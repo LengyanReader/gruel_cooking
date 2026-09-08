@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Math Clarification — 数学释疑{% endblock %}
+
+{% block content %}
+<div class="home-hero">
+    <h1>Math Clarification / 数学释疑</h1>
+    <p class="subtitle">Basic mathematics and famous problems — precise statements, intuition, and the history of human effort.<br>
+    基础数学与名题 —— 精确表述、直觉譬喻、以及人类探索的历史。</p>
+</div>
+
+<div class="entry-grid">
+    {% for entry in entries %}
+    <a href="/entry/{{ entry.category }}/{{ entry.slug }}?level=L5&lang=dual" class="entry-card">
+        <span class="entry-category">{{ entry.category }}</span>
+        <h3>{{ entry.title }}</h3>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

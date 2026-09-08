@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} — Math Clarification{% endblock %}
+
+{% block content %}
+<div class="entry-header">
+    <a href="/" class="back-link">&larr; All Entries</a>
+    <h1>{{ title }}</h1>
+</div>
+
+<div class="controls-bar">
+    <div class="level-control">
+        <label>Level / 层次:</label>
+        <div class="level-buttons">
+            {% for lv in levels %}
+            <a href="/entry/{{ category }}/{{ slug }}?level={{ lv }}&lang={{ current_lang }}"
+               class="level-btn {% if lv == current_level %}active{% endif %}"
+               title="Show up to {{ lv }}">
+                {{ lv }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="lang-control">
+        <label>Language / 语言:</label>
+        <div class="lang-buttons">
+            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=en"
+               class="lang-btn {% if current_lang == 'en' %}active{% endif %}">EN</a>
+            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=zh"
+               class="lang-btn {% if current_lang == 'zh' %}active{% endif %}">中</a>
+            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=dual"
+               class="lang-btn {% if current_lang == 'dual' %}active{% endif %}">双语</a>
+        </div>
+    </div>
+</div>
+
+<div class="entry-body">
+    <div class="entry-content">
+        {{ entry_html | safe }}
+    </div>
+</div>
+{% endblock %}
