@@ -25,6 +25,7 @@ What Lean does **not** do here, by design: no analogies, no historical narrative
 | [Goldbach & twin primes](../famous_problems/goldbach_and_twin_primes.md) | `core/Goldbach.lean` | The two open conjectures (stated); $10 = 3 + 7$ verified with a real proof of primality |
 | [Königsberg](../famous_problems/konigsberg_bridges.md) | `core/Konigsberg.lean` | All $7! = 5040$ orderings fail; add one bridge and a trail exists — search confirms what Euler's degree theorem predicts |
 | [Fermat](../famous_problems/fermat_last_theorem.md) | `core/Fermat.lean` | FLT stated (Wiles 1995, unformalized); $3^2 + 4^2 = 5^2$ and the near-miss $6^3 + 8^3 = 9^3 - 1$ checked |
+| [Erdős unit distance](../famous_problems/erdos_unit_distance.md) | `core/ErdosUnitDistance.lean` | The disproof is *not* formalized (stated with `sorry`); what is checked is the structural obstruction — exactly 4 unit vectors out of the origin ($a^2+b^2=1$ has 4 solutions), the finite-representation table, and the plain grid's $2k(k-1)$ unit distances brute-force counted |
 | [Numbers](../basics/numbers.md) | `mathlib/Sqrt2.lean` | $\sqrt{2}$ is irrational |
 | [Infinity](../basics/infinity.md) | `mathlib/Infinity.lean` | $0.999\ldots = 1$ as a geometric series |
 
@@ -41,9 +42,10 @@ lean Collatz.lean
 lean Goldbach.lean
 lean Konigsberg.lean
 lean Fermat.lean
+lean ErdosUnitDistance.lean
 ```
 
-**Verification record**: all 7 core files compile clean under Lean 4.33.1 (2026-09-06) — 0 errors. The only warnings are the intentional `sorry`s on the open conjectures (Collatz, Goldbach, twin primes, FLT) and three linter style notes in Goldbach.lean.
+**Verification record**: all 8 core files compile clean under Lean 4.33.1 (2026-09-06) — 0 errors. The only warnings are the intentional `sorry`s on the open conjectures (Collatz, Goldbach, twin primes, FLT, the Erdős disproof) and three linter style notes in Goldbach.lean.
 
 ## Checking the mathlib files
 

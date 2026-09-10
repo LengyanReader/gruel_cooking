@@ -5,6 +5,8 @@ __pycache__/
 .venv/
 venv/
 
+direction_refs/*
+
 # OS
 .DS_Store
 Thumbs.db

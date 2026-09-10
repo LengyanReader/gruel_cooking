@@ -130,6 +130,7 @@ The net effect: $u(n) \geq n^{1 + 0.014}$ — a genuine polynomial improvement, 
 
 The original disproof is a theoretical construction, not a computable finite object — it cannot be directly verified by Lean in the style of the core files. However:
 
+- **The structural obstruction is verified locally** — see [`../lean/core/ErdosUnitDistance.lean`](../lean/core/ErdosUnitDistance.lean). The kernel checks the exact fact that makes the naive constructions stall: the number of ways to write a fixed integer as a sum of two squares is finite, so the plain $k \times k$ grid yields exactly $2k(k-1) \approx 2n$ unit distances and no simple rescaling escapes. This is the precise "baseline" the AI construction has to beat.
 - **Golod–Shafarevich theorem**: formalized in Lean 4 Mathlib (`Mathlib.RingTheory.Polynomial.Irreducible.Basic` area — the group-theoretic version lives in a related module).
 - **Dirichlet's unit theorem**: partially formalized in Mathlib.
 - **The specific construction**: the infinite family is defined by a sequence of number fields; finite instances (specific $K$ with small discriminant) can in principle be checked for the claimed unit-distance count, but the full asymptotic proof requires analytic number theory beyond current formalization scope.
@@ -147,6 +148,7 @@ The original disproof is a theoretical construction, not a computable finite obj
 
 原始推翻是一个理论构造，而非可计算的有限对象——它无法像核心文件那样被 Lean 直接验证。然而：
 
+- **结构障碍已在本地验证**——参见 [`../lean/core/ErdosUnitDistance.lean`](../lean/core/ErdosUnitDistance.lean)。内核精确检查了让朴素构造失效的关键事实：将固定整数表示为两数平方和的方式是有限的，因此普通的 $k \times k$ 网格恰有 $2k(k-1) \approx 2n$ 个单位距离，简单的缩放无法逃离。这正是 AI 构造必须超越的精确"基线"。
 - **Golod–Shafarevich 定理**：在 Lean 4 Mathlib 中有形式化（群论版本在相关模块中）。
 - **Dirichlet 单位定理**：在 Mathlib 中有部分形式化。
 - **具体构造**：无穷族由数域序列定义；有限实例（具有小判别式的特定 $K$）原则上可以检查所声称的单位距离计数，但完整的渐近证明需要超出当前形式化范围的解析数论。
