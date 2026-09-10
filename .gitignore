@@ -6,6 +6,7 @@ __pycache__/
 venv/
 
 direction_refs/*
+living_heritage/materials/
 
 # OS
 .DS_Store
