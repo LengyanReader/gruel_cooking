@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>舟洲粥 — 以最朴素的食材熬粥 | Zhōu Zhōu Zhōu — Cooking porridge from the simplest ingredients</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-deep: #4A90C2; --sky-mid: #7AB8D9; --sky-light: #A8D4EC;
+  --warm-cream: #FFFBF5; --warm-soft: #FFF5E6;
+  --warm-gold: #F5C97E; --warm-amber: #E8A855;
+  --warm-peach: #F0C4A8;
+  --ink-deep: #3A3228; --ink-mid: #5C5248; --ink-soft: #8A7E72; --ink-pale: #B8AFA4;
+  --accent-teal: #5BA3A3; --accent-coral: #D4836A;
+  --accent-violet: #8B7BAA; --accent-sage: #7A9E7E;
+  --ff-display: "LXGW WenKai", "Noto Serif SC", serif;
+  --ff-body: "Inter", "LXGW WenKai", "Noto Sans SC", sans-serif;
+  --ff-zh: "LXGW WenKai", "Noto Serif SC", serif;
+  --fs-hero: clamp(2.8rem, 7vw, 5rem);
+  --shadow-md: 0 6px 20px rgba(58,50,40,0.07);
+  --shadow-lg: 0 12px 40px rgba(58,50,40,0.09);
+  --shadow-glow: 0 0 60px rgba(245,201,126,0.15);
+}
+
+/* ── Bilingual toggle ── */
+body.lang-zh [data-en] { display: none !important; }
+body.lang-en [data-zh] { display: none !important; }
+body.lang-en [data-both] span[data-en] { display: inline !important; }
+body.lang-en [data-both] span[data-zh] { display: none !important; }
+body.lang-zh [data-both] span[data-zh] { display: inline !important; }
+body.lang-zh [data-both] span[data-en] { display: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--ff-body);
+  color: var(--ink-deep);
+  background: var(--warm-cream);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+a { color: var(--accent-teal); text-decoration: none; transition: color 0.25s; }
+a:hover { color: var(--sky-deep); }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0.75rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,251,245,0.7);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border-bottom: 1px solid rgba(228,220,208,0.4);
+  transition: all 0.3s;
+}
+.nav.scrolled { background: rgba(255,251,245,0.92); box-shadow: 0 2px 16px rgba(58,50,40,0.06); }
+.nav-brand {
+  font-family: var(--ff-display); font-weight: 700; font-size: 1.3rem;
+  color: var(--ink-deep); letter-spacing: 0.05em;
+}
+.nav-brand .pinyin { font-size: 0.7em; color: var(--ink-soft); margin-left: 0.4em; font-weight: 400; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  color: var(--ink-soft); font-size: 0.875rem; font-weight: 500;
+  letter-spacing: 0.04em; transition: color 0.25s; position: relative;
+}
+.nav-links a::after {
+  content: ""; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 2px; background: var(--warm-gold); border-radius: 1px;
+  transform: scaleX(0); transition: transform 0.25s;
+}
+.nav-links a:hover { color: var(--ink-deep); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* Language toggle button */
+.lang-toggle {
+  display: flex; border-radius: 20px; overflow: hidden;
+  border: 1px solid rgba(228,220,208,0.6); background: var(--warm-cream);
+  font-size: 0.8rem; font-weight: 500; cursor: pointer;
+  box-shadow: 0 1px 4px rgba(58,50,40,0.06);
+}
+.lang-toggle button {
+  border: none; padding: 5px 14px; cursor: pointer;
+  font-family: var(--ff-body); font-size: 0.8rem; font-weight: 500;
+  transition: all 0.25s; color: var(--ink-soft); background: transparent;
+}
+.lang-toggle button.active {
+  background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+  color: #fff;
+}
+.lang-toggle button:hover:not(.active) { color: var(--ink-deep); }
+
+/* ═══ HERO ═══ */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 5rem 2rem; overflow: hidden;
+  background: linear-gradient(170deg, #5A9ECF 0%, #7AB8D9 20%, #A8D4EC 40%, #D4E8F0 55%, #F0E4D0 72%, #FFF0DB 88%, #FFFBF5 100%);
+}
+.hero-particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.particle {
+  position: absolute; width: 3px; height: 3px; border-radius: 50%;
+  background: var(--warm-gold); opacity: 0; animation: twinkle ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.7; transform: scale(1); }
+}
+.particle:nth-child(1) { top: 12%; left: 15%; animation-duration: 3.5s; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; left: 72%; animation-duration: 4.2s; animation-delay: 0.8s; }
+.particle:nth-child(3) { top: 35%; left: 28%; animation-duration: 3.8s; animation-delay: 1.5s; width: 4px; height: 4px; }
+.particle:nth-child(4) { top: 18%; left: 50%; animation-duration: 5s; animation-delay: 0.3s; }
+.particle:nth-child(5) { top: 42%; left: 85%; animation-duration: 3.2s; animation-delay: 2s; }
+.particle:nth-child(6) { top: 28%; left: 40%; animation-duration: 4.8s; animation-delay: 1.2s; width: 2px; height: 2px; }
+.particle:nth-child(7) { top: 8%; left: 60%; animation-duration: 3.6s; animation-delay: 0.5s; }
+.particle:nth-child(8) { top: 38%; left: 12%; animation-duration: 4.5s; animation-delay: 1.8s; }
+.particle:nth-child(9) { top: 15%; left: 82%; animation-duration: 3.3s; animation-delay: 2.5s; }
+.particle:nth-child(10) { top: 45%; left: 55%; animation-duration: 5.2s; animation-delay: 0.7s; width: 2px; height: 2px; }
+.particle:nth-child(11) { top: 25%; left: 92%; animation-duration: 4.0s; animation-delay: 1.0s; }
+.particle:nth-child(12) { top: 5%; left: 35%; animation-duration: 3.9s; animation-delay: 2.2s; }
+.hero-clouds { position: absolute; inset: 0; pointer-events: none; }
+.cloud-wisp {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,0.35); filter: blur(50px);
+  animation: float-cloud linear infinite;
+}
+@keyframes float-cloud {
+  0% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(80px) translateY(-10px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+.cloud-wisp-1 { width: 500px; height: 140px; top: 18%; left: -5%; animation-duration: 50s; }
+.cloud-wisp-2 { width: 400px; height: 110px; top: 30%; right: -8%; animation-duration: 65s; animation-delay: -20s; }
+.cloud-wisp-3 { width: 300px; height: 90px; top: 50%; left: 20%; animation-duration: 45s; opacity: 0.5; }
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+.hero-boat { display: block; margin: 0 auto 2rem; opacity: 0.6; animation: boat-bob 4s ease-in-out infinite; }
+@keyframes boat-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(-1deg); }
+  75% { transform: translateY(4px) rotate(1deg); }
+}
+.hero h1 {
+  font-family: var(--ff-display); font-size: var(--fs-hero); font-weight: 700;
+  color: var(--ink-deep); letter-spacing: 0.08em; line-height: 1.2; margin-bottom: 0.5rem;
+}
+.hero .subtitle-zh {
+  font-family: var(--ff-zh); font-size: 1.25rem; color: var(--ink-soft);
+  font-weight: 300; letter-spacing: 0.12em; margin-bottom: 0.5rem;
+}
+.hero .subtitle-en {
+  font-family: var(--ff-body); font-size: 1rem; color: var(--ink-pale);
+  font-weight: 300; letter-spacing: 0.06em; margin-bottom: 2rem;
+  font-style: italic;
+}
+.hero .tagline-zh {
+  font-family: var(--ff-zh); font-size: 1.125rem; color: var(--ink-mid);
+  max-width: 550px; margin: 0 auto; font-weight: 300; line-height: 2;
+  letter-spacing: 0.08em;
+}
+.hero .tagline-en {
+  font-family: var(--ff-body); font-size: 1rem; color: var(--ink-pale);
+  max-width: 550px; margin: 0 auto; font-weight: 300; line-height: 1.8;
+  font-style: italic;
+}
+.hero .scroll-hint {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: var(--ink-pale); font-size: 0.75rem; letter-spacing: 0.1em;
+  animation: gentle-bob 3s ease-in-out infinite;
+}
+.scroll-line { width: 1px; height: 30px; background: linear-gradient(to bottom, var(--ink-pale), transparent); }
+@keyframes gentle-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+/* ═══ SECTION HEADERS ═══ */
+.section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 {
+  font-family: var(--ff-display); font-size: 2rem; font-weight: 700;
+  color: var(--ink-deep); margin-bottom: 0.25rem; letter-spacing: 0.03em;
+}
+.section-header .subtitle {
+  font-size: 1rem; color: var(--ink-soft); font-weight: 300; letter-spacing: 0.08em;
+}
+.section-header .divider {
+  display: block; width: 50px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--warm-gold), transparent);
+  margin: 1rem auto; border-radius: 1px;
+}
+
+/* ═══ PILLAR CARDS ═══ */
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.pillar-card {
+  position: relative; background: var(--warm-cream); border-radius: 20px;
+  padding: 3rem 2.5rem 2rem; box-shadow: var(--shadow-md);
+  border: 1px solid rgba(228,220,208,0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease; overflow: hidden;
+}
+.pillar-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg), var(--shadow-glow); }
+.pillar-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 20px 20px 0 0; opacity: 0.8;
+}
+.pillar-card[data-color="sky"]::before { background: linear-gradient(90deg, var(--sky-mid), var(--sky-light)); }
+.pillar-card[data-color="gold"]::before { background: linear-gradient(90deg, var(--warm-amber), var(--warm-gold)); }
+.pillar-card[data-color="teal"]::before { background: linear-gradient(90deg, var(--accent-teal), #8CC5C5); }
+.pillar-card[data-color="coral"]::before { background: linear-gradient(90deg, var(--accent-coral), #E8A890); }
+.pillar-card[data-color="violet"]::before { background: linear-gradient(90deg, var(--accent-violet), #AEA0CC); }
+.pillar-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 14px; margin-bottom: 1rem; font-size: 1.5rem;
+}
+.pillar-card[data-color="sky"] .pillar-icon { background: #E8F4FA; }
+.pillar-card[data-color="gold"] .pillar-icon { background: #FFF3DD; }
+.pillar-card[data-color="teal"] .pillar-icon { background: #E0F0F0; }
+.pillar-card[data-color="coral"] .pillar-icon { background: #FAE8E2; }
+.pillar-card[data-color="violet"] .pillar-icon { background: #EDE8F4; }
+.pillar-card h3 { font-family: var(--ff-display); font-size: 1.5rem; font-weight: 700; color: var(--ink-deep); margin-bottom: 2px; }
+.pillar-card .card-subtitle { font-size: 0.875rem; color: var(--ink-pale); margin-bottom: 1rem; letter-spacing: 0.04em; }
+.pillar-card p { font-size: 1rem; color: var(--ink-mid); margin-bottom: 1rem; line-height: 1.8; }
+.pillar-card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1rem; }
+.pillar-card .tag {
+  display: inline-block; padding: 3px 12px; border-radius: 99px;
+  font-size: 0.75rem; font-weight: 500; background: var(--warm-soft);
+  color: var(--ink-soft); border: 1px solid rgba(228,220,208,0.4);
+}
+.pillar-card .enter-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.875rem; font-weight: 600; color: var(--accent-teal);
+}
+.pillar-card .enter-link .arrow { transition: transform 0.25s; display: inline-block; }
+.pillar-card:hover .enter-link .arrow { transform: translateX(4px); }
+.pillar-card .badge {
+  display: inline-block; padding: 3px 12px; border-radius: 6px;
+  font-size: 0.75rem; font-weight: 500;
+  background: linear-gradient(135deg, var(--warm-soft), var(--warm-gold));
+  color: var(--ink-soft); margin-left: 0.5rem;
+  border: 1px solid rgba(228,220,208,0.3);
+}
+.pillar-card.featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--warm-cream) 0%, #F8F0E8 100%);
+  border: 1px solid rgba(228,220,208,0.6);
+}
+
+/* ═══ PRINCIPLES ═══ */
+.principles-section {
+  background: linear-gradient(180deg, var(--warm-cream) 0%, var(--warm-soft) 100%);
+  max-width: 100%; padding: 5rem 2rem;
+}
+.principles-inner { max-width: 1200px; margin: 0 auto; }
+.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+.principle-item {
+  display: flex; gap: 1rem; padding: 1rem;
+  border-radius: 14px; background: var(--warm-cream);
+  border: 1px solid rgba(228,220,208,0.4);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.principle-item:hover { box-shadow: 0 2px 8px rgba(58,50,40,0.05); transform: translateY(-2px); }
+.principle-num {
+  flex-shrink: 0; width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: linear-gradient(135deg, var(--warm-gold), var(--warm-amber));
+  color: white; font-weight: 700; font-size: 0.75rem;
+  box-shadow: 0 2px 8px rgba(232,168,85,0.2);
+}
+.principle-item h4 {
+  font-family: var(--ff-display); font-size: 1rem; font-weight: 700;
+  color: var(--ink-deep); margin-bottom: 2px;
+}
+.principle-item p { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.7; }
+
+/* ═══ ABOUT ═══ */
+.about-section {
+  text-align: center; padding: 5rem 2rem; max-width: 750px; margin: 0 auto;
+}
+.about-section .poem {
+  font-family: var(--ff-zh); font-size: 1.5rem; color: var(--ink-mid);
+  font-weight: 300; line-height: 2; letter-spacing: 0.08em;
+  margin-bottom: 2rem; padding: 2rem 0;
+  border-top: 1px solid rgba(245,201,126,0.4); border-bottom: 1px solid rgba(245,201,126,0.4);
+}
+.about-section .poem-en {
+  font-family: var(--ff-body); font-size: 1.125rem; color: var(--ink-pale);
+  font-weight: 300; line-height: 1.8; font-style: italic;
+  margin-bottom: 2rem;
+}
+.about-section .explain { font-size: 1rem; color: var(--ink-soft); line-height: 2; }
+
+/* ═══ FOOTER ═══ */
+.footer {
+  text-align: center; padding: 3rem 2rem 2rem;
+  color: var(--ink-pale); font-size: 0.875rem;
+  border-top: 1px solid rgba(228,220,208,0.4); background: var(--warm-cream);
+}
+.footer .motto {
+  font-family: var(--ff-zh); font-size: 1.125rem; color: var(--ink-soft);
+  font-weight: 300; letter-spacing: 0.12em; margin-bottom: 0.25rem;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .pillars { grid-template-columns: 1fr; }
+  .pillar-card.featured { grid-column: auto; }
+  .hero { min-height: 90vh; padding-top: 4rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .section { padding: 3rem 1rem; }
+  .principles-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">舟洲粥<span class="pinyin">zhōu</span></div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#pillars"><span data-zh>领域</span><span data-en>Domains</span></a></li>
+      <li><a href="#principles"><span data-zh>原则</span><span data-en>Principles</span></a></li>
+      <li><a href="#about"><span data-zh>缘起</span><span data-en>About</span></a></li>
+    </ul>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-particles">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+  </div>
+  <div class="hero-clouds">
+    <div class="cloud-wisp cloud-wisp-1"></div>
+    <div class="cloud-wisp cloud-wisp-2"></div>
+    <div class="cloud-wisp cloud-wisp-3"></div>
+  </div>
+  <div class="hero-content">
+    <svg class="hero-boat" width="80" height="48" viewBox="0 0 80 48" fill="none">
+      <path d="M10 36 C10 36, 15 28, 40 28 C65 28, 70 36, 70 36" stroke="#B8AFA4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M8 38 C8 38, 18 32, 40 32 C62 32, 72 38, 72 38" stroke="#D4C8B8" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <line x1="40" y1="28" x2="40" y2="10" stroke="#B8AFA4" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M40 10 L58 18 L40 22 Z" fill="none" stroke="#D4C8B8" stroke-width="1" stroke-linejoin="round"/>
+      <g opacity="0.4">
+        <path d="M36 26 Q35 22 37 18" stroke="#B8AFA4" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <path d="M42 25 Q43 21 41 17" stroke="#B8AFA4" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <path d="M48 26 Q49 22 47 19" stroke="#B8AFA4" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+      </g>
+    </svg>
+
+    <h1 data-both><span data-zh>舟洲粥</span><span data-en>Zhōu Zhōu Zhōu</span></h1>
+    <div class="subtitle-zh">以最朴素的食材熬粥</div>
+    <div class="subtitle-en">Cooking porridge from the simplest ingredients</div>
+
+    <div class="tagline-zh">一叶小舟，渡万洲之远；一碗清粥，暖天地之心。</div>
+    <div class="tagline-en">A small boat, sailing across distant continents;<br>A warm bowl of porridge, soothing heaven and earth.</div>
+  </div>
+
+  <div class="scroll-hint">
+    <span data-zh>向下探索</span><span data-en>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══ PILLARS ═══ -->
+<section class="section" id="pillars">
+  <div class="section-header">
+    <h2><span data-zh>舟行万洲</span><span data-en>Sailing the Continents</span></h2>
+    <div class="subtitle"><span data-zh>研究领域</span><span data-en>Research Domains</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="pillars">
+
+    <!-- 1. Core -->
+    <div class="pillar-card" data-color="sky">
+      <div class="pillar-icon">◆</div>
+      <h3>First Principles</h3>
+      <div class="card-subtitle">
+        <span data-zh>第一性原理 · 元思考</span>
+        <span data-en>First Principles · Meta-thinking</span>
+      </div>
+      <p>
+        <span data-zh>从物理、逻辑、信息论与系统思维中提炼根本原理，并追问：这些原理为何成立？边界在哪里？</span>
+        <span data-en>Distilling fundamental principles from physics, logic, information theory, and systems thinking — then asking: why do they hold? Where do they break?</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>天</span><span data-en>Heaven</span></span>
+        <span class="tag" data-both><span data-zh>地</span><span data-en>Earth</span></span>
+        <span class="tag" data-both><span data-zh>人</span><span data-en>Society</span></span>
+        <span class="tag" data-both><span data-zh>元思考</span><span data-en>Meta-thinking</span></span>
+      </div>
+      <a href="core/" class="enter-link">
+        <span data-zh>进入 core/</span><span data-en>Enter core/</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 2. Heaven & Climate -->
+    <div class="pillar-card" data-color="gold">
+      <div class="pillar-icon">☉</div>
+      <h3>Heaven &amp; Climate</h3>
+      <div class="card-subtitle">
+        <span data-zh>天文 · 天象 · 气候</span>
+        <span data-en>Astronomy · Celestial Phenomena · Climate</span>
+      </div>
+      <p>
+        <span data-zh>从天文观测到气候动力学，追踪研究脉络——溯源、谱系、一手文献，用第一性原理重新解读。</span>
+        <span data-en>From astronomical observation to climate dynamics — tracing research lineages, genealogies, and primary sources, reinterpreted through first principles.</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>天象</span><span data-en>Celestial phenomena</span></span>
+        <span class="tag" data-both><span data-zh>气候</span><span data-en>Climate</span></span>
+        <span class="tag" data-both><span data-zh>思想史</span><span data-en>Intellectual history</span></span>
+      </div>
+      <a href="heaven_climate/" class="enter-link">
+        <span data-zh>进入 heaven_climate/</span><span data-en>Enter heaven_climate/</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 3. Economics -->
+    <div class="pillar-card" data-color="teal">
+      <div class="pillar-icon">⬡</div>
+      <h3>Cross-Culture Economics</h3>
+      <div class="card-subtitle">
+        <span data-zh>跨文化经济学</span>
+        <span data-en>Cross-Cultural Economics</span>
+      </div>
+      <p>
+        <span data-zh>西方、中国、伊斯兰、印度、非洲——各文明的经济智慧，比较中发现盲区与共识。</span>
+        <span data-en>West, China, Islamic, Indian, African — comparing economic wisdom across civilizations to discover blind spots and shared insights.</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>西方</span><span data-en>Western</span></span>
+        <span class="tag" data-both><span data-zh>中国经济思想</span><span data-en>Chinese economic thought</span></span>
+        <span class="tag" data-both><span data-zh>比较</span><span data-en>Comparative</span></span>
+        <span class="tag" data-both><span data-zh>案例</span><span data-en>Case studies</span></span>
+      </div>
+      <a href="economics_cross_culture/" class="enter-link">
+        <span data-zh>进入 economics_cross_culture/</span><span data-en>Enter economics_cross_culture/</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 4. Math -->
+    <div class="pillar-card" data-color="coral">
+      <div class="pillar-icon">∑</div>
+      <h3>Math Clarification</h3>
+      <div class="card-subtitle">
+        <span data-zh>数学释疑</span>
+        <span data-en>Math Clarification</span>
+      </div>
+      <p>
+        <span data-zh>第一性原理的语言，极简阐释。每个条目一屏读完——先图后式，直觉先行。</span>
+        <span data-en>The language of first principles, explained with radical simplicity. One concept per page — visuals first, formulas second, intuition always.</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>基础</span><span data-en>Fundamentals</span></span>
+        <span class="tag" data-both><span data-zh>名题</span><span data-en>Classic problems</span></span>
+        <span class="tag">Lean 4</span>
+        <span class="tag" data-both><span data-zh>证明叙事</span><span data-en>Proof narratives</span></span>
+      </div>
+      <a href="math_clarification/" class="enter-link">
+        <span data-zh>进入 math_clarification/</span><span data-en>Enter math_clarification/</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 5. Living Heritage — featured -->
+    <div class="pillar-card featured" data-color="violet">
+      <div class="pillar-icon">⌇</div>
+      <h3>Living Cultural Corridors</h3>
+      <div class="card-subtitle">
+        <span data-zh>活态文化廊道 · 博士研究</span>
+        <span data-en>Living Cultural Corridors · PhD Research</span>
+      </div>
+      <p>
+        <span data-zh>以田野为基础、以比较为方法、以数字技术为支撑——探究人类文化关系如何通过流动、地方、物质生活和交换网络而持续、转型与再生。以北京大运河为核心田野实验室，哥特兰为主要瑞典比较案例，聚焦大运河与丝绸之路体系之间的微妙接口。</span>
+        <span data-en>Fieldwork-based, comparative in method, digitally-enabled — investigating how human cultural relations persist, transform, and regenerate through movement, place, material life, and exchange networks. Beijing's Grand Canal as primary field laboratory, Gotland as main Swedish comparative case, focusing on the subtle interfaces between the Grand Canal and Silk Roads systems.</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>大运河</span><span data-en>Grand Canal</span></span>
+        <span class="tag" data-both><span data-zh>丝绸之路</span><span data-en>Silk Roads</span></span>
+        <span class="tag">Gotland 哥特兰</span>
+        <span class="tag" data-both><span data-zh>遗产未来</span><span data-en>Heritage Futures</span></span>
+        <span class="tag" data-both><span data-zh>数字人文</span><span data-en>Digital Humanities</span></span>
+        <span class="tag" data-both><span data-zh>田野研究</span><span data-en>Fieldwork</span></span>
+      </div>
+      <a href="living_heritage/" class="enter-link">
+        <span data-zh>进入活态文化廊道</span><span data-en>Enter Living Cultural Corridors</span>
+        <span class="arrow">→</span>
+      </a>
+      <span class="badge">PhD Research</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PRINCIPLES ═══ -->
+<div class="principles-section" id="principles">
+  <div class="principles-inner">
+    <div class="section-header">
+      <h2><span data-zh>熬粥之法</span><span data-en>The Art of Porridge</span></h2>
+      <div class="subtitle"><span data-zh>运行原则</span><span data-en>Operating Principles</span></div>
+      <span class="divider"></span>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-item">
+        <span class="principle-num">1</span>
+        <div>
+          <h4><span data-zh>从可感处起</span><span data-en>Start with the observable</span></h4>
+          <p><span data-zh>一切追问始于一个可见的现象或一个具体的问题。</span><span data-en>Every inquiry begins with a visible phenomenon or a concrete question.</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">2</span>
+        <div>
+          <h4><span data-zh>化至最简</span><span data-en>Reduce to the minimal</span></h4>
+          <p><span data-zh>用第一性原理找到能解释现象的最小模型。</span><span data-en>Find the smallest model that explains the phenomenon using first principles.</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">3</span>
+        <div>
+          <h4><span data-zh>反问解释本身</span><span data-en>Question the explanation itself</span></h4>
+          <p><span data-zh>这个原理为何成立？预设了什么？在哪里失效？</span><span data-en>Why does this principle hold? What does it assume? Where does it fail?</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">4</span>
+        <div>
+          <h4><span data-zh>追溯谱系</span><span data-en>Trace the genealogy</span></h4>
+          <p><span data-zh>每个想法都有来历。记录影响的链条。</span><span data-en>Every idea has an origin. Record the chain of influence.</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">5</span>
+        <div>
+          <h4><span data-zh>跨界授粉</span><span data-en>Cross-pollinate</span></h4>
+          <p><span data-zh>经济学滋养气候学，气候学滋养天文学。让连接活着。</span><span data-en>Economics nourishes climate science, which nourishes astronomy. Keep the connections alive.</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">6</span>
+        <div>
+          <h4><span data-zh>以最朴素的食材</span><span data-en>The simplest ingredients</span></h4>
+          <p><span data-zh>复杂性从简单规则的交互中涌现。相信那碗粥。</span><span data-en>Complexity emerges from the interaction of simple rules. Trust the porridge.</span></p>
+        </div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-num">7</span>
+        <div>
+          <h4><span data-zh>来源先于叙述</span><span data-en>Sources before narrative</span></h4>
+          <p><span data-zh>引用一手文献，核实来源，标注可靠度。不可验证的链接不如没有。</span><span data-en>Cite primary sources, verify origins, mark reliability. An unverifiable link is worse than none.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about-section" id="about">
+  <div class="poem">
+    一叶小舟，渡万洲之远；<br>
+    一碗清粥，暖天地之心。
+  </div>
+  <div class="poem-en">
+    A small boat, sailing across distant continents;<br>
+    A warm bowl of porridge, soothing heaven and earth.
+  </div>
+  <div class="explain">
+    <p>
+      <strong data-both><span data-zh>舟洲粥</span><span data-en>Zhōu Zhōu Zhōu</span></strong>
+      <span data-zh>，三字同音 zhōu。</span>
+      <span data-en>, three characters, one sound: zhōu.</span>
+    </p>
+    <p>
+      <span data-zh>舟——行远探索的渡具；洲——万域知识的栖所；粥——最朴素的理解之味。</span>
+      <span data-en><em>Zhōu</em> (boat) — vessel for distant exploration; <em>zhōu</em> (continent) — dwelling of knowledge across domains; <em>zhōu</em> (porridge) — the taste of understanding in its simplest form.</span>
+    </p>
+    <p>
+      <span data-zh>项目名是 deliberate 的：粥是最简单的食物，用最根本的食材熬成。我们追寻的是能解释复杂现象的最简内核，并追问：这个内核本身为何成立？它的边界在哪里？</span>
+      <span data-en>The name is deliberate: porridge is the simplest food, made from the most fundamental ingredients. We seek the minimal kernel that explains complex phenomena, and then ask — why does this kernel hold? Where is its boundary?</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="motto">
+    <span data-zh>舟行万洲 · 粥暖人心</span>
+    <span data-en>Sail the continents · Warm the heart</span>
+  </div>
+  <p>
+    <span data-zh>舟洲粥 — 天 · 地 · 人</span>
+    <span data-en>Zhōu Zhōu Zhōu — Heaven · Earth · Society</span>
+  </p>
+</footer>
+
+<!-- ═══ JS ═══ -->
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Language toggle
+const toggle = document.getElementById('langToggle');
+const buttons = toggle.querySelectorAll('button');
+
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('zhzz-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+}
+
+// Restore saved language
+const saved = localStorage.getItem('zhzz-lang');
+if (saved) setLang(saved);
+
+buttons.forEach(b => {
+  b.addEventListener('click', () => setLang(b.dataset.lang));
+});
+
+// Subtle parallax on hero particles
+document.addEventListener('mousemove', (e) => {
+  const particles = document.querySelectorAll('.particle');
+  const x = (e.clientX / window.innerWidth - 0.5) * 8;
+  const y = (e.clientY / window.innerHeight - 0.5) * 8;
+  particles.forEach((p, i) => {
+    const factor = (i % 3 + 1) * 0.3;
+    p.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+  });
+});
+</script>
+
+</body>
+</html>
