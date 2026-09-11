@@ -5,7 +5,7 @@ sys.path.insert(0, ".")
 conn = sqlite3.connect("data/living_heritage.db")
 conn.row_factory = sqlite3.Row
 
-for t in ["bilingual_text", "pages", "page_sections", "heritage_sites", "scholars", "corridors", "relations"]:
+for t in ["bilingual_text", "pages", "page_sections", "heritage_sites", "scholars", "corridors", "relations", "publications", "field_observations"]:
     n = conn.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
     print(f"{t}: {n}")
 
@@ -45,5 +45,25 @@ print("--- pages nav_order ---")
 rows = conn.execute("SELECT slug, nav_key, sort_order, is_published FROM pages ORDER BY sort_order").fetchall()
 for k in rows:
     print(dict(k))
+
+print("--- publications ---")
+rows = conn.execute("SELECT title_key, source_level, year, authors FROM publications ORDER BY year DESC").fetchall()
+for k in rows:
+    d = dict(k)
+    print(f"{d['title_key']} | [{d['source_level']}] | {d['year']} | {d['authors']}")
+
+print("--- observations ---")
+rows = conn.execute(
+    "SELECT fo.title_key, fo.source_level, fo.date_observed, hs.name_key FROM field_observations fo LEFT JOIN heritage_sites hs ON fo.site_id = hs.id ORDER BY fo.date_observed DESC"
+).fetchall()
+for k in rows:
+    d = dict(k)
+    print(f"{d['title_key']} | [{d['source_level']}] | {d['date_observed']} | {d['name_key']}")
+
+print("--- brand keys ---")
+rows = conn.execute("SELECT key, en, zh FROM bilingual_text WHERE key LIKE 'brand.%' ORDER BY key").fetchall()
+for k in rows:
+    d = dict(k)
+    print(f"{d['key']}: {d['en']} | {d['zh']}")
 
 conn.close()

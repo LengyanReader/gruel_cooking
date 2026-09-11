@@ -77,6 +77,7 @@ CREATE TABLE IF NOT EXISTS field_observations (
     title_key       TEXT,
     notes_key       TEXT,
     observation_type TEXT,
+    source_level    TEXT,
     tags            TEXT,
     photos          TEXT,
     created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
@@ -120,6 +121,7 @@ CREATE TABLE IF NOT EXISTS publications (
     url             TEXT,
     pdf_url         TEXT,
     tags            TEXT,
+    source_level    TEXT,
     corridor_slugs  TEXT,
     created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
@@ -155,4 +157,10 @@ def _migrate(conn):
     page_cols = {r[1] for r in conn.execute("PRAGMA table_info(pages)").fetchall()}
     if "nav_key" not in page_cols:
         conn.execute("ALTER TABLE pages ADD COLUMN nav_key TEXT")
+    fo_cols = {r[1] for r in conn.execute("PRAGMA table_info(field_observations)").fetchall()}
+    if "source_level" not in fo_cols:
+        conn.execute("ALTER TABLE field_observations ADD COLUMN source_level TEXT")
+    pub_cols = {r[1] for r in conn.execute("PRAGMA table_info(publications)").fetchall()}
+    if "source_level" not in pub_cols:
+        conn.execute("ALTER TABLE publications ADD COLUMN source_level TEXT")
     conn.commit()

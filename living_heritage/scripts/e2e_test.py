@@ -33,6 +33,17 @@ print("has zh text:", "\u6587\u5316" in b)
 print("has new slogan \u5468\u4e88\u6148\u821f:", "\u5468\u4e88\u6148\u821f" in b)
 print("has footer \u5468\u6e21\u4e07\u6d32:", "\u5468\u6e21\u4e07\u6d32" in b)
 
+# brand consistency: nav-sub, hero kicker, footer all from brand.* keys
+print("brand nav-sub (zh):", "\u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
+print("brand kicker (zh):", "\u5468\u4e88\u6148\u821f\u3001\u5468\u6e21\u4e07\u6d32\u3001\u559d\u7ca5\u6696\u80c3" in b or "\u5468\u4e88\u6148\u821f\uff0c\u5468\u6e21\u4e07\u6d32\uff0c\u559d\u7ca5\u6696\u80c3" in b)
+print("brand footer identity (zh):", "\u5468\u821f\u6d32\u7ca5 \u00b7 \u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
+
+# en variant default locale: brand strings should match the en seed
+raw = urllib.request.urlopen(f"{BASE}/").read().decode("utf-8")
+print("en brand kicker:", "the bark, the isles, the gruel" in raw)
+print("en brand nav-sub:", "\u5468\u821f\u6d32\u7ca5" in raw)
+print("en footer zhou_line:", "the bark, the isles, the gruel" in raw)
+
 # static asset check
 r = urllib.request.urlopen(f"{BASE}/css/main.css")
 mc = r.read().decode("utf-8")
@@ -44,6 +55,13 @@ print("js ok, len:", len(r.read()))
 for p in ["/corridors", "/scholars", "/graph", "/literature", "/methodology", "/fieldwork"]:
     b = op.open(f"{BASE}" + p).read().decode("utf-8")
     print(p, "len:", len(b), "has 北京大运河:", "\u5317\u4eac\u5927\u8fd0\u6cb3" in b)
+
+# zh publications page specifics
+pb = op.open(f"{BASE}/publications").read().decode("utf-8")
+print("publications has 研究资料库:", "\u7814\u7a76\u8d44\u6599\u5e93" in pb,
+      "| lvl-a chip:", "lvl-a" in pb,
+      "| source_level A:", "[A]" in pb,
+      "| verified Gillette:", "Gillette" in pb)
 
 # zh graph page specifics
 gb = op.open(f"{BASE}/graph").read().decode("utf-8")

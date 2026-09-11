@@ -181,5 +181,19 @@
       }
     ],
     "nav_key": "nav.fieldwork"
+  },
+  {
+    "slug": "publications",
+    "title_key": "page.publications.title",
+    "template": "pages/publications.html",
+    "sort_order": 7,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.publications.intro.title",
+        "body_key": "page.publications.intro.body"
+      }
+    ],
+    "nav_key": "nav.publications"
   }
 ]

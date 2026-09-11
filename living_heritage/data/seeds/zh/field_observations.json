@@ -1,0 +1,24 @@
+[
+  {
+    "site": "site.shichahai.name",
+    "date_observed": "2026-06-12",
+    "title_en": "Grain arrives by water",
+    "title_zh": "粮食由水路而来",
+    "notes_en": "At Shichahai–Yuhe, morning: the water gates carry the memory of grain tribute barges. What arrives, what leaves, where transfer occurs, what changes.",
+    "notes_zh": "后海—御河,清晨:水闸仍承载着漕运粮船的集体记忆。何来、何去、何处中转、何者改变。",
+    "observation_type": "walk",
+    "source_level": "A",
+    "tags": "运河, 粮食, 什刹海"
+  },
+  {
+    "site": "site.gamla_skogsby.name",
+    "date_observed": "2026-08-04",
+    "title_en": "When the past grows new life",
+    "title_zh": "当过去长出新生命",
+    "notes_en": "Gamla Skogsby, Iron Age site: soil, plants and food are being used to ask whether the past can generate future life.",
+    "notes_zh": "Gamla Skogsby 铁器时代遗址:以土壤、植物与食物追问——过去能否生长出未来的生命。",
+    "observation_type": "regeneration",
+    "source_level": "A",
+    "tags": "再生, 厄兰岛, 铁器时代"
+  }
+]

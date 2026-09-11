@@ -5,6 +5,6 @@
     <p class="footer-links">
       {% for item in nav_items %}{% if not loop.first %} · {% endif %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
     </p>
-    <p class="footer-copy">周舟洲粥 Living Cultural Corridors — 周予慈舟 · 周渡万洲 · 喝粥暖胃<br><span class="footer-zhou">zhōu·zhōu·zhōu — bark · isle · gruel</span></p>
+    <p class="footer-copy">{{ brand['brand.identity'] }}<br><span class="footer-zhou">{{ brand['brand.zhou_line'] }}</span></p>
   </div>
 </footer>

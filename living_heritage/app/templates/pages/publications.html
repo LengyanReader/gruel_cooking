@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.publications }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.publications }}</h1>
+    {% if page and page.sections %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="portrait-grid">
+    {% for p in publications %}
+      <article class="scholar-portrait reveal">
+        <div class="scholar-portrait-head">
+          <h3 class="scholar-name">{{ p.title }}</h3>
+          {% if p.source_level %}
+            <span class="meta-chip lvl-{{ p.source_level|lower }}">[{{ p.source_level }}]</span>
+          {% endif %}
+        </div>
+        {% if p.authors or p.year %}
+          <p class="scholar-inst">
+            {{ p.authors or '' }}{% if p.publication_type %} · {{ p.publication_type }}{% endif %}{% if p.year %} · {{ p.year }}{% endif %}
+          </p>
+        {% endif %}
+        {% if p.abstract %}<div class="scholar-bio">{{ p.abstract }}</div>{% endif %}
+        <div class="site-meta">
+          {% for tag in p.tag_list %}
+            <span class="meta-chip">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% if p.url or p.doi %}
+          <div class="works-block">
+            <p class="works-title">{{ labels.get('label.source_link', 'Source') if labels else 'Source' }}</p>
+            {% if p.doi %}<p class="work-venue">DOI: <a href="https://doi.org/{{ p.doi }}">{{ p.doi }}</a></p>{% endif %}
+            {% if p.url %}<p class="work-venue"><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.url }}</a></p>{% endif %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -105,6 +105,93 @@ def seed_heritage_sites(conn, en_data: list, zh_data: list):
     conn.commit()
 
 
+def seed_publications(conn, en_data: list, zh_data: list):
+    """Seed publication/research-source records with bilingual title + abstract."""
+    zmap = {p["title_key"]: p for p in zh_data}
+    texts = {}
+    for p in en_data:
+        z = zmap.get(p["title_key"], {})
+        texts[p["title_key"]] = (p.get("title_en", ""), z.get("title_zh", ""))
+        if p.get("abstract_key"):
+            texts[p["abstract_key"]] = (p.get("abstract_en", ""), z.get("abstract_zh", ""))
+    _seed_pair_dicts(conn, texts)
+
+    seeded_keys = [p["title_key"] for p in en_data]
+    if seeded_keys:
+        placeholders = ",".join("?" for _ in seeded_keys)
+        conn.execute(f"DELETE FROM publications WHERE title_key IN ({placeholders})", seeded_keys)
+    key_to_id = {}
+    for p in en_data:
+        conn.execute(
+            """INSERT OR REPLACE INTO publications
+               (title_key, abstract_key, authors, publication_type, year, doi, url, tags, source_level, corridor_slugs)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (
+                p["title_key"],
+                p.get("abstract_key"),
+                p.get("authors"),
+                p.get("publication_type"),
+                p.get("year"),
+                p.get("doi"),
+                p.get("url"),
+                p.get("tags"),
+                p.get("source_level"),
+                p.get("corridor_slugs") and json.dumps(p.get("corridor_slugs"), ensure_ascii=False),
+            )
+        )
+        row = conn.execute("SELECT id FROM publications WHERE title_key = ?", (p["title_key"],)).fetchone()
+        key_to_id[p["title_key"]] = row["id"]
+    conn.commit()
+    return key_to_id
+
+
+def seed_field_observations(conn, en_data: list, zh_data: list):
+    """Seed field observation records; site referenced by heritage_sites.name_key."""
+    zmap = {o.get("title_en", "") or o.get("site", ""): o for o in zh_data}
+    site_ids = {}
+    for r in conn.execute("SELECT id, name_key FROM heritage_sites").fetchall():
+        site_ids[r["name_key"]] = r["id"]
+
+    obs_keys = set()
+    for obs in en_data:
+        title_key = obs.get("title_key") or f"obs.{obs['site'].replace('.', '_')}.{obs['date_observed']}.title"
+        notes_key = obs.get("notes_key") or f"obs.{obs['site'].replace('.', '_')}.{obs['date_observed']}.notes"
+        obs_keys.add(title_key)
+        obs_keys.add(notes_key)
+    if obs_keys:
+        placeholders = ",".join("?" for _ in obs_keys)
+        conn.execute(
+            f"DELETE FROM field_observations WHERE title_key IN ({placeholders})",
+            sorted(obs_keys),
+        )
+
+    texts = {}
+    for obs in en_data:
+        site_id = site_ids.get(obs.get("site"))
+        key = obs.get("title_en") or obs.get("site") or str(len(texts))
+        z = zmap.get(key, {})
+        title_key = obs.get("title_key") or f"obs.{obs['site'].replace('.', '_')}.{obs['date_observed']}.title"
+        notes_key = obs.get("notes_key") or f"obs.{obs['site'].replace('.', '_')}.{obs['date_observed']}.notes"
+        texts[title_key] = (obs.get("title_en", ""), z.get("title_zh", obs.get("title_zh", "")))
+        texts[notes_key] = (obs.get("notes_en", ""), z.get("notes_zh", obs.get("notes_zh", "")))
+        conn.execute(
+            """INSERT INTO field_observations
+               (site_id, date_observed, title_key, notes_key, observation_type, source_level, tags)
+               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (
+                site_id,
+                obs.get("date_observed"),
+                title_key,
+                notes_key,
+                obs.get("observation_type"),
+                obs.get("source_level"),
+                obs.get("tags"),
+            )
+        )
+    _seed_pair_dicts(conn, texts)
+    conn.commit()
+
+
 def seed_relations(conn):
     """Build the knowledge-graph edge table from normalized entity columns.
 
@@ -158,6 +245,8 @@ def _load(lang: str) -> dict[str, Path]:
         "corridors_structure": base / "corridors_structure.json",
         "scholars": base / "scholars.json",
         "heritage_sites": base / "heritage_sites.json",
+        "publications": base / "publications.json",
+        "field_observations": base / "field_observations.json",
     }
 
 
@@ -218,6 +307,18 @@ def seed_all():
 
     # Knowledge-graph edges
     seed_relations(conn)
+
+    # Publications (records + bilingual title/abstract)
+    if en_files["publications"].exists():
+        en_p = json.loads(en_files["publications"].read_text(encoding="utf-8"))
+        zh_p = json.loads(zh_files["publications"].read_text(encoding="utf-8")) if zh_files["publications"].exists() else []
+        seed_publications(conn, en_p, zh_p)
+
+    # Field observations (records + bilingual title/notes)
+    if en_files["field_observations"].exists():
+        en_o = json.loads(en_files["field_observations"].read_text(encoding="utf-8"))
+        zh_o = json.loads(zh_files["field_observations"].read_text(encoding="utf-8")) if zh_files["field_observations"].exists() else []
+        seed_field_observations(conn, en_o, zh_o)
 
     conn.close()
     print("Seed completed.")

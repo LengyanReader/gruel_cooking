@@ -25,6 +25,12 @@ AVAILABLE_LOCALES = [l.strip() for l in os.getenv("LH_LOCALES", "en,zh").split("
 # Scholar six-dimension portrait keys (canonical order)
 TRAIT_KEYS = ["taste", "quality", "spirit", "character", "concerns", "philosophy"]
 
+# Source quality grades, per PRINCIPLES.md (A=primary, D=unverified)
+SOURCE_LEVELS = ["A", "B", "C", "D"]
+
+# Admin console bearer token; admin routes stay closed when unset/empty
+ADMIN_TOKEN = os.getenv("LH_ADMIN_TOKEN", "")
+
 # Paths
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 STATIC_DIR = Path(__file__).parent / "static"

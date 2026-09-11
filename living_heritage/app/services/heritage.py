@@ -1,6 +1,7 @@
 """
 Heritage site service — queries for corridor sites and field observations.
 """
+import json
 import sqlite3
 from app.services.locale import TextResolver
 
@@ -60,5 +61,40 @@ class HeritageService:
             r = dict(r)
             r["title"] = self.text.resolve(r.get("title_key"), locale)
             r["notes"] = self.text.resolve(r.get("notes_key"), locale)
+            result.append(r)
+        return result
+
+    def list_observations_by_corridor(self, corridors: list[str], locale: str = "en") -> list[dict]:
+        """Observations grouped per corridor, for the fieldwork page."""
+        if not corridors:
+            return self.list_observations(None, locale)
+        placeholders = ",".join("?" for _ in corridors)
+        rows = self.db.execute(
+            f"""SELECT fo.*, h.corridor_slug FROM field_observations fo
+                LEFT JOIN heritage_sites h ON fo.site_id = h.id
+                WHERE h.corridor_slug IN ({placeholders})
+                ORDER BY fo.date_observed DESC""",
+            list(corridors)
+        ).fetchall()
+        result = []
+        for r in rows:
+            r = dict(r)
+            r["title"] = self.text.resolve(r.get("title_key"), locale)
+            r["notes"] = self.text.resolve(r.get("notes_key"), locale)
+            result.append(r)
+        return result
+
+    def list_publications(self, locale: str = "en", limit: int = 200) -> list[dict]:
+        """List research sources/publications with resolved bilingual text."""
+        rows = self.db.execute(
+            "SELECT * FROM publications ORDER BY year DESC, id DESC LIMIT ?", (limit,)
+        ).fetchall()
+        result = []
+        for r in rows:
+            r = dict(r)
+            r["title"] = self.text.resolve(r.get("title_key"), locale)
+            r["abstract"] = self.text.resolve(r.get("abstract_key"), locale)
+            raw = r.get("tags") or ""
+            r["tag_list"] = [x.strip() for x in raw.split(",") if x.strip()]
             result.append(r)
         return result

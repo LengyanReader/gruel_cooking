@@ -7,7 +7,7 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-kicker">{% if locale == 'zh' %}周 · 舟 · 洲 · 粥 — 周予慈舟，周渡万洲，喝粥暖胃{% else %}zhōu·zhōu·zhōu — the bark, the isles, the gruel{% endif %}</p>
+    <p class="hero-kicker">{{ brand['brand.kicker'] }}</p>
     <h1 class="hero-title">{{ site_title }}</h1>
     <p class="hero-subtitle">{{ site_subtitle }}</p>
     {% if page and page.sections %}

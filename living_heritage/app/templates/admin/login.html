@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — 周舟洲粥</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="lang-{{ locale }}">
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;">
+  <div style="max-width:420px;width:100%;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px;">
+    <h1 style="font-size:1.4rem;margin-bottom:18px;">内容控制台 · Admin console</h1>
+    <p style="color:var(--ink-soft);font-size:0.9em;margin-bottom:18px;">
+      通过令牌进入。未设置 <code>LH_ADMIN_TOKEN</code> 时管理路由保持关闭。
+    </p>
+    <form id="login-form">
+      <input type="password" name="token" id="token" placeholder="Admin token"
+             autocomplete="current-password"
+             style="width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:1em;margin-bottom:14px;">
+      <button type="submit"
+              style="width:100%;padding:12px;border:none;border-radius:10px;cursor:pointer;
+                     background:linear-gradient(160deg,var(--water),var(--water-deep));
+                     color:#fff;font-size:1em;">进入 / Enter</button>
+    </form>
+    <p id="msg" style="color:#C0472B;margin-top:12px;font-size:0.85em;min-height:1em;"></p>
+  </div>
+</div>
+<script>
+(function () {
+  var form = document.getElementById("login-form");
+  var msg = document.getElementById("msg");
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var token = document.getElementById("token").value.trim();
+    fetch("/admin/session", {
+      method: "POST",
+      headers: { "X-Admin-Token": token },
+    }).then(function (r) {
+      if (r.ok) { location.href = "/admin"; }
+      else { msg.textContent = "Token rejected · 令牌无效"; }
+    }).catch(function () { msg.textContent = "Request failed · 请求失败"; });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,11 +1,7 @@
 <nav class="nav" id="nav">
   <div class="nav-brand">
     <a href="/">{{ site_title }}</a>
-    {% if locale == 'zh' %}
-      <span class="nav-brand-en">活态文化廊道</span>
-    {% else %}
-      <span class="nav-brand-en">周舟洲粥</span>
-    {% endif %}
+    <span class="nav-brand-en">{{ brand['brand.nav_sub'] }}</span>
   </div>
   <div class="nav-right">
     <ul class="nav-links">

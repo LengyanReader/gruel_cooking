@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — 周舟洲粥</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .admin-shell { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  .admin-top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .admin-top h1 { font-size: 1.5rem; }
+  .admin-top a { font-size: 0.85em; }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-size: 1.35rem; color: var(--amber-deep); }
+  .stat span { font-size: 0.74em; color: var(--ink-soft); letter-spacing: 0.03em; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; margin-bottom: 26px; }
+  .panel h2 { font-size: 1.15rem; margin-bottom: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .grid.one { grid-template-columns: 1fr; }
+  label { display: block; font-size: 0.78em; color: var(--ink-soft); margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px;
+    font-family: var(--font); font-size: 0.95em; background: var(--cream); margin-bottom: 10px;
+  }
+  textarea { min-height: 64px; resize: vertical; }
+  .btn {
+    border: none; border-radius: 999px; padding: 10px 22px; cursor: pointer;
+    font-family: var(--font); font-size: 0.92em;
+    background: linear-gradient(160deg, var(--water), var(--water-deep));
+    color: #fff;
+  }
+  .btn.danger { background: linear-gradient(160deg, #E8A6A6, #C96262); }
+  .btn.secondary { background: var(--cream-deep); color: var(--ink); border: 1px solid var(--line); }
+  .unit { border-top: 1px dashed var(--line); padding-top: 12px; margin-top: 12px; }
+  .unit:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+  .unit-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .unit-head b { font-size: 0.98em; }
+  .tag { display: inline-block; font-size: 0.7em; border-radius: 999px; padding: 1px 9px; margin-right: 6px; }
+  .lvl-a { background: #E3F0E5; color: #2E7D32; }
+  .lvl-b { background: #E3EEF5; color: #1D5F8A; }
+  .lvl-c { background: #F7EFDF; color: #A67B1F; }
+  .lvl-d { background: #F6E4E1; color: #A85343; }
+  .note { font-size: 0.8em; color: var(--ink-soft); }
+  .msg { margin-top: 10px; font-size: 0.85em; min-height: 1.1em; }
+  .msg.ok { color: #2E7D32; }
+  .msg.err { color: #C0472B; }
+</style>
+</head>
+<body class="lang-{{ locale }}">
+<div class="admin-shell">
+  <div class="admin-top">
+    <h1>内容控制台 · Admin</h1>
+    <a href="/" target="_blank">站点 / site ↗</a>
+    <a href="javascript:void(0)" onclick="logout()">登出 / logout</a>
+  </div>
+
+  <div class="stat-grid">
+    {% for name, n in counts.items() %}
+      <div class="stat"><b>{{ n }}</b><span>{{ name }}</span></div>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>田野观察 · Field observation</h2>
+    <form class="obs-form">
+      <div class="grid">
+        <div><label>标题 EN title</label><input name="title_en" placeholder="e.g. Lock keeper opens the sluice"></div>
+        <div><label>标题 中文</label><input name="title_zh" placeholder="例如 船闸值守人开启闸门"></div>
+        <div><label>备注 notes EN</label><textarea name="notes_en"></textarea></div>
+        <div><label>备注 中文</label><textarea name="notes_zh"></textarea></div>
+        <div>
+          <label>遗址点 / site</label>
+          <select name="site_id">
+            <option value="">—</option>
+            {% for s in sites %}<option value="{{ s.id }}">{{ s.name }}</option>{% endfor %}
+          </select>
+        </div>
+        <div>
+          <label>日期 date</label><input name="date" type="date">
+        </div>
+        <div>
+          <label>类型 type</label>
+          <select name="observation_type">
+            <option>archival</option><option>fieldwalk</option><option>interview</option>
+            <option>sensory</option><option>conversation</option><option>other</option>
+          </select>
+        </div>
+        <div>
+          <label>来源级别 source level</label>
+          <select name="source_level">
+            <option value="">—</option>
+            {% for lv in source_levels %}<option value="{{ lv }}">{{ lv }}</option>{% endfor %}
+          </select>
+        </div>
+        <div class="one"><label>标签 tags (逗号分隔)</label><input name="tags" placeholder="water, locks, labour"></div>
+      </div>
+      <button class="btn" type="submit">保存 Observation</button><span class="msg"></span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>文献资料 · Publication / source</h2>
+    <form class="pub-form">
+      <div class="grid">
+        <div><label>标题 EN</label><input name="title_en"></div>
+        <div><label>标题 中文</label><input name="title_zh"></div>
+        <div><label>摘要 abstract EN</label><textarea name="abstract_en"></textarea></div>
+        <div><label>摘要 中文</label><textarea name="abstract_zh"></textarea></div>
+        <div><label>作者 authors</label><input name="authors"></div>
+        <div><label>类型 type</label>
+          <select name="publication_type">
+            <option>journal</option><option>book</option><option>chapter</option>
+            <option>report</option><option>thesis</option><option>web</option>
+          </select>
+        </div>
+        <div><label>年份 year</label><input name="year" type="number" placeholder="2024"></div>
+        <div><label>来源级别</label>
+          <select name="source_level">
+            <option value="">—</option>
+            {% for lv in source_levels %}<option value="{{ lv }}">{{ lv }}</option>{% endfor %}
+          </select>
+        </div>
+        <div><label>DOI</label><input name="doi" placeholder="10.1111/..."></div>
+        <div><label>URL</label><input name="url" placeholder="https://..."></div>
+        <div class="one"><label>标签 / 廊道 slug (逗号分隔)</label><input name="corridor_slugs" placeholder="grand_canal, gotland"></div>
+      </div>
+      <button class="btn" type="submit">保存 Publication</button><span class="msg"></span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>双语文本 · bilingual_text</h2>
+    <div class="grid">
+      <div><label>搜索 search key / en / zh</label><input id="tt-search" placeholder="e.g. observation."></div>
+    </div>
+    <div id="tt-results"></div>
+  </div>
+
+  <div class="panel">
+    <h2>最近观察 · recent observations</h2>
+    {% for o in observations %}
+      <div class="unit">
+        <div class="unit-head">
+          <b>
+            {% if o.source_level %}<span class="tag lvl-{{ o.source_level|lower }}">[{{ o.source_level }}]</span>{% endif %}
+            {{ o.title or '(untitled)' }}
+          </b>
+          <span class="note">#{{ o.id }} · {{ o.site_name or '—' }} · {{ o.date_observed or '' }}</span>
+        </div>
+        <div class="note">{{ o.notes or '' }} {% if o.tags %}<br>tags: {{ o.tags }}{% endif %}</div>
+        <div><button class="btn danger" data-del="observation" data-id="{{ o.id }}">删除 delete</button></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>最近文献 · recent publications</h2>
+    {% for p in publications %}
+      <div class="unit">
+        <div class="unit-head">
+          <b>
+            {% if p.source_level %}<span class="tag lvl-{{ p.source_level|lower }}">[{{ p.source_level }}]</span>{% endif %}
+            {{ p.title or '(untitled)' }}
+          </b>
+          <span class="note">#{{ p.id }} · {{ p.authors or '' }} · {{ p.year or '' }} {% if p.doi %}· {{ p.doi }}{% endif %}</span>
+        </div>
+        <div><button class="btn danger" data-del="publication" data-id="{{ p.id }}">删除 delete</button></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function () {
+  function post(path, form, msgEl) {
+    var data = new URLSearchParams(new FormData(form));
+    return fetch(path, { method: "POST", body: data }).then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.ok) { if (msgEl) { msgEl.textContent = "✓ saved · id " + j.id; msgEl.className = "msg ok"; } form.reset(); }
+        else { if (msgEl) { msgEl.textContent = "✗ " + (j.error || "error"); msgEl.className = "msg err"; } }
+      }).catch(function () { if (msgEl) { msgEl.textContent = "✗ network error"; msgEl.className = "msg err"; } });
+  }
+
+  document.querySelectorAll(".obs-form").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      post("/admin/observation/add", f, f.querySelector(".msg"));
+    });
+  });
+  document.querySelectorAll(".pub-form").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      post("/admin/publication/add", f, f.querySelector(".msg"));
+    });
+  });
+  document.querySelectorAll("[data-del]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var kind = btn.dataset.del, id = btn.dataset.id;
+      if (!confirm("Delete " + kind + " #" + id + "?")) return;
+      fetch("/admin/" + kind + "/" + id + "/delete", { method: "POST" })
+        .then(function () { location.reload(); });
+    });
+  });
+
+  var searchBox = document.getElementById("tt-search");
+  var results = document.getElementById("tt-results");
+  var ttTimer = null;
+  function doSearch() {
+    var q = searchBox.value.trim();
+    if (!q) { results.innerHTML = ""; return; }
+    fetch("/admin/text/search", {
+      method: "POST", body: new URLSearchParams({ q: q })
+    }).then(function (r) { return r.json(); }).then(function (j) {
+      if (!j.results || !j.results.length) { results.innerHTML = '<div class="note">no match</div>'; return; }
+      var html = "";
+      j.results.forEach(function (t) {
+        html += '<div class="unit">' +
+          '<div class="unit-head"><b>' + t.key + '</b></div>' +
+          '<div class="grid"><div><input data-tt="en" data-k="' + t.key + '" value="' + (t.en || "").replace(/"/g, "&quot;") + '"></div>' +
+          '<div><input data-tt="zh" data-k="' + t.key + '" value="' + (t.zh || "").replace(/"/g, "&quot;") + '"></div></div>' +
+          '<button class="btn secondary" data-tt-save="' + t.key + '">save</button> <span class="msg"></span>' +
+          '</div>';
+      });
+      results.innerHTML = html;
+      results.querySelectorAll("[data-tt-save]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var k = b.dataset.ttSave;
+          var en = results.querySelector('[data-tt="en"][data-k="' + k + '"]').value;
+          var zh = results.querySelector('[data-tt="zh"][data-k="' + k + '"]').value;
+          fetch("/admin/text/update", { method: "POST",
+            body: new URLSearchParams({ key: k, en: en, zh: zh }) })
+            .then(function (r) { return r.json(); }).then(function (j) {
+              var m = b.parentElement.querySelector(".msg");
+              m.textContent = j.ok ? "✓" : "✗ " + j.error;
+              m.className = "msg " + (j.ok ? "ok" : "err");
+            });
+        });
+      });
+    });
+  }
+  searchBox.addEventListener("input", function () {
+    clearTimeout(ttTimer);
+    ttTimer = setTimeout(doSearch, 300);
+  });
+
+  window.logout = function () {
+    fetch("/admin/logout", { method: "POST" }).then(function () { location.href = "/admin"; });
+  };
+})();
+</script>
+</body>
+</html>

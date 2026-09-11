@@ -176,6 +176,11 @@ a:hover { color: var(--amber-deep); }
   font-weight: 600;
 }
 
+.meta-chip.lvl-a { background: #E7F2E7; color: #2E6B3E; }
+.meta-chip.lvl-b { background: #E9F0F7; color: #2A5C8A; }
+.meta-chip.lvl-c { background: #F6F0E0; color: #8A6D1F; }
+.meta-chip.lvl-d { background: #F6E6E8; color: #8F3341; }
+
 /* ── Page header ── */
 .page-header {
   padding: 56px 0 24px;

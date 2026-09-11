@@ -1,0 +1,42 @@
+[
+  {
+    "title_key": "pub.gillette_boyd_2024.title",
+    "abstract_key": "pub.gillette_boyd_2024.abstract",
+    "title_en": "Mining for tourists in China",
+    "abstract_en": "A digital ethnography of mining-heritage tourism in China. Relevant because it offers an empirical model for industrial-heritage regeneration — extending to the Grand Canal's industrial sections and abandoned-port assessments.",
+    "authors": "Maris Boyd Gillette, Emma Boyd",
+    "publication_type": "journal article",
+    "year": 2024,
+    "doi": "10.1080/1743873X.2023.2255691",
+    "url": null,
+    "tags": "heritage tourism, industrial heritage, digital ethnography, China",
+    "source_level": "A"
+  },
+  {
+    "title_key": "pub.gillette_2026.title",
+    "abstract_key": "pub.gillette_2026.abstract",
+    "title_en": "Conflict over the 2024 Bothnian herring quota",
+    "abstract_en": "Narrative policy analysis of the Bothnian herring quota conflict in Sociologia Ruralis. Background to Gotland's fisheries disputes and a direct case for the food-corridor framework on Gotland. Wiley lists M. B. Gillette as sole author.",
+    "authors": "Maris Boyd Gillette",
+    "publication_type": "journal article",
+    "year": 2026,
+    "doi": "10.1111/soru.70050",
+    "url": null,
+    "tags": "herring, fisheries, Gotland, narrative policy analysis, food corridor",
+    "source_level": "A"
+  },
+  {
+    "title_key": "pub.ingold_2022.title",
+    "abstract_key": "pub.ingold_2022.abstract",
+    "title_en": "Imagining for Real",
+    "abstract_en": "Ingold's essay on creation, attention and correspondence — the futures-literacy counterpart to the project's regeneration framing. Treated here as Routledge 2022 / openedition 2021.",
+    "authors": "Tim Ingold",
+    "publication_type": "book",
+    "year": 2022,
+    "doi": null,
+    "url": "https://www.routledge.com/Imagining-for-Real-Essays-on-Creation-Attention-and-Correspondence/Ingold/p/book/9781032033785",
+    "url": null,
+    "tags": "attention, correspondence, creation, futures literacy",
+    "source_level": "A"
+  }
+]
