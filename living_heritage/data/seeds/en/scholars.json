@@ -232,6 +232,16 @@
         "label": "A"
       },
       {
+        "type": "book",
+        "year": 2010,
+        "title_en": "Baltic Prehistoric Interactions and Transformations: The Neolithic to the Iron Age (ed.)",
+        "title_zh": "《波罗的海史前互动与转型：新石器至铁器时代》（主编）",
+        "venue_en": "Gotland University Press",
+        "venue_zh": "哥特兰大学出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
         "type": "article",
         "year": 2021,
         "title_en": "'Authenticity' as a pathway to sustainable cultural tourism? The cases of Gotland and Rapa Nui (with Poort, Persson-Fischier, Elf Donaldson & Schaub)",
@@ -399,6 +409,16 @@
         "venue_en": "Stanford University Press",
         "venue_zh": "斯坦福大学出版社",
         "url": "",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2010,
+        "title_en": "Copying, Counterfeiting, and Capitalism in Contemporary China: Jingdezhen's Porcelain Industry",
+        "title_zh": "《当代中国景德镇瓷器业的复制、仿制与资本主义》",
+        "venue_en": "Modern China 36(4): 367–403",
+        "venue_zh": "《现代中国》36(4): 367–403",
+        "url": "https://doi.org/10.1177/0097700410369880",
         "label": "A"
       },
       {
