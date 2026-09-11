@@ -14,6 +14,8 @@
 
 {% include "partials/nav.html" %}
 
+<div class="tide" aria-hidden="true"><i></i></div>
+
 <main>
 {% block content %}{% endblock %}
 </main>
@@ -21,6 +23,10 @@
 {% include "partials/wave.html" %}
 
 {% include "partials/footer.html" %}
+
+<button class="boat-top js-boat-top" type="button"
+        data-label="{{ labels.get('ui.back_to_top', 'Back to top') }}"
+        aria-label="{{ labels.get('ui.back_to_top', 'Back to top') }}">↑</button>
 
 <script src="/js/locale.js"></script>
 <script src="/js/living.js"></script>

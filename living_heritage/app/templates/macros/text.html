@@ -1,7 +1,7 @@
 {# Bilingual text helpers. All text is resolved server-side; macros handle layout. #}
 
 {% macro section_block(section) %}
-<article class="section-block reveal">
+<article class="section-block reveal" {% if section.section_key %}id="sec-{{ section.section_key }}"{% endif %}>
   {% if section.title %}
     <h2 class="section-block-title">{{ section.title }}</h2>
   {% endif %}

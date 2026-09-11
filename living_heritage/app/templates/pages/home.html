@@ -11,7 +11,7 @@
     <h1 class="hero-title">{{ site_title }}</h1>
     <p class="hero-subtitle">{{ site_subtitle }}</p>
     {% if page and page.sections %}
-      {% set hero = page.sections | selectattr("key", "equalto", "hero") | list %}
+      {% set hero = page.sections | selectattr("section_key", "equalto", "hero") | list %}
       {% if hero %}
         <div class="hero-body">{{ hero[0].body }}</div>
       {% endif %}
@@ -24,7 +24,7 @@
 <section class="section">
   <div class="container">
     {% if page %}
-      {% for s in page.sections if s.key != 'hero' %}
+      {% for s in page.sections if s.section_key != 'hero' %}
         {{ t.section_block(s) }}
       {% endfor %}
     {% endif %}
