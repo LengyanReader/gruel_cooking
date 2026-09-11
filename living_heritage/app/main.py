@@ -200,7 +200,17 @@ def fieldwork(req: Request):
     ctx.req.page_slug = "fieldwork"
     base = base_context(ctx)
     base["page"] = ctx.content.get_page("fieldwork", ctx.locale)
-    base["observations"] = ctx.heritage.list_observations(locale=ctx.locale)
+    corridor_objs = ctx.graph.list_corridors(ctx.locale)
+    observations = ctx.heritage.list_observations_by_corridor(
+        [c["slug"] for c in corridor_objs], ctx.locale
+    )
+    groups = []
+    for c in corridor_objs:
+        items = [o for o in observations if o.get("corridor_slug") == c["slug"]]
+        if items:
+            groups.append({"slug": c["slug"], "name": c["name"], "observations": items})
+    base["observations"] = observations
+    base["corridor_groups"] = groups
     html = render("pages/fieldwork.html", base)
     ctx.db.close()
     return html
@@ -212,7 +222,15 @@ def publications(req: Request):
     ctx.req.page_slug = "publications"
     base = base_context(ctx)
     base["page"] = ctx.content.get_page("publications", ctx.locale)
-    base["publications"] = ctx.heritage.list_publications(locale=ctx.locale)
+    corridor = (req.query.get("corridor") or [""])[0]
+    level = (req.query.get("level") or [""])[0]
+    base["active_corridor"] = corridor
+    base["active_level"] = level
+    base["filter_corridors"] = ctx.graph.list_corridors(ctx.locale)
+    base["filter_levels"] = SOURCE_LEVELS
+    base["publications"] = ctx.heritage.list_publications(
+        locale=ctx.locale, corridor=corridor or None, level=level or None
+    )
     html = render("pages/publications.html", base)
     ctx.db.close()
     return html

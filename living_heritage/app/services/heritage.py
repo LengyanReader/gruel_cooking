@@ -84,8 +84,10 @@ class HeritageService:
             result.append(r)
         return result
 
-    def list_publications(self, locale: str = "en", limit: int = 200) -> list[dict]:
-        """List research sources/publications with resolved bilingual text."""
+    def list_publications(self, locale: str = "en", limit: int = 200,
+                          corridor: str | None = None, level: str | None = None) -> list[dict]:
+        """List research sources/publications with resolved bilingual text.
+        corridor filters on the stored corridor_slugs JSON; level on source_level."""
         rows = self.db.execute(
             "SELECT * FROM publications ORDER BY year DESC, id DESC LIMIT ?", (limit,)
         ).fetchall()
@@ -96,5 +98,14 @@ class HeritageService:
             r["abstract"] = self.text.resolve(r.get("abstract_key"), locale)
             raw = r.get("tags") or ""
             r["tag_list"] = [x.strip() for x in raw.split(",") if x.strip()]
+            if corridor:
+                try:
+                    slugs = json.loads(r.get("corridor_slugs") or "[]")
+                except (ValueError, TypeError):
+                    slugs = []
+                if corridor not in slugs:
+                    continue
+            if level and r.get("source_level") != level:
+                continue
             result.append(r)
         return result

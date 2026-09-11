@@ -21,15 +21,20 @@
 <section class="section section-alt">
   <div class="container">
     <h2 class="section-title">{{ labels.get('label.observations', 'Field Observations') }}</h2>
-    <ul class="observation-list">
-      {% for o in observations %}
-        <li class="observation-item reveal">
-          <strong>{{ o.title }}</strong>
-          {% if o.date_observed %}<span class="obs-date">{{ o.date_observed }}</span>{% endif %}
-          <p>{{ o.notes }}</p>
-        </li>
-      {% endfor %}
-    </ul>
+    {% for g in corridor_groups %}
+      <div class="fieldwork-group" id="{{ g.slug }}">
+        <h3 class="corridor-group-title">{{ g.name }}</h3>
+        <ul class="observation-list">
+          {% for o in g.observations %}
+            <li class="observation-item reveal">
+              <strong>{{ o.title }}</strong>
+              {% if o.date_observed %}<span class="obs-date">{{ o.date_observed }}</span>{% endif %}
+              <p>{{ o.notes }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
   </div>
 </section>
 {% endif %}

@@ -19,6 +19,44 @@
 
 <section class="section">
   <div class="container">
+    {% if filter_corridors or filter_levels %}
+    <div class="filter-bar">
+      {% if filter_corridors %}
+      <div class="filter-group">
+        <span class="filter-label">{{ labels.get('label.filter_corridor', 'Corridor') if labels else 'Corridor' }}</span>
+        {% if active_corridor %}
+          <a class="filter-pill" href="/publications{% if active_level %}?level={{ active_level }}{% endif %}">{{ labels.get('label.filter_all', 'All') if labels else 'All' }}</a>
+        {% else %}
+          <span class="filter-pill is-active">{{ labels.get('label.filter_all', 'All') if labels else 'All' }}</span>
+        {% endif %}
+        {% for c in filter_corridors %}
+          {% if active_corridor == c.slug %}
+            <span class="filter-pill is-active">{{ c.name }}</span>
+          {% else %}
+            <a class="filter-pill" href="/publications?corridor={{ c.slug }}{% if active_level %}&level={{ active_level }}{% endif %}">{{ c.name }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if filter_levels %}
+      <div class="filter-group">
+        <span class="filter-label">{{ labels.get('label.filter_level', 'Source level') if labels else 'Source level' }}</span>
+        {% if active_level %}
+          <a class="filter-pill" href="/publications{% if active_corridor %}?corridor={{ active_corridor }}{% endif %}">{{ labels.get('label.filter_all', 'All') if labels else 'All' }}</a>
+        {% else %}
+          <span class="filter-pill is-active">{{ labels.get('label.filter_all', 'All') if labels else 'All' }}</span>
+        {% endif %}
+        {% for l in filter_levels %}
+          {% if active_level == l %}
+            <span class="filter-pill lvl-{{ l|lower }} is-active">[{{ l }}]</span>
+          {% else %}
+            <a class="filter-pill lvl-{{ l|lower }}" href="/publications?level={{ l }}{% if active_corridor %}&corridor={{ active_corridor }}{% endif %}">[{{ l }}]</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
     <div class="portrait-grid">
     {% for p in publications %}
       <article class="scholar-portrait reveal">
