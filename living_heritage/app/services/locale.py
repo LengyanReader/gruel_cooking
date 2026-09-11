@@ -1,6 +1,6 @@
 """
 Bilingual text resolution — single source of i18n logic.
-All user-facing strings flow through resolve_text().
+All user-facing strings flow through resolve_text() or the TextResolver batch API.
 """
 from typing import Optional
 
@@ -40,3 +40,35 @@ def build_text_map(keys: list[str], rows: list[dict], locale: str) -> dict[str, 
     for k in keys:
         result[k] = resolve_text(lookup.get(k), locale)
     return result
+
+
+class TextResolver:
+    """
+    DB-bound resolver. Batch-fetches keys in a single query so services
+    do not duplicate i18n logic or issue N+1 per-key SELECTs.
+    """
+
+    def __init__(self, db):
+        self.db = db
+
+    def resolve(self, key: Optional[str], locale: str) -> str:
+        """Resolve one text key to a locale string."""
+        if not key:
+            return ""
+        row = self.db.execute(
+            "SELECT key, en, zh FROM bilingual_text WHERE key = ?", (key,)
+        ).fetchone()
+        return resolve_text(dict(row) if row else None, locale)
+
+    def resolve_many(self, keys: list[str], locale: str) -> dict[str, str]:
+        """Resolve multiple keys in one query; missing keys resolve to themselves."""
+        keys = [k for k in keys if k]
+        if not keys:
+            return {}
+        rows = self.db.execute(
+            "SELECT key, en, zh FROM bilingual_text WHERE key IN ({})".format(
+                ",".join("?" * len(keys))
+            ),
+            keys,
+        ).fetchall()
+        return build_text_map(keys, [dict(r) for r in rows], locale)

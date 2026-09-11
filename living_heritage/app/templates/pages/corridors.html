@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.corridors }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.corridors }}</h1>
+    {% if page and page.sections %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="corridor-list">
+      {% for c in corridors %}
+      <article class="corridor-block" id="{{ c.slug }}">
+        <div class="corridor-head">
+          <h2>{{ c.name }}</h2>
+          {% if c.site_count is defined %}
+            <span class="meta-chip">{{ c.site_count }} {{ label_sites }}</span>
+          {% endif %}
+        </div>
+        <p class="corridor-intro">{{ c.description }}</p>
+        {% if c.sites %}
+        <div class="site-grid">
+          {% for s in c.sites %}
+            {{ t.site_card(s) }}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

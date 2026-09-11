@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.literature }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.literature }}</h1>
+    {% if page and page.sections %}
+      {% for s in page.sections %}
+        {% if s.section_key and s.section_key == 'synthesis' %}
+          {{ t.section_block(s) }}
+          {% if locale == 'zh' %}
+            <div class="dim-flow dim-flow-zh" aria-label="六维梳理图示">
+              <div class="dim-flow-item"><b>前提</b><span>物有能动性<br>行走生成知识</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>视野</b><span>行走·物质<br>遗产未来·连通</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>情怀</b><span>拥抱变化<br>善待衰败</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>方法</b><span>三步走·追物<br>食物·比较</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>实践</b><span>北京·哥特兰<br>南厄兰</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item dim-flow-persona"><b>人格</b><span>品味·品质·精神<br>性格·关切·哲学</span></div>
+            </div>
+          {% else %}
+            <div class="dim-flow" aria-label="Six-dimension synthesis diagram">
+              <div class="dim-flow-item"><b>Premises</b><span>things act<br>walking makes knowledge</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>Perspectives</b><span>movement · materiality<br>futures · connectivity</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>Ethos</b><span>embrace change<br>befriend decay</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>Method</b><span>three walks · follow-one<br>food · comparison</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item"><b>Practice</b><span>Beijing · Gotland<br>Southern Öland</span></div>
+              <div class="dim-flow-arrow">→</div>
+              <div class="dim-flow-item dim-flow-persona"><b>Persona</b><span>taste · quality · spirit<br>character · concerns · philosophy</span></div>
+            </div>
+          {% endif %}
+        {% else %}
+          {{ t.section_block(s) }}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ '学者肖像与代表作品' if locale == 'zh' else 'Scholar portraits & selected works' }}</h2>
+    <div class="portrait-grid">
+      {% for s in scholars %}
+        {{ t.scholar_portrait(s, trait_labels, works_label) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

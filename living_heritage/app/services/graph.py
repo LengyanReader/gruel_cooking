@@ -1,162 +1,175 @@
 """
-Graph service — Cypher queries against Neo4j for corridor network analysis.
-Falls back gracefully if Neo4j is not running.
+Graph service — corridor/site/scholar knowledge graph over SQLite.
+
+Source of truth is SQLite (corridors + relations tables). Neo4j is an
+OPTIONAL analysis layer behind the same interface (see neo4j_graph.py);
+the site never depends on an external service being online.
 """
-from typing import Optional
-from app.config import NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
+import sqlite3
+from app.services.locale import TextResolver
 
-_driver = None
-_available = False
-
-
-def get_driver():
-    global _driver, _available
-    if _driver is not None:
-        return _driver
-    try:
-        from neo4j import AsyncGraphDatabase
-        _driver = AsyncGraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
-        _available = True
-        return _driver
-    except Exception as e:
-        print(f"Neo4j unavailable: {e}")
-        _available = False
-        return None
-
-
-def is_available() -> bool:
-    return _available
-
-
-async def close_driver():
-    global _driver
-    if _driver:
-        await _driver.close()
-        _driver = None
+# Relation predicates used across seeds/services (single source of truth)
+R_BELONGS_TO = "belongs_to"     # site → corridor
+R_STUDIES = "studies"           # scholar → corridor / scholar → site
+R_INVOLVES = "involves"         # publication → corridor / observation → site
 
 
 class GraphService:
-    async def get_corridor_summary(self) -> list[dict]:
-        """Get all corridors with node counts."""
-        driver = get_driver()
-        if not driver:
-            return _fallback_corridors()
-        async with driver.session() as session:
-            result = await session.run(
-                """MATCH (c:Corridor)
-                   OPTIONAL MATCH (c)-[:CONTAINS]->(n)
-                   RETURN c.id AS id, c.name_en AS name_en, c.name_zh AS name_zh,
-                          c.slug AS slug, c.region AS region,
-                          COUNT(n) AS node_count
-                   ORDER BY c.slug"""
+    def __init__(self, db: sqlite3.Connection):
+        self.db = db
+        self.text = TextResolver(db)
+
+    # ── Corridors ──
+
+    def list_corridors(self, locale: str) -> list[dict]:
+        """All corridors with resolved names/descriptions and node counts."""
+        rows = self.db.execute(
+            "SELECT * FROM corridors ORDER BY sort_order, id"
+        ).fetchall()
+        result = []
+        for r in rows:
+            r = dict(r)
+            texts = self.text.resolve_many(
+                [k for k in (r.get("title_key"), r.get("intro_key"), r.get("detail_key")) if k],
+                locale,
             )
-            return [dict(record) for record in result]
+            r["name"] = texts.get(r.get("title_key"), "") or r["slug"]
+            r["description"] = texts.get(r.get("intro_key"), "")
+            r["detail"] = texts.get(r.get("detail_key"), "")
+            r["region"] = r.get("region") or ""
+            r["node_count"] = self._corridor_node_count(r["id"])
+            result.append(r)
+        return result
 
-    async def get_corridor_graph(self, slug: str) -> dict:
-        """Get nodes and edges for a corridor's neighborhood."""
-        driver = get_driver()
-        if not driver:
-            return {"nodes": [], "edges": []}
-        async with driver.session() as session:
-            # Get nodes within 2 hops of the corridor
-            result = await session.run(
-                """MATCH (c:Corridor {slug: $slug})-[*1..2]-(n)
-                   WITH DISTINCT n
-                   RETURN labels(n)[0] AS label, n.id AS id,
-                          COALESCE(n.name_en, n.name) AS name_en,
-                          COALESCE(n.name_zh, n.name) AS name_zh,
-                          n AS properties""",
-                slug=slug
-            )
-            nodes = []
-            async for record in result:
-                props = dict(record["properties"])
-                props.pop("id", None)
-                props.pop("name_en", None)
-                props.pop("name_zh", None)
-                nodes.append({
-                    "id": record["id"],
-                    "label": record["label"],
-                    "name_en": record["name_en"],
-                    "name_zh": record["name_zh"],
-                    "properties": props,
-                })
+    def get_corridor_by_slug(self, slug: str, locale: str) -> dict | None:
+        for c in self.list_corridors(locale):
+            if c["slug"] == slug:
+                return c
+        return None
 
-            # Get edges between these nodes
-            node_ids = [n["id"] for n in nodes]
-            if not node_ids:
-                return {"nodes": nodes, "edges": []}
+    def _corridor_node_count(self, corridor_id: int) -> int:
+        """Count linked nodes: sites (belongs_to) + scholars (studies)."""
+        return self.db.execute(
+            """SELECT (SELECT COUNT(*) FROM relations
+                     WHERE relation = ? AND target_type = 'corridor' AND target_id = ?)
+                  + (SELECT COUNT(*) FROM relations
+                     WHERE relation = ? AND target_type = 'corridor' AND target_id = ?)""",
+            (R_BELONGS_TO, corridor_id, R_STUDIES, corridor_id),
+        ).fetchone()[0]
 
-            result = await session.run(
-                """MATCH (a)-[r]->(b)
-                   WHERE a.id IN $ids AND b.id IN $ids
-                   RETURN a.id AS source, b.id AS target,
-                          type(r) AS type,
-                          r AS properties""",
-                ids=node_ids
-            )
-            edges = []
-            async for record in result:
-                props = dict(record["properties"])
-                props.pop(None, None)
-                edges.append({
-                    "source": record["source"],
-                    "target": record["target"],
-                    "type": record["type"],
-                })
+    # ── Relations ──
 
-            return {"nodes": nodes, "edges": edges}
+    def list_relations(self, locale: str, limit: int = 500) -> list[dict]:
+        """All relations with resolved entity names (for the graph view)."""
+        rows = self.db.execute(
+            "SELECT * FROM relations ORDER BY source_type, source_id, target_type, target_id LIMIT ?",
+            (limit,),
+        ).fetchall()
+        rels = [dict(r) for r in rows]
 
-    async def get_interfaces(self, corridor_slug: str) -> list[dict]:
-        """Get cultural interfaces touching a corridor."""
-        driver = get_driver()
-        if not driver:
-            return []
-        async with driver.session() as session:
-            result = await session.run(
-                """MATCH (i:Interface)-[:LINKS]-(c:Corridor {slug: $slug})
-                   RETURN i.id AS id, i.name_en AS name_en, i.name_zh AS name_zh,
-                          i.interface_type AS type,
-                          i.description_en AS desc_en, i.description_zh AS desc_zh
-                   ORDER BY i.name_en""",
-                slug=corridor_slug
-            )
-            return [dict(record) for record in result]
+        # Collect name keys for all involved entities, resolve in bulk
+        key_by_ref = {}
+        for rel in rels:
+            for side in ("source", "target"):
+                ref = (rel[f"{side}_type"], rel[f"{side}_id"])
+                if ref not in key_by_ref:
+                    key_by_ref[ref] = self._entity_name_key(*ref)
+        resolved = self.text.resolve_many([k for k in key_by_ref.values() if k], locale)
 
-    async def find_shortest_path(self, slug_a: str, slug_b: str) -> dict:
-        """Find shortest path between two corridors."""
-        driver = get_driver()
-        if not driver:
-            return {"path": [], "length": -1}
-        async with driver.session() as session:
-            result = await session.run(
-                """MATCH path = shortestPath(
-                     (a:Corridor {slug: $a})-[*]-(b:Corridor {slug: $b})
-                   )
-                   RETURN [n IN nodes(path) | n.id] AS node_ids,
-                          [r IN relationships(path) | type(r)] AS rel_types,
-                          length(path) AS dist""",
-                a=slug_a, b=slug_b
-            )
-            record = await result.single()
-            if not record:
-                return {"path": [], "length": -1}
-            return {
-                "node_ids": record["node_ids"],
-                "rel_types": record["rel_types"],
-                "length": record["dist"],
-            }
+        for rel in rels:
+            for side in ("source", "target"):
+                ref = (rel[f"{side}_type"], rel[f"{side}_id"])
+                rel[f"{side}_name"] = resolved.get(key_by_ref[ref], "") or str(rel[f"{side}_id"])
+        return rels
+
+    def _entity_name_key(self, entity_type: str, entity_id: int) -> str | None:
+        """Return the bilingual_text key used to name an entity (or None if N/A)."""
+        if entity_type == "corridor":
+            row = self.db.execute("SELECT title_key FROM corridors WHERE id = ?", (entity_id,)).fetchone()
+        elif entity_type == "site":
+            row = self.db.execute("SELECT name_key FROM heritage_sites WHERE id = ?", (entity_id,)).fetchone()
+        elif entity_type == "scholar":
+            row = self.db.execute("SELECT name_key FROM scholars WHERE id = ?", (entity_id,)).fetchone()
+        elif entity_type == "publication":
+            row = self.db.execute("SELECT title_key FROM publications WHERE id = ?", (entity_id,)).fetchone()
+        elif entity_type == "observation":
+            row = self.db.execute("SELECT title_key FROM field_observations WHERE id = ?", (entity_id,)).fetchone()
+        else:
+            return None
+        return dict(row).get("title_key" if entity_type in ("corridor", "publication", "observation") else "name_key") if row else None
+
+    # ── Corridor profiles (sites + scholars linked to each corridor) ──
+
+    def corridor_profiles(self, locale: str) -> list[dict]:
+        """Each corridor with its sites and scholars attached."""
+        profiles = self.list_corridors(locale)
+        for c in profiles:
+            c["sites"] = self.linked_entities(c["id"], "corridor", "site", R_BELONGS_TO, locale, inverse=True)
+            c["scholars"] = self.linked_entities(c["id"], "corridor", "scholar", R_STUDIES, locale, inverse=True)
+            c["site_count"] = len(c["sites"])
+            c["scholar_count"] = len(c["scholars"])
+        return profiles
+
+    def linked_entities(self, entity_id: int, entity_type: str, link_type: str,
+                        relation: str, locale: str, inverse: bool = False) -> list[dict]:
+        """Entities of a given link_type related to an entity via a relation predicate.
+
+        inverse=True  → this entity is the target; returns matching sources.
+        inverse=False → this entity is the source; returns matching targets.
+        """
+        if inverse:
+            rows = self.db.execute(
+                "SELECT * FROM relations WHERE relation = ? AND target_type = ? AND target_id = ?",
+                (relation, entity_type, entity_id),
+            ).fetchall()
+            refs = [(r["source_type"], r["source_id"]) for r in rows]
+        else:
+            rows = self.db.execute(
+                "SELECT * FROM relations WHERE relation = ? AND source_type = ? AND source_id = ?",
+                (relation, entity_type, entity_id),
+            ).fetchall()
+            refs = [(r["target_type"], r["target_id"]) for r in rows]
+
+        refs = list(dict.fromkeys(refs))  # de-duplicate, preserve order
+        keys = [self._entity_name_key(*ref) for ref in refs]
+        resolved = self.text.resolve_many([k for k in keys if k], locale)
+        out = []
+        for ref, key in zip(refs, keys):
+            out.append({
+                "entity_type": ref[0],
+                "id": ref[1],
+                "name": resolved.get(key, "") or str(ref[1]),
+            })
+        return out
+
+    # ── Scholar profiles ──
+
+    def scholar_profiles(self, locale: str) -> list[dict]:
+        """Each scholar with linked corridors and sites."""
+        rows = self.db.execute("SELECT * FROM scholars ORDER BY name_key").fetchall()
+        out = []
+        for r in rows:
+            r = dict(r)
+            name = self.text.resolve(r.get("name_key"), locale)
+            corridors = self.linked_entities(r["id"], "scholar", "corridor", R_STUDIES, locale)
+            sites = self.linked_entities(r["id"], "scholar", "site", R_STUDIES, locale)
+            out.append({
+                "id": r["id"],
+                "name": name,
+                "institution": r.get("institution") or "",
+                "corridors": corridors,
+                "sites": sites,
+            })
+        return out
 
 
-def _fallback_corridors() -> list[dict]:
-    """Return hardcoded corridor list when Neo4j is offline."""
-    return [
-        {"id": "grand_canal", "name_en": "Grand Canal Beijing", "name_zh": "北京大运河",
-         "slug": "grand_canal", "region": "Beijing", "node_count": 0},
-        {"id": "gotland", "name_en": "Gotland", "name_zh": "哥特兰",
-         "slug": "gotland", "region": "Sweden", "node_count": 0},
-        {"id": "southern_oland", "name_en": "Southern Öland", "name_zh": "南厄兰岛",
-         "slug": "southern_oland", "region": "Sweden", "node_count": 0},
-        {"id": "linkoping", "name_en": "Linköping / Kinda Canal", "name_zh": "林雪平/金达运河",
-         "slug": "linkoping", "region": "Sweden", "node_count": 0},
-    ]
+def get_graph_service(db) -> GraphService:
+    """Resolve the configured graph engine. SQLite is the default and canonical."""
+    from app.config import GRAPH_ENGINE, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
+    if GRAPH_ENGINE == "neo4j":
+        try:
+            from app.services.neo4j_graph import get_neo4j_service
+            return get_neo4j_service(db, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
+        except Exception as e:  # pragma: no cover - depends on external service
+            print(f"Neo4j unavailable, falling back to SQLite graph: {e}")
+    return GraphService(db)

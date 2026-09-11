@@ -9,8 +9,9 @@ from urllib.parse import urlparse, parse_qs
 from functools import wraps
 from pathlib import Path
 from typing import Callable
+from app.config import STATIC_DIR as _STATIC, AVAILABLE_LOCALES, DEFAULT_LOCALE
 
-STATIC_DIR = Path(__file__).parent / "static"
+STATIC_DIR = _STATIC
 routes: dict[str, dict[str, Callable]] = {}  # method -> {path_pattern: handler}
 
 
@@ -32,10 +33,9 @@ def _parse_pattern(pattern: str):
 def route(path: str, methods: list[str] | None = None):
     """Decorator to register a route handler."""
     def decorator(func: Callable):
-        if methods is None:
-            methods = ["GET"]
+        m = methods if methods is not None else ["GET"]
         pattern_re, param_names = _parse_pattern(path)
-        for method in methods:
+        for method in m:
             routes.setdefault(method.upper(), {})[path] = {
                 "regex": pattern_re,
                 "params": param_names,
@@ -67,7 +67,7 @@ class Request:
 
     @property
     def locale(self) -> str:
-        return self.cookies.get("locale", "en")
+        return self.cookies.get("locale", DEFAULT_LOCALE)
 
 
 class Response:
@@ -198,7 +198,9 @@ class Handler(BaseHTTPRequestHandler):
         self._handle("POST")
 
 
-def run_server(host: str = "127.0.0.1", port: int = 8000):
+def run_server(host: str = "127.0.0.1", port: int = 0):
+    if port == 0:
+        port = int(os.getenv("LH_PORT", "8000"))
     server = HTTPServer((host, port), Handler)
     print(f"Living Heritage running at http://{host}:{port}")
     try:

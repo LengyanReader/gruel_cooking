@@ -1,0 +1,482 @@
+[
+  {
+    "name_key": "scholar.ingold.name",
+    "name_en": "Tim Ingold",
+    "name_zh": "蒂姆·英格尔德",
+    "bio_key": "scholar.ingold.bio",
+    "bio_en": "Emeritus Professor of Social Anthropology, University of Aberdeen (Fellow of the British Academy; CBE 2022). Retired 2018 but remains highly active with publications through 2026 (~109,000 citations). Provides an epistemology of walking, wayfaring, attention, practical knowledge, and human-environment relations. Key works: The Perception of the Environment (2000); Lines: A Brief History (2007); Being Alive (2011); The Life of Lines (2015); Imagining for Real (2022). The field should be a place of knowledge production, not merely data collection.",
+    "bio_zh": "阿伯丁大学社会人类学荣休教授（英国皇家学会院士；2022年获CBE勋章），2018年退休但至今仍高度活跃（谷歌学术引用约10.9万）。提供了关于行走、漫游、注意力、实践知识和人-环境关系的认识论。代表作：《环境的感知》（2000）、《线：一段简短历史》（2007）、《活着》（2011）、《线的生命》（2015）、《脚踏实地地想象》（2022）。田野应当是知识生产之地，而不仅仅是数据采集之地。",
+    "institution": "University of Aberdeen",
+    "specialization": "Social anthropology; wayfaring; human-environment relations",
+    "website_url": "",
+    "corridor_slugs": ["grand_canal", "gotland"],
+    "works": [
+      {
+        "type": "book",
+        "year": 2000,
+        "title_en": "The Perception of the Environment: Essays on Livelihood, Dwelling and Skill",
+        "title_zh": "《环境的感知：生计、栖居与技艺论集》",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2007,
+        "title_en": "Lines: A Brief History",
+        "title_zh": "《线：一段简短历史》",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2008,
+        "title_en": "Ways of Walking: Ethnography and Practice on Foot (ed. with J. Vergunst)",
+        "title_zh": "《行走之道：以脚步实践的民族志》（与J. Vergunst合编）",
+        "venue_en": "Ashgate",
+        "venue_zh": "阿什盖特出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2011,
+        "title_en": "Being Alive: Essays on Movement, Knowledge and Description",
+        "title_zh": "《活着：运动、知识与描述论集》",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2015,
+        "title_en": "The Life of Lines",
+        "title_zh": "《线的生命》",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2023,
+        "title_en": "On not knowing and paying attention: How to walk in a possible world",
+        "title_zh": "《关于“不知道”与“留意”：如何在可能的世界中行走》",
+        "venue_en": "Irish Journal of Sociology 31(1): 20–36",
+        "venue_zh": "《爱尔兰社会学杂志》31(1): 20–36",
+        "url": "https://doi.org/10.1177/07916035221088546",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2021,
+        "title_en": "Imagining for Real: Essays on Creation, Attention and Correspondence (Routledge 2022 / openedition 2021)",
+        "title_zh": "《脚踏实地地想象：创造、注意与呼应论集》（Routledge 2022 / openedition 2021）",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "A taste for unobserved everyday things — lines, walking, string, basketweaving — treated as epistemological protagonists rather than examples. Revulsion against reducing the world to objects-of-representation.",
+        "zh": "偏爱那些通常被视而不见的日常事物——线、行走、绳索、编篮，把它们当作认识论的主角而非例子。对把人世还原为“供表征的对象”深恶痛绝。"
+      },
+      "quality": {
+        "en": "Rare clarity at great depth; wide erudition spanning anthropology, ecology, art and education; concepts (wayfaring, meshwork, attention, correspondence) that travel far beyond one discipline.",
+        "zh": "在极深的思辨中保持罕见的清晰；学识横跨人类学、生态学、艺术与教育；所创概念（漫游、网结、注意力、呼应）远超单一学科地被广泛使用。"
+      },
+      "spirit": {
+        "en": "The field is a place of knowledge production, not data collection; 'not knowing and paying attention' as a method and a virtue; writing as attention to the world's self-revelation.",
+        "zh": "把田野视为知识生产之地而非数据采集之地；以“不知道与留意”为方法也为美德；写作即是对世界自我呈现的倾听。"
+      },
+      "character": {
+        "en": "Gentle, relentless and quietly radical; a teacher-writer who changes his mind in print and asks his readers to keep their lines open and unfinished.",
+        "zh": "温和、执拗且不动声色的激进；一位在书中公开改主意的作者型教师，劝读者让线保持着开放与未完成。"
+      },
+      "concerns": {
+        "en": "Human-environment correspondence, dwelling and livelihood; how attention and practical skills shape knowledge; the education of the next generation; the future of knowledge itself.",
+        "zh": "人与环境的呼应、栖居与生计；注意力与实践技能如何塑造知识；下一代人的教养；知识本身的未来。"
+      },
+      "philosophy": {
+        "en": "Process-relational ontology: things are not objects but ongoing movement-lines; 'being-in-becoming'; life as a meshwork of interwoven, never-finished kinds of growth.",
+        "zh": "过程—关系本体论：事物不是对象，而是持续进行的运动之线；“in-becoming的生在”；生命是彼此交织、永不完成之种种成长所成之网结。"
+      }
+    }
+  },
+  {
+    "name_key": "scholar.olsen.name",
+    "name_en": "Bjørnar Olsen",
+    "name_zh": "比约纳尔·奥尔森",
+    "bio_key": "scholar.olsen.bio",
+    "bio_en": "Professor of Archaeology, UiT The Arctic University of Norway (since 1994). Contributes materiality, things, contemporary archaeology, ruins, and infrastructures. Key works: In Defense of Things (2010); Archaeology: The Discipline of Things (2012); Ruin Memories (2014); Unruly Heritage (2025). His involvement in the Arctic Silk Road project at UiT examines contemporary infrastructure, anticipated connectivity and local uncertainty across northern regions.",
+    "bio_zh": "北极大学（UiT）考古学教授（1994年至今）。贡献于物质性、物、当代考古学、废墟和基础设施研究。代表作：《为物辩护》（2010）、《考古学：物的学科》（2012）、《废墟记忆》（2014）、《不驯服的遗产》（2025）。他在北极大学北极丝绸之路项目中的参与，考察了北方地区的当代基础设施、可预期的连通性与地方不确定性。",
+    "institution": "UiT The Arctic University of Norway",
+    "specialization": "Archaeology; materiality; contemporary archaeology; ruins",
+    "website_url": "",
+    "corridor_slugs": ["grand_canal", "gotland"],
+    "works": [
+      {
+        "type": "book",
+        "year": 2010,
+        "title_en": "In Defense of Things: Archaeology and the Ontology of Objects",
+        "title_zh": "《为物辩护：考古学与物的本体论》",
+        "venue_en": "AltaMira Press",
+        "venue_zh": "阿尔塔米拉出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2012,
+        "title_en": "Archaeology: The Discipline of Things (with M. Shanks, T. Webmoor & C. Witmore)",
+        "title_zh": "《考古学：物的学科》（与M. Shanks、T. Webmoor、C. Witmore合著）",
+        "venue_en": "University of California Press",
+        "venue_zh": "加州大学出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2014,
+        "title_en": "Ruin Memories: Materiality, Aesthetics and the Archaeology of the Recent Past (ed. with Þ. Pétursdóttir)",
+        "title_zh": "《废墟记忆：近期遗存的物质性、美学与考古学》（与Þ. Pétursdóttir合编）",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "https://doi.org/10.4324/9781315778211",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2018,
+        "title_en": "Theory Adrift: The Matter of Archaeological Theorizing (with Þ. Pétursdóttir)",
+        "title_zh": "《理论在漂流：考古学理论化之物质》（与Þ. Pétursdóttir合著）",
+        "venue_en": "Journal of Social Archaeology 18(1): 97–117",
+        "venue_zh": "《社会考古学杂志》18(1): 97–117",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "project",
+        "year": 2009,
+        "title_en": "Ruin Memories: Materiality and the Recent Past (NRC, ed. with Pétursdóttir)",
+        "title_zh": "《废墟记忆：物质性与近期过去》（挪威研究理事会项目，与Pétursdóttir主持）",
+        "venue_en": "UiT The Arctic University of Norway",
+        "venue_zh": "北极大学（UiT）",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "project",
+        "year": 2018,
+        "title_en": "Arctic Silk Road / Arctic infrastructures",
+        "title_zh": "北极丝绸之路 / 北极当代基础设施研究",
+        "venue_en": "UiT The Arctic University of Norway",
+        "venue_zh": "北极大学（UiT）",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "A taste for the leftovers of modernity — ruins, decommissioned infrastructures, off-season fishing camps — rather than canonical monuments. Contemporary things as the honest face of our own time.",
+        "zh": "偏爱现代性的剩余物——废墟、退役基础设施、淡季渔村营地——而非圣殿般的地标。把当代之物视为我们这个时代最诚实的面孔。"
+      },
+      "quality": {
+        "en": "A theorist who grounds ontology in fieldworn material; co-author of one of the most cited manifestos of symmetrical archaeology; able to write both sharply and simply.",
+        "zh": "把本体论落进被田野磨旧的物质之中的理论家；对称考古学最被引用的宣言之一的主笔；既能写得锋利，也能写得朴素。"
+      },
+      "spirit": {
+        "en": "Anti-humanist courage — things are not passive background but co-agents of social life; a plea to stop reading everything through the human.",
+        "zh": "反人类中心主义的勇气——物不是被动的背景，而是社会生活的共同行动者；呼吁不要把所有事情都经由人来解读。"
+      },
+      "character": {
+        "en": "Unsentimental, unpretentious, uncompromising; a steady voice that faces decay, abandonment and the unruly side of heritage without flinching.",
+        "zh": "不煽情、不摆架子、不妥协；面对衰败、被遗弃之物以及遗产不驯服的一面，不回避，声音沉稳。"
+      },
+      "concerns": {
+        "en": "Modern ruins and material memory; 'unruly heritage' in the Anthropocene; Arctic infrastructures and anticipated connectivity; how things outlast the people who made them.",
+        "zh": "现代废墟与物质记忆；人类世中的“不驯服的遗产”；北极基础设施与可预期的连通；物如何在制造者之后继续存续。"
+      },
+      "philosophy": {
+        "en": "New materialism / symmetrical ontology: things 'push back', have memory-like endurance, and hold agency in their own right; the past is not only in the mind.",
+        "zh": "新唯物主义/对称本体论：物会“反向施力”，拥有类记忆的存续，且自持能动；历史不只存在于人心里，也存活于物中。"
+      }
+    }
+  },
+  {
+    "name_key": "scholar.martinsson_wallin.name",
+    "name_en": "Helene Martinsson-Wallin",
+    "name_zh": "海伦·马丁松-瓦林",
+    "bio_key": "scholar.martinsson_wallin.bio",
+    "bio_en": "Professor of Archaeology, Uppsala University, Campus Gotland (30+ years on Gotland). Contributes deep time, archaeology, landscape, historical ecology, sustainability, fisheries, tourism, and long-term human-environment relations. Key works include Martinsson-Wallin 1994 (PhD on Easter Island ahu) and Poort et al. 2021 (Sustainability 13(11): 6302) on Gotland-Rapa Nui comparative cultural tourism. Evidence: Uppsala University staff records [A].",
+    "bio_zh": "乌普萨拉大学哥特兰校区考古学教授（在哥特兰研究逾30年）。贡献于深时间、考古学、景观、历史生态学、可持续性、渔业、旅游和长期人-环境关系。代表作包括 Martinsson-Wallin 1994（复活节岛ahu的博士论文）和 Poort et al. 2021（Sustainability 13(11): 6302）关于哥特兰-拉帕努伊比较文化旅游的研究。来源：乌普萨拉大学教职员记录 [A]。",
+    "institution": "Uppsala University, Campus Gotland",
+    "specialization": "Archaeology; landscape; historical ecology; sustainability",
+    "website_url": "",
+    "corridor_slugs": ["gotland", "southern_oland"],
+    "works": [
+      {
+        "type": "book",
+        "year": 1994,
+        "title_en": "Ahu – The Ceremonial Stone Structures of Easter Island (PhD thesis)",
+        "title_zh": "《阿胡——复活节岛的仪式性石构建筑》（博士论文）",
+        "venue_en": "Societas Archaeologica Upsaliensis, AUN 20",
+        "venue_zh": "乌普萨拉考古学会出版社，AUN 20",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2021,
+        "title_en": "'Authenticity' as a pathway to sustainable cultural tourism? The cases of Gotland and Rapa Nui (with Poort, Persson-Fischier, Elf Donaldson & Schaub)",
+        "title_zh": "“真实性”是可持续文化旅游的路径吗？——以哥特兰与拉帕努伊为例（与Poort、Persson-Fischier、Elf Donaldson、Schaub合著）",
+        "venue_en": "Sustainability 13(11): 6302",
+        "venue_zh": "《Sustainability》13(11): 6302",
+        "url": "https://doi.org/10.3390/su13116302",
+        "label": "A"
+      },
+      {
+        "type": "project",
+        "year": 1990,
+        "title_en": "Long-term archaeological research on Gotland (30+ years)",
+        "title_zh": "哥特兰长时程考古研究（30余年）",
+        "venue_en": "Uppsala University, Campus Gotland",
+        "venue_zh": "乌普萨拉大学哥特兰校区",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "Islands as living laboratories — comparing Gotland with Rapa Nui and the Baltic littoral; a taste for deep time that meets the present in sustainability questions.",
+        "zh": "把岛屿当作活态实验室——在哥特兰、拉帕努伊与波罗的海沿岸之间比较；喜欢让深时间在今天的可持续性议题中与当下相遇。"
+      },
+      "quality": {
+        "en": "Steadfast longitudinal grounding (decades on Gotland), methodical integration of archaeology, historical ecology, tourism and fisheries; evidence-led comparative practice.",
+        "zh": "以数十年哥特兰田野为根基的扎实长期主义；把考古学、历史生态学、旅游与渔业有条理地整合起来；证据导向的比较实践。"
+      },
+      "spirit": {
+        "en": "Respect for deep time and for the people who live with it now; patience — the willingness to let one place teach you for decades.",
+        "zh": "既敬畏深时间，也尊重此刻与它共处的人；有耐力——愿意让一个地方用几十年慢慢教你。"
+      },
+      "character": {
+        "en": "Calm, local-first, collaborative and pragmatic; a bridge-builder between Swedish heritage management, island communities and South Pacific scholarship.",
+        "zh": "沉稳、在地优先、善于合作且务实；在瑞典遗产管理、岛屿社区与南太平洋学术之间架桥。"
+      },
+      "concerns": {
+        "en": "Island sustainability; tourism authenticity and belonging; coastal communities and fisheries; long-term human-environment feedback; living heritage on Gotland.",
+        "zh": "岛屿可持续性；旅游的真实性与归属感；沿海社区与渔业；长期的人—环境反馈；哥特兰的活态遗产。"
+      },
+      "philosophy": {
+        "en": "Historical ecology framing: present problems read through centuries of human–environment coupling; each island carries its own logic — comparison respects difference.",
+        "zh": "历史生态学视角：以数百年的人—环境耦合来读当下的问题；每个岛屿自有其逻辑——比较尊重差异性。"
+      }
+    }
+  },
+  {
+    "name_key": "scholar.holtorf.name",
+    "name_en": "Cornelius Holtorf",
+    "name_zh": "科尼利厄斯·霍尔托夫",
+    "bio_key": "scholar.holtorf.bio",
+    "bio_en": "Professor of Archaeology, Department of Cultural Sciences, Linnaeus University, Kalmar (since 2008); UNESCO Chair on Heritage Futures (since 2017, renewed 2021). Contributes heritage futures, future generations, uncertainty, regeneration, transformation, and stakeholder engagement. Key works: Heritage Futures (Harrison, DeSilvey, Holtorf et al. 2020, UCL Press); Cultural Heritage and the Future (2021, Routledge); 'Embracing Change' (World Archaeology 50(4), 2018); 'An Archaeology of Growth and Regeneration' (Kalmar Studies in Archaeology XIV, 2022, pp. 85-123). Evidence: Linnaeus University staff page [A].",
+    "bio_zh": "林奈大学卡尔马校区文化科学系考古学教授（2008年至今）；联合国教科文组织遗产未来教席持有者（2017年至今；2021年续任）。贡献于遗产未来、未来世代、不确定性、再生、转型和利益相关者参与。代表作：《遗产未来》（Harrison, DeSilvey, Holtorf et al. 2020, UCL出版社）；《文化遗产与未来》（2021，Routledge）；《拥抱变化》（World Archaeology 50(4), 2018）；《成长与再生的考古学》（Kalmar Studies in Archaeology XIV, 2022，第85–123页）。来源：林奈大学教职员页面 [A]。",
+    "institution": "Linnaeus University, Kalmar",
+    "specialization": "Heritage futures; regeneration; future generations",
+    "website_url": "",
+    "corridor_slugs": ["gotland", "southern_oland"],
+    "works": [
+      {
+        "type": "article",
+        "year": 2018,
+        "title_en": "Embracing change: how cultural resilience is increased through cultural heritage",
+        "title_zh": "《拥抱变化：文化遗产如何提升文化韧性》",
+        "venue_en": "World Archaeology 50(4): 639–650",
+        "venue_zh": "《世界考古学》50(4): 639–650",
+        "url": "https://doi.org/10.1080/00438243.2018.1510340",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2018,
+        "title_en": "No future in archaeological heritage management? (with Högberg, May & Wollentz)",
+        "title_zh": "《考古遗产管理没有未来吗？》（与Högberg、May、Wollentz合著）",
+        "venue_en": "World Archaeology 49(5): 639–647",
+        "venue_zh": "《世界考古学》49(5): 639–647",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2020,
+        "title_en": "Heritage Futures: Comparative Approaches to Natural and Cultural Heritage Practices (with Harrison, DeSilvey, Macdonald et al.)",
+        "title_zh": "《遗产未来：自然与文化遗产实践的比较路径》（与Harrison、DeSilvey、Macdonald等合著）",
+        "venue_en": "UCL Press",
+        "venue_zh": "伦敦大学学院出版社",
+        "url": "https://doi.org/10.14324/111.9781787356009",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2021,
+        "title_en": "Cultural Heritage and the Future (ed. with A. Högberg)",
+        "title_zh": "《文化遗产与未来》（与A. Högberg合编）",
+        "venue_en": "Routledge",
+        "venue_zh": "劳特利奇出版社",
+        "url": "https://doi.org/10.4324/9781315644615",
+        "label": "A"
+      },
+      {
+        "type": "chapter",
+        "year": 2022,
+        "title_en": "An Archaeology of Growth and Regeneration",
+        "title_zh": "《成长与再生的考古学》",
+        "venue_en": "In L. Papmehl-Dufay (ed.), Under storkökets golv. Kalmar Studies in Archaeology XIV: 85–123",
+        "venue_zh": "载L. Papmehl-Dufay编《在旧厨房地板之下》，卡尔马考古学研究第十四辑：85–123",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "project",
+        "year": 2017,
+        "title_en": "UNESCO Chair on Heritage Futures",
+        "title_zh": "联合国教科文组织“遗产未来”教席",
+        "venue_en": "Linnaeus University",
+        "venue_zh": "林奈大学",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "A taste for the counterintuitive question: what will heritage do for people a decade — or a century — from now? The future tense as the most interesting tense in heritage studies.",
+        "zh": "偏爱反直觉之问：遗产在十年后、一个世纪后能为人们做什么？未来时态是遗产研究中最有意味的时态。"
+      },
+      "quality": {
+        "en": "A communicator and convenor: UNESCO Chair, multi-partner volumes, plain prose; turns avant-garde frameworks (heritage futures, foresight literacy) into usable, testable practice.",
+        "zh": "出色的传播者与组织者：联合国教科文组织教席、多方合著、平易文风；把前沿框架（遗产未来、未来素养）变成可用、可检验的实践。"
+      },
+      "spirit": {
+        "en": "Embrace change — heritage is about building capacity for transformation, not freezing the past; optimistic, pragmatic and radically forward-looking.",
+        "zh": "拥抱变化——遗产关乎培养应对转型的能力，而非冻结过去；乐观、务实、激进地向前看。"
+      },
+      "character": {
+        "en": "Open-handed, gregarious and scenario-minded; thrives on dialogue with stakeholders, artists, students and publics rather than monologue.",
+        "zh": "开放、好交际、惯于构想情景；乐于与利益相关者、艺术家、学生和公众对话，而非独白。"
+      },
+      "concerns": {
+        "en": "Future generations and uncertainty; heritage standards and financing; nuclear waste as future heritage; regeneration at Gamla Skogsby; climate change and heritage practice.",
+        "zh": "未来世代与不确定性；遗产标准与资金；核废料作为未来遗产；(甘拉·斯科格斯比的再生；气候变化下的遗产实践。"
+      },
+      "philosophy": {
+        "en": "Heritage-futures: heritage is future-making, not past-restoration; pasts are resources for building viable futures, and uncertainty is a source, not a problem.",
+        "zh": "遗产未来论：遗产是面向未来的生成，而非回到过去的复原；过往是构筑可行未来的资源，不确定性是来源而非问题。"
+      }
+    }
+  },
+  {
+    "name_key": "scholar.gillette.name",
+    "name_en": "Maris Boyd Gillette",
+    "name_zh": "马里斯·博伊德·吉莱特",
+    "bio_key": "scholar.gillette.bio",
+    "bio_en": "Professor of Anthropology, School of Global Studies, University of Gothenburg (since 2017). Previously at Haverford College, Pennsylvania. Contributes China, material culture, economic life, labour, sustainability, food and material production, and community and museum engagement. Key works: Between Mecca and Beijing (2000, Stanford UP); China's Porcelain Capital (2016, Bloomsbury); work on mining heritage tourism in China (Journal of Heritage Tourism, 2024, with E. Boyd); on Swedish herring fisheries (Sociologia Ruralis, 2026). Evidence: University of Gothenburg staff records [A].",
+    "bio_zh": "哥德堡大学全球研究学院人类学教授（2017年至今），此前任教于宾夕法尼亚州哈弗福德学院。贡献于中国、物质文化、经济生活、劳动、可持续性、食物与物质生产，以及社区和博物馆参与。代表作：《麦加与北京之间》（2000，斯坦福大学出版社）；《中国的瓷器之都》（2016，Bloomsbury）；关于中国矿业遗产旅游的研究（Journal of Heritage Tourism, 2024，与E. Boyd合著）；关于瑞典鲱鱼渔业的研究（Sociologia Ruralis, 2026）。来源：哥德堡大学教职员记录 [A]。",
+    "institution": "University of Gothenburg",
+    "specialization": "Anthropology; China; material culture; food; labour",
+    "website_url": "",
+    "corridor_slugs": ["grand_canal"],
+    "works": [
+      {
+        "type": "book",
+        "year": 2000,
+        "title_en": "Between Mecca and Beijing: Modernization and Consumption Among Urban Chinese Muslims",
+        "title_zh": "《麦加与北京之间：中国城市穆斯林的现代化与消费》",
+        "venue_en": "Stanford University Press",
+        "venue_zh": "斯坦福大学出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "book",
+        "year": 2016,
+        "title_en": "China's Porcelain Capital: The Rise, Fall and Reinvention of Ceramics in Jingdezhen",
+        "title_zh": "《中国的瓷器之都：景德镇陶瓷的兴衰与再造》",
+        "venue_en": "Bloomsbury",
+        "venue_zh": "布卢姆斯伯里出版社",
+        "url": "",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2024,
+        "title_en": "Mining for tourists in China: A digital ethnography at the Fangshan National Geopark (with E. Boyd)",
+        "title_zh": "《为中国游客开矿：房山国家地质公园的数字民族志》（与E. Boyd合著）",
+        "venue_en": "Journal of Heritage Tourism 19(1)",
+        "venue_zh": "《遗产旅游杂志》19(1)",
+        "url": "https://doi.org/10.1080/1743873X.2023.2255691",
+        "label": "A"
+      },
+      {
+        "type": "chapter",
+        "year": 2024,
+        "title_en": "Implementing the SSF Guidelines in Sweden (with E. Bennett & M. Arias Schreiber)",
+        "title_zh": "《在瑞典实施小规模渔业指南》（与E. Bennett、M. Arias Schreiber合著）",
+        "venue_en": "In Small-Scale Fisheries in Europe. Springer MARE Series 28",
+        "venue_zh": "载《欧洲的小规模渔业》，施普林格MARE丛书第28卷",
+        "url": "https://doi.org/10.1007/978-3-031-56716-2_19",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2026,
+        "title_en": "Conflict over the 2024 Bothnian Herring Quota",
+        "title_zh": "《2024年波的尼亚湾鲱鱼配额之争》",
+        "venue_en": "Sociologia Ruralis 66",
+        "venue_zh": "《乡村社会学》66",
+        "url": "https://doi.org/10.1111/soru.70050",
+        "label": "A"
+      },
+      {
+        "type": "project",
+        "year": 2018,
+        "title_en": "Mining for Tourists in China (RJ-funded)",
+        "title_zh": "“为中国游客开矿”（瑞典银行纪念基金资助项目）",
+        "venue_en": "Riksbankens Jubileumsfond",
+        "venue_zh": "瑞典银行纪念基金（Riksbankens Jubileumsfond）",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "A taste for the concrete and the everyday as a window: a bowl, a herring, a coal mine — small tangible things carrying large historical transformations.",
+        "zh": "偏爱以具体而微的日常生活为窗口：一只碗、一条鲱鱼、一座煤矿——以小而可触之物承载宏大的历史变迁。"
+      },
+      "quality": {
+        "en": "Deep, longitudinal ethnography; bilingual archival and field scholarship across China and Sweden; a willingness to start over in a new field and bring the old skills along.",
+        "zh": "深入、长时程的民族志功底；跨越中国与瑞典的双料档案与田野学识；敢于在新领域从头再来并携旧技同行。"
+      },
+      "spirit": {
+        "en": "Intellectual humility before material production: take seriously what people make, buy, copy and eat — these are not trivia but the site where capitalism and culture meet.",
+        "zh": "对物质生产保持智识上的谦逊：认真对待人们制造、购买、复制与食用之物——这不是琐事，而是资本主义与文化相遇的现场。"
+      },
+      "character": {
+        "en": "Quiet, meticulous, patient and unflashy; an ethnographer who lets sources and craft speak rather than performing authority.",
+        "zh": "安静、细致、有耐心而不张扬；让材料与手艺说话、而非表演权威的民族志者。"
+      },
+      "concerns": {
+        "en": "Labour, fabrication and copying; urban consumption and modernization in China; mining-heritage tourism; Swedish small-scale fisheries and food sustainability.",
+        "zh": "劳动、制造与复制；中国的城市消费与现代化；矿业遗产旅游；瑞典的小规模渔业与食物可持续性。"
+      },
+      "philosophy": {
+        "en": "Materialist anthropology of livelihood: economic life is the strongest tracer of cultural relations; sustainability is a relational question of life, not a label.",
+        "zh": "面向生计的唯物主义人类学：经济生活是追踪文化关系的最强线索；可持续性是关乎生计的关系问题，而非标签。"
+      }
+    }
+  }
+]

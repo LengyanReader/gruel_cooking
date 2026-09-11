@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS pages (
     slug        TEXT    NOT NULL UNIQUE,
     title_key   TEXT    NOT NULL,
     template    TEXT    NOT NULL,
+    nav_key     TEXT,
     sort_order  INTEGER NOT NULL DEFAULT 0,
     is_published INTEGER NOT NULL DEFAULT 1,
     meta_json   TEXT,
@@ -41,7 +42,7 @@ CREATE TABLE IF NOT EXISTS page_sections (
 
 CREATE TABLE IF NOT EXISTS heritage_sites (
     id              INTEGER PRIMARY KEY,
-    name_key        TEXT    NOT NULL,
+    name_key        TEXT    NOT NULL UNIQUE,
     description_key TEXT,
     corridor_slug   TEXT    NOT NULL,
     latitude        REAL,
@@ -56,13 +57,15 @@ CREATE INDEX IF NOT EXISTS idx_hs_corridor ON heritage_sites(corridor_slug);
 
 CREATE TABLE IF NOT EXISTS scholars (
     id              INTEGER PRIMARY KEY,
-    name_key        TEXT    NOT NULL,
+    name_key        TEXT    NOT NULL UNIQUE,
     bio_key         TEXT,
     institution     TEXT,
     specialization  TEXT,
     photo_url       TEXT,
     website_url     TEXT,
     corridor_slugs  TEXT,
+    works_json      TEXT,
+    traits_json     TEXT,
     created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -79,6 +82,32 @@ CREATE TABLE IF NOT EXISTS field_observations (
     created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
 CREATE INDEX IF NOT EXISTS idx_fo_site ON field_observations(site_id);
+
+CREATE TABLE IF NOT EXISTS corridors (
+    id          INTEGER PRIMARY KEY,
+    slug        TEXT    NOT NULL UNIQUE,
+    title_key   TEXT,
+    intro_key   TEXT,
+    detail_key  TEXT,
+    region      TEXT,
+    sort_order  INTEGER NOT NULL DEFAULT 0,
+    created_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_cor_sort ON corridors(sort_order);
+
+CREATE TABLE IF NOT EXISTS relations (
+    id          INTEGER PRIMARY KEY,
+    source_type TEXT    NOT NULL,
+    source_id   INTEGER NOT NULL,
+    relation    TEXT    NOT NULL,
+    target_type TEXT    NOT NULL,
+    target_id   INTEGER NOT NULL,
+    weight      REAL,
+    note        TEXT,
+    created_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_rel_source ON relations(source_type, source_id);
+CREATE INDEX IF NOT EXISTS idx_rel_target ON relations(target_type, target_id);
 
 CREATE TABLE IF NOT EXISTS publications (
     id              INTEGER PRIMARY KEY,
@@ -108,8 +137,22 @@ def get_db() -> sqlite3.Connection:
 
 
 def init_db():
-    """Create tables if they don't exist."""
+    """Create tables if they don't exist, and migrate older DBs."""
     conn = get_db()
     conn.executescript(_schema_sql)
+    _migrate(conn)
     conn.close()
     print(f"SQLite initialized: {SQLITE_PATH}")
+
+
+def _migrate(conn):
+    """Add columns introduced after the initial schema (no-op on fresh DBs)."""
+    columns = {r[1] for r in conn.execute("PRAGMA table_info(scholars)").fetchall()}
+    if "works_json" not in columns:
+        conn.execute("ALTER TABLE scholars ADD COLUMN works_json TEXT")
+    if "traits_json" not in columns:
+        conn.execute("ALTER TABLE scholars ADD COLUMN traits_json TEXT")
+    page_cols = {r[1] for r in conn.execute("PRAGMA table_info(pages)").fetchall()}
+    if "nav_key" not in page_cols:
+        conn.execute("ALTER TABLE pages ADD COLUMN nav_key TEXT")
+    conn.commit()

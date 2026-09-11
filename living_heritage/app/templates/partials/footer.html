@@ -1,0 +1,10 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-motto">{{ site_subtitle }}</p>
+    <p class="footer-tag">{{ footer_tagline }}</p>
+    <p class="footer-links">
+      {% for item in nav_items %}{% if not loop.first %} · {% endif %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
+    </p>
+    <p class="footer-copy">周舟洲粥 Living Cultural Corridors — 周予慈舟 · 周渡万洲 · 喝粥暖胃<br><span class="footer-zhou">zhōu·zhōu·zhōu — bark · isle · gruel</span></p>
+  </div>
+</footer>

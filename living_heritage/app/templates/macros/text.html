@@ -1,0 +1,97 @@
+{# Bilingual text helpers. All text is resolved server-side; macros handle layout. #}
+
+{% macro section_block(section) %}
+<article class="section-block reveal">
+  {% if section.title %}
+    <h2 class="section-block-title">{{ section.title }}</h2>
+  {% endif %}
+  {% if section.body %}
+    <div class="section-block-body">{{ section.body }}</div>
+  {% endif %}
+</article>
+{% endmacro %}
+
+{% macro corridor_card(c) %}
+<div class="corridor-card reveal">
+  <div class="corridor-card-head">
+    <h3>{{ c.name }}</h3>
+    {% if c.region %}<span class="corridor-region">{{ c.region }}</span>{% endif %}
+  </div>
+  <p class="corridor-intro">{{ c.description }}</p>
+  {% if c.site_count is defined %}
+    <div class="corridor-meta">
+      <span class="meta-chip">{{ c.site_count }} sites</span>
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro site_card(s) %}
+<div class="site-card reveal">
+  <h4>{{ s.name }}</h4>
+  {% if s.unesco_status %}<span class="site-unesco">{{ s.unesco_status }}</span>{% endif %}
+  {% if s.description %}<p class="site-desc">{{ s.description }}</p>{% endif %}
+  <div class="site-meta">
+    {% if s.heritage_type %}<span class="meta-chip">{{ s.heritage_type }}</span>{% endif %}
+    {% if s.year_established %}<span class="meta-chip">{{ s.year_established }}</span>{% endif %}
+  </div>
+</div>
+{% endmacro %}
+
+{% macro scholar_card(s) %}
+<div class="scholar-card reveal">
+  <div class="scholar-avatar">{{ s.name[0] if s.name else '?' }}</div>
+  <div class="scholar-info">
+    <h3 class="scholar-name">{{ s.name }}</h3>
+    {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
+    {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
+    {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
+    {% if s.website_url %}<a class="scholar-link" href="{{ s.website_url }}">↗</a>{% endif %}
+  </div>
+</div>
+{% endmacro %}
+
+{% macro scholar_portrait(s, trait_labels=None, works_label='Selected works') %}
+<div class="scholar-portrait reveal">
+  <div class="scholar-portrait-head">
+    <div class="scholar-avatar">{{ s.name[0] if s.name else '?' }}</div>
+    <div>
+      <h3 class="scholar-name">{{ s.name }}</h3>
+      {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
+      {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
+    </div>
+  </div>
+  {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
+  {% if s.traits %}
+    <div class="trait-grid">
+      {% for key in ["taste", "quality", "spirit", "character", "concerns", "philosophy"] %}
+        {% if s.traits.get(key) %}
+          <div class="trait-item">
+            <span class="trait-label">{{ (trait_labels or {}).get(key, key) }}</span>
+            <p class="trait-text">{{ s.traits[key] }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if s.works %}
+    <div class="works-block">
+      <h4 class="works-title">{{ works_label }}</h4>
+      <ul class="works-list">
+        {% for w in s.works %}
+          <li class="work-item">
+            <span class="work-type">{{ w.type }}</span>
+            <span class="work-year">{{ w.year }}</span>
+            <div class="work-body">
+              <span class="work-title">{{ w.title }}</span>
+              {% if w.venue %}<span class="work-venue">{{ w.venue }}</span>{% endif %}
+            </div>
+            {% if w.url %}<a class="work-url" href="{{ w.url }}" target="_blank" rel="noopener">↗</a>{% endif %}
+            {% if w.label %}<span class="work-label">[{{ w.label }}]</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+{% endmacro %}

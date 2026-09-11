@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "grand_canal",
+    "title_key": "corridor.grand_canal.title",
+    "intro_key": "corridor.grand_canal.intro",
+    "detail_key": "corridor.grand_canal.detail",
+    "region": "Beijing",
+    "sort_order": 0
+  },
+  {
+    "slug": "gotland",
+    "title_key": "corridor.gotland.title",
+    "intro_key": "corridor.gotland.intro",
+    "detail_key": "corridor.gotland.detail",
+    "region": "Sweden",
+    "sort_order": 1
+  },
+  {
+    "slug": "southern_oland",
+    "title_key": "corridor.southern_oland.title",
+    "intro_key": "corridor.southern_oland.intro",
+    "detail_key": "corridor.southern_oland.detail",
+    "region": "Sweden",
+    "sort_order": 2
+  },
+  {
+    "slug": "linkoping",
+    "title_key": "corridor.linkoping.title",
+    "intro_key": "corridor.linkoping.intro",
+    "detail_key": "corridor.linkoping.detail",
+    "region": "Sweden",
+    "sort_order": 3
+  }
+]

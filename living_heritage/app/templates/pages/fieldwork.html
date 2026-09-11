@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.fieldwork }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.fieldwork }}</h1>
+    {% if page and page.sections %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+{% if observations %}
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ labels.get('label.observations', 'Field Observations') }}</h2>
+    <ul class="observation-list">
+      {% for o in observations %}
+        <li class="observation-item reveal">
+          <strong>{{ o.title }}</strong>
+          {% if o.date_observed %}<span class="obs-date">{{ o.date_observed }}</span>{% endif %}
+          <p>{{ o.notes }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

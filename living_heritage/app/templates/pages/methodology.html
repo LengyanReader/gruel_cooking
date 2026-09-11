@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.methodology }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.methodology }}</h1>
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    {% if page %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

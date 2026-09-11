@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.graph }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="page graph-page">
+  {% if page %}
+    {% for s in page.sections %}
+      {{ t.section_block(s) }}
+    {% endfor %}
+  {% endif %}
+
+  {% if corridors %}
+  <section class="section-block">
+    <h2 class="section-block-title">{{ '廊道画像' if locale == 'zh' else 'Corridor profiles' }}</h2>
+    <div class="graph-corridors">
+      {% for c in corridors %}
+      <article class="graph-corridor reveal">
+        <div class="graph-corridor-head">
+          <span class="graph-node-type">corridor</span>
+          <h3>{{ c.name }}</h3>
+          {% if c.region %}<span class="corridor-region">{{ c.region }}</span>{% endif %}
+          <span class="meta-chip">{{ c.site_count }} sites · {{ c.scholar_count }} scholars</span>
+        </div>
+        {% if c.description %}<p class="corridor-intro">{{ c.description }}</p>{% endif %}
+
+        {% if c.sites %}
+        <div class="graph-group">
+          <h4>{{ labels['label.sites'] }}</h4>
+          <ul class="graph-links">
+            {% for site in c.sites %}
+              <li><span class="graph-node-type">site</span> {{ site.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if c.scholars %}
+        <div class="graph-group">
+          <h4>{{ labels['label.scholars'] }}</h4>
+          <ul class="graph-links">
+            {% for sc in c.scholars %}
+              <li><span class="graph-node-type">scholar</span> {{ sc.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if relations %}
+  <section class="section-block">
+    <h2 class="section-block-title">{{ '关系表' if locale == 'zh' else 'Relation edges' }}</h2>
+    <table class="graph-table">
+      <thead>
+        <tr>
+          <th>{{ '来源' if locale == 'zh' else 'Source' }}</th>
+          <th>{{ '关系' if locale == 'zh' else 'Relation' }}</th>
+          <th>{{ '目标' if locale == 'zh' else 'Target' }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in relations %}
+        <tr>
+          <td><span class="graph-node-type">{{ r.source_type }}</span> {{ r.source_name }}</td>
+          <td class="graph-relation">{{ r.relation }}</td>
+          <td><span class="graph-node-type">{{ r.target_type }}</span> {{ r.target_name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

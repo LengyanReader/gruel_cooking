@@ -1,0 +1,490 @@
+/* 活态文化廊道 Living Cultural Corridors — warm "dawn" theme */
+:root {
+  --cream: #FFFBF5;
+  --cream-deep: #F7EFE2;
+  --gold: #F5C97E;
+  --gold-soft: #FBE9C8;
+  --amber: #E8A855;
+  --amber-deep: #C9852F;
+  --ink: #3A3228;
+  --ink-soft: #6B5F4F;
+  --sky: #5A9ECF;
+  --sky-deep: #407CB0;
+  --line: #EBDCC4;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(58, 50, 40, 0.08);
+  --font: "LXGW WenKai", "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background-color: var(--cream);
+  background-image: radial-gradient(rgba(232, 168, 85, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  color: var(--ink);
+  line-height: 1.75;
+  font-size: 17px;
+}
+
+a { color: var(--sky-deep); text-decoration: none; }
+a:hover { color: var(--amber-deep); }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── Navigation ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 32px;
+  background: rgba(255, 251, 245, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-brand { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-brand a { font-size: 1.2em; font-weight: 700; color: var(--ink); }
+.nav-brand-en { font-size: 0.75em; color: var(--ink-soft); letter-spacing: 0.05em; }
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a {
+  color: var(--ink-soft);
+  font-weight: 500;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--amber-deep); border-bottom-color: var(--amber); }
+
+.lang-toggle { display: flex; gap: 6px; }
+.lang-toggle form { margin: 0; }
+.lang-toggle button {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-family: var(--font);
+  font-size: 0.8em;
+}
+.lang-toggle button.active {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #fff;
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 96px 24px 80px;
+  text-align: center;
+  background: linear-gradient(160deg, #EAF3F9 0%, var(--gold-soft) 45%, var(--cream) 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero-inner { max-width: 780px; margin: 0 auto; }
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-body {
+  font-size: 1.05rem;
+  color: var(--ink);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  background: rgba(255, 251, 245, 0.75);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.hero-kicker {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--amber-deep);
+  margin-bottom: 10px;
+}
+
+/* ── Sections ── */
+.section { padding: 64px 0; }
+.section-alt { background: var(--cream-deep); border-top: 1px solid var(--line); }
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+.section-block { margin-bottom: 40px; }
+.section-block-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--amber-deep);
+  margin-bottom: 10px;
+}
+.section-block-body { color: var(--ink); max-width: 72ch; }
+
+/* ── Cards ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.corridor-card {
+  display: block;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  color: var(--ink);
+}
+.corridor-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(58, 50, 40, 0.14); }
+.corridor-card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.corridor-name { font-size: 1.2rem; font-weight: 700; color: var(--ink); }
+.corridor-region { font-size: 0.8em; color: var(--ink-soft); }
+.corridor-intro { color: var(--ink-soft); font-size: 0.95em; }
+.corridor-meta { margin-top: 12px; }
+
+.meta-chip {
+  display: inline-block;
+  background: var(--gold-soft);
+  color: var(--amber-deep);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 0.78em;
+  font-weight: 600;
+}
+
+/* ── Page header ── */
+.page-header {
+  padding: 56px 0 24px;
+  background: linear-gradient(160deg, #EAF3F9 0%, var(--cream) 100%);
+  border-bottom: 1px solid var(--line);
+}
+.page-header h1 { font-size: 2.2rem; margin-bottom: 20px; }
+.page-header .section-block { margin-bottom: 16px; }
+.page-header .section-block-title { color: var(--ink); font-size: 1.1rem; }
+
+/* ── Corridor list page ── */
+.corridor-block {
+  padding: 32px;
+  margin-bottom: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.corridor-head { display: flex; align-items: center; gap: 16px; margin-bottom: 10px; }
+.corridor-head h2 { font-size: 1.5rem; }
+
+.site-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+.site-card {
+  padding: 20px;
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.site-card h4 { font-size: 1.05rem; margin-bottom: 4px; }
+.site-unesco { display: inline-block; font-size: 0.78em; color: var(--sky-deep); margin-bottom: 8px; }
+.site-desc { font-size: 0.9em; color: var(--ink-soft); }
+.site-meta { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ── Scholars ── */
+.scholar-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 24px; }
+.scholar-card {
+  display: flex;
+  gap: 20px;
+  padding: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.scholar-avatar {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--gold), var(--amber));
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scholar-name { font-size: 1.2rem; color: var(--ink); }
+.scholar-inst { font-size: 0.9em; color: var(--amber-deep); font-weight: 600; }
+.scholar-spec { font-size: 0.88em; color: var(--ink-soft); margin-top: 2px; }
+.scholar-bio { font-size: 0.9em; margin-top: 8px; color: var(--ink); }
+.scholar-link { display: inline-block; margin-top: 6px; }
+
+/* ── Scholar portraits & works ── */
+.portrait-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+.scholar-portrait {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.scholar-portrait-head { display: flex; gap: 18px; align-items: center; margin-bottom: 16px; }
+.trait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 18px 0 22px;
+}
+.trait-item {
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trait-label {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--amber-deep);
+  background: var(--gold-soft);
+  border-radius: 999px;
+  padding: 2px 12px;
+  margin-bottom: 6px;
+}
+.trait-text { font-size: 0.92em; color: var(--ink); }
+.works-block { border-top: 1px solid var(--line); padding-top: 16px; }
+.works-title { font-size: 1rem; color: var(--amber-deep); margin-bottom: 10px; }
+.works-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.work-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.92em;
+}
+.work-type {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--sky-deep);
+  background: #EAF3F9;
+  border-radius: 6px;
+  padding: 1px 8px;
+  flex-shrink: 0;
+}
+.work-year { color: var(--ink-soft); font-size: 0.85em; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.work-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.work-title { color: var(--ink); font-weight: 500; }
+.work-venue { color: var(--ink-soft); font-size: 0.85em; }
+.work-url { color: var(--sky-deep); flex-shrink: 0; }
+.work-label { color: var(--amber-deep); font-size: 0.8em; flex-shrink: 0; }
+
+/* ── Six-dimension flow diagram ── */
+.dim-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 6px;
+  margin: 24px 0 8px;
+  padding: 20px;
+  background: var(--cream-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.dim-flow-item {
+  flex: 1 1 140px;
+  min-width: 120px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.dim-flow-item b { display: block; color: var(--amber-deep); font-size: 0.95em; margin-bottom: 4px; }
+.dim-flow-item span { font-size: 0.82em; color: var(--ink-soft); line-height: 1.5; }
+.dim-flow-item.dim-flow-persona { border-color: var(--gold); background: var(--gold-soft); }
+.dim-flow-persona b { color: var(--amber-deep); }
+.dim-flow-arrow {
+  align-self: center;
+  color: var(--sky-deep);
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 0 2px;
+}
+
+/* ── Observations ── */
+.observation-list { list-style: none; }
+.observation-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.observation-item strong { color: var(--ink); }
+.obs-date { color: var(--ink-soft); font-size: 0.85em; margin-left: 8px; }
+.observation-item p { color: var(--ink-soft); font-size: 0.95em; margin-top: 4px; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--ink);
+  color: #F5EDE0;
+  padding: 48px 24px;
+  text-align: center;
+}
+.footer-inner { max-width: 720px; margin: 0 auto; }
+.footer-motto {
+  font-size: 1.15rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.footer-tag { font-size: 0.95em; color: #D8CDBA; margin-bottom: 18px; }
+.footer-links { margin-bottom: 12px; }
+.footer-links a { color: #F5EDE0; margin: 0 6px; }
+.footer-links a:hover { color: var(--gold); }
+.footer-copy { font-size: 0.8em; color: #A99D8B; }
+
+/* ── Living book: water palette ── */
+:root {
+  --water: #9CC7E8;
+  --water-deep: #6FA9D8;
+  --water-ink: #3E7AAD;
+  --parchment: #FFF8EA;
+  --reeds: #B7A37A;
+}
+
+/* Paper page body — an open book laid across the stream */
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+.page-header + .page { padding-top: 28px; }
+.graph-page { max-width: 980px; }
+
+/* ── Flowing water divider (SVG) ── */
+.wave {
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  animation: wave-drift 14s ease-in-out infinite alternate;
+  --wave-fill: var(--water);
+  opacity: 0.55;
+}
+.wave svg { display: block; width: 100%; height: auto; }
+.wave .wave-fill { fill: var(--wave-fill); }
+.wave.on-cream { --wave-fill: var(--cream-deep); opacity: 0.8; }
+.wave.on-sky { --wave-fill: var(--water); }
+.wave.on-white { --wave-fill: var(--line); opacity: 0.6; }
+.wave.slim { max-width: 720px; margin: 0 auto; opacity: 0.4; }
+@keyframes wave-drift {
+  from { transform: translateX(-6px); }
+  to { transform: translateX(6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave { animation: none; }
+}
+
+/* ── Book-margin accent ── */
+.book-edge {
+  position: relative;
+  padding-left: 22px;
+}
+.book-edge::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 3px;
+  background: linear-gradient(var(--water), var(--gold), var(--water));
+  opacity: 0.55;
+}
+.section-title.book-edge { padding-left: 26px; }
+
+/* ── Scroll reveal (living pages) ── */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Page-turn entrance on navigation ── */
+@keyframes page-turn-in {
+  0%   { opacity: 0; transform: perspective(1200px) rotateY(-7deg); transform-origin: left center; }
+  40%  { opacity: 1; }
+  100% { opacity: 1; transform: perspective(1200px) rotateY(0); }
+}
+.js body.page-enter { animation: page-turn-in 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .js body.page-enter { animation: none; }
+}
+
+/* ── Section header ink / water accent ── */
+.section-block-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-block-title::after {
+  content: "";
+  flex: 0 1 90px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--water-deep), transparent);
+  opacity: 0.6;
+}
+
+/* ── Supplementary links ── */
+.wavemore-hint {
+  text-align: center;
+  margin: 44px 0 8px;
+  color: var(--ink-soft);
+  font-size: 0.92em;
+}
+.wavemore-hint .meta-chip { background: var(--gold-soft); }
+
+/* ── Responsive ── */
+@media (max-width: 720px) {
+  .nav { flex-direction: column; gap: 12px; padding: 12px 16px; }
+  .nav-right { flex-direction: column; gap: 10px; }
+  .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .scholar-grid { grid-template-columns: 1fr; }
+  .dim-flow { flex-direction: column; }
+  .dim-flow-arrow { transform: rotate(90deg); }
+  .hero { padding: 56px 16px 48px; }
+  .section { padding: 44px 0; }
+}

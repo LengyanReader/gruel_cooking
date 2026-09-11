@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ site_title }}{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker">{% if locale == 'zh' %}周 · 舟 · 洲 · 粥 — 周予慈舟，周渡万洲，喝粥暖胃{% else %}zhōu·zhōu·zhōu — the bark, the isles, the gruel{% endif %}</p>
+    <h1 class="hero-title">{{ site_title }}</h1>
+    <p class="hero-subtitle">{{ site_subtitle }}</p>
+    {% if page and page.sections %}
+      {% set hero = page.sections | selectattr("key", "equalto", "hero") | list %}
+      {% if hero %}
+        <div class="hero-body">{{ hero[0].body }}</div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    {% if page %}
+      {% for s in page.sections if s.key != 'hero' %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% if corridors %}
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">{{ nav.corridors }}</h2>
+    <div class="card-grid">
+      {% for c in corridors %}
+        <a class="corridor-card corridor-card-link reveal" href="/corridors#{{ c.slug }}">
+          <div class="corridor-card-head">
+            <span class="corridor-name">{{ c.name }}</span>
+          </div>
+          <p class="corridor-intro">{{ c.description }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if observations %}
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">{{ label_latest_observations }}</h2>
+    <ul class="observation-list">
+      {% for o in observations %}
+        <li class="observation-item">
+          <strong>{{ o.title }}</strong>
+          {% if o.date_observed %}<span class="obs-date">{{ o.date_observed }}</span>{% endif %}
+          <p>{{ o.notes }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

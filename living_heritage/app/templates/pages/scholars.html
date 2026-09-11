@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.scholars }} — {{ site_title }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.scholars }}</h1>
+    {% if page and page.sections %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="scholar-grid">
+      {% for s in scholars %}
+        {{ t.scholar_card(s) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

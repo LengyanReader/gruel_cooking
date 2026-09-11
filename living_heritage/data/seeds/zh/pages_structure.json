@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "home",
+    "title_key": "page.home.title",
+    "template": "pages/home.html",
+    "sort_order": 0,
+    "sections": [
+      {
+        "key": "hero",
+        "title_key": "page.home.hero.title",
+        "body_key": "page.home.hero.body"
+      },
+      {
+        "key": "intro",
+        "title_key": "page.home.intro.title",
+        "body_key": "page.home.intro.body"
+      },
+      {
+        "key": "lens",
+        "title_key": "page.home.lens.title",
+        "body_key": "page.home.lens.body"
+      },
+      {
+        "key": "vision",
+        "title_key": "page.home.vision.title",
+        "body_key": "page.home.vision.body"
+      }
+    ],
+    "nav_key": "nav.home"
+  },
+  {
+    "slug": "corridors",
+    "title_key": "page.corridors.title",
+    "template": "pages/corridors.html",
+    "sort_order": 1,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.corridors.intro.title",
+        "body_key": "page.corridors.intro.body"
+      },
+      {
+        "key": "comparison",
+        "title_key": "page.corridors.comparison.title",
+        "body_key": "page.corridors.comparison.body"
+      }
+    ],
+    "nav_key": "nav.corridors"
+  },
+  {
+    "slug": "scholars",
+    "title_key": "page.scholars.title",
+    "template": "pages/scholars.html",
+    "sort_order": 2,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.scholars.intro.title",
+        "body_key": "page.scholars.intro.body"
+      }
+    ],
+    "nav_key": "nav.scholars"
+  },
+  {
+    "slug": "graph",
+    "title_key": "page.graph.title",
+    "template": "pages/graph.html",
+    "nav_key": "nav.graph",
+    "sort_order": 3,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.graph.intro.title",
+        "body_key": "page.graph.intro.body"
+      },
+      {
+        "key": "rg",
+        "title_key": "page.graph.rg.title",
+        "body_key": "page.graph.rg.body"
+      }
+    ]
+  },
+  {
+    "slug": "literature",
+    "title_key": "page.literature.title",
+    "template": "pages/literature.html",
+    "sort_order": 4,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.literature.intro.title",
+        "body_key": "page.literature.intro.body"
+      },
+      {
+        "key": "synthesis",
+        "title_key": "page.literature.synthesis.title",
+        "body_key": "page.literature.synthesis.body"
+      },
+      {
+        "key": "portraits_note",
+        "title_key": "page.literature.portraits_note.title",
+        "body_key": "page.literature.portraits_note.body"
+      },
+      {
+        "key": "extended",
+        "title_key": "page.literature.extended.title",
+        "body_key": "page.literature.extended.body"
+      },
+      {
+        "key": "verification",
+        "title_key": "page.literature.verification.title",
+        "body_key": "page.literature.verification.body"
+      }
+    ],
+    "nav_key": "nav.literature"
+  },
+  {
+    "slug": "methodology",
+    "title_key": "page.methodology.title",
+    "template": "pages/methodology.html",
+    "sort_order": 5,
+    "sections": [
+      {
+        "key": "field",
+        "title_key": "page.methodology.field.title",
+        "body_key": "page.methodology.field.body"
+      },
+      {
+        "key": "walk",
+        "title_key": "page.methodology.walk.title",
+        "body_key": "page.methodology.walk.body"
+      },
+      {
+        "key": "follow",
+        "title_key": "page.methodology.follow.title",
+        "body_key": "page.methodology.follow.body"
+      },
+      {
+        "key": "food",
+        "title_key": "page.methodology.food.title",
+        "body_key": "page.methodology.food.body"
+      },
+      {
+        "key": "scope",
+        "title_key": "page.methodology.five.title",
+        "body_key": "page.methodology.five.body"
+      }
+    ],
+    "nav_key": "nav.methodology"
+  },
+  {
+    "slug": "fieldwork",
+    "title_key": "page.fieldwork.title",
+    "template": "pages/fieldwork.html",
+    "sort_order": 6,
+    "sections": [
+      {
+        "key": "c1",
+        "title_key": "page.fieldwork.c1.title",
+        "body_key": "page.fieldwork.c1.body"
+      },
+      {
+        "key": "c2",
+        "title_key": "page.fieldwork.c2.title",
+        "body_key": "page.fieldwork.c2.body"
+      },
+      {
+        "key": "c3",
+        "title_key": "page.fieldwork.c3.title",
+        "body_key": "page.fieldwork.c3.body"
+      },
+      {
+        "key": "c4",
+        "title_key": "page.fieldwork.c4.title",
+        "body_key": "page.fieldwork.c4.body"
+      },
+      {
+        "key": "c5",
+        "title_key": "page.fieldwork.c5.title",
+        "body_key": "page.fieldwork.c5.body"
+      }
+    ],
+    "nav_key": "nav.fieldwork"
+  }
+]

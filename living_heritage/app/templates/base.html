@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{{ site_title }}{% endblock %} — 周舟洲粥 Living Cultural Corridors</title>
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="lang-{{ locale }}">
+
+{% include "partials/nav.html" %}
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+{% include "partials/wave.html" %}
+
+{% include "partials/footer.html" %}
+
+<script src="/js/locale.js"></script>
+<script src="/js/living.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
