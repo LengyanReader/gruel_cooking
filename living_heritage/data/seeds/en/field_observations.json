@@ -4,7 +4,7 @@
     "date_observed": "2026-06-12",
     "title_en": "Grain arrives by water",
     "title_zh": "粮食由水路而来",
-    "notes_en": "At Shichahai–Yuhe, morning: the water gates carry the memory of grain tribute barges. What arrives, what leaves, where transfer occurs, what changes.",
+    "notes_en": "At Shichahai-Yuhe, morning: the water gates carry the memory of grain tribute barges. What arrives, what leaves, where transfer occurs, what changes.",
     "notes_zh": "后海—御河,清晨:水闸仍承载着漕运粮船的集体记忆。何来、何去、何处中转、何者改变。",
     "observation_type": "walk",
     "source_level": "A",
@@ -20,5 +20,82 @@
     "observation_type": "regeneration",
     "source_level": "A",
     "tags": "regeneration, oland, iron age"
+  },
+  {
+    "site": "site.tongzhou.name",
+    "date_observed": "2026-06-28",
+    "title_en": "The canal you can walk",
+    "title_zh": "可步行的运河",
+    "notes_en": "Tongzhou, dawn: joggers and yangge troupes move along the Grand Canal park while a museum recreates the 1920s towpath. The canal lives twice - as daily amenity and as displayed heritage.",
+    "notes_zh": "通州,拂晓:晨跑者与秧歌队沿着大运河公园移动,博物馆则在重建 1920 年代的纤道。运河被双重活化——既是日常设施,又是被展出的遗产。",
+    "observation_type": "walk",
+    "source_level": "A",
+    "tags": "tongzhou, living heritage, museum, daily life"
+  },
+  {
+    "site": "site.zhangjiawan.name",
+    "date_observed": "2026-07-02",
+    "title_en": "Porridge at the old grain wharf",
+    "title_zh": "旧粮码头的粥",
+    "notes_en": "Zhangjiawan, the historic tribute-grain wharf: the quay keeps its old alignment while the waterside market opens for breakfast; porridge vendors work the morning crowd where barges once tied up.",
+    "notes_zh": "张家湾,漕运古码头:码头仍保持旧时走向,而近水早市已开张;粥摊在当年粮船停靠的人群中营业。",
+    "observation_type": "food",
+    "source_level": "A",
+    "tags": "zhangjiawan, tribute grain, wharf, breakfast market"
+  },
+  {
+    "site": "site.grand_canal_beijing.name",
+    "date_observed": "2026-07-09",
+    "title_en": "Locks inside the grid",
+    "title_zh": "网格里的闸",
+    "notes_en": "The Qingcheng lock gate (upper lock) is preserved within the modern city grid; the canal beneath the street map is lined with re-created heritage. Living heritage here is staged between daily life and display.",
+    "notes_zh": "澄清上闸被保留在现代城市网格之内;街图之下的运河两岸排列着再造的遗产。此间的活态遗产,在日常生活与展示之间被演出。",
+    "observation_type": "walk",
+    "source_level": "A",
+    "tags": "grand canal beijing, qingcheng lock, heritagisation"
+  },
+  {
+    "site": "site.visby.name",
+    "date_observed": "2026-07-19",
+    "title_en": "The wall's second life",
+    "title_zh": "城墙的第二生",
+    "notes_en": "Visby, a loop of the town wall: thirteenth-century ramparts now buffer hotels and tour buses; the wall is kept authentic while the life behind it is re-invented for tourism.",
+    "notes_zh": "维斯比,沿城墙环行:十三世纪城墙如今缓冲着酒店与旅游大巴;城墙被保持原真,其背后的生活却在为旅游业被重新发明。",
+    "observation_type": "walk",
+    "source_level": "A",
+    "tags": "visby, town wall, authenticity, tourism"
+  },
+  {
+    "site": "site.ridanas.name",
+    "date_observed": "2026-08-11",
+    "title_en": "Herring at the export harbour",
+    "title_zh": "出口港的鲱鱼",
+    "notes_en": "Frojel harbour, from which Viking-Age goods once shipped out: the same bay now lands herring sold straight at the quayside; one catch at a time, the food corridor comes ashore.",
+    "notes_zh": "弗勒耶尔港,维京时代曾从这里运出货物:如今同一处海湾的鲱鱼在码头边直售;一船一船,食物廊道登岸了。",
+    "observation_type": "food",
+    "source_level": "A",
+    "tags": "ridanas, herring, quayside sale, food corridor"
+  },
+  {
+    "site": "site.gamla_skogsby.name",
+    "date_observed": "2026-08-28",
+    "title_en": "From kitchen floor to future grain",
+    "title_zh": "从灶台到未来的谷物",
+    "notes_en": "Gamla Skogsby, on the 2021-season kitchen assemblage: pig bones, quern stones and pottery read as the record of a chieftain household; soil carried out of the floors is being re-sown with heritage cereals.",
+    "notes_zh": "Gamla Skogsby,就 2021 季厨房遗存而言:猪骨、磨石与陶器被解读为一个首领之家的记录;从灶台下取出的土壤正被重新种上传统谷物。",
+    "observation_type": "regeneration",
+    "source_level": "A",
+    "tags": "gamla skogsby, kitchen, feasting, regeneration"
+  },
+  {
+    "site": "site.kinda_canal.name",
+    "date_observed": "2026-09-02",
+    "title_en": "When the canal becomes scenery",
+    "title_zh": "当运河成为风景",
+    "notes_en": "Nykvarn lock, Lake Roxen: the lock keeper now doubles as guide, freight barges carry day-trippers, and the national-interest designation preserves the 1871 waterway as cultural scenery.",
+    "notes_zh": "Nykvarn 闸,罗森湖:闸门管理员兼任导游,货驳载着观光客,国家利益保护把这条 1871 年的水道保存为文化风景。",
+    "observation_type": "walk",
+    "source_level": "A",
+    "tags": "kinda canal, nykvarn lock, riksintresse, tourism"
   }
 ]
