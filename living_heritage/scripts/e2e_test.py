@@ -72,9 +72,19 @@ for p, anchor in [
     ("/literature", "\u7efc\u8ff0\u5373\u524d\u884c"),  # literature intro title
     ("/methodology", "\u8ba9\u7530\u91ce\u6539\u53d8\u7814\u7a76\u8005"),  # field section title
     ("/fieldwork", "\u5317\u4eac\u5927\u8fd0\u6cb3"),   # fieldwork corridor group header
+    ("/plan", "\u7814\u7a76\u8ba1\u5212\u4e0e\u8def\u7ebf\u56fe"),  # plan page title
 ]:
     body = get(p)
     check(p + " anchor", anchor in body, ("len", len(body)))
+
+pl = get("/plan")
+check("plan has roadmap (\u8def\u7ebf\u56fe)", "\u8def\u7ebf\u56fe" in pl or "Roadmap" in pl)
+check("plan status chip done (\u5df2\u5b8c\u6210)", "\u5df2\u5b8c\u6210" in pl)
+check("plan status chip active (\u8fdb\u884c\u4e2d)", "\u8fdb\u884c\u4e2d" in pl)
+check("plan notebook refined note rendered", "\u7814\u7a76\u7b14\u8bb0\u672c" in pl)
+check("plan katex css", "katex.min.css" in pl)
+check("plan katex js", "katex.min.js" in pl)
+check("plan auto-render", "auto-render.min.js" in pl)
 
 pb = get("/publications")
 check("publications has \u7814\u7a76\u8d44\u6599\u5e93", "\u7814\u7a76\u8d44\u6599\u5e93" in pb)

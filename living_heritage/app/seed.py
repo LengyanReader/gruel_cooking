@@ -281,6 +281,87 @@ def _seed_pair_dicts(conn, pairs: dict):
     conn.commit()
 
 
+def seed_plan(conn, en_data: dict, zh_data: dict):
+    """Seed roadmap phases and milestone items (bilingual).
+
+    Phases are upserted by slug; items are upserted by item_key and deleted
+    only when their item_key is present in the seed (admin-created items survive).
+    """
+    zh_phases = {p["slug"]: p.get("title_zh", "") for p in zh_data.get("phases", [])}
+    for ph in en_data.get("phases", []):
+        slug = ph["slug"]
+        title_key = f"plan.phase.{slug}"
+        _seed_pair_dicts(conn, {title_key: (ph.get("title_en", ""), zh_phases.get(slug, ""))})
+        conn.execute(
+            "INSERT OR REPLACE INTO plan_phases (slug, title_key, sort_order) VALUES (?, ?, ?)",
+            (slug, title_key, ph.get("sort", 0))
+        )
+    conn.commit()
+
+    items = en_data.get("items", [])
+    seeded_keys = [it["id"] for it in items if it.get("id")]
+    if seeded_keys:
+        placeholders = ",".join("?" for _ in seeded_keys)
+        conn.execute(
+            f"DELETE FROM plan_items WHERE item_key IN ({placeholders})", seeded_keys
+        )
+        conn.commit()
+
+    zmap = {it.get("id"): it for it in zh_data.get("items", [])}
+    phase_ids = {r["slug"]: r["id"]
+                 for r in conn.execute("SELECT id, slug FROM plan_phases").fetchall()}
+    texts = {}
+    for it in items:
+        z = zmap.get(it["id"], {})
+        title_key = f"plan.item.{it['id']}.title"
+        note_key = f"plan.item.{it['id']}.note"
+        texts[title_key] = (it.get("title_en", ""), z.get("title_zh", ""))
+        texts[note_key] = (it.get("note_en", ""), z.get("note_zh", ""))
+        pid = phase_ids.get(it.get("phase"))
+        conn.execute(
+            """INSERT OR REPLACE INTO plan_items (item_key, phase_id, sort_order, status, title_key, note_key)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (it["id"], pid, it.get("sort", 0), int(it.get("status", 0)), title_key, note_key)
+        )
+    _seed_pair_dicts(conn, texts)
+    conn.commit()
+
+
+def seed_notes(conn, en_data: dict, zh_data: dict):
+    """Seed research-notebook entries (bilingual).
+
+    Entries are upserted by note_key and deleted only when the note_key is
+    present in the seed, so admin-created notes survive reseeds.
+    """
+    notes = en_data.get("notes", [])
+    seeded_keys = [n["id"] for n in notes if n.get("id")]
+    if seeded_keys:
+        placeholders = ",".join("?" for _ in seeded_keys)
+        conn.execute(
+            f"DELETE FROM research_notes WHERE note_key IN ({placeholders})", seeded_keys
+        )
+        conn.commit()
+
+    zmap = {n.get("id"): n for n in zh_data.get("notes", [])}
+    texts = {}
+    for n in notes:
+        z = zmap.get(n["id"], {})
+        title_key = f"note.{n['id']}.title"
+        body_key = f"note.{n['id']}.body"
+        texts[title_key] = (n.get("title_en", ""), z.get("title_zh", ""))
+        texts[body_key] = (n.get("body_en", ""), z.get("body_zh", ""))
+        conn.execute(
+            """INSERT OR REPLACE INTO research_notes
+               (note_key, title_key, body_key, category, status, tags, ref_key)
+               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (n["id"], title_key, body_key,
+             n.get("category", "brainstorm"), int(n.get("status", 0)),
+             n.get("tags", ""), n.get("ref_key", ""))
+        )
+    _seed_pair_dicts(conn, texts)
+    conn.commit()
+
+
 def _load(lang: str) -> dict[str, Path]:
     base = SEEDS_DIR / lang
     return {
@@ -293,6 +374,8 @@ def _load(lang: str) -> dict[str, Path]:
         "heritage_sites": base / "heritage_sites.json",
         "publications": base / "publications.json",
         "field_observations": base / "field_observations.json",
+        "plan": base / "plan.json",
+        "notes": base / "notes.json",
     }
 
 
@@ -371,6 +454,18 @@ def seed_all():
         en_o = json.loads(en_files["field_observations"].read_text(encoding="utf-8"))
         zh_o = json.loads(zh_files["field_observations"].read_text(encoding="utf-8")) if zh_files["field_observations"].exists() else []
         seed_field_observations(conn, en_o, zh_o)
+
+    # Roadmap phases + items (phases before items for FK integrity)
+    if en_files["plan"].exists():
+        en_plan = json.loads(en_files["plan"].read_text(encoding="utf-8"))
+        zh_plan = json.loads(zh_files["plan"].read_text(encoding="utf-8")) if zh_files["plan"].exists() else {}
+        seed_plan(conn, en_plan, zh_plan)
+
+    # Research-notebook entries
+    if en_files["notes"].exists():
+        en_n = json.loads(en_files["notes"].read_text(encoding="utf-8"))
+        zh_n = json.loads(zh_files["notes"].read_text(encoding="utf-8")) if zh_files["notes"].exists() else {}
+        seed_notes(conn, en_n, zh_n)
 
     # Knowledge-graph edges (rebuilt last: needs sites, scholars, pubs, observations)
     seed_relations(conn, scholar_map_from_seed() or None)

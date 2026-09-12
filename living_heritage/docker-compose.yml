@@ -13,7 +13,10 @@ services:
       # optional public base URL for absolute OG/SEO links (empty -> relative/suppressed)
       LH_BASE_URL: ${LH_BASE_URL:-}
     volumes:
-      # persist the SQLite DB across restarts; reseed by deleting the file
+      # persist the data dir (DB + seeds) across restarts. NOTE: the named
+      # volume shadows image seeds on first mount; after a rebuild, refresh:
+      #   docker cp ./data/seeds/. living-heritage:/srv/living_heritage/data/seeds/
+      #   docker exec living-heritage python -m app.seed
       - lh_data:/srv/living_heritage/data
     restart: unless-stopped
 

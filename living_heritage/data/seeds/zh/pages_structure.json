@@ -195,5 +195,19 @@
       }
     ],
     "nav_key": "nav.publications"
+  },
+  {
+    "slug": "plan",
+    "title_key": "page.plan.title",
+    "template": "pages/plan.html",
+    "sort_order": 8,
+    "sections": [
+      {
+        "key": "intro",
+        "title_key": "page.plan.intro.title",
+        "body_key": "page.plan.intro.body"
+      }
+    ],
+    "nav_key": "nav.plan"
   }
 ]

@@ -8,6 +8,7 @@
 <meta name="description" content="{% block meta_description %}{{ site_subtitle }}{% endblock %}">
 <link rel="canonical" href="{{ base_url }}{{ request_path }}">
 {% block meta %}{% endblock %}
+{% block katex %}{% endblock %}
 {% block og_meta %}
 <meta property="og:site_name" content="{{ brand['brand.identity'] }}">
 <meta property="og:type" content="website">
@@ -47,6 +48,7 @@
 
 <script src="/js/locale.js"></script>
 <script src="/js/living.js"></script>
+{% block katex_scripts %}{% endblock %}
 {% block scripts %}{% endblock %}
 </body>
 </html>

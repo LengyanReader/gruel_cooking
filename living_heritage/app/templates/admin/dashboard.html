@@ -146,6 +146,102 @@
   </div>
 
   <div class="panel">
+    <h2>路线图 · Roadmap item</h2>
+    <form class="plan-form">
+      <div class="grid">
+        <div><label>阶段 phase</label>
+          <select name="phase_slug">
+            {% for ph in plan_phases %}<option value="{{ ph.slug }}">{{ ph.title }}</option>{% endfor %}
+          </select>
+        </div>
+        <div><label>状态 status</label>
+          <select name="status">
+            <option value="0">{{ plan_status_labels.get('plan.status.todo', 'To do') }}</option>
+            <option value="1">{{ plan_status_labels.get('plan.status.active', 'In progress') }}</option>
+            <option value="2">{{ plan_status_labels.get('plan.status.done', 'Done') }}</option>
+          </select>
+        </div>
+        <div><label>序号 sort</label><input name="sort_order" type="number" value="1"></div>
+      </div>
+      <div class="grid">
+        <div><label>标题 EN</label><input name="title_en"></div>
+        <div><label>标题 中文</label><input name="title_zh"></div>
+        <div><label>说明 note EN</label><textarea name="note_en"></textarea></div>
+        <div><label>说明 中文</label><textarea name="note_zh"></textarea></div>
+      </div>
+      <button class="btn" type="submit" data-add-label="保存 Plan item">保存 Plan item</button>
+      <button class="btn secondary cancel hidden" type="button">取消 cancel</button><span class="msg"></span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>研究笔记本 · Research notebook</h2>
+    <form class="note-form">
+      <div class="grid one">
+        <div><label>快记 / 正文 body (Markdown + LaTeX) EN</label><textarea name="body_en" placeholder="随手记下想法 ... 支持 $\\frac{1}{2}$ 与 **markdown**"></textarea></div>
+        <div><label>正文 中文 body (optional)</label><textarea name="body_zh"></textarea></div>
+        <div><label>标题 EN title (留空则自动取正文开头)</label><input name="title_en"></div>
+        <div><label>标题 中文 title (optional)</label><input name="title_zh"></div>
+      </div>
+      <div class="grid">
+        <div><label>类别 category</label>
+          <select name="category">
+            {% for c in note_categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+          </select>
+        </div>
+        <div><label>状态 status</label>
+          <select name="status">
+            <option value="0">raw — 私密 private</option>
+            <option value="1">refined — 公开 public</option>
+            <option value="2">archived — 归档 hidden</option>
+          </select>
+        </div>
+        <div><label>标签 tags (逗号分隔)</label><input name="tags" placeholder="drafting, fieldwork"></div>
+        <div><label>关联 ref (e.g. plan.x, §53.3)</label><input name="ref_key" placeholder="plan.formal-chapters"></div>
+      </div>
+      <button class="btn" type="submit" data-add-label="保存 Note">保存 Note</button>
+      <button class="btn secondary cancel hidden" type="button">取消 cancel</button>
+      <a class="btn secondary" href="/admin/notebook" target="_blank">写作工作台 notebook ⇢</a>
+      <span class="msg"></span>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h2>最近路线图 · recent roadmap</h2>
+    {% for it in plan_items %}
+      <div class="unit">
+        <div class="unit-head">
+          <b>{% if it.status == 1 %}<span class="tag" style="background:#FCE9C8;color:#A76B12">进行中 active</span>{% elif it.status == 2 %}<span class="tag" style="background:#E3F0E5;color:#2E7D32">已完成 done</span>{% else %}<span class="tag" style="background:#EFE9DC;color:#7A6E56">未开始 todo</span>{% endif %} {{ it.title or '(untitled)' }}</b>
+          <span class="note">#{{ it.id }} · {{ it.phase_slug }} · sort {{ it.sort_order }}</span>
+        </div>
+        {% if it.note %}<div class="note">{{ it.note }}</div>{% endif %}
+        <div><button class="btn secondary" data-edit="plan" data-id="{{ it.id }}">编辑 edit</button>
+            <button class="btn danger" data-del="plan/item" data-id="{{ it.id }}">删除 delete</button></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>最近笔记 · recent notes</h2>
+    {% for n in notes %}
+      <div class="unit">
+        <div class="unit-head">
+          <b>
+            {% if n.status == 0 %}<span class="tag" style="background:#EFE9DC;color:#7A6E56">raw 私密</span>
+            {% elif n.status == 1 %}<span class="tag" style="background:#E3F0E5;color:#2E7D32">refined 公开</span>
+            {% else %}<span class="tag" style="background:#ECE5F3;color:#6B3A8A">archived 归档</span>{% endif %}
+            {{ n.title_en or n.title_zh or '(untitled)' }}
+          </b>
+          <span class="note">#{{ n.id }} · {{ n.category }}{% if n.tags %} · {{ n.tags }}{% endif %}{% if n.ref_key %} · → {{ n.ref_key }}{% endif %}</span>
+        </div>
+        {% if n.body_en or n.body_zh %}<div class="note">{{ (n.body_en or n.body_zh)[:140] }}{% if (n.body_en or n.body_zh) | length > 140 %}…{% endif %}</div>{% endif %}
+        <div><button class="btn secondary" data-edit="note" data-id="{{ n.id }}">编辑 edit</button>
+            <button class="btn danger" data-del="note" data-id="{{ n.id }}">删除 delete</button></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
     <h2>最近观察 · recent observations</h2>
     {% for o in observations %}
       <div class="unit">
@@ -264,6 +360,80 @@
       } else {
         post("/admin/publication/add", f, f.querySelector(".msg"));
       }
+    });
+  });
+
+  function editUnit(kind, id, formSel) {
+    var form = document.querySelector(formSel);
+    var save = form.querySelector(".btn[type=submit]");
+    fetch("/admin/" + kind + "/" + id + "/get", { method: "POST" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.error) { alert(d.error); return; }
+        form.setAttribute("data-edit-id", id);
+        form.querySelectorAll("[name]").forEach(function (el) {
+          var v = d[el.name];
+          el.value = (v == null) ? "" : v;
+        });
+        save.textContent = "更新 Update #" + id;
+        var cancel = form.querySelector(".btn.cancel");
+        if (cancel) cancel.classList.remove("hidden");
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+        form.querySelector(".msg").textContent = "";
+      });
+  }
+
+  document.querySelectorAll("[data-edit]").forEach(function (btn) {
+    var k = btn.dataset.edit;
+    if (k === "plan" || k === "note") return;
+    btn.addEventListener("click", function () {
+      enterEdit(btn.dataset.edit, btn.dataset.id);
+    });
+  });
+  document.querySelectorAll("[data-edit=plan]").forEach(function (btn) {
+    btn.addEventListener("click", function () { editUnit("plan/item", btn.dataset.id, ".plan-form"); });
+  });
+  document.querySelectorAll("[data-edit=note]").forEach(function (btn) {
+    btn.addEventListener("click", function () { editUnit("note", btn.dataset.id, ".note-form"); });
+  });
+
+  document.querySelectorAll(".plan-form").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var path, label;
+      if (f.dataset.editId) { path = "/admin/plan/item/" + f.dataset.editId + "/update"; label = "updated #" + f.dataset.editId; }
+      else { path = "/admin/plan/item/add"; label = "saved"; }
+      var data = new URLSearchParams(new FormData(f));
+      fetch(path, { method: "POST", body: data }).then(function (r) { return r.json(); }).then(function (j) {
+        var m = f.querySelector(".msg");
+        if (j.ok) { m.textContent = "✓ " + label; m.className = "msg ok"; location.reload(); }
+        else { m.textContent = "✗ " + (j.error || "error"); m.className = "msg err"; }
+      });
+    });
+  });
+  document.querySelectorAll(".note-form").forEach(function (f) {
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!f.querySelector("[name=body_en]").value.trim() && !f.querySelector("[name=body_zh]").value.trim()) {
+        var m = f.querySelector(".msg"); m.textContent = "✗ 正文不能为空 body required"; m.className = "msg err"; return;
+      }
+      var autoTitle = function (src) {
+        var v = (src || "").trim().replace(/\s+/g, " ");
+        return v.length > 60 ? v.slice(0, 60) + "…" : v;
+      };
+      var titleEn = f.querySelector("[name=title_en]").value.trim();
+      var titleZh = f.querySelector("[name=title_zh]").value.trim();
+      if (!titleEn) { titleEn = autoTitle(f.querySelector("[name=body_en]").value || f.querySelector("[name=body_zh]").value); f.querySelector("[name=title_en]").value = titleEn; }
+      if (!titleZh) { titleZh = f.querySelector("[name=title_zh]").value || titleEn; }
+      var path, label;
+      if (f.dataset.editId) { path = "/admin/note/" + f.dataset.editId + "/update"; label = "updated #" + f.dataset.editId; }
+      else { path = "/admin/note/add"; label = "saved"; }
+      var data = new URLSearchParams(new FormData(f));
+      fetch(path, { method: "POST", body: data }).then(function (r) { return r.json(); }).then(function (j) {
+        var m = f.querySelector(".msg");
+        if (j.ok) { m.textContent = "✓ " + label; m.className = "msg ok"; location.reload(); }
+        else { m.textContent = "✗ " + (j.error || "error"); m.className = "msg err"; }
+      });
     });
   });
   document.querySelectorAll("[data-del]").forEach(function (btn) {

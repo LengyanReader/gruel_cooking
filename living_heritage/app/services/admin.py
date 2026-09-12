@@ -49,6 +49,9 @@ class AdminService:
             "field_observations": "field_observations",
             "publications": "publications",
             "relations": "relations",
+            "plan_phases": "plan_phases",
+            "plan_items": "plan_items",
+            "research_notes": "research_notes",
         }
         return {name: self.db.execute(f"SELECT COUNT(*) FROM {tbl}").fetchone()[0]
                 for name, tbl in rows.items()}
@@ -273,3 +276,209 @@ class AdminService:
             (like, like, like, limit)
         ).fetchall()
         return [dict(r) for r in rows]
+
+    # ── Roadmap phases & items ──
+
+    def list_plan_phases(self, locale: str = "en") -> list[dict]:
+        rows = self.db.execute(
+            "SELECT id, slug, title_key, sort_order FROM plan_phases ORDER BY sort_order, id"
+        ).fetchall()
+        return [{"id": r["id"], "slug": r["slug"], "title": self.text.resolve(r["title_key"], locale)}
+                for r in rows]
+
+    def list_plan_items(self, locale: str = "en", limit: int = 200) -> list[dict]:
+        rows = self.db.execute(
+            """SELECT pi.*, pp.slug AS phase_slug FROM plan_items pi
+               JOIN plan_phases pp ON pi.phase_id = pp.id
+               ORDER BY pp.sort_order, pi.sort_order, pi.id LIMIT ?""",
+            (limit,)
+        ).fetchall()
+        out = []
+        for r in rows:
+            d = dict(r)
+            d["title"] = self.text.resolve(d.get("title_key"), locale)
+            d["note"] = self.text.resolve(d.get("note_key") or "", locale)
+            out.append(d)
+        return out
+
+    @staticmethod
+    def _plan_item_keys() -> tuple[str, str, str]:
+        stamp = datetime.now().strftime("%Y%m%d%H%M%S%f")
+        item_key = f"plan.admin.{stamp}"
+        return item_key, f"{item_key}.title", f"{item_key}.note"
+
+    def add_plan_item(self, *, phase_slug: str, sort_order: int, status: int,
+                      title_en: str, title_zh: str, note_en: str, note_zh: str) -> int:
+        pid = self.db.execute("SELECT id FROM plan_phases WHERE slug = ?", (phase_slug,)).fetchone()
+        if not pid:
+            raise ValueError(f"Unknown phase: {phase_slug}")
+        item_key, title_key, note_key = self._plan_item_keys()
+        self.db.execute(
+            "INSERT INTO bilingual_text (key, en, zh, updated_at) VALUES (?, ?, ?, datetime('now'))",
+            (title_key, title_en or "", title_zh or "")
+        )
+        self.db.execute(
+            "INSERT INTO bilingual_text (key, en, zh, updated_at) VALUES (?, ?, ?, datetime('now'))",
+            (note_key, note_en or "", note_zh or "")
+        )
+        cur = self.db.execute(
+            """INSERT INTO plan_items (item_key, phase_id, sort_order, status, title_key, note_key)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (item_key, pid["id"], int(sort_order or 0), int(status or 0), title_key, note_key)
+        )
+        self.db.commit()
+        return cur.lastrowid
+
+    def delete_plan_item(self, item_id: int) -> bool:
+        row = self.db.execute("SELECT title_key, note_key FROM plan_items WHERE id = ?",
+                              (item_id,)).fetchone()
+        cur = self.db.execute("DELETE FROM plan_items WHERE id = ?", (item_id,))
+        if not cur.rowcount:
+            return False
+        keys = [k for k in (row["title_key"], row["note_key"]) if k]
+        if keys:
+            self.db.execute(f"DELETE FROM bilingual_text WHERE key IN ({','.join('?' for _ in keys)})", keys)
+        self.db.commit()
+        return True
+
+    def get_plan_item(self, item_id: int) -> dict | None:
+        row = self.db.execute(
+            "SELECT pi.*, pp.slug AS phase_slug FROM plan_items pi "
+            "JOIN plan_phases pp ON pi.phase_id = pp.id WHERE pi.id = ?",
+            (item_id,)
+        ).fetchone()
+        if not row:
+            return None
+        d = dict(row)
+        d["title_en"], d["title_zh"] = self._resolve_pair(d.get("title_key"))
+        d["note_en"], d["note_zh"] = self._resolve_pair(d.get("note_key"))
+        return d
+
+    def update_plan_item(self, item_id: int, *, phase_slug: str, sort_order: int, status: int,
+                         title_en: str, title_zh: str, note_en: str, note_zh: str) -> bool:
+        row = self.db.execute("SELECT title_key, note_key FROM plan_items WHERE id = ?",
+                              (item_id,)).fetchone()
+        pid = self.db.execute("SELECT id FROM plan_phases WHERE slug = ?", (phase_slug,)).fetchone()
+        if not pid:
+            raise ValueError(f"Unknown phase: {phase_slug}")
+        if not row:
+            return False
+        self.set_text(row["title_key"] or "", title_en or "", title_zh or "")
+        self.set_text(row["note_key"] or "", note_en or "", note_zh or "")
+        self.db.execute(
+            "UPDATE plan_items SET phase_id = ?, sort_order = ?, status = ? WHERE id = ?",
+            (pid["id"], int(sort_order or 0), int(status or 0), item_id)
+        )
+        self.db.commit()
+        return True
+
+    # ── Research notebook ──
+
+    NOTE_CATEGORIES = ["brainstorm", "question", "decision", "critique", "source"]
+
+    def list_notes(self, limit: int = 200) -> list[dict]:
+        rows = self.db.execute(
+            "SELECT * FROM research_notes ORDER BY updated_at DESC, id DESC LIMIT ?", (limit,)
+        ).fetchall()
+        out = []
+        for r in rows:
+            d = dict(r)
+            d["title_en"], d["title_zh"] = self._resolve_pair(d.get("title_key"))
+            d["body_en"], d["body_zh"] = self._resolve_pair(d.get("body_key"))
+            out.append(d)
+        return out
+
+    def search_notes(self, term: str, category: str | None = None,
+                     status: int | None = None, limit: int = 60) -> list[dict]:
+        sql = ("SELECT id, note_key, category, status, tags, ref_key, updated_at "
+               "FROM research_notes WHERE 1=1")
+        args = []
+        if term:
+            sql += """ AND (note_key LIKE ? OR tags LIKE ? OR ref_key LIKE ? OR id IN (
+                SELECT rn.id FROM research_notes rn JOIN bilingual_text bt ON bt.key = rn.title_key
+                WHERE bt.en LIKE ? OR bt.zh LIKE ? OR rn.id IN (
+                    SELECT rn2.id FROM research_notes rn2 JOIN bilingual_text bt2
+                    ON bt2.key = rn2.body_key WHERE bt2.en LIKE ? OR bt2.zh LIKE ?)))"""
+            like = f"%{term}%"
+            args += [like, like, like, like, like, like, like]
+        if category:
+            sql += " AND category = ?"
+            args.append(category)
+        if status is not None:
+            sql += " AND status = ?"
+            args.append(status)
+        sql += " ORDER BY updated_at DESC, id DESC LIMIT ?"
+        args.append(limit)
+        return [dict(r) for r in self.db.execute(sql, args).fetchall()]
+
+    @staticmethod
+    def _note_keys() -> tuple[str, str, str]:
+        stamp = datetime.now().strftime("%Y%m%d%H%M%S%f")
+        note_key = f"note.{stamp}"
+        return note_key, f"{note_key}.title", f"{note_key}.body"
+
+    def add_note(self, *, title_en: str, title_zh: str, body_en: str, body_zh: str,
+                 category: str, status: int, tags: str, ref_key: str) -> int:
+        if category not in self.NOTE_CATEGORIES:
+            raise ValueError(f"Unknown category: {category}")
+        if int(status) not in (0, 1, 2):
+            raise ValueError(f"Unknown status: {status}")
+        note_key, title_key, body_key = self._note_keys()
+        self.db.execute(
+            "INSERT INTO bilingual_text (key, en, zh, updated_at) VALUES (?, ?, ?, datetime('now'))",
+            (title_key, title_en or "", title_zh or "")
+        )
+        self.db.execute(
+            "INSERT INTO bilingual_text (key, en, zh, updated_at) VALUES (?, ?, ?, datetime('now'))",
+            (body_key, body_en or "", body_zh or "")
+        )
+        cur = self.db.execute(
+            """INSERT INTO research_notes
+               (note_key, title_key, body_key, category, status, tags, ref_key)
+               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (note_key, title_key, body_key, category, int(status), tags or "", ref_key or "")
+        )
+        self.db.commit()
+        return cur.lastrowid
+
+    def delete_note(self, note_id: int) -> bool:
+        row = self.db.execute("SELECT title_key, body_key FROM research_notes WHERE id = ?",
+                              (note_id,)).fetchone()
+        cur = self.db.execute("DELETE FROM research_notes WHERE id = ?", (note_id,))
+        if not cur.rowcount:
+            return False
+        keys = [k for k in (row["title_key"], row["body_key"]) if k]
+        if keys:
+            self.db.execute(f"DELETE FROM bilingual_text WHERE key IN ({','.join('?' for _ in keys)})", keys)
+        self.db.commit()
+        return True
+
+    def get_note(self, note_id: int) -> dict | None:
+        row = self.db.execute("SELECT * FROM research_notes WHERE id = ?", (note_id,)).fetchone()
+        if not row:
+            return None
+        d = dict(row)
+        d["title_en"], d["title_zh"] = self._resolve_pair(d.get("title_key"))
+        d["body_en"], d["body_zh"] = self._resolve_pair(d.get("body_key"))
+        return d
+
+    def update_note(self, note_id: int, *, title_en: str, title_zh: str, body_en: str, body_zh: str,
+                    category: str, status: int, tags: str, ref_key: str) -> bool:
+        row = self.db.execute("SELECT title_key, body_key FROM research_notes WHERE id = ?",
+                              (note_id,)).fetchone()
+        if not row:
+            return False
+        if category not in self.NOTE_CATEGORIES:
+            raise ValueError(f"Unknown category: {category}")
+        if int(status) not in (0, 1, 2):
+            raise ValueError(f"Unknown status: {status}")
+        self.set_text(row["title_key"] or "", title_en or "", title_zh or "")
+        self.set_text(row["body_key"] or "", body_en or "", body_zh or "")
+        self.db.execute(
+            """UPDATE research_notes
+               SET category = ?, status = ?, tags = ?, ref_key = ?, updated_at = datetime('now')
+               WHERE id = ?""",
+            (category, int(status), tags or "", ref_key or "", note_id)
+        )
+        self.db.commit()
+        return True

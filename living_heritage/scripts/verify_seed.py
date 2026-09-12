@@ -63,8 +63,44 @@ check(f"每条观察都有 involves→site 边 ({n_rel_obs}/{n_obs})", n_rel_obs
 check("存在 authored 学者→文献 边", n_rel_auth > 0)
 check("存在 involves 文献→廊道 边", n_rel_pub >= n_pubs)
 
+n_phases = conn.execute("SELECT COUNT(*) FROM plan_phases").fetchone()[0]
+n_items = conn.execute("SELECT COUNT(*) FROM plan_items").fetchone()[0]
+n_notes = conn.execute("SELECT COUNT(*) FROM research_notes").fetchone()[0]
+check("路线图阶段齐备 (5 phases)", n_phases >= 5)
+check("每个阶段挂有阶段标题双语",
+      all(full_key(r["title_key"]) for r in conn.execute("SELECT title_key FROM plan_phases").fetchall()))
+check("里程碑非空且标题双语",
+      n_items > 0 and all(
+          full_key(r["title_key"]) for r in conn.execute("SELECT title_key FROM plan_items").fetchall()))
+check("里程碑状态合法 (0/1/2)",
+      all(r["status"] in (0, 1, 2) for r in conn.execute("SELECT status FROM plan_items").fetchall()))
+check("每个里程碑挂接有效阶段",
+      all(
+          conn.execute("SELECT 1 FROM plan_phases WHERE id=?", (r["phase_id"],)).fetchone()
+          for r in conn.execute("SELECT phase_id FROM plan_items").fetchall()))
+check("已有 ✓ 进度: 里程碑有完成项也有未完成项",
+      conn.execute("SELECT COUNT(*) FROM plan_items WHERE status=2").fetchone()[0] > 0
+      and conn.execute("SELECT COUNT(*) FROM plan_items WHERE status=1").fetchone()[0] > 0)
+check("研究笔记非空且标题/正文双语",
+      n_notes > 0 and all(
+          full_key(r["title_key"]) and full_key(r["body_key"])
+          for r in conn.execute("SELECT title_key, body_key FROM research_notes").fetchall()))
+check("笔记类别/状态合法",
+      all(r["category"] in ("brainstorm", "question", "decision", "critique", "source")
+          and r["status"] in (0, 1, 2)
+          for r in conn.execute("SELECT category, status FROM research_notes").fetchall()))
+check("存在 refined 公开笔记与 raw 私密笔记",
+      conn.execute("SELECT COUNT(*) FROM research_notes WHERE status=1").fetchone()[0] > 0
+      and conn.execute("SELECT COUNT(*) FROM research_notes WHERE status=0").fetchone()[0] > 0)
+check("plan 页注册且导航就绪",
+      bool(conn.execute("SELECT 1 FROM pages WHERE slug='plan' AND is_published=1 AND nav_key IS NOT NULL").fetchone()))
+for nav in ["nav.plan", "plan.status.todo", "note.category.brainstorm", "note.status.refined"]:
+    check(f"导航/标签键双语齐备: {nav}", full_key(nav))
+check("page.plan.title 双语齐备",
+      full_key("page.plan.title") and full_key("page.plan.intro.body"))
+
 print("== INFO ==")
-for t in ["bilingual_text", "pages", "page_sections", "heritage_sites", "scholars", "corridors", "relations", "publications", "field_observations"]:
+for t in ["bilingual_text", "pages", "page_sections", "heritage_sites", "scholars", "corridors", "relations", "publications", "field_observations", "plan_phases", "plan_items", "research_notes"]:
     n = conn.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
     print(f"{t}: {n}")
 

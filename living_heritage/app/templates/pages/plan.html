@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ page.title if page else nav.plan }} — {{ site_title }}{% endblock %}
+
+{% block katex %}
+<link rel="stylesheet" href="/vendor/katex/katex.min.css">
+{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title if page else nav.plan }}</h1>
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container">
+    {% if page %}
+      {% for s in page.sections %}
+        {{ t.section_block(s) }}
+      {% endfor %}
+    {% endif %}
+
+    <article class="section-block reveal">
+      <h2 class="section-block-title">Roadmap</h2>
+      <div class="plan-stats">
+        <span class="plan-stat"><b>{{ plan_stats.total }}</b> {{ labels.get('label.plan_progress', 'items') }}</span>
+        <span class="plan-stat"><b>{{ plan_stats.done }}</b> {{ labels.get('label.plan_phase_done', 'done') }}</span>
+        <span class="plan-stat"><b>{{ plan_stats.active }}</b> in progress</span>
+      </div>
+
+      <div class="plan-timeline">
+        {% for g in plan_groups %}
+        <div class="plan-phase">
+          <div class="plan-phase-head">
+            <h3 class="plan-phase-title">{{ g.phase.title }}</h3>
+            <span class="plan-phase-count">{{ g.done }}/{{ g.count }}</span>
+          </div>
+          {% for it in g.milestones %}
+          <div class="plan-item status-{{ it.status }}">
+            <span class="plan-status">{% if it.status == 0 %}{{ plan_status_labels.get('plan.status.todo', 'To do') }}{% elif it.status == 1 %}{{ plan_status_labels.get('plan.status.active', 'In progress') }}{% else %}{{ plan_status_labels.get('plan.status.done', 'Done') }}{% endif %}</span>
+            <div class="plan-item-body">
+              <h4 class="plan-item-title">{{ it.title }}</h4>
+              {% if it.note %}<p class="plan-item-note">{{ it.note }}</p>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </article>
+
+    <article class="section-block reveal">
+      <h2 class="section-block-title">{{ note_labels.get('page.plan.notebook.title', 'Research notebook') }}</h2>
+      <div class="section-block-body">{{ note_labels.get('page.plan.notebook.body', '') }}</div>
+
+      {% if notes %}
+      <div class="note-grid">
+        {% for n in notes %}
+        <article class="note-card">
+          <div class="note-card-head">
+            <span class="note-chip note-cat-{{ n.category }}">{{ note_labels.get('note.category.' ~ n.category, n.category) }}</span>
+            {% if n.tags %}
+              {% for tag in n.tags.split(',') %}
+                {% if tag.strip() %}<span class="note-chip note-tag">{{ tag.strip() }}</span>{% endif %}
+              {% endfor %}
+            {% endif %}
+            {% if n.ref_key %}<span class="note-chip note-ref">→ {{ n.ref_key }}</span>{% endif %}
+            {% if n.updated %}<time class="note-date" datetime="{{ n.updated }}">{{ n.updated }}</time>{% endif %}
+          </div>
+          <h3 class="note-card-title">{{ n.title }}</h3>
+          <div class="note-card-body note-md">{{ n.html | safe }}</div>
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+  </div>
+</section>
+{% endblock %}
+
+{% block katex_scripts %}
+<script defer src="/vendor/katex/katex.min.js"></script>
+<script defer src="/vendor/katex/auto-render.min.js"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ],
+        throwOnError: false
+      });
+    }
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,37 @@
+{
+  "notes": [
+    {
+      "id": "seed-formal-chapters",
+      "category": "brainstorm",
+      "status": 1,
+      "tags": "drafting, formal-chapters",
+      "ref_key": "plan.formal-chapters",
+      "title_en": "Formal chapters: anchor each §53 dimension to §52 rows",
+      "title_zh": "正式章节：将每个 §53 维度锚定到 §52 行",
+      "body_en": "For every content dimension in §53, pull the closest §52 rows and the §7.1 works used to close them. The chapter should show analysis role -> verified anchor -> field calibration, mirroring the drafted document so nothing new is asserted.",
+      "body_zh": "对 §53 的每个内容维度,取最相关的 §52 行以及用于闭合它们的 §7.1 文献。章节应呈现「分析作用 → 核验锚点 → 田野校准」的结构,与起草稿保持一致,不断言任何新事实。"
+    },
+    {
+      "id": "seed-desire-pathways",
+      "category": "question",
+      "status": 1,
+      "tags": "criterion, refinement",
+      "ref_key": "drafted-critique",
+      "title_en": "Low-criterion-circle question",
+      "title_zh": "低判准循环之问",
+      "body_en": "Does the drafting loop stay honest when the criterion circle is small and the corpus is closed? Open task: write a short self-audit pass (like Lynn's style-check) over the drafted chapters before they are promoted.",
+      "body_zh": "当判准循环很小、语料库已闭合时,起草回路是否仍然诚实?待办任务:在章节转正前,对起草稿做一次简短的自审(类似 Lynn 的文体检查)。"
+    },
+    {
+      "id": "seed-wringing-criteria",
+      "category": "source",
+      "status": 0,
+      "tags": "fieldwork, interviews",
+      "ref_key": "field.round3",
+      "title_en": "Kinda lockkeeper interviews on 'regeneration'",
+      "title_zh": "Kinda 闸门管理员谈「再生」",
+      "body_en": "Capture candidate interview snippets on canal regeneration; check against what the written record says about who maintains the lock. Possible entry point for the fieldwork cycles' discussion.",
+      "body_zh": "收集关于运河再生的候选访谈片段;与文字记录中关于闸门维护者的表述对勘。可作为田野周期讨论的切入点。"
+    }
+  ]
+}

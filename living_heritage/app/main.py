@@ -346,6 +346,55 @@ def publications(req: Request):
     return html
 
 
+@get("/plan")
+def plan(req: Request):
+    ctx = AppContext(req)
+    ctx.req.page_slug = "plan"
+    base = base_context(ctx)
+    base["page"] = ctx.content.get_page("plan", ctx.locale)
+
+    # Roadmap phases + items, grouped by phase
+    phases = ctx.admin.list_plan_phases(ctx.locale)
+    items = ctx.admin.list_plan_items(ctx.locale)
+    grouped = []
+    total_items = len(items)
+    total_done = sum(1 for it in items if it.get("status") == 2)
+    total_active = sum(1 for it in items if it.get("status") == 1)
+    for ph in phases:
+        ph_items = [it for it in items if it.get("phase_slug") == ph.get("slug")]
+        grouped.append({
+            "phase": ph,
+            "milestones": ph_items,
+            "done": sum(1 for it in ph_items if it.get("status") == 2),
+            "count": len(ph_items),
+        })
+    base["plan_groups"] = grouped
+    base["plan_stats"] = {"total": total_items, "done": total_done, "active": total_active}
+    base["plan_status_labels"] = ctx.content.resolve_texts_batch(
+        ["plan.status.todo", "plan.status.active", "plan.status.done"], ctx.locale
+    )
+
+    # Refined (public) notebook notes: raw stays private until refined
+    from app.services.markdown_render import render_markdown
+    notes = ctx.admin.list_notes(limit=500)
+    refined = [n for n in notes if n.get("status") == 1]
+    for n in refined:
+        n["title"] = ctx.content.resolve_text(n.get("title_key"), ctx.locale)
+        n["body"] = ctx.content.resolve_text(n.get("body_key"), ctx.locale)
+        n["html"] = render_markdown(n["body"])
+        n["updated"] = (n.get("updated_at") or "")[:10]
+    base["note_labels"] = ctx.content.resolve_texts_batch(
+        ["note.category.brainstorm", "note.category.question", "note.category.decision",
+         "note.category.critique", "note.category.source",
+         "page.plan.notebook.title", "page.plan.notebook.body"], ctx.locale
+    )
+    base["notes"] = refined
+    base["use_katex"] = True
+    html = render("pages/plan.html", base)
+    ctx.db.close()
+    return html
+
+
 @post("/locale/<lang>")
 def set_locale(req: Request):
     lang = req.params.get("lang", DEFAULT_LOCALE)
@@ -412,6 +461,18 @@ def admin_dash(req: Request):
     base["observations"] = ctx.admin.recent_observations(12)
     base["publications"] = ctx.admin.recent_publications(12)
     base["sites"] = ctx.admin.list_sites(ctx.locale)
+    base["plan_phases"] = ctx.admin.list_plan_phases(ctx.locale)
+    base["plan_items"] = ctx.admin.list_plan_items(ctx.locale, limit=60)
+    base["plan_status_labels"] = ctx.content.resolve_texts_batch(
+        ["plan.status.todo", "plan.status.active", "plan.status.done"], ctx.locale
+    )
+    base["note_categories"] = ctx.admin.NOTE_CATEGORIES
+    base["notes"] = ctx.admin.list_notes(100)
+    base["note_labels"] = ctx.content.resolve_texts_batch(
+        ["note.category.brainstorm", "note.category.question", "note.category.decision",
+         "note.category.critique", "note.category.source",
+         "note.status.raw", "note.status.refined", "note.status.archived"], ctx.locale
+    )
     base["page"] = None
     html = render("admin/dashboard.html", base)
     ctx.db.close()
@@ -603,6 +664,200 @@ def admin_text_search(req: Request):
     terms = ctx.admin.search_text(req.query.get("q", [""])[0], limit=40)
     ctx.db.close()
     return Response.json({"results": terms})
+
+
+# ── Admin: roadmap items ──
+
+def _int_or_default(q: dict, name: str, default=0) -> int:
+    raw = q.get(name, [default])[0]
+    try:
+        return int(raw)
+    except (TypeError, ValueError):
+        return default
+
+
+@post("/admin/plan/item/add")
+def admin_plan_item_add(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        item_id = ctx.admin.add_plan_item(
+            phase_slug=q.get("phase_slug", [""])[0],
+            sort_order=_int_or_default(q, "sort_order"),
+            status=_int_or_default(q, "status"),
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            note_en=q.get("note_en", [""])[0],
+            note_zh=q.get("note_zh", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": True, "id": item_id})
+
+
+@post("/admin/plan/item/<item_id>/delete")
+def admin_plan_item_delete(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    ok = ctx.admin.delete_plan_item(int(req.params["item_id"]))
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/plan/item/<item_id>/update")
+def admin_plan_item_update(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        ok = ctx.admin.update_plan_item(
+            int(req.params["item_id"]),
+            phase_slug=q.get("phase_slug", [""])[0],
+            sort_order=_int_or_default(q, "sort_order"),
+            status=_int_or_default(q, "status"),
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            note_en=q.get("note_en", [""])[0],
+            note_zh=q.get("note_zh", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/plan/item/<item_id>/get")
+def admin_plan_item_get(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    d = ctx.admin.get_plan_item(int(req.params["item_id"]))
+    ctx.db.close()
+    if d is None:
+        return Response.json({"error": "not found"}, status=404)
+    return Response.json(d)
+
+
+# ── Admin: research notebook ──
+
+@get("/admin/notebook")
+def admin_notebook(req: Request):
+    if not _admin_authed(req):
+        ctx = AppContext(req)
+        html = render("admin/login.html", {"locale": ctx.locale})
+        ctx.db.close()
+        return html
+    ctx = AppContext(req)
+    base = base_context(ctx)
+    base["page"] = None
+    base["note_categories"] = ctx.admin.NOTE_CATEGORIES
+    base["notes"] = ctx.admin.list_notes(200)
+    html = render("admin/notebook.html", base)
+    ctx.db.close()
+    return html
+
+
+@post("/admin/note/add")
+def admin_note_add(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        note_id = ctx.admin.add_note(
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            body_en=q.get("body_en", [""])[0],
+            body_zh=q.get("body_zh", [""])[0],
+            category=q.get("category", ["brainstorm"])[0],
+            status=_int_or_default(q, "status"),
+            tags=q.get("tags", [""])[0],
+            ref_key=q.get("ref_key", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": True, "id": note_id})
+
+
+@post("/admin/note/<note_id>/delete")
+def admin_note_delete(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    ok = ctx.admin.delete_note(int(req.params["note_id"]))
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/note/<note_id>/update")
+def admin_note_update(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        ok = ctx.admin.update_note(
+            int(req.params["note_id"]),
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            body_en=q.get("body_en", [""])[0],
+            body_zh=q.get("body_zh", [""])[0],
+            category=q.get("category", ["brainstorm"])[0],
+            status=_int_or_default(q, "status"),
+            tags=q.get("tags", [""])[0],
+            ref_key=q.get("ref_key", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/note/<note_id>/get")
+def admin_note_get(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    d = ctx.admin.get_note(int(req.params["note_id"]))
+    ctx.db.close()
+    if d is None:
+        return Response.json({"error": "not found"}, status=404)
+    return Response.json(d)
+
+
+@post("/admin/note/search")
+def admin_note_search(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    status_raw = req.query.get("status", [None])[0]
+    results = ctx.admin.search_notes(
+        term=req.query.get("q", [""])[0],
+        category=(req.query.get("category", [None])[0] or None),
+        status=int(status_raw) if status_raw not in (None, "") else None,
+        limit=60,
+    )
+    ctx.db.close()
+    return Response.json({"results": results})
+
+
+@post("/admin/note/preview")
+def admin_note_preview(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    from app.services.markdown_render import render_markdown
+    html = render_markdown(req.query.get("body", [""])[0])
+    return Response(html, content_type="text/html; charset=utf-8")
 
 
 # ── Run ──

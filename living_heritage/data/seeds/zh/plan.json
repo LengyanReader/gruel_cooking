@@ -1,0 +1,28 @@
+{
+  "phases": [
+    { "slug": "phase1", "title_zh": "一期 · 知识库与筛选" },
+    { "slug": "phase2", "title_zh": "二期 · 质量治理" },
+    { "slug": "phase3", "title_zh": "三期 · 内容扩充" },
+    { "slug": "phase4", "title_zh": "四期 · 发布与工程" },
+    { "slug": "phase5", "title_zh": "后续 · 实质研究" }
+  ],
+  "items": [
+    { "id": "seed-db", "title_zh": "种子化站点、廊道、学者、遗产地与文献", "note_zh": "四条双语廊道（大运河、哥特兰、厄兰、金达-约塔）、五位学者、八处遗产地、24 条已核验文献。" },
+    { "id": "filter-pills", "title_zh": "研究资料库筛选胶囊", "note_zh": "/publications 页的廊道与来源级别筛选。" },
+    { "id": "graph-edges", "title_zh": "知识图谱关系边（belongs_to / studies / involves / authored）", "note_zh": "relations 表在每次写操作后自动重建。" },
+    { "id": "dimensions-view", "title_zh": "文献维度视图", "note_zh": "/literature?view=dimensions 的内容维度导览。" },
+    { "id": "verify-hard", "title_zh": "种子硬断言（verify_seed.py）", "note_zh": "15 项断言：双语计数、廊道/遗产地/学者不变量、[A] 级残留检查。" },
+    { "id": "e2e-round", "title_zh": "端到端测试（失败即退出）", "note_zh": "品牌、页面、筛选、维度、图谱边、SEO、404——任何回归都令构建失败。" },
+    { "id": "admin-edit", "title_zh": "管理控制台（完整编辑/删除级联）", "note_zh": "观察与文献的增删改查、双语文本编辑、图谱自动重建。" },
+    { "id": "desk-obs", "title_zh": "档案式观察（Ridanäs、Kinda、Gamla Skogsby）", "note_zh": "2026-09-11 核验闭合的 desk 记录。" },
+    { "id": "site-notes", "title_zh": "带核验结论的遗产地笔记", "note_zh": "Gamla Skogsby 与 Kinda 描述升级；Ridanäs 的 UNESCO 状态更正。" },
+    { "id": "drafted-doc", "title_zh": "起草稿 §52–53 内容维度深化", "note_zh": "起草稿中的文献导航表与十个维度的正式纵论。" },
+    { "id": "docker-ci", "title_zh": "Docker 打包 + GitHub Actions CI", "note_zh": "每次推送 living_heritage/** 时：编译 → 种子 → 校验 → 起服 → e2e。" },
+    { "id": "og-seo", "title_zh": "OG/SEO 元信息、favicon、封图与样式化 404", "note_zh": "通过 LH_BASE_URL 可选启用绝对链接。" },
+    { "id": "qa-round", "title_zh": "非内容层质检与修复", "note_zh": "admin HTTP 全链路、CI 失败即停、容器绑定修复（LH_BIND_HOST）。" },
+    { "id": "formal-chapters", "title_zh": "依据 §53 纵论起草正式章节", "note_zh": "将十个内容维度写成正式研究章节，每节锚定 §52 与 §7.1 文献。" },
+    { "id": "field-cycles", "title_zh": "田野工作周期 1–5", "note_zh": "北京 → 哥特兰 → 南厄兰 → 林雪平 → 返回北京。" },
+    { "id": "living-maintenance", "title_zh": "经管理控制台持续录入内容", "note_zh": "观察、文献与路线图条目保持可实时编辑并自动清理双语文本。" },
+    { "id": "futures-publish", "title_zh": "成文与公开展示", "note_zh": "从活语料走向可读的研究产出；以 LH_BASE_URL 与 admin token 部署。" }
+  ]
+}

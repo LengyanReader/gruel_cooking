@@ -1,0 +1,130 @@
+{
+  "phases": [
+    { "slug": "phase1", "title_en": "Phase 1 · Knowledge base & filters", "title_zh": "一期 · 知识库与筛选", "sort": 1 },
+    { "slug": "phase2", "title_en": "Phase 2 · Quality governance", "title_zh": "二期 · 质量治理", "sort": 2 },
+    { "slug": "phase3", "title_en": "Phase 3 · Content expansion", "title_zh": "三期 · 内容扩充", "sort": 3 },
+    { "slug": "phase4", "title_en": "Phase 4 · Release & engineering", "title_zh": "四期 · 发布与工程", "sort": 4 },
+    { "slug": "phase5", "title_en": "Phase 5 · Substantive research", "title_zh": "后续 · 实质研究", "sort": 5 }
+  ],
+  "items": [
+    {
+      "id": "seed-db", "phase": "phase1", "sort": 1, "status": 2,
+      "title_en": "Seed the site, corridors, scholars, sites & publications",
+      "title_zh": "种子化站点、廊道、学者、遗产地与文献",
+      "note_en": "Four bilingual corridors (grand_canal, gotland, oland, kindagota), five scholars, eight sites, 24 verified publications.",
+      "note_zh": "四条双语廊道（大运河、哥特兰、厄兰、金达-约塔）、五位学者、八处遗产地、24 条已核验文献。"
+    },
+    {
+      "id": "filter-pills", "phase": "phase1", "sort": 2, "status": 2,
+      "title_en": "Research-library filter pills",
+      "title_zh": "研究资料库筛选胶囊",
+      "note_en": "Corridor and source-level filters on /publications.",
+      "note_zh": "/publications 页的廊道与来源级别筛选。"
+    },
+    {
+      "id": "graph-edges", "phase": "phase1", "sort": 3, "status": 2,
+      "title_en": "Knowledge-graph edges (belongs_to / studies / involves / authored)",
+      "title_zh": "知识图谱关系边（belongs_to / studies / involves / authored）",
+      "note_en": "Relations table rebuilt automatically on every write.",
+      "note_zh": "relations 表在每次写操作后自动重建。"
+    },
+    {
+      "id": "dimensions-view", "phase": "phase1", "sort": 4, "status": 2,
+      "title_en": "Literature dimensions view",
+      "title_zh": "文献维度视图",
+      "note_en": "Content-dimension browsing on /literature?view=dimensions.",
+      "note_zh": "/literature?view=dimensions 的内容维度导览。"
+    },
+    {
+      "id": "verify-hard", "phase": "phase2", "sort": 1, "status": 2,
+      "title_en": "Hard seed assertions (verify_seed.py)",
+      "title_zh": "种子硬断言（verify_seed.py）",
+      "note_en": "15 assertions: bilingual counts, corridor/site/scholar invariants, [A]-level residues.",
+      "note_zh": "15 项断言：双语计数、廊道/遗产地/学者不变量、[A] 级残留检查。"
+    },
+    {
+      "id": "e2e-round", "phase": "phase2", "sort": 2, "status": 2,
+      "title_en": "End-to-end tests with fail-fast exit",
+      "title_zh": "端到端测试（失败即退出）",
+      "note_en": "Brand, pages, filters, dimensions, graph edges, SEO, 404 — fails the build on any regression.",
+      "note_zh": "品牌、页面、筛选、维度、图谱边、SEO、404——任何回归都令构建失败。"
+    },
+    {
+      "id": "admin-edit", "phase": "phase2", "sort": 3, "status": 2,
+      "title_en": "Admin console with full edit/delete cascade",
+      "title_zh": "管理控制台（完整编辑/删除级联）",
+      "note_en": "Observations & publications create/read/update/delete, bilingual-text editing, graph rebuild.",
+      "note_zh": "观察与文献的增删改查、双语文本编辑、图谱自动重建。"
+    },
+    {
+      "id": "desk-obs", "phase": "phase3", "sort": 1, "status": 2,
+      "title_en": "Desk observations (Ridanäs, Kinda, Gamla Skogsby)",
+      "title_zh": "档案式观察（Ridanäs、Kinda、Gamla Skogsby）",
+      "note_en": "Verification-closed desk records dated 2026-09-11.",
+      "note_zh": "2026-09-11 核验闭合的 desk 记录。"
+    },
+    {
+      "id": "site-notes", "phase": "phase3", "sort": 2, "status": 2,
+      "title_en": "Heritage-site notes with verification conclusions",
+      "title_zh": "带核验结论的遗产地笔记",
+      "note_en": "Gamla Skogsby & Kinda descriptions upgraded; Ridanäs UNESCO status corrected.",
+      "note_zh": "Gamla Skogsby 与 Kinda 描述升级；Ridanäs 的 UNESCO 状态更正。"
+    },
+    {
+      "id": "drafted-doc", "phase": "phase3", "sort": 3, "status": 2,
+      "title_en": "Drafted doc §52–53 content-dimension deepening",
+      "title_zh": "起草稿 §52–53 内容维度深化",
+      "note_en": "Reference-library navigator plus ten formal dimension syntheses in the drafted research document.",
+      "note_zh": "起草稿中的文献导航表与十个维度的正式纵论。"
+    },
+    {
+      "id": "docker-ci", "phase": "phase4", "sort": 1, "status": 2,
+      "title_en": "Docker packaging + GitHub Actions CI",
+      "title_zh": "Docker 打包 + GitHub Actions CI",
+      "note_en": "compile → seed → verify → boot server → e2e on every push to living_heritage/**.",
+      "note_zh": "每次推送 living_heritage/** 时：编译 → 种子 → 校验 → 起服 → e2e。"
+    },
+    {
+      "id": "og-seo", "phase": "phase4", "sort": 2, "status": 2,
+      "title_en": "OG / SEO meta, favicon, og-cover asset & styled 404",
+      "title_zh": "OG/SEO 元信息、favicon、封图与样式化 404",
+      "note_en": "Opt-in absolute links via LH_BASE_URL.",
+      "note_zh": "通过 LH_BASE_URL 可选启用绝对链接。"
+    },
+    {
+      "id": "qa-round", "phase": "phase4", "sort": 3, "status": 2,
+      "title_en": "Non-content QA pass",
+      "title_zh": "非内容层质检与修复",
+      "note_en": "Admin HTTP lifecycle, CI fail-fast, container binding fix (LH_BIND_HOST).",
+      "note_zh": "admin HTTP 全链路、CI 失败即停、容器绑定修复（LH_BIND_HOST）。"
+    },
+    {
+      "id": "formal-chapters", "phase": "phase5", "sort": 1, "status": 1,
+      "title_en": "Draft formal chapters from §53 syntheses",
+      "title_zh": "依据 §53 纵论起草正式章节",
+      "note_en": "Write the ten content dimensions into formal research sections, each anchoring §52 rows and §7.1 works.",
+      "note_zh": "将十个内容维度写成正式研究章节，每节锚定 §52 与 §7.1 文献。"
+    },
+    {
+      "id": "field-cycles", "phase": "phase5", "sort": 2, "status": 0,
+      "title_en": "Fieldwork cycles 1–5",
+      "title_zh": "田野工作周期 1–5",
+      "note_en": "Beijing → Gotland → Southern Öland → Linköping → return to Beijing.",
+      "note_zh": "北京 → 哥特兰 → 南厄兰 → 林雪平 → 返回北京。"
+    },
+    {
+      "id": "living-maintenance", "phase": "phase5", "sort": 3, "status": 0,
+      "title_en": "Continual content intake via the admin console",
+      "title_zh": "经管理控制台持续录入内容",
+      "note_en": "Observations, publications and roadmap items stay live-editable with full bilingual cleanup.",
+      "note_zh": "观察、文献与路线图条目保持可实时编辑并自动清理双语文本。"
+    },
+    {
+      "id": "futures-publish", "phase": "phase5", "sort": 4, "status": 0,
+      "title_en": "Publication & public deployment",
+      "title_zh": "成文与公开展示",
+      "note_en": "From the living corpus to a readable research output; deploy with LH_BASE_URL and an admin token.",
+      "note_zh": "从活语料走向可读的研究产出；以 LH_BASE_URL 与 admin token 部署。"
+    }
+  ]
+}

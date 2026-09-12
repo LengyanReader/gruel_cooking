@@ -125,6 +125,39 @@ CREATE TABLE IF NOT EXISTS publications (
     corridor_slugs  TEXT,
     created_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS plan_phases (
+    id          INTEGER PRIMARY KEY,
+    slug        TEXT    NOT NULL UNIQUE,
+    title_key   TEXT    NOT NULL,
+    sort_order  INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS plan_items (
+    id          INTEGER PRIMARY KEY,
+    item_key    TEXT    NOT NULL UNIQUE,
+    phase_id    INTEGER NOT NULL REFERENCES plan_phases(id) ON DELETE CASCADE,
+    sort_order  INTEGER NOT NULL DEFAULT 0,
+    status      INTEGER NOT NULL DEFAULT 0,
+    title_key   TEXT    NOT NULL,
+    note_key    TEXT,
+    created_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_plan_item_phase ON plan_items(phase_id);
+
+CREATE TABLE IF NOT EXISTS research_notes (
+    id          INTEGER PRIMARY KEY,
+    note_key    TEXT    NOT NULL UNIQUE,
+    title_key   TEXT    NOT NULL,
+    body_key    TEXT    NOT NULL,
+    category    TEXT    NOT NULL DEFAULT 'brainstorm',
+    status      INTEGER NOT NULL DEFAULT 0,
+    tags        TEXT,
+    ref_key     TEXT,
+    created_at  TEXT    NOT NULL DEFAULT (datetime('now')),
+    updated_at  TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_research_note_status ON research_notes(status);
 """
 
 
