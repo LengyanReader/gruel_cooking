@@ -1,0 +1,17 @@
+services:
+  living-heritage:
+    build: .
+    container_name: living-heritage
+    ports:
+      - "18080:18080"
+    environment:
+      LH_PORT: "18080"
+      # optional admin token; if unset admin routes stay closed (see app/config.py)
+      LH_ADMIN_TOKEN: ${LH_ADMIN_TOKEN:-}
+    volumes:
+      # persist the SQLite DB across restarts; reseed by deleting the file
+      - lh_data:/srv/living_heritage/data
+    restart: unless-stopped
+
+volumes:
+  lh_data:

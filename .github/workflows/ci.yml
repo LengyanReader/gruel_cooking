@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - "living_heritage/**"
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: living_heritage
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Syntax check
+        run: python -m compileall -q app scripts
+
+      - name: Seed a fresh database
+        run: python -m app.seed
+        env:
+          LH_SQLITE_PATH: ${{ runner.temp }}/lh-ci.db
+
+      - name: Verify hard assertions
+        run: python scripts/verify_seed.py
+        env:
+          LH_SQLITE_PATH: ${{ runner.temp }}/lh-ci.db
+
+      - name: Boot server and run e2e
+        run: |
+          python -m app.main &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:18080/ >/dev/null && break
+            sleep 1
+          done
+          python scripts/e2e_test.py
+          kill $SERVER_PID
+        env:
+          LH_SQLITE_PATH: ${{ runner.temp }}/lh-ci.db
+          LH_PORT: "18080"

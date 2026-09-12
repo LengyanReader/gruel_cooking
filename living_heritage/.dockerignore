@@ -1,0 +1,8 @@
+.git
+.github
+materials
+.venv
+__pycache__
+*.pyc
+data/*.db
+start_server.ps1
