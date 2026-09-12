@@ -42,5 +42,8 @@
   "label.trait_concerns": "关切",
   "label.trait_philosophy": "哲学",
   "footer.tagline": "活态文化廊道——一项以田野为基础、以比较为方法、以数字技术为支撑的研究项目",
-  "nav.graph": "图谱"
+  "nav.graph": "图谱",
+  "notfound.title": "页面未找到",
+  "notfound.body": "这页已偏离水路。舟、洲与粥,仍在他处继续。",
+  "notfound.back": "返回岸边 / Back to the shore"
 }

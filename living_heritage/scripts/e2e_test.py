@@ -99,3 +99,19 @@ print("literature dimensions has tabs:", "lit-tab" in ld,
 # ── knowledge graph edges on page ──
 print("graph relations authored:", "authored" in gb, "| involves:", "involves" in gb,
       "| related literature:", "\u76f8\u5173\u6587\u732e" in gb)
+
+# ── SEO / OG meta on public pages ──
+print("seo og:site_name:", "property=\"og:site_name\"" in b,
+      "| og:title:", "property=\"og:title\"" in b,
+      "| twitter:card:", "name=\"twitter:card\"" in b,
+      "| canonical:", '<link rel="canonical"' in b,
+      "| meta description:", 'name="description"' in b)
+
+# ── styled bilingual 404 (en by default) ──
+try:
+    r = urllib.request.urlopen(f"{BASE}/no-such-page")
+    print("404 page ok (unexpected):", r.status)
+except urllib.error.HTTPError as e:
+    body = e.read().decode("utf-8")
+    print("404 status:", e.code, "| styled title:", "Page not found" in body,
+          "| back link:", "Back to the shore" in body)

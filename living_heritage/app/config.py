@@ -22,6 +22,9 @@ NEO4J_PASSWORD = os.getenv("LH_NEO4J_PASSWORD", "")
 DEFAULT_LOCALE = os.getenv("LH_DEFAULT_LOCALE", "en")
 AVAILABLE_LOCALES = [l.strip() for l in os.getenv("LH_LOCALES", "en,zh").split(",") if l.strip()]
 
+# Public base URL for canonical/Open Graph tags (empty => tags render relative paths)
+BASE_URL = os.getenv("LH_BASE_URL", "").rstrip("/")
+
 # Scholar six-dimension portrait keys (canonical order)
 TRAIT_KEYS = ["taste", "quality", "spirit", "character", "concerns", "philosophy"]
 

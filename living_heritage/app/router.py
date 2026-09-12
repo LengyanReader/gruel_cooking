@@ -53,6 +53,15 @@ def post(path: str):
     return route(path, methods=["POST"])
 
 
+# Optional app-level 404 page: fn(request_path) -> Response. Set via set_not_found_handler.
+_not_found_handler = None
+
+
+def set_not_found_handler(fn):
+    global _not_found_handler
+    _not_found_handler = fn
+
+
 class Request:
     """Lightweight request object."""
     def __init__(self, method: str, path: str, query: dict, headers: dict,
@@ -175,13 +184,29 @@ class Handler(BaseHTTPRequestHandler):
         else:
             self._serve_static()
 
+    def _parse_cookies(self) -> dict:
+        cookies = {}
+        for part in self.headers.get("cookie", "").split(";"):
+            if "=" in part:
+                k, v = part.strip().split("=", 1)
+                cookies[k] = v
+        return cookies
+
+    def _not_found_response(self, path: str) -> Response:
+        if _not_found_handler:
+            try:
+                return _not_found_handler(path, self._parse_cookies())
+            except Exception:  # noqa: BLE001 — never let the error page break the response
+                pass
+        return Response.html("Not Found", 404)
+
     def _serve_static(self):
         parsed = urlparse(self.path)
         file_path = STATIC_DIR / parsed.path.lstrip("/")
         file_path = file_path.resolve()
         # Security: ensure within static dir
         if not str(file_path).startswith(str(STATIC_DIR.resolve())):
-            self._send_response(Response.html("Not Found", 404))
+            self._send_response(self._not_found_response(self.path))
             return
         if file_path.is_file():
             ct, _ = mimetypes.guess_type(str(file_path))
@@ -189,7 +214,7 @@ class Handler(BaseHTTPRequestHandler):
             data = file_path.read_bytes()
             self._send_response(Response(data, content_type=ct))
         else:
-            self._send_response(Response.html("Not Found", 404))
+            self._send_response(self._not_found_response(self.path))
 
     def do_GET(self):
         self._handle("GET")

@@ -42,5 +42,8 @@
   "label.trait_concerns": "Concerns",
   "label.trait_philosophy": "Philosophy",
   "footer.tagline": "Living Cultural Corridors — a field-based, comparative and digitally enabled research project",
-  "nav.graph": "Graph"
+  "nav.graph": "Graph",
+  "notfound.title": "Page not found",
+  "notfound.body": "This page has drifted from the water route. The bark, the isles and the gruel continue elsewhere.",
+  "notfound.back": "Back to the shore / 回到岸边"
 }

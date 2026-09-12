@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ notfound_title }}{% endblock %}
+{% block meta %}<meta name="robots" content="noindex">{% endblock %}
+{% block content %}
+<section class="hero hero-404">
+  <div class="hero-inner">
+    <p class="hero-kicker overline">404 · zhōu·zhōu·zhōu</p>
+    <h1 class="hero-title">{{ notfound_title }}</h1>
+    <p class="hero-sub">{{ notfound_body }}</p>
+    <p class="hero-cta">
+      <a class="btn" href="/">{{ notfound_back }}</a>
+    </p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<style>
+  .hero-404 { min-height: 48vh; display: flex; align-items: center; }
+  .hero-404 .btn { text-decoration: none; }
+</style>
+{% endblock %}

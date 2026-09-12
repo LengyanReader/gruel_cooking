@@ -8,14 +8,14 @@ from pathlib import Path
 # Ensure project root is on sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from app.config import AVAILABLE_LOCALES, DEFAULT_LOCALE, TRAIT_KEYS, GRAPH_ENGINE, ADMIN_TOKEN, SOURCE_LEVELS
+from app.config import AVAILABLE_LOCALES, DEFAULT_LOCALE, TRAIT_KEYS, GRAPH_ENGINE, ADMIN_TOKEN, SOURCE_LEVELS, BASE_URL
 from app.db.sqlite import get_db
 from app.services.content import ContentService
 from app.services.heritage import HeritageService
 from app.services.scholar import ScholarService
 from app.services.graph import get_graph_service
 from app.services.admin import AdminService
-from app.router import get, post, run_server, Request, Response
+from app.router import get, post, run_server, Request, Response, set_not_found_handler
 from jinja2 import Environment, FileSystemLoader
 from app.config import TEMPLATE_DIR
 
@@ -30,6 +30,24 @@ def render(template_name: str, context: dict) -> str:
     """Render a Jinja2 template."""
     tmpl = jinja_env.get_template(template_name)
     return tmpl.render(**context)
+
+
+def _not_found_page(path: str, cookies: dict) -> Response:
+    """Styled bilingual 404 page (locale-aware via the request cookie)."""
+    req = Request("GET", path, {}, {}, b"", cookies, {})
+    ctx = AppContext(req)
+    try:
+        base = base_context(ctx)
+        base["notfound_title"] = ctx.content.resolve_text("notfound.title", ctx.locale)
+        base["notfound_body"] = ctx.content.resolve_text("notfound.body", ctx.locale)
+        base["notfound_back"] = ctx.content.resolve_text("notfound.back", ctx.locale)
+        html = render("pages/404.html", base)
+    finally:
+        ctx.db.close()
+    return Response.html(html, 404)
+
+
+set_not_found_handler(_not_found_page)
 
 
 def get_locale(req: Request) -> str:
@@ -108,6 +126,8 @@ def base_context(ctx: AppContext) -> dict:
         "site_subtitle": content_svc.resolve_text("site.subtitle", locale),
         "footer_tagline": content_svc.resolve_text("footer.tagline", locale),
         "graph_engine": GRAPH_ENGINE,
+        "base_url": BASE_URL,
+        "request_path": ctx.req.path,
     }
 
 

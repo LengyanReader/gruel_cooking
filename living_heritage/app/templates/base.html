@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}{{ site_title }}{% endblock %} — {{ brand['brand.identity'] }}</title>
+<meta name="description" content="{% block meta_description %}{{ site_subtitle }}{% endblock %}">
+<link rel="canonical" href="{{ base_url }}{{ request_path }}">
+{% block meta %}{% endblock %}
+{% block og_meta %}
+<meta property="og:site_name" content="{{ brand['brand.identity'] }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{% if locale == 'zh' %}zh_CN{% else %}en_US{% endif %}">
+<meta property="og:title" content="{{ self.title() }} — {{ brand['brand.identity'] }}">
+<meta property="og:description" content="{{ self.meta_description() }}">
+<meta property="og:url" content="{{ base_url }}{{ request_path }}">
+{% if base_url %}<meta property="og:image" content="{{ base_url }}/img/og-cover.jpg">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ self.title() }}">
+<meta name="twitter:description" content="{{ self.meta_description() }}">
+<meta name="twitter:image" content="{{ base_url }}/img/og-cover.jpg">
+{% endblock %}
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
