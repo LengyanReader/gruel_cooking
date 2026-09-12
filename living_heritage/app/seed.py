@@ -203,6 +203,12 @@ def seed_relations(conn, scholar_map: dict | None = None):
     """
     conn.execute("DELETE FROM relations")
 
+    def _slugs(raw) -> list:
+        value = json.loads(raw) if isinstance(raw, str) and raw.strip().startswith("[") else raw
+        if isinstance(value, list):
+            return value
+        return [s.strip() for s in str(raw or "").split(",") if s.strip()]
+
     sites = conn.execute("SELECT id, corridor_slug FROM heritage_sites").fetchall()
     scol = {s["slug"]: s for s in conn.execute("SELECT slug, id FROM corridors").fetchall()}
     for site in sites:
@@ -216,8 +222,7 @@ def seed_relations(conn, scholar_map: dict | None = None):
 
     scholars = conn.execute("SELECT id, corridor_slugs FROM scholars").fetchall()
     for scholarly in scholars:
-        slugs = json.loads(scholarly["corridor_slugs"] or "[]")
-        for slug in slugs:
+        for slug in _slugs(scholarly["corridor_slugs"]):
             corr = scol.get(slug)
             if corr:
                 conn.execute(
@@ -228,8 +233,7 @@ def seed_relations(conn, scholar_map: dict | None = None):
 
     pubs = conn.execute("SELECT id, title_key, corridor_slugs FROM publications").fetchall()
     for p in pubs:
-        slugs = json.loads(p["corridor_slugs"] or "[]")
-        for slug in slugs:
+        for slug in _slugs(p["corridor_slugs"]):
             corr = scol.get(slug)
             if corr:
                 conn.execute(
@@ -292,6 +296,15 @@ def _load(lang: str) -> dict[str, Path]:
     }
 
 
+def scholar_map_from_seed() -> dict[str, list[str]]:
+    """Rebuild {publication title_key: [scholar name_keys]} from the en publications seed."""
+    path = SEEDS_DIR / "en" / "publications.json"
+    if not path.exists():
+        return {}
+    en_p = json.loads(path.read_text(encoding="utf-8"))
+    return {p["title_key"]: p.get("scholar_keys", []) for p in en_p if p.get("scholar_keys")}
+
+
 def seed_all():
     """Full seed from data/seeds/ JSON files."""
     conn = get_db()
@@ -348,15 +361,10 @@ def seed_all():
         seed_heritage_sites(conn, en_h, zh_h)
 
     # Publications (records + bilingual title/abstract)
-    scholar_map = {}
     if en_files["publications"].exists():
         en_p = json.loads(en_files["publications"].read_text(encoding="utf-8"))
         zh_p = json.loads(zh_files["publications"].read_text(encoding="utf-8")) if zh_files["publications"].exists() else []
         seed_publications(conn, en_p, zh_p)
-        for p in en_p:
-            keys = p.get("scholar_keys")
-            if keys:
-                scholar_map[p["title_key"]] = keys
 
     # Field observations (records + bilingual title/notes)
     if en_files["field_observations"].exists():
@@ -365,7 +373,7 @@ def seed_all():
         seed_field_observations(conn, en_o, zh_o)
 
     # Knowledge-graph edges (rebuilt last: needs sites, scholars, pubs, observations)
-    seed_relations(conn, scholar_map or None)
+    seed_relations(conn, scholar_map_from_seed() or None)
 
     conn.close()
     print("Seed completed.")

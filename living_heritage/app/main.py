@@ -435,6 +435,47 @@ def admin_observation_delete(req: Request):
     return Response.json({"ok": ok})
 
 
+@post("/admin/observation/<obs_id>/update")
+def admin_observation_update(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        obs_id = int(req.params["obs_id"])
+        site_id = q.get("site_id", [None])[0]
+        site_id = int(site_id) if site_id else None
+        ok = ctx.admin.update_observation(
+            obs_id,
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            notes_en=q.get("notes_en", [""])[0],
+            notes_zh=q.get("notes_zh", [""])[0],
+            site_id=site_id,
+            date_observed=q.get("date", [""])[0] or "",
+            observation_type=q.get("observation_type", [""])[0],
+            source_level=(q.get("source_level", [None])[0] or None),
+            tags=q.get("tags", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/observation/<obs_id>/get")
+def admin_observation_get(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    d = ctx.admin.get_observation(int(req.params["obs_id"]))
+    ctx.db.close()
+    if d is None:
+        return Response.json({"error": "not found"}, status=404)
+    return Response.json(d)
+
+
 @post("/admin/publication/add")
 def admin_publication_add(req: Request):
     if not _admin_authed(req):
@@ -473,6 +514,50 @@ def admin_publication_delete(req: Request):
     ok = ctx.admin.delete_publication(int(req.params["pub_id"]))
     ctx.db.close()
     return Response.json({"ok": ok})
+
+
+@post("/admin/publication/<pub_id>/update")
+def admin_publication_update(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    q = req.query
+    try:
+        pub_id = int(req.params["pub_id"])
+        year = q.get("year", [None])[0]
+        year = int(year) if year else None
+        ok = ctx.admin.update_publication(
+            pub_id,
+            title_en=q.get("title_en", [""])[0],
+            title_zh=q.get("title_zh", [""])[0],
+            abstract_en=q.get("abstract_en", [""])[0],
+            abstract_zh=q.get("abstract_zh", [""])[0],
+            authors=q.get("authors", [""])[0],
+            publication_type=q.get("publication_type", [""])[0],
+            year=year,
+            doi=q.get("doi", [""])[0],
+            url=q.get("url", [""])[0],
+            tags=q.get("tags", [""])[0],
+            source_level=(q.get("source_level", [None])[0] or None),
+            corridor_slugs=q.get("corridor_slugs", [""])[0],
+        )
+    except Exception as e:  # noqa: BLE001
+        ctx.db.close()
+        return Response.json({"error": str(e)}, status=400)
+    ctx.db.close()
+    return Response.json({"ok": ok})
+
+
+@post("/admin/publication/<pub_id>/get")
+def admin_publication_get(req: Request):
+    if not _admin_authed(req):
+        return _unauthorized()
+    ctx = AppContext(req)
+    d = ctx.admin.get_publication(int(req.params["pub_id"]))
+    ctx.db.close()
+    if d is None:
+        return Response.json({"error": "not found"}, status=404)
+    return Response.json(d)
 
 
 @post("/admin/text/update")

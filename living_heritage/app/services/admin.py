@@ -20,6 +20,23 @@ class AdminService:
         self.text = TextResolver(db)
         self.allowed_levels = allowed_levels or ["A", "B", "C", "D"]
 
+    # ── Graph consistency ──
+
+    def rebuild_edges(self):
+        """Rebuild the knowledge-graph edges from current table columns.
+
+        Keeps graph consistent after admin writes; preserves the seeded
+        scholar→publication authored edges via the en publications seed.
+        """
+        from app.seed import scholar_map_from_seed, seed_relations
+        seed_relations(self.db, scholar_map_from_seed() or None)
+
+    @staticmethod
+    def _json_slugs(raw: str) -> str:
+        """Normalize a comma-separated corridor slug string to a JSON list."""
+        slugs = [s.strip() for s in (raw or "").split(",") if s.strip()]
+        return json.dumps(slugs, ensure_ascii=False)
+
     # ── Dash ──
 
     def dashboard_counts(self) -> dict:
@@ -99,12 +116,53 @@ class AdminService:
              observation_type or "", self._check_level(source_level), tags or "")
         )
         self.db.commit()
+        self.rebuild_edges()
         return cur.lastrowid
 
     def delete_observation(self, obs_id: int) -> bool:
+        row = self.db.execute("SELECT title_key, notes_key FROM field_observations WHERE id = ?",
+                              (obs_id,)).fetchone()
         cur = self.db.execute("DELETE FROM field_observations WHERE id = ?", (obs_id,))
+        if not cur.rowcount:
+            return False
+        if row:
+            keys = [k for k in (row["title_key"], row["notes_key"]) if k]
+            if keys:
+                self.db.execute(f"DELETE FROM bilingual_text WHERE key IN ({','.join('?' for _ in keys)})", keys)
+        self.db.execute("DELETE FROM relations WHERE (source_type='observation' AND source_id=?) "
+                        "OR (target_type='observation' AND target_id=?)", (obs_id, obs_id))
         self.db.commit()
-        return cur.rowcount > 0
+        self.rebuild_edges()
+        return True
+
+    def get_observation(self, obs_id: int) -> dict | None:
+        row = self.db.execute("SELECT * FROM field_observations WHERE id = ?", (obs_id,)).fetchone()
+        if not row:
+            return None
+        d = dict(row)
+        d["title_en"], d["title_zh"] = self._resolve_pair(d.get("title_key"))
+        d["notes_en"], d["notes_zh"] = self._resolve_pair(d.get("notes_key"))
+        return d
+
+    def update_observation(self, obs_id: int, *, title_en: str, title_zh: str, notes_en: str,
+                           notes_zh: str, site_id: int | None, date_observed: str,
+                           observation_type: str, source_level: str | None, tags: str) -> bool:
+        row = self.db.execute("SELECT title_key, notes_key FROM field_observations WHERE id = ?",
+                              (obs_id,)).fetchone()
+        if not row:
+            return False
+        self.set_text(row["title_key"] or "", title_en or "", title_zh or "")
+        self.set_text(row["notes_key"] or "", notes_en or "", notes_zh or "")
+        self.db.execute(
+            """UPDATE field_observations
+               SET site_id = ?, date_observed = ?, observation_type = ?, source_level = ?, tags = ?
+               WHERE id = ?""",
+            (site_id, date_observed or "", observation_type or "",
+             self._check_level(source_level), tags or "", obs_id)
+        )
+        self.db.commit()
+        self.rebuild_edges()
+        return True
 
     def add_publication(self, *, title_en: str, title_zh: str, abstract_en: str, abstract_zh: str,
                         authors: str, publication_type: str, year: int | None,
@@ -126,16 +184,60 @@ class AdminService:
                (title_key, abstract_key, authors, publication_type, year, doi, url,
                 tags, source_level, corridor_slugs)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-            (title_key, abstract_key, authors or "", publication_type or "", year,
-             doi or "", url or "", tags or "", self._check_level(source_level), corridor_slugs or "")
+(title_key, abstract_key, authors or "", publication_type or "", year,
+             doi or "", url or "", tags or "", self._check_level(source_level),
+             self._json_slugs(corridor_slugs))
         )
         self.db.commit()
+        self.rebuild_edges()
         return cur.lastrowid
 
     def delete_publication(self, pub_id: int) -> bool:
+        row = self.db.execute("SELECT title_key, abstract_key FROM publications WHERE id = ?",
+                              (pub_id,)).fetchone()
         cur = self.db.execute("DELETE FROM publications WHERE id = ?", (pub_id,))
+        if not cur.rowcount:
+            return False
+        if row:
+            keys = [k for k in (row["title_key"], row["abstract_key"]) if k]
+            if keys:
+                self.db.execute(f"DELETE FROM bilingual_text WHERE key IN ({','.join('?' for _ in keys)})", keys)
+        self.db.execute("DELETE FROM relations WHERE (source_type='publication' AND source_id=?) "
+                        "OR (target_type='publication' AND target_id=?)", (pub_id, pub_id))
         self.db.commit()
-        return cur.rowcount > 0
+        self.rebuild_edges()
+        return True
+
+    def get_publication(self, pub_id: int) -> dict | None:
+        row = self.db.execute("SELECT * FROM publications WHERE id = ?", (pub_id,)).fetchone()
+        if not row:
+            return None
+        d = dict(row)
+        d["title_en"], d["title_zh"] = self._resolve_pair(d.get("title_key"))
+        d["abstract_en"], d["abstract_zh"] = self._resolve_pair(d.get("abstract_key"))
+        return d
+
+    def update_publication(self, pub_id: int, *, title_en: str, title_zh: str, abstract_en: str,
+                           abstract_zh: str, authors: str, publication_type: str, year: int | None,
+                           doi: str, url: str, tags: str, source_level: str | None,
+                           corridor_slugs: str) -> bool:
+        row = self.db.execute("SELECT title_key, abstract_key FROM publications WHERE id = ?",
+                              (pub_id,)).fetchone()
+        if not row:
+            return False
+        self.set_text(row["title_key"] or "", title_en or "", title_zh or "")
+        self.set_text(row["abstract_key"] or "", abstract_en or "", abstract_zh or "")
+        self.db.execute(
+            """UPDATE publications
+               SET authors = ?, publication_type = ?, year = ?, doi = ?, url = ?,
+                   tags = ?, source_level = ?, corridor_slugs = ?
+               WHERE id = ?""",
+            (authors or "", publication_type or "", year, doi or "", url or "",
+             tags or "", self._check_level(source_level), self._json_slugs(corridor_slugs), pub_id)
+        )
+        self.db.commit()
+        self.rebuild_edges()
+        return True
 
     def set_text(self, key: str, en: str, zh: str) -> bool:
         """Insert or update a single bilingual_text row."""
@@ -153,6 +255,14 @@ class AdminService:
         )
         self.db.commit()
         return True
+
+    def _resolve_pair(self, key: str | None) -> tuple[str, str]:
+        if not key:
+            return "", ""
+        row = self.db.execute(
+            "SELECT en, zh FROM bilingual_text WHERE key = ?", (key,)
+        ).fetchone()
+        return (row["en"], row["zh"]) if row else ("", "")
 
     def search_text(self, term: str, limit: int = 40) -> list[dict]:
         like = f"%{term}%"

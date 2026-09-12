@@ -46,6 +46,9 @@
   .msg { margin-top: 10px; font-size: 0.85em; min-height: 1.1em; }
   .msg.ok { color: #2E7D32; }
   .msg.err { color: #C0472B; }
+  .hidden { display: none; }
+  .unit-head .btn { margin-left: 6px; }
+  .unit .btn { margin-top: 6px; font-size: 0.8em; padding: 5px 12px; }
 </style>
 </head>
 <body class="lang-{{ locale }}">
@@ -82,10 +85,12 @@
         </div>
         <div>
           <label>类型 type</label>
-          <select name="observation_type">
-            <option>archival</option><option>fieldwalk</option><option>interview</option>
-            <option>sensory</option><option>conversation</option><option>other</option>
-          </select>
+          <input name="observation_type" list="obs-types" placeholder="walk / food / desk ...">
+          <datalist id="obs-types">
+            <option>walk</option><option>food</option><option>regeneration</option>
+            <option>desk</option><option>archival</option><option>fieldwalk</option>
+            <option>interview</option><option>sensory</option><option>conversation</option><option>other</option>
+          </datalist>
         </div>
         <div>
           <label>来源级别 source level</label>
@@ -96,7 +101,8 @@
         </div>
         <div class="one"><label>标签 tags (逗号分隔)</label><input name="tags" placeholder="water, locks, labour"></div>
       </div>
-      <button class="btn" type="submit">保存 Observation</button><span class="msg"></span>
+      <button class="btn" type="submit" data-add-label="保存 Observation">保存 Observation</button>
+      <button class="btn secondary cancel hidden" type="button">取消 cancel</button><span class="msg"></span>
     </form>
   </div>
 
@@ -126,7 +132,8 @@
         <div><label>URL</label><input name="url" placeholder="https://..."></div>
         <div class="one"><label>标签 / 廊道 slug (逗号分隔)</label><input name="corridor_slugs" placeholder="grand_canal, gotland"></div>
       </div>
-      <button class="btn" type="submit">保存 Publication</button><span class="msg"></span>
+      <button class="btn" type="submit" data-add-label="保存 Publication">保存 Publication</button>
+      <button class="btn secondary cancel hidden" type="button">取消 cancel</button><span class="msg"></span>
     </form>
   </div>
 
@@ -150,7 +157,8 @@
           <span class="note">#{{ o.id }} · {{ o.site_name or '—' }} · {{ o.date_observed or '' }}</span>
         </div>
         <div class="note">{{ o.notes or '' }} {% if o.tags %}<br>tags: {{ o.tags }}{% endif %}</div>
-        <div><button class="btn danger" data-del="observation" data-id="{{ o.id }}">删除 delete</button></div>
+        <div><button class="btn secondary" data-edit="observation" data-id="{{ o.id }}">编辑 edit</button>
+            <button class="btn danger" data-del="observation" data-id="{{ o.id }}">删除 delete</button></div>
       </div>
     {% endfor %}
   </div>
@@ -166,7 +174,8 @@
           </b>
           <span class="note">#{{ p.id }} · {{ p.authors or '' }} · {{ p.year or '' }} {% if p.doi %}· {{ p.doi }}{% endif %}</span>
         </div>
-        <div><button class="btn danger" data-del="publication" data-id="{{ p.id }}">删除 delete</button></div>
+        <div><button class="btn secondary" data-edit="publication" data-id="{{ p.id }}">编辑 edit</button>
+            <button class="btn danger" data-del="publication" data-id="{{ p.id }}">删除 delete</button></div>
       </div>
     {% endfor %}
   </div>
@@ -183,16 +192,78 @@
       }).catch(function () { if (msgEl) { msgEl.textContent = "✗ network error"; msgEl.className = "msg err"; } });
   }
 
+  function resetEdit(form) {
+    form.removeAttribute("data-edit-kind");
+    form.removeAttribute("data-edit-id");
+    var save = form.querySelector(".btn[type=submit]");
+    save.textContent = form.querySelector(".btn[type=submit]").dataset.addLabel || "保存";
+    var cancel = form.querySelector(".btn.cancel");
+    if (cancel) cancel.classList.add("hidden");
+    form.reset();
+  }
+
+  function enterEdit(kind, id) {
+    var form = document.querySelector(kind === "observation" ? ".obs-form" : ".pub-form");
+    var save = form.querySelector(".btn[type=submit]");
+    fetch("/admin/" + kind + "/" + id + "/get", { method: "POST" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d.error) { alert(d.error); return; }
+        form.setAttribute("data-edit-kind", kind);
+        form.setAttribute("data-edit-id", id);
+        form.querySelectorAll("[name]").forEach(function (el) {
+          var v = d[el.name];
+          if (v == null) { el.value = ""; return; }
+          el.value = el.type === "date" ? String(v).slice(0, 10) : v;
+        });
+        save.textContent = "更新 Update #" + id;
+        var cancel = form.querySelector(".btn.cancel");
+        if (cancel) cancel.classList.remove("hidden");
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+        var msg = form.querySelector(".msg");
+        msg.textContent = "";
+      });
+  }
+
+  document.querySelectorAll("[data-edit]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      enterEdit(btn.dataset.edit, btn.dataset.id);
+    });
+  });
+  document.querySelectorAll(".btn.cancel").forEach(function (btn) {
+    btn.addEventListener("click", function () { resetEdit(btn.closest("form")); });
+  });
+
   document.querySelectorAll(".obs-form").forEach(function (f) {
     f.addEventListener("submit", function (e) {
       e.preventDefault();
-      post("/admin/observation/add", f, f.querySelector(".msg"));
+      if (f.dataset.editId) {
+        var data = new URLSearchParams(new FormData(f));
+        fetch("/admin/observation/" + f.dataset.editId + "/update", { method: "POST", body: data })
+          .then(function (r) { return r.json(); }).then(function (j) {
+            var m = f.querySelector(".msg");
+            if (j.ok) { m.textContent = "✓ updated #" + f.dataset.editId; m.className = "msg ok"; location.reload(); }
+            else { m.textContent = "✗ " + (j.error || "error"); m.className = "msg err"; }
+          });
+      } else {
+        post("/admin/observation/add", f, f.querySelector(".msg"));
+      }
     });
   });
   document.querySelectorAll(".pub-form").forEach(function (f) {
     f.addEventListener("submit", function (e) {
       e.preventDefault();
-      post("/admin/publication/add", f, f.querySelector(".msg"));
+      if (f.dataset.editId) {
+        var data = new URLSearchParams(new FormData(f));
+        fetch("/admin/publication/" + f.dataset.editId + "/update", { method: "POST", body: data })
+          .then(function (r) { return r.json(); }).then(function (j) {
+            var m = f.querySelector(".msg");
+            if (j.ok) { m.textContent = "✓ updated #" + f.dataset.editId; m.className = "msg ok"; location.reload(); }
+            else { m.textContent = "✗ " + (j.error || "error"); m.className = "msg err"; }
+          });
+      } else {
+        post("/admin/publication/add", f, f.querySelector(".msg"));
+      }
     });
   });
   document.querySelectorAll("[data-del]").forEach(function (btn) {
