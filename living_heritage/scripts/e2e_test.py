@@ -3,18 +3,38 @@ import os
 import sys
 import http.cookiejar
 import urllib.request
+import urllib.error
 
 sys.path.insert(0, ".")
 
 PORT = os.getenv("LH_PORT", "8000")
+BASE_URL = os.getenv("LH_BASE_URL", "").rstrip("/")
 BASE = f"http://127.0.0.1:{PORT}"
+
+FAILS = []
+
+
+def check(label, ok, extra=""):
+    print(("PASS " if ok else "FAIL ") + label + ((" [" + str(extra) + "]") if extra else ""))
+    if not ok:
+        FAILS.append(label)
+
+
+def get(path):
+    with op.open(BASE + path) as r:
+        return r.read().decode("utf-8")
+
+
+def get_en(path):
+    with urllib.request.urlopen(BASE + path) as r:
+        return r.read().decode("utf-8")
+
 
 cj = http.cookiejar.CookieJar()
 op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
 
 op.open(urllib.request.Request(f"{BASE}/locale/zh", data=b"", method="POST"))
-r = op.open(f"{BASE}/")
-b = r.read().decode("utf-8")
+b = get("/")
 
 m = re.search(r'nav-brand[^>]*>\s*<a[^>]*>(.*?)</a>', b, re.S)
 print("brand:", m.group(1).strip())
@@ -25,93 +45,112 @@ print("hero:", m.group(1))
 m = re.search(r'class="nav-links".*?href="/"[^>]*>(.*?)<', b, re.S)
 print("nav.home label:", m.group(1))
 
-m = re.search(r'class="nav-links">(.*?)</ul>', b, re.S)
-print("nav item count:", m.group(1).count("<li>") if m else -1)
-print("has nav /graph:", '/graph' in b)
+check("has zh text", "\u6587\u5316" in b)
+check("has new slogan \u5468\u4e88\u6148\u821f", "\u5468\u4e88\u6148\u821f" in b)
+check("has footer \u5468\u6e21\u4e07\u6d32", "\u5468\u6e21\u4e07\u6d32" in b)
+check("brand nav-sub (zh)", "\u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
+check("brand kicker (zh)",
+      "\u5468\u4e88\u6148\u821f\u3001\u5468\u6e21\u4e07\u6d32\u3001\u559d\u7ca5\u6696\u80c3" in b
+      or "\u5468\u4e88\u6148\u821f\uff0c\u5468\u6e21\u4e07\u6d32\uff0c\u559d\u7ca5\u6696\u80c3" in b)
+check("brand footer identity (zh)", "\u5468\u821f\u6d32\u7ca5 \u00b7 \u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
 
-print("has zh text:", "\u6587\u5316" in b)
-print("has new slogan \u5468\u4e88\u6148\u821f:", "\u5468\u4e88\u6148\u821f" in b)
-print("has footer \u5468\u6e21\u4e07\u6d32:", "\u5468\u6e21\u4e07\u6d32" in b)
+raw = get_en("/")
+check("en brand kicker", "the bark, the isles, the gruel" in raw)
+check("en brand nav-sub", "\u5468\u821f\u6d32\u7ca5" in raw)
+check("en footer zhou_line", "the bark, the isles, the gruel" in raw)
 
-# brand consistency: nav-sub, hero kicker, footer all from brand.* keys
-print("brand nav-sub (zh):", "\u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
-print("brand kicker (zh):", "\u5468\u4e88\u6148\u821f\u3001\u5468\u6e21\u4e07\u6d32\u3001\u559d\u7ca5\u6696\u80c3" in b or "\u5468\u4e88\u6148\u821f\uff0c\u5468\u6e21\u4e07\u6d32\uff0c\u559d\u7ca5\u6696\u80c3" in b)
-print("brand footer identity (zh):", "\u5468\u821f\u6d32\u7ca5 \u00b7 \u6d3b\u6001\u6587\u5316\u5eca\u9053" in b)
+mc = get("/css/main.css")
+check("css has --gold", "--gold" in mc, ("len", len(mc)))
+check("js served", len(get("/js/locale.js")) > 0)
 
-# en variant default locale: brand strings should match the en seed
-raw = urllib.request.urlopen(f"{BASE}/").read().decode("utf-8")
-print("en brand kicker:", "the bark, the isles, the gruel" in raw)
-print("en brand nav-sub:", "\u5468\u821f\u6d32\u7ca5" in raw)
-print("en footer zhou_line:", "the bark, the isles, the gruel" in raw)
+# zh variants across pages — anchors per page: corridor-name string is only
+# expected where corridors are actually listed/grouped
+for p, anchor in [
+    ("/corridors", "\u5317\u4eac\u5927\u8fd0\u6cb3"),  # corridor list includes the grand canal
+    ("/scholars", "\u7406\u8bba\u661f\u5ea7"),          # scholars intro block title
+    ("/graph", "\u77e5\u8bc6\u56fe\u8c31"),            # graph page marker
+    ("/literature", "\u7efc\u8ff0\u5373\u524d\u884c"),  # literature intro title
+    ("/methodology", "\u8ba9\u7530\u91ce\u6539\u53d8\u7814\u7a76\u8005"),  # field section title
+    ("/fieldwork", "\u5317\u4eac\u5927\u8fd0\u6cb3"),   # fieldwork corridor group header
+]:
+    body = get(p)
+    check(p + " anchor", anchor in body, ("len", len(body)))
 
-# static asset check
-r = urllib.request.urlopen(f"{BASE}/css/main.css")
-mc = r.read().decode("utf-8")
-print("css ok, len:", len(mc), "has --gold:", "--gold" in mc)
-r = urllib.request.urlopen(f"{BASE}/js/locale.js")
-print("js ok, len:", len(r.read()))
+pb = get("/publications")
+check("publications has \u7814\u7a76\u8d44\u6599\u5e93", "\u7814\u7a76\u8d44\u6599\u5e93" in pb)
+check("publications lvl-a chip", "lvl-a" in pb)
+check("publications source_level A", "[A]" in pb)
+check("publications verified Gillette", "Gillette" in pb)
 
-# zh variants across pages (reuse cookie opener)
-for p in ["/corridors", "/scholars", "/graph", "/literature", "/methodology", "/fieldwork"]:
-    b = op.open(f"{BASE}" + p).read().decode("utf-8")
-    print(p, "len:", len(b), "has 北京大运河:", "\u5317\u4eac\u5927\u8fd0\u6cb3" in b)
+gb = get("/graph")
+check("graph has \u77e5\u8bc6\u56fe\u8c31", "\u77e5\u8bc6\u56fe\u8c31" in gb)
+check("graph belongs_to", "belongs_to" in gb)
+check("graph studies", "studies" in gb)
 
-# zh publications page specifics
-pb = op.open(f"{BASE}/publications").read().decode("utf-8")
-print("publications has 研究资料库:", "\u7814\u7a76\u8d44\u6599\u5e93" in pb,
-      "| lvl-a chip:", "lvl-a" in pb,
-      "| source_level A:", "[A]" in pb,
-      "| verified Gillette:", "Gillette" in pb)
+lb = get("/literature")
+check("literature has \u54c1\u5473", "\u54c1\u5473" in lb)
+check("literature has \u54f2\u5b66", "\u54f2\u5b66" in lb)
+check("literature has \u4ee3\u8868\u4f5c\u54c1", "\u4ee3\u8868\u4f5c\u54c1" in lb)
+check("literature has \u524d\u63d0", "\u524d\u63d0" in lb)
+check("literature portrait grid", "portrait-grid" in lb)
+check("literature dim-flow", "dim-flow" in lb)
 
-# zh graph page specifics
-gb = op.open(f"{BASE}/graph").read().decode("utf-8")
-print("graph has \u77e5\u8bc6\u56fe\u8c31:", "\u77e5\u8bc6\u56fe\u8c31" in gb,
-      "| belongs_to:", "belongs_to" in gb, "| studies:", "studies" in gb)
+elen = get_en("/literature")
+check("en literature ok", "Literature Review" in elen and "taste" in elen and "premises" in elen)
 
-# zh literature page specifics
-lb = op.open(f"{BASE}/literature").read().decode("utf-8")
-print("literature has 品味:", "\u54c1\u5473" in lb, "| 哲学:", "\u54f2\u5b66" in lb, "| 代表作品:", "代表作品" in lb, "| 前提:", "\u524d\u63d0" in lb)
-print("literature has portrait grid:", 'portrait-grid' in lb, "| dim-flow:", 'dim-flow' in lb)
+check("pubs filter bar", "filter-pill" in pb)
+fc = get("/publications?corridor=grand_canal")
+check("pubs corridor=grand_canal keeps \u74f7\u5668\u4e4b\u90fd", "\u74f7\u5668\u4e4b\u90fd" in fc)
+check("pubs corridor=grand_canal excludes \u6ce2\u7684\u5c3c\u4e9a\u6e7e", "\u6ce2\u7684\u5c3c\u4e9a\u6e7e" not in fc)
+fl = get("/publications?level=A")
+check("pubs level=A has \u74f7\u5668\u4e4b\u90fd", "\u74f7\u5668\u4e4b\u90fd" in fl)
 
-# en variant of literature page (fresh opener without zh cookie)
-raw = urllib.request.urlopen(f"{BASE}/literature").read().decode("utf-8")
-print("en literature ok:", "Literature Review" in raw and "taste" in raw and "premises" in raw)
+check("fieldwork grouped (\u7ec4\u6807\u9898-\u5317\u4eac\u5927\u8fd0\u6cb3)", "\u5317\u4eac\u5927\u8fd0\u6cb3" in get("/fieldwork"))
 
-# ── research library filters ──
-print("pubs filter bar:", "filter-pill" in pb)
-fc = op.open(f"{BASE}/publications?corridor=grand_canal").read().decode("utf-8")
-print("pubs corridor=grand_canal keeps 瓷器之都:", "\u74f7\u5668\u4e4b\u90fd" in fc,
-      "| excludes gotland-only 2026 (波的尼亚湾):", "\u6ce2\u7684\u5c3c\u4e9a\u6e7e" not in fc)
-fl = op.open(f"{BASE}/publications?level=A").read().decode("utf-8")
-print("pubs level=A has 瓷器之都:", "\u74f7\u5668\u4e4b\u90fd" in fl)
+ld = get("/literature?view=dimensions")
+check("literature dimensions tabs", "lit-tab" in ld)
+check("dimensions \u6309\u5185\u5bb9\u7ef4\u5ea6\u5bfc\u89c8", "\u6309\u5185\u5bb9\u7ef4\u5ea6\u5bfc\u89c8" in ld)
+check("dimensions \u5eca\u9053\u4e0e\u79fb\u52a8", "\u5eca\u9053\u4e0e\u79fb\u52a8" in ld)
+check("dimensions \u98df\u7269\u5eca\u9053", "\u98df\u7269\u5eca\u9053" in ld)
+check("dimensions \u65b9\u6cd5\u8bba", "\u65b9\u6cd5\u8bba" in ld)
 
-# ── fieldwork corridor grouping ──
-print("fieldwork grouped (组标题-北京大运河):", "\u5317\u4eac\u5927\u8fd0\u6cb3" in op.open(f"{BASE}/fieldwork").read().decode("utf-8"))
+check("graph relations authored", "authored" in gb)
+check("graph relations involves", "involves" in gb)
+check("graph related literature", "\u76f8\u5173\u6587\u732e" in gb)
 
-# ── literature dimensions view ──
-ld = op.open(f"{BASE}/literature?view=dimensions").read().decode("utf-8")
-print("literature dimensions has tabs:", "lit-tab" in ld,
-      "| 按内容维度导览:", "\u6309\u5185\u5bb9\u7ef4\u5ea6\u5bfc\u89c8" in ld,
-      "| 廊道与移动:", "\u5eca\u9053\u4e0e\u79fb\u52a8" in ld,
-      "| 食物廊道:", "\u98df\u7269\u5eca\u9053" in ld,
-      "| 方法论:", "\u65b9\u6cd5\u8bba" in ld)
+# SEO / OG meta
+check("seo og:site_name", 'property="og:site_name"' in b)
+check("seo og:title", 'property="og:title"' in b)
+check("seo twitter:card", 'name="twitter:card"' in b)
+check("seo canonical", '<link rel="canonical"' in b)
+check("seo meta description", 'name="description"' in b)
+check("favicon link", 'rel="icon"' in b)
 
-# ── knowledge graph edges on page ──
-print("graph relations authored:", "authored" in gb, "| involves:", "involves" in gb,
-      "| related literature:", "\u76f8\u5173\u6587\u732e" in gb)
+# og/twitter image behaviour depends on LH_BASE_URL opt-in
+if BASE_URL:
+    check("og:image absolute (base_url set)", f'content="{BASE_URL}/img/og-cover.jpg"' in b)
+    check("twitter:image absolute (base_url set)", f'content="{BASE_URL}/img/og-cover.jpg"' in b)
+else:
+    check("og:image suppressed w/o base_url", 'property="og:image"' not in b)
+    check("twitter:image suppressed w/o base_url", 'name="twitter:image"' not in b)
 
-# ── SEO / OG meta on public pages ──
-print("seo og:site_name:", "property=\"og:site_name\"" in b,
-      "| og:title:", "property=\"og:title\"" in b,
-      "| twitter:card:", "name=\"twitter:card\"" in b,
-      "| canonical:", '<link rel="canonical"' in b,
-      "| meta description:", 'name="description"' in b)
+# static og placeholder asset is always served
+with urllib.request.urlopen(BASE + "/img/og-cover.jpg") as r:
+    ogbytes = r.read()
+check("og-cover.jpg served 200", r.status == 200 and len(ogbytes) > 1000, ("bytes", len(ogbytes)))
 
-# ── styled bilingual 404 (en by default) ──
+# styled bilingual 404 (en by default)
 try:
-    r = urllib.request.urlopen(f"{BASE}/no-such-page")
-    print("404 page ok (unexpected):", r.status)
+    with urllib.request.urlopen(BASE + "/no-such-page") as r:
+        check("404 page ok (unexpected 200)", False, r.status)
 except urllib.error.HTTPError as e:
     body = e.read().decode("utf-8")
-    print("404 status:", e.code, "| styled title:", "Page not found" in body,
-          "| back link:", "Back to the shore" in body)
+    check("404 status", e.code == 404)
+    check("404 styled title", "Page not found" in body)
+    check("404 back link", "Back to the shore" in body)
+
+print()
+if FAILS:
+    print("FAILS (%d): %s" % (len(FAILS), "; ".join(FAILS)))
+    sys.exit(1)
+print("ALL CHECKS PASSED")

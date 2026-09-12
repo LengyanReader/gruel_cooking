@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block title %}{{ site_title }}{% endblock %} — {{ brand['brand.identity'] }}</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23033b4c'/%3E%3Cpath%20d='M2%2021c6-7%2012%206%2028-2v7c0%204-3%206-6%206H2z'%20fill='%23e8c39a'/%3E%3C/svg%3E">
 <meta name="description" content="{% block meta_description %}{{ site_subtitle }}{% endblock %}">
 <link rel="canonical" href="{{ base_url }}{{ request_path }}">
 {% block meta %}{% endblock %}
@@ -18,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ self.title() }}">
 <meta name="twitter:description" content="{{ self.meta_description() }}">
-<meta name="twitter:image" content="{{ base_url }}/img/og-cover.jpg">
+{% if base_url %}<meta name="twitter:image" content="{{ base_url }}/img/og-cover.jpg">{% endif %}
 {% endblock %}
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
