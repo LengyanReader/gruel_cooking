@@ -19,6 +19,11 @@ from app.router import (
     STATIC_DIR,
 )
 
+# Registers the app's routes (decorators run at app.main import time); the
+# classic `python -m app.main` path imports it directly, whereas WSGI hosts
+# only import this module, so we must ensure the route table is populated.
+import app.main  # noqa: F401
+
 
 def _application(environ, start_response):
     method = environ.get("REQUEST_METHOD", "GET")
