@@ -57,7 +57,13 @@ def _application(environ, start_response):
         else:
             result = _serve_static_wsgi(path, cookies)
     except Exception:  # noqa: BLE001 — never leak a traceback to the client
-        result = Response.html("Internal Server Error", 500)
+        if os.environ.get("LH_WSGI_DEBUG"):
+            import traceback
+            result = Response.html(
+                "Internal Server Error\n\n" + traceback.format_exc(), 500
+            )
+        else:
+            result = Response.html("Internal Server Error", 500)
 
     status = f"{result.status} {HTTPStatus(result.status).phrase}"
     headers = [
