@@ -52,12 +52,49 @@
 
 <section class="section section-alt">
   <div class="container">
+    <div class="lit-tabs" role="tablist" aria-label="文献视图">
+      <a class="lit-tab {% if lit_view == 'scholars' %}is-active{% endif %}" href="/literature?view=scholars">
+        {{ '学者六维肖像' if locale == 'zh' else 'Scholar six-dimension portraits' }}
+      </a>
+      <a class="lit-tab {% if lit_view == 'dimensions' %}is-active{% endif %}" href="/literature?view=dimensions">
+        {{ '按内容维度导览' if locale == 'zh' else 'Browse by content dimension' }}
+      </a>
+    </div>
+
+    {% if lit_view == 'dimensions' %}
+      {% for d in dimensions %}
+      <section class="dim-block">
+        <div class="dim-block-head">
+          <h3>{{ d.title }}</h3>
+          {% if d.doc_sections %}<span class="meta-chip dim-doc">{{ d.doc_sections }}</span>{% endif %}
+        </div>
+        <div class="portrait-grid">
+          {% for p in d.publications %}
+          <article class="scholar-portrait reveal">
+            <div class="scholar-portrait-head">
+              <h4 class="scholar-name">{{ p.title }}</h4>
+              {% if p.source_level %}<span class="meta-chip lvl-{{ p.source_level|lower }}">[{{ p.source_level }}]</span>{% endif %}
+            </div>
+            {% if p.authors or p.year %}
+              <p class="scholar-inst">{{ p.authors or '' }}{% if p.year %} · {{ p.year }}{% endif %}</p>
+            {% endif %}
+            {% if p.abstract %}<div class="scholar-bio">{{ p.abstract }}</div>{% endif %}
+            <div class="site-meta">
+              {% for tag in p.tag_list %}<span class="meta-chip">{{ tag }}</span>{% endfor %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    {% else %}
     <h2 class="section-title">{{ '学者肖像与代表作品' if locale == 'zh' else 'Scholar portraits & selected works' }}</h2>
     <div class="portrait-grid">
       {% for s in scholars %}
         {{ t.scholar_portrait(s, trait_labels, works_label) }}
       {% endfor %}
     </div>
+    {% endif %}
   </div>
 </section>
 {% endblock %}

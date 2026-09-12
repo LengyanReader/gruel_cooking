@@ -10,7 +10,7 @@ from pathlib import Path
 
 from app.config import SEEDS_DIR
 from app.db.sqlite import get_db, init_db
-from app.services.graph import R_BELONGS_TO, R_STUDIES
+from app.services.graph import R_BELONGS_TO, R_STUDIES, R_INVOLVES, R_AUTHORED
 
 
 def seed_bilingual_text(conn, en_data: dict, zh_data: dict):
@@ -192,11 +192,14 @@ def seed_field_observations(conn, en_data: list, zh_data: list):
     conn.commit()
 
 
-def seed_relations(conn):
+def seed_relations(conn, scholar_map: dict | None = None):
     """Build the knowledge-graph edge table from normalized entity columns.
 
-    site    -[belongs_to]-> corridor      (from heritage_sites.corridor_slug)
-    scholar -[studies]---> corridor       (from scholars.corridor_slugs)
+    site          -[belongs_to]-> corridor     (from heritage_sites.corridor_slug)
+    scholar       -[studies]---> corridor      (from scholars.corridor_slugs)
+    publication   -[involves]--> corridor      (from publications.corridor_slugs)
+    observation   -[involves]--> site          (from field_observations.site_id)
+    scholar       -[authored]--> publication   (from publication scholar_keys, via scholar_map)
     """
     conn.execute("DELETE FROM relations")
 
@@ -222,6 +225,45 @@ def seed_relations(conn):
                        VALUES ('scholar', ?, ?, 'corridor', ?)""",
                     (scholarly["id"], R_STUDIES, corr["id"])
                 )
+
+    pubs = conn.execute("SELECT id, title_key, corridor_slugs FROM publications").fetchall()
+    for p in pubs:
+        slugs = json.loads(p["corridor_slugs"] or "[]")
+        for slug in slugs:
+            corr = scol.get(slug)
+            if corr:
+                conn.execute(
+                    """INSERT INTO relations (source_type, source_id, relation, target_type, target_id)
+                       VALUES ('publication', ?, ?, 'corridor', ?)""",
+                    (p["id"], R_INVOLVES, corr["id"])
+                )
+
+    observations = conn.execute("SELECT id, site_id FROM field_observations").fetchall()
+    for o in observations:
+        if o["site_id"]:
+            conn.execute(
+                """INSERT INTO relations (source_type, source_id, relation, target_type, target_id)
+                   VALUES ('observation', ?, ?, 'site', ?)""",
+                (o["id"], R_INVOLVES, o["site_id"])
+            )
+
+    if scholar_map:
+        sid_by_name = {r["name_key"]: r["id"]
+                       for r in conn.execute("SELECT id, name_key FROM scholars").fetchall()}
+        pid_by_title = {r["title_key"]: r["id"]
+                        for r in conn.execute("SELECT id, title_key FROM publications").fetchall()}
+        for title_key, name_keys in scholar_map.items():
+            pid = pid_by_title.get(title_key)
+            if pid is None:
+                continue
+            for nk in name_keys:
+                sid = sid_by_name.get(nk)
+                if sid:
+                    conn.execute(
+                        """INSERT INTO relations (source_type, source_id, relation, target_type, target_id)
+                           VALUES ('scholar', ?, ?, 'publication', ?)""",
+                        (sid, R_AUTHORED, pid)
+                    )
     conn.commit()
 
 
@@ -305,20 +347,25 @@ def seed_all():
         _seed_pair_dicts(conn, texts)
         seed_heritage_sites(conn, en_h, zh_h)
 
-    # Knowledge-graph edges
-    seed_relations(conn)
-
     # Publications (records + bilingual title/abstract)
+    scholar_map = {}
     if en_files["publications"].exists():
         en_p = json.loads(en_files["publications"].read_text(encoding="utf-8"))
         zh_p = json.loads(zh_files["publications"].read_text(encoding="utf-8")) if zh_files["publications"].exists() else []
         seed_publications(conn, en_p, zh_p)
+        for p in en_p:
+            keys = p.get("scholar_keys")
+            if keys:
+                scholar_map[p["title_key"]] = keys
 
     # Field observations (records + bilingual title/notes)
     if en_files["field_observations"].exists():
         en_o = json.loads(en_files["field_observations"].read_text(encoding="utf-8"))
         zh_o = json.loads(zh_files["field_observations"].read_text(encoding="utf-8")) if zh_files["field_observations"].exists() else []
         seed_field_observations(conn, en_o, zh_o)
+
+    # Knowledge-graph edges (rebuilt last: needs sites, scholars, pubs, observations)
+    seed_relations(conn, scholar_map or None)
 
     conn.close()
     print("Seed completed.")

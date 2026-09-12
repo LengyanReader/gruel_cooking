@@ -76,3 +76,26 @@ print("literature has portrait grid:", 'portrait-grid' in lb, "| dim-flow:", 'di
 # en variant of literature page (fresh opener without zh cookie)
 raw = urllib.request.urlopen(f"{BASE}/literature").read().decode("utf-8")
 print("en literature ok:", "Literature Review" in raw and "taste" in raw and "premises" in raw)
+
+# ── research library filters ──
+print("pubs filter bar:", "filter-pill" in pb)
+fc = op.open(f"{BASE}/publications?corridor=grand_canal").read().decode("utf-8")
+print("pubs corridor=grand_canal keeps 瓷器之都:", "\u74f7\u5668\u4e4b\u90fd" in fc,
+      "| excludes gotland-only 2026 (波的尼亚湾):", "\u6ce2\u7684\u5c3c\u4e9a\u6e7e" not in fc)
+fl = op.open(f"{BASE}/publications?level=A").read().decode("utf-8")
+print("pubs level=A has 瓷器之都:", "\u74f7\u5668\u4e4b\u90fd" in fl)
+
+# ── fieldwork corridor grouping ──
+print("fieldwork grouped (组标题-北京大运河):", "\u5317\u4eac\u5927\u8fd0\u6cb3" in op.open(f"{BASE}/fieldwork").read().decode("utf-8"))
+
+# ── literature dimensions view ──
+ld = op.open(f"{BASE}/literature?view=dimensions").read().decode("utf-8")
+print("literature dimensions has tabs:", "lit-tab" in ld,
+      "| 按内容维度导览:", "\u6309\u5185\u5bb9\u7ef4\u5ea6\u5bfc\u89c8" in ld,
+      "| 廊道与移动:", "\u5eca\u9053\u4e0e\u79fb\u52a8" in ld,
+      "| 食物廊道:", "\u98df\u7269\u5eca\u9053" in ld,
+      "| 方法论:", "\u65b9\u6cd5\u8bba" in ld)
+
+# ── knowledge graph edges on page ──
+print("graph relations authored:", "authored" in gb, "| involves:", "involves" in gb,
+      "| related literature:", "\u76f8\u5173\u6587\u732e" in gb)

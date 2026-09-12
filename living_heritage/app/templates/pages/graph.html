@@ -21,7 +21,7 @@
           <span class="graph-node-type">corridor</span>
           <h3>{{ c.name }}</h3>
           {% if c.region %}<span class="corridor-region">{{ c.region }}</span>{% endif %}
-          <span class="meta-chip">{{ c.site_count }} sites · {{ c.scholar_count }} scholars</span>
+          <span class="meta-chip">{{ c.site_count }} sites · {{ c.scholar_count }} scholars · {{ c.pub_count }} publications</span>
         </div>
         {% if c.description %}<p class="corridor-intro">{{ c.description }}</p>{% endif %}
 
@@ -42,6 +42,17 @@
           <ul class="graph-links">
             {% for sc in c.scholars %}
               <li><span class="graph-node-type">scholar</span> {{ sc.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if c.publications %}
+        <div class="graph-group">
+          <h4>{{ '相关文献' if locale == 'zh' else 'Related literature' }}</h4>
+          <ul class="graph-links">
+            {% for p in c.publications %}
+              <li><span class="graph-node-type">publication</span> {{ p.name }}</li>
             {% endfor %}
           </ul>
         </div>

@@ -12,6 +12,7 @@ from app.services.locale import TextResolver
 R_BELONGS_TO = "belongs_to"     # site → corridor
 R_STUDIES = "studies"           # scholar → corridor / scholar → site
 R_INVOLVES = "involves"         # publication → corridor / observation → site
+R_AUTHORED = "authored"         # scholar → publication
 
 
 class GraphService:
@@ -106,8 +107,10 @@ class GraphService:
         for c in profiles:
             c["sites"] = self.linked_entities(c["id"], "corridor", "site", R_BELONGS_TO, locale, inverse=True)
             c["scholars"] = self.linked_entities(c["id"], "corridor", "scholar", R_STUDIES, locale, inverse=True)
+            c["publications"] = self.linked_entities(c["id"], "corridor", "publication", R_INVOLVES, locale, inverse=True)
             c["site_count"] = len(c["sites"])
             c["scholar_count"] = len(c["scholars"])
+            c["pub_count"] = len(c["publications"])
         return profiles
 
     def linked_entities(self, entity_id: int, entity_type: str, link_type: str,

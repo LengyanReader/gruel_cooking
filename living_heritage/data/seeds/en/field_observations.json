@@ -97,5 +97,38 @@
     "observation_type": "walk",
     "source_level": "A",
     "tags": "kinda canal, nykvarn lock, riksintresse, tourism"
+  },
+  {
+    "site": "site.ridanas.name",
+    "date_observed": "2026-09-11",
+    "title_en": "Ridanäs is not on the tentative list",
+    "title_zh": "Ridanäs 不在暂定名录",
+    "notes_en": "Desk record, 2026-09-11: Sweden's UNESCO Tentative List holds a single entry (The Rise of Systematic Biology, 2009); Ridanäs is absent. The earlier Wikipedia-based claim is dropped and the site description updated.",
+    "notes_zh": "档案记录 2026-09-11:瑞典 UNESCO 暂定名录现仅有唯一一项（The Rise of Systematic Biology, 2009）；Ridanäs 不在其中。此前的维基说法已撤销，站点描述已更新。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "desk, verification, unesco, gotland"
+  },
+  {
+    "site": "site.kinda_canal.name",
+    "date_observed": "2026-09-11",
+    "title_en": "Liveness as starting point: Kinda Canal",
+    "title_zh": "以「活态」为出发点：金达运河",
+    "notes_en": "Desk record, 2026-09-11: kindakanal.se confirms the waterway has been an important route since 1871 (15 hand-operated locks, ~80 km); no official 'living heritage' designation exists — liveness here is the project's premise, not a claim about status.",
+    "notes_zh": "档案记录 2026-09-11:kindakanal.se 确认此水道自 1871 年起持续作为重要通道（15 座手控船闸、约 80 公里）；不存在官方「活态遗产」认定——此处「活态」是本项目的前提，而非对既有身份的断言。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "desk, verification, kinda canal, liveness"
+  },
+  {
+    "site": "site.gamla_skogsby.name",
+    "date_observed": "2026-09-11",
+    "title_en": "Southern Öland boundary includes Gamla Skogsby",
+    "title_zh": "南厄兰遗产边界包含 Gamla Skogsby",
+    "notes_en": "Desk record, 2026-09-11: UNESCO WHC 968 (criterion iv, v) inscribed area 56,286 ha — confirmed that the property runs from Karlevi to Gårdby and southward (2024 46COM 8D clarifications), placing Gamla Skogsby within the heritage area.",
+    "notes_zh": "档案记录 2026-09-11:UNESCO WHC 968（准则 iv、v）核定面积 56,286 公顷——已确认遗产范围自 Karlevi 至 Gårdby 并延伸向南（2024 年 46COM 8D 澄清），Gamla Skogsby 位于遗产区内。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "desk, verification, oland, whc968"
   }
 ]

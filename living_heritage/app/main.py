@@ -111,6 +111,90 @@ def base_context(ctx: AppContext) -> dict:
     }
 
 
+# Literature content dimensions (viewed on /literature?view=dimensions).
+# Keywords match the free-text `tags` column (case-insensitive substring).
+LITERATURE_DIMENSIONS = [
+    {
+        "key": "movement",
+        "title_en": "Corridors & movement",
+        "title_zh": "廊道与移动",
+        "doc_sections_en": "drafted doc §2, §7, §24",
+        "doc_sections_zh": "drafted doc §2、§7、§24",
+        "keywords": ["wayfaring", "walking", "lines", "movement", "corridor", "connectivity", "networks"],
+    },
+    {
+        "key": "materiality",
+        "title_en": "Materiality & ruins",
+        "title_zh": "物质性 / 废墟",
+        "doc_sections_en": "drafted doc §12, §14, §22",
+        "doc_sections_zh": "drafted doc §12、§14、§22",
+        "keywords": ["materiality", "things", "ontology", "ruins", "archaeology", "curated decay", "recent past"],
+    },
+    {
+        "key": "living_heritage",
+        "title_en": "Living heritage & regeneration",
+        "title_zh": "活态遗产 / 再生",
+        "doc_sections_en": "drafted doc §19, §22, §44-48",
+        "doc_sections_zh": "drafted doc §19、§22、§44–48",
+        "keywords": ["living heritage", "regeneration", "growth", "heritage futures", "transformation",
+                     "people-centred", "critical heritage", "cultural process", "care"],
+    },
+    {
+        "key": "food",
+        "title_en": "Food corridors",
+        "title_zh": "食物廊道",
+        "doc_sections_en": "drafted doc §15-18",
+        "doc_sections_zh": "drafted doc §15–18",
+        "keywords": ["food", "herring", "taste", "commodity", "food corridor"],
+    },
+    {
+        "key": "memory",
+        "title_en": "Memory & place",
+        "title_zh": "记忆 / 场所",
+        "doc_sections_en": "drafted doc §5, §17, §28",
+        "doc_sections_zh": "drafted doc §5、§17、§28",
+        "keywords": ["memory", "difficult heritage", "identity"],
+    },
+    {
+        "key": "canal_critique",
+        "title_en": "Critique of the Grand Canal nomination",
+        "title_zh": "大运河申报批判",
+        "doc_sections_en": "drafted doc §4-6, §11",
+        "doc_sections_zh": "drafted doc §4–6、§11",
+        "keywords": ["grand canal", "nomination", "intangible heritage", "actor-network",
+                     "heritage making", "urban development", "population", "spatial analysis"],
+    },
+    {
+        "key": "methods",
+        "title_en": "Methods",
+        "title_zh": "方法论",
+        "doc_sections_en": "drafted doc §23-24, §38",
+        "doc_sections_zh": "drafted doc §23–24、§38",
+        "keywords": ["digital ethnography", "narrative policy analysis", "actor-network",
+                     "long-run history", "futures literacy"],
+    },
+]
+
+
+def literature_dimensions(ctx) -> list[dict]:
+    """Group publications into content dimensions by tag keywords (per locale)."""
+    pubs = ctx.heritage.list_publications(locale=ctx.locale)
+    out = []
+    for d in LITERATURE_DIMENSIONS:
+        matches = []
+        for p in pubs:
+            hay = " ".join([p.get("title", ""), p.get("authors", ""), ",".join(p.get("tag_list", []))]).lower()
+            if any(kw in hay for kw in d["keywords"]):
+                matches.append(p)
+        out.append({
+            "key": d["key"],
+            "title": d["title_zh"] if ctx.locale == "zh" else d["title_en"],
+            "doc_sections": d["doc_sections_zh"] if ctx.locale == "zh" else d["doc_sections_en"],
+            "publications": matches,
+        })
+    return out
+
+
 # ── Routes ──
 
 @get("/")
@@ -165,6 +249,12 @@ def literature(req: Request):
     base = base_context(ctx)
     base["page"] = ctx.content.get_page("literature", ctx.locale)
     base["scholars"] = ctx.scholars.list_scholars(ctx.locale)
+    view = (req.query.get("view") or ["scholars"])[0]
+    if view not in ("scholars", "dimensions"):
+        view = "scholars"
+    base["lit_view"] = view
+    if view == "dimensions":
+        base["dimensions"] = literature_dimensions(ctx)
     html = render("pages/literature.html", base)
     ctx.db.close()
     return html
