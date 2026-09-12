@@ -609,4 +609,5 @@ def admin_text_search(req: Request):
 
 if __name__ == "__main__":
     from app.boot import boot
-    boot()
+    from app.config import BIND_HOST
+    boot(host=BIND_HOST)

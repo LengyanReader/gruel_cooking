@@ -23,6 +23,10 @@ DEFAULT_LOCALE = os.getenv("LH_DEFAULT_LOCALE", "en")
 AVAILABLE_LOCALES = [l.strip() for l in os.getenv("LH_LOCALES", "en,zh").split(",") if l.strip()]
 
 # Public base URL for canonical/Open Graph tags (empty => tags render relative paths)
+# Bind host for the HTTP server: keep loopback by default; containers must
+# expose via LH_BIND_HOST=0.0.0.0 for port mapping to forward from the host
+BIND_HOST = os.getenv("LH_BIND_HOST", "127.0.0.1")
+
 BASE_URL = os.getenv("LH_BASE_URL", "").rstrip("/")
 
 # Scholar six-dimension portrait keys (canonical order)

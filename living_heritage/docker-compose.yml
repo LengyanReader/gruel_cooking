@@ -6,8 +6,12 @@ services:
       - "18080:18080"
     environment:
       LH_PORT: "18080"
+      # bind all interfaces inside the container so the port mapping forwards
+      LH_BIND_HOST: "0.0.0.0"
       # optional admin token; if unset admin routes stay closed (see app/config.py)
       LH_ADMIN_TOKEN: ${LH_ADMIN_TOKEN:-}
+      # optional public base URL for absolute OG/SEO links (empty -> relative/suppressed)
+      LH_BASE_URL: ${LH_BASE_URL:-}
     volumes:
       # persist the SQLite DB across restarts; reseed by deleting the file
       - lh_data:/srv/living_heritage/data
