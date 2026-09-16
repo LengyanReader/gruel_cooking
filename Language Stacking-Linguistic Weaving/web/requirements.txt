@@ -1,0 +1,2 @@
+markdown~=3.6
+pytest~=9.1

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "kind": "glossary",
+    "source": "README 附录 D（概念 × 八语术语表 Core Glossary）底表的第一批校准；正本规划在 02_corpus/glossary.md",
+    "review": "all-high-signal-pending-native",
+    "note_zh": "概念 id 与 meaning_en 归一化探针对齐；八语词位为高信号底表词，仍待母语审校（铁律 4）。",
+    "note_en": "Concept ids align with meaning_en probe keys; the eight-language terms are high-signal baseline words, still awaiting native review."
+  },
+  "languages": ["zh", "en", "fr", "ja", "sa", "la", "de", "sv"],
+  "concepts": [
+    {
+      "id": "water", "name_zh": "水", "name_en": "Water",
+      "terms": {
+        "zh": {"word": "水", "roma": ""},
+        "en": {"word": "water", "roma": ""},
+        "fr": {"word": "eau", "roma": ""},
+        "ja": {"word": "水", "roma": "mizu"},
+        "sa": {"word": "जल", "roma": "jala"},
+        "la": {"word": "aqua", "roma": ""},
+        "de": {"word": "Wasser", "roma": ""},
+        "sv": {"word": "vatten", "roma": ""}
+      }
+    },
+    {
+      "id": "moon", "name_zh": "月", "name_en": "Moon",
+      "terms": {
+        "zh": {"word": "月", "roma": ""},
+        "en": {"word": "moon", "roma": ""},
+        "fr": {"word": "lune", "roma": ""},
+        "ja": {"word": "月", "roma": "tsuki"},
+        "sa": {"word": "चन्द्र", "roma": "candra"},
+        "la": {"word": "luna", "roma": ""},
+        "de": {"word": "Mond", "roma": ""},
+        "sv": {"word": "måne", "roma": ""}
+      }
+    },
+    {
+      "id": "heart", "name_zh": "心", "name_en": "Heart",
+      "terms": {
+        "zh": {"word": "心", "roma": ""},
+        "en": {"word": "heart", "roma": ""},
+        "fr": {"word": "cœur", "roma": ""},
+        "ja": {"word": "心", "roma": "kokoro"},
+        "sa": {"word": "हृदय", "roma": "hṛdaya"},
+        "la": {"word": "cor", "roma": ""},
+        "de": {"word": "Herz", "roma": ""},
+        "sv": {"word": "hjärta", "roma": ""}
+      }
+    },
+    {
+      "id": "time", "name_zh": "时间", "name_en": "Time",
+      "terms": {
+        "zh": {"word": "时", "roma": ""},
+        "en": {"word": "time", "roma": ""},
+        "fr": {"word": "temps", "roma": ""},
+        "ja": {"word": "時", "roma": "toki"},
+        "sa": {"word": "काल", "roma": "kāla"},
+        "la": {"word": "tempus", "roma": ""},
+        "de": {"word": "Zeit", "roma": ""},
+        "sv": {"word": "tid", "roma": ""}
+      }
+    },
+    {
+      "id": "sea", "name_zh": "海", "name_en": "Sea",
+      "terms": {
+        "zh": {"word": "海", "roma": ""},
+        "en": {"word": "sea", "roma": ""},
+        "fr": {"word": "mer", "roma": ""},
+        "ja": {"word": "海", "roma": "umi"},
+        "sa": {"word": "समुद्र", "roma": "samudra"},
+        "la": {"word": "mare", "roma": ""},
+        "de": {"word": "Meer", "roma": ""},
+        "sv": {"word": "hav", "roma": ""}
+      }
+    },
+    {
+      "id": "freedom", "name_zh": "自由", "name_en": "Freedom",
+      "terms": {
+        "zh": {"word": "自由", "roma": ""},
+        "en": {"word": "freedom", "roma": ""},
+        "fr": {"word": "liberté", "roma": ""},
+        "ja": {"word": "自由", "roma": "jiyū"},
+        "sa": {"word": "स्वतन्त्र", "roma": "mokṣa / svatantra"},
+        "la": {"word": "libertas", "roma": ""},
+        "de": {"word": "Freiheit", "roma": ""},
+        "sv": {"word": "frihet", "roma": ""}
+      }
+    },
+    {
+      "id": "tea", "name_zh": "茶", "name_en": "Tea",
+      "terms": {
+        "zh": {"word": "茶", "roma": ""},
+        "en": {"word": "tea", "roma": ""},
+        "fr": {"word": "thé", "roma": ""},
+        "ja": {"word": "茶", "roma": "cha"},
+        "sa": {"word": "चाय", "roma": "cāya"},
+        "la": {"word": "theria", "roma": ""},
+        "de": {"word": "Tee", "roma": ""},
+        "sv": {"word": "te", "roma": ""}
+      }
+    },
+    {
+      "id": "silence", "name_zh": "寂静", "name_en": "Silence",
+      "terms": {
+        "zh": {"word": "静", "roma": ""},
+        "en": {"word": "silence", "roma": ""},
+        "fr": {"word": "silence", "roma": ""},
+        "ja": {"word": "静けさ", "roma": "shizukesa"},
+        "sa": {"word": "शान्तिः", "roma": "śāntiḥ"},
+        "la": {"word": "silentium", "roma": ""},
+        "de": {"word": "Stille", "roma": ""},
+        "sv": {"word": "tystnad", "roma": ""}
+      }
+    },
+    {
+      "id": "tree", "name_zh": "树", "name_en": "Tree",
+      "terms": {
+        "zh": {"word": "树", "roma": ""},
+        "en": {"word": "tree", "roma": ""},
+        "fr": {"word": "arbre", "roma": ""},
+        "ja": {"word": "木", "roma": "ko"},
+        "sa": {"word": "वृक्ष", "roma": "vṛkṣa"},
+        "la": {"word": "arbor", "roma": ""},
+        "de": {"word": "Baum", "roma": ""},
+        "sv": {"word": "träd", "roma": ""}
+      }
+    },
+    {
+      "id": "wind", "name_zh": "风", "name_en": "Wind",
+      "terms": {
+        "zh": {"word": "风", "roma": ""},
+        "en": {"word": "wind", "roma": ""},
+        "fr": {"word": "vent", "roma": ""},
+        "ja": {"word": "風", "roma": "kaze"},
+        "sa": {"word": "वात", "roma": "vāta"},
+        "la": {"word": "ventus", "roma": ""},
+        "de": {"word": "Wind", "roma": ""},
+        "sv": {"word": "vind", "roma": ""}
+      }
+    },
+    {
+      "id": "light", "name_zh": "光", "name_en": "Light",
+      "terms": {
+        "zh": {"word": "光", "roma": ""},
+        "en": {"word": "light", "roma": ""},
+        "fr": {"word": "lumière", "roma": ""},
+        "ja": {"word": "光", "roma": "hikari"},
+        "sa": {"word": "ज्योति", "roma": "jyoti"},
+        "la": {"word": "lux", "roma": ""},
+        "de": {"word": "Licht", "roma": ""},
+        "sv": {"word": "ljus", "roma": ""}
+      }
+    },
+    {
+      "id": "nature", "name_zh": "自然", "name_en": "Nature",
+      "terms": {
+        "zh": {"word": "自然", "roma": ""},
+        "en": {"word": "nature", "roma": ""},
+        "fr": {"word": "nature", "roma": ""},
+        "ja": {"word": "自然", "roma": "shizen"},
+        "sa": {"word": "प्रकृति", "roma": "prakṛti"},
+        "la": {"word": "natura", "roma": ""},
+        "de": {"word": "Natur", "roma": ""},
+        "sv": {"word": "natur", "roma": ""}
+      }
+    }
+  ],
+  "scripts": [
+    {"id": "hanzi", "name_zh": "汉字楷系", "name_en": "Han-derived",
+     "note_zh": "意音文字，字孕义；中（简体/繁体）与日（当用汉字）共用同一字形家族", "note_en": "logosyllabary; meaning lives in the glyph — used by zh and ja",
+     "langs": ["zh", "ja"]},
+    {"id": "kana", "name_zh": "假名", "name_en": "Kana",
+     "note_zh": "平假名（语素）+ 片假名（外来词）音节文字", "note_en": "syllabary: hiragana (morphemes) + katakana (loanwords)",
+     "langs": ["ja"]},
+    {"id": "latin", "name_zh": "拉丁字母", "name_en": "Latin script",
+     "note_zh": "音位字母；en/fr/de/sv 直用，la 为其祖系", "note_en": "phonemic alphabet; used natively by en/fr/de/sv, la is its ancestor",
+     "langs": ["en", "fr", "la", "de", "sv"]},
+    {"id": "devanagari", "name_zh": "天城体", "name_en": "Devanagari",
+     "note_zh": "梵语正体，音位-音节文字，sandhi 视觉化", "note_en": "Sanskrit abugida; sandhi made visible",
+     "langs": ["sa"]}
+  ],
+  "threads": [
+    {"id": "t-water-en", "kind": "derives_from", "from": "en:water", "to": "root:pie-wedor",
+     "note_zh": "water ← 印欧 *wédor（水）", "note_en": "water ← PIE *wédor (water)"},
+    {"id": "t-water-de", "kind": "derives_from", "from": "de:water", "to": "root:pie-wedor",
+     "note_zh": "Wasser ← 印欧 *wédor", "note_en": "Wasser ← PIE *wédor"},
+    {"id": "t-water-sv", "kind": "derives_from", "from": "sv:water", "to": "root:pie-wedor",
+     "note_zh": "vatten ← 印欧 *wédor", "note_en": "vatten ← PIE *wédor"},
+    {"id": "t-water-fr", "kind": "derives_from", "from": "fr:water", "to": "la:water",
+     "note_zh": "eau ← 拉丁 aqua（普通罗曼传承）", "note_en": "eau ← Latin aqua (regular Romance descent)"},
+    {"id": "t-time-de", "kind": "derives_from", "from": "de:time", "to": "root:pie-dih2",
+     "note_zh": "Zeit ← 印欧 *dī-（分开、时段）", "note_en": "Zeit ← PIE *dī- (to divide)"},
+    {"id": "t-time-sv", "kind": "derives_from", "from": "sv:time", "to": "root:pie-dih2",
+     "note_zh": "tid ← 印欧 *dī-，与 Zeit 同根（域内 E 型词源片素材）", "note_en": "tid ← PIE *dī-; same root as Zeit (E-type genealogy material)"},
+    {"id": "t-nature-sa", "kind": "derives_from", "from": "sa:nature", "to": "root:pie-tker",
+     "note_zh": "prakṛti（本性）与「造/造作」同根（示意性 seed，待审）", "note_en": "prakṛti (nature) shares a root with 'make'; illustrative seed, pending review"},
+    {"id": "t-tea-ja", "kind": "loaned_to", "from": "zh:tea", "to": "ja:tea",
+     "note_zh": "茶 东传曰语；汉字圈借词回旋镖", "note_en": "tea spread from China to Japan; Han-sphere loan echo"},
+    {"id": "t-tea-en", "kind": "loaned_to", "from": "zh:tea", "to": "en:tea",
+     "note_zh": "en tea ← 闽南话 tê 海运西传", "note_en": "en tea ← Hokkien tê via the tea trade route"}
+  ]
+}

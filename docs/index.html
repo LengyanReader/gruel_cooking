@@ -212,6 +212,8 @@ a:hover { color: var(--sky-deep); }
 .pillar-card[data-color="teal"]::before { background: linear-gradient(90deg, var(--accent-teal), #8CC5C5); }
 .pillar-card[data-color="coral"]::before { background: linear-gradient(90deg, var(--accent-coral), #E8A890); }
 .pillar-card[data-color="violet"]::before { background: linear-gradient(90deg, var(--accent-violet), #AEA0CC); }
+.pillar-card[data-color="night"]::before { background: linear-gradient(90deg, #2D3B57, #7AB8D9); }
+.pillar-card[data-color="night"] .pillar-icon { background: #E9EDF4; }
 .pillar-icon {
   display: flex; align-items: center; justify-content: center;
   width: 48px; height: 48px; border-radius: 14px; margin-bottom: 1rem; font-size: 1.5rem;
@@ -479,7 +481,32 @@ a:hover { color: var(--sky-deep); }
       </a>
     </div>
 
-    <!-- 5. Living Heritage — featured -->
+    <!-- 5. Language Stacking -->
+    <div class="pillar-card" data-color="night">
+      <div class="pillar-icon">言</div>
+      <h3>Language Stacking</h3>
+      <div class="card-subtitle">
+        <span data-zh>语言叠织 · 一意而万语</span>
+        <span data-en>One meaning, a thousand tongues</span>
+      </div>
+      <p>
+        <span data-zh>同一心象，八面语法之镜——中文、英文、法文、日文、梵文、拉丁、德文、瑞典文对照叠放、互为注释。让每种语言用自己的方式忠于原意，听见语法，闻到文明。</span>
+        <span data-en>One image of thought, eight mirrors of grammar — Chinese, English, French, Japanese, Sanskrit, Latin, German, Swedish stacked and woven, each faithful in its own way. Hear the grammar, smell the civilization.</span>
+      </p>
+      <div class="tags">
+        <span class="tag" data-both><span data-zh>叠 · 织 · 照</span><span data-en>Stack · Weave · Illuminate</span></span>
+        <span class="tag" data-both><span data-zh>八语 × 五主题</span><span data-en>8 tongues × 5 themes</span></span>
+        <span class="tag" data-both><span data-zh>平行语料</span><span data-en>Parallel corpus</span></span>
+        <span class="tag" data-both><span data-zh>视频 × 词卡</span><span data-en>Video × word cards</span></span>
+        <span class="tag" data-both><span data-zh>32 语蓝图</span><span data-en>32-language blueprint</span></span>
+      </div>
+      <a href="language_stacking/" class="enter-link">
+        <span data-zh>进入语言叠织</span><span data-en>Enter Language Stacking</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- 6. Living Heritage — featured -->
     <div class="pillar-card featured" data-color="violet">
       <div class="pillar-icon">⌇</div>
       <h3>Living Cultural Corridors</h3>

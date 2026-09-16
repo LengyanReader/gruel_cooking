@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>语种根本 · Language Roots — 语言叠织</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/learning.css">
+</head>
+<body class="lang-zh">
+<header class="nav">
+  <div class="nav-brand"><span data-zh>语言叠织</span><span data-en>Language Stacking</span><span class="sub">&middot; 学习库 Learning</span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../index.html">Home</a>
+    <div class="lang-toggle" aria-label="language">
+      <button data-lang="zh" type="button">中</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+  </div>
+</header>
+<main>
+<section class="learn-hero"><p class="crumb"><a href="../../index.html">语言叠织</a> &rsaquo; <span>语言根本</span></p><h1>语种根本</h1><p class="sub">记读写 · 不离根本 &middot; listen · read · write · stay rooted</p></section>
+<div class="wrap">
+<div data-both="1"><div data-bit="zh"><p>这是<strong>语言叠织</strong>下属的「各语种基础学习」知识库。每门语言一个子目录（<code>ja/</code>、<code>fr/</code>……）：prose 固化知识以 markdown 存放（文字体系、发音要点、学习路径），结构化数据（音图、词表）以 JSON 存放于 <code>data/</code>。二者共同构成<strong>单一来源</strong>，网页由生成器统一产出——不硬编码、不复制。站点层级：学习库 → 语言 → 模块（如 日语 → 五十音）。</p></div></div><div data-both="1"><div data-bit="en"><p>This is the per-language <strong>Learning</strong> knowledge base under Language Stacking. Each language lives in its own folder (ja/, fr/, …): consolidated knowledge as markdown (writing systems, pronunciation, learning path), structured datasets (sound charts, word lists) as JSON under data/. Together they form the single source of truth; the web pages are generated — no hardcoding, no duplication. Site hierarchy: Learning → Language → Module (e.g. Japanese → Gojūon).</p>
+<h2 id="iron-rules">铁律 / Iron Rules</h2></div></div><div data-both="1"><div data-bit="zh"><ol>
+<li><strong>单一来源</strong>：prose 存 markdown，结构化数据存 JSON；网页一律由生成器产出。</li>
+<li><strong>记 → 读 → 写</strong>：语音先于文字，听见比看见先行。</li>
+<li><strong>锚点织法</strong>：月・水・心・和……与核心术语表互为镜像，一物多名，名为镜。</li>
+<li><strong>审校防线</strong>：AI 起草一律标注；正式语料前必须母语审校（绝不静默出错）。</li>
+<li><strong>数据层</strong>：sqlite 查询库随构建生成（索引 / 复习 / 检索）；neo4j 图谱（跨语概念织网，<code>export_neo4j.py</code> 导出 Cypher，<code>weave_query.py</code> 提供「一词万境」无服务器读路径）阶段二已验收。</li>
+</ol></div></div><div data-both="1"><div data-bit="en"><ol>
+<li>Single source: prose in markdown, structured data in JSON; pages are generated.</li>
+<li>Listen → read → write: sound before glyph.</li>
+<li>Anchor weaving: moon, water, heart, harmony … mirror the core glossary; many names, one mirror.</li>
+<li>Review shield: AI-drafted material is always marked; native review before it enters the formal corpus.</li>
+<li>Data layer: sqlite query index is generated with the build (search / review / retrieval); the neo4j graph (cross-language concept weaving, exported as Cypher by export_neo4j.py, served read-only by weave_query.py's "one word, many worlds") is phase-two verified.</li>
+</ol>
+<h2 id="outputs">产出 / Outputs</h2>
+<table>
+<thead>
+<tr>
+<th>生成物</th>
+<th>位置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>学习库页面</td>
+<td><code>docs/language_stacking/learning/</code></td>
+<td>由生成器从本目录 md/json 构建（hub / 语种 / 模块 / <strong>织网库 glossary</strong>）（提交 git）</td>
+</tr>
+<tr>
+<td>sqlite 索引</td>
+<td><code>data/learning.db</code></td>
+<td>注册表 + 模块 + 音图(chart_cells，含拨音ん) + 词表(vocab) + <strong>织网库(concepts/concept_terms/scripts/threads)</strong>，随构建同步（不入 git）</td>
+</tr>
+<tr>
+<td>neo4j 图谱</td>
+<td><code>data/neo4j_load.cypher</code></td>
+<td>阶段二跨语概念织网的 Cypher 导入脚本（<code>export_neo4j.py</code> 产出，不入 git）；schema 见 <code>docs/neo4j_schema.md</code></td>
+</tr>
+<tr>
+<td>Core Glossary</td>
+<td><code>data/core_glossary.json</code></td>
+<td>附录 D 概念 × 八语术语表第一批校准源（12 概念 × 8 语 + scripts + 织线），词位标 <code>review pending</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="weave-query">织网库查询 / Weave Query（一词万境）</h2>
+<pre><code class="language-bash">python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; list            # 全部权威概念（含 probe 标记）
+python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; concept water    # 一词万境：八语词位 + 挂接词条 + 织线
+python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; concept water --cypher   # 等同的 neo4j 查询
+python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; script           # 文字体系 × 语言
+python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; thread           # 词源/借词织线
+python &quot;Language Stacking-Linguistic Weaving/web/weave_query.py&quot; sound ja き      # 音图邻居
+</code></pre>
+<h2 id="build-test">构建与测试 / Build &amp; Test</h2>
+<p>运行构建（测试环境 <code>conda activate hy_py312</code>，仅依赖 <code>markdown</code> 包，可 <code>pip install -r web/requirements.txt</code>）：</p>
+<pre><code class="language-bash">conda activate hy_py312
+python &quot;Language Stacking-Linguistic Weaving/web/build_learning.py&quot;          # 生成静态页
+python &quot;Language Stacking-Linguistic Weaving/web/build_learning.py&quot; --validate  # 知识源校验
+python &quot;Language Stacking-Linguistic Weaving/web/build_learning.py&quot; --db        # sqlite 全量索引
+python &quot;Language Stacking-Linguistic Weaving/web/build_learning.py&quot; --check     # 源校验+产物校验(含陈旧产物)
+python &quot;Language Stacking-Linguistic Weaving/web/export_neo4j.py&quot;            # neo4j 阶段二 Cypher 导出
+</code></pre>
+<p>测试套件（<code>web/tests/</code>，pytest）：</p>
+<pre><code class="language-bash">python -m pytest &quot;Language Stacking-Linguistic Weaving/web/tests&quot; -q
+</code></pre>
+<p>一键验收（Windows 主机，含 [1/4]校验+构建+索引 [2/4]Cypher 导出 [3/4]pytest [4/4]汇总）：</p>
+<pre><code class="language-powershell">powershell -ExecutionPolicy Bypass -File &quot;Language Stacking-Linguistic Weaving/web/run_tests.ps1&quot;
+</code></pre>
+<p>CI：<code>.github/workflows/learning-ci.yml</code> 在 <code>Language Stacking-Linguistic Weaving/**</code> 或 <code>docs/language_stacking/**</code> 变更时跑同一套校验，并强制<strong>改源即重建提交产物</strong>（页面与源不一致则失败）。</p>
+<p><strong>纪律</strong>：新建语种/模块 = ① 注册表/README frontmatter 登记 → ② 写 <code>{lang}/*.md</code> prose 与 <code>data/{lang}/*.json</code> → ③ 跑 <code>--validate --db --check</code> + pytest；<strong>绝不直接编辑 <code>docs/language_stacking/learning/</code> 产物</strong>。</p></div></div><section class="cards" aria-label="languages"><a class="card card-ready" href="ja/"><span class="glyph">日本語</span><span class="name" data-zh>日本語</span><span class="name" data-en>Japanese</span><br><span class="iso">ja · Japonic</span><span class="summary" data-zh>汉字+假名 · 助词框定 · 以心传心</span><span class="summary" data-en>kanji + kana · particle-framed · heart-to-heart</span><span class="status ready" data-zh>学习入口</span><span class="status ready" data-en>Enter</span><a class="enter" href="ja/" data-zh>进入学习 &rarr;</a><a class="enter" href="ja/" data-en>Enter &rarr;</a></a><a class="card card-planned" href="#future"><span class="glyph">中文</span><span class="name" data-zh>中文</span><span class="name" data-en>Chinese</span><br><span class="iso">zh · Sino-Tibetan</span><span class="summary" data-zh>意合 · 声调 · 字孕义</span><span class="summary" data-en>paratactic · tonal · meaning lives in the glyph</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">English</span><span class="name" data-zh>英语</span><span class="name" data-en>English</span><br><span class="iso">en · Germanic</span><span class="summary" data-zh>名词化 · 双宾 · 时体</span><span class="summary" data-en>nominalization · two objects · tense-aspect</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">Français</span><span class="name" data-zh>法语</span><span class="name" data-en>French</span><br><span class="iso">fr · Romance</span><span class="summary" data-zh>同音异形 · 联诵 · 心之理由</span><span class="summary" data-en>homophones · liaison · the reasons of the heart</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">संस्कृतम्</span><span class="name" data-zh>梵语</span><span class="name" data-en>Sanskrit</span><br><span class="iso">sa · Indo-Aryan</span><span class="summary" data-zh>天城体 · sandhi · 语近数学</span><span class="summary" data-en>Devanagari · sandhi · grammar as mathematics</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">Latina</span><span class="name" data-zh>拉丁语</span><span class="name" data-en>Latin</span><br><span class="iso">la · Italic</span><span class="summary" data-zh>屈折完备 · 词序自由 · 格言浓缩</span><span class="summary" data-en>full inflection · free order · condensed mottoes</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">Deutsch</span><span class="name" data-zh>德语</span><span class="name" data-en>German</span><br><span class="iso">de · Germanic</span><span class="summary" data-zh>复合长词 · 句框 · 构式规整</span><span class="summary" data-en>long compounds · sentence frame · orderly construction</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a><a class="card card-planned" href="#future"><span class="glyph">Svenska</span><span class="name" data-zh>瑞典语</span><span class="name" data-en>Swedish</span><br><span class="iso">sv · North Germanic</span><span class="summary" data-zh>双性 · 词调 · 清音</span><span class="summary" data-en>two genders · word tone · clear vowels</span><span class="status planned" data-zh>建设中</span><span class="status planned" data-en>Planned</span></a></section><a class="card card-ready" href="glossary/" style="grid-column:1/-1"><span class="glyph">织</span><span class="name" data-zh>织网库</span><span class="name" data-en>Concept Weave</span><br><span class="iso">12 概念 &times; 8 语</span><span class="summary" data-zh>一词而万语 · 水月心 · 词源织线</span><span class="summary" data-en>one word, many worlds · etymology woven</span><span class="status ready" data-zh>织网</span><span class="status ready" data-en>Weave</span></a><div class="cta"><a class="btn" href="ja/" data-zh>进入 ja &rarr;</a><a class="btn" href="ja/" data-en>Enter &rarr;</a></div><div class="cta" style="margin:1.2rem 0 0"><a class="btn" href="../../index.html">语言叠织 · 主页</a></div>
+</div>
+</main>
+<footer class="footer">
+  <p><span data-zh>《语言叠织 · Language Stacking》 语种根本 · 所有学习与使用不离根本</span><span data-en>Language Stacking — per-language Roots · learning and use stay rooted</span></p>
+  <p class="note"><span data-zh>本页由 build_learning.py 从 languages/ 知识源自动生成 · 内容以知识库为单一来源</span><span data-en>Generated by build_learning.py from the languages/ knowledge base · single source of truth</span></p>
+</footer>
+<script>
+(function () {
+  const key = 'ls-lang';
+  const saved = (() => { try { return localStorage.getItem(key); } catch (e) { return null; } })();
+  document.body.classList.add(saved === 'en' ? 'lang-en' : 'lang-zh');
+  function set(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.body.classList.toggle('lang-zh', lang === 'zh');
+    document.querySelectorAll('.lang-toggle button').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    try { localStorage.setItem(key, lang); } catch (e) {}
+  }
+  set(document.body.classList.contains('lang-en') ? 'en' : 'zh');
+  document.querySelectorAll('.lang-toggle button').forEach(function (b) {
+    b.addEventListener('click', function () { set(b.getAttribute('data-lang')); });
+  });
+  window.addEventListener('scroll', function () {
+    document.querySelector('header.nav').classList.toggle('scrolled', window.scrollY > 8);
+  });
+  window._lastKanaVoice = null;
+  function kanaVoiceScore(v) {
+    var n = (v.name || '').toLowerCase();
+    if (n.indexOf('natural') >= 0 || n.indexOf('neural') >= 0) return 10;
+    if (n.indexOf('online') >= 0 || n.indexOf('premium') >= 0) return 8;
+    if (n.indexOf('google') >= 0) return 6;
+    if (n.indexOf('desktop') >= 0) return 4;
+    return 0;
+  }
+  function jaVoices() {
+    try {
+      var raw = speechSynthesis.getVoices();
+      var arr = [];
+      for (var i = 0; i < raw.length; i++) arr.push(raw[i]);
+      var vs = arr.filter(function (v) {
+        return (v.lang || '').replace(/_/g, '-').toLowerCase().indexOf('ja') === 0;
+      });
+      vs.sort(function (a, b) { return kanaVoiceScore(b) - kanaVoiceScore(a); });
+      return vs;
+    } catch (e) { return []; }
+  }
+  function resolveVoice(uri) {
+    if (!uri) return null;
+    var vs = speechSynthesis.getVoices();
+    for (var i = 0; i < vs.length; i++) {
+      if (vs[i].voiceURI === uri) return vs[i];
+    }
+    return null;
+  }
+  window.kanaSpeak = function (kana, voiceURI) {
+    try {
+      var u = new SpeechSynthesisUtterance(kana);
+      u.lang = 'ja-JP';
+      u.rate = 0.8;
+      u.pitch = 1.0;
+      var v = resolveVoice(voiceURI);
+      if (!v) v = resolveVoice(window._lastKanaVoice);
+      if (!v) {
+        var vs = jaVoices();
+        if (vs.length) v = vs[0];
+      }
+      if (v) { u.voice = v; window._lastKanaVoice = v.voiceURI; }
+      speechSynthesis.cancel();
+      speechSynthesis.speak(u);
+    } catch (e) {}
+  };
+  function fillKanaVoices() {
+    var boxes = document.querySelectorAll('.kana-voices');
+    if (!boxes.length) return;
+    var vs = jaVoices();
+    boxes.forEach(function (box) {
+      box.innerHTML = '';
+      var kana = box.getAttribute('data-h');
+      vs.forEach(function (v) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'voice-btn';
+        b.title = v.name;
+        var m = v.name.match(/[一-鿿぀-ヿa-zA-Z][一-鿿぀-ヿa-zA-Z ]+/);
+        var label = m ? m[0].replace(/ /g, '') : v.name;
+        b.textContent = label.length > 12 ? label.slice(0, 12) + '…' : label;
+        b.addEventListener('click', function (ev) {
+          ev.stopPropagation();
+          window._lastKanaVoice = v.voiceURI;
+          window.kanaSpeak(kana, v.voiceURI);
+        });
+        box.appendChild(b);
+      });
+    });
+  }
+  if ('speechSynthesis' in window) {
+    fillKanaVoices();
+    try { speechSynthesis.onvoiceschanged = fillKanaVoices; } catch (e) {}
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* ═══ 螺旋：形 → 词 → 义 → 源（回望第一旋）═══ */
+.spiral > section { margin: 0 auto; }
+.spiral-guide { text-align: center; padding: 1.2rem  excitement; margin: 0.6rem auto 0.4rem; }
+.spiral-tale { font-family: var(--ff-garamond); font-style: italic; font-size: 0.95rem; color: var(--ink-mid); max-width: 760px; margin: 0.45rem auto 0.8rem; }
+.spiral-tale::-webkit-data { }
+.spiral-pills { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center; gap: 0.5rem 0.9rem; margin: olenec miktar; }
+.pill { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.45rem 1.1rem; border: 1px solid rgba(176,141,87,0.32); border-radius: 999px; color: var(--ink-mid); transition: border-color 0.2s, color 0.2s, background 0.2s; }
+.pill b { font-family: var(--ff-garamond); font-size: 1.05rem; font-weight: 700; color: var(--accent-teal); }
+.pill:hover { border-color: var(--accent-teal); background: rgba(140,189,189,0.08); color: var(--ink-deep); }
+.pz { font-size: 1rem; font-family: var(--ff-jp); color: var(--ink-mid); }
+.pt { font-size: 0.8rem; letter-spacing: 0.12em; color: var(--invisible-soft); }
+.pp { font-size: 0.78rem; font-style: italic; font-family: var(--ff-garamond); color: var(--ink-soft); }
+.spiral-hint { font-size: 0.84rem; color: var(--ink-pale); margin: 0.8rem auto 0; max-width: 680px; }
+
+/* 四旋 */
+.spiral-ring { scroll-margin-top: 3.2rem; }
+.ring-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 0.8rem; margin: 2.4rem 0 0.5rem; }
+.ring-h[data-zh]::before { content: "旋"; color: var(--accent-teal); font-family: var(--ff-garamond-ex); }
+.ring-tag { font-family: var(--ff-jp); font-size: 1.1rem; font-weight: 700; color: var(--ink-deep); letter-spacing: 0.08em; }
+.ring-title { font-size: amil; }
+.ring-title[data-zh] { font-family: var(--ff-garamond-2); font-size: 0.8rem; color: var(--ink-pale); }
+.ring-title[data-en] { font-family: var(--ff-garamond); font-style: italic; color: var(--ink-soft); }
+.ring-promise { font-size: 0.88rem; color: var(--ink-mid); font-style: italic; font-family: var(--ff-garamond); margin: 0 0 1.4rem 1.2rem; }
+
+/* 第三旋 · 文化坐标表（义 / 典故） */
+.cult-table thead { }
+.cult-table th { text-align: left; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--ink-pale); font-weight: 600; }
+.cult-table td { vertical-align: top; padding: 0.7rem 0.9rem 0.7rem 0; border-bottom: 1px solid rgba(176,141,87,0.18); }
+.cx { font-size: 0.82rem; color: var(--ink-soft); }
+.cx:not([data-en]) { display: inline; }
+.co { font-size: 0.82rem; color: var(--ink-soft); }
+.kana-cell::after { content: ""; }
+
+/* 第四旋 · 字源表（源） */
+.og-cell:empty { }
+.og { font-size: 0.95rem; font-family: var(--ff-jp); color: var(--ink-deep); margin-right: 0.3rem; }
+.ogk { font-size: 0.82rem; color: var(--ink-mid); }
+.onote { font-size: 0.8rem; color: var(--ink-soft); font-style: italic; font-family: var(--ff-garamond); }
+.spiral-closure { margin-top: 2.6rem; text-align: center; padding: 1.4rem 0.5rem; border-top: 1px dashed rgba(176,141,87,0.25); }
+.sc-word { font-family: var(--ff-garamond); font-style: italic; font-size: 1.3rem; color: var(--ink-deep); letter-spacing: 0.06em; }

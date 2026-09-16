@@ -8,6 +8,11 @@ venv/
 direction_refs/*
 living_heritage/materials/
 
+# 学习库生成物（同步产物不入 git，静态页需保留）
+Language Stacking-Linguistic Weaving/languages/data/*.db
+Language Stacking-Linguistic Weaving/languages/data/*.cypher
+
 # OS
 .DS_Store
 Thumbs.db
+.env

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>语言叠织 · Language Stacking — 一意而万语 | 舟洲粥</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Devanagari:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ls-night: #1B2433; --ls-night-2: #232F46; --ls-night-3: #2D3B57;
+  --ls-moon: #F2D9A0; --ls-moon-soft: #E8C07A; --ls-moon-dim: #C9A465;
+  --ls-fog: #9FB4C8; --ls-fog-soft: #CBD6E2;
+  --ls-paper: #FBF7EF; --ls-paper-soft: #F5EEDF;
+  --ink-deep: #2A2620; --ink-mid: #5C5248; --ink-soft: #8A7E72; --ink-pale: #B8AFA4;
+  --accent-teal: #5BA3A3;
+  --ff-display: "LXGW WenKai", "Noto Serif SC", serif;
+  --ff-body: "Inter", "LXGW WenKai", "Noto Sans SC", sans-serif;
+  --ff-garamond: "EB Garamond", "Inter", serif;
+  --shadow-md: 0 6px 20px rgba(27,36,51,0.10);
+  --shadow-lg: 0 12px 40px rgba(27,36,51,0.14);
+}
+
+/* ── Bilingual toggle ── */
+body.lang-zh [data-en] { display: none !important; }
+body.lang-en [data-zh] { display: none !important; }
+body.lang-en [data-both] span[data-en] { display: inline !important; }
+body.lang-en [data-both] span[data-zh] { display: none !important; }
+body.lang-zh [data-both] span[data-zh] { display: inline !important; }
+body.lang-zh [data-both] span[data-en] { display: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--ff-body); color: var(--ink-deep); background: var(--ls-paper);
+  line-height: 1.8; overflow-x: hidden;
+}
+a { color: var(--accent-teal); text-decoration: none; transition: color 0.25s; }
+a:hover { color: #3E8FA8; }
+.lang-note-script { font-family: var(--ff-garamond); }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0.6rem 2rem; display: flex; align-items: center; justify-content: space-between;
+  background: rgba(27,36,51,0.72); backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border-bottom: 1px solid rgba(159,180,200,0.18); transition: all 0.3s;
+}
+.nav.scrolled { background: rgba(22,29,42,0.94); box-shadow: 0 2px 16px rgba(0,0,0,0.2); }
+.nav-brand { font-family: var(--ff-display); font-weight: 700; font-size: 1.25rem; color: var(--ls-moon); letter-spacing: 0.05em; }
+.nav-brand .sub { font-size: 0.65em; color: var(--ls-fog); margin-left: 0.5em; font-weight: 400; letter-spacing: 0.12em; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links a { color: var(--ls-fog-soft); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; position: relative; }
+.nav-links a:hover { color: var(--ls-moon); }
+.nav-home { color: var(--ls-fog-soft); font-size: 0.8rem; font-weight: 500; border: 1px solid rgba(159,180,200,0.35); border-radius: 18px; padding: 4px 14px; }
+.nav-home:hover { color: var(--ls-moon); border-color: var(--ls-moon-dim); }
+.lang-toggle { display: flex; border-radius: 20px; overflow: hidden; border: 1px solid rgba(159,180,200,0.35); font-size: 0.8rem; font-weight: 500; cursor: pointer; }
+.lang-toggle button { border: none; padding: 5px 14px; cursor: pointer; font-family: var(--ff-body); font-size: 0.8rem; font-weight: 500; transition: all 0.25s; color: var(--ls-fog-soft); background: transparent; }
+.lang-toggle button.active { background: linear-gradient(135deg, var(--ls-moon-soft), var(--ls-moon)); color: #3A2E18; }
+.lang-toggle button:hover:not(.active) { color: var(--ls-moon); }
+
+/* ═══ HERO ═══ */
+.hero {
+  position: relative; min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; padding: 5rem 2rem; overflow: hidden;
+  background:
+    radial-gradient(900px 460px at 78% 16%, rgba(242,217,160,0.20), transparent 60%),
+    radial-gradient(340px 340px at 78% 26%, rgba(242,217,160,0.5), transparent 70%),
+    linear-gradient(172deg, #10171F 0%, #1B2433 26%, #26344F 55%, #3A4A66 78%, #F6EEDA 92%, var(--ls-paper) 100%);
+  color: #EAF0F6;
+}
+.hero-moon {
+  position: absolute; width: 190px; height: 190px; border-radius: 50%;
+  top: 14%; right: 14%;
+  background: radial-gradient(circle at 38% 34%, #FFF6DC 0%, var(--ls-moon) 42%, var(--ls-moon-soft) 78%, #D9B87E 100%);
+  box-shadow: 0 0 90px rgba(242,217,160,0.55), 0 0 30px rgba(242,217,160,0.35);
+  opacity: 0.92; pointer-events: none;
+}
+.hero-moon::before {
+  content: ""; position: absolute; inset: 8%;
+  background: radial-gradient(circle at 40% 30%, transparent 30%, rgba(120,98,60,0.18) 55%, rgba(120,98,60,0.10) 78%);
+  border-radius: 50%;
+}
+.hero-stars { position: absolute; inset: 0; pointer-events: none; }
+.hero-stars i {
+  position: absolute; width: 2px; height: 2px; border-radius: 50%;
+  background: #DDE7F2; opacity: 0.5; animation: twinkle 4s ease-in-out infinite;
+}
+.hero-stars i:nth-child(odd) { animation-delay: 1.2s; }
+@keyframes twinkle { 0%,100% { opacity: 0.18; } 50% { opacity: 0.75; } }
+.hero-content { position: relative; z-index: 2; max-width: 880px; }
+.hero-kicker { font-size: 0.9rem; letter-spacing: 0.35em; color: var(--ls-moon-dim); margin-bottom: 1rem; font-weight: 500; }
+.hero h1 { font-family: var(--ff-display); font-size: clamp(2.6rem, 7vw, 4.6rem); font-weight: 700; color: #F5EFE2; letter-spacing: 0.06em; line-height: 1.25; margin-bottom: 0.6rem; }
+.hero h1 .moon-char { color: var(--ls-moon); }
+.hero .subtitle { font-family: var(--ff-display); font-size: clamp(1.05rem, 2.4vw, 1.5rem); color: #D8E2EE; font-weight: 300; letter-spacing: 0.14em; margin-bottom: 1.5rem; }
+.hero .languages {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; justify-content: center; margin: 0 auto 2rem; max-width: 640px;
+}
+.hero .languages span {
+  font-size: 0.95rem; color: #C9D6E4; border: 1px solid rgba(201,214,228,0.28);
+  border-radius: 99px; padding: 5px 14px; background: rgba(27,36,51,0.35);
+}
+.hero .languages span sv { display: inline-block; margin-right: 6px; opacity: 0.9; }
+.hero .tagline { font-family: var(--ff-display); font-size: 1.1rem; color: var(--ls-moon-soft); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.hero .tagline-en { font-family: var(--ff-garamond); font-style: italic; font-size: 1.05rem; color: #9FB4C8; max-width: 620px; margin: 0 auto 2rem; }
+.hero .scroll-hint {
+  position: absolute; bottom: 2.2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: var(--ls-fog); font-size: 0.75rem; letter-spacing: 0.12em; animation: bob 3s ease-in-out infinite;
+}
+.scroll-line { width: 1px; height: 30px; background: linear-gradient(to bottom, var(--ls-fog), transparent); }
+@keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+/* ═══ SECTIONS ═══ */
+.section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { font-family: var(--ff-display); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; color: var(--ink-deep); letter-spacing: 0.03em; }
+.section-header.dark h2 { color: #EDF2F8; }
+.section-header .subtitle { font-size: 1rem; color: var(--ink-soft); font-weight: 300; letter-spacing: 0.1em; }
+.section-header.dark .subtitle { color: var(--ls-fog); }
+.section-header .divider { display: block; width: 56px; height: 2px; background: linear-gradient(90deg, transparent, var(--ls-moon-dim), transparent); margin: 0.9rem auto; border-radius: 1px; }
+
+.band-dark { background: linear-gradient(180deg, #1B2433 0%, #232F46 100%); color: #DCE4EE; }
+.band-paper { background: var(--ls-paper); }
+.band-soft { background: var(--ls-paper-soft); }
+
+/* ═══ DNA PILLARS ═══ */
+.dna-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.dna-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(242,217,160,0.22);
+  border-radius: 18px; padding: 2rem 1.8rem; position: relative; overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.dna-card:hover { transform: translateY(-5px); border-color: var(--ls-moon); }
+.dna-card .big { font-family: var(--ff-display); font-size: 2.6rem; color: var(--ls-moon); display: block; margin-bottom: 0.4rem; line-height: 1; }
+.dna-card h3 { font-family: var(--ff-display); font-size: 1.35rem; color: #F5EFE2; margin-bottom: 0.3rem; }
+.dna-card .roman { font-family: var(--ff-garamond); color: var(--ls-fog); font-size: 0.85rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.8rem; display: block; }
+.dna-card p { color: #C4D0DE; font-size: 0.95rem; }
+.rules { margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.9rem; }
+.rule { display: flex; gap: 0.8rem; background: rgba(255,255,255,0.05); border-radius: 12px; padding: 0.9rem 1rem; border: 1px solid rgba(159,180,200,0.18); }
+.rule .n { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, var(--ls-moon), var(--ls-moon-soft)); color: #3A2E18; font-weight: 700; font-size: 0.75rem; display: flex; align-items: center; justify-content: center; }
+.rule h5 { font-family: var(--ff-display); font-size: 0.95rem; color: var(--ls-moon); margin-bottom: 2px; }
+.rule p { font-size: 0.82rem; color: #C4D0DE; }
+
+/* ═══ LANGUAGE CARDS ═══ */
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.4rem; }
+.lang-card {
+  --lsc: #C9A465; --lsbg: rgba(27,36,51,0.05);
+  background: var(--ls-paper); border-radius: 18px; border: 1px solid rgba(201,164,101,0.35);
+  padding: 1.6rem 1.6rem 1.4rem; box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lang-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--lsc), var(--lsc)); opacity: 0.85; }
+.lang-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.lang-card .glyph { font-family: var(--ff-display); font-size: 1.7rem; color: var(--ink-deep); line-height: 1.3; display: block; margin-bottom: 0.2rem; }
+.lang-card .ly2 { font-family: "Noto Serif JP", var(--ff-display), serif; }
+.lang-card .lsa { font-family: "Noto Serif Devanagari", serif; }
+.lang-card .lu { font-family: var(--ff-garamond), serif; }
+.lang-card .name { font-size: 0.9rem; font-weight: 600; color: var(--ink-deep); letter-spacing: 0.02em; }
+.lang-card .iso { color: var(--ink-pale); font-size: 0.78rem; font-weight: 500; margin-left: 6px; }
+.lang-card .family { font-size: 0.8rem; color: var(--ink-soft); margin: 0.35rem 0 0.6rem; letter-spacing: 0.04em; }
+.lang-card .dna {
+  font-family: var(--ff-display); font-size: 1.02rem; color: var(--ink-deep);
+  border-top: 1px dashed rgba(201,164,101,0.4); padding-top: 0.6rem; line-height: 1.6; margin-bottom: 0.4rem;
+}
+.lang-card .dna .label { font-size: 0.7rem; color: var(--ink-pale); letter-spacing: 0.16em; display: block; margin-bottom: 2px; }
+.lang-card .kw { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0.7rem; }
+.lang-card .kw span { font-size: 0.72rem; padding: 2px 10px; border-radius: 99px; background: var(--lsbg); color: var(--ink-mid); border: 1px solid rgba(27,36,51,0.08); }
+.lang-card .role { font-size: 0.85rem; color: var(--ink-soft); font-style: italic; }
+
+/* ═══ THEME CARDS ═══ */
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; }
+.theme-card {
+  background: var(--ls-paper); border-radius: 16px; padding: 1.5rem 1.4rem;
+  border: 1px solid rgba(201,164,101,0.3); box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center;
+}
+.theme-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.theme-card .mark { font-size: 1.8rem; display: block; margin-bottom: 0.4rem; }
+.theme-card h4 { font-family: var(--ff-display); font-size: 1.25rem; color: var(--ink-deep); }
+.theme-card .en-name { font-family: var(--ff-garamond); font-style: italic; color: var(--ink-pale); font-size: 0.85rem; margin-bottom: 0.4rem; display: block; }
+.theme-card p { font-size: 0.85rem; color: var(--ink-soft); }
+
+/* ═══ FORMAT CARDS ═══ */
+.fmt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; }
+.fmt-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(159,180,200,0.22); border-radius: 16px; padding: 1.5rem 1.5rem; transition: border-color 0.3s, transform 0.3s; }
+.fmt-card:hover { border-color: var(--ls-moon); transform: translateY(-4px); }
+.fmt-card .code { display: inline-block; font-family: var(--ff-garamond); font-size: 0.78rem; letter-spacing: 0.14em; color: var(--ls-moon); border: 1px solid var(--ls-moon-dim); border-radius: 6px; padding: 2px 10px; margin-bottom: 0.7rem; }
+.fmt-card h4 { font-family: var(--ff-display); font-size: 1.1rem; color: #F0F4F9; margin-bottom: 0.2rem; }
+.fmt-card .en-tag { font-family: var(--ff-garamond); font-style: italic; color: var(--ls-fog); font-size: 0.8rem; }
+.fmt-card p { color: #C4D0DE; font-size: 0.88rem; margin-top: 0.4rem; }
+
+.band-dark .pillar-hint { text-align: center; color: var(--ls-fog); font-size: 0.9rem; margin-top: 2rem; }
+.band-dark .pillar-hint a { color: var(--ls-moon); }
+
+/* ═══ SAMPLE STACK ═══ */
+.stack-wrap { overflow-x: auto; border-radius: 16px; box-shadow: var(--shadow-md); }
+.stack-table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 0.95rem; background: var(--ls-paper); }
+.stack-table th { background: #232F46; color: var(--ls-moon); font-weight: 600; text-align: left; padding: 0.9rem 1.1rem; font-size: 0.85rem; letter-spacing: 0.08em; }
+.stack-table td { padding: 0.95rem 1.1rem; border-top: 1px solid rgba(201,164,101,0.25); vertical-align: top; }
+.stack-table td.l { font-weight: 600; white-space: nowrap; color: var(--ink-deep); }
+.stack-table .orig { font-size: 0.8rem; color: var(--ink-pale); }
+.stack-table .si18n { font-family: var(--ff-display); font-size: 1.12rem; color: var(--ink-deep); line-height: 1.7; }
+.stack-table .smode { font-family: var(--ff-garamond); font-size: 0.78rem; color: var(--ink-pale); margin-left: 8px; }
+.stack-table .gloss { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.2rem; }
+.teach-note { margin-top: 1.2rem; padding: 1rem 1.2rem; border-left: 3px solid var(--ls-moon-dim); background: var(--ls-paper-soft); border-radius: 0 12px 12px 0; font-size: 0.92rem; color: var(--ink-mid); }
+
+/* ═══ GLOSSARY ═══ */
+.gloss-wrap { overflow-x: auto; border-radius: 16px; box-shadow: var(--shadow-md); }
+.gloss-table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.9rem; background: var(--ls-paper); }
+.gloss-table th { background: #232F46; color: var(--ls-moon); text-align: left; padding: 0.75rem 1rem; font-size: 0.8rem; letter-spacing: 0.05em; }
+.gloss-table .co { background: #F5EEDF; }
+.gloss-table td { padding: 0.7rem 1rem; border-top: 1px solid rgba(201,164,101,0.22); white-space: nowrap; }
+.gloss-table td.concept { font-weight: 600; color: var(--ink-deep); background: #F5EEDF; white-space: normal; }
+.gloss-table .gsa { font-family: "Noto Serif Devanagari", serif; }
+.gloss-table .gja { font-family: "Noto Serif JP", serif; }
+
+/* ═══ ROADMAP ═══ */
+.road { display: flex; flex-direction: column; gap: 1rem; max-width: 900px; margin: 0 auto; }
+.road-item { display: flex; gap: 1.2rem; align-items: flex-start; background: var(--ls-paper); border-radius: 14px; padding: 1.2rem 1.4rem; border: 1px solid rgba(201,164,101,0.28); box-shadow: var(--shadow-md); }
+.road-item .dot { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #232F46, #3A4A66); color: var(--ls-moon); display: flex; align-items: center; justify-content: center; font-family: var(--ff-garamond); font-weight: 600; }
+.road-item h4 { font-family: var(--ff-display); font-size: 1.05rem; color: var(--ink-deep); }
+.road-item .when { font-size: 0.78rem; color: var(--ls-moon-dim); font-weight: 600; }
+.road-item p { font-size: 0.88rem; color: var(--ink-soft); }
+
+/* ═══ PILOT CARDS ═══ */
+.pilot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
+.pilot-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(242,217,160,0.2); border-radius: 14px; padding: 1.3rem 1.3rem; }
+.pilot-card .typ { display: inline-block; font-family: var(--ff-garamond); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--ls-moon); border: 1px solid var(--ls-moon-dim); border-radius: 6px; padding: 1px 9px; margin-bottom: 0.6rem; }
+.pilot-card h5 { font-family: var(--ff-display); font-size: 1rem; color: #F0F4F9; margin-bottom: 0.2rem; }
+.pilot-card .why { font-size: 0.8rem; color: var(--ls-fog); }
+.pilot-card p { font-size: 0.85rem; color: #C4D0DE; }
+
+/* ═══ FOOTER ═══ */
+.footer { text-align: center; padding: 3rem 2rem 2rem; color: var(--ls-fog); font-size: 0.875rem; border-top: 1px solid rgba(159,180,200,0.2); background: #1B2433; }
+.footer .motto { font-family: var(--ff-display); font-size: 1.125rem; color: var(--ls-moon); font-weight: 300; letter-spacing: 0.12em; margin-bottom: 0.3rem; }
+.footer a { color: var(--ls-fog-soft); }
+.footer a:hover { color: var(--ls-moon); }
+
+/* ═══ EXPANSION ROSTER ═══ */
+.exp-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; }
+.exp-card { background: var(--ls-paper); border: 1px solid rgba(201,164,101,0.3); border-radius: 16px; padding: 1.2rem 1.3rem; box-shadow: var(--shadow-md); }
+.exp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; border-bottom: 1px dashed rgba(201,164,101,0.4); padding-bottom: 0.5rem; margin-bottom: 0.7rem; }
+.exp-name { font-family: var(--ff-display); font-size: 1.15rem; font-weight: 700; color: var(--ink-deep); }
+.exp-en { font-family: var(--ff-garamond); font-style: italic; color: var(--ink-pale); font-size: 0.8rem; }
+.exp-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip { display: inline-flex; align-items: center; gap: 6px; background: var(--ls-paper-soft); border: 1px solid rgba(27,36,51,0.1); border-radius: 10px; padding: 4px 10px; font-size: 0.85rem; color: var(--ink-deep); }
+.chip b { font-weight: 600; }
+.chip i { font-style: normal; font-size: 0.72rem; color: var(--ink-soft); }
+.chip em { font-style: normal; font-weight: 700; font-size: 0.66rem; width: 18px; height: 18px; line-height: 18px; text-align: center; border-radius: 50%; color: #fff; flex-shrink: 0; }
+.chip em.a { background: #3E8FB0; }
+.chip em.b { background: #C9A465; }
+.exp-legend { margin-top: 1.2rem; text-align: center; font-size: 0.85rem; color: var(--ink-soft); }
+.hero .ext-note { font-size: 0.78rem; color: var(--ls-fog); letter-spacing: 0.14em; margin: -1.2rem 0 2rem; }
+
+/* ═══ GOJŪON ═══ */
+.goji-intro { max-width: 780px; margin: 0 auto 2rem; text-align: center; color: var(--ink-soft); font-size: 0.95rem; }
+.kana-wrap { overflow-x: auto; border-radius: 16px; box-shadow: var(--shadow-md); }
+.kana-table { border-collapse: collapse; width: 100%; min-width: 560px; background: var(--ls-paper); }
+.kana-table th { background: #232F46; color: var(--ls-moon); padding: 0.6rem 0.4rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; }
+.kana-table th.vowel { font-family: var(--ff-garamond); }
+.kana-table td { text-align: center; padding: 0.55rem 0.3rem; border: 1px solid rgba(201,164,101,0.22); }
+.kana-table td.rowname { font-family: var(--ff-display); font-weight: 700; color: var(--ink-deep); background: #F5EEDF; white-space: nowrap; font-size: 0.95rem; width: 84px; }
+.kana-cell .k { font-family: "Noto Sans JP", "Inter", sans-serif; font-size: 0.92rem; color: var(--ink-soft); display: block; margin-bottom: 2px; letter-spacing: 0.08em; }
+.kana-cell .h { font-family: "Noto Serif JP", var(--ff-display), serif; font-size: 1.75rem; color: var(--ink-deep); display: block; line-height: 1.25; }
+.kana-cell .r { font-family: var(--ff-garamond); font-size: 0.8rem; color: var(--ls-moon-dim); letter-spacing: 0.04em; }
+.kana-cell.particle { background: #FFF3DD; }
+.kana-cell.void { background: rgba(27,36,51,0.03); }
+.kana-cell.void span { color: var(--ink-pale); font-family: var(--ff-garamond); font-size: 0.8rem; }
+.derived { margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center; }
+.derived span { font-family: "Noto Serif JP", var(--ff-display), serif; background: var(--ls-paper); border: 1px solid rgba(201,164,101,0.35); border-radius: 99px; padding: 4px 14px; font-size: 0.92rem; color: var(--ink-deep); line-height: 1.6; }
+.derived .dl { font-family: var(--ff-garamond); font-size: 0.7rem; letter-spacing: 0.12em; color: var(--ls-moon-dim); margin-right: 6px; font-style: normal; }
+.kana-word { min-width: 900px; }
+.kana-word tbody td { white-space: normal; vertical-align: top; }
+.kana-word .kc { text-align: center; vertical-align: middle; white-space: nowrap; }
+.kana-word .kc .big { font-family: "Noto Serif JP", var(--ff-display), serif; font-size: 1.35rem; color: var(--ink-deep); display: block; line-height: 1.3; }
+.kana-word .kc .kana-kat { font-family: "Noto Sans JP", sans-serif; font-size: 0.72rem; color: var(--ink-pale); display: block; }
+.kana-word .kw2 { font-family: var(--ff-display); font-size: 1.02rem; color: var(--ink-deep); }
+.kana-word .furigana { font-size: 0.8rem; color: var(--ink-soft); font-weight: 400; }
+.kana-word .rom { font-family: var(--ff-garamond); color: var(--ls-moon-dim); font-size: 0.82rem; font-style: italic; }
+.kana-word .sent { font-family: "Noto Serif JP", var(--ff-display), serif; font-size: 0.98rem; color: var(--ink-deep); line-height: 1.7; }
+.kana-word .tr { font-size: 0.8rem; color: var(--ink-soft); margin-top: 2px; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav { padding: 0.6rem 1rem; }
+  .hero { min-height: 90vh; padding-top: 4rem; }
+  .hero-moon { width: 130px; height: 130px; top: 12%; right: 6%; }
+  .section { padding: 3rem 1.1rem; }
+  .lang-grid { grid-template-columns: 1fr; }
+  .theme-grid { grid-template-columns: 1fr 1fr; }
+  .dna-grid, .fmt-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <span data-both><span data-zh>语言叠织</span><span data-en>Language Stacking</span></span><span class="sub">● LINGUISTIC WEAVING</span>
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#dna"><span data-zh>设计理念</span><span data-en>DNA</span></a></li>
+      <li><a href="#languages"><span data-zh>语言×文明</span><span data-en>Languages</span></a></li>
+      <li><a href="#expansion"><span data-zh>32 语编队</span><span data-en>Roster</span></a></li>
+      <li><a href="#gojuon"><span data-zh>五十音</span><span data-en>Gojūon</span></a></li>
+      <li><a href="#themes"><span data-zh>主题</span><span data-en>Themes</span></a></li>
+      <li><a href="#sample"><span data-zh>样例</span><span data-en>Sample</span></a></li>
+      <li><a href="#roadmap"><span data-zh>路线图</span><span data-en>Roadmap</span></a></li>
+    </ul>
+    <a href="../index.html" class="nav-home"><span data-zh>← 舟洲粥</span><span data-en>← Back to home</span></a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-moon"></div>
+  <div class="hero-stars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-content">
+    <div class="hero-kicker" data-both>
+      <span data-zh>舟洲粥 · 第六域</span><span data-en>Zhōu Zhōu Zhōu · The Sixth Domain</span>
+    </div>
+    <h1 data-both>
+      <span data-zh><span class="moon-char">一意</span>而万语</span>
+      <span data-en>One <span class="moon-char">Meaning</span>, a Thousand Tongues</span>
+    </h1>
+    <div class="subtitle" data-both>
+      <span data-zh>同一心象，八面语法之镜；一镜而八澜。</span>
+      <span data-en>One image of thought, eight mirrors of grammar; one mirror, eight ripples.</span>
+    </div>
+    <div class="languages">
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>中文</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>English</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>Français</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>日本語</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>संस्कृतम्</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>Latina</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>Deutsch</span>
+      <span><svg width="8" height="8" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" fill="#E8C07A"/></svg>Svenska</span>
+    </div>
+    <div class="ext-note">
+      <span data-zh>核心八语 —— 编队已扩至六大洲 32 语 · 各文明代表语种详见下文矩阵 ↓</span>
+      <span data-en>Core eight — the roster now spans 6 continents × 32 tongues · every civilization sends its representative ↓</span>
+    </div>
+    <div class="tagline">叠 · 织 · 照</div>
+    <div class="tagline-en">Stack, Weave, Illuminate — each language keeps its own civilizational soul.</div>
+  </div>
+  <div class="scroll-hint">
+    <span data-zh>向下探索</span><span data-en>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══ DESIGN DNA ═══ -->
+<section class="section band-dark" id="dna">
+  <div class="section-header dark">
+    <h2><span data-zh>设计理念</span><span data-en>Design DNA</span></h2>
+    <div class="subtitle"><span data-zh>叠 · 织 · 照</span><span data-en>Stack · Weave · Illuminate</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="dna-grid">
+    <div class="dna-card">
+      <span class="big">叠</span>
+      <h3>Stack</h3>
+      <span class="roman">One heartbeat, eight mirrors</span>
+      <p><span data-zh>同一心象在 8 语中叠加并置——一套语法，一面镜子。</span><span data-en>The same image of thought stacked across 8 languages — one grammar, one mirror each.</span></p>
+    </div>
+    <div class="dna-card">
+      <span class="big">织</span>
+      <h3>Weave</h3>
+      <span class="roman">Languages annotate each other</span>
+      <p><span data-zh>词源、直译、文化注疏缝合一体——三行对照，互为注释。</span><span data-en>Etymology, literal gloss, cultural notes woven together — three lines, mutual annotation.</span></p>
+    </div>
+    <div class="dna-card">
+      <span class="big">照</span>
+      <h3>Illuminate</h3>
+      <span class="roman">Each language keeps its soul</span>
+      <p><span data-zh>每语一个角色、一种音色、一种色彩、一种文明气韵。</span><span data-en>Every language has its role, timbre, palette, and the breath of a civilization.</span></p>
+    </div>
+  </div>
+  <div class="rules">
+    <div class="rule"><span class="n">1</span><div><h5><span data-zh>源先于叙事</span><span data-en>Sources first</span></h5><p><span data-zh>引用必标出处，公版与原创优先；未经审校的译文绝不冒充权威。</span><span data-en>Cite primary sources; prefer public-domain and original texts; never pass unreviewed translations off as authoritative.</span></p></div></div>
+    <div class="rule"><span class="n">2</span><div><h5><span data-zh>一处语料</span><span data-en>One source of truth</span></h5><p><span data-zh>平行语料只存一份，视频 / 卡图 / 网页都从它渲染。</span><span data-en>Store each parallel text once; everything renders from it.</span></p></div></div>
+    <div class="rule"><span class="n">3</span><div><h5><span data-zh>绝不静默出错</span><span data-en>No silent errors</span></h5><p><span data-zh>天城体连字、日文竖排、拉丁长音符——每个字每个音都显式验证。</span><span data-en>Devanagari conjuncts, JP vertical, Latin macrons — every glyph and phoneme passes QA.</span></p></div></div>
+    <div class="rule"><span class="n">4</span><div><h5><span data-zh>宁少勿滥</span><span data-en>Slow is smooth</span></h5><p><span data-zh>先出 5 条试片跑通全链，再放量。</span><span data-en>Ship 5 pilots first, prove the chain, then scale.</span></p></div></div>
+  </div>
+</section>
+
+<!-- ═══ LANGUAGES ═══ -->
+<section class="section" id="languages">
+  <div class="section-header">
+    <h2><span data-zh>语言 × 文明矩阵</span><span data-en>Language × Civilization Matrix</span></h2>
+    <div class="subtitle"><span data-zh>每种语言是一个文明的理由</span><span data-en>Behind every language stands the reason of a civilization</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="lang-grid">
+
+    <div class="lang-card" style="--lsc:#8A2E3B; --lsbg:rgba(138,46,59,0.06);">
+      <span class="glyph">中文</span>
+      <span class="name">中文 Chinese <span class="iso">zh · 汉藏语系 Hanzi</span></span>
+      <div class="family">表意方块字 · 意合 · 留白即意义</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>天人合一 · 礼乐 · 诗教 · 和而不同</span><span data-en>Unity of Heaven and Man · rites &amp; music · the teaching of poetry · harmony in diversity</span></div>
+      <div class="kw"><span data-both><span data-zh>诗眼与原乡</span><span data-en>The Poetic Source</span></span><span data-both><span data-zh>墨·朱</span><span data-en>ink · cinnabar</span></span><span data-both><span data-zh>古琴</span><span data-en>guqin</span></span></div>
+      <div class="role">«上善若水 » · «海上生明月 »</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#24456F; --lsbg:rgba(36,69,111,0.06);">
+      <span class="glyph lu">English</span>
+      <span class="name">English <span class="iso">en · Indo-European Germanic</span></span>
+      <div class="family">罗马字母 · 时态精严 · 双声部词汇</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>经验主义 · 契约 · 个体 · 言论自由</span><span data-en>Empiricism · contract · individualism · free speech</span></div>
+      <div class="kw"><span data-both><span data-zh>精确的音叉</span><span data-en>The Tuning Fork</span></span><span data-both><span data-zh>藏青</span><span data-en>navy</span></span><span data-both><span data-zh>民谣钢琴</span><span data-en>folk piano</span></span></div>
+      <div class="role">"The woods are lovely, dark and deep."</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#7A5BA8; --lsbg:rgba(122,91,168,0.07);">
+      <span class="glyph lu">Français</span>
+      <span class="name">Français <span class="iso">fr · Romance</span></span>
+      <div class="family">拉丁字母 + é è à ç œ · 联诵 · 性别与变位</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>启蒙 · 理性 · 雄辩 · esprit</span><span data-en>Enlightenment · reason · eloquence · l'esprit</span></div>
+      <div class="kw"><span data-both><span data-zh>哲思的低语</span><span data-en>Philosophy's Whisper</span></span><span data-both><span data-zh>薰衣草·金</span><span data-en>lavender · gold</span></span><span data-both><span data-zh>chanson</span><span data-en>chanson</span></span></div>
+      <div class="role">« Le cœur a ses raisons que la raison ne connaît point. »</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#D4889C; --lsbg:rgba(212,136,156,0.08);">
+      <span class="glyph ly2">日本語</span>
+      <span class="name">日本語 Japanese <span class="iso">ja · Japonic</span></span>
+      <div class="family">汉字 + 假名 · 竖排 · 助词框定 · 以心传心</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>物哀 · 幽玄 · 侘寂 · 一期一会</span><span data-en>mono no aware · yūgen · wabi-sabi · ichigo-ichie</span></div>
+      <div class="kw"><span data-both><span data-zh>留白的一瞬</span><span data-en>The Held Breath</span></span><span data-both><span data-zh>和纸·樱</span><span data-en>washi · sakura</span></span><span data-both><span data-zh>尺八·筝</span><span data-en>shakuhachi · koto</span></span></div>
+      <div class="role">「古池や 蛙飛びこむ 水の音」</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#C77B22; --lsbg:rgba(199,123,34,0.08);">
+      <span class="glyph lsa">संस्कृतम्</span>
+      <span class="name">Sanskrit <span class="iso">sa · Indo-Aryan Devanagari</span></span>
+      <div class="family">天城体 · sandhi · 复合词 · 语法近于数学</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>圣言 · 业与法 · 梵我一如 · 内观</span><span data-en>sacred utterance · karma &amp; dharma · ātman = brahman · inner science</span></div>
+      <div class="kw"><span data-both><span data-zh>根与咒</span><span data-en>The Root &amp; Mantra</span></span><span data-both><span data-zh>姜黄·朱砂</span><span data-en>turmeric · cinnabar</span></span><span data-both><span data-zh>维纳·颂钵</span><span data-en>vīṇā · bowls</span></span></div>
+      <div class="role">ॐ शान्तिः शान्तिः शान्तिः</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#6E6154; --lsbg:rgba(110,97,84,0.07);">
+      <span class="glyph lu">Latina</span>
+      <span class="name">Latina Latin <span class="iso">la · Italic (macrons: ā ē ī ō ū)</span></span>
+      <div class="family">屈折完备 · 词序自由 · 格言密度极高</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>罗马法 · 修辞 · 斯多葛 · 永续</span><span data-en>Roman law · oratory · Stoic calm · permanence</span></div>
+      <div class="kw"><span data-both><span data-zh>不朽的铭刻</span><span data-en>The Eternal Inscription</span></span><span data-both><span data-zh>石白·暗铜</span><span data-en>limestone · bronze</span></span><span data-both><span data-zh>管风琴</span><span data-en>organ</span></span></div>
+      <div class="role">Carpe diem, quam minimum credula postero.</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#4E6379; --lsbg:rgba(78,99,121,0.07);">
+      <span class="glyph lu">Deutsch</span>
+      <span class="name">Deutsch German <span class="iso">de · Germanic (ä ö ü ß)</span></span>
+      <div class="family">复合词扣件机 · 动词框定 · 名词性极强</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>观念论 · 秩序 · 修养 · 森林</span><span data-en>Idealism · order · Bildung · the forest</span></div>
+      <div class="kw"><span data-both><span data-zh>思想的拱顶</span><span data-en>The Vault of Thought</span></span><span data-both><span data-zh>板岩灰·钢蓝</span><span data-en>slate · steel</span></span><span data-both><span data-zh>Lied 艺术歌曲</span><span data-en>Lied</span></span></div>
+      <div class="role">»Wo aber Gefahr ist, wächst das Rettende auch.«</div>
+    </div>
+
+    <div class="lang-card" style="--lsc:#3E8FB0; --lsbg:rgba(62,143,176,0.07);">
+      <span class="glyph lu">Svenska</span>
+      <span class="name">Svenska Swedish <span class="iso">sv · North Germanic (å ä ö)</span></span>
+      <div class="family">北欧澄澈 · 浮音旋律 · lagom · fika</div>
+      <div class="dna"><span class="label">文明核心味 CIVILIZATIONAL SOUL</span><span data-zh>北欧自然 · 适度 · 高信任 · 光明与暗夜</span><span data-en>Nordic nature · lagom · high trust · light &amp; darkness</span></div>
+      <div class="kw"><span data-both><span data-zh>北境的澄澈</span><span data-en>Northern Clarity</span></span><span data-both><span data-zh>湖蓝·桦木</span><span data-en>lake blue · birch</span></span><span data-both><span data-zh>民谣·管风琴</span><span data-en>folk · organ</span></span></div>
+      <div class="role">»Ja, visst gör det ont när knoppar brister.«</div>
+    </div>
+
+  </div>
+  <p style="margin-top:1.6rem; font-size:0.9rem; color:var(--ink-soft); text-align:center;" data-both>
+    <span data-zh>每张卡 = 文明核心味（魂）→ 语言特色（表情）→ 制作要点（皮相）。新增 24 语身份卡见下节。</span>
+    <span data-en>Each card = civilizational soul → linguistic character → production notes. The 24 new identity cards follow.</span>
+  </p>
+</section>
+
+<!-- ═══ EXPANSION ROSTER ═══ -->
+<section class="section band-soft" id="expansion">
+  <div class="section-header">
+    <h2><span data-zh>文明代表语种</span><span data-en>Civilizations, Represented</span></h2>
+    <div class="subtitle"><span data-zh>核心八语全量产出 · 新增 24 语 = 六大洲 × 12 语系 × 26 文字形态</span><span data-en>The core eight run full; 24 more join across 6 continents, 12 families, 26 scripts</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="exp-groups">
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">中华 · 汉字圈</span><span class="exp-en">Sinosphere</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>中文</b><i>zh · 汉字</i><em class="a">A</em></span>
+        <span class="chip"><b>日本語</b><i>ja · 汉字+假名</i><em class="a">A</em></span>
+        <span class="chip"><b>한국어</b><i>ko · 谚文</i><em class="a">A</em></span>
+        <span class="chip"><b>Tiếng Việt</b><i>vi · 国语字</i><em class="a">A</em></span>
+        <span class="chip"><b>བོད་ཡིག</b><i>bo · 藏文</i><em class="b">B</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">印度 · 双系统</span><span class="exp-en">India — two systems</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>संस्कृतम्</b><i>sa · 天城体</i><em class="b">B</em></span>
+        <span class="chip"><b>हिन्दी</b><i>hi · 天城体</i><em class="a">A</em></span>
+        <span class="chip"><b>தமிழ்</b><i>ta · 泰米尔字母</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">波斯 · 伊斯兰</span><span class="exp-en">Persian-Islamic</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>العربية</b><i>ar · 阿拉伯字母</i><em class="a">A</em></span>
+        <span class="chip"><b>עברית</b><i>he · 希伯来字母</i><em class="a">A</em></span>
+        <span class="chip"><b>فارسی</b><i>fa · 波斯字母</i><em class="a">A</em></span>
+        <span class="chip"><b>Türkçe</b><i>tr · 拉丁(1928)</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">希腊罗马 · 拜占庭</span><span class="exp-en">Greco-Roman · Byzantine</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Ελληνικά</b><i>el · 希腊字母</i><em class="a">A</em></span>
+        <span class="chip"><b>Latina</b><i>la · 拉丁+macron</i><em class="b">B</em></span>
+        <span class="chip"><b>Русский</b><i>ru · 基里尔</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">西欧 · 跨大西洋</span><span class="exp-en">Western Europe · transatlantic</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>English</b><i>en · 拉丁</i><em class="a">A</em></span>
+        <span class="chip"><b>Français</b><i>fr · 拉丁</i><em class="a">A</em></span>
+        <span class="chip"><b>Deutsch</b><i>de · 拉丁+äöüß</i><em class="a">A</em></span>
+        <span class="chip"><b>Español</b><i>es · 拉丁+ñ</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">北欧 · 乌拉尔之镜</span><span class="exp-en">Norden · the Uralic mirror</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Svenska</b><i>sv · 拉丁+åäö</i><em class="a">A</em></span>
+        <span class="chip"><b>Suomi</b><i>fi · 拉丁+äö</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">凯尔特西缘</span><span class="exp-en">the Celtic fringe</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Gaeilge</b><i>ga · 拉丁</i><em class="a">A</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">非洲 · 班图与西非</span><span class="exp-en">Africa — Bantu &amp; West</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Kiswahili</b><i>sw · 拉丁</i><em class="b">B</em></span>
+        <span class="chip"><b>Èdè Yorùbá</b><i>yo · 拉丁</i><em class="b">B</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">中美洲</span><span class="exp-en">Mesoamerica</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Nāhuatl</b><i>nah · 拉丁(19c)</i><em class="b">B</em></span>
+        <span class="chip"><b>Maaya t'aan</b><i>yua · 拉丁(今)</i><em class="b">B</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">安第斯 · 低地</span><span class="exp-en">Andes &amp; the lowlands</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Runa Simi</b><i>qu · 拉丁(16c)</i><em class="b">B</em></span>
+        <span class="chip"><b>Avañe'ẽ</b><i>gn · 拉丁</i><em class="b">B</em></span>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-head"><span class="exp-name">大洋洲</span><span class="exp-en">Oceania</span></div>
+      <div class="exp-chips">
+        <span class="chip"><b>Te Reo Māori</b><i>mi · 拉丁+macron</i><em class="a">A</em></span>
+        <span class="chip"><b>Tok Pisin</b><i>tpi · 拉丁</i><em class="b">B</em></span>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="exp-legend" data-both>
+    <span data-zh>档位：<b>A</b> 全链 TTS —— 可出完整节目 ｜ <b>B</b> 真声/学者 —— 母语者口播，字幕后置 ｜ 其余候选池语暂走 <b>C</b> 词卡档。</span>
+    <span data-en>Tiers: <b>A</b> full TTS chain (full episodes) ｜ <b>B</b> native-voice / scholar recordings, captions fall back ｜ candidates in reserve run as <b>C</b> word-cards.</span>
+  </p>
+
+  <div class="teach-note">
+    <span data-zh><strong>新织线速览：</strong>复兴三姐妹 he · ga · mi（把语言说回来）／文字三命运 ar · fa · tr（保留-改造-决裂）／借词回旋镖 es ↔ nah（chocolate、tomato 出境）／包罗性 we·qu · tpi · id（「你们算不算我们」）／声调群 zh · th · vi · yo · yua／海词族 ar · sw · id · mi · tpi（印度洋到太平洋的帆影）。逐语身份卡与选语五原则见 </span>
+    <span data-en><strong>New weaving threads:</strong> the revival sisters he · ga · mi; three fates of script ar · fa · tr; the loanword boomerang es ↔ nah (chocolate, tomato); the inclusive-we qu · tpi · id; the tone club zh · th · vi · yo · yua; the sea-faring family ar · sw · id · mi · tpi. Full identity cards and the five selection lenses live in the </span>
+    <a href="../../Language%20Stacking-Linguistic%20Weaving/LANGUAGES_LINGUISTIC_EXPANSION.md" target="_blank" rel="noopener"><span data-zh>32 语扩展蓝图</span><span data-en>32-Language Expansion Blueprint</span></a>
+  </div>
+</section><!-- ═══ PART B ═══ -->
+
+<!-- ═══ GOJŪON ═══ -->
+<section class="section band-paper" id="gojuon">
+  <div class="section-header">
+    <h2><span data-zh>日本語 · 五十音図</span><span data-en>Nihongo · Gojūon</span></h2>
+    <div class="subtitle"><span data-zh>声音变成文字的第一步</span><span data-en>Where voice becomes script</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="goji-intro" data-both>
+    <span data-zh>五十音＝清音 46 音（5 段 × 9 行 + 撥音 ん）。行以辅音命名、段以元音命名（a i u e o）；し・ち・つ・ふ 保留古音拼写；を 与 お 同音、仅作助词；ん 为独立音节鼻音。浊音・半浊音・拗音・长音皆由此派生。</span>
+    <span data-en>The gojūon is the 46 pure sounds: 5 vowel-columns × 9 consonant-rows, plus the syllabic nasal ん. Rows take their consonant, columns their vowel (a·i·u·e·o). し·ち·つ·ふ keep archaic spellings; を sounds like お and is only a particle; ん is a syllabic nasal. Voiced, semi-voiced, contracted and long sounds all derive from these.</span>
+  </div>
+
+  <div class="kana-wrap">
+    <table class="kana-table">
+      <thead>
+        <tr><th>行 Row</th><th class="vowel">あ a</th><th class="vowel">い i</th><th class="vowel">う u</th><th class="vowel">え e</th><th class="vowel">お o</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rowname">あ行</td>
+          <td class="kana-cell"><span class="k">ア</span><span class="h">あ</span><span class="r">a</span></td>
+          <td class="kana-cell"><span class="k">イ</span><span class="h">い</span><span class="r">i</span></td>
+          <td class="kana-cell"><span class="k">ウ</span><span class="h">う</span><span class="r">u</span></td>
+          <td class="kana-cell"><span class="k">エ</span><span class="h">え</span><span class="r">e</span></td>
+          <td class="kana-cell"><span class="k">オ</span><span class="h">お</span><span class="r">o</span></td></tr>
+        <tr><td class="rowname">か行</td>
+          <td class="kana-cell"><span class="k">カ</span><span class="h">か</span><span class="r">ka</span></td>
+          <td class="kana-cell"><span class="k">キ</span><span class="h">き</span><span class="r">ki</span></td>
+          <td class="kana-cell"><span class="k">ク</span><span class="h">く</span><span class="r">ku</span></td>
+          <td class="kana-cell"><span class="k">ケ</span><span class="h">け</span><span class="r">ke</span></td>
+          <td class="kana-cell"><span class="k">コ</span><span class="h">こ</span><span class="r">ko</span></td></tr>
+        <tr><td class="rowname">さ行</td>
+          <td class="kana-cell"><span class="k">サ</span><span class="h">さ</span><span class="r">sa</span></td>
+          <td class="kana-cell"><span class="k">シ</span><span class="h">し</span><span class="r">shi</span></td>
+          <td class="kana-cell"><span class="k">ス</span><span class="h">す</span><span class="r">su</span></td>
+          <td class="kana-cell"><span class="k">セ</span><span class="h">せ</span><span class="r">se</span></td>
+          <td class="kana-cell"><span class="k">ソ</span><span class="h">そ</span><span class="r">so</span></td></tr>
+        <tr><td class="rowname">た行</td>
+          <td class="kana-cell"><span class="k">タ</span><span class="h">た</span><span class="r">ta</span></td>
+          <td class="kana-cell"><span class="k">チ</span><span class="h">ち</span><span class="r">chi</span></td>
+          <td class="kana-cell"><span class="k">ツ</span><span class="h">つ</span><span class="r">tsu</span></td>
+          <td class="kana-cell"><span class="k">テ</span><span class="h">て</span><span class="r">te</span></td>
+          <td class="kana-cell"><span class="k">ト</span><span class="h">と</span><span class="r">to</span></td></tr>
+        <tr><td class="rowname">な行</td>
+          <td class="kana-cell"><span class="k">ナ</span><span class="h">な</span><span class="r">na</span></td>
+          <td class="kana-cell"><span class="k">ニ</span><span class="h">に</span><span class="r">ni</span></td>
+          <td class="kana-cell"><span class="k">ヌ</span><span class="h">ぬ</span><span class="r">nu</span></td>
+          <td class="kana-cell"><span class="k">ネ</span><span class="h">ね</span><span class="r">ne</span></td>
+          <td class="kana-cell"><span class="k">ノ</span><span class="h">の</span><span class="r">no</span></td></tr>
+        <tr><td class="rowname">は行</td>
+          <td class="kana-cell"><span class="k">ハ</span><span class="h">は</span><span class="r">ha</span></td>
+          <td class="kana-cell"><span class="k">ヒ</span><span class="h">ひ</span><span class="r">hi</span></td>
+          <td class="kana-cell"><span class="k">フ</span><span class="h">ふ</span><span class="r">fu</span></td>
+          <td class="kana-cell"><span class="k">ヘ</span><span class="h">へ</span><span class="r">he</span></td>
+          <td class="kana-cell"><span class="k">ホ</span><span class="h">ほ</span><span class="r">ho</span></td></tr>
+        <tr><td class="rowname">ま行</td>
+          <td class="kana-cell"><span class="k">マ</span><span class="h">ま</span><span class="r">ma</span></td>
+          <td class="kana-cell"><span class="k">ミ</span><span class="h">み</span><span class="r">mi</span></td>
+          <td class="kana-cell"><span class="k">ム</span><span class="h">む</span><span class="r">mu</span></td>
+          <td class="kana-cell"><span class="k">メ</span><span class="h">め</span><span class="r">me</span></td>
+          <td class="kana-cell"><span class="k">モ</span><span class="h">も</span><span class="r">mo</span></td></tr>
+        <tr><td class="rowname">や行</td>
+          <td class="kana-cell"><span class="k">ヤ</span><span class="h">や</span><span class="r">ya</span></td>
+          <td class="kana-cell void"><span>—</span></td>
+          <td class="kana-cell"><span class="k">ユ</span><span class="h">ゆ</span><span class="r">yu</span></td>
+          <td class="kana-cell void"><span>—</span></td>
+          <td class="kana-cell"><span class="k">ヨ</span><span class="h">よ</span><span class="r">yo</span></td></tr>
+        <tr><td class="rowname">ら行</td>
+          <td class="kana-cell"><span class="k">ラ</span><span class="h">ら</span><span class="r">ra</span></td>
+          <td class="kana-cell"><span class="k">リ</span><span class="h">り</span><span class="r">ri</span></td>
+          <td class="kana-cell"><span class="k">ル</span><span class="h">る</span><span class="r">ru</span></td>
+          <td class="kana-cell"><span class="k">レ</span><span class="h">れ</span><span class="r">re</span></td>
+          <td class="kana-cell"><span class="k">ロ</span><span class="h">ろ</span><span class="r">ro</span></td></tr>
+        <tr><td class="rowname">わ行</td>
+          <td class="kana-cell"><span class="k">ワ</span><span class="h">わ</span><span class="r">wa</span></td>
+          <td class="kana-cell void"><span>—</span></td>
+          <td class="kana-cell void"><span>—</span></td>
+          <td class="kana-cell void"><span>—</span></td>
+          <td class="kana-cell particle"><span class="k">ヲ</span><span class="h">を</span><span class="r">o</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="derived">
+    <span><em class="dl">DAKUON</em>が ぎ ぐ げ ご ・ ざ じ ず ぜ ぞ ・ だ ぢ づ で ど ・ ば び ぶ べ ぼ</span>
+    <span><em class="dl">HANDAKUON</em>ぱ ぴ ぷ ぺ ぽ</span>
+    <span><em class="dl">YŌON</em>きゃ きゅ きょ ・ しゃ しゅ しょ ・ ちゃ ちゅ ちょ ・ にゃ にゅ にょ ・ ひゃ ひゅ ひょ ・ みゃ みゅ みょ ・ りゃ りゅ りょ</span>
+    <span><em class="dl">CHŌON · SOKUON · HATSUON</em>おかあさん ā ・ いって tt ・ しんぶん n̄</span>
+  </div>
+
+  <div class="gloss-wrap">
+    <table class="gloss-table kana-word">
+      <thead>
+        <tr><th>仮名 Kana</th><th>言葉 Word</th><th>意味 Meaning</th><th>例句 Example</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="kc"><span class="big">あ</span><span class="kana-kat">ア</span><span class="rom">a</span></td>
+          <td><b class="kw2">雨 <span class="furigana">あめ</span></b><br><span class="rom">ame</span></td>
+          <td><span data-zh>雨</span><span data-en>rain</span></td>
+          <td><div class="sent">あめが、ふっています。</div><div class="rom">Ame ga, futte imasu.</div><div class="tr"><span data-zh>正在下雨。</span><span data-en>It's raining.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">い</span><span class="kana-kat">イ</span><span class="rom">i</span></td>
+          <td><b class="kw2">命 <span class="furigana">いのち</span></b><br><span class="rom">inochi</span></td>
+          <td><span data-zh>生命</span><span data-en>life</span></td>
+          <td><div class="sent">いのちは、いちどきりです。</div><div class="rom">Inochi wa, ichido kiri desu.</div><div class="tr"><span data-zh>生命只有一次。</span><span data-en>Life comes but once.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">う</span><span class="kana-kat">ウ</span><span class="rom">u</span></td>
+          <td><b class="kw2">歌 <span class="furigana">うた</span></b><br><span class="rom">uta</span></td>
+          <td><span data-zh>歌</span><span data-en>song</span></td>
+          <td><div class="sent">みんなで、うたをうたいましょう。</div><div class="rom">Minna de, uta o utaimashō.</div><div class="tr"><span data-zh>大家一起唱歌吧。</span><span data-en>Let's all sing.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">え</span><span class="kana-kat">エ</span><span class="rom">e</span></td>
+          <td><b class="kw2">絵 <span class="furigana">え</span></b><br><span class="rom">e</span></td>
+          <td><span data-zh>图画</span><span data-en>picture</span></td>
+          <td><div class="sent">このえは、だれがかきましたか。</div><div class="rom">Kono e wa, dare ga kakimashita ka.</div><div class="tr"><span data-zh>这幅画是谁画的？</span><span data-en>Who painted this picture?</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">お</span><span class="kana-kat">オ</span><span class="rom">o</span></td>
+          <td><b class="kw2">音楽 <span class="furigana">おんがく</span></b><br><span class="rom">ongaku</span></td>
+          <td><span data-zh>音乐</span><span data-en>music</span></td>
+          <td><div class="sent">わたしは、おんがくをきくのがすきです。</div><div class="rom">Watashi wa, ongaku o kiku no ga suki desu.</div><div class="tr"><span data-zh>我喜欢听音乐。</span><span data-en>I like listening to music.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">か</span><span class="kana-kat">カ</span><span class="rom">ka</span></td>
+          <td><b class="kw2">風 <span class="furigana">かぜ</span></b><br><span class="rom">kaze</span></td>
+          <td><span data-zh>风</span><span data-en>wind</span></td>
+          <td><div class="sent">きょうは、かぜがつよいです。</div><div class="rom">Kyō wa, kaze ga tsuyoi desu.</div><div class="tr"><span data-zh>今天风很大。</span><span data-en>The wind is strong today.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">き</span><span class="kana-kat">キ</span><span class="rom">ki</span></td>
+          <td><b class="kw2">木 <span class="furigana">き</span></b><br><span class="rom">ki</span></td>
+          <td><span data-zh>树</span><span data-en>tree</span></td>
+          <td><div class="sent">このきは、とてもふるいです。</div><div class="rom">Kono ki wa, totemo furui desu.</div><div class="tr"><span data-zh>这棵树很老了。</span><span data-en>This tree is very old.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">く</span><span class="kana-kat">ク</span><span class="rom">ku</span></td>
+          <td><b class="kw2">雲 <span class="furigana">くも</span></b><br><span class="rom">kumo</span></td>
+          <td><span data-zh>云</span><span data-en>cloud</span></td>
+          <td><div class="sent">そらに、くもがうかんでいます。</div><div class="rom">Sora ni, kumo ga ukande imasu.</div><div class="tr"><span data-zh>天上飘着云。</span><span data-en>Clouds float in the sky.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">け</span><span class="kana-kat">ケ</span><span class="rom">ke</span></td>
+          <td><b class="kw2">景色 <span class="furigana">けしき</span></b><br><span class="rom">keshiki</span></td>
+          <td><span data-zh>景色</span><span data-en>scenery</span></td>
+          <td><div class="sent">ふじさんのけしきは、すばらしいです。</div><div class="rom">Fujisan no keshiki wa, subarashii desu.</div><div class="tr"><span data-zh>富士山的景色很美。</span><span data-en>Mt. Fuji's scenery is wonderful.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">こ</span><span class="kana-kat">コ</span><span class="rom">ko</span></td>
+          <td><b class="kw2">心 <span class="furigana">こころ</span></b><br><span class="rom">kokoro</span></td>
+          <td><span data-zh>心</span><span data-en>heart</span></td>
+          <td><div class="sent">こころをこめて、てがみをかきました。</div><div class="rom">Kokoro o komete, tegami o kakimashita.</div><div class="tr"><span data-zh>我用心写了这封信。</span><span data-en>I wrote the letter with all my heart.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">さ</span><span class="kana-kat">サ</span><span class="rom">sa</span></td>
+          <td><b class="kw2">桜 <span class="furigana">さくら</span></b><br><span class="rom">sakura</span></td>
+          <td><span data-zh>樱花</span><span data-en>cherry blossom</span></td>
+          <td><div class="sent">さくらが、はらはらとちります。</div><div class="rom">Sakura ga, harahara to chirimasu.</div><div class="tr"><span data-zh>樱花簌簌飘落。</span><span data-en>Cherry blossoms flutter down.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">し</span><span class="kana-kat">シ</span><span class="rom">shi</span></td>
+          <td><b class="kw2">幸せ <span class="furigana">しあわせ</span></b><br><span class="rom">shiawase</span></td>
+          <td><span data-zh>幸福</span><span data-en>happiness</span></td>
+          <td><div class="sent">いちばんのしあわせは、かぞくとすごすじかんです。</div><div class="rom">Ichiban no shiawase wa, kazoku to sugosu jikan desu.</div><div class="tr"><span data-zh>最大的幸福，是和家人在一起的时光。</span><span data-en>My greatest happiness is time with my family.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">す</span><span class="kana-kat">ス</span><span class="rom">su</span></td>
+          <td><b class="kw2">雀 <span class="furigana">すずめ</span></b><br><span class="rom">suzume</span></td>
+          <td><span data-zh>麻雀</span><span data-en>sparrow</span></td>
+          <td><div class="sent">すずめたちが、ちゅんちゅんとないています。</div><div class="rom">Suzume-tachi ga, chunchun to naite imasu.</div><div class="tr"><span data-zh>麻雀们啾啾地叫着。</span><span data-en>The sparrows are chirping.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">せ</span><span class="kana-kat">セ</span><span class="rom">se</span></td>
+          <td><b class="kw2">世界 <span class="furigana">せかい</span></b><br><span class="rom">sekai</span></td>
+          <td><span data-zh>世界</span><span data-en>world</span></td>
+          <td><div class="sent">せかいは、ひろくて、ふしぎがいっぱいです。</div><div class="rom">Sekai wa, hirokute, fushigi ga ippai desu.</div><div class="tr"><span data-zh>世界辽阔，充满神奇。</span><span data-en>The world is wide and full of wonders.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">そ</span><span class="kana-kat">ソ</span><span class="rom">so</span></td>
+          <td><b class="kw2">空 <span class="furigana">そら</span></b><br><span class="rom">sora</span></td>
+          <td><span data-zh>天空</span><span data-en>sky</span></td>
+          <td><div class="sent">きょうのそらは、とってもあおいです。</div><div class="rom">Kyō no sora wa, tottemo aoi desu.</div><div class="tr"><span data-zh>今天的天空非常蓝。</span><span data-en>Today's sky is so blue.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">た</span><span class="kana-kat">タ</span><span class="rom">ta</span></td>
+          <td><b class="kw2">太陽 <span class="furigana">たいよう</span></b><br><span class="rom">taiyō</span></td>
+          <td><span data-zh>太阳</span><span data-en>sun</span></td>
+          <td><div class="sent">あさになると、たいようがのぼります。</div><div class="rom">Asa ni naru to, taiyō ga noborimasu.</div><div class="tr"><span data-zh>一到早晨，太阳就升起。</span><span data-en>When morning comes, the sun rises.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ち</span><span class="kana-kat">チ</span><span class="rom">chi</span></td>
+          <td><b class="kw2">力 <span class="furigana">ちから</span></b><br><span class="rom">chikara</span></td>
+          <td><span data-zh>力量</span><span data-en>strength</span></td>
+          <td><div class="sent">みんなで、ちからをあわせましょう。</div><div class="rom">Minna de, chikara o awasemashō.</div><div class="tr"><span data-zh>大家齐心协力吧。</span><span data-en>Let's join our strength.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">つ</span><span class="kana-kat">ツ</span><span class="rom">tsu</span></td>
+          <td><b class="kw2">月 <span class="furigana">つき</span></b><br><span class="rom">tsuki</span></td>
+          <td><span data-zh>月亮</span><span data-en>moon</span></td>
+          <td><div class="sent">つきが、にわをしろくてらしています。</div><div class="rom">Tsuki ga, niwa o shiroku terashite imasu.</div><div class="tr"><span data-zh>月光把院子照得雪白。</span><span data-en>The moon lights the garden white.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">て</span><span class="kana-kat">テ</span><span class="rom">te</span></td>
+          <td><b class="kw2">手 <span class="furigana">て</span></b><br><span class="rom">te</span></td>
+          <td><span data-zh>手</span><span data-en>hand</span></td>
+          <td><div class="sent">てをあらってから、ごはんをたべます。</div><div class="rom">Te o aratte kara, gohan o tabemasu.</div><div class="tr"><span data-zh>先洗手，再吃饭。</span><span data-en>I wash my hands, then eat.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">と</span><span class="kana-kat">ト</span><span class="rom">to</span></td>
+          <td><b class="kw2">鳥 <span class="furigana">とり</span></b><br><span class="rom">tori</span></td>
+          <td><span data-zh>鸟</span><span data-en>bird</span></td>
+          <td><div class="sent">あさはやくから、とりがなきはじめます。</div><div class="rom">Asa hayaku kara, tori ga naki-hajimemasu.</div><div class="tr"><span data-zh>清晨，鸟儿就开始啼鸣。</span><span data-en>From early morning, the birds start singing.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">な</span><span class="kana-kat">ナ</span><span class="rom">na</span></td>
+          <td><b class="kw2">夏 <span class="furigana">なつ</span></b><br><span class="rom">natsu</span></td>
+          <td><span data-zh>夏天</span><span data-en>summer</span></td>
+          <td><div class="sent">にほんのなつは、むしあついです。</div><div class="rom">Nihon no natsu wa, mushiatsui desu.</div><div class="tr"><span data-zh>日本的夏天闷热。</span><span data-en>Japan's summers are hot and humid.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">に</span><span class="kana-kat">ニ</span><span class="rom">ni</span></td>
+          <td><b class="kw2">日本 <span class="furigana">にほん</span></b><br><span class="rom">Nihon</span></td>
+          <td><span data-zh>日本</span><span data-en>Japan</span></td>
+          <td><div class="sent">にほんには、よっつのきせつがあります。</div><div class="rom">Nihon ni wa, yottsu no kisetsu ga arimasu.</div><div class="tr"><span data-zh>日本有四个季节。</span><span data-en>Japan has four seasons.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ぬ</span><span class="kana-kat">ヌ</span><span class="rom">nu</span></td>
+          <td><b class="kw2">沼 <span class="furigana">ぬま</span></b><br><span class="rom">numa</span></td>
+          <td><span data-zh>沼泽</span><span data-en>marsh</span></td>
+          <td><div class="sent">むかし、このあたりは、ぬまでした。</div><div class="rom">Mukashi, kono atari wa, numa deshita.</div><div class="tr"><span data-zh>从前，这一带是一片沼泽。</span><span data-en>Long ago, this area was marshland.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ね</span><span class="kana-kat">ネ</span><span class="rom">ne</span></td>
+          <td><b class="kw2">猫 <span class="furigana">ねこ</span></b><br><span class="rom">neko</span></td>
+          <td><span data-zh>猫</span><span data-en>cat</span></td>
+          <td><div class="sent">うちのねこは、ひるねをするのがすきです。</div><div class="rom">Uchi no neko wa, hirune o suru no ga suki desu.</div><div class="tr"><span data-zh>我家的猫喜欢午睡。</span><span data-en>Our cat likes to nap.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">の</span><span class="kana-kat">ノ</span><span class="rom">no</span></td>
+          <td><b class="kw2">野 <span class="furigana">の</span></b><br><span class="rom">no</span></td>
+          <td><span data-zh>原野</span><span data-en>field</span></td>
+          <td><div class="sent">のはらに、ちょうちょがとんでいます。</div><div class="rom">Nohara ni, chōcho ga tonde imasu.</div><div class="tr"><span data-zh>蝴蝶在原野上飞舞。</span><span data-en>Butterflies fly over the field.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">は</span><span class="kana-kat">ハ</span><span class="rom">ha</span></td>
+          <td><b class="kw2">花 <span class="furigana">はな</span></b><br><span class="rom">hana</span></td>
+          <td><span data-zh>花</span><span data-en>flower</span></td>
+          <td><div class="sent">にわに、はながたくさんさきました。</div><div class="rom">Niwa ni, hana ga takusan sakimashita.</div><div class="tr"><span data-zh>院子里开了很多花。</span><span data-en>Many flowers have bloomed in the garden.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ひ</span><span class="kana-kat">ヒ</span><span class="rom">hi</span></td>
+          <td><b class="kw2">人 <span class="furigana">ひと</span></b><br><span class="rom">hito</span></td>
+          <td><span data-zh>人</span><span data-en>person</span></td>
+          <td><div class="sent">あのかたは、わたしのせんせいです。</div><div class="rom">Ano kata wa, watashi no sensei desu.</div><div class="tr"><span data-zh>那位是我的老师。</span><span data-en>That person is my teacher.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ふ</span><span class="kana-kat">フ</span><span class="rom">fu</span></td>
+          <td><b class="kw2">冬 <span class="furigana">ふゆ</span></b><br><span class="rom">fuyu</span></td>
+          <td><span data-zh>冬天</span><span data-en>winter</span></td>
+          <td><div class="sent">ふゆになると、ゆきがふります。</div><div class="rom">Fuyu ni naru to, yuki ga furimasu.</div><div class="tr"><span data-zh>一到冬天就下雪。</span><span data-en>When winter comes, it snows.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">へ</span><span class="kana-kat">ヘ</span><span class="rom">he</span></td>
+          <td><b class="kw2">平和 <span class="furigana">へいわ</span></b><br><span class="rom">heiwa</span></td>
+          <td><span data-zh>和平</span><span data-en>peace</span></td>
+          <td><div class="sent">みんなで、へいわをねがっています。</div><div class="rom">Minna de, heiwa o negatte imasu.</div><div class="tr"><span data-zh>大家都在祈愿和平。</span><span data-en>Everyone wishes for peace.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ほ</span><span class="kana-kat">ホ</span><span class="rom">ho</span></td>
+          <td><b class="kw2">星 <span class="furigana">ほし</span></b><br><span class="rom">hoshi</span></td>
+          <td><span data-zh>星星</span><span data-en>star</span></td>
+          <td><div class="sent">よるのそらに、ほしがかがやきます。</div><div class="rom">Yoru no sora ni, hoshi ga kagayakimasu.</div><div class="tr"><span data-zh>星星在夜空中闪耀。</span><span data-en>Stars shine in the night sky.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ま</span><span class="kana-kat">マ</span><span class="rom">ma</span></td>
+          <td><b class="kw2">松 <span class="furigana">まつ</span></b><br><span class="rom">matsu</span></td>
+          <td><span data-zh>松树</span><span data-en>pine</span></td>
+          <td><div class="sent">まつのきは、ふゆでも、みどりです。</div><div class="rom">Matsu no ki wa, fuyu demo, midori desu.</div><div class="tr"><span data-zh>松树即使冬天也是绿的。</span><span data-en>Pine trees stay green even in winter.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">み</span><span class="kana-kat">ミ</span><span class="rom">mi</span></td>
+          <td><b class="kw2">水 <span class="furigana">みず</span></b><br><span class="rom">mizu</span></td>
+          <td><span data-zh>水</span><span data-en>water</span></td>
+          <td><div class="sent">このみずは、とてもきれいです。</div><div class="rom">Kono mizu wa, totemo kirei desu.</div><div class="tr"><span data-zh>这水很清。</span><span data-en>This water is very clear.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">む</span><span class="kana-kat">ム</span><span class="rom">mu</span></td>
+          <td><b class="kw2">虫 <span class="furigana">むし</span></b><br><span class="rom">mushi</span></td>
+          <td><span data-zh>虫</span><span data-en>insect</span></td>
+          <td><div class="sent">なつには、むしのこえがきこえます。</div><div class="rom">Natsu ni wa, mushi no koe ga kikoemasu.</div><div class="tr"><span data-zh>夏天能听见虫鸣。</span><span data-en>In summer, you hear the voices of insects.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">め</span><span class="kana-kat">メ</span><span class="rom">me</span></td>
+          <td><b class="kw2">目 <span class="furigana">め</span></b><br><span class="rom">me</span></td>
+          <td><span data-zh>眼睛</span><span data-en>eye</span></td>
+          <td><div class="sent">めをとじて、ゆっくりいきをしましょう。</div><div class="rom">Me o tojite, yukkuri iki o shimashō.</div><div class="tr"><span data-zh>闭上眼睛，慢慢呼吸。</span><span data-en>Close your eyes and breathe slowly.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">も</span><span class="kana-kat">モ</span><span class="rom">mo</span></td>
+          <td><b class="kw2">森 <span class="furigana">もり</span></b><br><span class="rom">mori</span></td>
+          <td><span data-zh>森林</span><span data-en>forest</span></td>
+          <td><div class="sent">もりには、いろなどうぶつがすんでいます。</div><div class="rom">Mori ni wa, iro na dōbutsu ga sunde imasu.</div><div class="tr"><span data-zh>森林里住着各种动物。</span><span data-en>Many animals live in the forest.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">や</span><span class="kana-kat">ヤ</span><span class="rom">ya</span></td>
+          <td><b class="kw2">山 <span class="furigana">やま</span></b><br><span class="rom">yama</span></td>
+          <td><span data-zh>山</span><span data-en>mountain</span></td>
+          <td><div class="sent">やまのいただきには、ゆきがあります。</div><div class="rom">Yama no itadaki ni wa, yuki ga arimasu.</div><div class="tr"><span data-zh>山顶上有积雪。</span><span data-en>There is snow on the mountaintop.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ゆ</span><span class="kana-kat">ユ</span><span class="rom">yu</span></td>
+          <td><b class="kw2">雪 <span class="furigana">ゆき</span></b><br><span class="rom">yuki</span></td>
+          <td><span data-zh>雪</span><span data-en>snow</span></td>
+          <td><div class="sent">ゆきが、しんしんとふっています。</div><div class="rom">Yuki ga, shinshin to futte imasu.</div><div class="tr"><span data-zh>雪正静静地飘落。</span><span data-en>Snow falls silently.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">よ</span><span class="kana-kat">ヨ</span><span class="rom">yo</span></td>
+          <td><b class="kw2">夜 <span class="furigana">よる</span></b><br><span class="rom">yoru</span></td>
+          <td><span data-zh>夜晚</span><span data-en>night</span></td>
+          <td><div class="sent">よるになると、つきがきれいです。</div><div class="rom">Yoru ni naru to, tsuki ga kirei desu.</div><div class="tr"><span data-zh>到了夜晚，月亮很美。</span><span data-en>At night, the moon is beautiful.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ら</span><span class="kana-kat">ラ</span><span class="rom">ra</span></td>
+          <td><b class="kw2">来年 <span class="furigana">らいねん</span></b><br><span class="rom">rainen</span></td>
+          <td><span data-zh>明年</span><span data-en>next year</span></td>
+          <td><div class="sent">らいねん、にほんをたずねます。</div><div class="rom">Rainen, Nihon o tazunemasu.</div><div class="tr"><span data-zh>明年，我造访日本。</span><span data-en>Next year, I will visit Japan.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">り</span><span class="kana-kat">リ</span><span class="rom">ri</span></td>
+          <td><b class="kw2">林檎 <span class="furigana">りんご</span></b><br><span class="rom">ringo</span></td>
+          <td><span data-zh>苹果</span><span data-en>apple</span></td>
+          <td><div class="sent">りんごを、ひとつください。</div><div class="rom">Ringo o, hitotsu kudasai.</div><div class="tr"><span data-zh>请给我一个苹果。</span><span data-en>One apple, please.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">る</span><span class="kana-kat">ル</span><span class="rom">ru</span></td>
+          <td><b class="kw2">留守 <span class="furigana">るす</span></b><br><span class="rom">rusu</span></td>
+          <td><span data-zh>不在家</span><span data-en>away from home</span></td>
+          <td><div class="sent">いま、かぞくはみんな、るすです。</div><div class="rom">Ima, kazoku wa minna, rusu desu.</div><div class="tr"><span data-zh>现在家人都不在家。</span><span data-en>Everyone is out right now.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">れ</span><span class="kana-kat">レ</span><span class="rom">re</span></td>
+          <td><b class="kw2">歴史 <span class="furigana">れきし</span></b><br><span class="rom">rekishi</span></td>
+          <td><span data-zh>历史</span><span data-en>history</span></td>
+          <td><div class="sent">いま、にほんのれきしをべんきょうしています。</div><div class="rom">Ima, Nihon no rekishi o benkyō shite imasu.</div><div class="tr"><span data-zh>我正在学日本历史。</span><span data-en>I am studying Japanese history.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ろ</span><span class="kana-kat">ロ</span><span class="rom">ro</span></td>
+          <td><b class="kw2">蝋燭 <span class="furigana">ろうそく</span></b><br><span class="rom">rōsoku</span></td>
+          <td><span data-zh>蜡烛</span><span data-en>candle</span></td>
+          <td><div class="sent">とうろうに、ろうそくをともしました。</div><div class="rom">Tōrō ni, rōsoku o tomoshimashita.</div><div class="tr"><span data-zh>我在灯笼里点上了蜡烛。</span><span data-en>I lit a candle in the lantern.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">わ</span><span class="kana-kat">ワ</span><span class="rom">wa</span></td>
+          <td><b class="kw2">和 <span class="furigana">わ</span></b><br><span class="rom">wa</span></td>
+          <td><span data-zh>和谐</span><span data-en>harmony</span></td>
+          <td><div class="sent">わを、たいせつにしています。</div><div class="rom">Wa o, taisetsu ni shite imasu.</div><div class="tr"><span data-zh>珍惜「和」。</span><span data-en>We treasure harmony.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">を</span><span class="kana-kat">ヲ</span><span class="rom">o</span></td>
+          <td><b class="kw2">格助詞 <span class="furigana">を</span></b><br><span class="rom">wo / o</span></td>
+          <td><span data-zh>宾格助词</span><span data-en>object particle</span></td>
+          <td><div class="sent">ほんをよみます。</div><div class="rom">Hon o yomimasu.</div><div class="tr"><span data-zh>读书。</span><span data-en>I read a book.</span></div></td>
+        </tr>
+        <tr>
+          <td class="kc"><span class="big">ん</span><span class="kana-kat">ン</span><span class="rom">n</span></td>
+          <td><b class="kw2">撥音 <span class="furigana">はつおん</span></b><br><span class="rom">hatsuon</span></td>
+          <td><span data-zh>音节鼻音</span><span data-en>syllabic nasal</span></td>
+          <td><div class="sent">しんぶんを、よんでいます。</div><div class="rom">Shinbun o, yonde imasu.</div><div class="tr"><span data-zh>正在读报。</span><span data-en>I'm reading the newspaper.</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="teach-note">
+    <span data-zh><strong>织法说明：</strong>つき（月）・みず（水）・こころ（心）・わ（和）已入核心术语表，一片海域照进八种语法之镜；46 词皆可各长成一张 C 型词卡。例句为教学自造句（AI 起草・待母语者审校），记 → 读 → 写三步学习之后，入正式语料前须走审校。</span>
+    <span data-en><strong>Woven notes:</strong> つき (moon) · みず (water) · こころ (heart) · わ (harmony) are already in the core glossary — one sea, eight mirrors of grammar. Each of the 46 words can grow into a C-type word-card. The example sentences are AI-drafted teaching lines awaiting native review before they enter the formal corpus.</span>
+  </div>
+</section>
+
+<!-- ═══ THEMES ═══ -->
+<section class="section band-paper" id="themes">
+  <div class="section-header">
+    <h2><span data-zh>主题矩阵</span><span data-en>Theme Matrix</span></h2>
+    <div class="subtitle"><span data-zh>五大主题 · 五大「织语」子系列，每个主题先定约 12 个心象，逐期灌溉成片</span><span data-en>Five themes, five sub-series; each theme begins with ~12 "images of thought"</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="theme-grid">
+    <div class="theme-card">
+      <span class="mark">山</span>
+      <h4><span data-zh>织语 · 自然</span><span data-en>Nature</span></h4>
+      <span class="en-name">Nature in Every Tongue</span>
+      <p><span data-zh>春 · 月 · 海 · 山 · 树 · 雪 · 光 · 星空 · 风 · 溪 · 节气 · 雨</span><span data-en>spring · moon · sea · mountain · tree · snow · light · stars · wind · stream · seasons · rain</span></p>
+    </div>
+    <div class="theme-card">
+      <span class="mark">觉</span>
+      <h4><span data-zh>织语 · 觉</span><span data-en>Awakening</span></h4>
+      <span class="en-name">Awakened Words</span>
+      <p><span data-zh>无常 · 当下 · 生死 · 觉知 · 放下 · 自由 · 静 · 初心 · 精进 · 回归</span><span data-en>impermanence · now · life &amp; death · awareness · letting go · freedom · stillness · beginner's mind · diligence · return</span></p>
+    </div>
+    <div class="theme-card">
+      <span class="mark">文</span>
+      <h4><span data-zh>织语 · 文明</span><span data-en>Civilization</span></h4>
+      <span class="en-name">Civilizations Whisper</span>
+      <p><span data-zh>语言起源 · 文字源流 · 经典 · 神话对坐 · 哲学 · 桥梁</span><span data-en>origins of language · scripts · classics · myths side by side · philosophy · bridges</span></p>
+    </div>
+    <div class="theme-card">
+      <span class="mark">心</span>
+      <h4><span data-zh>织语 · 渐悟</span><span data-en>Insights</span></h4>
+      <span class="en-name">Notes on Living</span>
+      <p><span data-zh>时间 · 幸福 · 友谊 · 知足 · 热爱 · 孤独 · 勇气 · 简单</span><span data-en>time · happiness · friendship · contentment · passion · solitude · courage · simplicity</span></p>
+    </div>
+    <div class="theme-card">
+      <span class="mark">茶</span>
+      <h4><span data-zh>织语 · 日常</span><span data-en>Daily</span></h4>
+      <span class="en-name">Everyday Songs</span>
+      <p><span data-zh>清晨 · 茶 · 散步 · 家常 · 相逢 · 劳作 · 一餐 · 睡眠 · 旅途</span><span data-en>morning · tea · a walk · home · reunion · labor · a meal · sleep · the road</span></p>
+    </div>
+  </div>
+
+  <div class="teach-note">
+    <strong data-both><span data-zh>选题三问（每期必答）</span><span data-en>Selection Triad (every episode)</span></strong>
+    <span data-zh>：① 这个心象是否「一句即见全豹」？② 八语对它是否「各有其说」且「殊途同归」？③ 能否带一条织线（词源 / 语法 / 文化互文）？——三期全过才入池。</span>
+    <span data-en> &nbsp;One sentence must hold the whole image; the eight tongues must each speak it their own way and still converge; it must carry a weaving thread (etymology, grammar, or cultural intertext). Pass all three, and it enters the backlog.</span>
+  </div>
+</section>
+
+<!-- ═══ FORMATS ═══ -->
+<section class="section band-dark" id="formats">
+  <div class="section-header dark">
+    <h2><span data-zh>六种格式</span><span data-en>Six Templates</span></h2>
+    <div class="subtitle" data-both>
+      <span data-zh>当前阶段以文字为主 —— 网页、词卡与平行语料先行；视频统一 16:9 宽屏、为 YouTube 嵌入预留，制作方案另列规划。</span>
+      <span data-en>Text-first for now: web, word-cards and the corpus lead. Video will be 16:9 widescreen, sized for YouTube embedding — its plan is settled separately.</span>
+    </div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="fmt-grid">
+    <div class="fmt-card">
+      <span class="code">A</span>
+      <h4><span data-zh>一镜八澜 · 叠式短视频</span><span data-en>Stack Short</span></h4>
+      <span class="en-tag">30–60s · widescreen 16:9 · YouTube</span>
+      <p><span data-zh>一帧留白起钩子 → 逐语登场（每语 4–6s，语音先、字幕随）→ 八语同屏合璧、织线注疏浮出。</span><span data-en>A held frame hooks in — each language steps in (4–6s, voice first) — the eight stack into one screen and a weaving note surfaces.</span></p>
+    </div>
+    <div class="fmt-card">
+      <span class="code">B</span>
+      <h4><span data-zh>对读之辩 · 织式长视频</span><span data-en>Weave Long</span></h4>
+      <span class="en-tag">3–6min · landscape 16:9</span>
+      <p><span data-zh>原文深读 + 逐语对读 + 「不可译实验室」——3 句话讲透为什么侘寂、lagom 翻不进去。</span><span data-en>Deep reading + per-language reading + the Untranslatable Lab: three sentences on why wabi-sabi or lagom can't be carried over.</span></p>
+    </div>
+    <div class="fmt-card">
+      <span class="code">C</span>
+      <h4><span data-zh>一词万境 · 每日一词</span><span data-en>Word of the Day</span></h4>
+      <span class="en-tag">card 9:16 · 15–30s audio</span>
+      <p><span data-zh>一字原形 → IPA → 拉丁转写 → 直译+注释 → 出处 → 一致影像 → 八语对照小行。</span><span data-en>Big glyph → IPA → transliteration → gloss + note → source → a shared image → an eight-language echo line.</span></p>
+    </div>
+    <div class="fmt-card">
+      <span class="code">D</span>
+      <h4><span data-zh>同题异想 · 多语对读</span><span data-en>Parallel Reading</span></h4>
+      <span class="en-tag">learning format</span>
+      <p><span data-zh>逐行八语并列、一行一朗读，句读给呼吸，呼吸给理解——适合《道德经》一课 × 八语。</span><span data-en>One poem or passage, eight rows, one voiced line each; the pause between lines is the understanding.</span></p>
+    </div>
+    <div class="fmt-card">
+      <span class="code">E</span>
+      <h4><span data-zh>语之谱系 · 词源解密</span><span data-en>Etymology</span></h4>
+      <span class="en-tag">1–2min · word-genealogy tree</span>
+      <p><span data-zh>一个词的八语分身 → 追根（印欧原根 / 汉字源流）→ 落地看各自文明——「同源而殊途，殊途而同归」。</span><span data-en>One word, eight incarnations, traced to a root and landed in each civilization: same source, separate roads, one return.</span></p>
+    </div>
+    <div class="fmt-card">
+      <span class="code">F</span>
+      <h4><span data-zh>七语八澜 · 轮诵合唱</span><span data-en>Choir</span></h4>
+      <span class="en-tag">60–90s · festivals</span>
+      <p><span data-zh>同一文本逐语轮诵，最后八语交叉淡化合一收束；节奏按诗律而非等分。</span><span data-en>One text chanted around the circle, then eight voices cross-fade into one; rhythm follows the poetry, not the metronome.</span></p>
+    </div>
+  </div>
+
+  <div class="pillar-hint">
+    <span data-zh>…每条固定元素与分镜明细，见 </span>
+    <span data-en>…full beat sheets live in the </span>
+    <a href="../../Language%20Stacking-Linguistic%20Weaving/README.md" target="_blank" rel="noopener"><span data-zh>总体规划 README §7</span><span data-en>Master Plan README §7</span></a>
+  </div>
+</section>
+
+<!-- ═══ SAMPLE STACK ═══ -->
+<section class="section band-paper" id="sample">
+  <div class="section-header">
+    <h2><span data-zh>样例 · 一镜八澜</span><span data-en>Worked Sample</span></h2>
+    <div class="subtitle"><span data-zh>「海上生明月，天涯共此时」——张九龄《望月怀远》（唐）· 演示叠 + 织 + 照</span><span data-en>Zhang Jiuling, "Wang Yue Huai Yuan" (Tang) — a demonstration of Stack + Weave + Illuminate</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="stack-wrap">
+    <table class="stack-table">
+      <thead>
+        <tr>
+          <th><span data-zh>语</span><span data-en>Lang</span></th>
+          <th><span data-zh>译文 Rendering</span><span data-en>Rendering</span></th>
+          <th><span data-zh>字面直译 / 注 Literal / Note</span><span data-en>Literal / Note</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="l">中文</td>
+          <td class="si18n">海上生明月，天涯共此时。</td>
+          <td class="gloss"><span data-en>Source</span><span data-zh>原句</span> · 张九龄《望月怀远》· 唐 <span data-zh>「生」=月从海中生出</span><span data-en>"生": the moon is born from the sea</span></td>
+        </tr>
+        <tr>
+          <td class="l">English</td>
+          <td class="si18n">Over the sea a bright moon rises;<br>we share this moment across the world.</td>
+          <td class="gloss">lit. on-sea it-begets bright-moon; sky's-edge together this-hour — "生" = to give birth to</td>
+        </tr>
+        <tr>
+          <td class="l">Français</td>
+          <td class="si18n">Au-dessus de la mer, une lune claire se lève ;<br>nous partageons cet instant aux confins du monde.</td>
+          <td class="gloss">lit. above-of-the sea, a moon clear itself-raises; we share this instant at the limits of-the world</td>
+        </tr>
+        <tr>
+          <td class="l">日本語</td>
+          <td class="si18n gja">海の上に明月昇り、天涯にこの時を同じくす。</td>
+          <td class="gloss">lit. 海·<span data-en>gen.</span><span data-zh>属格</span>·上に bright-moon rises；天涯=世界の果て、時を同じく=同刻</td>
+        </tr>
+        <tr>
+          <td class="l">संस्कृतम्</td>
+          <td class="si18n gsa"><span data-zh>待专家起草</span><span data-en>pending specialist draft</span></td>
+          <td class="gloss">词汇层：समुद्र samudra（海）· चन्द्र candra（月）· समां घटिकां samāṃ ghaṭikāṃ（共此时）——整句译由受训译员完成并审校</td>
+        </tr>
+        <tr>
+          <td class="l">Latina</td>
+          <td class="si18n">Clara luna super mare oritur;<br>nos hoc idem momentum per totum orbem tenemus.</td>
+          <td class="gloss">lit. clear moon above the sea rises; we this same moment through the whole world hold — mare/mar/sea 词族直达印欧</td>
+        </tr>
+        <tr>
+          <td class="l">Deutsch</td>
+          <td class="si18n">Über dem Meer erhebt sich der lichte Mond;<br>wir teilen diese Stunde bis ans Ende der Welt.</td>
+          <td class="gloss">lit. over the sea rises the bright moon; we share this hour to the end of the world</td>
+        </tr>
+        <tr>
+          <td class="l">Svenska</td>
+          <td class="si18n">Över havet stiger den klara månen;<br>vi delar denna stund vid världens ände.</td>
+          <td class="gloss">lit. over the sea rises the clear moon; we share this hour at the world's end — hav/sea · måne/moon · stund/moment</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="teach-note">
+    <strong data-both><span data-zh>教学注 · 这颗月亮的「语法性别」</span><span data-en>Teaching note · the moon's grammatical gender</span></strong>
+    <span data-zh>：la lune（法·阴）、der Mond（德·阳）、the moon（英·无）、月（中·无）、candra（梵·阳）——语言孕育了我们看待世界的方式。正式成片前，所有译文须经 §10 审校。</span>
+    <span data-en> &nbsp;la lune (Fr·feminine), der Mond (De·masculine), the moon (En·none), 月 (Zh·none), candra (Sa·masculine) — grammar shapes how we see the world. All renderings must pass §10 review before release.</span>
+  </div>
+</section>
+
+<!-- ═══ GLOSSARY ═══ -->
+<section class="section band-soft" id="glossary">
+  <div class="section-header">
+    <h2><span data-zh>核心术语表</span><span data-en>Core Glossary</span></h2>
+    <div class="subtitle"><span data-zh>水 · 月 · 心 —— 十二个心象词 × 八语，全期一致性的底表</span><span data-en>Twelve image-words × eight tongues — the consistency floor for every episode</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="gloss-wrap">
+    <table class="gloss-table">
+      <thead>
+        <tr>
+          <th><span data-zh>概念</span><span data-en>Concept</span></th>
+          <th>zh</th><th>en</th><th>fr</th><th>ja</th><th>sa</th><th>la</th><th>de</th><th>sv</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="concept"><span data-zh>水 · Water</span><span data-en>Water</span></td><td>水</td><td>water</td><td>eau</td><td class="gja">水（みず）</td><td class="gsa">jala जल</td><td>aqua</td><td>Wasser</td><td>vatten</td></tr>
+        <tr><td class="concept"><span data-zh>月 · Moon</span><span data-en>Moon</span></td><td>月</td><td>moon</td><td>lune</td><td class="gja">月（つき）</td><td class="gsa">candra चन्द्र</td><td>luna</td><td>Mond</td><td>måne</td></tr>
+        <tr><td class="concept"><span data-zh>心 · Heart</span><span data-en>Heart</span></td><td>心</td><td>heart</td><td>cœur</td><td class="gja">心（こころ）</td><td class="gsa">hṛdaya हृदय</td><td>cor</td><td>Herz</td><td>hjärta</td></tr>
+        <tr><td class="concept"><span data-zh>时间 · Time</span><span data-en>Time</span></td><td>时</td><td>time</td><td>temps</td><td class="gja">時（とき）</td><td class="gsa">kāla काल</td><td>tempus</td><td>Zeit</td><td>tid</td></tr>
+        <tr><td class="concept"><span data-zh>海 · Sea</span><span data-en>Sea</span></td><td>海</td><td>sea</td><td>mer</td><td class="gja">海（うみ）</td><td class="gsa">samudra समुद्र</td><td>mare</td><td>Meer</td><td>hav</td></tr>
+        <tr><td class="concept"><span data-zh>自由 · Freedom</span><span data-en>Freedom</span></td><td>自由</td><td>freedom</td><td>liberté</td><td class="gja">自由（じゆう）</td><td class="gsa">mokṣa / स्वतन्त्र</td><td>libertas</td><td>Freiheit</td><td>frihet</td></tr>
+        <tr><td class="concept"><span data-zh>茶 · Tea</span><span data-en>Tea</span></td><td>茶</td><td>tea</td><td>thé</td><td class="gja">茶（ちゃ）</td><td class="gsa">cāya चाय</td><td>(theria 借)</td><td>Tee</td><td>te</td></tr>
+        <tr><td class="concept"><span data-zh>寂静 · Silence</span><span data-en>Silence</span></td><td>静</td><td>silence</td><td>silence</td><td class="gja">静けさ（しずけさ）</td><td class="gsa">śāntiḥ शान्तिः</td><td>silentium</td><td>Stille</td><td>tystnad</td></tr>
+        <tr><td class="concept"><span data-zh>树 · Tree</span><span data-en>Tree</span></td><td>树</td><td>tree</td><td>arbre</td><td class="gja">木（こ）</td><td class="gsa">vṛkṣa वृक्ष</td><td>arbor</td><td>Baum</td><td>träd</td></tr>
+        <tr><td class="concept"><span data-zh>风 · Wind</span><span data-en>Wind</span></td><td>风</td><td>wind</td><td>vent</td><td class="gja">風（かぜ）</td><td class="gsa">vāta वात</td><td>ventus</td><td>Wind</td><td>vind</td></tr>
+        <tr><td class="concept"><span data-zh>光 · Light</span><span data-en>Light</span></td><td>光</td><td>light</td><td>lumière</td><td class="gja">光（ひかり）</td><td class="gsa">jyoti ज्योति</td><td>lux</td><td>Licht</td><td>ljus</td></tr>
+        <tr><td class="concept"><span data-zh>自然 · Nature</span><span data-en>Nature</span></td><td>自然</td><td>nature</td><td>nature</td><td class="gja">自然（しぜん）</td><td class="gsa">prakṛti प्रकृति</td><td>natura</td><td>Natur</td><td>natur</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="teach-note">
+    <span data-both>
+      <span data-zh>词汇本身即是故事：<em>prakṛti</em>（自然/本性与「造」同根）、<em>Zeit</em> 与 <em>tid</em> 同属印欧 *dī-（分开）……每一行都可能长出一条 E 型词源片。完整底表见 <code>02_corpus/glossary.md</code>。</span>
+      <span data-en>Each word is already a story: prakṛti shares a root with "make"; Zeit and tid both descend from PIE *dī- (to divide)… every row is a potential etymology episode.</span>
+    </span>
+  </div>
+</section>
+
+<!-- ═══ ROADMAP ═══ -->
+<section class="section band-paper" id="roadmap">
+  <div class="section-header">
+    <h2><span data-zh>路线图</span><span data-en>Roadmap</span></h2>
+    <div class="subtitle"><span data-zh>先跑通全链，再谈放量——从一艘船到一张帆</span><span data-en>Prove the whole chain before scaling — one boat first, then a sail</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="road">
+    <div class="road-item"><span class="dot">P0</span><div><h4><span data-zh>地基</span><span data-en>Foundation</span> <span class="when">· 第 1–2 周</span></h4><p><span data-zh>设计包 + 语料 schema + 工具脚本：8 张身份卡 · 5 张主题卡 · JSON schema · TTS 与素材验证。</span><span data-en>Design kit, corpus schema, and tools: 8 identity cards, 5 theme cards, JSON schema, TTS &amp; footage validation.</span></p></div></div>
+    <div class="road-item"><span class="dot">P1</span><div><h4><span data-zh>试片</span><span data-en>Pilots</span> <span class="when">· 第 3–6 周</span></h4><p><span data-zh>5 条宽屏（16:9）试片跑通全链：A 型×3 + C 型×1 + E 型×1（首批清单见下）。</span><span data-en>Five widescreen (16:9) pilots through the whole pipeline: A×3, C×1, E×1 (list below).</span></p></div></div>
+    <div class="road-item"><span class="dot">P2</span><div><h4><span data-zh>全 8 语链路</span><span data-en>All-8-Chain</span> <span class="when">· 第 1–2 月</span></h4><p><span data-zh>sa / la 的语音策略落地（学者→Indic TTS→兜底），首条 B 型长视频 + 例行周更。</span><span data-en>Voice strategy for Sanskrit and Latin lands; first B-type long video and the weekly rhythm begins.</span></p></div></div>
+    <div class="road-item"><span class="dot">P3</span><div><h4><span data-zh>系列化</span><span data-en>Series</span> <span class="when">· 季度</span></h4><p><span data-zh>5 主题 × 8 条 = 40 条主线 + 一词万境 100+；主题合集播放列表 + GitHub Pages 剧场。</span><span data-en>Five themes × eight episodes = 40 mains plus 100+ word cards; collection playlists and the Pages theatre.</span></p></div></div>
+    <div class="road-item"><span class="dot">P4</span><div><h4><span data-zh>交互</span><span data-en>Interactivity</span> <span class="when">· 半年+</span></h4><p><span data-zh>叠字阅读器 + 跟读模式；学习模式与共同翻译社区。</span><span data-en>The stacked-glyph reader and read-after-me mode; a learning mode and a community translation space.</span></p></div></div>
+  </div>
+</section>
+
+<!-- ═══ PILOTS ═══ -->
+<section class="section band-dark" id="pilots">
+  <div class="section-header dark">
+    <h2><span data-zh>首批试片</span><span data-en>First Pilots</span></h2>
+    <div class="subtitle"><span data-zh>P1 五条：先出 5 条试片跑通全链，再放量</span><span data-en>Five pilots prove the chain before anything scales</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="pilot-grid">
+    <div class="pilot-card">
+      <span class="typ">A 叠式</span>
+      <h5><span data-zh>《一镜八澜 · 月》</span><span data-en>One Mirror, Eight Ripples · Moon</span></h5>
+      <p><span data-zh>张九龄「海上生明月，天涯共此时」</span><span data-en>Zhang Jiuling's moon over the sea</span></p>
+      <div class="why">— <span data-zh>全 8 语齐发力 · 人心所向</span><span data-en>all eight tongues fire at once</span></div>
+    </div>
+    <div class="pilot-card">
+      <span class="typ">A 叠式</span>
+      <h5><span data-zh>《海之名词学》</span><span data-en>The Taxonomy of the Sea</span></h5>
+      <p><span data-zh>一「海」水之一体，八语之名（印欧词族 + 汉字）</span><span data-en>one sea, eight names: the Indo-European web meets Hanzi</span></p>
+      <div class="why">— <span data-zh>E 型词源前置，双格式复用</span><span data-en>front-loads the etymology format</span></div>
+    </div>
+    <div class="pilot-card">
+      <span class="typ">C 词卡</span>
+      <h5><span data-zh>一词万境 #1 · lagom</span><span data-en>Word of the Day #1 · lagom</span></h5>
+      <p><span data-zh>瑞典语「适度」——不多不少，恰如其分</span><span data-en>Swedish "just right, not too much"</span></p>
+      <div class="why">— <span data-zh>预热瑞典语 + 不可译话题</span><span data-en>preheats Swedish and the untranslatable</span></div>
+    </div>
+    <div class="pilot-card">
+      <span class="typ">F 轮诵</span>
+      <h5><span data-zh>《七语八澜 · 冬》</span><span data-en>Seven Tongues, Eight Ripples · Winter</span></h5>
+      <p><span data-zh>冬之微诗 / 寒夜短句（自制原文，免责安全）</span><span data-en>original winter micro-poems — rights-safe by design</span></p>
+      <div class="why">— <span data-zh>时节即流量</span><span data-en>seasonality is traffic</span></div>
+    </div>
+    <div class="pilot-card">
+      <span class="typ">E 词源</span>
+      <h5><span data-zh>《语之谱系 · 心》</span><span data-en>The Lineage of a Word · Heart</span></h5>
+      <p><span data-zh>heart / cœur / cor / Herz / hjärta / हृदय / 心 —— 同源与殊途</span><span data-en>one root, seven heirs, same source, separate roads</span></p>
+      <div class="why">— <span data-zh>教育感最强 · 收藏率高</span><span data-en>the most teachable, the most saved</span></div>
+    </div>
+  </div>
+
+  <div class="pillar-hint">
+    <span data-zh>验收口径：5 条全部通过 §11 质检清单，发布 14 天后复盘（完播 · 收藏 · 评论词云）。</span>
+    <span data-en>Acceptance: all five pass the §11 QA checklist; review after 14 days — completion, saves, comment clouds.</span>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="motto">
+    <span data-zh>叠 · 织 · 照 —— 慢慢织，慢慢亮</span>
+    <span data-en>Stack · Weave · Illuminate — weave slowly, light gently</span>
+  </div>
+  <p data-both>
+    <span data-zh>一意而万语，一镜而八澜 · 舟洲粥 · 第六域</span>
+    <span data-en>One meaning, a thousand tongues; one mirror, eight ripples · Zhōu Zhōu Zhōu · The Sixth Domain</span>
+  </p>
+  <p style="margin-top:0.8rem;">
+    <a href="../../Language%20Stacking-Linguistic%20Weaving/README.md" target="_blank" rel="noopener">
+      <span data-zh>总体规划 README</span><span data-en>Master Plan README</span></a>
+    &nbsp;·&nbsp;
+    <a href="../../Language%20Stacking-Linguistic%20Weaving/LANGUAGES_LINGUISTIC_EXPANSION.md" target="_blank" rel="noopener">
+      <span data-zh>32 语扩展蓝图</span><span data-en>32-Language Expansion</span></a>
+    &nbsp;·&nbsp;
+    <a href="../../Language%20Stacking-Linguistic%20Weaving/AI_VIDEO_FREE_TOOLS_RESEARCH.md" target="_blank" rel="noopener">
+      <span data-zh>免费 AI 视频全栈工具调研 v2</span><span data-en>Free AI-Video Toolchain Survey v2</span></a>
+    &nbsp;·&nbsp;
+    <a href="../index.html">
+      <span data-zh>回到舟洲粥首页</span><span data-en>Back to Zhōuzhōuzhōu home</span></a>
+  </p>
+</footer>
+
+<!-- ═══ JS ═══ -->
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Language toggle
+const toggle = document.getElementById('langToggle');
+const buttons = toggle.querySelectorAll('button');
+
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('ls-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+}
+
+const saved = localStorage.getItem('ls-lang');
+if (saved) setLang(saved);
+
+buttons.forEach(b => {
+  b.addEventListener('click', () => setLang(b.dataset.lang));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: Learning CI
+
+on:
+  push:
+    paths:
+      - "Language Stacking-Linguistic Weaving/**"
+      - "docs/language_stacking/**"
+  pull_request:
+    paths:
+      - "Language Stacking-Linguistic Weaving/**"
+      - "docs/language_stacking/**"
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r "Language Stacking-Linguistic Weaving/web/requirements.txt"
+
+      - name: Validate knowledge sources + build pages + sqlite index
+        run: python "Language Stacking-Linguistic Weaving/web/build_learning.py" --validate --db --check
+
+      - name: Export neo4j cypher (phase-2 graph seam)
+        run: python "Language Stacking-Linguistic Weaving/web/export_neo4j.py" --quiet
+
+      - name: Run pytest suite
+        run: python -m pytest "Language Stacking-Linguistic Weaving/web/tests" -q
+
+      # 铁律: 改源即重建并提交产物；页面与源不一致则 CI 失败
+      - name: Enforce source → output sync
+        run: git diff --exit-code -- "docs/language_stacking/learning/"
