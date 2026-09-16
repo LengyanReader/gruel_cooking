@@ -478,7 +478,16 @@ def cultural_html(data):
         )
     return ('<div class="gloss-wrap"><table class="gloss-table cult-table"><thead><tr>'
             "<th>音</th><th>語</th><th>季語 sea</th><th>美学 art</th><th>典故 ref</th>"
-            "</tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>")
+            "</tr></thead><tbody>" + "".join(rows) + "</tbody></table>"
+            '<p class="cult-src" data-zh>一手出处 · 溯源：'
+            '季語——<a href="https://ja.wikipedia.org/wiki/季語" target="_blank" rel="noopener">歳時記·季題分類</a>'#（季語 sea 列）
+            '美学——<a href="https://ja.wikisource.org/wiki/「いき」の構造" target="_blank" rel="noopener">九鬼周造『「いき」の構造』ウィキソース全文</a>' #（美学 art 列)
+            '典故——<a href="https://ja.wikipedia.org/wiki/もののあはれ" target="_blank" rel="noopener">本居宣長·もののあはれ</a>' #（典故 ref 列)</p>'
+            '<p class="cult-src" data-en>primary sources: '
+            '<a href="https://ja.wikipedia.org/wiki/季語" target="_blank" rel="noopener">kigo — saijiki seasonal vocabulary</a>'
+             ' · <a href="https://www.aozora.gr.jp/cards/000065/files/393_1765.html" target="_blank" rel="noopener">Kuki Shūzō, The Structure of Iki</a>'
+            ' · <a href="https://ja.wikipedia.org/wiki/もののあはれ" target="_blank" rel="noopener">Motoori Norinaga, mono-no-aware</a></p>'
+            "</div>")
 
 
 def _origin_row(c):
