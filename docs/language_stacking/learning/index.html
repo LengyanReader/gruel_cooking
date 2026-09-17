@@ -353,6 +353,8 @@ python &quot;Language Stacking-Linguistic Weaving/web/export_neo4j.py&quot;     
       law: kmRow(kmBi('拍 / morae', 'morae'), kmEsc(String(mseq.length)) + beats(mseq))
             + kmRow(kmBi('读法', 'reading'), kmEsc(d.kana || h))
             + '<a class="km-link" href="#ring-law">' + kmBi('第五旋 · 律 · 音调四型 →', 'Ring 5 · Law · four pitch types →') + '</a>'
+            + ' <a class="ojad-link" target="_blank" rel="noopener" href="https://www.gavo.t.u-tokyo.ac.jp/ojad/search/index/word:'
+            + encodeURIComponent(d.kana || h) + '">' + kmBi('OJAD 声调', 'OJAD accent') + '</a>'
             + (d.kana ? kmPlay(d.kana, en ? 'word' : '读词') : '')
     };
     ['shape', 'word', 'sense', 'root', 'law'].forEach(function (k) {

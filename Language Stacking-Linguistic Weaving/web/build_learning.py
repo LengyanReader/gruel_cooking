@@ -25,6 +25,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 
 try:
     import markdown
@@ -331,6 +332,8 @@ PAGE = """<!DOCTYPE html>
       law: kmRow(kmBi('拍 / morae', 'morae'), kmEsc(String(mseq.length)) + beats(mseq))
             + kmRow(kmBi('读法', 'reading'), kmEsc(d.kana || h))
             + '<a class="km-link" href="#ring-law">' + kmBi('第五旋 · 律 · 音调四型 →', 'Ring 5 · Law · four pitch types →') + '</a>'
+            + ' <a class="ojad-link" target="_blank" rel="noopener" href="https://www.gavo.t.u-tokyo.ac.jp/ojad/search/index/word:'
+            + encodeURIComponent(d.kana || h) + '">' + kmBi('OJAD 声调', 'OJAD accent') + '</a>'
             + (d.kana ? kmPlay(d.kana, en ? 'word' : '读词') : '')
     }};
     ['shape', 'word', 'sense', 'root', 'law'].forEach(function (k) {{
@@ -693,7 +696,8 @@ def vocab_html(data):
              f'<td><span class="kw2">{e(v["kanji"])}</span> '
              f'<span class="furigana">{e(v["kana"])}</span>'
              f'<span class="rom">{e(v["rom"])}</span>'
-             f'<button type="button" class="word-play" data-say="{e(v["kana"])}" title="读词 / speak word">&#9654;</button><br>'
+             f'<button type="button" class="word-play" data-say="{e(v["kana"])}" title="读词 / speak word">&#9654;</button>'
+             f'{ojad_link(v["kana"])}<br>'
              f'<span class="min-tr" data-zh>{e(v["meaning_zh"])}</span>'
              f'<span class="min-tr" data-en>{e(v["meaning_en"])}</span></td>'
              f'<td class="lyr"><span class="lyr-badge" data-zh>{e(v.get("layer_zh", ""))}</span>'
@@ -741,11 +745,24 @@ def mora_split(s):
     return out
 
 
-def beats_html(s, cap=10):
+def beats_html(s, cap=10, always=False):
     m = mora_split(s)
     if not m or len(m) > cap:
         return ""
-    return '<span class="beats" aria-hidden="true">' + "".join("<i></i>" for _ in m) + "</span>"
+    cls = "beats on" if always else "beats"
+    return f'<span class="{cls}" aria-hidden="true">' + "".join("<i></i>" for _ in m) + "</span>"
+
+
+OJAD_SEARCH = "https://www.gavo.t.u-tokyo.ac.jp/ojad/search/index/word:"
+
+
+def ojad_link(kana, label="調", cls="ojad-link"):
+    """指向 OJAD 该词的声调查询页（把「以 OJAD 为准」变成可点核验）。"""
+    if not kana:
+        return ""
+    u = OJAD_SEARCH + urllib.parse.quote(kana, safe="")
+    return (f'<a class="{cls}" href="{u}" target="_blank" rel="noopener" '
+            f'title="OJAD 声调核验 / accent lookup">{label}</a>')
 
 
 def pitch_svg(seq, w=148, h=56):
@@ -795,7 +812,7 @@ def prosody_html(data):
             x = m.get(key) or {}
             if not x:
                 continue
-            bts = "".join("<i></i>" for _ in mora_split(x.get("kana", "")))
+            bts = beats_html(x.get("kana", ""), always=True)
             temps = "".join(
                 f'<button type="button" class="word-play tempo" data-say="{e(x.get("kana", ""))}" '
                 f'data-rate="{r}" title="{t}">&#9654;{t}</button>'
@@ -803,7 +820,7 @@ def prosody_html(data):
             exs.append(
                 f'<div class="pr-ex"><span class="pr-kana" lang="ja">{e(x.get("kana", ""))}</span>'
                 f'<span class="pr-rom">{e(x.get("rom", ""))}</span>'
-                f'<span class="beats on">{bts}</span>'
+                f'{bts}{ojad_link(x.get("kana", ""))}'
                 f'<span class="pr-cap" data-zh>{e(x.get("zh", ""))}</span>'
                 f'<span class="pr-cap" data-en>{e(x.get("en", ""))}</span>'
                 f'<span class="pr-tempo">{temps}</span></div>')
@@ -852,10 +869,12 @@ def prosody_html(data):
             if not o:
                 return ""
             return (f'<span class="mp-kana" lang="ja">{e(o.get("kana", ""))}</span>'
+                    f'{beats_html(o.get("kana", ""), always=True)}'
                     f'<span class="mp-rom">{e(o.get("rom", ""))}</span>'
                     f'<span class="mp-m" data-zh>{e(o.get("zh", ""))}</span>'
                     f'<span class="mp-m" data-en>{e(o.get("en", ""))}</span>'
-                    f'<button type="button" class="word-play" data-say="{e(o.get("kana", ""))}">&#9654;</button>')
+                    f'<button type="button" class="word-play" data-say="{e(o.get("kana", ""))}">&#9654;</button>'
+                    f'{ojad_link(o.get("kana", ""))}')
         rows = []
         for pair in mp:
             sides = (f'<div class="mp-side">{_mp_cell(pair.get("a"))}</div>'
@@ -1029,7 +1048,8 @@ def cultural_html(data):
              f'<td><span class="kw2">{e(v["kanji"])}</span> '
              f'<span class="furigana">{e(v["kana"])}</span>'
              f'<span class="rom">{e(v["rom"])}</span>'
-             f'<button type="button" class="word-play" data-say="{e(v["kana"])}" title="读词 / speak word">&#9654;</button><br>'
+             f'<button type="button" class="word-play" data-say="{e(v["kana"])}" title="读词 / speak word">&#9654;</button>'
+             f'{ojad_link(v["kana"])}<br>'
              f'<span class="min-tr" data-zh>{e(v["meaning_zh"])}</span>'
              f'<span class="min-tr" data-en>{e(v["meaning_en"])}</span></td>'
              f'<td class="lyr"><span class="lyr-badge" data-zh>{e(v.get("layer_zh", ""))}</span>'

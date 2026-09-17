@@ -212,6 +212,22 @@ def test_vocab_and_cultural_word_play_buttons():
     assert ch.count('class="word-play"') == 46
     # 发音目标为词的假名读音（雨 → あめ）
     assert 'class="word-play" data-say="\u3042\u3081"' in vh
+    # 每词挂 OJAD 声调核验深链（把「以 OJAD 为准」变为可点）
+    assert vh.count('class="ojad-link"') == 46
+    assert ch.count('class="ojad-link"') == 46
+    assert "ojad/search/index/word:%E3%81%82%E3%82%81" in vh  # あめ
+
+
+def test_ojad_links_are_encoded_and_https():
+    data = json.loads(bl.read(DATA_JA))
+    html = bl.vocab_html(data)
+    for v in data["vocab"]:
+        assert bl.ojad_link(v["kana"]).startswith('<a class="ojad-link" href="https://')
+    assert bl.ojad_link("") == ""
+    # 最小对立对：拍点常显 + OJAD
+    ph = bl.prosody_html(data)
+    assert "mp-side" in ph and 'class="beats on"' in ph
+    assert "ojad/search/index/word:" in ph
 
 
 def test_modal_mandala_markup_and_js():
@@ -326,6 +342,9 @@ def test_page_js_beat_overlay_and_rate():
     assert "show-beats" in html
     assert "mm-reverse" in html
     assert "data-rate" in html
+    # 弹窗律卫星的 OJAD 深链（按词编码）
+    assert "ojad/search/index/word:" in html
+    assert "encodeURIComponent" in html
 
 
 # ── 校验 ───────────────────────────────────────────────────────

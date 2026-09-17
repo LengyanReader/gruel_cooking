@@ -406,6 +406,10 @@ body.mm-reverse .mm-root::after { content: ' \21ba'; color: var(--ls-moon-dim); 
 .mp-m { font-size: 0.7rem; color: var(--ink-soft); }
 .mp-why { margin-top: 0.25rem; font-size: 0.72rem; color: var(--ink-mid); }
 .mp-src { font-size: 0.64rem; color: var(--accent-teal); }
+.ojad-link { display: inline-block; margin-left: 0.28rem; padding: 0 5px; font-size: 0.62rem; line-height: 1.35; vertical-align: middle; border: 1px solid rgba(201,164,101,0.5); border-radius: 5px; background: rgba(242,217,160,0.16); color: var(--ink-mid); text-decoration: none; }
+.ojad-link:hover { background: var(--ls-moon-dim); color: var(--ls-night-2); }
+.mp-side .beats { margin-left: 0; }
+.mp-side .ojad-link { margin-left: 0; }
 
 /* ── 律旋附：图 · 影 · 拓展 ── */
 .media-fig, .media-vid { margin: 0 0 0.8rem; }
