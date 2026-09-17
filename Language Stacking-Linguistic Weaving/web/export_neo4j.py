@@ -70,12 +70,16 @@ def export_cypher(db_path):
     modules = _rows(cur, "SELECT * FROM modules ORDER BY lang, id")
     sounds = _rows(cur, "SELECT * FROM chart_cells ORDER BY lang, module, row, col")
     words = _rows(cur, "SELECT * FROM vocab ORDER BY lang, module, id")
+    accents = _rows(cur, "SELECT * FROM accent_types ORDER BY lang, module, num")
+    pairs = _rows(cur, "SELECT * FROM mpairs ORDER BY lang, module, idx")
+    media = _rows(cur, "SELECT * FROM media_links ORDER BY lang, module, kind")
 
     L = []
     L.append("// 语言叠织 · Language Stacking — neo4j 导入脚本")
     L.append(f"// 生成: {date.today().isoformat()} · export_neo4j.py · 从 learning.db 导出")
     L.append(f"// 规模: Language={len(languages)} Module={len(modules)} "
-             f"Sound={len(sounds)} Word={len(words)}")
+             f"Sound={len(sounds)} Word={len(words)} "
+             f"Accent={len(accents)} Pair={len(pairs)} Resource={len(media)}")
     L.append("")
 
     for l in languages:
@@ -128,6 +132,53 @@ def export_cypher(db_path):
                        f"module: \"{cypher_escape(w['module'])}\", "
                        f"id: \"{cypher_escape(w['id'])}\"}})"
                        f" MERGE (m)-[:HAS_WORD]->(w)"))
+
+    # ── 律：声调类型 Accent + 最小对立对 Pair（逐词音调只存出处，不臆造）──
+    for a in accents:
+        L.append(cstmt(f"MERGE (ac:Accent {{lang: \"{cypher_escape(a['lang'])}\", "
+                       f"module: \"{cypher_escape(a['module'])}\", num: {a['num']}}})"
+                       f" SET ac.name_zh=\"{cypher_escape(a['name_zh'])}\", "
+                       f"ac.name_en=\"{cypher_escape(a['name_en'])}\", "
+                       f"ac.seq=\"{cypher_escape(a['seq'])}\", "
+                       f"ac.zh=\"{cypher_escape(a['zh'])}\", "
+                       f"ac.en=\"{cypher_escape(a['en'])}\""))
+        L.append(cstmt(f"MATCH (m:Module {{lang: \"{cypher_escape(a['lang'])}\", "
+                       f"id: \"{cypher_escape(a['module'])}\"}}), "
+                       f"(ac:Accent {{lang: \"{cypher_escape(a['lang'])}\", "
+                       f"module: \"{cypher_escape(a['module'])}\", num: {a['num']}}})"
+                       f" MERGE (m)-[:HAS_ACCENT]->(ac)"))
+
+    for p in pairs:
+        L.append(cstmt(f"MERGE (pa:Pair {{lang: \"{cypher_escape(p['lang'])}\", "
+                       f"module: \"{cypher_escape(p['module'])}\", idx: {p['idx']}}})"
+                       f" SET pa.kind=\"{cypher_escape(p['kind'])}\", "
+                       f"pa.a_kana=\"{cypher_escape(p['a_kana'])}\", "
+                       f"pa.a_rom=\"{cypher_escape(p['a_rom'])}\", "
+                       f"pa.b_kana=\"{cypher_escape(p['b_kana'])}\", "
+                       f"pa.b_rom=\"{cypher_escape(p['b_rom'])}\", "
+                       f"pa.c_kana=\"{cypher_escape(p['c_kana'])}\", "
+                       f"pa.c_rom=\"{cypher_escape(p['c_rom'])}\", "
+                       f"pa.zh=\"{cypher_escape(p['zh'])}\", "
+                       f"pa.en=\"{cypher_escape(p['en'])}\", "
+                       f"pa.src=\"{cypher_escape(p['src'])}\""))
+        L.append(cstmt(f"MATCH (m:Module {{lang: \"{cypher_escape(p['lang'])}\", "
+                       f"id: \"{cypher_escape(p['module'])}\"}}), "
+                       f"(pa:Pair {{lang: \"{cypher_escape(p['lang'])}\", "
+                       f"module: \"{cypher_escape(p['module'])}\", idx: {p['idx']}}})"
+                       f" MERGE (m)-[:HAS_PAIR]->(pa)"))
+
+    # ── 图·影·拓展：Resource（统一为可复用链接资源）──
+    for md in media:
+        L.append(cstmt(f"MERGE (res:Resource {{url: \"{cypher_escape(md['url'])}\"}})"
+                       f" SET res.kind=\"{cypher_escape(md['kind'])}\", "
+                       f"res.title_zh=\"{cypher_escape(md['title_zh'])}\", "
+                       f"res.title_en=\"{cypher_escape(md['title_en'])}\", "
+                       f"res.note_zh=\"{cypher_escape(md['note_zh'])}\", "
+                       f"res.note_en=\"{cypher_escape(md['note_en'])}\""))
+        L.append(cstmt(f"MATCH (m:Module {{lang: \"{cypher_escape(md['lang'])}\", "
+                       f"id: \"{cypher_escape(md['module'])}\"}}), "
+                       f"(res:Resource {{url: \"{cypher_escape(md['url'])}\"}})"
+                       f" MERGE (m)-[:HAS_RESOURCE]->(res)"))
 
     # ── 织网库：Core Glossary 校准概念（权威，probe=false）──
     glossary = _rows(cur, "SELECT * FROM concepts ORDER BY id")

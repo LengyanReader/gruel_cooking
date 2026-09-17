@@ -66,6 +66,13 @@ PAGE = """<!DOCTYPE html>
     <div class="voice-wrap">
       <label class="voice-label" for="voice-picker"><span data-zh>声线</span><span data-en>voice</span></label>
       <select id="voice-picker" class="voice-picker" aria-label="voice selector"></select>
+      <button id="voice-status" class="voice-status" type="button" title="重新检测声线"><span data-zh>语音检测中…</span><span data-en>scanning…</span></button>
+      <label class="voice-label" for="tempo-picker"><span data-zh>语速</span><span data-en>tempo</span></label>
+      <select id="tempo-picker" class="voice-picker" aria-label="tempo selector">
+        <option value="0.7">慢 · slow</option>
+        <option value="1.0" selected>中 · mid</option>
+        <option value="1.4">快 · fast</option>
+      </select>
     </div>
     <div class="lang-toggle" aria-label="language">
       <button data-lang="zh" type="button">中</button>
@@ -154,29 +161,103 @@ PAGE = """<!DOCTYPE html>
   }}
   window._lastKanaVoice = null;
   try {{ window._lastKanaVoice = localStorage.getItem('ls-jp-voice') || null; }} catch (e) {{}}
+  var _voiceSig = '';
+  function setVoiceStatus(jaCount, total, lackText) {{
+    var st = document.getElementById('voice-status');
+    if (!st) return;
+    window._jaVoiceCount = jaCount;
+    var zh = (jaCount > 0 ? '日语声线 ' + jaCount : '未检测到日语声线') + ' · 共 ' + total;
+    var en = (jaCount > 0 ? 'ja voices ' + jaCount : 'no Japanese voice') + ' · total ' + total;
+    var zhNode = st.querySelector('[data-zh]'), enNode = st.querySelector('[data-en]');
+    if (zhNode) zhNode.textContent = zh;
+    if (enNode) enNode.textContent = en;
+    st.classList.toggle('no-ja', jaCount === 0);
+    st.title = lackText;
+  }}
+  function rescanVoices(force) {{
+    if (!('speechSynthesis' in window)) {{
+      setVoiceStatus(0, 0, '此浏览器不支持语音合成 speechSynthesis');
+      return;
+    }}
+    var all = jaVoices();
+    var ja = all.filter(function (v) {{ return (v.lang || '').replace(/_/g, '-').toLowerCase().indexOf('ja') === 0; }});
+    var lack = ja.length
+      ? ''
+      : (document.body.classList.contains('lang-en')
+         ? 'No Japanese TTS voice found — install one (Windows: Settings → Time & language → Language → add 日本語 and its voice; macOS: 系统设置 → 辅助功能 → 朗读内容 → 系统声音; Android/iOS: add Japanese data to Google TTS). Then tap here to rescan.'
+         : '未找到可朗读日语的声线，播放会静音。Windows: 设置 → 时间和语言 → 语言 → 添加 日本語(日本) → 点击其「语音」并下载。macOS: 系统设置 → 辅助功能 → 朗读内容 → 系统声音 → 管理声音 添加 ja-JP(如 Kyoko)。安装后点这里重新检测。');
+    setVoiceStatus(ja.length, all.length, lack);
+    fillVoicePicker(all);
+    return ja.length;
+  }}
   function fillVoicePicker(vs) {{
     var pick = document.getElementById('voice-picker');
     if (!pick) return;
-    if (pick.getAttribute('data-filled') === '1') return;
-    pick.setAttribute('data-filled', '1');
+    var sig = (vs || []).map(function (v) {{ return v.voiceURI; }}).join('|');
+    if (sig === _voiceSig && pick.options.length > 1) return;
+    _voiceSig = sig;
     pick.innerHTML = '';
     var auto = document.createElement('option');
     auto.value = '';
-    auto.textContent = '✨ ' + (document.body.classList.contains('lang-en') ? 'auto (local first)' : '自动（本地声线优先）');
+    auto.textContent = (document.body.classList.contains('lang-en') ? 'auto (first ja voice)' : '自动（首选日语声线）');
     pick.appendChild(auto);
     vs.forEach(function (v) {{
       var o = document.createElement('option');
       o.value = v.voiceURI;
       var short = (v.name || '').replace(/^Microsoft |^Google /, '');
-      var where = v.localService ? (document.body.classList.contains('lang-en') ? 'local' : '本地') : (document.body.classList.contains('lang-en') ? 'online' : '在线');
-      o.textContent = (window._lastKanaVoice === v.voiceURI ? '✓ ' : '') + '[' + where + '] ' + short + ' · ' + (v.lang || '');
+      var ja = (v.lang || '').replace(/_/g, '-').toLowerCase().indexOf('ja') === 0;
+      var where = v.localService ? 'local' : 'online';
+      o.textContent = (window._lastKanaVoice === v.voiceURI ? '✓ ' : '') + '[' + where + (ja ? '' : ' · 非日语') + '] ' + short + ' · ' + (v.lang || '');
       pick.appendChild(o);
     }});
-    pick.value = window._lastKanaVoice || '';
+    pick.value = (window._lastKanaVoice && pick.querySelector('option[value="' + window._lastKanaVoice.replace(/"/g, '\\"') + '"]')) ? window._lastKanaVoice : '';
     pick.addEventListener('change', function () {{
       window._lastKanaVoice = this.value || null;
       try {{ localStorage.setItem('ls-jp-voice', this.value || ''); }} catch (e) {{}}
     }});
+  }}
+  var vsBtn = document.getElementById('voice-status');
+  if (vsBtn) vsBtn.addEventListener('click', function () {{
+    rescanVoices(true);
+    liaToast(document.body.classList.contains('lang-en')
+      ? 'Rescanned ' + window._jaVoiceCount + ' Japanese voice(s)'
+      : '重新检测：日语声线 ' + window._jaVoiceCount + ' 个');
+  }});
+  function resolveTempo() {{
+    try {{ var v = parseFloat(localStorage.getItem('ls-jp-tempo') || ''); if (isFinite(v) && v > 0) return v; }} catch (e) {{}}
+    return 1.0;
+  }}
+  var tempoPick = document.getElementById('tempo-picker');
+  if (tempoPick) {{
+    tempoPick.value = String(resolveTempo());
+    tempoPick.addEventListener('change', function () {{
+      try {{ localStorage.setItem('ls-jp-tempo', this.value || ''); }} catch (e) {{}}
+    }});
+  }}
+  function liaToast(msg) {{
+    var t = document.getElementById('lia-toast');
+    if (!t) {{
+      t = document.createElement('div');
+      t.id = 'lia-toast';
+      t.className = 'lia-toast';
+      document.body.appendChild(t);
+    }}
+    t.textContent = msg;
+    t.className = 'lia-toast show';
+    clearTimeout(t._tm);
+    t._tm = setTimeout(function () {{ t.className = 'lia-toast'; }}, 5000);
+  }}
+  function liaToastSpeech(code, jaCount) {{
+    var EN = document.body.classList.contains('lang-en');
+    if (code === 'not-allowed') {{
+      liaToast(EN ? 'Speech blocked by browser — tap once then retry.' : '浏览器拦截了语音合成——先点一次页面再试。');
+    }} else if (code === 'language-unavailable' || code === 'no-speech' || code === 'synthesis-failed') {{
+      liaToast(EN
+        ? 'Could not speak Japanese (voice ' + jaCount + '). Install a Japanese TTS voice, then tap the voice button to rescan.'
+        : '无法朗读日语（识别到日语声线 ' + jaCount + ' 个）。请安装日语语音包后点击声线徽标重新检测。');
+    }} else {{
+      liaToast(EN ? 'Speech error: ' + (code || 'unknown') : '语音出错：' + (code || '未知'));
+    }}
   }}
   window.kanaSpeak = function (kana, voiceURI, rate) {{
     try {{
@@ -186,26 +267,30 @@ PAGE = """<!DOCTYPE html>
         // 绝不拼罗马音（拉丁字母会被 TTS 按外语念，音与日语不符）
         text = text + '、' + text;
       }}
-      var rt = (typeof rate === 'number' && rate > 0) ? rate : 1.0;
+      var rt = (typeof rate === 'number' && rate > 0) ? rate : resolveTempo();
       var u = new SpeechSynthesisUtterance(text);
       u.lang = 'ja-JP';
       u.rate = rt;
       u.pitch = 1.1;
       var vs = jaVoices();
+      var jaCount = vs.filter(function (vv) {{ return (vv.lang || '').replace(/_/g, '-').toLowerCase().indexOf('ja') === 0; }}).length;
       var v = resolveVoice(voiceURI) || resolveVoice(window._lastKanaVoice) || vs[0] || null;
       if (v) {{ u.voice = v; window._lastKanaVoice = v.voiceURI; }}
+      else {{ liaToastSpeech('language-unavailable', jaCount); }}
       var now = Date.now();
       if (speechSynthesis.speaking && (now - (window._kanaLastClick || 0)) > 250) speechSynthesis.cancel();
       window._kanaLastClick = now;
       u.onerror = function (ev) {{
-        if (ev && ev.error === 'not-allowed') return;
+        var code = ev && ev.error;
+        if (code === 'interrupted' || code === 'canceled' || code === 'request-interrupted') return;
         if (v && vs.length > 1) {{
           var fix = vs[0] !== v ? vs[0] : vs[1];
           window._lastKanaVoice = fix.voiceURI;
           var u2 = new SpeechSynthesisUtterance(text);
-          u2.lang = 'ja-JP'; u2.rate = 1.0; u2.pitch = 1.1; u2.voice = fix;
+          u2.lang = 'ja-JP'; u2.rate = rt; u2.pitch = 1.1; u2.voice = fix;
           speechSynthesis.speak(u2);
         }}
+        liaToastSpeech(code, jaCount);
       }};
       speechSynthesis.speak(u);
     }} catch (e) {{}}
@@ -451,12 +536,10 @@ PAGE = """<!DOCTYPE html>
     }});
   }});
   if ('speechSynthesis' in window) {{
-    fillKanaVoices();
+    rescanVoices(false);
     try {{
       speechSynthesis.onvoiceschanged = function () {{
-        var pick = document.getElementById('voice-picker');
-        if (pick) pick.setAttribute('data-filled', '0');
-        fillKanaVoices();
+        rescanVoices(false);
       }};
     }} catch (e) {{}}
   }}
@@ -1577,7 +1660,9 @@ def check_outputs(pages):
             ok = False
             print(f"[check] {rel} 缺 data-bit")
         for tag in ("div", "table", "span", "a", "section"):
-            delta = text.count(f"<{tag}") - text.count(f"</{tag}>")
+            opens = len(re.findall(r"<" + tag + r"(?!\w)", text))
+            closes = len(re.findall(r"</" + tag + r"\s*>", text))
+            delta = opens - closes
             if delta:
                 print(f"[check] {rel} 标签<{tag}>不平衡 ±{delta}")
                 ok = False
@@ -1622,6 +1707,16 @@ def sync_sqlite(registry, langs_modules, db_path=None):
         kanji TEXT, kana TEXT, meaning_zh TEXT, meaning_en TEXT,
         sentence TEXT, sent_rom TEXT, tr_zh TEXT, tr_en TEXT,
         PRIMARY KEY(lang, module, id))""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS accent_types(
+        id TEXT PRIMARY KEY, lang TEXT, module TEXT, num INTEGER,
+        name_zh TEXT, name_en TEXT, seq TEXT, zh TEXT, en TEXT)""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS mpairs(
+        id TEXT PRIMARY KEY, lang TEXT, module TEXT, kind TEXT, idx INTEGER,
+        a_kana TEXT, a_rom TEXT, b_kana TEXT, b_rom TEXT, c_kana TEXT, c_rom TEXT,
+        zh TEXT, en TEXT, src TEXT)""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS media_links(
+        id TEXT PRIMARY KEY, lang TEXT, module TEXT, kind TEXT,
+        title_zh TEXT, title_en TEXT, url TEXT, note_zh TEXT, note_en TEXT)""")
     cur.execute("""CREATE TABLE IF NOT EXISTS concepts(
         id TEXT PRIMARY KEY, name_zh TEXT, name_en TEXT, probe INTEGER DEFAULT 0)""")
     cur.execute("""CREATE TABLE IF NOT EXISTS concept_terms(
@@ -1637,6 +1732,9 @@ def sync_sqlite(registry, langs_modules, db_path=None):
     cur.execute("DELETE FROM modules")
     cur.execute("DELETE FROM chart_cells")
     cur.execute("DELETE FROM vocab")
+    cur.execute("DELETE FROM accent_types")
+    cur.execute("DELETE FROM mpairs")
+    cur.execute("DELETE FROM media_links")
     _sync_glossary(cur)
     cur.executemany("INSERT INTO languages VALUES(:id,:glyph,:name_zh,:name_en,:iso,:status,:summary_zh,:summary_en,:href)",
                     [{"id": l["id"], **{k: l.get(k, "") for k in ("glyph", "name_zh", "name_en", "iso", "status", "summary_zh", "summary_en", "href")}}
@@ -1651,6 +1749,8 @@ def sync_sqlite(registry, langs_modules, db_path=None):
                 data = json.loads(read(jpath))
                 _sync_chart(cur, lang_id, m["id"], data)
                 _sync_vocab(cur, lang_id, m["id"], data)
+                _sync_prosody(cur, lang_id, m["id"], data)
+                _sync_media(cur, lang_id, m["id"], data)
     cur.execute("INSERT OR REPLACE INTO meta VALUES('schema_version','1')")
     cur.execute("INSERT OR REPLACE INTO meta VALUES('builder','build_learning.py')")
     con.commit()
@@ -1706,6 +1806,45 @@ def _sync_vocab(cur, lang_id, module_id, data):
             (lang_id, module_id, v.get("h", ""), v.get("h", ""), v.get("kat", ""), v.get("r", ""),
              v.get("kanji", ""), v.get("kana", ""), v.get("meaning_zh", ""), v.get("meaning_en", ""),
              v.get("sent", ""), v.get("sent_rom", ""), v.get("tr_zh", ""), v.get("tr_en", "")))
+
+
+def _sync_prosody(cur, lang_id, module_id, data):
+    """第五旋·律 → accent_types / mpairs 表（逐词音调只存出处，不臆造）。"""
+    p = data.get("prosody") or {}
+    for acc in p.get("accent_types", []):
+        cur.execute("INSERT OR REPLACE INTO accent_types VALUES(?,?,?,?,?,?,?,?,?)",
+                    (f"{lang_id}:{module_id}:acc:{acc.get('num')}", lang_id, module_id,
+                     acc.get("num"), acc.get("name_zh", ""), acc.get("name_en", ""),
+                     acc.get("seq", ""), acc.get("zh", ""), acc.get("en", "")))
+    for i, mp in enumerate(p.get("minimal_pairs", [])):
+        a, b, c = mp.get("a") or {}, mp.get("b") or {}, mp.get("c") or {}
+        cur.execute("INSERT OR REPLACE INTO mpairs VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                    (f"{lang_id}:{module_id}:pair:{i}", lang_id, module_id,
+                     mp.get("kind", ""), i,
+                     a.get("kana", ""), a.get("rom", ""), b.get("kana", ""), b.get("rom", ""),
+                     c.get("kana", ""), c.get("rom", ""),
+                     mp.get("zh", ""), mp.get("en", ""), mp.get("src", "")))
+
+
+def _sync_media(cur, lang_id, module_id, data):
+    """媒体/拓展 → media_links 表（图/影/读三类统一为资源链接）。"""
+    md = data.get("media") or {}
+    rows = []
+    img = md.get("image") or {}
+    if img:
+        rows.append(("image", img.get("cap_zh", ""), img.get("cap_en", ""),
+                     img.get("url", ""), "", ""))
+    vid = md.get("video") or {}
+    if vid:
+        rows.append(("video", vid.get("title_zh", ""), vid.get("title_en", ""),
+                     vid.get("url", ""), vid.get("note_zh", ""), vid.get("note_en", "")))
+    for r in md.get("read", []):
+        rows.append(("read", r.get("zh", ""), r.get("en", ""),
+                     r.get("url", ""), r.get("note_zh", ""), r.get("note_en", "")))
+    for i, (kind, tz, te, url, nz, ne) in enumerate(rows):
+        cur.execute("INSERT OR REPLACE INTO media_links VALUES(?,?,?,?,?,?,?,?,?)",
+                    (f"{lang_id}:{module_id}:{kind}:{i}", lang_id, module_id,
+                     kind, tz, te, url, nz, ne))
 
 
 def main():
