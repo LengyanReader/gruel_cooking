@@ -243,10 +243,21 @@ a:hover { color: var(--amber-deep); }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+.scholar-avatar.img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border: 2px solid var(--line);
+}
+.scholar-portrait-head .scholar-avatar.img { width: 120px; height: 120px; }
 .scholar-name { font-size: 1.2rem; color: var(--ink); }
 .scholar-inst { font-size: 0.9em; color: var(--amber-deep); font-weight: 600; }
 .scholar-spec { font-size: 0.88em; color: var(--ink-soft); margin-top: 2px; }
+.scholar-credit { font-size: 0.72em; color: var(--ink-soft); margin-top: 2px; }
+.scholar-www { margin-top: 10px; font-size: 0.85em; word-break: break-all; }
+.scholar-www a { color: var(--amber-deep); }
 .scholar-bio { font-size: 0.9em; margin-top: 8px; color: var(--ink); }
 .scholar-link { display: inline-block; margin-top: 6px; }
 

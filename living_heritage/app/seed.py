@@ -66,15 +66,17 @@ def seed_scholars(conn, en_data: list, zh_data: list):
     for scholar in en_data:
         conn.execute(
             """INSERT OR REPLACE INTO scholars
-               (name_key, bio_key, institution, specialization, website_url, corridor_slugs,
-                works_json, traits_json)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+               (name_key, bio_key, institution, specialization, website_url, photo_url,
+                image_credit, corridor_slugs, works_json, traits_json)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (
                 scholar["name_key"],
                 scholar.get("bio_key"),
                 scholar.get("institution"),
                 scholar.get("specialization"),
                 scholar.get("website_url"),
+                scholar.get("photo_url"),
+                scholar.get("image_credit"),
                 json.dumps(scholar.get("corridor_slugs", []), ensure_ascii=False),
                 json.dumps(scholar.get("works", []), ensure_ascii=False),
                 json.dumps(scholar.get("traits", {}), ensure_ascii=False),

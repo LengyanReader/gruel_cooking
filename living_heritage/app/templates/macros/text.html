@@ -38,15 +38,29 @@
 </div>
 {% endmacro %}
 
+{% macro scholar_avatar(s) %}
+  {% if s.photo_url %}
+    <img class="scholar-avatar img"
+         src="/img/{{ s.photo_url }}"
+         alt="{{ s.name }}" title="{{ s.name }}"
+         {% if s.image_credit %}data-credit="{{ s.image_credit }}"{% endif %} loading="lazy">
+  {% else %}
+    <span class="scholar-avatar">{{ s.name[0] if s.name else '?' }}</span>
+  {% endif %}
+{% endmacro %}
+
 {% macro scholar_card(s) %}
 <div class="scholar-card reveal">
-  <div class="scholar-avatar">{{ s.name[0] if s.name else '?' }}</div>
+  {{ scholar_avatar(s) }}
   <div class="scholar-info">
     <h3 class="scholar-name">{{ s.name }}</h3>
     {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
     {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
+    {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
     {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
-    {% if s.website_url %}<a class="scholar-link" href="{{ s.website_url }}">↗</a>{% endif %}
+    {% if s.website_url %}<a class="scholar-link"
+        href="{{ s.website_url }}" target="_blank" rel="noopener"
+        title="{{ s.website_url }}">↗</a>{% endif %}
   </div>
 </div>
 {% endmacro %}
@@ -54,14 +68,16 @@
 {% macro scholar_portrait(s, trait_labels=None, works_label='Selected works') %}
 <div class="scholar-portrait reveal">
   <div class="scholar-portrait-head">
-    <div class="scholar-avatar">{{ s.name[0] if s.name else '?' }}</div>
+    {{ scholar_avatar(s) }}
     <div>
       <h3 class="scholar-name">{{ s.name }}</h3>
       {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
       {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
+      {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
     </div>
   </div>
   {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
+  {% if s.website_url %}<p class="scholar-www"><a href="{{ s.website_url }}" target="_blank" rel="noopener">{{ s.website_url }}</a></p>{% endif %}
   {% if s.traits %}
     <div class="trait-grid">
       {% for key in ["taste", "quality", "spirit", "character", "concerns", "philosophy"] %}
