@@ -46,6 +46,18 @@ a:hover { color: #3E8FA8; }
 .lang-toggle button { border: none; padding: 5px 14px; cursor: pointer; font-family: var(--ff-body); font-size: 0.8rem; font-weight: 500; transition: all 0.25s; color: var(--ls-fog-soft); background: transparent; }
 .lang-toggle button.active { background: linear-gradient(135deg, var(--ls-moon-soft), var(--ls-moon)); color: #3A2E18; }
 .lang-toggle button:hover:not(.active) { color: var(--ls-moon); }
+.voice-wrap { display: flex; align-items: center; gap: 0.4rem; }
+.voice-label { font-size: 0.72rem; color: var(--ls-fog-soft); letter-spacing: 0.08em; }
+.voice-picker {
+  font-family: var(--ff-body); font-size: 0.78rem; font-weight: 500;
+  color: var(--ls-fog-soft); background: rgba(22,29,42,0.55);
+  border: 1px solid rgba(201,164,101,0.4); border-radius: 16px;
+  padding: 4px 8px; max-width: 180px; cursor: pointer; outline: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.voice-picker:hover, .voice-picker:focus { border-color: var(--ls-moon-dim); color: var(--ls-moon); }
+.voice-picker option { background: var(--ls-night-2); color: var(--ls-fog-soft); }
+.voice-btn.picked { background: var(--ls-moon-dim); color: var(--ls-night-2); font-weight: 600; }
 
 /* ═══ HERO (learning header strip) ═══ */
 .learn-hero {
@@ -115,7 +127,7 @@ a:hover { color: #3E8FA8; }
 .kana-voices { display: block; margin-top: 7px; padding-top: 6px; border-top: 1px dashed rgba(236,229,204,0.18); }
 .kana-voices:empty { display: none; }
 .kana-voices .voice-btn { display: inline-block; margin: 2px 3px 0 0; padding: 2px 8px; border: 1px solid rgba(201,164,101,0.55); border-radius: 999px; background: transparent; color: var(--ls-moon); font-family: var(--ff-body); font-size: 0.66rem; line-height: 1.6; cursor: pointer; transition: background 0.15s, color 0.15s; }
-.kana-voices .voice-btn:hover { background: var(--gold); color: var(--ls-night-2); }
+.kana-voices .voice-btn:hover { background: var(--ls-moon-dim); color: var(--ls-night-2); }
 .kana-voices .voice-btn:active { transform: translateY(1px); }
 .kana-notes { max-width: 820px; margin: 1rem auto 0; text-align: center; color: var(--ink-pale); font-size: 0.78rem; line-height: 1.9; }
 .derived { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center; }
@@ -174,4 +186,237 @@ a:hover { color: #3E8FA8; }
 .wterm .wr { font-family: var(--ff-garamond); color: var(--ls-moon-dim); font-size: 0.8rem; font-style: italic; margin-left: 0.4rem; }
 .wthreads { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px dashed rgba(201,164,101,0.35); font-size: 0.82rem; color: var(--ink-mid); line-height: 1.9; }
 .wthreads a { color: var(--accent-teal); }
+/* ═══ 四旋螺环 SPIRAL RINGS ═══ */
+.spiral-guide { max-width: 860px; margin: 0 auto 2.6rem; padding: 1.1rem 1.2rem 1.3rem; text-align: center; }
+.spiral-guide .ring-h span { display: inline-block; }
+.spiral-tale { font-family: var(--ff-garamond); font-style: italic; font-size: 0.96rem; color: var(--ink-soft); max-width: 640px; margin: 0.7rem auto 0; }
+.spiral-hint { font-size: 0.8rem; color: var(--ink-pale); margin-top: 0.85rem; letter-spacing: 0.05em; }
+.spiral-hint a, .spiral-closure a { color: var(--accent-teal); }
+
+.spiral-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 1.1rem auto 0; max-width: 760px; }
+.spiral-pills .pill { display: inline-flex; flex-direction: column; align-items: center; gap: 0.18rem; padding: 0.55rem 1.15rem; border: 1px solid rgba(201,164,101,0.35); border-radius: 16px; text-decoration: none; background: var(--ls-paper-soft); transition: border-color 0.25s, background 0.25s, transform 0.25s; }
+.spiral-pills .pill:hover { border-color: var(--ls-moon-dim); background: var(--ls-paper); transform: translateY(-2px); }
+.spiral-pills .pill b { font-family: var(--ff-garamond); color: var(--ls-moon-dim); font-weight: 700; font-size: 0.95rem; }
+.spiral-pills .pill .pz { font-family: var(--ff-jp); font-weight: 700; color: var(--ink-deep); font-size: 1rem; }
+.spiral-pills .pill .pt { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ls-moon-dim); }
+.spiral-pills .pill .pp { font-size: 0.78rem; font-family: var(--ff-garamond); font-style: italic; color: var(--ink-soft); max-width: 120px; }
+
+.spiral-ring { max-width: 900px; margin: 0 auto 2.8rem; padding-top: 0.3rem; }
+.ring-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 0.7rem; margin-bottom: 0.5rem; font-family: var(--ff-display); font-size: 1.3rem; color: var(--ink-deep); letter-spacing: 0.04em; }
+.ring-tag { font-family: var(--ff-garamond); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.14em; color: var(--ls-moon-dim); }
+.ring-title { font-size: 1.02rem; }
+.ring-promise { font-size: 0.9rem; color: var(--ink-mid); font-family: var(--ff-garamond); font-style: italic; margin-bottom: 0.2rem; }
+
+/* 义环 · 文化/习惯根 */
+.cult-table td.cx, .cult-table td.co { font-size: 0.86rem; color: var(--ink-mid); line-height: 1.6; }
+.cult-table td.cx { min-width: 150px; }
+.cult-table td.co { min-width: 170px; }
+
+/* 源环 · 字源 */
+.origin-table td.og-cell { font-size: 0.9rem; }
+.origin-table .og { font-family: var(--ff-jp); font-size: 1.25rem; font-weight: 700; color: var(--ink-deep); }
+.origin-table .ogk { font-family: var(--ff-garamond); color: var(--ls-moon-dim); font-size: 0.9rem; font-style: italic; }
+.origin-table .onote { font-size: 0.82rem; color: var(--ink-pale); font-style: italic; line-height: 1.6; }
+
+/* 回望收束 */
+.spiral-closure { margin-top: 1.5rem; padding: 2.2rem 1rem; text-align: center; border-top: 1px dashed rgba(201,164,101,0.35); border-bottom: 1px dashed rgba(201,164,101,0.35); }
+.spiral-closure .sc-word { font-family: var(--ff-garamond); font-size: 1.35rem; font-style: italic; color: var(--ink-deep); letter-spacing: 0.06em; margin-bottom: 0.6rem; }
+.spiral-closure a.btn { display: inline-block; margin: 0.5rem 0.4rem 0; padding: 0.55rem 1.4rem; border: 1px solid var(--ls-moon-dim); border-radius: 999px; color: var(--ink-deep); font-weight: 600; font-size: 0.9rem; }
+.spiral-closure a.btn:hover { background: var(--ls-paper-soft); color: var(--accent-teal); }
+
+/* ── 四盘联动：点任意盘同音行 → 各盘高亮；pill 聚焦单旋 ── */
+.ring-hit { background: linear-gradient(90deg, rgba(242,217,160,0.30), rgba(242,217,160,0.06)) !important; box-shadow: inset 3px 0 0 var(--ls-moon-dim); }
+.kana-cell.ring-hit { box-shadow: inset 0 0 0 2px var(--ls-moon-dim); background: rgba(242,217,160,0.30) !important; }
+.spiral-ring { transition: opacity 0.3s, filter 0.3s; }
+.spiral-ring.ring-focus { position: relative; z-index: 1; }
+.spiral-ring.ring-focus .ring-h { color: var(--accent-teal); }
+body:has(.spiral-ring.ring-focus) .spiral-ring:not(.ring-focus) { opacity: 0.32; filter: grayscale(0.4); }
+.spiral-pills .pill[aria-current="true"], .spiral-pills .pill.on { border-color: var(--ls-moon); background: var(--ls-paper); }
+
+/* ── 例句分层：五层徽章 + 层筛选 ── */
+.layer-bar { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.9rem; }
+.layer-bar .lyr-btn {
+  font-family: var(--ff-body); font-size: 0.76rem; font-weight: 500; cursor: pointer;
+  padding: 3px 12px; border: 1px solid rgba(159,180,200,0.35); border-radius: 999px;
+  background: transparent; color: var(--ink-soft); transition: all 0.2s;
+}
+.layer-bar .lyr-btn:hover { border-color: var(--ls-moon-dim); color: var(--ink-deep); }
+.layer-bar .lyr-btn.on { background: var(--ls-moon-dim); color: var(--ls-night-2); border-color: var(--ls-moon-dim); font-weight: 600; }
+.lyr-badge { display: inline-block; padding: 1px 9px; border-radius: 10px; border: 1px solid rgba(201,164,101,0.5); background: rgba(242,217,160,0.18); color: var(--ink-deep); font-size: 0.74rem; line-height: 1.7; letter-spacing: 0.04em; white-space: nowrap; }
+.gloss-table td.lyr { white-space: nowrap; }
+.gloss-table tbody tr.layer-off { display: none; }
+
+
+
+/* 纸上读声按钮对比修正：浅金改深字 */
+.kana-voices .voice-btn { color: var(--ink-mid); }
+
+/* ── 词/义环 · 词汇发音按钮 ── */
+.word-play {
+  margin-left: 0.4rem; font-size: 0.68rem; line-height: 1.6; padding: 1px 8px;
+  border: 1px solid rgba(201,164,101,0.55); border-radius: 999px;
+  background: rgba(242,217,160,0.18); color: var(--ink-mid); cursor: pointer; vertical-align: middle;
+  transition: background 0.15s, color 0.15s;
+}
+.word-play:hover { background: var(--ls-moon-dim); color: var(--ls-night-2); border-color: var(--ls-moon-dim); }
+.word-play:active { transform: translateY(1px); }
+
+/* ═══ 点音聚合图 · 放射树弹窗 ═══ */
+.kana-modal { position: fixed; inset: 0; z-index: 95; display: flex; align-items: center; justify-content: center; padding: 1.2rem; }
+.kana-modal[hidden] { display: none; }
+.km-mask { position: absolute; inset: 0; background: rgba(14,20,28,0.55); backdrop-filter: blur(3px); }
+.km-card {
+  position: relative; z-index: 1; width: min(780px, 96vw); max-height: 92vh; overflow: auto;
+  background: var(--ls-paper); border: 1px solid rgba(201,164,101,0.5); border-radius: 16px;
+  box-shadow: var(--shadow-lg); padding: 1.1rem 1.2rem 1.3rem;
+}
+.km-x {
+  position: absolute; top: 0.55rem; right: 0.7rem; width: 30px; height: 30px;
+  border: 1px solid rgba(159,180,200,0.4); border-radius: 50%; background: transparent;
+  color: var(--ink-soft); font-size: 1.05rem; line-height: 1; cursor: pointer;
+}
+.km-x:hover { border-color: var(--ls-moon-dim); color: var(--ink-deep); }
+.km-title { margin: 0 0 0.9rem; font-size: 1rem; letter-spacing: 0.06em; color: var(--ink-deep); }
+.km-stage {
+  position: relative; display: grid; gap: 0.6rem;
+  grid-template-columns: 1fr 1.05fr 1fr; grid-template-rows: auto auto auto;
+  align-items: center; justify-items: center;
+}
+.km-lines { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: visible; }
+.km-center {
+  grid-column: 2; grid-row: 2; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 108px; height: 108px; border-radius: 50%; text-align: center;
+  background: radial-gradient(circle at 50% 38%, rgba(242,217,160,0.62), rgba(242,217,160,0.12));
+  border: 1.5px solid var(--ls-moon-dim); box-shadow: 0 0 0 6px rgba(242,217,160,0.14);
+}
+.km-big { font-family: var(--ff-jp); font-size: 2.5rem; line-height: 1.05; color: var(--ink-deep); }
+.km-sub { margin-top: 1px; font-size: 0.68rem; letter-spacing: 0.08em; color: var(--ink-soft); }
+.km-node {
+  position: relative; z-index: 1; width: 100%; align-self: stretch;
+  display: flex; flex-direction: column; gap: 2px;
+  background: rgba(255,255,255,0.66); border: 1px solid rgba(159,180,200,0.34);
+  border-radius: 11px; padding: 0.5rem 0.62rem; font-size: 0.78rem;
+}
+.km-node-h { font-weight: 600; font-size: 0.74rem; letter-spacing: 0.09em; color: var(--ls-moon-dim); margin-bottom: 2px; }
+.km-n-shape { grid-column: 2; grid-row: 1; }
+.km-n-word  { grid-column: 3; grid-row: 2; }
+.km-n-root  { grid-column: 1; grid-row: 2; }
+.km-n-sense { grid-column: 2; grid-row: 3; }
+.km-n-law   { grid-column: 3; grid-row: 3; }
+.km-link { display: inline-block; margin-top: 0.32rem; font-size: 0.7rem; color: var(--accent-teal); text-decoration: none; border-bottom: 1px dashed; }
+.km-beats { margin-left: 0.3rem; }
+.km-row { display: flex; gap: 0.35rem; align-items: baseline; }
+.km-k { flex: 0 0 auto; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.05em; color: var(--ink-soft); }
+.km-v { flex: 1 1 auto; color: var(--ink-deep); }
+.km-play {
+  margin-top: 0.35rem; align-self: flex-start; font-size: 0.72rem; padding: 2px 11px;
+  border: 1px solid rgba(201,164,101,0.55); border-radius: 999px;
+  background: rgba(242,217,160,0.22); color: var(--ink-deep); cursor: pointer;
+}
+.km-play:hover { background: var(--ls-moon-dim); color: var(--ls-night-2); }
+.km-play-ico { font-size: 0.62rem; }
+.km-sent {
+  margin-top: 0.95rem; padding-top: 0.8rem; border-top: 1px dashed rgba(201,164,101,0.4);
+  display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-start;
+}
+.km-sent-ja { display: flex; gap: 0.55rem; align-items: baseline; flex-wrap: wrap; font-family: var(--ff-jp); font-size: 0.98rem; color: var(--ink-deep); }
+.km-sent-ja .rom { font-size: 0.74rem; color: var(--ls-moon-dim); }
+.km-sent-tr { font-size: 0.82rem; color: var(--ink-soft); }
+body.modal-open { overflow: hidden; }
+
+@media (max-width: 640px) {
+  .km-stage { grid-template-columns: 1fr; grid-template-rows: none; }
+  .km-center, .km-n-shape, .km-n-word, .km-n-root, .km-n-sense, .km-n-law { grid-column: 1; grid-row: auto; }
+  .km-center { justify-self: center; }
+  .km-lines { display: none; }
+}
+
 @media (max-width: 768px) { .words { grid-template-columns: repeat(2, 1fr); } }
+
+/* ── 拍点 · 音律叠加（默认隐藏，开关 body.show-beats 显示）── */
+.beats { display: none; gap: 3px; margin-left: 0.35rem; vertical-align: middle; }
+.beats.on, body.show-beats .beats { display: inline-flex; }
+.beats i { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--ls-moon-dim); }
+
+/* ── 螺旋导图（主干/枝/叶，可折叠、可逆走）── */
+.mindmap { text-align: left; margin: 1.4rem auto 0; max-width: 860px; }
+.mm-head { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.mm-h { margin: 0; font-size: 0.95rem; letter-spacing: 0.05em; color: var(--ink-deep); }
+.mm-ctrl { display: flex; gap: 0.4rem; }
+.mm-btn { font-size: 0.72rem; padding: 3px 11px; border: 1px solid rgba(201,164,101,0.5); border-radius: 999px; background: rgba(242,217,160,0.2); color: var(--ink-deep); cursor: pointer; }
+.mm-btn.on { background: var(--ls-moon-dim); color: var(--ls-night-2); }
+.mm-tree { margin-top: 0.8rem; }
+.mm-root { display: inline-flex; gap: 0.4rem; align-items: baseline; font-family: var(--ff-display); font-size: 1rem; color: var(--ink-deep); padding: 0.3rem 0.7rem; border: 1.5px solid var(--ls-moon-dim); border-radius: 10px; background: rgba(242,217,160,0.16); }
+.mm-root span { font-size: 0.66rem; color: var(--ink-soft); }
+.mm-rings { list-style: none; margin: 0.5rem 0 0; padding: 0 0 0 1rem; border-left: 1.5px dashed rgba(201,164,101,0.5); display: flex; flex-direction: column; gap: 0.55rem; }
+.mm-ring { position: relative; }
+.mm-ring::before { content: ''; position: absolute; left: -1rem; top: 0.8rem; width: 0.8rem; border-top: 1.5px dashed rgba(201,164,101,0.5); }
+.mm-trunk { display: flex; gap: 0.45rem; align-items: baseline; text-decoration: none; color: var(--ink-deep); font-size: 0.88rem; flex-wrap: wrap; }
+.mm-trunk b { display: inline-flex; width: 1.25rem; height: 1.25rem; align-items: center; justify-content: center; border-radius: 50%; background: var(--ls-moon-dim); color: var(--ls-night); font-size: 0.7rem; }
+.mm-trunk .mm-title { color: var(--ink-soft); font-size: 0.76rem; }
+.mm-branch { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.28rem 0 0 1.7rem; }
+.mm-chip { font-size: 0.66rem; padding: 1px 8px; border-radius: 999px; background: rgba(159,180,200,0.16); color: var(--ink-mid); }
+.mm-det { margin: 0.3rem 0 0 1.7rem; }
+.mm-det summary { cursor: pointer; font-size: 0.7rem; color: var(--ls-moon-dim); }
+.mm-leaves { display: flex; flex-wrap: wrap; gap: 0.22rem; margin-top: 0.3rem; }
+.mm-leaf { font-family: var(--ff-jp); font-size: 0.78rem; padding: 1px 6px; border: 1px solid rgba(201,164,101,0.35); border-radius: 6px; background: rgba(255,255,255,0.5); color: var(--ink-deep); cursor: pointer; text-decoration: none; }
+.mm-leaf:hover { background: var(--ls-moon-dim); color: var(--ls-night-2); }
+.mm-leaves-law .mm-leaf { font-family: inherit; font-size: 0.7rem; }
+.mm-note { text-align: left; font-size: 0.72rem; color: var(--ink-soft); margin: 0.7rem 0 0; }
+body.mm-reverse .mm-rings { flex-direction: column-reverse; }
+body.mm-reverse .mm-ring::before { top: auto; bottom: 0.8rem; }
+body.mm-reverse .mm-root::after { content: ' \21ba'; color: var(--ls-moon-dim); }
+
+/* ── 回首内观（每旋回望上一旋）── */
+.retro { max-width: 900px; margin: 0 auto 0.9rem; padding: 0.6rem 0.85rem; border-left: 3px solid var(--ls-moon-dim); background: rgba(242,217,160,0.12); border-radius: 0 10px 10px 0; }
+.retro-tag { display: block; font-size: 0.66rem; letter-spacing: 0.12em; color: var(--ls-moon-dim); margin-bottom: 0.25rem; }
+.retro p { margin: 0.15rem 0; font-size: 0.8rem; line-height: 1.6; color: var(--ink-mid); }
+.retro-jump { display: inline-block; margin-top: 0.3rem; font-size: 0.72rem; color: var(--accent-teal); text-decoration: none; border-bottom: 1px dashed; }
+.spiral-closure .sc-retro { font-size: 0.8rem; color: var(--ink-mid); margin: 0.3rem 0; }
+
+/* ── 第五旋·律：音律 ── */
+.prosody { display: flex; flex-direction: column; gap: 1.1rem; }
+.pr-block { border: 1px solid rgba(159,180,200,0.28); border-radius: 12px; padding: 0.85rem 0.95rem; background: rgba(255,255,255,0.5); }
+.pr-h { margin: 0 0 0.5rem; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--ink-deep); }
+.pr-p { margin: 0.3rem 0; font-size: 0.82rem; line-height: 1.65; color: var(--ink-mid); }
+.pr-note { margin: 0.5rem 0 0; font-size: 0.74rem; color: var(--ink-soft); font-style: italic; }
+.pr-exs { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+.pr-ex { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-size: 0.85rem; }
+.pr-kana { font-family: var(--ff-jp); font-size: 1.15rem; color: var(--ink-deep); }
+.pr-rom { font-size: 0.74rem; color: var(--ls-moon-dim); }
+.pr-cap { font-size: 0.74rem; color: var(--ink-soft); }
+.pr-tempo { display: inline-flex; gap: 0.25rem; margin-left: auto; }
+.word-play.tempo { font-size: 0.66rem; padding: 1px 7px; }
+.pr-k { font-family: var(--ff-jp); font-size: 1.05rem; color: var(--ink-deep); }
+.pitch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin-top: 0.5rem; }
+.pitch-card { margin: 0; padding: 0.5rem; border: 1px solid rgba(201,164,101,0.3); border-radius: 10px; background: rgba(251,247,239,0.7); text-align: center; }
+.pitch-card figcaption { display: flex; flex-direction: column; gap: 1px; font-size: 0.72rem; }
+.pitch-card b { color: var(--ink-deep); }
+.pc-en { font-size: 0.64rem; color: var(--ls-moon-dim); letter-spacing: 0.08em; }
+.pc-num { font-size: 0.62rem; color: var(--ink-soft); }
+.pc-d { color: var(--ink-mid); font-size: 0.7rem; }
+.pitch-svg { max-width: 100%; height: auto; }
+.mp-wrap { display: flex; flex-direction: column; gap: 0.5rem; }
+.mp-row { padding: 0.5rem 0.1rem; border-bottom: 1px dashed rgba(159,180,200,0.3); }
+.mp-sides { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.mp-side { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; min-width: 84px; }
+.mp-kana { font-family: var(--ff-jp); font-size: 1.2rem; color: var(--ink-deep); }
+.mp-rom { font-size: 0.7rem; color: var(--ls-moon-dim); }
+.mp-m { font-size: 0.7rem; color: var(--ink-soft); }
+.mp-why { margin-top: 0.25rem; font-size: 0.72rem; color: var(--ink-mid); }
+.mp-src { font-size: 0.64rem; color: var(--accent-teal); }
+
+/* ── 律旋附：图 · 影 · 拓展 ── */
+.media-fig, .media-vid { margin: 0 0 0.8rem; }
+.media-fig img { max-width: 200px; width: 100%; border: 1px solid rgba(159,180,200,0.3); border-radius: 10px; background: #fff; }
+.media-fig figcaption, .media-vid figcaption { display: flex; flex-direction: column; gap: 2px; font-size: 0.72rem; color: var(--ink-soft); }
+.media-credit { font-size: 0.64rem; color: var(--ink-soft); }
+.media-fig.img-fail::before { content: '图示需联网加载 / image needs a connection'; display: block; font-size: 0.72rem; color: var(--ink-soft); padding: 0.6rem; border: 1px dashed rgba(159,180,200,0.4); border-radius: 10px; }
+.vid-frame { position: relative; padding-top: 56.25%; border-radius: 10px; overflow: hidden; background: #000; }
+.vid-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.read-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-top: 0.6rem; }
+.read-card { display: flex; flex-direction: column; gap: 2px; padding: 0.55rem 0.65rem; border: 1px solid rgba(159,180,200,0.3); border-radius: 10px; background: rgba(255,255,255,0.55); text-decoration: none; }
+.read-card:hover { border-color: var(--ls-moon-dim); }
+.read-card b { font-size: 0.76rem; color: var(--ink-deep); }
+.read-card span { font-size: 0.7rem; color: var(--ink-soft); }

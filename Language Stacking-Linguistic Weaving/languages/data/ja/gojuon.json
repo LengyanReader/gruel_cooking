@@ -47,6 +47,15 @@
         "title_en": "the kana's past lives",
         "promise_zh": "字源 · 音变 · 回望",
         "promise_en": "cursive origins · sound change · return"
+      },
+      {
+        "id": "law",
+        "zh": "律",
+        "en": "law",
+        "title_zh": "听其律，成其调",
+        "title_en": "hear the beat, shape the melody",
+        "promise_zh": "拍 · 节奏 · 音调 · 音变",
+        "promise_en": "mora · rhythm · pitch · sound change"
       }
     ],
     "closure_zh": "看罢第四旋，请回到第一旋。你会发现：字形里藏着草书的呼吸，字音里站着季语的颜色。螺旋没有终点——回望即出发。",
@@ -606,6 +615,8 @@
       "sent_rom": "Ame ga, futte imasu.",
       "tr_zh": "正在下雨。",
       "tr_en": "It's raining.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "春雨（春）",
       "sea_en": "harusame · spring",
       "art_zh": "润物的静默",
@@ -626,6 +637,8 @@
       "sent_rom": "Inochi wa, ichido kiri desu.",
       "tr_zh": "生命只有一次。",
       "tr_en": "Life comes but once.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "一次性的神话",
@@ -646,6 +659,8 @@
       "sent_rom": "Minna de, uta o utaimashō.",
       "tr_zh": "大家一起唱歌吧。",
       "tr_en": "Let's all sing.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "言灵栖居之处",
@@ -666,6 +681,8 @@
       "sent_rom": "Kono e wa, dare ga kakimashita ka.",
       "tr_zh": "这幅画是谁画的？",
       "tr_en": "Who painted this picture?",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "余白呼吸的地方",
@@ -686,6 +703,8 @@
       "sent_rom": "Watashi wa, ongaku o kiku no ga suki desu.",
       "tr_zh": "我喜欢听音乐。",
       "tr_en": "I like listening to music.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "弦外的余响",
@@ -706,6 +725,8 @@
       "sent_rom": "Kyō wa, kaze ga tsuyoi desu.",
       "tr_zh": "今天风很大。",
       "tr_en": "The wind is strong today.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "春風 / 秋风（春·秋）",
       "sea_en": "harukaze · akikaze (spring/autumn)",
       "art_zh": "不停留的过客",
@@ -726,6 +747,8 @@
       "sent_rom": "Kono ki wa, totemo furui desu.",
       "tr_zh": "这棵树很老了。",
       "tr_en": "This tree is very old.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "若木（春）/ 常世（无）",
       "sea_en": "wakagi (spring) / timeless",
       "art_zh": "立着的沉默",
@@ -746,6 +769,8 @@
       "sent_rom": "Sora ni, kumo ga ukande imasu.",
       "tr_zh": "天上飘着云。",
       "tr_en": "Clouds float in the sky.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "秋の雲（秋）",
       "sea_en": "aki no kumo (autumn)",
       "art_zh": "无常的具象",
@@ -766,6 +791,8 @@
       "sent_rom": "Fujisan no keshiki wa, subarashii desu.",
       "tr_zh": "富士山的景色很美。",
       "tr_en": "Mt. Fuji's scenery is wonderful.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "观看搭成的桥",
@@ -786,6 +813,8 @@
       "sent_rom": "Kokoro o komete, tegami o kakimashita.",
       "tr_zh": "我用心写了这封信。",
       "tr_en": "I wrote the letter with all my heart.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "物哀寄宿的殿堂",
@@ -806,6 +835,8 @@
       "sent_rom": "Sakura ga, harahara to chirimasu.",
       "tr_zh": "樱花簌簌飘落。",
       "tr_en": "Cherry blossoms flutter down.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "花・桜（春）",
       "sea_en": "hana · sakura (spring)",
       "art_zh": "凋零之际最美",
@@ -826,6 +857,8 @@
       "sent_rom": "Ichiban no shiawase wa, kazoku to sugosu jikan desu.",
       "tr_zh": "最大的幸福，是和家人在一起的时光。",
       "tr_en": "My greatest happiness is time with my family.",
+      "layer_zh": "现代",
+      "layer_en": "modern",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "一瞬的亮光",
@@ -846,6 +879,8 @@
       "sent_rom": "Suzume-tachi ga, chunchun to naite imasu.",
       "tr_zh": "麻雀们啾啾地叫着。",
       "tr_en": "The sparrows are chirping.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "身边的喧嚣",
@@ -866,6 +901,8 @@
       "sent_rom": "Sekai wa, hirokute, fushigi ga ippai desu.",
       "tr_zh": "世界辽阔，充满神奇。",
       "tr_en": "The world is wide and full of wonders.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "张开的翅膀",
@@ -886,6 +923,8 @@
       "sent_rom": "Kyō no sora wa, tottemo aoi desu.",
       "tr_zh": "今天的天空非常蓝。",
       "tr_en": "Today's sky is so blue.",
+      "layer_zh": "流行",
+      "layer_en": "popular / set phrases",
       "sea_zh": "秋の空（秋）",
       "sea_en": "aki no sora (autumn)",
       "art_zh": "眼界之尽处",
@@ -906,6 +945,8 @@
       "sent_rom": "Asa ni naru to, taiyō ga noborimasu.",
       "tr_zh": "一到早晨，太阳就升起。",
       "tr_en": "When morning comes, the sun rises.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "夏の日（夏）",
       "sea_en": "natsu no hi (summer)",
       "art_zh": "唤醒大地的目光",
@@ -926,6 +967,8 @@
       "sent_rom": "Minna de, chikara o awasemashō.",
       "tr_zh": "大家齐心协力吧。",
       "tr_en": "Let's join our strength.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "不发一言的坚定",
@@ -946,6 +989,8 @@
       "sent_rom": "Tsuki ga, niwa o shiroku terashite imasu.",
       "tr_zh": "月光把院子照得雪白。",
       "tr_en": "The moon lights the garden white.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "十五夜・月（秋）",
       "sea_en": "jūgoya · tsuki (autumn)",
       "art_zh": "澄夜的白光",
@@ -966,6 +1011,8 @@
       "sent_rom": "Te o aratte kara, gohan o tabemasu.",
       "tr_zh": "先洗手，再吃饭。",
       "tr_en": "I wash my hands, then eat.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "会说话的掌心",
@@ -986,6 +1033,8 @@
       "sent_rom": "Asa hayaku kara, tori ga naki-hajimemasu.",
       "tr_zh": "清晨，鸟儿就开始啼鸣。",
       "tr_en": "From early morning, the birds start singing.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "渡り鳥（秋）· 郭公（夏）",
       "sea_en": "watari dori (autumn) · hototogisu (summer)",
       "art_zh": "报晓的使者",
@@ -1006,6 +1055,8 @@
       "sent_rom": "Nihon no natsu wa, mushiatsui desu.",
       "tr_zh": "日本的夏天闷热。",
       "tr_en": "Japan's summers are hot and humid.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "夏（夏其词）",
       "sea_en": "natsu — summer itself",
       "art_zh": "倾泻的热量",
@@ -1026,6 +1077,8 @@
       "sent_rom": "Nihon ni wa, yottsu no kisetsu ga arimasu.",
       "tr_zh": "日本有四个季节。",
       "tr_en": "Japan has four seasons.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "常（国名）",
       "sea_en": "seasonless (a name)",
       "art_zh": "太阳升起之地",
@@ -1046,6 +1099,8 @@
       "sent_rom": "Mukashi, kono atari wa, numa deshita.",
       "tr_zh": "从前，这一带是一片沼泽。",
       "tr_en": "Long ago, this area was marshland.",
+      "layer_zh": "现代",
+      "layer_en": "modern",
       "sea_zh": "水郷（夏）",
       "sea_en": "suigō (summer waters)",
       "art_zh": "静水的深藏",
@@ -1066,6 +1121,8 @@
       "sent_rom": "Uchi no neko wa, hirune o suru no ga suki desu.",
       "tr_zh": "我家的猫喜欢午睡。",
       "tr_en": "Our cat likes to nap.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "午后的从容",
@@ -1086,6 +1143,8 @@
       "sent_rom": "Nohara ni, chōcho ga tonde imasu.",
       "tr_zh": "蝴蝶在原野上飞舞。",
       "tr_en": "Butterflies fly over the field.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "秋の野（秋）",
       "sea_en": "aki no no (autumn field)",
       "art_zh": "风跑过的开阔",
@@ -1106,6 +1165,8 @@
       "sent_rom": "Niwa ni, hana ga takusan sakimashita.",
       "tr_zh": "院子里开了很多花。",
       "tr_en": "Many flowers have bloomed in the garden.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "花（春）",
       "sea_en": "hana (spring)",
       "art_zh": "四季的容颜",
@@ -1126,6 +1187,8 @@
       "sent_rom": "Ano kata wa, watashi no sensei desu.",
       "tr_zh": "那位是我的老师。",
       "tr_en": "That person is my teacher.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "礼节织成的人",
@@ -1146,6 +1209,8 @@
       "sent_rom": "Fuyu ni naru to, yuki ga furimasu.",
       "tr_zh": "一到冬天就下雪。",
       "tr_en": "When winter comes, it snows.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "冬（冬其词）",
       "sea_en": "fuyu — winter itself",
       "art_zh": "收拢万物的静",
@@ -1166,6 +1231,8 @@
       "sent_rom": "Minna de, heiwa o negatte imasu.",
       "tr_zh": "大家都在祈愿和平。",
       "tr_en": "Everyone wishes for peace.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "和展开的尽头",
@@ -1186,6 +1253,8 @@
       "sent_rom": "Yoru no sora ni, hoshi ga kagayakimasu.",
       "tr_zh": "星星在夜空中闪耀。",
       "tr_en": "Stars shine in the night sky.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "七夕（夏）",
       "sea_en": "tanabata (summer)",
       "art_zh": "天河里的灯",
@@ -1206,6 +1275,8 @@
       "sent_rom": "Matsu no ki wa, fuyu demo, midori desu.",
       "tr_zh": "松树即使冬天也是绿的。",
       "tr_en": "Pine trees stay green even in winter.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "松飾り（新年）",
       "sea_en": "matsu kazari (New Year)",
       "art_zh": "不凋的绿意",
@@ -1226,6 +1297,8 @@
       "sent_rom": "Kono mizu wa, totemo kirei desu.",
       "tr_zh": "这水很清。",
       "tr_en": "This water is very clear.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "模仿寂静的形状",
@@ -1246,6 +1319,8 @@
       "sent_rom": "Natsu ni wa, mushi no koe ga kikoemasu.",
       "tr_zh": "夏天能听见虫鸣。",
       "tr_en": "In summer, you hear the voices of insects.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "虫の音（秋）",
       "sea_en": "mushi no ne (autumn)",
       "art_zh": "夜晚的合奏",
@@ -1266,6 +1341,8 @@
       "sent_rom": "Me o tojite, yukkuri iki o shimashō.",
       "tr_zh": "闭上眼睛，慢慢呼吸。",
       "tr_en": "Close your eyes and breathe slowly.",
+      "layer_zh": "经典",
+      "layer_en": "classic canon",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "不说话的口",
@@ -1286,6 +1363,8 @@
       "sent_rom": "Mori ni wa, iro na dōbutsu ga sunde imasu.",
       "tr_zh": "森林里住着各种动物。",
       "tr_en": "Many animals live in the forest.",
+      "layer_zh": "流行",
+      "layer_en": "popular / set phrases",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "万物呼吸的肺",
@@ -1306,6 +1385,8 @@
       "sent_rom": "Yama no itadaki ni wa, yuki ga arimasu.",
       "tr_zh": "山顶上有积雪。",
       "tr_en": "There is snow on the mountaintop.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "需要仰望的崇高",
@@ -1326,6 +1407,8 @@
       "sent_rom": "Yuki ga, shinshin to futte imasu.",
       "tr_zh": "雪正静静地飘落。",
       "tr_en": "Snow falls silently.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "雪（冬）",
       "sea_en": "yuki (winter)",
       "art_zh": "白的一场沉默",
@@ -1346,6 +1429,8 @@
       "sent_rom": "Yoru ni naru to, tsuki ga kirei desu.",
       "tr_zh": "到了夜晚，月亮很美。",
       "tr_en": "At night, the moon is beautiful.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "秋の夜（秋）",
       "sea_en": "aki no yo (autumn night)",
       "art_zh": "灯盏铺开的幕",
@@ -1366,6 +1451,8 @@
       "sent_rom": "Rainen, Nihon o tazunemasu.",
       "tr_zh": "明年，我造访日本。",
       "tr_en": "Next year, I will visit Japan.",
+      "layer_zh": "现代",
+      "layer_en": "modern",
       "sea_zh": "新年（岁首）",
       "sea_en": "New Year (year's head)",
       "art_zh": "循环里的新起点",
@@ -1386,6 +1473,8 @@
       "sent_rom": "Ringo o, hitotsu kudasai.",
       "tr_zh": "请给我一个苹果。",
       "tr_en": "One apple, please.",
+      "layer_zh": "现代",
+      "layer_en": "modern",
       "sea_zh": "秋の実（秋）",
       "sea_en": "aki no mi (autumn fruit)",
       "art_zh": "淬过霜的甜",
@@ -1406,6 +1495,8 @@
       "sent_rom": "Ima, kazoku wa minna, rusu desu.",
       "tr_zh": "现在家人都不在家。",
       "tr_en": "Everyone is out right now.",
+      "layer_zh": "现代",
+      "layer_en": "modern",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "缺席留下的门槛",
@@ -1426,6 +1517,8 @@
       "sent_rom": "Ima, Nihon no rekishi o benkyō shite imasu.",
       "tr_zh": "我正在学日本历史。",
       "tr_en": "I am studying Japanese history.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（无季语）",
       "sea_en": "seasonless",
       "art_zh": "层层叠加的积岁",
@@ -1446,6 +1539,8 @@
       "sent_rom": "Tōrō ni, rōsoku o tomoshimashita.",
       "tr_zh": "我在灯笼里点上了蜡烛。",
       "tr_en": "I lit a candle in the lantern.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "灯火（冬·盆）",
       "sea_en": "tōro (winter · o-bon)",
       "art_zh": "守夜的一点光",
@@ -1466,6 +1561,8 @@
       "sent_rom": "Wa o, taisetsu ni shite imasu.",
       "tr_zh": "珍惜「和」。",
       "tr_en": "We treasure harmony.",
+      "layer_zh": "重大文明事件",
+      "layer_en": "major civilizational events",
       "sea_zh": "常（国之德）",
       "sea_en": "seasonless (a national virtue)",
       "art_zh": "圆融的圆心",
@@ -1486,6 +1583,8 @@
       "sent_rom": "Hon o yomimasu.",
       "tr_zh": "读书。",
       "tr_en": "I read a book.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（语法词）",
       "sea_en": "seasonless (a function word)",
       "art_zh": "架在动词上的小桥",
@@ -1506,6 +1605,8 @@
       "sent_rom": "Shinbun o, yonde imasu.",
       "tr_zh": "正在读报。",
       "tr_en": "I'm reading the newspaper.",
+      "layer_zh": "古典",
+      "layer_en": "classical antiquity",
       "sea_zh": "常（声音的余韵）",
       "sea_en": "seasonless (a trailing sound)",
       "art_zh": "融化在空气里的收束",
@@ -1517,5 +1618,297 @@
   "provenance": {
     "zh": "词例与文化注脚为教学创作 · AI 起草 · 待母语者审校；「典」为公认文化典故，「拟」为教学自造语。记 → 读 → 写三步之后，入正式语料前须走审校。",
     "en": "Words & cultural glosses are AI-drafted teaching lines pending native review; entries marked 典 are recognized cultural references, 拟 are teaching inventions."
+  },
+  "backrefs": {
+    "word": {
+      "back": "shape",
+      "zh": "回望「形」：你写下的每一个假名，在词里恰好占一拍——词不过是形的连缀。",
+      "en": "Back to Shape: every kana you wrote takes exactly one mora inside a word — a word is shape strung together."
+    },
+    "sense": {
+      "back": "word",
+      "zh": "回望「词」：同一个音，在季语里染上了颜色——词义是音与义的第一道分岔。",
+      "en": "Back to Word: the same sound takes on colour in a season-word — meaning is the first fork of sound."
+    },
+    "root": {
+      "back": "sense",
+      "zh": "回望「义」：字源解释了这份联想从何而来；草书的呼吸塑造了义的坐标。",
+      "en": "Back to Sense: origin explains where the association came from; cursive breath shaped the coordinates of meaning."
+    },
+    "law": {
+      "back": "root",
+      "zh": "回望「源」：音的来历与音的节律本是一体——源告诉你音从哪来，律告诉你音如何行走。",
+      "en": "Back to Origin: where a sound comes from and how it moves are one — origin says whence, law says how."
+    },
+    "shape": {
+      "back": null,
+      "zh": "回望即出发——走到「律」，再回到「形」：每个假名已不再只是一个字，而是一拍、一个可升可降的音。",
+      "en": "Looking back is setting out — having reached Law, return to Shape: each kana is no longer just a letter, but one beat, one rising-and-falling tone."
+    }
+  },
+  "prosody": {
+    "mora": {
+      "zh": "日语以「拍」（モーラ / mora）计时，而不是音节。一个假名 = 一拍；ん、っ、ー 也各占一整拍；拗音（きゃ）算一拍。所有拍子等长——这是日语听感的骨架。",
+      "en": "Japanese counts in morae, not syllables. One kana = one mora; ん, っ and ー each hold a full mora; a contracted sound (きゃ) counts as one. Every mora is about equally long — the skeleton of Japanese rhythm.",
+      "ex": {
+        "kana": "おおさか",
+        "rom": "o-o-sa-ka",
+        "zh": "大阪：3 个音节，4 拍",
+        "en": "Ōsaka: 3 syllables, 4 morae"
+      },
+      "ex2": {
+        "kana": "きって",
+        "rom": "ki-t-te",
+        "zh": "邮票：促音 っ 独占一拍",
+        "en": "stamp: the っ holds a mora of its own"
+      }
+    },
+    "special": [
+      {
+        "k": "ん",
+        "zh": "撥音 hatsuon",
+        "note_zh": "独占一拍，鼻音，没有自己的元音。",
+        "note_en": "A full mora; a nasal with no vowel of its own."
+      },
+      {
+        "k": "っ",
+        "zh": "促音 sokuon",
+        "note_zh": "一拍屏息，把后一个辅音「顶长」。きて→きって。",
+        "note_en": "A mora of held silence that doubles the next consonant. kite → kitte."
+      },
+      {
+        "k": "ー",
+        "zh": "長音 chōon",
+        "note_zh": "一拍，把前一个元音拉长。おばさん→おばあさん。",
+        "note_en": "A mora lengthening the preceding vowel. obasan → obaasan."
+      },
+      {
+        "k": "きゃ",
+        "zh": "拗音 yōon",
+        "note_zh": "两个假名，合成一拍。",
+        "note_en": "Two kana, one single mora."
+      }
+    ],
+    "accent_intro": {
+      "zh": "日语靠「高低」而非「强弱」。标准语（东京）里最关键的是「下がり目」——高音之后骤然下降的那一处；它落在哪一拍，词义就可能不同。",
+      "en": "Japanese uses pitch, not stress. In standard (Tokyo) Japanese the key is the downstep — where a high pitch suddenly falls. Where it falls can change the word.",
+      "note_zh": "本页只讲「系统」；逐词的音调以权威辞典 / OJAD 为准，不在此臆断。",
+      "note_en": "This page teaches the system only; per-word pitch follows an authoritative dictionary / OJAD, not guesswork."
+    },
+    "accent_types": [
+      {
+        "name_zh": "平板",
+        "name_en": "heiban",
+        "num": 0,
+        "zh": "没有下降，后续助词仍高。",
+        "en": "No downstep; a following particle stays high.",
+        "seq": "LHHH"
+      },
+      {
+        "name_zh": "頭高",
+        "name_en": "atamadaka",
+        "num": 1,
+        "zh": "首拍即高，随即下降。",
+        "en": "High from the first mora, then falls.",
+        "seq": "HLLL"
+      },
+      {
+        "name_zh": "中高",
+        "name_en": "nakadaka",
+        "num": 2,
+        "zh": "先升后降，下降落在词内。",
+        "en": "Rises then falls inside the word.",
+        "seq": "LHLL"
+      },
+      {
+        "name_zh": "尾高",
+        "name_en": "odaka",
+        "num": 3,
+        "zh": "词内全高，下降落在后续助词上。",
+        "en": "High through the word; the fall lands on the particle.",
+        "seq": "LHHL"
+      }
+    ],
+    "devoicing": {
+      "zh": "母音无声化：i、u 夹在清辅音之间时常「只做口型、不发声」——です、ます、すき、きた。元音淡去，但拍数不变。",
+      "en": "Vowel devoicing: i and u between voiceless consonants are often whispered — desu, masu, suki, kita. The vowel fades, but the mora stays."
+    },
+    "minimal_pairs": [
+      {
+        "kind": "long",
+        "a": {
+          "kana": "おばさん",
+          "rom": "obasan",
+          "zh": "阿姨",
+          "en": "aunt"
+        },
+        "b": {
+          "kana": "おばあさん",
+          "rom": "obaasan",
+          "zh": "奶奶",
+          "en": "grandmother"
+        },
+        "zh": "只差一拍的长度。",
+        "en": "Differs by a single mora."
+      },
+      {
+        "kind": "long",
+        "a": {
+          "kana": "ここ",
+          "rom": "koko",
+          "zh": "这里",
+          "en": "here"
+        },
+        "b": {
+          "kana": "こうこう",
+          "rom": "kōkō",
+          "zh": "高中",
+          "en": "high school"
+        },
+        "zh": "短音 vs 长音。",
+        "en": "Short vs long vowel."
+      },
+      {
+        "kind": "sokuon",
+        "a": {
+          "kana": "きて",
+          "rom": "kite",
+          "zh": "来",
+          "en": "come"
+        },
+        "b": {
+          "kana": "きって",
+          "rom": "kitte",
+          "zh": "邮票",
+          "en": "stamp"
+        },
+        "zh": "促音 っ 独占一拍。",
+        "en": "The っ takes a mora of its own."
+      },
+      {
+        "kind": "pitch",
+        "a": {
+          "kana": "箸",
+          "rom": "haꜜshi",
+          "zh": "筷子（頭高）",
+          "en": "chopsticks (atamadaka)"
+        },
+        "b": {
+          "kana": "橋",
+          "rom": "hashiꜜ",
+          "zh": "桥（尾高）",
+          "en": "bridge (odaka)"
+        },
+        "c": {
+          "kana": "端",
+          "rom": "hashi",
+          "zh": "端（平板）",
+          "en": "edge (heiban)"
+        },
+        "zh": "同音三词，唯调不同。",
+        "en": "Same sounds, three meanings — separated by pitch alone.",
+        "src": "https://en.wikipedia.org/wiki/Japanese_phonology"
+      },
+      {
+        "kind": "pitch",
+        "a": {
+          "kana": "雨",
+          "rom": "aꜜme",
+          "zh": "雨（頭高）",
+          "en": "rain (atamadaka)"
+        },
+        "b": {
+          "kana": "飴",
+          "rom": "ame",
+          "zh": "糖（平板）",
+          "en": "candy (heiban)"
+        },
+        "zh": "同音二词，唯调不同。",
+        "en": "Same sounds, separated by pitch.",
+        "src": "https://www.gavo.t.u-tokyo.ac.jp/ojad/"
+      }
+    ]
+  },
+  "media": {
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiragana_%E3%81%82_stroke_order_animation.gif",
+      "page": "https://commons.wikimedia.org/wiki/Category:Hiragana_stroke_order_(animated_image_set)",
+      "cap_zh": "笔顺动画（例：あ）· 来自 Wikimedia Commons 笔顺项目",
+      "cap_en": "Stroke order (e.g. あ) · Wikimedia Commons Stroke Order Project",
+      "credit": "CC BY-SA / GFDL · Sirgazil et al. · Wikimedia Commons"
+    },
+    "video": {
+      "id": "O6AoilGEers",
+      "url": "https://www.youtube.com/watch?v=O6AoilGEers",
+      "title_zh": "Japanese Pitch-Accent in 10 Minutes（Dogen）",
+      "title_en": "Japanese Pitch-Accent in 10 Minutes (Dogen)",
+      "note_zh": "四型高低调的入门速览。",
+      "note_en": "A brisk intro to the four pitch-accent patterns."
+    },
+    "read": [
+      {
+        "zh": "OJAD · 在线日语声调辞典（东京大学）",
+        "en": "OJAD · Online Japanese Accent Dictionary (Univ. of Tokyo)",
+        "url": "https://www.gavo.t.u-tokyo.ac.jp/ojad/eng/pages/home",
+        "note_zh": "逐词音调与韵律范读；本页「律」旋的权威外援。",
+        "note_en": "Per-word accent & prosody; the authority behind this ring."
+      },
+      {
+        "zh": "Wikipedia · 日语高低声调",
+        "en": "Wikipedia · Japanese pitch accent",
+        "url": "https://en.wikipedia.org/wiki/Japanese_pitch_accent",
+        "note_zh": "下げ核、助词依附、方言对照。",
+        "note_en": "Downstep nucleus, particle behaviour, dialects."
+      },
+      {
+        "zh": "Wikipedia · 日语音系",
+        "en": "Wikipedia · Japanese phonology",
+        "url": "https://en.wikipedia.org/wiki/Japanese_phonology",
+        "note_zh": "拍、特殊拨音、促音、无声化。",
+        "note_en": "Mora, moraic nasal, gemination, devoicing."
+      },
+      {
+        "zh": "Wikipedia · 拍（mora）",
+        "en": "Wikipedia · Mora (linguistics)",
+        "url": "https://en.wikipedia.org/wiki/Mora_(linguistics)",
+        "note_zh": "「拍」作为计时单位的一般定义。",
+        "note_en": "The mora as a unit of timing."
+      },
+      {
+        "zh": "Wikipedia · 等时性与拍节语",
+        "en": "Wikipedia · Isochrony & mora-timed languages",
+        "url": "https://en.wikipedia.org/wiki/Mora-timed_language",
+        "note_zh": "为何日语听起来「一板一眼」。",
+        "note_en": "Why Japanese sounds evenly paced."
+      },
+      {
+        "zh": "Wikipedia · 日语声调规则",
+        "en": "Wikipedia · Japanese pitch accent rules",
+        "url": "https://en.wikipedia.org/wiki/Japanese_pitch_accent_rules",
+        "note_zh": "名词、复合词、助词的规则清单。",
+        "note_en": "Rules for nouns, compounds, particles."
+      },
+      {
+        "zh": "Commons · 笔顺项目 · 平假名",
+        "en": "Commons · Stroke Order Project · Hiragana",
+        "url": "https://commons.wikimedia.org/wiki/Commons:Stroke_Order_Project/Hiragana",
+        "note_zh": "74 个平假名的笔顺图集（自由许可）。",
+        "note_en": "Stroke diagrams for 74 hiragana (free license)."
+      },
+      {
+        "zh": "tdmelodic · 日语声调工具文档",
+        "en": "tdmelodic · Japanese accent toolkit docs",
+        "url": "https://tdmelodic.readthedocs.io/en/latest/pages/introduction.html",
+        "note_zh": "高低调记号与四型命名。",
+        "note_en": "Pitch notation and the four type names."
+      },
+      {
+        "zh": "Tofugu · 平假名终极指南",
+        "en": "Tofugu · Learn Hiragana Ultimate Guide",
+        "url": "https://www.tofugu.com/japanese/learn-hiragana/",
+        "note_zh": "联想记忆法 + 发音入门。",
+        "note_en": "Mnemonics plus pronunciation starter."
+      }
+    ]
   }
 }
