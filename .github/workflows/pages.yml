@@ -1,0 +1,58 @@
+name: Build & Deploy static mirror to GitHub Pages
+
+on:
+  push:
+    paths:
+      - "living_heritage/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: living_heritage
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Render the static mirror
+        run: python scripts/build_static_site.py
+        env:
+          LH_SQLITE_PATH: ${{ runner.temp }}/lh-static.db
+          LH_BASE_URL: https://${{ github.event.repository.owner.login }}.github.io/${{ github.event.repository.name }}/
+          LH_SITE_OUT: ${{ runner.temp }}/lh-static-site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ github.workspace }}/docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

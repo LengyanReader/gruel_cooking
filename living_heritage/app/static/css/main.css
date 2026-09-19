@@ -68,6 +68,20 @@ a:hover { color: var(--amber-deep); }
 
 .lang-toggle { display: flex; gap: 6px; }
 .lang-toggle form { margin: 0; }
+.lang-toggle a, .lang-toggle button {
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+.lang-toggle a {
+  cursor: pointer;
+  background: var(--cream);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font: inherit;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
 .lang-toggle button {
   cursor: pointer;
   border: 1px solid var(--line);
