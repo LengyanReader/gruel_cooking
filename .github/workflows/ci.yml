@@ -35,6 +35,15 @@ jobs:
         env:
           LH_SQLITE_PATH: ${{ runner.temp }}/lh-ci.db
 
+      - name: Enforce static mirror sync with source
+        run: |
+          python scripts/build_static_site.py
+          git diff --exit-code -- docs/living_heritage/
+        env:
+          LH_SQLITE_PATH: ${{ runner.temp }}/lh-ci.db
+          LH_SITE_OUT: ../docs/living_heritage
+          LH_BASE_URL: https://lengyanreader.github.io/gruel_cooking/living_heritage
+
       - name: Boot server and run e2e
         run: |
           set -e
