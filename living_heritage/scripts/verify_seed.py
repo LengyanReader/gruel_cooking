@@ -2,7 +2,9 @@ import sqlite3
 import sys
 
 sys.path.insert(0, ".")
-conn = sqlite3.connect("data/living_heritage.db")
+from app.config import SQLITE_PATH
+
+conn = sqlite3.connect(SQLITE_PATH)
 conn.row_factory = sqlite3.Row
 
 fails = []
@@ -162,3 +164,7 @@ for k in rows:
     print(f"{d['key']}: {d['en']} | {d['zh']}")
 
 conn.close()
+if fails:
+    print(f"\n{len(fails)} hard assertion(s) failed.")
+    sys.exit(1)
+print("\nAll hard assertions passed.")
