@@ -98,7 +98,8 @@ def base_context(ctx: AppContext) -> dict:
         "label.corridors", "label.scholars", "label.institution",
         "label.specialization", "label.website", "label.region",
         "label.unesco", "label.type", "label.established", "label.coordinates",
-        "label.works",
+        "label.works", "label.profile", "label.corridor_ties",
+        "label.related_literature",
     ] + trait_label_keys
     label_texts = content_svc.resolve_texts_batch(label_keys, locale)
 
@@ -258,6 +259,25 @@ def scholar_list(req: Request):
     base["page"] = ctx.content.get_page("scholars", ctx.locale)
     base["scholars"] = ctx.scholars.list_scholars(ctx.locale)
     html = render("pages/scholars.html", base)
+    ctx.db.close()
+    return html
+
+
+@get("/scholars/<slug>")
+def scholar_detail(req: Request):
+    ctx = AppContext(req)
+    ctx.req.page_slug = "scholars"  # keep the Scholars nav item active
+    scholar = ctx.scholars.get_scholar_by_slug(req.params.get("slug", ""), ctx.locale)
+    if not scholar:
+        ctx.db.close()
+        return _not_found_page(req.path, req.cookies)
+    base = base_context(ctx)
+    base["scholar"] = scholar
+    corridors = [ctx.graph.get_corridor_by_slug(s, ctx.locale)
+                 for s in scholar.get("corridors", [])]
+    base["corridor_objs"] = [c for c in corridors if c]
+    base["related_pubs"] = ctx.scholars.related_publications(scholar["id"], ctx.locale)
+    html = render("pages/scholar_detail.html", base)
     ctx.db.close()
     return html
 

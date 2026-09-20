@@ -37,9 +37,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))
 
-from app.db.sqlite import init_db  # noqa: E402
+from app.db.sqlite import init_db, get_db  # noqa: E402
 from app.seed import seed_all  # noqa: E402
 from app.config import STATIC_DIR, DEFAULT_LOCALE, AVAILABLE_LOCALES  # noqa: E402
+from app.services.scholar import slug_from_name_key  # noqa: E402
 import app.main  # noqa: E402,F401  (registers the public route table)
 
 LOCALES = [l for l in ("en", "zh") if l in AVAILABLE_LOCALES] or [DEFAULT_LOCALE]
@@ -87,6 +88,13 @@ def page_link(match: re.Match) -> str:
     if dir_ == "index":
         dir_ = ""
     return f'href="{dir_ + "/" if dir_ else ""}index.html{suffix}"'
+
+
+def scholar_pages() -> list[tuple[str, str, dict]]:
+    """One snapshot per scholar detail route /scholars/<slug>."""
+    rows = get_db().execute("SELECT name_key FROM scholars ORDER BY name_key").fetchall()
+    slugs = sorted(filter(None, (slug_from_name_key(r["name_key"]) for r in rows)))
+    return [(f"scholars/{s}/index", f"/scholars/{s}", {}) for s in slugs]
 
 
 def fetch(path: str, query: dict, locale: str) -> str:
@@ -143,6 +151,7 @@ def rewrite(html: str, *, out_key: str, locale: str, base_href: str) -> str:
 def main() -> int:
     init_db()
     seed_all()
+    pages = PAGES + scholar_pages()
 
     out_root = Path(os.getenv("LH_SITE_OUT", str(BASE_DIR / "dist"))).resolve()
     # LH_BASE_URL still drives canonical/og absolute URLs (read by app.config at
@@ -153,7 +162,7 @@ def main() -> int:
     written = 0
     for locale in LOCALES:
         prefix = "" if locale == "en" else "zh"
-        for out_key, path, query in PAGES:
+        for out_key, path, query in pages:
             html = rewrite(fetch(path, query, locale), out_key=out_key, locale=locale,
                            base_href=relative_base(out_key, locale))
             rel = (Path(prefix) / out_key).with_suffix(".html")

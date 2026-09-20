@@ -1,3 +1,4 @@
+import re
 import sqlite3
 import sys
 
@@ -32,6 +33,10 @@ check("学者 >= 5 且每名有双语名与机构",
       n_scholars >= 5 and all(
           full_key(r["name_key"]) and r["institution"]
           for r in conn.execute("SELECT name_key, institution FROM scholars").fetchall()))
+scholar_slugs = [m.group(1) for r in conn.execute("SELECT name_key FROM scholars").fetchall()
+                 if (m := re.fullmatch(r"scholar\.([a-z0-9_]+)\.name", r["name_key"]))]
+check("每名学者 name_key 可解析出唯一 slug（详情页路由）",
+      len(scholar_slugs) == n_scholars and len(set(scholar_slugs)) == n_scholars)
 check("文献库非空且每篇双语标题+来源级别合法",
       n_pubs > 0 and all(
           full_key(r["title_key"]) and r["source_level"] in ("A", "B", "C", "D")
@@ -96,7 +101,8 @@ check("存在 refined 公开笔记与 raw 私密笔记",
       and conn.execute("SELECT COUNT(*) FROM research_notes WHERE status=0").fetchone()[0] > 0)
 check("plan 页注册且导航就绪",
       bool(conn.execute("SELECT 1 FROM pages WHERE slug='plan' AND is_published=1 AND nav_key IS NOT NULL").fetchone()))
-for nav in ["nav.plan", "plan.status.todo", "note.category.brainstorm", "note.status.refined"]:
+for nav in ["nav.plan", "plan.status.todo", "note.category.brainstorm", "note.status.refined",
+            "label.profile", "label.corridor_ties", "label.related_literature"]:
     check(f"导航/标签键双语齐备: {nav}", full_key(nav))
 check("page.plan.title 双语齐备",
       full_key("page.plan.title") and full_key("page.plan.intro.body"))

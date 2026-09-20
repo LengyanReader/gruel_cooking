@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "macros/text.html" as t %}
+
+{% block title %}{{ scholar.name }} — {{ nav.scholars }} — {{ site_title }}{% endblock %}
+{% block meta_description %}{{ scholar.institution or site_subtitle }}{% if scholar.specialization %} · {{ scholar.specialization }}{% endif %}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <p class="detail-back"><a href="/scholars">← {{ nav.scholars }}</a></p>
+    <h1>{{ scholar.name }}</h1>
+    {% if scholar.institution %}<p class="scholar-inst">{{ scholar.institution }}</p>{% endif %}
+  </div>
+</section>
+
+{% include "partials/wave.html" %}
+
+<section class="section">
+  <div class="container scholar-detail">
+    {{ t.scholar_portrait(scholar, trait_labels, works_label, '') }}
+
+    {% if corridor_objs %}
+    <div class="detail-block reveal">
+      <h2 class="section-title">{{ labels.get('label.corridor_ties', 'Corridor ties') }}</h2>
+      <div class="site-meta">
+        {% for c in corridor_objs %}
+          <a class="meta-chip chip-link" href="/corridors#{{ c.slug }}">{{ c.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if related_pubs %}
+    <div class="detail-block reveal">
+      <h2 class="section-title">{{ labels.get('label.related_literature', 'Related literature') }}</h2>
+      <ul class="related-pub-list">
+        {% for p in related_pubs %}
+        <li class="related-pub">
+          <div class="work-body">
+            {% if p.link %}
+              <a class="related-pub-title" href="{{ p.link }}" target="_blank" rel="noopener">{{ p.title }}</a>
+            {% else %}
+              <span class="related-pub-title">{{ p.title }}</span>
+            {% endif %}
+            {% if p.authors or p.year %}
+              <span class="related-pub-meta">{{ p.authors or '' }}{% if p.year %} · {{ p.year }}{% endif %}</span>
+            {% endif %}
+          </div>
+          {% if p.source_level %}<span class="meta-chip lvl-{{ p.source_level|lower }}">[{{ p.source_level }}]</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="detail-library-link"><a href="/publications">{{ labels.get('label.publications', nav.publications) }} →</a></p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

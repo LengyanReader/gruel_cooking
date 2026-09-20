@@ -49,15 +49,16 @@
   {% endif %}
 {% endmacro %}
 
-{% macro scholar_card(s) %}
+{% macro scholar_card(s, profile_label='Profile') %}
 <div class="scholar-card reveal">
   {{ scholar_avatar(s) }}
   <div class="scholar-info">
-    <h3 class="scholar-name">{{ s.name }}</h3>
+    <h3 class="scholar-name">{% if s.slug %}<a class="scholar-detail-link" href="/scholars/{{ s.slug }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
     {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
     {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
     {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
     {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
+    {% if s.slug %}<a class="scholar-profile" href="/scholars/{{ s.slug }}">{{ profile_label }} →</a>{% endif %}
     {% if s.website_url %}<a class="scholar-link"
         href="{{ s.website_url }}" target="_blank" rel="noopener"
         title="{{ s.website_url }}">↗</a>{% endif %}
@@ -65,15 +66,16 @@
 </div>
 {% endmacro %}
 
-{% macro scholar_portrait(s, trait_labels=None, works_label='Selected works') %}
+{% macro scholar_portrait(s, trait_labels=None, works_label='Selected works', profile_label='Profile') %}
 <div class="scholar-portrait reveal">
   <div class="scholar-portrait-head">
     {{ scholar_avatar(s) }}
     <div>
-      <h3 class="scholar-name">{{ s.name }}</h3>
+      <h3 class="scholar-name">{% if s.slug %}<a class="scholar-detail-link" href="/scholars/{{ s.slug }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
       {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
       {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
       {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
+      {% if s.slug and profile_label %}<p class="scholar-www"><a class="scholar-profile" href="/scholars/{{ s.slug }}">{{ profile_label }} →</a></p>{% endif %}
     </div>
   </div>
   {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}

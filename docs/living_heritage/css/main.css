@@ -272,6 +272,24 @@ a:hover { color: var(--amber-deep); }
 .scholar-credit { font-size: 0.72em; color: var(--ink-soft); margin-top: 2px; }
 .scholar-www { margin-top: 10px; font-size: 0.85em; word-break: break-all; }
 .scholar-www a { color: var(--amber-deep); }
+.scholar-name a.scholar-detail-link { color: var(--ink); text-decoration: none; }
+.scholar-name a.scholar-detail-link:hover { color: var(--amber-deep); }
+.scholar-profile { display: inline-block; margin-top: 6px; font-size: 0.85em; font-weight: 600; color: var(--amber-deep); }
+/* Scholar detail page */
+.detail-back { font-size: 0.9em; margin-bottom: 10px; }
+.detail-back a { color: var(--ink-soft); }
+.detail-back a:hover { color: var(--amber-deep); }
+.detail-block { margin-top: 34px; }
+.scholar-detail .scholar-portrait { margin-top: 0; }
+a.meta-chip.chip-link { display: inline-block; margin: 4px 6px 0 0; text-decoration: none; color: var(--ink); }
+a.meta-chip.chip-link:hover { color: var(--amber-deep); border-color: var(--gold); }
+.related-pub-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.related-pub { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; border-bottom: 1px dashed var(--line); padding-bottom: 10px; }
+.related-pub-title { font-weight: 600; color: var(--ink); }
+a.related-pub-title:hover { color: var(--amber-deep); }
+.related-pub-meta { display: block; font-size: 0.85em; color: var(--ink-soft); margin-top: 2px; }
+.detail-library-link { margin-top: 14px; font-size: 0.9em; }
+.detail-library-link a { color: var(--amber-deep); }
 .scholar-bio { font-size: 0.9em; margin-top: 8px; color: var(--ink); }
 .scholar-link { display: inline-block; margin-top: 6px; }
 

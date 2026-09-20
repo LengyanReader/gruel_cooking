@@ -21,7 +21,7 @@
   <div class="container">
     <div class="scholar-grid">
       {% for s in scholars %}
-        {{ t.scholar_card(s) }}
+        {{ t.scholar_card(s, labels.get('label.profile', 'Profile')) }}
       {% endfor %}
     </div>
   </div>

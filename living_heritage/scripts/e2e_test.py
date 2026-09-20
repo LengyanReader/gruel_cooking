@@ -108,6 +108,26 @@ check("literature dim-flow", "dim-flow" in lb)
 elen = get_en("/literature")
 check("en literature ok", "Literature Review" in elen and "taste" in elen and "premises" in elen)
 
+# Scholar detail pages (/scholars/<slug>)
+sl = get_en("/scholars")
+check("scholars list links to detail", 'href="/scholars/ingold"' in sl)
+check("scholars list profile label", "Full profile" in sl)
+sd = get_en("/scholars/ingold")
+check("scholar detail en institution", "Aberdeen" in sd)
+check("scholar detail works list", "Perception of the Environment" in sd)
+check("scholar detail traits", "meshwork" in sd)
+check("scholar detail related pubs", "Imagining for Real" in sd)
+check("scholar detail corridor chip", "/corridors#grand_canal" in sd)
+check("scholar detail back link", 'href="/scholars"' in sd)
+sdz = get("/scholars/gillette")  # zh cookie jar active
+check("scholar detail zh name", "\u5409\u83b1\u7279" in sdz)
+check("scholar detail zh sections", "\u5eca\u9053\u5173\u8054" in sdz and "\u4ee3\u8868\u4f5c\u54c1" in sdz)
+try:
+    with urllib.request.urlopen(BASE + "/scholars/nobody-here") as r:
+        check("scholar detail 404 (unexpected 200)", False, r.status)
+except urllib.error.HTTPError as e:
+    check("scholar detail unknown slug 404", e.code == 404)
+
 check("pubs filter bar", "filter-pill" in pb)
 fc = get("/publications?corridor=grand_canal")
 check("pubs corridor=grand_canal keeps \u74f7\u5668\u4e4b\u90fd", "\u74f7\u5668\u4e4b\u90fd" in fc)

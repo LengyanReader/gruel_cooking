@@ -91,7 +91,7 @@
     <h2 class="section-title">{{ '学者肖像与代表作品' if locale == 'zh' else 'Scholar portraits & selected works' }}</h2>
     <div class="portrait-grid">
       {% for s in scholars %}
-        {{ t.scholar_portrait(s, trait_labels, works_label) }}
+        {{ t.scholar_portrait(s, trait_labels, works_label, labels.get('label.profile', 'Profile')) }}
       {% endfor %}
     </div>
     {% endif %}
