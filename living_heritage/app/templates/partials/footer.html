@@ -6,5 +6,6 @@
       {% for item in nav_items %}{% if not loop.first %} · {% endif %}<a href="{{ item.href }}">{{ item.label }}</a>{% endfor %}
     </p>
     <p class="footer-copy">{{ brand['brand.identity'] }}<br><span class="footer-zhou">{{ brand['brand.zhou_line'] }}</span></p>
+    {% if footer_image_rights %}<p class="footer-image-rights">{{ footer_image_rights }} <a href="/scholars">{{ nav.scholars }}</a></p>{% endif %}
   </div>
 </footer>

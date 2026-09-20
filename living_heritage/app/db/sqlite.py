@@ -62,6 +62,8 @@ CREATE TABLE IF NOT EXISTS scholars (
     institution     TEXT,
     specialization  TEXT,
     photo_url       TEXT,
+    image_credit    TEXT,
+    image_source_url TEXT,
     website_url     TEXT,
     corridor_slugs  TEXT,
     works_json      TEXT,
@@ -191,6 +193,8 @@ def _migrate(conn):
         conn.execute("ALTER TABLE scholars ADD COLUMN photo_url TEXT")
     if "image_credit" not in columns:
         conn.execute("ALTER TABLE scholars ADD COLUMN image_credit TEXT")
+    if "image_source_url" not in columns:
+        conn.execute("ALTER TABLE scholars ADD COLUMN image_source_url TEXT")
     page_cols = {r[1] for r in conn.execute("PRAGMA table_info(pages)").fetchall()}
     if "nav_key" not in page_cols:
         conn.execute("ALTER TABLE pages ADD COLUMN nav_key TEXT")

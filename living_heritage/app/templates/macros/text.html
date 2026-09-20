@@ -49,6 +49,12 @@
   {% endif %}
 {% endmacro %}
 
+{% macro scholar_credit(s) %}
+  {% if s.image_credit %}
+    <p class="scholar-credit">{% if s.image_source_url %}<a href="{{ s.image_source_url }}" target="_blank" rel="noopener nofollow">{{ s.image_credit }}</a>{% else %}{{ s.image_credit }}{% endif %}</p>
+  {% endif %}
+{% endmacro %}
+
 {% macro scholar_card(s, profile_label='Profile') %}
 <div class="scholar-card reveal">
   {{ scholar_avatar(s) }}
@@ -56,7 +62,7 @@
     <h3 class="scholar-name">{% if s.slug %}<a class="scholar-detail-link" href="/scholars/{{ s.slug }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
     {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
     {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
-    {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
+    {{ scholar_credit(s) }}
     {% if s.bio %}<div class="scholar-bio">{{ s.bio }}</div>{% endif %}
     {% if s.slug %}<a class="scholar-profile" href="/scholars/{{ s.slug }}">{{ profile_label }} →</a>{% endif %}
     {% if s.website_url %}<a class="scholar-link"
@@ -74,7 +80,7 @@
       <h3 class="scholar-name">{% if s.slug %}<a class="scholar-detail-link" href="/scholars/{{ s.slug }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
       {% if s.institution %}<p class="scholar-inst">{{ s.institution }}</p>{% endif %}
       {% if s.specialization %}<p class="scholar-spec">{{ s.specialization }}</p>{% endif %}
-      {% if s.image_credit %}<p class="scholar-credit">{{ s.image_credit }}</p>{% endif %}
+      {{ scholar_credit(s) }}
       {% if s.slug and profile_label %}<p class="scholar-www"><a class="scholar-profile" href="/scholars/{{ s.slug }}">{{ profile_label }} →</a></p>{% endif %}
     </div>
   </div>

@@ -10,7 +10,8 @@
     "specialization": "Social anthropology; wayfaring; human-environment relations",
     "website_url": "https://www.timingold.com",
     "photo_url": "scholars/ingold.jpg",
-    "image_credit": "Photo: Caroline Dear, via timingold.com",
+    "image_credit": "Photo: Caroline Dear — via timingold.com",
+    "image_source_url": "https://www.timingold.com/",
     "corridor_slugs": ["grand_canal", "gotland"],
     "works": [
       {
@@ -521,6 +522,7 @@
     "website_url": "https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/",
     "photo_url": "scholars/roux.jpg",
     "image_credit": "Photo: UMR 8068 TEMPS / CNRS",
+    "image_source_url": "https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/",
     "corridor_slugs": ["grand_canal"],
     "works": [
       {
