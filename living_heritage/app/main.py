@@ -126,7 +126,6 @@ def base_context(ctx: AppContext) -> dict:
         "site_title": content_svc.resolve_text("site.title", locale),
         "site_subtitle": content_svc.resolve_text("site.subtitle", locale),
         "footer_tagline": content_svc.resolve_text("footer.tagline", locale),
-        "footer_image_rights": content_svc.resolve_text("footer.image_rights", locale),
         "graph_engine": GRAPH_ENGINE,
         "base_url": BASE_URL,
         "request_path": ctx.req.path,

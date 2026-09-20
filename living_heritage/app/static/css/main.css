@@ -418,9 +418,6 @@ a.related-pub-title:hover { color: var(--amber-deep); }
 .footer-links a { color: #F5EDE0; margin: 0 6px; }
 .footer-links a:hover { color: var(--gold); }
 .footer-copy { font-size: 0.8em; color: #A99D8B; }
-.footer-image-rights { font-size: 0.72em; color: #8f8474; margin-top: 14px; line-height: 1.55; max-width: 62ch; }
-.footer-image-rights a { color: #A99D8B; text-decoration: underline; text-underline-offset: 2px; }
-.footer-image-rights a:hover { color: var(--gold); }
 
 /* ── Living book: water palette ── */
 :root {

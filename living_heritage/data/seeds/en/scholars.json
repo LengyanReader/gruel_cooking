@@ -9,9 +9,6 @@
     "institution": "University of Aberdeen",
     "specialization": "Social anthropology; wayfaring; human-environment relations",
     "website_url": "https://www.timingold.com",
-    "photo_url": "scholars/ingold.jpg",
-    "image_credit": "Photo: Caroline Dear — via timingold.com",
-    "image_source_url": "https://www.timingold.com/",
     "corridor_slugs": ["grand_canal", "gotland"],
     "works": [
       {
@@ -122,8 +119,6 @@
     "institution": "UiT The Arctic University of Norway",
     "specialization": "Archaeology; materiality; contemporary archaeology; ruins",
     "website_url": "https://uit.no/ansatte/bjornar.olsen",
-    "photo_url": "scholars/olsen.jpg",
-    "image_credit": "UiT The Arctic University of Norway",
     "corridor_slugs": ["grand_canal", "gotland"],
     "works": [
       {
@@ -224,8 +219,6 @@
     "institution": "Uppsala University, Campus Gotland",
     "specialization": "Archaeology; landscape; historical ecology; sustainability",
     "website_url": "https://www.uu.se/en/contact-and-organisation/staff?query=N12-2422",
-    "photo_url": "scholars/martinsson_wallin.jpg",
-    "image_credit": "Uppsala University",
     "corridor_slugs": ["gotland", "southern_oland"],
     "works": [
       {
@@ -306,8 +299,6 @@
     "institution": "Linnaeus University, Kalmar",
     "specialization": "Heritage futures; regeneration; future generations",
     "website_url": "https://corneliusholtorf.com",
-    "photo_url": "scholars/holtorf.jpg",
-    "image_credit": "Linnaeus University; photo Johannes Rydström",
     "corridor_slugs": ["gotland", "southern_oland"],
     "works": [
       {
@@ -408,8 +399,6 @@
     "institution": "University of Gothenburg",
     "specialization": "Anthropology; China; material culture; food; labour",
     "website_url": "https://www.gu.se/en/about/find-staff/marisgillette",
-    "photo_url": "scholars/gillette.jpg",
-    "image_credit": "University of Gothenburg",
     "corridor_slugs": ["grand_canal"],
     "works": [
       {
@@ -520,9 +509,6 @@
     "institution": "CNRS / Université Paris Nanterre (UMR 8068 TEMPS)",
     "specialization": "Chaîne opératoire analysis; ethnoarchaeology of ceramic production; social transmission of technical traditions",
     "website_url": "https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/",
-    "photo_url": "scholars/roux.jpg",
-    "image_credit": "Photo: UMR 8068 TEMPS / CNRS",
-    "image_source_url": "https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/",
     "corridor_slugs": ["grand_canal"],
     "works": [
       {

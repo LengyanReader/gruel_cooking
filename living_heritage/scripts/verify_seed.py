@@ -105,7 +105,7 @@ check("存在 refined 公开笔记与 raw 私密笔记",
 check("plan 页注册且导航就绪",
       bool(conn.execute("SELECT 1 FROM pages WHERE slug='plan' AND is_published=1 AND nav_key IS NOT NULL").fetchone()))
 for nav in ["nav.plan", "plan.status.todo", "note.category.brainstorm", "note.status.refined",
-            "label.profile", "label.corridor_ties", "label.related_literature", "footer.image_rights"]:
+            "label.profile", "label.corridor_ties", "label.related_literature"]:
     check(f"导航/标签键双语齐备: {nav}", full_key(nav))
 check("page.plan.title 双语齐备",
       full_key("page.plan.title") and full_key("page.plan.intro.body"))

@@ -130,13 +130,11 @@ check("roux detail specialization", "chaîne opératoire" in rd)
 check("roux detail works", "Ceramics and Society" in rd)
 check("roux detail related pub via authored edge", "Persisting technological boundaries" in rd)
 check("roux detail corridor chip grand_canal", "/corridors#grand_canal" in rd)
-# Image attribution compliance: source-linked credits + site-wide rights notice
-check("ingold credit names photographer", "Caroline Dear" in sd)
-check("ingold credit links to source", 'href="https://www.timingold.com/"' in sd)
-check("roux credit links to source", 'href="https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/"' in rd)
-check("footer image-rights notice (en)", "rights holders" in sd)
-sdzr = get("/scholars/roux")  # zh cookie jar active
-check("footer image-rights notice (zh)", "\u7248\u6743" in sdzr)
+# Photo removal (avoid third-party copyright exposure): no portraits or credits rendered
+check("ingold detail has no scholar portrait", "/img/scholars/" not in sd)
+check("ingold detail has no photographer credit", "Caroline Dear" not in sd)
+check("roux detail has no scholar portrait", "/img/scholars/" not in rd)
+check("footer has no image-rights notice", "rights holders" not in sd)
 try:
     with urllib.request.urlopen(BASE + "/scholars/nobody-here") as r:
         check("scholar detail 404 (unexpected 200)", False, r.status)
