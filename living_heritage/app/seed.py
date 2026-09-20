@@ -138,7 +138,7 @@ def seed_publications(conn, en_data: list, zh_data: list):
                 p.get("url"),
                 p.get("tags"),
                 p.get("source_level"),
-                p.get("corridor_slugs") and json.dumps(p.get("corridor_slugs"), ensure_ascii=False),
+                (json.dumps(p["corridor_slugs"], ensure_ascii=False) if p.get("corridor_slugs") else None),
             )
         )
         row = conn.execute("SELECT id FROM publications WHERE title_key = ?", (p["title_key"],)).fetchone()

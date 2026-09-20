@@ -310,5 +310,44 @@
     "url": null,
     "tags": "波罗的海, 史前, 网络, 哥特兰, 连通性",
     "source_level": "A"
+  },
+  {
+    "title_key": "pub.roux_2019.title",
+    "abstract_key": "pub.roux_2019.abstract",
+    "title_zh": "《陶瓷与社会：考古陶瓷组合的技术路径》",
+    "abstract_zh": "法国操作链学派的集大成之作：将陶瓷组合解码为“技术选择的联盟”，其边界即社会边界。对大运河的窑业与作坊廊道可直接操作——吉莱特的景德镇瓷器材料可借此重读：传递从来不是扩散，而是沿网络边界发生的学习。Roux & Courty, Springer 2019（《陶瓷与人》英译本）。",
+    "authors": "Valentine Roux（与 M.-A. Courty 合作）",
+    "publication_type": "专著",
+    "year": 2019,
+    "doi": "10.1007/978-3-030-03973-8",
+    "url": null,
+    "tags": "操作链, 陶瓷, 技术选择, 社会边界, 传递",
+    "source_level": "A"
+  },
+  {
+    "title_key": "pub.roux_2017.title",
+    "abstract_key": "pub.roux_2017.abstract",
+    "title_zh": "《持续的技术边界：社会互动、认知相关与极化》",
+    "abstract_zh": "来自印度与非洲陶工的民族考古学与建模证据：当社会互动为内婚制、学习有界时，技术边界便持续存在——为“手工艺为何沿某些廊道传播而在另一些处中断”提供机制解释。Roux, Bril, Cauliez 等，Journal of Anthropological Archaeology 48: 320–335。",
+    "authors": "Valentine Roux, B. Bril, J. Cauliez, A.-L. Goujon, C. Lara, C. Manen, G. de Saulieu, E. Zangato",
+    "publication_type": "期刊论文",
+    "year": 2017,
+    "doi": "10.1016/j.jaa.2017.09.004",
+    "url": null,
+    "tags": "技术边界, 学习, 社会网络, 民族考古学, 极化",
+    "source_level": "A"
+  },
+  {
+    "title_key": "pub.roux_2020.title",
+    "abstract_key": "pub.roux_2020.abstract",
+    "title_zh": "《操作链、技术网络与社会学解释》",
+    "abstract_zh": "纲领性论述：操作链经形式化为技术网络，即成为建模社会关系结构的工具——将技术选择的微观序列连至互动的宏观格局。解读廊道手工艺复合体的方法论骨干。《格拉纳达大学史前与考古学刊》30，“社会陶瓷”专号。",
+    "authors": "Valentine Roux",
+    "publication_type": "期刊论文",
+    "year": 2020,
+    "doi": null,
+    "url": "https://shs.hal.science/halshs-03091018",
+    "tags": "操作链, 技术网络, 建模, 社会学解释",
+    "source_level": "A"
   }
 ]

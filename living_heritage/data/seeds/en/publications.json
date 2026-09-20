@@ -346,5 +346,50 @@
     "tags": "Baltic, prehistory, networks, Gotland, connectivity",
     "source_level": "A",
     "corridor_slugs": ["gotland"]
+  },
+  {
+    "title_key": "pub.roux_2019.title",
+    "abstract_key": "pub.roux_2019.abstract",
+    "title_en": "Ceramics and Society: A Technological Approach to Archaeological Assemblages",
+    "abstract_en": "The summa of the French chaîne opératoire school: decoding ceramic assemblages as coalitions of technical choices whose boundaries are social boundaries. Directly operational for the Grand Canal's kiln and craft corridors — Gillette's Jingdezhen porcelain material can be re-read through it: transmission is never diffusion but learning along network boundaries. Roux & Courty, Springer 2019 (English translation of Des Céramiques et des Hommes).",
+    "authors": "Valentine Roux (with M.-A. Courty)",
+    "scholar_keys": ["scholar.roux.name"],
+    "publication_type": "book",
+    "year": 2019,
+    "doi": "10.1007/978-3-030-03973-8",
+    "url": null,
+    "tags": "chaîne opératoire, ceramics, technical choices, social boundaries, transmission",
+    "source_level": "A",
+    "corridor_slugs": ["grand_canal"]
+  },
+  {
+    "title_key": "pub.roux_2017.title",
+    "abstract_key": "pub.roux_2017.abstract",
+    "title_en": "Persisting technological boundaries: Social interactions, cognitive correlations and polarization",
+    "abstract_en": "Ethnoarchaeological and modelling evidence (potters in India and Africa) that technological boundaries persist where social interaction is endogamous and learning is bounded — a mechanism account of why crafts travel along some corridors and stop at others. Roux, Bril, Cauliez, Goujon, Lara, Manen, de Saulieu & Zangato, Journal of Anthropological Archaeology 48: 320–335.",
+    "authors": "Valentine Roux, B. Bril, J. Cauliez, A.-L. Goujon, C. Lara, C. Manen, G. de Saulieu, E. Zangato",
+    "scholar_keys": ["scholar.roux.name"],
+    "publication_type": "journal article",
+    "year": 2017,
+    "doi": "10.1016/j.jaa.2017.09.004",
+    "url": null,
+    "tags": "technological boundaries, learning, social networks, ethnoarchaeology, polarization",
+    "source_level": "A",
+    "corridor_slugs": null
+  },
+  {
+    "title_key": "pub.roux_2020.title",
+    "abstract_key": "pub.roux_2020.abstract",
+    "title_en": "Chaîne Opératoire, technological networks and sociological interpretations",
+    "abstract_en": "Programmatic statement: the chaîne opératoire, formalised as technological networks, is a tool for modelling the relational structure of societies — linking micro-sequences of technical choices to macro patterns of interaction. Methodological backbone for reading corridor craft complexes. Cuadernos de Prehistoria y Arqueología de la Universidad de Granada 30, special issue 'Social ceramics'.",
+    "authors": "Valentine Roux",
+    "scholar_keys": ["scholar.roux.name"],
+    "publication_type": "journal article",
+    "year": 2020,
+    "doi": null,
+    "url": "https://shs.hal.science/halshs-03091018",
+    "tags": "chaîne opératoire, technological networks, modelling, sociological interpretation",
+    "source_level": "A",
+    "corridor_slugs": null
   }
 ]

@@ -508,5 +508,97 @@
         "zh": "面向生计的唯物主义人类学：经济生活是追踪文化关系的最强线索；可持续性是关乎生计的关系问题，而非标签。"
       }
     }
+  },
+  {
+    "name_key": "scholar.roux.name",
+    "name_en": "Valentine Roux",
+    "name_zh": "瓦伦丁·鲁",
+    "bio_key": "scholar.roux.bio",
+    "bio_en": "Director of Research Emerita at the CNRS; long affiliated with UMR 8068 CrÉATiS / TEMPS (Université Paris Nanterre / CNRS). Leader of the French school of chaîne opératoire analysis: through ethnoarchaeology of pottery (India, Africa, Levant), experiments on motor schemes and agent-based modelling, she demonstrates that technical choices are social choices — technological traditions persist, spread or fossilise along the boundaries of social networks (~7,200 citations). Co-editor, with T. Ingold, of Tools, Language and Cognition in Human Evolution (CUP 1993). Key works: Ceramics and Society (Springer 2019); 'Persisting technological boundaries' (Journal of Anthropological Archaeology 48, 2017); 'Chaîne opératoire, technological networks and sociological interpretations' (CPAU-UG 30, 2020). Her framework decodes assemblages of the Grand Canal's kiln and craft sites as coalitions of technical choices revealing who learned from whom, along which routes.",
+    "bio_zh": "法国国家科学研究中心（CNRS）终身研究总监（荣休），长期任职于巴黎纳米塞尔大学/CNRS 的 UMR 8068 CrÉATiS / TEMPS 实验室。法国操作链（chaîne opératoire）分析学派的领军人物：通过陶器民族考古学（印度、非洲、黎凡特）、身体图式实验与基于主体的建模，她证明技术选择即社会选择——技术传统沿社会网络的边界而存续、传播或固化（谷歌学术引用约7200次）。与蒂姆·英格尔德合编《工具、语言与人类认知演化》（剑桥大学出版社1993）。代表作：《陶瓷与社会》（Springer 2019）；《持续的技术边界》（Journal of Anthropological Archaeology 48, 2017）；《操作链、技术网络与社会学解释》（CPAU-UG 30, 2020）。她的框架可将大运河沿线窑址与作坊遗存解码为“技术选择的联盟”，揭示师承沿何种路线流动。",
+    "institution": "CNRS / Université Paris Nanterre (UMR 8068 TEMPS)",
+    "specialization": "Chaîne opératoire analysis; ethnoarchaeology of ceramic production; social transmission of technical traditions",
+    "website_url": "https://umrtemps.cnrs.fr/en/membre/roux-valentine-2/",
+    "photo_url": "",
+    "image_credit": "",
+    "corridor_slugs": ["grand_canal"],
+    "works": [
+      {
+        "type": "book",
+        "year": 2019,
+        "title_en": "Ceramics and Society: A Technological Approach to Archaeological Assemblages (with M.-A. Courty)",
+        "title_zh": "《陶瓷与社会：考古陶瓷组合的技术路径》（与M.-A. Courty合作）",
+        "venue_en": "Springer",
+        "venue_zh": "施普林格出版社",
+        "url": "https://doi.org/10.1007/978-3-030-03973-8",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2017,
+        "title_en": "Persisting technological boundaries: Social interactions, cognitive correlations and polarization (with B. Bril, J. Cauliez et al.)",
+        "title_zh": "《持续的技术边界：社会互动、认知相关与极化》（与B. Bril, J. Cauliez等合作）",
+        "venue_en": "Journal of Anthropological Archaeology 48: 320–335",
+        "venue_zh": "《人类学考古学杂志》48: 320–335",
+        "url": "https://doi.org/10.1016/j.jaa.2017.09.004",
+        "label": "A"
+      },
+      {
+        "type": "edited volume",
+        "year": 2018,
+        "title_en": "Social Boundaries and Networks in the Diffusion of Innovations (special issue with G. Manzo)",
+        "title_zh": "《创新扩散中的社会边界与网络》（与G. Manzo合编特刊）",
+        "venue_en": "Journal of Archaeological Method and Theory 25(4)",
+        "venue_zh": "《考古学方法与理论杂志》25(4)",
+        "url": "https://doi.org/10.1007/s10816-018-9395-x",
+        "label": "A"
+      },
+      {
+        "type": "article",
+        "year": 2020,
+        "title_en": "Chaîne Opératoire, technological networks and sociological interpretations",
+        "title_zh": "《操作链、技术网络与社会学解释》",
+        "venue_en": "Cuadernos de Prehistoria y Arqueología de la Universidad de Granada 30: 15–34",
+        "venue_zh": "《格拉纳达大学史前与考古学刊》30: 15–34",
+        "url": "https://shs.hal.science/halshs-03091018",
+        "label": "A"
+      },
+      {
+        "type": "edited volume",
+        "year": 1993,
+        "title_en": "Tools, Language and Cognition in Human Evolution (edited with K. R. Gibson and T. Ingold)",
+        "title_zh": "《工具、语言与人类认知演化》（与K. R. Gibson、T. Ingold合编）",
+        "venue_en": "Cambridge University Press",
+        "venue_zh": "剑桥大学出版社",
+        "url": "",
+        "label": "A"
+      }
+    ],
+    "traits": {
+      "taste": {
+        "en": "A taste for the granularity of making — paste preparation, coiling, firing, the kinematics of the gesture — refused to be flattened into typological classes; style alone is never explanation.",
+        "zh": "偏爱制作过程的细密之处——陶土处理、泥条盘筑、烧成、动作的运动学——拒绝把它们磨平成类型学类别；仅凭风格从不构成解释。"
+      },
+      "quality": {
+        "en": "Unusual methodological range: long-term ethnoarchaeological fieldwork, motor-cognition experiments and agent-based simulation held together by one question — how technical traditions are transmitted.",
+        "zh": "罕见的方法跨度：长期民族考古田野、动作与认知实验、基于主体的模拟，被同一个问题贯穿——技术传统如何传递。"
+      },
+      "spirit": {
+        "en": "Objects are social facts: every operational chain encodes a 'coalition of technical choices'; if a difference can be made to matter socially, it can be made to matter analytically — decode, then model.",
+        "zh": "器物即社会事实：每条操作链都编码着“技术选择的联盟”；凡能在社会中造成差异者，必能在分析中造成差异——先解码，再建模。"
+      },
+      "character": {
+        "en": "Direct, polemical and constructive; more interested in designing the decisive test than in winning the school debate; a trainer of a whole French school of technological analysis.",
+        "zh": "直接、好辩而有建设性；对设计决定性检验的兴趣远大于在学派论战中取胜；培育出整个法国技术分析学派。"
+      },
+      "concerns": {
+        "en": "Persistence and diffusion of technological traditions; social boundaries and networks in the transmission of innovations; learning, bodily techniques and standardisation; what ceramics tell us about who learned from whom.",
+        "zh": "技术传统的存续与扩散；创新传递中的社会边界与网络；学习、身体技术与标准化；陶瓷能告诉我们谁向谁学习。"
+      },
+      "philosophy": {
+        "en": "The chaîne opératoire as a matrix of the social: technical sequences are crystallised social relations; transmission is never diffusion but learning along network boundaries.",
+        "zh": "操作链即社会的矩阵：技术序列是结晶了的社会关系；传递从来不是扩散，而是沿网络边界发生的学习。"
+      }
+    }
   }
 ]

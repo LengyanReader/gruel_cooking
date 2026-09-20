@@ -122,6 +122,14 @@ check("scholar detail back link", 'href="/scholars"' in sd)
 sdz = get("/scholars/gillette")  # zh cookie jar active
 check("scholar detail zh name", "\u5409\u83b1\u7279" in sdz)
 check("scholar detail zh sections", "\u5eca\u9053\u5173\u8054" in sdz and "\u4ee3\u8868\u4f5c\u54c1" in sdz)
+# 6th scholar: Valentine Roux (chaîne opératoire)
+check("scholars list links to roux detail", 'href="/scholars/roux"' in sl)
+rd = get_en("/scholars/roux")
+check("roux detail institution CNRS", "CNRS" in rd)
+check("roux detail specialization", "chaîne opératoire" in rd)
+check("roux detail works", "Ceramics and Society" in rd)
+check("roux detail related pub via authored edge", "Persisting technological boundaries" in rd)
+check("roux detail corridor chip grand_canal", "/corridors#grand_canal" in rd)
 try:
     with urllib.request.urlopen(BASE + "/scholars/nobody-here") as r:
         check("scholar detail 404 (unexpected 200)", False, r.status)
