@@ -14,9 +14,15 @@ Environment:
     LH_SITE_OUT     output dir (defaults to ../docs beside the repo root)
 
 Design notes:
-  * A <base href="{LH_BASE_URL}/"> tag is injected so every rewritten root-relative
-    href/src resolves against the deployed site root (works on project Pages URLs).
+  * Portability first: every page gets a depth-relative <base href="../…/"> so the
+    mirror works from the live Pages URL, a local HTTP server AND plain file://
+    double-clicks. canonical/og tags keep the absolute LH_BASE_URL (template-side),
+    independent of the <base> tag.
   * Internal /-rooted hrefs/srcs are made base-relative; https/data/#/mailto untouched.
+  * Directory-style page links (corridors, scholars/, zh/plan/, even the bare
+    href="" home link) are rewritten to explicit <dir>/index.html targets — the
+    only form that opens under file://. Asset paths (they contain a dot: .css/.js/
+    .jpg) and pure #fragments are left alone.
   * /literature?view=… becomes /literature/<view>/ folders; the two tab links are
     rewritten accordingly.
   * The POST /locale/<lang> forms (cookie switch) are replaced by static links to the
@@ -57,6 +63,30 @@ LANG_TOGGLE_RE = re.compile(
     r'<div class="lang-toggle">.*?</div>', re.DOTALL
 )
 INTERNAL_ATTR_RE = re.compile(r'\s(href|src)="/')
+HREF_RE = re.compile(r'href="([^"#]*?)([?#][^"]*)?"')
+
+
+def relative_base(out_key: str, locale: str) -> str:
+    """Depth-relative <base> href: '../' per folder level below the mirror root."""
+    head = "" if out_key == "index" else out_key.rsplit("/index", 1)[0]  # '' | 'scholars' | 'literature/dimensions'
+    depth = (1 if locale != "en" else 0) + (1 if head else 0) + head.count("/")
+    return "./" if depth == 0 else "../" * depth
+
+
+def page_link(match: re.Match) -> str:
+    """Rewrite one href to an explicit <dir>/index.html target (file://-friendly).
+
+    Skips: absolute URLs (https:/data:, rewritten away already), assets (any path
+    containing a dot, e.g. css/main.css), and the <base> tag itself ('../').
+    """
+    target, suffix = match.group(1), match.group(2) or ""
+    if ":" in target or "." in target:
+        return match.group(0)
+    dir_ = "index" if target in ("", "index") else target.strip("/").removesuffix("/index")
+    # 'index' was the old (broken) home link; '' and 'index' both mean the root page.
+    if dir_ == "index":
+        dir_ = ""
+    return f'href="{dir_ + "/" if dir_ else ""}index.html{suffix}"'
 
 
 def fetch(path: str, query: dict, locale: str) -> str:
@@ -80,7 +110,7 @@ def parallel_href(out_key: str, target_locale: str) -> str:
 
 
 def rewrite(html: str, *, out_key: str, locale: str, base_href: str) -> str:
-    """Make a rendered page work on a static host."""
+    """Make a rendered page work on a static host and under file://."""
     html = html.replace("<head>", f'<head>\n<base href="{base_href}">', 1)
 
     # Internal /-rooted URLs become base-relative; https:/data:/# untouched.
@@ -90,7 +120,8 @@ def rewrite(html: str, *, out_key: str, locale: str, base_href: str) -> str:
     html = html.replace('href="literature?view=dimensions"', 'href="literature/dimensions/"')
     html = html.replace('href="literature?view=scholars"', 'href="literature/scholars/"')
 
-    # Static language switch (replaces the POST forms).
+    # Static language switch (replaces the POST forms). Directory-style targets
+    # are normalised to index.html by the final pass below.
     en_href = parallel_href(out_key, "en")
     zh_href = parallel_href(out_key, "zh")
     en_active = ' active' if locale == "en" else ''
@@ -102,6 +133,10 @@ def rewrite(html: str, *, out_key: str, locale: str, base_href: str) -> str:
         f'</div>'
     )
     html = LANG_TOGGLE_RE.sub(block, html, count=1)
+
+    # Every page-directory href -> explicit <dir>/index.html (file:// needs the
+    # real file; Pages/HTTP keep working identically).
+    html = HREF_RE.sub(page_link, html)
     return html
 
 
@@ -110,8 +145,8 @@ def main() -> int:
     seed_all()
 
     out_root = Path(os.getenv("LH_SITE_OUT", str(BASE_DIR / "dist"))).resolve()
-    base_url = os.getenv("LH_BASE_URL", "").rstrip("/")
-    base_href = base_url + "/" if base_url else "./"
+    # LH_BASE_URL still drives canonical/og absolute URLs (read by app.config at
+    # render time); the <base> tag itself is now depth-relative per page.
     if out_root.exists():
         shutil.rmtree(out_root)
 
@@ -119,7 +154,8 @@ def main() -> int:
     for locale in LOCALES:
         prefix = "" if locale == "en" else "zh"
         for out_key, path, query in PAGES:
-            html = rewrite(fetch(path, query, locale), out_key=out_key, locale=locale, base_href=base_href)
+            html = rewrite(fetch(path, query, locale), out_key=out_key, locale=locale,
+                           base_href=relative_base(out_key, locale))
             rel = (Path(prefix) / out_key).with_suffix(".html")
             dest = out_root / rel
             dest.parent.mkdir(parents=True, exist_ok=True)
@@ -130,7 +166,6 @@ def main() -> int:
     shutil.copytree(STATIC_DIR, out_root, dirs_exist_ok=True)
 
     print(f"static site written: {out_root} ({written} pages, {len(LOCALES)} locales)")
-    print(f"base href: {base_href}")
     return 0
 
 
