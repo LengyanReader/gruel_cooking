@@ -8,6 +8,12 @@ from app.config import SQLITE_PATH
 conn = sqlite3.connect(SQLITE_PATH)
 conn.row_factory = sqlite3.Row
 
+ALLOWED_OBS_TYPES = {
+    "walk", "food", "regeneration", "desk", "archival",
+    "fieldwalk", "interview", "sensory", "conversation", "other", "ritual",
+}
+BELIEF_TAGS = ("belief", "信仰", "进香", "香会")
+
 fails = []
 def check(desc, ok):
     if ok:
@@ -44,12 +50,28 @@ check("文献库非空且每篇双语标题+来源级别合法",
       n_pubs > 0 and all(
           full_key(r["title_key"]) and r["source_level"] in ("A", "B", "C", "D")
           for r in conn.execute("SELECT title_key, source_level FROM publications").fetchall()))
+check("语料门禁: 文献来源级别仅收 A/B",
+      all(r["source_level"] in ("A", "B")
+          for r in conn.execute("SELECT source_level FROM publications").fetchall()))
 check("每篇文献有 tags",
       all((r["tags"] or "").strip() for r in conn.execute("SELECT tags FROM publications").fetchall()))
 check("田野观察非空且每条约记双语",
       n_obs > 0 and all(
           full_key(r["title_key"]) and full_key(r["notes_key"])
           for r in conn.execute("SELECT title_key, notes_key FROM field_observations").fetchall()))
+check("观察类型白名单（含 ritual）且非空",
+      all(
+          (r["observation_type"] or "").strip()
+          and r["observation_type"].strip() in ALLOWED_OBS_TYPES
+          for r in conn.execute("SELECT observation_type FROM field_observations").fetchall()))
+check("信仰·日常纹理维度已有观察",
+      any(r["tags"] and any(t in r["tags"] for t in BELIEF_TAGS)
+          for r in conn.execute("SELECT tags FROM field_observations").fetchall()))
+check("ritual 观察(若存在)挂有效站点且级别 A/B",
+      all(
+          r["site_id"] and r["source_level"] in ("A", "B")
+          and conn.execute("SELECT 1 FROM heritage_sites WHERE id=?", (r["site_id"],)).fetchone()
+          for r in conn.execute("SELECT site_id, source_level FROM field_observations WHERE observation_type='ritual'").fetchall()))
 check("每条观察挂接有效站点",
       all(
           conn.execute("SELECT 1 FROM heritage_sites WHERE id=?", (r["site_id"],)).fetchone()

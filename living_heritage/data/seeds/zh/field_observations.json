@@ -130,5 +130,60 @@
     "observation_type": "desk",
     "source_level": "A",
     "tags": "档案, 核验, 厄兰, WHC 968"
+  },
+  {
+    "site": "site.tongzhou.name",
+    "date_observed": "2026-09-23",
+    "title_en": "The tower at the canal's northern end",
+    "title_zh": "大运河北端的塔",
+    "notes_en": "Desk record, 2026-09-23: the Burning-Lamp Pagoda (first built 557 AD; surviving base Liao-dynasty; body rebuilt 1696 after the 1679 earthquake) is verified as the landmark of the Grand Canal's northern terminus — 'three sights of the tower, and you have reached Tongzhou city'. The Confucian Temple, Youpeng Temple and Ziqing Temple sit in a triangle celebrated as the 'three temples one tower' of Tongzhou. An octagonal thirteen-storey brick pagoda, 56 metres, 2,248 wind bells: read here as a seamark of everyday navigation, not a doctrinal object. Sources: Beijing Municipal Ethnic & Religious Affairs Commission [A]; Beijing Municipal Government [A].",
+    "notes_zh": "档案记录 2026-09-23:燃灯塔（始建北周 557 年；现存塔基为辽代；塔身于康熙三十五年 1696 年按原样重建）已核验为大运河北端标志——「三望燃灯塔，便到通州城」。文庙、佑胜教寺与紫清宫呈「品」字形布列,即通州「三庙一塔」。八角十三层密檐砖塔、高 56 米、风铃 2248 枚:此处视为日常航行的航海标,而非教义对象。来源:北京市民宗委 [A]；北京市政府 [A]。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "通州, 燃灯塔, 三庙一塔, 航标, 信仰"
+  },
+  {
+    "site": "site.shichahai.name",
+    "date_observed": "2026-09-23",
+    "title_en": "Belief at the endpoint of the Yuan canal",
+    "title_zh": "元运河尽头的信仰",
+    "notes_en": "Desk record, 2026-09-23: Jishuitan is verified as the Yuan-dynasty terminus where tribute-grain barges laid in, and the Shichahai stretch is State-level protected (7th batch, 2013). Huode Zhenjun Temple and Guanghua Temple are both Beijing municipal protection (3rd batch, 1984). The open question in the field is whether Guanghua's Laba porridge-giving (recorded as late as 2017) still runs today — the 2025 Beijing Daily list did not include it; pending an on-site check. Sources: Beijing Xicheng District Government [A]; Beijing Cultural Heritage Bureau [A].",
+    "notes_zh": "档案记录 2026-09-23:积水潭已核验为元代漕运粮船的终点港,什刹海段为全国重点文保（2013 年第七批）。火德真君庙与广化寺均为北京市第三批（1984）市级文保。田野中的悬而未决之间:广化寺的腊八施粥（至迟 2017 年有记录）今日是否仍在进行——2025 年北京日报舍粥名单未见广化寺;待现场复核。来源:北京市西城区政府 [A]；北京市文物局 [A]。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "什刹海, 积水潭, 火德真君庙, 广化寺, 腊八粥, 信仰"
+  },
+  {
+    "site": "site.zhangjiawan.name",
+    "date_observed": "2026-09-23",
+    "title_en": "The wharf town's absent shrines",
+    "title_zh": "码头市镇失落的香火",
+    "notes_en": "Desk record, 2026-09-23: Zhangjiawan's place-narrative as a tribute-grain wharf town of mixed beliefs holds only at [C] level at best; no reliable surviving evidence was found for an in-situ Guandi, Dragon-King or River-God temple. Absence of evidence is itself a fieldwork finding: the town's faith-scape must be read today through its breakfast market and the ongoing canal-gateway regeneration rather than through standing shrines. Pending an on-site walking pass (upgrade to walk/ritual).",
+    "notes_zh": "档案记录 2026-09-23:张家湾作为「漕运移民市镇、多元信仰」的说法至多停在 [C] 级;就地关帝庙、龙王庙或河神庙,未找到任何可靠的存留证据。缺证本身就是田野结论:此镇的信仰景观如今只能经由它的早市与进行中的运河门户更新被阅读,而非经由站立的香火。待实地行走复核（升级为 walk/ritual）。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "张家湾, 码头市镇, 缺证, 香火, 核验, 信仰"
+  },
+  {
+    "site": "site.grand_canal_beijing.name",
+    "date_observed": "2026-09-23",
+    "title_en": "The sailor's little shrine on the tribute route",
+    "title_zh": "漕路上的行船小神龛",
+    "notes_en": "Desk record, 2026-09-23: Mazu worship moved north along the hereditary sea-canal grain routes — the Yuan court founded Tianhou temples at the Hai-river mouth ('In the third year of Taiding the Heavenly Consort temple was built at Haijin town'); the Qing renamed the goddess Tianhou in 1684; and along the canal her shrines mingled with the lady-detty cults of the north. Read as everyday texture: a votive niche on a grain barge, a safe-passage prayer at a lock — a guardian of movement rather than a sect. Sources: Fang Guangling [B]; Xu Xiaohui [B].",
+    "notes_zh": "档案记录 2026-09-23:妈祖信仰随漕运的海陆航路北上——元代于海河口的天津敕建天妃宫（「泰定三年作天妃宫于海津镇」）；清康熙二十三年（1684）改封「天后」；运河沿线的妈祖宫庙又与北方娘娘信仰互渗。读作日常纹理:粮船上的一角神龛、闸前的一次平安祈祷——移动的守护神,而非宗派。来源:方广岭 [B]；徐晓慧 [B]。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "妈祖, 天后, 漕运, 行船人, 神龛, 信仰"
+  },
+  {
+    "site": "site.grand_canal_beijing.name",
+    "date_observed": "2026-09-23",
+    "title_en": "A walking approach to Beijing: the Miaofengshan road",
+    "title_zh": "走进北京的香道：妙峰山路",
+    "notes_en": "Desk record, 2026-09-23: set against the canal's 'see the tower, arrive at the city', the Miaofengshan pilgrimage road is the walking approach to Beijing — tea sheds along the route, incense societies walking the spring and autumn fairs (national intangible heritage, 2008; Gu Jiegang's landmark 1925 survey opens China's folklore fieldwork). Not a canal corridor but a Jifeng road interface: two ways of arriving at the capital, one by boat beneath a tower, one on foot through tea-houses. Pending an on-site walking pass (upgrade to walk/ritual).",
+    "notes_zh": "档案记录 2026-09-23:与运河「望塔即到城」相对照,妙峰山香道是「走进北京」的徒步方式——路旁设茶棚,香会按春、秋两香走会（2008 年国家级非遗；顾颉刚 1925 年调查开启中国民俗学首次田野）。非运河廊道,而是京畿行进界面对照:抵达京城的两种方式,一乘舟于塔下,一徒步穿行于茶棚之间。待实地行走复核（升级为 walk/ritual）。",
+    "observation_type": "desk",
+    "source_level": "A",
+    "tags": "妙峰山, 香道, 茶棚, 顾颉刚, 抵达方式, 信仰"
   }
 ]
