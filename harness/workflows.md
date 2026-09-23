@@ -1,0 +1,63 @@
+# Workflows · Repo-wide 公共流程
+
+Shared, env-wide loops with the exact commands. Domain-specific loops live in each domain's harness (registered in `harness/README.md`). All Python runs happen in **`conda activate hy_py312`**.
+
+本文件只收**跨域公共**流程；域专属流程在各域 harness（见注册表）。
+
+## W-GEN · Build & sync any generator 构建与源出同步
+
+Pattern shared by every pillar that ships a static site: **source (markdown/JSON) → generator → `docs/` mirror → CI-verified `git diff --exit-code`**.
+
+1. Edit source material (markdown/JSON), never the generated `docs/` output by hand.
+2. Run the domain's generator (per-domain exact command lives in that domain's harness):
+   - **Language Stacking**: `python "Language Stacking-Linguistic Weaving/web/build_learning.py" --validate --db --check`
+   - **living_heritage**: `python scripts/build_static_site.py` (from `living_heritage/`, env `LH_SITE_OUT` set)
+   - **Reading & IA**: `python Reading_IA/web/build_reading.py`
+3. Verify: run the domain's checks (HTML / links / seed-verify / pytest).
+4. Commit **source + generated mirror together**; CI enforces `git diff --exit-code -- <docs path>` so the mirror is always in sync.
+
+## W-ENV · Environment 环境
+
+- Python: `conda activate hy_py312` (repo-wide, per `harness/principles.md` §III.14).
+- Preview locally: `python -m http.server 8080 --directory docs` → `http://localhost:8080/<pillar>/`.
+- Bilingual by default (§II.12).
+
+## W-PRE · Hygiene before any commit 提交前卫生
+
+Run the spirit of `_final_ok.ps1` (triggered the moment a commit is requested):
+1. `git status --short` — only intended files staged.
+2. Junk scan: no `_tmp_*`, `extract_classes*`, `.bak`, stray output files.
+3. Secrets scan on staged diff: `BEGIN … PRIVATE KEY`, `ghp_…`, `AKIA…`, API keys.
+4. `git diff --cached --name-only` review.
+5. Never write secrets into notes or data files (`.env` stays out).
+6. Ask before committing/pushing/PR — per `harness/principles.md` §III.19.
+
+## W-EVO · The harness evolves itself 装备自我演化
+
+The most proactive loop in the repo: the harness does not wait to be told it is stale. Whenever any evolution signal fires (see `harness/evolution.md`), or monthly, run:
+
+```powershell
+python harness/audit.py --strict   # scans EVERY harness layer; S-signals reported
+```
+
+1. **Audit** — report which signal fired (S1 promote / S2 register / S3 deepen / S4 fission / S5 archive / S6 consolidate).
+2. **Mutate** — apply the minimal mutation from `evolution.md`'s taxonomy, at the layer that owns it.
+3. **Re-audit** — rerun until `audit clean`.
+4. **Journal** — append one row to `harness/evolution.md` Journal (date · layer · mutation · signal).
+5. **Human sign-off** — structural mutations carry an *AI proposed → human reviewed* marker (§I.6) before they are declared effective.
+
+Wire `audit.py` into `_final_ok.ps1` so every commit hygiene pass also checks harness health.
+
+---
+
+## Registry 各域工作流注册表
+
+| Domain 板块 | Where 位置 | Loops 流程 |
+|---|---|---|
+| `Reading_IA/` | `Reading_IA/docs/workflows.md` | W1 阅读录入 · W2 书单核验 · W3 思潮之形 · W4 站点同步 |
+| `Language Stacking-Linguistic Weaving/` | `README.md` §99 + `Language Stacking-Linguistic Weaving/web/README.md` | 构建/校验/导出 neo4j / pytest |
+| `living_heritage/` | `living_heritage/docs/workflows.md` | LH-W1 录入 · W2 灌库校验 · W3 构建同步 · W4 e2e · W5 图谱 · W6 部署 |
+| `math_clarification/` | `math_clarification/docs/workflows.md` | MC-W1 条目 · W2 机器验证 · W3 分层 · W4 索引 · W5 叙事 · W6 查看器 |
+| `core/ · heaven_climate/ · economics_cross_culture/` | `README.md` | 尚无独立流程（内容驱动） |
+
+> Extensibility 拓展规则：新的单域流程 → 写进该域 harness 并在上表加一行；新的跨域流程 → 作为 `W-` 加在本文件，或按 `evolution.md` 晋升/加深/拓展。

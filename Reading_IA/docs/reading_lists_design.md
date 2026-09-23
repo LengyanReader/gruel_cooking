@@ -1,6 +1,6 @@
 # 书单档案与更新设计 · Reading-list Archive & Update Protocol
 
-`2026-09-23` · 已落地 D0（登记注册 + 档案页）；生成器待 Phase 1 · 关联：`readings/lists/`、`docs/reading_ia/read/`、`harness/workflows.md`
+`2026-09-23` · 已落地 D0（登记注册 + 档案页）；生成器待 Phase 1 · 关联：`readings/lists/`、`docs/reading_ia/read/`、`workflows.md`
 
 > 问题：书单会**陆续添加**；文化趋势文章不应内嵌书单（已定规则，见 §7 R1）；需要一种可增长、可回溯、不破损的归档与更新方式。
 
@@ -72,7 +72,7 @@ Phase 1（卡片积累后）：登记注册改 `---json---` frontmatter（同 La
 
 ## 7. 铁律（新增）Iron rules
 
-1. **R1 · 书单不入思潮之文**：思潮文章（`.md` 与 `.html`）只允许**指针**（链接 + 一句定位），绝不允许内嵌书单清单或逐本展开。已同步进 `harness/workflows.md` W3。
+1. **R1 · 书单不入思潮之文**：思潮文章（`.md` 与 `.html`）只允许**指针**（链接 + 一句定位），绝不允许内嵌书单清单或逐本展开。已同步进 `Reading_IA/docs/workflows.md` W3。
 2. **R2 · 一窗一书单**：一个阅读窗口至多一份书单。
 3. **R3 · 文件名稳定**：crop 页名定稿后不复用、不改名。
 4. **R4 · 单一来源 → 镜像**：注册表与 web 页对用户呈现一致；改源即改镜像、跑校验。
@@ -88,4 +88,4 @@ Phase 1（卡片积累后）：登记注册改 `---json---` frontmatter（同 La
 ---
 
 *本文档是设计 + D0 落地基线；落地清单已登记于 `readings/lists/README.md`。*
-<!-- AI-drafted 草拟标注：2026-09-23 opencode；规则 R1–R4 已在本次会话生效，人工复核后入 harness。 -->
+<!-- AI-drafted 草拟标注：2026-09-23 opencode；规则 R1–R4 已在本次会话生效，人工复核后入 harness（根目录 `../harness/`）。 -->

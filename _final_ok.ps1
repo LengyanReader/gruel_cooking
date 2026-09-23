@@ -30,3 +30,7 @@ if ($hits) { $hits } else { Write-Output 'clean (0 hits)' }
 Write-Output ''
 Write-Output '=== 5) .bak untracked in docs? ==='
 git -C $r status --short --untracked-files=all | Select-String -Pattern '\.bak|_tmp_classes|extract_classes'
+
+Write-Output ''
+Write-Output '=== 6) harness self-evolution audit (W-EVO) ==='
+conda run -n hy_py312 python harness/audit.py --strict

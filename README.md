@@ -72,7 +72,7 @@ Investigating how human cultural relations persist, transform, and regenerate th
 Reading as intelligence — a personal knowledge management system for books, writers, categories, relations and extensions, side by side with **The Shape of the Moment**: how cultural movements and thought trends develop across 7-day, 14-day, 1-month, and 1-year windows.
 
 - **Part 1**: one card per book / per author, cross-cutting categories, explicit relation edges, reading notes, and a growing map of reading leads (`reading/extensions/`)
-- **Part 2**: dated research briefs, rolling window syntheses, and persistent theme dossiers — every claim marked for reliability (`harness/` holds the methods, skills, tools and rules)
+- **Part 2**: dated research briefs, rolling window syntheses, and persistent theme dossiers — every claim marked for reliability (see root `harness/` for the repo-wide methods, skills, tools and rules)
 
 ---
 
@@ -112,8 +112,10 @@ gruel_cooking/
 ├── Reading_IA/                 # Reading & IA (阅读与智识)
     ├── readings/               # Part 1: books, authors, categories, relations, notes, extensions
     ├── moment/                 # Part 2: briefs, rolling series, theme dossiers
-    ├── harness/                # Methods, skills, tools & rules
     └── web/                    # Site build plan (phase-1 generator)
+├── harness/                    # Repo-wide methods, skills, tools & rules (README.md = registry)
+    ├── evolution.md            # Self-evolution mechanism + journal (W-EVO)
+    └── audit.py                # Automatic harness auditor (drift → evolution signals)
 ```
 
 ---

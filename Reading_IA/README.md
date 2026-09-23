@@ -50,8 +50,10 @@ Tracking **cultural movements and thought trends** across time windows — 7 day
 
 | Path 路径 | Purpose 用途 |
 |---|---|
-| `harness/` | Methods, skills, tools & working rules 方法、技能、工具与规则 |
+| `docs/workflows.md` | Domain workflows 本域工作流（W1–W4 + 本域技能） |
 | `web/` | Static site build plan & templates 静态站点构建计划 |
+
+> Repo-wide rules, skills & tools live in the root **`../harness/`** (`principles.md`, `skills.md`, `workflows.md`) — shared across all pillars. 跨域规则、技能与工具在根目录 `../harness/`（全仓库共享）。
 
 ---
 
@@ -68,4 +70,4 @@ The mirror lives at `docs/reading_ia/` and is linked from the site home `docs/in
 
 - Python environment: `conda activate hy_py312`
 - Languages: Chinese and English (bilingual by default)
-- See `harness/principles.md` for the rules all work must follow.
+- See `../harness/principles.md` for the repo-wide rules, and `docs/workflows.md` for this domain's workflows.
