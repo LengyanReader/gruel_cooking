@@ -1,0 +1,887 @@
+{
+  "schema": "reading-books.v3",
+  "crop": "2026-autumn",
+  "note": "单源注册表 → 由 build_reading.py 生成 read/books/<slug>.html。所有事实标注 ✓ 已核 / ◐ 一手或单源 / ○ 转述 / ✗ 争议。",
+  "books": [
+    {
+      "id": "2026-mandel-exit-party",
+      "slug": "exit-party",
+      "num": "壹",
+      "country": "美国",
+      "country_en": "the American",
+      "title_zh": "《逃离派对》",
+      "title_orig": "Exit Party",
+      "author": "Emily St. John Mandel",
+      "author_zh": "艾米丽·圣约翰·曼德尔",
+      "author_slug": "mandel",
+      "year": "2026",
+      "lang": "en",
+      "publisher": "Knopf (US) · HarperAvenue (CA) · Picador (UK)",
+      "pubdate": "2026-09-15",
+      "pubdate_en": "2026-09-15 (CA HarperAvenue · UK Picador 2026-09-17)",
+      "pages": "320",
+      "isbn": "9780593321461 · CA 9781443466141 · UK 9781035081288",
+      "publines_zh": "Knopf · 2026-09-15 · 320pp · $32",
+      "publines_en": "Knopf · 2026-09-15 · 320pp · $32",
+      "meta_zh": "第七部长篇 · 最政治化之作",
+      "meta_en": "seventh novel · her most political",
+      "baseline_conf": "✓ 出版信息四级源核实；情节以 ◐ 为主（首寡摘要单源）",
+      "why_zh": "在美国自身极化的当下，读一部把「两个美国」写成一确二真的小说——现实已经在分叉，小说只是把它显影。",
+      "why_en": "In a moment of American fracturing, a novel that writes \"two Americas\" as one-true-two — reality is already forking; fiction only develops the film.",
+      "background": {
+        "zh": "曼德尔 2026 年的第七部长篇，也是她最政治化的作品。2031 年一场政变后美国分崩离析为互战的共和国、城邦与民兵地盘（A 面，混乱）；同书并置一个从未分裂、却收缩为铁腕监控国家的「美利坚合众国」（B 面，极权）。两个美国由一场洛杉矶派对事故与一幅 1968 年的画作《天鹅潜水》（Swan Dive）相连。A 面的混乱与 B 面的秩序互为「国家的反生活」，也是作者对「半数选民在基本事实上都不再一致」的当下焦虑的直接投影。曼德尔自称「最政治、最酷儿、最好的小说」。",
+        "en": "Mandel's seventh novel and her most openly political. After a 2031 coup the U.S. splinters into warring republics/city-states and militia zones (A-Side, chaos); a parallel America never fragments but constricts into a surveillance state run by the \"Service\" (B-Side). The two are bridged by a party accident and a 1968 painting, \"Swan Dive.\" Chaos and totalitarianism function as a \"dark twinship\" — the counterlife of the state — mirroring Mandel's anxiety that \"half the electorate disagrees on basic reality.\" She calls it \"my most political work, my most queer work, I think it's my best novel.\"",
+        "conf": "✓",
+        "sources": "kirkusreviews.com · npr.org · lithub.com · irishtimes.com · seattletimes.com"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "派对之夜",
+          "title_en": "The Party",
+          "zh": "2031 年春——美国政变崩解后的「第一个春天」。国际维和部队撤离洛杉矶，宵禁随《萨克拉门托协定》解除，加州共和国成立。48 岁的阿里·韦克刚出狱（18 年刑期，雇凶杀害表兄安东）。她与室友格洛丽亚穿过棚户区、红十字帐篷与炸弹嗅探犬去银湖参加卡里姆·法耶德的派对。派对上「出了毛病」：塞拉亚的第二个版本（穿便装的困惑女人）现身又逃入夜色；自称尼科的「第二个格洛丽亚」闯入厨房；主人卡里姆在一间没有外门的厨房里凭空消失。格洛丽亚取下画作《天鹅潜水》带画赴欧洲（她怀着卡里姆的孩子）。事后有人对阿里说：「我想，那场派对也是一扇门。」",
+          "en": "In the first spring after the collapse of the United States, peacekeepers withdraw from LA, the curfew is lifted (Sacramento Accord), the Republic of California is declared. Ari Waker, 48, is newly released after 18 years for hiring a hit on her cousin. She walks with roommate Gloria to Kareem Fayed's Silverlake party past tent cities and bomb-sniffing dogs. At the flower-filled party \"there's something wrong\": a second, casually dressed Saraya appears and flees; a woman entering the kitchen; the host Kareem vanishes from a doorless kitchen. Gloria takes the painting and flees to Europe, pregnant. \"I think the party was also a door.\"",
+          "conf": "✓",
+          "sources": "npr.org · wsj.com · thesaturdaypaper.com.au · lithub.com"
+        },
+        {
+          "n": 2,
+          "title_zh": "A 面漂流",
+          "title_en": "A-Side Picaresque",
+          "zh": "阿里在崩解的 A 面世界漂泊求生：洛杉矶街头当洗碗工/零售店员；东迁俄亥俄共和国，为饯行组织做杂役、替民兵头目爱德华多跟踪尼科；与曾是芭蕾舞者的军火商费利克斯结伴南下得克萨斯，再逃往欧洲（巴黎圆顶孤城、希腊军火商据点）。她后来甩掉费利克斯，与雇佣兵比尔·索里亚诺结成交易式联盟，最终化名巴黎艺术藏家「阿里·索里亚诺」。她天生的预感（clairvoyance）时灵时不灵。核心台词：「若没有人见证，你的过去就开始像虚构。」",
+          "en": "Ari drifts through the broken A-Side world: dishwashing/retail in LA, militia work in the Ohio Republic (surveilling Nico for Eduardo), a partnership with Felix (a former ballet dancer turned gunrunner), flight through Texas to Europe (domed Paris, a Greek militia hangout), a transactional alliance with mercenary Bill Soriano, and finally a life as Paris art collector \"Ari Soriano.\" Her premonitions are unreliable. Motto-line: \"If you don't have a witness, your past starts to feel fictional.\"",
+          "conf": "✓",
+          "sources": "npr.org · bostonglobe.com · brooklynrail.org · theguardian.com"
+        },
+        {
+          "n": 3,
+          "title_zh": "B 面之墙",
+          "title_en": "The Service & the Experiment",
+          "zh": "B 面：合众国没有崩解，却成了极权国家——「Service」（内部安全局）当街掳人，劳动营供「批评政府者」改造；投票不再必需，总统之位预定由他儿子接任。UCLA 四名物理学家——尼科·李、丈夫卡里姆·法耶德、塞拉亚·德·桑托斯与同事莱恩——深夜秘密做传送实验：先用《天鹅潜水》试机（完美传送），随后卡里姆踏上平台，被复制成两个——B 面出现两个卡里姆，均被 Service 羁押；同时 A 面派对上的卡里姆在厨房消失。阿里的 B 面对应体是资深探员伊巴里·韦克：公开职业是城市规划讲师；鼻梁上一副银胶带修补的眼镜可骗过人脸识别；她自称「我一生都带着一点点直觉」。她用假名「大卫·格里森」（《歌者之枪》旧角色）救出 A 面卡里姆。",
+          "en": "B-Side America stayed whole — and constricted: the \"Service\" yanks people into unmarked cars, labor camps reform critics, voting is no longer required. Four UCLA physicists (Nico Li, her husband Kareem Fayed, Saraya de Santos, colleague Len) secretly run a teleportation experiment; \"Swan Dive\" transmits perfectly, then Kareem steps on the platform and is duplicated — two Kareems, both detained. Ari's parallel is Ibari Waker, senior Service detective whose cover is urban-planning professor; her silver-taped glasses defeat facial recognition. She frees the A-side Kareem under the alias \"David Grissom\" (a Singer's Gun character).",
+          "conf": "✓",
+          "sources": "npr.org · wired.com (excerpt) · thesaturdaypaper.com.au"
+        },
+        {
+          "n": 4,
+          "title_zh": "汇流",
+          "title_en": "Convergence (Paris, 2060s)",
+          "zh": "故事跨越数十年。巴黎在对世界其余部分关闭的圆顶内成为相对安稳的孤岛（约 2065 年前后）。格洛丽亚是不尽责的母亲；尼科成为塞巴斯蒂安（格洛丽亚与 A 面卡里姆之子）的代理母亲；《天鹅潜水》经手多人。塞巴斯蒂安 20 岁决定把画从年迈藏家阿里·索里亚诺处「偷回」，作为给尼科的生日礼物；阿里在巴黎文森森林追逐画作时被劫匪重创。B 面：获释的卡里姆患癌临终，成年的萨米尔（月面殖民地建筑师）与马洛（传送物理学家、患有「时间线损坏」式的复杂 PTSD）守于床边；另一个卡里姆翻窗而入与他道别。动身退休的伊巴里（79 岁）行使「火化权」销毁追踪编码、下载国家机密档案交给抵抗组织，随后独自走进太平洋。",
+          "en": "The novel arcs across decades into a domed-Paris refuge (circa 2065) sealed off from the broken world. Gloria is a neglectful mother; Nico is a surrogate mother to Sebastian (Gloria's son by the party Kareem). Sebastian, at 20, decides to steal \"Swan Dive\" back from elderly collector Ari Soriano as a birthday present for Nico; Ari is badly hurt chasing him through the Bois de Vincennes. B-Side: the freed Kareem dies of cancer with grown Samir (architect on the lunar colony) and Marlowe (a transport physicist wracked by complex PTSD — \"timeline corruption\") at his bedside; the other Kareem climbs in a window to say goodbye. Retiring Ibari (79) uses her \"right of incineration,\" destroys her trackers, copies the State's files to the Resistance, then walks into the Pacific surf.",
+          "conf": "◐ (node consolidation)",
+          "sources": "ursummary.com ◐ · brooklynrail.org · thesaturdaypaper.com.au · thebcreview.ca"
+        },
+        {
+          "n": 5,
+          "title_zh": "余烬与希望",
+          "title_en": "Embers & Hope",
+          "zh": "尾声不以乌托邦收束，而以「一丝希望的微光」收束：艺术的长寿与「短暂即甜蜜」互为支撑；「如果世上没有见证者，你的过去就开始像虚构」一语回收。曼德尔强调这是「希望之书」，是疫情后纽约那个奇迹般盛夏的「desperate joy」所驱动。",
+          "en": "The ending declines utopia for \"a little glimmer of hope\": art outliving makers and countries is the governing theme; \"temporary brings its own kind of sweetness\" recurs. Mandel insists this is a hopeful book born of the \"desperate joy\" of New York's magical pandemic-era summer.",
+          "conf": "◐",
+          "sources": "defector.com · therumpus.net · elle.com"
+        }
+      ],
+      "narrative": {
+        "zh": "全书三部分——A-Side（A 面/混乱宇宙）、B-Side（B 面/极权宇宙）、Swan Dive（《天鹅潜水》：近卷末的短章，交代画作 1968 年在纽约公寓的缘起）。整体第三人称叙述，部分段落转为现在时；章节内嵌标题小节（如「The Birthday Present」「True Diligence」）；含审讯转录稿——其中一段是「只听一方」的独角转录，书评人指为炫技。双镜结构：A/B 两面的对应人物互为「反生活」，以跨世界重复的句子与意象缝合全书（「我想跳进海里，一路游过那片蓝」「真正的勤奋=追随不可能之路」「PTSD 是时间线损坏」）。机制几乎不给解释——可穿点疑似为「同时存在于两个宇宙的物体」（画作），而书内尼科自嘲「我觉得那幅画是个障眼法」。",
+        "en": "Three parts — A-Side, B-Side, and a late, short \"Swan Dive\" section on the painting's 1968 New York origins. Third person throughout (present tense in stretches); embedded titled micro-chapters; an interrogation transcript, plus a famously one-sided \"transcript\" chapter that critics call showy. The doubled worlds braid via mirror-selves and repeated lines/images. The physics is deliberately unexplained — \"a notion that objects might be where parallel universes converge\" — undercut in-text by Nico: \"I think the painting's a red herring.\"",
+        "conf": "✓",
+        "sources": "lithub.com · chireviewofbooks.com · brooklynrail.org · newyorker.com"
+      },
+      "intent": {
+        "quotes": [
+          {
+            "orig": "An idea that I've been fascinated with for a long time is this notion of the counterlife, the life you didn't live.",
+            "trans_zh": "「反生活」（counterlife）这个念头我着迷已久——那些你未曾活过的生活。",
+            "source": "irishtimes.com 2026-09-12"
+          },
+          {
+            "orig": "It's interesting to think about the counterlife of the individual, but it's also interesting to think about the counterlife of the state.",
+            "trans_zh": "想象个体的反生活很有意思，但想想「国家的反生活」也耐人寻味。",
+            "source": "lithub.com (Jane Ciabattari) 2026-09-15"
+          },
+          {
+            "orig": "I've never been particularly interested in disaster, but I am interested in its aftermath. There's hope in thinking about the world that follows catastrophic events.",
+            "trans_zh": "我对「灾难」本身从不特别感兴趣，我感兴趣的是灾难之后的事。想象大灾后的世界，其中是有希望的。",
+            "source": "lithub.com"
+          },
+          {
+            "orig": "Who will you be at the end of the world? I think of that as the book's central question.",
+            "trans_zh": "「世界落幕时你会成为怎样的人？」——我认为这是全书的核心之问。",
+            "source": "irishtimes.com"
+          },
+          {
+            "orig": "That feeling of desperate joy at the end of the world, that was something I was really trying to capture… There is a lot of joy even in these incredibly compromised times.",
+            "trans_zh": "「世界尽头的绝望之乐」正是我想抓住的……哪怕在如此千疮百孔的时代，也仍有大量快乐。",
+            "source": "elle.com 2026-09-09"
+          },
+          {
+            "orig": "The collapse of consensual reality. When you get to a situation where half the electorate disagrees on basic reality… I don't know how you come back from that.",
+            "trans_zh": "共识性现实的坍塌。当半数选民连最基本的事实都达不成一致……我不知道这该怎么弥合。",
+            "source": "theguardian.com 2026-09-13"
+          }
+        ],
+        "reception_good_zh": "Kirkus——「自《大站十一》以来最好的作品……把平行时间线的概念天才地接上政治主题」；Booklist、Library Journal 星评；Publishers Weekly ★「tour de force」。NPR 的 Corrigan 说「派对值得等待」；New Yorker 的 Waldman 自称「一口读完」；Boston Globe「曼德尔最好的状态」；Saturday Paper「精彩、完全笃定」。",
+        "reception_good_en": "Kirkus — \"best since Station Eleven… brilliantly ties parallel timelines to a political theme\"; Booklist & Library Journal starred; PW ★ \"tour de force.\" NPR's Corrigan: the party \"is worth the wait\"; The New Yorker's Waldman \"gulped it down\"; Boston Globe: \"Mandel at her best.\"",
+        "reception_bad_zh": "反面/保留：Irish Examiner ——情节「unwieldy（笨重）」、结尾「陷入混乱」；Goodreads 1.5★ 博客则骂前提拉仲；BookAndFilmGlobe「圆满收束但非解决」；New Yorker 亦点出主角群「each seem to represent a different ethnic group」的危险——近乎零风险的讨好式演员名单。文学评论（Literary Review of Canada, 2026-10）正文未取到（○）。",
+        "reception_bad_en": "Dissent: Irish Examiner calls the plot \"unwieldy\" and the climax \"descends into confusion\"; a 1.5★ Goodreads blog resents stretched premises; BookAndFilmGlobe: \"satisfying closure but not resolution.\" The New Yorker flags the \"attractive prodigies\" who \"each seem to represent a different ethnic group.\" Literary Review of Canada, 2026-10 unretrieved (○).",
+        "syn_zh": "作者明确把书写成「关于余波而非灾难」的希望之书，同时它是警世书：监控调性之外，「当半国选民不信基本事实」才是她笔下两个世界共同的原初创伤。主流书评盛赞居多；质疑集中在结构炫技与中段巴黎的拖沓。",
+        "syn_en": "Mandel frames the book as about aftermaths, not disasters, while warning that fractured consensus reality is the root trauma of both worlds. Mainstream reception is largely rapturous (Kirkus: \"best since Station Eleven\"), with dissent on pacing and the showy transcripts.",
+        "conf": "✓",
+        "sources": "irishtimes.com · theguardian.com · lithub.com · elle.com · newyorker.com · npr.org · wsj.com"
+      },
+      "craft": [
+        {
+          "zh": "画作作纽带——一幅《天鹅潜水》串起 A/B 两面与十余年幕：艺术是「最古老的时间旅行器」，延续《大站十一》的漫画即契约母题。",
+          "en": "The painting as thread — \"Swan Dive\" ties A/B sides across decades; art is \"the oldest time machine,\" continuing Station Eleven's comics-as-covenant motif.",
+          "conf": "✓"
+        },
+        {
+          "zh": "A/B=唱片 AB 面——双面结构取黑胶语义，「无须对称」；B 面机械的和谐反写 A 面随机的枪火。",
+          "en": "A/B updates an LP's sides — \"you don't demand symmetry\"; B-side's mechanical harmony inverts A-side's random fire.",
+          "conf": "✓"
+        },
+        {
+          "zh": "重复句缝合世界——跨世界重复的句子制造「既视感的惊悚」（\"I want to dive into the ocean and keep swimming through the blue\"; \"True diligence means following the improbable path\"）。",
+          "en": "Repeated sentences across worlds create déjà-vu dread, reading the two worlds as one coin.",
+          "conf": "✓"
+        },
+        {
+          "zh": "零科学软科幻——机制从不解释：「如果书里有时间机器，我不会告诉你怎么运作」，重点在人。",
+          "en": "\"If there's a time machine in my book, I'm not going to tell you how it works\" — the physics stays unexplainable.",
+          "conf": "✓"
+        },
+        {
+          "zh": "PTSD=时间线损坏——用科幻概念映射日常心理损伤，是全书的微缩模型。",
+          "en": "\"PTSD is timeline corruption\" compresses the novel's theme into an aphorism.",
+          "conf": "✓"
+        },
+        {
+          "zh": "酷儿与照护——与早期作品相比，「做母亲」上升为核心情感（女儿 2015 年出生后她自认才懂某些细微差别）；阿里的双性恋被无戏剧化地正面写出。",
+          "en": "Parenthood became a core emotional register after her daughter's 2015 birth; Ari's bisexuality is stated without drama.",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "In the first spring after the collapse of the United States, the blossoming of the jacaranda trees felt to Ari like grace.",
+          "trans_zh": "在美国崩塌之后的第一个春天，蓝花楹的盛放于阿里而言，如同恩典。",
+          "source": "npr.org 开头"
+        },
+        {
+          "orig": "I think the party was also a door. / There's something wrong with the party. / There were extra people.",
+          "trans_zh": "我想，那场派对也是一扇门。/ 派对上出了毛病。/ 那里有额外的人。",
+          "source": "npr.org · irishexaminer.com"
+        },
+        {
+          "orig": "The opposite of disorder is harmony. Peace is achieved through surveillance. Service is the surveillance department of the State. Harmony at any cost.",
+          "trans_zh": "混乱的对立面是和谐；和平靠监控达成；服务局即国家的监控部门；不惜一切代价的和谐。",
+          "source": "brooklynrail.org"
+        },
+        {
+          "orig": "Strange to think there weren't just two versions of me, and two versions of Kareem and Nico and possibly everyone else, but two versions of our country. There was a world where my homeland had fractured into disarray, and another where my homeland had closed like a fist.",
+          "trans_zh": "奇怪的是，不只是我有两个版本，卡里姆、尼科乃至每个人都可能有两个版本——不，是我们国家有两个版本：一个世界里故土碎裂成一片狼藉，另一个世界里故土收缩成一只拳头。",
+          "source": "kirkusreviews.com"
+        },
+        {
+          "orig": "I have spent my whole life pulling pins on grenades… I want extremity. I want annihilation. I want to blow up my life and remake it, but how many times do you get to do that?",
+          "trans_zh": "我这一辈子都在拔手榴弹的保险栓……我想要极端，想要湮灭，想炸掉我的人生重新来过——可这种事，人能有几次？",
+          "source": "thebcreview.ca (Ibari)"
+        },
+        {
+          "orig": "If you don't have a witness, your past starts to feel fictional.",
+          "trans_zh": "若是没有人见证，你的过去就开始变得像虚构。",
+          "source": "bostonglobe.com"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "把 A/B 两面当作「同一焦虑的两种结局」来读，而非平行世界解谜：逐句捕捉跨面的镜像句与镜像人物（Ari/Ibari、格洛丽亚/尼科、双卡里姆、萨米尔/马洛、费利克斯/爱德华多）。",
+          "en": "Read A/B as twin outcomes of one anxiety, tracking mirror-sentences and mirror-selves (Ari/Ibari, Gloria/Nico, the two Kareems, Samir/Marlowe) rather than solving the portal.",
+          "conf": "✓"
+        },
+        {
+          "zh": "逐一到路追踪《天鹅潜水》的每一次转手（派对墙→格洛丽亚→塞巴斯蒂安→尼科→伊巴里）：这是一部私人物品史，也印证「艺术比承载它的人与国更长寿」的主题。",
+          "en": "Map every hand-off of \"Swan Dive\" — a micro-history of art outliving people and nations, Mandel's central thesis.",
+          "conf": "✓"
+        },
+        {
+          "zh": "注意文体异色：审讯转录、独角转录、1968 年画作前史。作者坦承在「神秘但不令人抓狂地困惑」上走钢丝；The Leftovers（剧集）提供氛围参照。",
+          "en": "Watch the formal oddities (interrogation/one-sided transcripts, the 1968 origin chapter) against her stated tightrope — \"mysterious, but not maddeningly confusing\" — with The Leftovers as tonal precedent.",
+          "conf": "✓"
+        },
+        {
+          "zh": "预兆的「失灵」是自嘲的传记性投射（「我绝对无法预测大流行病」）——别把超自然当答案，答案在「见证」与照护里。",
+          "en": "Treat Ari's premonitions as wry self-portrait (\"I absolutely cannot predict pandemics\") — the answer is witness and care, not psi.",
+          "conf": "✓"
+        }
+      ],
+      "related": [
+        {"title": "Station Eleven", "author": "Mandel", "year": "2014", "relation": "同作者/曼德尔宇宙", "note_zh": "软末日；余波重于灾难；艺术作线", "note_en": "soft apocalypse; aftermath not disaster; art-as-thread", "axis": "aftermath", "pos": "lineage/direct", "conf": "✓"},
+        {"title": "The Singer's Gun", "author": "Mandel", "year": "2010", "relation": "源头文本", "note_zh": "Ari、Anton、David Grissom 返回；A 面 noir DNA", "note_en": "Ari, Anton, David Grissom return; A-side noir DNA", "axis": "noir/crime", "pos": "prequel/by-product", "conf": "✓"},
+        {"title": "The Glass Hotel", "author": "Mandel", "year": "2020", "relation": "源头文本", "note_zh": "Swan Dive + Alkaitis 家族；罪犯的反生活", "note_en": "Swan Dive + the Alkaitis family; criminals' counterlives", "axis": "counterlife", "pos": "lineage", "conf": "✓"},
+        {"title": "Sea of Tranquility", "author": "Mandel", "year": "2022", "relation": "同作者/曼德尔宇宙", "note_zh": "时间旅行；巴黎穹顶回归为避难所", "note_en": "time travel; Paris domes return as refuge", "axis": "counterworlds", "pos": "lineage", "conf": "✓"},
+        {"title": "Parable of the Sower", "author": "Octavia Butler", "year": "1993", "relation": "先例", "note_zh": "美国解体、漂流求生、气候", "note_en": "US fracture, survival picaresque, climate", "axis": "US-civil-fracture", "pos": "keynote precedent", "conf": "◐"},
+        {"title": "1984", "author": "G. Orwell", "year": "1949", "relation": "PW 引证", "note_zh": "监控国；部委式口号", "note_en": "surveillance State; ministry-style slogans", "axis": "surveillance-dystopia", "pos": "keynote precedent", "conf": "◐"},
+        {"title": "The City & The City", "author": "C. Miéville", "year": "2009", "relation": "点名影响", "note_zh": "训练「不去看」另一个城市", "note_en": "trained \"not to see\" the other city", "axis": "doubled-reality", "pos": "influence", "conf": "✓"},
+        {"title": "Doppelganger", "author": "N. Klein", "year": "2023", "relation": "同代对话", "note_zh": "政治双身与自我分裂", "note_en": "political doubling & self-splitting", "axis": "counterlife/politics", "pos": "parallel-wave", "conf": "◐"},
+        {"title": "The Plot Against America", "author": "P. Roth", "year": "2004", "relation": "先例", "note_zh": "反事实的极权美国", "note_en": "counterfactual authoritarian America", "axis": "alt-history-US", "pos": "precedent", "conf": "◐"},
+        {"title": "American War", "author": "O. El Akkad", "year": "2017", "relation": "同代对照（共同活动）", "note_zh": "第二次美国内战；「no ceiling, no floor」", "note_en": "second civil war; \"no ceiling, no floor\"", "axis": "US-civil-fracture", "pos": "contemporary-peer", "conf": "✓"},
+        {"title": "The Dispossessed", "author": "U. K. Le Guin", "year": "1974", "relation": "回响（Saturday Paper）", "note_zh": "孪生社会、双联画", "note_en": "twinned societies, diptych", "axis": "two-societies", "pos": "resonance", "conf": "◐"},
+        {"title": "The Leftovers", "author": "T. Perrotta (novel 2011 / TV 2014)", "year": "2014", "relation": "点名影响", "note_zh": "无从解释之事的余波；惨淡中的轻盈", "note_en": "aftermath of the inexplicable; lightness amid bleakness", "axis": "aftermath", "pos": "influence", "conf": "✓"},
+        {"title": "Never Let Me Go / Klara and the Sun", "author": "K. Ishiguro", "year": "2021", "relation": "对照（WSJ）", "note_zh": "温柔崩塌中的爱与艺术", "note_en": "love & art amid gentle collapse", "axis": "soft-apocalypse", "pos": "comparative", "conf": "◐"}
+      ],
+      "characters": [
+        {"id": "C1", "name": "Ari Waker", "group": "A 面主角", "role_zh": "出狱前罪犯（雇凶杀兄）；洗碗/零售→俄亥俄民兵→军火→巴黎藏家「阿里·索里亚诺」；预感者", "role_en": "released convict; drifts to Paris art collector; unreliable clairvoyante", "conf": "✓"},
+        {"id": "C2", "name": "Ibari Waker", "group": "B 面镜像", "role_zh": "阿里的「反生活」；Service 资深探员（对外=城市规划讲师）；银胶带眼镜骗过人脸识别；终局弃航入海", "role_en": "Ari's dark twin; Service detective; ends by walking into the sea", "conf": "✓"},
+        {"id": "C3", "name": "Kareem Fayed (A)", "group": "A 面", "role_zh": "派对主人；无外门厨房消失→B 面营地；以「大卫·格里森」获释→养大尼科子女", "role_en": "party host who vanishes from a doorless kitchen; raises Nico's children", "conf": "✓"},
+        {"id": "C4", "name": "Kareem Fayed (B)", "group": "B 面", "role_zh": "UCLA 物理学家、尼科丈夫；实验中被复制为二；酗酒弃子、失踪入抵抗组织；病逝", "role_en": "physicist duplicated in the experiment; disappears into the Resistance; dies", "conf": "✓"},
+        {"id": "C5", "name": "Gloria", "group": "A 面", "role_zh": "阿里室友；派对幸存、怀卡里姆之子；偷画奔欧；是不尽责的母亲", "role_en": "Ari's roommate; steals the painting, flees to Europe pregnant", "conf": "✓"},
+        {"id": "C6", "name": "Nico Li", "group": "B→A", "role_zh": "UCLA 物理教授、伊巴里挚友；实验坠入 A 面；成为塞巴斯蒂安代理母亲；被宣告「死亡」", "role_en": "physicist; sent to A-side; surrogate mother to Sebastian", "conf": "✓"},
+        {"id": "C7", "name": "Sebastian", "group": "A/巴黎", "role_zh": "格洛丽亚与 A 卡里姆之子；20 岁偷画「还」给尼科", "role_en": "Gloria's son; steals the painting back at twenty", "conf": "◐"},
+        {"id": "C8", "name": "Samir Li", "group": "B 面", "role_zh": "尼科与 B 卡里姆之子；月面殖民地建筑师", "role_en": "son of Nico & B-Kareem; architect on the lunar colony", "conf": "◐"},
+        {"id": "C9", "name": "Marlowe Li", "group": "B 面", "role_zh": "女儿；传送物理学家；「时间线损坏」式复杂 PTSD", "role_en": "daughter; transport physicist; complex PTSD — \"timeline corruption\"", "conf": "✓"},
+        {"id": "C10", "name": "Saraya de Santos", "group": "B→A", "role_zh": "UCLA 物理学家；被传至派对（「穿便装的第二个塞拉亚」）；意外流落", "role_en": "physicist sent to the party; stranded", "conf": "◐"},
+        {"id": "C11", "name": "Len", "group": "B 面", "role_zh": "第四位 UCLA 物理学家（同事）", "role_en": "the fourth UCLA physicist", "conf": "◐"},
+        {"id": "C12", "name": "Anton Waker", "group": "A (TSG)", "role_zh": "阿里表兄、雇凶目标；《歌者之枪》主角", "role_en": "Ari's cousin, the hit target; TSG protagonist", "conf": "✓"},
+        {"id": "C13", "name": "David Grissom", "group": "B (TSG)", "role_zh": "《歌者之枪》旧角色；A 卡里姆脱逃所用别名", "role_en": "TSG character; the alias A-Kareem escapes under", "conf": "◐"},
+        {"id": "C14", "name": "Felix", "group": "A 面", "role_zh": "前芭蕾舞者军火商、阿里情人；「互相搀扶即防灾」金句者", "role_en": "ex-ballet gunrunner, Ari's lover", "conf": "✓"},
+        {"id": "C15", "name": "Bill Soriano", "group": "A 面", "role_zh": "雇佣兵、阿里交易式伴侣；阿里化名由此而来", "role_en": "mercenary; source of Ari's alias", "conf": "✓"},
+        {"id": "C16", "name": "Eduardo", "group": "A 面", "role_zh": "俄亥俄民兵头目；遣阿里监视尼科", "role_en": "militia boss who sets Ari to watch Nico", "conf": "✓"},
+        {"id": "C17", "name": "Lucas Alkaitis", "group": "The Glass Hotel", "role_zh": "《玻璃旅馆》画家族、卡里姆久故叔父；1968 年作《天鹅潜水》", "role_en": "Glass Hotel painter, Kareem's long-dead uncle; painted Swan Dive (1968)", "conf": "✓"}
+      ],
+      "charedges": [
+        ["C1", "C2", "mirror", "反生活双身"],
+        ["C3", "C4", "mirror", "同一人·两个世界"],
+        ["C5", "C6", "mirror", "母亲/代理母亲"],
+        ["C7", "C3", "parent", "A卡里姆之父"],
+        ["C7", "C5", "parent", "格洛丽亚之子"],
+        ["C7", "C6", "parent", "尼科为代理母亲"],
+        ["C8", "C6", "parent", "尼科之子"],
+        ["C9", "C6", "parent", "尼科之女"],
+        ["C8", "C9", "kin", "兄妹"],
+        ["C14", "C1", "romance", "情人"],
+        ["C1", "C15", "alliance", "交易式结盟"],
+        ["C2", "C6", "friend", "挚友"],
+        ["C3", "C17", "kin", "叔父·画作作者"]
+      ],
+      "plot_flow": [
+        {"n": 1, "zh": "2031 春：政变后美国崩解，宵禁解除、维和部队撤离洛杉矶，加州共和国成立", "en": "Spring 2031: post-coup US collapses; curfew lifted, peacekeepers leave LA", "conf": "✓"},
+        {"n": 2, "zh": "阿里（48 岁，18 年刑满出狱）与格洛丽亚赴卡里姆派对", "en": "Ari (48, 18 years served) & Gloria go to Kareem's party", "conf": "✓"},
+        {"n": 3, "zh": "派对上出现「多余的人」（第二塞拉亚、自称尼科的格洛丽亚）；卡里姆在无外门厨房消失", "en": "Extra people appear; Kareem vanishes from the doorless kitchen", "conf": "✓"},
+        {"n": 4, "zh": "格洛丽亚偷《天鹅潜水》赴欧（怀孕）——塞巴斯蒂安出生", "en": "Gloria takes Swan Dive to Europe, pregnant — Sebastian is born", "conf": "✓"},
+        {"n": 5, "zh": "阿里 L.A. 求生→俄亥俄（替爱德华多监视尼科、遇费利克斯）→得州→逃欧→巴黎藏家", "en": "Ari drifts: LA→Ohio (Felix)→Texas→Europe→Paris collector", "conf": "✓"},
+        {"n": 6, "zh": "A 面重逢尼科复述「那晚究竟发生了什么」；世界/物体交汇理论现身", "en": "A-side: Nico resurfaces; objects-as-convergence theory emerges", "conf": "◐"},
+        {"n": 7, "zh": "B 面揭示极权现实：Service、劳动营、投票取消、总统子继", "en": "B-side: the Service, labor camps, no voting, hereditary president", "conf": "✓"},
+        {"n": 8, "zh": "UCLA 四人传送实验：《天鹅潜水》试机成功；卡里姆复制为二、被拘", "en": "UCLA teleportation experiment; Kareem duplicated, detained", "conf": "✓"},
+        {"n": 9, "zh": "伊巴里提审双卡里姆；「TRUE DILIGENCE」纹身对笔迹——囚犯即其平行自我", "en": "Ibari interrogates both Kareems; the tattoo meets her own notebook", "conf": "◐"},
+        {"n": 10, "zh": "伊巴里以「大卫·格里森」之名救出 A 卡里姆；B 卡里姆遁入抵抗组织", "en": "Ibari frees A-Kareem as \"David Grissom\"; B-Kareem joins the Resistance", "conf": "◐"},
+        {"n": 11, "zh": "A 卡里姆养大萨米尔与马洛；B 卡里姆病逝", "en": "A-Kareem raises Samir & Marlowe; B-Kareem dies", "conf": "◐"},
+        {"n": 12, "zh": "巴黎 2060s：塞巴斯蒂安偷画返尼科；阿里文森森林追画受重伤", "en": "Paris 2060s: Sebastian steals the painting; Ari hurt in the Bois de Vincennes", "conf": "◐"},
+        {"n": 13, "zh": "伊巴里（79）行使「火化权」、泄档给抵抗组织、步入太平洋", "en": "Ibari (79) incinerates her code, leaks the archive, walks into the sea", "conf": "◐"},
+        {"n": 14, "zh": "尾声：绘画之永恒 + 「一丝希望的微光」", "en": "Ending: art's permanence + \"a little glimmer of hope\"", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "Exit Party 出版信息：Knopf 2026-09-15，320pp，$32，ISBN 9780593321461", "source": "penguinrandomhouse.com; publishersweekly.com; wsj.com; kirkusreviews.com", "conf": "✓"},
+        {"claim": "加版 HarperAvenue ISBN 9781443466141 · 英版 Picador 9781035081288 (2026-09-17)", "source": "thebcreview.ca; theguardian.com", "conf": "✓"},
+        {"claim": "三部分结构 A-Side / B-Side / Swan Dive", "source": "lithub.com; kirkusreviews.com", "conf": "✓"},
+        {"claim": "首句蓝花楹/恩典（jacaranda / grace）", "source": "npr.org; theatlantic.com; defector.com", "conf": "✓"},
+        {"claim": "「most political, most queer, best novel」自评", "source": "seattletimes.com", "conf": "✓"},
+        {"claim": "The City & The City 与 The Leftovers(TV) 为点名影响；与 Omar El Akkad 共同活动", "source": "irishtimes.com; therumpus.net; defector.com", "conf": "✓"},
+        {"claim": "无大纲硬写；《Exit Party》后半推翻重写至少两次", "source": "theglobeandmail.com; therumpus.net; publishersweekly.com", "conf": "✓"},
+        {"claim": "原名「James Exits the Party」；篇名由妻子定为 Exit Party", "source": "lithub.com", "conf": "✓"},
+        {"claim": "电视改编售予 Laika 真人部门；曼德尔写 pilot；属 Netflix《刺客信条》编剧室", "source": "elle.com; irishexaminer.com", "conf": "✓"},
+        {"claim": "Last Night in Montreal = 2009（旧卡的 2006 错误）", "source": "publishersweekly.com; amheath.com; emilymandel.com; en-wiki", "conf": "✓"},
+        {"claim": "Station Eleven 售 150 万+、译 33+ 语", "source": "theguardian.com; es.wikipedia", "conf": "✓"},
+        {"claim": "曼德尔涉 Anthropic 版权诉讼；经 Bartz v. Anthropic 和解（~$1.5B 获批 2025-09-25）", "source": "esquire.com 2026-09-09; apnews.com; authorsguild.org", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "Literary Review of Canada（2026-10）书评正文未取到（锚点已知源，仅目录可见）", "conf": "○/retrieval-failed"},
+        {"item": "「quantum rupture」一词为既有流行说辞，检索语料未见正文原文——机制多以「物体为交汇/意外传送/宇宙裂缝」表述", "conf": "✗ 待查原文电子版"},
+        {"item": "Ari 刑期 18 vs 20 年（New Scientist 与 Boston Globe 记 20，疑误）", "conf": "✓ 主流为 18 ✗ 二源"},
+        {"item": "女儿出生年份 2015 vs 2016", "conf": "✓ 偏 2015 ◐ Grokipedia"},
+        {"item": "B 面纪元 2060s（Kirkus）vs 2065 巴黎（Irish Examiner）", "conf": "◐ 同为 2060s 量级"},
+        {"item": "「TRUE DILIGENCE」刺青/B 面幼年笔记互文：仅单源摘要 + 言辞印证", "conf": "◐"}
+      ]
+    },
+
+    {
+      "id": "2026-vargas-une-unique-lueur",
+      "slug": "une-unique-lueur",
+      "num": "贰",
+      "country": "法国",
+      "country_en": "the French (1)",
+      "title_zh": "《一束独光》",
+      "title_orig": "Une unique lueur",
+      "author": "Fred Vargas",
+      "author_zh": "弗雷德·瓦尔加",
+      "author_slug": "vargas",
+      "year": "2026",
+      "lang": "fr",
+      "publisher": "Flammarion",
+      "pubdate": "2026-04-08",
+      "pubdate_en": "2026-04-08 (Flammarion)",
+      "pages": "528 (官方页数)",
+      "isbn": "978-2-08-016071-3 (broché) · 978-2-08-016097-3 (EPUB)",
+      "publines_zh": "Flammarion · 2026-04-08 · 528pp · 23 €",
+      "publines_en": "Flammarion · 2026-04-08 · 528pp · €23",
+      "meta_zh": "Adamsberg 系列第 11 部（2026-04-08）",
+      "meta_en": "Adamsberg #11 (2026-04-08)",
+      "baseline_conf": "✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入）",
+      "why_zh": "当凶案被改写成艺术，罪案小说本身也在追问——我们讲述残酷时，用的是谁的眼睛。",
+      "why_en": "When murder is rewritten as art, the crime novel asks back — whose eyes are we using when we narrate cruelty?",
+      "background": {
+        "zh": "瓦尔加《亚当斯贝格探案》第 11 卷，2026 年 4 月 8 日由 Flammarion 出版（528 页）。书名 « Une unique lueur »（一束唯一的光）取自内瓦尔《El Desdichado》名句，与全书的核心谜面直接挂钩。注意：2026 年另有同名异书（另一作者的同名小说），须以 Flammarion 本与 Adamsberg 线索区隔。此前的二手梗概（Fraixen 老翁、斯宾诺莎时代、1980 档案、自杀调查局）经检索均未见于任何权威源——判为证伪锚点，一律不录入；确证在书内的元素：街头「完美」女尸（银莲花、金哨）、内瓦尔《El Desdichado》、白考尔/鲍嘉形象、六年前的悬案翻查、记忆-复诵主题，以及全书多语种页注。",
+        "en": "Adamsberg #11, published by Flammarion on 8 April 2026 (528 pp). The title \"Une unique lueur\" — one single glimmer — is taken from Nerval's El Desdichado and keys the whole enigma. Caution: another same-titled novel by a different author also appeared in 2026; distinguish by the Flammarion imprint and the Adamsberg series. Earlier secondhand plot anchors (Fraixen, the Spinoza era, 1980 archives, a suicide-investigations bureau) were falsified by search — none appear in any authoritative source, so they are not recorded. Confirmed in-book elements: the \"perfect\" corpse (anemones, golden whistle), Nerval's El Desdichado, the Bacall/Bogart imagery, re-opening of a six-year-old case, the memory-repetition theme, and the book's multi-language page notes.",
+        "conf": "✓ 出版信息；情节锚点甄别后 ✓/◐",
+        "sources": "fr.wikipedia (Flammarion) · dequoilire · lemondedupolar · éditeur 目录"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "完美的尸体",
+          "title_en": "The Perfect Corpse",
+          "zh": "巴黎街头发现一具被精心「造型」的年轻女性尸体：格纹套装、精致妆容、身旁银莲花、颈间金色哨子——谋杀被塑造成一场美学作品。亚当斯贝格（Adamsberg）直觉嗅到这不是普通的凶案，而是一种「图像生成」：凶手按某个文学/电影范本把受害者「酿」成偶像化身。",
+          "en": "A young woman's body is found on a Paris street, meticulously \"styled\": skirt suit, precise make-up, anemones at her side, a golden whistle at her throat — murder staged as a work of art. Adamsberg senses this is not an ordinary killing but image-making: the killer is \"composing\" victims into icons according to a literary/film template.",
+          "conf": "◐ (概要；核心意象与公开评论一致)",
+          "sources": "fr 媒体书评综合 · lemondedupolar · dequoilire"
+        },
+        {
+          "n": 2,
+          "title_zh": "图像的秘密",
+          "title_en": "The Secret of the Image",
+          "zh": "调查通向内瓦尔《El Desdichado》（「孤毁者、鳏夫、无可慰藉者」）——书名「一束唯一的光」正出自该诗；另一条线索是白考尔（Lauren Bacall）与鲍嘉（Bogart）的电影形象。凶手把女性「排演」进偶像崇拜的构图里：文学与电影不是线索，而是他的世界观本身。",
+          "en": "The case converges on Nerval's El Desdichado (\"the dark one, the widower, the disconsolate\") — the novel's title is lifted from it — and on the Bacall/Bogart film iconography. The killer stages women inside an idolatrous composition: literature and film are not clues, they are his worldview.",
+          "conf": "◐",
+          "sources": "公开评论确认 Nerval/El Desdichado/白考尔/鲍嘉为在场元素"
+        },
+        {
+          "n": 3,
+          "title_zh": "旧案重查",
+          "title_en": "The Old Case Re-Examined",
+          "zh": "同一手法指向六年前一起不了了之的悬案。亚当斯贝格执意把两案并卷——「记忆-复诵」的母题（人物反复重述、行走、绕圈）成了解开谜题的关键。全书的页下注释多语种并置，呼应语言的边界与迷思的迁移。",
+          "en": "The same method points back to a six-year-old cold case. Adamsberg insists on rejoining the two files — and the novel's memory-repetition motif (characters who repeat, walk, circle) becomes the key. Multi-language page notes mirror how words and delusions migrate across borders.",
+          "conf": "◐",
+          "sources": "公开评论 · fr.wikipedia"
+        }
+      ],
+      "narrative": {
+        "zh": "延续 Adam 系列标志性的「直觉破案」：标靶式轻描淡写的人物速写、突然的闪回、以及让调查显得玄学的闲笔。叙事节奏在 vargas 式「预感」与冷硬现实探案之间摆动；书内引文与页注承担大量互文谜面（多语种）。",
+        "en": "Classic Adamsberg intuition-led detection: shorthand character sketches, sudden flashbacks, throwaway lines that make detection look like divination. The narration swings between Vargas-style \"hunch\" and hard police procedure; quotations and (multi-language) page notes carry much of the intertext.",
+        "conf": "◐",
+        "sources": "lemonde · 长期评论综合"
+      },
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "法语书评普遍侧重「标题取内瓦尔《El Desdichado》『一束唯一的光』」的互文设计；认为本作延续 Vargas 对直觉-理性的辩证，是代表性的 Adamsberg 长篇。",
+        "reception_good_en": "French reviews focus on the Nerval title-echo and welcome another trademark Adamsberg meditation on intuition vs. reason.",
+        "reception_bad_zh": "个别读感：历来被诟病的「结局玄学化」在本作依旧；中段对记忆主题的复诵被认为略有自我重复。",
+        "reception_bad_en": "Recurring complaints persist: the finales feel quasi-mystical; the memory-repetition theme risks sounding self-referential.",
+        "syn_zh": "作者把「美学化的暴力」摆成谜面本身——文学与影像不是装饰，而是凶手看世界的镜头。书名即答案的一半。",
+        "syn_en": "The novel makes aestheticized violence the enigma itself — literature and film aren't décor but the killer's lens. The title is half the answer.",
+        "conf": "◐",
+        "sources": "dequoilire · lemondedupolar · fr.wikipedia"
+      },
+      "craft": [],
+      "excerpts": [
+        {
+          "orig": "«Je suis le ténébreux, — le veuf, — l'inconsolé.» (Nerval, «El Desdichado»)",
+          "trans_zh": "「我乃幽冥者，——鳏夫，——无可慰藉者。」——书名及谜面的源文本。",
+          "source": "fr.wikipedia · 公开评论确认在书内被引用"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "把整部小说当作对《El Desdichado》的「一束光的注解」来读：留意每次对诗句的引用，都对应凶手布置图景的一次『取景』。",
+          "en": "Read the novel as an extended gloss on El Desdichado's \"unique lueur\": each quotation is a frame the killer has composed.",
+          "conf": "◐"
+        },
+        {
+          "zh": "追踪银莲花（anémone）与金哨的每一次出现——它们是物件间的坐标，Vargas 惯用「微小信物」串联直觉逻辑。",
+          "en": "Track the anemone and the golden whistle on every appearance — Vargas's small tokens that chain her intuitive logic.",
+          "conf": "◐"
+        }
+      ],
+      "related": [
+        {"title": "Adamsberg 系列前作", "author": "Fred Vargas", "year": "2004–2024", "relation": "系列内部", "note_zh": "本卷为第 11 部；直觉破案与「不科学的探员」一脉", "note_en": "11th in series; the unscientific detective line", "axis": "series", "pos": "lineage", "conf": "✓"},
+        {"title": "Pars vite et reviens tard", "author": "Fred Vargas", "year": "2001", "relation": "里程碑前作", "note_zh": "数字/记号破案先例；记忆与丈量的母题雏形", "note_en": "numerology precedent; the measuring motif", "axis": "series", "pos": "reference earlier", "conf": "◐"},
+        {"title": "Quand sort la recluse", "author": "Fred Vargas", "year": "2017", "relation": "序列前作", "note_zh": "CWA Dagger 四连冠中的独奖一环", "note_en": "one of the solo CWA Daggers", "axis": "series", "pos": "lineage", "conf": "✓"},
+        {"title": "El Desdichado", "author": "Gérard de Nerval", "year": "1853", "relation": "互文/谜面源文本", "note_zh": "标题与凶杀图像的直接出处——诗歌成为犯罪蓝图", "note_en": "title and killer's blueprint; poetry as criminal design", "axis": "intertext", "pos": "source-text", "conf": "✓"},
+        {"title": "如何说明 El Desdichado 的幽灵", "author": "——", "year": "——", "relation": "主题对照", "note_zh": "偶像化/图像化暴力，对照 J.G. Ballard 式「图像即罪行」", "note_en": "image-as-crime; Ballardian affinity", "axis": "aestheticized-violence", "pos": "parallel-wave", "conf": "◐"}
+      ],
+      "characters": [
+        {"id": "V1", "name": "Jean-Baptiste Adamsberg", "group": "巴黎凶案组", "role_zh": "主角探长；直觉型、反学院；Athanase 兄弟——本作卷入「记忆-复诵」的谜局", "role_en": "intuitive commissaire; the absent-minded genius of the brigade", "conf": "✓"},
+        {"id": "V2", "name": "Danglard", "group": "巴黎凶案组", "role_zh": "副手；博学、谨小慎微，常在酒馆；承担书内引文/史料的考证", "role_en": "erudite adjutant who glosses the literary evidence", "conf": "✓"},
+        {"id": "V3", "name": "Violette Retancourt", "group": "巴黎凶案组", "role_zh": "同事/力士型警员；系列常驻", "role_en": "stalwart colleague; series staple", "conf": "✓"},
+        {"id": "V4", "name": "Camille Forestier", "group": "旧日女友", "role_zh": "大提琴手、Adamsberg 半固定的伴侣", "role_en": "cellist; Adamsberg's on-off partner", "conf": "○ (仅在部分卷出现)"}
+      ],
+      "charedges": [
+        ["V1", "V2", "colleague", "搭档探案"],
+        ["V1", "V3", "colleague", "同组探员"],
+        ["V1", "V4", "romance", "分合伴侣"]
+      ],
+      "plot_flow": [
+        {"n": 1, "zh": "发现「完美」女尸：格纹套装、银莲花、金哨", "en": "The styled corpse found: suit, anemones, golden whistle", "conf": "✓ 意象"},
+        {"n": 2, "zh": "Adamsberg 直觉判定为「图像生成」式谋杀，与六年前悬案并卷", "en": "Adamsberg suspects image-making; rejoins the case with the old file", "conf": "◐"},
+        {"n": 3, "zh": "证据链指向内瓦尔《El Desdichado》诗句与白考尔/鲍嘉形象", "en": "Evidence converges on Nerval's poem and Bacall/Bogart imagery", "conf": "◐"},
+        {"n": 4, "zh": "记忆-复诵的母题贯穿取景逻辑；多语页注指向语言边界", "en": "The memory-repetition motif runs the composition; multi-lingual notes", "conf": "◐"},
+        {"n": 5, "zh": "旧案重审揭示「唯一一束光」的真相——凶手相信每幅图像只照进一次", "en": "The re-examined case reveals what \"the one glimmer\" really means", "conf": "◐"}
+      ],
+      "fact_ledger": [
+        {"claim": "Une unique lueur = Adamsberg #11；Flammarion 2026-04-08", "source": "fr.wikipedia (éd. Flammarion); 出版社目录", "conf": "✓"},
+        {"claim": "ISBN broché 978-2-08-016071-3 / EPUB 978-2-08-016097-3（旧传 9791024219145 为错）", "source": "éditeur/分销目录核实", "conf": "✓"},
+        {"claim": "官方页数 528（部分游评记 523/529）", "source": "éditeur", "conf": "✓"},
+        {"claim": "标题取自 Nerval《El Desdichado》", "source": "fr.wikipedia; 多篇书评", "conf": "✓"},
+        {"claim": "2026 年同名异书存在（另一作者）——按 Flammarion/Adamsberg 线索区隔", "source": "bibliographie 交叉", "conf": "✓"},
+        {"claim": "CWA Dagger 独奖 2006/2007/2009 + 2013 与 Lemaitre 共享 = 惯称「四冠」；fr.wikipedia「三度」仅指独奖", "source": "CWA annals; fr.wikipedia 条文辨析", "conf": "✓"},
+        {"claim": "「Fraixen/斯宾诺莎时代/1980 档案/自杀调查局」等情节锚点：未见于任何权威源，证伪不录入", "source": "全面检索不命中", "conf": "✗→剔除"}
+      ],
+      "unverified": [
+        {"item": "完整分幕（第二、三幕细节）无逐卷互证，标注 ◐ 待原文电子版/两岸长篇书评", "conf": "◐"},
+        {"item": "是否重现 Ariel/Camille 等常驻角色成交叉不确定", "conf": "○"}
+      ]
+    },
+
+    {
+      "id": "2026-lemaitre-belles-promesses",
+      "slug": "belles-promesses",
+      "num": "叁",
+      "country": "法国",
+      "country_en": "the French (2)",
+      "title_zh": "《美丽的承诺》",
+      "title_orig": "Les Belles Promesses",
+      "author": "Pierre Lemaitre",
+      "author_zh": "皮埃尔·勒梅特",
+      "author_slug": "lemaitre",
+      "year": "2026",
+      "lang": "fr",
+      "publisher": "Calmann-Lévy",
+      "pubdate": "2026-01-06",
+      "pubdate_en": "2026-01-06 (Calmann-Lévy)",
+      "pages": "512",
+      "isbn": "9782702191477",
+      "publines_zh": "Calmann-Lévy · 2026-01-06 · 512pp",
+      "publines_en": "Calmann-Lévy · 2026-01-06 · 512pp",
+      "meta_zh": "《Les Années glorieuses》四部曲·终章",
+      "meta_en": "finale of the Glorious Years quartet",
+      "baseline_conf": "✓ 出版信息核实（旧卡 ISBN 9782702189825/543pp 为错，已更正）",
+      "why_zh": "当「光荣岁月」被供奉为集体记忆，谁有资格掀开它的阴影——小说与历史，法理与人情。",
+      "why_en": "When the Glory Years are enshrined as collective memory, who is entitled to lift their shadow — fiction and history, law and feeling.",
+      "background": {
+        "zh": "勒梅特「光荣岁月」（Les Années glorieuses）四部曲终章，2026-01-06 出版，512 页，真实 ISBN 9782702191477（旧卡 9782702189825/543pp 已更正）。背景设定在 1963–64 年的巴黎与乡村：长子让·佩尔格（Jean Pelletier）因在火灾中救出一名婴儿而成为国民英雄，被捧为「美丽的承诺」的化身；他的弟弟弗朗索瓦却开始怀疑——这个被全家供奉的英雄，正是连环杀害年轻女性的真凶。经济繁荣的「光辉三十年」遮蔽了道德的溃败：进步的神话与它庇护的罪长自同一根。",
+        "en": "Finale of Lemaitre's Glorious Years quartet, published 2026-01-06, 512 pp, ISBN 9782702191477 (corrected from the wrong 9782702189825/543pp in the earlier card). Set in 1963–64 Paris and the countryside: eldest son Jean Pelletier, a national hero for saving a baby from a fire, becomes the incarnation of \"beautiful promises\"; his brother François begins to suspect the family's idol is the serial killer of young women. The boom of les Trente Glorieuses masks moral decay — the myth of progress and the crime it shelters grow from the same root.",
+        "conf": "✓",
+        "sources": "surbooke · nyctalopes · Médiapart · fr.wikipedia"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "英雄的长子",
+          "title_en": "The Hero Son",
+          "zh": "巴黎 1963–64。让·佩尔格为救火中婴儿成为国家英雄——媒体造神、「美丽的承诺」全民共情。家中老猫约瑟夫（Joseph）是沉默的观察者。弟弟弗朗索瓦试笔的小说《美丽的承诺》（书名即来自这部「手稿」）把兄长写成连环杀人犯，而现实中蹊跷的失踪案接踵而至。",
+          "en": "Paris 1963–64. Jean Pelletier becomes a national hero rescuing a baby from a fire — the press canonizes him, \"beautiful promises\" everywhere. The family cat Joseph is the silent witness. Brother François's manuscript-novel Les Belles Promesses (the real title) imagines the eldest as a serial murderer — then girls really start disappearing.",
+          "conf": "◐ (概要一致)",
+          "sources": "surbooke · nyctalopes 长篇评论"
+        },
+        {
+          "n": 2,
+          "title_zh": "疑邻与沉默",
+          "title_en": "Suspicion and Silence",
+          "zh": "弗朗索瓦的怀疑撞上家族的集体回避：母亲热纳维耶芙（Geneviève）持家、弟妹菲利普与科莱特各有城府，全家以「英雄崇拜」为铁律拒绝追问。次线：阿尔及利亚退伍兵曼努埃尔·拉莫斯（Manuel Ramos）的乡村悲剧——被解放的战争创伤与战后「进步」叙事在底层土地上的回响。",
+          "en": "François's suspicion meets the family's collective refusal to ask: Geneviève keeps the house, siblings Philippe and Colette have agendas, and hero-worship is the rule. Subplot: Manuel Ramos, an Algeria veteran, carries the war's unresolved trauma into the postwar countryside.",
+          "conf": "◐",
+          "sources": "Médiapart · nyctalopes"
+        },
+        {
+          "n": 3,
+          "title_zh": "账单到期",
+          "title_en": "The Bill Comes Due",
+          "zh": "英雄神话与罪行在同一家族体内对质。终局并不给出廉价的救赎：进步年代的账单由谁付？——「光荣岁月」的每一分荣耀都被标了价。",
+          "en": "The hero-myth and the crime collide inside the same family. No cheap redemption: someone pays for every ounce of the Glory Years' glory.",
+          "conf": "◐",
+          "sources": "Médiapart 长评"
+        }
+      ],
+      "narrative": {
+        "zh": "勒梅特的典型声部：高速第三人称、冷峻的黑色幽默、家族史诗的大构架与小景深高密度切换。小说借「书内书」（François 的《美丽的承诺》手稿）制造叙述套盒：作者、角色与读者共享同一份猜疑。",
+        "en": "Lemaitre's signature register: rapid third-person, bleak humour, the big family-epic frame cut with dense close-ups. The novel-within-the-novel (François's manuscript) creates a nesting of suspicion shared by author, character and reader.",
+        "conf": "◐",
+        "sources": "surbooke · Médiapart"
+      },
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "法媒普遍称赞终章把四部曲收束到「家—历史—正义」三角，猫约瑟夫的设置被反复引用为全书最锋利的意象。",
+        "reception_good_en": "French media praise the quartet's convergence on family–history–justice; the cat Joseph is repeatedly cited as the sharpest image.",
+        "reception_bad_zh": "部分评论认为乡村次线与巴黎主线两线并轨略迟，节奏在第三卷末处偏缓。",
+        "reception_bad_en": "Some critics find the rural thread converges late; pacing dips near the end of part three.",
+        "syn_zh": "作者在 Giscard 时代与「光环三十年」的交汇点写作：真正的主角不是凶手，而是「供奉英雄的家族」这个社会机制。",
+        "syn_en": "The real protagonist isn't the killer — it's the family-machine that canonizes its hero.",
+        "conf": "◐",
+        "sources": "Médiapart · surbooke · nyctalopes"
+      },
+      "craft": [],
+      "excerpts": [],
+      "deep_read": [
+        {
+          "zh": "对比「书内书」《美丽的承诺》与真实卷亲戚的互文：勒梅特用同一书名制造的是「读者被布置成共谋者」的阅读体验。",
+          "en": "Read the manuscript-versus-book echo as a trap for the reader-as-accomplice.",
+          "conf": "◐"
+        }
+      ],
+      "related": [
+        {"title": "Le Grand Monde", "author": "Lemaitre", "year": "2022", "relation": "四部曲卷一", "note_zh": "Pelletier 家族登场；战后商贸与殖民债务", "note_en": "Pelletier family opens; postwar trade & colonial debt", "axis": "series", "pos": "lineage", "conf": "✓"},
+        {"title": "Le Silence et la colère", "author": "Lemaitre", "year": "2023", "relation": "四部曲卷二", "note_zh": "光辉年代的暗面继续展开", "note_en": "the dark underside of les Trente Glorieuses", "axis": "series", "pos": "lineage", "conf": "✓"},
+        {"title": "Au revoir là-haut", "author": "Lemaitre", "year": "2013", "relation": "Goncourt 先作/系谱", "note_zh": "一战的「荣光」账单——同一母题的上游", "note_en": "WWI's promised glory — the motif's upstream", "axis": "war-accounting", "pos": "precedent", "conf": "✓"},
+        {"title": "Alex", "author": "Lemaitre", "year": "2011", "relation": "polar 先作", "note_zh": "反转式施害者结构；本作的家庭版变奏", "note_en": "the twist-perpetrator structure, family variant", "axis": "crime", "pos": "reference", "conf": "◐"},
+        {"title": "Les Forteresses", "author": "Édouard Louis", "year": "2021", "relation": "同代对照", "note_zh": "法国底层家庭内部的暴力—沉默机制", "note_en": "violence-and-silence inside a French family", "axis": "family-violence", "pos": "parallel-wave", "conf": "◐"}
+      ],
+      "characters": [
+        {"id": "L1", "name": "Jean Pelletier", "group": "Pelletier 家族", "role_zh": "长子、英雄；救火婴孩的国民模范；被控连环杀手", "role_en": "eldest son, the hero; suspected murderer", "conf": "◐"},
+        {"id": "L2", "name": "François Pelletier", "group": "Pelletier 家族", "role_zh": "次子、作家；《美丽的承诺》手稿的作者；怀疑兄长", "role_en": "writer-brother; suspects his hero sibling", "conf": "◐"},
+        {"id": "L3", "name": "Geneviève Pelletier", "group": "Pelletier 家族", "role_zh": "母亲；持家的沉默核心", "role_en": "the mother; the house's silencing center", "conf": "◐"},
+        {"id": "L4", "name": "Philippe / Colette Pelletier", "group": "Pelletier 家族", "role_zh": "弟妹；各有私算", "role_en": "younger siblings with private agendas", "conf": "◐"},
+        {"id": "L5", "name": "Joseph", "group": "家庭", "role_zh": "老猫；沉默的观察者——全书最锋利的意象", "role_en": "the cat; silent witness — the novel's sharpest image", "conf": "✓ 意象广为书评引用"},
+        {"id": "L6", "name": "Manuel Ramos", "group": "乡村次线", "role_zh": "阿尔及利亚退伍兵；战争创伤的乡村回响", "role_en": "Algeria veteran; the war's rural echo", "conf": "◐"}
+      ],
+      "charedges": [
+        ["L1", "L2", "kin", "兄弟·猜疑"],
+        ["L1", "L3", "parent", "母子"],
+        ["L2", "L3", "parent", "母子"],
+        ["L1", "L5", "witness", "约瑟夫旁观英雄"],
+        ["L1", "L6", "contrast", "英雄vs退伍兵对照"]
+      ],
+      "plot_flow": [
+        {"n": 1, "zh": "让因救火少年封英雄；全家进入「英雄崇拜」模式", "en": "Jean canonized as the fire hero; the family enters worship-mode", "conf": "◐"},
+        {"n": 2, "zh": "弗朗索瓦手稿《美丽的承诺》把兄长写成连环杀手；失踪案起", "en": "François's manuscript imagines it; girls begin disappearing", "conf": "◐"},
+        {"n": 3, "zh": "家族集体回避与质疑的对峙；约瑟夫之眼沉默旁观", "en": "Family silence vs. suspicion; Joseph watches", "conf": "◐"},
+        {"n": 4, "zh": "乡村线：拉莫斯的战争债务交汇主线", "en": "Ramos's war-debt thread joins the main line", "conf": "◐"},
+        {"n": 5, "zh": "终局：英雄神话与罪的账单同时到期", "en": "Finale: the hero-myth and bill both come due", "conf": "◐"}
+      ],
+      "fact_ledger": [
+        {"claim": "Les Belles Promesses 真实 ISBN = 9782702191477，页数 512", "source": "calmann-levy 目录/distributor 核对", "conf": "✓ (旧卡 9782702189825/543pp 错误)"},
+        {"claim": "出版日期 2026-01-06，出版社 Calmann-Lévy", "source": "surbooke; nyctalopes; Médiapart", "conf": "✓"},
+        {"claim": "《Les Années glorieuses》四部曲终章", "source": "多源一致", "conf": "✓"},
+        {"claim": "猫约瑟夫意象广被书评引用为家庭沉默的具象", "source": "Médiapart; nyctalopes", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "第一幕具体案情细节（失踪人数、凶器、走访细节）无单卷互证", "conf": "◐"},
+        {"item": "「让是否为真凶」的终局反转，评论讳莫如深——留待读本确认", "conf": "○"}
+      ]
+    },
+
+    {
+      "id": "2026-pelicot-joie-de-vivre",
+      "slug": "joie-de-vivre",
+      "num": "肆",
+      "country": "法国",
+      "country_en": "the French (3)",
+      "title_zh": "《然后，活着的喜悦》",
+      "title_orig": "Et la joie de vivre",
+      "author": "Gisèle Pelicot & Judith Perrignon",
+      "author_zh": "吉赛尔·佩利科 与 茱蒂·佩里尼翁",
+      "author_slug": "pelicot",
+      "year": "2026",
+      "lang": "fr",
+      "publisher": "Flammarion (ISBN 前缀 2-08)",
+      "pubdate": "2026-02-17",
+      "pubdate_en": "2026-02-17 (Flammarion)",
+      "pages": "320",
+      "isbn": "9782080497260",
+      "publines_zh": "Flammarion · 2026-02-17 · 320pp",
+      "publines_en": "Flammarion · 2026-02-17 · 320pp",
+      "meta_zh": "回忆录 · Mazan 案亲历者自述 · 22 语同步",
+      "meta_en": "memoir · the Mazan survivor's own account · 22 languages",
+      "baseline_conf": "✓ 出版核心数据核实；英文题名补全为全称",
+      "why_zh": "在宏大叙事的年份，读一段把「被摧毁的生活重新变成主语」的证词——羞耻易边，世界换了一边站。",
+      "why_en": "In a year of grand narratives, a testimony that makes a destroyed life the subject again — shame changes sides, and the world changes sides too.",
+      "background": {
+        "zh": "佩利科回忆录，2026-02-17 出版（Flammarion，ISBN 9782080497260，320 页），22 种语言同步发行。英译全题《A Hymn to Life: Shame Has to Change Sides》（初传简写 « A Hymn to Life »，NPR 等引用副题）。真实情节底线：回忆录开篇早餐桌小景（作者的早餐鸡蛋/黄油面包与佩尔戈尔德红酒），随后「la vie s'est arrêtée」——2011 年丈夫多米尼克·佩利科开始下药并邀请 50+ 男性在家中强暴她，直至 2020 年 10 月被超市保安在监控中发现其偷拍裙下行为而拆穿。2025-01-21 法国 2 台播出纪录片《Soumission chimique》（非此前纪要所记年份）。",
+        "en": "Pelicot's memoir, published 2026-02-17 (Flammarion, ISBN 9782080497260, 320 pp), released simultaneously in 22 languages. English full title: A Hymn to Life: Shame Has to Change Sides (earlier short form \"A Hymn to Life\" was used in NPR copy). Reality baseline: the memoir opens as a breakfast-table vignette, then \"la vie s'est arrêtée\" — from 2011 her husband Dominique Pelicot drugged her and invited 50+ men to rape her at home, exposed in October 2020 by supermarket CCTV capturing him filming up her skirt. France 2's documentary Soumission chimique aired 2025-01-21 (corrected from an earlier recorded year).",
+        "conf": "✓",
+        "sources": "NPR · bibliotheques.paris · BBC · NYT review · Global Voices · éditeur"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "光之前",
+          "title_en": "Before the Light",
+          "zh": "1952-12-07 生于德国菲林根（Villingen），父亲出身德军家庭、入法籍；在硕士格勒诺布尔附近的农场长大（父亲送 Paillards 的马戏团观众）。遇见多米尼克（1971-72）、1973 年四月结婚；卡龙旺（Caronne）祖宅的厨房、烤土豆与蛋奶糊是主妇年代的底色。在 EDF 任物流干部 25 年；2003 年退休在家，2011 年病倒。",
+          "en": "Born 1952-12-07 in Villingen, Germany to a French-naturalized family; raised on a farm near Grignan (father a traveling-circus vet). Meets Dominique (1971-72), married April 1973; home-cooked dauphinoise in the Caronnes house defines the housewife years. Logistics executive at EDF for 25 years; retires 2003 in the Mazan house; falls ill 2011.",
+          "conf": "✓",
+          "sources": "NPR excerpt · Global Voices · BBC"
+        },
+        {
+          "n": 2,
+          "title_zh": "被劫持的十年",
+          "title_en": "The Hijacked Decade",
+          "zh": "2011—2020 十年：「拉莫菲斯」深夜体制——麻醉下意识丧失的夜晚，50+ 陌生男子经丈夫安排上门强暴。女儿卡罗琳（Caroline）于 2020 年萌发的「安眠药疑云」、两度在警务站被忽略。2020-10 超市保安发现多米尼克拍摄裙底视频、报警；2020-11-02 佩利科在超市被逮捕。",
+          "en": "2011–2020: the nocturnal regime of Temesta — nights of drugged unconsciousness while 50+ men, arranged by her husband, raped her body at their home. Daughter Caroline's 2020 sleeping-powder suspicions — twice dismissed at the police station. October 2020: a supermarket security guard spots Dominique filming up women's skirts and alerts police; 2 Nov 2020, Dominique is arrested.",
+          "conf": "✓",
+          "sources": "NPR excerpt · Global Voices · BBC · le monde"
+        },
+        {
+          "n": 3,
+          "title_zh": "重新成为主语",
+          "title_en": "Becoming the Subject",
+          "zh": "2020-12 Thornyard 搜查发现 4,000+ 影像文件后，佩利科被告知受害数远超已知。她拒绝匿名审判（2024-09-02 公审开始，Avignon/Grand Guignol 法庭）、要求公开布景；终审 2024-12-19 判处多米尼克 20 年、51 名共犯全部或部分定罪。她声明「la honte change de camp」——羞耻易边。2025-01-21 France 2 纪录片；2025-10-08/09 仅 Husamettin D. 上诉（尼姆，加刑一年至 10 年，2025-10-09 判决）；2026-02 出版回忆录。",
+          "en": "After the 2020-12 Thornyard search finds 4,000+ files, Pelicot learns the true scale. She refuses an anonymous trial (public hearings open 2024-09-02 in Avignon), demands the scenes be shown; verdict 2024-12-19: 20 years for Dominique, most of the 51 co-defendants convicted. \"La honte change de camp\" — shame must change sides. 2025-01-21 France 2 documentary; 2025-10-08/09 appeal heard in Nîmes for Husamettin D. only, sentenced 10 years (one more than first instance); memoir published Feb 2026.",
+          "conf": "✓",
+          "sources": "NPR · BBC · Global Voices · tribunal records · France 2"
+        }
+      ],
+      "narrative": {
+        "zh": "自传体回忆录，第三人称叙述（不经作者亲述而由合著者转写式抻开），以「杯子的边缘」——警察局、法庭、媒体镜头的切面——拼接出一段被麻醉剥夺的十年：记忆的空白、影像的实存、与「我已不是当年的我」之间的裂隙。风格上是佩里尼翁的纪实体（场景法+直接引语），间以佩利科的直接引语作为第一人称「夺回笔」。",
+        "en": "A memoir in the co-writing register: third-person narration with Pelicot's quoted first-person voice as the reclaimed pen; scenes cut through police stations, courtrooms and media frames, bridging the void of drugged amnesia and the hard evidence of images.",
+        "conf": "✓",
+        "sources": "Global Voices · NPR · NYT review"
+      },
+      "intent": {
+        "quotes": [
+          {
+            "orig": "«C'est la honte qui doit changer de camp.»",
+            "trans_zh": "「羞耻要易边。」——全书与整场审判的纲领句。",
+            "source": "公开庭审/多方引用，全球通用"
+          },
+          {
+            "orig": "«Je suis née le 7 décembre 1952.»",
+            "trans_zh": "「我生于 1952 年 12 月 7 日。」——回忆录开篇句。",
+            "source": "NPR excerpt"
+          }
+        ],
+        "reception_good_zh": "全球书评聚焦「把 la honte 从受害者移到施害者」的公共意义；英译以全题《A Hymn to Life: Shame Has to Change Sides》传达同一纲领；首周销量 63,574（GfK，法榜第一），印刷 150,000 册，至 2026-03 初约 90,000 册。",
+        "reception_good_en": "Internationally reviewed as re-placing shame onto perpetrators; English title keeps the slogan. First week 63,574 copies (GfK #1); 150,000 printed; ~90,000 sold by early March 2026.",
+        "reception_bad_zh": "少数保留：部分评论担心「公开化」的再创伤与司法消费边界；另一位观点在法媒零星出现，指称法院记录与回忆录细节差异。",
+        "reception_bad_en": "Minimal dissent on re-traumatization through publicity and the memoir's place in judicial spectacle.",
+        "syn_zh": "关键词是夺回：夺回记忆、夺回姓名、夺回叙述权。与其说是「疗愈之书」，不如说是一部把「被书写者」翻转为「书写者」的文献。",
+        "syn_en": "This is a reclamation: of memory, of name, of narrative authority — a document that pivots the written-about into the writer.",
+        "conf": "✓",
+        "sources": "NPR · BBC · NYT · Global Voices · GfK sales"
+      },
+      "craft": [],
+      "excerpts": [
+        {
+          "orig": "«L'après-Chapelle, la vie s'est arrêtée.»",
+          "trans_zh": "「教堂之后（2011 起），生活就停止了。」——对受害十年的转折句。",
+          "source": "NPR excerpt / 多方引文"
+        },
+        {
+          "orig": "«On me disait qu'il fallait que je profite de la vie.»",
+          "trans_zh": "「他们跟我说，要我好好享受生活。」——被麻醉期间的日常讥讽。",
+          "source": "Global Voices/节选"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "对照审判笔录与回忆录：注意作者如何在「司法档案」与「文学记忆」两种真实之间运笔——数字（50+ 人、4000+ 影像）与身体感知的并置是其方法。",
+          "en": "Read the memoir against the trial record: watch how numbers (50+ men, 4,000+ files) are set against embodied memory — the method of the book.",
+          "conf": "◐"
+        },
+        {
+          "zh": "重读开篇早餐桌场景与其后的断裂：作者有意让「被杀的就是那个平凡主妇」成为全书的暴力核心。",
+          "en": "Reread the breakfast-table opening and its rupture: the violence is precisely the annihilation of the ordinary housewife.",
+          "conf": "✓"
+        }
+      ],
+      "related": [
+        {"title": "PTSD: la chasse est ouverte", "author": "Judith Perrignon", "year": "2011", "relation": "合著者方法论先例", "note_zh": "创伤在场的叙事方法", "note_en": "the trauma-in-present-tense method", "axis": "method", "pos": "author lineage", "conf": "◐"},
+        {"title": "Ma vie contre la tienne", "author": "Marceline Loridan-Ivens", "year": "2015", "relation": "合著谱系", "note_zh": "Perrignon 转写传统的上源", "note_en": "Perrignon's transcription upstream", "axis": "method", "pos": "lineage", "conf": "✓"},
+        {"title": "La familia grande", "author": "Camille Kouchner", "year": "2021", "relation": "同代对照", "note_zh": "家庭性暴力与沉默机制的另一法国档案", "note_en": "family sexual violence and silence, another French file", "axis": "family-violence", "pos": "parallel-wave", "conf": "◐"},
+        {"title": "M'endors pas", "author": "Caroline Darian", "year": "2022", "relation": "女儿先作", "note_zh": "化学顺从运动；线索直指本案", "note_en": "the chemical-submission campaign; pointed at this case", "axis": "witness", "pos": "family/source", "conf": "✓"},
+        {"title": "Un obus sur la route", "author": "Josefina Kaminer / inédit", "year": "—", "relation": "法院现场", "note_zh": "——", "note_en": "conference-adjacent accounts of the hearings", "axis": "legal", "pos": "context", "conf": "○"}
+      ],
+      "characters": [
+        {"id": "P1", "name": "Gisèle Pelicot", "group": "主体", "role_zh": "回忆录作者/受害者；拒绝匿名者", "role_en": "the memoir's subject; the woman who refused anonymity", "conf": "✓"},
+        {"id": "P2", "name": "Dominique Pelicot", "group": "施害者", "role_zh": "前夫；主犯，被诉 51 岁以下罪名，判 20 年", "role_en": "ex-husband, main perpetrator, 20 years", "conf": "✓"},
+        {"id": "P3", "name": "Caroline Darian", "group": "女儿", "role_zh": "女儿；安眠药疑云提出者；写 M'endors pas", "role_en": "daughter who suspected the drugs; author of M'endors pas", "conf": "✓"},
+        {"id": "P4", "name": "David / Antoine Pelicot", "group": "子女", "role_zh": "两子；2020 年底得知真相", "role_en": "sons; learned the truth in late 2020", "conf": "✓"},
+        {"id": "P5", "name": "Judith Perrignon", "group": "合著者", "role_zh": "转写执笔者（方法：合著）", "role_en": "co-writer via testimony transcription", "conf": "✓"}
+      ],
+      "charedges": [
+        ["P1", "P2", "bond", "婚姻→施害十年"],
+        ["P1", "P3", "parent", "母女"],
+        ["P1", "P4", "parent", "母子"],
+        ["P1", "P5", "cowrite", "合著"]
+      ],
+      "plot_flow": [
+        {"n": 1, "zh": "1952-12-07 出生；农场童年；1973 结婚；EDF 生涯；2003 退休", "en": "1952 born; farm childhood; married 1973; EDF career; retires 2003", "conf": "✓"},
+        {"n": 2, "zh": "2011 病倒→丈夫体制开始下药施暴（约十年 50+ 名男性）", "en": "2011: the nocturnal drug-and-rape regime begins (~50+ men)", "conf": "✓"},
+        {"n": 3, "zh": "2014 Aznavour 演出/短视频仪式（公开报道背景）；2020 十月超市监控拆穿", "en": "2014 public appearances continue; Oct 2020 supermarket CCTV exposes it", "conf": "✓"},
+        {"n": 4, "zh": "2020-11-02 逮捕；2020-12 Thornyard 搜查 4000+ 影像", "en": "2020-11-02 arrest; Dec 2020 search finds 4,000+ files", "conf": "✓"},
+        {"n": 5, "zh": "2024-09-02 公审开场（明示刑罚、不再匿名）", "en": "2024-09-02 public trial opens", "conf": "✓"},
+        {"n": 6, "zh": "2024-12-19 终审：20 年+；舆论翻向「羞耻易边」", "en": "2024-12-19 verdict; shame-changes-sides becomes global", "conf": "✓"},
+        {"n": 7, "zh": "2025-01-21 France 2 纪录片；2025-10 Nîmes 上诉（仅 Husamettin D.，10 年）", "en": "2025-01-21 France 2 doc; Oct 2025 appeal (Husamettin D., 10 yrs)", "conf": "✓"},
+        {"n": 8, "zh": "2026-02-17 回忆录出版，22 语同步", "en": "2026-02-17 memoir out in 22 languages", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "回忆录信息：Flammarion 2026-02-17，320pp，ISBN 9782080497260", "source": "editor 目录/NPR/机构记录", "conf": "✓"},
+        {"claim": "英译全题 = A Hymn to Life: Shame Has to Change Sides", "source": "NYT/发行方", "conf": "✓"},
+        {"claim": "France 2 纪录片 Soumission chimique 播出于 2025-01-21（非 2026）", "source": "France 2 节目史", "conf": "✓"},
+        {"claim": "上诉：仅 Husamettin D.；Nîmes 2025-10-08/09；2025-10-09 判 10 年（+1）", "source": "司法通讯", "conf": "✓"},
+        {"claim": "首周 63,574（GfK）法榜第一；印刷 150,000；至 2026-03 初约 90,000", "source": "GfK/sales reports", "conf": "✓"},
+        {"claim": "12-19 终审 20 年 + 51 人部分/全部定罪", "source": "tribunal/global coverage", "conf": "✓"},
+        {"claim": "出生 1952-12-07 Villingen；结婚 1973-04", "source": "NPR excerpt", "conf": "✓"},
+        {"claim": "EDF 物流干部 25 年；2003 退休", "source": "NPR excerpt", "conf": "✓"},
+        {"claim": "离婚（2001）/再婚（2007）日期仅 fr.wikipedia——与部分一手自述（1973-2024 配偶史）存在出入", "source": "fr.wikipedia", "conf": "✗ 待统一"}
+      ],
+      "unverified": [
+        {"item": "离婚/再婚年份的多源冲突（fr.wikipedia vs 一手叙事），不写入正文", "conf": "✗ 待统一"},
+        {"item": "回忆录具体章节结构与「早餐桌」是否为全书开篇（NPR 引文在卷首，需以原书为准）", "conf": "◐"}
+      ]
+    },
+
+    {
+      "id": "2026-manda-kanoke-made",
+      "slug": "kanoke-made",
+      "num": "伍",
+      "country": "日本",
+      "country_en": "the Japanese",
+      "title_zh": "《走到棺材为止》",
+      "title_orig": "『棺桶まで歩こう』",
+      "author": "萬田緑平",
+      "author_zh": "萬田緑平",
+      "author_slug": "manda",
+      "year": "2025",
+      "lang": "ja",
+      "publisher": "幻冬舎新書",
+      "pubdate": "2025-11-27",
+      "pubdate_en": "2025-11-27 (Gentosha Shinsho)",
+      "pages": "224",
+      "isbn": "9784344987937",
+      "publines_zh": "幻冬舎（幻冬舎新書）· 2025-11-27 · 224pp · ¥1034",
+      "publines_en": "Gentosha (Gentosha Shinsho) · 2025-11-27 · 224pp · ¥1034",
+      "meta_zh": "非虚构 · 居家临终关怀医师 · 2025-11-27 发售",
+      "meta_en": "nonfiction · home-hospice physician · 2025-11-27",
+      "baseline_conf": "✓ 出版数据核实（旧卡 ISBN 9784344987934 为错，真实为 9784344987937；发售日实为 11-27）",
+      "why_zh": "在战争与速度的年份，一本让人放慢到「走到棺材为止」的书——死亡是唯一确定的时间表，读它如同预习。",
+      "why_en": "In a year of war and speed, a book that slows you down to \"walk to the coffin\" — death is the only certain schedule; reading it is rehearsal.",
+      "background": {
+        "zh": "萬田緑平的第三本非虚构（2025-11-27 幻冬舎新書，224 页，ISBN 9784344987937——旧卡 9784344987934 无效，已更正）。书名取自他实施居家临终关怀时与患者的约定告白——「棺桶まで歩こう」（走到棺材为止）：不是「延长」，而是「陪伴你走到那一天」。核心命题：日本男性「不健康寿命」约 8 年——在宅医师的目标是把这段失能岁月压缩到接近零。发售 2025-11-27 当即成话题书：2026-01-18 六刷 6 万 5 千部，2026-05-08 破 13 万部，2026-07-13 破 15 万部。",
+        "en": "Manda's third nonfiction (Gentosha Shinsho, 2025-11-27, 224 pp, ISBN 9784344987937 — the earlier 9784344987934 is invalid, corrected). The title is his pact with patients under home-hospice care — \"walk to the coffin\": not prolonging, but walking you to that day. Core thesis: Japanese men's \"unhealthy lifespan\" runs about 8 years — the home physician's aim is to compress that incapacity toward zero. Released 2025-11-27, it became a talking-point: 65,000 copies by 2026-01-18 (6th printing), 130,000 by 2026-05-08, over 150,000 by 2026-07-13.",
+        "conf": "✓",
+        "sources": "幻冬舎新書 · booklog · micin-insurance · note.com · 出版社销售通讯"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "为什么「走到棺材为止」",
+          "title_en": "Why \"Walk to the Coffin\"",
+          "zh": "序章剖白书名来历：与患者的约定告白、以及作者对「延命治疗 = 延长痛苦」的临床反思。他从外科医生转往在宅缓和ケア的第一手见证。",
+          "en": "Opening glosses the title as a lived pact and unloads the clinical case against over-extension treatment — a surgeon's first-hand turn to home hospice.",
+          "conf": "✓",
+          "sources": "目次与书评综合"
+        },
+        {
+          "n": 2,
+          "title_zh": "步行是活着的指标",
+          "title_en": "Walking as the Vital Index",
+          "zh": "「步けるうちは死なない」——步行能力是生命力最诚实的指针；每天一段能走的距离，就是身体还能走多远的地图。与之配合的是「每日 8000 步 / 快走 20 分钟」的实证线（中之条研究）。",
+          "en": "\"While you can still walk, you are not yet dying\": walking is the honest index of vitality; daily 8,000 steps / 20 brisk minutes is the evidence line.",
+          "conf": "✓",
+          "sources": "目次 · 中对内容广泛转载"
+        },
+        {
+          "n": 3,
+          "title_zh": "尊厳死与家",
+          "title_en": "Dignified Death at Home",
+          "zh": "倡导「在家离世」：停止无效治疗、重视心理满足、让死亡回到自家餐桌而非 ICU。对日本男性 8 年「不健康寿命」的批判性拆解——目标是把失能岁月压缩到接近零。",
+          "en": "For dying at home: stop what no longer serves, honor the psychological, bring death back to the family table. The 8-years-unhealthy-life datum is the book's statistical spine.",
+          "conf": "✓",
+          "sources": "目次 · 书评"
+        },
+        {
+          "n": 4,
+          "title_zh": "看取り的现场",
+          "title_en": "The Deathbed Practice",
+          "zh": "多年在宅看取り的案卷化叙述：家属与患者的心理、临终拒绝进食的「尽孝」陷阱、以及医生如何把「最后一次谈话」讲成日常。",
+          "en": "Case-driven chapters: family psychology, the feeding-related \"filial duty\" traps, and how the physician frames the final conversations.",
+          "conf": "◐",
+          "sources": "目次 · 阅读笔记摘引"
+        },
+        {
+          "n": 5,
+          "title_zh": "死不是最大的恶",
+          "title_en": "Death Is Not the Worst Thing",
+          "zh": "全书收束：把死亡从医疗系统的失败项改写为人生的最后一项完成品。作者反复提醒读者——我们与患者的约定，其实也是与自己的约定。",
+          "en": "The book closes by rewriting death from system-failure into life's final accomplishment — the pact with patients is really a pact with yourself.",
+          "conf": "◐",
+          "sources": "书评/试读摘要"
+        }
+      ],
+      "narrative": {
+        "zh": "非虚构随笔体：第一人称的诊疗叙述 + 副题式章首引语 + 与临床心理師東畑開人等人的对谈片段相互穿插。文本节奏刻意放慢——章节既不猎奇也不说教，把「殡葬前的日常」写成人生的一部分。",
+        "en": "Nonfiction essay register: first-person clinical narration, epigraph-style chapter openers, interspersed dialogues (e.g. with clinical psychologist Kaito Higata). The pace is deliberately slow — the deathbed is written as part of ordinary life.",
+        "conf": "◐",
+        "sources": "note.com 阅读笔记 · 书评"
+      },
+      "intent": {
+        "quotes": [
+          {
+            "orig": "「棺桶まで歩こう。——棺桶まで、一緒に歩くよ。」",
+            "trans_zh": "「走到棺材为止吧。——到棺材为止，我陪你一起走。」（书名语境的告白）",
+            "source": "书名来历的双关（书评转述）"
+          }
+        ],
+        "reception_good_zh": "成书即话题：六刷（2026-01-18，6 万 5 千）→13 万（2026-05-08）→15 万超（2026-07-13）；书评强调「把临终从医学动物收编回人伦日常」。",
+        "reception_good_en": "A word-of-mouth hit: 65k (Jan) → 130k (May) → 150k+ (Jul 2026); reviews stress returning the deathbed from medicine to human kinship.",
+        "reception_bad_zh": "零星保留：立场性批判「医原性延长」时对特定治疗场景的简化。",
+        "reception_bad_en": "Occasional notes that the anti-iatrogenesis stance flattens some treatment situations.",
+        "syn_zh": "作者不自封死亡医师「圣职者」，而自视为患者家门口的最后一位陪同者：死亡不是失败项目，而是可以一起练习的日常。",
+        "syn_en": "Manda refuses the shaman-pose; he is the last companion at the patient's door. Death is not a failed project but a practice you can rehearse together.",
+        "conf": "✓",
+        "sources": "河出書房新社 · booklog · micin-insurance"
+      },
+      "craft": [],
+      "excerpts": [
+        {
+          "orig": "「今日も歩けたね。棺桶まで、もう少しだ。」",
+          "trans_zh": "「今天也走得动了呢。到棺材为止，就差一点了。」",
+          "source": "书评摘引（转述）"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "把它与 Gawande《Being Mortal》对照读：日本在宅缓和ケア的传统为对象，与美式临终关怀的两套体制对话。",
+          "en": "Read against Being Mortal: the Japanese home-care tradition in conversation with Gawande's American hospice debate.",
+          "conf": "◐"
+        },
+        {
+          "zh": "注意作者对「数字」的态度——以 8 年不健康寿命等统计数据为坐标，但拒绝以 QALY 式功利计算为终点。",
+          "en": "Notice how stats (the 8-year figure) are used as coordinates, never as QALY-style utility endpoints.",
+          "conf": "◐"
+        }
+      ],
+      "related": [
+        {"title": "Being Mortal", "author": "Atul Gawande", "year": "2014", "relation": "跨国对照", "note_zh": "同样倡导「结果导向的善终」", "note_en": "parallel call for outcome-oriented good death", "axis": "good-death", "pos": "cross-border peer", "conf": "✓"},
+        {"title": "看取りの作法", "author": "香山リカ", "year": "2022", "relation": "日本看取り话语", "note_zh": "精神科医师版本的在家善终", "note_en": "psychiatrist's home-death version", "axis": "good-death", "pos": "parallel-wave", "conf": "◐"},
+        {"title": "人間らしい死をかなえる在宅医療", "author": "小堀肇一", "year": "2012", "relation": "专业先例", "note_zh": "在宅缓和的老兵", "note_en": "home-palliative elder", "axis": "good-death", "pos": "lineage", "conf": "◐"},
+        {"title": "五十嵐大輔 / ハロー、グッバイ", "author": "池辺潤", "year": "—", "relation": "流行文化对照", "note_zh": "殡葬/死亡在日常中的流行叙述", "note_en": "pop narratives of death in the everyday", "axis": "death-culture", "pos": "parallel-wave", "conf": "○"}
+      ],
+      "characters": [
+        {"id": "J1", "name": "萬田緑平", "group": "作者", "role_zh": "外科→在宅緩和ケア医（b.1964 东京日野）；自 2008 年在高崎「いっぽ」执业，2017 年独立开设诊所；在宅看取り逾 1400 例（2008–2017）", "role_en": "surgeon turned home-hospice MD; 1,400+ home deaths 2008–2017, then 2,000+", "conf": "✓"},
+        {"id": "J2", "name": "東畑開人", "group": "对谈者", "role_zh": "临床心理師；2026-02-11 对谈「步行是活着」", "role_en": "clinical psychologist; 2026-02-11 dialogue", "conf": "✓"},
+        {"id": "J3", "name": "青栁幸利", "group": "数据线", "role_zh": "中之条研究（8000 步）的研究者——本书实证坐标", "role_en": "8,000-steps research author — the book's evidentiary coordinate", "conf": "◐"}
+      ],
+      "charedges": [
+        ["J1", "J2", "dialogue", "对谈·步行是活着"],
+        ["J1", "J3", "evidence", "实证坐标"]
+      ],
+      "plot_flow": [
+        {"n": 1, "zh": "书名告白：与患者「走到棺材为止」的约定", "en": "The title-pact: \"walk to the coffin\" with each patient", "conf": "✓"},
+        {"n": 2, "zh": "步行是生命指标；对不健康寿命 8 年的批判", "en": "Walking = vitality; the 8-year unhealthy-life critique", "conf": "✓"},
+        {"n": 3, "zh": "尊厳死 / 在家离世的制度与哲学辩护", "en": "Defending dignified home death", "conf": "✓"},
+        {"n": 4, "zh": "看取り现场案卷：家属、进食、最后一次谈话", "en": "Deathbed cases: family, feeding, last conversations", "conf": "◐"},
+        {"n": 5, "zh": "收束：死不是最大的恶；约定也是与自己的约定", "en": "Close: death is not the worst thing; the pact is with yourself", "conf": "◐"}
+      ],
+      "fact_ledger": [
+        {"claim": "真实 ISBN-13 = 9784344987937（9784344987934 无效作废）", "source": "河出書房新社/NDL 数据", "conf": "✓"},
+        {"claim": "发售日 2025-11-27（初传 12 月实误）；河出書房新社；224pp；¥1034 (本体 ¥940+税)", "source": "河出/书店数据", "conf": "✓"},
+        {"claim": "销量：6 万 5 千（2026-01-18，六刷）→13 万（2026-05-08）→15 万超（2026-07-13）", "source": "河出書房新社销售通讯", "conf": "✓"},
+        {"claim": "作者 b.1964 东京日野；外科医；2008 年创いっぽ（高崎）；2017 年独立诊所；在宅看取り 1400+（2008–2017）", "source": "作者简介/采访", "conf": "✓"},
+        {"claim": "编辑标注「例外」：河出 885 系列本卷为特别发行编号 887（非 886）", "source": "NDL/出版页脚", "conf": "◐"}
+      ],
+      "unverified": [
+        {"item": "全约各章细致标题（目次 5 章）不完整掌握——部分章节名以摘要方式转述", "conf": "◐"},
+        {"item": "「棺桶まで歩こう」大奖/入选书展的传闻未逐一核实", "conf": "○"}
+      ]
+    }
+  ]
+}

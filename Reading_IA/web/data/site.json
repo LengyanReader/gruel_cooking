@@ -1,0 +1,66 @@
+{
+  "site": {
+    "name_zh": "阅读与智识",
+    "name_en": "Reading & IA",
+    "base": "docs/reading_ia",
+    "domains": {
+      "landing": "docs/reading_ia/index.html",
+      "read": "docs/reading_ia/read/index.html",
+      "authors": "docs/reading_ia/authors/index.html",
+      "moment": "docs/reading_ia/moment/year-2026.html"
+    },
+    "storage_key": "zhzz-reading-lang"
+  },
+  "crops": [
+    {
+      "id": "2026-autumn",
+      "page": "docs/reading_ia/read/2026-09-books.html",
+      "dir_page": "2026-09-books.html",
+      "glyph_zh": "秋分 · AUTUMN",
+      "glyph_en": "AUTUMN · 秋分",
+      "date": "2026-09-23",
+      "title_zh": "秋分书单 · 五本书",
+      "title_en": "The Autumn List — five books",
+      "subtitle_zh": "美国一册 · 法国三册 · 日本一册",
+      "subtitle_en": "One from America · three from France · one from Japan",
+      "verdict_zh": "GLOSES",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "美国×1 · 法国×3 · 日本×1 — 全部经 W2 核验实际版本",
+      "lang_line_en": "US×1 · FR×3 · JP×1 — every title located & verified (W2)",
+      "book_ids": [
+        "2026-mandel-exit-party",
+        "2026-vargas-une-unique-lueur",
+        "2026-lemaitre-belles-promesses",
+        "2026-pelicot-joie-de-vivre",
+        "2026-manda-kanoke-made"
+      ],
+      "verdict_body_zh": "供给扎实、正确、有内在张力，但有一个规范缺位：非虚构的思想史 / AI 反思轴完全缺席；战争见证缺席（可接受为「延迟」）。",
+      "verdict_body_en": "A solid, correct, internally-tensioned list — but one canonical corner is absent: the nonfiction thought-history / AI-reflection axis; war testimony is also absent (acceptable as 'deferred').",
+      "verdict_gaps": [
+        {
+          "zh": "补 1 · 2026 AI 元年反思作——《Coming Wave》一系——补上全年最强思潮的理论对位",
+          "en": "Add 1 · a 2026 AI-era reflection (the Coming Wave line) — the theoretical counterpoint"
+        },
+        {
+          "zh": "补 2 · 一部中东战争一手见证或小说——把「间接隐喻」换成「直接经验」",
+          "en": "Add 2 · a first-hand war testimony or novel from the Middle East"
+        },
+        {
+          "zh": "补 3 · 一部中文世界作品——完成东亚三极；超老龄议题上中文语境有极强的对照材料",
+          "en": "Add 3 · one Chinese-language work — completes the East-Asian tripod"
+        },
+        {
+          "zh": "补 4 · Sontag《Regarding the Pain of Others》——补「美与暴力互渗」的理论底座",
+          "en": "Add 4 · Sontag, Regarding the Pain of Others — the theoretical base"
+        },
+        {
+          "zh": "补 5（可选）· Butler《Parable of the Sower》或 Klein《Doppelganger》——Exit Party 的系谱上游",
+          "en": "Add 5 (optional) · Butler's Parable of the Sower or Klein's Doppelganger"
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice"
+    }
+  ],
+  "keel": "2026-12 winter solstice"
+}

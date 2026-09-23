@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>活着的此刻 · 一年的形状 — THE LIVING MOMENT | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink-deep: #26261F; --ink-mid: #4E4B42; --ink-soft: #7C7568; --ink-pale: #A89F90;
+  --paper: #F7F1E3; --paper-soft: #EFE6D3; --paper-deep: #E7DCC4;
+  --gold: #C9A227; --gold-soft: #E3C457; --gold-dim: #A5811D;
+  --lapis: #3E5C76; --lapis-soft: #6C8AAF; --sage: #7A8F6E;
+  --night: #1E2230;
+  --ff-display: "LXGW WenKai", "Noto Serif SC", serif;
+  --ff-body: "Inter", "LXGW WenKai", "Noto Sans SC", sans-serif;
+  --ff-zh: "LXGW WenKai", "Noto Serif SC", serif;
+  --shadow-md: 0 6px 20px rgba(38,38,31,0.08);
+  --shadow-lg: 0 12px 40px rgba(38,38,31,0.12);
+}
+
+body.lang-zh [data-en] { display: none !important; }
+body.lang-en [data-zh] { display: none !important; }
+body.lang-en [data-both] span[data-en] { display: inline !important; }
+body.lang-en [data-both] span[data-zh] { display: none !important; }
+body.lang-zh [data-both] span[data-zh] { display: inline !important; }
+body.lang-zh [data-both] span[data-en] { display: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--ff-body);
+  color: var(--ink-deep);
+  background: var(--paper);
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+a { color: var(--lapis); text-decoration: none; transition: color 0.25s; }
+a:hover { color: var(--gold); }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0.7rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(247,241,227,0.85);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border-bottom: 1px solid rgba(167,146,93,0.25);
+}
+.nav.scrolled { background: rgba(247,241,227,0.97); box-shadow: 0 2px 16px rgba(38,38,31,0.07); }
+.nav-brand { font-family: var(--ff-display); font-weight: 700; font-size: 1.15rem; color: var(--ink-deep); letter-spacing: 0.05em; }
+.nav-brand .sub { font-size: 0.66em; color: var(--ink-pale); margin-left: 0.55em; font-weight: 400; letter-spacing: 0.12em; }
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+.nav-home {
+  color: var(--ink-soft); font-size: 0.8rem; font-weight: 500;
+  border: 1px solid rgba(167,146,93,0.4); border-radius: 18px; padding: 4px 13px;
+}
+.nav-home:hover { color: var(--gold); border-color: var(--gold); }
+.lang-toggle { display: flex; border-radius: 20px; overflow: hidden; border: 1px solid rgba(167,146,93,0.45); font-size: 0.8rem; font-weight: 500; cursor: pointer; background: var(--paper-soft); }
+.lang-toggle button { border: none; padding: 5px 14px; cursor: pointer; font-family: var(--ff-body); font-size: 0.8rem; font-weight: 500; transition: all 0.25s; color: var(--ink-soft); background: transparent; }
+.lang-toggle button.active { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: #fff; }
+
+/* ═══ ARTICLE HERO ═══ */
+.hero {
+  position: relative; padding: 7.5rem 2rem 4rem;
+  text-align: center;
+  background:
+    radial-gradient(700px 360px at 80% 10%, rgba(201,162,39,0.14), transparent 60%),
+    linear-gradient(170deg, #20253A 0%, #2A3350 28%, #3E5C76 52%, #8C8A6C 76%, #C9B98F 90%, var(--paper) 100%);
+  color: #F3EDE0;
+}
+.hero .kicker { font-size: 0.85rem; letter-spacing: 0.3em; color: var(--gold-soft); font-weight: 500; margin-bottom: 1rem; }
+.hero h1 { font-family: var(--ff-display); font-size: clamp(2.1rem, 5.5vw, 3.6rem); font-weight: 700; color: #F7F1E3; letter-spacing: 0.06em; line-height: 1.3; margin-bottom: 0.4rem; }
+.hero h1 .zh { font-size: 0.82em; display: block; margin-bottom: 0.3rem; color: #E9E2CE; }
+.hero .subtitle { font-family: var(--ff-display); font-size: clamp(1rem, 2.3vw, 1.3rem); color: #D9E1EA; font-weight: 300; letter-spacing: 0.12em; }
+.hero .metachip { display: inline-flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 1.4rem; }
+.hero .metachip span {
+  font-size: 0.75rem; letter-spacing: 0.08em; color: #D9E1EA;
+  border: 1px solid rgba(217,225,234,0.35); border-radius: 20px; padding: 4px 13px;
+  background: rgba(30,34,48,0.25);
+}
+
+/* ═══ ARTICLE BODY ═══ */
+.article { max-width: 820px; margin: 0 auto; padding: 3.4rem 2rem 4rem; }
+.epigraph {
+  font-family: var(--ff-zh); font-size: 1.15rem; color: var(--ink-mid);
+  border-left: 3px solid var(--gold); padding: 0.2rem 0 0.2rem 1.4rem; margin-bottom: 1.2rem;
+}
+.epigraph .en { font-family: var(--ff-body); font-size: 0.9rem; font-style: italic; color: var(--ink-soft); margin-top: 0.5rem; }
+.srcnote {
+  font-size: 0.85rem; color: var(--ink-soft);
+  background: var(--paper-soft); border: 1px solid rgba(167,146,93,0.3);
+  border-radius: 12px; padding: 1rem 1.2rem; margin: 1.4rem 0 2.6rem;
+}
+.srcnote code { font-family: "Inter", monospace; font-size: 0.8rem; color: var(--gold-dim); }
+.marks { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0.7rem; font-size: 0.78rem; color: var(--ink-soft); }
+
+h2.part {
+  font-family: var(--ff-display); font-size: clamp(1.7rem, 3.6vw, 2.2rem); font-weight: 700;
+  color: var(--ink-deep); letter-spacing: 0.04em;
+  margin: 4rem 0 0.3rem; text-align: center; position: relative;
+}
+h2.part::after { content: ""; display: block; width: 54px; height: 2px; margin: 0.8rem auto 1.2rem; background: linear-gradient(90deg, transparent, var(--gold), transparent); border-radius: 1px; }
+h3.win {
+  font-family: var(--ff-display); font-size: 1.3rem; font-weight: 700; color: var(--lapis);
+  margin: 2.8rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(167,146,93,0.3);
+}
+h4.mini { font-family: var(--ff-display); font-size: 1.05rem; font-weight: 700; color: var(--ink-deep); margin: 1.8rem 0 0.5rem; }
+.article p { font-size: 1.02rem; color: var(--ink-mid); margin-bottom: 1.2rem; }
+.article p + p[data-zh], .article p + p[data-en] { margin-top: -0.6rem; }
+.comment { background: var(--paper-deep); border-radius: 12px; padding: 1.1rem 1.3rem; margin: 1.4rem 0; border: 1px solid rgba(167,146,93,0.3); }
+.comment .c-label { font-family: var(--ff-display); font-weight: 700; color: var(--gold-dim); font-size: 0.88rem; margin-bottom: 0.3rem; letter-spacing: 0.06em; }
+.comment p { font-size: 0.98rem; margin-bottom: 0.4rem; }
+
+ul.yearlist { list-style: none; margin: 1rem 0 1.6rem; }
+ul.yearlist li {
+  position: relative; padding: 0.9rem 0 0.9rem 1.4rem; margin-bottom: 0.6rem;
+  border-bottom: 1px dashed rgba(167,146,93,0.25);
+}
+ul.yearlist li::before { content: ""; position: absolute; left: 0; top: 1.15rem; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+ul.yearlist li b { color: var(--ink-deep); font-family: var(--ff-display); }
+
+.bookblock { margin: 2.6rem 0; }
+.bookblock .b-head { font-family: var(--ff-display); font-weight: 700; font-size: 1.28rem; color: var(--ink-deep); margin-bottom: 0.2rem; }
+.bookblock .b-head .orig { color: var(--lapis); }
+.bookblock .b-sub { font-size: 0.85rem; color: var(--ink-pale); letter-spacing: 0.06em; margin-bottom: 0.8rem; }
+
+.footnote {
+  font-size: 0.82rem; color: var(--ink-pale);
+  border-top: 1px solid rgba(167,146,93,0.3); margin-top: 3.4rem; padding-top: 1.2rem; text-align: center;
+}
+.footnote code { font-family: "Inter", monospace; font-size: 0.78rem; }
+
+.q-card {
+  background: var(--paper-soft); border: 1px solid rgba(167,146,93,0.3); border-radius: 14px;
+  padding: 1.3rem 1.5rem; margin: 1rem 0;
+}
+.q-card .q-num { font-family: var(--ff-display); font-weight: 700; color: var(--gold-dim); font-size: 0.9rem; margin-bottom: 0.3rem; }
+
+/* ═══ FOOTER ═══ */
+.footer { text-align: center; padding: 2.6rem 2rem 2.2rem; color: var(--ink-pale); font-size: 0.875rem; border-top: 1px solid rgba(167,146,93,0.3); background: var(--paper); }
+
+@media (max-width: 768px) {
+  .nav { padding: 0.6rem 1rem; }
+  .hero { padding: 6rem 1rem 3rem; }
+  .article { padding: 2.4rem 1.1rem 3rem; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>活着的此刻</span><span data-en>THE LIVING MOMENT</span><span class="sub" data-both><span data-zh>一年的形状</span><span data-en>The Shape of a Year</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker">ZHŌU · ZHŌU · ZHŌU — MOMENT · 2026</p>
+  <h1>
+    <span class="zh" data-zh>活着的此刻 · 一年的形状</span>
+    <span class="zh" data-en>THE LIVING MOMENT — THE SHAPE OF A YEAR</span>
+  </h1>
+  <div class="subtitle" data-both><span data-zh>从一个春分，到一个秋分</span><span data-en>Two Equinoxes — from Nowruz to the Autumn Balance</span></div>
+  <div class="metachip">
+    <span data-both><span data-zh>2026-09-23 · 秋分</span><span data-en>2026-09-23 · Autumn Equinox</span></span>
+    <span data-both><span data-zh>涵盖 1 年</span><span data-en>1-year window</span></span>
+    <span data-zh>战争第 27 周 · 距中选 20 天</span><span data-en>War week 27 · 20 days to midterms</span>
+  </div>
+</section>
+
+<article class="article">
+
+  <div class="epigraph">
+    <div data-zh>「日中则昃，月盈则食。天地盈虚，与时消息。」——《周易 · 丰》</div>
+    <div data-en>"The sun declines at its zenith; the moon wanes at its full. Heaven and earth wax and wane, shifting with the time." — from the I Ching, Hexagram 55 (Fēng)</div>
+    <div class="en" data-both><span data-zh>在中华的宇宙观里，这句话写在国家、帝国出现之前：丰盈本身并不恒常，它由性质决定地会偏转。这篇文章，是要把那个偏转按住一瞬，读它一眼。</span><span data-en>In Chinese cosmology this was written before states, before empires: that fullness does not persist by its nature — it turns. This essay is an attempt to hold the turning still long enough to read it.</span></div>
+  </div>
+
+  <div class="srcnote">
+    <div data-zh><b>出处与可信度。</b>每一处主张带可信度标记：<code>✓</code> 已核实 / <code>◐</code> 主体自述 / <code>○</code> 仅转述 / <code>✗</code> 存争议。来源经与 Bloomberg、NPR、Reuters、Cook Political Report、PRH、《纽约时报》书评及出版社目录交叉核对。书目卡在 <code>readings/library/</code>；场域图在 <code>readings/review_2026-09-23.md</code>。</div>
+    <div data-en><b>Provenance.</b> Every claim carries a reliability mark: <code>✓</code> verified / <code>◐</code> company-claim / <code>○</code> unconfirmed / <code>✗</code> disputed. Sources are cross-checks against Bloomberg, NPR, Reuters, Cook Political Report, PRH, the NYT review, and publisher catalogues. Cards live in <code>readings/library/</code>; the field map in <code>readings/review_2026-09-23.md</code>.</div>
+    <div class="marks">
+      <span>✓ verified · 已核实</span><span>◐ company-claim · 自述</span><span>○ unconfirmed · 转述</span><span>✗ disputed · 争议</span>
+    </div>
+  </div>
+
+  <h2 class="part" data-both><span data-zh>此刻：秋分之日</span><span data-en>ORIENTATION — THE DAY ITSELF</span></h2>
+
+  <p data-zh>今晨，全球各地入暮时分，是秋分。太阳停在天赤道正上空，昼夜精确到分钟地两分；我们这颗倾斜、顽固、永远失衡的星球，决然地向寒冷倾过身去。半年前、一战之前，波斯历的春天带来诺鲁孜节——「新的一天」，比我们称之为现代的大多数事物早三千年。那个春分落在战争的第 21 天；这个秋分，落在战争的第二十七周。</p>
+  <p data-en>Today, September 23, 2026, at dusk everywhere it is autumn's hinge. The sun stands over the equator, day and night balanced to the minute, and the earth — our tilted, stubborn, perpetually off-balance star — tips decisively toward cold. In the Persian calendar, half a year and one war ago, the spring brought Nowruz: <i>New Day</i>, a festival three thousand years older than most of what we call modernity. That equinox landed on the 21st day of the war. This one lands on its 27th week.</p>
+
+  <p data-zh>秋分不是法庭。它不裁断这一年是否公正。它只宣报几何学：光正按部就班地离开北半球，对柴油价格、导弹弹道、总统的行程一无所知。而就在这无动于衷里，又藏着某种消息：<i>一年走到了它的平衡点，我们正被载着越过它。</i></p>
+  <p data-en>The equinox is not a tribunal. It does not weigh whether the year was just. It announces only the geometry: the light is leaving the northern half of the world, exactly on schedule, indifferent to diesel prices, to missile trajectories, to the itinerary of presidents. And somewhere in that indifference there is, again, a form of news: <i>the year has reached its balance point, and we are being carried past it.</i></p>
+
+  <p data-zh>2026 年的天平与其说是倾斜，不如说是<b>裂开</b>——裂成可见的一半与机器生成的一半；裂成本土与战区；裂成一个奉献了近年最美足球赛事的年份，与一次近年最致命的校园空袭并存的年份；裂成一个教会机器思考、却还没决定允许机器替人瞄多少靶的文明。</p>
+  <p data-en>In 2026 the balance is not so much tilted as <b>split</b> — split into visible and machine-made halves, into homeland and war zone, into a year that produced the most beautiful football tournament in memory and the most lethal school strike in recent memory, into a civilization that taught its machines to reason and is still deciding how much of the aiming those machines may do.</p>
+
+  <p data-zh>这就是从秋分之衡读到的这一年之形：多数事件，如同多数日子，是相等的两半。裂开，就是故事本身。而这个秋分我在读的五本书，像是专为这一道裂缝而写——清单不入此文，单独存于独立的书单页。</p>
+  <p data-en>This is the shape of the year, as read from its autumn balance: most events, like most days, are equal halves. The split is the story. And on this equinox the five books I am reading seem to have been written for exactly this split — the list itself is filed separately, on its own page, not inside this essay.</p>
+
+  <h2 class="part" data-both><span data-zh>回望：一年的弧线</span><span data-en>PART I — LOOKING BACK: THE ARC OF A YEAR</span></h2>
+
+  <h3 class="win" data-both><span data-zh>一月之风：暴风前的预告</span><span data-en>The January wind — before the storm</span></h3>
+  <p data-zh>新年以期待的音阶开场。足球世界杯即将在北美举行；中期选举在争议总统的阴影下成形；AI 产业承诺年末会迎来一个「推理之夏」，新一代模型届时登场；而海湾——在它成为非正常运转地带的最后几周——仍是畅通的咽喉。一月像是正在布景的舞台。战争早已排在历史的日程上，只是台下还看不见节目单。</p>
+  <p data-en>The year opened in the register of anticipation. A football World Cup was coming to North America; the midterms were forming in the shadow of a contested presidency; the AI industry promised a "summer of reason" with new model generations at the end of the year; and the Gulf remained — for the last weeks it ever would be — a functioning chokepoint. January felt like a stage being dressed. The war was already on the calendar of history; the audience just couldn't see the program yet.</p>
+
+  <h3 class="win" data-both><span data-zh>二月二十八：断裂</span><span data-en>February 28 — the rupture</span></h3>
+  <p data-zh>然后断裂降临，它将——若还能被记住的话——被记住为一个日期，而非一个季节：2026 年 2 月 28 日。美国对伊朗的打击开启了被称为「大规模作战行动」的进程 <code>✓</code>。数日之内，霍尔木兹海峡——承载着全球约五分之一石油的二十一英里动脉——对多数交通关闭 <code>✓</code>，战火蔓延到也门与沙特本土 <code>✓</code>。丰裕的物流，那个让一切廉价可及一切的奇迹，被揭露出它是有咽喉的；而有人正把手按在上面。</p>
+  <p data-en>Then the rupture, which will be remembered — if it is remembered at all — as a date rather than a season: February 28, 2026. United States strikes on Iran began what was declared "major combat operations" <code>✓</code>. Within days the Strait of Hormuz — the 21-mile-wide artery carrying roughly a fifth of the world's oil — was closed to most traffic <code>✓</code>, and the war widened to Yemen and to Saudi soil <code>✓</code>. The logistics of abundance, the miracle that had made everything cheap everywhere, was revealed to have a throat; someone's hands were on it.</p>
+  <p data-zh>同一波开场炮火中，米纳布一所学校，超过一百二十名儿童罹难 <code>✓</code>——这个数字可能将与这个世纪对「精准战争」的关系，如同美莱村之于越战、德累斯顿之于战略一样具有定义性 <code>○</code>。9 月 18–19 日，Bloomberg 报道 Pentagon 自我审查将该次打击的一部分归因于<b>对 AI 生成目标的过度依赖</b>——Palantir 的 Maven 系统读着战场模式，把一个机器认不出的地点标为军事目标 <code>○</code>。第一场死亡机器大体上由模式识别机器瞄准的战争，不在我们的未来。它已经发生。我们就活在这个季节里。</p>
+  <p data-en>In that same opening salvo, at a school in Minab, more than a hundred and twenty children were killed <code>✓</code> — a figure that may define the century's relationship to precision warfare the way My Lai defined a war or Dresden defined a strategy <code>○</code>. On September 18–19, Bloomberg reported that the Pentagon's own review attributes part of that strike to <b>over-reliance on AI-generated targeting</b> — that Palantir's Maven system, reading the patterns of the battlefield, flagged a site the machine could not see as a school <code>○</code>. The first war in which the machinery of death was substantially aimed by the machinery of pattern recognition is not somewhere in our future. It happened. It is the season we are in.</p>
+
+  <h3 class="win" data-both><span data-zh>三月：战争中的春分</span><span data-en>March — the equinox inside the war</span></h3>
+  <p data-zh>第一个春分——3 月 21 日诺鲁孜节——落在战争的第 21 天 <code>✓</code>，世界正面遭遇了这个悖论：即便空袭夜夜落在德黑兰，伊朗人仍在达吉里什巴扎买风信子、在跳火节上跳过火焰；即便有一位总理宣称轰炸是送给人民庆祝新年的礼物，人民依然排练着他们正典里最古老的文化论证——<i>无论此刻多么动荡，未来总会到来</i>。这句话至今仍是全年被引用最多的句子 <code>✓</code>。七个停火条件经由卡塔尔渠道被提出 <code>○</code>；没有一个站住。</p>
+  <p data-en>The first equinox — March 21, Nowruz — arrived on the 21st day of the war <code>✓</code>, and the world met the paradox head-on: even as nightly airstrikes hit Tehran, Iranians bought hyacinths in the Tajrish Bazaar and jumped over fires for Chaharshanbe Suri; even as a prime minister claimed the bombing was a gift to the people's ability to celebrate their own new year, the people rehearsed the oldest cultural argument in their canon — <i>despite any turmoil now, there will be a future</i>. That clause is still the most quoted sentence of the year <code>✓</code>. Seven conditions for settlement were floated through Qatari channels <code>○</code>; none held.</p>
+
+  <h3 class="win" data-both><span data-zh>夏：世界杯的间奏</span><span data-en>Summer — the World Cup interlude</span></h3>
+  <p data-zh>随后七月奉献了这一年最具分量的文化慰藉：世界杯。7 月 19 日，西班牙在纽约大都会人寿球场于加时赛中 1–0 击败阿根廷，费兰·托雷斯第 106 分钟头球破门 <code>✓</code>。西班牙成为历史上首个同时捧起男足与女足世界杯的国家 <code>✓</code>。英格兰获季军；佛得角的一记进球被评为赛事最佳 <code>✓</code>。没有任何体育能治愈战争。但体育保有一种值得一提的古老力量：它给世界一份共享的奇迹日历——两百个国家同意在同一个下午感受同一种情绪。在分裂的一年里，有一个情绪的共和国持续了一个月，而这很重要。</p>
+  <p data-en>Then July gave the year its most consequential act of cultural consolation: the World Cup. Spain beat Argentina 1–0 in extra time at MetLife Stadium on July 19, the goal a 106th-minute header by Ferran Torres <code>✓</code>. Spain became the first country ever to hold both the men's and the women's world titles simultaneously <code>✓</code>. England took bronze; a Cabo Verde goal was named goal of the tournament <code>✓</code>. Nothing in sport heals a war. But sport retains one ancient power worth naming: it gives the world a shared calendar of wonder — two hundred countries agreeing to feel the same emotion on the same afternoon. In a year of fracture, a republic of feeling held for one month, and it mattered.</p>
+
+  <h3 class="win" data-both><span data-zh>九月：崩塌与喧哗并至</span><span data-en>September — collapse and clamor together</span></h3>
+  <ul class="yearlist">
+    <li>
+      <b data-zh>9 月 3 日——双重葬礼与秋季军备竞赛。</b><b data-en>September 3 — the double funeral and the fall rush.</b>
+      <p data-zh>格洛丽亚·斯泰纳姆 92 岁辞世 <code>✓</code>，距她参与创立的运动被同时授予一项胜利和一份验尸报告，不过一周。同日，AI 产业引爆秋季发布：OpenAI 的 GPT-6「Astra」、Anthropic 的 Claude Fable 5.1、Google 的 Gemini 3.8，以及持续扩张的 Meta 产品线——该领域历史上最密集的前沿发布节奏 <code>✓</code>。</p>
+      <p data-en>Gloria Steinem died at 92 <code>✓</code>, a week after the movement she co-founded was handed both a triumph and an autopsy. On the same day the AI industry detonated its autumn release: OpenAI's GPT-6 "Astra," Anthropic's Claude Fable 5.1, Google's Gemini 3.8, and an expanding Meta line — the most compressed frontier-launch cadence in the field's history <code>✓</code>.</p>
+    </li>
+    <li>
+      <b data-zh>9 月 4 日——礼貌的助手死去。</b><b data-en>September 4 — the polite assistant died.</b>
+      <p data-zh>Google 关闭了它的 Assistant，终结一场十二年的对话伴侣实验 <code>✓</code>——一场更安静、也更奇特的葬礼。整整一代用户曾被一个说着「抱歉，我不明白」的设备训练。它的离世，标志着<b>恭顺式界面</b>的退场。</p>
+      <p data-en>Google shut down its Assistant, ending a twelve-year experiment in conversational companionship <code>✓</code> — a quieter funeral, and a stranger one. A whole generation of users had been trained by a device that said "I'm sorry, I don't understand." Its death marks the passing of the <i>deferential</i> interface.</p>
+    </li>
+    <li>
+      <b data-zh>9 月 9–10 日——共和党全国代表大会在达拉斯举行，</b><b data-en>September 9–10 — the Republican convention in Dallas,</b>
+      <p data-zh>中期选举的蓝图在此定型，「拼命作弊」成为一个全国性词汇 <code>✓</code>。</p>
+      <p data-en>where the midterm blueprint was set and the phrase "cheat like hell" entered the national lexicon <code>✓</code>.</p>
+    </li>
+    <li>
+      <b data-zh>9 月 14 日——艾美奖</b><b data-en>September 14 — the Emmys</b>
+      <p data-zh>颁给了《The Pitt》与《Widow's Bay》，珍·斯玛特第八度折桂，追平表演者历史纪录 <code>✓</code>——在分裂之年的秋天，电视再次充当文化的脉搏。</p>
+      <p data-en>went to <i>The Pitt</i> and <i>Widow's Bay</i>, and Jean Smart won her eighth, tying the all-time record for a performer <code>✓</code> — television, in the autumn of the fractured year, once again functioning as the culture's pulse.</p>
+    </li>
+    <li>
+      <b data-zh>9 月 17 日——华盛顿拒绝了一份联合国报告，</b><b data-en>September 17 — Washington rejected a UN report</b>
+      <p data-zh>该报告称战争中的某些行为可能构成战争罪 <code>✓</code>。今年最奇特的政治事件或许在此：当「报告」二字传播的速度快于「异议」二字，民主政体正在学会抢先否决自己的工具。</p>
+      <p data-en>describing conduct in the war as possible war crimes <code>✓</code>. The strangest institutional event of the year may be this: the word "report" now travels faster than the word "disputed," and democracies are learning to pre-empt their own instruments.</p>
+    </li>
+    <li>
+      <b data-zh>9 月 21–22 日——峰与基地。</b><b data-en>September 21–22 — the summit and the bases.</b>
+      <p data-zh>马克龙借联合国大会第 81 届会议之机在特朗普大厦会见特朗普 <code>✓</code>；华盛顿宣布在格陵兰开设两座新军事基地 <code>✓</code>——北极，这年压轴的地图，融冰之处让火药进驻。</p>
+      <p data-en>Macron met Trump at Trump Tower amid UNGA 81 <code>✓</code>; Washington announced two new military bases in Greenland <code>✓</code> — the Arctic, the year's final map where the melt gives way to missiles.</p>
+    </li>
+    <li>
+      <b data-zh>贯穿整个秋天——咽喉的代价。</b><b data-en>Through the autumn — the price of the throat.</b>
+      <p data-zh>柴油每加仑 5.85 美元，创下纪录 <code>✓</code>；油污带在海湾扩散 <code>✓</code>；而头条背后是安静的灾难：科威特 90%、阿曼 86%、沙特 70% 的淡水来自直接暴露在战争射程内的海水淡化工厂 <code>✓</code>。咽喉从来不只是关乎石油。它关乎这样的事实——海湾的每一座城市都是把海水转成生命的机器，而开关，是一条航道。</p>
+      <p data-en>Diesel at $5.85 a gallon, a record <code>✓</code>; an oil slick spreading in the Gulf <code>✓</code>; and the quiet catastrophe behind the headlines: Kuwait draws 90% of its water, Oman 86%, Saudi Arabia 70% from desalination plants sitting directly in the war's firing line <code>✓</code>. The chokepoint was never only about oil. It was about the fact that a city in the Gulf is a machine for turning seawater into life, and the switch is a shipping lane.</p>
+    </li>
+  </ul>
+
+  <h2 class="part" data-both><span data-zh>AI 之线：未经许可的智能</span><span data-en>PART II — THE AI THREAD: INTELLIGENCE WITHOUT PERMISSION</span></h2>
+  <p data-zh>如果说战争给了这一年它的伤口，人工智能则给了它速度。而两者已经开始以一种无人预谋的方式彼此照亮。</p>
+  <p data-en>If the war gave the year its wound, artificial intelligence gave it its speed. And the two have begun to glow together in a way no one planned.</p>
+
+  <p data-zh><b>秋季发布是一场协奏，而非独奏。</b>9 月 3 日，前沿在四条战线同时移动——而每家公司都声称自己领先：推理（<code>◐</code>）、长程行动（<code>◐</code>）、价格（<code>◐</code>）。值得读两遍的不是基准，而是<b>方向</b>：每一套大系统如今都是<b>智能体</b>，而非应答者。问题不再是 AI 知道什么；而是 AI 做什么。Anthropic 自称的业绩——Claude 现承担公司约 26% 的研发任务，即 AI 在设计下一代 AI <code>◐</code>——是这领域最骄傲的里程碑，还是它最重大的未知数，取决于你问谁。</p>
+  <p data-en><b>The autumn release was a concert, not a solo.</b> On September 3 the frontier moved on four fronts at once — and each company claims its model leads: reasoning (<code>◐</code>), long-horizon action (<code>◐</code>), price (<code>◐</code>). The detail that deserves a second read is not the benchmarks but the <i>direction</i>: every major system is now an <b>agent</b>, not a respondent. The question is no longer what AI knows; it is what AI <i>does.</i> Anthropic's own reporting — that Claude now performs roughly 26% of the company's R&amp;D tasks, i.e. AI designing the next AI <code>◐</code> — is either the field's proudest milestone or its most significant unknown, depending on who is asked.</p>
+
+  <p data-zh><b>治理问题穿着丑闻的外衣到场。</b>有人提议为前沿实验室设立一个仿 FINRA 的行业标准机构 <code>✓</code>，反对者——包括政府内部的声音——斥之为「卡特尔」 <code>✓</code>。这场碰撞真实而富含思想：一个预防性的机构，是对市场的矫正，还是对市场的俘获？这一年目前的答案是：监管这个词本身已经党派化——对一个影响如此深重的技术而言，这或许是最坏的可能结果，因为它保证让嗓门最大而非头脑最清的人来定规则。特朗普的「AI Force」与一位 AI 沙皇进一步把美国的姿态集中化 <code>✓</code>：国家要的是能力，不是克制。</p>
+  <p data-en><b>The governance question arrived dressed as a scandal.</b> A FINRA-style standards body was proposed for the frontier labs <code>✓</code>, and its opponents — including voices inside the administration — attacked it as a "cartel" <code>✓</code>. The collision is genuine and philosophically rich: is a precautionary institution a correction of the market, or a capture of it? The year's answer so far is that regulation itself has become a partisan word, which is perhaps the worst possible outcome for a technology this consequential — it guarantees the loudest, not the wisest, voices set the rules. Trump's "AI Force" and an AI czar further centralize the American posture <code>✓</code>: the state wants the capability, not the restraint.</p>
+
+  <p data-zh><b>而机器去找它的第一张支票。</b>Anthropic 着手推进 11 月上市，据报营收超过一千亿美元 <code>◐</code>——这一估值事件若成立，将让「人类史上最值钱的公司」从比喻沦为陈述句。</p>
+  <p data-en><b>And the machine looked for its first checkbook.</b> Anthropic filed toward a November IPO built on reported revenues exceeding $100 billion <code>◐</code> — a valuation event that, if it holds, would make the clause "the most valuable company in the history of the planet" a routine statement rather than a metaphor.</p>
+
+  <div class="comment">
+    <div class="c-label" data-both><span data-zh>【我注】</span><span data-en>My Comment.</span></div>
+    <p data-zh>2026 年 AI 叙事从产品故事变为文明故事，恰好发生在它与战争交汇之处——Maven 审查、米纳布学校、那台认不出学校、因为学校不是一个「模式」的机器 <code>○</code>。我们整年都在教机器识别<b>规律性</b>。而伦理生活整个都在<b>不规则</b>之中：那栋同时也是学校的建筑，那个同时也是威胁的手势，那个同时也是节日的下午。前沿模型令人惊叹。它们认不出的那个模式，正是例外。而例外——明年的战争、下一场选举——一直是人性寄居之所。</p>
+    <p data-en>The AI story of 2026 stops being a product story and becomes a civilizational story at exactly the point where it and the war merge — the Maven review, the Minab school, the machine that couldn't see a school because a school is not a pattern <code>○</code>. We have spent the year teaching machines to recognize <i>regularities</i>. But the whole of the ethical life is in the <i>irregularities</i>: the building that is also a school, the gesture that is also a threat, the afternoon that is also a holiday. The frontier models are astonishing. The pattern they cannot recognize is the exception. And the exception — next year, in the next war, in the next election — is where our humanity has always lived.</p>
+  </div>
+
+  <h2 class="part" data-both><span data-zh>本季书单</span><span data-en>PART III — THE READING OF THE SEASON</span></h2>
+  <p data-zh><i>这个秋分读的书，正是这道裂缝的镜像；但清单本身不入思潮之文。每本书——已核验、带核心主张与「为何读」——在独立的书单页；彼此之间的边，画在 <code>readings/relations/book_graph.md</code>。</i></p>
+  <p data-en><i>The books of this equinox mirror the split, but the list itself is not part of this essay. Each title — verified, with core claims and a "why" — lives on its own reading-list page; the edges between them are drawn in <code>readings/relations/book_graph.md</code>.</i></p>
+  <div class="comment">
+    <div class="c-label" data-both><span data-zh>【书单 · 秋分五书】</span><span data-en>The autumn list.</span></div>
+    <p data-zh>点击进入书单页 → <a href="../read/2026-09-books.html">read/2026-09-books.html</a> · 五本书的读点、「为何读」与完备性核验。</p>
+    <p data-en>Open the list page → <a href="../read/2026-09-books.html">read/2026-09-books.html</a> — each book's core claims, "why now", and the completeness review.</p>
+  </div>
+
+  <h2 class="part" data-both><span data-zh>前瞻：接下来的约一百天</span><span data-en>PART IV — LOOKING FORWARD: THE NEXT ~100 DAYS</span></h2>
+  <p data-zh>秋分是一年的龙骨；接下来的约一百天决定船身怎样破浪。</p>
+  <p data-en>The equinox acts as the year's keel; the next hundred days determine how the hull rides.</p>
+
+  <ul class="yearlist">
+    <li>
+      <b data-zh>11 月 3 日——中期选举。</b><b data-en>November 3 — the midterms.</b>
+      <p data-zh>Cook Political Report 当前预测：众议院倾向共和党，参议院 53–47 共和党领先 <code>✓</code>。五千美元小费税减免的承诺为竞选加温 <code>✓</code>；达拉斯大会定下策略，包括那句将被研究多年的短语 <code>✓</code>。总统那句「拼命作弊」的鼓励 <code>✓</code>，此刻必须以文化对待征兆的方式去衡量：不是看它证明了什么，而是看它<b>练习</b>了什么。如果九月时模式已如此清晰，那么差距不需要很小——它需要<b>可核验</b>，而今年最典型的反讽是：恰是核验的机制正被侵蚀。</p>
+      <p data-en>Cook Political Report currently projects: House leans Republican, Senate 53–47 Republican <code>✓</code>. The $5,000-tip-credit pledge animates the campaign <code>✓</code>; the Dallas convention set the strategy, including the phrase that will be studied for years <code>✓</code>. A presidential encouragement to "cheat like hell" <code>✓</code> must now be weighed the way cultures weigh omens: not for what it proves, but for what it <i>practices</i>. If the pattern is this clear in September, the margin does not need to be small — it needs to be <i>verifiable</i>, and the year's signature irony is that the machinery to verify is precisely what is being eroded.</p>
+    </li>
+    <li>
+      <b data-zh>11 月（暂定）——Anthropic 上市。</b><b data-en>November (tentative) — the Anthropic IPO.</b>
+      <p data-zh>一个以千亿美元营收为前提的估值事件 <code>◐</code>。若成立，「AI 资本开支」就不再是科幻，而成为中产养老金账户里的一个科目。市场的下注不再是某个产品，而是一个<b>智能体</b>——把智能当作一种自行续费的水电煤气。</p>
+      <p data-en>A valuation event predicated on $100B+ revenue <code>◐</code>. If it holds, the phrase "AI capex" stops being science fiction and becomes a line item in the retirement accounts of the middle class. The market's bet is no longer on a product; it is on an <i>agent</i> — on intelligence as a utility that renews its own subscription.</p>
+    </li>
+    <li>
+      <b data-zh>战争的冬天。</b><b data-en>The winter of the war.</b>
+      <p data-zh>经由卡塔尔的停火通道仍是唯一的道路 <code>○</code>。海水淡化暴露度——90% / 86% / 70% <code>✓</code>——是需要紧盯的细节：战争的下一章可能不写在首都，而写在<b>水</b>里。没有淡水的一个城邦根本不是一个国家；它是一座等待着名字的围城。</p>
+      <p data-en>The ceasefire lane through Qatar remains the only road <code>○</code>. The desalination exposure — 90% / 86% / 70% <code>✓</code> — is the detail to watch: the war's next chapter may be written not in capitals but in <i>water</i>. A city-state without fresh water is not a state at all; it is a siege waiting for a name.</p>
+    </li>
+    <li>
+      <b data-zh>格陵兰两座新基地；北极成为压轴图。</b><b data-en>Two new bases in Greenland; the Arctic as the closing map.</b>
+      <p data-zh>当冰层退让，远北的战略地图被重绘 <code>✓</code>。这个在本世纪开篇之页还是气候灾难象征的地区，在收尾之章成为其反面的象征：<i>融冰，作为资产。</i></p>
+      <p data-en>As ice concedes, the strategic cartography of the far north is redrawn <code>✓</code>. The region that was, in the century's early pages, the emblem of climate catastrophe, becomes in its final chapter the emblem of its opposite: <i>the melt as an asset.</i></p>
+    </li>
+    <li>
+      <b data-zh>文化日历。</b><b data-en>The cultural calendar.</b>
+      <p data-zh>秋季节庆与电影季会做战争年代文化一直做的事——在缩量的配额上维持感觉共和国的存活 <code>○</code>。而在年末，笼罩一切的问题是：畅销榜上那两部虚构乌托邦（《逃离派对》及其镜像）还会被当作小说来读吗？</p>
+      <p data-en>The autumn festivals and the film season will do what culture does in wartime — keep the republic of feeling alive on a reduced ration <code>○</code>. And at the year's end, the question that shadows all of it: will the two invented utopias on the bestseller list (<i>Exit Party</i>, and its mirror) still be read as fiction?</p>
+    </li>
+  </ul>
+
+  <h2 class="part" data-both><span data-zh>一年的形状</span><span data-en>SYNTHESIS — THE SHAPE OF THE YEAR</span></h2>
+
+  <h4 class="mini" data-both><span data-zh>上升</span><span data-en>Rising</span></h4>
+  <p data-zh><b>智能体压倒应答。</b>智能不再是问你什么，而是它去做什么——在模型里、在瞄准里、在编辑部里、在那个已经知道十一月差距的选情情报里 <code>✓</code>。文化意义是：<i>「提问」作为默认的人类姿态，正在终结。</i></p>
+  <p data-en><b>Agents over answers.</b> Intelligence is no longer something you ask; it is something that acts — in the models, in the targeting, in the newsroom, in the ballot-intelligence that already knows the November margins <code>✓</code>. The cultural meaning of this is the end of the <i>question</i> as the default human posture.</p>
+  <p data-zh><b>景观成为治理。</b>从「拼命作弊」到艾美奖到世界杯——今年所有掌权者说着景观的语言，而今年最受关注的事件，就是它最诚实的档案 <code>✓</code>。</p>
+  <p data-en><b>The spectacle as governance.</b> From "cheat like hell" to Emmys to the World Cup, the year's authority figures all speak in spectacle, and the year's most-watched events are its most honest documents <code>✓</code>.</p>
+  <p data-zh><b>死亡，被叙述。</b>一场让机器向学校瞄准的战争、一部让受害者书写自己遭难的回忆录、一位教国民如何走向棺材的医生——2026 是死亡要求由其参与者、而非旁观者书写的一年。</p>
+  <p data-en><b>Death, narrated.</b> A war that lets a machine aim at a school, a memoir that lets a victim author her abuse, a doctor who teaches his countrymen how to walk to a coffin — 2026 is the year death demanded to be written by its participants, not its spectators.</p>
+
+  <h4 class="mini" data-both><span data-zh>退场</span><span data-en>Falling</span></h4>
+  <p data-zh><b>恭顺的机器。</b>Google Assistant 于 9 月 4 日关闭 <code>✓</code>，结束了「乐于助人」界面的时代——那个让一代人相信机器是谦卑的时代。</p>
+  <p data-en><b>The deferential machine.</b> Google Assistant's shutdown on September 4 <code>✓</code> closes the age of the "helpful" interface — the age that taught a generation to believe machines are humble.</p>
+  <p data-zh><b>不受质疑的咽喉。</b>和平红利正以柴油与淡化水的价格支付 <code>✓</code>，而「全球化的动脉在政治上是中立的」这一假设，已经死了。</p>
+  <p data-en><b>The uncontested chokepoint.</b> A peace dividend is being paid in diesel and desalination <code>✓</code>, and the assumption that globalization's arteries are <i>politically neutral</i> is dead.</p>
+  <p data-zh><b>制度的不证自明。</b>当一份联合国报告必须被<b>抢先拒绝</b> <code>✓</code>，地壳已经移动：制度不再需要先被证明错误才会被弃置；只需被证明碍事。</p>
+  <p data-en><b>Institutional self-evidence.</b> When a UN report must be <i>pre-emptively refused</i> <code>✓</code>, the ground has moved: institutions no longer need to be wrong to be dismissed; they only need to be inconvenient.</p>
+
+  <h4 class="mini" data-both><span data-zh>反转</span><span data-en>Reversing</span></h4>
+  <p data-zh><b>羞耻易边。</b>佩利科定理传遍世界 <code>✓</code>：一年里最快的文化倒置不是政策，而是人称——从「你」到「我们」。</p>
+  <p data-en><b>Shame changes sides.</b> Pelicot's theorem propagated across the world <code>✓</code>: the fastest cultural inversion of the year is not a policy but a pronoun — from <i>you</i> to <i>us</i>.</p>
+  <p data-zh><b>英雄成为嫌犯。</b>勒梅特与这一年同谋：「那个营救」被交叉质证，光荣年代拒绝承认自己的神话，英雄的勋章被证明是不在场证明。</p>
+  <p data-en><b>The hero becomes the suspect.</b> Lemaitre and the year together: the rescue is cross-examined, the glory years refuse their own myth, the hero's medal is shown to be an alibi.</p>
+  <p data-zh><b>慰藉成为档案。</b>西班牙的双冠 <code>✓</code>、佛得角的最佳进球 <code>✓</code>——在这个战争的公民无法拍照的年份，感觉共和国留下了出其不意的档案馆。</p>
+  <p data-en><b>The consolation as the record.</b> Spain's two cups <code>✓</code>, Cabo Verde's goal of the tournament <code>✓</code> — in a year the war's citizens could not photograph, the people's republic of feeling left the unexpected archive.</p>
+
+  <h4 class="mini" data-both><span data-zh>摩擦点</span><span data-en>Friction points</span></h4>
+  <p data-zh><b>监管 vs 能力。</b>那个被提议、又被斥为「卡特尔」的仿 FINRA 机构 <code>✓</code>——无论朝哪个方向切，预防都在对抗俘获。</p>
+  <p data-en><b>Regulation vs. capability.</b> The FINRA-style body that was proposed and denounced as a "cartel" <code>✓</code> — precaution against capture, in whichever direction it cuts.</p>
+  <p data-zh><b>主权 vs 算法。</b>同一个季节里，一个部委既否决联合国报告、又审查自家机器的瞄准 <code>○</code>——国家在神明与被告之间旋转。</p>
+  <p data-en><b>Sovereignty vs. the algorithm.</b> The ministry that rejects a UN report in the same season it reviews its own machine's targeting <code>○</code> — the state rotates between god and defendant.</p>
+  <p data-zh><b>模式 vs 例外。</b>Maven 认不出学校，因为学校不是规律 <code>○</code>——而这一整年，人文学科全体站在例外这一边。</p>
+  <p data-en><b>The pattern vs. the exception.</b> Maven could not see the school because schools are not regularities <code>○</code> — and the entire humanities, this year, stand on the side of the exception.</p>
+
+  <div class="comment">
+    <div class="c-label" data-both><span data-zh>【与阅读的连接】</span><span data-en>Reading ties.</span></div>
+    <p data-zh>与阅读的连接由本季书单承载，不入此文：每本书的角色与彼此之间的边，画在 <code>readings/relations/book_graph.md</code> 与 <code>moment_ties.md</code>；缺口清单列在 <code>readings/review_2026-09-23.md</code>。书单本体见 <a href="../read/2026-09-books.html">秋分书单</a>。</p>
+    <p data-en>The reading ties are carried by this season's list, not by this essay: each book's role and the edges between them are drawn in <code>readings/relations/book_graph.md</code> and <code>moment_ties.md</code>; the gaps are listed in <code>readings/review_2026-09-23.md</code>. The list itself is on its own page — <a href="../read/2026-09-books.html">the autumn reading list</a>.</p>
+  </div>
+
+  <h2 class="part" data-both><span data-zh>收束</span><span data-en>CLOSING OBSERVATIONS</span></h2>
+  <p data-zh>从秋分龙骨读到的一年最深的一课，是三千年一句中文写下的：<i>日中则昃，月盈则食</i>。2026 是若干个「盈」<b>按时刻、同时地</b>开始转「昃」的一年：廉价能源的帝国、廉价证据的帝国、耐心助手的帝国、前沿无可置疑的帝国。衰落不是崩塌，充盈不是胜利。周易不为偏转赋道德——它只让偏转可读。在充满裂缝的一年里，「可读」正是宇宙给出最仁慈的东西。</p>
+  <p data-en>The year's deepest teaching, read from its autumn keel, is a Chinese sentence written about three millennia ago: <i>日中则昃，月盈则食</i> — the sun declines at its zenith; the moon wanes at its full. 2026 was a year in which several fullnesses began to decline <b>on schedule and at once</b>: the empire of easy energy, the empire of easy evidence, the empire of the patient assistant, the empire of the unquestioned frontier. Decline is not collapse; waxing is not victory. The <i>I Ching</i> does not moralize the turning — it only makes it legible. That legibility, in a year of fractures, was the kindest thing the cosmos offered.</p>
+  <p data-zh>而这个秋分，本季的阅读用各自的调门讲着同一件事——人类在裂缝中的位置，是留在<b>例外</b>一侧：与那场不属于模式的欢聚同在，与不叙述的美同在，与可能是无辜的英雄同在，与夺回笔杆的受害者同在，与那场日复一日练习、终结于善终的步行同在。光正在离开北半球。那是几何。它留在地上的一切——那一部分，是我们的。</p>
+  <p data-en>And on this equinox the reading of the season tells, in its own keys, the same thing — that the human position in the split is to remain <i>in the exception</i>: with the party that isn't a pattern, the beauty that doesn't narrate, the hero who might be innocent, the victim who reclaims the pen, and the walk, practiced daily, that ends in a good death. The light is leaving the north. That is geometry. What it leaves behind on the ground — that part is ours.</p>
+
+  <h2 class="part" data-both><span data-zh>结转问题</span><span data-en>QUESTIONS CARRIED FORWARD</span></h2>
+
+  <div class="q-card">
+    <div class="q-num" data-both><span data-zh>① 若模式认不出例外，谁巡夜例外？</span><span data-en>① If the pattern cannot see the exception, who patrols the exception?</span></div>
+    <p data-zh>当瞄准由机器建议、学校不是模式时，还剩哪个机构有能力说「这是学校」？（<code>○</code>，源自米纳布/Maven 一线）</p>
+    <p data-en>When targeting is machine-suggested and schools are not patterns, what institution remains capable of stating "this is a school"? (<code>○</code>, derives from the Minab/Maven thread)</p>
+  </div>
+
+  <div class="q-card">
+    <div class="q-num" data-both><span data-zh>② 感觉共和国能否靠限量配给存活？</span><span data-en>② Can a republic of feeling survive on reduced ration?</span></div>
+    <p data-zh>世界杯奉献了一个月的集体情绪停火。若战争入冬、经济转冷，一个撕裂的政体还能真正认同哪一本共享日历？（<code>✓</code> 配给已开始；答案开放）</p>
+    <p data-en>The World Cup held a single-month truce of collective emotion. If the war winters and the economy cools, what other shared calendar can a fractured polity actually agree on? (<code>✓</code> that rationing has begun; the answer is open)</p>
+  </div>
+
+  <div class="q-card">
+    <div class="q-num" data-both><span data-zh>③ 当机器写作，署名归谁？</span><span data-en>③ When the machine authors, who receives the byline?</span></div>
+    <p data-zh>Anthropic 研发自动化 26% <code>◐</code>、一纸重写估值的 IPO <code>◐</code>；相形之下，佩利科的回忆录坚持<i>人的作者</i>是世上最珍贵也最脆弱之物。「未经许可的智能」与一个夺回自己笔杆的女性之间的下一回合，是最值得盯住的问题。</p>
+    <p data-en>Anthropic R&amp;D automation at 26% <code>◐</code> and an IPO rewriting valuations <code>◐</code>; Pelicot's memoir, by contrast, insists on the <i>human author</i> as the most precious and most fragile thing on earth. The next shot of the conflict between intelligence-without-permission and a woman taking back her pen is the question most worth watching.</p>
+  </div>
+
+  <div class="footnote">
+    <p data-zh>源头档案：<code>moment/series/year-2026.md</code> · 秋分节点档案 · 游标：2026-09-23 → 下次更新将锚定任何重大信号；<b>11 月 3 日</b>是下一个龙骨日。</p>
+    <p data-en>Source: <code>moment/series/year-2026.md</code> · Autumn-equinox balance dossier · Cursor 2026-09-23; the next window updates on any major signal; <b>November 3</b> is the next keel date.</p>
+    <p data-zh><i>草拟标注：本页由 AI 依已验证来源生成（2026-09-23）；正式入库前经人工复核。</i></p>
+    <p data-en><i>AI-drafted from verified sources; entries pass human review before "established."</i></p>
+  </div>
+
+</article>
+
+<footer class="footer">
+  <p data-zh>一叶小舟，渡万洲之远 · 阅读与智识 — 当下的形状 · 2026 秋</p>
+  <p data-en>Reading &amp; IA — The Shape of the Moment · Autumn 2026</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+const toggle = document.getElementById('langToggle');
+const buttons = toggle.querySelectorAll('button');
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('zhzz-reading-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+}
+const saved = localStorage.getItem('zhzz-reading-lang');
+if (saved) setLang(saved);
+buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+</script>
+
+</body>
+</html>

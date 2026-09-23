@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《逃离派对》｜Exit Party | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip span{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>秋分 · AUTUMN</span><span data-en>秋分 · AUTUMN</span><span class="sub" data-both><span data-zh>五部 · 2026-09</span><span data-en>five books · 2026-09</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker">READING &amp; IA — 秋分 · AUTUMN</p>
+  <h1><span data-zh>《逃离派对》 · Exit Party</span><span data-en>Exit Party — 《逃离派对》</span></h1>
+  <div class="subtitle" data-both><span data-zh>艾米丽·圣约翰·曼德尔 · 美国 · Knopf · 2026-09-15 · 320pp · $32</span><span data-en>Emily St. John Mandel · the American · Knopf · 2026-09-15 · 320pp · $32</span></div>
+  <div class="metachip"><span>秋分 · AUTUMN · 2026-09-23</span> <span>第七部长篇 · 最政治化之作</span> <span>conf ✓ 出版信息四级源核实；情节以 ◐ 为主（首寡摘要单源）</span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 出版信息四级源核实；情节以 ◐ 为主（首寡摘要单源） · 档案：2026-mandel-exit-party（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ 出版信息四级源核实；情节以 ◐ 为主（首寡摘要单源） · record: 2026-mandel-exit-party. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻 · Why now</span><span data-en>为何此刻 · Why now</span></h3><div data-zh>在美国自身极化的当下，读一部把「两个美国」写成一确二真的小说——现实已经在分叉，小说只是把它显影。</div><div data-en>In a moment of American fracturing, a novel that writes &quot;two Americas&quot; as one-true-two — reality is already forking; fiction only develops the film.</div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景 · Background</span><span data-en>背景 · Background</span></h3><div data-zh>曼德尔 2026 年的第七部长篇，也是她最政治化的作品。2031 年一场政变后美国分崩离析为互战的共和国、城邦与民兵地盘（A 面，混乱）；同书并置一个从未分裂、却收缩为铁腕监控国家的「美利坚合众国」（B 面，极权）。两个美国由一场洛杉矶派对事故与一幅 1968 年的画作《天鹅潜水》（Swan Dive）相连。A 面的混乱与 B 面的秩序互为「国家的反生活」，也是作者对「半数选民在基本事实上都不再一致」的当下焦虑的直接投影。曼德尔自称「最政治、最酷儿、最好的小说」。</div><div data-en>Mandel&#x27;s seventh novel and her most openly political. After a 2031 coup the U.S. splinters into warring republics/city-states and militia zones (A-Side, chaos); a parallel America never fragments but constricts into a surveillance state run by the &quot;Service&quot; (B-Side). The two are bridged by a party accident and a 1968 painting, &quot;Swan Dive.&quot; Chaos and totalitarianism function as a &quot;dark twinship&quot; — the counterlife of the state — mirroring Mandel&#x27;s anxiety that &quot;half the electorate disagrees on basic reality.&quot; She calls it &quot;my most political work, my most queer work, I think it&#x27;s my best novel.&quot;</div></div>
+<p class="tok"><span class="conf c-ok">✓</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>情节分幕 · Plot content</span><span data-en>Plot content</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 幕 · 派对之夜</span><span data-en>Act 1 · The Party</span></h3>
+<div data-zh>2031 年春——美国政变崩解后的「第一个春天」。国际维和部队撤离洛杉矶，宵禁随《萨克拉门托协定》解除，加州共和国成立。48 岁的阿里·韦克刚出狱（18 年刑期，雇凶杀害表兄安东）。她与室友格洛丽亚穿过棚户区、红十字帐篷与炸弹嗅探犬去银湖参加卡里姆·法耶德的派对。派对上「出了毛病」：塞拉亚的第二个版本（穿便装的困惑女人）现身又逃入夜色；自称尼科的「第二个格洛丽亚」闯入厨房；主人卡里姆在一间没有外门的厨房里凭空消失。格洛丽亚取下画作《天鹅潜水》带画赴欧洲（她怀着卡里姆的孩子）。事后有人对阿里说：「我想，那场派对也是一扇门。」</div><div data-en>In the first spring after the collapse of the United States, peacekeepers withdraw from LA, the curfew is lifted (Sacramento Accord), the Republic of California is declared. Ari Waker, 48, is newly released after 18 years for hiring a hit on her cousin. She walks with roommate Gloria to Kareem Fayed&#x27;s Silverlake party past tent cities and bomb-sniffing dogs. At the flower-filled party &quot;there&#x27;s something wrong&quot;: a second, casually dressed Saraya appears and flees; a woman entering the kitchen; the host Kareem vanishes from a doorless kitchen. Gloria takes the painting and flees to Europe, pregnant. &quot;I think the party was also a door.&quot;</div>
+<p class="tok"><span class="conf c-ok">✓</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">npr.org · wsj.com · thesaturdaypaper.com.au · lithub.com</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 幕 · A 面漂流</span><span data-en>Act 2 · A-Side Picaresque</span></h3>
+<div data-zh>阿里在崩解的 A 面世界漂泊求生：洛杉矶街头当洗碗工/零售店员；东迁俄亥俄共和国，为饯行组织做杂役、替民兵头目爱德华多跟踪尼科；与曾是芭蕾舞者的军火商费利克斯结伴南下得克萨斯，再逃往欧洲（巴黎圆顶孤城、希腊军火商据点）。她后来甩掉费利克斯，与雇佣兵比尔·索里亚诺结成交易式联盟，最终化名巴黎艺术藏家「阿里·索里亚诺」。她天生的预感（clairvoyance）时灵时不灵。核心台词：「若没有人见证，你的过去就开始像虚构。」</div><div data-en>Ari drifts through the broken A-Side world: dishwashing/retail in LA, militia work in the Ohio Republic (surveilling Nico for Eduardo), a partnership with Felix (a former ballet dancer turned gunrunner), flight through Texas to Europe (domed Paris, a Greek militia hangout), a transactional alliance with mercenary Bill Soriano, and finally a life as Paris art collector &quot;Ari Soriano.&quot; Her premonitions are unreliable. Motto-line: &quot;If you don&#x27;t have a witness, your past starts to feel fictional.&quot;</div>
+<p class="tok"><span class="conf c-ok">✓</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">npr.org · bostonglobe.com · brooklynrail.org · theguardian.com</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 幕 · B 面之墙</span><span data-en>Act 3 · The Service & the Experiment</span></h3>
+<div data-zh>B 面：合众国没有崩解，却成了极权国家——「Service」（内部安全局）当街掳人，劳动营供「批评政府者」改造；投票不再必需，总统之位预定由他儿子接任。UCLA 四名物理学家——尼科·李、丈夫卡里姆·法耶德、塞拉亚·德·桑托斯与同事莱恩——深夜秘密做传送实验：先用《天鹅潜水》试机（完美传送），随后卡里姆踏上平台，被复制成两个——B 面出现两个卡里姆，均被 Service 羁押；同时 A 面派对上的卡里姆在厨房消失。阿里的 B 面对应体是资深探员伊巴里·韦克：公开职业是城市规划讲师；鼻梁上一副银胶带修补的眼镜可骗过人脸识别；她自称「我一生都带着一点点直觉」。她用假名「大卫·格里森」（《歌者之枪》旧角色）救出 A 面卡里姆。</div><div data-en>B-Side America stayed whole — and constricted: the &quot;Service&quot; yanks people into unmarked cars, labor camps reform critics, voting is no longer required. Four UCLA physicists (Nico Li, her husband Kareem Fayed, Saraya de Santos, colleague Len) secretly run a teleportation experiment; &quot;Swan Dive&quot; transmits perfectly, then Kareem steps on the platform and is duplicated — two Kareems, both detained. Ari&#x27;s parallel is Ibari Waker, senior Service detective whose cover is urban-planning professor; her silver-taped glasses defeat facial recognition. She frees the A-side Kareem under the alias &quot;David Grissom&quot; (a Singer&#x27;s Gun character).</div>
+<p class="tok"><span class="conf c-ok">✓</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">npr.org · wired.com (excerpt) · thesaturdaypaper.com.au</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 幕 · 汇流</span><span data-en>Act 4 · Convergence (Paris, 2060s)</span></h3>
+<div data-zh>故事跨越数十年。巴黎在对世界其余部分关闭的圆顶内成为相对安稳的孤岛（约 2065 年前后）。格洛丽亚是不尽责的母亲；尼科成为塞巴斯蒂安（格洛丽亚与 A 面卡里姆之子）的代理母亲；《天鹅潜水》经手多人。塞巴斯蒂安 20 岁决定把画从年迈藏家阿里·索里亚诺处「偷回」，作为给尼科的生日礼物；阿里在巴黎文森森林追逐画作时被劫匪重创。B 面：获释的卡里姆患癌临终，成年的萨米尔（月面殖民地建筑师）与马洛（传送物理学家、患有「时间线损坏」式的复杂 PTSD）守于床边；另一个卡里姆翻窗而入与他道别。动身退休的伊巴里（79 岁）行使「火化权」销毁追踪编码、下载国家机密档案交给抵抗组织，随后独自走进太平洋。</div><div data-en>The novel arcs across decades into a domed-Paris refuge (circa 2065) sealed off from the broken world. Gloria is a neglectful mother; Nico is a surrogate mother to Sebastian (Gloria&#x27;s son by the party Kareem). Sebastian, at 20, decides to steal &quot;Swan Dive&quot; back from elderly collector Ari Soriano as a birthday present for Nico; Ari is badly hurt chasing him through the Bois de Vincennes. B-Side: the freed Kareem dies of cancer with grown Samir (architect on the lunar colony) and Marlowe (a transport physicist wracked by complex PTSD — &quot;timeline corruption&quot;) at his bedside; the other Kareem climbs in a window to say goodbye. Retiring Ibari (79) uses her &quot;right of incineration,&quot; destroys her trackers, copies the State&#x27;s files to the Resistance, then walks into the Pacific surf.</div>
+<p class="tok"><span class="conf c-part">◐ (node consolidation)</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">ursummary.com ◐ · brooklynrail.org · thesaturdaypaper.com.au · thebcreview.ca</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 5 幕 · 余烬与希望</span><span data-en>Act 5 · Embers & Hope</span></h3>
+<div data-zh>尾声不以乌托邦收束，而以「一丝希望的微光」收束：艺术的长寿与「短暂即甜蜜」互为支撑；「如果世上没有见证者，你的过去就开始像虚构」一语回收。曼德尔强调这是「希望之书」，是疫情后纽约那个奇迹般盛夏的「desperate joy」所驱动。</div><div data-en>The ending declines utopia for &quot;a little glimmer of hope&quot;: art outliving makers and countries is the governing theme; &quot;temporary brings its own kind of sweetness&quot; recurs. Mandel insists this is a hopeful book born of the &quot;desperate joy&quot; of New York&#x27;s magical pandemic-era summer.</div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">defector.com · therumpus.net · elle.com</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>叙事结构 · Narrative structure</span><span data-en>Narrative structure</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构 · Structure</span><span data-en>结构 · Structure</span></h3><div data-zh>全书三部分——A-Side（A 面/混乱宇宙）、B-Side（B 面/极权宇宙）、Swan Dive（《天鹅潜水》：近卷末的短章，交代画作 1968 年在纽约公寓的缘起）。整体第三人称叙述，部分段落转为现在时；章节内嵌标题小节（如「The Birthday Present」「True Diligence」）；含审讯转录稿——其中一段是「只听一方」的独角转录，书评人指为炫技。双镜结构：A/B 两面的对应人物互为「反生活」，以跨世界重复的句子与意象缝合全书（「我想跳进海里，一路游过那片蓝」「真正的勤奋=追随不可能之路」「PTSD 是时间线损坏」）。机制几乎不给解释——可穿点疑似为「同时存在于两个宇宙的物体」（画作），而书内尼科自嘲「我觉得那幅画是个障眼法」。</div><div data-en>Three parts — A-Side, B-Side, and a late, short &quot;Swan Dive&quot; section on the painting&#x27;s 1968 New York origins. Third person throughout (present tense in stretches); embedded titled micro-chapters; an interrogation transcript, plus a famously one-sided &quot;transcript&quot; chapter that critics call showy. The doubled worlds braid via mirror-selves and repeated lines/images. The physics is deliberately unexplained — &quot;a notion that objects might be where parallel universes converge&quot; — undercut in-text by Nico: &quot;I think the painting&#x27;s a red herring.&quot;</div></div>
+<h2 class="part" data-both><span data-zh>情节流程图 · Plot flow</span><span data-en>Plot flow</span></h2>
+<div class="diagram"><svg viewBox="0 0 860 1408" role="img" aria-label="plot flow" xmlns="http://www.w3.org/2000/svg">
+<rect x="90" y="26" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="46" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">1</text>
+<text x="130" y="60" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">2031 春：政变后美国崩解，宵禁解除、维和部队撤离洛杉矶，加州共和国成立</text>
+<text x="730" y="60" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="98" x2="430" y2="124" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="124" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="144" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">2</text>
+<text x="130" y="158" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">阿里（48 岁，18 年刑满出狱）与格洛丽亚赴卡里姆派对</text>
+<text x="730" y="158" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="196" x2="430" y2="222" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="222" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="242" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">3</text>
+<text x="130" y="256" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">派对上出现「多余的人」（第二塞拉亚、自称尼科的格洛丽亚）；卡里姆在无外门厨房消失</text>
+<text x="730" y="256" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="294" x2="430" y2="320" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="320" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="340" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">4</text>
+<text x="130" y="354" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">格洛丽亚偷《天鹅潜水》赴欧（怀孕）——塞巴斯蒂安出生</text>
+<text x="730" y="354" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="392" x2="430" y2="418" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="418" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="438" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">5</text>
+<text x="130" y="452" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">阿里 L.A. 求生→俄亥俄（替爱德华多监视尼科、遇费利克斯）→得州→逃欧→巴黎藏家</text>
+<text x="730" y="452" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="490" x2="430" y2="516" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="516" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="536" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">6</text>
+<text x="130" y="550" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">A 面重逢尼科复述「那晚究竟发生了什么」；世界/物体交汇理论现身</text>
+<text x="730" y="550" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="588" x2="430" y2="614" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="614" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="634" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">7</text>
+<text x="130" y="648" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">B 面揭示极权现实：Service、劳动营、投票取消、总统子继</text>
+<text x="730" y="648" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="686" x2="430" y2="712" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="712" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="732" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">8</text>
+<text x="130" y="746" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">UCLA 四人传送实验：《天鹅潜水》试机成功；卡里姆复制为二、被拘</text>
+<text x="730" y="746" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<line x1="430" y1="784" x2="430" y2="810" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="810" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="830" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">9</text>
+<text x="130" y="844" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">伊巴里提审双卡里姆；「TRUE DILIGENCE」纹身对笔迹——囚犯即其平行自我</text>
+<text x="730" y="844" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="882" x2="430" y2="908" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="908" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="928" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">10</text>
+<text x="130" y="942" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">伊巴里以「大卫·格里森」之名救出 A 卡里姆；B 卡里姆遁入抵抗组织</text>
+<text x="730" y="942" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="980" x2="430" y2="1006" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="1006" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="1026" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">11</text>
+<text x="130" y="1040" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">A 卡里姆养大萨米尔与马洛；B 卡里姆病逝</text>
+<text x="730" y="1040" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="1078" x2="430" y2="1104" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="1104" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="1124" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">12</text>
+<text x="130" y="1138" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">巴黎 2060s：塞巴斯蒂安偷画返尼科；阿里文森森林追画受重伤</text>
+<text x="730" y="1138" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="1176" x2="430" y2="1202" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="1202" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="106" y="1222" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">13</text>
+<text x="130" y="1236" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">伊巴里（79）行使「火化权」、泄档给抵抗组织、步入太平洋</text>
+<text x="730" y="1236" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line x1="430" y1="1274" x2="430" y2="1300" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="90" y="1300" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#C9A227" stroke-width="1.4"/>
+<text x="106" y="1320" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">14</text>
+<text x="130" y="1334" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">尾声：绘画之永恒 + 「一丝希望的微光」</text>
+<text x="730" y="1334" font-family="monospace" font-size="11" font-weight="700" fill="#3E7C5A">✓</text>
+<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker></defs>
+</svg><p class="cap">《逃离派对》 · 事件链（数字为顺序）</p></div>
+<h2 class="part" data-both><span data-zh>人物关系图 · Characters</span><span data-en>Characters &amp; relations</span></h2>
+<div class="diagram"><svg viewBox="0 0 2020 370" role="img" aria-label="character relationship" xmlns="http://www.w3.org/2000/svg">
+<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面主角</text>
+<rect x="22" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="80" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Ari Waker</text>
+<text x="290" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B 面镜像</text>
+<rect x="232" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="290" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Ibari Waker</text>
+<text x="500" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面</text>
+<rect x="442" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="500" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Kareem Fayed (A)</text>
+<text x="500" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面</text>
+<rect x="442" y="94" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="500" y="110" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Gloria</text>
+<text x="500" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面</text>
+<rect x="442" y="156" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="500" y="172" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Felix</text>
+<text x="500" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面</text>
+<rect x="442" y="218" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="500" y="234" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Bill Soriano</text>
+<text x="500" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A 面</text>
+<rect x="442" y="280" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="500" y="296" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Eduardo</text>
+<text x="710" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B 面</text>
+<rect x="652" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="710" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Kareem Fayed (B)</text>
+<text x="710" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B 面</text>
+<rect x="652" y="94" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="710" y="110" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Samir Li</text>
+<text x="710" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B 面</text>
+<rect x="652" y="156" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="710" y="172" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Marlowe Li</text>
+<text x="710" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B 面</text>
+<rect x="652" y="218" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="710" y="234" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Len</text>
+<text x="920" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B→A</text>
+<rect x="862" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="920" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Nico Li</text>
+<text x="920" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B→A</text>
+<rect x="862" y="94" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="920" y="110" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Saraya de Santos</text>
+<text x="1130" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A/巴黎</text>
+<rect x="1072" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="1130" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Sebastian</text>
+<text x="1340" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">A (TSG)</text>
+<rect x="1282" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="1340" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Anton Waker</text>
+<text x="1550" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">B (TSG)</text>
+<rect x="1492" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="1550" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">David Grissom</text>
+<text x="1760" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">The Glass Hotel</text>
+<rect x="1702" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
+<text x="1760" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Lucas Alkaitis</text>
+<path d="M80,46 C80,46.0 290,46.0 290,46" fill="none" stroke="#8C4A77" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M500,46 C500,46.0 710,46.0 710,46" fill="none" stroke="#8C4A77" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M500,108 C500,77.0 920,77.0 920,46" fill="none" stroke="#8C4A77" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M1130,46 C1130,46.0 500,46.0 500,46" fill="none" stroke="#3E5C76" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M1130,46 C1130,77.0 500,77.0 500,108" fill="none" stroke="#3E5C76" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M1130,46 C1130,46.0 920,46.0 920,46" fill="none" stroke="#3E5C76" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M710,108 C710,77.0 920,77.0 920,46" fill="none" stroke="#3E5C76" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M710,170 C710,108.0 920,108.0 920,46" fill="none" stroke="#3E5C76" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M710,108 C710,139.0 710,139.0 710,170" fill="none" stroke="#6C8AAF" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M500,170 C500,108.0 80,108.0 80,46" fill="none" stroke="#C0556B" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M80,46 C80,139.0 500,139.0 500,232" fill="none" stroke="#7A8F6E" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M290,46 C290,46.0 920,46.0 920,46" fill="none" stroke="#C9A227" stroke-width="1.3" stroke-dasharray="4 3"/>
+<path d="M500,46 C500,46.0 1760,46.0 1760,46" fill="none" stroke="#6C8AAF" stroke-width="1.3" stroke-dasharray="4 3"/>
+</svg><p class="cap">《逃离派对》 · 人物关系（虚点线=连接）</p></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>ID</th><th data-both><span data-zh>人物</span><span data-en>name</span></th><th data-both><span data-zh>阵营/组</span><span data-en>group</span></th><th data-both><span data-zh>角色</span><span data-en>role</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td>C1</td><td>Ari Waker</td><td>A 面主角</td><td><div data-zh>出狱前罪犯（雇凶杀兄）；洗碗/零售→俄亥俄民兵→军火→巴黎藏家「阿里·索里亚诺」；预感者</div><div data-en>released convict; drifts to Paris art collector; unreliable clairvoyante</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C2</td><td>Ibari Waker</td><td>B 面镜像</td><td><div data-zh>阿里的「反生活」；Service 资深探员（对外=城市规划讲师）；银胶带眼镜骗过人脸识别；终局弃航入海</div><div data-en>Ari&#x27;s dark twin; Service detective; ends by walking into the sea</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C3</td><td>Kareem Fayed (A)</td><td>A 面</td><td><div data-zh>派对主人；无外门厨房消失→B 面营地；以「大卫·格里森」获释→养大尼科子女</div><div data-en>party host who vanishes from a doorless kitchen; raises Nico&#x27;s children</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C4</td><td>Kareem Fayed (B)</td><td>B 面</td><td><div data-zh>UCLA 物理学家、尼科丈夫；实验中被复制为二；酗酒弃子、失踪入抵抗组织；病逝</div><div data-en>physicist duplicated in the experiment; disappears into the Resistance; dies</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C5</td><td>Gloria</td><td>A 面</td><td><div data-zh>阿里室友；派对幸存、怀卡里姆之子；偷画奔欧；是不尽责的母亲</div><div data-en>Ari&#x27;s roommate; steals the painting, flees to Europe pregnant</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C6</td><td>Nico Li</td><td>B→A</td><td><div data-zh>UCLA 物理教授、伊巴里挚友；实验坠入 A 面；成为塞巴斯蒂安代理母亲；被宣告「死亡」</div><div data-en>physicist; sent to A-side; surrogate mother to Sebastian</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C7</td><td>Sebastian</td><td>A/巴黎</td><td><div data-zh>格洛丽亚与 A 卡里姆之子；20 岁偷画「还」给尼科</div><div data-en>Gloria&#x27;s son; steals the painting back at twenty</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>C8</td><td>Samir Li</td><td>B 面</td><td><div data-zh>尼科与 B 卡里姆之子；月面殖民地建筑师</div><div data-en>son of Nico &amp; B-Kareem; architect on the lunar colony</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>C9</td><td>Marlowe Li</td><td>B 面</td><td><div data-zh>女儿；传送物理学家；「时间线损坏」式复杂 PTSD</div><div data-en>daughter; transport physicist; complex PTSD — &quot;timeline corruption&quot;</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C10</td><td>Saraya de Santos</td><td>B→A</td><td><div data-zh>UCLA 物理学家；被传至派对（「穿便装的第二个塞拉亚」）；意外流落</div><div data-en>physicist sent to the party; stranded</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>C11</td><td>Len</td><td>B 面</td><td><div data-zh>第四位 UCLA 物理学家（同事）</div><div data-en>the fourth UCLA physicist</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>C12</td><td>Anton Waker</td><td>A (TSG)</td><td><div data-zh>阿里表兄、雇凶目标；《歌者之枪》主角</div><div data-en>Ari&#x27;s cousin, the hit target; TSG protagonist</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C13</td><td>David Grissom</td><td>B (TSG)</td><td><div data-zh>《歌者之枪》旧角色；A 卡里姆脱逃所用别名</div><div data-en>TSG character; the alias A-Kareem escapes under</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>C14</td><td>Felix</td><td>A 面</td><td><div data-zh>前芭蕾舞者军火商、阿里情人；「互相搀扶即防灾」金句者</div><div data-en>ex-ballet gunrunner, Ari&#x27;s lover</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C15</td><td>Bill Soriano</td><td>A 面</td><td><div data-zh>雇佣兵、阿里交易式伴侣；阿里化名由此而来</div><div data-en>mercenary; source of Ari&#x27;s alias</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C16</td><td>Eduardo</td><td>A 面</td><td><div data-zh>俄亥俄民兵头目；遣阿里监视尼科</div><div data-en>militia boss who sets Ari to watch Nico</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>C17</td><td>Lucas Alkaitis</td><td>The Glass Hotel</td><td><div data-zh>《玻璃旅馆》画家族、卡里姆久故叔父；1968 年作《天鹅潜水》</div><div data-en>Glass Hotel painter, Kareem&#x27;s long-dead uncle; painted Swan Dive (1968)</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">An idea that I&#x27;ve been fascinated with for a long time is this notion of the counterlife, the life you didn&#x27;t live.</div><div class="trs">「反生活」（counterlife）这个念头我着迷已久——那些你未曾活过的生活。</div><div class="src">irishtimes.com 2026-09-12</div></div>
+<div class="quote"><div class="orig">It&#x27;s interesting to think about the counterlife of the individual, but it&#x27;s also interesting to think about the counterlife of the state.</div><div class="trs">想象个体的反生活很有意思，但想想「国家的反生活」也耐人寻味。</div><div class="src">lithub.com (Jane Ciabattari) 2026-09-15</div></div>
+<div class="quote"><div class="orig">I&#x27;ve never been particularly interested in disaster, but I am interested in its aftermath. There&#x27;s hope in thinking about the world that follows catastrophic events.</div><div class="trs">我对「灾难」本身从不特别感兴趣，我感兴趣的是灾难之后的事。想象大灾后的世界，其中是有希望的。</div><div class="src">lithub.com</div></div>
+<div class="quote"><div class="orig">Who will you be at the end of the world? I think of that as the book&#x27;s central question.</div><div class="trs">「世界落幕时你会成为怎样的人？」——我认为这是全书的核心之问。</div><div class="src">irishtimes.com</div></div>
+<div class="quote"><div class="orig">That feeling of desperate joy at the end of the world, that was something I was really trying to capture… There is a lot of joy even in these incredibly compromised times.</div><div class="trs">「世界尽头的绝望之乐」正是我想抓住的……哪怕在如此千疮百孔的时代，也仍有大量快乐。</div><div class="src">elle.com 2026-09-09</div></div>
+<div class="quote"><div class="orig">The collapse of consensual reality. When you get to a situation where half the electorate disagrees on basic reality… I don&#x27;t know how you come back from that.</div><div class="trs">共识性现实的坍塌。当半数选民连最基本的事实都达不成一致……我不知道这该怎么弥合。</div><div class="src">theguardian.com 2026-09-13</div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>为何如此写 · Reception &amp; synthesis</span><span data-en>为何如此写 · Reception &amp; synthesis</span></h3><div data-zh>Kirkus——「自《大站十一》以来最好的作品……把平行时间线的概念天才地接上政治主题」；Booklist、Library Journal 星评；Publishers Weekly ★「tour de force」。NPR 的 Corrigan 说「派对值得等待」；New Yorker 的 Waldman 自称「一口读完」；Boston Globe「曼德尔最好的状态」；Saturday Paper「精彩、完全笃定」。
+
+反面/保留：Irish Examiner ——情节「unwieldy（笨重）」、结尾「陷入混乱」；Goodreads 1.5★ 博客则骂前提拉仲；BookAndFilmGlobe「圆满收束但非解决」；New Yorker 亦点出主角群「each seem to represent a different ethnic group」的危险——近乎零风险的讨好式演员名单。文学评论（Literary Review of Canada, 2026-10）正文未取到（○）。
+
+**合成 Synthesis：** 作者明确把书写成「关于余波而非灾难」的希望之书，同时它是警世书：监控调性之外，「当半国选民不信基本事实」才是她笔下两个世界共同的原初创伤。主流书评盛赞居多；质疑集中在结构炫技与中段巴黎的拖沓。</div><div data-en>Kirkus — &quot;best since Station Eleven… brilliantly ties parallel timelines to a political theme&quot;; Booklist &amp; Library Journal starred; PW ★ &quot;tour de force.&quot; NPR&#x27;s Corrigan: the party &quot;is worth the wait&quot;; The New Yorker&#x27;s Waldman &quot;gulped it down&quot;; Boston Globe: &quot;Mandel at her best.&quot;
+
+Dissent: Irish Examiner calls the plot &quot;unwieldy&quot; and the climax &quot;descends into confusion&quot;; a 1.5★ Goodreads blog resents stretched premises; BookAndFilmGlobe: &quot;satisfying closure but not resolution.&quot; The New Yorker flags the &quot;attractive prodigies&quot; who &quot;each seem to represent a different ethnic group.&quot; Literary Review of Canada, 2026-10 unretrieved (○).
+
+**Synthesis:** Mandel frames the book as about aftermaths, not disasters, while warning that fractured consensus reality is the root trauma of both worlds. Mainstream reception is largely rapturous (Kirkus: &quot;best since Station Eleven&quot;), with dissent on pacing and the showy transcripts.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p>画作作纽带——一幅《天鹅潜水》串起 A/B 两面与十余年幕：艺术是「最古老的时间旅行器」，延续《大站十一》的漫画即契约母题。</p><p style="color:var(--ink-soft);font-size:.9rem">The painting as thread — &quot;Swan Dive&quot; ties A/B sides across decades; art is &quot;the oldest time machine,&quot; continuing Station Eleven&#x27;s comics-as-covenant motif.</p></div>
+<div class="card"><p>A/B=唱片 AB 面——双面结构取黑胶语义，「无须对称」；B 面机械的和谐反写 A 面随机的枪火。</p><p style="color:var(--ink-soft);font-size:.9rem">A/B updates an LP&#x27;s sides — &quot;you don&#x27;t demand symmetry&quot;; B-side&#x27;s mechanical harmony inverts A-side&#x27;s random fire.</p></div>
+<div class="card"><p>重复句缝合世界——跨世界重复的句子制造「既视感的惊悚」（&quot;I want to dive into the ocean and keep swimming through the blue&quot;; &quot;True diligence means following the improbable path&quot;）。</p><p style="color:var(--ink-soft);font-size:.9rem">Repeated sentences across worlds create déjà-vu dread, reading the two worlds as one coin.</p></div>
+<div class="card"><p>零科学软科幻——机制从不解释：「如果书里有时间机器，我不会告诉你怎么运作」，重点在人。</p><p style="color:var(--ink-soft);font-size:.9rem">&quot;If there&#x27;s a time machine in my book, I&#x27;m not going to tell you how it works&quot; — the physics stays unexplainable.</p></div>
+<div class="card"><p>PTSD=时间线损坏——用科幻概念映射日常心理损伤，是全书的微缩模型。</p><p style="color:var(--ink-soft);font-size:.9rem">&quot;PTSD is timeline corruption&quot; compresses the novel&#x27;s theme into an aphorism.</p></div>
+<div class="card"><p>酷儿与照护——与早期作品相比，「做母亲」上升为核心情感（女儿 2015 年出生后她自认才懂某些细微差别）；阿里的双性恋被无戏剧化地正面写出。</p><p style="color:var(--ink-soft);font-size:.9rem">Parenthood became a core emotional register after her daughter&#x27;s 2015 birth; Ari&#x27;s bisexuality is stated without drama.</p></div>
+<h2 class="part" data-both><span data-zh>精彩片段 · Excerpts</span><span data-en>Notable excerpts</span></h2>
+<div class="quote"><div class="orig">In the first spring after the collapse of the United States, the blossoming of the jacaranda trees felt to Ari like grace.</div><div class="trs">在美国崩塌之后的第一个春天，蓝花楹的盛放于阿里而言，如同恩典。</div><div class="src">npr.org 开头</div></div>
+<div class="quote"><div class="orig">I think the party was also a door. / There&#x27;s something wrong with the party. / There were extra people.</div><div class="trs">我想，那场派对也是一扇门。/ 派对上出了毛病。/ 那里有额外的人。</div><div class="src">npr.org · irishexaminer.com</div></div>
+<div class="quote"><div class="orig">The opposite of disorder is harmony. Peace is achieved through surveillance. Service is the surveillance department of the State. Harmony at any cost.</div><div class="trs">混乱的对立面是和谐；和平靠监控达成；服务局即国家的监控部门；不惜一切代价的和谐。</div><div class="src">brooklynrail.org</div></div>
+<div class="quote"><div class="orig">Strange to think there weren&#x27;t just two versions of me, and two versions of Kareem and Nico and possibly everyone else, but two versions of our country. There was a world where my homeland had fractured into disarray, and another where my homeland had closed like a fist.</div><div class="trs">奇怪的是，不只是我有两个版本，卡里姆、尼科乃至每个人都可能有两个版本——不，是我们国家有两个版本：一个世界里故土碎裂成一片狼藉，另一个世界里故土收缩成一只拳头。</div><div class="src">kirkusreviews.com</div></div>
+<div class="quote"><div class="orig">I have spent my whole life pulling pins on grenades… I want extremity. I want annihilation. I want to blow up my life and remake it, but how many times do you get to do that?</div><div class="trs">我这一辈子都在拔手榴弹的保险栓……我想要极端，想要湮灭，想炸掉我的人生重新来过——可这种事，人能有几次？</div><div class="src">thebcreview.ca (Ibari)</div></div>
+<div class="quote"><div class="orig">If you don&#x27;t have a witness, your past starts to feel fictional.</div><div class="trs">若是没有人见证，你的过去就开始变得像虚构。</div><div class="src">bostonglobe.com</div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>把 A/B 两面当作「同一焦虑的两种结局」来读，而非平行世界解谜：逐句捕捉跨面的镜像句与镜像人物（Ari/Ibari、格洛丽亚/尼科、双卡里姆、萨米尔/马洛、费利克斯/爱德华多）。</div><div data-en>Read A/B as twin outcomes of one anxiety, tracking mirror-sentences and mirror-selves (Ari/Ibari, Gloria/Nico, the two Kareems, Samir/Marlowe) rather than solving the portal.</div></div>
+<div class="card"><div data-zh>逐一到路追踪《天鹅潜水》的每一次转手（派对墙→格洛丽亚→塞巴斯蒂安→尼科→伊巴里）：这是一部私人物品史，也印证「艺术比承载它的人与国更长寿」的主题。</div><div data-en>Map every hand-off of &quot;Swan Dive&quot; — a micro-history of art outliving people and nations, Mandel&#x27;s central thesis.</div></div>
+<div class="card"><div data-zh>注意文体异色：审讯转录、独角转录、1968 年画作前史。作者坦承在「神秘但不令人抓狂地困惑」上走钢丝；The Leftovers（剧集）提供氛围参照。</div><div data-en>Watch the formal oddities (interrogation/one-sided transcripts, the 1968 origin chapter) against her stated tightrope — &quot;mysterious, but not maddeningly confusing&quot; — with The Leftovers as tonal precedent.</div></div>
+<div class="card"><div data-zh>预兆的「失灵」是自嘲的传记性投射（「我绝对无法预测大流行病」）——别把超自然当答案，答案在「见证」与照护里。</div><div data-en>Treat Ari&#x27;s premonitions as wry self-portrait (&quot;I absolutely cannot predict pandemics&quot;) — the answer is witness and care, not psi.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th>年</th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><b>Station Eleven</b></td><td>Mandel</td><td>2014</td><td>同作者/曼德尔宇宙</td><td><div data-zh>软末日；余波重于灾难；艺术作线</div><div data-en>soft apocalypse; aftermath not disaster; art-as-thread</div></td><td>aftermath</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>The Singer&#x27;s Gun</b></td><td>Mandel</td><td>2010</td><td>源头文本</td><td><div data-zh>Ari、Anton、David Grissom 返回；A 面 noir DNA</div><div data-en>Ari, Anton, David Grissom return; A-side noir DNA</div></td><td>noir/crime</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>The Glass Hotel</b></td><td>Mandel</td><td>2020</td><td>源头文本</td><td><div data-zh>Swan Dive + Alkaitis 家族；罪犯的反生活</div><div data-en>Swan Dive + the Alkaitis family; criminals&#x27; counterlives</div></td><td>counterlife</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Sea of Tranquility</b></td><td>Mandel</td><td>2022</td><td>同作者/曼德尔宇宙</td><td><div data-zh>时间旅行；巴黎穹顶回归为避难所</div><div data-en>time travel; Paris domes return as refuge</div></td><td>counterworlds</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Parable of the Sower</b></td><td>Octavia Butler</td><td>1993</td><td>先例</td><td><div data-zh>美国解体、漂流求生、气候</div><div data-en>US fracture, survival picaresque, climate</div></td><td>US-civil-fracture</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>1984</b></td><td>G. Orwell</td><td>1949</td><td>PW 引证</td><td><div data-zh>监控国；部委式口号</div><div data-en>surveillance State; ministry-style slogans</div></td><td>surveillance-dystopia</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The City &amp; The City</b></td><td>C. Miéville</td><td>2009</td><td>点名影响</td><td><div data-zh>训练「不去看」另一个城市</div><div data-en>trained &quot;not to see&quot; the other city</div></td><td>doubled-reality</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Doppelganger</b></td><td>N. Klein</td><td>2023</td><td>同代对话</td><td><div data-zh>政治双身与自我分裂</div><div data-en>political doubling &amp; self-splitting</div></td><td>counterlife/politics</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The Plot Against America</b></td><td>P. Roth</td><td>2004</td><td>先例</td><td><div data-zh>反事实的极权美国</div><div data-en>counterfactual authoritarian America</div></td><td>alt-history-US</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>American War</b></td><td>O. El Akkad</td><td>2017</td><td>同代对照（共同活动）</td><td><div data-zh>第二次美国内战；「no ceiling, no floor」</div><div data-en>second civil war; &quot;no ceiling, no floor&quot;</div></td><td>US-civil-fracture</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>The Dispossessed</b></td><td>U. K. Le Guin</td><td>1974</td><td>回响（Saturday Paper）</td><td><div data-zh>孪生社会、双联画</div><div data-en>twinned societies, diptych</div></td><td>two-societies</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The Leftovers</b></td><td>T. Perrotta (novel 2011 / TV 2014)</td><td>2014</td><td>点名影响</td><td><div data-zh>无从解释之事的余波；惨淡中的轻盈</div><div data-en>aftermath of the inexplicable; lightness amid bleakness</div></td><td>aftermath</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Never Let Me Go / Klara and the Sun</b></td><td>K. Ishiguro</td><td>2021</td><td>对照（WSJ）</td><td><div data-zh>温柔崩塌中的爱与艺术</div><div data-en>love &amp; art amid gentle collapse</div></td><td>soft-apocalypse</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>Exit Party 出版信息：Knopf 2026-09-15，320pp，$32，ISBN 9780593321461</td><td style="font-size:.8rem;color:var(--ink-pale)">penguinrandomhouse.com; publishersweekly.com; wsj.com; kirkusreviews.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>加版 HarperAvenue ISBN 9781443466141 · 英版 Picador 9781035081288 (2026-09-17)</td><td style="font-size:.8rem;color:var(--ink-pale)">thebcreview.ca; theguardian.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>三部分结构 A-Side / B-Side / Swan Dive</td><td style="font-size:.8rem;color:var(--ink-pale)">lithub.com; kirkusreviews.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>首句蓝花楹/恩典（jacaranda / grace）</td><td style="font-size:.8rem;color:var(--ink-pale)">npr.org; theatlantic.com; defector.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>「most political, most queer, best novel」自评</td><td style="font-size:.8rem;color:var(--ink-pale)">seattletimes.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>The City &amp; The City 与 The Leftovers(TV) 为点名影响；与 Omar El Akkad 共同活动</td><td style="font-size:.8rem;color:var(--ink-pale)">irishtimes.com; therumpus.net; defector.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>无大纲硬写；《Exit Party》后半推翻重写至少两次</td><td style="font-size:.8rem;color:var(--ink-pale)">theglobeandmail.com; therumpus.net; publishersweekly.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>原名「James Exits the Party」；篇名由妻子定为 Exit Party</td><td style="font-size:.8rem;color:var(--ink-pale)">lithub.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>电视改编售予 Laika 真人部门；曼德尔写 pilot；属 Netflix《刺客信条》编剧室</td><td style="font-size:.8rem;color:var(--ink-pale)">elle.com; irishexaminer.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>Last Night in Montreal = 2009（旧卡的 2006 错误）</td><td style="font-size:.8rem;color:var(--ink-pale)">publishersweekly.com; amheath.com; emilymandel.com; en-wiki</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>Station Eleven 售 150 万+、译 33+ 语</td><td style="font-size:.8rem;color:var(--ink-pale)">theguardian.com; es.wikipedia</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>曼德尔涉 Anthropic 版权诉讼；经 Bartz v. Anthropic 和解（~$1.5B 获批 2025-09-25）</td><td style="font-size:.8rem;color:var(--ink-pale)">esquire.com 2026-09-09; apnews.com; authorsguild.org</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p>Literary Review of Canada（2026-10）书评正文未取到（锚点已知源，仅目录可见） <span class="tok"><span class="conf c-part">○/retrieval-failed</span></span></p></div>
+<div class="card"><p>「quantum rupture」一词为既有流行说辞，检索语料未见正文原文——机制多以「物体为交汇/意外传送/宇宙裂缝」表述 <span class="tok"><span class="conf c-part">✗ 待查原文电子版</span></span></p></div>
+<div class="card"><p>Ari 刑期 18 vs 20 年（New Scientist 与 Boston Globe 记 20，疑误） <span class="tok"><span class="conf c-part">✓ 主流为 18 ✗ 二源</span></span></p></div>
+<div class="card"><p>女儿出生年份 2015 vs 2016 <span class="tok"><span class="conf c-part">✓ 偏 2015 ◐ Grokipedia</span></span></p></div>
+<div class="card"><p>B 面纪元 2060s（Kirkus）vs 2065 巴黎（Irish Examiner） <span class="tok"><span class="conf c-part">◐ 同为 2060s 量级</span></span></p></div>
+<div class="card"><p>「TRUE DILIGENCE」刺青/B 面幼年笔记互文：仅单源摘要 + 言辞印证 <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../2026-09-books.html">← <span data-zh>返回秋分书单</span><span data-en>back to the autumn list</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识 · 2026 秋</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA · Autumn 2026</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

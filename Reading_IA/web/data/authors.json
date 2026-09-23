@@ -1,0 +1,399 @@
+{
+  "schema": "reading-authors.v3",
+  "crop": "2026-autumn",
+  "note": "单源注册表 → 由 build_reading.py 生成 authors/index.html。事实标注 ✓ 已核 / ◐ 一手或单源 / ○ 转述 / ✗ 争议。",
+  "authors": [
+    {
+      "id": "mandel",
+      "name_zh": "曼德尔",
+      "name_en": "Mandel",
+      "name_native": "Emily St. John Mandel (née Fairbanks)",
+      "slug_display": "Mandel",
+      "born": "1979 春 · Merville, BC, Canada",
+      "native_lang": "English",
+      "domain_zh": "当代小说 · speculative/literary crossover · 灾难—艺术母题",
+      "domain_en": "contemporary fiction · speculative crossover · disaster-art motif",
+      "one_liner_zh": "灾难不是背景，是让微小联结显影的暗室。舞者转小说家，写了 7 部跨界小说；《Exit Party》让「两个美国」一确二真。",
+      "one_liner_en": "Dystopia as a darkroom for small bonds. Dancer turned novelist; seven crossover novels; in Exit Party two Americas are one-true-two.",
+      "school_zh": "soft-apocalypse 跨界文学",
+      "school_en": "soft-apocalypse crossover",
+      "circle": [
+        {"who": "Patrick Somerville", "edge": "◎", "why_zh": "《Station Eleven》剧集 showrunner", "why_en": "Station Eleven HBO showrunner", "conf": "✓"},
+        {"who": "Laura Barisonzi", "edge": "◎", "why_zh": "2025 起配偶、摄影师；首读者与作者照拍摄者", "why_en": "wife (2025), photographer, first reader", "conf": "✓"},
+        {"who": "Kevin Mandel", "edge": "◇", "why_zh": "前夫（2022 离），剧作家/招聘高管", "why_en": "ex-husband (2022), writer & executive recruiter", "conf": "✓"},
+        {"who": "Katherine Fausset / Emilie Jacobson", "edge": "◎", "why_zh": "文学代理（Curtis Brown）", "why_en": "literary agents (Curtis Brown)", "conf": "✓"},
+        {"who": "Semi Chellas", "edge": "✎", "why_zh": "Last Night in Montreal 电影共编剧", "why_en": "film co-writer", "conf": "✓"},
+        {"who": "Sam Esmail（Mr. Robot 系）", "edge": "◎", "why_zh": "Sea of Tranquility 影集合作方", "why_en": "Sea of Tranquility TV partner", "conf": "✓"},
+        {"who": "Omar El Akkad", "edge": "⇌", "why_zh": "同代对谈（American War 作者）；「直书美国分裂」的搭档声音", "why_en": "peer conversations; American War author", "conf": "✓"},
+        {"who": "The Millions 编辑部", "edge": "◎", "why_zh": "2010 年起任 staff writer", "why_en": "staff writer since 2010", "conf": "✓"}
+      ],
+      "influences": [
+        {"from": "China Miéville", "edge": "⇐", "note_zh": "The City & The City 点名影响：双重现实、训练「不去看」另一城", "note_en": "named influence: doubled reality", "conf": "✓"},
+        {"from": "Tom Perrotta (The Leftovers)", "edge": "⇐", "note_zh": "无从解释之事的余波；惨淡中的轻盈", "note_en": "aftermath of the inexplicable; lightness", "conf": "✓"},
+        {"from": "Virginia Woolf 式时间跳跃", "edge": "⇐", "note_zh": "现代主义拼贴叙述的底子", "note_en": "modernist collage narration", "conf": "○"},
+        {"from": "Cormac McCarthy", "edge": "⇐", "note_zh": "荒原感与文明的脆弱", "note_en": "wasteland sensibility", "conf": "◐"},
+        {"from": "疫情后纽约的「绝望之乐」", "edge": "⇐", "note_zh": "Exit Party 的氛围来源（自述）", "note_en": "the desperate joy of post-pandemic NYC", "conf": "✓"}
+      ],
+      "timeline": [
+        {"y": "1979", "event_zh": "生于 Merville, BC；父（美裔）越战拒役水管工、母（加裔）家暴机构社工；五兄妹", "event_en": "born Merville, BC; American-Vietnam-C.O. father; social-worker mother; five kids", "conf": "✓"},
+        {"y": "~15", "event_zh": "家庭学校至约 15 岁；无高中文凭；写作者纪律（日记作业）", "event_en": "homeschooled to ~15; no diploma; diary-as-homework discipline", "conf": "✓"},
+        {"y": "18", "event_zh": "入学多伦多舞剧院学校（当代舞）；毕业背上不少学贷", "event_en": "School of Toronto Dance Theatre (contemporary dance); graduating with debt", "conf": "✓"},
+        {"y": "2002", "event_zh": "蒙特利尔动笔处女作《Last Night in Montreal》", "event_en": "begins Last Night in Montreal in Montreal", "conf": "✓"},
+        {"y": "2009", "event_zh": "《Last Night in Montreal》出版（Unbridled；非 2006）", "event_en": "Last Night in Montreal out (Unbridled), not 2006", "conf": "✓"},
+        {"y": "2010–2012", "event_zh": "《The Singer's Gun》《The Lola Quartet》；行政助理夜班 + The Millions 专栏", "event_en": "TSG (2010) & The Lola Quartet (2012); admin day-job + The Millions", "conf": "✓"},
+        {"y": "2014", "event_zh": "《Station Eleven》：NBA finalist · HBO 改编 · 150 万+ 册", "event_en": "Station Eleven: NBA finalist; HBO; 1.5M+ copies", "conf": "✓"},
+        {"y": "2015", "event_zh": "女儿出生（2015 vs 2016 小争议）；Clarke 奖", "event_en": "daughter born (2015); Clarke Award", "conf": "✓"},
+        {"y": "2020–2022", "event_zh": "《The Glass Hotel》Giller finalist；《Sea of Tranquility》Goodreads Choice；2022 年与 Kevin 离婚", "event_en": "Glass Hotel Giller finalist; Sea of Tranquility out; divorces Kevin 2022", "conf": "✓"},
+        {"y": "2025", "event_zh": "与摄影师 Laura Barisonzi 在布鲁克林 Greenlight 书店结婚", "event_en": "marries Laura Barisonzi at Greenlight Bookstore, Brooklyn", "conf": "✓"},
+        {"y": "2026-09", "event_zh": "第 7 部长篇《Exit Party》（Knopf 2026-09-15）；「最政治、最酷儿、最好」", "event_en": "Exit Party out 2026-09-15; 'my most political, most queer, best novel'", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "2009", "title": "Last Night in Montreal", "note_zh": "处女作；蒙特利尔", "note_en": "debut; Montreal", "conf": "✓"},
+        {"y": "2010", "title": "The Singer's Gun", "note_zh": "Prix Mystère de la Critique 2014；Exit Party 的阿里/安东/格里森源头", "note_en": "Prix Mystère 2014; A-side DNA of Exit Party", "conf": "✓"},
+        {"y": "2012", "title": "The Lola Quartet", "note_zh": "独角戏三部之一", "note_en": "third Unbridled novel", "conf": "✓"},
+        {"y": "2014", "title": "Station Eleven", "note_zh": "破圈之作；Clarke 2015", "note_en": "breakout; Clarke 2015", "conf": "✓"},
+        {"y": "2020", "title": "The Glass Hotel", "note_zh": "Giller finalist；海边 Ponzi 帝国", "note_en": "Giller finalist; coastal Ponzi empire", "conf": "✓"},
+        {"y": "2022", "title": "Sea of Tranquility", "note_zh": "时间旅行 + 巴黎穹顶", "note_en": "time travel + Paris domes", "conf": "✓"},
+        {"y": "2026", "title": "Exit Party", "note_zh": "本批主打；A/B 双美国", "note_en": "this crop's headliner; A/B two Americas", "conf": "✓"}
+      ],
+      "awards": [
+        {"y": "2014", "award": "Prix Mystère de la Critique", "note": "The Singer's Gun", "conf": "✓"},
+        {"y": "2014", "award": "National Book Award finalist", "note": "Station Eleven", "conf": "✓"},
+        {"y": "2015", "award": "Arthur C. Clarke Award", "note": "Station Eleven", "conf": "✓"},
+        {"y": "2015", "award": "Toronto Book Award · Tournament of Books", "note": "Station Eleven", "conf": "✓"},
+        {"y": "2015", "award": "PEN/Faulkner finalist · Baileys longlist", "note": "Station Eleven", "conf": "✓"},
+        {"y": "2017", "award": "Prix des Libraires du Québec", "note": "Station Eleven", "conf": "✓"},
+        {"y": "2020", "award": "Scotiabank Giller finalist", "note": "The Glass Hotel", "conf": "✓"},
+        {"y": "2022", "award": "Goodreads Choice Award, SF", "note": "Sea of Tranquility", "conf": "✓"},
+        {"y": "2020/2022", "award": "Obama 年度书单", "note": "Glass Hotel & Sea of Tranquility", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "Last Night in Montreal = 2009（旧卡 2006 错误）", "source": "publishersweekly.com; emilymandel.com; amheath.com", "conf": "✓"},
+        {"claim": "2025 与 Laura Barisonzi 结婚（Greenlight 书店）", "source": "publishersweekly.com; en-wiki; theguardian.com", "conf": "✓"},
+        {"claim": "2022 与 Kevin Mandel 离婚（‘prove divorce to Wikipedia’）", "source": "irishtimes.com; en-wiki", "conf": "✓"},
+        {"claim": "女儿 2015 出生（2026 时 10 岁）", "source": "en-wiki; theguardian.com", "conf": "✓ (Grokipedia 2016 ◐)"},
+        {"claim": "homeschool 至约 15 岁、无高中文凭", "source": "theguardian.com; newyorker.com; monroeccc.edu", "conf": "✓"},
+        {"claim": "The Millions staff writer 自 2010", "source": "themillions.com", "conf": "✓"},
+        {"claim": "涉 Anthropic 版权诉讼（Bartz v. Anthropic 和解）", "source": "esquire.com 2026-09-09; apnews.com", "conf": "✓"},
+        {"claim": "无大纲硬写；后半推翻重写", "source": "theglobeandmail.com; therumpus.net", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "女儿出生年份 2015 vs 2016", "conf": "✓/◐"},
+        {"item": "The Lola Quartet 具体奖项（缩写来源不确定）", "conf": "○"}
+      ],
+      "stance_zh": "灾难不是背景，是让「微小联结」显影的暗室：莎剧、酒店、画作、派对——都是人对抗熵的仪式。2026 年这套装置第一次直接对准「美国自身的宪政解体会发生什么」；心理上她承认「我无法预测大流行」，预兆之「失灵」正是其自嘲。",
+      "stance_en": "Disaster as darkroom for small bonds — Shakespeare, hotels, paintings, parties as rituals against entropy. In 2026 the device finally aims at American constitutional collapse itself.",
+      "read_status_zh": "Exit Party（阅读中）；Station Eleven 列为候补（先对照 HBO 版）。",
+      "read_status_en": "Exit Party: reading; Station Eleven: backlist candidate (against HBO).",
+      "why_now_zh": "2026 美国宪政焦虑（政变讨论、中选、AI 失控叙事）的客体化证词——「两个美国」一确二真；'I cannot overstate how stressful the US is at the moment'（irishtimes 2026-09-12）。",
+      "why_now_en": "The objectified testimony of 2026's American constitutional anxiety — two Americas, one-true-two."
+    },
+
+    {
+      "id": "vargas",
+      "name_zh": "瓦尔加",
+      "name_en": "Vargas",
+      "name_native": "Frédérique Audoin-Rouzeau -> pen name Fred Vargas",
+      "slug_display": "Vargas",
+      "born": "1957-06-07 · Paris",
+      "native_lang": "French",
+      "domain_zh": "罪案小说 · 考古动物学",
+      "domain_en": "crime fiction · archaeozoology",
+      "one_liner_zh": "罪案是文明史的病历；直觉（poésie）是理性的另一面。CWA Dagger 四冠（含独奖三连 + 与勒梅特共享一冠）。",
+      "one_liner_en": "Crime as the case-file of civilisation; intuition spelled poetry. CWA Dagger solo x3 + one shared = commonly 'four'.",
+      "school_zh": "法式 néo-polar · 直觉派侦探文学",
+      "school_en": "French neo-polar, intuition-led detection",
+      "circle": [
+        {"who": "Jo Vargas（孪生姐）", "edge": "◎", "why_zh": "画家；笔名来源（借自《赤足天使》女主），常为法语版封面作画", "why_en": "painter; the pen-name's source and cover artist", "conf": "✓"},
+        {"who": "Stéphane Audoin-Rouzeau（兄）", "edge": "◎", "why_zh": "一战史家；The Three Evangelists 史家角色原型", "why_en": "WWI historian; character source", "conf": "✓"},
+        {"who": "Philippe Audoin（父）", "edge": "◎", "why_zh": "作家/超现实主义圈（与 Breton 亲近）", "why_en": "writer in the Surrealist circle", "conf": "✓"},
+        {"who": "Siân Reynolds（英译者）", "edge": "✎", "why_zh": "长期译者；Dagger 奖随译共认", "why_en": "long-time translator; Dagger recognition follows", "conf": "✓"},
+        {"who": "Pierre Lemaitre", "edge": "⇌", "why_zh": "同代双峰；2013 同届 CWA Dagger（共享一冠）", "why_en": "peers; shared 2013 Dagger", "conf": "✓"}
+      ],
+      "influences": [
+        {"from": "Georges Simenon", "edge": "⇐", "note_zh": "心理侦探传统 + 罪案读成社会病理", "note_en": "psychological detective line; crime as pathology", "conf": "◐"},
+        {"from": "考古动物学训练", "edge": "⇐", "note_zh": "对「证据即骨头/残迹」的直觉方法", "note_en": "archaeozoology's evidence-as-remains instinct", "conf": "◐"},
+        {"from": "Nerval（El Desdichado）", "edge": "⇐", "note_zh": "Une unique lueur 的互文源文本", "note_en": "intertextual source of the 2026 title", "conf": "✓"}
+      ],
+      "timeline": [
+        {"y": "1957", "event_zh": "生于巴黎；父超现实主义圈作家 Philippe Audoin；孪生姐 Jo；兄 Stéphane", "event_en": "born Paris; surrealist-writer father; twin Jo; brother Stéphane", "conf": "✓"},
+        {"y": "1979", "event_zh": "于巴黎七大（Jussieu）完成考古动物学博士（Sorbonne），研究方向：中世纪疾病媒介/畜牧业", "event_en": "archaeozoology doctorate at Jussieu; medieval disease vectors", "conf": "✓"},
+        {"y": "1980s–90s", "event_zh": "CNRS 研究员（考古动物学）；业余写侦探小说", "event_en": "CNRS researcher; crime fiction sidelines", "conf": "✓"},
+        {"y": "1995", "event_zh": "《Debout les morts》——Les Évangélistes 三部曲第一部出版", "event_en": "Debout les morts, first of The Three Evangelists", "conf": "✓"},
+        {"y": "2001", "event_zh": "《Pars vite et reviens tard》——Adamsberg 系列国际破圈", "event_en": "Pars vite et reviens tard, Adamsberg's international breakout", "conf": "✓"},
+        {"y": "2006/2007/2009", "event_zh": "CWA International Dagger 独奖三连", "event_en": "three solo CWA Daggers", "conf": "✓"},
+        {"y": "2013", "event_zh": "与 Lemaitre 共享 CWA Dagger（第四冠）", "event_en": "shared CWA Dagger with Lemaitre", "conf": "✓"},
+        {"y": "2018", "event_zh": "Prince of Asturias 奖（文学）", "event_en": "Prince of Asturias Award (Literature)", "conf": "✓"},
+        {"y": "2026-04-08", "event_zh": "《Une unique lueur》——Adamsberg #11（Flammarion）", "event_en": "Une unique lueur, Adamsberg #11", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "1995", "title": "Debout les morts / Les Évangélistes", "note_zh": "三部曲第一部", "note_en": "first of The Evangelists trilogy", "conf": "✓"},
+        {"y": "2001", "title": "Pars vite et reviens tard", "note_zh": "破圈代表作", "note_en": "breakout", "conf": "✓"},
+        {"y": "2017", "title": "Quand sort la recluse", "note_zh": "蜘蛛意象的 Adamsberg 作", "note_en": "the recluse-spider Adamsberg", "conf": "✓"},
+        {"y": "2026", "title": "Une unique lueur", "note_zh": "Adamsberg #11；本批书单法国代表", "note_en": "Adamsberg #11; this crop's French entry", "conf": "✓"}
+      ],
+      "awards": [
+        {"y": "2006", "award": "CWA International Dagger", "note": "solo", "conf": "✓"},
+        {"y": "2007", "award": "CWA International Dagger", "note": "solo", "conf": "✓"},
+        {"y": "2009", "award": "CWA International Dagger", "note": "solo", "conf": "✓"},
+        {"y": "2013", "award": "CWA International Dagger", "note": "shared with Lemaitre ('four in total' wording)", "conf": "✓"},
+        {"y": "2018", "award": "Prince of Asturias Award", "note": "Literature", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "Une unique lueur = Adamsberg #11；Flammarion 2026-04-08", "source": "fr.wikipedia (éd. Flammarion)", "conf": "✓"},
+        {"claim": "ISBN broché 978-2-08-016071-3 / EPUB 978-2-08-016097-3", "source": "éditeur/distributor", "conf": "✓"},
+        {"claim": "CWA 独奖三连 + 2013 共享 = 常见「四冠」（fr.wikipedia 合计独奖三度）", "source": "CWA annals", "conf": "✓"},
+        {"claim": "父 Philippe Audoin、孪生姐 Jo、兄 Stéphane", "source": "fr.wikipedia; 多家访谈", "conf": "✓"},
+        {"claim": "笔名源自《赤足天使》/孪生姐 Jo", "source": "fr.wikipedia", "conf": "✓"},
+        {"claim": "1979 Jussieu 考古动物学博士", "source": "fr.wikipedia", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "CNRS 结束具体年份（1990s 末？）跨源不一", "conf": "◐"}
+      ],
+      "stance_zh": "她的小说里「谋杀」多为一种观念的病兆：凶手的妄想经由直觉被亚当斯贝格读出。直觉派破案长期被科学主义批评——她干脆把「un-scientific」当作美德。",
+      "stance_en": "Murder as symptom of a worldview-disease; detection as intuitive reading. She wears the 'unscientific detective' as a virtue.",
+      "read_status_zh": "Une unique lueur（阅读中）；旧作目录在档案。",
+      "read_status_en": "Une unique lueur: reading.",
+      "why_now_zh": "法国犯罪文学的声音双峰之一；2026 新作以「文学/电影世界观本身就是凶器」回应时代的美学化暴力。",
+      "why_now_en": "One pole of French crime fiction answering 2026's aestheticized violence."
+    },
+
+    {
+      "id": "lemaitre",
+      "name_zh": "勒梅特",
+      "name_en": "Lemaitre",
+      "name_native": "Pierre Lemaitre",
+      "slug_display": "Lemaitre",
+      "born": "1951-04-19 · Paris",
+      "native_lang": "French",
+      "domain_zh": "法国 polar → 社会史小说 · Goncourt 2013",
+      "domain_en": "French polar to social-history novel; Goncourt 2013",
+      "one_liner_zh": "20 世纪法国的进步神话及其阴影：光荣岁月之下必有账单。55 岁出道，从 polar 走向社会史小说。",
+      "one_liner_en": "France's twentieth-century progress-myth and its bill. Debuted at 55; polar to social history.",
+      "school_zh": "法国 polar → 社会史小说",
+      "school_en": "French polar → social-history novel",
+      "circle": [
+        {"who": "Albert Dupontel", "edge": "✎", "why_zh": "《Au revoir là-haut》电影导演；César 2018 共获", "why_en": "film director; shared César 2018", "conf": "✓"},
+        {"who": "Fred Vargas", "edge": "⇌", "why_zh": "同代双峰；2013 同届 CWA Dagger", "why_en": "peer; shared 2013 Dagger", "conf": "✓"},
+        {"who": "Stephen King", "edge": "⇐", "why_zh": "公开表彰：两位法国作者 K 皆称道", "why_en": "public praise from King", "conf": "◐"}
+      ],
+      "influences": [
+        {"from": "Balzac / Zola", "edge": "⇐", "note_zh": "家族-产业史诗的十九世纪法", "note_en": "19th-c. family-industry epic", "conf": "◐"},
+        {"from": "有声书/编剧经验", "edge": "⇐", "note_zh": "节奏与反转的电影化教养", "note_en": "cinematic pacing from screenwriting", "conf": "◐"},
+        {"from": "Vargas / polar 黄金世代", "edge": "⇐", "note_zh": "同代对话", "note_en": "generational peer", "conf": "◐"}
+      ],
+      "timeline": [
+        {"y": "1951", "event_zh": "生于巴黎", "event_en": "born Paris", "conf": "✓"},
+        {"y": "1970s–2000s", "event_zh": "心理学家/教师（心理创伤与残疾儿童工作）→ 编剧/模写作", "event_en": "psychologist-teacher; then screenwriting", "conf": "✓"},
+        {"y": "2006", "event_zh": "出道作《Travail soigné》（55 岁）", "event_en": "debut Travail soigné at 55", "conf": "✓"},
+        {"y": "2011", "event_zh": "《Alex》——反转式施害者 polar 高峰", "event_en": "Alex, the twist-perpetrator peak", "conf": "✓"},
+        {"y": "2013", "event_zh": "《Au revoir là-haut》Goncourt；次年 CWA 与 Vargas 共享", "event_en": "Au revoir là-haut: Goncourt; then shared Dagger", "conf": "✓"},
+        {"y": "2022–2026", "event_zh": "Les Années glorieuses 四部曲：Le Grand Monde→Le Silence et la colère→… →Les Belles Promesses（终章 2026-01-06）", "event_en": "Glorious Years quartet, ending Les Belles Promesses 2026-01-06", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "2006", "title": "Travail soigné", "note_zh": "出道 polar", "note_en": "debut", "conf": "✓"},
+        {"y": "2011", "title": "Alex", "note_zh": "反转式施害者峰作", "note_en": "twist peak", "conf": "✓"},
+        {"y": "2013", "title": "Au revoir là-haut", "note_zh": "Goncourt 2013；一战的荣光账单", "note_en": "Goncourt 2013; WWI glory-account", "conf": "✓"},
+        {"y": "2022", "title": "Le Grand Monde", "note_zh": "四部曲卷一", "note_en": "quartet vol.1", "conf": "✓"},
+        {"y": "2023", "title": "Le Silence et la colère", "note_zh": "四部曲卷二", "note_en": "quartet vol.2", "conf": "✓"},
+        {"y": "2026", "title": "Les Belles Promesses", "note_zh": "四部曲终章；ISBN 9782702191477；本批书单法国代表", "note_en": "quartet finale; this crop's French entry", "conf": "✓"}
+      ],
+      "awards": [
+        {"y": "2013", "award": "Prix Goncourt", "note": "Au revoir là-haut", "conf": "✓"},
+        {"y": "2013", "award": "CWA International Dagger", "note": "shared with Vargas (Camille series)", "conf": "✓"},
+        {"y": "2018", "award": "César (film adaptation)", "note": "cinema awards for Au revoir là-haut", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "Les Belles Promesses ISBN 9782702191477，512pp，2026-01-06 Calmann-Lévy", "source": "calmann-levy 目录", "conf": "✓"},
+        {"claim": "旧卡 ISBN 9782702189825 / 543pp 为错", "source": "对比核实", "conf": "✓→更正"},
+        {"claim": "Goncourt 2013 Au revoir là-haut", "source": "多源一致", "conf": "✓"},
+        {"claim": "1951 生；55 岁出道", "source": "fr.wikipedia", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "心理学家职业的精确时间线（1970s-80s 具体岗位）", "conf": "◐"}
+      ],
+      "stance_zh": "他的长篇剥开法国「光环三十年」的釉面：每个荣耀都被标价，每笔进步都有债主。极性反转、施害者同情是他的 signature。",
+      "stance_en": "Stripping les Trente Glorieuses' glaze: every glory priced, every progress owed. Reversal and perpetrator-empathy are his signature.",
+      "read_status_zh": "Les Belles Promesses（阅读中）。",
+      "read_status_en": "Les Belles Promesses: reading.",
+      "why_now_zh": "2026 终章把四部曲收束在「英雄崇拜的社会学」——在公共记忆被重新瓜分的当下，是最合时宜的法语声音。",
+      "why_now_en": "2026 finale; hero-worship sociology for a year of contested memory."
+    },
+
+    {
+      "id": "pelicot",
+      "name_zh": "佩利科",
+      "name_en": "Pelicot",
+      "name_native": "Gisèle Pelicot",
+      "slug_display": "Pelicot",
+      "born": "1952-12-07 · Villingen, Germany → Île de Ré",
+      "native_lang": "French",
+      "domain_zh": "幸存者 · 回忆录 · Mazan 案当事人",
+      "domain_en": "survivor · memoir · Mazan trial protagonist",
+      "one_liner_zh": "la honte change de camp——羞耻要易边。被书写者变成书写者；主体性可以被拿回来。",
+      "one_liner_en": "Shame must change sides. From written-about to writer; subjectivity reclaimed.",
+      "school_zh": "#MeToo 档案 / 见证文学",
+      "school_en": "#MeToo archive / testimonial literature",
+      "circle": [
+        {"who": "Judith Perrignon", "edge": "✎", "why_zh": "回忆录合著（证言转写）", "why_en": "memoir co-write", "conf": "✓"},
+        {"who": "Caroline Darian（女儿）", "edge": "◎", "why_zh": "「M'endors pas」化学顺从运动 + France 2 纪录片", "why_en": "the M'endors pas campaign", "conf": "✓"},
+        {"who": "Manon Garcia（哲学家）", "edge": "◎", "why_zh": "《Living With Men》分析 Mazan 审判", "why_en": "Living With Men on the trial", "conf": "✓"},
+        {"who": "Dominique Pelicot（前夫）", "edge": "◇", "why_zh": "施害者；主犯 20 年刑", "why_en": "the perpetrator; 20 years", "conf": "✓"}
+      ],
+      "influences": [
+        {"from": "#MeToo (2017)", "edge": "⇐", "note_zh": "运动的第三级火箭（公开审判→回忆录）", "note_en": "movement's third stage", "conf": "✓"},
+        {"from": "Perrignon 的转写方法论", "edge": "⇐", "note_zh": "把第一人称还给经历者", "note_en": "returning first person to the lived", "conf": "✓"}
+      ],
+      "timeline": [
+        {"y": "1952-12-07", "event_zh": "生于德国菲林根（Villingen），德军家庭出身、入法籍", "event_en": "born Villingen, Germany; French-naturalized", "conf": "✓"},
+        {"y": "1960s", "event_zh": "在格勒诺布尔附近的农场长大；父亲是流动马戏团兽医（Paillards）", "event_en": "farm childhood near Grenoble; circus-veterinarian father", "conf": "✓"},
+        {"y": "1971–72", "event_zh": "遇见多米尼克；1973-04 结婚", "event_en": "meets Dominique; married April 1973", "conf": "✓"},
+        {"y": "1980s–2003", "event_zh": "EDF 物流干部 25 年；2003 退休（Mazan 宅）", "event_en": "EDF logistics executive 25 yrs; retires 2003 to Mazan", "conf": "✓"},
+        {"y": "2011", "event_zh": "病倒；多米尼克开始系统性下药与邀客施暴（十余载 50+ 男）", "event_en": "illness; the night-time drug-and-rape regime begins", "conf": "✓"},
+        {"y": "2014", "event_zh": "与多米尼克的 Aznavour 巡演合影成为「明面恩爱」的证据", "event_en": "the public couple façade", "conf": "◐"},
+        {"y": "2020-10/11", "event_zh": "超市保安发现多米尼克拍摄裙底视频报警；11-02 被捕；12 月 Thornyard 搜出 4000+ 影像", "event_en": "CCTV exposure; arrest; 4,000+ files found", "conf": "✓"},
+        {"y": "2024-09→12", "event_zh": "Avignon 公开审判（拒匿名）；2024-12-19 判 20 年 + 51 人定罪", "event_en": "public trial; 2024-12-19 verdict", "conf": "✓"},
+        {"y": "2025-01-21", "event_zh": "France 2 纪录片《Soumission chimique》播出", "event_en": "France 2 documentary airs", "conf": "✓"},
+        {"y": "2025-10-08/09", "event_zh": "仅 Husamettin D. 上诉（Nîmes），判 10 年（+1）", "event_en": "sole appeal, Husamettin D., 10 years", "conf": "✓"},
+        {"y": "2026-02-17", "event_zh": "回忆录《Et la joie de vivre》22 语同步发行", "event_en": "memoir out in 22 languages", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "2026", "title": "Et la joie de vivre (A Hymn to Life)", "note_zh": "本批书单法国证人；22 语同步", "note_en": "this crop's French testament", "conf": "✓"}
+      ],
+      "awards": [
+        {"y": "2025", "award": "Time 年度女性（2024/2025 提名为全球象征）", "note": "public recognition", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "出生 1952-12-07，Villingen；农场出身", "source": "NPR excerpt", "conf": "✓"},
+        {"claim": "EDF 物流干部 25 年；2003 退休", "source": "NPR excerpt", "conf": "✓"},
+        {"claim": "2020-10 超市监控拆穿；11-02 逮捕；4000+ 影像（12-2020）", "source": "BBC; le monde; Global Voices", "conf": "✓"},
+        {"claim": "2024-12-19 判 20 年/51 人；2025-10 唯一上诉 Husamettin D.（10 年）", "source": "tribunal records", "conf": "✓"},
+        {"claim": "France 2 纪录片 2025-01-21", "source": "France 2 programming", "conf": "✓"},
+        {"claim": "回忆录 Flammarion 2026-02-17，ISBN 9782080497260，320pp", "source": "éditeur", "conf": "✓"},
+        {"claim": "离婚(2001)/再婚(2007)来源仅 fr.wikipedia，与一手配偶史冲突", "source": "fr.wikipedia", "conf": "✗ 未统一"}
+      ],
+      "unverified": [
+        {"item": "离婚/再婚年份多源冲突——正文回避", "conf": "✗"}
+      ],
+      "stance_zh": "拒绝匿名、公开姓名与面容——把私密疼痛锻造成公共建制改革的工具。她要的不是同情，而是结构性改变。",
+      "stance_en": "Refuses anonymity; converts private pain into a lever for structural legal reform, not sympathy.",
+      "read_status_zh": "回忆录（阅读中）。",
+      "read_status_en": "the memoir: reading.",
+      "why_now_zh": "时间 2025 年度女性的实体文本；在「谁拥有大叙事」之年的最强反例。",
+      "why_now_en": "the physical text of Time's 2025 woman; the strongest counter-example in a year of grand narratives."
+    },
+
+    {
+      "id": "perrignon",
+      "name_zh": "佩里尼翁",
+      "name_en": "Perrignon",
+      "name_native": "Judith Perrignon",
+      "slug_display": "Perrignon",
+      "born": "1967 · 巴黎（journaliste de formation）",
+      "native_lang": "French",
+      "domain_zh": "传记/证言转写 · 法国文化电台节目",
+      "domain_en": "biography & testimonial transcription · France Culture",
+      "one_liner_zh": "把第一人称还给经历者：从 Van Gogh 兄弟到 FDR 到幸存者——一台记者的录音笔转写成生命。",
+      "one_liner_en": "First person returned to those who lived it: Van Gogh brothers, FDR, survivors — a reporter's tape as life-writer.",
+      "school_zh": "法式传记/证言转写",
+      "school_en": "French literary transcription",
+      "circle": [
+        {"who": "Marceline Loridan-Ivens", "edge": "✎", "why_zh": "《Et tu n'es pas revenu》(2015)、《L'Amour d'après》(2018) 两度合著", "why_en": "two co-writes", "conf": "✓"},
+        {"who": "Gisèle Pelicot", "edge": "✎", "why_zh": "2026 Et la joie de vivre 合著；Sophie de Closets 编辑", "why_en": "2026 memoir co-write; ed. Sophie de Closets", "conf": "✓"},
+        {"who": "Ariane Chemin / Eva Joly", "edge": "✎", "why_zh": "合著谱系（法国大政治转写）", "why_en": "co-writing lineage", "conf": "✓"},
+        {"who": "France Culture（Grandes Traversées 等）", "edge": "◎", "why_zh": "纪录片/播客制作；2015 SGDL Révélation", "why_en": "radio documentary producer", "conf": "✓"}
+      ],
+      "influences": [
+        {"from": "Primo Levi / 见证文学", "edge": "⇐", "note_zh": "口述史 × 文学转写", "note_en": "oral history × literary transcription", "conf": "◐"}
+      ],
+      "timeline": [
+        {"y": "1991–2007", "event_zh": "Libération 记者", "event_en": "reporter at Libération", "conf": "✓"},
+        {"y": "2007–", "event_zh": "作家/转写者；Europe 1→France Culture", "event_en": "writer-transcriber; France Culture", "conf": "✓"},
+        {"y": "2015", "event_zh": "SGDL Révélation 奖", "event_en": "SGDL Révélation prize", "conf": "✓"},
+        {"y": "2015/2018", "event_zh": "与 Loridan-Ivens 两度合著", "event_en": "two co-writes with the Holocaust survivor", "conf": "✓"},
+        {"y": "2026-02", "event_zh": "与 Pelicot 的《Et la joie de vivre》出版", "event_en": "Et la joie de vivre published with Pelicot", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "2011", "title": "PTSD: la chasse est ouverte", "note_zh": "创伤在场的叙事方法", "note_en": "trauma-in-present-tense method", "conf": "◐"},
+        {"y": "2015", "title": "Et tu n'es pas revenu", "note_zh": "与 Loridan-Ivens", "note_en": "with Loridan-Ivens", "conf": "✓"},
+        {"y": "2018", "title": "L'Amour d'après", "note_zh": "与 Loridan-Ivens", "note_en": "with Loridan-Ivens", "conf": "✓"},
+        {"y": "2026", "title": "Et la joie de vivre", "note_zh": "与 Pelicot", "note_en": "with Pelicot", "conf": "✓"}
+      ],
+      "awards": [
+        {"y": "2015", "award": "SGDL Révélation", "note": "recognition", "conf": "✓"}
+      ],
+      "fact_ledger": [
+        {"claim": "Libération 1991–2007", "source": "出版社简介", "conf": "✓"},
+        {"claim": "2015 SGDL Révélation", "source": "SGDL annals", "conf": "✓"},
+        {"claim": "《Notre guerre civile》= Grasset–France Culture 合制（此前「Louise Michel 出版方」混淆已澄清）", "source": "出版社/电台节目志", "conf": "✓"},
+        {"claim": "Grandes Traversées 制作：Ali 2018、Sinatra 2019、Louise Michel 2021、Thatcher", "source": "France Culture 节目存档", "conf": "✓"},
+        {"claim": "Springsteen 系列索引于 2023-06（2017 未确认）", "source": "France Culture 索引", "conf": "◐"}
+      ],
+      "unverified": [
+        {"item": "Springsteen 主题系列确切年份（2017 vs 2023）", "conf": "◐"}
+      ],
+      "stance_zh": "她的工作本质是把「外部声音的在场」炼成一种文学装置：转写不是记录，是「把话筒还给人」的伦理实践。",
+      "stance_en": "Transcription as ethical practice — returning the microphone, not merely recording.",
+      "read_status_zh": "作为合著者随 Pelicot 书单入列。",
+      "read_status_en": "on the list via the Pelicot co-write.",
+      "why_now_zh": "法国见证文学的中枢执笔者——2026 年最强的公共证词出自她的转写案。",
+      "why_now_en": "the transcriber behind 2026's most consequential French testimony."
+    },
+
+    {
+      "id": "manda",
+      "name_zh": "萬田緑平",
+      "name_en": "Manda",
+      "name_native": "萬田緑平 · Ryokhei Manda",
+      "slug_display": "Manda",
+      "born": "1964 · 东京日野 → 前橋（群馬）",
+      "native_lang": "Japanese",
+      "domain_zh": "外科 → 在宅緩和ケア医 · 非虚构作者",
+      "domain_en": "surgeon turned home-hospice physician · nonfiction",
+      "one_liner_zh": "延命より満足、治療より尊厳。2000+ 例在宅看取り，把死亡从 ICU 请回自家餐桌。",
+      "one_liner_en": "Dignity over prolonging. 2,000+ home deaths — death moved from ICU back to the family table.",
+      "school_zh": "日本在宅緩和ケア 生死观话语场",
+      "school_en": "Japan's home-palliative discourse",
+      "circle": [
+        {"who": "東畑開人（临床心理師）", "edge": "⇌", "why_zh": "2026-02-11 对谈「步行是活着」", "why_en": "2026-02-11 dialogue", "conf": "✓"},
+        {"who": "青栁幸利（中之条研究）", "edge": "◎", "why_zh": "每日 8000 步 / 快走 20 分钟实证线", "why_en": "the 8,000-steps evidence line", "conf": "◐"},
+        {"who": "香山リカ（精神科医）", "edge": "⇌", "why_zh": "《看取りの作法》作者；同话语场", "why_en": "fellow death-discourse voice", "conf": "◐"}
+      ],
+      "influences": [
+        {"from": "柏木哲夫（日本ホスピス）", "edge": "⇐", "note_zh": "「善终」谱系 → 在宅路线分岔", "note_en": "good-death lineage → home branch", "conf": "◐"}
+      ],
+      "timeline": [
+        {"y": "1964", "event_zh": "东京日野生；大学时代跳级、2 浪后入群馬大学医学部（1991 年卒）", "event_en": "born Hino, Tokyo; two gap years; Gunma Medical 1991", "conf": "✓"},
+        {"y": "1991–2000s", "event_zh": "外科医（一般外科→消化器外科）", "event_en": "surgeon (general→GI)", "conf": "✓"},
+        {"y": "2008", "event_zh": "创设在宅専門診療クリニック「いっぽ」（高崎）；开始看取り", "event_en": "founds home-care clinic ippo (Takasaki)", "conf": "✓"},
+        {"y": "2008–2017", "event_zh": "在宅看取り 1400+ 例", "event_en": "1,400+ home deaths", "conf": "✓"},
+        {"y": "2017", "event_zh": "独立开设自营诊所（在宅緩和中心继续扩大）", "event_en": "independent clinic; cumulative 2,000+ by journey", "conf": "✓"},
+        {"y": "2025-11-27", "event_zh": "《棺桶まで歩こう》发售（河出書房新社）", "event_en": "Kanoke made arukou out 2025-11-27", "conf": "✓"},
+        {"y": "2026-07", "event_zh": "累计 15 万部超", "event_en": "150k+ copies", "conf": "✓"}
+      ],
+      "works": [
+        {"y": "2017", "title": "言語化できない痛み（?）", "note_zh": "系列首作（书名以书评目录核）", "note_en": "first nonfiction (title id from reviews)", "conf": "◐"},
+        {"y": "2020", "title": "がん治療とロングテール", "note_zh": "治疗与「长尾」的批判", "note_en": "treatment & the long tail", "conf": "◐"},
+        {"y": "2025", "title": "棺桶まで歩こう", "note_zh": "本批书单日本代表；ISBN 9784344987937", "note_en": "this crop's Japanese entry", "conf": "✓"}
+      ],
+      "awards": [],
+      "fact_ledger": [
+        {"claim": "真实 ISBN-13 9784344987937（旧 9784344987934 无效）", "source": "NDL/河出", "conf": "✓"},
+        {"claim": "发售 2025-11-27，224pp，¥1034", "source": "河出/书店", "conf": "✓"},
+        {"claim": "销量 6.5 万(2026-01-18)→13 万(2026-05-08)→15 万+(2026-07-13)", "source": "河出销售通讯", "conf": "✓"},
+        {"claim": "b.1964 东京日野；2 浪；群馬 1991；外科→2008 いっぽ→2017 自营", "source": "作者简介/采访", "conf": "✓"},
+        {"claim": "看取り 1400+（2008–2017）；累计 2000+", "source": "作者简介", "conf": "✓"}
+      ],
+      "unverified": [
+        {"item": "首部非虚构的确切书名/出版年（封面目录未能直核）", "conf": "◐"},
+        {"item": "「棺桶まで歩こう」影视/书展获奖传闻未逐条核", "conf": "○"}
+      ],
+      "stance_zh": "死亡不是医疗系统的失败项目，而是人生最后一个可以「一起练习」的日常。步行、家里、最后的谈话——他把终点站从 ICU 移到患者门口。",
+      "stance_en": "Death not as system-failure but a daily practice walked together — home, walking, the last conversation.",
+      "read_status_zh": "《棺桶まで歩こう》（阅读中）。",
+      "read_status_en": "Kanoke made arukou: reading.",
+      "why_now_zh": "超老龄日本的在地答案；在「速度与延命」的时代提供反叙事。",
+      "why_now_en": "Japan's local answer to super-aging; a counter-narrative to speed and prolongation."
+    }
+  ]
+}

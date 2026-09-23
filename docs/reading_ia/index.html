@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阅读与智识 · Reading &amp; IA — 一叶小舟，渡万洲之远 | 舟洲粥</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink-deep: #26261F; --ink-mid: #4E4B42; --ink-soft: #7C7568; --ink-pale: #A89F90;
+  --paper: #F7F1E3; --paper-soft: #EFE6D3; --paper-deep: #E7DCC4;
+  --gold: #C9A227; --gold-soft: #E3C457; --gold-dim: #A5811D;
+  --lapis: #3E5C76; --lapis-soft: #6C8AAF; --sage: #7A8F6E;
+  --night: #1E2230;
+  --ff-display: "LXGW WenKai", "Noto Serif SC", serif;
+  --ff-body: "Inter", "LXGW WenKai", "Noto Sans SC", sans-serif;
+  --ff-zh: "LXGW WenKai", "Noto Serif SC", serif;
+  --shadow-md: 0 6px 20px rgba(38,38,31,0.08);
+  --shadow-lg: 0 12px 40px rgba(38,38,31,0.12);
+  --shadow-glow: 0 0 60px rgba(201,162,39,0.14);
+}
+
+/* ── Bilingual toggle ── */
+body.lang-zh [data-en] { display: none !important; }
+body.lang-en [data-zh] { display: none !important; }
+body.lang-en [data-both] span[data-en] { display: inline !important; }
+body.lang-en [data-both] span[data-zh] { display: none !important; }
+body.lang-zh [data-both] span[data-zh] { display: inline !important; }
+body.lang-zh [data-both] span[data-en] { display: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--ff-body);
+  color: var(--ink-deep);
+  background: var(--paper);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+a { color: var(--lapis); text-decoration: none; transition: color 0.25s; }
+a:hover { color: var(--gold); }
+
+/* ═══ NAV ═══ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0.7rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(247,241,227,0.78);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border-bottom: 1px solid rgba(167,146,93,0.25);
+  transition: all 0.3s;
+}
+.nav.scrolled { background: rgba(247,241,227,0.95); box-shadow: 0 2px 16px rgba(38,38,31,0.07); }
+.nav-brand { font-family: var(--ff-display); font-weight: 700; font-size: 1.25rem; color: var(--ink-deep); letter-spacing: 0.05em; }
+.nav-brand .sub { font-size: 0.68em; color: var(--ink-pale); margin-left: 0.55em; font-weight: 400; letter-spacing: 0.12em; }
+.nav-right { display: flex; align-items: center; gap: 1.4rem; }
+.nav-home {
+  color: var(--ink-soft); font-size: 0.8rem; font-weight: 500;
+  border: 1px solid rgba(167,146,93,0.4); border-radius: 18px; padding: 4px 14px;
+}
+.nav-home:hover { color: var(--gold); border-color: var(--gold); }
+.lang-toggle { display: flex; border-radius: 20px; overflow: hidden; border: 1px solid rgba(167,146,93,0.45); font-size: 0.8rem; font-weight: 500; cursor: pointer; background: var(--paper-soft); }
+.lang-toggle button { border: none; padding: 5px 14px; cursor: pointer; font-family: var(--ff-body); font-size: 0.8rem; font-weight: 500; transition: all 0.25s; color: var(--ink-soft); background: transparent; }
+.lang-toggle button.active { background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: #fff; }
+.lang-toggle button:hover:not(.active) { color: var(--ink-deep); }
+
+/* ═══ HERO ═══ */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 5rem 2rem; overflow: hidden;
+  background:
+    radial-gradient(700px 360px at 20% 10%, rgba(201,162,39,0.14), transparent 60%),
+    linear-gradient(170deg, #20253A 0%, #2A3350 24%, #3E5C76 46%, #8C8A6C 66%, #C9B98F 82%, var(--paper) 100%);
+  color: #F3EDE0;
+}
+.hero-lamp {
+  position: absolute; top: 7%; left: 9%; width: 120px; height: 120px; pointer-events: none;
+  animation: lamp-bob 6s ease-in-out infinite;
+}
+@keyframes lamp-bob {
+  0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); }
+}
+.hero-glow {
+  position: absolute; width: 260px; height: 260px; border-radius: 50%;
+  top: 12%; left: 11%;
+  background: radial-gradient(circle, rgba(227,196,87,0.5), rgba(227,196,87,0) 65%);
+  filter: blur(6px); animation: glow-pulse 4.5s ease-in-out infinite; pointer-events: none;
+}
+@keyframes glow-pulse { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
+.hero-stars { position: absolute; inset: 0; pointer-events: none; }
+.hero-stars i {
+  position: absolute; width: 2px; height: 2px; border-radius: 50%;
+  background: #F3EDE0; opacity: 0.5; animation: twinkle 4s ease-in-out infinite;
+}
+.hero-stars i:nth-child(odd) { animation-delay: 1.3s; }
+@keyframes twinkle { 0%,100% { opacity: 0.15; } 50% { opacity: 0.8; } }
+.hero-spines { position: absolute; inset: 0; pointer-events: none; display: flex; gap: 10px; align-items: flex-end; justify-content: center; }
+.hero-spines span {
+  width: 12px; border-radius: 3px 3px 0 0; opacity: 0.35;
+  background: linear-gradient(180deg, rgba(201,162,39,0.5), rgba(62,92,118,0.35));
+}
+.hero-content { position: relative; z-index: 2; max-width: 880px; }
+.hero-kicker { font-size: 0.9rem; letter-spacing: 0.32em; color: var(--gold-soft); margin-bottom: 1rem; font-weight: 500; }
+.hero h1 { font-family: var(--ff-display); font-size: clamp(2.6rem, 7vw, 4.6rem); font-weight: 700; color: #F7F1E3; letter-spacing: 0.08em; line-height: 1.25; margin-bottom: 0.6rem; }
+.hero h1 .ia { color: var(--gold-soft); }
+.hero .subtitle { font-family: var(--ff-display); font-size: clamp(1.05rem, 2.4vw, 1.45rem); color: #D9E1EA; font-weight: 300; letter-spacing: 0.14em; margin-bottom: 1.4rem; }
+.hero .tagline { font-family: var(--ff-zh); font-size: 1.1rem; color: var(--gold-soft); letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+.hero .tagline-en { font-family: var(--ff-body); font-style: italic; font-size: 1rem; color: #B8C4D4; max-width: 620px; margin: 0 auto; }
+.hero .scroll-hint {
+  position: absolute; bottom: 2.4rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: #B8C4D4; font-size: 0.75rem; letter-spacing: 0.12em; animation: bob 3s ease-in-out infinite;
+}
+.scroll-line { width: 1px; height: 30px; background: linear-gradient(to bottom, #B8C4D4, transparent); }
+@keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+/* ═══ SECTION ═══ */
+.section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h2 { font-family: var(--ff-display); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; color: var(--ink-deep); letter-spacing: 0.05em; margin-bottom: 0.25rem; }
+.section-header .subtitle { font-size: 1rem; color: var(--ink-soft); font-weight: 300; letter-spacing: 0.1em; }
+.section-header .divider { display: block; width: 54px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 1rem auto; border-radius: 1px; }
+.section-intro { text-align: center; max-width: 720px; margin: 0 auto 3rem; color: var(--ink-mid); font-size: 1.05rem; }
+
+/* ═══ CARD GRID ═══ */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.6rem; }
+.card {
+  position: relative; background: var(--paper-soft); border-radius: 18px;
+  padding: 2rem 1.8rem 1.6rem; box-shadow: var(--shadow-md);
+  border: 1px solid rgba(167,146,93,0.3);
+  transition: transform 0.32s ease, box-shadow 0.32s ease; overflow: hidden;
+}
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg), var(--shadow-glow); }
+a.card { display: block; color: inherit; text-decoration: none; }
+.card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dim), var(--gold-soft)); opacity: 0.85; }
+.card-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 13px; margin-bottom: 1rem; font-size: 1.35rem; color: var(--lapis);
+  background: var(--paper); border: 1px solid rgba(167,146,93,0.25);
+}
+.card h3 { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 700; color: var(--ink-deep); margin-bottom: 2px; }
+.card .card-sub { font-size: 0.8rem; color: var(--ink-pale); letter-spacing: 0.05em; margin-bottom: 0.7rem; }
+.card p { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.75; margin-bottom: 0.8rem; }
+.card .path { font-family: "Inter", sans-serif; font-size: 0.78rem; color: var(--gold-dim); font-weight: 600; }
+.card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
+.tag { display: inline-block; padding: 2px 11px; border-radius: 99px; font-size: 0.72rem; font-weight: 500; background: var(--paper); color: var(--ink-soft); border: 1px solid rgba(167,146,93,0.3); }
+.tag.soon { border-style: dashed; color: var(--ink-pale); background: transparent; letter-spacing: 0.06em; }
+
+/* ═══ BAND (dark) ═══ */
+.band {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+  max-width: 100%; padding: 5rem 2rem;
+}
+.band-inner { max-width: 1200px; margin: 0 auto; }
+
+/* ═══ PRINCIPLES ═══ */
+.principles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.principle-item {
+  display: flex; gap: 0.9rem; padding: 1rem 1.1rem;
+  border-radius: 14px; background: var(--paper); border: 1px solid rgba(167,146,93,0.35);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.principle-item:hover { box-shadow: 0 2px 8px rgba(38,38,31,0.05); transform: translateY(-2px); }
+.principle-num {
+  flex-shrink: 0; width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; color: #fff; font-weight: 700; font-size: 0.72rem;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+}
+.principle-item h4 { font-family: var(--ff-display); font-size: 0.98rem; font-weight: 700; color: var(--ink-deep); margin-bottom: 1px; }
+.principle-item p { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.65; }
+
+/* ═══ MONTH-BAND counters ═══ */
+.windows { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; margin-bottom: 2.6rem; }
+.window {
+  background: var(--paper); border: 1px solid rgba(167,146,93,0.35); border-radius: 16px;
+  padding: 1.4rem 1.4rem 1.1rem; text-align: center; box-shadow: var(--shadow-md);
+}
+.window .num { font-size: 2rem; font-weight: 700; color: var(--lapis); font-family: var(--ff-display); line-height: 1.1; }
+.window .label { font-size: 0.88rem; color: var(--ink-soft); font-weight: 500; }
+.window .desc { font-size: 0.78rem; color: var(--ink-pale); margin-top: 0.3rem; }
+
+/* ═══ TOC / HARNESS ═══ */
+.harness-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+.harness-item {
+  background: var(--paper); border: 1px solid rgba(167,146,93,0.35); border-radius: 16px;
+  padding: 1.6rem 1.6rem 1.3rem;
+}
+.harness-item h3 { font-family: var(--ff-display); font-size: 1.15rem; font-weight: 700; color: var(--lapis); margin-bottom: 0.4rem; }
+.harness-item p { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.7; }
+.harness-item code { font-family: "Inter", monospace; font-size: 0.8rem; background: var(--paper-soft); padding: 1px 6px; border-radius: 5px; }
+
+/* ═══ FOOTER ═══ */
+.footer { text-align: center; padding: 3rem 2rem 2.2rem; color: var(--ink-pale); font-size: 0.875rem; border-top: 1px solid rgba(167,146,93,0.3); background: var(--paper); }
+.footer .motto { font-family: var(--ff-zh); font-size: 1.1rem; color: var(--ink-soft); letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+
+@media (max-width: 768px) {
+  .nav { padding: 0.6rem 1rem; }
+  .grid, .harness-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 90vh; padding-top: 4rem; }
+  .section { padding: 3rem 1rem; }
+  .principles-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">阅读与智识<span class="sub">READING &amp; IA</span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../index.html">
+      <span data-zh>回 舟洲粥</span><span data-en>← 舟洲粥 Home</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-stars">
+    <i style="top:16%;left:12%"></i><i style="top:26%;left:70%"></i>
+    <i style="top:38%;left:32%"></i><i style="top:22%;left:52%"></i>
+    <i style="top:44%;left:84%"></i><i style="top:10%;left:42%"></i>
+  </div>
+  <svg class="hero-lamp" viewBox="0 0 120 120" fill="none">
+    <path d="M38 96 L82 96 M52 96 L60 120 L68 96" stroke="#C9A227" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M30 44 C30 38 42 30 60 30 C78 30 90 38 90 44 C90 50 78 58 60 58 C42 58 30 50 30 44 Z" fill="#E3C457" opacity="0.85"/>
+    <path d="M28 58 C28 66 43 72 60 72 C77 72 92 66 92 58 L94 44 L26 44 Z" fill="#F7F1E3" opacity="0.6"/>
+    <rect x="33" y="18" width="54" height="6" rx="3" fill="#C9A227" opacity="0.7"/>
+  </svg>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-kicker">ZHŌU · ZHŌU · ZHŌU</p>
+    <h1 data-both><span data-zh>阅读与智识</span><span data-en>Reading &amp; <span class="ia">IA</span></span></h1>
+    <div class="subtitle">
+      <span data-zh>一书一师，一条思路一条河</span>
+      <span data-en>One book a teacher · one thread a river</span>
+    </div>
+    <div class="tagline">
+      <span data-zh>留阅读之痕 · 察时代之形</span>
+      <span data-en>Keep the traces of reading · Read the shape of the moment</span>
+    </div>
+    <div class="tagline-en">
+      <span data-zh>两大板块：其一，书籍、作者与延伸的知识管理；其二，时间窗内思潮与文化运动的发展与演化。</span>
+      <span data-en>Two parts: (1) a knowledge system for readings, writers and extensions; (2) how cultural movements and thought trends develop within time windows.</span>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span data-zh>向下探索</span><span data-en>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══ PART 1 ═══ -->
+<section class="section" id="part1">
+  <div class="section-header">
+    <h2><span data-zh>其一 · 阅读、作者与延伸</span><span data-en>Part 1 · Readings, Writers, Extensions</span></h2>
+    <div class="subtitle"><span data-zh>知识管理系统 · 阅读笔记工具</span><span data-en>Knowledge management · a reading notebook</span></div>
+    <span class="divider"></span>
+  </div>
+  <p class="section-intro">
+    <span data-zh>一书一卡，一人一卡；分类是交叉的主题簇，关系是显式的边。读完每一本，至少落下一个延伸线索——让书与书彼此照亮。</span>
+    <span data-en>One card per book, one per author; categories are cross-cutting theme clusters, relations are explicit edges. Every finished book drops at least one lead — books illuminate each other.</span>
+  </p>
+
+  <div class="grid">
+    <a class="card" href="read/index.html">
+      <div class="card-icon">①</div>
+      <h3 data-both><span data-zh>书目卡片</span><span data-en>Library</span></h3>
+      <div class="card-sub" data-both><span data-zh>书是什么</span><span data-en>what a book is</span></div>
+      <p data-both><span data-zh>书名、作者、原语言、版本、核心主张、方法与关系线索——每本在读或要读的书一卡。</span><span data-en>Title, author, original language, edition, core claims, method, relation stubs — one card per book you read, are reading, or will read.</span></p>
+      <div class="path">read/index.html</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>核心主张</span><span data-en>core claims</span></span><span class="tag" data-both><span data-zh>阅读状态</span><span data-en>status</span></span></div>
+    </a>
+
+    <a class="card" href="authors/index.html">
+      <div class="card-icon">②</div>
+      <h3 data-both><span data-zh>作者卡片</span><span data-en>Authors</span></h3>
+      <div class="card-sub" data-both><span data-zh>谁在写</span><span data-en>who writes</span></div>
+      <p data-both><span data-zh>时代、领域、主要作品、师承与影响、一贯立场，以及「为何此刻值得读」。人物即思想的坐标。</span><span data-en>Era, field, body of work, lineage, stance, and why this writer matters now. Persons are the coordinates of thought.</span></p>
+      <div class="path">authors/index.html</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>师承谱系</span><span data-en>lineage</span></span><span class="tag" data-both><span data-zh>为何此刻</span><span data-en>why now</span></span></div>
+    </a>
+
+    <div class="card">
+      <div class="card-icon">③</div>
+      <h3 data-both><span data-zh>分类体系</span><span data-en>Categories</span></h3>
+      <div class="card-sub" data-both><span data-zh>主题之簇</span><span data-en>cluster of themes</span></div>
+      <p data-both><span data-zh>少而好记、彼此交叉。概念层、传统层、时事层三环：时事层由「当下的形状」驱动，来去自由。</span><span data-en>Few, memorable, cross-cutting. Three rings — concepts, traditions, moment — the moment ring is driven by the Shape of the Moment and comes and goes.</span></p>
+      <div class="path">readings/categories/</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>一句话论题</span><span data-en>one-line thesis</span></span><span class="tag" data-both><span data-zh>交叉</span><span data-en>cross-cutting</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">④</div>
+      <h3 data-both><span data-zh>关系网络</span><span data-en>Relations</span></h3>
+      <div class="card-sub" data-both><span data-zh>显式的边</span><span data-en>explicit edges</span></div>
+      <p data-both><span data-zh>影响、继承、反驳、同法、同题、延伸、时事钩——一页边表，重读这本图就能规划阅读路径。</span><span data-en>Influences, inheritance, tensions, shared method, concept-cores, extensions, moment-ties — one row per edge; re-reading this graph plans the next path.</span></p>
+      <div class="path">readings/relations/</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>影响链</span><span data-en>influence</span></span><span class="tag" data-both><span data-zh>终极彩蛋</span><span data-en>graph</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⑤</div>
+      <h3 data-both><span data-zh>读书笔记</span><span data-en>Notes</span></h3>
+      <div class="card-sub" data-both><span data-zh>阅读的过程</span><span data-en>the process</span></div>
+      <p data-both><span data-zh>引用要短，回应要长；不同意即进步；每条笔记至少一个回响——唤起旧读，通向新书。</span><span data-en>Quote short, reply long; disagreement counts as progress; one echo minimum per note — back to earlier books, forward to the next.</span></p>
+      <div class="path">readings/notes/</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>高光</span><span data-en>highlights</span></span><span class="tag" data-both><span data-zh>分歧</span><span data-en>disagreements</span></span><span class="tag" data-both><span data-zh>回响</span><span data-en>echoes</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⑥</div>
+      <h3 data-both><span data-zh>延伸地图</span><span data-en>Extensions</span></h3>
+      <div class="card-sub" data-both><span data-zh>下一步读什么</span><span data-en>what's next</span></div>
+      <p data-both><span data-zh>狩猎场。每个线索带三个标签：期待、与当下相关、成本。每月修剪；开阔永远胜过完备。</span><span data-en>The hunting field. Every lead carries three tags: anticipation, relevance-to-moment, cost. Prune monthly; mind-opening always beats completeness.</span></p>
+      <div class="path">readings/extensions/</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>线索</span><span data-en>leads</span></span><span class="tag" data-both><span data-zh>阅读路径</span><span data-en>paths</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PART 2 ═══ -->
+<div class="band" id="part2">
+  <div class="band-inner">
+    <div class="section-header">
+      <h2><span data-zh>其二 · 当下的形状</span><span data-en>Part 2 · The Shape of the Moment</span></h2>
+      <div class="subtitle"><span data-zh>思潮与文化运动的时间演化</span><span data-en>Cultural movements &amp; thought trends over time</span></div>
+      <span class="divider"></span>
+    </div>
+    <p class="section-intro">
+      <span data-zh>从你提供的材料出发 → 向内核实（深度）→ 向外生长（广度）→ 合成「此刻的形状」，并以 2–3 个问题作结，回连阅读清单。</span>
+      <span data-en>From your materials → verify inward (depth) → grow outward (breadth) → synthesise the shape of now, and close with 2–3 consequential questions that wire back into the reading list.</span>
+    </p>
+
+    <div class="windows">
+      <div class="window">
+        <div class="num" data-both><span data-zh>7 天</span><span data-en>7d</span></div>
+        <div class="label" data-both><span data-zh>本周动静</span><span data-en>weekly</span></div>
+        <div class="desc" data-both><span data-zh>信号、峰值、回响</span><span data-en>signals, spikes, echo</span></div>
+      </div>
+      <div class="window">
+        <div class="num" data-both><span data-zh>14 天</span><span data-en>14d</span></div>
+        <div class="label" data-both><span data-zh>两周统合</span><span data-en>fortnightly</span></div>
+        <div class="desc" data-both><span data-zh>回落与抬头</span><span data-en>falling &amp; rising</span></div>
+      </div>
+      <div class="window">
+        <div class="num" data-both><span data-zh>1 月</span><span data-en>1m</span></div>
+        <div class="label" data-both><span data-zh>月度结构</span><span data-en>monthly</span></div>
+        <div class="desc" data-both><span data-zh>结构位移与新战线</span><span data-en>structural shifts, new fronts</span></div>
+      </div>
+      <div class="window">
+        <div class="num" data-both><span data-zh>1 年</span><span data-en>1y</span></div>
+        <div class="label" data-both><span data-zh>年度脉络</span><span data-en>annual</span></div>
+        <div class="desc" data-both><span data-zh>一年的弧线与十年之教</span><span data-en>the arc of the year</span></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">◷</div>
+        <h3 data-both><span data-zh>研究简报</span><span data-en>Briefs</span></h3>
+        <div class="card-sub" data-both><span data-zh>趁热记下</span><span data-en>dated, while hot</span></div>
+        <p data-both><span data-zh>带日期的话题档案：TL;DR、时间线、已知与未知、来源可信度（✓ 核实 / ◐ 自述 / ○ 转述 / ✗ 争议）。</span><span data-en>Dated topic files: TL;DR, timeline, what is known vs unconfirmed, with source confidence (✓ verified / ◐ company-claim / ○ echo / ✗ disputed).</span></p>
+        <div class="path">moment/briefs/</div>
+        <div class="tags"><span class="tag" data-both><span data-zh>可信度图例</span><span data-en>reliability</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+      </div>
+
+      <a class="card" href="moment/year-2026.html">
+        <div class="card-icon">≡</div>
+        <h3 data-both><span data-zh>窗口综述</span><span data-en>Series</span></h3>
+        <div class="card-sub" data-both><span data-zh>累积的合成</span><span data-en>cumulative</span></div>
+        <p data-both><span data-zh>出现信号 / 上升·退场·反转 / 摩擦点 / 与阅读的连接 / 结转问题。窗口层层累积，年文件涵盖各月。</span><span data-en>Signals surfaced · rising/falling/reversing · friction points · reading ties · questions carried forward. Windows stack: the year includes its months.</span></p>
+        <div class="path">moment/year-2026.html</div>
+        <div class="tags"><span class="tag" data-both><span data-zh>摩擦点</span><span data-en>friction</span></span></div>
+      </a>
+
+      <div class="card">
+        <div class="card-icon">❖</div>
+        <h3 data-both><span data-zh>思潮档案</span><span data-en>Themes</span></h3>
+        <div class="card-sub" data-both><span data-zh>越过单周</span><span data-en>beyond any week</span></div>
+        <p data-both><span data-zh>持久档案：一句话论题、谱系、承载者、近期走势、对立潮、开放问题。成熟后可能升入分类的时事层。</span><span data-en>Persistent dossiers: one-line thesis, lineage, carriers, recent movement, opposing currents, open questions. Mature ones may rise into the categories' moment ring.</span></p>
+        <div class="path">moment/themes/</div>
+        <div class="tags"><span class="tag" data-both><span data-zh>谱系</span><span data-en>lineage</span></span><span class="tag" data-both><span data-zh>对立潮</span><span data-en>opposing currents</span></span><span class="tag soon" data-both><span data-zh>即将出版</span><span data-en>not yet published</span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LATEST ═══ -->
+<section class="section" id="latest">
+  <div class="section-header">
+    <h2><span data-zh>最新产出 · 秋分节点</span><span data-en>Latest · the Autumn Balance</span></h2>
+    <div class="subtitle"><span data-zh>2026-09-23 · 书单 + 年度思潮档案</span><span data-en>2026-09-23 · the list + the year dossier</span></div>
+    <span class="divider"></span>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="read/2026-09-books.html">
+      <div class="card-icon">☍</div>
+      <h3 data-both><span data-zh>秋分书单 · 五本书</span><span data-en>THE AUTUMN LIST — five books</span></h3>
+      <div class="card-sub" data-both><span data-zh>阅读清单 + W2 完备性核验</span><span data-en>the reading list + completeness review</span></div>
+      <p data-both><span data-zh>美国一册、法国三册、日本一册；每部经核验定位实际版本，附核心主张与「为何读」。判定：有扎实缺口（AI 反思轴缺席）宜补。</span><span data-en>One each from America, three from France, one from Japan; each title located and verified, with core claims and a "why". Verdict: gaps — the AI-reflection axis is missing.</span></p>
+      <div class="path">read/2026-09-books.html</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>书目卡</span><span data-en>library cards</span></span><span class="tag" data-both><span data-zh>W2 核验</span><span data-en>W2 review</span></span></div>
+    </a>
+
+    <a class="card" href="moment/year-2026.html">
+      <div class="card-icon">✧</div>
+      <h3 data-both><span data-zh>活着的此刻 · 一年的形状</span><span data-en>THE LIVING MOMENT — the shape of a year</span></h3>
+      <div class="card-sub" data-both><span data-zh>年度思潮档案 · 双语长文</span><span data-en>the year dossier · bilingual essay</span></div>
+      <p data-both><span data-zh>从一个春分（诺鲁孜节，战争第 21 天）到一个秋分（战争第 27 周）。回望窗 × AI 之线 × 书单指针 × 前瞻百日，以《周易·丰》作结：日中则昃，月盈则食。</span><span data-en>From one equinox (Nowruz, war day 21) to another (war week 27). Retrospectives × the AI thread × a reading-list pointer × a 100-day outlook, sealed with the I Ching: the sun declines at its zenith; the moon wanes at its full.</span></p>
+      <div class="path">moment/year-2026.html</div>
+      <div class="tags"><span class="tag" data-both><span data-zh>1y 窗口</span><span data-en>1y window</span></span><span class="tag" data-both><span data-zh>✓/○ 标注</span><span data-en>confidence marks</span></span><span class="tag" data-both><span data-zh>双语文长文</span><span data-en>bilingual</span></span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ HARNESS ═══ -->
+<section class="section" id="harness">
+  <div class="section-header">
+    <h2><span data-zh>操作手册</span><span data-en>Harness &amp; Rules</span></h2>
+    <div class="subtitle"><span data-zh>方法 · 技能 · 工具 · 规则</span><span data-en>Methods · Skills · Tools · Rules</span></div>
+    <span class="divider"></span>
+  </div>
+  <p class="section-intro">
+    <span data-zh>装备目录、常设流程与铁律——由本仓库既往会话与运行原则蒸馏而来。</span>
+    <span data-en>The equipment catalog, the recurring workflows, and the iron rules — distilled from this repo's own conventions and earlier sessions.</span>
+  </p>
+
+  <div class="harness-grid">
+    <div class="harness-item">
+      <h3 data-both><span data-zh>技能与工具</span><span data-en>Skills &amp; Tools</span></h3>
+      <p data-both><span data-zh>websearch / webfetch / research / academic-research-writer / citation-verification / find-skills；perspective 视角技能（卡帕西、费曼、塔勒布……）用于拷问论点，不作事实来源。</span><span data-en>websearch / webfetch / research / academic-research-writer / citation-verification / find-skills; perspective skills (Karpathy, Feynman, Taleb…) stress-test theses — never a fact source.</span></p>
+      <code>harness/skills.md</code>
+    </div>
+    <div class="harness-item">
+      <h3 data-both><span data-zh>常设流程</span><span data-en>Workflows</span></h3>
+      <p data-both><span data-zh>阅读录入 → 供给完备性核验（检索-核验-摆地图-深度检查-交付缺口）→ 思潮展开 → 站点同步 → 提交前卫生。</span><span data-en>Reading intake → completeness review (retrieve-verify-map-depth-deliver) → develop the moment → site build &amp; sync → pre-commit hygiene.</span></p>
+      <code>harness/workflows.md</code>
+    </div>
+    <div class="harness-item">
+      <h3 data-both><span data-zh>原则与规则</span><span data-en>Principles</span></h3>
+      <p data-both><span data-zh>来源先于叙述、立场必标、一手先于转述、追溯谱系、一切带日期、草拟必标注、一实体一卡、单一来源→生成页、hy_py312、源出同步。</span><span data-en>Sources before narrative, reliability always marked, primary before press, trace the genealogy, date everything, AI-drafted = labelled, one card per entity, single source → generated pages, conda hy_py312, source↔output sync.</span></p>
+      <code>harness/principles.md</code>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRINCIPLES ═══ -->
+<div class="band" id="rules">
+  <div class="band-inner">
+    <div class="section-header">
+      <h2><span data-zh>熬粥之法 · 本域铁律</span><span data-en>Serving rules · this domain</span></h2>
+      <span class="divider"></span>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-item"><span class="principle-num">1</span><div><h4 data-both><span data-zh>来源先于叙述</span><span data-en>Sources before narrative</span></h4><p data-both><span data-zh>不可验证的链接不如没有。</span><span data-en>An unverifiable link is worse than none.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">2</span><div><h4 data-both><span data-zh>立场必标</span><span data-en>Reliability always</span></h4><p data-both><span data-zh>✓ / ◐ / ○ / ✗，四等分明，无标注不入档。</span><span data-en>✓ verified / ◐ claim / ○ echo / ✗ disputed — nothing unlabelled.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">3</span><div><h4 data-both><span data-zh>追溯谱系</span><span data-en>Trace the genealogy</span></h4><p data-both><span data-zh>每个想法都有来历，记录影响之链，包括谁误读了它。</span><span data-en>Every idea has an origin — record the chain, including who misquoted it.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">4</span><div><h4 data-both><span data-zh>开阔胜过完备</span><span data-en>Open beats complete</span></h4><p data-both><span data-zh>延伸地图允许未完成，其职责是让邻近可见。</span><span data-en>The extension map may stay unfinished — its job is to make adjacency visible.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">5</span><div><h4 data-both><span data-zh>不同意即进步</span><span data-en>Disagreement is progress</span></h4><p data-both><span data-zh>每条笔记至少一个歧义、一个回响。</span><span data-en>One disagreement and one echo minimum per note.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">6</span><div><h4 data-both><span data-zh>双语默认</span><span data-en>Bilingual by default</span></h4><p data-both><span data-zh>中英并列，站点可切换，互不驱逐。</span><span data-en>Chinese and English co-primary; the site toggles, neither expunges.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">7</span><div><h4 data-both><span data-zh>单一来源 → 生成页</span><span data-en>Single source → pages</span></h4><p data-both><span data-zh>散文入 Markdown，数据入 JSON，页由生成器产出。</span><span data-en>Prose in Markdown, data in JSON, pages generated.</span></p></div></div>
+      <div class="principle-item"><span class="principle-num">8</span><div><h4 data-both><span data-zh>源出同步</span><span data-en>Source ↔ Output sync</span></h4><p data-both><span data-zh>改源即重建提交，CI 锁校验。</span><span data-en>Change source, rebuild and commit together; CI enforces the diff.</span></p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="motto">
+    <span data-zh>一叶小舟，渡万洲之远；一碗清粥，暖天地之心。</span>
+    <span data-en>A small boat, sailing across distant continents; a warm bowl of porridge, soothing heaven and earth.</span>
+  </div>
+  <p>
+    <span data-zh>阅读与智识 · Reading &amp; IA — 舟洲粥板块</span>
+    <span data-en>Reading &amp; IA — a Zhōu Zhōu Zhōu domain</span>
+  </p>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Language toggle
+const toggle = document.getElementById('langToggle');
+const buttons = toggle.querySelectorAll('button');
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  localStorage.setItem('zhzz-reading-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+}
+const saved = localStorage.getItem('zhzz-reading-lang');
+if (saved) setLang(saved);
+buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+</script>
+
+</body>
+</html>

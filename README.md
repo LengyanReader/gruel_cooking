@@ -67,6 +67,13 @@ Investigating how human cultural relations persist, transform, and regenerate th
 - Main Swedish comparative case: **Gotland**
 - Focus: the subtle interfaces between the Grand Canal and Silk Roads systems
 
+### 6. Reading & IA (`/Reading_IA`)
+
+Reading as intelligence — a personal knowledge management system for books, writers, categories, relations and extensions, side by side with **The Shape of the Moment**: how cultural movements and thought trends develop across 7-day, 14-day, 1-month, and 1-year windows.
+
+- **Part 1**: one card per book / per author, cross-cutting categories, explicit relation edges, reading notes, and a growing map of reading leads (`reading/extensions/`)
+- **Part 2**: dated research briefs, rolling window syntheses, and persistent theme dossiers — every claim marked for reliability (`harness/` holds the methods, skills, tools and rules)
+
 ---
 
 ## Directory Structure
@@ -102,6 +109,11 @@ gruel_cooking/
     ├── app/                    # Application layer
     ├── data/                   # Data layer
     └── scripts/                # Scripts
+├── Reading_IA/                 # Reading & IA (阅读与智识)
+    ├── readings/               # Part 1: books, authors, categories, relations, notes, extensions
+    ├── moment/                 # Part 2: briefs, rolling series, theme dossiers
+    ├── harness/                # Methods, skills, tools & rules
+    └── web/                    # Site build plan (phase-1 generator)
 ```
 
 ---

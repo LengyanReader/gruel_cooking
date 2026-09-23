@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作者知识图谱 · AUTHORS GRAPH | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip span{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>AUTUMN</span><span data-en>AUTUMN</span><span class="sub" data-both><span data-zh>五部 · 2026-09</span><span data-en>five books · 2026-09</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker">READING &amp; IA — AUTUMN</p>
+  <h1><span data-zh>作者知识图谱 · 谁在写，与谁同代</span><span data-en>作者知识图谱 · 谁在写，与谁同代</span></h1>
+  <div class="subtitle" data-both><span data-zh>生平 · 朋友圈 · 合著 · 流派归属 · 影响链——人物即思想的坐标</span><span data-en>生平 · 朋友圈 · 合著 · 流派归属 · 影响链——人物即思想的坐标</span></div>
+  <div class="metachip"><span>2026 秋批 · 6 位作者</span> <span>generator 维护</span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源与位置。</b>节点与生平：<code>web/data/authors.json</code>（逐条附出处与把握）；边：唯一源 <code>relations/influences.md</code> 镜像 <code>web/data/relations.json</code>。可信度 <code>✓ 已核 · ◐ 一手/自述 · ○ 转述 · ✗ 争议</code>。</div><div data-en><b>Source &amp; layout.</b> Nodes &amp; lives: <code>web/data/authors.json</code>; edges: single source <code>relations.json</code> (mirrors influences.md). Confidence <code>✓ verified · ◐ primary · ○ secondhand · ✗ disputed</code>.</div></div>
+<h2 class="part" data-both><span data-zh>一 · 节点 Nodes</span><span data-en>I · Nodes</span></h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem">
+<div class="card" style="margin:0">
+<h3 class="sec">曼德尔 <span style="font-size:.8rem;color:var(--ink-pale)">Emily St. John Mandel (née Fairbanks)</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1979 春 · Merville, BC, Canada · English</p>
+<p data-zh style="font-size:.9rem">灾难不是背景，是让微小联结显影的暗室。舞者转小说家，写了 7 部跨界小说；《Exit Party》让「两个美国」一确二真。</p><p data-en style="font-size:.9rem">Dystopia as a darkroom for small bonds. Dancer turned novelist; seven crossover novels; in Exit Party two Americas are one-true-two.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">soft-apocalypse 跨界文学</span></div>
+</div>
+<div class="card" style="margin:0">
+<h3 class="sec">瓦尔加 <span style="font-size:.8rem;color:var(--ink-pale)">Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1957-06-07 · Paris · French</p>
+<p data-zh style="font-size:.9rem">罪案是文明史的病历；直觉（poésie）是理性的另一面。CWA Dagger 四冠（含独奖三连 + 与勒梅特共享一冠）。</p><p data-en style="font-size:.9rem">Crime as the case-file of civilisation; intuition spelled poetry. CWA Dagger solo x3 + one shared = commonly &#x27;four&#x27;.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">法式 néo-polar · 直觉派侦探文学</span></div>
+</div>
+<div class="card" style="margin:0">
+<h3 class="sec">勒梅特 <span style="font-size:.8rem;color:var(--ink-pale)">Pierre Lemaitre</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1951-04-19 · Paris · French</p>
+<p data-zh style="font-size:.9rem">20 世纪法国的进步神话及其阴影：光荣岁月之下必有账单。55 岁出道，从 polar 走向社会史小说。</p><p data-en style="font-size:.9rem">France&#x27;s twentieth-century progress-myth and its bill. Debuted at 55; polar to social history.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">法国 polar → 社会史小说</span></div>
+</div>
+<div class="card" style="margin:0">
+<h3 class="sec">佩利科 <span style="font-size:.8rem;color:var(--ink-pale)">Gisèle Pelicot</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1952-12-07 · Villingen, Germany → Île de Ré · French</p>
+<p data-zh style="font-size:.9rem">la honte change de camp——羞耻要易边。被书写者变成书写者；主体性可以被拿回来。</p><p data-en style="font-size:.9rem">Shame must change sides. From written-about to writer; subjectivity reclaimed.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">#MeToo 档案 / 见证文学</span></div>
+</div>
+<div class="card" style="margin:0">
+<h3 class="sec">佩里尼翁 <span style="font-size:.8rem;color:var(--ink-pale)">Judith Perrignon</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1967 · 巴黎（journaliste de formation） · French</p>
+<p data-zh style="font-size:.9rem">把第一人称还给经历者：从 Van Gogh 兄弟到 FDR 到幸存者——一台记者的录音笔转写成生命。</p><p data-en style="font-size:.9rem">First person returned to those who lived it: Van Gogh brothers, FDR, survivors — a reporter&#x27;s tape as life-writer.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">法式传记/证言转写</span></div>
+</div>
+<div class="card" style="margin:0">
+<h3 class="sec">萬田緑平 <span style="font-size:.8rem;color:var(--ink-pale)">萬田緑平 · Ryokhei Manda</span></h3>
+<p style="font-size:.76rem;color:var(--gold-dim)">1964 · 东京日野 → 前橋（群馬） · Japanese</p>
+<p data-zh style="font-size:.9rem">延命より満足、治療より尊厳。2000+ 例在宅看取り，把死亡从 ICU 请回自家餐桌。</p><p data-en style="font-size:.9rem">Dignity over prolonging. 2,000+ home deaths — death moved from ICU back to the family table.</p>
+<div style="margin-top:.6rem"><span class="conf c-ok">日本在宅緩和ケア 生死观话语场</span></div>
+</div>
+</div>
+<h2 class="part" data-both><span data-zh>二 · 流派归属 Schools</span><span data-en>II · Schools</span></h2>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">法式 néo-polar 文学派（Adamsberg 脉）</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>罪案 = 文明史的病历；直觉/诗学是常识的另一面 · 成员：瓦尔加</span><span data-en>crime as case-file of civilisation · members: Vargas</span></p></div>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">法国 polar 文学派 → 社会史小说</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>从 Balzac/Zola 到 20 世纪荣誉与废墟 · 成员：勒梅特</span><span data-en>Balzac/Zola to the century of glory and ru · members: Lemaitre</span></p></div>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">#MeToo 档案 / 见证文学</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>亲历者自夺笔 · 成员：佩利科</span><span data-en>the survivor takes the pen · members: Pelicot</span></p></div>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">法式传记/证言转写</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>把第一人称还给经历者 · 成员：佩里尼翁</span><span data-en>returning first person to the lived · members: Perrignon</span></p></div>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">soft-apocalypse 跨界文学</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>灾难—艺术—韧性母题 · 成员：曼德尔</span><span data-en>disaster-art-resilience · members: Mandel</span></p></div>
+<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">日本在宅緩和ケア 生死观话语场</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>延命 vs 尊厳 的常识化 · 成员：萬田緑平</span><span data-en>dignity over prolonging · members: Manda</span></p></div>
+<h2 class="part" data-both><span data-zh>三 · 朋友圈 · 合著 Circles &amp; Co-writes</span><span data-en>III · Circles &amp; Co-writes</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作者</span><span data-en>author</span></th><th>edge</th><th data-both><span data-zh>同代 · 合作者</span><span data-en>peer / collaborator</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>佩利科</td><td class="conf">◎</td><td>Caroline Darian（女儿/作家）</td><td><span data-both><span data-zh>「M&#x27;endors pas」化学顺从运动；母女对表</span><span data-en>the M&#x27;endors pas campaign</span></span></td><td class="conf">verified</td></tr>
+<tr><td>佩利科</td><td class="conf">◎</td><td>perrignon</td><td><span data-both><span data-zh>回忆录合著（证言转写）</span><span data-en>memoir co-write</span></span></td><td class="conf">verified</td></tr>
+<tr><td>佩利科</td><td class="conf">◎</td><td>Manon Garcia（哲学家）</td><td><span data-both><span data-zh>《Living With Men》分析 Mazan 审判</span><span data-en>Living With Men on the trial</span></span></td><td class="conf">verified</td></tr>
+<tr><td>瓦尔加</td><td class="conf">◎</td><td>Stéphane Audoin-Rouzeau（兄）</td><td><span data-both><span data-zh>Three Evangelists 史家角色原型</span><span data-en>historian character source</span></span></td><td class="conf">verified</td></tr>
+<tr><td>瓦尔加</td><td class="conf">◎</td><td>Jo Vargas（孪生姐）</td><td><span data-both><span data-zh>笔名来源；画名借自《赤足天使》</span><span data-en>pen-name source; painter</span></span></td><td class="conf">verified</td></tr>
+<tr><td>瓦尔加</td><td class="conf">◎</td><td>Siân Reynolds（英译者）</td><td><span data-both><span data-zh>长期译者，Dagger 随译共认</span><span data-en>long-time translator</span></span></td><td class="conf">verified</td></tr>
+<tr><td>萬田緑平</td><td class="conf">◎</td><td>東畑開人（临床心理師）</td><td><span data-both><span data-zh>2026-02-11 对谈「步行是活着」</span><span data-en>2026-02-11 dialogue</span></span></td><td class="conf">verified</td></tr>
+<tr><td>萬田緑平</td><td class="conf">◎</td><td>青栁幸利（中之条研究）</td><td><span data-both><span data-zh>8000 步/日实证线</span><span data-en>8,000-steps/day evidence line</span></span></td><td class="conf">verified</td></tr>
+<tr><td>勒梅特</td><td class="conf">◎</td><td>Albert Dupontel（导演）</td><td><span data-both><span data-zh>《Au revoir là-haut》电影改编，César 共获</span><span data-en>film adaptation; shared César</span></span></td><td class="conf">verified</td></tr>
+<tr><td>曼德尔</td><td class="conf">◎</td><td>Patrick Somerville（剧集主创）</td><td><span data-both><span data-zh>《Station Eleven》HBO 改编 → Exit Party 回响</span><span data-en>Station Eleven HBO → the Exit Party echo</span></span></td><td class="conf">verified</td></tr>
+<tr><td>佩利科</td><td class="conf">✎</td><td>perrignon</td><td><span data-both><span data-zh>证言转写合著 · 《Et la joie de vivre》</span><span data-en>testimonial co-write · 《Et la joie de vivre》</span></span></td><td class="conf">verified</td></tr>
+<tr><td>佩里尼翁</td><td class="conf">✎</td><td>Marceline Loridan-Ivens</td><td><span data-both><span data-zh>两度合著 · 《Et tu n&#x27;es pas revenu》《L&#x27;Amour d&#x27;après》</span><span data-en>two co-writes · 《Et tu n&#x27;es pas revenu》《L&#x27;Amour d&#x27;après》</span></span></td><td class="conf">verified</td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>四 · 影响链 Influence</span><span data-en>IV · Influence</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>源</span><span data-en>from</span></th><th>edge</th><th data-both><span data-zh>向</span><span data-en>to</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>瓦尔加</td><td class="conf">⇒</td><td>勒梅特</td><td><span data-both><span data-zh>同代法国罪案双峰；书风构成法式 noir 两端（直觉美学 vs 道德写实）</span><span data-en>peers; the two poles of French crime</span></span></td><td class="conf">strong</td></tr>
+<tr><td>勒梅特</td><td class="conf">⇒</td><td>瓦尔加</td><td><span data-both><span data-zh>2013 共获 CWA International Dagger；同被 Stephen King 表彰</span><span data-en>shared 2013 Dagger; both praised by King</span></span></td><td class="conf">strong</td></tr>
+<tr><td>Balzac / Zola</td><td class="conf">⇐</td><td>勒梅特</td><td><span data-both><span data-zh>社会史四部曲承自十九世纪家族-产业史诗法</span><span data-en>9th-style family-industry epic</span></span></td><td class="conf">medium</td></tr>
+<tr><td>Georges Simenon</td><td class="conf">⇐</td><td>瓦尔加</td><td><span data-both><span data-zh>心理侦探传统 + 罪案读成社会病理</span><span data-en>psychological detective line</span></span></td><td class="conf">medium</td></tr>
+<tr><td>Primo Levi / 见证文学</td><td class="conf">⇐</td><td>佩里尼翁</td><td><span data-both><span data-zh>口述史 × 文学转写（Loridan-Ivens 线）</span><span data-en>oral history × transcription</span></span></td><td class="conf">medium</td></tr>
+<tr><td>柏木哲夫 / 日本ホスピス緩和ケア</td><td class="conf">⇐</td><td>萬田緑平</td><td><span data-both><span data-zh>「善终」谱系 → 在宅路线分岔</span><span data-en>good-death lineage → home branch</span></span></td><td class="conf">medium</td></tr>
+<tr><td>#MeToo（2017）</td><td class="conf">⇒</td><td>佩利科</td><td><span data-both><span data-zh>Mazan 公开庭审 → 回忆录：运动的三级火箭</span><span data-en>public trial → memoir: the movement&#x27;s third stage</span></span></td><td class="conf">verified</td></tr>
+<tr><td>瓦尔加</td><td class="conf">⇒</td><td>曼德尔</td><td><span data-both><span data-zh>皆用「一件艺术图像作谜面发动机」（美学化为装置）</span><span data-en>both drive plot from a single work of art</span></span></td><td class="conf">medium</td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>五 · 每位作者 Deep dossiers</span><span data-en>V · Per-author dossiers</span></h2>
+<div class="card" id="mandel">
+<h3 class="sec">曼德尔 · Mandel</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1979</td><td><div data-zh>生于 Merville, BC；父（美裔）越战拒役水管工、母（加裔）家暴机构社工；五兄妹</div><div data-en>born Merville, BC; American-Vietnam-C.O. father; social-worker mother; five kids</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>~15</td><td><div data-zh>家庭学校至约 15 岁；无高中文凭；写作者纪律（日记作业）</div><div data-en>homeschooled to ~15; no diploma; diary-as-homework discipline</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>18</td><td><div data-zh>入学多伦多舞剧院学校（当代舞）；毕业背上不少学贷</div><div data-en>School of Toronto Dance Theatre (contemporary dance); graduating with debt</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2002</td><td><div data-zh>蒙特利尔动笔处女作《Last Night in Montreal》</div><div data-en>begins Last Night in Montreal in Montreal</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2009</td><td><div data-zh>《Last Night in Montreal》出版（Unbridled；非 2006）</div><div data-en>Last Night in Montreal out (Unbridled), not 2006</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2010–2012</td><td><div data-zh>《The Singer&#x27;s Gun》《The Lola Quartet》；行政助理夜班 + The Millions 专栏</div><div data-en>TSG (2010) &amp; The Lola Quartet (2012); admin day-job + The Millions</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2014</td><td><div data-zh>《Station Eleven》：NBA finalist · HBO 改编 · 150 万+ 册</div><div data-en>Station Eleven: NBA finalist; HBO; 1.5M+ copies</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2015</td><td><div data-zh>女儿出生（2015 vs 2016 小争议）；Clarke 奖</div><div data-en>daughter born (2015); Clarke Award</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2020–2022</td><td><div data-zh>《The Glass Hotel》Giller finalist；《Sea of Tranquility》Goodreads Choice；2022 年与 Kevin 离婚</div><div data-en>Glass Hotel Giller finalist; Sea of Tranquility out; divorces Kevin 2022</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2025</td><td><div data-zh>与摄影师 Laura Barisonzi 在布鲁克林 Greenlight 书店结婚</div><div data-en>marries Laura Barisonzi at Greenlight Bookstore, Brooklyn</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026-09</td><td><div data-zh>第 7 部长篇《Exit Party》（Knopf 2026-09-15）；「最政治、最酷儿、最好」</div><div data-en>Exit Party out 2026-09-15; &#x27;my most political, most queer, best novel&#x27;</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>2009</td><td><b>Last Night in Montreal</b></td><td><div data-zh>处女作；蒙特利尔</div><div data-en>debut; Montreal</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2010</td><td><b>The Singer&#x27;s Gun</b></td><td><div data-zh>Prix Mystère de la Critique 2014；Exit Party 的阿里/安东/格里森源头</div><div data-en>Prix Mystère 2014; A-side DNA of Exit Party</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2012</td><td><b>The Lola Quartet</b></td><td><div data-zh>独角戏三部之一</div><div data-en>third Unbridled novel</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2014</td><td><b>Station Eleven</b></td><td><div data-zh>破圈之作；Clarke 2015</div><div data-en>breakout; Clarke 2015</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2020</td><td><b>The Glass Hotel</b></td><td><div data-zh>Giller finalist；海边 Ponzi 帝国</div><div data-en>Giller finalist; coastal Ponzi empire</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2022</td><td><b>Sea of Tranquility</b></td><td><div data-zh>时间旅行 + 巴黎穹顶</div><div data-en>time travel + Paris domes</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026</td><td><b>Exit Party</b></td><td><div data-zh>本批主打；A/B 双美国</div><div data-en>this crop&#x27;s headliner; A/B two Americas</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>
+<tr><td>2014</td><td>Prix Mystère de la Critique</td><td>The Singer&#x27;s Gun</td></tr>
+<tr><td>2014</td><td>National Book Award finalist</td><td>Station Eleven</td></tr>
+<tr><td>2015</td><td>Arthur C. Clarke Award</td><td>Station Eleven</td></tr>
+<tr><td>2015</td><td>Toronto Book Award · Tournament of Books</td><td>Station Eleven</td></tr>
+<tr><td>2015</td><td>PEN/Faulkner finalist · Baileys longlist</td><td>Station Eleven</td></tr>
+<tr><td>2017</td><td>Prix des Libraires du Québec</td><td>Station Eleven</td></tr>
+<tr><td>2020</td><td>Scotiabank Giller finalist</td><td>The Glass Hotel</td></tr>
+<tr><td>2022</td><td>Goodreads Choice Award, SF</td><td>Sea of Tranquility</td></tr>
+<tr><td>2020/2022</td><td>Obama 年度书单</td><td>Glass Hotel &amp; Sea of Tranquility</td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">Patrick Somerville ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>《Station Eleven》剧集 showrunner</span><span data-en>Station Eleven HBO showrunner</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Laura Barisonzi ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>2025 起配偶、摄影师；首读者与作者照拍摄者</span><span data-en>wife (2025), photographer, first reader</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Kevin Mandel ◇ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>前夫（2022 离），剧作家/招聘高管</span><span data-en>ex-husband (2022), writer &amp; executive recruiter</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Katherine Fausset / Emilie Jacobson ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>文学代理（Curtis Brown）</span><span data-en>literary agents (Curtis Brown)</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Semi Chellas ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>Last Night in Montreal 电影共编剧</span><span data-en>film co-writer</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Sam Esmail（Mr. Robot 系） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>Sea of Tranquility 影集合作方</span><span data-en>Sea of Tranquility TV partner</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Omar El Akkad ⇌ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>同代对谈（American War 作者）；「直书美国分裂」的搭档声音</span><span data-en>peer conversations; American War author</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">The Millions 编辑部 ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>2010 年起任 staff writer</span><span data-en>staff writer since 2010</span></span></span> <span class="conf c-ok">✓</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>灾难不是背景，是让「微小联结」显影的暗室：莎剧、酒店、画作、派对——都是人对抗熵的仪式。2026 年这套装置第一次直接对准「美国自身的宪政解体会发生什么」；心理上她承认「我无法预测大流行」，预兆之「失灵」正是其自嘲。</div><div data-en>Disaster as darkroom for small bonds — Shakespeare, hotels, paintings, parties as rituals against entropy. In 2026 the device finally aims at American constitutional collapse itself.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>2026 美国宪政焦虑（政变讨论、中选、AI 失控叙事）的客体化证词——「两个美国」一确二真；&#x27;I cannot overstate how stressful the US is at the moment&#x27;（irishtimes 2026-09-12）。</div><div data-en>The objectified testimony of 2026&#x27;s American constitutional anxiety — two Americas, one-true-two.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>Last Night in Montreal = 2009（旧卡 2006 错误）</td><td style="font-size:.78rem;color:var(--ink-pale)">publishersweekly.com; emilymandel.com; amheath.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2025 与 Laura Barisonzi 结婚（Greenlight 书店）</td><td style="font-size:.78rem;color:var(--ink-pale)">publishersweekly.com; en-wiki; theguardian.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2022 与 Kevin Mandel 离婚（‘prove divorce to Wikipedia’）</td><td style="font-size:.78rem;color:var(--ink-pale)">irishtimes.com; en-wiki</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>女儿 2015 出生（2026 时 10 岁）</td><td style="font-size:.78rem;color:var(--ink-pale)">en-wiki; theguardian.com</td><td class="conf"><span class="conf c-part">✓ (Grokipedia 2016 ◐)</span></td></tr>
+<tr><td>homeschool 至约 15 岁、无高中文凭</td><td style="font-size:.78rem;color:var(--ink-pale)">theguardian.com; newyorker.com; monroeccc.edu</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>The Millions staff writer 自 2010</td><td style="font-size:.78rem;color:var(--ink-pale)">themillions.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>涉 Anthropic 版权诉讼（Bartz v. Anthropic 和解）</td><td style="font-size:.78rem;color:var(--ink-pale)">esquire.com 2026-09-09; apnews.com</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>无大纲硬写；后半推翻重写</td><td style="font-size:.78rem;color:var(--ink-pale)">theglobeandmail.com; therumpus.net</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">女儿出生年份 2015 vs 2016 <span class="conf c-part">✓/◐</span></div>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">The Lola Quartet 具体奖项（缩写来源不确定） <span class="conf c-part">○</span></div>
+</div>
+<div class="card" id="vargas">
+<h3 class="sec">瓦尔加 · Vargas</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1957</td><td><div data-zh>生于巴黎；父超现实主义圈作家 Philippe Audoin；孪生姐 Jo；兄 Stéphane</div><div data-en>born Paris; surrealist-writer father; twin Jo; brother Stéphane</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1979</td><td><div data-zh>于巴黎七大（Jussieu）完成考古动物学博士（Sorbonne），研究方向：中世纪疾病媒介/畜牧业</div><div data-en>archaeozoology doctorate at Jussieu; medieval disease vectors</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1980s–90s</td><td><div data-zh>CNRS 研究员（考古动物学）；业余写侦探小说</div><div data-en>CNRS researcher; crime fiction sidelines</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1995</td><td><div data-zh>《Debout les morts》——Les Évangélistes 三部曲第一部出版</div><div data-en>Debout les morts, first of The Three Evangelists</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2001</td><td><div data-zh>《Pars vite et reviens tard》——Adamsberg 系列国际破圈</div><div data-en>Pars vite et reviens tard, Adamsberg&#x27;s international breakout</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2006/2007/2009</td><td><div data-zh>CWA International Dagger 独奖三连</div><div data-en>three solo CWA Daggers</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2013</td><td><div data-zh>与 Lemaitre 共享 CWA Dagger（第四冠）</div><div data-en>shared CWA Dagger with Lemaitre</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2018</td><td><div data-zh>Prince of Asturias 奖（文学）</div><div data-en>Prince of Asturias Award (Literature)</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026-04-08</td><td><div data-zh>《Une unique lueur》——Adamsberg #11（Flammarion）</div><div data-en>Une unique lueur, Adamsberg #11</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1995</td><td><b>Debout les morts / Les Évangélistes</b></td><td><div data-zh>三部曲第一部</div><div data-en>first of The Evangelists trilogy</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2001</td><td><b>Pars vite et reviens tard</b></td><td><div data-zh>破圈代表作</div><div data-en>breakout</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2017</td><td><b>Quand sort la recluse</b></td><td><div data-zh>蜘蛛意象的 Adamsberg 作</div><div data-en>the recluse-spider Adamsberg</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026</td><td><b>Une unique lueur</b></td><td><div data-zh>Adamsberg #11；本批书单法国代表</div><div data-en>Adamsberg #11; this crop&#x27;s French entry</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>
+<tr><td>2006</td><td>CWA International Dagger</td><td>solo</td></tr>
+<tr><td>2007</td><td>CWA International Dagger</td><td>solo</td></tr>
+<tr><td>2009</td><td>CWA International Dagger</td><td>solo</td></tr>
+<tr><td>2013</td><td>CWA International Dagger</td><td>shared with Lemaitre (&#x27;four in total&#x27; wording)</td></tr>
+<tr><td>2018</td><td>Prince of Asturias Award</td><td>Literature</td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">Jo Vargas（孪生姐） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>画家；笔名来源（借自《赤足天使》女主），常为法语版封面作画</span><span data-en>painter; the pen-name&#x27;s source and cover artist</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Stéphane Audoin-Rouzeau（兄） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>一战史家；The Three Evangelists 史家角色原型</span><span data-en>WWI historian; character source</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Philippe Audoin（父） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>作家/超现实主义圈（与 Breton 亲近）</span><span data-en>writer in the Surrealist circle</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Siân Reynolds（英译者） ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>长期译者；Dagger 奖随译共认</span><span data-en>long-time translator; Dagger recognition follows</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Pierre Lemaitre ⇌ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>同代双峰；2013 同届 CWA Dagger（共享一冠）</span><span data-en>peers; shared 2013 Dagger</span></span></span> <span class="conf c-ok">✓</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>她的小说里「谋杀」多为一种观念的病兆：凶手的妄想经由直觉被亚当斯贝格读出。直觉派破案长期被科学主义批评——她干脆把「un-scientific」当作美德。</div><div data-en>Murder as symptom of a worldview-disease; detection as intuitive reading. She wears the &#x27;unscientific detective&#x27; as a virtue.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>法国犯罪文学的声音双峰之一；2026 新作以「文学/电影世界观本身就是凶器」回应时代的美学化暴力。</div><div data-en>One pole of French crime fiction answering 2026&#x27;s aestheticized violence.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>Une unique lueur = Adamsberg #11；Flammarion 2026-04-08</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia (éd. Flammarion)</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>ISBN broché 978-2-08-016071-3 / EPUB 978-2-08-016097-3</td><td style="font-size:.78rem;color:var(--ink-pale)">éditeur/distributor</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>CWA 独奖三连 + 2013 共享 = 常见「四冠」（fr.wikipedia 合计独奖三度）</td><td style="font-size:.78rem;color:var(--ink-pale)">CWA annals</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>父 Philippe Audoin、孪生姐 Jo、兄 Stéphane</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia; 多家访谈</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>笔名源自《赤足天使》/孪生姐 Jo</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1979 Jussieu 考古动物学博士</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">CNRS 结束具体年份（1990s 末？）跨源不一 <span class="conf c-part">◐</span></div>
+</div>
+<div class="card" id="lemaitre">
+<h3 class="sec">勒梅特 · Lemaitre</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1951</td><td><div data-zh>生于巴黎</div><div data-en>born Paris</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1970s–2000s</td><td><div data-zh>心理学家/教师（心理创伤与残疾儿童工作）→ 编剧/模写作</div><div data-en>psychologist-teacher; then screenwriting</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2006</td><td><div data-zh>出道作《Travail soigné》（55 岁）</div><div data-en>debut Travail soigné at 55</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2011</td><td><div data-zh>《Alex》——反转式施害者 polar 高峰</div><div data-en>Alex, the twist-perpetrator peak</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2013</td><td><div data-zh>《Au revoir là-haut》Goncourt；次年 CWA 与 Vargas 共享</div><div data-en>Au revoir là-haut: Goncourt; then shared Dagger</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2022–2026</td><td><div data-zh>Les Années glorieuses 四部曲：Le Grand Monde→Le Silence et la colère→… →Les Belles Promesses（终章 2026-01-06）</div><div data-en>Glorious Years quartet, ending Les Belles Promesses 2026-01-06</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>2006</td><td><b>Travail soigné</b></td><td><div data-zh>出道 polar</div><div data-en>debut</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2011</td><td><b>Alex</b></td><td><div data-zh>反转式施害者峰作</div><div data-en>twist peak</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2013</td><td><b>Au revoir là-haut</b></td><td><div data-zh>Goncourt 2013；一战的荣光账单</div><div data-en>Goncourt 2013; WWI glory-account</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2022</td><td><b>Le Grand Monde</b></td><td><div data-zh>四部曲卷一</div><div data-en>quartet vol.1</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2023</td><td><b>Le Silence et la colère</b></td><td><div data-zh>四部曲卷二</div><div data-en>quartet vol.2</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026</td><td><b>Les Belles Promesses</b></td><td><div data-zh>四部曲终章；ISBN 9782702191477；本批书单法国代表</div><div data-en>quartet finale; this crop&#x27;s French entry</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>
+<tr><td>2013</td><td>Prix Goncourt</td><td>Au revoir là-haut</td></tr>
+<tr><td>2013</td><td>CWA International Dagger</td><td>shared with Vargas (Camille series)</td></tr>
+<tr><td>2018</td><td>César (film adaptation)</td><td>cinema awards for Au revoir là-haut</td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">Albert Dupontel ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>《Au revoir là-haut》电影导演；César 2018 共获</span><span data-en>film director; shared César 2018</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Fred Vargas ⇌ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>同代双峰；2013 同届 CWA Dagger</span><span data-en>peer; shared 2013 Dagger</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Stephen King ⇐ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>公开表彰：两位法国作者 K 皆称道</span><span data-en>public praise from King</span></span></span> <span class="conf c-part">◐</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>他的长篇剥开法国「光环三十年」的釉面：每个荣耀都被标价，每笔进步都有债主。极性反转、施害者同情是他的 signature。</div><div data-en>Stripping les Trente Glorieuses&#x27; glaze: every glory priced, every progress owed. Reversal and perpetrator-empathy are his signature.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>2026 终章把四部曲收束在「英雄崇拜的社会学」——在公共记忆被重新瓜分的当下，是最合时宜的法语声音。</div><div data-en>2026 finale; hero-worship sociology for a year of contested memory.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>Les Belles Promesses ISBN 9782702191477，512pp，2026-01-06 Calmann-Lévy</td><td style="font-size:.78rem;color:var(--ink-pale)">calmann-levy 目录</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>旧卡 ISBN 9782702189825 / 543pp 为错</td><td style="font-size:.78rem;color:var(--ink-pale)">对比核实</td><td class="conf"><span class="conf c-part">✓→更正</span></td></tr>
+<tr><td>Goncourt 2013 Au revoir là-haut</td><td style="font-size:.78rem;color:var(--ink-pale)">多源一致</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1951 生；55 岁出道</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">心理学家职业的精确时间线（1970s-80s 具体岗位） <span class="conf c-part">◐</span></div>
+</div>
+<div class="card" id="pelicot">
+<h3 class="sec">佩利科 · Pelicot</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1952-12-07</td><td><div data-zh>生于德国菲林根（Villingen），德军家庭出身、入法籍</div><div data-en>born Villingen, Germany; French-naturalized</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1960s</td><td><div data-zh>在格勒诺布尔附近的农场长大；父亲是流动马戏团兽医（Paillards）</div><div data-en>farm childhood near Grenoble; circus-veterinarian father</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1971–72</td><td><div data-zh>遇见多米尼克；1973-04 结婚</div><div data-en>meets Dominique; married April 1973</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1980s–2003</td><td><div data-zh>EDF 物流干部 25 年；2003 退休（Mazan 宅）</div><div data-en>EDF logistics executive 25 yrs; retires 2003 to Mazan</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2011</td><td><div data-zh>病倒；多米尼克开始系统性下药与邀客施暴（十余载 50+ 男）</div><div data-en>illness; the night-time drug-and-rape regime begins</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2014</td><td><div data-zh>与多米尼克的 Aznavour 巡演合影成为「明面恩爱」的证据</div><div data-en>the public couple façade</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>2020-10/11</td><td><div data-zh>超市保安发现多米尼克拍摄裙底视频报警；11-02 被捕；12 月 Thornyard 搜出 4000+ 影像</div><div data-en>CCTV exposure; arrest; 4,000+ files found</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2024-09→12</td><td><div data-zh>Avignon 公开审判（拒匿名）；2024-12-19 判 20 年 + 51 人定罪</div><div data-en>public trial; 2024-12-19 verdict</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2025-01-21</td><td><div data-zh>France 2 纪录片《Soumission chimique》播出</div><div data-en>France 2 documentary airs</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2025-10-08/09</td><td><div data-zh>仅 Husamettin D. 上诉（Nîmes），判 10 年（+1）</div><div data-en>sole appeal, Husamettin D., 10 years</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026-02-17</td><td><div data-zh>回忆录《Et la joie de vivre》22 语同步发行</div><div data-en>memoir out in 22 languages</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>2026</td><td><b>Et la joie de vivre (A Hymn to Life)</b></td><td><div data-zh>本批书单法国证人；22 语同步</div><div data-en>this crop&#x27;s French testament</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>
+<tr><td>2025</td><td>Time 年度女性（2024/2025 提名为全球象征）</td><td>public recognition</td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">Judith Perrignon ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>回忆录合著（证言转写）</span><span data-en>memoir co-write</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Caroline Darian（女儿） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>「M&#x27;endors pas」化学顺从运动 + France 2 纪录片</span><span data-en>the M&#x27;endors pas campaign</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Manon Garcia（哲学家） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>《Living With Men》分析 Mazan 审判</span><span data-en>Living With Men on the trial</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Dominique Pelicot（前夫） ◇ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>施害者；主犯 20 年刑</span><span data-en>the perpetrator; 20 years</span></span></span> <span class="conf c-ok">✓</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>拒绝匿名、公开姓名与面容——把私密疼痛锻造成公共建制改革的工具。她要的不是同情，而是结构性改变。</div><div data-en>Refuses anonymity; converts private pain into a lever for structural legal reform, not sympathy.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>时间 2025 年度女性的实体文本；在「谁拥有大叙事」之年的最强反例。</div><div data-en>the physical text of Time&#x27;s 2025 woman; the strongest counter-example in a year of grand narratives.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>出生 1952-12-07，Villingen；农场出身</td><td style="font-size:.78rem;color:var(--ink-pale)">NPR excerpt</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>EDF 物流干部 25 年；2003 退休</td><td style="font-size:.78rem;color:var(--ink-pale)">NPR excerpt</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2020-10 超市监控拆穿；11-02 逮捕；4000+ 影像（12-2020）</td><td style="font-size:.78rem;color:var(--ink-pale)">BBC; le monde; Global Voices</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2024-12-19 判 20 年/51 人；2025-10 唯一上诉 Husamettin D.（10 年）</td><td style="font-size:.78rem;color:var(--ink-pale)">tribunal records</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>France 2 纪录片 2025-01-21</td><td style="font-size:.78rem;color:var(--ink-pale)">France 2 programming</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>回忆录 Flammarion 2026-02-17，ISBN 9782080497260，320pp</td><td style="font-size:.78rem;color:var(--ink-pale)">éditeur</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>离婚(2001)/再婚(2007)来源仅 fr.wikipedia，与一手配偶史冲突</td><td style="font-size:.78rem;color:var(--ink-pale)">fr.wikipedia</td><td class="conf"><span class="conf c-part">✗ 未统一</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">离婚/再婚年份多源冲突——正文回避 <span class="conf c-bad">✗</span></div>
+</div>
+<div class="card" id="perrignon">
+<h3 class="sec">佩里尼翁 · Perrignon</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1991–2007</td><td><div data-zh>Libération 记者</div><div data-en>reporter at Libération</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2007–</td><td><div data-zh>作家/转写者；Europe 1→France Culture</div><div data-en>writer-transcriber; France Culture</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2015</td><td><div data-zh>SGDL Révélation 奖</div><div data-en>SGDL Révélation prize</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2015/2018</td><td><div data-zh>与 Loridan-Ivens 两度合著</div><div data-en>two co-writes with the Holocaust survivor</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026-02</td><td><div data-zh>与 Pelicot 的《Et la joie de vivre》出版</div><div data-en>Et la joie de vivre published with Pelicot</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>2011</td><td><b>PTSD: la chasse est ouverte</b></td><td><div data-zh>创伤在场的叙事方法</div><div data-en>trauma-in-present-tense method</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>2015</td><td><b>Et tu n&#x27;es pas revenu</b></td><td><div data-zh>与 Loridan-Ivens</div><div data-en>with Loridan-Ivens</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2018</td><td><b>L&#x27;Amour d&#x27;après</b></td><td><div data-zh>与 Loridan-Ivens</div><div data-en>with Loridan-Ivens</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026</td><td><b>Et la joie de vivre</b></td><td><div data-zh>与 Pelicot</div><div data-en>with Pelicot</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>
+<tr><td>2015</td><td>SGDL Révélation</td><td>recognition</td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">Marceline Loridan-Ivens ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>《Et tu n&#x27;es pas revenu》(2015)、《L&#x27;Amour d&#x27;après》(2018) 两度合著</span><span data-en>two co-writes</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Gisèle Pelicot ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>2026 Et la joie de vivre 合著；Sophie de Closets 编辑</span><span data-en>2026 memoir co-write; ed. Sophie de Closets</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">Ariane Chemin / Eva Joly ✎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>合著谱系（法国大政治转写）</span><span data-en>co-writing lineage</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">France Culture（Grandes Traversées 等） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>纪录片/播客制作；2015 SGDL Révélation</span><span data-en>radio documentary producer</span></span></span> <span class="conf c-ok">✓</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>她的工作本质是把「外部声音的在场」炼成一种文学装置：转写不是记录，是「把话筒还给人」的伦理实践。</div><div data-en>Transcription as ethical practice — returning the microphone, not merely recording.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>法国见证文学的中枢执笔者——2026 年最强的公共证词出自她的转写案。</div><div data-en>the transcriber behind 2026&#x27;s most consequential French testimony.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>Libération 1991–2007</td><td style="font-size:.78rem;color:var(--ink-pale)">出版社简介</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2015 SGDL Révélation</td><td style="font-size:.78rem;color:var(--ink-pale)">SGDL annals</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>《Notre guerre civile》= Grasset–France Culture 合制（此前「Louise Michel 出版方」混淆已澄清）</td><td style="font-size:.78rem;color:var(--ink-pale)">出版社/电台节目志</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>Grandes Traversées 制作：Ali 2018、Sinatra 2019、Louise Michel 2021、Thatcher</td><td style="font-size:.78rem;color:var(--ink-pale)">France Culture 节目存档</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>Springsteen 系列索引于 2023-06（2017 未确认）</td><td style="font-size:.78rem;color:var(--ink-pale)">France Culture 索引</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">Springsteen 主题系列确切年份（2017 vs 2023） <span class="conf c-part">◐</span></div>
+</div>
+<div class="card" id="manda">
+<h3 class="sec">萬田緑平 · Manda</h3>
+<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>1964</td><td><div data-zh>东京日野生；大学时代跳级、2 浪后入群馬大学医学部（1991 年卒）</div><div data-en>born Hino, Tokyo; two gap years; Gunma Medical 1991</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>1991–2000s</td><td><div data-zh>外科医（一般外科→消化器外科）</div><div data-en>surgeon (general→GI)</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2008</td><td><div data-zh>创设在宅専門診療クリニック「いっぽ」（高崎）；开始看取り</div><div data-en>founds home-care clinic ippo (Takasaki)</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2008–2017</td><td><div data-zh>在宅看取り 1400+ 例</div><div data-en>1,400+ home deaths</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2017</td><td><div data-zh>独立开设自营诊所（在宅緩和中心继续扩大）</div><div data-en>independent clinic; cumulative 2,000+ by journey</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2025-11-27</td><td><div data-zh>《棺桶まで歩こう》发售（河出書房新社）</div><div data-en>Kanoke made arukou out 2025-11-27</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>2026-07</td><td><div data-zh>累计 15 万部超</div><div data-en>150k+ copies</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>2017</td><td><b>言語化できない痛み（?）</b></td><td><div data-zh>系列首作（书名以书评目录核）</div><div data-en>first nonfiction (title id from reviews)</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>2020</td><td><b>がん治療とロングテール</b></td><td><div data-zh>治疗与「长尾」的批判</div><div data-en>treatment &amp; the long tail</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td>2025</td><td><b>棺桶まで歩こう</b></td><td><div data-zh>本批书单日本代表；ISBN 9784344987937</div><div data-en>this crop&#x27;s Japanese entry</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>
+<ul style="list-style:none">
+<li style="margin-bottom:.35rem">東畑開人（临床心理師） ⇌ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>2026-02-11 对谈「步行是活着」</span><span data-en>2026-02-11 dialogue</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin-bottom:.35rem">青栁幸利（中之条研究） ◎ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>每日 8000 步 / 快走 20 分钟实证线</span><span data-en>the 8,000-steps evidence line</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin-bottom:.35rem">香山リカ（精神科医） ⇌ — <span style="color:var(--ink-soft)"><span data-both><span data-zh>《看取りの作法》作者；同话语场</span><span data-en>fellow death-discourse voice</span></span></span> <span class="conf c-part">◐</span></li>
+</ul>
+<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>
+<div data-zh>死亡不是医疗系统的失败项目，而是人生最后一个可以「一起练习」的日常。步行、家里、最后的谈话——他把终点站从 ICU 移到患者门口。</div><div data-en>Death not as system-failure but a daily practice walked together — home, walking, the last conversation.</div>
+<h4 class="sec" data-both><span data-zh>为何此刻 Why now</span><span data-en>Why now</span></h4>
+<div data-zh>超老龄日本的在地答案；在「速度与延命」的时代提供反叙事。</div><div data-en>Japan&#x27;s local answer to super-aging; a counter-narrative to speed and prolongation.</div>
+<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td>真实 ISBN-13 9784344987937（旧 9784344987934 无效）</td><td style="font-size:.78rem;color:var(--ink-pale)">NDL/河出</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>发售 2025-11-27，224pp，¥1034</td><td style="font-size:.78rem;color:var(--ink-pale)">河出/书店</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>销量 6.5 万(2026-01-18)→13 万(2026-05-08)→15 万+(2026-07-13)</td><td style="font-size:.78rem;color:var(--ink-pale)">河出销售通讯</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>b.1964 东京日野；2 浪；群馬 1991；外科→2008 いっぽ→2017 自营</td><td style="font-size:.78rem;color:var(--ink-pale)">作者简介/采访</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td>看取り 1400+（2008–2017）；累计 2000+</td><td style="font-size:.78rem;color:var(--ink-pale)">作者简介</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">首部非虚构的确切书名/出版年（封面目录未能直核） <span class="conf c-part">◐</span></div>
+<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">「棺桶まで歩こう」影视/书展获奖传闻未逐条核 <span class="conf c-part">○</span></div>
+</div>
+<div class="links"><a class="pill" href="../read/index.html">↝ 读书单档案</a><a class="pill" href="../index.html">↝ 板块首页</a></div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识 · 2026 秋</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA · Autumn 2026</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>
