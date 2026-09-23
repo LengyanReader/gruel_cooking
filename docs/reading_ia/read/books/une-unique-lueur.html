@@ -54,6 +54,7 @@ h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 
 h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
 .srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
 .srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
 .card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
 .ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
@@ -82,6 +83,53 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .gapbox ul{list-style:none}
 .gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
 .gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
 @media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
@@ -108,7 +156,10 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 
 <div class="article">
 <div class="srcnote"><div data-zh><b>来源说明。</b>✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入） · 档案：2026-vargas-une-unique-lueur（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入） · record: 2026-vargas-une-unique-lueur. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（当前情节仅依据已核预告 `◐/○`）</span><span data-en>not yet read in full · refresh after reading (plot from verified previews only `◐/○`)</span></div>
+<div class="card" style="display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.9rem 1.2rem"><img src="../../art/covers/une-unique-lueur.jpg" alt="Une unique lueur" style="width:88px;height:124px;object-fit:cover;border-radius:6px;box-shadow:0 4px 12px rgba(38,38,31,.2)" loading="lazy"><a href="../../authors/index.html#vargas" title="Fred Vargas"><img src="../../art/authors/vargas.jpg" alt="Fred Vargas" class="aface" loading="lazy"></a><div><div class="bkrate " data-both><span data-zh><svg viewBox="0 0 87 15" width="87" height="15" role="img" aria-label="3.92/5" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(18,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(36,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(54,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><defs><clipPath id="sune-un3"><rect x="0" y="0" width="12.14" height="14"/></clipPath></defs><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6" clip-path="url(#sune-un3)"/></g><g transform="translate(72,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/></g></svg><span class="score">3.92</span><span class="cnt"><span class="n">660</span> 评分 · <span class="n">95</span> 评论</span><span class="cnt" style="color:var(--ink-pale)">Goodreads 评分（2026-04-08 出版后）</span></span><span data-en><svg viewBox="0 0 87 15" width="87" height="15" role="img" aria-label="3.92/5" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(18,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(36,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(54,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><defs><clipPath id="sune-un3"><rect x="0" y="0" width="12.14" height="14"/></clipPath></defs><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6" clip-path="url(#sune-un3)"/></g><g transform="translate(72,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/></g></svg><span class="score">3.92</span><span class="cnt"><span class="n">660</span> ratings · <span class="n">95</span> reviews</span><span class="cnt" style="color:var(--ink-pale)">Goodreads rating (since 2026-04-08)</span></span></div><span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span></div></div>
 <div class="card"><h3 class="sec" data-both><span data-zh>为何此刻 · Why now</span><span data-en>为何此刻 · Why now</span></h3><div data-zh>当凶案被改写成艺术，罪案小说本身也在追问——我们讲述残酷时，用的是谁的眼睛。</div><div data-en>When murder is rewritten as art, the crime novel asks back — whose eyes are we using when we narrate cruelty?</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文与试读 · Original text &amp; previews</span><span data-en>Original text &amp; previews</span></h3><div class="tl-list"><a href="https://www.leslibraires.ca/livres/une-unique-lueur-9782898114601" target="_blank" rel="noopener"><span data-zh>Les Libraires 在线翻书 EPUB/PDF + 免费节选 PDF</span><span data-en>Les Libraires feuilleter EPUB/PDF + free extract PDF</span><span class="dom">www.leslibraires.ca ↗</span></a><a href="https://editions.flammarion.com/une-unique-lueur/9782080160713" target="_blank" rel="noopener"><span data-zh>Flammarion 官方页 · Feuilleter 预览</span><span data-en>Flammarion official page · Feuilleter preview</span><span class="dom">editions.flammarion.com ↗</span></a><a href="https://www.goodreads.com/book/show/247037487" target="_blank" rel="noopener"><span data-zh>Goodreads 评分与读者讨论</span><span data-en>Goodreads ratings &amp; discussion</span><span class="dom">www.goodreads.com ↗</span></a></div></div>
 <div class="card"><h3 class="sec" data-both><span data-zh>背景 · Background</span><span data-en>背景 · Background</span></h3><div data-zh>瓦尔加《亚当斯贝格探案》第 11 卷，2026 年 4 月 8 日由 Flammarion 出版（528 页）。书名 « Une unique lueur »（一束唯一的光）取自内瓦尔《El Desdichado》名句，与全书的核心谜面直接挂钩。注意：2026 年另有同名异书（另一作者的同名小说），须以 Flammarion 本与 Adamsberg 线索区隔。此前的二手梗概（Fraixen 老翁、斯宾诺莎时代、1980 档案、自杀调查局）经检索均未见于任何权威源——判为证伪锚点，一律不录入；确证在书内的元素：街头「完美」女尸（银莲花、金哨）、内瓦尔《El Desdichado》、白考尔/鲍嘉形象、六年前的悬案翻查、记忆-复诵主题，以及全书多语种页注。</div><div data-en>Adamsberg #11, published by Flammarion on 8 April 2026 (528 pp). The title &quot;Une unique lueur&quot; — one single glimmer — is taken from Nerval&#x27;s El Desdichado and keys the whole enigma. Caution: another same-titled novel by a different author also appeared in 2026; distinguish by the Flammarion imprint and the Adamsberg series. Earlier secondhand plot anchors (Fraixen, the Spinoza era, 1980 archives, a suicide-investigations bureau) were falsified by search — none appear in any authoritative source, so they are not recorded. Confirmed in-book elements: the &quot;perfect&quot; corpse (anemones, golden whistle), Nerval&#x27;s El Desdichado, the Bacall/Bogart imagery, re-opening of a six-year-old case, the memory-repetition theme, and the book&#x27;s multi-language page notes.</div></div>
 <p class="tok"><span class="conf c-part">✓ 出版信息；情节锚点甄别后 ✓/◐</span> <span class="hidden"></span></p>
 <h2 class="part" data-both><span data-zh>情节分幕 · Plot content</span><span data-en>Plot content</span></h2>
@@ -192,6 +243,7 @@ Recurring complaints persist: the finales feel quasi-mystical; the memory-repeti
 
 **Synthesis:** The novel makes aestheticized violence the enigma itself — literature and film aren&#x27;t décor but the killer&#x27;s lens. The title is half the answer.</div></div>
 <h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="srcnote"><div data-zh>待通读原书后补充。</div><div data-en>Craft notes come after the full read.</div></div>
 <h2 class="part" data-both><span data-zh>精彩片段 · Excerpts</span><span data-en>Notable excerpts</span></h2>
 <div class="quote"><div class="orig">«Je suis le ténébreux, — le veuf, — l&#x27;inconsolé.» (Nerval, «El Desdichado»)</div><div class="trs">「我乃幽冥者，——鳏夫，——无可慰藉者。」——书名及谜面的源文本。</div><div class="src">fr.wikipedia · 公开评论确认在书内被引用</div></div>
 <h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>

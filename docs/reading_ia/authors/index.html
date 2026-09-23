@@ -54,6 +54,7 @@ h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 
 h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
 .srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
 .srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
 .card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
 .ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
@@ -82,6 +83,53 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .gapbox ul{list-style:none}
 .gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
 .gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
 @media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
@@ -108,40 +156,41 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 
 <div class="article">
 <div class="srcnote"><div data-zh><b>来源与位置。</b>节点与生平：<code>web/data/authors.json</code>（逐条附出处与把握）；边：唯一源 <code>relations/influences.md</code> 镜像 <code>web/data/relations.json</code>。可信度 <code>✓ 已核 · ◐ 一手/自述 · ○ 转述 · ✗ 争议</code>。</div><div data-en><b>Source &amp; layout.</b> Nodes &amp; lives: <code>web/data/authors.json</code>; edges: single source <code>relations.json</code> (mirrors influences.md). Confidence <code>✓ verified · ◐ primary · ○ secondhand · ✗ disputed</code>.</div></div>
+<div class="srcnote"><div data-zh><b>照片。</b>作者照片取自公开来源（Wikimedia Commons 等），版权归原作者，仅个人笔记引用。</div><div data-en><b>Portraits.</b> Photos from public sources (Wikimedia Commons &amp;c.), rights remain with the owners; cited for a personal journal.</div></div>
 <h2 class="part" data-both><span data-zh>一 · 节点 Nodes</span><span data-en>I · Nodes</span></h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem">
 <div class="card" style="margin:0">
-<h3 class="sec">曼德尔 <span style="font-size:.8rem;color:var(--ink-pale)">Emily St. John Mandel (née Fairbanks)</span></h3>
+<div class="anode"><img src="../art/authors/mandel.jpg" alt="Mandel" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">曼德尔 <span style="font-size:.8rem;color:var(--ink-pale)">Emily St. John Mandel (née Fairbanks)</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1979 春 · Merville, BC, Canada · English</p>
 <p data-zh style="font-size:.9rem">灾难不是背景，是让微小联结显影的暗室。舞者转小说家，写了 7 部跨界小说；《Exit Party》让「两个美国」一确二真。</p><p data-en style="font-size:.9rem">Dystopia as a darkroom for small bonds. Dancer turned novelist; seven crossover novels; in Exit Party two Americas are one-true-two.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">soft-apocalypse 跨界文学</span></div>
 </div>
 <div class="card" style="margin:0">
-<h3 class="sec">瓦尔加 <span style="font-size:.8rem;color:var(--ink-pale)">Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas</span></h3>
+<div class="anode"><img src="../art/authors/vargas.jpg" alt="Vargas" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">瓦尔加 <span style="font-size:.8rem;color:var(--ink-pale)">Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1957-06-07 · Paris · French</p>
 <p data-zh style="font-size:.9rem">罪案是文明史的病历；直觉（poésie）是理性的另一面。CWA Dagger 四冠（含独奖三连 + 与勒梅特共享一冠）。</p><p data-en style="font-size:.9rem">Crime as the case-file of civilisation; intuition spelled poetry. CWA Dagger solo x3 + one shared = commonly &#x27;four&#x27;.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">法式 néo-polar · 直觉派侦探文学</span></div>
 </div>
 <div class="card" style="margin:0">
-<h3 class="sec">勒梅特 <span style="font-size:.8rem;color:var(--ink-pale)">Pierre Lemaitre</span></h3>
+<div class="anode"><img src="../art/authors/lemaitre.jpg" alt="Lemaitre" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">勒梅特 <span style="font-size:.8rem;color:var(--ink-pale)">Pierre Lemaitre</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1951-04-19 · Paris · French</p>
 <p data-zh style="font-size:.9rem">20 世纪法国的进步神话及其阴影：光荣岁月之下必有账单。55 岁出道，从 polar 走向社会史小说。</p><p data-en style="font-size:.9rem">France&#x27;s twentieth-century progress-myth and its bill. Debuted at 55; polar to social history.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">法国 polar → 社会史小说</span></div>
 </div>
 <div class="card" style="margin:0">
-<h3 class="sec">佩利科 <span style="font-size:.8rem;color:var(--ink-pale)">Gisèle Pelicot</span></h3>
+<div class="anode"><img src="../art/authors/pelicot.jpg" alt="Pelicot" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">佩利科 <span style="font-size:.8rem;color:var(--ink-pale)">Gisèle Pelicot</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1952-12-07 · Villingen, Germany → Île de Ré · French</p>
 <p data-zh style="font-size:.9rem">la honte change de camp——羞耻要易边。被书写者变成书写者；主体性可以被拿回来。</p><p data-en style="font-size:.9rem">Shame must change sides. From written-about to writer; subjectivity reclaimed.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">#MeToo 档案 / 见证文学</span></div>
 </div>
 <div class="card" style="margin:0">
-<h3 class="sec">佩里尼翁 <span style="font-size:.8rem;color:var(--ink-pale)">Judith Perrignon</span></h3>
+<div class="anode"><img src="../art/authors/perrignon.png" alt="Perrignon" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">佩里尼翁 <span style="font-size:.8rem;color:var(--ink-pale)">Judith Perrignon</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1967 · 巴黎（journaliste de formation） · French</p>
 <p data-zh style="font-size:.9rem">把第一人称还给经历者：从 Van Gogh 兄弟到 FDR 到幸存者——一台记者的录音笔转写成生命。</p><p data-en style="font-size:.9rem">First person returned to those who lived it: Van Gogh brothers, FDR, survivors — a reporter&#x27;s tape as life-writer.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">法式传记/证言转写</span></div>
 </div>
 <div class="card" style="margin:0">
-<h3 class="sec">萬田緑平 <span style="font-size:.8rem;color:var(--ink-pale)">萬田緑平 · Ryokhei Manda</span></h3>
+<div class="anode"><img src="../art/authors/manda.jpg" alt="Manda" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">萬田緑平 <span style="font-size:.8rem;color:var(--ink-pale)">萬田緑平 · Ryokhei Manda</span></h3></div></div>
 <p style="font-size:.76rem;color:var(--gold-dim)">1964 · 东京日野 → 前橋（群馬） · Japanese</p>
 <p data-zh style="font-size:.9rem">延命より満足、治療より尊厳。2000+ 例在宅看取り，把死亡从 ICU 请回自家餐桌。</p><p data-en style="font-size:.9rem">Dignity over prolonging. 2,000+ home deaths — death moved from ICU back to the family table.</p>
 <div style="margin-top:.6rem"><span class="conf c-ok">日本在宅緩和ケア 生死观话语场</span></div>
@@ -182,7 +231,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 </tbody></table></div>
 <h2 class="part" data-both><span data-zh>五 · 每位作者 Deep dossiers</span><span data-en>V · Per-author dossiers</span></h2>
 <div class="card" id="mandel">
-<h3 class="sec">曼德尔 · Mandel</h3>
+<div class="anode"><img src="../art/authors/mandel.jpg" alt="Mandel" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">曼德尔 · Mandel</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1979</td><td><div data-zh>生于 Merville, BC；父（美裔）越战拒役水管工、母（加裔）家暴机构社工；五兄妹</div><div data-en>born Merville, BC; American-Vietnam-C.O. father; social-worker mother; five kids</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -198,6 +247,41 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-09</td><td><div data-zh>第 7 部长篇《Exit Party》（Knopf 2026-09-15）；「最政治、最酷儿、最好」</div><div data-en>Exit Party out 2026-09-15; &#x27;my most political, most queer, best novel&#x27;</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
+<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Exit Party</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+<circle cx="761.8" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="761.8" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2022</text>
+<text x="761.8" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Sea of Tranquility</text>
+<circle cx="727.7" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="727.7" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2020</text>
+<text x="727.7" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Glass Hotel</text>
+<circle cx="625.5" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="625.5" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2014</text>
+<text x="625.5" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Station Eleven</text>
+<circle cx="591.4" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="591.4" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2012</text>
+<text x="591.4" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Lola Quartet</text>
+<circle cx="557.3" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="557.3" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2010</text>
+<text x="557.3" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Singer&#x27;s Gun</text>
+<circle cx="540.3" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="540.3" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2009</text>
+<text x="540.3" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Last Night in Montreal</text>
+</svg><p class="cap">曼德尔 · Emily St. John Mandel (née Fairbanks) 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2009</td><td><b>Last Night in Montreal</b></td><td><div data-zh>处女作；蒙特利尔</div><div data-en>debut; Montreal</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2010</td><td><b>The Singer&#x27;s Gun</b></td><td><div data-zh>Prix Mystère de la Critique 2014；Exit Party 的阿里/安东/格里森源头</div><div data-en>Prix Mystère 2014; A-side DNA of Exit Party</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -250,7 +334,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">The Lola Quartet 具体奖项（缩写来源不确定） <span class="conf c-part">○</span></div>
 </div>
 <div class="card" id="vargas">
-<h3 class="sec">瓦尔加 · Vargas</h3>
+<div class="anode"><img src="../art/authors/vargas.jpg" alt="Vargas" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">瓦尔加 · Vargas</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1957</td><td><div data-zh>生于巴黎；父超现实主义圈作家 Philippe Audoin；孪生姐 Jo；兄 Stéphane</div><div data-en>born Paris; surrealist-writer father; twin Jo; brother Stéphane</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -264,6 +348,32 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-04-08</td><td><div data-zh>《Une unique lueur》——Adamsberg #11（Flammarion）</div><div data-en>Une unique lueur, Adamsberg #11</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
+<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Une unique lueur</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+<circle cx="676.6" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="676.6" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2017</text>
+<text x="676.6" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Quand sort la recluse</text>
+<circle cx="403.9" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="403.9" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2001</text>
+<text x="403.9" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Pars vite et reviens t</text>
+<circle cx="301.7" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="301.7" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">1995</text>
+<text x="301.7" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Debout les morts / Les</text>
+</svg><p class="cap">瓦尔加 · Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1995</td><td><b>Debout les morts / Les Évangélistes</b></td><td><div data-zh>三部曲第一部</div><div data-en>first of The Evangelists trilogy</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2001</td><td><b>Pars vite et reviens tard</b></td><td><div data-zh>破圈代表作</div><div data-en>breakout</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -303,7 +413,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">CNRS 结束具体年份（1990s 末？）跨源不一 <span class="conf c-part">◐</span></div>
 </div>
 <div class="card" id="lemaitre">
-<h3 class="sec">勒梅特 · Lemaitre</h3>
+<div class="anode"><img src="../art/authors/lemaitre.jpg" alt="Lemaitre" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">勒梅特 · Lemaitre</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1951</td><td><div data-zh>生于巴黎</div><div data-en>born Paris</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -314,6 +424,38 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2022–2026</td><td><div data-zh>Les Années glorieuses 四部曲：Le Grand Monde→Le Silence et la colère→… →Les Belles Promesses（终章 2026-01-06）</div><div data-en>Glorious Years quartet, ending Les Belles Promesses 2026-01-06</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
+<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Les Belles Promesses</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+<circle cx="778.9" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="778.9" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2023</text>
+<text x="778.9" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Le Silence et la colèr</text>
+<circle cx="761.8" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="761.8" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2022</text>
+<text x="761.8" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Le Grand Monde</text>
+<circle cx="608.4" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="608.4" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2013</text>
+<text x="608.4" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Au revoir là-haut</text>
+<circle cx="574.3" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="574.3" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2011</text>
+<text x="574.3" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Alex</text>
+<circle cx="489.1" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="489.1" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2006</text>
+<text x="489.1" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Travail soigné</text>
+</svg><p class="cap">勒梅特 · Pierre Lemaitre 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2006</td><td><b>Travail soigné</b></td><td><div data-zh>出道 polar</div><div data-en>debut</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2011</td><td><b>Alex</b></td><td><div data-zh>反转式施害者峰作</div><div data-en>twist peak</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -349,7 +491,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">心理学家职业的精确时间线（1970s-80s 具体岗位） <span class="conf c-part">◐</span></div>
 </div>
 <div class="card" id="pelicot">
-<h3 class="sec">佩利科 · Pelicot</h3>
+<div class="anode"><img src="../art/authors/pelicot.jpg" alt="Pelicot" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">佩利科 · Pelicot</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1952-12-07</td><td><div data-zh>生于德国菲林根（Villingen），德军家庭出身、入法籍</div><div data-en>born Villingen, Germany; French-naturalized</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -365,6 +507,23 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-02-17</td><td><div data-zh>回忆录《Et la joie de vivre》22 语同步发行</div><div data-en>memoir out in 22 languages</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
+<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Et la joie de vivre (A</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+</svg><p class="cap">佩利科 · Gisèle Pelicot 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2026</td><td><b>Et la joie de vivre (A Hymn to Life)</b></td><td><div data-zh>本批书单法国证人；22 语同步</div><div data-en>this crop&#x27;s French testament</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
@@ -397,7 +556,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">离婚/再婚年份多源冲突——正文回避 <span class="conf c-bad">✗</span></div>
 </div>
 <div class="card" id="perrignon">
-<h3 class="sec">佩里尼翁 · Perrignon</h3>
+<div class="anode"><img src="../art/authors/perrignon.png" alt="Perrignon" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">佩里尼翁 · Perrignon</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1991–2007</td><td><div data-zh>Libération 记者</div><div data-en>reporter at Libération</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -407,6 +566,32 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-02</td><td><div data-zh>与 Pelicot 的《Et la joie de vivre》出版</div><div data-en>Et la joie de vivre published with Pelicot</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
+<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Et la joie de vivre</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+<circle cx="693.7" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="693.7" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2018</text>
+<text x="693.7" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">L&#x27;Amour d&#x27;après</text>
+<circle cx="642.5" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="642.5" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2015</text>
+<text x="642.5" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Et tu n&#x27;es pas revenu</text>
+<circle cx="574.3" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="574.3" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2011</text>
+<text x="574.3" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">PTSD: la chasse est ou</text>
+</svg><p class="cap">佩里尼翁 · Judith Perrignon 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2011</td><td><b>PTSD: la chasse est ouverte</b></td><td><div data-zh>创伤在场的叙事方法</div><div data-en>trauma-in-present-tense method</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
 <tr><td>2015</td><td><b>Et tu n&#x27;es pas revenu</b></td><td><div data-zh>与 Loridan-Ivens</div><div data-en>with Loridan-Ivens</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -440,7 +625,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">Springsteen 主题系列确切年份（2017 vs 2023） <span class="conf c-part">◐</span></div>
 </div>
 <div class="card" id="manda">
-<h3 class="sec">萬田緑平 · Manda</h3>
+<div class="anode"><img src="../art/authors/manda.jpg" alt="Manda" class="aface" loading="lazy"><div style="min-width:0"><h3 class="sec">萬田緑平 · Manda</h3></div></div>
 <h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1964</td><td><div data-zh>东京日野生；大学时代跳级、2 浪后入群馬大学医学部（1991 年卒）</div><div data-en>born Hino, Tokyo; two gap years; Gunma Medical 1991</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -452,6 +637,29 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-07</td><td><div data-zh>累计 15 万部超</div><div data-en>150k+ copies</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
+<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
+<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
+<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2025</text>
+<line x1="220.2" y1="75.36" x2="220.2" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.2" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
+<line x1="394.4" y1="75.36" x2="394.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="394.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
+<line x1="568.7" y1="75.36" x2="568.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="568.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
+<line x1="742.9" y1="75.36" x2="742.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="742.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
+<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2025</text>
+<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">棺桶まで歩こう</text>
+<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
+<circle cx="742.9" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="742.9" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2020</text>
+<text x="742.9" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">がん治療とロングテール</text>
+<circle cx="690.6" cy="79.36" r="4" fill="#6C8AAF" />
+<text x="690.6" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2017</text>
+<text x="690.6" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">言語化できない痛み（?）</text>
+</svg><p class="cap">萬田緑平 · 萬田緑平 · Ryokhei Manda 作品年表（金环 = 本批书单）</p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2017</td><td><b>言語化できない痛み（?）</b></td><td><div data-zh>系列首作（书名以书评目录核）</div><div data-en>first nonfiction (title id from reviews)</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
 <tr><td>2020</td><td><b>がん治療とロングテール</b></td><td><div data-zh>治疗与「长尾」的批判</div><div data-en>treatment &amp; the long tail</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>

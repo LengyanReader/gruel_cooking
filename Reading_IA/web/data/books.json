@@ -23,9 +23,22 @@
       "isbn": "9780593321461 · CA 9781443466141 · UK 9781035081288",
       "publines_zh": "Knopf · 2026-09-15 · 320pp · $32",
       "publines_en": "Knopf · 2026-09-15 · 320pp · $32",
+      "rating": {
+        "goodreads": {"score": 4.37, "count": 345, "reviews": 149},
+        "note_zh": "Goodreads 预售期评分（2026-09，发行前页面）",
+        "note_en": "Goodreads pre-release rating (Sep 2026, pre-publication page)"
+      },
+      "textlinks": [
+        {"zh": "企鹅兰登书屋作者页（含在版书目/Look Inside 预览入口）", "en": "Penguin Random House author page (incl. Look Inside)", "url": "https://www.penguinrandomhouse.com/authors/222154/emily-st-john-mandel"},
+        {"zh": "TODAY 首章试读 · Read the First Page", "en": "TODAY — Read the First Page", "url": "https://www.today.com/books/books-reading/exit-party-emily-st-john-mandel-read-first-page-rcna597746"},
+        {"zh": "Goodreads 评分与读者评论", "en": "Goodreads ratings & reviews", "url": "https://www.goodreads.com/book/show/245325201-exit-party"},
+        {"zh": "NPR/WFAE 书评（含开篇引文与派对照述）", "en": "NPR/WFAE review (with opening & party prose)", "url": "https://www.wfae.org/npr-arts-life/2026-09-09/its-2031-and-the-u-s-has-come-undone-in-emily-st-john-mandels-exit-party"}
+      ],
       "meta_zh": "第七部长篇 · 最政治化之作",
       "meta_en": "seventh novel · her most political",
       "baseline_conf": "✓ 出版信息四级源核实；情节以 ◐ 为主（首寡摘要单源）",
+      "read_status": "未通读全文 · 待读后更新（当前为二手/预报资料 `◐`）",
+      "read_status_en": "not yet read in full · refresh after reading (secondary/press material now `◐`)",
       "why_zh": "在美国自身极化的当下，读一部把「两个美国」写成一确二真的小说——现实已经在分叉，小说只是把它显影。",
       "why_en": "In a moment of American fracturing, a novel that writes \"two Americas\" as one-true-two — reality is already forking; fiction only develops the film.",
       "background": {
@@ -324,9 +337,21 @@
       "isbn": "978-2-08-016071-3 (broché) · 978-2-08-016097-3 (EPUB)",
       "publines_zh": "Flammarion · 2026-04-08 · 528pp · 23 €",
       "publines_en": "Flammarion · 2026-04-08 · 528pp · €23",
+      "rating": {
+        "goodreads": {"score": 3.92, "count": 660, "reviews": 95},
+        "note_zh": "Goodreads 评分（2026-04-08 出版后）",
+        "note_en": "Goodreads rating (since 2026-04-08)"
+      },
+      "textlinks": [
+        {"zh": "Les Libraires 在线翻书 EPUB/PDF + 免费节选 PDF", "en": "Les Libraires feuilleter EPUB/PDF + free extract PDF", "url": "https://www.leslibraires.ca/livres/une-unique-lueur-9782898114601"},
+        {"zh": "Flammarion 官方页 · Feuilleter 预览", "en": "Flammarion official page · Feuilleter preview", "url": "https://editions.flammarion.com/une-unique-lueur/9782080160713"},
+        {"zh": "Goodreads 评分与读者讨论", "en": "Goodreads ratings & discussion", "url": "https://www.goodreads.com/book/show/247037487"}
+      ],
       "meta_zh": "Adamsberg 系列第 11 部（2026-04-08）",
       "meta_en": "Adamsberg #11 (2026-04-08)",
       "baseline_conf": "✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入）",
+      "read_status": "未通读全文 · 待读后更新（当前情节仅依据已核预告 `◐/○`）",
+      "read_status_en": "not yet read in full · refresh after reading (plot from verified previews only `◐/○`)",
       "why_zh": "当凶案被改写成艺术，罪案小说本身也在追问——我们讲述残酷时，用的是谁的眼睛。",
       "why_en": "When murder is rewritten as art, the crime novel asks back — whose eyes are we using when we narrate cruelty?",
       "background": {
@@ -461,9 +486,20 @@
       "isbn": "9782702191477",
       "publines_zh": "Calmann-Lévy · 2026-01-06 · 512pp",
       "publines_en": "Calmann-Lévy · 2026-01-06 · 512pp",
+      "rating": {
+        "goodreads": {"score": 4.22, "count": 1603, "reviews": 0},
+        "note_zh": "Goodreads 作者书目页均分（Les Années glorieuses #4）",
+        "note_en": "Goodreads average from author list (Glorious Years #4)"
+      },
+      "textlinks": [
+        {"zh": "Calmann-Lévy 官方页 · Feuilleter 预览", "en": "Calmann-Lévy official page · Feuilleter preview", "url": "https://www.calmann-levy.fr/livre/les-belles-promesses-9782702191477"},
+        {"zh": "Goodreads 作者书目（含本作均分 4.22）", "en": "Goodreads author bibliography (avg 4.22)", "url": "https://www.goodreads.com/author/list/822613.Pierre_Lemaitre"}
+      ],
       "meta_zh": "《Les Années glorieuses》四部曲·终章",
       "meta_en": "finale of the Glorious Years quartet",
       "baseline_conf": "✓ 出版信息核实（旧卡 ISBN 9782702189825/543pp 为错，已更正）",
+      "read_status": "未通读全文 · 待读后更新（当前为四部曲终章的预订与系列架构资料 `◐`）",
+      "read_status_en": "not yet read in full · refresh after reading (quartet-finale previews & series architecture now `◐`)",
       "why_zh": "当「光荣岁月」被供奉为集体记忆，谁有资格掀开它的阴影——小说与历史，法理与人情。",
       "why_en": "When the Glory Years are enshrined as collective memory, who is entitled to lift their shadow — fiction and history, law and feeling.",
       "background": {
@@ -588,9 +624,20 @@
       "isbn": "9782080497260",
       "publines_zh": "Flammarion · 2026-02-17 · 320pp",
       "publines_en": "Flammarion · 2026-02-17 · 320pp",
+      "rating": {
+        "goodreads": {"score": 4.66, "count": 35426, "reviews": 5303},
+        "note_zh": "Goodreads 评分（2026-02-17 出版后）",
+        "note_en": "Goodreads rating (since 2026-02-17)"
+      },
+      "textlinks": [
+        {"zh": "Flammarion 官方页 · Feuilleter 预览", "en": "Flammarion official page · Feuilleter preview", "url": "https://editions.flammarion.com/et-la-joie-de-vivre/9782080497260"},
+        {"zh": "Goodreads 评分与读者评论（3.5 万+）", "en": "Goodreads ratings & reviews (35k+)", "url": "https://www.goodreads.com/book/show/241452970"}
+      ],
       "meta_zh": "回忆录 · Mazan 案亲历者自述 · 22 语同步",
       "meta_en": "memoir · the Mazan survivor's own account · 22 languages",
       "baseline_conf": "✓ 出版核心数据核实；英文题名补全为全称",
+      "read_status": "通读中（2026-02 起）· 引句按原书逐步核对更新",
+      "read_status_en": "reading since 2026-02 · quotes cross-checked against the book as I go",
       "why_zh": "在宏大叙事的年份，读一段把「被摧毁的生活重新变成主语」的证词——羞耻易边，世界换了一边站。",
       "why_en": "In a year of grand narratives, a testimony that makes a destroyed life the subject again — shame changes sides, and the world changes sides too.",
       "background": {
@@ -748,9 +795,21 @@
       "isbn": "9784344987937",
       "publines_zh": "幻冬舎（幻冬舎新書）· 2025-11-27 · 224pp · ¥1034",
       "publines_en": "Gentosha (Gentosha Shinsho) · 2025-11-27 · 224pp · ¥1034",
+      "rating": {
+        "bookmeter": {"count": null, "reviews": null},
+        "sales": {"copies": "150000+", "note_zh": "2026-07-13（幻冬舎销售通讯）", "note_en": "2026-07-13 (Gentosha sales report)"}
+      },
+      "textlinks": [
+        {"zh": "幻冬舎官方页 · 試し読み入口（立ち読み）", "en": "Gentosha official page · sample read", "url": "https://www.gentosha.co.jp/book/detail/9784344987937"},
+        {"zh": "幻冬舎新书 特设页面（含部分试读）", "en": "Gentosha special feature page (sample)", "url": "https://www.gentosha.co.jp/s/kanoke"},
+        {"zh": "幻冬舎plus ·「歩けるうちは人は死にません」试读", "en": "Gentosha plus sample chapter", "url": "https://www.gentosha.jp/article/28320"},
+        {"zh": "Bookmeter 试读与读者感想", "en": "Bookmeter sample & reader notes", "url": "https://bookmeter.com/books/23037778"}
+      ],
       "meta_zh": "非虚构 · 居家临终关怀医师 · 2025-11-27 发售",
       "meta_en": "nonfiction · home-hospice physician · 2025-11-27",
       "baseline_conf": "✓ 出版数据核实（旧卡 ISBN 9784344987934 为错，真实为 9784344987937；发售日实为 11-27）",
+      "read_status": "未通读全文 · 待读后更新（当前以书评+目次+受访片语转述 `◐`）",
+      "read_status_en": "not yet read in full · refresh after reading (reviews/ToC/interview glosses now `◐`)",
       "why_zh": "在战争与速度的年份，一本让人放慢到「走到棺材为止」的书——死亡是唯一确定的时间表，读它如同预习。",
       "why_en": "In a year of war and speed, a book that slows you down to \"walk to the coffin\" — death is the only certain schedule; reading it is rehearsal.",
       "background": {

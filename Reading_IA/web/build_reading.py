@@ -6,12 +6,31 @@ Renders: per-book pages (read/books/<slug>.html), crop list page, archive page,
 authors graph page.  Bilingual via data-zh/data-en spans + a shared lang toggle
 (localStorage key from site.json).  Inline SVG visualizers only (no external deps).
 """
-import json, os, html, sys, argparse
+import json, os, html, sys, argparse, math, re
 from operator import itemgetter
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE, "..", ".."))
 DATA = os.path.join(BASE, "data")
+ART_DIR = os.path.join(ROOT, "docs", "reading_ia", "art")
+
+
+def cover_art(slug):
+    """Local cover image file (art/covers/<slug>.jpg|png) or None."""
+    for ext in ("jpg", "png"):
+        p = os.path.join(ART_DIR, "covers", slug + "." + ext)
+        if os.path.exists(p):
+            return p
+    return None
+
+
+def author_art(slug):
+    """Local author portrait (art/authors/<slug>.jpg/png) or None."""
+    for ext in ("jpg", "png"):
+        p = os.path.join(ART_DIR, "authors", slug + "." + ext)
+        if os.path.exists(p):
+            return p
+    return None
 
 CONF_COLOR = {"✓": "#3E7C5A", "◐": "#A5811D", "○": "#6C8AAF", "✗": "#B0413E"}
 EDGE_KIND = {
@@ -77,6 +96,7 @@ h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 
 h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
 .srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
 .srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
 .card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
 .ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
@@ -105,6 +125,53 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .gapbox ul{list-style:none}
 .gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
 .gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
 @media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 """
 
@@ -145,6 +212,204 @@ def srcnote(zh, en):
 def conf_token(c):
     r = {"✓": "c-ok", "◐": "c-part", "○": "c-part", "✗": "c-bad"}.get(c, "c-part")
     return '<span class="conf %s">%s</span>' % (r, esc(c))
+
+
+# ---------- hybrid card helpers (Goodreads × Douban) ----------
+PUB_COLOR = {
+    "Knopf": "#8C4A77", "HarperAvenue": "#6C8AAF", "Picador": "#7A8F6E",
+    "Flammarion": "#3E5C76", "Calmann-Lévy": "#A5811D", "Calmann-Levy": "#A5811D",
+    "幻冬舎新書": "#B0413E", "Gentosha": "#B0413E",
+}
+COUNTRY_COLOR = {"美国": "#3E5C76", "法国": "#1F3A63", "日本": "#B0413E"}
+
+
+def _esc_at(s):
+    return s.replace("@", " at ")
+
+
+def stars_svg(score, size=15, uid="r"):
+    """5-star Goodreads/Douban-style rating row as inline SVG."""
+    if not score:
+        return ""
+    w = size * 5 + 4 * 3
+    out = [f'<svg viewBox="0 0 {w} {size}" width="{w}" height="{size}" role="img" aria-label="{score}/5" xmlns="http://www.w3.org/2000/svg">']
+    star_d = "M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z"
+    for i in range(5):
+        x = i * (size / 15 * 15 + 3) if False else i * (size + 3)
+        frac = max(0.0, min(1.0, score - i))
+        clip = f"{uid}{i}"
+        out.append(f'<g transform="translate({x},0) scale({size/13:.4f})">')
+        out.append(f'<path d="{star_d}" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/>')
+        if frac >= 0.999:
+            out.append(f'<path d="{star_d}" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/>')
+        elif frac > 0.05:
+            out.append(f'<defs><clipPath id="{clip}"><rect x="0" y="0" width="{13.2*frac:.2f}" height="14"/></clipPath></defs>')
+            out.append(f'<path d="{star_d}" fill="#E8A317" stroke="#C9880F" stroke-width="0.6" clip-path="url(#{clip})"/>')
+        out.append('</g>')
+    out.append('</svg>')
+    return "".join(out)
+
+
+def rating_line(b, cls=""):
+    """Goodreads-style score row: stars + score + counts (Douban). Bilingual."""
+    r = b.get("rating") or {}
+    gr = r.get("goodreads")
+    if gr:
+        score = gr.get("score")
+        stars = stars_svg(score, uid="s" + b["slug"][:6]) if score else ""
+        score_el = f'<span class="score">{score:.2f}</span>' if score else ""
+        cnt_zh, cnt_en = [], []
+        if gr.get("count"):
+            n = f'{gr["count"]:,}'
+            cnt_zh.append(f'<span class="n">{n}</span> 评分')
+            cnt_en.append(f'<span class="n">{n}</span> ratings')
+        if gr.get("reviews"):
+            n = f'{gr["reviews"]:,}'
+            cnt_zh.append(f'<span class="n">{n}</span> 评论')
+            cnt_en.append(f'<span class="n">{n}</span> reviews')
+        note_zh = r.get("note_zh", "")
+        note_en = r.get("note_en", "")
+        zh = stars + score_el + '<span class="cnt">' + " · ".join(cnt_zh) + '</span>'
+        if note_zh:
+            zh += f'<span class="cnt" style="color:var(--ink-pale)">{esc(note_zh)}</span>'
+        en = stars + score_el + '<span class="cnt">' + " · ".join(cnt_en) + '</span>'
+        if note_en:
+            en += f'<span class="cnt" style="color:var(--ink-pale)">{esc(note_en)}</span>'
+        return f'<div class="bkrate {cls}" data-both><span data-zh>{zh}</span><span data-en>{en}</span></div>'
+    sales = r.get("sales")
+    if sales:
+        copies = sales.get("copies", "") or "—"
+        copies = re.sub(r"(\d)(?=(\d{3})+(\+|$))", r"\1,", copies)
+        note_zh = sales.get("note_zh", "")
+        note_en = sales.get("note_en", "")
+        zh = (f'<span class="score">{esc(copies)}</span><span class="cnt"> 部销量 · {esc(note_zh)}</span>'
+              if note_zh else f'<span class="score">{esc(copies)}</span><span class="cnt"> 部销量</span>')
+        en = (f'<span class="score">{esc(copies)}</span><span class="cnt"> copies sold · {esc(note_en)}</span>'
+              if note_en else f'<span class="score">{esc(copies)}</span><span class="cnt"> copies sold</span>')
+        return f'<div class="bkrate {cls}" data-both><span data-zh>{zh}</span><span data-en>{en}</span></div>'
+    return ""
+
+
+def read_chip(b):
+    """Douban-style shelf state: 想读 / 在读 / 读过."""
+    rs = b.get("read_status", "")
+    if "通读中" in rs:
+        zh, en, cls = "在读", "currently reading", "reading"
+    elif "读完" in rs or "已读" in rs:
+        zh, en, cls = "读过", "read", "reading"
+    else:
+        zh, en, cls = "想读 / 未通读", "want to read / not finished", "unread"
+    return f'<span class="status {cls}" data-both><span data-zh>{esc(zh)}</span><span data-en>{esc(en)}</span></span>'
+
+
+def pub_key(publisher):
+    """Primary publisher name (first of a multi-territory line)."""
+    return publisher.split(" · ")[0].split(" (")[0].strip()
+
+
+def pub_color(name):
+    for k, v in PUB_COLOR.items():
+        if k.lower() in name.lower():
+            return v
+    return "#777069"
+
+
+def svg_cover(b, w=126, h=178):
+    """Inline SVG book cover: country-coded field, vertical title, author, imprint."""
+    bg = COUNTRY_COLOR.get(b.get("country", ""), "#3E5C76")
+    accent = pub_color(pub_key(b.get("publisher", "")))
+    title = b["title_orig"]
+    author = b["author"].split(" & ")[0].split(" ")[-1]
+    imprint = pub_key(b.get("publisher", ""))
+    num = b.get("num", "")
+    # wrap title into short vertical lines
+    words = title.split()
+    lines, cur = [], ""
+    for w_ in words:
+        if len(cur) + len(w_) + (1 if cur else 0) <= 11:
+            cur = (cur + " " + w_).strip()
+        else:
+            if cur:
+                lines.append(cur)
+            cur = w_
+    if cur:
+        lines.append(cur)
+    if len(lines) > 4:
+        lines = lines[:4]
+        lines[-1] += "…"
+    k = h / 178.0           # height scale for small covers
+    cx = w / 2.0 + 4
+    sf = lambda v: int(v * k * 100) / 100.0
+    out = [f'<svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover {esc(title)}">']
+    out.append(f'<rect x="0" y="0" width="{w}" height="{h}" rx="5" fill="{bg}"/>')
+    out.append(f'<rect x="0" y="0" width="9" height="{h}" fill="{accent}"/>')
+    # inner frame
+    out.append(f'<rect x="17" y="{sf(10)}" width="{w-30}" height="{h-sf(20)}" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/>')
+    # num badge
+    out.append(f'<text x="{w-16}" y="{sf(30)}" text-anchor="end" font-family="LXGW WenKai,serif" font-size="{sf(15)}" font-weight="700" fill="#E9D89B">{esc(num)}</text>')
+    # title lines centered
+    y0 = sf(52)
+    ctx_fs = sf(15)
+    for i, ln in enumerate(lines):
+        out.append(f'<text x="{cx}" y="{y0+i*sf(20)}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="{ctx_fs}" font-weight="700" fill="#F7F1E3">{esc(ln)}</text>')
+    yb = y0 + len(lines) * sf(20) + sf(6)
+    out.append(f'<line x1="24" y1="{yb}" x2="{w-20}" y2="{yb}" stroke="rgba(233,216,155,.7)" stroke-width="1"/>')
+    out.append(f'<text x="{cx}" y="{yb+sf(20)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(9.5)}" fill="#D9E1EA">{esc(author)}</text>')
+    out.append(f'<text x="{cx}" y="{yb+sf(36)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(8)}" fill="rgba(217,225,234,.75)">{esc(imprint[:18])} · {esc(b.get("year",""))}</text>')
+    # spine label at bottom
+    out.append(f'<text x="{cx}" y="{h-sf(18)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(7.5)}" letter-spacing="1.5" fill="rgba(247,241,227,.6)">{esc(b.get("lang","").upper())} · {esc(b.get("country",""))}</text>')
+    out.append('</svg>')
+    return "".join(out)
+
+
+def pubviz_svg(books, width=760):
+    """Publisher × books bar (Goodreads-like shelf visualization): one colored block per book, width ∝ pages."""
+    groups = {}
+    for b in books:
+        k = pub_key(b.get("publisher", ""))
+        groups.setdefault(k, []).append(b)
+    rows = []
+    maxp = 1
+    for k, bs in groups.items():
+        for b in bs:
+            try:
+                p = int(str(b.get("pages", "0")).split()[0])
+            except Exception:
+                p = 300
+            maxp = max(maxp, p)
+        rows.append((k, bs))
+    html_out = ['<div class="pubviz">']
+    for k, bs in rows:
+        col = pub_color(k)
+        blocks = []
+        for b in bs:
+            try:
+                p = int(str(b.get("pages", "0")).split()[0])
+            except Exception:
+                p = 300
+            wpx = max(34, int(150 + 330 * p / maxp))
+            short = b["title_orig"][:16]
+            blocks.append(f'<div class="blk" style="background:{col};width:{wpx}px" title="{esc(b["title_orig"])} · {p}pp"><span>{esc(short)}</span></div>')
+        html_out.append(f'<div class="row"><div class="pname"><span class="dot" style="background:{col}"></span>{esc(k)}</div>'
+                        f'<div class="bar">{"".join(blocks)}<span class="cnt">×{len(bs)}</span></div></div>')
+    html_out.append('</div>')
+    return "".join(html_out)
+
+
+def textlinks_block(b):
+    """Original-text / preview links only — no scraped content (per directive)."""
+    tls = b.get("textlinks") or []
+    if not tls:
+        return ""
+    rows = []
+    for t in tls:
+        dom = t["url"].split("/")[2]
+        rows.append(f'<a href="{esc(t["url"])}" target="_blank" rel="noopener">'
+                    f'<span data-zh>{esc(t["zh"])}</span><span data-en>{esc(t["en"])}</span>'
+                    f'<span class="dom">{esc(dom)} ↗</span></a>')
+    return ('<h3 class="sec" data-both><span data-zh>原文与试读 · Original text &amp; previews</span>'
+            '<span data-en>Original text &amp; previews</span></h3>'
+            '<div class="tl-list">' + "".join(rows) + '</div>')
 
 
 def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h1_en=None, hero_sub_en=None):
@@ -318,6 +583,57 @@ def svg_timeline(flow_nodes, width=900):
     return "\n".join(out)
 
 
+# ---------- SVG: works × years ----------
+def svg_works_years(a, width=860):
+    """Per-author works × years timeline: one spine, dots labeled with titles.
+    The current-crop book is highlighted in gold with a ring."""
+    ymin = None
+    ys = []
+    for w in a["works"]:
+        y = w["y"]
+        if y.isdigit():
+            y = int(y)
+        yy = (y if isinstance(y, int) else None)
+        ys.append((w, y, yy))
+    ints = [yy for (_, _, yy) in ys if yy is not None]
+    if not ints:
+        return ""
+    ymin, ymax = min(ints), max(ints)
+    if ymin > 1980:
+        ymin = 1980
+    year_w = (ymax - ymin) or 1
+    H = 128
+    x0, x1 = 46, width - 30
+    out = [f'<svg viewBox="0 0 {width} {H}" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">']
+    base = H * 0.62
+    out.append(f'<line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}" stroke="#A5811D" stroke-width="1.2"/>')
+    out.append(f'<text x="{x0-8}" y="{base+4}" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">{ymin}</text>')
+    out.append(f'<text x="{x1+4}" y="{base+4}" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">{ymax}</text>')
+    for t in range((ymin // 10) * 10 + 10, ymax, 10):
+        if t <= ymin:
+            continue
+        tx = x0 + (t - ymin) / year_w * (x1 - x0)
+        out.append(f'<line x1="{tx:.1f}" y1="{base-4}" x2="{tx:.1f}" y2="{base+4}" stroke="#C9BFA6" stroke-width="0.8"/>')
+        out.append(f'<text x="{tx:.1f}" y="{base+17}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">{t}</text>')
+    for i, (w, y, yy) in enumerate(reversed(ys)):
+        if yy is None:
+            continue
+        k = (yy - ymin) / year_w
+        cx = x0 + k * (x1 - x0)
+        top = i % 2 == 0
+        cy = base - 18 if top else base + 18
+        is_crop = w.get("crop")
+        fill = "#C9A227" if is_crop else "#6C8AAF"
+        ring = 'stroke="#E9D89B" stroke-width="2"' if is_crop else ""
+        out.append(f'<circle cx="{cx:.1f}" cy="{base}" r="{5 if is_crop else 4}" fill="{fill}" {ring}/>')
+        out.append(f'<text x="{cx:.1f}" y="{cy:.1f}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="{"#B08A2E" if is_crop else "#7C7568"}">{y}</text>')
+        out.append(f'<text x="{cx:.1f}" y="{cy + (16 if top else -8):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="{("#C9A227" if is_crop else "#4A4438")}">{esc(str(w["title"])[:22])}</text>')
+        if is_crop:
+            out.append(f'<text x="{cx:.1f}" y="{cy + (28 if top else -20):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>')
+    out.append('</svg>')
+    return "\n".join(out)
+
+
 # ---------- book page ----------
 def blk(label, zh, en, cls="card"):
     return f'<div class="{cls}"><h3 class="sec" data-both><span data-zh>{esc(label)}</span><span data-en>{esc(label)}</span></h3>{zh_en(zh, en)}</div>'
@@ -335,8 +651,28 @@ def book_page(site, book, crop):
     s.append(srcnote(
         "<b>来源说明。</b>" + esc(book["baseline_conf"]) + " · 档案：" + esc(book["id"]) + "（Books）核心数据经四级核实，情节细处标 ◐/○。",
         "<b>Provenance.</b> " + esc(book["baseline_conf"]) + " · record: " + esc(book["id"]) + ". Publication facts verified; plot details marked ◐/○."))
+    # read status banner
+    if book.get("read_status"):
+        rs_en = book.get("read_status_en", book["read_status"])
+        s.append('<div class="readban" data-both><span data-zh>%s</span><span data-en>%s</span></div>' % (
+            esc(book["read_status"]), esc(rs_en)))
+    # rating strip (Douban/Goodreads).
+    rating_html = rating_line(book)
+    if rating_html:
+        cov = cover_art(book["slug"])
+        cover_el = (f'<img src="../../art/covers/{esc(os.path.basename(cov))}" alt="{esc(book["title_orig"])}" style="width:88px;height:124px;object-fit:cover;border-radius:6px;box-shadow:0 4px 12px rgba(38,38,31,.2)" loading="lazy">'
+                    if cov else svg_cover(book, 88, 124))
+        aface = author_art(book["author_slug"])
+        if aface:
+            cover_el += f'<a href="../../authors/index.html#{esc(book["author_slug"])}" title="{esc(book["author"])}"><img src="../../art/authors/{esc(os.path.basename(aface))}" alt="{esc(book["author"])}" class="aface" loading="lazy"></a>'
+        s.append('<div class="card" style="display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.9rem 1.2rem">'
+                 + cover_el + '<div>' + rating_html + read_chip(book) + '</div></div>')
     # why
     s.append(blk("为何此刻 · Why now", book["why_zh"], book["why_en"]))
+    # original text / preview links (links only, no scraped content)
+    tl = textlinks_block(book)
+    if tl:
+        s.append('<div class="card" id="textlinks">' + tl + '</div>')
     # background
     s.append(blk("背景 · Background", book["background"]["zh"], book["background"]["en"]))
     s.append('<p class="tok">' + conf_token(book["background"]["conf"]) + ' <span class="hidden"></span></p>')
@@ -374,6 +710,8 @@ def book_page(site, book, crop):
     if book.get("craft"):
         for c in book["craft"]:
             s.append(f'<div class="card"><p>{esc(c["zh"])}</p><p style="color:var(--ink-soft);font-size:.9rem">{esc(c["en"])}</p></div>')
+    else:
+        s.append(f'<div class="srcnote">{zh_en("待通读原书后补充。", "Craft notes come after the full read.")}</div>')
     # excerpts
     s.append('<h2 class="part" data-both><span data-zh>精彩片段 · Excerpts</span><span data-en>Notable excerpts</span></h2>')
     if book.get("excerpts"):
@@ -421,19 +759,74 @@ def crop_page(site, crop, books):
     s.append(srcnote(
         '<b>来源说明。</b>本清单由 <code>web/data/books.json</code> 驱动（generator: build_reading.py）；每部均经 websearch/webfetch 定位实际版本（W2）。出版信息 <code>✓</code> 核实；情节细处标 <code>◐/○</code>。点击各书卡进入单书页码。',
         '<b>Provenance.</b> This list is driven by <code>web/data/books.json</code> (generator: build_reading.py); each title located &amp; verified (W2). Pub facts <code>✓</code>; plot details <code>◐/○</code>. Click a card for the per-book page.'))
+    s.append(srcnote(
+        '<b>书封与照片。</b>书封图取自各出版社/书店公开页（<code>docs/reading_ia/art/covers/</code>，仅本地引用）；作者照片取自 Wikimedia Commons 等公开来源，版权归原作者，个人笔记内引用。',
+        '<b>Covers &amp; portraits.</b> Cover art referenced locally from publisher/bookseller pages (<code>art/covers/</code>); author photos from public sources (Wikimedia Commons etc.). All rights remain with their owners; cited here for a personal reading journal.'))
     for i, b in enumerate(books, 1):
-        s.append(f'<div class="card">')
-        s.append('<div class="b-num" data-both style="font-family:var(--ff-display);color:var(--gold-dim);font-size:.85rem;letter-spacing:.08em"><span data-zh>%s · %s</span><span data-en>%s · %s</span></div>' % (b["num"], b["country"], chr(64+i), b["country_en"]))
-        s.append(f'<h3 class="sec"><span data-zh>{esc(b["title_zh"])} <span style="color:var(--lapis)">{esc(b["title_orig"])}</span></span><span data-en>{esc(b["title_orig"])} — <span style="color:var(--lapis)">{esc(b["author"])}</span></span></h3>')
-        s.append('<p style="font-size:.82rem;color:var(--ink-pale)">%s · %s · conf %s</p>' % (esc(b["year"]), esc(b["publines_zh"]), esc(b["baseline_conf"].split("；")[0] if "；" in b["baseline_conf"] else b["baseline_conf"])))
-        s.append('<div class="why" style="margin-top:.6rem;color:var(--ink-soft);font-style:italic"><p data-zh>%s</p><p data-en>%s</p></div>' % (esc(b["why_zh"]), esc(b["why_en"])))
-        s.append(f'<p style="margin-top:.7rem"><a class="pill" href="books/{esc(b["slug"])}.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a></p>')
-        # mini claims (first 2)
-        s.append('<ul style="list-style:none;margin-top:.5rem">')
-        for c in b.get("claims_list", []):
-            s.append('<li style="position:relative;padding-left:1rem;margin-bottom:.4rem"><span style="position:absolute;left:0;top:.5rem;width:7px;height:7px;border-radius:50%;background:var(--gold)"></span><b style="color:var(--gold-dim)">%s</b></li>' % esc(c))
-        s.append('</ul>')
+        s.append('<article class="bkcard">')
+        cov = cover_art(b["slug"])
+        if cov:
+            s.append(f'<a class="bkcover" href="books/{esc(b["slug"])}.html" aria-label="{esc(b["title_zh"])}"><img src="../art/covers/{esc(os.path.basename(cov))}" alt="{esc(b["title_orig"])}" loading="lazy"></a>')
+        else:
+            s.append(f'<a class="bkcover" href="books/{esc(b["slug"])}.html" aria-label="{esc(b["title_zh"])}">{svg_cover(b)}</a>')
+        s.append('<div class="bkbody">')
+        s.append('<div class="bkhead">'
+                 '<span class="bknum" data-both><span data-zh>%s · %s</span><span data-en>%s · %s</span></span>'
+                 '<span class="tag cn">%s</span></div>'
+                 % (esc(b["num"]), esc(b["country"]), chr(64 + i), esc(b["country_en"]), esc(b.get("lang", "").upper())))
+        s.append(f'<h3 class="bktitle"><a href="books/{esc(b["slug"])}.html"><span data-zh>{esc(b["title_zh"])}</span><span data-en>{esc(b["title_orig"])}</span> <span class="orig" data-both><span data-zh>{esc(b["title_orig"])}</span><span data-en>{esc(b["title_zh"])}</span></span></a></h3>')
+        s.append(f'<div class="bkauthor"><a href="../authors/index.html#{esc(b["author_slug"])}" data-both><span data-zh>{esc(b["author_zh"])}</span><span data-en>{esc(b["author"])}</span></a>'
+                 f' <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· {esc(b.get("author",""))}</span></div>')
+        s.append(rating_line(b))
+        # Douban-style publisher / date / pages / ISBN meta line
+        s.append(f'<div class="bkmeta" data-both><span data-zh>{esc(b["publines_zh"])} · ISBN {esc(str(b.get("isbn","")).split(" · ")[0])}</span>'
+                 f'<span data-en>{esc(b["publines_en"])} · ISBN {esc(str(b.get("isbn","")).split(" · ")[0])}</span></div>')
+        # tags: series / meta / country / publisher chip
+        s.append('<div class="bktags">')
+        s.append(f'<span class="tag pub" style="background:{pub_color(pub_key(b.get("publisher","")))}">{esc(pub_key(b.get("publisher","")))}</span>')
+        s.append(f'<span class="tag" data-both><span data-zh>{esc(b["country"])}</span><span data-en>{esc(b["country_en"])}</span></span>')
+        s.append(f'<span class="tag" data-both><span data-zh>{esc(b.get("meta_zh",""))}</span><span data-en>{esc(b.get("meta_en",""))}</span></span>')
+        s.append(read_chip(b))
         s.append('</div>')
+        # why (Goodreads blurb position)
+        s.append(f'<div class="bkwhy"><p data-zh>{esc(b["why_zh"])}</p><p data-en>{esc(b["why_en"])}</p></div>')
+        # claims strip (Douban short-review feel)
+        claims = b.get("claims_list") or []
+        if claims:
+            s.append('<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">')
+            for c in claims:
+                s.append('<li style="font-size:.78rem;color:var(--gold-dim)">· %s</li>' % esc(c))
+            s.append('</ul>')
+        # actions: dossier + first original-text link inline (Goodreads action buttons row)
+        s.append('<div class="bkact">')
+        s.append(f'<a class="pill sm" href="books/{esc(b["slug"])}.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>')
+        tl = (b.get("textlinks") or [])
+        if tl:
+            s.append(f'<a class="pill sm ext" href="{esc(tl[0]["url"])}" target="_blank" rel="noopener"><span data-zh>原文试读 · {esc(tl[0]["zh"])}</span><span data-en>Original text · {esc(tl[0]["en"])}</span></a>')
+            if len(tl) > 1:
+                s.append(f'<a class="pill sm" href="books/{esc(b["slug"])}.html#textlinks"><span data-zh>全部原文链接 {len(tl)} 条 →</span><span data-en>all {len(tl)} source links →</span></a>')
+        s.append('</div>')
+        s.append('</div></article>')
+    # publisher × books visualization (Goodreads-shelf style)
+    s.append('<h2 class="part" data-both><span data-zh>出版社 × 书 · Publishers &amp; shelves</span><span data-en>Publishers &amp; shelves</span></h2>')
+    s.append(srcnote(
+        '<b>可视化说明。</b>每行一个出版社（色块=出版社色），块宽∝页数，块内为书名——出版方、篇幅与批次分布一图读完。',
+        '<b>How to read.</b> One row per publisher (color = press); block width ∝ page count; titles inside — press, length and batch at a glance.'))
+    s.append(pubviz_svg(books))
+    # author × books mapping
+    s.append('<h2 class="part" data-both><span data-zh>作者 × 书 · Authors mapping</span><span data-en>Authors mapping</span></h2>')
+    s.append('<div class="pubviz">')
+    seen_auth = {}
+    for b in books:
+        seen_auth.setdefault(b["author_slug"], []).append(b)
+    for slug, bs in seen_auth.items():
+        col = COUNTRY_COLOR.get(bs[0].get("country", ""), "#777069")
+        links = " ".join(f'<a href="books/{esc(x["slug"])}.html" style="font-size:.78rem">{esc(x["title_orig"])}</a>' for x in bs)
+        auth_zh = bs[0]["author_zh"]; auth_en = bs[0]["author"]
+        s.append(f'<div class="row"><div class="pname"><span class="dot" style="background:{col}"></span>'
+                 f'<a href="../authors/index.html#{esc(slug)}" data-both><span data-zh>{esc(auth_zh)}</span><span data-en>{esc(auth_en)}</span></a></div>'
+                 f'<div class="bar" style="gap:.9rem">{links}</div></div>')
+    s.append('</div>')
     # verdict
     s.append('<h2 class="part" data-both><span data-zh>完备性核验 · Completeness review</span><span data-en>Completeness review</span></h2>')
     s.append('<div class="gapbox"><div class="v-line"><span class="badge">判定 ' + esc(crop["verdict_zh"]) + '</span><span data-zh>' + esc(crop["verdict_body_zh"]) + '</span><span data-en>' + esc(crop["verdict_body_en"]) + '</span></div><ul>')
@@ -477,12 +870,20 @@ def authors_page(site, authors, relations):
     s.append(srcnote(
         '<b>来源与位置。</b>节点与生平：<code>web/data/authors.json</code>（逐条附出处与把握）；边：唯一源 <code>relations/influences.md</code> 镜像 <code>web/data/relations.json</code>。可信度 <code>✓ 已核 · ◐ 一手/自述 · ○ 转述 · ✗ 争议</code>。',
         '<b>Source &amp; layout.</b> Nodes &amp; lives: <code>web/data/authors.json</code>; edges: single source <code>relations.json</code> (mirrors influences.md). Confidence <code>✓ verified · ◐ primary · ○ secondhand · ✗ disputed</code>.'))
+    s.append(srcnote(
+        '<b>照片。</b>作者照片取自公开来源（Wikimedia Commons 等），版权归原作者，仅个人笔记引用。',
+        '<b>Portraits.</b> Photos from public sources (Wikimedia Commons &amp;c.), rights remain with the owners; cited for a personal journal.'))
     # nodes
     s.append('<h2 class="part" data-both><span data-zh>一 · 节点 Nodes</span><span data-en>I · Nodes</span></h2>')
     s.append('<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem">')
     for a in authors:
         s.append('<div class="card" style="margin:0">')
-        s.append('<h3 class="sec">%s <span style="font-size:.8rem;color:var(--ink-pale)">%s</span></h3>' % (esc(a["name_zh"]), esc(a["name_native"])))
+        face = author_art(a["id"])
+        name_block = '<h3 class="sec">%s <span style="font-size:.8rem;color:var(--ink-pale)">%s</span></h3>' % (esc(a["name_zh"]), esc(a["name_native"]))
+        if face:
+            s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{name_block}</div></div>')
+        else:
+            s.append(name_block)
         s.append('<p style="font-size:.76rem;color:var(--gold-dim)">' + esc(a["born"]) + ' · ' + esc(a["native_lang"]) + '</p>')
         s.append('<p data-zh style="font-size:.9rem">' + esc(a["one_liner_zh"]) + '</p><p data-en style="font-size:.9rem">' + esc(a["one_liner_en"]) + '</p>')
         s.append('<div style="margin-top:.6rem"><span class="conf c-ok">' + esc(a["school_zh"]) + '</span></div>')
@@ -517,7 +918,12 @@ def authors_page(site, authors, relations):
     s.append('<h2 class="part" data-both><span data-zh>五 · 每位作者 Deep dossiers</span><span data-en>V · Per-author dossiers</span></h2>')
     for a in authors:
         s.append(f'<div class="card" id="{esc(a["id"])}">')
-        s.append('<h3 class="sec">' + esc(a["name_zh"]) + ' · ' + esc(a["slug_display"]) + '</h3>')
+        face = author_art(a["id"])
+        head = '<h3 class="sec">' + esc(a["name_zh"]) + ' · ' + esc(a["slug_display"]) + '</h3>'
+        if face:
+            s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{head}</div></div>')
+        else:
+            s.append(head)
         # timeline
         s.append('<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>')
@@ -526,6 +932,9 @@ def authors_page(site, authors, relations):
         s.append('</tbody></table></div>')
         # works
         s.append('<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>')
+        tline = svg_works_years(a)
+        if tline:
+            s.append('<div class="diagram">' + tline + '<p class="cap">' + esc(a["name_zh"]) + ' · ' + esc(a["name_native"]) + ' 作品年表（金环 = 本批书单）</p></div>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>')
         for w in a["works"]:
             s.append('<tr><td>%s</td><td><b>%s</b></td><td><div data-zh>%s</div><div data-en>%s</div></td><td class="conf">%s</td></tr>' % (esc(w["y"]), esc(w["title"]), esc(w["note_zh"]), esc(w["note_en"]), conf_token(w["conf"])))
