@@ -4,14 +4,14 @@
 <!-- en -->
 ## Abstract
 
-Over the past three decades, artificial intelligence has produced a sequence of landmark results in closed games and, increasingly, in mathematical research, accompanied by a public narrative of a "crisis of mathematics." The paper first reconstructs the prior work along three technical streams (1954–1965, 1968–1997, 2000–2020) and in the philosophical and sociological literatures that posed the same question earlier, showing that the positions taken in 2026 re-run an old argument with the burden of proof shifted from capability to authority. Taking nine groups of representative results publicly recorded between 2024 and 2026 as its evidential base, this study applies a five-question verification framework — honest framing, reproducibility, independent certification, symmetric disclosure, and whether the answer was found or made — and orders the results into a "staircase" model running from machine-graded to community-adjudicated layers. Five rival explanations of the resulting distribution of dispute — capability gradient, announcement incentive, certification regime, institutional latency, and resource concentration — are enumerated and tested against the record, and four observations that would refute the study are specified. A language thesis (signifier/signified), together with the Gödel–Turing limit results, then supports three findings: exactness is a property of the sign-system rather than of what it denotes; verification certifies grammar, never the object; and the "crisis" exhibits no symptoms in mathematical content — what is under renegotiation is employment, authority, prestige, and the meaning of professional labor. On this basis the paper reconstructs "mathematician" as a four-rung ladder of labor, decomposes the genius cult into five measurable causes, proposes a layered division of labor between machines and humans with a five-stage model of problem-solving, and corrects it with cross-civilizational evidence. The criterion proposed for "groundbreaking" work is that a breakthrough moves the border rather than the frontier; machines have broken walls inside given languages, with no public record yet of language-building — a standard that, on the evidence of Ramanujan's unposed questions, few humans satisfy either. The study concludes that the correctly named crisis is a social crisis of the mathematicians, whose normative implication is an agenda of disclosure, certification, and verification institutions rather than prohibition.
+Over the past three decades, artificial intelligence has produced a sequence of landmark results in closed games and, increasingly, in mathematical research, accompanied by a public narrative of a "crisis of mathematics." The paper first reconstructs the prior work along three technical streams (1954–1965, 1968–1997, 2000–2020) and in the philosophical and sociological literatures that posed the same question earlier, showing that the positions taken in 2026 re-run an old argument with the burden of proof shifted from capability to authority. Taking nine groups of representative results publicly recorded between 2024 and 2026 as its evidential base, this study applies a five-question verification framework — honest framing, reproducibility, independent certification, symmetric disclosure, and whether the answer was found or made — and orders the results into a "staircase" model running from machine-graded to community-adjudicated layers. Five rival explanations of the resulting distribution of dispute — capability gradient, announcement incentive, certification regime, institutional latency, and resource concentration — are enumerated and tested against the record, and four observations that would refute the study are specified; the audit apparatus behind them (corpus rules, an ordered decision rule for certification regimes, coding cards for the five questions, and two tables recording evidence maturity and self-reported figures) is supplied in Section 11. A language thesis (signifier/signified), together with the Gödel–Turing limit results, then supports three findings: exactness is a property of the sign-system rather than of what it denotes; verification certifies grammar, never the object; and the "crisis" exhibits no symptoms in mathematical content — what is under renegotiation is employment, authority, prestige, and the meaning of professional labor. On this basis the paper reconstructs "mathematician" as a four-rung ladder of labor, decomposes the genius cult into five measurable causes, proposes a layered division of labor between machines and humans with a five-stage model of problem-solving, and corrects it with cross-civilizational evidence. The criterion proposed for "groundbreaking" work is that a breakthrough moves the border rather than the frontier; machines have broken walls inside given languages, with no public record yet of language-building — a standard that, on the evidence of Ramanujan's unposed questions, few humans satisfy either. The study concludes that the correctly named crisis is a social crisis of the mathematicians, whose normative implication is an agenda of disclosure, certification, and verification institutions rather than prohibition.
 
 **Keywords:** artificial intelligence and mathematics; automated theorem proving; proof assistant; formal verification; certification regime; signifier and signified; mathematical community; verification crisis; Leiden Declaration
 
 <!-- zh -->
 ## 摘要
 
-过去三十年间，人工智能在封闭博弈乃至数学研究中接连产生标志性成果，「数学危机」的公共叙事随之流行。本文先在三条技术脉络（1954—1965、1968—1997、2000—2020）与更早提出同一问的哲学、社会学文献中重建前人工作，指出 2026 年诸立场不过是重演一场旧论，只是论证的负担已由「能力」移向「权威」。本文以 2024—2026 年公开记录的九组代表性成果为证据基础，以「表述是否诚实、能否复现、有无独立认证、披露是否对称、答案为发现还是制造」五项问题为核验框架，将上述成果排比为一座自机器自评层延伸至共同体裁断层的「台阶」模型；继而就争执在此模型上的分布列出五项竞争解释——能力梯度、公告诱因、认证体制、建制滞后、资源集中——逐一以记录相校，并明列足以推翻本文的四项观察。再以能指/所指之分配合哥德尔—图灵的限界结果，论证精确性是符号系统的性质而非被指之物的性质，核验所认证者为语法、永远不及对象；同时表明，数学内容并未显出危机征兆，实际处于重新谈判之中的是就业、权威、声望与劳动的意义。在此基础上，本文将「数学家」重释为四级劳动阶梯，把天才崇拜的成因拆解为五项可测量的社会心理因素，提出形式化之后机器与人的分层分工及解题五阶段模型，并以跨文明数学史材料对其加以修正。就「开创性」提出的判准是：突破挪动的是边界而非前线；机器已在给定语言中破壁，而造语言尚无公开记录——以拉马努金「未被提出的问题」为证，此判准对多数人类同样难以满足。研究结论为：得到正确命名的危机，是数学家的社会性危机；其规范含义在于将议程从「禁令」转向披露、认证与核验制度的建设。
+过去三十年间，人工智能在封闭博弈乃至数学研究中接连产生标志性成果，「数学危机」的公共叙事随之流行。本文先在三条技术脉络（1954—1965、1968—1997、2000—2020）与更早提出同一问的哲学、社会学文献中重建前人工作，指出 2026 年诸立场不过是重演一场旧论，只是论证的负担已由「能力」移向「权威」。本文以 2024—2026 年公开记录的九组代表性成果为证据基础，以「表述是否诚实、能否复现、有无独立认证、披露是否对称、答案为发现还是制造」五项问题为核验框架，将上述成果排比为一座自机器自评层延伸至共同体裁断层的「台阶」模型；继而就争执在此模型上的分布列出五项竞争解释——能力梯度、公告诱因、认证体制、建制滞后、资源集中——逐一以记录相校，并明列足以推翻本文的四项观察；其稽核装置（入录规则、判定认证体制的按序判准、五问的编码卡，以及记录证据成熟度与自报数字的两张表）俱列于第十一节。再以能指/所指之分配合哥德尔—图灵的限界结果，论证精确性是符号系统的性质而非被指之物的性质，核验所认证者为语法、永远不及对象；同时表明，数学内容并未显出危机征兆，实际处于重新谈判之中的是就业、权威、声望与劳动的意义。在此基础上，本文将「数学家」重释为四级劳动阶梯，把天才崇拜的成因拆解为五项可测量的社会心理因素，提出形式化之后机器与人的分层分工及解题五阶段模型，并以跨文明数学史材料对其加以修正。就「开创性」提出的判准是：突破挪动的是边界而非前线；机器已在给定语言中破壁，而造语言尚无公开记录——以拉马努金「未被提出的问题」为证，此判准对多数人类同样难以满足。研究结论为：得到正确命名的危机，是数学家的社会性危机；其规范含义在于将议程从「禁令」转向披露、认证与核验制度的建设。
 
 **关键词：** 人工智能与数学；自动定理证明；证明助手；形式化验证；认证体制；能指与所指；数学共同体；核验危机；莱顿宣言
 <!-- L1-end -->
@@ -24,17 +24,17 @@ Over the past three decades, artificial intelligence has produced a sequence of 
 
 For thirty years the progress of AI has been narrated as a siege: Deep Blue defeated Kasparov in 1997; AlphaGo reached the summit of Go in 2016; from 2024 machines entered olympiad mathematics; in May 2026 a conjecture open since 1946 was disproved by a model [1]; and in September of the same year a Millennium Prize problem was declared "apparently" settled, with its authorship contested in public [2][3]. Each stage was announced as the fall of the last stronghold of human mind; none of the strongholds held. This paper does not continue that narrative but replaces its question. Whether mathematics is in crisis is, on the evidence assembled below, indeterminate; whether mathematicians are in crisis is the empirically tractable question — and the two are systematically conflated in public discourse.
 
-The study proceeds in five movements. Section 2 reconstructs the prior work — three technical streams (1954–1965, 1968–1997, 2000–2020), the philosophical and sociological traditions that posed the same question earlier, and the fast literature of 2021–2026 — and names what these bodies of work leave unconnected. Section 3 fixes the analytic vocabulary used thereafter, rebuilds the syllogism on which the controversy actually rests, and enumerates five rival explanations of the pattern the record displays, specifying the observations that would discriminate among them and the four that would refute this study. The evidential layer (Section 4) then submits the period's loudest results to five verification questions — was the claim honestly framed; is it reproducible; was it independently certified; were failures disclosed as freely as successes; and did the machine find an answer already present in the literature or construct one that did not exist — and sorts the results into a staircase of certification regimes. The theoretical layer (Section 6) reads the same evidence through the signifier/signified distinction and the incompleteness results, deriving a bound on what verification can certify. The sociological layer (Sections 5, 7–9) treats the controversy itself as data: five published positions are reconstructed and shown to share one syllogism whose minor premise ("mathematics is a game") is true only of the formalized fragment; the profession is then modeled as a ladder of labor rather than a type of person; and the demarcation question "can machines pose groundbreaking problems" is answered with an explicit criterion. Section 8 derives the resulting division of labor; Section 10 states the conclusions.
+The study proceeds in five movements, with an audit apparatus appended. Section 2 reconstructs the prior work — three technical streams (1954–1965, 1968–1997, 2000–2020), the philosophical and sociological traditions that posed the same question earlier, and the fast literature of 2021–2026 — and names what these bodies of work leave unconnected. Section 3 fixes the analytic vocabulary used thereafter, rebuilds the syllogism on which the controversy actually rests, and enumerates five rival explanations of the pattern the record displays, specifying the observations that would discriminate among them and the four that would refute this study. The evidential layer (Section 4) then submits the period's loudest results to five verification questions — was the claim honestly framed; is it reproducible; was it independently certified; were failures disclosed as freely as successes; and did the machine find an answer already present in the literature or construct one that did not exist — and sorts the results into a staircase of certification regimes. The theoretical layer (Section 6) reads the same evidence through the signifier/signified distinction and the incompleteness results, deriving a bound on what verification can certify. The sociological layer (Sections 5, 7–9) treats the controversy itself as data: five published positions are reconstructed and shown to share one syllogism whose minor premise ("mathematics is a game") is true only of the formalized fragment; the profession is then modeled as a ladder of labor rather than a type of person; and the demarcation question "can machines pose groundbreaking problems" is answered with an explicit criterion. Section 8 derives the resulting division of labor; Section 10 states the conclusions. Section 11, set after the conclusions, reports the materials and methods: the corpus rules and the items they exclude, the ordered decision rule by which a certification regime is assigned, the coding cards behind the five questions, two audit tables, and the successor design that would turn this paper's ordering into a test.
 
-Two limitations are declared at the outset. First, several of the 2025–2026 episodes rest on institutional announcements and secondary reportage; all such items are tiered and flagged in the reference apparatus (一手 / 权威版本 / 学界共识·解读 / 存疑), and contested figures are cited as reported, not as settled. Second, this is a study of the mathematics community's verification practices, not of any formal system's soundness: no mathematical result of its own is claimed.
+Three limitations are declared at the outset. First, several of the 2025–2026 episodes rest on institutional announcements and secondary reportage; all such items are tiered and flagged in the reference apparatus (一手 / 权威版本 / 学界共识·解读 / 存疑), and contested figures are cited as reported, not as settled. Second, this is a study of the mathematics community's verification practices, not of any formal system's soundness: no mathematical result of its own is claimed. Third, the coding reported in Section 11 was executed by a single coder on public material alone; no inter-coder statistic is offered, which is why the cards, the decision rule and the cell-level citations are published in full — so that the coding may be disputed item by item rather than taken on trust.
 <!-- zh -->
 ## 一、问题的提出与研究设计
 
 过去三十年，人工智能的进展一直被叙述为一场围城：1997 年深蓝击败卡斯帕罗夫；2016 年 AlphaGo 登顶围棋；2024 年起机器进入奥林匹克数学；2026 年 5 月，一道自 1946 年悬置至今的猜想被模型证伪 [1]；同年 9 月，一道千禧年大奖难题被宣布「貌似」解决，署名归属随之公开争执 [2][3]。每一阶段都被宣告为人类心智最后堡垒的陷落，而每一座堡垒都未能守住。本文不延续这一叙事，而是替换它的问题：数学是否处于危机之中，以下文所集证据观之并无定论；数学家是否处于危机之中，才是可在经验层面处理的问题——而公共讨论系统性地混淆了两者。
 
-研究分五步推进。第二节重建前人工作，取三条技术脉络（1954—1965、1968—1997、2000—2020），益以更早提出同一问的哲学传统与社会学传统，殿以一拨跑得很快的近文献（2021—2026），末尾指明这几拨文献之间尚未接通的缺口。第三节定下此后所用的语汇，把论战真正赖以立足的那段三段论原样重建，并列出记录所示格局的五项竞争解释，同时说明足以在诸说之间断定的观察，以及足以推翻本文的四项观察。证据层（第四节）随之把同期最突出的成果交付五项核验问题——表述是否诚实、能否复现、有无独立认证、失败与成功是否获得对称披露、答案是自文献中*发现*还是被机器*制造*——并按认证机制的强弱排成一座「台阶」模型。理论层（第六节）以能指/所指之分与哥德尔—图灵限界结果重读同一批证据，推出核验在原则上所能认证者的界限。社会层（第五、七至九节）把论战本身当作材料：先行五派立场被重建，并被证明共享同一段三段论，其小前提（「数学是博弈」）只对已被形式化的部分成立；职业则被建模为一架劳动阶梯而非一种人；「机器能否提出开创性问题」这一划界问题得到明示的判准。第八节由是引出分工方案，第十节陈述结论。
+研究分五步推进，末了另附稽核装置一节。第二节重建前人工作，取三条技术脉络（1954—1965、1968—1997、2000—2020），益以更早提出同一问的哲学传统与社会学传统，殿以一拨跑得很快的近文献（2021—2026），末尾指明这几拨文献之间尚未接通的缺口。第三节定下此后所用的语汇，把论战真正赖以立足的那段三段论原样重建，并列出记录所示格局的五项竞争解释，同时说明足以在诸说之间断定的观察，以及足以推翻本文的四项观察。证据层（第四节）随之把同期最突出的成果交付五项核验问题——表述是否诚实、能否复现、有无独立认证、失败与成功是否获得对称披露、答案是自文献中*发现*还是被机器*制造*——并按认证机制的强弱排成一座「台阶」模型。理论层（第六节）以能指/所指之分与哥德尔—图灵限界结果重读同一批证据，推出核验在原则上所能认证者的界限。社会层（第五、七至九节）把论战本身当作材料：先行五派立场被重建，并被证明共享同一段三段论，其小前提（「数学是博弈」）只对已被形式化的部分成立；职业则被建模为一架劳动阶梯而非一种人；「机器能否提出开创性问题」这一划界问题得到明示的判准。第八节由是引出分工方案，第十节陈述结论。第十一节列在结论之后，交代材料与方法：入录的规则与其排除项、判定认证体制的按序判准、五问背后的编码卡、两张审计表，以及能把这套排序变成一项检验的后续设计。
 
-两点限制须预先声明。其一，2025—2026 年若干事件仅有机构公告与二手报道可据；凡此类条目，文末参考文献一律标注信度层级（一手 / 权威版本 / 学界共识·解读 / 存疑），有争议的数字按「据报道」征引，不视为定论。其二，本文研究所对象的是数学共同体的核验实践，而非任何形式系统的可靠性；本文不提出自身的数学结果。
+三点限制须预先声明。其一，2025—2026 年若干事件仅有机构公告与二手报道可据；凡此类条目，文末参考文献一律标注信度层级（一手 / 权威版本 / 学界共识·解读 / 存疑），有争议的数字按「据报道」征引，不视为定论。其二，本文研究所对象的是数学共同体的核验实践，而非任何形式系统的可靠性；本文不提出自身的数学结果。其三，第十一节所报的编码由单一编码者在公开材料上执行，本文不报编码者一致性统计量；编码卡、判准与逐格出处所以全文刊出，正为使这套编码可被逐格争执，而不必受人之信。
 <!-- L1-end -->
 
 ---
@@ -144,7 +144,7 @@ Four observations would break claims made here, and their absence is part of the
 
 ### 3.5 Material and method limits
 
-The corpus is the public record: institutional announcements, peer-reviewed papers, benchmark reports, and published position statements, in English and Chinese sources available to the author, closed on the date of the reference list. No interviews, no surveys, and no non-public artifacts were used, so all testimony about private motives is excluded by construction, and disputed episodes are tiered and flagged rather than resolved. The study's positive claims are ordering claims — about where disputes occur and under which regimes — not measurement claims; no new quantitative benchmark is produced here, and the numbers quoted in Section 4 are reported as their sources state them, with the reliability of each carried in the entry that documents it. Finally, the framing itself is contestable: a reader who holds that the formalized fragment is the whole of mathematics, or that significance is itself nothing beyond checkability, will find Sections 6 and 9 question-begging; that dispute is philosophical, and this study's aim is to make its exact location visible rather than to settle it.
+The corpus is the public record: institutional announcements, peer-reviewed papers, benchmark reports, and published position statements, in English and Chinese sources available to the author, closed on the date of the reference list. No interviews, no surveys, and no non-public artifacts were used, so all testimony about private motives is excluded by construction, and disputed episodes are tiered and flagged rather than resolved. The study's positive claims are ordering claims — about where disputes occur and under which regimes — not measurement claims; no new quantitative benchmark is produced here. The one statistic computed over the corpus, the small-sample association in Section 11.5, is reported as descriptive and expressly not as confirmation. The numbers quoted in Section 4 are reported as their sources state them, with the reliability of each carried in the entry that documents it. Finally, the framing itself is contestable: a reader who holds that the formalized fragment is the whole of mathematics, or that significance is itself nothing beyond checkability, will find Sections 6 and 9 question-begging; that dispute is philosophical, and this study's aim is to make its exact location visible rather than to settle it. How these limits were worked out — the corpus rules and the items they exclude, the decision rule assigning a certification regime, the coding cards behind the five questions, and the design that would convert the ordering into a test — is set out in Section 11.
 <!-- zh -->
 ## 三、分析范畴、核心论证的重建与竞争解释
 
@@ -180,7 +180,7 @@ The corpus is the public record: institutional announcements, peer-reviewed pape
 
 ### （五）材料与方法的限制
 
-语料是公共记录：机构公告、同行评审论文、基准报告与刊出的立场文，以作者可及的中英材料为限，截止之日见文末文献表。未用访谈、问卷与非公开材料，故一切关于私人动机的证词即由方法自外于本文；有争议之事按层级标注并存疑，不作裁断。本文的正面主张是排序性主张——关于争执生在何处、生于何种体制——不是测量性主张：此处不产出新的定量基准，第四节所引数字一律照其出处所述，其可靠程度由记它的那一条载明。最后，本文的框架自身亦可被争：若有人认已形式化那一角即数学全部，或认意义之外别无他物、可核即是意义，他会觉得第六节与第九节在所预设。那一争是哲学之争，本文之所为，是把它的确切位置照出来，不是替它了断。
+语料是公共记录：机构公告、同行评审论文、基准报告与刊出的立场文，以作者可及的中英材料为限，截止之日见文末文献表。未用访谈、问卷与非公开材料，故一切关于私人动机的证词即由方法自外于本文；有争议之事按层级标注并存疑，不作裁断。本文的正面主张是排序性主张（关于争执生在何处、生于何种体制），不是测量性主张：此处不产出新的定量基准，语料上算得的唯一统计量即第十一节（五）那个小样本关联，只作描述呈报，并声明不充作确认。第四节所引数字一律照其出处所述，其可靠程度由记它的那一条载明。最后，本文的框架自身亦可被争：若有人认已形式化那一角即数学全部，或认意义之外别无他物、可核即是意义，他会觉得第六节与第九节在所预设。那一争是哲学之争，本文之所为，是把它的确切位置照出来，不是替它了断。这些限制在本文之中如何一一应付——入录的规则与其排除项、判定认证体制的按序判准、五问背后的编码卡、以及能把这套排序变成一项检验的后续设计——俱见第十一节。
 <!-- L1-end -->
 
 ---
@@ -593,7 +593,7 @@ The title's question can now be answered in the study's own terms. A crisis *of 
 
 ### 10.3 Synthesis and further research
 
-The essayistic vocabulary of the controversy — "solve," "understand," "author," "replace" — collapses, on analysis, into relations of co-production: the unit-distance result *was* the meeting of a machine construction and nine human verifiers [1][42], as a working week made of many such meetings; the fear of human redundancy rests on a zero-sum picture of roles and a fixed stock of dignity, neither of which the labor-ladder model of Section 7 supports. What the machine supplies is patterns; what it does not, and cannot be shown to, supply is the wanting of them to be true — the demand side of attention, judgment, and care that organizes the whole profession. Three lines of further research follow directly: the pending adjudications of the 2025–2026 episodes flagged 存疑 herein, once primary records stabilize; the institutional effectiveness of verification regimes (e.g., whether machine-graded open-problem benchmarks displace framing disputes); and the longitudinal sociology of authorship norms as corporate-speed results become routine. The oldest division of labor needs no new justification: the banks hold, and the water runs; mathematics remains, as on the most conservative reading of its own two-thousand-year record, for the human who meets a pattern, wants it true, and wants to understand why.
+The essayistic vocabulary of the controversy — "solve," "understand," "author," "replace" — collapses, on analysis, into relations of co-production: the unit-distance result *was* the meeting of a machine construction and nine human verifiers [1][42], as a working week made of many such meetings; the fear of human redundancy rests on a zero-sum picture of roles and a fixed stock of dignity, neither of which the labor-ladder model of Section 7 supports. What the machine supplies is patterns; what it does not, and cannot be shown to, supply is the wanting of them to be true — the demand side of attention, judgment, and care that organizes the whole profession. Three lines of further research follow directly: the pending adjudications of the 2025–2026 episodes flagged 存疑 herein, once primary records stabilize; the institutional effectiveness of verification regimes (e.g., whether machine-graded open-problem benchmarks displace framing disputes); and the longitudinal sociology of authorship norms as corporate-speed results become routine. To these three the study adds its own audit apparatus, set out in Section 11 — corpus rules, the decision rule by which each regime was assigned, the coding cards behind the five questions, and two tables separating what is settled on primary records from what still rests on an announcement — so that each of the claims above can be contested at the cell where it was decided rather than at the paragraph where it was stated. The oldest division of labor needs no new justification: the banks hold, and the water runs; mathematics remains, as on the most conservative reading of its own two-thousand-year record, for the human who meets a pattern, wants it true, and wants to understand why.
 <!-- zh -->
 ## 十、结论
 
@@ -607,7 +607,166 @@ The essayistic vocabulary of the controversy — "solve," "understand," "author,
 
 ### （三）综合与后续研究
 
-论战词汇表里的「解出」「理解」「作者」「取代」，经分析纷纷塌缩为共同生产的关系：单位距离的结果*就是*机器构造与九位人类核验者的相遇本身 [1][42]，正如一个由许多此类相遇构成的工作周；「人被冗余」的恐惧，则以角色的零和货架与尊严的固定总量为预设——第七节的劳动阶梯模型两者都不支持。机器供给的是图案；它不曾供给、也无法被证明能够供给的，是盼图案成真那一桩意愿——注意力、判断与关心的全部需求侧，正是它组织着整个职业。后续研究顺势有三条线：本文标注存疑的 2025—2026 年诸案，待主记录齐备后的裁决；核验制度的实效（如机器阅卷的开放问题基准能否取代口径之争）；以及公司速度成果常态化之后，署名规范的纵贯社会学。最古老的分工无需新证：岸守着，水自流过；按数学自家两千年记录上最保守的读法，数学仍为那个遇见图案、盼图案成真、又想知道何以成真的人而在。
+论战词汇表里的「解出」「理解」「作者」「取代」，经分析纷纷塌缩为共同生产的关系：单位距离的结果*就是*机器构造与九位人类核验者的相遇本身 [1][42]，正如一个由许多此类相遇构成的工作周；「人被冗余」的恐惧，则以角色的零和货架与尊严的固定总量为预设——第七节的劳动阶梯模型两者都不支持。机器供给的是图案；它不曾供给、也无法被证明能够供给的，是盼图案成真那一桩意愿——注意力、判断与关心的全部需求侧，正是它组织着整个职业。后续研究顺势有三条线：本文标注存疑的 2025—2026 年诸案，待主记录齐备后的裁决；核验制度的实效（如机器阅卷的开放问题基准能否取代口径之争）；以及公司速度成果常态化之后，署名规范的纵贯社会学。此三条线之外，本文另加稽核装置一节（第十一节）：入录的规则、判定体制的判准、五问的编码卡，以及分辨何者已定于一手记录、何者仍系于一纸公告的两张表。设此一节，意在使上面每一条主张都能在它被定下的那一格上受人争执，而不只在它被说出的那一段上。最古老的分工无需新证：岸守着，水自流过；按数学自家两千年记录上最保守的读法，数学仍为那个遇见图案、盼图案成真、又想知道何以成真的人而在。
+<!-- L1-end -->
+
+---
+
+<!-- L1 -->
+<!-- en -->
+## 11. Materials and Methods: Corpus Rules, Coding Cards, the Regime Decision Rule, and Audit Tables
+
+This section is placed after the conclusions on purpose. Nothing in Sections 1–10 depends on it; everything in it can be checked against them. Its function is to let a reader re-run the coding rather than to agree with it, and to record where the study's design stops short of what its questions would ideally require.
+
+### 11.1 What counts as the record: corpus rules and exclusions
+
+The population window is 1 January 2024 to 23 September 2026, the date on which the last link in the reference list was checked. Two pre-window cases (the 1997 chess and 2016 Go results) are used in Section 4 only to set the frame and are not coded. An item entered the corpus if it met all three of the following tests. (i) Its claim concerns a mathematical result, a formalization, or a machine-graded mathematical score. (ii) At least one artifact is public: a peer-reviewed paper, a benchmark technical report, an institutional announcement, or a statement by a prize body. (iii) It is quoted or contested in at least one of the position texts reviewed in Section 2.6, or in the coverage of those texts.
+
+Recorded exclusions, with reasons: school and undergraduate word-problem benchmarks, which carry no research-level claim and attracted no certification dispute; vendor claims with no checkable artifact of any kind; results known only from a preprint that neither an institution nor a position text refers to; and continuous library work such as mathlib merges, which is infrastructure rather than an announced result. The unit of analysis is the *certification event* — one public claim together with the procedure by which it was graded. Where a single event was graded twice by different procedures it is split into two rows, which is why eleven events are coded from nine groups of results.
+
+The sampling risk is declared rather than argued away: items enter the corpus through publicity, and publicity is partly manufactured by dispute. Section 11.5 specifies the design that would repair this.
+
+### 11.2 The certification regime: an ordered decision rule
+
+The rule is run in order; the first clause that fires assigns the regime. **Machine-graded (MG)** — the verdict is produced by a mechanical procedure over a formal artifact or by an objectively computable counter, and no human score can alter it. **Hybrid-graded (HG)** — a machine-verifiable artifact exists *and* designated human judges assign the accepted outcome, which they can decline. **Community-graded (CG)** — acceptance depends on being read, used, cited, or declared admissible by an unfixed human community, prize bodies and editorial procedures included.
+
+Three tie-breakers are fixed in advance, so that two coders cannot diverge here. (a) If a human judgment can change the outcome while the machine verdict stands, code CG. (b) If a formal artifact is supplied for the *statement* only, and the answer itself is prose, code the regime at the level at which the answer is judged. (c) If the producer of a claim also executes the check, code the regime as though no independent check existed, and record the fact in the certification column. Clause (a) is what places the Millennium case at the top of the staircase despite its Lean formalization [2][49][50]; clause (c) is what removes a producer-run evaluation from the certified column without touching the arithmetic.
+
+### 11.3 The five verification questions as coding cards
+
+Each cell takes one of four values: `+` (satisfied on the record), `−` (not satisfied on the record), `±` (partially satisfied or contested), `n.r.` (not recorded — an absence of evidence, which is not evidence of absence). Every cell is fixed by the citation named in its row, so a second coder who disagrees can point at the same source and identify the clause of the card that reads differently.
+
+**Q1 Honest framing.** Does the announced claim match the scope of the artifact? `−` where the headline carries a scope the artifact does not: a self-selected subset reported as a general score, or a result obtained under an added hypothesis announced without it. **Q2 Reproducibility.** Can a third party re-run the verification with public artifacts? `+` where checker and artifact are both public; `±` where a re-run is possible in principle but has not been demonstrated; `−` where verification requires the producer's private assets. **Q3 Independent certification.** Was the certifier designated before the result was known and free of employment or financial stake in it? `−` where graders are self-selected by, or are, the claim's producer. **Q4 Symmetric disclosure.** Are zeros, failures and rejected items disclosed at the same prominence as successes? `+` also where an institution publicly corrects its own instrument. **Q5 Found or made.** Was the answer recoverable from the literature, or constructed and previously unwritten? Descriptive; not an evaluation.
+
+Coding was executed by a single coder (the author) on public material only. No interviews, surveys or non-public artifacts were used, so testimony about private motives is excluded by construction, and no inter-coder statistic is claimed anywhere in this paper. The cards and tables below exist precisely so that the coding can be re-run and disputed item by item.
+
+### 11.4 Table 1 — the eleven certification events, coded
+
+| # | Event (record) | Regime | Q1 | Q2 | Q3 | Q4 | Q5 | Dispute recorded |
+|---|---|---|---|---|---|---|---|---|
+| 1 | IMO 2024, AlphaProof & AlphaGeometry 2 [38][39] | HG | + | + | + | + | made | none |
+| 2 | IMO 2025, DeepMind route — graded by official coordinators [40] | HG | + | ± | + | + | made | none |
+| 3 | IMO 2025, OpenAI route — self-selected readers, no checker [40] | CG | ± | − | − | − | made | yes: grading and fluency |
+| 4 | o3 on FrontierMath, December 2024 [37][41] | MG | − | − | − | − | found | yes: subset and framing |
+| 5 | FrontierMath tier-4 v2 correction, June 2026 [37] | MG | + | + | + | + | n/a | none — self-correction |
+| 6 | Unit-distance disproof and its absorption [1][42]–[45] | CG | + | + | + | + | made | none |
+| 7 | First Proof lemmas, Harvard [46] | CG | ± | ± | + | − | made | none; bottleneck reported |
+| 8 | AlphaEvolve: matrix count and fifty problems [47] | MG | + | ± | ± | ± | made | none |
+| 9 | FrontierMath Erdős: open problems in Lean [48] | MG | + | + | + | + | n.r. | none |
+| 10 | Navier–Stokes announcement [2][49]–[51] | CG / MG | ± | − | − | − | made | yes: the loudest |
+| 11 | September attribution dispute [3] | n/a | n.r. | n/a | n/a | n/a | n/a | yes; contested |
+
+Row 10 carries two regimes because the derivation and its admissibility are graded by different procedures (rule 11.2(a)). Rows 2–3 are the same Olympiad year split by grading design. Row 5 is the corpus's only case of an institution correcting its own instrument in public and is therefore coded as a positive instance of Q4. Row 11 is not a mathematical result; it is retained because Section 7 treats it as data.
+
+### 11.5 What the coding yields, and what it does not
+
+Grouped by regime and by the presence of a recorded public dispute, the eleven events give: MG and HG together 1 dispute in 6; CG 3 in 5. On this 2×2 Fisher's exact test returns an odds ratio of about 0.13 with a two-sided p ≈ 0.24 (one-sided p ≈ 0.20). The association is therefore reported as *descriptive*, and it is not the confirmation of Section 3's hypothesis H3 — at this sample size nothing in the corpus could confirm anything, which is why H3 was argued by the alignment of mechanism and location rather than by counts.
+
+The counting is defective in one specific, repairable way: the denominators are selected on publicity. The repair is a census rather than a selection — enumerate the population of machine-graded mathematical outputs in the window (arXiv listings for formalized mathematics, mathlib merge records, published leaderboard tables), enumerate public named challenges to results (correction notices, commentaries, formal complaints, referee statements placed on the public record), and cross-tabulate challenge rate against regime. That design would test H3 against H1 and H2 with the same material this paper has had to order qualitatively, and it is the study's first recommended successor.
+
+Predictions are stated here so that the next record can refute them: **(P1)** no framing or subset dispute will arise at a stratum whose verdict is executed by a machine and re-runnable by a third party; **(P2)** framing disputes will continue to arise only where the producer discloses before independent grading; **(P3)** where a laboratory submits to grading by a body it did not select, the dispute rate in that episode will be zero. The IMO 2027 results and any FrontierMath v3 release are the test set; if P1 fails, Section 3.4(i) is refuted and with it the staircase's central claim.
+
+### 11.6 Negative-case search: how "no machine-graded scandal" was looked for
+
+The claim that the purely machine-checkable strata have produced no scandal is a negative existence claim and was searched for, not assumed. Three queries were run against the corpus and its citations: reports of an unsound or exploited proof checker kernel; reports of a benchmark whose machine grader returned a false positive on an unsolved item; retractions, withdrawals or referee reversals of formally verified results. The one near-miss is FrontierMath's v2 correction, where errors were fixed in 42% of the original problems [37]. It is decisive to see where that defect sits: it is a defect of the *statements* and answer keys, discovered and repaired by the benchmark's own builders, not a false verdict by a checker; under rule 11.2 it is an instance of Q4 satisfied, not of the kernel defeated. The absence reported in Section 3.4(i) therefore stands, with a stated search protocol attached and a duty to revise: any single documented case of a machine-graded false positive would overturn it.
+
+### 11.7 Table 2 — evidence maturity and self-reported figures
+
+| Claim as recorded | Value | Source class | Record that would settle it | What moves if it changes |
+|---|---|---|---|---|
+| IMO 2025 scores, both laboratories [40] | 35/42, five of six | 存疑 (announcement + secondary) | official coordinator records | §4.3's natural experiment; H2's force |
+| o3 on FrontierMath [37][41] | 25.2%; 75.7% on a chosen subset | 一手 + 解读 | OpenAI's evaluation configuration | §4.4; Q1 coding of row 4 |
+| Benchmark defects corrected [37] | 42% of v1 problems | 一手 | none needed | §11.6; H3's boundary case |
+| First Proof outcomes [46] | ≥6 of 10 lemmas; checkers stalled | 存疑 | the nonprofit's own record | §4.6; the checking-bottleneck datum |
+| AlphaEvolve results [47] | 48 vs 49 multiplications; ~70% rediscovery; 11-d kissing bound | 存疑 (corporate) | peer-reviewed primary record | §4.7; the silent stratum |
+| FrontierMath Erdős [48] | 68 problems; best 3%, others 0; $300 each | 一手 | none needed | §4.8; P1's strongest instance |
+| Navier–Stokes production [2] | ~10,000 agents; ~130bn tokens; added forcing term | 一手（宣称） | laboratory artifact repository | §4.9; Q1 coding of row 10 |
+| Forced/unforced distinction [51] | method does not extend | 解读 (journalistic) | a referee-able argument | §4.9's third proposition |
+| Attribution allegations [3] | offer to publish under one name | 存疑 (contested) | correspondence or an adjudication | §5.6; §7's credit analysis |
+| Reported fatalism; double discovery [52] | as quoted | 存疑 (secondary) | primary statements by those named | §5.5 only |
+| Leiden Declaration reach [33] | 16 authors; 4,181 signatories | 一手 (as of 2026-09-23) | later counts | §5.3 |
+| Erdős problem census [61] | 1,217 problems tracked; 562 solved (46%) | 一手 (database, 2026-09-23) | none needed | §8's quantification of a frontier |
+
+### 11.8 Statements
+
+**Data availability.** The corpus is the public record; every item is documented in the reference list with its reliability tier, and no non-public material was used. **Analytic code.** No code was used; the classification is fully specified in Sections 11.2–11.3 so that it can be reproduced by hand. **Ethics.** Named individuals appear only in their capacity as public actors in a professional debate, on the basis of published statements; contested allegations are labelled 存疑 and no judgment of character is offered. **Competing interests.** None declared. **Funding.** No external funding. **Correction.** Any of the coded cells in Table 1 may be revised by a reader who names the citation and the clause of the card in question; the ordering claims of Section 4 depend on the regime column, not on the Q-codes, and would survive most such revisions.
+<!-- zh -->
+## 十一、材料与方法：语料规则、编码卡、认证体制判准与两张审计表
+
+本节特意列在结论之后。第一至十节没有一处依赖它；它所说的一切，却都要回到那些记录上去核对。此节之用，在使读者能自行重跑这套编码，不必先认同它；顺带写明本文的设计在何处够不上它自己的问题所应要求的水准。
+
+### （一）何者入录：语料规则与排除项
+
+取样窗口为 2024 年 1 月 1 日至 2026 年 9 月 23 日，即文献表最后一次逐条核验链接之日。窗口之外的两桩旧事（1997 年国际象棋、2016 年围棋）在第四节只作定调之用，不参与编码。一项材料须同时通过三关方得入录：其一，其所宣称者为数学结果、形式化，或由机器判分的数学分数；其二，至少有一件公开物件——同行评审论文、基准技术报告、机构公告，或评奖机构的声明；其三，它被第二节（六）所复查的某篇立场文（或其报道）征引或反驳。
+
+排除项连同理由亦在案记录：中小学应用题基准，因其不涉研究级宣称、亦未引出认证之争；全无物件可核的厂商话头；仅有预印本、而无一机构或立场文提及的结果；以及 mathlib 合入那类连续的库工——那是基础设施，不是一则被宣布的成果。分析单位是*认证事件*：一项公开宣称，连同为其定分的那道程序。同一事件若被两套不同的程序各判一次，即拆作两行——正因如此，九组成果编出十一行。
+
+取样上的毛病不辩解，直说：材料因曝光而入录，而曝光之中有一部分正是争执造出来的。本节（五）说明此项设计当如何补救。
+
+### （二）认证体制：一条按序而下的判准
+
+判准依次执行，第一条命中即定其体制。**机器自核（MG）**：判决由机械程序施于形式物件而得，或由一个客观可算的计数器而得，人工评分无从改动。**混合核验（HG）**：机器可检的物件俱在，*且*受命的行家另行定分，而他们有权不予接受。**共同体裁断（CG）**：能否被接受，取决于是否有人读、有人用、有人引，或是否被一个未定的人类共同体宣告可入——评奖机构与刊物程序皆在其内。
+
+三条歧解先定下来，好让两位编码者不致在此分道。（甲）人判虽在机器判决之上而仍能改动其结果者，定为 CG。（乙）形式物件只立*陈述*、答案本身仍是散文者，依答案受判的那一级定级。（丙）宣称者兼执行其核验者，视同并无独立核验而定级，并把它记在认证一栏。（甲）正是把千禧年一案虽经 Lean 形式化、仍置于台阶最高一级的理由 [2][49][50]；（丙）则使一场由公司自跑的评测在认证栏中落空，而不动其算术。
+
+### （三）五项核验问题作为编码卡
+
+每格四值之一：`+`（记录上成立）、`−`（记录上不成立）、`±`（部分成立或有争议）、`n.r.`（未载——此为证据之阙，非阙之证据）。每一格皆由其行首标出的那条出处定住，故异见的第二编码者可指着同一条出处，说出他不同意的是卡上哪一句。
+
+**问一 诚实表述。**宣布所言与物件所涵，范围是否相合？物件不含而标题含者记 `−`：自择子集报作全数，或添了假设为条件所得、宣布时却不提此条件。**问二 可复现。**第三方能否凭公开物件重跑核验？检查器与物件俱公开者 `+`；原则上可跑而未有人跑成者 `±`；须仗厂商私有之物者 `−`。**问三 独立认证。**判定者是否在结果已知之前即已定下，且不受雇于宣称者、于其结果无财务之关涉？判定者由宣称者自择、或即宣称者本身，记 `−`。**问四 对称披露。**零分、失败与剔去的题目是否与成绩同幅披露？机构当众更正自家仪器的，亦记 `+`。**问五 发现还是制造。**答案是文献中原可取回，还是从无到有被构造出来？此为描述，不作褒贬。
+
+编码由单一编码者（本文作者）在公开材料上执行。未用访谈、问卷与非公开材料，故关于私人动机的证词自方法上即被排除；本文亦不主张任何编码者一致性统计量。下面诸卡与诸表的存在，正是为了让这套编码可以被逐格重跑、逐格争执。
+
+### （四）表一：十一场认证事件的编码
+
+| # | 事件（出处） | 体制 | 问一 | 问二 | 问三 | 问四 | 问五 | 有无公开争执 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 2024 年 IMO，AlphaProof 与 AlphaGeometry 2 [38][39] | HG | + | + | + | + | 制造 | 无 |
+| 2 | 2025 年 IMO，DeepMind 一支——由官方评分员判 [40] | HG | + | ± | + | + | 制造 | 无 |
+| 3 | 2025 年 IMO，OpenAI 一支——自择读者、无检查器 [40] | CG | ± | − | − | − | 制造 | 有：判分与行文流畅 |
+| 4 | o3 之于 FrontierMath，2024 年 12 月 [37][41] | MG | − | − | − | − | 发现 | 有：子集与口径 |
+| 5 | FrontierMath 四级 v2 订正，2026 年 6 月 [37] | MG | + | + | + | + | 不适用 | 无——自我更正 |
+| 6 | 单位距离反例及其被消化 [1][42]–[45] | CG | + | + | + | + | 制造 | 无 |
+| 7 | First Proof 诸引理，哈佛 [46] | CG | ± | ± | + | − | 制造 | 无；报出核验瓶颈 |
+| 8 | AlphaEvolve：乘法计数与五十道题 [47] | MG | + | ± | ± | ± | 制造 | 无 |
+| 9 | FrontierMath Erdős：以 Lean 写的开放问题 [48] | MG | + | + | + | + | 未载 | 无 |
+| 10 | Navier–Stokes 公告 [2][49]–[51] | CG / MG | ± | − | − | − | 制造 | 有：其声最响 |
+| 11 | 九月署名纠纷 [3] | 不适用 | 未载 | 不适用 | 不适用 | 不适用 | 不适用 | 有；未决 |
+
+第十行之所以两制并存，因其推导与其可入性由两套程序分别判定（判准（甲））。第二、三行是同一年奥赛按判分设计拆开的两半。第五行是语料中唯一一例机构当众更正自家仪器，故作为问四的正面例证编入。第十一行本非数学结果，保留于此，因为第七节把它当材料。
+
+### （五）编码得出了什么，得不出什么
+
+按体制与「是否见诸公开争执」分组，十一件事给出：MG 与 HG 合计 6 件中 1 件；CG 为 5 件中 3 件。此 2×2 列联表的 Fisher 精确检验给出胜算比约 0.13、双侧 p ≈ 0.24（单侧 p ≈ 0.20）。故这一关联只作为*描述*呈报，它不是第三节假说 H3 的确认——以这样的样本量，记录中什么也确认不了。H3 之所以被采，靠的是机制与位置的相互吻合，不是数出来的。
+
+这套计数有一个具体而可修的毛病：分母是按曝光选出来的。补救之道是把「挑选」换成「普查」——列出窗口内全部机器判分的数学产出（arXiv 形式化数学清单、mathlib 合入记录、已公布的基准成绩表），再列出对结果的公开指名挑战（更正启事、评论文、正式申诉、被置于公开记录的审稿陈述），而后以争执率对体制作交叉列联。此设计能以本文只得定性排比的同一批材料，就 H3 与 H1、H2 一较高下，是本文首推的后续研究。
+
+预测此刻写下，好让下一份记录来推翻：**（P1）**凡判决由机器执行、第三方可自行重跑的那一层，不会再出口径或子集之争；**（P2）**口径之争将继续只生在成果先由生产者自布、独立判分未及之处；**（P3）**凡实验室把成果交由其未自选的机构判分者，该案的争执率为零。检验集即 2027 年 IMO 成绩与 FrontierMath v3（若发布）。P1 一倒，第三节（四）之（一）随之而倒，台阶的中心主张亦随之。
+
+### （六）负例搜索：「机器自核层无丑闻」是如何找过的
+
+纯粹机器可检之层未出丑闻，是一句存在性的否定断言，故经搜索，非由默认。检索三路，皆施于语料及其引文：证明检查器内核不安全或被利用的报告；机器判分的基准在未解之题上给出假阳性的报告；经形式验证的结果之撤回、撤稿或审稿翻案。诸路检索只擦边一次：FrontierMath 的 v2 订正，原题库 42% 的题目经改其误 [37]。此处必须看清毛病生在哪一层：错在*陈述*与答案，且由题库攒建者自查自修，而非检查器误判一着；依（二）的判准，这是问四得以成立的一例，不是内核被击穿的一例。于是第三节（四）之（一）所报的「未见」仍然站得住，且如今附着一套可复核的搜索规程，也附着一项修订之责：任何一桩有据可查的机器判分假阳性，即足以推翻它。
+
+### （七）表二：证据成熟度与自报数字
+
+| 记录所载的宣称 | 数值 | 来源层级 | 足以定案的记录 | 若变更动的是哪一处 |
+|---|---|---|---|---|
+| 2025 年 IMO 两家成绩 [40] | 42 题得 35，六题解其五 | 存疑（公告加二手） | 官方评分员记录 | 四（三）那桩自然实验；H2 之力道 |
+| o3 之于 FrontierMath [37][41] | 25.2%；经择子集上 75.7% | 一手加解读 | OpenAI 自陈的评测配置 | 四（四）；表一第 4 行的问一 |
+| 题库自身订正 [37] | v1 题目 42% | 一手 | 不必另证 | 本节（六）；H3 的边界案例 |
+| First Proof 结果 [46] | 十条中至少六条；核验者受阻 | 存疑 | 该机构自立的记录 | 四（六）；核验瓶颈这一数据 |
+| AlphaEvolve 结果 [47] | 48 对 49 次；约七成重推；十一维接吻数上界 | 存疑（企业自报） | 同行评审的一手记录 | 四（七）；无人争辩的那一层 |
+| FrontierMath Erdős [48] | 68 题；最高 3%，余皆零；每题 300 美元 | 一手 | 不必另证 | 四（八）；P1 最强的一例 |
+| Navier–Stokes 排场 [2] | 约一万个协同智能体；约 1300 亿词元；另加强迫项 | 一手（宣称） | 实验室的物件库 | 四（九）；表一第 10 行的问一 |
+| 受迫与无强迫之分 [51] | 其法不能延及 | 解读（新闻评述） | 一项可送审的论证 | 四（九）第三层 |
+| 署名指控 [3] | 曾许以一人之名发表 | 存疑（各执一词） | 往来函件或一次裁决 | 五（六）；第七节的名分分析 |
+| 宿命论说与双重发现 [52] | 如其所引 | 存疑（二手） | 当事者本人的陈述 | 唯五（五） |
+| 莱顿宣言的广度 [33] | 16 人发起；4,181 人签署 | 一手（截至 2026-09-23） | 后续计数 | 五（三） |
+| 埃尔德什问题普查 [61] | 共录 1,217 题；已解 562（46%） | 一手（数据库，2026-09-23） | 不必另证 | 第八节对前线的量化 |
+
+### （八）各项声明
+
+**数据可得性。**语料即公共记录；每一条目皆见文献表并附其信度层级，未用任何非公开材料。**分析代码。**本文未用程序代码；分类规程已于本节（二）（三）两段写足，人人可徒手复现。**伦理。**凡具名者，只以其在这场行业论战中的公共身份出现，所据皆为已刊陈述；未决指控一律标注存疑，本文不作品行裁断。**利益冲突。**无。**资助。**无外部资助。**更正。**表一中任何一格，读者皆可指名其所据出处与编码卡上所持异议而予修订；第四节那些排序性主张所依者乃体制一栏，而非问一至问五的编码，故此类修订多半动它不得。
 <!-- L1-end -->
 
 ---
