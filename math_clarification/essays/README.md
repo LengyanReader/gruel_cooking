@@ -1,0 +1,27 @@
+# essays — 论说 (Essays & Meta-Reflections)
+
+Long-form essays on mathematics itself: what it is, who does it, how it is judged, and what happens when the work of doing it changes hands. The nine-part entry anatomy (house style) is for *concepts and problems*; an essay argues. This folder keeps the argumentative pieces.
+
+## The first essay
+
+- [ai_and_math.md](ai_and_math.md) — **智慧与证明：AI 时代的数学七问** / *Wisdom and Proof: Seven Questions on Mathematics in the Age of AI*. Seven interlocking chapters on AI and mathematics: the claims and their verification, the voices in the community, what mathematics is, who mathematicians are, the division of labor under formalization, the question of groundbreaking problems, and a plain-spoken closing reflection. Anchored on this folder's own [Erdős unit distance record](../famous_problems/erdos_unit_distance.md) and its [proof narrative](../proof_narratives/erdos_unit_distance.md).
+
+## Essay anatomy (论说体例)
+
+House style's nine parts are built around a *problem you can state and picture*. An essay has no such anchor, so it uses a different but equally fixed skeleton:
+
+1. **论点 (Claim)** — the chapter's position in one sentence.
+2. **论据 (Evidence)** — sourced facts, with the source's reliability tier attached (per house rules: 一手 / 权威版本 / 学界共识·解读 / 存疑, and **legend** never stated as fact).
+3. **论证 (Argument)** — why the evidence supports the claim, and the counter-arguments dealt with in their strongest form.
+4. **反诘 (Pushback)** — the honest limits: what this chapter cannot settle, which claims the author treats as 解读 (interpretation) rather than fact.
+5. **来源 (Sources)** — consolidated at the file's end in an `<!-- L5 -->` block, following the same stable-link rules as entries.
+
+Rules that differ from concept entries:
+
+- No **Machine-checked** line. An essay contains no checkable claim; where it reports a checkable result (e.g. the unit-distance bounds), it cites the entry that carries the check.
+- Level markers are minimal by design: `<!-- L1 -->` for the whole argument, `<!-- L5 -->` for the sources. The web viewer's level cropping is for school-like depth layering, which an essay does not need.
+- The bilingual default for essays is **逐段并列** (paragraph-interleaved en/zh), because an essay's force lives in the prose, not in a diagram.
+
+## Self-evolution
+
+This folder registers a **new entry type** (论说/essay) alongside basics·famous_problems·proof_narratives. It is wired into the web viewer via `web/parser.py` `list_entries()`. If the essay skeleton starts to fork, the authoritative description moves up to `docs/workflows.md` (§ Self-evolution).

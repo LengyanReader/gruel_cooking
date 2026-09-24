@@ -173,9 +173,9 @@ def render_entry_html(entry: ParsedEntry) -> str:
 
 
 def list_entries(base_dir: Path) -> list[dict]:
-    """List all available entries across basics/, famous_problems/ and proof_narratives/."""
+    """List all available entries across basics/, famous_problems/, proof_narratives/ and essays/."""
     entries = []
-    for subdir in ["basics", "famous_problems", "proof_narratives"]:
+    for subdir in ["basics", "famous_problems", "proof_narratives", "essays"]:
         dir_path = base_dir / subdir
         if not dir_path.exists():
             continue
