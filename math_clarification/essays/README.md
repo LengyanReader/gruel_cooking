@@ -12,7 +12,7 @@ Long-form essays on mathematics itself: what it is, who does it, how it is judge
 
 ## Essay anatomy (论说体例)
 
-House style's nine parts are built around a *problem you can state and picture*. An essay has no such anchor. It is written in the register of philosophy of science and critical humanism — flowing prose, argument carried inside the paragraph, no thesis labels, no bullet scaffolding. But the prose is disciplined by a fixed internal sequence, which is the same five moves every time, even when none of them appears as a heading:
+House style's nine parts are built around a *problem you can state and picture*. An essay has no such anchor. It is written in the register of philosophy of science and critical humanism — flowing prose, argument carried inside the paragraph, no bullet scaffolding. The prose is disciplined by a fixed internal sequence, which is the same five moves every time. As of the restructured draft (`ai_and_math.md`), an essay may also open with a Contents block and use `##` chapter titles plus `###` subheadings as navigational anchors — they route the reader through the argument but do not carry the argument themselves.
 
 1. **论点 (Claim)** — the chapter's position, stated up front.
 2. **论据 (Evidence)** — sourced facts, with the source's reliability tier attached (per house rules: 一手 / 权威版本 / 学界共识·解读 / 存疑, and **legend** never stated as fact).
@@ -25,7 +25,7 @@ Rules that differ from concept entries:
 - No **Machine-checked** line. An essay contains no checkable claim; where it reports a checkable result (e.g. the unit-distance bounds), it cites the entry that carries the check.
 - Level markers are minimal by design: `<!-- L1 -->` for the whole argument, `<!-- L5 -->` for the sources. The web viewer's level cropping is for school-like depth layering, which an essay does not need.
 - The bilingual default for essays is **逐段并列** (paragraph-interleaved en/zh), because an essay's force lives in the prose, not in a diagram.
-- The scholar's apparatus — signpost headings like "Claim." or "Pushback.", enumerations, tables — is *not* part of the register. The skeleton above is the discipline the prose obeys, and obedience is exactly what must stay invisible.
+- The scholar's apparatus — signpost headings like "Claim." or "Pushback.", enumerations, tables — is *not* part of the register. The skeleton above is the discipline the prose obeys, and obedience is exactly what must stay invisible. Navigation headings (`##`/`###`) are permitted as wayfinding; the argument still lives in the paragraphs.
 
 ## Self-evolution
 
