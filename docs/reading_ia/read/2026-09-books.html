@@ -70,8 +70,20 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .quote .orig{font-style:italic;color:var(--ink-deep)}
 .quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
 .quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
 .diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
-.diagram svg{display:block;margin:0 auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
 .diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
@@ -117,6 +129,16 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .pill.sm{font-size:.77rem;padding:4px 14px}
 .pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
 .pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
@@ -169,6 +191,8 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <span class="tag pub" style="background:#8C4A77">Knopf</span>
 <span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
 <span class="tag" data-both><span data-zh>第七部长篇 · 最政治化之作</span><span data-en>seventh novel · her most political</span></span>
+<span class="tag" data-both><span data-zh>kind · novel</span><span data-en>novel</span></span>
+<span class="tag" data-both><span data-zh>literature, theory, cross-disciplinary</span><span data-en>literature, theory, cross-disciplinary</span></span>
 <span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
 </div>
 <div class="bkwhy"><p data-zh>在美国自身极化的当下，读一部把「两个美国」写成一确二真的小说——现实已经在分叉，小说只是把它显影。</p><p data-en>In a moment of American fracturing, a novel that writes &quot;two Americas&quot; as one-true-two — reality is already forking; fiction only develops the film.</p></div>
@@ -190,6 +214,8 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <span class="tag pub" style="background:#3E5C76">Flammarion</span>
 <span class="tag" data-both><span data-zh>法国</span><span data-en>the French (1)</span></span>
 <span class="tag" data-both><span data-zh>Adamsberg 系列第 11 部（2026-04-08）</span><span data-en>Adamsberg #11 (2026-04-08)</span></span>
+<span class="tag" data-both><span data-zh>kind · novel</span><span data-en>novel</span></span>
+<span class="tag" data-both><span data-zh>literature, theory</span><span data-en>literature, theory</span></span>
 <span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
 </div>
 <div class="bkwhy"><p data-zh>当凶案被改写成艺术，罪案小说本身也在追问——我们讲述残酷时，用的是谁的眼睛。</p><p data-en>When murder is rewritten as art, the crime novel asks back — whose eyes are we using when we narrate cruelty?</p></div>
@@ -211,6 +237,8 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <span class="tag pub" style="background:#A5811D">Calmann-Lévy</span>
 <span class="tag" data-both><span data-zh>法国</span><span data-en>the French (2)</span></span>
 <span class="tag" data-both><span data-zh>《Les Années glorieuses》四部曲·终章</span><span data-en>finale of the Glorious Years quartet</span></span>
+<span class="tag" data-both><span data-zh>kind · novel</span><span data-en>novel</span></span>
+<span class="tag" data-both><span data-zh>literature, history</span><span data-en>literature, history</span></span>
 <span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
 </div>
 <div class="bkwhy"><p data-zh>当「光荣岁月」被供奉为集体记忆，谁有资格掀开它的阴影——小说与历史，法理与人情。</p><p data-en>When the Glory Years are enshrined as collective memory, who is entitled to lift their shadow — fiction and history, law and feeling.</p></div>
@@ -232,6 +260,8 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <span class="tag pub" style="background:#3E5C76">Flammarion</span>
 <span class="tag" data-both><span data-zh>法国</span><span data-en>the French (3)</span></span>
 <span class="tag" data-both><span data-zh>回忆录 · Mazan 案亲历者自述 · 22 语同步</span><span data-en>memoir · the Mazan survivor&#x27;s own account · 22 languages</span></span>
+<span class="tag" data-both><span data-zh>kind · memoir</span><span data-en>memoir</span></span>
+<span class="tag" data-both><span data-zh>history, social-science</span><span data-en>history, social-science</span></span>
 <span class="status reading" data-both><span data-zh>在读</span><span data-en>currently reading</span></span>
 </div>
 <div class="bkwhy"><p data-zh>在宏大叙事的年份，读一段把「被摧毁的生活重新变成主语」的证词——羞耻易边，世界换了一边站。</p><p data-en>In a year of grand narratives, a testimony that makes a destroyed life the subject again — shame changes sides, and the world changes sides too.</p></div>
@@ -253,6 +283,8 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <span class="tag pub" style="background:#B0413E">幻冬舎新書</span>
 <span class="tag" data-both><span data-zh>日本</span><span data-en>the Japanese</span></span>
 <span class="tag" data-both><span data-zh>非虚构 · 居家临终关怀医师 · 2025-11-27 发售</span><span data-en>nonfiction · home-hospice physician · 2025-11-27</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag" data-both><span data-zh>medicine-health, cross-disciplinary</span><span data-en>medicine-health, cross-disciplinary</span></span>
 <span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
 </div>
 <div class="bkwhy"><p data-zh>在战争与速度的年份，一本让人放慢到「走到棺材为止」的书——死亡是唯一确定的时间表，读它如同预习。</p><p data-en>In a year of war and speed, a book that slows you down to &quot;walk to the coffin&quot; — death is the only certain schedule; reading it is rehearsal.</p></div>

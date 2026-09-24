@@ -10,6 +10,8 @@ Copy to `library/YYYY-slug.md`, fill both language fields. **Every factual claim
 - **author 作者**: [[authors/<slug>]]（+ 合著者，如 [[authors/perrignon]]）
 - **year 出版年**: （出版年-月-日 若有）ISBN / 页数 / 出版社
 - **lang_orig 原语言** / **translator 译者 / edition 版本**:
+- **kind 文本形态**: novel / essay / paper / memoir / testimony / film …（阅读不限于书）
+- **domain 领域**: literature / theory / philosophy / history / social-science / mathematics / …（`categories/README.md` 领域轴，开放标签）
 - **category 分类**: [[categories/<slug>]] × n
 - **status 状态** / **date_read 阅读时间**:
 - **award 奖项**（若获）: year · 奖名
@@ -44,4 +46,29 @@ Copy to `library/YYYY-slug.md`, fill both language fields. **Every factual claim
 
 ### 一句话 Why this book 为何读
 …
+
+---
+
+## 提取账本 Extract Ledger（深度无损验账 · `../extraction/audit.py`）
+
+分型堆栈（`../extraction/framework.md`）+ 对应透镜（`../extraction/prompts/<kind>.md`）逐层提取后，
+如实填数字快照；阈值不达标=缺口，补真实内容而非放宽阈值。示例（按 kind 调整字段）：
+
+```yaml
+extract_ledger:
+  kind: novel
+  read_status: done
+  skeleton_parts: 3
+  plot_nodes: 9
+  characters: 8
+  charedges: 6
+  motif_clusters: 4
+  craft_items: 6
+  intent_quotes: 2
+  excerpts: 3
+  disagreements: 1
+  unverified_items: 2
+  related_edges: 4
 ```
+
+> L5 母题簇的内容宿地是 `../web/data/books.json` → `motifs[]`（`name_zh/name_en` + `evid_zh/evid_en` + `orig` 原文引句 + `source` + `conf`），渲染器为 `../web/build_reading.py` 的 `motif_block()`；卡里只需在账本如实计数。母题≠主题。参考已落库范例：`2026-mandel-exit-party`（派对即门、国家的反生活、见证公信……）。

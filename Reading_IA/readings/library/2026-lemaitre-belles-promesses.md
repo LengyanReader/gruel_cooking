@@ -47,3 +47,24 @@
 
 ### 一句话 Why this book 为何读
 四部曲的终章：读「繁荣年代的账单」——在怀旧政治盛行的 2026，终章证明黄金时代从不是免费的。
+
+---
+
+## 提取账本 Extract Ledger
+
+```yaml
+extract_ledger:
+  kind: novel
+  read_status: reading
+  skeleton_parts: 3
+  plot_nodes: 5
+  characters: 6
+  charedges: 5
+  motif_clusters: 0
+  craft_items: 0
+  intent_quotes: 0
+  excerpts: 0
+  disagreements: 1
+  unverified_items: 2
+  related_edges: 5
+```

@@ -50,3 +50,22 @@
 
 ### 一句话 Why this book 为何读
 #MeToo 从运动到文献的顶点文本：把司法卷宗锻造成一个「将有愉悦生活」的第一人称。
+
+---
+
+## 提取账本 Extract Ledger
+
+```yaml
+extract_ledger:
+  kind: memoir
+  read_status: reading
+  events: 8
+  turning_points: 3
+  plot_nodes: 8
+  characters: 5
+  charedges: 4
+  excerpts: 2
+  disagreements: 1
+  unverified_items: 2
+  related_edges: 5
+```

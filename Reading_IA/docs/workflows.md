@@ -32,13 +32,16 @@ Domain-specific workflows & skills for **Reading & IA**. Repo-wide rules, skills
 
 Trigger: 读完 / 放弃 / 计划一本书，或收集到一批读物。
 
-1. Create the cards: `library/YYYY-slug.md`, `authors/<name>.md`, wire `categories/`.
-2. Write the hot note in `readings/notes/<slug>.md` (quotes short, replies long, ≥1 echo).
-3. Add edges to `relations/influences.md` / `book_graph.md` / `moment_ties.md` (one row each, with confidence).
-4. Drop ≥1 lead into `extensions/leads.md` with tags (`anticipation / moment / cost`).
-5. If the material came from a live topic, cross-file into `moment/` (below).
+1. **定型 kind-route**：按 `readings/extraction/framework.md` §2 给读物定 kind（novel / memoir / essay / generic）。
+2. **提取 decode**：打开对应透镜 `readings/extraction/prompts/<kind>.md`，按 10–12 层堆栈逐层提取；逐层写入 `library/YYYY-slug.md`（骨架/节点/人物/母题/手法/意图……）。
+3. **验账 ledger**：卡片末尾填 `extract_ledger` 块（`framework.md` §4 最小捕获阈值）。
+4. **核验 depth 无损**：`py -X utf8 Reading_IA/readings/extraction/audit.py` —— 缺口补真实内容，不放宽阈值。
+5. Create the hot note in `readings/notes/<slug>.md` (quotes short, replies long, ≥1 echo).
+6. Add edges to `relations/influences.md` / `book_graph.md` / `moment_ties.md` (one row each, with confidence).
+7. Drop ≥1 lead into `extensions/leads.md` with tags (`anticipation / moment / cost`).
+8. If the material came from a live topic, cross-file into `moment/` (below).
 
-Checks 自检: every card has a one-line thesis; every finished book has ≥1 new lead.
+Checks 自检: every card has a one-line thesis; every finished book has ≥1 new lead; audit exits clean.
 
 ### W2 · Completeness review of a reading list 书目供给的完备性核验
 
@@ -68,7 +71,7 @@ Cadence: 7d sweep weekly; fortnight consolidation; monthly structure review; ann
 ### W4 · Site build & sync 站点构建与同步
 
 - The reading-list pages + archive mirror the registry `readings/lists/README.md`: `docs/reading_ia/read/<crop>-books.html` (one page per crop) + `read/index.html` (archive, newest first) + per-book / per-author pages + authors knowledge graph.
-- **Phase 1 (live)**: adopt the repo's iron rule — **single source → generated pages** (`web/build_reading.py` reading JSON, emitting `docs/reading_ia/`); regenerate with `python Reading_IA/web/build_reading.py`.
+- **Phase 1 (live)**: adopt the repo's iron rule — **single source → generated pages** (`web/build_reading.py` reading JSON + the term registry `readings/categories/glossary.md` + the methods source `readings/methods/README.md`, emitting `docs/reading_ia/` incl. `glossary.html` + `methods.html`); regenerate with `python Reading_IA/web/build_reading.py`. New term → first into `glossary.md`, then（成熟后）promote to a concept-layer archetype cluster in `categories/`; new method → into `methods/README.md`, one card per method, only after working in practice twice.
 - After any change, validate all HTML: `python <check_html.py> <files...>` and `python <check_links.py>` (per `../harness/workflows.md` W-GEN).
 - New crop = registry row + new page + archive card + landing "Latest" + essay pointers. Protocol: `docs/reading_lists_design.md`.
 
@@ -94,3 +97,4 @@ python -m http.server 8080 --directory docs
 - 卡片/关系/分类类型膨胀但无流程覆盖 → 在此补一条 W- 循环（或晋升共享规则）。
 - 生成器 `build_reading.py` 数据层变动 → 同步 W4。
 - 本域技能段与 `../harness/skills.md` 出现重复 → **晋升**到根，本域只留指针。
+- 每次会话收尾：按根 harness **W-CAP** 把新方法/原则/经验回沉淀——本域新成型操作法 → 并入对应 W- 循环（S6）；本域独有规则 → 写进本文件并登记 `../harness/evolution.md` Journal。

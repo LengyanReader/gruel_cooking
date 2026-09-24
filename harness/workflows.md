@@ -48,6 +48,21 @@ python harness/audit.py --strict   # scans EVERY harness layer; S-signals report
 
 Wire `audit.py` into `_final_ok.ps1` so every commit hygiene pass also checks harness health.
 
+## W-CAP · Session recap loop 每次工作后的复盘沉淀
+
+Every session — no matter how small — ends by **catching what it taught, then routing it into the harness**. The harness grows only if we harvest; this loop is how "经验/方法/原则/反思" stop being tribal knowledge and become the operating manual.
+
+1. **Collect 收集**（工作收尾时，2 分钟）：回答三问——
+   - 这轮做成了什么以前没有的方法/原则/技巧？→ 候选 **Consolidate(S6)**
+   - 哪个现有 harness 流程被**绕过**或**不够用**（重复了第二次就要记）？→ 候选 **Deepen(S3)**
+   - 哪条规则失效 / 哪条该上浮为全仓库？→ 候选 **Promote(S1)** / **Archive(S5)**
+2. **Route 分派**：按 `evolution.md` 变异谱系，把每条发现落到**拥有它的那层**（域内 → 域 harness；跨域 → 根 `harness/`；技能 → `skills.md`；规则 → `principles.md`）。域专属能力别 fork 进根文件，根规则别复制进域文件。
+3. **Mutate 变异**：最小必要变更（一次 ≤1–3 条）；双语两侧同改（§II.12）；编号稳定（S 信号 / W- 编号不乱）。
+4. **Journal 登记**:在 `harness/evolution.md` Journal 加一行（日期 · 层 · 变异 · 触发信号），域级变更同时写进该域 harness 的 Self-evolution 段。
+5. **Verify 核验**：`python harness/audit.py --strict` 通过后，这次会话才算真正闭环。
+
+> 复盘本身就是一条 workflow（本文件已注册为 W-CAP）；它不在已有循环里"夹带"，而是每轮工作的显式收尾步骤。结构性变异仍须人工复核（S6/§I.6）。
+
 ---
 
 ## Registry 各域工作流注册表

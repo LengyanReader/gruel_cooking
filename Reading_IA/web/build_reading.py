@@ -112,8 +112,20 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .quote .orig{font-style:italic;color:var(--ink-deep)}
 .quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
 .quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
 .diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
-.diagram svg{display:block;margin:0 auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
 .diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
@@ -159,6 +171,16 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .pill.sm{font-size:.77rem;padding:4px 14px}
 .pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
 .pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
@@ -196,6 +218,57 @@ def esc(s):
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_md_sections(rel_path):
+    """Parse a Markdown file of '## <title>' sections with '- **key**: value' bullets.
+    Returns list of {title, items{key: value}} in file order.
+    术语架/方法论源（单一来源 Markdown）→ 生成 HTML 页。"""
+    path = os.path.join(ROOT, rel_path)
+    sections = []
+    if not os.path.exists(path):
+        return sections
+    cur = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.rstrip("\n")
+            if line.startswith("## "):
+                title = line[3:].strip()
+                if title.startswith("Format") or title.startswith("格式"):
+                    cur = None
+                    continue
+                cur = {"title": title, "items": {}}
+                sections.append(cur)
+            elif cur is not None:
+                m = re.match(r"^\s*-\s*\*\*([^*]+)\*\*:\s*(.*)$", line)
+                if m:
+                    key = m.group(1).replace("  ", " ").strip()
+                    cur["items"][key] = m.group(2).strip()
+    return sections
+
+
+def wl(text):
+    """Render [[...]] wikilinks as non-dangling reference chips (data-layer pointers)."""
+    if not text:
+        return ""
+    out = []
+    for part in re.split(r"(\[\[[^\]]+\]\])", text):
+        if part.startswith("[[") and part.endswith("]]"):
+            ref = part[2:-2].strip()
+            slug = ref.split("/")[-1]
+            out.append(f'<span class="ref">{esc(slug)}</span>')
+        else:
+            out.append(esc(part))
+    return "".join(out)
+
+
+def conf_mark(text):
+    """Pull a trailing ✓◐○✗ confidence mark out of a source string for a colored chip."""
+    m = re.search(r"([✓◐○✗])", text)
+    if not m:
+        return ""
+    c = m.group(1)
+    return '<span class="tok">' + conf_token(c) + "</span>"
 
 
 # ---------- helpers ----------
@@ -396,19 +469,43 @@ def pubviz_svg(books, width=760):
     return "".join(html_out)
 
 
+def access_route(dom):
+    """Classify a link's route from its domain — metadata only, never content."""
+    d = dom.lower()
+    if any(s in d for s in ("penguinrandomhouse", "flammarion", "calmann", "gentosha", "gallimard", "actes-sud")):
+        return ("官方出版页 · Official publisher", "✓")
+    if any(s in d for s in ("overdrive", "libby", "biblio", "leslibraires")):
+        return ("图书馆 · 借阅记录 Library", "◐")
+    if any(s in d for s in ("goodreads", "bookmeter")):
+        return ("读者平台 · Reader community", "◐")
+    if any(s in d for s in ("npr", "today", "wfae", "irishtimes", "lithub", "theguardian", "elle", "lepoint", "liberation", "lefigaro", "letemps", "lacroix", "telegramme")):
+        return ("媒体 · 授权转载 Media", "◐")
+    return ("其他 · Other", "○")
+
+
 def textlinks_block(b):
-    """Original-text / preview links only — no scraped content (per directive)."""
+    """Access to the original — licensed previews & links only, no scraped content
+    and no unlicensed mirrors. Each entry: bilingual label + route chip + conf."""
     tls = b.get("textlinks") or []
     if not tls:
         return ""
     rows = []
     for t in tls:
         dom = t["url"].split("/")[2]
+        route, tconf = access_route(dom)
+        ccol = CONF_COLOR.get(tconf, "#777069")
         rows.append(f'<a href="{esc(t["url"])}" target="_blank" rel="noopener">'
                     f'<span data-zh>{esc(t["zh"])}</span><span data-en>{esc(t["en"])}</span>'
-                    f'<span class="dom">{esc(dom)} ↗</span></a>')
-    return ('<h3 class="sec" data-both><span data-zh>原文与试读 · Original text &amp; previews</span>'
-            '<span data-en>Original text &amp; previews</span></h3>'
+                    f'<span class="dom">{esc(dom)} ↗</span>'
+                    f'<span class="rtag" style="color:{ccol}">{esc(route)} · {tconf}</span></a>')
+    note = ('本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，'
+            '不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。',
+            'This page links only verifiable sources — official previews, licensed '
+            'samples, and library/OverDrive records. No unlicensed full-text mirrors. '
+            'The complete original is obtained via the published edition or library loan.')
+    return ('<h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span>'
+            '<span data-en>Accessing the original</span></h3>'
+            '<p class="tl-note">' + zh_en(note[0], note[1], "span") + '</p>'
             '<div class="tl-list">' + "".join(rows) + '</div>')
 
 
@@ -466,47 +563,72 @@ def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h
 
 
 # ---------- SVG: plot flow ----------
+def _cjk_w(t):
+    return sum(13 if ord(c) > 0x2E80 else 6.8 for c in t)
+
+
+def _wrap(t, maxw):
+    if not t:
+        return [""]
+    lines = []
+    cur = ""
+    for c in t:
+        if _cjk_w(cur) + _cjk_w(c) > maxw and cur:
+            lines.append(cur)
+            cur = c
+        else:
+            cur += c
+    if cur:
+        lines.append(cur)
+    return lines if lines else [""]
+
+
 def svg_plot_flow(nodes, width=860):
     if not nodes:
         return ''
-    x = 90
+    x = 72
     y0 = 26
-    rh = 44
-    gap = 26
-    est = lambda t: sum(13 if ord(c) > 0x2E80 else 6.8 for c in t)
-    hp = []
+    gap = 30
+    box_w = 716
+    txt_w = 560
+    zh_lh = 17
+    en_lh = 13
+    boxes = []
     for nd in nodes:
-        w_zh = est(nd["zh"]); w_en = est(nd["en"])
-        h = rh + 15 * (max(1, round(w_zh / 620 + 0.4))) + 13 * (max(1, round(w_en / 860 + 0.3)))
-        hp.append(max(44, h))
-    H = 2 * y0 + sum(hp) + gap * (len(hp) - 1) + 10
+        zl = _wrap(nd["zh"], txt_w)
+        el = _wrap(nd["en"], txt_w)
+        h = 26 + (len(zl) - 1) * zh_lh + 12 + (len(el) - 1) * en_lh + 14 + 12
+        boxes.append((zl, el, h))
+    H = 2 * y0 + sum(b[2] for b in boxes) + gap * (len(boxes) - 1) + 10
     out = [f'<svg viewBox="0 0 {width} {H}" role="img" aria-label="plot flow" xmlns="http://www.w3.org/2000/svg">']
     cy = y0
-    for i, (nd, h) in enumerate(zip(nodes, hp), 1):
+    for i, (nd, (zl, el, h)) in enumerate(zip(nodes, boxes), 1):
         yb = cy + h
         fill = "#FFF8EC" if i % 2 else "#EFE6D3"
         stroke = "#C9A227" if i == len(nodes) else "#A5811D"
-        out.append(f'<rect x="{x}" y="{cy}" width="680" height="{h}" rx="10" fill="{fill}" stroke="{stroke}" stroke-width="1.4"/>')
-        out.append(f'<text x="{x+16}" y="{cy+20}" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">{i}</text>')
+        out.append(f'<rect x="{x}" y="{cy}" width="{box_w}" height="{h}" rx="10" fill="{fill}" stroke="{stroke}" stroke-width="1.4"{' class="cn"' if i == len(nodes) else ''}/>')
+        out.append(f'<text x="{x+16}" y="{cy+22}" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">{i}</text>')
         # zh
-        wy = cy + 20 + 14
-        out.append(f'<text x="{x+40}" y="{wy}" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">{esc(nd["zh"])}</text>')
-        # en (translate manually: wrap by char est)
-        cum = 0; line = 1; seg = []
-        row = []
-        for c in nd["en"]:
-            cum += 13 if ord(c) > 0x2E80 else 6.8
-            row.append(c)
-            # (simplified wrap at 150 *)
-        # the len is enough: en single line
+        ty = cy + 24
+        for ln in zl:
+            out.append(f'<text x="{x+40}" y="{ty}" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">{esc(ln)}</text>')
+            ty += zh_lh
+        ty += 4
+        # en
+        for ln in el:
+            out.append(f'<text x="{x+40}" y="{ty}" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">{esc(ln)}</text>')
+            ty += en_lh
         # conf
         if nd.get("conf"):
             ccol = CONF_COLOR.get(nd["conf"], "#777069")
-            out.append(f'<text x="{x+640}" y="{wy}" font-family="monospace" font-size="11" font-weight="700" fill="{ccol}">{esc(nd["conf"])}</text>')
+            out.append(f'<text x="{x+box_w-14}" y="{cy+22}" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="{ccol}">{esc(nd["conf"])}</text>')
         if i < len(nodes):
-            out.append(f'<line x1="{x+340}" y1="{yb}" x2="{x+340}" y2="{yb+gap}" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>')
+            out.append(f'<line class="eflow" x1="{x+box_w/2}" y1="{yb}" x2="{x+box_w/2}" y2="{yb+gap}" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>')
         cy = yb + gap
-    out.append('<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker></defs>')
+    out.append('<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker>'
+                '<style>@media (prefers-reduced-motion: no-preference){.eflow{animation:pfdraw 7s linear infinite}.cn{animation:pfpulse 4.2s ease-in-out infinite}}'
+                '@keyframes pfdraw{to{stroke-dashoffset:-132}}@keyframes pfpulse{0%,100%{opacity:1}50%{opacity:.45}}'
+                '@media print{.eflow,.cn{animation:none}}</style></defs>')
     out.append('</svg>')
     return "\n".join(out)
 
@@ -544,17 +666,45 @@ def svg_charedge(book, width=900):
         for j, c in enumerate(members):
             pos[c["id"]] = (colx[g], 46 + j * row_h)
             # group label
-            out.append(f'<text x="{colx[g]}" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">{g}</text>')
+            out.append(f'<text x="{colx[g]}" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">{g}</text>')
             # node
-            out.append(f'<rect x="{colx[g]-58}" y="{pos[c["id"]][1]-14}" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>')
-            out.append(f'<text x="{colx[g]}" y="{pos[c["id"]][1]+2}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">{c["name"]}</text>')
+            out.append(f'<rect x="{colx[g]-62}" y="{pos[c["id"]][1]-16}" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>')
+            out.append(f'<text x="{colx[g]}" y="{pos[c["id"]][1]+1}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">{c["name"]}</text>')
     for a, b, kind, note in edges:
         if a not in pos or b not in pos:
             continue
         (ax, ay), (bx, by) = pos[a], pos[b]
-        kcol = EDGE_KIND.get(kind, ("", "#8c8c8c"))[1]
-        mx, my = (ax + bx) / 2, (ay + by) / 2
-        out.append(f'<path d="M{ax},{ay} C{ax},{my} {bx},{my} {bx},{by}" fill="none" stroke="{kcol}" stroke-width="1.3" stroke-dasharray="4 3"/>')
+        klabel, kcol = EDGE_KIND.get(kind, (kind, "#8C8C8C"))
+        dash = "4 3" if kind in ("witness", "dialogue", "contrast", "evidence", "colleague") else "1"
+        my = (ay + by) / 2
+        out.append(f'<path class="edge eflow" d="M{ax},{ay} C{ax},{my} {bx},{my} {bx},{by}" fill="none" stroke="{kcol}" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="{dash}" marker-end="url(#arwX)"/>')
+        # bilingual edge-kind label at midpoint (small, low-contrast)
+        lx, ly = (ax + bx) / 2, my - 7
+        out.append(f'<text x="{lx}" y="{ly}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066">{esc(note)}</text>')
+    # legend: kinds used in this book, bilingual
+    used = []
+    for a, b, kind, note in edges:
+        if kind not in used:
+            used.append(kind)
+    if used:
+        out.append('<g class="legend">')
+        lx = 24
+        ly0 = H - 14
+        for i, kind in enumerate(used):
+            klabel, kcol = EDGE_KIND.get(kind, (kind, "#8C8C8C"))
+            if i % 6 == 0:
+                lx = 24
+                ly = ly0 - (i // 6) * 14
+            if i > 0 and i % 6 == 0:
+                lx = 24
+            out.append(f'<rect x="{lx}" y="{ly-8}" width="9" height="3" rx="1.5" fill="{kcol}"/>')
+            out.append(f'<text x="{lx+13}" y="{ly}" font-family="LXGW WenKai,serif" font-size="9.5" fill="#57524A">{esc(klabel)}</text>')
+            lx += 30 + _cjk_w(klabel) + 8
+        out.append('</g>')
+    out.append('<defs><marker id="arwX" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker>'
+                '<style>@media (prefers-reduced-motion: no-preference){.eflow{animation:pfdraw 7s linear infinite}.cn{animation:pfpulse 4.2s ease-in-out infinite}}'
+                '@keyframes pfdraw{to{stroke-dashoffset:-132}}@keyframes pfpulse{0%,100%{opacity:1}50%{opacity:.45}}'
+                '@media print{.eflow,.cn{animation:none}}</style></defs>')
     out.append('</svg>')
     return "\n".join(out)
 
@@ -602,34 +752,34 @@ def svg_works_years(a, width=860):
     if ymin > 1980:
         ymin = 1980
     year_w = (ymax - ymin) or 1
-    H = 128
-    x0, x1 = 46, width - 30
+    H = 158
+    x0, x1 = 52, width - 34
     out = [f'<svg viewBox="0 0 {width} {H}" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">']
-    base = H * 0.62
+    base = H * 0.6
     out.append(f'<line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}" stroke="#A5811D" stroke-width="1.2"/>')
-    out.append(f'<text x="{x0-8}" y="{base+4}" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">{ymin}</text>')
-    out.append(f'<text x="{x1+4}" y="{base+4}" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">{ymax}</text>')
+    out.append(f'<text x="{x0-8}" y="{base+4}" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">{ymin}</text>')
+    out.append(f'<text x="{x1+4}" y="{base+4}" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">{ymax}</text>')
     for t in range((ymin // 10) * 10 + 10, ymax, 10):
         if t <= ymin:
             continue
         tx = x0 + (t - ymin) / year_w * (x1 - x0)
         out.append(f'<line x1="{tx:.1f}" y1="{base-4}" x2="{tx:.1f}" y2="{base+4}" stroke="#C9BFA6" stroke-width="0.8"/>')
-        out.append(f'<text x="{tx:.1f}" y="{base+17}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">{t}</text>')
+        out.append(f'<text x="{tx:.1f}" y="{base+18}" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">{t}</text>')
     for i, (w, y, yy) in enumerate(reversed(ys)):
         if yy is None:
             continue
         k = (yy - ymin) / year_w
         cx = x0 + k * (x1 - x0)
         top = i % 2 == 0
-        cy = base - 18 if top else base + 18
+        cy = base - 22 if top else base + 22
         is_crop = w.get("crop")
         fill = "#C9A227" if is_crop else "#6C8AAF"
         ring = 'stroke="#E9D89B" stroke-width="2"' if is_crop else ""
-        out.append(f'<circle cx="{cx:.1f}" cy="{base}" r="{5 if is_crop else 4}" fill="{fill}" {ring}/>')
-        out.append(f'<text x="{cx:.1f}" y="{cy:.1f}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="{"#B08A2E" if is_crop else "#7C7568"}">{y}</text>')
-        out.append(f'<text x="{cx:.1f}" y="{cy + (16 if top else -8):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="{("#C9A227" if is_crop else "#4A4438")}">{esc(str(w["title"])[:22])}</text>')
+        out.append(f'<circle cx="{cx:.1f}" cy="{base}" r="{5.5 if is_crop else 4.5}" fill="{fill}" {ring}/>')
+        out.append(f'<text x="{cx:.1f}" y="{cy:.1f}" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="{"#B08A2E" if is_crop else "#7C7568"}">{y}</text>')
+        out.append(f'<text x="{cx:.1f}" y="{cy + (17 if top else -9):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="{("#C9A227" if is_crop else "#4A4438")}">{esc(str(w["title"])[:20])}</text>')
         if is_crop:
-            out.append(f'<text x="{cx:.1f}" y="{cy + (28 if top else -20):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>')
+            out.append(f'<text x="{cx:.1f}" y="{cy + (30 if top else -22):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>')
     out.append('</svg>')
     return "\n".join(out)
 
@@ -639,6 +789,35 @@ def blk(label, zh, en, cls="card"):
     return f'<div class="{cls}"><h3 class="sec" data-both><span data-zh>{esc(label)}</span><span data-en>{esc(label)}</span></h3>{zh_en(zh, en)}</div>'
 
 
+LANG_LABEL = {"en": "EN · english", "fr": "FR · français", "ja": "JA · 日本語"}
+
+
+def excerpt_block(e):
+    lang = LANG_LABEL.get(e.get("lang", ""), "")
+    bits = [f'<div class="exq">', f'<div class="orig">{esc(e["orig"])}' + (f'<span class="lang">{lang}</span>' if lang else '') + '</div>']
+    trs = f'<div data-zh>{esc(e["trans_zh"])}</div>'
+    if e.get("trans_en"):
+        trs += f'<div data-en>{esc(e["trans_en"])}</div>'
+    bits.append(f'<div class="tr">{trs}</div>')
+    if e.get("note_zh") or e.get("note_en"):
+        note = f'<div data-zh>{esc(e["note_zh"])}</div><div data-en>{esc(e["note_en"])}</div>'
+        bits.append(f'<div class="note">{note}</div>')
+    bits.append(f'<div class="src">{esc(e["source"])}</div></div>')
+    return "\n".join(bits)
+
+
+def motif_block(m):
+    bits = [f'<div class="exq">',
+            f'<div class="mname"><span data-zh>{esc(m["name_zh"])}</span><span data-en>{esc(m["name_en"])}</span></div>']
+    if m.get("orig"):
+        bits.append(f'<div class="orig">{esc(m["orig"])}</div>')
+    bits.append(f'<div class="mnote">{zh_en(m["evid_zh"], m["evid_en"])}</div>')
+    if m.get("source"):
+        bits.append(f'<div class="src">{esc(m["source"])} · {conf_token(m.get("conf", "◐"))}</div>')
+    bits.append('</div>')
+    return "\n".join(bits)
+
+
 def book_page(site, book, crop):
     title = f"{book['title_zh']}｜{book['title_orig']}"
     hero_sub = f"{book['author_zh']} · {book['country']} · {book['publines_zh']}"
@@ -646,6 +825,10 @@ def book_page(site, book, crop):
     hero_h1_en = f"{book['title_orig']} — {book['title_zh']}"
     hero_sub_en = f"{book['author']} · {book['country_en']} · {book['publines_en']}"
     chips = [f"{crop['glyph_zh']} · {crop['date']}", book["meta_zh"], f"conf {book['baseline_conf']}"]
+    if book.get("kind"):
+        chips.insert(2, f"kind·{book['kind']}")
+    if book.get("domain"):
+        chips.insert(3, book["domain"])
     s = []
     # provenance
     s.append(srcnote(
@@ -691,10 +874,10 @@ def book_page(site, book, crop):
     s.append(blk("结构 · Structure", book["narrative"]["zh"], book["narrative"]["en"], cls="card"))
     # plot flow svg
     s.append('<h2 class="part" data-both><span data-zh>情节流程图 · Plot flow</span><span data-en>Plot flow</span></h2>')
-    s.append('<div class="diagram">' + svg_plot_flow(book["plot_flow"]) + '<p class="cap">' + esc(book["title_zh"]) + ' · 事件链（数字为顺序）</p></div>')
+    s.append('<div class="diagram">' + svg_plot_flow(book["plot_flow"]) + '<p class="cap">' + zh_en(book["title_zh"] + " · 事件链（数字为顺序）", book["title_orig"] + " · the event chain (numbers = order)", "span") + '</p></div>')
     # characters + charedge svg
     s.append('<h2 class="part" data-both><span data-zh>人物关系图 · Characters</span><span data-en>Characters &amp; relations</span></h2>')
-    s.append('<div class="diagram">' + svg_charedge(book) + '<p class="cap">' + esc(book["title_zh"]) + ' · 人物关系（虚点线=连接）</p></div>')
+    s.append('<div class="diagram">' + svg_charedge(book) + '<p class="cap">' + zh_en(book["title_zh"] + " · 人物关系（虚点线=连接）", book["title_orig"] + " · character relations (dotted = link)", "span") + '</p></div>')
     s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>ID</th><th data-both><span data-zh>人物</span><span data-en>name</span></th><th data-both><span data-zh>阵营/组</span><span data-en>group</span></th><th data-both><span data-zh>角色</span><span data-en>role</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>')
     for c in book["characters"]:
         s.append(f'<tr><td>{esc(c["id"])}</td><td>{esc(c["name"])}</td><td>{esc(c.get("group",""))}</td><td><div data-zh>{esc(c["role_zh"])}</div><div data-en>{esc(c["role_en"])}</div></td><td class="conf">{conf_token(c["conf"])}</td></tr>')
@@ -712,11 +895,16 @@ def book_page(site, book, crop):
             s.append(f'<div class="card"><p>{esc(c["zh"])}</p><p style="color:var(--ink-soft);font-size:.9rem">{esc(c["en"])}</p></div>')
     else:
         s.append(f'<div class="srcnote">{zh_en("待通读原书后补充。", "Craft notes come after the full read.")}</div>')
+    # motifs（母题簇 · 结构无损层的可核验单元）
+    if book.get("motifs"):
+        s.append('<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>')
+        for m in book["motifs"]:
+            s.append(motif_block(m))
     # excerpts
-    s.append('<h2 class="part" data-both><span data-zh>精彩片段 · Excerpts</span><span data-en>Notable excerpts</span></h2>')
+    s.append('<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>')
     if book.get("excerpts"):
         for e in book["excerpts"]:
-            s.append(f'<div class="quote"><div class="orig">{esc(e["orig"])}</div><div class="trs">{esc(e["trans_zh"])}</div><div class="src">{esc(e["source"])}</div></div>')
+            s.append(excerpt_block(e))
     else:
         s.append(f'<div class="srcnote">{zh_en("待读原书摘引。", "Excerpts pending the read.")}</div>')
     # deep read
@@ -786,6 +974,10 @@ def crop_page(site, crop, books):
         s.append(f'<span class="tag pub" style="background:{pub_color(pub_key(b.get("publisher","")))}">{esc(pub_key(b.get("publisher","")))}</span>')
         s.append(f'<span class="tag" data-both><span data-zh>{esc(b["country"])}</span><span data-en>{esc(b["country_en"])}</span></span>')
         s.append(f'<span class="tag" data-both><span data-zh>{esc(b.get("meta_zh",""))}</span><span data-en>{esc(b.get("meta_en",""))}</span></span>')
+        if b.get("kind"):
+            s.append(f'<span class="tag" data-both><span data-zh>kind · {esc(b["kind"])}</span><span data-en>{esc(b["kind"])}</span></span>')
+        if b.get("domain"):
+            s.append(f'<span class="tag" data-both><span data-zh>{esc(b["domain"])}</span><span data-en>{esc(b["domain"])}</span></span>')
         s.append(read_chip(b))
         s.append('</div>')
         # why (Goodreads blurb position)
@@ -934,7 +1126,7 @@ def authors_page(site, authors, relations):
         s.append('<h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>')
         tline = svg_works_years(a)
         if tline:
-            s.append('<div class="diagram">' + tline + '<p class="cap">' + esc(a["name_zh"]) + ' · ' + esc(a["name_native"]) + ' 作品年表（金环 = 本批书单）</p></div>')
+            s.append('<div class="diagram">' + tline + '<p class="cap">' + zh_en(a["name_zh"] + " · " + a["name_native"] + " 作品年表（金环 = 本批书单）", a["name_en"] + " works by year (gold ring = this batch)", "span") + '</p></div>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>')
         for w in a["works"]:
             s.append('<tr><td>%s</td><td><b>%s</b></td><td><div data-zh>%s</div><div data-en>%s</div></td><td class="conf">%s</td></tr>' % (esc(w["y"]), esc(w["title"]), esc(w["note_zh"]), esc(w["note_en"]), conf_token(w["conf"])))
@@ -974,6 +1166,72 @@ def authors_page(site, authors, relations):
     return page("作者知识图谱 · AUTHORS GRAPH", "AUTUMN", "作者知识图谱 · 谁在写，与谁同代", "生平 · 朋友圈 · 合著 · 流派归属 · 影响链——人物即思想的坐标", ["2026 秋批 · " + str(len(authors)) + " 位作者", "generator 维护"], "\n".join(s))
 
 
+def glossary_page(site, entries):
+    """Render readings/categories/glossary.md → docs/reading_ia/glossary.html."""
+    s = []
+    s.append(srcnote(
+        '<b>单一来源。</b>术语架 = <code>readings/categories/glossary.md</code>（唯一源），由 <code>build_reading.py</code> 生成本页。新术语（文学/理论/哲学/数学/科学/社科/媒介）先落术语架，成熟后晋升为概念层原型簇。',
+        '<b>Single source.</b> Terms live in <code>readings/categories/glossary.md</code>; this page is generated. New terms land here first; mature ones are promoted to concept-layer archetype clusters.'))
+    s.append('<div class="links"><a class="pill" href="read/index.html">↝ <span data-zh>书目档案</span><span data-en>the library</span></a>'
+             '<a class="pill" href="methods.html">↝ <span data-zh>方法论与透镜</span><span data-en>methods &amp; lenses</span></a>'
+             '<a class="pill" href="index.html">↝ <span data-zh>板块首页</span><span data-en>the domain</span></a></div>')
+    count = len(entries)
+    for e in entries:
+        it = e["items"]
+        mode = it.get("mode", "concept")
+        dom = it.get("domain", "")
+        s.append('<div class="card" id="%s" style="margin-top:1.4rem">' % esc(e["title"].split(" ")[0]))
+        en_sub = it.get("en", "")
+        if en_sub:
+            s.append('<h3 class="sec" style="margin-top:.2rem">%s <span style="font-size:.78rem;color:var(--ink-pale)">%s</span></h3>'
+                     % (esc(e["title"]), esc(en_sub)))
+        else:
+            s.append('<h3 class="sec" style="margin-top:.2rem">%s</h3>' % esc(e["title"]))
+        s.append(f'<div><span class="modechip {esc(mode)}">{esc(mode)}</span>'
+                 f'<span class="domchip">{esc(dom)}</span>'
+                 f'<span class="ref">cluster → {esc(it.get("cluster","").split("/")[-1].replace("]]",""))}</span></div>')
+        s.append('<div class="term-line"><b>' + esc("定义 · ") + '</b>' + wl(it.get("def_zh", "")) + "</div>")
+        s.append('<div class="term-line" style="color:var(--ink-soft)"><b>' + esc("en · ") + '</b>' + wl(it.get("def_en", "")) + "</div>")
+        if it.get("epitome"):
+            s.append('<div class="term-line" style="font-size:.85rem"><b>' + esc("典例 · epitome") + '</b> ' + wl(it.get("epitome")) + "</div>")
+        if it.get("source"):
+            s.append('<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>' + esc("出处 · source") + '</b> ' + wl(it.get("source")) + "</div>")
+        if it.get("links"):
+            s.append('<div style="margin-top:.5rem">' + wl(it.get("links")) + "</div>")
+        s.append("</div>")
+    s.append('<div class="links"><a class="pill" href="methods.html">↝ <span data-zh>方法论</span><span data-en>methods</span></a>'
+             '<a class="pill" href="read/index.html">↝ <span data-zh>读书</span><span data-en>the library</span></a></div>')
+    return page("术语架 · TERM REGISTRY", "TERMS", "术语架 · 全领域的名字", "概念 · 传统 · 原型 · 方法——先命名，再理解", ["%d 条术语" % count, "跨学科"], "\n".join(s))
+
+
+def methods_page(site, methods):
+    """Render readings/methods/README.md → docs/reading_ia/methods.html."""
+    s = []
+    s.append(srcnote(
+        '<b>单一来源。</b>方法论 = <code>readings/methods/README.md</code>（唯一源），由生成器产出本页。一法一卡；一种方法至少实践两次后才可入档（skill-creator 触发条件）。',
+        '<b>Single source.</b> Methods live in <code>readings/methods/README.md</code>; this page is generated. A method earns a card only after working twice in practice.'))
+    s.append('<div class="links"><a class="pill" href="glossary.html">↝ <span data-zh>术语架</span><span data-en>glossary</span></a>'
+             '<a class="pill" href="read/index.html">↝ <span data-zh>书目档案</span><span data-en>the library</span></a>'
+             '<a class="pill" href="index.html">↝ <span data-zh>板块首页</span><span data-en>the domain</span></a></div>')
+    for i, m in enumerate(methods, 1):
+        it = m["items"]
+        s.append('<div class="card" id="%s">' % esc(m["title"].split(" ")[0]))
+        s.append('<h3 class="sec" style="margin-top:.2rem"><span class="method-num">%d</span>%s <span style="font-size:.78rem;color:var(--ink-pale)">%s</span></h3>'
+                 % (i, esc(m["title"]), esc(it.get("en", ""))))
+        if it.get("applies"):
+            s.append('<div class="term-line" style="font-size:.82rem"><b>' + esc("适用 · applies") + '</b> ' + wl(it.get("applies")) + "</div>")
+        if it.get("why 为何"):
+            s.append('<div class="term-line"><b>' + esc("为何 · why") + '</b> ' + wl(it.get("why 为何")) + "</div>")
+        if it.get("how 怎么做"):
+            s.append('<div class="term-line" style="color:var(--ink-soft)"><b>' + esc("怎么做 · how") + '</b><br>' + wl(it.get("how 怎么做")) + "</div>")
+        if it.get("rule 关联"):
+            s.append('<div class="term-line" style="font-size:.82rem;color:var(--gold-dim)"><b>' + esc("关联 · rule") + '</b> ' + wl(it.get("rule 关联")) + "</div>")
+        s.append("</div>")
+    s.append('<div class="links"><a class="pill" href="glossary.html">↝ <span data-zh>术语架</span><span data-en>glossary</span></a>'
+             '<a class="pill" href="index.html">↝ <span data-zh>板块首页</span><span data-en>the domain</span></a></div>')
+    return page("方法论与透镜 · METHODS & LENSES", "METHODS", "方法论与透镜 · 怎么读", "一手先于转述 · 追溯谱系 · 双身对读 · 原型猎袭 · 理论即透镜", ["%d 法" % len(methods), "practice i 义"], "\n".join(s))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--validate", action="store_true", help="validate JSON only, no writes")
@@ -1009,6 +1267,16 @@ def main():
     fp = os.path.join(root, "authors", "index.html")
     with open(fp, "w", encoding="utf-8") as f:
         f.write(authors_page(site, authors, relations))
+    out.append(fp)
+    # glossary (single source: readings/categories/glossary.md)
+    fp = os.path.join(root, "glossary.html")
+    with open(fp, "w", encoding="utf-8") as f:
+        f.write(glossary_page(site, load_md_sections("Reading_IA/readings/categories/glossary.md")))
+    out.append(fp)
+    # methods (single source: readings/methods/README.md)
+    fp = os.path.join(root, "methods.html")
+    with open(fp, "w", encoding="utf-8") as f:
+        f.write(methods_page(site, load_md_sections("Reading_IA/readings/methods/README.md")))
     out.append(fp)
     print("wrote %d files:" % len(out))
     for p in out:

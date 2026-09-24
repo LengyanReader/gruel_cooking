@@ -49,3 +49,19 @@
 
 ### 一句话 Why this book 为何读
 把死亡从 ICU 请回自家餐桌的宣言——在 2026 年战争/加速/超老龄化三重重压下，它提供第四种时间表。
+
+---
+
+## 提取账本 Extract Ledger
+
+```yaml
+extract_ledger:
+  kind: essay
+  read_status: reading
+  claims: 4
+  excerpts: 1
+  concepts: 4
+  disagreements: 2
+  related_edges: 4
+  unverified_items: 2
+```

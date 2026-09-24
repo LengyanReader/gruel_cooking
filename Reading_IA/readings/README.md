@@ -17,9 +17,10 @@ The system is **card-based** (one file per entity) plus **explicit edges** (rela
 library/  authors/  categories/        ← entities 实体 (cards)
           relations/                   ← edges 关系 (the graph)
 notes/    extensions/                  ← activity 活动 (reading traces + leads)
+extraction/                           ← decode 解码 (kind-route lenses + lossless ledger)
 ```
 
-**One rule of thumb 判据**：实体卡片回答「是什么」，关系文件回答「怎么连」，笔记回答「我读到了什么、想到了什么」，延伸回答「下一步读什么」。
+**One rule of thumb 判据**：实体卡片回答「是什么」，关系文件回答「怎么连」，笔记回答「我读到了什么、想到了什么」，延伸回答「下一步读什么」，extraction 回答「怎么读得深且无损」。
 
 ---
 
@@ -37,6 +38,8 @@ Named by slug (`year-firstword`, e.g. `2026-herbert-platonic`). Front-matter-fre
 | `edition` 版本 | | Read edition, translator 所读版本与译者 |
 | `lang_orig` 原语言 | | e.g. `en`, `de`, `zh`, `ja` |
 | `category` 分类 | ✓ | One or more links to categories 指向分类 |
+| `domain` 领域 | | open tag(s): `literature` `theory` `philosophy` `history` `social-science` `cognitive-psych` `mathematics` `physical-sci` `life-sci` `technology-ai` `medicine-health` `cross-disciplinary`（`categories/README.md` 领域轴） |
+| `kind` 文本形态 | | what artifact it is: `novel` `essay` `paper` `thesis` `memoir` `testimony` `lecture` `poetry` `film` `exhibition`…（阅读不限于书） |
 | `core_claims` 核心主张 | | 2–5 kernels in your own words 用自己的话写 2–5 条内核 |
 | `method` 方法与体裁 | | treatise / essay / field note / fiction… 文体与方法 |
 | `status` 状态 | | `unread / reading / done / re-reading / dnf` |
@@ -67,20 +70,24 @@ A category = a persistent theme cluster (not a rigid library taxonomy). See `cat
 
 - `notes/<book-slug>.md` — per-book reading note: highlights, margins, questions, disagreements, echoes (什么使我眼前一亮、什么我不同意、唤起了哪些旧读).
 - Notes **never replace** the card; the card summarises, the note remembers the live reading process.
+- Notes carry **domain tags** too (`#mathematics`, `#theory`, …) so the notebook stays navigable across disciplines.
 
 ---
 
 ## Extensions 延伸 — `extensions/`
 
-- `extensions/leads.md` — the open field: authors/books/questions you want to chase next, each with a one-line reason (why it might matter).
+- `extensions/leads.md` — the open field: authors/books/**papers**/questions/**courses/data** you want to chase next, each with a one-line reason (why it might matter). （文献、论文、课程、数据也算线索——不只书。）
 - `extensions/README.md` — method for scoring and pruning leads (cluster them; the moment is a pruning signal).
 
 ---
 
 ## Intake loop 录入流程
 
-1. **Card first** 先建卡 — create book/author card while reading or right after DNF.
-2. **Note when hot** 趁热记 — capture the live reaction in `notes/`.
-3. **Wire edges** 连关系 — add rows to `relations/` graph files.
-4. **Push extensions** 补延伸 — record at least one new lead per finished book.
-5. **Prune by the moment** 借时事修剪 — use `moment/` signals to decide which leads to promote to the reading queue.
+1. **Kind-route 定型** — 按 `extraction/framework.md` §2 定 kind（novel / memoir / essay / generic），加载 `extraction/prompts/<kind>.md` 透镜。
+2. **Decode 提取** — 依透镜堆栈逐层提取，写入 `library/<slug>.md`（骨架/节点/人物/母题/手法/意图……）。
+3. **Ledger 验账** — 卡尾填 `extract_ledger`；`py -X utf8 readings/extraction/audit.py` 核深度无损，缺口补真实内容。
+4. **Card first** 先建卡 — create book/author card while reading or right after DNF.
+5. **Note when hot** 趁热记 — capture the live reaction in `notes/`.
+6. **Wire edges** 连关系 — add rows to `relations/` graph files.
+7. **Push extensions** 补延伸 — record at least one new lead per finished book.
+8. **Prune by the moment** 借时事修剪 — use `moment/` signals to decide which leads to promote to the reading queue.

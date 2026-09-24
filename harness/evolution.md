@@ -60,6 +60,7 @@ How every layer of the harness **continually improves itself** — without waiti
 
 | Date 日期 | Layer 层 | Mutation 变异 | Signal 信号 | Notes 备注 |
 |---|---|---|---|---|
+| 2026-09-24 | root → all | Expand：新增公共循环 **W-CAP 复盘沉淀**（`harness/workflows.md`），把「每次工作后经验/方法/原则/反思回沉淀进 harness」本身注册为一条 workflow，并接 S1/S3/S5/S6 信号与 Journal | S6（用户明确提出：每次工作须持续沉淀 lessons，且此机制应作为 harness 存在） | 本轮已在 Reading_IA 落地同类实践（glossary/methods 单一来源→生成页），W-CAP 使其常态化 |
 | 2026-09-24 | root → all | Engine：新增 `harness/audit.py`（自动审校器）+ W-EVO 公共循环（`harness/workflows.md`），并接入 `_final_ok.ps1` 步骤 6 | S6（机制需要可运行的审校引擎，而非纯文档） | 实测 S2 Register 信号可被真实触发；`--strict` 作门禁 |
 | 2026-09-24 | living_heritage · math_clarification | Register：新建两域 harness（LH-W1…W6、MC-W1…W6），注册表 + 各域 harness 均含 Self-evolution 段；Reading_IA 也补上 Self-evolution 段（S6） | S2（living_heritage 已有 CI seed/verify/e2e；math 已有 house style + Lean + viewer，均无归属 harness） | 待人工复核（S6/§I.6） |
 | 2026-09-24 | Reading_IA | Consolidate：本域 harness 收缩为 W1–W4 + 本域技能段，指向根 harness | S1（跨域规则已抽到根） | 待人工复核 |

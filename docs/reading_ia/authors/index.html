@@ -70,8 +70,20 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .quote .orig{font-style:italic;color:var(--ink-deep)}
 .quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
 .quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
 .diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
-.diagram svg{display:block;margin:0 auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
 .diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
@@ -117,6 +129,16 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .pill.sm{font-size:.77rem;padding:4px 14px}
 .pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
 .pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
@@ -247,41 +269,41 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-09</td><td><div data-zh>第 7 部长篇《Exit Party》（Knopf 2026-09-15）；「最政治、最酷儿、最好」</div><div data-en>Exit Party out 2026-09-15; &#x27;my most political, most queer, best novel&#x27;</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
-<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Exit Party</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-<circle cx="761.8" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="761.8" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2022</text>
-<text x="761.8" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Sea of Tranquility</text>
-<circle cx="727.7" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="727.7" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2020</text>
-<text x="727.7" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Glass Hotel</text>
-<circle cx="625.5" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="625.5" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2014</text>
-<text x="625.5" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Station Eleven</text>
-<circle cx="591.4" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="591.4" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2012</text>
-<text x="591.4" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Lola Quartet</text>
-<circle cx="557.3" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="557.3" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2010</text>
-<text x="557.3" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">The Singer&#x27;s Gun</text>
-<circle cx="540.3" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="540.3" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2009</text>
-<text x="540.3" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Last Night in Montreal</text>
-</svg><p class="cap">曼德尔 · Emily St. John Mandel (née Fairbanks) 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2026</text>
+<line x1="220.3" y1="90.8" x2="220.3" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.3" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="388.5" y1="90.8" x2="388.5" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="388.5" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="556.8" y1="90.8" x2="556.8" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="556.8" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="725.0" y1="90.8" x2="725.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="725.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2026</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">Exit Party</text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+<circle cx="758.7" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="758.7" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2022</text>
+<text x="758.7" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Sea of Tranquility</text>
+<circle cx="725.0" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="725.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2020</text>
+<text x="725.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">The Glass Hotel</text>
+<circle cx="624.1" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="624.1" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2014</text>
+<text x="624.1" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Station Eleven</text>
+<circle cx="590.4" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="590.4" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2012</text>
+<text x="590.4" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">The Lola Quartet</text>
+<circle cx="556.8" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="556.8" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2010</text>
+<text x="556.8" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">The Singer&#x27;s Gun</text>
+<circle cx="540.0" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="540.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2009</text>
+<text x="540.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Last Night in Montre</text>
+</svg><p class="cap"><span data-both><span data-zh>曼德尔 · Emily St. John Mandel (née Fairbanks) 作品年表（金环 = 本批书单）</span><span data-en>Mandel works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2009</td><td><b>Last Night in Montreal</b></td><td><div data-zh>处女作；蒙特利尔</div><div data-en>debut; Montreal</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2010</td><td><b>The Singer&#x27;s Gun</b></td><td><div data-zh>Prix Mystère de la Critique 2014；Exit Party 的阿里/安东/格里森源头</div><div data-en>Prix Mystère 2014; A-side DNA of Exit Party</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -348,32 +370,32 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-04-08</td><td><div data-zh>《Une unique lueur》——Adamsberg #11（Flammarion）</div><div data-en>Une unique lueur, Adamsberg #11</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
-<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Une unique lueur</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-<circle cx="676.6" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="676.6" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2017</text>
-<text x="676.6" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Quand sort la recluse</text>
-<circle cx="403.9" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="403.9" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2001</text>
-<text x="403.9" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Pars vite et reviens t</text>
-<circle cx="301.7" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="301.7" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">1995</text>
-<text x="301.7" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Debout les morts / Les</text>
-</svg><p class="cap">瓦尔加 · Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2026</text>
+<line x1="220.3" y1="90.8" x2="220.3" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.3" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="388.5" y1="90.8" x2="388.5" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="388.5" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="556.8" y1="90.8" x2="556.8" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="556.8" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="725.0" y1="90.8" x2="725.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="725.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2026</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">Une unique lueur</text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+<circle cx="674.6" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="674.6" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2017</text>
+<text x="674.6" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Quand sort la reclus</text>
+<circle cx="405.3" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="405.3" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2001</text>
+<text x="405.3" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Pars vite et reviens</text>
+<circle cx="304.4" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="304.4" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">1995</text>
+<text x="304.4" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Debout les morts / L</text>
+</svg><p class="cap"><span data-both><span data-zh>瓦尔加 · Frédérique Audoin-Rouzeau -&gt; pen name Fred Vargas 作品年表（金环 = 本批书单）</span><span data-en>Vargas works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>1995</td><td><b>Debout les morts / Les Évangélistes</b></td><td><div data-zh>三部曲第一部</div><div data-en>first of The Evangelists trilogy</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2001</td><td><b>Pars vite et reviens tard</b></td><td><div data-zh>破圈代表作</div><div data-en>breakout</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -424,38 +446,38 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2022–2026</td><td><div data-zh>Les Années glorieuses 四部曲：Le Grand Monde→Le Silence et la colère→… →Les Belles Promesses（终章 2026-01-06）</div><div data-en>Glorious Years quartet, ending Les Belles Promesses 2026-01-06</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
-<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Les Belles Promesses</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-<circle cx="778.9" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="778.9" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2023</text>
-<text x="778.9" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Le Silence et la colèr</text>
-<circle cx="761.8" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="761.8" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2022</text>
-<text x="761.8" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Le Grand Monde</text>
-<circle cx="608.4" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="608.4" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2013</text>
-<text x="608.4" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Au revoir là-haut</text>
-<circle cx="574.3" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="574.3" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2011</text>
-<text x="574.3" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Alex</text>
-<circle cx="489.1" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="489.1" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2006</text>
-<text x="489.1" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Travail soigné</text>
-</svg><p class="cap">勒梅特 · Pierre Lemaitre 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2026</text>
+<line x1="220.3" y1="90.8" x2="220.3" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.3" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="388.5" y1="90.8" x2="388.5" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="388.5" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="556.8" y1="90.8" x2="556.8" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="556.8" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="725.0" y1="90.8" x2="725.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="725.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2026</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">Les Belles Promesses</text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+<circle cx="775.5" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="775.5" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2023</text>
+<text x="775.5" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Le Silence et la col</text>
+<circle cx="758.7" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="758.7" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2022</text>
+<text x="758.7" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Le Grand Monde</text>
+<circle cx="607.3" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="607.3" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2013</text>
+<text x="607.3" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Au revoir là-haut</text>
+<circle cx="573.6" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="573.6" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2011</text>
+<text x="573.6" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Alex</text>
+<circle cx="489.5" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="489.5" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2006</text>
+<text x="489.5" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Travail soigné</text>
+</svg><p class="cap"><span data-both><span data-zh>勒梅特 · Pierre Lemaitre 作品年表（金环 = 本批书单）</span><span data-en>Lemaitre works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2006</td><td><b>Travail soigné</b></td><td><div data-zh>出道 polar</div><div data-en>debut</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>2011</td><td><b>Alex</b></td><td><div data-zh>反转式施害者峰作</div><div data-en>twist peak</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -507,23 +529,23 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-02-17</td><td><div data-zh>回忆录《Et la joie de vivre》22 语同步发行</div><div data-en>memoir out in 22 languages</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
-<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Et la joie de vivre (A</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-</svg><p class="cap">佩利科 · Gisèle Pelicot 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2026</text>
+<line x1="220.3" y1="90.8" x2="220.3" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.3" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="388.5" y1="90.8" x2="388.5" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="388.5" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="556.8" y1="90.8" x2="556.8" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="556.8" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="725.0" y1="90.8" x2="725.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="725.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2026</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">Et la joie de vivre </text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+</svg><p class="cap"><span data-both><span data-zh>佩利科 · Gisèle Pelicot 作品年表（金环 = 本批书单）</span><span data-en>Pelicot works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2026</td><td><b>Et la joie de vivre (A Hymn to Life)</b></td><td><div data-zh>本批书单法国证人；22 语同步</div><div data-en>this crop&#x27;s French testament</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
@@ -566,32 +588,32 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-02</td><td><div data-zh>与 Pelicot 的《Et la joie de vivre》出版</div><div data-en>Et la joie de vivre published with Pelicot</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2026</text>
-<line x1="216.4" y1="75.36" x2="216.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="216.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="386.9" y1="75.36" x2="386.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="386.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="557.3" y1="75.36" x2="557.3" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="557.3" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="727.7" y1="75.36" x2="727.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="727.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2026</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">Et la joie de vivre</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-<circle cx="693.7" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="693.7" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2018</text>
-<text x="693.7" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">L&#x27;Amour d&#x27;après</text>
-<circle cx="642.5" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="642.5" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2015</text>
-<text x="642.5" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">Et tu n&#x27;es pas revenu</text>
-<circle cx="574.3" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="574.3" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2011</text>
-<text x="574.3" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">PTSD: la chasse est ou</text>
-</svg><p class="cap">佩里尼翁 · Judith Perrignon 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2026</text>
+<line x1="220.3" y1="90.8" x2="220.3" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="220.3" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="388.5" y1="90.8" x2="388.5" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="388.5" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="556.8" y1="90.8" x2="556.8" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="556.8" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="725.0" y1="90.8" x2="725.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="725.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2026</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">Et la joie de vivre</text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+<circle cx="691.4" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="691.4" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2018</text>
+<text x="691.4" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">L&#x27;Amour d&#x27;après</text>
+<circle cx="640.9" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="640.9" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2015</text>
+<text x="640.9" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">Et tu n&#x27;es pas reven</text>
+<circle cx="573.6" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="573.6" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2011</text>
+<text x="573.6" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">PTSD: la chasse est </text>
+</svg><p class="cap"><span data-both><span data-zh>佩里尼翁 · Judith Perrignon 作品年表（金环 = 本批书单）</span><span data-en>Perrignon works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2011</td><td><b>PTSD: la chasse est ouverte</b></td><td><div data-zh>创伤在场的叙事方法</div><div data-en>trauma-in-present-tense method</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
 <tr><td>2015</td><td><b>Et tu n&#x27;es pas revenu</b></td><td><div data-zh>与 Loridan-Ivens</div><div data-en>with Loridan-Ivens</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -637,29 +659,29 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <tr><td>2026-07</td><td><div data-zh>累计 15 万部超</div><div data-en>150k+ copies</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 </tbody></table></div>
 <h4 class="sec" data-both><span data-zh>作品 Works</span><span data-en>Works</span></h4>
-<div class="diagram"><svg viewBox="0 0 860 128" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
-<line x1="46" y1="79.36" x2="830" y2="79.36" stroke="#A5811D" stroke-width="1.2"/>
-<text x="38" y="83.36" text-anchor="end" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">1980</text>
-<text x="834" y="83.36" text-anchor="start" font-family="Inter,sans-serif" font-size="8" fill="#7C7568">2025</text>
-<line x1="220.2" y1="75.36" x2="220.2" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="220.2" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">1990</text>
-<line x1="394.4" y1="75.36" x2="394.4" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="394.4" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2000</text>
-<line x1="568.7" y1="75.36" x2="568.7" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="568.7" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2010</text>
-<line x1="742.9" y1="75.36" x2="742.9" y2="83.36" stroke="#C9BFA6" stroke-width="0.8"/>
-<text x="742.9" y="96.36" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" fill="#7C7568">2020</text>
-<circle cx="830.0" cy="79.36" r="5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
-<text x="830.0" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#B08A2E">2025</text>
-<text x="830.0" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#C9A227">棺桶まで歩こう</text>
-<text x="830.0" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="8" fill="#B08A2E">【本批书单】</text>
-<circle cx="742.9" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="742.9" y="97.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2020</text>
-<text x="742.9" y="89.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">がん治療とロングテール</text>
-<circle cx="690.6" cy="79.36" r="4" fill="#6C8AAF" />
-<text x="690.6" y="61.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#7C7568">2017</text>
-<text x="690.6" y="77.4" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="9.5" fill="#4A4438">言語化できない痛み（?）</text>
-</svg><p class="cap">萬田緑平 · 萬田緑平 · Ryokhei Manda 作品年表（金环 = 本批书单）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 158" role="img" aria-label="works over years" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" y1="94.8" x2="826" y2="94.8" stroke="#A5811D" stroke-width="1.2"/>
+<text x="44" y="98.8" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">1980</text>
+<text x="830" y="98.8" text-anchor="start" font-family="Inter,sans-serif" font-size="10" fill="#7C7568">2025</text>
+<line x1="224.0" y1="90.8" x2="224.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="224.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">1990</text>
+<line x1="396.0" y1="90.8" x2="396.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="396.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2000</text>
+<line x1="568.0" y1="90.8" x2="568.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="568.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2010</text>
+<line x1="740.0" y1="90.8" x2="740.0" y2="98.8" stroke="#C9BFA6" stroke-width="0.8"/>
+<text x="740.0" y="112.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#7C7568">2020</text>
+<circle cx="826.0" cy="94.8" r="5.5" fill="#C9A227" stroke="#E9D89B" stroke-width="2"/>
+<text x="826.0" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#B08A2E">2025</text>
+<text x="826.0" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#C9A227">棺桶まで歩こう</text>
+<text x="826.0" y="102.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>
+<circle cx="740.0" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="740.0" y="116.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2020</text>
+<text x="740.0" y="107.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">がん治療とロングテール</text>
+<circle cx="688.4" cy="94.8" r="4.5" fill="#6C8AAF" />
+<text x="688.4" y="72.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="#7C7568">2017</text>
+<text x="688.4" y="89.8" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="#4A4438">言語化できない痛み（?）</text>
+</svg><p class="cap"><span data-both><span data-zh>萬田緑平 · 萬田緑平 · Ryokhei Manda 作品年表（金环 = 本批书单）</span><span data-en>Manda works by year (gold ring = this batch)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>
 <tr><td>2017</td><td><b>言語化できない痛み（?）</b></td><td><div data-zh>系列首作（书名以书评目录核）</div><div data-en>first nonfiction (title id from reviews)</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
 <tr><td>2020</td><td><b>がん治療とロングテール</b></td><td><div data-zh>治疗与「长尾」的批判</div><div data-en>treatment &amp; the long tail</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr>

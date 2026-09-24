@@ -70,8 +70,20 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .quote .orig{font-style:italic;color:var(--ink-deep)}
 .quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
 .quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
 .diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
-.diagram svg{display:block;margin:0 auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
 .diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
@@ -117,6 +129,16 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .pill.sm{font-size:.77rem;padding:4px 14px}
 .pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
 .pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
@@ -151,7 +173,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
   <p class="kicker">READING &amp; IA — 秋分 · AUTUMN</p>
   <h1><span data-zh>《一束独光》 · Une unique lueur</span><span data-en>Une unique lueur — 《一束独光》</span></h1>
   <div class="subtitle" data-both><span data-zh>弗雷德·瓦尔加 · 法国 · Flammarion · 2026-04-08 · 528pp · 23 €</span><span data-en>Fred Vargas · the French (1) · Flammarion · 2026-04-08 · 528pp · €23</span></div>
-  <div class="metachip"><span>秋分 · AUTUMN · 2026-09-23</span> <span>Adamsberg 系列第 11 部（2026-04-08）</span> <span>conf ✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入）</span></div>
+  <div class="metachip"><span>秋分 · AUTUMN · 2026-09-23</span> <span>Adamsberg 系列第 11 部（2026-04-08）</span> <span>kind·novel</span> <span>literature, theory</span> <span>conf ✓ 出版信息核实；此前传播的「Fraixen/斯宾诺莎/1980 档案/自杀调查局」等情节锚点经检索证伪（不录入）</span></div>
 </section>
 
 <div class="article">
@@ -159,7 +181,7 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（当前情节仅依据已核预告 `◐/○`）</span><span data-en>not yet read in full · refresh after reading (plot from verified previews only `◐/○`)</span></div>
 <div class="card" style="display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.9rem 1.2rem"><img src="../../art/covers/une-unique-lueur.jpg" alt="Une unique lueur" style="width:88px;height:124px;object-fit:cover;border-radius:6px;box-shadow:0 4px 12px rgba(38,38,31,.2)" loading="lazy"><a href="../../authors/index.html#vargas" title="Fred Vargas"><img src="../../art/authors/vargas.jpg" alt="Fred Vargas" class="aface" loading="lazy"></a><div><div class="bkrate " data-both><span data-zh><svg viewBox="0 0 87 15" width="87" height="15" role="img" aria-label="3.92/5" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(18,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(36,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(54,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><defs><clipPath id="sune-un3"><rect x="0" y="0" width="12.14" height="14"/></clipPath></defs><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6" clip-path="url(#sune-un3)"/></g><g transform="translate(72,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/></g></svg><span class="score">3.92</span><span class="cnt"><span class="n">660</span> 评分 · <span class="n">95</span> 评论</span><span class="cnt" style="color:var(--ink-pale)">Goodreads 评分（2026-04-08 出版后）</span></span><span data-en><svg viewBox="0 0 87 15" width="87" height="15" role="img" aria-label="3.92/5" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(18,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(36,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6"/></g><g transform="translate(54,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/><defs><clipPath id="sune-un3"><rect x="0" y="0" width="12.14" height="14"/></clipPath></defs><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E8A317" stroke="#C9880F" stroke-width="0.6" clip-path="url(#sune-un3)"/></g><g transform="translate(72,0) scale(1.1538)"><path d="M7,0.6 L8.9,4.6 L13.2,5.2 L10.1,8.3 L10.8,12.6 L7,10.5 L3.2,12.6 L3.9,8.3 L0.8,5.2 L5.1,4.6 Z" fill="#E4DAC4" stroke="#C9BFA6" stroke-width="0.6"/></g></svg><span class="score">3.92</span><span class="cnt"><span class="n">660</span> ratings · <span class="n">95</span> reviews</span><span class="cnt" style="color:var(--ink-pale)">Goodreads rating (since 2026-04-08)</span></span></div><span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span></div></div>
 <div class="card"><h3 class="sec" data-both><span data-zh>为何此刻 · Why now</span><span data-en>为何此刻 · Why now</span></h3><div data-zh>当凶案被改写成艺术，罪案小说本身也在追问——我们讲述残酷时，用的是谁的眼睛。</div><div data-en>When murder is rewritten as art, the crime novel asks back — whose eyes are we using when we narrate cruelty?</div></div>
-<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文与试读 · Original text &amp; previews</span><span data-en>Original text &amp; previews</span></h3><div class="tl-list"><a href="https://www.leslibraires.ca/livres/une-unique-lueur-9782898114601" target="_blank" rel="noopener"><span data-zh>Les Libraires 在线翻书 EPUB/PDF + 免费节选 PDF</span><span data-en>Les Libraires feuilleter EPUB/PDF + free extract PDF</span><span class="dom">www.leslibraires.ca ↗</span></a><a href="https://editions.flammarion.com/une-unique-lueur/9782080160713" target="_blank" rel="noopener"><span data-zh>Flammarion 官方页 · Feuilleter 预览</span><span data-en>Flammarion official page · Feuilleter preview</span><span class="dom">editions.flammarion.com ↗</span></a><a href="https://www.goodreads.com/book/show/247037487" target="_blank" rel="noopener"><span data-zh>Goodreads 评分与读者讨论</span><span data-en>Goodreads ratings &amp; discussion</span><span class="dom">www.goodreads.com ↗</span></a></div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.leslibraires.ca/livres/une-unique-lueur-9782898114601" target="_blank" rel="noopener"><span data-zh>Les Libraires 在线翻书 EPUB/PDF + 免费节选 PDF</span><span data-en>Les Libraires feuilleter EPUB/PDF + free extract PDF</span><span class="dom">www.leslibraires.ca ↗</span><span class="rtag" style="color:#A5811D">图书馆 · 借阅记录 Library · ◐</span></a><a href="https://editions.flammarion.com/une-unique-lueur/9782080160713" target="_blank" rel="noopener"><span data-zh>Flammarion 官方页 · Feuilleter 预览</span><span data-en>Flammarion official page · Feuilleter preview</span><span class="dom">editions.flammarion.com ↗</span><span class="rtag" style="color:#3E7C5A">官方出版页 · Official publisher · ✓</span></a><a href="https://www.goodreads.com/book/show/247037487" target="_blank" rel="noopener"><span data-zh>Goodreads 评分与读者讨论</span><span data-en>Goodreads ratings &amp; discussion</span><span class="dom">www.goodreads.com ↗</span><span class="rtag" style="color:#A5811D">读者平台 · Reader community · ◐</span></a></div></div>
 <div class="card"><h3 class="sec" data-both><span data-zh>背景 · Background</span><span data-en>背景 · Background</span></h3><div data-zh>瓦尔加《亚当斯贝格探案》第 11 卷，2026 年 4 月 8 日由 Flammarion 出版（528 页）。书名 « Une unique lueur »（一束唯一的光）取自内瓦尔《El Desdichado》名句，与全书的核心谜面直接挂钩。注意：2026 年另有同名异书（另一作者的同名小说），须以 Flammarion 本与 Adamsberg 线索区隔。此前的二手梗概（Fraixen 老翁、斯宾诺莎时代、1980 档案、自杀调查局）经检索均未见于任何权威源——判为证伪锚点，一律不录入；确证在书内的元素：街头「完美」女尸（银莲花、金哨）、内瓦尔《El Desdichado》、白考尔/鲍嘉形象、六年前的悬案翻查、记忆-复诵主题，以及全书多语种页注。</div><div data-en>Adamsberg #11, published by Flammarion on 8 April 2026 (528 pp). The title &quot;Une unique lueur&quot; — one single glimmer — is taken from Nerval&#x27;s El Desdichado and keys the whole enigma. Caution: another same-titled novel by a different author also appeared in 2026; distinguish by the Flammarion imprint and the Adamsberg series. Earlier secondhand plot anchors (Fraixen, the Spinoza era, 1980 archives, a suicide-investigations bureau) were falsified by search — none appear in any authoritative source, so they are not recorded. Confirmed in-book elements: the &quot;perfect&quot; corpse (anemones, golden whistle), Nerval&#x27;s El Desdichado, the Bacall/Bogart imagery, re-opening of a six-year-old case, the memory-repetition theme, and the book&#x27;s multi-language page notes.</div></div>
 <p class="tok"><span class="conf c-part">✓ 出版信息；情节锚点甄别后 ✓/◐</span> <span class="hidden"></span></p>
 <h2 class="part" data-both><span data-zh>情节分幕 · Plot content</span><span data-en>Plot content</span></h2>
@@ -181,51 +203,66 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 <h2 class="part" data-both><span data-zh>叙事结构 · Narrative structure</span><span data-en>Narrative structure</span></h2>
 <div class="card"><h3 class="sec" data-both><span data-zh>结构 · Structure</span><span data-en>结构 · Structure</span></h3><div data-zh>延续 Adam 系列标志性的「直觉破案」：标靶式轻描淡写的人物速写、突然的闪回、以及让调查显得玄学的闲笔。叙事节奏在 vargas 式「预感」与冷硬现实探案之间摆动；书内引文与页注承担大量互文谜面（多语种）。</div><div data-en>Classic Adamsberg intuition-led detection: shorthand character sketches, sudden flashbacks, throwaway lines that make detection look like divination. The narration swings between Vargas-style &quot;hunch&quot; and hard police procedure; quotations and (multi-language) page notes carry much of the intertext.</div></div>
 <h2 class="part" data-both><span data-zh>情节流程图 · Plot flow</span><span data-en>Plot flow</span></h2>
-<div class="diagram"><svg viewBox="0 0 860 526" role="img" aria-label="plot flow" xmlns="http://www.w3.org/2000/svg">
-<rect x="90" y="26" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
-<text x="106" y="46" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">1</text>
-<text x="130" y="60" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">发现「完美」女尸：格纹套装、银莲花、金哨</text>
-<text x="730" y="60" font-family="monospace" font-size="11" font-weight="700" fill="#777069">✓ 意象</text>
-<line x1="430" y1="98" x2="430" y2="124" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
-<rect x="90" y="124" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
-<text x="106" y="144" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">2</text>
-<text x="130" y="158" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Adamsberg 直觉判定为「图像生成」式谋杀，与六年前悬案并卷</text>
-<text x="730" y="158" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
-<line x1="430" y1="196" x2="430" y2="222" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
-<rect x="90" y="222" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
-<text x="106" y="242" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">3</text>
-<text x="130" y="256" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">证据链指向内瓦尔《El Desdichado》诗句与白考尔/鲍嘉形象</text>
-<text x="730" y="256" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
-<line x1="430" y1="294" x2="430" y2="320" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
-<rect x="90" y="320" width="680" height="72" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
-<text x="106" y="340" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">4</text>
-<text x="130" y="354" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">记忆-复诵的母题贯穿取景逻辑；多语页注指向语言边界</text>
-<text x="730" y="354" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
-<line x1="430" y1="392" x2="430" y2="418" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
-<rect x="90" y="418" width="680" height="72" rx="10" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.4"/>
-<text x="106" y="438" font-family="LXGW WenKai,serif" font-size="13" font-weight="700" fill="#A5811D">5</text>
-<text x="130" y="452" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">旧案重审揭示「唯一一束光」的真相——凶手相信每幅图像只照进一次</text>
-<text x="730" y="452" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
-<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker></defs>
-</svg><p class="cap">《一束独光》 · 事件链（数字为顺序）</p></div>
+<div class="diagram"><svg viewBox="0 0 860 502" role="img" aria-label="plot flow" xmlns="http://www.w3.org/2000/svg">
+<rect x="72" y="26" width="716" height="64" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="48" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">1</text>
+<text x="112" y="50" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">发现「完美」女尸：格纹套装、银莲花、金哨</text>
+<text x="112" y="71" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">The styled corpse found: suit, anemones, golden whistle</text>
+<text x="774" y="48" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#777069">✓ 意象</text>
+<line class="eflow" x1="430.0" y1="90" x2="430.0" y2="120" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="120" width="716" height="64" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="142" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">2</text>
+<text x="112" y="144" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Adamsberg 直觉判定为「图像生成」式谋杀，与六年前悬案并卷</text>
+<text x="112" y="165" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">Adamsberg suspects image-making; rejoins the case with the old file</text>
+<text x="774" y="142" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line class="eflow" x1="430.0" y1="184" x2="430.0" y2="214" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="214" width="716" height="64" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="236" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">3</text>
+<text x="112" y="238" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">证据链指向内瓦尔《El Desdichado》诗句与白考尔/鲍嘉形象</text>
+<text x="112" y="259" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">Evidence converges on Nerval&#x27;s poem and Bacall/Bogart imagery</text>
+<text x="774" y="236" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line class="eflow" x1="430.0" y1="278" x2="430.0" y2="308" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="308" width="716" height="64" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="330" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">4</text>
+<text x="112" y="332" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">记忆-复诵的母题贯穿取景逻辑；多语页注指向语言边界</text>
+<text x="112" y="353" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">The memory-repetition motif runs the composition; multi-lingual notes</text>
+<text x="774" y="330" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<line class="eflow" x1="430.0" y1="372" x2="430.0" y2="402" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="402" width="716" height="64" rx="10" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.4" class="cn"/>
+<text x="88" y="424" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">5</text>
+<text x="112" y="426" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">旧案重审揭示「唯一一束光」的真相——凶手相信每幅图像只照进一次</text>
+<text x="112" y="447" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">The re-examined case reveals what &quot;the one glimmer&quot; really means</text>
+<text x="774" y="424" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#A5811D">◐</text>
+<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker><style>@media (prefers-reduced-motion: no-preference){.eflow{animation:pfdraw 7s linear infinite}.cn{animation:pfpulse 4.2s ease-in-out infinite}}@keyframes pfdraw{to{stroke-dashoffset:-132}}@keyframes pfpulse{0%,100%{opacity:1}50%{opacity:.45}}@media print{.eflow,.cn{animation:none}}</style></defs>
+</svg><p class="cap"><span data-both><span data-zh>《一束独光》 · 事件链（数字为顺序）</span><span data-en>Une unique lueur · the event chain (numbers = order)</span></span></p></div>
 <h2 class="part" data-both><span data-zh>人物关系图 · Characters</span><span data-en>Characters &amp; relations</span></h2>
 <div class="diagram"><svg viewBox="0 0 560 246" role="img" aria-label="character relationship" xmlns="http://www.w3.org/2000/svg">
-<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
-<rect x="22" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
-<text x="80" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Jean-Baptiste Adamsberg</text>
-<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
-<rect x="22" y="94" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
-<text x="80" y="110" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Danglard</text>
-<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
-<rect x="22" y="156" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
-<text x="80" y="172" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Violette Retancourt</text>
-<text x="290" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11.5" font-weight="700" fill="#A5811D">旧日女友</text>
-<rect x="232" y="32" width="116" height="28" rx="14" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.2"/>
-<text x="290" y="48" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="11" fill="#26261F">Camille Forestier</text>
-<path d="M80,46 C80,77.0 80,77.0 80,108" fill="none" stroke="#A5811D" stroke-width="1.3" stroke-dasharray="4 3"/>
-<path d="M80,46 C80,108.0 80,108.0 80,170" fill="none" stroke="#A5811D" stroke-width="1.3" stroke-dasharray="4 3"/>
-<path d="M80,46 C80,46.0 290,46.0 290,46" fill="none" stroke="#C0556B" stroke-width="1.3" stroke-dasharray="4 3"/>
-</svg><p class="cap">《一束独光》 · 人物关系（虚点线=连接）</p></div>
+<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
+<rect x="18" y="30" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>
+<text x="80" y="47" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Jean-Baptiste Adamsberg</text>
+<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
+<rect x="18" y="92" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>
+<text x="80" y="109" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Danglard</text>
+<text x="80" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">巴黎凶案组</text>
+<rect x="18" y="154" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>
+<text x="80" y="171" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Violette Retancourt</text>
+<text x="290" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">旧日女友</text>
+<rect x="228" y="30" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>
+<text x="290" y="47" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">Camille Forestier</text>
+<path class="edge eflow" d="M80,46 C80,77.0 80,77.0 80,108" fill="none" stroke="#A5811D" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arwX)"/>
+<text x="80.0" y="70.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066">搭档探案</text>
+<path class="edge eflow" d="M80,46 C80,108.0 80,108.0 80,170" fill="none" stroke="#A5811D" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3" marker-end="url(#arwX)"/>
+<text x="80.0" y="101.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066">同组探员</text>
+<path class="edge eflow" d="M80,46 C80,46.0 290,46.0 290,46" fill="none" stroke="#C0556B" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1" marker-end="url(#arwX)"/>
+<text x="185.0" y="39.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066">分合伴侣</text>
+<g class="legend">
+<rect x="24" y="224" width="9" height="3" rx="1.5" fill="#A5811D"/>
+<text x="37" y="232" font-family="LXGW WenKai,serif" font-size="9.5" fill="#57524A">同组 colleague</text>
+<rect x="156.0" y="224" width="9" height="3" rx="1.5" fill="#C0556B"/>
+<text x="169.0" y="232" font-family="LXGW WenKai,serif" font-size="9.5" fill="#57524A">恋人 romance</text>
+</g>
+<defs><marker id="arwX" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker><style>@media (prefers-reduced-motion: no-preference){.eflow{animation:pfdraw 7s linear infinite}.cn{animation:pfpulse 4.2s ease-in-out infinite}}@keyframes pfdraw{to{stroke-dashoffset:-132}}@keyframes pfpulse{0%,100%{opacity:1}50%{opacity:.45}}@media print{.eflow,.cn{animation:none}}</style></defs>
+</svg><p class="cap"><span data-both><span data-zh>《一束独光》 · 人物关系（虚点线=连接）</span><span data-en>Une unique lueur · character relations (dotted = link)</span></span></p></div>
 <div class="tablewrap"><table class="ledger"><thead><tr><th>ID</th><th data-both><span data-zh>人物</span><span data-en>name</span></th><th data-both><span data-zh>阵营/组</span><span data-en>group</span></th><th data-both><span data-zh>角色</span><span data-en>role</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
 <tr><td>V1</td><td>Jean-Baptiste Adamsberg</td><td>巴黎凶案组</td><td><div data-zh>主角探长；直觉型、反学院；Athanase 兄弟——本作卷入「记忆-复诵」的谜局</div><div data-en>intuitive commissaire; the absent-minded genius of the brigade</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
 <tr><td>V2</td><td>Danglard</td><td>巴黎凶案组</td><td><div data-zh>副手；博学、谨小慎微，常在酒馆；承担书内引文/史料的考证</div><div data-en>erudite adjutant who glosses the literary evidence</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
@@ -244,8 +281,12 @@ Recurring complaints persist: the finales feel quasi-mystical; the memory-repeti
 **Synthesis:** The novel makes aestheticized violence the enigma itself — literature and film aren&#x27;t décor but the killer&#x27;s lens. The title is half the answer.</div></div>
 <h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
 <div class="srcnote"><div data-zh>待通读原书后补充。</div><div data-en>Craft notes come after the full read.</div></div>
-<h2 class="part" data-both><span data-zh>精彩片段 · Excerpts</span><span data-en>Notable excerpts</span></h2>
-<div class="quote"><div class="orig">«Je suis le ténébreux, — le veuf, — l&#x27;inconsolé.» (Nerval, «El Desdichado»)</div><div class="trs">「我乃幽冥者，——鳏夫，——无可慰藉者。」——书名及谜面的源文本。</div><div class="src">fr.wikipedia · 公开评论确认在书内被引用</div></div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq">
+<div class="orig">«Je suis le ténébreux, — le veuf, — l&#x27;inconsolé.» (Nerval, «El Desdichado»)<span class="lang">FR · français</span></div>
+<div class="tr"><div data-zh>「我乃幽冥者，——鳏夫，——无可慰藉者。」——书名及谜面的源文本。</div><div data-en>&quot;I am the dark one — the widower — the inconsolable one.&quot; (Gérard de Nerval, &quot;El Desdichado&quot;)</div></div>
+<div class="note"><div data-zh>书名《Une unique lueur》（一束独光）正脱胎于这首诗。「ténébreux / veuf / inconsolé」三连呼，是法国浪漫主义最著名的一句——诗人以失星者自喻（「我的唯一的星已经熄灭」）。瓦尔加借这句诗把罪案谜面沉入法国文学传统的底色：一束光，在黑暗中辨认。</div><div data-en>The novel&#x27;s title quotes this line from Nerval&#x27;s great sonnet &quot;El Desdichado&quot; — &quot;my one Star is dead.&quot; Three vocatives (dark one / widower / inconsolable) make it the most famous opening in French Romanticism. Vargas plants her murder-mystery inside that literary shadow: one glimmer, held up against the dark.</div></div>
+<div class="src">fr.wikipedia · 公开评论确认在书内被引用</div></div>
 <h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
 <div class="card"><div data-zh>把整部小说当作对《El Desdichado》的「一束光的注解」来读：留意每次对诗句的引用，都对应凶手布置图景的一次『取景』。</div><div data-en>Read the novel as an extended gloss on El Desdichado&#x27;s &quot;unique lueur&quot;: each quotation is a frame the killer has composed.</div></div>
 <div class="card"><div data-zh>追踪银莲花（anémone）与金哨的每一次出现——它们是物件间的坐标，Vargas 惯用「微小信物」串联直觉逻辑。</div><div data-en>Track the anemone and the golden whistle on every appearance — Vargas&#x27;s small tokens that chain her intuitive logic.</div></div>

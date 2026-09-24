@@ -47,3 +47,24 @@
 
 ### 一句话 Why this book 为何读
 在「AI 批量图像、美与暴力互渗」的法语区语境，问「谁在把现实美学化」——Adamsberg 是那个拒绝美学化的常识侦探。
+
+---
+
+## 提取账本 Extract Ledger
+
+```yaml
+extract_ledger:
+  kind: novel
+  read_status: reading
+  skeleton_parts: 3
+  plot_nodes: 5
+  characters: 4
+  charedges: 3
+  motif_clusters: 0
+  craft_items: 0
+  intent_quotes: 0
+  excerpts: 1
+  disagreements: 1
+  unverified_items: 2
+  related_edges: 5
+```

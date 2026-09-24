@@ -11,7 +11,7 @@ This folder is the **operating manual for every domain in this repo**: which too
 | File 文件 | Content 内容 |
 |---|---|
 | `skills.md` | Environment-wide catalog of skills & tools 环境级技能与工具目录 |
-| `workflows.md` | Shared workflows + per-domain registry 公共流程 + 各域工作流注册表 |
+| `workflows.md` | Shared workflows + per-domain registry 公共流程 + 各域工作流注册表（W-GEN · W-ENV · W-PRE · W-EVO · **W-CAP 复盘沉淀**） |
 | `principles.md` | Repo-wide rules (information use · knowledge design · coding) 全仓库规则（信息 · 知识 · 编码） |
 | `evolution.md` | Self-evolution mechanism 自我演化机制（信号 · 变异 · 日志） |
 | `README.md` | this index 本索引 |

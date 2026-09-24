@@ -48,3 +48,24 @@
 
 ### 一句话 Why this book 为何读
 秋分书单头炮：在美国自身极化的当下，读一部把「两个美国」写成一确二真的小说——现实已经在分叉，小说只是把它显影。
+
+---
+
+## 提取账本 Extract Ledger
+
+```yaml
+extract_ledger:
+  kind: novel
+  read_status: reading
+  skeleton_parts: 5
+  plot_nodes: 14
+  characters: 17
+  charedges: 13
+  motif_clusters: 6
+  craft_items: 6
+  intent_quotes: 6
+  excerpts: 6
+  disagreements: 1
+  unverified_items: 6
+  related_edges: 13
+```

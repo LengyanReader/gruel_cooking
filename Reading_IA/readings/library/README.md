@@ -8,6 +8,10 @@ One Markdown file per book you have read, are reading, or seriously intend to re
 
 Copy `_template.md` and fill it. Keep one card per book, no matter how brief.
 
+**戴透镜提取**：先按 `../extraction/framework.md` 定型（novel / memoir / essay / generic），
+用对应 `../extraction/prompts/<kind>.md` 逐层提取，最后填 `extract_ledger` 验账
+（`py -X utf8 ../extraction/audit.py`）——深度无损由账本保证，不只靠手感。
+
 复制 `_template.md` 填写。每书一卡，无论多短。
 
 ## Status conventions 状态约定

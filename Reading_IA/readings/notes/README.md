@@ -12,6 +12,8 @@ The live record of reading. One note per book, filed by book slug: `notes/<book-
 - **book**: [[library/YYYY-slug]]
 - **read**: YYYY-MM — YYYY-MM
 - **form**: 精读 close / 通读 skimming / 选读 select / 弃读 dnf
+- **domain**: #tag（如 #mathematics #theory #medicine-health）跨学科检索用
+- **echo**: [[categories/<slug>]] 原型·概念簇挂钩
 
 ## 高光 Highlights
 > （引用 + 一行动态 reply）
