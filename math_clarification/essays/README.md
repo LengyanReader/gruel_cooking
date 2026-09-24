@@ -6,6 +6,10 @@ Long-form essays on mathematics itself: what it is, who does it, how it is judge
 
 - [ai_and_math.md](ai_and_math.md) — **数学的危机，还是数学家的危机？——AI 时代关于数学的七问** / *A Crisis of Mathematics — or of the Mathematicians? Seven Questions in the Age of AI*. Seven interlocking chapters on AI and mathematics: the claims and their verification, the voices in the community, mathematics as a language, who mathematicians are, the division of labor under formalization, the question of groundbreaking problems, and a plain-spoken closing reflection. Anchored on this folder's own [Erdős unit distance record](../famous_problems/erdos_unit_distance.md) and its [proof narrative](../proof_narratives/erdos_unit_distance.md).
 
+## Reference drafts (参考稿)
+
+- [ref1/](ref1/) keeps working drafts and reference material consulted while writing the essay (er2/qw1/rf3/fr4 — English outlines, a full Chinese draft, and critical analyses). They are research material, not entries: the viewer never lists them (`web/parser.py` scans `essays/*.md` non-recursively), and they are not covered by the anatomy below. Keep them out of the essay index if you reorganize the folder.
+
 ## Essay anatomy (论说体例)
 
 House style's nine parts are built around a *problem you can state and picture*. An essay has no such anchor. It is written in the register of philosophy of science and critical humanism — flowing prose, argument carried inside the paragraph, no thesis labels, no bullet scaffolding. But the prose is disciplined by a fixed internal sequence, which is the same five moves every time, even when none of them appears as a heading:
