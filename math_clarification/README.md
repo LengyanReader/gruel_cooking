@@ -42,7 +42,7 @@ Entries with checkable claims carry a **Machine-checked** line at the end.
 - `proof_narratives/` — **proof narratives (证明叙事)**: proofs retold as stories anyone can follow. Every step motivated, no unexplained leaps, dead ends shown as part of the road. The guiding creed: **math is never a difficult thing** — when a proof feels hard, the exposition has failed, not the reader. Each narrative retells one entry's proof as an arc: the puzzle → the false starts → the one key idea → the click.
   - [Erdős unit distance disproof](proof_narratives/erdos_unit_distance.md) *(first narrative — the AI's leap from a count of dots to the symmetries of number fields)*
 - `essays/` — **essays & meta-reflections (论说)**: long-form arguments about mathematics itself — what it is, who does it, how it is judged, and what happens when the work of doing it changes hands. An essay argues; the nine-part entry anatomy does not apply. Its skeleton, sources rules, and status as a registered entry type are set out in [essays/](essays/README.md).
-  - [Wisdom and Proof: Seven Questions on Mathematics in the Age of AI](essays/ai_and_math.md) *(seven interlocking chapters on AI and mathematics: the claims and their verification, the voices, what mathematics is, who mathematicians are, the division of labor under formalization, the question of groundbreaking problems, and a plain-spoken closing reflection)*
+  - [数学的危机，还是数学家的危机？——AI 时代关于数学的七问](essays/ai_and_math.md) *(seven interlocking chapters on AI and mathematics: the claims and their verification, the voices, mathematics as a language, who mathematicians are, the division of labor under formalization, the question of groundbreaking problems, and a plain-spoken closing reflection)*
 
 ## Suggested Order
 
