@@ -9,7 +9,7 @@
   <div class="container">
     <h1>{% if zh %}通州运河 · 田野底图{% else %}Tongzhou Canal · Field Basemap{% endif %}</h1>
     <p class="map-lede">
-      {% if zh %}以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。{% else %}A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.{% endif %}
+      {% if zh %}以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。点「档」标记展开每个点的<strong>考据档案</strong>（历史演变 / 交融 / 影响），逐条标注出处与分级。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。{% else %}A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Click a “档” marker to open each point's <strong>dossier</strong> (Evolution / Contact / Influence), every line tagged with source and grade. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.{% endif %}
     </p>
   </div>
 </section>
@@ -21,6 +21,12 @@
     </div>
     <div id="map" class="map-stage" role="img"
          aria-label="{% if zh %}通州运河多图层可交互地图{% else %}Interactive multi-layer map of the Tongzhou canal{% endif %}"></div>
+    <aside id="dossier-panel" class="dossier-panel" aria-hidden="true" aria-live="polite">
+      <button id="dossier-close" class="dossier-close" type="button" aria-label="{% if zh %}关闭{% else %}Close{% endif %}">×</button>
+      <h3 id="dossier-title" class="dossier-title"></h3>
+      <p id="dossier-sub" class="dossier-sub"></p>
+      <div id="dossier-body" class="dossier-body"></div>
+    </aside>
     <ul id="map-legend" class="map-legend"></ul>
     <p class="map-foot-note">
       {% if zh %}数据来源：OpenStreetMap（© 贡献者，ODbL）、国务院/UNESCO 公开名录文本、本项目田野数据库。保护红线一律以官方公布文本为准，本图不绘制任何未经公布的边界几何。{% else %}Sources: OpenStreetMap (© contributors, ODbL), State Council / UNESCO published lists (text), and this project's field database. Protection boundaries follow official published text only — no unpublished boundary geometry is drawn on this map.{% endif %}

@@ -70,7 +70,7 @@
   <div class="container">
     <h1>Tongzhou Canal · Field Basemap</h1>
     <p class="map-lede">
-      A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.
+      A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Click a “档” marker to open each point's <strong>dossier</strong> (Evolution / Contact / Influence), every line tagged with source and grade. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.
     </p>
   </div>
 </section>
@@ -82,6 +82,12 @@
     </div>
     <div id="map" class="map-stage" role="img"
          aria-label="Interactive multi-layer map of the Tongzhou canal"></div>
+    <aside id="dossier-panel" class="dossier-panel" aria-hidden="true" aria-live="polite">
+      <button id="dossier-close" class="dossier-close" type="button" aria-label="Close">×</button>
+      <h3 id="dossier-title" class="dossier-title"></h3>
+      <p id="dossier-sub" class="dossier-sub"></p>
+      <div id="dossier-body" class="dossier-body"></div>
+    </aside>
     <ul id="map-legend" class="map-legend"></ul>
     <p class="map-foot-note">
       Sources: OpenStreetMap (© contributors, ODbL), State Council / UNESCO published lists (text), and this project's field database. Protection boundaries follow official published text only — no unpublished boundary geometry is drawn on this map.

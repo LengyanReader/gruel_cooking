@@ -145,8 +145,53 @@
       .bindPopup("<strong>" + (ZH ? r.name_zh : r.name_en) + "</strong>"));
   });
 
+  /* ── layer: node dossiers (考据档案: 历史演变 / 交融 / 影响) ── */
+  /* Every dossier line is segmented from already-vetted field_observations and
+   * carries its own source + grade tag; gaps stay flagged, nothing is invented. */
+  var LVL = { evolution: ["历史演变", "Evolution"], contact: ["交融", "Contact"], influence: ["影响", "Influence"] };
+  var LVL_CLS = { A: "grade-unesco", B: "tier-osm", C: "grade-tbd", D: "grade-tbd" };
+  function levelBadge(lv) { return badge("[" + lv + "]", LVL_CLS[lv] || "grade-tbd"); }
+  function facetHtml(d, key) {
+    var items = d[key] || [];
+    if (!items.length) return "";
+    var lis = items.map(function (it) {
+      return "<li>" + (ZH ? it.zh : it.en) + " " + levelBadge(it.level) +
+        (it.src ? "<br><em>" + it.src + "</em>" : "") + "</li>";
+    }).join("");
+    return "<section class='dossier-facet'><h4>" + (ZH ? LVL[key][0] : LVL[key][1]) +
+      "</h4><ul>" + lis + "</ul></section>";
+  }
+  function openDossier(d) {
+    var panel = document.getElementById("dossier-panel");
+    if (!panel) return;
+    var t = document.getElementById("dossier-title");
+    var s = document.getElementById("dossier-sub");
+    var b = document.getElementById("dossier-body");
+    if (t) t.textContent = ZH ? d.name_zh : d.name_en;
+    if (s) s.textContent = d.lat.toFixed(4) + ", " + d.lon.toFixed(4) + " · " +
+      (d.trust === "osm" ? "OSM" : "approx 锚点") + " · 坐标待 GPS 复核";
+    if (b) b.innerHTML = facetHtml(d, "evolution") + facetHtml(d, "contact") + facetHtml(d, "influence");
+    panel.classList.add("open");
+    panel.setAttribute("aria-hidden", "false");
+  }
+  var gDossier = L.layerGroup();
+  (D.dossiers || []).forEach(function (d) {
+    var ic = L.divIcon({ className: "map-dossier-pin", html: "档", iconSize: [20, 20], iconAnchor: [10, 10] });
+    var mk = L.marker([d.lat, d.lon], { icon: ic });
+    mk.bindPopup("<strong>" + (ZH ? d.name_zh : d.name_en) + "</strong><br>" +
+      (ZH ? "点选查看考据档案" : "click for the dossier"));
+    mk.on("popupopen", function (e) {
+      var node = e.popup.getElement();
+      var a = node.querySelector(".dossier-open");
+      if (a) a.addEventListener("click", function () { openDossier(d); });
+    });
+    // clicking the marker opens the dossier directly
+    mk.on("click", function () { openDossier(d); });
+    gDossier.addLayer(mk);
+  });
+
   /* ── defaults + control ── */
-  gWater.addTo(map); gParks.addTo(map); gPois.addTo(map); gRoute.addTo(map);
+  gWater.addTo(map); gParks.addTo(map); gPois.addTo(map); gRoute.addTo(map); gDossier.addTo(map);
   L.control.layers(
     { [ZH ? "街道底图 OSM" : "OSM streets"]: tiles },
     {
@@ -157,6 +202,7 @@
       [ZH ? "DB 田野观察" : "DB observations"]: gObs,
       [ZH ? "保护红线（文本）" : "Red-line (text)"]: gRedline,
       [ZH ? "漕运 tracer 链" : "Grain-trade tracer"]: gTracer,
+      [ZH ? "考据档案（点）" : "Node dossiers"]: gDossier,
       [ZH ? "一日回环" : "Day loop"]: gRoute
     },
     { collapsed: false, position: "topright" }
@@ -173,7 +219,8 @@
       ["#c07a2d", ZH ? "空心 = 近似锚点（待 GPS 钉）" : "Hollow = approximate anchor (GPS pin pending)"],
       ["#a32020", ZH ? "国保点（文本著录）" : "National-site point (text record)"],
       ["#a9822d", ZH ? "UNESCO / A 级来源" : "UNESCO / grade-A source"],
-      ["#7a5c1e", ZH ? "虚线 = 漕运 tracer（概念示意）" : "Dashed = grain tracer (conceptual)"]
+      ["#7a5c1e", ZH ? "虚线 = 漕运 tracer（概念示意）" : "Dashed = grain tracer (conceptual)"],
+      ["#033b4c", ZH ? "档 = 考据档案（点选右侧展开）" : "档 = node dossier (click to open)"]
     ];
     legend.innerHTML = rows.map(function (r) {
       return '<li><i style="background:' + r[0] + '"></i>' + r[1] + "</li>";
@@ -182,4 +229,15 @@
       (ZH ? "无任何边界几何被绘制：OSM 无本区遗产区划数据，红线仅著录官方文本" :
            "No boundary geometry drawn: OSM lacks WH zone data here; red-line = official text only") + "</li>";
   }
+
+  /* dossier panel: close button + Esc */
+  var dpanel = document.getElementById("dossier-panel");
+  var dclose = document.getElementById("dossier-close");
+  function closeDossier() {
+    if (!dpanel) return;
+    dpanel.classList.remove("open");
+    dpanel.setAttribute("aria-hidden", "true");
+  }
+  if (dclose) dclose.addEventListener("click", closeDossier);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDossier(); });
 })();
