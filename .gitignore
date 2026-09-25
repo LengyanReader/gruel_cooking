@@ -19,3 +19,8 @@ Language Stacking-Linguistic Weaving/languages/data/*.cypher
 .DS_Store
 Thumbs.db
 .env
+
+# 浏览器自动化测试残留（子代理启动的临时 Chrome/Edge profile 与截图，非项目内容）
+_tmp_profile*/
+_tmp_*.html
+screenshot_*.png
