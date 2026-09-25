@@ -750,7 +750,7 @@ Row 10 carries two regimes because the derivation and its admissibility are grad
 
 ### 11.5 What the coding yields, and what it does not
 
-Grouped by regime and by the presence of a recorded public dispute, the eleven events give: MG and HG together 1 dispute in 6; CG 3 in 5. On this 2×2 Fisher's exact test returns an odds ratio of about 0.13 with a two-sided p ≈ 0.24 (one-sided p ≈ 0.20). The association is therefore reported as *descriptive*, and it is not the confirmation of Section 3's hypothesis H3 — at this sample size nothing in the corpus could confirm anything, which is why H3 was argued by the alignment of mechanism and location rather than by counts.
+Grouped by regime and by the presence of a recorded public dispute, the eleven events give 1 dispute among the 6 machine- or hybrid-graded events, and 3 among the 5 that are community-graded or, like the September attribution episode (row 11), adjudicated by the same social machinery though not themselves a mathematical result. On this 2×2 Fisher's exact test returns an odds ratio of about 0.13 with a two-sided p ≈ 0.24 (one-sided p ≈ 0.20). The association is therefore reported as *descriptive*, and it is not the confirmation of Section 3's hypothesis H3 — at this sample size nothing in the corpus could confirm anything, which is why H3 was argued by the alignment of mechanism and location rather than by counts.
 
 The counting is defective in one specific, repairable way: the denominators are selected on publicity. The repair is a census rather than a selection — enumerate the population of machine-graded mathematical outputs in the window (arXiv listings for formalized mathematics, mathlib merge records, published leaderboard tables), enumerate public named challenges to results (correction notices, commentaries, formal complaints, referee statements placed on the public record), and cross-tabulate challenge rate against regime. That design would test H3 against H1 and H2 with the same material this paper has had to order qualitatively, and it is the study's first recommended successor. It is written out as an executable protocol — three sampling frames with their exact queries, one pre-declared endpoint, a power table, and coder-reliability gates — at [`submission/census_protocol.md`](submission/census_protocol.md), so that the successor study can be audited as a design before it exists as a result.
 
@@ -827,7 +827,7 @@ The claim that the purely machine-checkable strata have produced no scandal is a
 
 ### （五）编码得出了什么，得不出什么
 
-按体制与「是否见诸公开争执」分组，十一件事给出：MG 与 HG 合计 6 件中 1 件；CG 为 5 件中 3 件。此 2×2 列联表的 Fisher 精确检验给出胜算比约 0.13、双侧 p ≈ 0.24（单侧 p ≈ 0.20）。故这一关联只作为*描述*呈报，它不是第三节假说 H3 的确认——以这样的样本量，记录中什么也确认不了。H3 之所以被采，靠的是机制与位置的相互吻合，不是数出来的。
+按体制与「是否见诸公开争执」分组，十一件事给出：机器自核与混合核验两层，6 件中 1 件生出争执；其余 5 件——共同体裁断之层，连同第十一行那桩虽非成果、却凭同一套社会机制裁断的署名之争——5 件中 3 件生出争执。此 2×2 列联表的 Fisher 精确检验给出胜算比约 0.13、双侧 p ≈ 0.24（单侧 p ≈ 0.20）。故这一关联只作为*描述*呈报，它不是第三节假说 H3 的确认——以这样的样本量，记录中什么也确认不了。H3 之所以被采，靠的是机制与位置的相互吻合，不是数出来的。
 
 这套计数有一个具体而可修的毛病：分母是按曝光选出来的。补救之道是把「挑选」换成「普查」——列出窗口内全部机器判分的数学产出（arXiv 形式化数学清单、mathlib 合入记录、已公布的基准成绩表），再列出对结果的公开指名挑战（更正启事、评论文、正式申诉、被置于公开记录的审稿陈述），而后以争执率对体制作交叉列联。此设计能以本文只得定性排比的同一批材料，就 H3 与 H1、H2 一较高下，是本文首推的后续研究。它已写成一份可执行的方案，另存于 [`submission/census_protocol.md`](submission/census_protocol.md)：三源检索框架与逐条检索式、唯一的主终点、样本效力表、编码者信度门槛，俱在案上。另录一份，取的是这个意思：这项研究未出结果之先，已可作为一份方案受人稽核。
 
