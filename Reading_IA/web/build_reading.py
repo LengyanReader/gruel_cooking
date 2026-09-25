@@ -938,13 +938,13 @@ def book_page(site, book, crop):
         for m in book["motifs"]:
             s.append(motif_block(m))
     # excerpts
-    if not is_hist:
-        s.append('<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>')
-        if book.get("excerpts"):
-            for e in book["excerpts"]:
-                s.append(excerpt_block(e))
-        else:
-            s.append(f'<div class="srcnote">{zh_en("待读原书摘引。", "Excerpts pending the read.")}</div>')
+    exc_label = ("原文摘录 · Passages from the book", "Passages from the book") if is_hist else ("语言与文化 · 原意摘录", "Language &amp; culture — excerpts")
+    s.append(f'<h2 class="part" data-both><span data-zh>{exc_label[0]}</span><span data-en>{exc_label[1]}</span></h2>')
+    if book.get("excerpts"):
+        for e in book["excerpts"]:
+            s.append(excerpt_block(e))
+    else:
+        s.append(f'<div class="srcnote">{zh_en("待读原书摘引。", "Excerpts pending the read.")}</div>')
     # deep read
     s.append('<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>')
     for d in book.get("deep_read", []):

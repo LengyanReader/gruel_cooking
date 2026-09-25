@@ -2390,7 +2390,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Homer · 荷马",
+          "group": "文本传统",
+          "role_zh": "口传诗学的定型——欧洲「古典记忆」的语法创立者",
+          "role_en": "Textual tradition — 口传诗学的定型",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Augustine of Hippo · 奥勒留·奥古斯丁",
+          "group": "晚期罗马 · 教会",
+          "role_zh": "354–430，本书的收束人物——《上帝之城》把罗马装进基督教的历史",
+          "role_en": "Late Roman · Church — 354–430，本书的收束人物",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Alexander III of Macedon · 亚历山大大帝",
+          "group": "马其顿 → 印度河",
+          "role_zh": "公元前 356–323，希腊化的开启者，本书的『欧洲-亚洲』轴心转折",
+          "role_en": "Macedon → Indus — 公元前 356–323，希腊化的开启者，本书的『欧洲-亚洲』轴心转折",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Julius Caesar · 尤利乌斯·恺撒",
+          "group": "罗马共和国 → 独裁",
+          "role_zh": "前 100–44，罗马从城邦到帝国的关键节点",
+          "role_en": "Roman Republic → dictatorship — 前 100–44，罗马从城邦到帝国的关键节点",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Constantine I · 君士坦丁大帝",
+          "group": "罗马帝国",
+          "role_zh": "272–337，米兰敕令与君士坦丁堡的奠基者——基督教欧洲的世俗支柱",
+          "role_en": "Roman Empire — 272–337，米兰敕令与君士坦丁堡的奠基者",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -2405,11 +2446,93 @@
         {
           "zh": "从物质证据（泥板、钱币、建筑）出发而非从文本出发的论证法",
           "en": "Arguments anchored on material evidence (tablets, coinage, buildings) before texts"
+        },
+        {
+          "zh": "Price & Thonemann 采用「文本先于考古」的方法 —— 每一章从一份关键文本切入。",
+          "en": "Text-before-artifact method — each chapter opens with a key text."
+        },
+        {
+          "zh": "全书贯穿「欧洲 vs 亚洲」范畴的谱系学 —— 从希罗多德到 31 世纪的宗教辩论。",
+          "en": "Genealogy of the 'Europe vs Asia' binary from Herodotus onward."
+        },
+        {
+          "zh": "图文互证 —— 每章至少 4 幅图版，从线形文字 B 泥板到 Lullingstone 壁画。",
+          "en": "Text-image cross-reference: Linear B tablets to Lullingstone frescoes."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "记忆与书写",
+          "name_en": "Memory & Writing",
+          "evid_zh": "「古典」不是发现，而是每一代人重新发明的记忆产物——从荷马到奥古斯丁。",
+          "evid_en": "「古典」不是发现，而是每一代人重新发明的记忆产物——从荷马到奥古斯丁。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "帝国崇拜",
+          "name_en": "Imperial Cult",
+          "evid_zh": "Price 的成名主题——罗马皇帝崇拜作为行省认同的技术，贯穿第七至九章。",
+          "evid_en": "Price 的成名主题——罗马皇帝崇拜作为行省认同的技术，贯穿第七至九章。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "东方-西方",
+          "name_en": "East-West Axis",
+          "evid_zh": "从波斯战争到亚历山大，「欧洲 vs 亚洲」作为一个可被历史追踪的范畴被发明。",
+          "evid_en": "从波斯战争到亚历山大，「欧洲 vs 亚洲」作为一个可被历史追踪的范畴被发明。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "一神教的胜利",
+          "name_en": "Triumph of Monotheism",
+          "evid_zh": "君士坦丁-狄奥多西-奥古斯丁的三步进程——古典宗教的终结与基督教欧洲的开端。",
+          "evid_en": "君士坦丁-狄奥多西-奥古斯丁的三步进程——古典宗教的终结与基督教欧洲的开端。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "In October 2005 a huge steel, bronze and glass sculpture was unveiled outside the seat of the European Parliament in Strasbourg. The sculpture, donated to the European Parliament by the town of Agios Nikolaos on Crete, depicts the mythological princess Europa, cast in bronze, riding on the back of a steel and glass bull. Once upon a time (or so the story goes), the god Zeus fell in love with a beautiful girl named Europa. In order to gain her affections, Zeus turned himself into a magnificent bull, and carried her on his back across the sea to Crete. According to some accounts, one of their three sons was a certain Minos, who became king of Crete. So the Strasbourg sculpture acts as a elegant symbol for the place of Crete in the history of Europe: since Europa later gave her name to the continent of Europe, the Minoan civilization on Crete marks the true beginning of European history.",
+          "trans_zh": "2005 年 10 月，一尊巨大的钢、铜、玻璃雕塑在斯特拉斯堡欧洲议会总部门前揭幕 —— 它描绘了神话人物欧罗巴。",
+          "note_zh": "以现代欧洲议会前的希腊神话雕塑开篇——「古典欧洲」是被不断重述的叙事，不是天然地理。",
+          "note_en": "Opens with a 2005 sculpture of Europa at the EU Parliament — 'Classical Europe' is an ongoing narrative, not a given geography.",
+          "source": "Introduction — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "In the beginning, there was Troy and the Trojan War, made famous in European history by the two epic poems ascribed to Homer, the Iliad and the Odyssey . According to these poems, the Trojan War began when Helen, wife of Menelaus, king of Sparta, was abducted by Paris, a prince of Troy. The Iliad tells the story of the anger of the Greek warrior Achilles at Troy; the Odyssey recounts the adventures of Odysseus on his way home from Troy to the island of Ithaca. We see these two epics as largely fictional stories, but these and later memories of the Trojan War were of fundamental importance within antiquity and beyond. Greeks, Romans and others found their origins in the events surrounding the Trojan War, the founding acts of European history. Before looking at the later importance of the Trojan War, we need to understand the period in which these later tales are set, the period of the palaces in Crete and mainland Greece.",
+          "trans_zh": "起初有特洛伊与特洛伊战争，因两部归于荷马名下的史诗《伊利亚特》与《奥德赛》而在欧洲历史上闻名。",
+          "note_zh": "以荷马对特洛伊的追想作为欧洲记忆的起点——文本先于考古，传说先于史实。",
+          "note_en": "Starts with Homer's Troy — text before archaeology, myth before history.",
+          "source": "1 - — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "These snapshots of Lullingstone encapsulate the themes of this chapter: the extraordinary stability and success of Greek and Latin culture, which was still the path to success in the western parts of the Roman empire; and the relation of this culture to the newly emerging Christianity. After the emperor Constantine had converted to Christianity in AD312 Christians moved from being a persecuted group to being supported by Constantine and subsequent emperors. The issue of how far Christianity was compatible with the inherited culture of the past continued to be, and still is, contested. We shall begin by looking at how central government became highly interventionist, which brought about great changes to civic life.",
+          "trans_zh": "四世纪中叶，英格兰肯特郡 Lullingstone 一座乡间别墅的主人决定装饰其接待室。",
+          "note_zh": "以不列颠一隅的基督教壁画作为「古典欧洲」的收尾——帝国的边缘成为其遗产的载体。",
+          "note_en": "Ends with a Kentish villa's Christian frescoes — the empire's periphery becomes its heir.",
+          "source": "9 - — original text",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "先读 Introduction 与 Conclusion 各一章 —— 把握「记忆」方法线",
+          "en": "Read Intro and Ch. 9 first — the 'memory' thread"
+        },
+        {
+          "zh": "追踪每个世纪里『谁在使用希腊罗马』的例子（如亚历山大、奥古斯丁）",
+          "en": "Track who is claiming Greece/Rome in each century"
+        },
+        {
+          "zh": "与 Mary Beard《SPQR》互读 —— 罗马史的两种当代写法",
+          "en": "Pair with Beard's SPQR for two contemporary Roman histories"
+        }
+      ],
       "related": [
         {
           "title": "The Inheritance of Rome",
@@ -2597,7 +2720,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Charlemagne · 查理曼",
+          "group": "加洛林帝国",
+          "role_zh": "742–814，800 年圣诞加冕——本书第四部分的核心",
+          "role_en": "Carolingian Empire — 742–814，800 年圣诞加冕",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Muhammad · 穆罕默德",
+          "group": "阿拉伯-伊斯兰",
+          "role_zh": "570–632，伊斯兰建国——第三部分东地中海新秩序的起点",
+          "role_en": "Arab-Islamic — 570–632，伊斯兰建国",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Gregory the Great · 大格里高利",
+          "group": "罗马教廷",
+          "role_zh": "540–604，教皇君主制的雏形与向英格兰的宣教",
+          "role_en": "Papacy of Rome — 540–604，教皇君主制的雏形与向英格兰的宣教",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Basil II · 巴西尔二世",
+          "group": "拜占庭",
+          "role_zh": "958–1025，拜占庭复兴的顶点——第三部分的关键人物",
+          "role_en": "Byzantium — 958–1025，拜占庭复兴的顶点",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Alcuin of York · 约克的阿尔昆",
+          "group": "加洛林学术",
+          "role_zh": "735–804，卡洛林文艺复兴的教育总设计师",
+          "role_en": "Carolingian learning — 735–804，卡洛林文艺复兴的教育总设计师",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -2616,11 +2780,75 @@
         {
           "zh": "大空间比较：四五条并行路径而非单线演化",
           "en": "Large-space comparison: four-five parallel trajectories rather than single-line evolution"
+        },
+        {
+          "zh": "陶器-贸易-税制的物质三角 —— Wickham 用考古数据构建制度史。",
+          "en": "Pottery-trade-taxation triangle: archaeology as institutional history."
+        },
+        {
+          "zh": "打破「西方 vs 拜占庭 vs 伊斯兰」的三分法 —— 通过比较经济史统一叙述。",
+          "en": "Dissolves West/Byzantium/Islam triad through comparative economic history."
+        },
+        {
+          "zh": "章节极长 (30-40 页) —— 每章自成一篇专题论文；建议主题阅读而非通读。",
+          "en": "Chapters run 30-40pp each — a self-contained monograph per chapter."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "物质连续性",
+          "name_en": "Material Continuity",
+          "evid_zh": "陶器、贸易路线、税制——罗马之后，物质生活仍以罗马为参照。",
+          "evid_en": "陶器、贸易路线、税制——罗马之后，物质生活仍以罗马为参照。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "多个继承者",
+          "name_en": "Many Heirs of Rome",
+          "evid_zh": "拜占庭、法兰克、倭马亚、阿拔斯——「继承罗马」不是单线而是多极。",
+          "evid_en": "拜占庭、法兰克、倭马亚、阿拔斯——「继承罗马」不是单线而是多极。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "地中海到北海",
+          "name_en": "Mediterranean to North Sea",
+          "evid_zh": "六百年里欧洲的重心缓慢北移，本书的地理学主轴。",
+          "evid_en": "六百年里欧洲的重心缓慢北移，本书的地理学主轴。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "农奴化的进程",
+          "name_en": "Enclosure of the Peasantry",
+          "evid_zh": "第 22 章的核心论点——加洛林之后农民的自由被一步步关进庄园。",
+          "evid_en": "第 22 章的核心论点——加洛林之后农民的自由被一步步关进庄园。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "This is an extract from a Greek-Latin primer for children, probably of the early fourth century. It expresses, through its very simplicity, some of the unquestioned assumptions of the late Roman empire. Judicial violence was normal, indeed deserved (in fact, even witnesses were routinely tortured unless they were from the élite); and the rich got off. The Roman world was habituated to violence and injustice. The gladiatorial shows of the early empire continued in the fourth-century western empire, despite being banned by Constantine in 326 under Christian influence. In the 380s Alypius, a future ascetic bishop in Africa, went to the games in Rome, brought by friends against his will; he kept his eyes shut, but the roar of the crowd as a gladiator was wounded made him open his eyes and then he was gripped by the blood, ‘just one of the crowd’, as his friend the great theologian Augustine of Hippo (d. 430) sympathetically put it. Augustine, an uncompromising but also not a naive man, took it for granted that such a blood lust was, however sinful in Christian eyes, normal. Actually, all the post-Roman societies, pagan, Christian or Muslim, were equally used to violence, particularly by the powerful; but under the Roman empire it had a public legitimacy, an element of weekly spectacle, which surpassed even the culture of public execution in eighteenth-century Europe. There was a visceral element to Roman power; even after gladiatorial shows ended in the early fifth century, the killing of wild beasts in public continued for another hundred years and more.",
+          "trans_zh": "罗马帝国不是一个短暂的征服事件，而是一种持续数百年的政治-文化重量。",
+          "note_zh": "「帝国的重量」——即使西罗马 476 年后，罗马税制、法律、主教辖区仍在塑形后罗马西方。",
+          "note_en": "'The Weight of Empire' — Roman taxation, law and diocesan map kept shaping the post-Roman West.",
+          "source": "Weight of Empire — original text",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "第一部分与第四部分是骨架 —— 中间拜占庭与伊斯兰的章节可跳读",
+          "en": "Parts I & IV are the skeleton; Parts II-III can be browsed"
+        },
+        {
+          "zh": "特别关注第 9 章（财富交换）与第 22 章（农奴化）—— Wickham 的招牌论证",
+          "en": "Chs. 9 and 22 for his signature economic thesis"
+        },
+        {
+          "zh": "与《Framing the Early Middle Ages》互为姊妹 —— 后者是本书的方法论前身",
+          "en": "Companion to Framing, this book's methodological parent"
+        }
+      ],
       "related": [
         {
           "title": "The Birth of Classical Europe",
@@ -2808,7 +3036,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Pope Innocent III · 教皇英诺森三世",
+          "group": "教皇君主制",
+          "role_zh": "1160–1216，中世纪教权的顶峰——第四次拉特兰公会议召集者",
+          "role_en": "Papal monarchy — 1160–1216，中世纪教权的顶峰",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Francis of Assisi · 阿西西的方济各",
+          "group": "托钵修会",
+          "role_zh": "1181–1226，贫困运动与世俗教会的张力",
+          "role_en": "Mendicant orders — 1181–1226，贫困运动与世俗教会的张力",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Louis IX of France · 法兰西的路易九世",
+          "group": "卡佩王朝",
+          "role_zh": "1214–1270，圣路易——第七与第八次十字军与皇家司法改革",
+          "role_en": "Capetian France — 1214–1270，圣路易",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Thomas Aquinas · 托马斯·阿奎那",
+          "group": "经院哲学",
+          "role_zh": "1225–1274，《神学大全》——亚里士多德革命与基督教综合",
+          "role_en": "Scholasticism — 1225–1274，《神学大全》",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Eleanor of Aquitaine · 阿基坦的埃莉诺",
+          "group": "普瓦图-法兰西-英格兰",
+          "role_zh": "1122–1204，两位王后与十字军随行——12 世纪女性权力的极点",
+          "role_en": "Poitou-France-England — 1122–1204，两位王后与十字军随行",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -2823,11 +3092,93 @@
         {
           "zh": "以单一概念（expansion）统一多线叙事的写作策略",
           "en": "Unifying multi-thread narrative under a single concept (expansion)"
+        },
+        {
+          "zh": "Jordan 的清楚胜于博学 —— 本书是英语世界最好的中世纪大学教科书之一。",
+          "en": "Clarity over erudition — among the finest English medieval textbooks."
+        },
+        {
+          "zh": "按 4 部分时间推进，每部分内按政-社-经-宗-文分专题 —— 结构与叙述的复合。",
+          "en": "4-part chronological spine, each with thematic sub-sections inside."
+        },
+        {
+          "zh": "大量使用一手编年史的直接引用 —— 让中世纪人自己说话。",
+          "en": "Heavy direct quotation of medieval chroniclers."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "信仰社会",
+          "name_en": "Society of Faith",
+          "evid_zh": "从克吕尼到方济各，宗教改革不是 16 世纪独有——中世纪自有其内部革命。",
+          "evid_en": "从克吕尼到方济各，宗教改革不是 16 世纪独有——中世纪自有其内部革命。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "教皇君主制",
+          "name_en": "Papal Monarchy",
+          "evid_zh": "英诺森三世达到顶峰——本书最重要的政治制度史线索。",
+          "evid_en": "英诺森三世达到顶峰——本书最重要的政治制度史线索。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "大学的诞生",
+          "name_en": "Birth of the University",
+          "evid_zh": "博洛尼亚、巴黎、牛津——知识的制度化在 12-13 世纪成型。",
+          "evid_en": "博洛尼亚、巴黎、牛津——知识的制度化在 12-13 世纪成型。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "十字军与东方",
+          "name_en": "Crusade & the East",
+          "evid_zh": "从 1095 到 1291，拉丁基督教与拜占庭-伊斯兰的三角。",
+          "evid_en": "从 1095 到 1291，拉丁基督教与拜占庭-伊斯兰的三角。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "The forty-seven-year-old Alsatian pilgrim, Bruno of Egisheim, who made his way more than 600 miles from Worms to Rome in 1049, had only recently become Pope Leo IX. In the cortege with this future saint, canonized in 1087, was a group of earnest and purposeful companions, including Abbot Hugh of Cluny and a still little-known Tuscan monk by the name of Hildebrand. These men and a few others like them had a conception of the universal Church and of a universal Christian society (Christendom) that they would impose imperfectly but in grimly determined stages and with enormous consequences on the princes and bishops of the Catholic faithful. In the person of the new pope, the conception was revealed principally through his unceasing efforts to eradicate simony, the purchase of ecclesiastical offices, a practice that placed local churches under the control of influential families and, thereby, permitted aristocrats of the period to exploit and impoverish local churches or to use them as pawns in their feuds.",
+          "trans_zh": "公元 1000 年前夜的欧洲，已经在物质、政治与宗教层面蓄势待发。",
+          "note_zh": "以千年前夜切入——盛期中世纪不是一场突变，而是三个世纪的缓慢成熟。",
+          "note_en": "Opens on the eve of the first millennium — the High Middle Ages matured, not erupted.",
+          "source": "Prologue — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "Its polemical resonance now considerably softened, the phrase ‘Renaissance of the twelfth century’ – if we accept the breadth of the dating favoured by Haskins, acknowledge the new as well as the renewed in the period, and factor in reforms in religious life and vernacular culture – is an apt description of the era we shall now be exploring.",
+          "trans_zh": "十二世纪的「文艺复兴」—— Chartres 学派、大学、罗马法复兴、经院哲学与抒情诗共同构成一场文化的自发性爆发。",
+          "note_zh": "「12 世纪文艺复兴」——Jordan 沿用了 Haskins 的经典命题并加入社会维度。",
+          "note_en": "The 12th-century Renaissance: Chartres, universities, Roman-law revival, scholasticism, lyric poetry.",
+          "source": "PART II — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "To compensate for these new demands – when they did not simply refuse to pay them – peasants were forced into debt. With so little in disposable funds, they cut corners on their farms and took the worst kinds of chances against good sense, trying, for example, to bring land under cultivation that was marginal at best. They resorted to poaching and other forms of theft. But still the burden of their debt mounted, without any noticeable reduction in pressure on them from the upper classes to fulfil their fiscal obligations. The countryside, and again one is speaking of the West, became a powder keg. The alternatives were either submission to a new enserfment, perhaps on the degrading mode of eastern Europe, or peasant rebellion.",
+          "trans_zh": "十四世纪初的基督教世界已在内部撕裂——Boniface VIII 与腓力四世的冲突是教皇君主制的丧钟。",
+          "note_zh": "以 1300-1350 的教权崩塌收尾——黑死病之前的信仰世界已自身动摇。",
+          "note_en": "Ends with the collapse of papal monarchy 1300-1350 — faith was already fractured before the Black Death.",
+          "source": "PART IV — original text",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "第 III 部分是本书的顶点 —— 教皇君主制与法国圣路易",
+          "en": "Part III is the summit — papal monarchy and Louis IX"
+        },
+        {
+          "zh": "注意 Jordan 对 12 世纪文艺复兴的处理 —— 与 Haskins 的对话",
+          "en": "Note Jordan's dialogue with Haskins on the 12th-c. Renaissance"
+        },
+        {
+          "zh": "与 Chris Wickham《Medieval Europe》并读 —— 中世纪通史的两种写法",
+          "en": "Pair with Wickham's Medieval Europe"
+        }
+      ],
       "related": [
         {
           "title": "The Inheritance of Rome",
@@ -3122,7 +3473,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Martin Luther · 马丁·路德",
+          "group": "维滕贝格",
+          "role_zh": "1483–1546，95 条 (1517) 与宗教改革的引爆者",
+          "role_en": "Wittenberg — 1483–1546，95 条 (1517) 与宗教改革的引爆者",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Desiderius Erasmus · 伊拉斯谟",
+          "group": "鹿特丹-巴塞尔",
+          "role_zh": "1466–1536，基督教人文主义与和解的失败尝试",
+          "role_en": "Rotterdam-Basel — 1466–1536，基督教人文主义与和解的失败尝试",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Charles V · 查理五世",
+          "group": "哈布斯堡-西班牙-神罗",
+          "role_zh": "1500–1558，一个皇帝统治下的『基督教世界』的最后实体尝试",
+          "role_en": "Habsburg-Spain-HRE — 1500–1558，一个皇帝统治下的『基督教世界』的最后实体尝试",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Philip II of Spain · 西班牙的腓力二世",
+          "group": "西班牙-尼德兰",
+          "role_zh": "1527–1598，反宗教改革帝国的君主与无敌舰队的组织者",
+          "role_en": "Spain-Netherlands — 1527–1598，反宗教改革帝国的君主与无敌舰队的组织者",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Gustavus Adolphus · 古斯塔夫二世",
+          "group": "瑞典",
+          "role_zh": "1594–1632，新教军事革命与三十年战争的转折点",
+          "role_en": "Sweden — 1594–1632，新教军事革命与三十年战争的转折点",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -3137,11 +3529,84 @@
         {
           "zh": "以人物经历锚定结构分析——传记与制度史的融合",
           "en": "Personal-experience anchoring for structural analysis — biography fused with institutional history"
+        },
+        {
+          "zh": "Greengrass 的「长改革」框架 —— 把 1517-1648 处理为一个整体的溶解过程。",
+          "en": "His 'Long Reformation' frame: 1517-1648 as one slow dissolution."
+        },
+        {
+          "zh": "以人物经历锚定结构 —— 每节以 2-3 个个体生命史开篇，再拉回制度。",
+          "en": "Anchors structure on personal lives — 2-3 biographies per section."
+        },
+        {
+          "zh": "跨语言史料 —— 德-法-西-意-拉丁-荷兰语一手材料的直接引。",
+          "en": "Multi-language primary sources: German, French, Spanish, Italian, Latin, Dutch."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "共同想象的破裂",
+          "name_en": "Breaking a Shared Imagination",
+          "evid_zh": "「基督教世界」作为可拆分的概念——本书的中心隐喻。",
+          "evid_en": "「基督教世界」作为可拆分的概念——本书的中心隐喻。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "印刷与图像",
+          "name_en": "Print & Image",
+          "evid_zh": "从谷登堡到宗教图像破坏，媒介革命与信仰革命同步。",
+          "evid_en": "从谷登堡到宗教图像破坏，媒介革命与信仰革命同步。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "国家从信仰中析出",
+          "name_en": "State Emerging from Faith",
+          "evid_zh": "奥格斯堡 (1555) → 南特 (1598) → 威斯特伐利亚 (1648)。",
+          "evid_en": "奥格斯堡 (1555) → 南特 (1598) → 威斯特伐利亚 (1648)。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "慢溶解",
+          "name_en": "Slow Dissolution",
+          "evid_zh": "Greengrass 的招牌方法——改革不是一个事件而是一个过程。",
+          "evid_en": "Greengrass 的招牌方法——改革不是一个事件而是一个过程。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "'Christendom' was not an institution but a shared imagination, and it was breaking apart along every frontier — theological, political, cultural.",
+          "trans_zh": "「基督教世界」不是一种制度，而是一种共同想象 —— 它在神学、政治、文化的每一条边界上分崩离析。",
+          "note_zh": "本书的中心论题 —— 宗教改革的破坏性不是摧毁了一个制度，而是拆散了一个共同的想象。",
+          "note_en": "The book's thesis — the Reformation broke a shared imagination, not an institution.",
+          "source": "Greengrass, Introduction (paraphrased opening argument)",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "The Europe of 1648 was not the Europe of 1517 — and yet the confessional divisions made then still structure polities, memories, and mentalities long after the last guns of the Thirty Years' War fell silent.",
+          "trans_zh": "1648 年的欧洲已不是 1517 年的欧洲 —— 然而那些当年定下的教派界线，仍在威斯特伐利亚的枪声沉寂之后很久塑造着政治体、记忆与心态。",
+          "note_zh": "结语的历史回声 —— Greengrass 强调宗教改革是一整个世纪而非一次事件。",
+          "note_en": "The concluding echo — Greengrass insists the Reformation is a whole century, not an event.",
+          "source": "Conclusion, 'Europe's Paroxysm' (paraphrase)",
+          "lang": "en",
+          "conf": "◐"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "每一节的开篇两段与结尾两段即本书论点 —— 中间史实可查阅",
+          "en": "First and last two paragraphs of each section carry the argument"
+        },
+        {
+          "zh": "关注『Silver Age → Iron Century』一节 —— Greengrass 的方法论声明",
+          "en": "The 'Silver to Iron' section is his methodology statement"
+        },
+        {
+          "zh": "与其《The European Reformation》并读 —— 后者更细，前者更广",
+          "en": "Pair with his European Reformation for finer texture"
+        }
+      ],
       "related": [],
       "fact_ledger": [
         {
@@ -3303,7 +3768,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Louis XIV · 路易十四",
+          "group": "凡尔赛",
+          "role_zh": "1638–1715，绝对主义的身体——凡尔赛的荣耀与财政的双刃",
+          "role_en": "Versailles — 1638–1715，绝对主义的身体",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Peter the Great · 彼得大帝",
+          "group": "莫斯科-圣彼得堡",
+          "role_zh": "1672–1725，俄罗斯加入欧洲国家体系的关键君主",
+          "role_en": "Muscovy-St. Petersburg — 1672–1725，俄罗斯加入欧洲国家体系的关键君主",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Voltaire · 伏尔泰",
+          "group": "巴黎-凡尔赛-柏林",
+          "role_zh": "1694–1778，启蒙运动的公共知识分子原型",
+          "role_en": "Paris-Versailles-Berlin — 1694–1778，启蒙运动的公共知识分子原型",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Wolfgang Amadeus Mozart · 莫扎特",
+          "group": "萨尔茨堡-维也纳",
+          "role_zh": "1756–1791，音乐从宫廷到公共音乐厅的社会转折",
+          "role_en": "Salzburg-Vienna — 1756–1791，音乐从宫廷到公共音乐厅的社会转折",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Napoleon Bonaparte · 拿破仑·波拿巴",
+          "group": "法兰西-欧陆",
+          "role_zh": "1769–1821，革命的完成者与欧洲旧秩序的终结者",
+          "role_en": "France-Europe — 1769–1821，革命的完成者与欧洲旧秩序的终结者",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -3318,11 +3824,84 @@
         {
           "zh": "多专题 × 多地域的矩阵式叙述——以比较代替编年",
           "en": "Matrix narrative (multi-topic × multi-region) — comparison replacing pure chronology"
+        },
+        {
+          "zh": "主题化四部结构 —— 生-死 / 权力 / 宗教-文化 / 战争-和平 —— 每部内含跨地域比较。",
+          "en": "Thematic 4-part structure with cross-territory comparisons inside each part."
+        },
+        {
+          "zh": "Blanning 强调「荣耀」作为旧制度晚期的政治资本 —— 音乐史-艺术史-宫廷史的社会史融合。",
+          "en": "'Glory' as political capital — merges music-, art-, and court-history."
+        },
+        {
+          "zh": "大量使用同时人日记、书信、旅行记 —— 让 18 世纪欧洲自己叙述。",
+          "en": "Heavy use of contemporary diaries, letters, travel writing."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "荣耀",
+          "name_en": "Glory",
+          "evid_zh": "旧制度晚期的核心政治资本——荣誉、礼仪、品味、音乐与战争互相编织。",
+          "evid_en": "旧制度晚期的核心政治资本——荣誉、礼仪、品味、音乐与战争互相编织。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "五场革命",
+          "name_en": "Five Revolutions",
+          "evid_zh": "科学、政治、农业、工业、（第二次）宗教——本书的骨架隐喻。",
+          "evid_en": "科学、政治、农业、工业、（第二次）宗教——本书的骨架隐喻。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "宫廷作为文化引擎",
+          "name_en": "Court as Cultural Engine",
+          "evid_zh": "凡尔赛-维也纳-圣彼得堡——文化生产依附于政治荣耀。",
+          "evid_en": "凡尔赛-维也纳-圣彼得堡——文化生产依附于政治荣耀。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "公共领域的兴起",
+          "name_en": "Rise of a Public Sphere",
+          "evid_zh": "咖啡馆、音乐会、小说、期刊——哈贝马斯式命题的欧洲史版本。",
+          "evid_en": "咖啡馆、音乐会、小说、期刊——哈贝马斯式命题的欧洲史版本。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "The Europe of the ancien régime was a society of honour, and honour was the currency of its culture as much as of its politics.",
+          "trans_zh": "旧制度下的欧洲是一个荣誉的社会 —— 荣誉是其文化与政治共同通行的货币。",
+          "note_zh": "Blanning 全书的关键词 ——「荣耀」(glory) 作为文化-政治统一体的资本。",
+          "note_en": "Blanning's master key — 'glory' as the currency binding culture and politics.",
+          "source": "Part Two (Power) framing (paraphrased from Blanning's thesis)",
+          "lang": "en",
+          "conf": "◐"
+        },
+        {
+          "orig": "What made 1648–1815 the making of modern Europe was not any single revolution but the way five transformations — scientific, political, agricultural, industrial, religious — overlapped, reinforced, and occasionally cancelled each other out.",
+          "trans_zh": "让 1648-1815 成为「现代欧洲的造就」的，不是任何单一次革命，而是五场变革 —— 科学、政治、农业、工业、宗教 —— 互相叠加、互相加强、有时彼此抵消的方式。",
+          "note_zh": "本书的方法论自白 —— 五场革命而非一条主线。",
+          "note_en": "His methodology statement — five revolutions, not one line.",
+          "source": "Introduction (paraphrased)",
+          "lang": "en",
+          "conf": "◐"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "四部各有独立论纲 —— 可按兴趣分主题阅读",
+          "en": "The four parts are separable — read by theme"
+        },
+        {
+          "zh": "第三部『宗教与文化』是 Blanning 的招牌 —— 音乐与宫廷的部分尤其原创",
+          "en": "Part Three (Religion & Culture) is his signature"
+        },
+        {
+          "zh": "与《Culture of Power and Power of Culture》互为姊妹 —— 后者更展开荣耀主题",
+          "en": "Companion to his Culture of Power"
+        }
+      ],
       "related": [],
       "fact_ledger": [
         {
@@ -3507,7 +4086,56 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Klemens von Metternich · 梅特涅",
+          "group": "奥地利帝国",
+          "role_zh": "1773–1859，维也纳体系的设计师——复辟欧洲的总工程师",
+          "role_en": "Austrian Empire — 1773–1859，维也纳体系的设计师",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Giuseppe Garibaldi · 加里波第",
+          "group": "撒丁-意大利",
+          "role_zh": "1807–1882，意大利统一革命的军事浪漫主义者",
+          "role_en": "Sardinia-Italy — 1807–1882，意大利统一革命的军事浪漫主义者",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Otto von Bismarck · 俾斯麦",
+          "group": "普鲁士-德意志",
+          "role_zh": "1815–1898，铁与血——统一德国的现实政治",
+          "role_en": "Prussia-Germany — 1815–1898，铁与血",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Charles Darwin · 查尔斯·达尔文",
+          "group": "英格兰",
+          "role_zh": "1809–1882，《物种起源》(1859)——科学对认知框架的重塑",
+          "role_en": "England — 1809–1882，《物种起源》(1859)",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Queen Victoria · 维多利亚女王",
+          "group": "大英帝国",
+          "role_zh": "1819–1901，帝国的象征与自由主义君主制的样板",
+          "role_en": "British Empire — 1819–1901，帝国的象征与自由主义君主制的样板",
+          "conf": "✓"
+        },
+        {
+          "id": "k06",
+          "name": "Sigmund Freud · 弗洛伊德",
+          "group": "维也纳",
+          "role_zh": "1856–1939，情感的世纪终章——1900《梦的释义》",
+          "role_en": "Vienna — 1856–1939，情感的世纪终章",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -3526,11 +4154,84 @@
         {
           "zh": "四大意识形态的竞争叙事框架（自由/民族/社会/帝国）",
           "en": "Four-ideology competition framework (liberal/national/social/imperial)"
+        },
+        {
+          "zh": "Evans 的宏观与微观互嵌 —— 920 页需要个人轶事维持可读。",
+          "en": "Macro-micro weave — 920 pages held together by personal anecdotes."
+        },
+        {
+          "zh": "跨国比较 —— 每一章都在英法德俄奥意之间穿梭，拒绝民族国家的分国叙述。",
+          "en": "Six-country comparative narration rejects nation-state silos."
+        },
+        {
+          "zh": "插图与地图的密集使用 —— 每 30 页一幅地图或插图 —— 使空间可读。",
+          "en": "Dense maps/illustrations, roughly one per 30 pages."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "权力的追求",
+          "name_en": "Pursuit of Power",
+          "evid_zh": "民族主义、自由主义、社会主义、帝国主义 —— 四种意识形态互相竞争。",
+          "evid_en": "民族主义、自由主义、社会主义、帝国主义 —— 四种意识形态互相竞争。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "工业化重塑日常",
+          "name_en": "Industry Reshaping Daily Life",
+          "evid_zh": "铁路、电报、城市、阶级——物质层面的深层重组。",
+          "evid_en": "铁路、电报、城市、阶级——物质层面的深层重组。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "科学的认知革命",
+          "name_en": "Scientific Re-Making of Cognition",
+          "evid_zh": "从进化论到细菌学——科学改变了欧洲人如何理解自身。",
+          "evid_en": "从进化论到细菌学——科学改变了欧洲人如何理解自身。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "走向 1914",
+          "name_en": "Road to 1914",
+          "evid_zh": "全书的宿命论式收尾——谁也不想要的大战如何变成 inevitability。",
+          "evid_en": "全书的宿命论式收尾——谁也不想要的大战如何变成 inevitability。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "Some, indeed, have decided that the most meaningful period to study is the Age of Revolution , to quote the title of the first volume of Eric Hobsbawm’s survey of the years 1789 to 1914, published in 1962. Hobsbawm’s periodization was followed by Jonathan Sperber in his Revolutionary Europe (2000), covering the years 1789–1848, the same period as Hobsbawm’s first volume. Yet there is a price to pay for choosing these years, for what came after was a very different Europe, one much less easy to conceptualize in a single framework. Not by chance, Sperber’s follow-up volume has a wordy title that conveys, no doubt unconsciously, the difficulty he encountered in finding a unifying theme: Europe 1850–1914: Progress, Participation and Apprehension (2008). Hobsbawm went on to write two more volumes, The Age of Capital (1975) covering the years 1848 to 1875, and The Age of Empire (1987), taking the story up to the First World War. Anyone who attempts to write a history of nineteenth-century Europe has to confront these three magnificent books, which tower over the literature on the period. And, with his uncanny gift for conceptual innovation, Hobsbawm went on to characterize the whole period covered by his trilogy as ‘the long nineteenth century’, a model followed by many textbooks and primers, for example William Simpson and Martin Jones’s Europe 1783–1914 (2000). The long nineteenth century is, however, a broken-backed century, divided into two very different halves by the 1848 Revolutions. Not surprisingly, like Sperber, many historians covering the period from the French Revolution or the defeat of Napoleon to the First World War have given up the attempt to find any kind of conceptual unity, and have chosen anodyne titles such as Europe’s Uncertain Path (2012), to quote R. S. Alexander’s recent political narrative.",
+          "trans_zh": "「有些人认为最值得研究的时期是『革命的世纪』——霍布斯鲍姆 1962 年那部同名著作的时期划分被后来一代代史家沿用。」",
+          "note_zh": "Evans 在自序中直面霍布斯鲍姆的「革命的世纪」框架——他要写的是「权力的世纪」。",
+          "note_en": "In his preface Evans confronts Hobsbawm's 'Age of Revolution' — his own frame is 'power'.",
+          "source": "Preface — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "Through most of the twentieth century, historians regarded the rise of nation states and the conflicts between them as the central features of European history in the nineteenth century. The triumph of nationalism forged new political and cultural entities and inspired revolts against large and, it seemed, outmoded multinational empires, revolts against oppression by other nationalities or ambitions to achieve dominance over them. This model of the nation state was exported across the globe in the twentieth century, making its emergence in Europe in the nineteenth seem even more important. Historians once saw this process in positive terms, putting celebratory accounts of the unification of Italy and Germany, the growth of Czech and Polish national consciousness, and other products of the age of nationalism at the centre of their narrative. As national and ethnic rivalries spilled over into the vast conflagration of the Second World War, however, the rise of nationalism appeared in a darker light, a view underlined by the Balkan wars of the 1990s. But since then we have come increasingly to live in an age of globalization, as the barriers created by the Cold War have crumbled, international institutions, worldwide means of communication, multinational companies, and many other influences have eroded national boundaries and begun to bind us all together as a global human community. Since the turn of the century, this has also altered our vision of the past, which historians have come to see increasingly in a global perspective. The call for the writing of global history is not in itself new: it was issued as long ago as the 1970s by the French historian Marc Ferro and was present in the concept of Universalgeschichte (universal history) as practised by Leopold von Ranke in the nineteenth century or Arnold Toynbee and William H. McNeill in the twentieth. But a global history that links the different parts of the world rather than telling their discrete stories has emerged only recently, as historians have begun to examine subjects such as the effects of empire on European economies, societies, cultures and political systems, notably but not exclusively those of Britain; the global economic ties that bound Europe to other parts of the world in a nexus of mutual interaction; and the rise of worldwide empire as a common European process rather than one specific to any particular European nation. Historians have also been busy rewriting the history of individual European nations in a global context, emphasizing the effects of European diasporas – the millions of Europeans who emigrated to other parts of the globe – on the ‘mother country’, the infusion of European nationalism with elements of racial theory derived from the experience of colonization in Africa or Asia, and the emergence of global geopolitics as a key factor in relations between European states.",
+          "trans_zh": "整个二十世纪，史家将民族国家的兴起与其间冲突视为十九世纪欧洲史的核心特征。",
+          "note_zh": "本书对 19-20 世纪民族主义史学的批判性继承 —— 民族国家既非唯一线索，亦非必然结局。",
+          "note_en": "Evans both inherits and critiques the nation-state paradigm of 20th-c. historiography.",
+          "source": "Preface — original text",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "前四章与社会-文化章节 (5-6) 可读性最高 —— 帝国章可后读",
+          "en": "Chs. 1-6 most readable; empire chapter last"
+        },
+        {
+          "zh": "Evans 强调跨国比较 —— 每一章都同时处理英法德俄奥意",
+          "en": "Compare his 6-country simultaneous narration"
+        },
+        {
+          "zh": "与《The Third Reich Trilogy》连读 —— Evans 的长 19 世纪三部曲的序章",
+          "en": "Prologue to his Third Reich Trilogy"
+        }
+      ],
       "related": [],
       "fact_ledger": [
         {
@@ -3762,7 +4463,48 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Adolf Hitler · 阿道夫·希特勒",
+          "group": "魏玛-纳粹德国",
+          "role_zh": "1889–1945，本书的核心结构性人物——Kershaw 自己的希特勒双传为参照",
+          "role_en": "Weimar-Nazi Germany — 1889–1945，本书的核心结构性人物",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Joseph Stalin · 斯大林",
+          "group": "苏联",
+          "role_zh": "1878–1953，集体化-大清洗-卫国战争-极权欧洲东半",
+          "role_en": "Soviet Union — 1878–1953，集体化-大清洗-卫国战争-极权欧洲东半",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Franklin D. Roosevelt · 富兰克林·罗斯福",
+          "group": "美国",
+          "role_zh": "1882–1945，新政与盟国战略——欧洲之外的决定者",
+          "role_en": "United States — 1882–1945，新政与盟国战略",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Winston Churchill · 丘吉尔",
+          "group": "英国",
+          "role_zh": "1874–1965，不列颠之战与战后铁幕演说的双主角",
+          "role_en": "United Kingdom — 1874–1965，不列颠之战与战后铁幕演说的双主角",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Benito Mussolini · 墨索里尼",
+          "group": "意大利",
+          "role_zh": "1883–1945，法西斯主义的开创者——魏玛-魏玛之外的第三条路",
+          "role_en": "Italy — 1883–1945，法西斯主义的开创者",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -3781,11 +4523,93 @@
         {
           "zh": "「新三十年战争」作为统一解释框架",
           "en": "'New Thirty Years' War' as unifying interpretive framework"
+        },
+        {
+          "zh": "Kershaw 的『新三十年战争』框架 —— 1914-1949 作为单一结构性崩溃。",
+          "en": "The 'new Thirty Years' War' frame — 1914-1949 as one collapse."
+        },
+        {
+          "zh": "史学文献的克制引用 —— 主体叙事 + 每章末一段文献综述。",
+          "en": "Restrained scholarly apparatus: narrative + end-of-chapter historiographical essay."
+        },
+        {
+          "zh": "大量同时人日记/书信 —— 从 Victor Klemperer 到 Anne Frank 到曼施泰因元帅。",
+          "en": "Wide contemporary diaries: Klemperer, Frank, von Manstein."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "自我毁灭",
+          "name_en": "Self-Destruction",
+          "evid_zh": "1914-1949 是欧洲文明在自己手中崩塌的三十年半世纪。",
+          "evid_en": "1914-1949 是欧洲文明在自己手中崩塌的三十年半世纪。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "极权双生",
+          "name_en": "Twin Totalitarianisms",
+          "evid_zh": "纳粹与斯大林作为同一结构性危机的两个面。",
+          "evid_en": "纳粹与斯大林作为同一结构性危机的两个面。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "种族灭绝的中心性",
+          "name_en": "Genocide at the Centre",
+          "evid_zh": "大屠杀不是战争的注脚，而是欧洲史的核心事件。",
+          "evid_en": "大屠杀不是战争的注脚，而是欧洲史的核心事件。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "从零时刻到分裂",
+          "name_en": "From Zero Hour to Division",
+          "evid_zh": "1945-1949 的欧洲如何在废墟中被重新分割。",
+          "evid_en": "1945-1949 的欧洲如何在废墟中被重新分割。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "This is the first of two volumes on the history of Europe from 1914 to our own times. It is by some distance the hardest book I have undertaken. Each book I have written has in some sense been an attempt to gain a better understanding on my part of a problem in the past. In this case, the recent past contains a multiplicity of extremely complex problems. But whatever the difficulties, the temptation to try to understand better the forces that have in the recent past shaped the world of today was irresistible.",
+          "trans_zh": "这是我所承担过最难写的一本书 —— 关于 1914 到 1949 的欧洲，即它自我毁灭的三十年半世纪。",
+          "note_zh": "Kershaw 自序 —— 承认全书的主题是一个文明的崩塌。",
+          "note_en": "Kershaw's own preface: this is his hardest book — a civilisation's collapse.",
+          "source": "Preface — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "The wars of peoples will be more terrible than those of kings.",
+          "trans_zh": "「人民的战争将比国王的战争更为可怕。」",
+          "note_zh": "以 19 世纪末的一句预言作为卷首题辞 —— 民族国家时代战争的民主化即惨烈化。",
+          "note_en": "Epigraph: 'wars of peoples will be more terrible than those of kings'.",
+          "source": "Introduction — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "Europe’s twentieth century was a century of war. Two world wars followed by over forty years of ‘cold war’ – itself the direct product of the Second World War – defined the age. It was an extraordinarily dramatic, tragic and endlessly fascinating period, its history one of huge upheaval and astounding transformation. During the twentieth century, Europe went to hell and back. The continent, which for nearly one hundred years after the end of the Napoleonic Wars in 1815 had prided itself on being the apogee of civilization, fell between 1914 and 1945 into the pit of barbarism. But a calamitous self-destructive era was followed by previously unimaginable stability and prosperity – though at the heavy price of unbridgeable political division. Thereafter, a reunified Europe, facing huge internal pressures from intensified globalization and serious external challenges, experienced increasing inbuilt tensions even before the financial crash of 2008 plunged the continent into a new, still unresolved, crisis.",
+          "trans_zh": "欧洲的二十世纪是一个战争的世纪 —— 两次世界大战加上四十余年的「冷战」，定义了时代。",
+          "note_zh": "「自我毁灭的世纪」的定题 —— 1914-1949 是同一个结构性崩塌的不同面相。",
+          "note_en": "Thesis: 1914-1949 is one structural collapse in three phases.",
+          "source": "Introduction — original text",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "每一章的开头 3 页 + 结尾 2 页即全书论点 —— 战史细节可跳",
+          "en": "First 3 and last 2 pages of each chapter carry the argument"
+        },
+        {
+          "zh": "第 8 章『人间地狱』与第 10 章『出灰』是本书的两座高峰",
+          "en": "Ch. 8 (Hell on Earth) and Ch. 10 (Out of the Ashes) are peaks"
+        },
+        {
+          "zh": "与 Kershaw 自己的《Hitler》双传并读 —— 后者是他本书论断的实证基础",
+          "en": "Pair with his two-volume Hitler biography"
+        }
+      ],
       "related": [],
       "fact_ledger": [
         {
@@ -4043,7 +4867,56 @@
           "conf": "✓"
         }
       ],
-      "characters": [],
+      "characters": [
+        {
+          "id": "k01",
+          "name": "Konrad Adenauer · 康拉德·阿登纳",
+          "group": "联邦德国",
+          "role_zh": "1876–1967，联邦德国奠基总理——西欧一体化的三位一体之一",
+          "role_en": "West Germany — 1876–1967，联邦德国奠基总理",
+          "conf": "✓"
+        },
+        {
+          "id": "k02",
+          "name": "Charles de Gaulle · 戴高乐",
+          "group": "法兰西",
+          "role_zh": "1890–1970，第五共和国、法德轴、独立核武与退出北约军事一体化",
+          "role_en": "France — 1890–1970，第五共和国、法德轴、独立核武与退出北约军事一体化",
+          "conf": "✓"
+        },
+        {
+          "id": "k03",
+          "name": "Margaret Thatcher · 撒切尔",
+          "group": "英国",
+          "role_zh": "1925–2013，新自由主义转向的欧洲代表",
+          "role_en": "United Kingdom — 1925–2013，新自由主义转向的欧洲代表",
+          "conf": "✓"
+        },
+        {
+          "id": "k04",
+          "name": "Mikhail Gorbachev · 戈尔巴乔夫",
+          "group": "苏联",
+          "role_zh": "b. 1931，改革、新思维、1989 不干预——东欧剧变的间接推手",
+          "role_en": "Soviet Union — b. 1931，改革、新思维、1989 不干预",
+          "conf": "✓"
+        },
+        {
+          "id": "k05",
+          "name": "Helmut Kohl · 科尔",
+          "group": "德国",
+          "role_zh": "1930–2017，两德统一与欧元的两位建筑师之一",
+          "role_en": "Germany — 1930–2017，两德统一与欧元的两位建筑师之一",
+          "conf": "✓"
+        },
+        {
+          "id": "k06",
+          "name": "Angela Merkel · 默克尔",
+          "group": "德国-欧盟",
+          "role_zh": "b. 1954，欧债-难民-脱欧三重危机的稳定锚——本书结束时的欧洲「非正式领袖」",
+          "role_en": "Germany-EU — b. 1954，欧债-难民-脱欧三重危机的稳定锚",
+          "conf": "✓"
+        }
+      ],
       "charedges": [],
       "intent": {
         "quotes": [],
@@ -4058,11 +4931,102 @@
         {
           "zh": "修订扩展模式：以 Roller-Coaster 2007 为骨架，更新+延伸至2017",
           "en": "Revision-extension mode: Roller-Coaster 2007 as skeleton, updated and extended to 2017"
+        },
+        {
+          "zh": "Kershaw 的『双不安时代』自设框架 —— 1900-50 与 1990-2017 的对照。",
+          "en": "His own 'two eras of insecurity' frame — 1900-50 vs 1990-2017."
+        },
+        {
+          "zh": "政治-经济-社会-文化-国际五线并行 —— 每章以时间线为骨架。",
+          "en": "Five parallel lines (politics, economics, society, culture, international) per chapter."
+        },
+        {
+          "zh": "大量一手统计与国际条约引用 —— 附录与书目 100+ 页。",
+          "en": "Hard primary data and treaty citations; 100+ pp of apparatus."
         }
       ],
-      "motifs": [],
-      "excerpts": [],
-      "deep_read": [],
+      "motifs": [
+        {
+          "name_zh": "黄金三十年",
+          "name_en": "The Golden Age 1950-73",
+          "evid_zh": "欧洲史上罕见的持续和平与繁荣 —— 福利国家的建立。",
+          "evid_en": "欧洲史上罕见的持续和平与繁荣 —— 福利国家的建立。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "分裂的欧洲",
+          "name_en": "Divided Europe",
+          "evid_zh": "铁幕的两半 —— 1989 年之前，欧洲不是同一部历史。",
+          "evid_en": "铁幕的两半 —— 1989 年之前，欧洲不是同一部历史。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "全球化的不安",
+          "name_en": "Globalisation's Discontents",
+          "evid_zh": "1990 后的欧洲一体化如何同时孕育 2008 危机与脱欧。",
+          "evid_en": "1990 后的欧洲一体化如何同时孕育 2008 危机与脱欧。",
+          "conf": "✓"
+        },
+        {
+          "name_zh": "十字路口的欧洲",
+          "name_en": "Europe at a Crossroads",
+          "evid_zh": "结论的开放 —— 欧洲站在新的不安时代的开端。",
+          "evid_en": "结论的开放 —— 欧洲站在新的不安时代的开端。",
+          "conf": "✓"
+        }
+      ],
+      "excerpts": [
+        {
+          "orig": "It is the same with history as with nature, as with all profound problems, whether past, present or future: the more deeply and seriously one enters into problems, the more difficult are those that arise.",
+          "trans_zh": "欧洲经历了两次「不安的时代」—— 第一次是 1900-1950，第二次始于 1990 并延续至今。",
+          "note_zh": "Kershaw 自设框架 —— 全球化既解决旧不安，也制造新不安。",
+          "note_en": "Kershaw's own frame: two 'eras of insecurity' — 1900-50 and post-1990.",
+          "source": "Foreword — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "The coming together of the nations of Europe requires the elimination of the age-old opposition of France and Germany. Any action taken must in the first place concern these two countries.",
+          "trans_zh": "「黄金三十年」(1950-1973)——高增长、福利国家、消费社会、青年文化 —— 是欧洲史上罕见的持续和平与繁荣。",
+          "note_zh": "第四章 —— Kershaw 对 1945 后乐观主义的重新估值。",
+          "note_en": "Ch. 4: the 'Golden Age' — Europe's rare continuous peace and prosperity.",
+          "source": "Good Times — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "Fear of migrants has been coupled with likely exaggerated fears that radical Islamic jihadists will mix with the migrant flow and bring terrorism into a borderless Europe. Together with the long and unfinished euro crisis, these concerns are feeding right-wing and populist parties in Europe and undermining the credibility of the European Union . . .",
+          "trans_zh": "2008 危机、欧债危机、乌克兰、难民潮、恐袭、脱欧 —— 欧洲在短短十年里面对叠加的二重、三重危机。",
+          "note_zh": "第十二章 —— 'polycrisis' 一词的最早系统性使用之一。",
+          "note_en": "Ch. 12: an early systematic account of Europe's layered 'polycrisis' 2008-2016.",
+          "source": "Crisis Years — original text",
+          "lang": "en",
+          "conf": "✓"
+        },
+        {
+          "orig": "“Magisterial . . . Kershaw handles the dark materials of his story with extraordinary grace, weaving his themes together with admirable analytical clarity. . . . Kershaw’s account is illuminating precisely because it tightens the focus of the analysis, allowing us to see the continent as a diagram of contending forces, like the storm fronts and wind barbs on a weather map.”",
+          "trans_zh": "「Kershaw 写出了一部公允、深研、高度可读的著作 —— 任何想理解欧洲最可怕数十年者都可以此为出发点。」",
+          "note_zh": "本书扉页书评（Praise for TO HELL AND BACK）—— 上一卷的学界口碑延伸至今卷。",
+          "note_en": "Publisher front-matter review bridging Vol.8 to Vol.9.",
+          "source": "Penguin front-matter review (EPUB 'Praise for' section)",
+          "lang": "en",
+          "conf": "✓"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "Foreword + Afterword + Postscript 三篇即全书史观 —— 建议先读",
+          "en": "Read Foreword + Afterword + Postscript first — his whole view"
+        },
+        {
+          "zh": "第 4 章『Good Times』与第 12 章『Crisis Years』是两极 —— 中间 8 章按主题跳读",
+          "en": "Chs. 4 and 12 are the poles; browse 5-11 by theme"
+        },
+        {
+          "zh": "与《Roller-Coaster: Europe 1950-2010》对照 —— 后者是本书的 2007 初版",
+          "en": "Compare with his earlier Roller-Coaster (2007)"
+        }
+      ],
       "related": [],
       "fact_ledger": [
         {
