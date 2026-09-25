@@ -1,0 +1,12 @@
+event_id,regime_a,regime_b,q1_framing_a,q1_framing_b,q5_found_or_made_a,q5_found_or_made_b,dispute_a,dispute_b
+1,H,H,+,+,made,made,0,0
+2,H,H,+,+,made,made,0,0
+3,C,H,+,+,made,made,1,1
+4,M,M,-,-,found,found,1,1
+5,M,M,+,+,,,0,0
+6,C,C,+,+,made,made,0,0
+7,C,C,+,+,made,made,0,0
+8,M,M,+,+,made,made,0,0
+9,M,M,+,+,n.r.,n.r.,0,0
+10,C,C,+,+,made,made,1,1
+11,,,n.r.,n.r.,,,1,1
