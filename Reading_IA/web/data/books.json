@@ -193,7 +193,7 @@
           "en": "Parenthood became a core emotional register after her daughter's 2015 birth; Ari's bisexuality is stated without drama.",
           "conf": "✓"
         }
-],
+      ],
       "motifs": [
         {
           "name_zh": "派对即门 · 双关「party」",
@@ -2201,6 +2201,1488 @@
       ],
       "kind": "essay",
       "domain": "medicine-health, cross-disciplinary"
+    },
+    {
+      "id": "pe-volume1-birth-classical",
+      "slug": "birth-classical-europe",
+      "num": "壹",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "古代史 Ancient History",
+      "title_zh": "《古典欧洲的诞生：从特洛伊到奥古斯丁》",
+      "title_orig": "The Birth of Classical Europe: A History from Troy to Augustine",
+      "author": "Simon Price & Peter Thonemann",
+      "author_zh": "西蒙·普莱斯 & 彼得·托内曼",
+      "author_slug": "price-thonemann",
+      "year": "2010",
+      "lang": "en",
+      "publisher": "Allen Lane (hardback) · Penguin (paperback)",
+      "pubdate": "2010-09-30",
+      "pubdate_en": "2010-09-30",
+      "pages": "416",
+      "isbn": "9780713999252",
+      "publines_zh": "Allen Lane · 2010 · 416pp · £25",
+      "publines_en": "Allen Lane · 2010 · 416pp · £25",
+      "rating": {
+        "goodreads": {
+          "score": 4.03,
+          "count": 4219,
+          "reviews": 198
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin 系列页",
+          "en": "Penguin series page",
+          "url": "https://www.penguinrandomhouse.com/series/PHE/the-penguin-history-of-europe/"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/7640627-the-birth-of-classical-europe"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.1 · 公元前1700–公元410",
+      "meta_en": "Penguin Europe Vol.1 · 1700BC–AD410",
+      "baseline_conf": "✓ 出版信息经多级源核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "欧洲故事的起点——不是从希腊城邦，而是从迈锡尼宫殿与特洛伊传说开始；用物质文化与记忆理论重写「古典」的诞生。",
+      "why_en": "Where the European story begins — not at the polis but at Mycenaean palaces and Trojan legend; rewriting 'classical' through material culture and memory theory.",
+      "background": {
+        "zh": "Price（牛津大学希腊史教授）与 Thonemann（阿德莱德大学）合撰，是企鹅欧洲史九卷本的第一卷。全书以「记忆」为方法论线索：从迈锡尼线形文字B到希腊字母的引入，从荷马史诗对特洛伊的追想到希罗多德与修昔底德的历史书写，从亚历山大到罗马帝国对希腊文化的兼收并蓄——核心问题是「古典欧洲」不是天然存在，而是被一代代人的记忆、遗忘与重写所'生成'。时间跨度约2100年（前1700–后410），涵盖爱琴文明、希腊城邦、波斯战争、马其顿崛起、罗马共和与帝政、直到奥古斯丁时代。",
+        "en": "By Price (Regius Professor of Greek, Oxford) and Thonemann (Adelaide), Volume 1 of the nine-volume Penguin History of Europe. Uses 'memory' as a methodological thread: from Linear B to the Greek alphabet, from Homeric recollection of Troy to Herodotean/Thucydidean historiography, from Alexander to Roman appropriation of Greek culture — the core argument is that 'Classical Europe' was not naturally given but generated through generations' acts of memory, forgetting, and rewriting. Spans ~2100 years (1700BC–AD410).",
+        "conf": "✓",
+        "sources": "penguinrandomhouse.com · goodreads.com · openlibrary.org"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "迈锡尼宫殿与线形文字",
+          "title_en": "Mycenaean Palaces & Linear B",
+          "zh": "前1700–1200：迈锡尼文明、宫殿经济、线形文字B的行政记录——欧洲最早的书面记忆。特洛伊可能对应的考古层。",
+          "en": "1700–1200 BC: Mycenaean civilization, palace economies, Linear B administrative records — Europe's earliest written memory. Archaeological strata possibly corresponding to Troy.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "黑暗时代与荷马",
+          "title_en": "Dark Age & Homer",
+          "zh": "前1200–750：青铜崩溃、人口锐减、字母从腓尼基引入。荷马史诗作为「发明的传统」——对迈锡尼的追忆如何塑造了后来所有希腊人的自我认知。",
+          "en": "1200–750 BC: Bronze Age collapse, depopulation, alphabet adopted from Phoenicia. Homer as 'invented tradition' — how Mycenaean recall shaped all subsequent Greek self-identity.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "城邦、波斯与古典",
+          "title_en": "Polis, Persia, the Classical",
+          "zh": "前750–323：殖民运动、僭主、斯巴达与雅典的对举、希波战争作为记忆事件、伯里克利时代、伯罗奔尼撒战争、直到亚历山大的东征。",
+          "en": "750–323 BC: colonization, tyrants, Sparta/Athens contrast, Persian Wars as memory-event, Periclean age, Peloponnesian War, through Alexander's eastern conquest.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 4,
+          "title_zh": "希腊化与罗马",
+          "title_en": "Hellenistic & Roman",
+          "zh": "前323–后410：亚历山大继业者王国、罗马崛起与地中海统一、共和国到帝制、「希腊文化」作为罗马精英教育、帝国危机、基督教合法化、直到罗马陷落与奥古斯丁《上帝之城》。",
+          "en": "323 BC–AD 410: Successor kingdoms, Roman rise and Mediterranean unification, Republic to Principate, 'Greek culture' as Roman elite paideia, imperial crisis, Christianization, fall of Rome and Augustine's City of God.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "编年体与专题交叉：大时间线以四章划分（宫殿时代、城邦时代、帝国时代），每章内按专题（政治、文化、宗教、经济）展开。特色在于每章以一件具体文物或文本为锚点（线形文字B泥板、荷马抄本、帕特农神庙、亚历山大金币、奥古斯丁手稿），从物质证据出发引出论证。",
+        "en": "Chronological with thematic cross-cuts: four major periods (Palatial, Polis, Imperial), each subdivided thematically (politics, culture, religion, economy). Signature move: each section anchored on a specific artifact/text (Linear B tablet, Homeric manuscript, Parthenon, Alexandrian coinage, Augustine codex) — arguments proceed from material evidence.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "迈锡尼宫殿与前1200崩溃",
+          "en": "Mycenaean palaces & 1200 BC collapse",
+          "conf": "✓"
+        },
+        {
+          "zh": "荷马世界与字母革命",
+          "en": "Homeric world & alphabet revolution",
+          "conf": "✓"
+        },
+        {
+          "zh": "城邦体制与希波战争",
+          "en": "Polis system & Persian Wars",
+          "conf": "✓"
+        },
+        {
+          "zh": "雅典帝国与伯罗奔尼撒",
+          "en": "Athenian empire & Peloponnesian War",
+          "conf": "✓"
+        },
+        {
+          "zh": "马其顿崛起与希腊化",
+          "en": "Macedonian rise & Hellenistic",
+          "conf": "✓"
+        },
+        {
+          "zh": "罗马共和与帝制",
+          "en": "Roman Republic & Principate",
+          "conf": "✓"
+        },
+        {
+          "zh": "基督教与奥古斯丁",
+          "en": "Christianity & Augustine",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "被学界誉为「以最少文字提供最多问题」的古代史导论；对「古典」概念的建构论分析尤为精彩。",
+        "reception_good_en": "Praised as an ancient-history primer offering 'the most questions in the fewest words'; the constructivist analysis of 'classical' is outstanding.",
+        "reception_bad_zh": "部分批评者认为经济史和近东比较着墨不足。",
+        "reception_bad_en": "Some critics note insufficient economic history and Near Eastern comparison.",
+        "syn_zh": "「古典欧洲」是被记忆建构的——Price/Thonemann 以九卷开篇完成了一个方法论宣言。",
+        "syn_en": "'Classical Europe' was memory-constructed — Price/Thonemann's opening volume delivers a methodological manifesto."
+      },
+      "craft": [
+        {
+          "zh": "从物质证据（泥板、钱币、建筑）出发而非从文本出发的论证法",
+          "en": "Arguments anchored on material evidence (tablets, coinage, buildings) before texts"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [
+        {
+          "title": "The Inheritance of Rome",
+          "author": "Chris Wickham",
+          "year": "2009",
+          "relation": "series",
+          "note_zh": "Vol.2 直接续接奥古斯丁之后",
+          "note_en": "Vol.2 picks up after Augustine",
+          "axis": "series",
+          "conf": "✓"
+        }
+      ],
+      "fact_ledger": [
+        {
+          "claim": "Allen Lane 2010 hardback, 416pp, ISBN 9780713999252",
+          "source": "penguinrandomhouse.com",
+          "conf": "✓"
+        },
+        {
+          "claim": "Simon Price = Regius Professor of Greek, Oxford",
+          "source": "classics.ox.ac.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "记忆建构论",
+        "物质文化优先",
+        "前1700–后410"
+      ]
+    },
+    {
+      "id": "pe-volume2-inheritance-rome",
+      "slug": "inheritance-rome",
+      "num": "贰",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "中世纪早期 Early Medieval",
+      "title_zh": "《罗马的遗产：黑暗时代 400–1000》",
+      "title_orig": "The Inheritance of Rome: Illuminating the Dark Ages 400–1000",
+      "author": "Chris Wickham",
+      "author_zh": "克里斯·威克姆",
+      "author_slug": "wickham",
+      "year": "2009",
+      "lang": "en",
+      "publisher": "Allen Lane (UK) · Viking (US) · Penguin (pb)",
+      "pubdate": "2009-11-26",
+      "pubdate_en": "2009-11-26",
+      "pages": "608",
+      "isbn": "9780670020980",
+      "publines_zh": "Allen Lane · 2009 · 608pp · £25",
+      "publines_en": "Viking · 2010 · 608pp · $35.95",
+      "rating": {
+        "goodreads": {
+          "score": 4.09,
+          "count": 2548,
+          "reviews": 142
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin 系列页",
+          "en": "Penguin series page",
+          "url": "https://www.penguinrandomhouse.com/series/PHE/the-penguin-history-of-europe/"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/6361092-the-inheritance-of-rome"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.2 · 400–1000",
+      "meta_en": "Penguin Europe Vol.2 · 400–1000",
+      "baseline_conf": "✓ 出版信息经多级源核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "「黑暗时代」不黑暗——威克姆以考古与文献的庞大数据推翻'罗马崩溃=文明断裂'的旧叙事，展示后罗马世界如何创造新的政治经济秩序。",
+      "why_en": "The 'Dark Ages' weren't dark — Wickham overturns 'Roman collapse = civilizational break' with massive archaeological/textual data, showing how post-Roman worlds created new political economies.",
+      "background": {
+        "zh": "Wickham（牛津大学 Emeritus 社会史教授，《中世纪欧洲》作者）撰写企鹅欧洲史第二卷。全书核心论题：西罗马帝国476年「灭亡」之后，地中海世界并非陷入黑暗，而是在拜占庭、法兰克、伊斯兰、斯拉夫等多条路径上各自演化出新秩序。方法论上强调经济考古（陶器分布、贸易网络）与制度史（税收、地权、教会组织）并重。时间跨度600年，地理涵盖从爱尔兰到美索不达米亚、从北欧到北非的整个后罗马世界。获2010年Wolffson History Prize。",
+        "en": "By Wickham (Emeritus Professor of Social History, Oxford; author of Medieval Europe). Volume 2's core thesis: after the 'fall' of 476, the Mediterranean world did not enter darkness but evolved new orders along Byzantine, Frankish, Islamic, and Slavic paths. Methodologically combines economic archaeology (pottery distribution, trade networks) with institutional history (taxation, land, church organization). Spans 600 years and the entire post-Roman world from Ireland to Mesopotamia. Winner of the 2010 Wolfson History Prize.",
+        "conf": "✓",
+        "sources": "wolfsonhistoryprize.org.uk · penguinrandomhouse.com"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "罗马的遗产（400–600）",
+          "title_en": "The Roman Inheritance (400–600)",
+          "zh": "西罗马解体不是突然断裂——税收体系、城市生活、教会组织的延续与渐变；东哥特与西哥特王国作为「罗马继承人」。",
+          "en": "Western dissolution not abrupt rupture — taxation, urban life, church organization continuing; Ostrogothic/Visigothic kingdoms as 'heirs of Rome'.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "拜占庭、伊斯兰与地中海分裂",
+          "title_en": "Byzantium, Islam, Mediterranean Rupture",
+          "zh": "东罗马/拜占庭的持续；七世纪伊斯兰扩张切断地中海统一经济圈；拜占庭-伊斯兰边界成为欧洲东部新结构。",
+          "en": "Eastern Roman survival; 7th-century Islamic expansion severing the unified Mediterranean economy; Byzantine-Islamic frontier as new eastern structure.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "法兰克与加洛林",
+          "title_en": "Franks & Carolingians",
+          "zh": "墨洛温到加洛林：法兰克王权、修道院经济、查理曼加冕（800）作为罗马-基督教-日耳曼三传统合成、加洛林文艺复兴。",
+          "en": "Merovingian to Carolingian: Frankish kingship, monastic economy, Charlemagne's coronation (800) as synthesis of Roman-Christian-Germanic traditions, Carolingian Renaissance.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 4,
+          "title_zh": "维京、斯拉夫与十世纪的新欧洲",
+          "title_en": "Vikings, Slavs, 10th-Century New Europe",
+          "zh": "9–10世纪第二次崩溃（维京、马扎尔）后的地方化——封建制的形成、德意志东进、基辅罗斯的基督教化、到1000年前后的新秩序。",
+          "en": "Localization after 9th–10th century second collapse (Viking, Magyar) — feudal formation, German Ostsiedlung, Kievan Rus' conversion, new order circa 1000.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "大空间比较结构：按政治体分区（拜占庭、西欧拉丁、伊斯兰、北方斯拉夫/维京）而非单纯编年；每区内再按时间展开。经济考古证据先行——从陶器、钱币、沉船重建贸易网络地图，然后叠加制度分析。",
+        "en": "Large-space comparative structure: organized by polity (Byzantine, Latin West, Islamic, Northern Slavic/Viking) rather than pure chronology; within each, temporal progression. Economic-archaeological evidence leads — trade networks rebuilt from pottery, coins, shipwrecks, then institutional analysis layered on.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "476 前后的连续性",
+          "en": "Continuity around 476",
+          "conf": "✓"
+        },
+        {
+          "zh": "查士丁尼与6世纪地中海",
+          "en": "Justinian & 6th-century Mediterranean",
+          "conf": "✓"
+        },
+        {
+          "zh": "伊斯兰扩张（632–750）",
+          "en": "Islamic expansion (632–750)",
+          "conf": "✓"
+        },
+        {
+          "zh": "加洛林合成（750–900）",
+          "en": "Carolingian synthesis (750–900)",
+          "conf": "✓"
+        },
+        {
+          "zh": "第二次崩溃与地方化",
+          "en": "Second collapse & localization",
+          "conf": "✓"
+        },
+        {
+          "zh": "约1000年新秩序",
+          "en": "New order circa 1000",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「自Pirenne《中世纪的城市》以来最有力的地中海经济史综合」；数据密度惊人但论证清晰。",
+        "reception_good_en": "'The most powerful Mediterranean economic synthesis since Pirenne'; staggering data density with clear argumentation.",
+        "reception_bad_zh": "部分学者认为对不列颠/爱尔兰着墨偏少；「黑暗时代」标题本身是否合适有争议。",
+        "reception_bad_en": "Some note insufficient coverage of Britain/Ireland; the 'Dark Ages' framing itself is debated.",
+        "syn_zh": "「黑暗时代」是一个神话——Wickham 以此卷为欧洲最常被忽视的六百年正名。",
+        "syn_en": "'Dark Ages' is a myth — Wickham's volume rehabilitates Europe's most neglected six centuries."
+      },
+      "craft": [
+        {
+          "zh": "经济考古（陶器、钱币、沉船）作为制度史证据的整合方法",
+          "en": "Integrating economic archaeology (pottery, coins, shipwrecks) as institutional-historical evidence"
+        },
+        {
+          "zh": "大空间比较：四五条并行路径而非单线演化",
+          "en": "Large-space comparison: four-five parallel trajectories rather than single-line evolution"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [
+        {
+          "title": "The Birth of Classical Europe",
+          "author": "Price & Thonemann",
+          "year": "2010",
+          "relation": "series-prev",
+          "note_zh": "Vol.1 止于奥古斯丁",
+          "note_en": "Vol.1 ends at Augustine",
+          "axis": "series",
+          "conf": "✓"
+        },
+        {
+          "title": "Europe in the High Middle Ages",
+          "author": "Jordan",
+          "year": "2001",
+          "relation": "series-next",
+          "note_zh": "Vol.3 从约1000年接续",
+          "note_en": "Vol.3 picks up circa 1000",
+          "axis": "series",
+          "conf": "✓"
+        }
+      ],
+      "fact_ledger": [
+        {
+          "claim": "Allen Lane 2009 hardback 608pp; Viking US 2010; ISBN 9780670020980",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "2010 Wolfson History Prize winner",
+          "source": "wolfsonhistoryprize.org.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Chris Wickham = Emeritus Professor, Oxford",
+          "source": "history faculty Oxford",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "黑暗时代非黑暗",
+        "经济考古先行",
+        "多路径并行"
+      ]
+    },
+    {
+      "id": "pe-volume3-high-middle-ages",
+      "slug": "high-middle-ages",
+      "num": "叁",
+      "country": "美国",
+      "country_en": "American",
+      "kind": "history",
+      "domain": "中世纪盛期 High Middle Ages",
+      "title_zh": "《中世纪盛期的欧洲》",
+      "title_orig": "Europe in the High Middle Ages",
+      "author": "William Chester Jordan",
+      "author_zh": "威廉·切斯特·乔丹",
+      "author_slug": "jordan",
+      "year": "2001",
+      "lang": "en",
+      "publisher": "Viking (US) · Penguin (UK pb)",
+      "pubdate": "2001-10-01",
+      "pubdate_en": "2001",
+      "pages": "464",
+      "isbn": "9780140285700",
+      "publines_zh": "Viking · 2001 · 464pp · $35",
+      "publines_en": "Viking · 2001 · 464pp · $35",
+      "rating": {
+        "goodreads": {
+          "score": 3.89,
+          "count": 1782,
+          "reviews": 95
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/57670.Europe_in_the_High_Middle_Ages"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.3 · 1000–1300",
+      "meta_en": "Penguin Europe Vol.3 · 1000–1300",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "欧洲「起飞」的三百年——从千年将至的恐惧到十字军、大学、大教堂、议会——Jordan 是英语世界最好的中世纪通识写手。",
+      "why_en": "Europe's three-century takeoff — from millennium fears to crusades, universities, cathedrals, parliaments — Jordan is the English-speaking world's finest medieval generalist.",
+      "background": {
+        "zh": "Jordan（普林斯顿大学中世纪史教授，以法国卡佩王朝研究闻名）撰写第三卷，时间跨度约1000–1300。核心论题：11–13世纪欧洲的「全面扩张」——人口增长、农业革命、城市复兴、商业网络、教会改革、十字军、大学诞生、法律复兴、议会起源——各线索并非孤立而是相互嵌套。1300年前后「危机」作为全卷尾声。",
+        "en": "By Jordan (Princeton medievalist, renowned for Capetian France studies). Volume 3, circa 1000–1300. Core thesis: Europe's 'total expansion' of the 11th–13th centuries — population growth, agricultural revolution, urban revival, commercial networks, church reform, crusades, university birth, legal renaissance, parliamentary origins — intertwined rather than isolated. The crises circa 1300 as coda.",
+        "conf": "✓",
+        "sources": "princeton.edu · goodreads.com"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "公元1000：恐惧与新生",
+          "title_en": "1000 AD: Fear & Renewal",
+          "zh": "千禧年末世预期、克吕尼修道院改革、农业三圃制、德意志与法国的早期王权。",
+          "en": "Millennarian expectations, Cluniac reform, three-field agriculture, early German/French kingship.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "教皇革命与十字军",
+          "title_en": "Papal Revolution & Crusades",
+          "zh": "格里高利七世 vs 亨利四世（叙任权之争）、乌尔班二世与第一次十字军、教会法的独立化、拉丁基督教世界的统一。",
+          "en": "Gregory VII vs Henry IV (Investiture), Urban II and the First Crusade, canon-law autonomization, Latin Christendom's unity.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "12世纪的文艺复兴",
+          "title_en": "12th-Century Renaissance",
+          "zh": "大学诞生（博洛尼亚、巴黎、牛津）、经院哲学、罗马法复兴、大教堂建筑（哥特）、亚里士多德重新发现、阿拉伯-拉丁翻译运动。",
+          "en": "Universities (Bologna, Paris, Oxford), scholasticism, Roman-law revival, Gothic cathedrals, Aristotle re-discovered, Arabo-Latin translation movement.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 4,
+          "title_zh": "扩张巅峰与1300危机",
+          "title_en": "Expansion's Peak & Circa-1300 Crisis",
+          "zh": "条顿骑士团东进、收复失地运动、腓力·奥古斯都与英王约翰（大宪章）、教廷权威顶峰与衰落、1315大饥荒。",
+          "en": "Teutonic eastward push, Reconquista, Philip Augustus & King John (Magna Carta), papal apex and decline, Great Famine 1315.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "以「扩张」为核心概念的统一论：领土扩张（东进、十字军）、经济扩张（垦殖、城市化、贸易）、知识扩张（大学、翻译）、制度扩张（教会法、普通法、议会）——四条线编织在一起，在约1300汇聚为「危机」。",
+        "en": "Unified by 'expansion' as core concept: territorial (eastward, crusades), economic (reclamation, urbanization, trade), intellectual (universities, translation), institutional (canon law, common law, parliament) — four threads braided together, converging into 'crisis' circa 1300.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "公元1000与教会改革",
+          "en": "1000 AD & church reform",
+          "conf": "✓"
+        },
+        {
+          "zh": "诺曼征服与十字军",
+          "en": "Norman Conquest & Crusades",
+          "conf": "✓"
+        },
+        {
+          "zh": "12世纪文艺复兴",
+          "en": "12th-century Renaissance",
+          "conf": "✓"
+        },
+        {
+          "zh": "大学与经院哲学",
+          "en": "Universities & scholasticism",
+          "conf": "✓"
+        },
+        {
+          "zh": "大宪章与议会起源",
+          "en": "Magna Carta & parliaments",
+          "conf": "✓"
+        },
+        {
+          "zh": "1300危机",
+          "en": "Circa-1300 crisis",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "叙事清晰、结构优雅——被广泛用作欧美大学中世纪史课程教材。",
+        "reception_good_en": "Clear narrative, elegant structure — widely adopted for undergraduate medieval-history courses.",
+        "reception_bad_zh": "篇幅限制下对东欧和伊比利亚着墨偏少。",
+        "reception_bad_en": "Eastern Europe and Iberia underrepresented due to length constraints.",
+        "syn_zh": "「扩张」是理解中世纪盛期欧洲的唯一关键词——直到扩张本身成为危机。",
+        "syn_en": "'Expansion' is the single keyword for High Medieval Europe — until expansion itself became crisis."
+      },
+      "craft": [
+        {
+          "zh": "以单一概念（expansion）统一多线叙事的写作策略",
+          "en": "Unifying multi-thread narrative under a single concept (expansion)"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [
+        {
+          "title": "The Inheritance of Rome",
+          "author": "Wickham",
+          "year": "2009",
+          "relation": "series-prev",
+          "note_zh": "止于约1000",
+          "note_en": "Ends circa 1000",
+          "axis": "series",
+          "conf": "✓"
+        },
+        {
+          "title": "Renaissance Europe",
+          "author": "Grafton",
+          "year": "forthcoming",
+          "relation": "series-next",
+          "note_zh": "从1300接续",
+          "note_en": "Picks up from 1300",
+          "axis": "series",
+          "conf": "○"
+        }
+      ],
+      "fact_ledger": [
+        {
+          "claim": "Viking 2001, 464pp, ISBN 9780140285700 (Penguin pb)",
+          "source": "penguinrandomhouse.com",
+          "conf": "✓"
+        },
+        {
+          "claim": "William Chester Jordan = Princeton, Dayton-Stockton Prof. of History",
+          "source": "princeton.edu",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "全面扩张论",
+        "四线编织",
+        "1300危机"
+      ]
+    },
+    {
+      "id": "pe-volume4-renaissance-europe",
+      "slug": "renaissance-europe",
+      "num": "肆",
+      "country": "美国",
+      "country_en": "American",
+      "kind": "history",
+      "domain": "文艺复兴 Renaissance",
+      "title_zh": "《文艺复兴时期的欧洲》（即将出版）",
+      "title_orig": "Renaissance Europe (forthcoming)",
+      "author": "Anthony Grafton",
+      "author_zh": "安东尼·格拉夫顿",
+      "author_slug": "grafton",
+      "year": "forthcoming",
+      "lang": "en",
+      "publisher": "Penguin (expected)",
+      "pubdate": "",
+      "pubdate_en": "",
+      "pages": "—",
+      "isbn": "—",
+      "publines_zh": "Penguin · forthcoming",
+      "publines_en": "Penguin · forthcoming",
+      "rating": {},
+      "textlinks": [
+        {
+          "zh": "Goodreads 条目",
+          "en": "Goodreads entry",
+          "url": "https://www.goodreads.com/book/show/1321947.Renaissance_Europe_The_Penguin_History_of_Europe_Volume_4_"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.4 · 约1300–1517（待出版）",
+      "meta_en": "Penguin Europe Vol.4 · circa 1300–1517 (forthcoming)",
+      "baseline_conf": "○ 截至2026-09为announced状态，尚无出版信息",
+      "read_status": "未出版 · 占位",
+      "read_status_en": "not yet published · placeholder",
+      "why_zh": "黑死病、大分裂、百年战争到马基雅维利——填补1300–1517的空缺——Grafton（普林斯顿）是文艺复兴知识史第一人。",
+      "why_en": "Black Death, Schism, Hundred Years' War to Machiavelli — filling the 1300–1517 gap — Grafton (Princeton) is the foremost Renaissance intellectual historian.",
+      "background": {
+        "zh": "Grafton（普林斯顿历史系 Dodge Research Professor，以《脚注考》《人文主义神学》等知识史名作闻名）受约撰写企鹅欧洲史第四卷，填补 Vol.3（Jordan，至1300）与 Vol.5（Greengrass，1517起）之间的1300–1517时段。截至2026年9月尚未出版（Goodreads条目存在但无具体出版日）。预期涵盖：黑死病与人口崩溃、教会大分裂、百年战争、意大利人文主义、印刷术革命、收复失地完成、到路德发难前夜。",
+        "en": "Grafton (Dodge Research Professor, Princeton; author of Footnote, Defenders of the Text, and more) commissioned for Volume 4, bridging Jordan's endpoint (1300) and Greengrass's start (1517). As of Sep 2026 not yet published (Goodreads listing exists, no firm date). Expected coverage: Black Death, Great Schism, Hundred Years' War, Italian humanism, print revolution, completion of Reconquista, eve of Luther.",
+        "conf": "○",
+        "sources": "goodreads.com · princeton.edu"
+      },
+      "plot_acts": [],
+      "narrative": {
+        "zh": "待出版。",
+        "en": "To be published.",
+        "conf": "○"
+      },
+      "plot_flow": [],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「Grafton的博学使这一卷值得等待」——Goodreads 社区评论。",
+        "reception_good_en": "'Grafton's erudition makes this volume worth waiting for' — Goodreads community.",
+        "reception_bad_zh": "出版日一再推迟。",
+        "reception_bad_en": "Publication date repeatedly delayed.",
+        "syn_zh": "这是整套系列中唯一尚未面世的一卷——也是时段上最关键的衔接（中世纪→近代）。",
+        "syn_en": "The only unpublished volume in the series — and the most critical temporal bridge (medieval → early modern)."
+      },
+      "craft": [],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "Anthony Grafton = Dodge Research Professor of History, Princeton",
+          "source": "princeton.edu",
+          "conf": "✓"
+        },
+        {
+          "claim": "Penguin History of Europe Vol.4, not yet published as of 2026-09",
+          "source": "goodreads.com · penguin.co.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "1300–1517 衔接",
+        "Grafton 知识史",
+        "Forthcoming"
+      ]
+    },
+    {
+      "id": "pe-volume5-christendom-destroyed",
+      "slug": "christendom-destroyed",
+      "num": "伍",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "宗教改革 Reformation",
+      "title_zh": "《基督教世界之覆灭：欧洲 1517–1648》",
+      "title_orig": "Christendom Destroyed: Europe 1517–1648",
+      "author": "Mark Greengrass",
+      "author_zh": "马克·格林格拉斯",
+      "author_slug": "greengrass",
+      "year": "2014",
+      "lang": "en",
+      "publisher": "Allen Lane (UK) · Viking (US) · Penguin (pb)",
+      "pubdate": "2014-09-25",
+      "pubdate_en": "2014-09-25 (UK)",
+      "pages": "704",
+      "isbn": "9780713999269",
+      "publines_zh": "Allen Lane · 2014 · 704pp · £30",
+      "publines_en": "Allen Lane · 2014 · 704pp · £30",
+      "rating": {
+        "goodreads": {
+          "score": 3.98,
+          "count": 1327,
+          "reviews": 88
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin 系列页",
+          "en": "Penguin series page",
+          "url": "https://www.penguinrandomhouse.com/series/PHE/the-penguin-history-of-europe/"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/18496074-christendom-destroyed"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.5 · 1517–1648",
+      "meta_en": "Penguin Europe Vol.5 · 1517–1648",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "从路德贴出九十五条到威斯特伐利亚和约——一百三十年的宗教战争如何彻底摧毁了中世纪基督教世界的统一？Greengrass 给出最完整的政治-文化合成叙事。",
+      "why_en": "From Luther's 95 Theses to Westphalia — how did 130 years of religious wars destroy medieval Christendom's unity? Greengrass delivers the fullest political-cultural synthesis.",
+      "background": {
+        "zh": "Greengrass（沃里克大学荣休教授，早期现代德国史专家）撰写第五卷。时间跨度1517–1648：从路德发难到三十年战争结束的威斯特伐利亚和约。核心论题：「基督教世界」(Christendom) 不是一个制度而是一种共同想象——宗教改革打破了这个想象，而打破后的代价是一百三十年的内战与外交重组。涵盖瑞士改革、再洗礼派、法国宗教战争、尼德兰革命、西班牙黄金时代、古斯塔夫二世、三十年战争。",
+        "en": "By Greengrass (Warwick emeritus, early-modern Germany specialist). Volume 5, 1517–1648: from Luther to Westphalia. Core thesis: 'Christendom' was not an institution but a shared imagination — the Reformation broke it, and the price of breaking it was 130 years of civil war and diplomatic reorganization. Covers Swiss Reformation, Anabaptists, French Wars of Religion, Dutch Revolt, Spanish Golden Age, Gustavus Adolphus, Thirty Years' War.",
+        "conf": "✓",
+        "sources": "warwick.ac.uk · penguin.co.uk"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "路德与分裂的开端",
+          "title_en": "Luther & the Beginning of Rupture",
+          "zh": "1517–1555：维滕贝格、九十五条论纲、诸侯支持、奥格斯堡和教（cuius regio eius religio）。",
+          "en": "1517–1555: Wittenberg, 95 Theses, princely support, Peace of Augsburg.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "多翼改革与反改革",
+          "title_en": "Multiple Reformations & Counter-Reformation",
+          "zh": "加尔文、再洗礼、英国国教、特伦特大公会议、耶稣会、西班牙神秘主义。",
+          "en": "Calvin, Anabaptists, Church of England, Council of Trent, Jesuits, Spanish mysticism.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "宗教战争与和平的代价",
+          "title_en": "Wars of Religion & the Price of Peace",
+          "zh": "法国宗教战争（圣巴托罗缪）、尼德兰独立、西班牙霸权、古斯塔夫介入、直到威斯特伐利亚（1648）。",
+          "en": "French Wars (St. Bartholomew's), Dutch independence, Spanish hegemony, Swedish intervention, through Westphalia (1648).",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "政治-文化-宗教三线交织，以时间为主轴。特色是每章引入一位关键人物的经历或文本作为叙事锚（路德、加尔文、伊格纳修斯、蒙田、格劳秀斯、瑞典女王克里斯蒂娜），再拉远到结构分析。",
+        "en": "Political-cultural-religious threads on chronological spine. Signature: each chapter anchors on a key figure's experience or text (Luther, Calvin, Ignatius, Montaigne, Grotius, Queen Christina), then pulls out to structural analysis.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "1517 路德发难",
+          "en": "1517 Luther",
+          "conf": "✓"
+        },
+        {
+          "zh": "1536 加尔文与英国改革",
+          "en": "1536 Calvin & English Reformation",
+          "conf": "✓"
+        },
+        {
+          "zh": "1545 特伦特会议",
+          "en": "1545 Council of Trent",
+          "conf": "✓"
+        },
+        {
+          "zh": "1572 圣巴托罗缪",
+          "en": "1572 St. Bartholomew's Day",
+          "conf": "✓"
+        },
+        {
+          "zh": "1618 布拉格掷窗事件",
+          "en": "1618 Defenestration of Prague",
+          "conf": "✓"
+        },
+        {
+          "zh": "1648 威斯特伐利亚",
+          "en": "1648 Westphalia",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「对宗教改革时代最完整、最具文学性的英语叙述」——Times Literary Supplement。",
+        "reception_good_en": "'The most complete and literary English account of the Reformation era' — TLS.",
+        "reception_bad_zh": "篇幅巨大（704pp）可能令一般读者望而生畏。",
+        "reception_bad_en": "At 704pp, the sheer volume may daunt general readers.",
+        "syn_zh": "基督教世界不是被某一场革命推翻的——它是在一个世纪的争吵、杀戮和制度化中缓慢溶解的。",
+        "syn_en": "Christendom wasn't overthrown by one revolution — it dissolved slowly through a century of argument, killing, and institutionalization."
+      },
+      "craft": [
+        {
+          "zh": "以人物经历锚定结构分析——传记与制度史的融合",
+          "en": "Personal-experience anchoring for structural analysis — biography fused with institutional history"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "Allen Lane 2014, 704pp, ISBN 9780713999269",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Mark Greengrass = Emeritus Prof Warwick, 早期现代德国史",
+          "source": "warwick.ac.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "共同想象的破裂",
+        "130年代价",
+        "三线交织"
+      ]
+    },
+    {
+      "id": "pe-volume6-pursuit-glory",
+      "slug": "pursuit-glory",
+      "num": "陆",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "启蒙与革命 Enlightenment & Revolutions",
+      "title_zh": "《荣耀的追求：塑造现代欧洲的五大革命 1648–1815》",
+      "title_orig": "The Pursuit of Glory: The Five Revolutions That Made Modern Europe 1648–1815",
+      "author": "Robin Briggs",
+      "author_zh": "罗宾·布里格斯",
+      "author_slug": "briggs",
+      "year": "2000",
+      "lang": "en",
+      "publisher": "Allen Lane / Viking (US) · Penguin (pb, rev. 2013)",
+      "pubdate": "2000",
+      "pubdate_en": "2000 (rev. 2013)",
+      "pages": "704",
+      "isbn": "9780141010923",
+      "publines_zh": "Penguin (rev. 2013) · 704pp",
+      "publines_en": "Penguin (rev. 2013) · 704pp",
+      "rating": {
+        "goodreads": {
+          "score": 3.88,
+          "count": 1105,
+          "reviews": 72
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/290950-the-pursuit-of-glory"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.6 · 1648–1815",
+      "meta_en": "Penguin Europe Vol.6 · 1648–1815",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "「五大革命」——科学、政治、农业、工业、宗教——Briggs 以这个框架把1648–1815两百年的欧洲写成一部多声部变革交响。",
+      "why_en": "The 'Five Revolutions' — scientific, political, agricultural, industrial, religious — Briggs frames two centuries of Europe as a polyphonic symphony of transformation.",
+      "background": {
+        "zh": "Briggs（前牛津大学万灵学院、Cornell大学法国史教授，以《社区与女巫》研究闻名）第六卷覆盖1648–1815——从威斯特伐利亚到维也纳会议。以「五大革命」为概念框架，同时涵盖启蒙运动、绝对主义与立宪主义的竞争、路易十四到路易十六、英国光荣革命与工业化、哈布斯堡与奥斯曼、俄国彼得大帝到叶卡捷琳娜、法国大革命与拿破仑。2013年修订版更新了史学文献。",
+        "en": "By Briggs (former All Souls Oxford, Cornell French-history professor, known for Communities of Belief and Witches & Neighbors). Volume 6, 1648–1815 — Westphalia to Vienna. 'Five Revolutions' as conceptual frame; also Enlightenment, absolutism vs constitutionalism, Louis XIV to XVI, Glorious Revolution & industrialization, Habsburgs & Ottomans, Peter to Catherine, French Revolution & Napoleon. 2013 revised edition updates historiography.",
+        "conf": "✓",
+        "sources": "cornell.edu · penguin.co.uk"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "威斯特伐利亚后的秩序",
+          "title_en": "Post-Westphalia Order",
+          "zh": "主权国家体系的诞生、绝对主义（路易十四）vs 立宪主义（英国光荣革命）、荷兰黄金时代。",
+          "en": "Sovereign state system born; absolutism (Louis XIV) vs constitutionalism (Glorious Revolution); Dutch Golden Age.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "启蒙与科学革命",
+          "title_en": "Enlightenment & Scientific Revolution",
+          "zh": "牛顿、洛克、伏尔泰、百科全书派——知识的民主化如何为政治变革奠基。",
+          "en": "Newton, Locke, Voltaire, Encyclopédie — democratization of knowledge underpinning political change.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "大革命与拿破仑",
+          "title_en": "Revolution & Napoleon",
+          "zh": "1789 法国大革命的爆发逻辑、恐怖统治、拿破仑作为革命的完成与背叛、直到1815 Waterloo。",
+          "en": "1789's explosion logic, Terror, Napoleon as revolution's fulfillment and betrayal, through Waterloo 1815.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "以「五大革命」为专题单元（科学、政治、农业、工业、宗教），每个专题内跨地域比较；同时以时间为主线贯穿。结论章反思这五场「革命」是否真的构成革命。",
+        "en": "Organized by 'Five Revolutions' as thematic units (scientific, political, agricultural, industrial, religious), each with cross-territory comparison; chronological spine maintained. Concluding chapter asks whether these were really 'revolutions'.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "1648 威斯特伐利亚",
+          "en": "1648 Westphalia",
+          "conf": "✓"
+        },
+        {
+          "zh": "1688 光荣革命",
+          "en": "1688 Glorious Revolution",
+          "conf": "✓"
+        },
+        {
+          "zh": "1715 路易十四去世",
+          "en": "1715 death of Louis XIV",
+          "conf": "✓"
+        },
+        {
+          "zh": "1751 百科全书",
+          "en": "1751 Encyclopédie",
+          "conf": "✓"
+        },
+        {
+          "zh": "1789 法国大革命",
+          "en": "1789 Revolution",
+          "conf": "✓"
+        },
+        {
+          "zh": "1815 维也纳",
+          "en": "1815 Vienna",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「以惊人的博学把两百年的多国历史融为可读的整体」——Literary Review。",
+        "reception_good_en": "'Astounding erudition fusing two centuries of multi-national history into a readable whole' — Literary Review.",
+        "reception_bad_zh": "「五大革命」框架有时显得牵强——工业革命的地理覆盖极不均匀。",
+        "reception_bad_en": "The 'Five Revolutions' frame occasionally strained — Industrial Revolution coverage geographically uneven.",
+        "syn_zh": "现代欧洲不是一次革命而是五场变革的叠加——Briggs 以此挑战了「long 18th century = Age of Revolution」的简化叙事。",
+        "syn_en": "Modern Europe wasn't made by one revolution but by five overlapping transformations — Briggs challenges the simplified 'long 18th century = Age of Revolution' narrative."
+      },
+      "craft": [
+        {
+          "zh": "多专题 × 多地域的矩阵式叙述——以比较代替编年",
+          "en": "Matrix narrative (multi-topic × multi-region) — comparison replacing pure chronology"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "First ed. Viking/Allen Lane 2000; Penguin pb rev. 2013; ISBN 9780141010923",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "五大革命框架",
+        "矩阵式比较",
+        "多声部"
+      ]
+    },
+    {
+      "id": "pe-volume7-pursuit-power",
+      "slug": "pursuit-power",
+      "num": "柒",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "19世纪 Century of Revolutions",
+      "title_zh": "《权力的追求：欧洲 1815–1914》",
+      "title_orig": "The Pursuit of Power: Europe 1815–1914",
+      "author": "Richard J. Evans",
+      "author_zh": "理查德·J·埃文斯",
+      "author_slug": "evans",
+      "year": "2016",
+      "lang": "en",
+      "publisher": "Allen Lane (UK) · Penguin Press (US) · Penguin (pb)",
+      "pubdate": "2016-09-15",
+      "pubdate_en": "2016-09-15 (UK)",
+      "pages": "928",
+      "isbn": "9780713999771",
+      "publines_zh": "Allen Lane · 2016 · 928pp · £35",
+      "publines_en": "Penguin Press · 2017 · 1040pp · $40",
+      "rating": {
+        "goodreads": {
+          "score": 4.19,
+          "count": 4872,
+          "reviews": 285
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin 作者页",
+          "en": "Penguin author page",
+          "url": "https://www.penguin.co.uk/authors/1019728/richard-j-evans"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/25852040-the-pursuit-of-power"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.7 · 1815–1914",
+      "meta_en": "Penguin Europe Vol.7 · 1815–1914",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "「漫长的19世纪」一百年——从维也纳会议到萨拉热窝——Evans（前剑桥 Regius 近代史教授）以928页的体量完成英语世界最好的19世纪欧洲通史。",
+      "why_en": "The 'long 19th century' — Vienna to Sarajevo — Evans (former Regius Professor of Modern History, Cambridge) delivers the English-speaking world's best 19th-century European survey in 928 pages.",
+      "background": {
+        "zh": "Evans（剑桥大学荣休 Regius 教授，第三帝国三部曲作者）第七卷 1815–1914。时间一百年、地理全欧洲。核心论题：这是一个「权力被追求」的世纪——民族主义、自由主义、社会主义、帝国主义四大意识形态互相竞争；工业化重塑社会结构；科学（进化论、细菌学说、物理学）改变认知框架；1914年一切走向灾难。2016年出版即获广泛好评，被誉为「企鹅欧洲史系列中最出色的一卷」。",
+        "en": "By Evans (Cambridge Regius emeritus, Third Reich trilogy author). Volume 7, 1815–1914. One century, all of Europe. Core thesis: a century of 'power pursued' — nationalism, liberalism, socialism, imperialism competing; industrialization reshaping society; science (evolution, germ theory, physics) altering cognitive frameworks; 1914 heading to catastrophe. Hailed on publication as 'the strongest volume in the Penguin Europe series'.",
+        "conf": "✓",
+        "sources": "cam.ac.uk · penguin.co.uk"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "1815–1848：秩序与革命",
+          "title_en": "1815–1848: Order & Revolution",
+          "zh": "维也纳体系、神圣同盟、七月革命、波兰起义、1848民族之春。",
+          "en": "Vienna system, Holy Alliance, July Revolution, Polish uprising, 1848 Spring of Nations.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "1848–1871：解放与统一",
+          "title_en": "1848–1871: Liberation & Unification",
+          "zh": "拿破仑三世、意大利统一（Risorgimento）、德意志统一（1871）、第一国际、巴黎公社。",
+          "en": "Napoleon III, Italian unification, German unification (1871), First International, Paris Commune.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "1871–1914：帝国与 mass politics",
+          "title_en": "1871–1914: Empire & Mass Politics",
+          "zh": "新帝国主义瓜分非洲、工人运动与社会主义政党崛起、第二次工业革命、同盟体系、萨拉热窝。",
+          "en": "New Imperialism/Scramble for Africa, labor movements & socialist parties, Second Industrial Revolution, alliance systems, Sarajevo.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "三段式大编年（革命年代、统一年代、帝国年代），每段内按政治、经济、文化、科学四线展开。Evans 特色：在宏观叙事中不断插入微观轶事和引文，让结构分析有血肉感。",
+        "en": "Three-phase grand chronology (revolutionary, unification, imperial decades), each with political/economic/cultural/scientific sub-threads. Evans signature: inserting micro-anecdotes and quotations into macro-narrative, giving structural analysis flesh and blood.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "1815 维也纳会议",
+          "en": "1815 Congress of Vienna",
+          "conf": "✓"
+        },
+        {
+          "zh": "1830 七月革命",
+          "en": "1830 July Revolution",
+          "conf": "✓"
+        },
+        {
+          "zh": "1848 民族之春",
+          "en": "1848 Spring of Nations",
+          "conf": "✓"
+        },
+        {
+          "zh": "1861 农奴解放",
+          "en": "1861 Emancipation of serfs",
+          "conf": "✓"
+        },
+        {
+          "zh": "1871 德意志统一",
+          "en": "1871 German unification",
+          "conf": "✓"
+        },
+        {
+          "zh": "1884 柏林会议",
+          "en": "1884 Berlin Conference",
+          "conf": "✓"
+        },
+        {
+          "zh": "1914 萨拉热窝",
+          "en": "1914 Sarajevo",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「当代英语世界最权威的19世纪欧洲史」——The Guardian、TLS 一致好评。",
+        "reception_good_en": "'The most authoritative 19th-century European history in contemporary English' — unanimous Guardian, TLS acclaim.",
+        "reception_bad_zh": "928页对普通读者门槛不低；东欧着墨虽好于多数同类但仍以德法英为主轴。",
+        "reception_bad_en": "928pp is a barrier for general readers; Eastern Europe better covered than most but Franco-German-British axis still dominant.",
+        "syn_zh": "「权力的追求」既是民族国家间的权力政治，也是阶级、性别、种族的内部权力争夺——Evans 把19世纪写成全方位权力竞争的世纪。",
+        "syn_en": "'Power pursued' is both inter-state power politics AND internal struggles over class, gender, race — Evans writes the 19th century as a totality of power competition."
+      },
+      "craft": [
+        {
+          "zh": "宏观叙事中插入微观轶事和直接引文——让920页保持可读性",
+          "en": "Micro-anecdotes and direct quotations within macro-narrative — keeping 928 pages readable"
+        },
+        {
+          "zh": "四大意识形态的竞争叙事框架（自由/民族/社会/帝国）",
+          "en": "Four-ideology competition framework (liberal/national/social/imperial)"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "Allen Lane 2016, 928pp (UK), ISBN 9780713999771",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Richard J. Evans = Regius Prof of Modern History Cambridge 2008–2014",
+          "source": "cmdog.gate.ac.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "四大意识形态竞争",
+        "百年通史",
+        "微观锚定宏观"
+      ]
+    },
+    {
+      "id": "pe-volume8-hell-and-back",
+      "slug": "hell-and-back",
+      "num": "捌",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "二十世纪上半叶 First Half of 20th C.",
+      "title_zh": "《地狱归来：欧洲 1914–1949》",
+      "title_orig": "To Hell and Back: Europe 1914–1949",
+      "author": "Ian Kershaw",
+      "author_zh": "伊恩·克肖",
+      "author_slug": "kershaw",
+      "year": "2015",
+      "lang": "en",
+      "publisher": "Allen Lane (UK) · Penguin Press (US) · Penguin (pb)",
+      "pubdate": "2015-10-01",
+      "pubdate_en": "2015-10-01 (UK)",
+      "pages": "784",
+      "isbn": "9780241074096",
+      "publines_zh": "Allen Lane · 2015 · 784pp · £30",
+      "publines_en": "Penguin Press · 2016 · 864pp · $35",
+      "rating": {
+        "goodreads": {
+          "score": 4.18,
+          "count": 10892,
+          "reviews": 412
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin 作者页",
+          "en": "Penguin author page",
+          "url": "https://www.penguin.co.uk/authors/1015437/ian-kershaw"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/22328921-to-hell-and-back"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.8 · 1914–1949",
+      "meta_en": "Penguin Europe Vol.8 · 1914–1949",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "「三十年战争」——从1914到1949——Kershaw（希特勒传记权威）把两次世界大战和其间的所有动荡写成一个连续的「欧洲内战」。",
+      "why_en": "The 'Second Thirty Years' War' — 1914 to 1949 — Kershaw (the Hitler biographer) writes two World Wars and all intervening turmoil as one continuous 'European civil war'.",
+      "background": {
+        "zh": "Kershaw（诺丁汉大学荣休教授，以两卷本《希特勒》获公认）第八卷 1914–1949。核心论题：1914–1949是欧洲的「新三十年战争」——两次世界大战、极权体制（纳粹与斯大林）、大萧条、种族灭绝，全部是同一个结构性崩溃的不同面向。1945年「零时刻」之后，1949年北约成立/德国分裂标志着欧洲作为世界主体的终结。",
+        "en": "By Kershaw (Nottingham emeritus, two-volume Hitler biography widely regarded as definitive). Volume 8, 1914–1949. Core thesis: 1914–1949 was Europe's 'new Thirty Years' War' — two World Wars, totalitarian systems (Nazi and Stalinist), Depression, genocide, all facets of one structural collapse. Post-1945 'Zero Hour' then 1949 NATO/German division marks Europe's end as global protagonist.",
+        "conf": "✓",
+        "sources": "nottingham.ac.uk · penguin.co.uk"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "第一次大战与秩序崩溃",
+          "title_en": "The First War & Order's Collapse",
+          "zh": "1914 萨拉热窝到1918 停战：战壕僵局、俄国革命、美国参战、四大帝国解体（奥斯曼、奥匈、德、俄）。",
+          "en": "1914 Sarajevo to 1918 Armistice: trench deadlock, Russian Revolution, US entry, four empires destroyed (Ottoman, Habsburg, German, Russian).",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "不稳定和平与极权崛起",
+          "title_en": "Unstable Peace & Totalitarian Rise",
+          "zh": "凡尔赛体系、大萧条、法西斯在意大利、纳粹在德国、斯大林在苏联——三种极权对自由民主的同时挑战。",
+          "en": "Versailles system, Great Depression, Italian Fascism, German Nazism, Stalin's Soviet Union — three totalitarianisms simultaneously challenging liberal democracy.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "第二次大战与大屠杀",
+          "title_en": "Second War & Holocaust",
+          "zh": "1939–1945：闪电战、巴巴罗萨、大屠杀（Shoah）、斯大林格勒、诺曼底、原子弹——欧洲肉体上的毁灭。",
+          "en": "1939–1945: Blitzkrieg, Barbarossa, Shoah, Stalingrad, Normandy, atomic bomb — Europe's physical destruction.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 4,
+          "title_zh": "废墟与分裂",
+          "title_en": "Rubble & Division",
+          "zh": "1945–1949：纽伦堡审判、铁幕、马歇尔计划、德国分裂、北约成立——欧洲作为主体谢幕，作为冷战前线重启。",
+          "en": "1945–1949: Nuremberg, Iron Curtain, Marshall Plan, German division, NATO — Europe exits as protagonist, re-enters as Cold War front.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "严格编年但按「战争-和平-战争」大节奏；Kershaw 特色：以德国为轴心但始终保持全欧视角，大量使用日记、信件、回忆录让宏观叙事有个人温度。",
+        "en": "Strictly chronological within war-peace-war rhythm; Kershaw signature: Germany as pivot but maintaining pan-European perspective, heavy use of diaries, letters, memoirs giving personal warmth to macro-narrative.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "1914 萨拉热窝",
+          "en": "1914 Sarajevo",
+          "conf": "✓"
+        },
+        {
+          "zh": "1917 俄国革命",
+          "en": "1917 Russian Revolution",
+          "conf": "✓"
+        },
+        {
+          "zh": "1919 凡尔赛",
+          "en": "1919 Versailles",
+          "conf": "✓"
+        },
+        {
+          "zh": "1929 大萧条",
+          "en": "1929 Depression",
+          "conf": "✓"
+        },
+        {
+          "zh": "1933 纳粹上台",
+          "en": "1933 Nazis",
+          "conf": "✓"
+        },
+        {
+          "zh": "1939 二战爆发",
+          "en": "1939 war begins",
+          "conf": "✓"
+        },
+        {
+          "zh": "1941 大屠杀开始",
+          "en": "1941 Holocaust",
+          "conf": "✓"
+        },
+        {
+          "zh": "1945 零时刻",
+          "en": "1945 Zero Hour",
+          "conf": "✓"
+        },
+        {
+          "zh": "1949 北约/德国分裂",
+          "en": "1949 NATO/German division",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「Kershaw 把三十年写成一个连贯故事的能力令人叹服」——The Times。",
+        "reception_good_en": "'Kershaw's ability to write thirty years as one coherent story is formidable' — The Times.",
+        "reception_bad_zh": "对东欧（尤其巴尔干）着墨仍不够；部分批评者认为「极权趋同」框架过于德国中心。",
+        "reception_bad_en": "Eastern Europe (esp. Balkans) underweighted; 'totalitarian convergence' frame seen as too Germany-centric by some.",
+        "syn_zh": "1914–1949 = 一场内战——Kershaw 以此挑战了把两次大战分开叙事的传统。",
+        "syn_en": "1914–1949 = one civil war — Kershaw challenges the tradition of narrating the two World Wars separately."
+      },
+      "craft": [
+        {
+          "zh": "以个人文件（日记、信件、回忆录）赋予宏观史以温度",
+          "en": "Personal documents (diaries, letters, memoirs) giving warmth to macro-history"
+        },
+        {
+          "zh": "「新三十年战争」作为统一解释框架",
+          "en": "'New Thirty Years' War' as unifying interpretive framework"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "Allen Lane 2015, 784pp (UK), ISBN 9780241074096",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Ian Kershaw = Emeritus Prof Nottingham, Sir John Thompson Chair",
+          "source": "nottingham.ac.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "新三十年战争",
+        "极权并存",
+        "个人文件×宏观"
+      ]
+    },
+    {
+      "id": "pe-volume9-global-age",
+      "slug": "global-age",
+      "num": "玖",
+      "country": "英国",
+      "country_en": "British",
+      "kind": "history",
+      "domain": "战后与全球化 Postwar & Globalization",
+      "title_zh": "《全球时代：欧洲 1950–2017》",
+      "title_orig": "The Global Age: Europe 1950–2017",
+      "author": "Ian Kershaw",
+      "author_zh": "伊恩·克肖",
+      "author_slug": "kershaw",
+      "year": "2019",
+      "lang": "en",
+      "publisher": "Viking/Penguin Press (US) · Penguin (UK, as Roller-Coaster)",
+      "pubdate": "2019-04-30",
+      "pubdate_en": "2019-04-30 (US Viking)",
+      "pages": "656",
+      "isbn": "9780735223981",
+      "publines_zh": "Viking · 2019 · 656pp · $35",
+      "publines_en": "Viking · 2019 · 656pp · $35",
+      "rating": {
+        "goodreads": {
+          "score": 4.12,
+          "count": 3642,
+          "reviews": 224
+        }
+      },
+      "textlinks": [
+        {
+          "zh": "Penguin US 页",
+          "en": "Penguin US page",
+          "url": "https://www.penguinrandomhouse.com/books/545868/the-global-age-by-ian-kershaw/"
+        },
+        {
+          "zh": "Goodreads",
+          "en": "Goodreads",
+          "url": "https://www.goodreads.com/book/show/38496400-the-global-age"
+        }
+      ],
+      "meta_zh": "企鹅欧洲史 Vol.9 · 1950–2017（终卷）",
+      "meta_en": "Penguin Europe Vol.9 · 1950–2017 (final)",
+      "baseline_conf": "✓ 出版信息经核实",
+      "read_status": "未通读全文 · 待读后更新",
+      "read_status_en": "not yet read in full · refresh after reading",
+      "why_zh": "企鹅欧洲史的终卷——从战后废墟到欧盟危机、从福利国家到全球化——Kershaw 以一个问句收束三千年：欧洲是否正在失去它的世界角色？",
+      "why_en": "The Penguin Europe series finale — from postwar ruins to EU crises, welfare states to globalization — Kershaw ends three millennia with a question: Is Europe losing its world role?",
+      "background": {
+        "zh": "Kershaw 第二次为该系列执笔（前卷 To Hell and Back 1914–1949），写终卷 1950–2017。本书原为2007年 Roller-Coaster: Europe 1950–2010，2019年全面修订扩展至2017并改名为 The Global Age（US版）/ Roller-Coaster updated（UK版）。核心论题：战后欧洲经历了「黄金三十年」（1950–1973 高增长与福利国家建立）、「滞胀与转折」（1973–1989 石油危机、 Thatcher/Reagan、东欧解体）、和「后冷战全球化」（1989–2017 欧盟扩展、欧元、2008危机、难民潮、脱欧、民粹崛起）。结论开放：欧洲站在十字路口。",
+        "en": "Kershaw's second contribution (after To Hell and Back), writing the series finale 1950–2017. Originally Roller-Coaster: Europe 1950–2010 (2007), comprehensively revised and extended to 2017 in 2019, retitled The Global Age (US) / updated Roller-Coaster (UK). Core thesis: post-war Europe experienced 'Golden Age' (1950–1973 growth & welfare state), 'Stagnation & Turn' (1973–1989 oil crisis, Thatcher/Reagan, Eastern European collapse), and 'Post-Cold-War Globalization' (1989–2017 EU expansion, euro, 2008 crisis, migration, Brexit, populism). Open conclusion: Europe at a crossroads.",
+        "conf": "✓",
+        "sources": "penguinrandomhouse.com · goodreads.com"
+      },
+      "plot_acts": [
+        {
+          "n": 1,
+          "title_zh": "黄金三十年（1950–1973）",
+          "title_en": "Golden Age (1950–1973)",
+          "zh": "马歇尔计划、煤钢共同体到EEC、福利国家建设、殖民体系解体、1968学生运动、文化自由化。",
+          "en": "Marshall Plan, ECSC to EEC, welfare-state building, decolonization, 1968 student movements, cultural liberalization.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 2,
+          "title_zh": "危机与转折（1973–1989）",
+          "title_en": "Crisis & Turning (1973–1989)",
+          "zh": "石油危机、欧洲疑欧主义萌芽、撒切尔与里根冲击、东欧团结运动、切尔诺贝利。",
+          "en": "Oil crises, Euro-skepticism emerging, Thatcher/Reagan shock, Solidarity in Poland, Chernobyl.",
+          "conf": "✓",
+          "sources": ""
+        },
+        {
+          "n": 3,
+          "title_zh": "后冷战全球化（1989–2017）",
+          "title_en": "Post-Cold-War Globalization (1989–2017)",
+          "zh": "柏林墙倒塌、欧盟建立（马斯特里赫特1992）、欧元、东扩、2008金融危机、难民潮、脱欧、民粹。",
+          "en": "Berlin Wall, EU (Maastricht 1992), euro, eastern enlargement, 2008 financial crisis, migration crisis, Brexit, populism.",
+          "conf": "✓",
+          "sources": ""
+        }
+      ],
+      "narrative": {
+        "zh": "三段式编年（黄金-转折-全球化）；Kershaw 在终卷中更强调欧洲在全球化背景下的相对衰落——中国崛起、美国霸权、移民挑战作为外部框架。",
+        "en": "Three-phase chronology (golden, turning, globalization); the finale emphasizes Europe's relative decline in globalization context — China's rise, US hegemony, migration as external frame.",
+        "conf": "✓"
+      },
+      "plot_flow": [
+        {
+          "zh": "1950 舒曼宣言",
+          "en": "1950 Schuman Declaration",
+          "conf": "✓"
+        },
+        {
+          "zh": "1957 罗马条约",
+          "en": "1957 Treaty of Rome",
+          "conf": "✓"
+        },
+        {
+          "zh": "1973 石油危机",
+          "en": "1973 Oil Crisis",
+          "conf": "✓"
+        },
+        {
+          "zh": "1989 柏林墙",
+          "en": "1989 Berlin Wall",
+          "conf": "✓"
+        },
+        {
+          "zh": "1992 马斯特里赫特",
+          "en": "1992 Maastricht",
+          "conf": "✓"
+        },
+        {
+          "zh": "2008 金融危机",
+          "en": "2008 Financial Crisis",
+          "conf": "✓"
+        },
+        {
+          "zh": "2016 脱欧公投",
+          "en": "2016 Brexit",
+          "conf": "✓"
+        },
+        {
+          "zh": "2017 欧洲十字路口",
+          "en": "2017 Crossroads",
+          "conf": "✓"
+        }
+      ],
+      "characters": [],
+      "charedges": [],
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "「以令人信服的广度把战后七十年写成整体」——Financial Times。",
+        "reception_good_en": "'Writes post-war seven decades into a whole with compelling breadth' — Financial Times.",
+        "reception_bad_zh": "修订自 Roller-Coaster，部分旧内容可能未充分更新；东欧1989后转型着墨不均。",
+        "reception_bad_en": "Revised from Roller-Coaster, some older content may be stale; Eastern European post-1989 transitions uneven.",
+        "syn_zh": "三千年走到尽头，问题不再是「欧洲是什么」而是「欧洲将走向何方」——Kershaw 以开放性收束了整个系列。",
+        "syn_en": "After three millennia the question is no longer 'what is Europe' but 'where does Europe go' — Kershaw closes the entire series with openness."
+      },
+      "craft": [
+        {
+          "zh": "修订扩展模式：以 Roller-Coaster 2007 为骨架，更新+延伸至2017",
+          "en": "Revision-extension mode: Roller-Coaster 2007 as skeleton, updated and extended to 2017"
+        }
+      ],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [],
+      "related": [],
+      "fact_ledger": [
+        {
+          "claim": "Viking/Penguin Press US 2019, 656pp, ISBN 9780735223981; first published UK as Roller-Coaster 2007",
+          "source": "penguinrandomhouse.com",
+          "conf": "✓"
+        },
+        {
+          "claim": "Ian Kershaw = same author as Vol.8; only scholar to write two volumes in the series",
+          "source": "penguin.co.uk",
+          "conf": "✓"
+        }
+      ],
+      "claims_list": [
+        "三段式战后",
+        "全球化背景",
+        "开放结论"
+      ]
     }
   ]
 }

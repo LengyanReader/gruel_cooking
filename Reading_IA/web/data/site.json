@@ -13,6 +13,47 @@
   },
   "crops": [
     {
+      "id": "2026-penguin-europe",
+      "page": "docs/reading_ia/read/penguin-europe-books.html",
+      "dir_page": "penguin-europe-books.html",
+      "glyph_zh": "企鹅欧洲史 · PENGUIN EUROPE",
+      "glyph_en": "PENGUIN EUROPE · 企鹅欧洲史",
+      "date": "2026-09-25",
+      "title_zh": "企鹅欧洲史 · 九卷通鉴",
+      "title_en": "The Penguin History of Europe — nine volumes",
+      "subtitle_zh": "从特洛伊到全球化 · 一套读完三千年欧洲",
+      "subtitle_en": "From Troy to the Global Age — three millennia in nine volumes",
+      "verdict_zh": "SUFFICIENT",
+      "verdict_en": "SUFFICIENT",
+      "lang_line_zh": "英国学术通史×9（英文原版）— 涵盖 1700BC–2017AD 全部时段",
+      "lang_line_en": "British academic survey ×9 (English originals) — covering 1700BC–2017AD",
+      "book_ids": [
+        "pe-volume1-birth-classical",
+        "pe-volume2-inheritance-rome",
+        "pe-volume3-high-middle-ages",
+        "pe-volume4-renaissance-europe",
+        "pe-volume5-christendom-destroyed",
+        "pe-volume6-pursuit-glory",
+        "pe-volume7-pursuit-power",
+        "pe-volume8-hell-and-back",
+        "pe-volume9-global-age"
+      ],
+      "verdict_body_zh": "供给完备——九卷覆盖企鹅欧洲史全套计划，时段无缝衔接（前1700–2017），作者皆为各领域顶级学者。唯一缺口：Vol.4 Grafton《Renaissance Europe》尚未出版（截至2026年9月为 forthcoming），实际可读八卷。",
+      "verdict_body_en": "Supply is complete — nine volumes cover the full Penguin History of Europe program, seamless period coverage (1700BC–2017AD), authors are top scholars in each field. Only gap: Vol.4 Grafton's Renaissance Europe remains forthcoming as of Sep 2026; eight volumes are practically readable.",
+      "verdict_gaps": [
+        {
+          "zh": "Vol.4 Grafton《Renaissance Europe》(1300–1517) 尚未面世——中世纪晚期到宗教改革的衔接段暂缺专著",
+          "en": "Vol.4 Grafton, Renaissance Europe (1300–1517) still forthcoming — the late-medieval-to-Reformation bridge lacks a dedicated volume"
+        },
+        {
+          "zh": "可选补充：Norman Davies《Europe: A History》作单卷对照——鸟瞰与分卷互补",
+          "en": "Optional add: Norman Davies, Europe: A History — a single-volume contrast to complement the multi-volume approach"
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice"
+    },
+    {
       "id": "2026-autumn",
       "page": "docs/reading_ia/read/2026-09-books.html",
       "dir_page": "2026-09-books.html",
