@@ -151,12 +151,18 @@ check("pubs level=A has \u74f7\u5668\u4e4b\u90fd", "\u74f7\u5668\u4e4b\u90fd" in
 check("fieldwork grouped (\u7ec4\u6807\u9898-\u5317\u4eac\u5927\u8fd0\u6cb3)", "\u5317\u4eac\u5927\u8fd0\u6cb3" in get("/fieldwork"))
 check("fieldwork links to map", 'href="/map"' in get("/fieldwork"))
 
-# Tongzhou field basemap (/map) — bilingual SVG viewer + offline data asset
+# Tongzhou field basemap (/map) — Leaflet multi-layer viewer + offline data assets
 mp = get("/map")
 check("map zh title", "\u901a\u5dde\u8fd0\u6cb3" in mp)
-check("map loads data script", 'src="/js/tongzhou_map.js"' in mp)
-check("map svg canvas", 'id="map"' in mp)
+check("map loads vendored leaflet", 'href="/vendor/leaflet/leaflet.css"' in mp and 'src="/vendor/leaflet/leaflet.js"' in mp)
+check("map loads data + viewer scripts", 'src="/js/tongzhou_map.js"' in mp and 'src="/js/map_viewer.js"' in mp)
+check("map div canvas", 'id="map"' in mp)
+check("map offline banner", "map-offline-banner" in mp)
 check("map serves geometry data", "window.TONGZHOU_MAP" in get("/js/tongzhou_map.js"))
+tj = get("/js/tongzhou_map.js")
+check("map layer manifest has 4 layers", all(k in tj for k in ('"observations"', '"heritage"', '"redline"', '"tracer"')))
+check("map viewer wires layer control", "L.control.layers" in get("/js/map_viewer.js"))
+check("leaflet.js served", len(get("/vendor/leaflet/leaflet.js")) > 100000)
 mpe = get_en("/map")
 check("map en title", "Tongzhou Canal" in mpe)
 
