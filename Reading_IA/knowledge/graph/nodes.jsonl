@@ -1,0 +1,126 @@
+{"id": "author:blanning", "type": "Author", "label": "Tim Blanning", "props": {"name_zh": "蒂姆·布拉宁", "school_zh": "文化史 × 政治史 × 音乐与社会", "domain_zh": "近代早期欧洲 · 法国史 · 十八世纪文化史 · 音乐史"}}
+{"id": "author:evans", "type": "Author", "label": "Evans", "props": {"name_zh": "埃文斯", "school_zh": "社会史 × 政治史 × 文化史综合", "domain_zh": "近代欧洲史 · 德国史 · 第三帝国 · 大屠杀史学"}}
+{"id": "author:grafton", "type": "Author", "label": "Grafton", "props": {"name_zh": "格拉夫顿", "school_zh": "知识史 · 接受史 · 语文学", "domain_zh": "文艺复兴知识史 · 古典学接受史 · 语文学 · 学术方法论"}}
+{"id": "author:greengrass", "type": "Author", "label": "Greengrass", "props": {"name_zh": "格林格拉斯", "school_zh": "文化转移 × 政治-宗教交织", "domain_zh": "近代早期欧洲 · 宗教改革 · 文化转移"}}
+{"id": "author:jordan", "type": "Author", "label": "Jordan", "props": {"name_zh": "乔丹", "school_zh": "政治史 × 制度史 × 经济社会史", "domain_zh": "中世纪法国 · 卡佩王朝 · 路易九世 · 1315 大饥荒"}}
+{"id": "author:kershaw", "type": "Author", "label": "Kershaw", "props": {"name_zh": "克肖", "school_zh": "结构主义功能论 × 通史综合", "domain_zh": "二十世纪欧洲史 · 希特勒与纳粹 · 战后欧洲 · 「结构性 vs 意图性」"}}
+{"id": "author:lemaitre", "type": "Author", "label": "Lemaitre", "props": {"name_zh": "勒梅特", "school_zh": "法国 polar → 社会史小说", "domain_zh": "法国 polar → 社会史小说 · Goncourt 2013"}}
+{"id": "author:manda", "type": "Author", "label": "Manda", "props": {"name_zh": "萬田緑平", "school_zh": "日本在宅緩和ケア 生死观话语场", "domain_zh": "外科 → 在宅緩和ケア医 · 非虚构作者"}}
+{"id": "author:mandel", "type": "Author", "label": "Mandel", "props": {"name_zh": "曼德尔", "school_zh": "soft-apocalypse 跨界文学", "domain_zh": "当代小说 · speculative/literary crossover · 灾难—艺术母题"}}
+{"id": "author:pelicot", "type": "Author", "label": "Pelicot", "props": {"name_zh": "佩利科", "school_zh": "#MeToo 档案 / 见证文学", "domain_zh": "幸存者 · 回忆录 · Mazan 案当事人"}}
+{"id": "author:perrignon", "type": "Author", "label": "Perrignon", "props": {"name_zh": "佩里尼翁", "school_zh": "法式传记/证言转写", "domain_zh": "传记/证言转写 · 法国文化电台节目"}}
+{"id": "author:price-thonemann", "type": "Author", "label": "Price & Thonemann", "props": {"name_zh": "普莱斯 & 托内曼", "school_zh": "记忆建构 × 帝国崇拜 × 物质文化", "domain_zh": "古希腊罗马史 · 帝国崇拜 · 记忆与文化史"}}
+{"id": "author:vargas", "type": "Author", "label": "Vargas", "props": {"name_zh": "瓦尔加", "school_zh": "法式 néo-polar · 直觉派侦探文学", "domain_zh": "罪案小说 · 考古动物学"}}
+{"id": "author:wickham", "type": "Author", "label": "Wickham", "props": {"name_zh": "威克姆", "school_zh": "经济考古 × 制度史 × 大空间比较", "domain_zh": "中世纪早期 · 意大利中世纪史 · 地中海比较经济史"}}
+{"id": "book:2026-lemaitre-belles-promesses", "type": "Book", "label": "《美丽的承诺》", "props": {"kind": "novel", "author": "Pierre Lemaitre", "year": "2026"}}
+{"id": "book:2026-manda-kanoke-made", "type": "Book", "label": "《走到棺材为止》", "props": {"kind": "essay", "author": "萬田緑平", "year": "2025"}}
+{"id": "book:2026-mandel-exit-party", "type": "Book", "label": "《逃离派对》", "props": {"kind": "novel", "author": "Emily St. John Mandel", "year": "2026"}}
+{"id": "book:2026-pelicot-joie-de-vivre", "type": "Book", "label": "《然后，活着的喜悦》", "props": {"kind": "memoir", "author": "Gisèle Pelicot & Judith Perrignon", "year": "2026"}}
+{"id": "book:2026-vargas-une-unique-lueur", "type": "Book", "label": "《一束独光》", "props": {"kind": "novel", "author": "Fred Vargas", "year": "2026"}}
+{"id": "book:pe-volume1-birth-classical", "type": "Book", "label": "《古典欧洲的诞生：从特洛伊到奥古斯丁》", "props": {"kind": "history", "author": "Simon Price & Peter Thonemann", "year": "2010"}}
+{"id": "book:pe-volume2-inheritance-rome", "type": "Book", "label": "《罗马的遗产：黑暗时代 400–1000》", "props": {"kind": "history", "author": "Chris Wickham", "year": "2009"}}
+{"id": "book:pe-volume3-high-middle-ages", "type": "Book", "label": "《中世纪盛期的欧洲》", "props": {"kind": "history", "author": "William Chester Jordan", "year": "2001"}}
+{"id": "book:pe-volume4-renaissance-europe", "type": "Book", "label": "《文艺复兴时期的欧洲》（即将出版）", "props": {"kind": "history", "author": "Anthony Grafton", "year": "forthcoming"}}
+{"id": "book:pe-volume5-christendom-destroyed", "type": "Book", "label": "《基督教世界之覆灭：欧洲 1517–1648》", "props": {"kind": "history", "author": "Mark Greengrass", "year": "2014"}}
+{"id": "book:pe-volume6-pursuit-glory", "type": "Book", "label": "《荣耀的追求：塑造现代欧洲的五大革命 1648–1815》", "props": {"kind": "history", "author": "Tim Blanning", "year": "2002"}}
+{"id": "book:pe-volume7-pursuit-power", "type": "Book", "label": "《权力的追求：欧洲 1815–1914》", "props": {"kind": "history", "author": "Richard J. Evans", "year": "2016"}}
+{"id": "book:pe-volume8-hell-and-back", "type": "Book", "label": "《地狱归来：欧洲 1914–1949》", "props": {"kind": "history", "author": "Ian Kershaw", "year": "2015"}}
+{"id": "book:pe-volume9-global-age", "type": "Book", "label": "《全球时代：欧洲 1950–2017》", "props": {"kind": "history", "author": "Ian Kershaw", "year": "2019"}}
+{"id": "char:2026-lemaitre-belles-promesses:L1", "type": "Character", "label": "Jean Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-lemaitre-belles-promesses:L2", "type": "Character", "label": "François Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-lemaitre-belles-promesses:L3", "type": "Character", "label": "Geneviève Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-lemaitre-belles-promesses:L4", "type": "Character", "label": "Philippe / Colette Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-lemaitre-belles-promesses:L5", "type": "Character", "label": "Joseph", "props": {"group": "家庭", "conf": "✓ 意象广为书评引用", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-lemaitre-belles-promesses:L6", "type": "Character", "label": "Manuel Ramos", "props": {"group": "乡村次线", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
+{"id": "char:2026-manda-kanoke-made:J1", "type": "Character", "label": "萬田緑平", "props": {"group": "作者", "conf": "✓", "book": "2026-manda-kanoke-made"}}
+{"id": "char:2026-manda-kanoke-made:J2", "type": "Character", "label": "東畑開人", "props": {"group": "对谈者", "conf": "✓", "book": "2026-manda-kanoke-made"}}
+{"id": "char:2026-manda-kanoke-made:J3", "type": "Character", "label": "青栁幸利", "props": {"group": "数据线", "conf": "◐", "book": "2026-manda-kanoke-made"}}
+{"id": "char:2026-mandel-exit-party:C1", "type": "Character", "label": "Ari Waker", "props": {"group": "A 面主角", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C10", "type": "Character", "label": "Saraya de Santos", "props": {"group": "B→A", "conf": "◐", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C11", "type": "Character", "label": "Len", "props": {"group": "B 面", "conf": "◐", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C12", "type": "Character", "label": "Anton Waker", "props": {"group": "A (TSG)", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C13", "type": "Character", "label": "David Grissom", "props": {"group": "B (TSG)", "conf": "◐", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C14", "type": "Character", "label": "Felix", "props": {"group": "A 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C15", "type": "Character", "label": "Bill Soriano", "props": {"group": "A 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C16", "type": "Character", "label": "Eduardo", "props": {"group": "A 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C17", "type": "Character", "label": "Lucas Alkaitis", "props": {"group": "The Glass Hotel", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C2", "type": "Character", "label": "Ibari Waker", "props": {"group": "B 面镜像", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C3", "type": "Character", "label": "Kareem Fayed (A)", "props": {"group": "A 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C4", "type": "Character", "label": "Kareem Fayed (B)", "props": {"group": "B 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C5", "type": "Character", "label": "Gloria", "props": {"group": "A 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C6", "type": "Character", "label": "Nico Li", "props": {"group": "B→A", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C7", "type": "Character", "label": "Sebastian", "props": {"group": "A/巴黎", "conf": "◐", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C8", "type": "Character", "label": "Samir Li", "props": {"group": "B 面", "conf": "◐", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-mandel-exit-party:C9", "type": "Character", "label": "Marlowe Li", "props": {"group": "B 面", "conf": "✓", "book": "2026-mandel-exit-party"}}
+{"id": "char:2026-pelicot-joie-de-vivre:P1", "type": "Character", "label": "Gisèle Pelicot", "props": {"group": "主体", "conf": "✓", "book": "2026-pelicot-joie-de-vivre"}}
+{"id": "char:2026-pelicot-joie-de-vivre:P2", "type": "Character", "label": "Dominique Pelicot", "props": {"group": "施害者", "conf": "✓", "book": "2026-pelicot-joie-de-vivre"}}
+{"id": "char:2026-pelicot-joie-de-vivre:P3", "type": "Character", "label": "Caroline Darian", "props": {"group": "女儿", "conf": "✓", "book": "2026-pelicot-joie-de-vivre"}}
+{"id": "char:2026-pelicot-joie-de-vivre:P4", "type": "Character", "label": "David / Antoine Pelicot", "props": {"group": "子女", "conf": "✓", "book": "2026-pelicot-joie-de-vivre"}}
+{"id": "char:2026-pelicot-joie-de-vivre:P5", "type": "Character", "label": "Judith Perrignon", "props": {"group": "合著者", "conf": "✓", "book": "2026-pelicot-joie-de-vivre"}}
+{"id": "char:2026-vargas-une-unique-lueur:V1", "type": "Character", "label": "Jean-Baptiste Adamsberg", "props": {"group": "巴黎凶案组", "conf": "✓", "book": "2026-vargas-une-unique-lueur"}}
+{"id": "char:2026-vargas-une-unique-lueur:V2", "type": "Character", "label": "Danglard", "props": {"group": "巴黎凶案组", "conf": "✓", "book": "2026-vargas-une-unique-lueur"}}
+{"id": "char:2026-vargas-une-unique-lueur:V3", "type": "Character", "label": "Violette Retancourt", "props": {"group": "巴黎凶案组", "conf": "✓", "book": "2026-vargas-une-unique-lueur"}}
+{"id": "char:2026-vargas-une-unique-lueur:V4", "type": "Character", "label": "Camille Forestier", "props": {"group": "旧日女友", "conf": "○ (仅在部分卷出现)", "book": "2026-vargas-une-unique-lueur"}}
+{"id": "char:pe-volume1-birth-classical:k01", "type": "Character", "label": "Homer · 荷马", "props": {"group": "文本传统", "conf": "✓", "book": "pe-volume1-birth-classical"}}
+{"id": "char:pe-volume1-birth-classical:k02", "type": "Character", "label": "Augustine of Hippo · 奥勒留·奥古斯丁", "props": {"group": "晚期罗马 · 教会", "conf": "✓", "book": "pe-volume1-birth-classical"}}
+{"id": "char:pe-volume1-birth-classical:k03", "type": "Character", "label": "Alexander III of Macedon · 亚历山大大帝", "props": {"group": "马其顿 → 印度河", "conf": "✓", "book": "pe-volume1-birth-classical"}}
+{"id": "char:pe-volume1-birth-classical:k04", "type": "Character", "label": "Julius Caesar · 尤利乌斯·恺撒", "props": {"group": "罗马共和国 → 独裁", "conf": "✓", "book": "pe-volume1-birth-classical"}}
+{"id": "char:pe-volume1-birth-classical:k05", "type": "Character", "label": "Constantine I · 君士坦丁大帝", "props": {"group": "罗马帝国", "conf": "✓", "book": "pe-volume1-birth-classical"}}
+{"id": "char:pe-volume2-inheritance-rome:k01", "type": "Character", "label": "Charlemagne · 查理曼", "props": {"group": "加洛林帝国", "conf": "✓", "book": "pe-volume2-inheritance-rome"}}
+{"id": "char:pe-volume2-inheritance-rome:k02", "type": "Character", "label": "Muhammad · 穆罕默德", "props": {"group": "阿拉伯-伊斯兰", "conf": "✓", "book": "pe-volume2-inheritance-rome"}}
+{"id": "char:pe-volume2-inheritance-rome:k03", "type": "Character", "label": "Gregory the Great · 大格里高利", "props": {"group": "罗马教廷", "conf": "✓", "book": "pe-volume2-inheritance-rome"}}
+{"id": "char:pe-volume2-inheritance-rome:k04", "type": "Character", "label": "Basil II · 巴西尔二世", "props": {"group": "拜占庭", "conf": "✓", "book": "pe-volume2-inheritance-rome"}}
+{"id": "char:pe-volume2-inheritance-rome:k05", "type": "Character", "label": "Alcuin of York · 约克的阿尔昆", "props": {"group": "加洛林学术", "conf": "✓", "book": "pe-volume2-inheritance-rome"}}
+{"id": "char:pe-volume3-high-middle-ages:k01", "type": "Character", "label": "Pope Innocent III · 教皇英诺森三世", "props": {"group": "教皇君主制", "conf": "✓", "book": "pe-volume3-high-middle-ages"}}
+{"id": "char:pe-volume3-high-middle-ages:k02", "type": "Character", "label": "Francis of Assisi · 阿西西的方济各", "props": {"group": "托钵修会", "conf": "✓", "book": "pe-volume3-high-middle-ages"}}
+{"id": "char:pe-volume3-high-middle-ages:k03", "type": "Character", "label": "Louis IX of France · 法兰西的路易九世", "props": {"group": "卡佩王朝", "conf": "✓", "book": "pe-volume3-high-middle-ages"}}
+{"id": "char:pe-volume3-high-middle-ages:k04", "type": "Character", "label": "Thomas Aquinas · 托马斯·阿奎那", "props": {"group": "经院哲学", "conf": "✓", "book": "pe-volume3-high-middle-ages"}}
+{"id": "char:pe-volume3-high-middle-ages:k05", "type": "Character", "label": "Eleanor of Aquitaine · 阿基坦的埃莉诺", "props": {"group": "普瓦图-法兰西-英格兰", "conf": "✓", "book": "pe-volume3-high-middle-ages"}}
+{"id": "char:pe-volume5-christendom-destroyed:k01", "type": "Character", "label": "Martin Luther · 马丁·路德", "props": {"group": "维滕贝格", "conf": "✓", "book": "pe-volume5-christendom-destroyed"}}
+{"id": "char:pe-volume5-christendom-destroyed:k02", "type": "Character", "label": "Desiderius Erasmus · 伊拉斯谟", "props": {"group": "鹿特丹-巴塞尔", "conf": "✓", "book": "pe-volume5-christendom-destroyed"}}
+{"id": "char:pe-volume5-christendom-destroyed:k03", "type": "Character", "label": "Charles V · 查理五世", "props": {"group": "哈布斯堡-西班牙-神罗", "conf": "✓", "book": "pe-volume5-christendom-destroyed"}}
+{"id": "char:pe-volume5-christendom-destroyed:k04", "type": "Character", "label": "Philip II of Spain · 西班牙的腓力二世", "props": {"group": "西班牙-尼德兰", "conf": "✓", "book": "pe-volume5-christendom-destroyed"}}
+{"id": "char:pe-volume5-christendom-destroyed:k05", "type": "Character", "label": "Gustavus Adolphus · 古斯塔夫二世", "props": {"group": "瑞典", "conf": "✓", "book": "pe-volume5-christendom-destroyed"}}
+{"id": "char:pe-volume6-pursuit-glory:k01", "type": "Character", "label": "Louis XIV · 路易十四", "props": {"group": "凡尔赛", "conf": "✓", "book": "pe-volume6-pursuit-glory"}}
+{"id": "char:pe-volume6-pursuit-glory:k02", "type": "Character", "label": "Peter the Great · 彼得大帝", "props": {"group": "莫斯科-圣彼得堡", "conf": "✓", "book": "pe-volume6-pursuit-glory"}}
+{"id": "char:pe-volume6-pursuit-glory:k03", "type": "Character", "label": "Voltaire · 伏尔泰", "props": {"group": "巴黎-凡尔赛-柏林", "conf": "✓", "book": "pe-volume6-pursuit-glory"}}
+{"id": "char:pe-volume6-pursuit-glory:k04", "type": "Character", "label": "Wolfgang Amadeus Mozart · 莫扎特", "props": {"group": "萨尔茨堡-维也纳", "conf": "✓", "book": "pe-volume6-pursuit-glory"}}
+{"id": "char:pe-volume6-pursuit-glory:k05", "type": "Character", "label": "Napoleon Bonaparte · 拿破仑·波拿巴", "props": {"group": "法兰西-欧陆", "conf": "✓", "book": "pe-volume6-pursuit-glory"}}
+{"id": "char:pe-volume7-pursuit-power:k01", "type": "Character", "label": "Klemens von Metternich · 梅特涅", "props": {"group": "奥地利帝国", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume7-pursuit-power:k02", "type": "Character", "label": "Giuseppe Garibaldi · 加里波第", "props": {"group": "撒丁-意大利", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume7-pursuit-power:k03", "type": "Character", "label": "Otto von Bismarck · 俾斯麦", "props": {"group": "普鲁士-德意志", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume7-pursuit-power:k04", "type": "Character", "label": "Charles Darwin · 查尔斯·达尔文", "props": {"group": "英格兰", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume7-pursuit-power:k05", "type": "Character", "label": "Queen Victoria · 维多利亚女王", "props": {"group": "大英帝国", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume7-pursuit-power:k06", "type": "Character", "label": "Sigmund Freud · 弗洛伊德", "props": {"group": "维也纳", "conf": "✓", "book": "pe-volume7-pursuit-power"}}
+{"id": "char:pe-volume8-hell-and-back:k01", "type": "Character", "label": "Adolf Hitler · 阿道夫·希特勒", "props": {"group": "魏玛-纳粹德国", "conf": "✓", "book": "pe-volume8-hell-and-back"}}
+{"id": "char:pe-volume8-hell-and-back:k02", "type": "Character", "label": "Joseph Stalin · 斯大林", "props": {"group": "苏联", "conf": "✓", "book": "pe-volume8-hell-and-back"}}
+{"id": "char:pe-volume8-hell-and-back:k03", "type": "Character", "label": "Franklin D. Roosevelt · 富兰克林·罗斯福", "props": {"group": "美国", "conf": "✓", "book": "pe-volume8-hell-and-back"}}
+{"id": "char:pe-volume8-hell-and-back:k04", "type": "Character", "label": "Winston Churchill · 丘吉尔", "props": {"group": "英国", "conf": "✓", "book": "pe-volume8-hell-and-back"}}
+{"id": "char:pe-volume8-hell-and-back:k05", "type": "Character", "label": "Benito Mussolini · 墨索里尼", "props": {"group": "意大利", "conf": "✓", "book": "pe-volume8-hell-and-back"}}
+{"id": "char:pe-volume9-global-age:k01", "type": "Character", "label": "Konrad Adenauer · 康拉德·阿登纳", "props": {"group": "联邦德国", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "char:pe-volume9-global-age:k02", "type": "Character", "label": "Charles de Gaulle · 戴高乐", "props": {"group": "法兰西", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "char:pe-volume9-global-age:k03", "type": "Character", "label": "Margaret Thatcher · 撒切尔", "props": {"group": "英国", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "char:pe-volume9-global-age:k04", "type": "Character", "label": "Mikhail Gorbachev · 戈尔巴乔夫", "props": {"group": "苏联", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "char:pe-volume9-global-age:k05", "type": "Character", "label": "Helmut Kohl · 科尔", "props": {"group": "德国", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "char:pe-volume9-global-age:k06", "type": "Character", "label": "Angela Merkel · 默克尔", "props": {"group": "德国-欧盟", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "concept:french-neo-polar", "type": "Concept", "label": "French neo-polar", "props": {"school_zh": "法式 néo-polar 文学派（Adamsberg 脉）", "school_en": "French neo-polar"}}
+{"id": "concept:japan-home-palliative-discourse", "type": "Concept", "label": "Japan home-palliative discourse", "props": {"school_zh": "日本在宅緩和ケア 生死观话语场", "school_en": "Japan home-palliative discourse"}}
+{"id": "concept:literary-transcription", "type": "Concept", "label": "literary transcription", "props": {"school_zh": "法式传记/证言转写", "school_en": "literary transcription"}}
+{"id": "concept:metoo-archive-testimonial", "type": "Concept", "label": "#MeToo archive / testimonial", "props": {"school_zh": "#MeToo 档案 / 见证文学", "school_en": "#MeToo archive / testimonial"}}
+{"id": "concept:polar-to-social-history", "type": "Concept", "label": "polar to social history", "props": {"school_zh": "法国 polar 文学派 → 社会史小说", "school_en": "polar to social history"}}
+{"id": "concept:soft-apocalypse-crossover", "type": "Concept", "label": "soft-apocalypse crossover", "props": {"school_zh": "soft-apocalypse 跨界文学", "school_en": "soft-apocalypse crossover"}}
+{"id": "person:albert-dupontel", "type": "Person", "label": "Albert Dupontel", "props": {"raw": "Albert Dupontel（导演）"}}
+{"id": "person:balzac-zola", "type": "Person", "label": "Balzac / Zola", "props": {"raw": "Balzac / Zola"}}
+{"id": "person:caroline-darian", "type": "Person", "label": "Caroline Darian", "props": {"raw": "Caroline Darian（女儿/作家）"}}
+{"id": "person:georges-simenon", "type": "Person", "label": "Georges Simenon", "props": {"raw": "Georges Simenon"}}
+{"id": "person:jo-vargas", "type": "Person", "label": "Jo Vargas", "props": {"raw": "Jo Vargas（孪生姐）"}}
+{"id": "person:manon-garcia", "type": "Person", "label": "Manon Garcia", "props": {"raw": "Manon Garcia（哲学家）"}}
+{"id": "person:marceline-loridan-ivens", "type": "Person", "label": "Marceline Loridan-Ivens", "props": {"raw": "Marceline Loridan-Ivens"}}
+{"id": "person:metoo", "type": "Person", "label": "#MeToo", "props": {"raw": "#MeToo（2017）"}}
+{"id": "person:patrick-somerville", "type": "Person", "label": "Patrick Somerville", "props": {"raw": "Patrick Somerville（剧集主创）"}}
+{"id": "person:primo-levi-见证文学", "type": "Person", "label": "Primo Levi / 见证文学", "props": {"raw": "Primo Levi / 见证文学"}}
+{"id": "person:siân-reynolds", "type": "Person", "label": "Siân Reynolds", "props": {"raw": "Siân Reynolds（英译者）"}}
+{"id": "person:stéphane-audoin-rouzeau", "type": "Person", "label": "Stéphane Audoin-Rouzeau", "props": {"raw": "Stéphane Audoin-Rouzeau（兄）"}}
+{"id": "person:東畑開人", "type": "Person", "label": "東畑開人", "props": {"raw": "東畑開人（临床心理師）"}}
+{"id": "person:柏木哲夫-日本ホスピス緩和ケア", "type": "Person", "label": "柏木哲夫 / 日本ホスピス緩和ケア", "props": {"raw": "柏木哲夫 / 日本ホスピス緩和ケア"}}
+{"id": "person:青栁幸利", "type": "Person", "label": "青栁幸利", "props": {"raw": "青栁幸利（中之条研究）"}}

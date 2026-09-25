@@ -1,0 +1,67 @@
+{"from": "char:2026-mandel-exit-party:C1", "to": "char:2026-mandel-exit-party:C15", "type": "alliance", "props": {"book": "2026-mandel-exit-party", "note": "交易式结盟"}}
+{"from": "book:2026-lemaitre-belles-promesses", "to": "author:lemaitre", "type": "authored_by", "props": {"book": "2026-lemaitre-belles-promesses"}}
+{"from": "book:2026-manda-kanoke-made", "to": "author:manda", "type": "authored_by", "props": {"book": "2026-manda-kanoke-made"}}
+{"from": "book:2026-mandel-exit-party", "to": "author:mandel", "type": "authored_by", "props": {"book": "2026-mandel-exit-party"}}
+{"from": "book:2026-pelicot-joie-de-vivre", "to": "author:pelicot", "type": "authored_by", "props": {"book": "2026-pelicot-joie-de-vivre"}}
+{"from": "book:2026-vargas-une-unique-lueur", "to": "author:vargas", "type": "authored_by", "props": {"book": "2026-vargas-une-unique-lueur"}}
+{"from": "book:pe-volume1-birth-classical", "to": "author:price-thonemann", "type": "authored_by", "props": {"book": "pe-volume1-birth-classical"}}
+{"from": "book:pe-volume2-inheritance-rome", "to": "author:wickham", "type": "authored_by", "props": {"book": "pe-volume2-inheritance-rome"}}
+{"from": "book:pe-volume3-high-middle-ages", "to": "author:jordan", "type": "authored_by", "props": {"book": "pe-volume3-high-middle-ages"}}
+{"from": "book:pe-volume4-renaissance-europe", "to": "author:grafton", "type": "authored_by", "props": {"book": "pe-volume4-renaissance-europe"}}
+{"from": "book:pe-volume5-christendom-destroyed", "to": "author:greengrass", "type": "authored_by", "props": {"book": "pe-volume5-christendom-destroyed"}}
+{"from": "book:pe-volume6-pursuit-glory", "to": "author:blanning", "type": "authored_by", "props": {"book": "pe-volume6-pursuit-glory"}}
+{"from": "book:pe-volume7-pursuit-power", "to": "author:evans", "type": "authored_by", "props": {"book": "pe-volume7-pursuit-power"}}
+{"from": "book:pe-volume8-hell-and-back", "to": "author:kershaw", "type": "authored_by", "props": {"book": "pe-volume8-hell-and-back"}}
+{"from": "book:pe-volume9-global-age", "to": "author:kershaw", "type": "authored_by", "props": {"book": "pe-volume9-global-age"}}
+{"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P2", "type": "bond", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "婚姻→施害十年"}}
+{"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V2", "type": "colleague", "props": {"book": "2026-vargas-une-unique-lueur", "note": "搭档探案"}}
+{"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V3", "type": "colleague", "props": {"book": "2026-vargas-une-unique-lueur", "note": "同组探员"}}
+{"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L6", "type": "contrast", "props": {"book": "2026-lemaitre-belles-promesses", "note": "英雄vs退伍兵对照"}}
+{"from": "author:pelicot", "to": "author:perrignon", "type": "cowrite", "props": {"conf": "verified", "book": "《Et la joie de vivre》", "year": "2026-02-17"}}
+{"from": "author:perrignon", "to": "person:marceline-loridan-ivens", "type": "cowrite", "props": {"conf": "verified", "book": "《Et tu n'es pas revenu》《L'Amour d'après》", "year": "2015/2018"}}
+{"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P5", "type": "cowrite", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "合著"}}
+{"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J2", "type": "dialogue", "props": {"book": "2026-manda-kanoke-made", "note": "对谈·步行是活着"}}
+{"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J3", "type": "evidence", "props": {"book": "2026-manda-kanoke-made", "note": "实证坐标"}}
+{"from": "char:2026-mandel-exit-party:C2", "to": "char:2026-mandel-exit-party:C6", "type": "friend", "props": {"book": "2026-mandel-exit-party", "note": "挚友"}}
+{"from": "author:lemaitre", "to": "person:albert-dupontel", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Au revoir là-haut》电影改编，César 共获", "why_en": "film adaptation; shared César"}}
+{"from": "author:manda", "to": "person:東畑開人", "type": "in_circle", "props": {"conf": "verified", "why_zh": "2026-02-11 对谈「步行是活着」", "why_en": "2026-02-11 dialogue"}}
+{"from": "author:manda", "to": "person:青栁幸利", "type": "in_circle", "props": {"conf": "verified", "why_zh": "8000 步/日实证线", "why_en": "8,000-steps/day evidence line"}}
+{"from": "author:mandel", "to": "person:patrick-somerville", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Station Eleven》HBO 改编 → Exit Party 回响", "why_en": "Station Eleven HBO → the Exit Party echo"}}
+{"from": "author:pelicot", "to": "author:perrignon", "type": "in_circle", "props": {"conf": "verified", "why_zh": "回忆录合著（证言转写）", "why_en": "memoir co-write"}}
+{"from": "author:pelicot", "to": "person:caroline-darian", "type": "in_circle", "props": {"conf": "verified", "why_zh": "「M'endors pas」化学顺从运动；母女对表", "why_en": "the M'endors pas campaign"}}
+{"from": "author:pelicot", "to": "person:manon-garcia", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Living With Men》分析 Mazan 审判", "why_en": "Living With Men on the trial"}}
+{"from": "author:vargas", "to": "person:jo-vargas", "type": "in_circle", "props": {"conf": "verified", "why_zh": "笔名来源；画名借自《赤足天使》", "why_en": "pen-name source; painter"}}
+{"from": "author:vargas", "to": "person:siân-reynolds", "type": "in_circle", "props": {"conf": "verified", "why_zh": "长期译者，Dagger 随译共认", "why_en": "long-time translator"}}
+{"from": "author:vargas", "to": "person:stéphane-audoin-rouzeau", "type": "in_circle", "props": {"conf": "verified", "why_zh": "Three Evangelists 史家角色原型", "why_en": "historian character source"}}
+{"from": "author:lemaitre", "to": "author:vargas", "type": "influence", "props": {"conf": "strong", "why_zh": "2013 共获 CWA International Dagger；同被 Stephen King 表彰", "why_en": "shared 2013 Dagger; both praised by King"}}
+{"from": "author:vargas", "to": "author:lemaitre", "type": "influence", "props": {"conf": "strong", "why_zh": "同代法国罪案双峰；书风构成法式 noir 两端（直觉美学 vs 道德写实）", "why_en": "peers; the two poles of French crime"}}
+{"from": "author:vargas", "to": "author:mandel", "type": "influence", "props": {"conf": "medium", "why_zh": "皆用「一件艺术图像作谜面发动机」（美学化为装置）", "why_en": "both drive plot from a single work of art"}}
+{"from": "person:balzac-zola", "to": "author:lemaitre", "type": "influence", "props": {"conf": "medium", "why_zh": "社会史四部曲承自十九世纪家族-产业史诗法", "why_en": "9th-style family-industry epic"}}
+{"from": "person:georges-simenon", "to": "author:vargas", "type": "influence", "props": {"conf": "medium", "why_zh": "心理侦探传统 + 罪案读成社会病理", "why_en": "psychological detective line"}}
+{"from": "person:metoo", "to": "author:pelicot", "type": "influence", "props": {"conf": "verified", "why_zh": "Mazan 公开庭审 → 回忆录：运动的三级火箭", "why_en": "public trial → memoir: the movement's third stage"}}
+{"from": "person:primo-levi-见证文学", "to": "author:perrignon", "type": "influence", "props": {"conf": "medium", "why_zh": "口述史 × 文学转写（Loridan-Ivens 线）", "why_en": "oral history × transcription"}}
+{"from": "person:柏木哲夫-日本ホスピス緩和ケア", "to": "author:manda", "type": "influence", "props": {"conf": "medium", "why_zh": "「善终」谱系 → 在宅路线分岔", "why_en": "good-death lineage → home branch"}}
+{"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L2", "type": "kin", "props": {"book": "2026-lemaitre-belles-promesses", "note": "兄弟·猜疑"}}
+{"from": "char:2026-mandel-exit-party:C3", "to": "char:2026-mandel-exit-party:C17", "type": "kin", "props": {"book": "2026-mandel-exit-party", "note": "叔父·画作作者"}}
+{"from": "char:2026-mandel-exit-party:C8", "to": "char:2026-mandel-exit-party:C9", "type": "kin", "props": {"book": "2026-mandel-exit-party", "note": "兄妹"}}
+{"from": "char:2026-mandel-exit-party:C1", "to": "char:2026-mandel-exit-party:C2", "type": "mirror", "props": {"book": "2026-mandel-exit-party", "note": "反生活双身"}}
+{"from": "char:2026-mandel-exit-party:C3", "to": "char:2026-mandel-exit-party:C4", "type": "mirror", "props": {"book": "2026-mandel-exit-party", "note": "同一人·两个世界"}}
+{"from": "char:2026-mandel-exit-party:C5", "to": "char:2026-mandel-exit-party:C6", "type": "mirror", "props": {"book": "2026-mandel-exit-party", "note": "母亲/代理母亲"}}
+{"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L3", "type": "parent", "props": {"book": "2026-lemaitre-belles-promesses", "note": "母子"}}
+{"from": "char:2026-lemaitre-belles-promesses:L2", "to": "char:2026-lemaitre-belles-promesses:L3", "type": "parent", "props": {"book": "2026-lemaitre-belles-promesses", "note": "母子"}}
+{"from": "char:2026-mandel-exit-party:C7", "to": "char:2026-mandel-exit-party:C3", "type": "parent", "props": {"book": "2026-mandel-exit-party", "note": "A卡里姆之父"}}
+{"from": "char:2026-mandel-exit-party:C7", "to": "char:2026-mandel-exit-party:C5", "type": "parent", "props": {"book": "2026-mandel-exit-party", "note": "格洛丽亚之子"}}
+{"from": "char:2026-mandel-exit-party:C7", "to": "char:2026-mandel-exit-party:C6", "type": "parent", "props": {"book": "2026-mandel-exit-party", "note": "尼科为代理母亲"}}
+{"from": "char:2026-mandel-exit-party:C8", "to": "char:2026-mandel-exit-party:C6", "type": "parent", "props": {"book": "2026-mandel-exit-party", "note": "尼科之子"}}
+{"from": "char:2026-mandel-exit-party:C9", "to": "char:2026-mandel-exit-party:C6", "type": "parent", "props": {"book": "2026-mandel-exit-party", "note": "尼科之女"}}
+{"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P3", "type": "parent", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "母女"}}
+{"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P4", "type": "parent", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "母子"}}
+{"from": "char:2026-mandel-exit-party:C14", "to": "char:2026-mandel-exit-party:C1", "type": "romance", "props": {"book": "2026-mandel-exit-party", "note": "情人"}}
+{"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V4", "type": "romance", "props": {"book": "2026-vargas-une-unique-lueur", "note": "分合伴侣"}}
+{"from": "author:lemaitre", "to": "concept:polar-to-social-history", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:manda", "to": "concept:japan-home-palliative-discourse", "type": "school_of", "props": {"conf": "medium"}}
+{"from": "author:mandel", "to": "concept:soft-apocalypse-crossover", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:pelicot", "to": "concept:metoo-archive-testimonial", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:perrignon", "to": "concept:literary-transcription", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:vargas", "to": "concept:french-neo-polar", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L5", "type": "witness", "props": {"book": "2026-lemaitre-belles-promesses", "note": "约瑟夫旁观英雄"}}

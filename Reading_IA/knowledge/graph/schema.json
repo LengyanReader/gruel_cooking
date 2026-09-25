@@ -1,0 +1,45 @@
+{
+  "schema": "rkf-graph.v1",
+  "note": "Reading Knowledge Fabric L3 hub. Node types + edge types are DATA. build_reading.py's hard-coded EDGE_KIND / CONF_COLOR / dash-rule live here; graph_build.py and the --graph audit gate read only this file. Adding a relation type = append an edge_types row, never edit Python.",
+  "node_types": {
+    "Author":    {"id_prefix": "author",    "label_zh": "作者", "label_en": "Author",    "color": "#3E5C76"},
+    "Book":      {"id_prefix": "book",      "label_zh": "读物", "label_en": "Book",      "color": "#A5811D"},
+    "Character": {"id_prefix": "char",      "label_zh": "人物", "label_en": "Character", "color": "#C9A227"},
+    "Person":    {"id_prefix": "person",    "label_zh": "相关人", "label_en": "Person",  "color": "#6C8AAF"},
+    "Concept":   {"id_prefix": "concept",   "label_zh": "概念/流派", "label_en": "Concept", "color": "#7A8F6E"},
+    "Motif":     {"id_prefix": "motif",     "label_zh": "母题", "label_en": "Motif",     "color": "#8C4A77"},
+    "Place":     {"id_prefix": "place",     "label_zh": "地点", "label_en": "Place",     "color": "#777069"},
+    "Event":     {"id_prefix": "event",     "label_zh": "事件", "label_en": "Event",     "color": "#B0413E"},
+    "Source":    {"id_prefix": "source",    "label_zh": "来源", "label_en": "Source",    "color": "#8C6A4A"}
+  },
+  "edge_types": {
+    "authored_by": {"label_zh": "著", "label_en": "authored-by", "color": "#A5811D", "dash": "1",   "from": "Book", "to": "Author",   "cardinality": "n:1"},
+    "mirror":      {"label_zh": "双身 mirror", "label_en": "mirror",    "color": "#8C4A77", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "parent":      {"label_zh": "亲子 parent", "label_en": "parent",    "color": "#3E5C76", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "kin":         {"label_zh": "亲属 kin", "label_en": "kin",         "color": "#6C8AAF", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "romance":     {"label_zh": "恋人 romance", "label_en": "romance",   "color": "#C0556B", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "alliance":    {"label_zh": "结盟 alliance", "label_en": "alliance",  "color": "#7A8F6E", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "friend":      {"label_zh": "挚友 friend", "label_en": "friend",     "color": "#C9A227", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "colleague":   {"label_zh": "同组 colleague", "label_en": "colleague", "color": "#A5811D", "dash": "4 3", "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "cowrite":     {"label_zh": "合著 co-write", "label_en": "cowrite",   "color": "#8C6A4A", "dash": "1",   "from": "Author", "to": "Author",   "cardinality": "n:n"},
+    "dialogue":    {"label_zh": "对谈 dialogue", "label_en": "dialogue",   "color": "#C9A227", "dash": "4 3", "from": "Author", "to": "Person",   "cardinality": "n:n"},
+    "evidence":    {"label_zh": "实证 evidence", "label_en": "evidence",   "color": "#7A8F6E", "dash": "4 3", "from": "Author", "to": "Concept",  "cardinality": "n:n"},
+    "witness":     {"label_zh": "旁观 witness", "label_en": "witness",    "color": "#6C8AAF", "dash": "4 3", "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "contrast":    {"label_zh": "对照 contrast", "label_en": "contrast",   "color": "#777069", "dash": "4 3", "from": "Author", "to": "Author",   "cardinality": "n:n"},
+    "bond":        {"label_zh": "羁绊 bond", "label_en": "bond",       "color": "#8C4A77", "dash": "1",   "from": "Character", "to": "Character", "cardinality": "n:n"},
+    "influence":   {"label_zh": "影响", "label_en": "influence",  "color": "#3E5C76", "dash": "4 3", "from": "Author", "to": "Author",  "cardinality": "n:n"},
+    "in_circle":   {"label_zh": "朋友圈", "label_en": "in-circle",  "color": "#6C8AAF", "dash": "1",   "from": "Author", "to": "Person",  "cardinality": "n:n"},
+    "school_of":   {"label_zh": "流派归属", "label_en": "school-of", "color": "#7A8F6E", "dash": "1",   "from": "Author", "to": "Concept", "cardinality": "n:1"}
+  },
+  "confidence": {
+    "marks": {"✓": "#3E7C5A", "◐": "#A5811D", "○": "#6C8AAF", "✗": "#B0413E"},
+    "levels": {"verified": "✓", "strong": "◐", "medium": "○", "weak": "✗"},
+    "default": "#777069"
+  },
+  "integrity": {
+    "require_nodes_for_edges": true,
+    "_orphan_comment": "Listing entities may exist without a modeled relation (history key-figures, characters outside the charedge diagram, unconnected people). Dangling edges + unregistered types stay fatal.",
+    "allow_orphan_types": ["Character", "Motif", "Place", "Event", "Source", "Person"],
+    "edge_type_must_be_registered": true
+  }
+}

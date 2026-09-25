@@ -31,6 +31,10 @@ LIBRARY = os.path.normpath(os.path.join(HERE, "..", "library"))
 WEB_DATA = os.path.normpath(os.path.join(HERE, "..", "..", "web", "data"))
 BOOKS_JSON = os.path.join(WEB_DATA, "books.json")
 CORPUS_DIR = os.path.join(WEB_DATA, "corpus")
+GRAPH_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "knowledge", "graph"))
+GRAPH_SCHEMA = os.path.join(GRAPH_DIR, "schema.json")
+GRAPH_NODES = os.path.join(GRAPH_DIR, "nodes.jsonl")
+GRAPH_EDGES = os.path.join(GRAPH_DIR, "edges.jsonl")
 
 # The five lossless sub-fields every chapter brief must carry (framework.md §1).
 BRIEF_FIELDS = ("main", "flow", "names", "sources", "link")
@@ -185,9 +189,84 @@ def audit_corpus() -> int:
     return 0
 
 
+def _read_jsonl(path):
+    rows = []
+    with io.open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.strip()
+            if line:
+                rows.append(json.loads(line))
+    return rows
+
+
+def audit_graph() -> int:
+    """L3 integrity gate. Reads only knowledge/graph/{schema.json, nodes.jsonl,
+    edges.jsonl} and checks, entirely schema-driven: (1) every node type and
+    every edge type is registered in schema.json; (2) no dangling edge (both
+    endpoints resolve to a node id); (3) no disallowed orphan node (a node with
+    no incident edges whose type is not in integrity.allow_orphan_types).
+    Exit 1 on any violation. Never reads source prose."""
+    for p in (GRAPH_SCHEMA, GRAPH_NODES, GRAPH_EDGES):
+        if not os.path.exists(p):
+            print(f"MISSING graph artifact: {p}  (run engine/graph_build.py)")
+            return 1
+    schema = json.load(io.open(GRAPH_SCHEMA, encoding="utf-8"))
+    node_types = set(schema.get("node_types", {}))
+    edge_types = set(schema.get("edge_types", {}))
+    integ = schema.get("integrity", {})
+    allow_orphan = set(integ.get("allow_orphan_types", []))
+
+    nodes = _read_jsonl(GRAPH_NODES)
+    edges = _read_jsonl(GRAPH_EDGES)
+    ids = {n["id"] for n in nodes}
+
+    problems = []
+    # (1) registered types
+    for n in nodes:
+        if n.get("type") not in node_types:
+            problems.append(f"node {n.get('id')} has unregistered type '{n.get('type')}'")
+    for e in edges:
+        if e.get("type") not in edge_types and integ.get("edge_type_must_be_registered", True):
+            problems.append(f"edge {e.get('from')} -[{e.get('type')}]-> {e.get('to')} uses unregistered type")
+    # (2) dangling edges
+    degree = {nid: 0 for nid in ids}
+    for e in edges:
+        for endp in (e["from"], e["to"]):
+            if integ.get("require_nodes_for_edges", True) and endp not in ids:
+                problems.append(f"dangling edge endpoint: {endp} (in {e.get('from')} -[{e.get('type')}]-> {e.get('to')})")
+            if endp in degree:
+                degree[endp] += 1
+    # (3) disallowed orphans
+    for n in nodes:
+        if degree.get(n["id"], 0) == 0 and n["type"] not in allow_orphan:
+            problems.append(f"orphan node {n['id']} (type {n['type']} not in allow_orphan_types)")
+
+    by_ntype, by_etype = {}, {}
+    for n in nodes:
+        by_ntype[n["type"]] = by_ntype.get(n["type"], 0) + 1
+    for e in edges:
+        by_etype[e["type"]] = by_etype.get(e["type"], 0) + 1
+    print(f"graph dir       : {GRAPH_DIR}")
+    print(f"nodes           : {len(nodes)}  ({', '.join(f'{k}:{v}' for k, v in sorted(by_ntype.items()))})")
+    print(f"edges           : {len(edges)}  ({', '.join(f'{k}:{v}' for k, v in sorted(by_etype.items()))})")
+    print(f"registered kinds: {len(node_types)} node / {len(edge_types)} edge types")
+
+    if problems:
+        print(f"\nGRAPH INTEGRITY: {len(problems)} problem(s) — 修数据/注册类型，勿放宽 gate。")
+        for pr in problems[:40]:
+            print(f"  - {pr}")
+        if len(problems) > 40:
+            print(f"  \u2026 {len(problems) - 40} more")
+        return 1
+    print("\ngraph integrity clean")
+    return 0
+
+
 def main(argv: list[str]) -> int:
     if "--corpus" in argv:
         return audit_corpus()
+    if "--graph" in argv:
+        return audit_graph()
 
     cards = sorted(f for f in os.listdir(LIBRARY)
                    if f.startswith("20") and f.endswith(".md"))
