@@ -465,8 +465,6 @@ None of this makes mathematics arbitrary, nor makes it a first cause. The univer
 
 Consider now, without reflexes, who experiences a mathematical statement as exact. The profession's instinctive answer — "anyone who can read it" — concedes the point: the felt exactness belongs to whoever has mastered the dialect; it reports the reader's relation to the code, not the code's relation to the world. The difficulty is that this felt exactness is at once genuine and empty. Genuine, because within the calculus a claim is not trusted but *enforced*: a derivation either follows the rules or it does not, and there is no third possibility. Empty, because the enforcement never leaves the system. A proof assistant certifies the exactness of the drawing — every stroke matched against the grammar — and the grammar, not the object, is all it can see [39]. A formally certified proof may therefore be a proof of the wrong sentence. The Navier–Stokes construction with which Section 4 closed is, on the reports, exactly that: a proof, formally checked, apparently valid, while the community's actual question — the unforced blow-up — remains open [2]. The formalization was faithful; it could only ever be faithful to itself.
 
-And "faithful" is not a switch but a slider: a reduction from a working object to a formal sentence admits of degrees, and its grade is fixed only relative to a standard of reduction some community accepts — formalization, yes, but equally informal argument, empirical calibration, machine computation. The recognition that a proof has *caught* its object is therefore never the system speaking to itself; it is the moment a certified monologue is handed to people, who answer on the standard they hold. That is why the question of Section 3 — who executes the check, and under what rule — is not a sociological add-on to the mathematics but the very question of this section, turned now on the authority that signs it.
-
 Beneath exactness lies a deeper layer: completeness. Within a chosen language, a theorem is as complete as its axioms permit; Gödel's wall is the theorem that no sufficiently strong language is complete about everything it can state. Quieter, and more consequential here, is a second incompleteness — the incompleteness of the *characterization*: every re-description captures some relations and discards others, so the signified of "unit distance" is not identical with the signified of "algebraic integer." The sense of exhaustion felt in 1946 — "we have said everything there is to say about the unit-distance problem" — was not exhaustion; it was exactness within the one register the field then commanded. The distinction governs everything downstream: exactness is a property of the sign-system; completeness is a property of the relation between the sign-system and what it points at — and no grammar has authority over that relation.
 
 ### 6.6 The limits of verification
@@ -494,8 +492,6 @@ Two corollaries follow, and together they discipline every claim reviewed in Sec
 ### （五）分毫不差，对谁而言？
 
 现在正面端详「分毫不差」。一段数学陈述，在谁眼里分毫不差？这一行的本能回答「凡会读者皆然」，恰恰已经把底牌讲出：那种精确感只属于通了那门方言的人；它报的是读者同码本之间的动静，不是码本同世界之间的动静。这份感觉的刁钻在于又真又空。说它真：在演算之内，一个声称不是被人*信*下来的，是被*强制*非成立不可的——推导或者合语法，或者不合，没有第三条路。说它空：这份强制一步不出系统。证明辅助程序查的是画笔的笔路，每一笔都拿语法去对；它见得着的从来只有语法，没有对象 [39]。证明即便经了形式化认证，所证的仍可能是*错的那句话*：第四节末尾的 Navier–Stokes 构造正是如此——按报道，它确是一份证明，确过了形式化检查，确称有效；可共同体真正守着的问题——无强迫项的爆破——纹丝未动 [2]。形式化是忠诚的；而形式化所能忠诚的也只有自身。
-
-「忠诚」也不是一记开关，而是一副刻度：从工作对象到形式语句的还原只分程度，还原得多像、近到哪一步，须相对于某个共同体所认可的还原标准才定得下来；这标准可以是形式化，也同样可以是通俗论证、经验校准、机器计算。于是，「证明确已抓住了它的对象」这一认定，从来不是系统关起门来独自说话，而是把一段经了认证的独白交到人手里，由人各自本其所持的标准去回应。这正说明第三节那个头号问题——核验由谁执行、依据什么规矩——并非套在数学外面的一层社会学：它仍是本节这一问，此刻回转来问到了签字认证的那份权威身上。
 
 精确之下还压着一层完整。在选定的语言内部，定理完备到何种地步，看公理许了多少；哥德尔那堵墙标的正是：没有任何足够强的语言，能对自己说出的全部陈述保住完备。此处更要紧的是第二重更安静的不完备：*刻画*的不完备。重画一回，抓住一些关系、漏掉一些关系：「单位距离」的所指同「代数整数」的所指并不重合。1946 年那种「关于单位距离问题能说的都说尽了」的感觉，并非说尽，只是在彼时那一门行当参透的意义下才算精确。此分别贯穿以下全部论证：精确是符号系统的性质；完整是符号系统同它所指之物*之间*那桩关系的性质——而任何语法的家规都管不到这层关系。
 
@@ -565,7 +561,7 @@ Within the formalizable stratum the machine's decisive advantage is no longer sp
 
 ### 8.4 The division of labor, and the three emerging posts
 
-From the stratification a division of labor follows directly, which is why the panic reviewed in Section 5 is aimed at the wrong target. Machines propose, construct, formalize, check. Humans choose the goal, choose the language, judge importance, hold the community's standards, and — in Tao's term — *digest*: convert verified results into something a mathematician can carry in her head [32]. Every bottleneck both camps predict — proofs outrunning verification, verification outrunning write-ups, write-ups outrunning referees — increases the scarcity of the human half rather than reducing its need: attention is finite, and the machine manufactures supply, not demand. On this model the profession is differentiating into three posts that the current decade is visibly creating: formalization architects, auditors of machine proofs, and interpreters who translate machine output back into the community's ordinary language.
+From the stratification a division of labor follows directly, which is why the panic reviewed in Section 5 is aimed at the wrong target. Machines propose, construct, formalize, check. Humans choose the goal, choose the language, judge importance, hold the community's standards, and — in Tao's term — *digest*: convert verified results into something a mathematician can carry in her head [32]. Every bottleneck both camps predict — proofs outrunning verification, verification outrunning write-ups, write-ups outrunning referees — increases the scarcity of the human half rather than reducing its need: attention is finite, and the machine manufactures supply, not demand. On this model the profession is differentiating into three posts that the current decade is visibly creating: formalization architects, auditors of machine proofs, and interpreters who translate machine output back into the community's ordinary language. These three posts are not a new profession but the ladder of Section 7, differentiated: they cluster on the rungs Section 7.2 already marks least-paid, the attention-keepers who hold the community's standards, now called on as paid labour to absorb what the craft had long done as unpaid stewardship. The model's quietest warning is in that placement — the flood of machine output is scheduled to break first over the posts the ladder compensates least.
 
 ### 8.5 The five-stage model
 
@@ -591,7 +587,7 @@ One correction, routinely skipped in the debate, must be entered before the sect
 
 ### （四）分工格局与三个新职位
 
-由能力分层直接引出分工格局——第五节所复查的恐慌之所以瞄错了靶子，原因在此。机器提案、构造、形式化、检查；人定目标、选语言、断轻重、替共同体守住标准，还要——借陶哲轩那个词——*消化*：把核验过的结果变成一位数学家装得进脑子的东西 [32]。两派共同预言的每一个瓶颈——证明跑赢核验、核验跑赢誊写、誊写跑赢审稿——都只把人那一半衬得更稀缺，而不一分多余：注意力有限，机器造得出供给，造不出需求。按此模型，这一行正在分化出三个看得见正在长出来的职位：形式化的建筑师、机器证明的审计师、把机器输出译回共同体日常话语的阐释者。
+由能力分层直接引出分工格局——第五节所复查的恐慌之所以瞄错了靶子，原因在此。机器提案、构造、形式化、检查；人定目标、选语言、断轻重、替共同体守住标准，还要——借陶哲轩那个词——*消化*：把核验过的结果变成一位数学家装得进脑子的东西 [32]。两派共同预言的每一个瓶颈——证明跑赢核验、核验跑赢誊写、誊写跑赢审稿——都只把人那一半衬得更稀缺，而不一分多余：注意力有限，机器造得出供给，造不出需求。按此模型，这一行正在分化出三个看得见正在长出来的职位：形式化的建筑师、机器证明的审计师、把机器输出译回共同体日常话语的阐释者。这三个职位不是一门新行当，而是第七节那架劳动阶梯的分化：它们恰恰落在第七节（二）已经点明酬劳最薄的那几级上——替众人看守注意力、守住共同体标准的那批人——如今头一回要以受雇之身，去承接这门手艺历来当作无薪本分在做的事。这套模型里最轻的一声警告，就藏在这层落点之中：机器输出的洪水，照排期头一个漫过的，正是阶梯上给钱最少的那几级。
 
 ### （五）五阶段模型
 
@@ -636,7 +632,7 @@ The historical interlude is analytically load-bearing because it defeats the str
 
 ### 9.7 The deepest act remains social
 
-The profession's deepest act — deciding that this, not that, matters — is a social judgment about value, exercised by a community over time. Machine output will flood the docket; on present evidence it does not decide the cases. What 2026 established is that border-*moving* problems are answerable by search once the language is given; what remains is choosing the language, and the eighty years of the unit-distance problem show that no referee, human or machine, can certify which choice was *important* until long after the fact. Importance is a verdict of history, not of proof. "Groundbreaking" is accordingly not a binary act of creation from nothing but a continuous spectrum — and at the celebrated, inhabited end of that spectrum, the public record contains, as of the close of this study's evidence window, no machine footprint. This is the hinge of Section 6.5, set one rung higher: a certified monologue handed to people to be answered not only as *true* but as *worth having asked*, on the standard a community holds — settled in history, not in logic.
+The profession's deepest act — deciding that this, not that, matters — is a social judgment about value, exercised by a community over time. Machine output will flood the docket; on present evidence it does not decide the cases. What 2026 established is that border-*moving* problems are answerable by search once the language is given; what remains is choosing the language, and the eighty years of the unit-distance problem show that no referee, human or machine, can certify which choice was *important* until long after the fact. Importance is a verdict of history, not of proof. "Groundbreaking" is accordingly not a binary act of creation from nothing but a continuous spectrum — and at the celebrated, inhabited end of that spectrum, the public record contains, as of the close of this study's evidence window, no machine footprint.
 <!-- zh -->
 ## 九、「开创性」的划界问题：机器提得出大问题吗？
 
@@ -668,7 +664,7 @@ The profession's deepest act — deciding that this, not that, matters — is a 
 
 ### （七）最深的动作仍是社会性的
 
-这一行当里最深的动作——判定这一件而非那一件要紧——是一桩关于价值的共同体判断，要在时间里慢慢做成。机器输出会把案头堆满诉状；据现有证据，它不判案。2026 年验出的是：*挪动边界*的问题，只要语言给定，搜索即可作答；剩下来的仍是选语言——而单位距离问题八十年给出的教训恰是：哪一次选择*重要*，没有任何判官，无论人还是机器，能赶在时过境迁之前盖上印。重要性出自历史的判决，不出自证明。「开创性」因此从来不是「从无到有、非此即彼」的一锤子买卖，而是一条连续谱——而在它著名的、有人居住的那一头，截至本文证据窗口关闭，公开记录里还没有机器的足迹。这正是第六节（五）那一处枢纽，被抬高了一级：一段经了认证的独白交到人的手里，要人答的不只是它为不为*真*，还有它值不值得被这样问出来；而答话所本的标准，是共同体所持的标准——它定在历史里，不定在逻辑里。
+这一行当里最深的动作——判定这一件而非那一件要紧——是一桩关于价值的共同体判断，要在时间里慢慢做成。机器输出会把案头堆满诉状；据现有证据，它不判案。2026 年验出的是：*挪动边界*的问题，只要语言给定，搜索即可作答；剩下来的仍是选语言——而单位距离问题八十年给出的教训恰是：哪一次选择*重要*，没有任何判官，无论人还是机器，能赶在时过境迁之前盖上印。重要性出自历史的判决，不出自证明。「开创性」因此从来不是「从无到有、非此即彼」的一锤子买卖，而是一条连续谱——而在它著名的、有人居住的那一头，截至本文证据窗口关闭，公开记录里还没有机器的足迹。
 <!-- L1-end -->
 
 ---
