@@ -87,16 +87,16 @@
 3. **Lens 2 and 4** are nicks, not breaks; the draft's existing signifier/signified and lowest-paid-rung material already parry most of them.
 4. Net: the argument survives its own red-team **only if** it (i) stops treating "machine-graded ⇒ no dispute" as flat and re-frames it as a *statement-vs-derivation* rule (L3), and (ii) concedes the prestige/selection confound is real *here* and is what the census exists to break (L1, L5). Both are wording-level, both trace to the parent.
 
-## Concrete §A edits proposed (for approval — not yet applied)
+## Concrete §A edits — status (author approved the pass on 2026-09-25)
 
-| # | Lens | Proposed edit to §A | Type |
-|---|---|---|---|
-| e1 | L3 | In the machine-graded definition and the "no scandals" line: qualify with "given agreement on the statement," and add the move that a dispute about a machine-graded event re-files against its statement, relocating it to the community stratum. | accuracy / pre-empt |
-| e2 | L1 | One sentence conceding regime and grader-prestige are collinear in a publicity-selected corpus, and pointing to the census trend test as the discriminator. | honesty / pre-empt |
-| e3 | L5 | Name capability-gradient as the rival the census is designed to exclude; state the Comment cannot, the study can. | scope control |
-| e4 | L2/L4 | "No human score can alter the outcome" → "no human score can *overrule* the derivation" (keeps the claim, drops the incorruptibility reading); "cheap" → "necessary but not sufficient." | calibration |
+| # | Lens | Proposed edit to §A | Type | Status |
+|---|---|---|---|---|
+| e1 | L3 | In the machine-graded definition and the "no scandals" line: qualify with "given agreement on the statement," and add the move that a dispute about a machine-graded event re-files against its statement, relocating it to the community stratum. | accuracy / pre-empt | **HELD** — reframes a body claim; kept for separate author review |
+| e2 | L1 | One sentence conceding regime and grader-prestige are collinear in a publicity-selected corpus, and pointing to the census trend test as the discriminator. | honesty / pre-empt | **APPLIED** (candidacy paragraph) |
+| e3 | L5 | Name capability-gradient as the rival the census is designed to exclude; state the Comment cannot, the study can. | scope control | **APPLIED** (candidacy paragraph) |
+| e4 | L2/L4 | "No human score can alter the outcome" → "no human score can *overrule* the derivation" (keeps the claim, drops the incorruptibility reading); "cheap" → "necessary but not sufficient." | calibration | **APPLIED** (both) |
 
-Applying any of these is a body-content change and remains the author's call; they are drafted as wording only, each still backed by the parent.
+e2/e3/e4 were applied on the author's instruction; each is wording only and still backed by the parent, adding no facts. **e1 is held** because it changes the argumentative shape of P1, not just its wording. A separate citation-integrity check (now `checks/refcheck.py`) found reference 23 uncited in the body and it was fixed by citing the Harvard First Proof case; the pass took the body from ~1,510 to ~1,650 words, still inside the Comment band.
 
 ## Boundaries
 
