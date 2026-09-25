@@ -91,12 +91,12 @@
 
 | # | Lens | Proposed edit to §A | Type | Status |
 |---|---|---|---|---|
-| e1 | L3 | In the machine-graded definition and the "no scandals" line: qualify with "given agreement on the statement," and add the move that a dispute about a machine-graded event re-files against its statement, relocating it to the community stratum. | accuracy / pre-empt | **HELD** — reframes a body claim; kept for separate author review |
+| e1 | L3 | In the machine-graded definition and the "no scandals" line: qualify with "given agreement on the statement," and add the move that a dispute about a machine-graded event re-files against its statement, relocating it to the community stratum. | accuracy / pre-empt | **APPLIED** (definition qualified + re-filing move added) |
 | e2 | L1 | One sentence conceding regime and grader-prestige are collinear in a publicity-selected corpus, and pointing to the census trend test as the discriminator. | honesty / pre-empt | **APPLIED** (candidacy paragraph) |
 | e3 | L5 | Name capability-gradient as the rival the census is designed to exclude; state the Comment cannot, the study can. | scope control | **APPLIED** (candidacy paragraph) |
 | e4 | L2/L4 | "No human score can alter the outcome" → "no human score can *overrule* the derivation" (keeps the claim, drops the incorruptibility reading); "cheap" → "necessary but not sufficient." | calibration | **APPLIED** (both) |
 
-e2/e3/e4 were applied on the author's instruction; each is wording only and still backed by the parent, adding no facts. **e1 is held** because it changes the argumentative shape of P1, not just its wording. A separate citation-integrity check (now `checks/refcheck.py`) found reference 23 uncited in the body and it was fixed by citing the Harvard First Proof case; the pass took the body from ~1,510 to ~1,650 words, still inside the Comment band.
+e1–e4 were applied on the author's instruction; each is wording only and still backed by the parent, adding no facts (e1 changes P1's shape from a flat "no disputes" to a statement-vs-derivation rule, so the taxonomy is dynamic rather than a classification artifact). A separate citation-integrity check (now `checks/refcheck.py`) found reference 23 uncited in the body and it was fixed by citing the Harvard First Proof case; a live-web re-verification then corrected that case's count (the setters confirmed two, not the parent's "≥6" from OpenAI's claim). The pass took the body from ~1,510 to ~1,670 words (recounted after the live-web correction), still inside the Comment band.
 
 ## Boundaries
 
