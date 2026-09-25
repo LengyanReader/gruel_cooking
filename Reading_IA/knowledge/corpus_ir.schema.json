@@ -1,0 +1,28 @@
+{
+  "_note": "Lightweight structural spec consumed by engine/ingest.py. Deliberately NOT full JSON-Schema (no extra runtime dep). Field lists live here, not in code — edit data to change validation.",
+  "version": 1,
+  "required_top": ["book_id", "format", "chapters"],
+  "top_types": {
+    "book_id": "str",
+    "format": "str",
+    "meta": "dict",
+    "chapters": "list"
+  },
+  "chapter_required": ["index", "char_count", "word_count", "text"],
+  "chapter_types": {
+    "index": "int",
+    "href": "str",
+    "toc_title": "str",
+    "headings": "list",
+    "paras": "list",
+    "char_count": "int",
+    "word_count": "int",
+    "sentence_count": "int",
+    "text": "str"
+  },
+  "constraints": {
+    "min_chapters": 1,
+    "nonempty_text_ratio_min": 0.6,
+    "format_enum": ["epub", "pdf", "text", "office", "universal"]
+  }
+}

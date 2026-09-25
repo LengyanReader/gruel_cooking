@@ -14,10 +14,12 @@ Semantics:
 Usage:
     py -X utf8 Reading_IA/readings/extraction/audit.py         # audit all cards
     py -X utf8 Reading_IA/readings/extraction/audit.py 2026-.. # by slug substring
+    py -X utf8 Reading_IA/readings/extraction/audit.py --corpus # gate books.json briefs vs Layer-1 corpus
 """
 from __future__ import annotations
 
 import io
+import json
 import os
 import re
 import sys
@@ -26,6 +28,12 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIBRARY = os.path.normpath(os.path.join(HERE, "..", "library"))
+WEB_DATA = os.path.normpath(os.path.join(HERE, "..", "..", "web", "data"))
+BOOKS_JSON = os.path.join(WEB_DATA, "books.json")
+CORPUS_DIR = os.path.join(WEB_DATA, "corpus")
+
+# The five lossless sub-fields every chapter brief must carry (framework.md §1).
+BRIEF_FIELDS = ("main", "flow", "names", "sources", "link")
 
 DONE_STATUS = {"done", "re-reading"}
 
@@ -125,7 +133,62 @@ def audit_card(md_path: str) -> dict:
             "gaps": gaps, "warns": warns, "info": info}
 
 
+def _load_books() -> list:
+    if not os.path.exists(BOOKS_JSON):
+        return []
+    data = json.load(io.open(BOOKS_JSON, encoding="utf-8"))
+    return data.get("books", data) if isinstance(data, dict) else data
+
+
+def audit_corpus() -> int:
+    """Grounding gate: every history-kind chapter must carry a complete
+    five-field lossless brief, and (when available) the book must be backed by
+    a Layer-1 corpus file. Checks structure only — never reads/compares source
+    prose. Exit 1 on any brief gap; missing corpus is a warn (not fatal)."""
+    books = _load_books()
+    hist = [r for r in books if r.get("kind") == "history" and (r.get("plot_acts") or [])]
+    print(f"repo root       : {os.path.dirname(os.path.dirname(WEB_DATA))}")
+    print(f"corpus dir      : {CORPUS_DIR} ({'present' if os.path.isdir(CORPUS_DIR) else 'ABSENT — run extract_corpus.py'})")
+    print(f"history books   : {len(hist)} (kind=history with >=1 plot_act)")
+
+    bad = 0
+    for rec in hist:
+        bid = rec.get("id", "?")
+        acts = rec.get("plot_acts") or []
+        corpus_path = os.path.join(CORPUS_DIR, f"{bid}.json")
+        n_corpus = 0
+        if os.path.exists(corpus_path):
+            cd = json.load(io.open(corpus_path, encoding="utf-8"))
+            n_corpus = (cd.get("summary") or {}).get("n_chapters") or len(cd.get("chapters") or [])
+        gaps, complete = [], 0
+        for a in acts:
+            br = a.get("brief") or {}
+            missing = [f for f in BRIEF_FIELDS if not str(br.get(f, "")).strip()]
+            if missing:
+                gaps.append(f"act {a.get('n')} missing:{'/'.join(missing)}")
+            else:
+                complete += 1
+        status = "ok" if not gaps else "INCOMPLETE"
+        cov = f"corpus={n_corpus}" if n_corpus else "corpus=NONE"
+        print(f"  {status:<11} {bid:<34} briefs {complete}/{len(acts)}  {cov}")
+        for g in gaps[:8]:
+            print(f"      gap: {g}")
+        if len(gaps) > 8:
+            print(f"      … {len(gaps) - 8} more brief gaps")
+        if gaps:
+            bad += 1
+
+    if bad:
+        print(f"\nINCOMPLETE: {bad} history book(s) — 每章补齐五维 brief（main/flow/names/sources/link），勿放宽 gate。")
+        return 1
+    print("\ncorpus audit clean")
+    return 0
+
+
 def main(argv: list[str]) -> int:
+    if "--corpus" in argv:
+        return audit_corpus()
+
     cards = sorted(f for f in os.listdir(LIBRARY)
                    if f.startswith("20") and f.endswith(".md"))
     filter_ = argv[1] if len(argv) > 1 else None

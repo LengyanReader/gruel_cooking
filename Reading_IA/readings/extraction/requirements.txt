@@ -1,0 +1,23 @@
+# Reading & IA extraction harness — Layer-1 corpus extractor deps
+# Install into conda env hy_py312:
+#   python -m pip install -r requirements.txt
+# Then:  python -X utf8 extract_corpus.py --penguin-dir "C:\Docs_Here\newReading\企鹅欧洲"
+
+# EPUB parsing (OPF manifest + spine + NCX/nav TOC)
+EbookLib>=0.18
+html5lib>=1.1
+lxml>=4.9
+
+# clean main-text extraction + BeautifulSoup tree walking
+beautifulsoup4>=4.12
+
+# PDF text + document TOC (import name: pymupdf, legacy: fitz)
+PyMuPDF>=1.24
+
+# HTML / web publication boilerplate removal
+trafilatura>=1.8
+
+# Optional readability metrics. NOTE: textstat pulls NLTK `cmudict` at call
+# time; if the sandbox proxy blocks that download the extractor degrades
+# gracefully (readability simply omitted) — nothing here hard-depends on it.
+textstat>=0.73

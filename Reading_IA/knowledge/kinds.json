@@ -1,0 +1,31 @@
+{
+  "_note": "RKF kind router. Which adapters a kind accepts, which lens (thresholds) governs it, and which page_spec renders it. Detection: books.json 'kind' field is authoritative; fallback 'generic'. Adding a kind = one row here + a lenses/<kind>.json.",
+  "detect": { "by_field": "kind", "source": "books.json", "fallback": "generic" },
+  "kinds": {
+    "history": {
+      "adapters": ["file-epub", "file-pdf", "file-universal", "web-article"],
+      "lens_ref": "lenses/history.json",
+      "page_spec_ref": "page_spec/history.json"
+    },
+    "essay": {
+      "adapters": ["file-epub", "file-pdf", "file-universal", "web-article"],
+      "lens_ref": "lenses/essay.json",
+      "page_spec_ref": "page_spec/essay.json"
+    },
+    "novel": {
+      "adapters": ["file-epub", "file-pdf", "file-universal"],
+      "lens_ref": "lenses/novel.json",
+      "page_spec_ref": "page_spec/novel.json"
+    },
+    "memoir": {
+      "adapters": ["file-epub", "file-pdf", "file-universal"],
+      "lens_ref": "lenses/memoir.json",
+      "page_spec_ref": "page_spec/memoir.json"
+    },
+    "generic": {
+      "adapters": ["file-universal", "web-article", "web-catalog"],
+      "lens_ref": "lenses/generic.json",
+      "page_spec_ref": "page_spec/generic.json"
+    }
+  }
+}

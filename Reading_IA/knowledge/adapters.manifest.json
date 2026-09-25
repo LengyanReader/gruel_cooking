@@ -1,0 +1,79 @@
+{
+  "_note": "RKF L0 adapter registry. ingest.py iterates this list to pick an adapter by detector; adding a format or source = append a row, no code change. 'emitter' is 'module:function' resolved dynamically; 'status' marks whether the emitter is wired yet.",
+  "adapters": [
+    {
+      "id": "file-epub",
+      "status": "wired",
+      "fidelity": "structured",
+      "detect": { "ext": [".epub"] },
+      "emitter": "extract_corpus:read_epub",
+      "note": "ebooklib spine+NCX/nav; keeps chapter order, TOC titles, heading tree, per-doc metrics."
+    },
+    {
+      "id": "file-pdf",
+      "status": "wired",
+      "fidelity": "structured",
+      "detect": { "ext": [".pdf"] },
+      "emitter": "extract_corpus:read_pdf",
+      "note": "PyMuPDF per-page text + doc TOC; born-digital PDFs. Scanned PDFs -> see file-pdf-hifi (DEFER)."
+    },
+    {
+      "id": "file-text",
+      "status": "wired",
+      "fidelity": "structured",
+      "detect": { "ext": [".txt", ".md"] },
+      "emitter": "extract_corpus:read_any",
+      "note": "plain text / markdown as a single-chapter IR."
+    },
+    {
+      "id": "file-universal",
+      "status": "wired",
+      "fidelity": "flat",
+      "detect": { "ext": [".docx", ".pptx", ".xlsx", ".xls", ".zip", ".csv", ".json", ".xml", ".htm", ".html"] },
+      "emitter": "extract_corpus:read_universal",
+      "backend": "markitdown",
+      "note": "Office/archive/tabular -> flat markdown via markitdown. Fallback front door when no structured adapter owns the format."
+    },
+    {
+      "id": "file-media",
+      "status": "planned",
+      "fidelity": "flat",
+      "detect": { "ext": [".jpg", ".png", ".wav", ".mp3"] },
+      "emitter": "extract_corpus:read_universal",
+      "backend": "markitdown[image,audio-transcription]",
+      "note": "images (OCR/EXIF) + audio (transcription). Needs OCR/STT extras; P4. OCR-from-image only surfaces facts, still summarize-only for commits."
+    },
+    {
+      "id": "web-article",
+      "status": "planned",
+      "fidelity": "flat",
+      "detect": { "scheme": ["http", "https"] },
+      "emitter": "extract_corpus:read_web_article",
+      "backend": "trafilatura",
+      "note": "URL -> clean main text + provenance. P4. Stores source_url; commits only summaries/short quotes."
+    },
+    {
+      "id": "web-catalog",
+      "status": "planned",
+      "fidelity": "metadata-only",
+      "detect": { "intent": "enrich_meta", "keys": ["isbn", "title", "doi"] },
+      "emitter": "extract_corpus:read_catalog",
+      "backend": "openalex|crossref|openlibrary|semanticscholar",
+      "note": "Enrich L1 meta (publisher, pages, cover link, subjects). Never fetches body text."
+    },
+    {
+      "id": "file-pdf-hifi",
+      "status": "deferred",
+      "fidelity": "structured",
+      "detect": { "ext": [".pdf"], "when": "scanned_or_layout_heavy" },
+      "emitter": "adapters/mineru:read",
+      "backend": "MinerU (AGPL) | docling (MIT)",
+      "note": "License-gated; append and wire only when a scanned/figure-dense PDF actually appears (S4 fission signal)."
+    }
+  ],
+  "routing": {
+    "order": "first-match",
+    "default_when_unmatched": "file-universal",
+    "url_scheme_adapters": ["web-article"]
+  }
+}
