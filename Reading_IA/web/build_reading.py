@@ -436,6 +436,29 @@ def svg_cover(b, w=126, h=178):
     return "".join(out)
 
 
+def svg_monogram(name, size=48):
+    """Inline SVG circular monogram avatar (initials on muted bg). Zero-copyright fallback."""
+    words = re.sub(r"[^A-Za-z ]", "", name).split()
+    if len(words) >= 2:
+        initials = words[0][0] + words[-1][0]
+    elif words:
+        initials = words[0][0]
+    else:
+        initials = "?"
+    initials = initials.upper()
+    h = abs(hash(name)) % 360
+    bg = f"hsl({h}, 28%, 38%)"
+    r = size / 2.0
+    fs = size * 0.38
+    return (f'<svg viewBox="0 0 {size} {size}" width="{size}" height="{size}" '
+            f'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="monogram {esc(name)}" '
+            f'class="aface" style="border-radius:50%">'
+            f'<circle cx="{r}" cy="{r}" r="{r}" fill="{bg}"/>'
+            f'<text x="{r}" y="{r + fs * 0.35}" text-anchor="middle" '
+            f'font-family="Inter,sans-serif" font-size="{fs}" font-weight="700" '
+            f'fill="rgba(255,255,255,.92)">{esc(initials)}</text></svg>')
+
+
 def pubviz_svg(books, width=760):
     """Publisher × books bar (Goodreads-like shelf visualization): one colored block per book, width ∝ pages."""
     groups = {}
@@ -1097,7 +1120,7 @@ def authors_page(site, authors, relations):
         if face:
             s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{name_block}</div></div>')
         else:
-            s.append(name_block)
+            s.append(f'<div class="anode">{svg_monogram(a.get("name_en", a["id"]), 48)}<div style="min-width:0">{name_block}</div></div>')
         s.append('<p style="font-size:.76rem;color:var(--gold-dim)">' + esc(a["born"]) + ' · ' + esc(a["native_lang"]) + '</p>')
         s.append('<p data-zh style="font-size:.9rem">' + esc(a["one_liner_zh"]) + '</p><p data-en style="font-size:.9rem">' + esc(a["one_liner_en"]) + '</p>')
         s.append('<div style="margin-top:.6rem"><span class="conf c-ok">' + esc(a["school_zh"]) + '</span></div>')
@@ -1137,7 +1160,7 @@ def authors_page(site, authors, relations):
         if face:
             s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{head}</div></div>')
         else:
-            s.append(head)
+            s.append(f'<div class="anode">{svg_monogram(a.get("name_en", a["id"]), 48)}<div style="min-width:0">{head}</div></div>')
         # timeline
         s.append('<h4 class="sec" data-both><span data-zh>生平轨迹 Timeline</span><span data-en>Timeline</span></h4>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th data-both><span data-zh>事件</span><span data-en>event</span></th><th class="conf">conf</th></tr></thead><tbody>')

@@ -1306,44 +1306,90 @@
       "id": "price-thonemann",
       "name_zh": "普莱斯 & 托内曼",
       "name_en": "Price & Thonemann",
-      "name_native": "Simon Price (Oxford) & Peter Thonemann (Adelaide)",
+      "name_native": "Simon Rowland Francis Price (1954–2011) & Peter F. Thonemann (b. 1977)",
       "slug_display": "Price & Thonemann",
-      "born": "Price 1955 · Thonemann circa 1970s",
+      "born": "Price 27 Sep 1954 Manchester · 14 Jun 2011 卒 · Thonemann 1977",
       "native_lang": "English",
-      "domain_zh": "古希腊史 · 罗马史 · 记忆与物质文化",
-      "domain_en": "Greek/Roman history · memory & material culture",
-      "one_liner_zh": "以「记忆建构」重写古典欧洲诞生——不是发现古典，而是发明古典。",
-      "one_liner_en": "Rewriting the birth of Classical Europe through 'memory construction' — not discovering classical, but inventing it.",
-      "school_zh": "记忆研究 × 物质文化",
+      "domain_zh": "古希腊罗马史 · 帝国崇拜 · 记忆与文化史",
+      "domain_en": "Greek/Roman history · imperial cult · memory & culture",
+      "one_liner_zh": "Price 以《仪式与权力》重写了罗马皇帝崇拜研究；2011 年辞世时《古典欧洲的诞生》才刚面世。Thonemann 续写古典世界的记忆史。",
+      "one_liner_en": "Price rewrote Roman imperial-cult studies with Rituals and Power; he died in 2011, a year after Birth of Classical Europe appeared. Thonemann carries on the memory-history line.",
+      "school_zh": "记忆建构 × 帝国崇拜 × 物质文化",
       "school_en": "Memory studies × material culture",
       "timeline": [
         {
-          "y": "1955",
-          "event_zh": "Simon Price 出生",
-          "event_en": "Simon Price born",
+          "y": "1954",
+          "event_zh": "Simon Price 生于曼彻斯特",
+          "event_en": "Simon Price born in Manchester",
           "conf": "✓"
         },
         {
-          "y": "1985",
-          "event_zh": "Price 任牛津大学希腊史讲师",
-          "event_en": "Price joins Oxford Faculty of Classics",
+          "y": "1984",
+          "event_zh": "Price《Rituals and Power》出版——重写罗马皇帝崇拜",
+          "event_en": "Price publishes Rituals and Power: Roman Provincial Worship of Emperors",
           "conf": "✓"
         },
         {
           "y": "2010",
-          "event_zh": "合著出版 The Birth of Classical Europe",
-          "event_en": "Co-author Birth of Classical Europe",
+          "event_zh": "合著出版 The Birth of Classical Europe（Vol.1）",
+          "event_en": "Co-authors Birth of Classical Europe (Vol.1)",
+          "conf": "✓"
+        },
+        {
+          "y": "2011",
+          "event_zh": "Price 因肝癌去世，享年 56 岁",
+          "event_en": "Price dies of liver cancer, aged 56",
+          "conf": "✓"
+        },
+        {
+          "y": "2018",
+          "event_zh": "Thonemann 出版《An Introduction to Greek Epigraphy》",
+          "event_en": "Thonemann publishes Introduction to Greek Epigraphy",
+          "conf": "✓"
+        },
+        {
+          "y": "2023",
+          "event_zh": "Thonemann 出版《Money in the Western Tradition》",
+          "event_en": "Thonemann publishes Money in the Western Tradition",
           "conf": "✓"
         }
       ],
       "works": [
         {
+          "y": "1984",
+          "title": "Rituals and Power",
+          "note_zh": "罗马行省皇帝崇拜研究，开山之作",
+          "note_en": "Roman provincial worship of emperors",
+          "conf": "✓"
+        },
+        {
+          "y": "1999",
+          "title": "The History of Greece (2nd ed.)",
+          "note_zh": "牛津希腊史教科书",
+          "note_en": "Oxford Greek-history textbook",
+          "conf": "✓"
+        },
+        {
           "y": "2010",
           "title": "The Birth of Classical Europe",
-          "note_zh": "企鹅欧洲史 Vol.1",
-          "note_en": "Penguin Europe Vol.1",
+          "note_zh": "企鹅欧洲史 Vol.1（Price 遗作之一）",
+          "note_en": "Penguin Europe Vol.1 (Price's late work)",
           "conf": "✓",
           "crop": "2026-penguin-europe"
+        },
+        {
+          "y": "2018",
+          "title": "An Introduction to Greek Epigraphy",
+          "note_zh": "Thonemann 独著 · 剑桥",
+          "note_en": "Thonemann sole-authored, Cambridge",
+          "conf": "✓"
+        },
+        {
+          "y": "2023",
+          "title": "Money in the Western Tradition",
+          "note_zh": "Thonemann · 从古希腊到比特币",
+          "note_en": "Thonemann · from ancient Greece to Bitcoin",
+          "conf": "✓"
         }
       ],
       "stance_zh": "「古典」不是发现而是建构——每一代人重新发明自己的希腊罗马传统。",
@@ -1352,72 +1398,133 @@
       "why_now_en": "The single starting point of the three-millennium European story.",
       "fact_ledger": [
         {
-          "claim": "Simon Price = Regius Professor of Greek, Oxford",
+          "claim": "Simon Price = classical scholar, Oxford University College (Fellow & Tutor 1980–2011)",
+          "source": "Guardian obit 2011-08-21",
+          "conf": "✓"
+        },
+        {
+          "claim": "Price died of liver cancer, 14 June 2011, aged 56",
+          "source": "Guardian obit · Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "Peter Thonemann = Professor of Greek, University of Adelaide",
           "source": "classics.ox.ac.uk",
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "awards": [
+        {
+          "y": "2011",
+          "award": "Price 逝后学界追念",
+          "note": "The Guardian 讣告；TLS 悼念"
+        }
+      ]
     },
     {
       "id": "wickham",
       "name_zh": "威克姆",
       "name_en": "Wickham",
-      "name_native": "Chris Wickham",
+      "name_native": "Christopher John Wickham FBA FLSW FRHistS",
       "slug_display": "Wickham",
-      "born": "1950 · 英国",
+      "born": "18 May 1950 · 英国",
       "native_lang": "English",
-      "domain_zh": "中世纪早期 · 地中海经济史 · 比较史学",
-      "domain_en": "Early medieval · Mediterranean economic history · comparative",
-      "one_liner_zh": "以考古数据和比较方法证明「黑暗时代」不黑暗——中世纪欧洲最有力的综合者。",
-      "one_liner_en": "Proved 'Dark Ages' weren't dark with archaeological data and comparison — the most powerful early-medieval synthesizer.",
-      "school_zh": "经济考古 × 制度史",
+      "domain_zh": "中世纪早期 · 意大利中世纪史 · 地中海比较经济史",
+      "domain_en": "Early medieval · medieval Italy · Mediterranean comparative economic history",
+      "one_liner_zh": "《Framing》与《Inheritance》两书奠定其战后欧洲经济史首座——以陶器、税收、地权重写中世纪欧洲的诞生。",
+      "one_liner_en": "Framing + Inheritance crown him the post-war European economic historian par excellence — rewriting medieval Europe's birth through pottery, taxation, land.",
+      "school_zh": "经济考古 × 制度史 × 大空间比较",
       "school_en": "Economic archaeology × institutional history",
       "timeline": [
         {
           "y": "1950",
-          "event_zh": "出生",
-          "event_en": "Born",
+          "event_zh": "出生于英国",
+          "event_en": "Born in Britain",
           "conf": "✓"
         },
         {
-          "y": "1987",
-          "event_zh": "《Early Medieval Europe》出版",
-          "event_en": "Early Medieval Europe published",
+          "y": "1975",
+          "event_zh": "牛津博士",
+          "event_en": "Oxford DPhil",
+          "conf": "○"
+        },
+        {
+          "y": "1984",
+          "event_zh": "《Early Medieval Italy》出版",
+          "event_en": "Early Medieval Italy published",
+          "conf": "✓"
+        },
+        {
+          "y": "1994",
+          "event_zh": "《Land and Power》出版",
+          "event_en": "Land and Power published",
+          "conf": "✓"
+        },
+        {
+          "y": "1998",
+          "event_zh": "入选英国国家学术院 FBA",
+          "event_en": "Elected Fellow of the British Academy (FBA)",
           "conf": "✓"
         },
         {
           "y": "2005",
-          "event_zh": "《Framing the Early Middle Ages》获学界大奖",
-          "event_en": "Framing the Early Middle Ages wins major prizes",
+          "event_zh": "《Framing the Early Middle Ages》出版 · 任 Chichele 中世纪史教授",
+          "event_en": "Framing published; Chichele Professor of Medieval History",
           "conf": "✓"
         },
         {
           "y": "2009",
           "event_zh": "出版 The Inheritance of Rome (Vol.2)",
-          "event_en": "Publishes Inheritance of Rome",
+          "event_en": "Publishes Inheritance of Rome (Vol.2)",
           "conf": "✓"
         },
         {
           "y": "2010",
-          "event_zh": "获 Wolfson History Prize",
-          "event_en": "Wolfson History Prize",
+          "event_zh": "《Inheritance》获 Wolfson History Prize",
+          "event_en": "Inheritance wins Wolfson History Prize",
+          "conf": "✓"
+        },
+        {
+          "y": "2014",
+          "event_zh": "获 Royal Historical Society Serena Medal",
+          "event_en": "Awarded the Serena Medal (RHS)",
+          "conf": "✓"
+        },
+        {
+          "y": "2016",
+          "event_zh": "《Medieval Europe》出版 · 荣休",
+          "event_en": "Medieval Europe published; retirement from Chichele chair",
           "conf": "✓"
         }
       ],
       "works": [
         {
-          "y": "1987",
-          "title": "Early Medieval Europe",
-          "note_zh": "经典教材",
-          "note_en": "landtext textbook",
+          "y": "1984",
+          "title": "Early Medieval Italy",
+          "note_zh": "中央公权力与地方社会",
+          "note_en": "Central power and local society",
+          "conf": "✓"
+        },
+        {
+          "y": "1992",
+          "title": "The Mountains and the City",
+          "note_zh": "托斯卡娜地区 400–1000",
+          "note_en": "Tuscan backcountry c.400–1000",
+          "conf": "✓"
+        },
+        {
+          "y": "1994",
+          "title": "Land and Power",
+          "note_zh": "中世纪意大利研究",
+          "note_en": "Studies in Italian society",
           "conf": "✓"
         },
         {
           "y": "2005",
           "title": "Framing the Early Middle Ages",
-          "note_zh": "600–1000 地中海比较经济史",
-          "note_en": "Mediterranean comparative economic history",
+          "note_zh": "600 年欧亚非比较经济史",
+          "note_en": "Europe & Mediterranean 400–800",
           "conf": "✓"
         },
         {
@@ -1427,6 +1534,13 @@
           "note_en": "Penguin Europe Vol.2",
           "conf": "✓",
           "crop": "2026-penguin-europe"
+        },
+        {
+          "y": "2016",
+          "title": "Medieval Europe",
+          "note_zh": "400–1500 一册通论",
+          "note_en": "400–1500 single-volume survey",
+          "conf": "✓"
         }
       ],
       "stance_zh": "「从物质出发」——先看陶器分布和贸易路线，再谈意识形态。",
@@ -1435,17 +1549,34 @@
       "why_now_en": "Structural analogy between the post-Roman world and our post-globalization moment.",
       "fact_ledger": [
         {
-          "claim": "Emeritus Professor of Social History, Oxford",
-          "source": "history.web.ox.ac.uk",
+          "claim": "Chichele Professor of Medieval History, Oxford 2005–2016 (NOT 'Social History')",
+          "source": "en.wikipedia.org/wiki/Chris_Wickham",
           "conf": "✓"
         },
         {
-          "claim": "Wolfson History Prize 2010",
-          "source": "wolfsonhistoryprize.org.uk",
+          "claim": "FBA elected 1998 · Serena Medal 2014 · Wolfson Prize 2010",
+          "source": "thebritishacademy.ac.uk",
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "awards": [
+        {
+          "y": "1998",
+          "award": "FBA (Fellow of the British Academy)",
+          "note": "elected"
+        },
+        {
+          "y": "2010",
+          "award": "Wolfson History Prize",
+          "note": "The Inheritance of Rome"
+        },
+        {
+          "y": "2014",
+          "award": "Serena Medal (Royal Historical Society)",
+          "note": "for Italian Renaissance / medieval studies"
+        }
+      ]
     },
     {
       "id": "jordan",
@@ -1453,35 +1584,73 @@
       "name_en": "Jordan",
       "name_native": "William Chester Jordan",
       "slug_display": "Jordan",
-      "born": "1948 · 美国",
+      "born": "7 April 1948 · 美国",
       "native_lang": "English",
-      "domain_zh": "中世纪法国 · 卡佩王朝 · 通史写作",
-      "domain_en": "Medieval France · Capetian dynasty · general history",
-      "one_liner_zh": "英语世界最好的中世纪通识写手——以单一概念（expansion）统一三百年。",
-      "one_liner_en": "English-speaking world's finest medieval generalist — unifying three centuries under 'expansion'.",
-      "school_zh": "政治史 × 制度史",
+      "domain_zh": "中世纪法国 · 卡佩王朝 · 路易九世 · 1315 大饥荒",
+      "domain_en": "Medieval France · Capetian dynasty · Louis IX · Great Famine",
+      "one_liner_zh": "普林斯顿中世纪史掌门，卡佩王朝与「1315 大饥荒」研究的定论者——英语世界最好的中世纪通识写手。",
+      "one_liner_en": "Princeton's medievalist doyen; definitive on Capetians and the Great Famine of 1315 — the English-speaking world's finest medieval generalist.",
+      "school_zh": "政治史 × 制度史 × 经济社会史",
       "school_en": "Political × institutional history",
       "timeline": [
         {
           "y": "1948",
-          "event_zh": "出生",
-          "event_en": "Born",
+          "event_zh": "出生于美国",
+          "event_en": "Born in US",
           "conf": "✓"
         },
         {
           "y": "1974",
-          "event_zh": "耶鲁博士",
+          "event_zh": "耶鲁博士 (PhD)",
           "event_en": "Yale PhD",
           "conf": "✓"
         },
         {
+          "y": "1979",
+          "event_zh": "《Louis IX and the Challenge of the Crusade》",
+          "event_en": "Louis IX & the Challenge of the Crusade",
+          "conf": "✓"
+        },
+        {
+          "y": "1996",
+          "event_zh": "《The Great Famine》1315–1317",
+          "event_en": "The Great Famine (1315–1317)",
+          "conf": "✓"
+        },
+        {
           "y": "2001",
-          "event_zh": "出版 Europe in the High Middle Ages",
-          "event_en": "Publishes High Middle Ages",
+          "event_zh": "出版 Europe in the High Middle Ages (Vol.3)",
+          "event_en": "Publishes Europe in the High Middle Ages",
+          "conf": "✓"
+        },
+        {
+          "y": "2009",
+          "event_zh": "《A Tale of Two Monks》",
+          "event_en": "A Tale of Two Monks (Dubois & Catalani)",
+          "conf": "✓"
+        },
+        {
+          "y": "2015",
+          "event_zh": "《From England to France》",
+          "event_en": "From England to France: Felony and Exile",
           "conf": "✓"
         }
       ],
       "works": [
+        {
+          "y": "1979",
+          "title": "Louis IX and the Challenge of the Crusade",
+          "note_zh": "卡佩君主统治研究",
+          "note_en": "Study in Capetian rulership",
+          "conf": "✓"
+        },
+        {
+          "y": "1996",
+          "title": "The Great Famine",
+          "note_zh": "1315–1317 中世纪欧洲灾难",
+          "note_en": "Northern Europe in disaster 1315–1317",
+          "conf": "✓"
+        },
         {
           "y": "2001",
           "title": "Europe in the High Middle Ages",
@@ -1489,6 +1658,20 @@
           "note_en": "Penguin Europe Vol.3",
           "conf": "✓",
           "crop": "2026-penguin-europe"
+        },
+        {
+          "y": "2008",
+          "title": "Europe's Dark Middle Ages",
+          "note_zh": "基督教与少数群体",
+          "note_en": "Christianity and its minorities",
+          "conf": "✓"
+        },
+        {
+          "y": "2015",
+          "title": "From England to France",
+          "note_zh": "13 世纪重罪与流放",
+          "note_en": "Felony and Exile in 13th-c.",
+          "conf": "✓"
         }
       ],
       "stance_zh": "清晰胜于博学——大学本科生能读懂的中世纪通史。",
@@ -1498,7 +1681,12 @@
       "fact_ledger": [
         {
           "claim": "Dayton-Stockton Professor of History, Princeton",
-          "source": "princeton.edu",
+          "source": "history.princeton.edu · Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "Born 7 April 1948",
+          "source": "en.wikipedia.org/wiki/William_Chester_Jordan",
           "conf": "✓"
         }
       ],
@@ -1508,68 +1696,125 @@
       "id": "grafton",
       "name_zh": "格拉夫顿",
       "name_en": "Grafton",
-      "name_native": "Anthony Grafton",
+      "name_native": "Anthony Thomas Grafton",
       "slug_display": "Grafton",
-      "born": "1951 · 纽约",
+      "born": "21 May 1950 · 纽约",
       "native_lang": "English",
-      "domain_zh": "文艺复兴知识史 · 古典学接受史 · 学术方法论",
-      "domain_en": "Renaissance intellectual history · classical reception · scholarship as craft",
-      "one_liner_zh": "知识史第一人——从脚注的发明到斯卡利杰的语文学，展示近代学术如何在文艺复兴诞生。",
-      "one_liner_en": "The foremost intellectual historian — from footnote invention to Scaliger's philology, showing how modern scholarship was born in the Renaissance.",
+      "domain_zh": "文艺复兴知识史 · 古典学接受史 · 语文学 · 学术方法论",
+      "domain_en": "Renaissance intellectual history · classical reception · philology · scholarship as craft",
+      "one_liner_zh": "知识史第一人——从脚注到斯卡利杰，展示近代学术如何在文艺复兴被发明；43 部著作 · 200+ 论文。",
+      "one_liner_en": "The foremost intellectual historian of early modern Europe — from footnotes to Scaliger, showing how modern scholarship was invented in the Renaissance; 43 books, 200+ articles.",
       "school_zh": "知识史 · 接受史 · 语文学",
       "school_en": "Intellectual history · reception · philology",
       "timeline": [
         {
-          "y": "1951",
-          "event_zh": "出生纽约",
-          "event_en": "Born New York",
+          "y": "1950",
+          "event_zh": "出生于纽约",
+          "event_en": "Born in New York",
           "conf": "✓"
         },
         {
-          "y": "1979",
-          "event_zh": "瓦尔堡研究所",
-          "event_en": "Warburg Institute",
+          "y": "1971",
+          "event_zh": "芝加哥大学 BA",
+          "event_en": "University of Chicago BA",
+          "conf": "✓"
+        },
+        {
+          "y": "1975",
+          "event_zh": "瓦尔堡研究所 (Warburg Institute) 博士",
+          "event_en": "Warburg Institute PhD",
+          "conf": "✓"
+        },
+        {
+          "y": "1975",
+          "event_zh": "加入普林斯顿历史系",
+          "event_en": "Joins Princeton History department",
           "conf": "✓"
         },
         {
           "y": "1983",
-          "event_zh": "Joseph Scaliger 出版",
-          "event_en": "Joseph Scaliger published",
+          "event_zh": "《Joseph Scaliger》Vol.1 出版",
+          "event_en": "Joseph Scaliger Vol.1 published",
+          "conf": "✓"
+        },
+        {
+          "y": "1989",
+          "event_zh": "获 Guggenheim Fellowship",
+          "event_en": "Guggenheim Fellowship",
+          "conf": "✓"
+        },
+        {
+          "y": "1993",
+          "event_zh": "《Defenders of the Text》· LA Times Book Prize",
+          "event_en": "Defenders of the Text · LA Times Book Prize",
           "conf": "✓"
         },
         {
           "y": "1997",
-          "event_zh": "Footnote 出版",
-          "event_en": "Footnote published",
+          "event_zh": "《The Footnote: A Curious History》",
+          "event_en": "Footnote: A Curious History published",
           "conf": "✓"
         },
         {
-          "y": "2010",
-          "event_zh": "The Culture of Correction",
-          "event_en": "The Culture of Correction",
+          "y": "2002",
+          "event_zh": "获 Balzan Prize for History of Humanities",
+          "event_en": "Balzan Prize for History of Humanities",
+          "conf": "✓"
+        },
+        {
+          "y": "2011",
+          "event_zh": "《The Culture of Correction in Renaissance Europe》",
+          "event_en": "Culture of Correction published",
+          "conf": "✓"
+        },
+        {
+          "y": "2026",
+          "event_zh": "获 CISH 国际历史大奖 International Prize for History",
+          "event_en": "CISH International Prize for History laureate",
           "conf": "✓"
         }
       ],
       "works": [
         {
           "y": "1983",
-          "title": "Joseph Scaliger",
-          "note_zh": "语文学革命传记",
-          "note_en": "Biography of philological revolution",
+          "title": "Joseph Scaliger: A Study in the History of Classical Scholarship",
+          "note_zh": "两卷 · 语文学革命传记",
+          "note_en": "2 vols · biography of philological revolution",
+          "conf": "✓"
+        },
+        {
+          "y": "1991",
+          "title": "Defenders of the Text",
+          "note_zh": "16 世纪拉丁经典校勘",
+          "note_en": "Latin texts in 16th-c.",
           "conf": "✓"
         },
         {
           "y": "1997",
-          "title": "The Footnote",
+          "title": "The Footnote: A Curious History",
           "note_zh": "学术方法论谱系",
-          "note_en": "Genealogy of scholarship",
+          "note_en": "Genealogy of scholarly method",
+          "conf": "✓"
+        },
+        {
+          "y": "2007",
+          "title": "What Was History?",
+          "note_zh": "近代早期欧洲的历史实践",
+          "note_en": "Practice of history in early modern Europe",
+          "conf": "✓"
+        },
+        {
+          "y": "2011",
+          "title": "The Culture of Correction in Renaissance Europe",
+          "note_zh": "George Buchanan 与古典校勘",
+          "note_en": "George Buchanan & classical emendation",
           "conf": "✓"
         },
         {
           "y": "forthcoming",
           "title": "Renaissance Europe",
-          "note_zh": "企鹅欧洲史 Vol.4",
-          "note_en": "Penguin Europe Vol.4",
+          "note_zh": "企鹅欧洲史 Vol.4 · 待出版",
+          "note_en": "Penguin Europe Vol.4 · forthcoming",
           "conf": "○",
           "crop": "2026-penguin-europe"
         }
@@ -1580,12 +1825,39 @@
       "why_now_en": "The only scholar to fill the 1300–1517 gap.",
       "fact_ledger": [
         {
-          "claim": "Dodge Research Professor of History, Princeton",
-          "source": "princeton.edu",
+          "claim": "Henry Putnam University Professor of History, Princeton (current title; previously Dodge)",
+          "source": "en.wikipedia.org/wiki/Anthony_Grafton · history.princeton.edu",
+          "conf": "✓"
+        },
+        {
+          "claim": "Author or editor of 43 books and 200+ articles",
+          "source": "cish.org 2025-11-03",
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "awards": [
+        {
+          "y": "1989",
+          "award": "Guggenheim Fellowship",
+          "note": ""
+        },
+        {
+          "y": "1993",
+          "award": "Los Angeles Times Book Prize",
+          "note": "Defenders of the Text"
+        },
+        {
+          "y": "2002",
+          "award": "Balzan Prize for the History of Humanities",
+          "note": "genealogy of scholarship"
+        },
+        {
+          "y": "2026",
+          "award": "CISH International Prize for History",
+          "note": "laureate"
+        }
+      ]
     },
     {
       "id": "greengrass",
@@ -1593,29 +1865,66 @@
       "name_en": "Greengrass",
       "name_native": "Mark Greengrass",
       "slug_display": "Greengrass",
-      "born": "circa 1950s · 英国",
+      "born": "7 September 1949 · 英国",
       "native_lang": "English",
-      "domain_zh": "宗教改革 · 早期现代德国 · 文化转移",
-      "domain_en": "Reformation · early-modern Germany · cultural transfer",
-      "one_liner_zh": "宗教改革的「慢溶解」叙事——基督教世界不是被推翻而是被吵散、杀散、制度化的。",
-      "one_liner_en": "The 'slow dissolution' narrative — Christendom wasn't overthrown but argued apart, killed apart, institutionalized apart.",
+      "domain_zh": "近代早期欧洲 · 宗教改革 · 文化转移",
+      "domain_en": "Early modern Europe · Reformation · cultural transfer",
+      "one_liner_zh": "宗教改革的「慢溶解」叙事——以人物经历锚定制度史，把一百三十年的分裂写成一个整体。",
+      "one_liner_en": "The 'slow dissolution' narrative of the Reformation — anchoring institutional history on personal experience across 130 years of fracture.",
       "school_zh": "文化转移 × 政治-宗教交织",
       "school_en": "Cultural transfer × political-religious interweaving",
       "timeline": [
         {
+          "y": "1949",
+          "event_zh": "出生于英国",
+          "event_en": "Born in Britain",
+          "conf": "✓"
+        },
+        {
+          "y": "1973",
+          "event_zh": "剑桥博士 (Clare College)",
+          "event_en": "Cambridge PhD (Clare College)",
+          "conf": "○"
+        },
+        {
+          "y": "1990s",
+          "event_zh": "Warwick 近代早期史教授",
+          "event_en": "Prof Early Modern History, Warwick (to 2010s)",
+          "conf": "✓"
+        },
+        {
           "y": "1996",
-          "event_zh": "The European Reformation 出版",
-          "event_en": "The European Reformation published",
+          "event_zh": "《The European Reformation, c.1450–1618》初版",
+          "event_en": "The European Reformation first ed.",
           "conf": "✓"
         },
         {
           "y": "2014",
-          "event_zh": "出版 Christendom Destroyed (Vol.5)",
-          "event_en": "Publishes Christendom Destroyed",
+          "event_zh": "转至 Sheffield · 出版 Christendom Destroyed (Vol.5)",
+          "event_en": "Moves to Sheffield · Publishes Christendom Destroyed",
+          "conf": "✓"
+        },
+        {
+          "y": "2019",
+          "event_zh": "《The Long Reformation》",
+          "event_en": "The Long Reformation published",
+          "conf": "○"
+        },
+        {
+          "y": "2022",
+          "event_zh": "《Protestants: A History from Reformation to Revolution》",
+          "event_en": "Protestants: A History from Reformation to Revolution",
           "conf": "✓"
         }
       ],
       "works": [
+        {
+          "y": "1996",
+          "title": "The European Reformation, c.1450–1618",
+          "note_zh": "1·2 版 (2004, 2015 3rd)",
+          "note_en": "2nd ed 2004, 3rd 2015",
+          "conf": "✓"
+        },
         {
           "y": "2014",
           "title": "Christendom Destroyed",
@@ -1623,6 +1932,13 @@
           "note_en": "Penguin Europe Vol.5",
           "conf": "✓",
           "crop": "2026-penguin-europe"
+        },
+        {
+          "y": "2022",
+          "title": "Protestants: A History from Reformation to Revolution",
+          "note_zh": "新教四百年全球史",
+          "note_en": "Global Protestantism 16th–21st c.",
+          "conf": "✓"
         }
       ],
       "stance_zh": "改革不是事件而是过程——以人物经历锚定结构。",
@@ -1631,8 +1947,18 @@
       "why_now_en": "Deep analogy between religious fracture and today's identity politics.",
       "fact_ledger": [
         {
-          "claim": "Emeritus Professor, University of Warwick",
-          "source": "warwick.ac.uk",
+          "claim": "Born 7 September 1949",
+          "source": "sheffield.academia.edu CV",
+          "conf": "✓"
+        },
+        {
+          "claim": "Emeritus Professor of Early Modern History, University of Sheffield",
+          "source": "sheffield.academia.edu · news sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "Previously taught at Glasgow and Warwick before Sheffield",
+          "source": "sheffield.academia.edu CV",
           "conf": "✓"
         }
       ],
@@ -1646,33 +1972,65 @@
       "slug_display": "Briggs",
       "born": "1939 · 英国",
       "native_lang": "English",
-      "domain_zh": "近代早期欧洲 · 法国社会史 · 猎巫",
-      "domain_en": "Early modern Europe · French social history · witchcraft",
-      "one_liner_zh": "从猎巫到启蒙——用「社区与信仰」的透镜重写近代欧洲形成期。",
-      "one_liner_en": "From witch-hunts to Enlightenment — rewriting early modern Europe's formation through 'communities of belief'.",
+      "domain_zh": "近代早期欧洲 · 法国社会史 · 猎巫 · 宗教与文化",
+      "domain_en": "Early modern Europe · French social history · witchcraft · religion & culture",
+      "one_liner_zh": "从猎巫到启蒙——用「社区与信仰」的透镜重写近代欧洲形成期；《早期现代欧洲》是英语世界教科书。",
+      "one_liner_en": "From witch-hunts to Enlightenment — rewriting early modern Europe's formation through 'communities of belief'; his Early Modern Europe is the standard English textbook.",
       "school_zh": "社会史 × 心态史",
       "school_en": "Social history × history of mentalities",
       "timeline": [
         {
           "y": "1939",
-          "event_zh": "出生",
-          "event_en": "Born",
+          "event_zh": "出生于英国",
+          "event_en": "Born in Britain",
+          "conf": "○"
+        },
+        {
+          "y": "1970s–80s",
+          "event_zh": "牛津万灵学院 (All Souls) 研究员",
+          "event_en": "Fellow of All Souls College Oxford",
+          "conf": "✓"
+        },
+        {
+          "y": "1989",
+          "event_zh": "《Communities of Belief》",
+          "event_en": "Communities of Belief: Cultural & Social Tensions in Early Modern France",
           "conf": "✓"
         },
         {
           "y": "1996",
-          "event_zh": "Witches & Neighbors 出版",
-          "event_en": "Witches & Neighbors published",
+          "event_zh": "《Witches and Neighbors》",
+          "event_en": "Witches and Neighbors: Social & Cultural Context of European Witchcraft",
           "conf": "✓"
         },
         {
           "y": "2000",
           "event_zh": "出版 The Pursuit of Glory (Vol.6)",
-          "event_en": "Publishes Pursuit of Glory",
+          "event_en": "Publishes The Pursuit of Glory (Vol.6)",
+          "conf": "✓"
+        },
+        {
+          "y": "2003",
+          "event_zh": "《Early Modern Europe: An Oxford History》",
+          "event_en": "Early Modern Europe: An Oxford History",
           "conf": "✓"
         }
       ],
       "works": [
+        {
+          "y": "1989",
+          "title": "Communities of Belief",
+          "note_zh": "近代早期法国文化社会张力",
+          "note_en": "Cultural & social tensions in early modern France",
+          "conf": "✓"
+        },
+        {
+          "y": "1996",
+          "title": "Witches and Neighbors",
+          "note_zh": "欧洲猎巫的社会文化语境",
+          "note_en": "Social & cultural context of European witchcraft",
+          "conf": "✓"
+        },
         {
           "y": "2000",
           "title": "The Pursuit of Glory",
@@ -1680,6 +2038,20 @@
           "note_en": "Penguin Europe Vol.6 (rev. 2013)",
           "conf": "✓",
           "crop": "2026-penguin-europe"
+        },
+        {
+          "y": "2003",
+          "title": "Early Modern Europe: An Oxford History",
+          "note_zh": "1550–1789 教科书",
+          "note_en": "Oxford history 1550–1789",
+          "conf": "✓"
+        },
+        {
+          "y": "2005",
+          "title": "Francis Bacon and the Politics of Knowledge",
+          "note_zh": "（论文/短篇）",
+          "note_en": "Essay/short monograph",
+          "conf": "○"
         }
       ],
       "stance_zh": "五场革命叠加而非单线——拒绝「一个原因解释一个世纪」。",
@@ -1688,8 +2060,13 @@
       "why_now_en": "Multiple transformations overlaid — resonating with 21st-century polycrisis.",
       "fact_ledger": [
         {
-          "claim": "Former All Souls Oxford; Cornell Prof French History",
-          "source": "cornell.edu",
+          "claim": "Robin Briggs: Emeritus Fellow of All Souls College, Oxford; previously taught French History at Cornell",
+          "source": "cornell.edu · asc.ox.ac.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Witches and Neighbors (1996) 是近代早期猎巫研究标准参考",
+          "source": "jstor.org · Bodleian LibGuides",
           "conf": "✓"
         }
       ],
@@ -1699,68 +2076,120 @@
       "id": "evans",
       "name_zh": "埃文斯",
       "name_en": "Evans",
-      "name_native": "Richard J. Evans",
+      "name_native": "Sir Richard John Evans FBA",
       "slug_display": "Evans",
-      "born": "1947 · 伦敦",
+      "born": "29 June 1947 · 伦敦",
       "native_lang": "English",
-      "domain_zh": "近代欧洲史 · 德国史 · 第三帝国",
-      "domain_en": "Modern European · German · Third Reich",
-      "one_liner_zh": "以「三大意识形态+帝国」的框架把19世纪写成全方位权力竞争——同时是第三帝国庆研究最高权威。",
-      "one_liner_en": "Framing the 19th century as total power competition through 'three ideologies + empire' — simultaneously the supreme Third Reich authority.",
+      "domain_zh": "近代欧洲史 · 德国史 · 第三帝国 · 大屠杀史学",
+      "domain_en": "Modern European · German · Third Reich · Holocaust historiography",
+      "one_liner_zh": "第三帝国三部曲作者 · Regius 剑桥近代史讲座教授 · 2012 年封爵 · 当今英国最知名的公共史学家。",
+      "one_liner_en": "Author of the Third Reich Trilogy · Regius Professor of History at Cambridge · knighted 2012 · contemporary Britain's most prominent public historian.",
       "school_zh": "社会史 × 政治史 × 文化史综合",
       "school_en": "Social × political × cultural synthesis",
       "timeline": [
         {
           "y": "1947",
-          "event_zh": "出生伦敦",
-          "event_en": "Born London",
+          "event_zh": "出生于伦敦",
+          "event_en": "Born in London",
+          "conf": "✓"
+        },
+        {
+          "y": "1968",
+          "event_zh": "牛津 MA (Oxford Modern History)",
+          "event_en": "Oxford Modern History",
+          "conf": "✓"
+        },
+        {
+          "y": "1972",
+          "event_zh": "伦敦大学博士",
+          "event_en": "PhD, University of London (A. J. P. Taylor supervised)",
+          "conf": "○"
+        },
+        {
+          "y": "1987",
+          "event_zh": "《Death in Hamburg》——获 Wolfson 奖",
+          "event_zh_note": "",
+          "event_en": "Death in Hamburg · Wolfson Prize",
           "conf": "✓"
         },
         {
           "y": "1989",
-          "event_zh": "Rethinking German History",
-          "event_en": "Rethinking German History",
+          "event_zh": "入选 British Academy FBA",
+          "event_en": "Elected FBA",
           "conf": "✓"
         },
         {
-          "y": "2003",
-          "event_zh": "The Coming of the Third Reich",
-          "event_en": "Coming of the Third Reich",
+          "y": "1998",
+          "event_zh": "《In Defence of History》出版",
+          "event_en": "In Defence of History published",
           "conf": "✓"
         },
         {
           "y": "2008–2014",
-          "event_zh": "剑桥 Regius 近代史教授",
-          "event_en": "Regius Prof Modern History, Cambridge",
+          "event_zh": "剑桥大学 Regius 历史讲座教授",
+          "event_en": "Regius Professor of History, Cambridge",
+          "conf": "✓"
+        },
+        {
+          "y": "2012",
+          "event_zh": "新年荣誉授勋为 Knight Bachelor",
+          "event_en": "Knighted in the New Year Honours 2012",
+          "conf": "✓"
+        },
+        {
+          "y": "2014",
+          "event_zh": "Gresham College 校长 (Provost) · 获 Norton Medlicott Medal",
+          "event_en": "Provost of Gresham College; Norton Medlicott Medal (HA)",
           "conf": "✓"
         },
         {
           "y": "2016",
           "event_zh": "出版 The Pursuit of Power (Vol.7)",
-          "event_en": "Publishes Pursuit of Power",
+          "event_en": "Publishes The Pursuit of Power (Vol.7)",
           "conf": "✓"
         }
       ],
       "works": [
         {
+          "y": "1987",
+          "title": "Death in Hamburg",
+          "note_zh": "1890 霍乱与社会",
+          "note_en": "Society and cholera in 1890",
+          "conf": "✓"
+        },
+        {
+          "y": "1996",
+          "title": "Rituals of Retribution",
+          "note_zh": "德国刑罚史 1700–1987",
+          "note_en": "Capital punishment in Germany 1700–1987",
+          "conf": "✓"
+        },
+        {
+          "y": "1997",
+          "title": "In Defence of History",
+          "note_zh": "史学理论经典",
+          "note_en": "Historiographical defense",
+          "conf": "✓"
+        },
+        {
           "y": "2003",
           "title": "The Coming of the Third Reich",
-          "note_zh": "三部曲 Vol.1",
-          "note_en": "Trilogy Vol.1",
+          "note_zh": "第三帝国三部曲 Vol.1",
+          "note_en": "Third Reich Trilogy Vol.1",
+          "conf": "✓"
+        },
+        {
+          "y": "2005",
+          "title": "The Third Reich in Power",
+          "note_zh": "Vol.2",
+          "note_en": "Vol.2",
           "conf": "✓"
         },
         {
           "y": "2008",
-          "title": "The Third Reich in Power",
-          "note_zh": "三部曲 Vol.2",
-          "note_en": "Trilogy Vol.2",
-          "conf": "✓"
-        },
-        {
-          "y": "2015",
           "title": "The Third Reich at War",
-          "note_zh": "三部曲 Vol.3",
-          "note_en": "Trilogy Vol.3",
+          "note_zh": "Vol.3",
+          "note_en": "Vol.3",
           "conf": "✓"
         },
         {
@@ -1772,89 +2201,173 @@
           "crop": "2026-penguin-europe"
         }
       ],
-      "stance_zh": "宏观与微观互嵌——920页需要个人轶事维持可读。",
+      "stance_zh": "宏观与微观互嵌——920 页需要个人轶事维持可读。",
       "stance_en": "Macro and micro interlocked — 928 pages need personal anecdotes for readability.",
       "why_now_zh": "「权力的追求」= 当今中美欧竞争的历史底本。",
       "why_now_en": "'Power pursued' = the historical template for today's US-China-EU competition.",
       "fact_ledger": [
         {
-          "claim": "Regius Professor of Modern History Cambridge 2008–2014",
-          "source": "cmdog.gate.ac.uk",
+          "claim": "Regius Professor of History, Cambridge 2008–2014 (title: 'History', not 'Modern History')",
+          "source": "hist.cam.ac.uk",
           "conf": "✓"
         },
         {
-          "claim": "Knighted 2020 for services to scholarship",
-          "source": "gov.uk",
+          "claim": "Knighted 2012 (New Year Honours), NOT 2020",
+          "source": "hist.cam.ac.uk · nzz-academy.com",
+          "conf": "✓"
+        },
+        {
+          "claim": "Provost of Gresham College London from 2014",
+          "source": "gresham.ac.uk",
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "awards": [
+        {
+          "y": "1987",
+          "award": "Wolfson History Prize",
+          "note": "Death in Hamburg"
+        },
+        {
+          "y": "1989",
+          "award": "FBA (Fellow of the British Academy)",
+          "note": "elected"
+        },
+        {
+          "y": "2012",
+          "award": "Knight Bachelor",
+          "note": "New Year Honours for services to scholarship"
+        },
+        {
+          "y": "2014",
+          "award": "Norton Medlicott Medal",
+          "note": "Historical Association"
+        }
+      ]
     },
     {
       "id": "kershaw",
       "name_zh": "克肖",
       "name_en": "Kershaw",
-      "name_native": "Sir Ian Kershaw",
+      "name_native": "Sir Ian Kershaw FBA FRHistS",
       "slug_display": "Kershaw",
-      "born": "1943 · Oldham, Lancashire",
+      "born": "29 April 1943 · Oldham, Lancashire",
       "native_lang": "English",
-      "domain_zh": "二十世纪欧洲史 · 希特勒/纳粹 · 「结构性 vs 意图性」",
-      "domain_en": "20th-century Europe · Hitler/Nazism · structuralism",
-      "one_liner_zh": "希特勒传记的代名词——同时以「新三十年战争」框架重写1914–1949全欧史，又续写战后到全球化。",
-      "one_liner_en": "Synonymous with Hitler biography — simultaneously rewriting 1914–49 as a 'new Thirty Years' War' and continuing to globalization.",
+      "domain_zh": "二十世纪欧洲史 · 希特勒与纳粹 · 战后欧洲 · 「结构性 vs 意图性」",
+      "domain_en": "20th-century Europe · Hitler & Nazism · post-war Europe · structuralism vs intentionalism",
+      "one_liner_zh": "希特勒传记的代名词 · Bundesverdienstkreuz 1994 · 封爵 2002 · 企鹅欧洲史唯一执笔两卷的学者。",
+      "one_liner_en": "Synonym for Hitler biography · Bundesverdienstkreuz 1994 · knighted 2002 · the only scholar to write two volumes of the Penguin Europe series.",
       "school_zh": "结构主义功能论 × 通史综合",
       "school_en": "Structural-functionalist × grand synthesis",
       "timeline": [
         {
           "y": "1943",
-          "event_zh": "出生 Oldham",
-          "event_en": "Born Oldham",
+          "event_zh": "出生于 Oldham",
+          "event_en": "Born in Oldham",
+          "conf": "✓"
+        },
+        {
+          "y": "1966",
+          "event_zh": "利物浦大学 BA 一等",
+          "event_en": "BA First Class, University of Liverpool",
+          "conf": "✓"
+        },
+        {
+          "y": "1968",
+          "event_zh": "牛津大学圣约翰学院博士（研究德国社民党）",
+          "event_en": "St John's College Oxford PhD (German Social Democracy)",
           "conf": "✓"
         },
         {
           "y": "1985",
-          "event_zh": "Peasants into Nazis 出版",
-          "event_en": "Peasants into Nazis",
+          "event_zh": "《The Nazi Dictatorship》——纳粹史结构主义论证",
+          "event_en": "The Nazi Dictatorship — structuralist argument",
+          "conf": "✓"
+        },
+        {
+          "y": "1989",
+          "event_zh": "入选 British Academy FBA",
+          "event_en": "Elected FBA",
+          "conf": "✓"
+        },
+        {
+          "y": "1994",
+          "event_zh": "获德国 Bundesverdienstkreuz（联邦十字勋章）",
+          "event_en": "Awarded German Bundesverdienstkreuz (Federal Cross of Merit)",
           "conf": "✓"
         },
         {
           "y": "1998",
-          "event_zh": "Hitler Vol.1 (Hubris)",
-          "event_en": "Hitler Vol.1",
+          "event_zh": "《Hitler 1889–1936: Hubris》",
+          "event_en": "Hitler: Hubris",
           "conf": "✓"
         },
         {
           "y": "2000",
-          "event_zh": "Hitler Vol.2 (Nemesis)",
-          "event_en": "Hitler Vol.2",
+          "event_zh": "《Hitler 1936–1945: Nemesis》——获 British Book Awards 年度非虚构",
+          "event_en": "Hitler: Nemesis · British Book Awards Non-fiction Book of the Year",
+          "conf": "✓"
+        },
+        {
+          "y": "2002",
+          "event_zh": "新年荣誉授勋 Knight Bachelor",
+          "event_en": "Knighted in the New Year Honours 2002",
+          "conf": "✓"
+        },
+        {
+          "y": "2007",
+          "event_zh": "《Fateful Choices》· 《Roller-Coaster》UK 版",
+          "event_en": "Fateful Choices · UK Roller-Coaster",
           "conf": "✓"
         },
         {
           "y": "2015",
           "event_zh": "出版 To Hell and Back (Vol.8)",
-          "event_en": "Publishes To Hell and Back",
+          "event_en": "Publishes To Hell and Back (Vol.8)",
           "conf": "✓"
         },
         {
           "y": "2019",
-          "event_zh": "出版 The Global Age (Vol.9)",
-          "event_en": "Publishes The Global Age",
+          "event_zh": "出版 The Global Age (Vol.9, US 版)",
+          "event_en": "Publishes The Global Age (Vol.9 US)",
           "conf": "✓"
         }
       ],
       "works": [
         {
+          "y": "1985",
+          "title": "The Nazi Dictatorship: Problems and Perspectives",
+          "note_zh": "结构主义 vs 意图性论战",
+          "note_en": "Structuralism vs intentionalism debate",
+          "conf": "✓"
+        },
+        {
           "y": "1998",
-          "title": "Hitler: Hubris",
-          "note_zh": "上卷：1889–1936",
-          "note_en": "Vol.1: 1889–1936",
+          "title": "Hitler 1889–1936: Hubris",
+          "note_zh": "上卷",
+          "note_en": "Vol.1",
           "conf": "✓"
         },
         {
           "y": "2000",
-          "title": "Hitler: Nemesis",
-          "note_zh": "下卷：1936–1945",
-          "note_en": "Vol.2: 1936–1945",
+          "title": "Hitler 1936–1945: Nemesis",
+          "note_zh": "下卷",
+          "note_en": "Vol.2",
+          "conf": "✓"
+        },
+        {
+          "y": "2007",
+          "title": "Fateful Choices: Ten Decisions 1940–41",
+          "note_zh": "战时决策史",
+          "note_en": "Wartime decision-making",
+          "conf": "✓"
+        },
+        {
+          "y": "2007",
+          "title": "Roller-Coaster: Europe 1950–2010",
+          "note_zh": "UK 版 The Global Age 前身",
+          "note_en": "UK predecessor of The Global Age",
           "conf": "✓"
         },
         {
@@ -1874,19 +2387,19 @@
           "crop": "2026-penguin-europe"
         }
       ],
-      "stance_zh": "「唯一能写两卷的人」——以「新三十年战争」框架把1914–1949写成一个整体。",
+      "stance_zh": "「唯一能写两卷的人」——以「新三十年战争」框架把 1914–1949 写成一个整体。",
       "stance_en": "'The only scholar to write two volumes' — 'new Thirty Years' War' framing 1914–49 as one unit.",
       "why_now_zh": "从地狱归来的欧洲——21世纪民粹与战争记忆的回响。",
       "why_now_en": "Europe back from Hell — echoes of populism and war memory in the 21st century.",
       "fact_ledger": [
         {
-          "claim": "Emeritus Professor, University of Nottingham",
-          "source": "nottingham.ac.uk",
+          "claim": "Sir Ian Kershaw FBA FRHistS · Nottingham Prof of Modern History",
+          "source": "thebritishacademy.ac.uk/fellows/profiles/ian-kershaw-FBA/",
           "conf": "✓"
         },
         {
-          "claim": "Knighted 2002; BAFTA-winning documentary presenter",
-          "source": "en.wikipedia.org/wiki/Ian_Kershaw",
+          "claim": "Bundesverdienstkreuz 1994 · Knighted 2002 · FBA 1989",
+          "source": "merton.ox.ac.uk · britishacademy",
           "conf": "✓"
         },
         {
@@ -1895,7 +2408,29 @@
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "awards": [
+        {
+          "y": "1994",
+          "award": "Bundesverdienstkreuz (Federal Cross of Merit, Germany)",
+          "note": ""
+        },
+        {
+          "y": "1998",
+          "award": "Wolfgang Haldenschweiler Prize",
+          "note": "Hubris"
+        },
+        {
+          "y": "2002",
+          "award": "Knight Bachelor",
+          "note": "for services to history"
+        },
+        {
+          "y": "2003",
+          "award": "BAFTA (documentary presentation)",
+          "note": "Hitlers Deutschland BBC"
+        }
+      ]
     }
   ]
 }

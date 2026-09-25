@@ -2251,10 +2251,10 @@
       "why_zh": "欧洲故事的起点——不是从希腊城邦，而是从迈锡尼宫殿与特洛伊传说开始；用物质文化与记忆理论重写「古典」的诞生。",
       "why_en": "Where the European story begins — not at the polis but at Mycenaean palaces and Trojan legend; rewriting 'classical' through material culture and memory theory.",
       "background": {
-        "zh": "Price（牛津大学希腊史教授）与 Thonemann（阿德莱德大学）合撰，是企鹅欧洲史九卷本的第一卷。全书以「记忆」为方法论线索：从迈锡尼线形文字B到希腊字母的引入，从荷马史诗对特洛伊的追想到希罗多德与修昔底德的历史书写，从亚历山大到罗马帝国对希腊文化的兼收并蓄——核心问题是「古典欧洲」不是天然存在，而是被一代代人的记忆、遗忘与重写所'生成'。时间跨度约2100年（前1700–后410），涵盖爱琴文明、希腊城邦、波斯战争、马其顿崛起、罗马共和与帝政、直到奥古斯丁时代。",
-        "en": "By Price (Regius Professor of Greek, Oxford) and Thonemann (Adelaide), Volume 1 of the nine-volume Penguin History of Europe. Uses 'memory' as a methodological thread: from Linear B to the Greek alphabet, from Homeric recollection of Troy to Herodotean/Thucydidean historiography, from Alexander to Roman appropriation of Greek culture — the core argument is that 'Classical Europe' was not naturally given but generated through generations' acts of memory, forgetting, and rewriting. Spans ~2100 years (1700BC–AD410).",
+        "zh": "Price（牛津大学 University College 古典学研究员，以《仪式与权力》1984 重写罗马皇帝崇拜研究）与 Thonemann（阿德莱德大学 Greek 教授，前牛津）合撰，是企鹅欧洲史九卷本的第一卷。Price 于 2011 年因肝癌去世，《古典欧洲的诞生》成为他最后一部完整专著。全书以「记忆」为方法论线索：从迈锡尼线形文字 B 到希腊字母的引入，从荷马史诗对特洛伊的追想到希罗多德与修昔底德的历史书写，从亚历山大到罗马帝国对希腊文化的兼收并蓄——核心问题是「古典欧洲」不是天然存在，而是被一代代人的记忆、遗忘与重写所「生成」。时间跨度约 2100 年（前 1700–后 410）。",
+        "en": "By Price (Fellow & Tutor in Ancient History, University College Oxford; author of Rituals and Power (1984), which rewrote the study of Roman emperor worship) and Thonemann (Professor of Greek, Adelaide; previously Oxford). Price died of liver cancer on 14 June 2011, making Birth of Classical Europe his last completed monograph. Uses 'memory' as a methodological thread: from Linear B to the Greek alphabet, Homeric recollection to Herodotean/Thucydidean historiography, Alexander to Roman appropriation of Greek culture — the argument is that 'Classical Europe' was generated, not discovered. Spans ~2100 years (1700BC–AD410).",
         "conf": "✓",
-        "sources": "penguinrandomhouse.com · goodreads.com · openlibrary.org"
+        "sources": "Guardian obit 2011-08-21 · classics.ox.ac.uk Thonemann pubs · penguin.co.uk"
       },
       "plot_acts": [
         {
@@ -2361,10 +2361,20 @@
           "title": "The Inheritance of Rome",
           "author": "Chris Wickham",
           "year": "2009",
-          "relation": "series",
+          "relation": "series-next",
           "note_zh": "Vol.2 直接续接奥古斯丁之后",
           "note_en": "Vol.2 picks up after Augustine",
           "axis": "series",
+          "conf": "✓"
+        },
+        {
+          "title": "Rituals and Power",
+          "author": "Simon Price",
+          "year": "1984",
+          "relation": "author-prev",
+          "note_zh": "Price 成名作 · 罗马皇帝崇拜研究",
+          "note_en": "Price's landmark emperor-worship study",
+          "axis": "author",
           "conf": "✓"
         }
       ],
@@ -2435,10 +2445,10 @@
       "why_zh": "「黑暗时代」不黑暗——威克姆以考古与文献的庞大数据推翻'罗马崩溃=文明断裂'的旧叙事，展示后罗马世界如何创造新的政治经济秩序。",
       "why_en": "The 'Dark Ages' weren't dark — Wickham overturns 'Roman collapse = civilizational break' with massive archaeological/textual data, showing how post-Roman worlds created new political economies.",
       "background": {
-        "zh": "Wickham（牛津大学 Emeritus 社会史教授，《中世纪欧洲》作者）撰写企鹅欧洲史第二卷。全书核心论题：西罗马帝国476年「灭亡」之后，地中海世界并非陷入黑暗，而是在拜占庭、法兰克、伊斯兰、斯拉夫等多条路径上各自演化出新秩序。方法论上强调经济考古（陶器分布、贸易网络）与制度史（税收、地权、教会组织）并重。时间跨度600年，地理涵盖从爱尔兰到美索不达米亚、从北欧到北非的整个后罗马世界。获2010年Wolffson History Prize。",
-        "en": "By Wickham (Emeritus Professor of Social History, Oxford; author of Medieval Europe). Volume 2's core thesis: after the 'fall' of 476, the Mediterranean world did not enter darkness but evolved new orders along Byzantine, Frankish, Islamic, and Slavic paths. Methodologically combines economic archaeology (pottery distribution, trade networks) with institutional history (taxation, land, church organization). Spans 600 years and the entire post-Roman world from Ireland to Mesopotamia. Winner of the 2010 Wolfson History Prize.",
+        "zh": "Wickham（牛津大学 Chichele 中世纪史讲座教授 2005–2016、FBA、《Framing the Early Middle Ages》作者）撰写企鹅欧洲史第二卷。核心论题：西罗马帝国 476 年「灭亡」之后，地中海世界并非陷入黑暗，而是在拜占庭、法兰克、伊斯兰、斯拉夫等多条路径上各自演化出新秩序。方法论上强调经济考古（陶器分布、贸易网络）与制度史（税收、地权、教会组织）并重。时间跨度 600 年，地理涵盖从爱尔兰到美索不达米亚、从北欧到北非的整个后罗马世界。获 2010 年 Wolfson History Prize、2014 年 Royal Historical Society Serena Medal。",
+        "en": "By Wickham (Chichele Professor of Medieval History Oxford 2005–2016, FBA 1998; author of Framing the Early Middle Ages). Volume 2, 400–1000. Core thesis: after the 'fall' of 476, the Mediterranean world did not enter darkness but evolved new orders along Byzantine, Frankish, Islamic, and Slavic paths. Methodologically combines economic archaeology (pottery distribution, trade networks) with institutional history (taxation, land, church organization). Spans 600 years and the entire post-Roman world from Ireland to Mesopotamia. Winner of the 2010 Wolfson History Prize; RHS Serena Medal 2014 for related work.",
         "conf": "✓",
-        "sources": "wolfsonhistoryprize.org.uk · penguinrandomhouse.com"
+        "sources": "thebritishacademy.ac.uk/fellows · asc.ox.ac.uk/people/professor-chris-wickham · wolfsonhistoryprize.org.uk"
       },
       "plot_acts": [
         {
@@ -2573,8 +2583,8 @@
           "conf": "✓"
         },
         {
-          "claim": "Chris Wickham = Emeritus Professor, Oxford",
-          "source": "history faculty Oxford",
+          "claim": "Chris Wickham = Chichele Prof Medieval History Oxford 2005–2016 (NOT 'Social History')",
+          "source": "en.wikipedia.org/wiki/Chris_Wickham",
           "conf": "✓"
         }
       ],
@@ -2806,10 +2816,10 @@
       "why_zh": "黑死病、大分裂、百年战争到马基雅维利——填补1300–1517的空缺——Grafton（普林斯顿）是文艺复兴知识史第一人。",
       "why_en": "Black Death, Schism, Hundred Years' War to Machiavelli — filling the 1300–1517 gap — Grafton (Princeton) is the foremost Renaissance intellectual historian.",
       "background": {
-        "zh": "Grafton（普林斯顿历史系 Dodge Research Professor，以《脚注考》《人文主义神学》等知识史名作闻名）受约撰写企鹅欧洲史第四卷，填补 Vol.3（Jordan，至1300）与 Vol.5（Greengrass，1517起）之间的1300–1517时段。截至2026年9月尚未出版（Goodreads条目存在但无具体出版日）。预期涵盖：黑死病与人口崩溃、教会大分裂、百年战争、意大利人文主义、印刷术革命、收复失地完成、到路德发难前夜。",
-        "en": "Grafton (Dodge Research Professor, Princeton; author of Footnote, Defenders of the Text, and more) commissioned for Volume 4, bridging Jordan's endpoint (1300) and Greengrass's start (1517). As of Sep 2026 not yet published (Goodreads listing exists, no firm date). Expected coverage: Black Death, Great Schism, Hundred Years' War, Italian humanism, print revolution, completion of Reconquista, eve of Luther.",
-        "conf": "○",
-        "sources": "goodreads.com · princeton.edu"
+        "zh": "Grafton（普林斯顿大学 Henry Putnam 历史讲座教授，前 Dodge Research Professor；以《Joseph Scaliger》两卷《The Footnote》《Defenders of the Text》等知识史名作闻名；1989 Guggenheim、2002 Balzan Prize、2026 CISH 国际历史大奖得主 · 著作 43 部论文 200+）受约撰写企鹅欧洲史第四卷，填补 Vol.3（Jordan，至 1300）与 Vol.5（Greengrass，1517 起）之间的 1300–1517 时段。截至 2026 年 9 月尚未出版（Goodreads 条目存在但无具体出版日）。预期涵盖：黑死病与人口崩溃、教会大分裂、百年战争、意大利人文主义、印刷术革命、收复失地完成、到路德发难前夜。",
+        "en": "Grafton (Henry Putnam University Professor of History, Princeton; formerly Dodge; author of Joseph Scaliger (2 vols), Footnote, Defenders of the Text, and 40+ other books; Guggenheim 1989, Balzan Prize 2002, CISH International Prize for History 2026 laureate) commissioned for Volume 4, bridging Jordan's endpoint (1300) and Greengrass's start (1517). As of Sep 2026 not yet published (Goodreads listing exists, no firm date). Expected coverage: Black Death, Great Schism, Hundred Years' War, Italian humanism, print revolution, completion of Reconquista, eve of Luther.",
+        "conf": "✓",
+        "sources": "cish.org · history.princeton.edu · balzan.org · goodreads.com"
       },
       "plot_acts": [],
       "narrative": {
@@ -2836,13 +2846,18 @@
       "related": [],
       "fact_ledger": [
         {
-          "claim": "Anthony Grafton = Dodge Research Professor of History, Princeton",
-          "source": "princeton.edu",
+          "claim": "Anthony Grafton = Henry Putnam University Professor of History, Princeton (current; was formerly Dodge Research Professor)",
+          "source": "en.wikipedia.org/wiki/Anthony_Grafton · history.princeton.edu",
           "conf": "✓"
         },
         {
           "claim": "Penguin History of Europe Vol.4, not yet published as of 2026-09",
           "source": "goodreads.com · penguin.co.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Balzan Prize 2002 · Guggenheim 1989 · CISH International Prize for History 2026",
+          "source": "balzan.org · cish.org",
           "conf": "✓"
         }
       ],
@@ -2901,10 +2916,10 @@
       "why_zh": "从路德贴出九十五条到威斯特伐利亚和约——一百三十年的宗教战争如何彻底摧毁了中世纪基督教世界的统一？Greengrass 给出最完整的政治-文化合成叙事。",
       "why_en": "From Luther's 95 Theses to Westphalia — how did 130 years of religious wars destroy medieval Christendom's unity? Greengrass delivers the fullest political-cultural synthesis.",
       "background": {
-        "zh": "Greengrass（沃里克大学荣休教授，早期现代德国史专家）撰写第五卷。时间跨度1517–1648：从路德发难到三十年战争结束的威斯特伐利亚和约。核心论题：「基督教世界」(Christendom) 不是一个制度而是一种共同想象——宗教改革打破了这个想象，而打破后的代价是一百三十年的内战与外交重组。涵盖瑞士改革、再洗礼派、法国宗教战争、尼德兰革命、西班牙黄金时代、古斯塔夫二世、三十年战争。",
-        "en": "By Greengrass (Warwick emeritus, early-modern Germany specialist). Volume 5, 1517–1648: from Luther to Westphalia. Core thesis: 'Christendom' was not an institution but a shared imagination — the Reformation broke it, and the price of breaking it was 130 years of civil war and diplomatic reorganization. Covers Swiss Reformation, Anabaptists, French Wars of Religion, Dutch Revolt, Spanish Golden Age, Gustavus Adolphus, Thirty Years' War.",
+        "zh": "Greengrass（谢菲尔德大学近代早期史荣休教授，前格拉斯哥、Warwick）撰写第五卷。时间跨度 1517–1648：从路德发难到三十年战争结束的威斯特伐利亚和约。核心论题：「基督教世界」(Christendom) 不是一个制度而是一种共同想象——宗教改革打破了这个想象，而打破后的代价是一百三十年的内战与外交重组。涵盖瑞士改革、再洗礼派、法国宗教战争、尼德兰革命、西班牙黄金时代、古斯塔夫二世、三十年战争。Greengrass 另一部成名作是《The European Reformation, c.1450–1618》（1996 初版，2015 第 3 版），是英语宗教改革史的标准教科书。",
+        "en": "By Greengrass (Emeritus Prof of Early Modern History, University of Sheffield; previously Glasgow and Warwick). Volume 5, 1517–1648: from Luther to Westphalia. Core thesis: 'Christendom' was not an institution but a shared imagination — the Reformation broke it, and the price of breaking it was 130 years of civil war and diplomatic reorganization. Covers Swiss Reformation, Anabaptists, French Wars of Religion, Dutch Revolt, Spanish Golden Age, Gustavus Adolphus, Thirty Years' War. His companion book The European Reformation (1996, 3rd ed. 2015) is the English-language textbook.",
         "conf": "✓",
-        "sources": "warwick.ac.uk · penguin.co.uk"
+        "sources": "sheffield.academia.edu CV · penguin.co.uk"
       },
       "plot_acts": [
         {
@@ -3000,8 +3015,8 @@
           "conf": "✓"
         },
         {
-          "claim": "Mark Greengrass = Emeritus Prof Warwick, 早期现代德国史",
-          "source": "warwick.ac.uk",
+          "claim": "Mark Greengrass = Emeritus Prof of Early Modern History, University of Sheffield (born 7 Sep 1949)",
+          "source": "sheffield.academia.edu CV",
           "conf": "✓"
         }
       ],
@@ -3055,10 +3070,10 @@
       "why_zh": "「五大革命」——科学、政治、农业、工业、宗教——Briggs 以这个框架把1648–1815两百年的欧洲写成一部多声部变革交响。",
       "why_en": "The 'Five Revolutions' — scientific, political, agricultural, industrial, religious — Briggs frames two centuries of Europe as a polyphonic symphony of transformation.",
       "background": {
-        "zh": "Briggs（前牛津大学万灵学院、Cornell大学法国史教授，以《社区与女巫》研究闻名）第六卷覆盖1648–1815——从威斯特伐利亚到维也纳会议。以「五大革命」为概念框架，同时涵盖启蒙运动、绝对主义与立宪主义的竞争、路易十四到路易十六、英国光荣革命与工业化、哈布斯堡与奥斯曼、俄国彼得大帝到叶卡捷琳娜、法国大革命与拿破仑。2013年修订版更新了史学文献。",
-        "en": "By Briggs (former All Souls Oxford, Cornell French-history professor, known for Communities of Belief and Witches & Neighbors). Volume 6, 1648–1815 — Westphalia to Vienna. 'Five Revolutions' as conceptual frame; also Enlightenment, absolutism vs constitutionalism, Louis XIV to XVI, Glorious Revolution & industrialization, Habsburgs & Ottomans, Peter to Catherine, French Revolution & Napoleon. 2013 revised edition updates historiography.",
+        "zh": "Briggs（牛津万灵学院荣休研究员，前康奈尔大学法国史教授，以《Communities of Belief》《Witches and Neighbors》闻名）第六卷覆盖 1648–1815——从威斯特伐利亚到维也纳会议。以「五大革命」为概念框架：科学、政治、农业、工业、宗教；同时涵盖启蒙运动、绝对主义与立宪主义的竞争、路易十四到路易十六、英国光荣革命与工业化、哈布斯堡与奥斯曼、俄国彼得大帝到叶卡捷琳娜、法国大革命与拿破仑。2013 年修订版更新了史学文献。",
+        "en": "By Briggs (Emeritus Fellow of All Souls College Oxford; formerly Cornell, French-history; author of Communities of Belief and Witches & Neighbors). Volume 6, 1648–1815 — Westphalia to Vienna. 'Five Revolutions' as conceptual frame; also Enlightenment, absolutism vs constitutionalism, Louis XIV to XVI, Glorious Revolution & industrialization, Habsburgs & Ottomans, Peter to Catherine, French Revolution & Napoleon. 2013 revised edition updates historiography.",
         "conf": "✓",
-        "sources": "cornell.edu · penguin.co.uk"
+        "sources": "asc.ox.ac.uk · cornell.edu · penguin.co.uk"
       },
       "plot_acts": [
         {
@@ -3209,10 +3224,10 @@
       "why_zh": "「漫长的19世纪」一百年——从维也纳会议到萨拉热窝——Evans（前剑桥 Regius 近代史教授）以928页的体量完成英语世界最好的19世纪欧洲通史。",
       "why_en": "The 'long 19th century' — Vienna to Sarajevo — Evans (former Regius Professor of Modern History, Cambridge) delivers the English-speaking world's best 19th-century European survey in 928 pages.",
       "background": {
-        "zh": "Evans（剑桥大学荣休 Regius 教授，第三帝国三部曲作者）第七卷 1815–1914。时间一百年、地理全欧洲。核心论题：这是一个「权力被追求」的世纪——民族主义、自由主义、社会主义、帝国主义四大意识形态互相竞争；工业化重塑社会结构；科学（进化论、细菌学说、物理学）改变认知框架；1914年一切走向灾难。2016年出版即获广泛好评，被誉为「企鹅欧洲史系列中最出色的一卷」。",
-        "en": "By Evans (Cambridge Regius emeritus, Third Reich trilogy author). Volume 7, 1815–1914. One century, all of Europe. Core thesis: a century of 'power pursued' — nationalism, liberalism, socialism, imperialism competing; industrialization reshaping society; science (evolution, germ theory, physics) altering cognitive frameworks; 1914 heading to catastrophe. Hailed on publication as 'the strongest volume in the Penguin Europe series'.",
+        "zh": "Evans（剑桥大学 Regius 历史讲座教授 2008–2014 · FBA · 2012 年封爵 · Gresham College 校长）第七卷 1815–1914。时间一百年、地理全欧洲。核心论题：这是一个「权力被追求」的世纪——民族主义、自由主义、社会主义、帝国主义四大意识形态互相竞争；工业化重塑社会结构；科学（进化论、细菌学说、物理学）改变认知框架；1914 年一切走向灾难。2016 年出版即获广泛好评，被誉为「企鹅欧洲史系列中最出色的一卷」。",
+        "en": "By Evans (Regius Professor of History Cambridge 2008–2014, FBA, knighted 2012, Provost of Gresham College since 2014; author of the Third Reich Trilogy). Volume 7, 1815–1914. One century, all of Europe. Core thesis: a century of 'power pursued' — nationalism, liberalism, socialism, imperialism competing; industrialization reshaping society; science (evolution, germ theory, physics) altering cognitive frameworks; 1914 heading to catastrophe. Hailed on publication as 'the strongest volume in the Penguin Europe series'.",
         "conf": "✓",
-        "sources": "cam.ac.uk · penguin.co.uk"
+        "sources": "hist.cam.ac.uk · penguin.co.uk"
       },
       "plot_acts": [
         {
@@ -3317,8 +3332,13 @@
           "conf": "✓"
         },
         {
-          "claim": "Richard J. Evans = Regius Prof of Modern History Cambridge 2008–2014",
-          "source": "cmdog.gate.ac.uk",
+          "claim": "Richard J. Evans = Regius Prof of History Cambridge 2008–2014; knighted 2012; FBA 1989",
+          "source": "hist.cam.ac.uk",
+          "conf": "✓"
+        },
+        {
+          "claim": "Provost of Gresham College London from 2014",
+          "source": "gresham.ac.uk",
           "conf": "✓"
         }
       ],
@@ -3377,10 +3397,10 @@
       "why_zh": "「三十年战争」——从1914到1949——Kershaw（希特勒传记权威）把两次世界大战和其间的所有动荡写成一个连续的「欧洲内战」。",
       "why_en": "The 'Second Thirty Years' War' — 1914 to 1949 — Kershaw (the Hitler biographer) writes two World Wars and all intervening turmoil as one continuous 'European civil war'.",
       "background": {
-        "zh": "Kershaw（诺丁汉大学荣休教授，以两卷本《希特勒》获公认）第八卷 1914–1949。核心论题：1914–1949是欧洲的「新三十年战争」——两次世界大战、极权体制（纳粹与斯大林）、大萧条、种族灭绝，全部是同一个结构性崩溃的不同面向。1945年「零时刻」之后，1949年北约成立/德国分裂标志着欧洲作为世界主体的终结。",
-        "en": "By Kershaw (Nottingham emeritus, two-volume Hitler biography widely regarded as definitive). Volume 8, 1914–1949. Core thesis: 1914–1949 was Europe's 'new Thirty Years' War' — two World Wars, totalitarian systems (Nazi and Stalinist), Depression, genocide, all facets of one structural collapse. Post-1945 'Zero Hour' then 1949 NATO/German division marks Europe's end as global protagonist.",
+        "zh": "Kershaw（诺丁汉大学荣休教授 · FBA · 2002 年封爵 · 1994 年德国联邦十字勋章 · 以两卷本《希特勒》为公认标准传记）第八卷 1914–1949。核心论题：1914–1949 是欧洲的「新三十年战争」——两次世界大战、极权体制（纳粹与斯大林）、大萧条、种族灭绝，全部是同一个结构性崩溃的不同面向。1945 年「零时刻」之后，1949 年北约成立/德国分裂标志着欧洲作为世界主体的终结。Kershaw 是企鹅欧洲史唯一执笔两卷（Vol.8、Vol.9）的学者。",
+        "en": "By Kershaw (Nottingham emeritus, FBA 1989, knighted 2002, Bundesverdienstkreuz 1994; two-volume Hitler biography is the recognized standard). Volume 8, 1914–1949. Core thesis: 1914–1949 was Europe's 'new Thirty Years' War' — two World Wars, totalitarian systems (Nazi and Stalinist), Depression, genocide, all facets of one structural collapse. Post-1945 'Zero Hour' then 1949 NATO/German division marks Europe's end as global protagonist. Kershaw is the only author to write two volumes of the Penguin Europe series (Vol.8, Vol.9).",
         "conf": "✓",
-        "sources": "nottingham.ac.uk · penguin.co.uk"
+        "sources": "thebritishacademy.ac.uk/fellows/ian-kershaw-FBA · merton.ox.ac.uk · penguin.co.uk"
       },
       "plot_acts": [
         {
@@ -3504,8 +3524,8 @@
           "conf": "✓"
         },
         {
-          "claim": "Ian Kershaw = Emeritus Prof Nottingham, Sir John Thompson Chair",
-          "source": "nottingham.ac.uk",
+          "claim": "Ian Kershaw = Emeritus Prof Nottingham · FBA 1989 · Bundesverdienstkreuz 1994 · Knighted 2002",
+          "source": "thebritishacademy.ac.uk",
           "conf": "✓"
         }
       ],
@@ -3564,8 +3584,8 @@
       "why_zh": "企鹅欧洲史的终卷——从战后废墟到欧盟危机、从福利国家到全球化——Kershaw 以一个问句收束三千年：欧洲是否正在失去它的世界角色？",
       "why_en": "The Penguin Europe series finale — from postwar ruins to EU crises, welfare states to globalization — Kershaw ends three millennia with a question: Is Europe losing its world role?",
       "background": {
-        "zh": "Kershaw 第二次为该系列执笔（前卷 To Hell and Back 1914–1949），写终卷 1950–2017。本书原为2007年 Roller-Coaster: Europe 1950–2010，2019年全面修订扩展至2017并改名为 The Global Age（US版）/ Roller-Coaster updated（UK版）。核心论题：战后欧洲经历了「黄金三十年」（1950–1973 高增长与福利国家建立）、「滞胀与转折」（1973–1989 石油危机、 Thatcher/Reagan、东欧解体）、和「后冷战全球化」（1989–2017 欧盟扩展、欧元、2008危机、难民潮、脱欧、民粹崛起）。结论开放：欧洲站在十字路口。",
-        "en": "Kershaw's second contribution (after To Hell and Back), writing the series finale 1950–2017. Originally Roller-Coaster: Europe 1950–2010 (2007), comprehensively revised and extended to 2017 in 2019, retitled The Global Age (US) / updated Roller-Coaster (UK). Core thesis: post-war Europe experienced 'Golden Age' (1950–1973 growth & welfare state), 'Stagnation & Turn' (1973–1989 oil crisis, Thatcher/Reagan, Eastern European collapse), and 'Post-Cold-War Globalization' (1989–2017 EU expansion, euro, 2008 crisis, migration, Brexit, populism). Open conclusion: Europe at a crossroads.",
+        "zh": "Kershaw 第二次为该系列执笔（前卷 To Hell and Back 1914–1949），写终卷 1950–2017。本书原为 2007 年 Roller-Coaster: Europe 1950–2010（Penguin UK），2019 年全面修订扩展至 2017 并改名为 The Global Age（US 版 Viking/Penguin Press 2019-04-30；UK 版 2020 年 9 月以 Roller-Coaster 更新版发行）。核心论题：战后欧洲经历了「黄金三十年」（1950–1973 高增长与福利国家建立）、「滞胀与转折」（1973–1989 石油危机、Thatcher/Reagan、东欧解体）、和「后冷战全球化」（1989–2017 欧盟扩展、欧元、2008 危机、难民潮、脱欧、民粹崛起）。结论开放：欧洲站在十字路口。",
+        "en": "Kershaw's second contribution (after To Hell and Back), writing the series finale 1950–2017. Originally Roller-Coaster: Europe 1950–2010 (2007 Penguin UK), comprehensively revised and extended to 2017 in 2019 as The Global Age (Viking/Penguin Press US 2019-04-30; UK edition follows in Sep 2020 as updated Roller-Coaster). Core thesis: post-war Europe experienced 'Golden Age' (1950–1973 growth & welfare state), 'Stagnation & Turn' (1973–1989 oil crisis, Thatcher/Reagan, Eastern European collapse), and 'Post-Cold-War Globalization' (1989–2017 EU expansion, euro, 2008 crisis, migration, Brexit, populism). Open conclusion: Europe at a crossroads.",
         "conf": "✓",
         "sources": "penguinrandomhouse.com · goodreads.com"
       },
