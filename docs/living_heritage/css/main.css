@@ -690,6 +690,24 @@ a.related-pub-title:hover { color: var(--amber-deep); }
   margin-bottom: 14px;
 }
 
+/* ── Field basemap callout (fieldwork → /map) ── */
+.fieldwork-map-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold, #a9822d);
+  border-radius: 10px;
+  background: linear-gradient(120deg, #EAF3F9 0%, var(--gold-soft, #FBE9C8) 100%);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.fieldwork-map-callout:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(58,50,40,.14); }
+.fieldwork-map-callout strong { font-size: 1.08rem; }
+.fieldwork-map-callout span { color: var(--ink-soft); font-size: 0.9em; }
+
 /* ── Literature view tabs ── */
 .lit-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
 .lit-tab {

@@ -17,6 +17,15 @@
 
 {% include "partials/wave.html" %}
 
+<section class="section">
+  <div class="container">
+    <a class="fieldwork-map-callout" href="/map">
+      <strong>{% if locale == 'zh' %}通州运河 · 田野底图 →{% else %}Tongzhou Canal · Field basemap →{% endif %}</strong>
+      <span>{% if locale == 'zh' %}水系、文保点与一日走查预设的可交互工作图{% else %}Interactive waterways, heritage points and the day-walk preset{% endif %}</span>
+    </a>
+  </div>
+</section>
+
 {% if observations %}
 <section class="section section-alt">
   <div class="container">

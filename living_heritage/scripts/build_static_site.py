@@ -56,6 +56,7 @@ PAGES = [
     ("graph/index", "/graph", {}),
     ("methodology/index", "/methodology", {}),
     ("fieldwork/index", "/fieldwork", {}),
+    ("map/index", "/map", {}),
     ("publications/index", "/publications", {}),
     ("plan/index", "/plan", {}),
 ]

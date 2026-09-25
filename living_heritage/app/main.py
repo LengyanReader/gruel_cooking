@@ -346,6 +346,17 @@ def fieldwork(req: Request):
     return html
 
 
+@get("/map")
+def field_map(req: Request):
+    ctx = AppContext(req)
+    ctx.req.page_slug = "fieldwork"  # keep the Fieldwork nav item active
+    base = base_context(ctx)
+    base["page"] = ctx.content.get_page("fieldwork", ctx.locale)
+    html = render("pages/map.html", base)
+    ctx.db.close()
+    return html
+
+
 @get("/publications")
 def publications(req: Request):
     ctx = AppContext(req)
