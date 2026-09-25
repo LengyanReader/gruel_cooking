@@ -889,16 +889,44 @@ def book_page(site, book, crop):
     # plot acts / thematic periods
     acts_label = ("时段章节 · Periods &amp; chapters", "Periods &amp; chapters") if is_hist else ("情节分幕 · Plot content", "Plot content")
     s.append(f'<h2 class="part" data-both><span data-zh>{acts_label[0]}</span><span data-en>{acts_label[1]}</span></h2>')
+    def render_brief(act):
+        """Render a per-chapter lossless brief block if the act has one.
+        Falls back to the older arg_zh/arg_en short form when no brief is present.
+        Every sub-field is our own structured summary; not source prose."""
+        br = act.get("brief") or {}
+        has_br = any((br.get(k) or "").strip() for k in ("main", "flow", "names", "sources", "link"))
+        if not has_br:
+            if act.get("arg_zh"):
+                return ('<div style="margin-top:.5em;padding-left:.8em;border-left:2px solid var(--accent);font-size:.94rem">'
+                        f'<span data-zh style="color:var(--ink)"><strong>章旨 · </strong>{esc(act["arg_zh"])}</span>'
+                        f'<span data-en style="color:var(--ink-soft)"><strong>Argument · </strong>{esc(act.get("arg_en",""))}</span>'
+                        '</div>')
+            return ""
+        labels = [
+            ("main", "章旨 · Chapter argument", "Argument"),
+            ("flow", "论证展开 · Argument development", "Development"),
+            ("names", "关键人物 · 事件 · 年代 · 地名", "Key figures · events · dates · places"),
+            ("sources", "材料与方法 · Evidence base", "Evidence"),
+            ("link", "章际关系 · Relation to neighbouring chapters", "Chapter link"),
+        ]
+        parts = ['<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65">']
+        for key, zh_lab, en_lab in labels:
+            txt = (br.get(key) or "").strip()
+            if not txt:
+                continue
+            parts.append(
+                f'<p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">{esc(zh_lab)}：</strong>{esc(txt)}</span>'
+                f'<span data-en style="color:var(--ink-soft)"><strong>{esc(en_lab)}: </strong>{esc(txt)}</span></p>'
+            )
+        parts.append("</div>")
+        return "".join(parts)
+
     for act in book.get("plot_acts", []):
         act_head_zh = f'第 {act["n"]} 节 · {act["title_zh"]}' if is_hist else f'第 {act["n"]} 幕 · {act["title_zh"]}'
         act_head_en = f'Section {act["n"]} · {act["title_en"]}' if is_hist else f'Act {act["n"]} · {act["title_en"]}'
         s.append(f'<div class="card"><h3 class="sec" data-both><span data-zh>{act_head_zh}</span><span data-en>{act_head_en}</span></h3>')
         s.append(zh_en(act["zh"], act["en"]))
-        if act.get("arg_zh"):
-            s.append('<div style="margin-top:.5em;padding-left:.8em;border-left:2px solid var(--accent);font-size:.94rem">'
-                     f'<span data-zh style="color:var(--ink)"><strong>章旨 · </strong>{esc(act["arg_zh"])}</span>'
-                     f'<span data-en style="color:var(--ink-soft)"><strong>Argument · </strong>{esc(act.get("arg_en",""))}</span>'
-                     '</div>')
+        s.append(render_brief(act))
         if act.get("conf"):
             s.append('<p class="tok">' + conf_token(act["conf"]) + "</p>")
         if act.get("sources"):
