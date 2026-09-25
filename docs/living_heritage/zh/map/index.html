@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>通州运河田野底图 — 周舟洲粥 · 活态文化廊道</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23033b4c'/%3E%3Cpath%20d='M2%2021c6-7%2012%206%2028-2v7c0%204-3%206-6%206H2z'%20fill='%23e8c39a'/%3E%3C/svg%3E">
-<meta name="description" content="Leaflet 多图层田野工作底图：水系、绿地、文保分级、DB 观察、漕运 tracer 与保护红线文本著录。">
+<meta name="description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，以及可播放的历史进程时间轴（事件 / 政策，与档案联动）。">
 <link rel="canonical" href="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 
 
@@ -15,12 +15,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="通州运河田野底图 — 周舟洲粥 · 活态文化廊道">
-<meta property="og:description" content="Leaflet 多图层田野工作底图：水系、绿地、文保分级、DB 观察、漕运 tracer 与保护红线文本著录。">
+<meta property="og:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，以及可播放的历史进程时间轴（事件 / 政策，与档案联动）。">
 <meta property="og:url" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 <meta property="og:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="通州运河田野底图">
-<meta name="twitter:description" content="Leaflet 多图层田野工作底图：水系、绿地、文保分级、DB 观察、漕运 tracer 与保护红线文本著录。">
+<meta name="twitter:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，以及可播放的历史进程时间轴（事件 / 政策，与档案联动）。">
 <meta name="twitter:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 
 <script>document.documentElement.classList.add('js');</script>
@@ -82,12 +82,35 @@
     </div>
     <div id="map" class="map-stage" role="img"
          aria-label="通州运河多图层可交互地图"></div>
+    <div id="era-banner" class="era-banner" hidden></div>
     <aside id="dossier-panel" class="dossier-panel" aria-hidden="true" aria-live="polite">
       <button id="dossier-close" class="dossier-close" type="button" aria-label="关闭">×</button>
       <h3 id="dossier-title" class="dossier-title"></h3>
       <p id="dossier-sub" class="dossier-sub"></p>
       <div id="dossier-body" class="dossier-body"></div>
     </aside>
+    <div class="timeline-bar" role="group" aria-label="历史进程时间轴">
+      <div class="tl-transport">
+        <button id="tl-prev" class="tl-btn" type="button" title="上一事件">⏮</button>
+        <button id="tl-play" class="tl-btn tl-play" type="button" aria-pressed="false" title="播放/暂停">▶</button>
+        <button id="tl-next" class="tl-btn" type="button" title="下一事件">⏭</button>
+        <button id="tl-reset" class="tl-btn" type="button" title="回到起点">↺</button>
+      </div>
+      <output id="tl-year" class="tl-year" for="tl-slider">557</output>
+      <input id="tl-slider" class="tl-slider" type="range" min="557" max="2025" step="1" value="557"
+             aria-label="年代">
+      <label class="tl-opt">速度
+        <select id="tl-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+      </label>
+      <label class="tl-opt">时间窗
+        <select id="tl-window"><option value="15">±15</option><option value="45" selected>±45</option><option value="120">±120</option><option value="2000">全部</option></select>
+      </label>
+      <label class="tl-opt tl-check"><input id="tl-follow" type="checkbox" checked> 跟随</label>
+    </div>
+    <div class="tl-wrap">
+      <h2 class="tl-heading">时间轴事件 · 逐条可定位与展开档案</h2>
+      <ul id="tl-rail" class="tl-rail"></ul>
+    </div>
     <ul id="map-legend" class="map-legend"></ul>
     <p class="map-foot-note">
       数据来源：OpenStreetMap（© 贡献者，ODbL）、国务院/UNESCO 公开名录文本、本项目田野数据库。保护红线一律以官方公布文本为准，本图不绘制任何未经公布的边界几何。
@@ -127,6 +150,8 @@
 
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/leaflet-timeslider/iso8601.min.js"></script>
+<script src="vendor/leaflet-timeslider/leaflet.timedimension.min.js"></script>
 <script src="js/tongzhou_map.js"></script>
 <script src="js/map_viewer.js"></script>
 

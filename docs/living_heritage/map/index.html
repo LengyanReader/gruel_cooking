@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tongzhou Canal Field Basemap — 周舟洲粥 Living Cultural Corridors</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23033b4c'/%3E%3Cpath%20d='M2%2021c6-7%2012%206%2028-2v7c0%204-3%206-6%206H2z'%20fill='%23e8c39a'/%3E%3C/svg%3E">
-<meta name="description" content="A multi-layer Leaflet fieldwork basemap: waterways, parks, heritage grades, DB observations, the grain-trade tracer and red-line text records.">
+<meta name="description" content="A multi-layer Leaflet fieldwork basemap (Leaflet.TimeDimension): waterways, parks, heritage grades, DB observations, the grain-trade tracer, red-line text records, and a playable historical-process timeline (events / policies, linked to each point's dossier).">
 <link rel="canonical" href="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 
 
@@ -15,12 +15,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Tongzhou Canal Field Basemap — 周舟洲粥 Living Cultural Corridors">
-<meta property="og:description" content="A multi-layer Leaflet fieldwork basemap: waterways, parks, heritage grades, DB observations, the grain-trade tracer and red-line text records.">
+<meta property="og:description" content="A multi-layer Leaflet fieldwork basemap (Leaflet.TimeDimension): waterways, parks, heritage grades, DB observations, the grain-trade tracer, red-line text records, and a playable historical-process timeline (events / policies, linked to each point's dossier).">
 <meta property="og:url" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 <meta property="og:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tongzhou Canal Field Basemap">
-<meta name="twitter:description" content="A multi-layer Leaflet fieldwork basemap: waterways, parks, heritage grades, DB observations, the grain-trade tracer and red-line text records.">
+<meta name="twitter:description" content="A multi-layer Leaflet fieldwork basemap (Leaflet.TimeDimension): waterways, parks, heritage grades, DB observations, the grain-trade tracer, red-line text records, and a playable historical-process timeline (events / policies, linked to each point's dossier).">
 <meta name="twitter:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 
 <script>document.documentElement.classList.add('js');</script>
@@ -82,12 +82,35 @@
     </div>
     <div id="map" class="map-stage" role="img"
          aria-label="Interactive multi-layer map of the Tongzhou canal"></div>
+    <div id="era-banner" class="era-banner" hidden></div>
     <aside id="dossier-panel" class="dossier-panel" aria-hidden="true" aria-live="polite">
       <button id="dossier-close" class="dossier-close" type="button" aria-label="Close">×</button>
       <h3 id="dossier-title" class="dossier-title"></h3>
       <p id="dossier-sub" class="dossier-sub"></p>
       <div id="dossier-body" class="dossier-body"></div>
     </aside>
+    <div class="timeline-bar" role="group" aria-label="Historical timeline">
+      <div class="tl-transport">
+        <button id="tl-prev" class="tl-btn" type="button" title="Previous event">⏮</button>
+        <button id="tl-play" class="tl-btn tl-play" type="button" aria-pressed="false" title="Play / pause">▶</button>
+        <button id="tl-next" class="tl-btn" type="button" title="Next event">⏭</button>
+        <button id="tl-reset" class="tl-btn" type="button" title="Reset">↺</button>
+      </div>
+      <output id="tl-year" class="tl-year" for="tl-slider">557</output>
+      <input id="tl-slider" class="tl-slider" type="range" min="557" max="2025" step="1" value="557"
+             aria-label="Year">
+      <label class="tl-opt">Speed
+        <select id="tl-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
+      </label>
+      <label class="tl-opt">Window
+        <select id="tl-window"><option value="15">±15</option><option value="45" selected>±45</option><option value="120">±120</option><option value="2000">all</option></select>
+      </label>
+      <label class="tl-opt tl-check"><input id="tl-follow" type="checkbox" checked> Follow</label>
+    </div>
+    <div class="tl-wrap">
+      <h2 class="tl-heading">Timeline events · click to locate and open the dossier</h2>
+      <ul id="tl-rail" class="tl-rail"></ul>
+    </div>
     <ul id="map-legend" class="map-legend"></ul>
     <p class="map-foot-note">
       Sources: OpenStreetMap (© contributors, ODbL), State Council / UNESCO published lists (text), and this project's field database. Protection boundaries follow official published text only — no unpublished boundary geometry is drawn on this map.
@@ -127,6 +150,8 @@
 
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 <script src="vendor/leaflet/leaflet.js"></script>
+<script src="vendor/leaflet-timeslider/iso8601.min.js"></script>
+<script src="vendor/leaflet-timeslider/leaflet.timedimension.min.js"></script>
 <script src="js/tongzhou_map.js"></script>
 <script src="js/map_viewer.js"></script>
 

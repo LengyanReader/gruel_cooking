@@ -886,6 +886,60 @@ a.related-pub-title:hover { color: var(--amber-deep); }
 .dossier-facet ul { margin: 0; padding-left: 0; list-style: none; }
 .dossier-facet li { margin: 0 0 10px; font-size: 0.9em; color: var(--ink); line-height: 1.6; }
 .dossier-facet li em { display: inline-block; margin-top: 2px; font-size: 0.82em; color: var(--ink-soft); font-style: normal; }
+
+/* policy era-banner (no geometry — text record overlay) */
+.era-banner {
+  position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 850;
+  max-width: min(680px, 92%); background: #155e63; color: #f3ede0;
+  border: 1px solid #0d3f43; border-radius: 8px; padding: 8px 14px;
+  font-size: 0.86rem; line-height: 1.5; box-shadow: 0 3px 14px rgba(0,0,0,.28);
+}
+.era-banner .era-tag { font-weight: 700; letter-spacing: .04em; color: #ffd98a; }
+.era-banner em { display: block; font-style: normal; opacity: .8; font-size: 0.78em; margin-top: 2px; }
+
+/* historical-process timeline transport */
+.timeline-bar {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin: 14px 0 4px; padding: 10px 14px; background: var(--paper, #fff);
+  border: 1px solid var(--line); border-radius: 10px;
+}
+.tl-transport { display: flex; gap: 4px; }
+.tl-btn {
+  width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 8px;
+  background: #fff; color: var(--ink); font-size: 15px; cursor: pointer; line-height: 1;
+}
+.tl-btn:hover { background: var(--gold-soft, #FBE9C8); }
+.tl-play.playing { background: #7b2d8b; color: #fff; border-color: #7b2d8b; }
+.tl-year { min-width: 62px; text-align: center; font-weight: 700; font-size: 1.35rem; color: #7b2d8b; font-variant-numeric: tabular-nums; }
+.tl-slider { flex: 1 1 240px; accent-color: #7b2d8b; height: 4px; }
+.tl-opt { font-size: 0.8rem; color: var(--ink-soft); display: inline-flex; align-items: center; gap: 4px; }
+.tl-opt select { padding: 2px 4px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); }
+.tl-check input { accent-color: #7b2d8b; }
+
+/* event rail */
+.tl-wrap { margin: 8px 0 4px; }
+.tl-heading { font-size: 0.95rem; margin: 8px 0 6px; color: var(--ink); }
+.tl-rail {
+  list-style: none; margin: 0; padding: 6px; display: grid; gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); max-height: 300px; overflow-y: auto;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--paper, #fff);
+}
+.tl-card {
+  display: grid; grid-template-columns: auto auto 1fr auto; align-items: baseline; gap: 6px;
+  padding: 7px 9px; border: 1px solid var(--line); border-left: 4px solid #d8cdb6; border-radius: 7px;
+  background: #fff; cursor: pointer; transition: background .15s, border-color .15s, opacity .15s; font-size: 0.84rem;
+}
+.tl-card:hover { background: #fbf6ec; }
+.tl-card.past { opacity: 0.5; }
+.tl-card.active { border-left-color: #7b2d8b; background: #f4e9f6; box-shadow: 0 1px 6px rgba(123,45,139,.18); }
+.tl-card-year { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--ink); }
+.tl-card-kind { font-size: 0.68rem; padding: 1px 6px; border-radius: 20px; letter-spacing: .03em; }
+.kind-event { background: #eee4f0; color: #7b2d8b; }
+.kind-policy { background: #dbeceb; color: #155e63; }
+.tl-card-title { color: var(--ink-soft); line-height: 1.35; }
+.dossier-facet.flash { animation: facetflash 1.4s ease; }
+@keyframes facetflash { 0%,100% { background: transparent; } 25% { background: #fbe9c8; } }
+
 @media (max-width: 720px) {
   .map-stage { height: 60vh; }
   .leaflet-top.leaflet-right, .leaflet-top .leaflet-control-layers { margin-right: 6px; }
