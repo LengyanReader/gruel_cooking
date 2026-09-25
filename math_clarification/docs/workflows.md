@@ -21,7 +21,7 @@ All Python runs in `conda activate hy_py312`（Lean 编译用本机 `lean`；web
 
 ## MC-W1 · Add an entry 新增条目
 
-1. 放置：`basics/<topic>.md`（基础）或 `famous_problems/<topic>.md`（名题）或 `proof_narratives/<topic>.md`（叙事）或 `essays/<essay>.md`（论说，体例见 `essays/README.md`，不走九段式）。
+1. 放置：`basics/<topic>.md`（基础）或 `famous_problems/<topic>.md`（名题）或 `proof_narratives/<topic>.md`（叙事）或 `essays/<essay>.md`（论说，体例见 `essays/README.md`，不走九段式）。投稿衍生物（面向外部的改写稿、后续研究方案与其校验脚本）放 `essays/submission/`——不入渲染（`web/parser.py` 只扫 `essays/*.md`），须在 `essays/README.md` 登记，并按 §I.6 标注 AI-drafted。
 2. 结构：遵循 **house style 九段式**（`README.md` §House Style）：
    `一行为想 → 精确表述 → 譬喻直觉 → 前提与成立条件 → 一点数学 → 解题方向与历史 → 它出现在哪里（天/地/人）→ 常错处 → 来源`。
 3. 声明条件：**前提/成立条件必须显式**——一个题不能精确表述，就没有开始；不能画出画面，就没有理解。
