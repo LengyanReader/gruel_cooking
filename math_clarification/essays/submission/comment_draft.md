@@ -42,6 +42,10 @@ Mathematics has absorbed every expansion of what counts as a proof (the axiom of
 
 **Figure 1.** *Controversy tracks the certification regime, not the difficulty of the result.* Suggested form: horizontal "staircase" of the three regimes on the x-axis (machine-graded → hybrid-graded → community-graded), eleven points placed by event, filled symbols where a public dispute is recorded, open symbols where none is; the five verification questions as a small heat-strip beneath each point. Rates annotated as 1/6 and 3/5 with the exact-test caveat in the legend.
 
+*Rendered draft (AI-generated, unreviewed; harness §I.6).* The figure below is produced from the dataset immediately after it by [`checks/figure1.py`](checks/figure1.py) — `python checks/figure1.py` re-derives the 1/6 and 3/5 tallies from these rows and fails if they do not reproduce the body (MC-W2/R-D), so the picture cannot drift from the coding it illustrates. A vector [`figure1.pdf`](figure1.pdf) accompanies the PNG for print submission.
+
+![Figure 1 — regime staircase with verification-question heat-strip](figure1.png)
+
 ```csv
 id,year,event,regime,dispute,q1_framing,q2_reproducible,q3_independent,q4_symmetric_disclosure,q5_found_or_made,ref
 1,2024,"IMO 2024 (AlphaProof, AlphaGeometry 2) — marked by Gowers & Myers, re-checked in Lean",HG,0,+,+,+,+,made,"4,7"
