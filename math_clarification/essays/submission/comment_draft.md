@@ -1,4 +1,4 @@
-# Comment draft — *Misnaming the crisis in mathematics: it is consensus, not capability, that is failing*
+# Comment draft — *A crisis of consensus, not of mathematics*
 
 > **Status 状态**: Working derivative of [`../ai_and_math.md`](../ai_and_math.md). **AI-drafted, unreviewed** (harness §I.6) — a human author must accept or delete every claim before this leaves the repo.
 > **Target 目标**: *Nature* **Comment** (1,500–2,200 words, ~20–30 references, one Figure). Not a Research Article: this document contains no primary data collection.
@@ -11,7 +11,7 @@
 
 ## A · The manuscript text (body as it would be submitted)
 
-### Misnaming the crisis in mathematics: it is consensus, not capability, that is failing
+### A crisis of consensus, not of mathematics
 
 *Why the profession should be arguing about verification, not about capability.*
 
@@ -126,6 +126,6 @@ Run on 2026-09-25 against the installed `nature-writing` skill (`yuan1z0825/natu
 | 7 | Non-specialist significance; jargon defined | **pass** | The three regimes are glossed on first use; no un-translated specialist term. |
 | 8 | Terminology ledger consistent with parent | **pass** | machine-/hybrid-/community-graded and Q1–Q5 track parent §3.1/§4.1 without drift. |
 | 9 | Author evidence first; do not invent (`stance.md`) | **unchanged** | This pass touched styling and framing only (em-dashes, one claim hedge, the title) — never facts, numbers, or citations. Every fact/number/citation still traces to the parent paper, **not** to a live-web re-check; refs 4, 16, 21–23 keep their "pending" notes. |
-| 10 | Title (author instruction; objective per parent) | **applied** | Retitled to *"Misnaming the crisis in mathematics: it is consensus, not capability, that is failing."* Grounded in parent §4 — "certification cost, not capability, discriminates the cases" and "mathematical content shows no crisis symptom on this record; the reporting and certification apparatus does." The consensus-making machinery is what fails; foregrounding *consensus* asserts no more than the paper supports. |
+| 10 | Title (Nature Comment genre; objective per parent) | **applied** | Final: *"A crisis of consensus, not of mathematics."* A declarative, Comment-length title (six words, no subtitle), foregrounding *consensus* per author instruction and mirroring the parent's own disjunction *"A Crisis of Mathematics or of the Mathematicians?"* plus its §4 finding that "mathematical content shows no crisis symptom on this record; the reporting and certification apparatus does." The standfirst carries the prescription (argue verification, not capability). Alternates held in reserve: *"The crisis in mathematics is a crisis of consensus"*; *"Mathematics is not in crisis: its consensus is."* |
 
 **What this pass could not do.** `nature-writing` targets research Articles and ships no Comment-length template; and the canonical stage-aware Nature submission checklist it points to lives in a separate `nature-shared` package that was **not** installed (only `nature-writing` came in). So the exact official Nature *Comment* limits (word ceiling, figure and reference policy) were not read from the authoritative source — the numbers above are the draft's own stated target. Closing that gap needs either `nature-shared` (for the checklist) or `nature-figure`/`academic-plotting` (to render Fig. 1 from the CSV instead of the current spec+data stub); both are installs that change the environment, i.e. **your call**.
