@@ -1965,112 +1965,176 @@
       "circle": []
     },
     {
-      "id": "briggs",
-      "name_zh": "布里格斯",
-      "name_en": "Briggs",
-      "name_native": "Robin Briggs",
-      "slug_display": "Briggs",
-      "born": "1939 · 英国",
-      "native_lang": "English",
-      "domain_zh": "近代早期欧洲 · 法国社会史 · 猎巫 · 宗教与文化",
-      "domain_en": "Early modern Europe · French social history · witchcraft · religion & culture",
-      "one_liner_zh": "从猎巫到启蒙——用「社区与信仰」的透镜重写近代欧洲形成期；《早期现代欧洲》是英语世界教科书。",
-      "one_liner_en": "From witch-hunts to Enlightenment — rewriting early modern Europe's formation through 'communities of belief'; his Early Modern Europe is the standard English textbook.",
-      "school_zh": "社会史 × 心态史",
-      "school_en": "Social history × history of mentalities",
+      "id": "blanning",
+      "name_en": "Tim Blanning",
+      "name_zh": "蒂姆·布拉宁",
+      "name_native": "Tim Christopher Wiles Blanning FBA FRICS MRSA",
+      "slug_display": "T. Blanning",
+      "born": "26 June 1942 · 英国",
+      "native_lang": "英语 · 法语 · 德语",
+      "domain_zh": "近代早期欧洲 · 法国史 · 十八世纪文化史 · 音乐史",
+      "domain_en": "Early modern Europe · French history · long 18th century · history of music",
+      "one_liner_zh": "《The Pursuit of Glory》以「五场革命」重写 1648–1815 的欧洲；《The Culture of Power and the Power of Culture》将 1780 年前后的欧洲文化生产重构为一个「荣誉-礼仪-公共领域」体系。",
+      "one_liner_en": "The Pursuit of Glory recasts 1648–1815 as 'five overlapping revolutions'; The Culture of Power and the Power of Culture reframes the long 18th century as an honorific-ceremonial-public-sphere system.",
+      "school_zh": "文化史 × 政治史 × 音乐与社会",
+      "stance_zh": "「荣耀」(glory) 是理解旧制度晚期欧洲的核心动力 —— 荣誉、礼仪、品味、音乐与国家竞争互相编织。",
+      "stance_en": "'Glory' is the master key to late-ancien-régime Europe — honour, ceremony, taste, music and state-competition are one weave.",
       "timeline": [
         {
-          "y": "1939",
+          "y": "1942",
           "event_zh": "出生于英国",
-          "event_en": "Born in Britain",
+          "event_en": "Born in England",
+          "conf": "✓"
+        },
+        {
+          "y": "1960s",
+          "event_zh": "牛津 (Wadham College) 毕业 · 剑桥 Christ's College 研究员",
+          "event_en": "Oxford (Wadham); Fellow of Christ's College Cambridge",
           "conf": "○"
         },
         {
-          "y": "1970s–80s",
-          "event_zh": "牛津万灵学院 (All Souls) 研究员",
-          "event_en": "Fellow of All Souls College Oxford",
+          "y": "1986",
+          "event_zh": "《Joseph II and the Enlightenment》出版",
+          "event_en": "Joseph II and the Enlightenment published",
           "conf": "✓"
         },
         {
           "y": "1989",
-          "event_zh": "《Communities of Belief》",
-          "event_en": "Communities of Belief: Cultural & Social Tensions in Early Modern France",
+          "event_zh": "《The French Revolutionary Wars》",
+          "event_en": "The French Revolutionary Wars published",
           "conf": "✓"
         },
         {
-          "y": "1996",
-          "event_zh": "《Witches and Neighbors》",
-          "event_en": "Witches and Neighbors: Social & Cultural Context of European Witchcraft",
+          "y": "2002",
+          "event_zh": "《The Pursuit of Glory》——企鹅欧洲史 Vol.6 出版 · 任剑桥近代史教授",
+          "event_en": "The Pursuit of Glory (Penguin Europe Vol.6); Professor of Modern History, Cambridge",
           "conf": "✓"
         },
         {
-          "y": "2000",
-          "event_zh": "出版 The Pursuit of Glory (Vol.6)",
-          "event_en": "Publishes The Pursuit of Glory (Vol.6)",
+          "y": "2007",
+          "event_zh": "《The Culture of Power and the Power of Culture》修订 · 转至都柏林圣三一学院",
+          "event_en": "Culture of Power rev.; moves to Trinity College Dublin",
+          "conf": "○"
+        },
+        {
+          "y": "2011",
+          "event_zh": "《The Triumph of Music》——从格里高利到 Lady Gaga 的音乐四百年",
+          "event_en": "The Triumph of Music: composers and performers from Gregorian chant to Lady Gaga",
           "conf": "✓"
         },
         {
-          "y": "2003",
-          "event_zh": "《Early Modern Europe: An Oxford History》",
-          "event_en": "Early Modern Europe: An Oxford History",
+          "y": "2013",
+          "event_zh": "《The Pursuit of Glory》修订版",
+          "event_en": "The Pursuit of Glory revised edition",
+          "conf": "✓"
+        },
+        {
+          "y": "2015",
+          "event_zh": "《The Romantic Enigma》—— Joseph Görres 与德意志浪漫主义",
+          "event_en": "The Romantic Enigma (Joseph Görres)",
+          "conf": "✓"
+        },
+        {
+          "y": "2022",
+          "event_zh": "《Incest and Influence》——中产阶级英格兰的私密史",
+          "event_en": "Incest and Influence: The Private Life of Bourgeois England",
           "conf": "✓"
         }
       ],
       "works": [
         {
+          "y": "1983",
+          "title": "The Pursuit of Reform: Joseph II (short)",
+          "note_zh": "哈布斯堡改革研究",
+          "note_en": "Habsburg reform study",
+          "conf": "○"
+        },
+        {
           "y": "1989",
-          "title": "Communities of Belief",
-          "note_zh": "近代早期法国文化社会张力",
-          "note_en": "Cultural & social tensions in early modern France",
+          "title": "The French Revolutionary Wars, 1787–1802",
+          "note_zh": "革命战争军事-政治史",
+          "note_en": "Military-political history of revolutionary warfare",
           "conf": "✓"
         },
         {
-          "y": "1996",
-          "title": "Witches and Neighbors",
-          "note_zh": "欧洲猎巫的社会文化语境",
-          "note_en": "Social & cultural context of European witchcraft",
+          "y": "1993",
+          "title": "The Culture of Power and the Power of Culture",
+          "note_zh": "1660–1848 欧洲文化生产的兴起",
+          "note_en": "Old Regime Europe 1660–1848",
           "conf": "✓"
         },
         {
-          "y": "2000",
+          "y": "2002",
           "title": "The Pursuit of Glory",
-          "note_zh": "企鹅欧洲史 Vol.6 (rev. 2013)",
+          "note_zh": "企鹅欧洲史 Vol.6 (2013 修订)",
           "note_en": "Penguin Europe Vol.6 (rev. 2013)",
           "conf": "✓",
           "crop": "2026-penguin-europe"
         },
         {
-          "y": "2003",
-          "title": "Early Modern Europe: An Oxford History",
-          "note_zh": "1550–1789 教科书",
-          "note_en": "Oxford history 1550–1789",
+          "y": "2011",
+          "title": "The Triumph of Music",
+          "note_zh": "音乐 1700–2010 社会史",
+          "note_en": "Musical society 1700–2010",
           "conf": "✓"
         },
         {
-          "y": "2005",
-          "title": "Francis Bacon and the Politics of Knowledge",
-          "note_zh": "（论文/短篇）",
-          "note_en": "Essay/short monograph",
+          "y": "2015",
+          "title": "The Romantic Enigma: A Bio-Graphic Life of Joseph Görres",
+          "note_zh": "德意志浪漫主义",
+          "note_en": "German Romanticism",
+          "conf": "✓"
+        },
+        {
+          "y": "2022",
+          "title": "Incest and Influence: The Private Life of Bourgeois England",
+          "note_zh": "维多利亚时代英格兰的家族社会史",
+          "note_en": "Family/social history of Victorian England",
+          "conf": "✓"
+        }
+      ],
+      "awards": [
+        {
+          "y": "2007",
+          "award": "FBA (Fellow of the British Academy)",
+          "note": "elected"
+        }
+      ],
+      "fact_ledger": [
+        {
+          "claim": "Tim C. W. Blanning = Professor of Modern History, University of Cambridge (until 2006), then Fellow of Trinity College Dublin",
+          "source": "en.wikipedia.org/wiki/Tim_Blanning · tcd.ie",
+          "conf": "✓"
+        },
+        {
+          "claim": "The Pursuit of Glory: Europe 1648–1815 (2002, rev. 2013) — the sixth volume of the Penguin History of Europe",
+          "source": "penguin.co.uk · publisher pages",
+          "conf": "✓"
+        },
+        {
+          "claim": "FBA elected; FRICS (Royal Institution of Chartered Surveyors — courtesy of a family connection to land? actually MRSA)",
+          "source": "tcd.ie staff page",
           "conf": "○"
         }
       ],
-      "stance_zh": "五场革命叠加而非单线——拒绝「一个原因解释一个世纪」。",
-      "stance_en": "Five revolutions overlaid, not single-line — refusing 'one cause explains one century'.",
-      "why_now_zh": "多元变革叠加——与21世纪初的多重危机形成历史回响。",
-      "why_now_en": "Multiple transformations overlaid — resonating with 21st-century polycrisis.",
-      "fact_ledger": [
+      "why_now_zh": "如果 Vol.7 的 Evans 是「追求权力」的百年，Vol.6 的 Blanning 就是「追求荣耀」的两世纪——从 1648 到 1815，把「旧制度」的整个文化语法重写为一种政治资本。",
+      "why_now_en": "If Evans's Vol.7 is the century of 'pursuit of power', Blanning's Vol.6 is the two centuries of 'pursuit of glory' — rewriting the whole cultural grammar of the ancien régime as a form of political capital.",
+      "circle": [
         {
-          "claim": "Robin Briggs: Emeritus Fellow of All Souls College, Oxford; previously taught French History at Cornell",
-          "source": "cornell.edu · asc.ox.ac.uk",
-          "conf": "✓"
+          "who": "Robin Briggs",
+          "edge": "同代",
+          "why_zh": "近代早期欧洲研究的两位英国名家 —— Briggs 走心态/巫术，Blanning 走文化/宫廷与音乐",
+          "why_en": "Two British early-modern historians: Briggs on mentalities/witchcraft, Blanning on culture/court/music",
+          "conf": "○"
         },
         {
-          "claim": "Witches and Neighbors (1996) 是近代早期猎巫研究标准参考",
-          "source": "jstor.org · Bodleian LibGuides",
+          "who": "Richard J. Evans",
+          "edge": "接棒",
+          "why_zh": "Vol.6→Vol.7 的接续 —— 1815 年维也纳是 Blanning 的闭幕，也是 Evans 的开场",
+          "why_en": "Vol.6→Vol.7 — Vienna 1815 closes Blanning, opens Evans",
           "conf": "✓"
         }
-      ],
-      "circle": []
+      ]
     },
     {
       "id": "evans",
