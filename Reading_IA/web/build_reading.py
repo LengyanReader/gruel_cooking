@@ -894,6 +894,11 @@ def book_page(site, book, crop):
         act_head_en = f'Section {act["n"]} · {act["title_en"]}' if is_hist else f'Act {act["n"]} · {act["title_en"]}'
         s.append(f'<div class="card"><h3 class="sec" data-both><span data-zh>{act_head_zh}</span><span data-en>{act_head_en}</span></h3>')
         s.append(zh_en(act["zh"], act["en"]))
+        if act.get("arg_zh"):
+            s.append('<div style="margin-top:.5em;padding-left:.8em;border-left:2px solid var(--accent);font-size:.94rem">'
+                     f'<span data-zh style="color:var(--ink)"><strong>章旨 · </strong>{esc(act["arg_zh"])}</span>'
+                     f'<span data-en style="color:var(--ink-soft)"><strong>Argument · </strong>{esc(act.get("arg_en",""))}</span>'
+                     '</div>')
         if act.get("conf"):
             s.append('<p class="tok">' + conf_token(act["conf"]) + "</p>")
         if act.get("sources"):
@@ -923,6 +928,30 @@ def book_page(site, book, crop):
         for q in book["intent"]["quotes"]:
             s.append(f'<div class="quote"><div class="orig">{esc(q["orig"])}</div><div class="trs">{esc(q["trans_zh"])}</div><div class="src">{esc(q["source"])}</div></div>')
     s.append(blk("评价与合成 · Reception & synthesis", book["intent"]["reception_good_zh"] + "\n\n" + book["intent"]["reception_bad_zh"] + "\n\n**合成 Synthesis：** " + book["intent"]["syn_zh"], book["intent"]["reception_good_en"] + "\n\n" + book["intent"]["reception_bad_en"] + "\n\n**Synthesis:** " + book["intent"]["syn_en"], cls="gapbox"))
+    # read-through notes (my own critical synthesis after reading through each book end-to-end)
+    rt = book.get("read_through") or {}
+    if rt.get("verdict_zh") or rt.get("observations"):
+        s.append('<h2 class="part" data-both><span data-zh>通读札记 · Read-through notes</span><span data-en>Read-through notes</span></h2>')
+        if rt.get("verdict_zh"):
+            s.append('<div class="card gapbox">'
+                     f'<p style="font-weight:600;color:var(--accent);margin-bottom:.4em" data-both><span data-zh>通读结论</span><span data-en>Overall verdict</span></p>'
+                     f'<div data-zh>{esc(rt["verdict_zh"])}</div>'
+                     f'<div data-en>{esc(rt.get("verdict_en",""))}</div>'
+                     '</div>')
+        for ob in rt.get("observations", []):
+            s.append('<div class="card">'
+                     f'<p style="font-weight:600;margin-bottom:.3em" data-both><span data-zh>{esc(ob["title_zh"])}</span><span data-en>{esc(ob["title_en"])}</span></p>'
+                     f'<div data-zh>{esc(ob["note_zh"])}</div>'
+                     f'<div data-en style="color:var(--ink-soft);font-size:.92rem">{esc(ob["note_en"])}</div>'
+                     '</div>')
+    # full-book critical analysis (my own synthesis after reading through, includes limitations assessment)
+    fa = book.get("full_analysis") or {}
+    if fa.get("zh"):
+        s.append('<h2 class="part" data-both><span data-zh>全书精读评析 · Full-read critical analysis</span><span data-en>Full-read critical analysis</span></h2>')
+        s.append('<div class="card gapbox" style="line-height:1.7">'
+                 f'<div data-zh>{esc(fa["zh"]).replace("**", "").replace("&amp;#", "#")}</div>'
+                 f'<div data-en style="color:var(--ink-soft);font-size:.94rem">{esc(fa.get("en",""))}</div>'
+                 '</div>')
     # craft / highlights
     craft_label = ("史学方法 · Historiography", "Historiography") if is_hist else ("手法与亮点 · Craft", "Craft &amp; highlights")
     s.append(f'<h2 class="part" data-both><span data-zh>{craft_label[0]}</span><span data-en>{craft_label[1]}</span></h2>')
