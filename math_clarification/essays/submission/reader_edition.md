@@ -470,6 +470,12 @@ Beneath exactness lies a deeper layer: completeness. Within a chosen language, a
 ### 6.6 The limits of verification
 
 Two corollaries follow, and together they discipline every claim reviewed in Section 4. First, verification — Lean checks, expert read-throughs — operates entirely on the signifier's shore: it certifies that the translation was faithful and the signs were shuffled lawfully; it cannot certify that the signified was worth attention. Lean's own reference states the bound in one sentence: determining whether a theorem has a valid proof and determining what the theorem *means* are distinct tasks, and the kernel discharges only the first [39]. Second, the freedom to change the language is at once mathematics' deepest liberty and its most human operation: no formal system decides which re-description deserves the next twenty years. That judgment — which language will let the truth show itself — is not theorem-shaped, and on the record of Section 4, not yet machine-shaped.
+
+### 6.7 The classical objections, read from the far shore
+
+The framework now in place lets us return to the oldest objections and give each its exact address. The Gödelian argument, from Lucas to Penrose, runs that a human mathematician can see the truth of a statement no formal system of hers can prove, and so outruns any machine [24][25]. Its premise is one these pages concede without difficulty: within any fixed language there are truths that language cannot settle — that was precisely Gödel's wall — and Section 6.4 noted that the discipline, on Tao's "naive" footing, declined to be paralyzed by it [32]. What the argument needs, and does not have, is the inference from "the human sees the unprovable" to "therefore the human is not a symbol-manipulator." For what the mathematician is credited with seeing is never the grammar, which is exactly what the system already possessed; it is the *adequacy of a re-description* — whether the unproducible sentence is the one worth attending to. That is the signified-side judgment of Section 6.6, the same operation that chooses which language deserves the next twenty years. The Gödelian objection, on this reading, locates no surplus of mechanism-transcending intuition; it rediscovers, under the name of insight, the very sovereignty of the meaning shore that this essay assigns to the community.
+
+The neighboring objections converge on the same address. Searle's that syntax never yields semantics is the distinction stated from the philosophy of mind [23]; Dreyfus' embodied know-how and Polanyi's unformulable competence in judging a proof name, instead, where that judgment lives in a working mathematician — in the trained, largely unstatable sense of what a definition is reaching for [22][26]. Taken together the classical anti-mechanist arguments are not the essay's rivals but its corroborators: each, by a different road, fixes the human monopoly on the signified — significance, admissibility, the choice of what counts — and not on exactness, which was always the machine's to match. Section 4 states the same conclusion in a plainer idiom: through the whole noisy period the machines were exact, and no one had yet to ask them what anything meant.
 <!-- zh -->
 ## 六、理论框架：能指与所指、形式精确性的界限
 
@@ -498,6 +504,12 @@ Two corollaries follow, and together they discipline every claim reviewed in Sec
 ### （六）核验的界限
 
 由是生出两条推论，合起来恰可勘定第四节所审的一切宣称。其一，核验——Lean 跑过也好，专家通读也好——做的全是能指这一岸的营生：它保的是翻译没走了样、符号搬得合乎法度；所指值不值得劳神，它保不了。Lean 自家的参考文档把限度一句话讲破：这个定理的证明有没有效，同这个定理*是什么意思*，本是两桩差事，内核只领了头一桩 [39]。其二，换语言的自由，是数学最深的自由，也是最像人的一式：哪一种重画值得押上下一个二十年，没有哪个形式系统能替你落槌。哪种语言能让真理现出身形——这一判断没有定理的样子，据第四节的记录，也还没有机器的样子。
+
+### （七）从对岸读来的几桩老异议
+
+框架既立，便可回头给最老的那几桩异议各派一个确切的地址。哥德尔一路的反机制论，自卢卡斯到彭罗斯，其说如此：人类数学家看得出某个他自己的形式系统所不能证的陈述之为真，因而机器无从将他模拟 [24][25]。它那前提，本文一路读来并无难色：一门固定的语言之内，总有该语言自己定不了的真理，这正是哥德尔那堵墙；而第六节（四）已指出，这一行靠着陶哲轩所谓「朴素地基」，并不曾叫这堵墙吓住 [32]。它真正需要、偏偏拿不出来的，是从「人看得出那不可证者」跳到「故人不是搬符号的机器」那一步。数学家被夸口「看出」的，从来不是语法，语法恰是系统早已尽有的；他看出的是*一次重画到位不到位*：那句证不出的陈述，值不值得人去守。这正是第六节（六）所说所指一侧的判断，也正是拣定「哪一副语言值得押上下一个二十年」的同一式操作。如此读来，哥德尔式的异议并未指认出一份额外的、超机械的直觉；它不过是换作「洞见」一名，重新发现了本文交给共同体的那样东西——意义这一岸的主权。
+
+相邻的几桩异议，也都落在同一个地址。塞尔说句法终究给不出语义，是把这道分别自心灵哲学那一头讲了出来 [23]；德莱福斯的具身之知、博兰尼读者判断一份证明时那套说不清的胜任，指的却是这判断实际栖身何处——在一个正在工作的数学家身上，那副训练得来、却多半无从言说的分寸感：一个定义究竟在伸手够着什么 [22][26]。合起来看，几桩经典的反机制论不是本文的对手，反倒是它的佐证：它们各循一路，末了都把人的独占定在所指一边——意义、可入性、何者算数的那一拣择——而不定在精确上，精确从来就是机器比得上的东西。第四节以较朴的语域说了这同一结论：在那一派喧嚣的年月里，机器处处精确，而从无一人去问它们，这一切到底是什么意思。
 <!-- L1-end -->
 
 ---
