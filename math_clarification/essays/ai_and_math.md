@@ -546,7 +546,7 @@ The historical interlude is analytically load-bearing because it defeats the str
 
 ### 9.7 The deepest act remains social
 
-The profession's deepest act — deciding that this, not that, matters — is a social judgment about value, exercised by a community over time. Machine output will flood the docket; on present evidence it does not decide the cases. What 2026 established is that border-*moving* problems are answerable by search once the language is given; what remains is choosing the language, and the eighty years of the unit-distance problem show that no referee, human or machine, can certify which choice was *important* until long after the fact. Importance is a verdict of history, not of proof. "Groundbreaking" is accordingly not a binary act of creation from nothing but a continuous spectrum — and at the celebrated, inhabited end of that spectrum, the public record contains, as of the close of this study's evidence window, no machine footprint.
+The profession's deepest act — deciding that this, not that, matters — is a social judgment about value, exercised by a community over time. Machine output will flood the docket; on present evidence it does not decide the cases. What 2026 established is that border-*moving* problems are answerable by search once the language is given; what remains is choosing the language, and the eighty years of the unit-distance problem show that no referee, human or machine, can certify which choice was *important* until long after the fact. Importance is a verdict of history, not of proof. "Groundbreaking" is accordingly not a binary act of creation from nothing but a continuous spectrum — and at the celebrated, inhabited end of that spectrum, the public record contains, as of the close of this study's evidence window, no machine footprint. This is the hinge of Section 6.5, set one rung higher: a certified monologue handed to people to be answered not only as *true* but as *worth having asked*, on the standard a community holds — settled in history, not in logic.
 <!-- zh -->
 ## 九、「开创性」的划界问题：机器提得出大问题吗？
 
@@ -578,7 +578,7 @@ The profession's deepest act — deciding that this, not that, matters — is a 
 
 ### （七）最深的动作仍是社会性的
 
-这一行当里最深的动作——判定这一件而非那一件要紧——是一桩关于价值的共同体判断，要在时间里慢慢做成。机器输出会把案头堆满诉状；据现有证据，它不判案。2026 年验出的是：*挪动边界*的问题，只要语言给定，搜索即可作答；剩下来的仍是选语言——而单位距离问题八十年给出的教训恰是：哪一次选择*重要*，没有任何判官，无论人还是机器，能赶在时过境迁之前盖上印。重要性出自历史的判决，不出自证明。「开创性」因此从来不是「从无到有、非此即彼」的一锤子买卖，而是一条连续谱——而在它著名的、有人居住的那一头，截至本文证据窗口关闭，公开记录里还没有机器的足迹。
+这一行当里最深的动作——判定这一件而非那一件要紧——是一桩关于价值的共同体判断，要在时间里慢慢做成。机器输出会把案头堆满诉状；据现有证据，它不判案。2026 年验出的是：*挪动边界*的问题，只要语言给定，搜索即可作答；剩下来的仍是选语言——而单位距离问题八十年给出的教训恰是：哪一次选择*重要*，没有任何判官，无论人还是机器，能赶在时过境迁之前盖上印。重要性出自历史的判决，不出自证明。「开创性」因此从来不是「从无到有、非此即彼」的一锤子买卖，而是一条连续谱——而在它著名的、有人居住的那一头，截至本文证据窗口关闭，公开记录里还没有机器的足迹。这正是第六节（五）那一处枢纽，被抬高了一级：一段经了认证的独白交到人的手里，要人答的不只是它为不为*真*，还有它值不值得被这样问出来；而答话所本的标准，是共同体所持的标准——它定在历史里，不定在逻辑里。
 <!-- L1-end -->
 
 ---
