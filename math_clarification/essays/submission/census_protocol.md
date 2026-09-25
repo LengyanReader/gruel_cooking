@@ -122,7 +122,7 @@ Reading. The design is generous to the study because P1 predicts a rate of *zero
 
 ## 8 · Reliability and preregistration gates
 
-- Cohen's κ per column (regime, each Q, dispute) on the doubly-coded full corpus; κ ≥ 0.6 required for any column to enter the primary analysis; columns below threshold are reported descriptively with the divergence list. The novelty screen (§3.2) gets its own κ.
+- Cohen's κ per column (regime, each Q, dispute) on the doubly-coded full corpus; κ ≥ 0.6 required for any column to enter the primary analysis; columns below threshold are reported descriptively with the divergence list. The novelty screen (§3.2) gets its own κ. The κ arithmetic is machine-checked, not asserted (MC-W2/R-D): the generating script is kept beside this protocol as [`checks/kappa.py`](checks/kappa.py) — `python checks/kappa.py` reproduces the hand-checkable worked example (a 2×2, N = 100 matrix giving κ = 0.4318, which *fails* the 0.6 gate) and, when scikit-learn is present, cross-checks it against `cohen_kappa_score`. The unweighted form named here is used for every column, including the ordinal regime column; a weighted κ is a permissible sensitivity but not the gate.
 - Registration package = this protocol + §11.2–11.3 of the parent paper as appendix + analysis code stub (data-generating plan included), deposited with timestamp before Frame C's first post-registration snapshot is inspected.
 - Falsification report obligation: if P1 fails (a machine-graded dispute is found), the finding is published with the same prominence as confirmation — stated here so it cannot become a postscript.
 
