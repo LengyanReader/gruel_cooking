@@ -355,11 +355,17 @@ def seed_notes(conn, en_data: dict, zh_data: dict):
         texts[body_key] = (n.get("body_en", ""), z.get("body_zh", ""))
         conn.execute(
             """INSERT OR REPLACE INTO research_notes
-               (note_key, title_key, body_key, category, status, tags, ref_key)
-               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+               (note_key, title_key, body_key, category, status, tags, ref_key,
+                created_at, updated_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (n["id"], title_key, body_key,
              n.get("category", "brainstorm"), int(n.get("status", 0)),
-             n.get("tags", ""), n.get("ref_key", ""))
+             n.get("tags", ""), n.get("ref_key", ""),
+             # Seeded notes carry no authored date. Leave the stamps empty rather
+             # than letting the column default datetime('now') publish build time as
+             # if it were the note's own date: that fabricated provenance on the
+             # /plan page and made the static mirror drift daily.
+             n.get("date", ""), n.get("date", ""))
         )
     _seed_pair_dicts(conn, texts)
     conn.commit()
