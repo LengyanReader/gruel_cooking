@@ -2527,8 +2527,8 @@
         "quotes": [],
         "reception_good_zh": "被学界誉为「以最少文字提供最多问题」的古代史导论；对「古典」概念的建构论分析尤为精彩。",
         "reception_good_en": "Praised as an ancient-history primer offering 'the most questions in the fewest words'; the constructivist analysis of 'classical' is outstanding.",
-        "reception_bad_zh": "部分批评者认为经济史和近东比较着墨不足。",
-        "reception_bad_en": "Some critics note insufficient economic history and Near Eastern comparison.",
+        "reception_bad_zh": "批评集中于三点：其一，虽以「欧洲」为题，近东、埃及与凯尔特/日耳曼边缘仍着墨有限，被指内核实为希腊—罗马正典；其二，为统摄「从特洛伊到奥古斯丁」四千年，经济、制度与人口史被大幅压缩，物质分析让位于观念与认同史；其三，「古典是被建构的记忆」这一后设框架虽锋利，却使部分传统古典学者担忧它把古人自身的自我理解也一并解构。",
+        "reception_bad_en": "Criticism clusters on three points: for all its 'Europe' framing, treatment of the Near East, Egypt and the Celtic/Germanic periphery stays thin, keeping Greece-Rome as the canonical core; compressing four thousand years into one volume squeezes economic, institutional and demographic history in favour of ideas and identity; and the meta-frame that 'the classical is a constructed memory', though incisive, worries traditional classicists that it deconstructs the ancients' own self-understanding as well.",
         "syn_zh": "「古典欧洲」是被记忆建构的——Price/Thonemann 以九卷开篇完成了一个方法论宣言。",
         "syn_en": "'Classical Europe' was memory-constructed — Price/Thonemann's opening volume delivers a methodological manifesto."
       },
@@ -2548,6 +2548,10 @@
         {
           "zh": "图文互证 —— 每章至少 4 幅图版，从线形文字 B 泥板到 Lullingstone 壁画。",
           "en": "Text-image cross-reference: Linear B tablets to Lullingstone frescoes."
+        },
+        {
+          "zh": "接受史（Rezeptionsgeschichte）作为章节收束装置：每章末追溯该时段在后世如何被再解读、挪用与争论，使「古典的形成」与「古典的被记忆」在同一卷内并行推进。",
+          "en": "Reception history as a chapter-closing device: each chapter ends by tracing how the period was later re-read, appropriated and contested, running 'the making of the classical' and 'its memory' in parallel within one volume."
         }
       ],
       "motifs": [
@@ -2856,7 +2860,7 @@
             "main": "结语 —— 400-1000 六百年是一个统一过程。两个宏观论旨：(1) 欧洲重心从地中海缓慢北移到北海-莱茵-易北轴；(2) 农民自由在 700-1000 被一步步关进庄园 (enclosure of the peasantry)。两者共同解释了 1000 之后盛期中世纪的所有条件。",
             "flow": "重心理论 (Pirenne thesis 的修正版 —— 不是伊斯兰逼走地中海，而是北方开发) → 农奴化进程 (从 capitularies 与 polyptyques 追踪) → 与同期其他中世纪通史 (Collins、Fouracre、Noble、Wickham 自己的 Framing) 的比较 → 1000 年前夜的欧洲作为『窄门』的开放收束。",
             "names": "Pirenne、Seebohm、Dopsch、Halsall、Wickham 自己 (作为学术自传)",
-            "sources": "全书材料总汇",
+            "sources": "结语不引新档案，而是回扣前二十二章的一手证据链 —— 以陶器、税册与编年史的跨区域比对，收束「罗马性如何在地方被续用与改造」这一贯穿全书的总问题。",
             "link": "与 Vol.3 (Jordan 盛期中世纪) 直接衔接 —— Wickham 的结语正是 Jordan 的序章。"
           }
         }
@@ -2945,8 +2949,8 @@
         "quotes": [],
         "reception_good_zh": "「自Pirenne《中世纪的城市》以来最有力的地中海经济史综合」；数据密度惊人但论证清晰。",
         "reception_good_en": "'The most powerful Mediterranean economic synthesis since Pirenne'; staggering data density with clear argumentation.",
-        "reception_bad_zh": "部分学者认为对不列颠/爱尔兰着墨偏少；「黑暗时代」标题本身是否合适有争议。",
-        "reception_bad_en": "Some note insufficient coverage of Britain/Ireland; the 'Dark Ages' framing itself is debated.",
+        "reception_bad_zh": "主要保留有三：不列颠与爱尔兰在「欧洲」叙事里被显著淡化，重心始终在地中海与法兰克核心地带；经济论证高度依赖考古数据（陶器分布、贸易网络），部分学者质疑其从物证到生产关系的推断跳跃过大；至于以「照亮黑暗时代」为副题，作者虽在正文中解构这一标签，封面却仍倚仗其传播力，而中世纪学界对本是否应复活该词本就分歧。",
+        "reception_bad_en": "Three main reservations: Britain and Ireland are markedly down-weighted in the 'Europe' narrative, with the focus held on the Mediterranean and the Frankish heartland; the economic argument leans heavily on archaeological data (pottery distributions, trade webs), and some scholars read a too-quick inference from material evidence to relations of production; and while the subtitle 'Illuminating the Dark Ages' deconstructs the loaded label in the text, the cover still trades on its market pull, which medievalists dispute reviving at all.",
         "syn_zh": "「黑暗时代」是一个神话——Wickham 以此卷为欧洲最常被忽视的六百年正名。",
         "syn_en": "'Dark Ages' is a myth — Wickham's volume rehabilitates Europe's most neglected six centuries."
       },
@@ -3349,8 +3353,8 @@
         "quotes": [],
         "reception_good_zh": "叙事清晰、结构优雅——被广泛用作欧美大学中世纪史课程教材。",
         "reception_good_en": "Clear narrative, elegant structure — widely adopted for undergraduate medieval-history courses.",
-        "reception_bad_zh": "篇幅限制下对东欧和伊比利亚着墨偏少。",
-        "reception_bad_en": "Eastern Europe and Iberia underrepresented due to length constraints.",
+        "reception_bad_zh": "结构性保留有二：受制于教科书式篇幅，东欧、拜占庭与伊比利亚再征服被压缩，叙事重心仍是法兰西—英格兰—德意志的核心西欧；方法上偏重政治、宗教与制度的传统叙事，对社会—经济史、性别与边缘群体的新近研究吸收有限，故被一些学者视为稳健却略趋保守。作为断代合成，它对十二至十三世纪「危机」与「转折」的因果裁断有时让位于清晰时间线。",
+        "reception_bad_en": "Two structural reservations: bound by textbook length, the Eastern periphery, Byzantium and the Iberian Reconquista get squeezed, with the narrative anchored on France-England-Germany; and the method stays close to conventional political, religious and institutional narrative, absorbing less of the newer social-economic, gender and subaltern scholarship, so some read it as sound but slightly conservative. As a period synthesis its causal verdicts on the crises of the twelfth-thirteenth centuries can yield to a clean timeline.",
         "syn_zh": "「扩张」是理解中世纪盛期欧洲的唯一关键词——直到扩张本身成为危机。",
         "syn_en": "'Expansion' is the single keyword for High Medieval Europe — until expansion itself became crisis."
       },
@@ -3370,6 +3374,10 @@
         {
           "zh": "大量使用一手编年史的直接引用 —— 让中世纪人自己说话。",
           "en": "Heavy direct quotation of medieval chroniclers."
+        },
+        {
+          "zh": "内外联动的「扩张」概念：把内部殖民（垦荒、排水、排犹与驱逐异端）与外部地中海/十字军扩张并置为同一逻辑的两面，使单一关键词获得结构性而非装饰性的解释力。",
+          "en": "Expansion as an inner-outer coupling: internal colonisation (land clearance, drainage, expulsion of Jews and heretics) is set beside Mediterranean and crusading expansion as two faces of one logic, giving the single keyword structural rather than decorative explanatory force."
         }
       ],
       "motifs": [
@@ -3892,8 +3900,8 @@
         "quotes": [],
         "reception_good_zh": "「对宗教改革时代最完整、最具文学性的英语叙述」——Times Literary Supplement。",
         "reception_good_en": "'The most complete and literary English account of the Reformation era' — TLS.",
-        "reception_bad_zh": "篇幅巨大（704pp）可能令一般读者望而生畏。",
-        "reception_bad_en": "At 704pp, the sheer volume may daunt general readers.",
+        "reception_bad_zh": "批评不止于体量：其一，1517至1648的长时段全景在德意志、法兰西、伊比利亚、意大利与东欧之间频繁切换，牺牲了任何单一区域的纵深，被指「广而不深」；其二，书名所暗示的宏大论题与书中大量并置的宗教实践、艺术、科学、国家形成等专题之间，编织有时松散，「溶解」的总纲更多浮现于结论而非贯穿论证；其三，对非精英信仰与日常宗教经验的着墨相较政治—外交主线仍偏少。",
+        "reception_bad_en": "Criticism goes beyond sheer bulk: the long 1517-1648 panorama shuttles among Germany, France, Iberia, Italy and Eastern Europe at the cost of depth in any single region, read as 'wide rather than deep'; the grand thesis signalled by the title sits somewhat loosely beside the many juxtaposed specialties - religious practice, art, science, state-formation - so the 'dissolution' arc emerges more in the conclusion than through a sustained argument; and coverage of non-elite belief and everyday religion stays thin against the political-diplomatic spine.",
         "syn_zh": "基督教世界不是被某一场革命推翻的——它是在一个世纪的争吵、杀戮和制度化中缓慢溶解的。",
         "syn_en": "Christendom wasn't overthrown by one revolution — it dissolved slowly through a century of argument, killing, and institutionalization."
       },
@@ -3913,6 +3921,10 @@
         {
           "zh": "跨语言史料 —— 德-法-西-意-拉丁-荷兰语一手材料的直接引。",
           "en": "Multi-language primary sources: German, French, Spanish, Italian, Latin, Dutch."
+        },
+        {
+          "zh": "总体史抱负下的多场域并置：把宗教、艺术、科学、地理扩张纳入同一「基督教世界」解体的场域，专题章（如知识、新大陆）与政治主线互相注解，而非各说各话。",
+          "en": "A total-history ambition through multi-domain juxtaposition: religion, art, science and geographic expansion are held inside one field of a dissolving 'Christendom', with specialty chapters (knowledge, the New World) annotating the political spine rather than speaking separately."
         }
       ],
       "motifs": [
@@ -4275,8 +4287,8 @@
         "quotes": [],
         "reception_good_zh": "「以惊人的博学把两百年的多国历史融为可读的整体」——Literary Review。",
         "reception_good_en": "'Astounding erudition fusing two centuries of multi-national history into a readable whole' — Literary Review.",
-        "reception_bad_zh": "「五大革命」框架有时显得牵强——工业革命的地理覆盖极不均匀。",
-        "reception_bad_en": "The 'Five Revolutions' frame occasionally strained — Industrial Revolution coverage geographically uneven.",
+        "reception_bad_zh": "框架的代价是主要争议点：以「五场革命」统摄1648至1815，使工业革命一章几乎只讲英格兰，欧陆与殖民地的经济变迁被边缘化；革命范式的取舍亦引发质疑——作者刻意淡化1789法国大革命的政治断裂，将其纳入渐进变革，部分革命史学者认为这低估了大革命的结构性冲击；此外「文化革命」一章以德法英美学为轴，对东欧几近略过。",
+        "reception_bad_en": "The frame itself is the main point of contention: subsuming 1648-1815 under 'five revolutions' leaves the Industrial Revolution chapter essentially about England, marginalising continental and colonial economic change; and Blanning's deliberate downplaying of 1789 as a political rupture - folding the French Revolution into gradual transformation - draws fire from revolutionary historians who think it understates the structural shock of 1789; the 'cultural revolution' chapter, too, runs on a Franco-British-German aesthetic axis with the East largely omitted.",
         "syn_zh": "现代欧洲不是一次革命而是五场变革的叠加——Blanning 以此挑战了「long 18th century = Age of Revolution」的简化叙事。",
         "syn_en": "Modern Europe wasn't made by one revolution but by five overlapping transformations — Blanning challenges the simplified 'long 18th century = Age of Revolution' narrative."
       },
@@ -4296,6 +4308,10 @@
         {
           "zh": "大量使用同时人日记、书信、旅行记 —— 让 18 世纪欧洲自己叙述。",
           "en": "Heavy use of contemporary diaries, letters, travel writing."
+        },
+        {
+          "zh": "把「公众舆论的兴起」当作可与战争、经济并列的革命性力量：以报刊、阅读公众、沙龙与公共领域为贯穿线索，将文化史提升为解释现代欧洲形成的独立变量。",
+          "en": "The rise of public opinion is treated as a revolutionary force alongside war and economy: press, reading public, salon and public sphere run as a through-line, elevating cultural history into an independent variable in explaining modern Europe's formation."
         }
       ],
       "motifs": [
@@ -4707,8 +4723,8 @@
         "quotes": [],
         "reception_good_zh": "「当代英语世界最权威的19世纪欧洲史」——The Guardian、TLS 一致好评。",
         "reception_good_en": "'The most authoritative 19th-century European history in contemporary English' — unanimous Guardian, TLS acclaim.",
-        "reception_bad_zh": "928页对普通读者门槛不低；东欧着墨虽好于多数同类但仍以德法英为主轴。",
-        "reception_bad_en": "928pp is a barrier for general readers; Eastern Europe better covered than most but Franco-German-British axis still dominant.",
+        "reception_bad_zh": "体量与视角是主要保留：近千页、材料密度极高，对普通读者门槛不低；东欧、巴尔干与殖民帝国虽优于多数同类通史，主轴仍是「革命—民族国家—工业化」的西北欧轨迹。埃文斯以大量转引二手文献支撑全景，个别领域（全球经济、生态、技术）依赖他人研究而非原创综合，被一些评论者认为「最好的部分是叙述、最弱的是判断」；性别与种族线索虽前所未有地被织入，却有时呈专题拼贴而非贯穿的分析轴。",
+        "reception_bad_en": "Scale and vantage are the reservations: nearly a thousand pages of very high data density daunt general readers; and though Eastern Europe, the Balkans and the colonial empires fare better than most syntheses, the spine remains a north-west European 'revolution-nation-state-industrialisation' trajectory. Evans sustains the panorama with heavy reliance on secondary literature, so some reviewers find the best parts narrative and the weakest judgement, notably in global economy, ecology and technology; gender and race, though unprecedentedly woven in, can read as topical insertions rather than a through-going analytic axis.",
         "syn_zh": "「权力的追求」既是民族国家间的权力政治，也是阶级、性别、种族的内部权力争夺——Evans 把19世纪写成全方位权力竞争的世纪。",
         "syn_en": "'Power pursued' is both inter-state power politics AND internal struggles over class, gender, race — Evans writes the 19th century as a totality of power competition."
       },
@@ -5209,8 +5225,8 @@
         "quotes": [],
         "reception_good_zh": "「Kershaw 把三十年写成一个连贯故事的能力令人叹服」——The Times。",
         "reception_good_en": "'Kershaw's ability to write thirty years as one coherent story is formidable' — The Times.",
-        "reception_bad_zh": "对东欧（尤其巴尔干）着墨仍不够；部分批评者认为「极权趋同」框架过于德国中心。",
-        "reception_bad_en": "Eastern Europe (esp. Balkans) underweighted; 'totalitarian convergence' frame seen as too Germany-centric by some.",
+        "reception_bad_zh": "两点最受质疑：其一，把1914至1945读作一场「第二次三十年战争」的内战叙事虽有力，却有把复杂的多线冲突塞进单一框架之嫌，尤其淡化了巴尔干与苏德战场的相对自主性；其二，「极权主义趋同」（纳粹与斯大林并置）的框架被东欧史学者批评为德国/西欧中心，且可能遮蔽两类政权在社会基础与运作逻辑上的差异。作为「从下面看」的尝试，日常经验虽丰富，地区覆盖仍向西欧倾斜。",
+        "reception_bad_en": "Two points draw most fire: reading 1914-1945 as a single 'second thirty years' war' civil-war narrative is powerful but risks squeezing multi-line conflicts into one frame, downplaying the relative autonomy of the Balkans and the Eastern Front; and the 'totalitarian convergence' pairing of Nazism and Stalinism is criticised by Eastern-European historians as Germany/West-Europe-centric and as obscuring differences in the two regimes' social bases and logics. As a 'view from below' it is rich in everyday experience yet its regional coverage still tilts west.",
         "syn_zh": "1914–1949 = 一场内战——Kershaw 以此挑战了把两次大战分开叙事的传统。",
         "syn_en": "1914–1949 = one civil war — Kershaw challenges the tradition of narrating the two World Wars separately."
       },
@@ -5811,6 +5827,10 @@
         {
           "zh": "大量一手统计与国际条约引用 —— 附录与书目 100+ 页。",
           "en": "Hard primary data and treaty citations; 100+ pp of apparatus."
+        },
+        {
+          "zh": "以「欧洲的相对衰落与全球相互依存」为潜台词贯穿：战后叙事不断把欧洲事件放回美苏对峙与后殖民全球格局中定位，使全书既是欧洲史，也是一部欧洲失去中心的过程史。",
+          "en": "A running subtext of Europe's relative decline and growing global interdependence: postwar events are continually re-placed within the US-USSR standoff and the postcolonial world, so the volume reads both as a history of Europe and as a history of Europe losing its centre."
         }
       ],
       "motifs": [
