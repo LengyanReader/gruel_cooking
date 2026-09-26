@@ -3,37 +3,232 @@
   "crop": "2026-autumn",
   "note": "边表唯一源 → build_reading.py 生成 authors/index.html 的边表。与 relations/influences.md 一一对应。",
   "influences": [
-    {"from": "vargas", "to": "lemaitre", "arrow": "⇒", "why_zh": "同代法国罪案双峰；书风构成法式 noir 两端（直觉美学 vs 道德写实）", "why_en": "peers; the two poles of French crime", "conf": "strong"},
-    {"from": "lemaitre", "to": "vargas", "arrow": "⇒", "why_zh": "2013 共获 CWA International Dagger；同被 Stephen King 表彰", "why_en": "shared 2013 Dagger; both praised by King", "conf": "strong"},
-    {"from": "Balzac / Zola", "to": "lemaitre", "arrow": "⇐", "why_zh": "社会史四部曲承自十九世纪家族-产业史诗法", "why_en": "9th-style family-industry epic", "conf": "medium"},
-    {"from": "Georges Simenon", "to": "vargas", "arrow": "⇐", "why_zh": "心理侦探传统 + 罪案读成社会病理", "why_en": "psychological detective line", "conf": "medium"},
-    {"from": "Primo Levi / 见证文学", "to": "perrignon", "arrow": "⇐", "why_zh": "口述史 × 文学转写（Loridan-Ivens 线）", "why_en": "oral history × transcription", "conf": "medium"},
-    {"from": "柏木哲夫 / 日本ホスピス緩和ケア", "to": "manda", "arrow": "⇐", "why_zh": "「善终」谱系 → 在宅路线分岔", "why_en": "good-death lineage → home branch", "conf": "medium"},
-    {"from": "#MeToo（2017）", "to": "pelicot", "arrow": "⇒", "why_zh": "Mazan 公开庭审 → 回忆录：运动的三级火箭", "why_en": "public trial → memoir: the movement's third stage", "conf": "verified"},
-    {"from": "vargas", "to": "mandel", "arrow": "⇒", "why_zh": "皆用「一件艺术图像作谜面发动机」（美学化为装置）", "why_en": "both drive plot from a single work of art", "conf": "medium"}
+    {
+      "from": "vargas",
+      "to": "lemaitre",
+      "arrow": "⇒",
+      "why_zh": "同代法国罪案双峰；书风构成法式 noir 两端（直觉美学 vs 道德写实）",
+      "why_en": "peers; the two poles of French crime",
+      "conf": "strong"
+    },
+    {
+      "from": "lemaitre",
+      "to": "vargas",
+      "arrow": "⇒",
+      "why_zh": "2013 共获 CWA International Dagger；同被 Stephen King 表彰",
+      "why_en": "shared 2013 Dagger; both praised by King",
+      "conf": "strong"
+    },
+    {
+      "from": "Balzac / Zola",
+      "to": "lemaitre",
+      "arrow": "⇐",
+      "why_zh": "社会史四部曲承自十九世纪家族-产业史诗法",
+      "why_en": "9th-style family-industry epic",
+      "conf": "medium"
+    },
+    {
+      "from": "Georges Simenon",
+      "to": "vargas",
+      "arrow": "⇐",
+      "why_zh": "心理侦探传统 + 罪案读成社会病理",
+      "why_en": "psychological detective line",
+      "conf": "medium"
+    },
+    {
+      "from": "Primo Levi / 见证文学",
+      "to": "perrignon",
+      "arrow": "⇐",
+      "why_zh": "口述史 × 文学转写（Loridan-Ivens 线）",
+      "why_en": "oral history × transcription",
+      "conf": "medium",
+      "from_en": "Primo Levi / testimonial literature"
+    },
+    {
+      "from": "柏木哲夫 / 日本ホスピス緩和ケア",
+      "to": "manda",
+      "arrow": "⇐",
+      "why_zh": "「善终」谱系 → 在宅路线分岔",
+      "why_en": "good-death lineage → home branch",
+      "conf": "medium",
+      "from_en": "Tetsuo Kashiwagi / Japanese hospice & palliative care"
+    },
+    {
+      "from": "#MeToo（2017）",
+      "to": "pelicot",
+      "arrow": "⇒",
+      "why_zh": "Mazan 公开庭审 → 回忆录：运动的三级火箭",
+      "why_en": "public trial → memoir: the movement's third stage",
+      "conf": "verified"
+    },
+    {
+      "from": "vargas",
+      "to": "mandel",
+      "arrow": "⇒",
+      "why_zh": "皆用「一件艺术图像作谜面发动机」（美学化为装置）",
+      "why_en": "both drive plot from a single work of art",
+      "conf": "medium"
+    }
   ],
   "circle": [
-    {"from": "pelicot", "to": "Caroline Darian（女儿/作家）", "arrow": "◎", "why_zh": "「M'endors pas」化学顺从运动；母女对表", "why_en": "the M'endors pas campaign", "conf": "verified"},
-    {"from": "pelicot", "to": "perrignon", "arrow": "◎", "why_zh": "回忆录合著（证言转写）", "why_en": "memoir co-write", "conf": "verified"},
-    {"from": "pelicot", "to": "Manon Garcia（哲学家）", "arrow": "◎", "why_zh": "《Living With Men》分析 Mazan 审判", "why_en": "Living With Men on the trial", "conf": "verified"},
-    {"from": "vargas", "to": "Stéphane Audoin-Rouzeau（兄）", "arrow": "◎", "why_zh": "Three Evangelists 史家角色原型", "why_en": "historian character source", "conf": "verified"},
-    {"from": "vargas", "to": "Jo Vargas（孪生姐）", "arrow": "◎", "why_zh": "笔名来源；画名借自《赤足天使》", "why_en": "pen-name source; painter", "conf": "verified"},
-    {"from": "vargas", "to": "Siân Reynolds（英译者）", "arrow": "◎", "why_zh": "长期译者，Dagger 随译共认", "why_en": "long-time translator", "conf": "verified"},
-    {"from": "manda", "to": "東畑開人（临床心理師）", "arrow": "◎", "why_zh": "2026-02-11 对谈「步行是活着」", "why_en": "2026-02-11 dialogue", "conf": "verified"},
-    {"from": "manda", "to": "青栁幸利（中之条研究）", "arrow": "◎", "why_zh": "8000 步/日实证线", "why_en": "8,000-steps/day evidence line", "conf": "verified"},
-    {"from": "lemaitre", "to": "Albert Dupontel（导演）", "arrow": "◎", "why_zh": "《Au revoir là-haut》电影改编，César 共获", "why_en": "film adaptation; shared César", "conf": "verified"},
-    {"from": "mandel", "to": "Patrick Somerville（剧集主创）", "arrow": "◎", "why_zh": "《Station Eleven》HBO 改编 → Exit Party 回响", "why_en": "Station Eleven HBO → the Exit Party echo", "conf": "verified"}
+    {
+      "from": "pelicot",
+      "to": "Caroline Darian（女儿/作家）",
+      "arrow": "◎",
+      "why_zh": "「M'endors pas」化学顺从运动；母女对表",
+      "why_en": "the M'endors pas campaign",
+      "conf": "verified",
+      "to_en": "Caroline Darian (daughter / author)"
+    },
+    {
+      "from": "pelicot",
+      "to": "perrignon",
+      "arrow": "◎",
+      "why_zh": "回忆录合著（证言转写）",
+      "why_en": "memoir co-write",
+      "conf": "verified"
+    },
+    {
+      "from": "pelicot",
+      "to": "Manon Garcia（哲学家）",
+      "arrow": "◎",
+      "why_zh": "《Living With Men》分析 Mazan 审判",
+      "why_en": "Living With Men on the trial",
+      "conf": "verified",
+      "to_en": "Manon Garcia (philosopher)"
+    },
+    {
+      "from": "vargas",
+      "to": "Stéphane Audoin-Rouzeau（兄）",
+      "arrow": "◎",
+      "why_zh": "Three Evangelists 史家角色原型",
+      "why_en": "historian character source",
+      "conf": "verified",
+      "to_en": "Stéphane Audoin-Rouzeau (brother)"
+    },
+    {
+      "from": "vargas",
+      "to": "Jo Vargas（孪生姐）",
+      "arrow": "◎",
+      "why_zh": "笔名来源；画名借自《赤足天使》",
+      "why_en": "pen-name source; painter",
+      "conf": "verified",
+      "to_en": "Jo Vargas (twin sister)"
+    },
+    {
+      "from": "vargas",
+      "to": "Siân Reynolds（英译者）",
+      "arrow": "◎",
+      "why_zh": "长期译者，Dagger 随译共认",
+      "why_en": "long-time translator",
+      "conf": "verified",
+      "to_en": "Siân Reynolds (English translator)"
+    },
+    {
+      "from": "manda",
+      "to": "東畑開人（临床心理師）",
+      "arrow": "◎",
+      "why_zh": "2026-02-11 对谈「步行是活着」",
+      "why_en": "2026-02-11 dialogue",
+      "conf": "verified",
+      "to_en": "Kaito Higashibata (clinical psychologist)"
+    },
+    {
+      "from": "manda",
+      "to": "青栁幸利（中之条研究）",
+      "arrow": "◎",
+      "why_zh": "8000 步/日实证线",
+      "why_en": "8,000-steps/day evidence line",
+      "conf": "verified",
+      "to_en": "Yukitoshi Aoyagi (Nakajō Study)"
+    },
+    {
+      "from": "lemaitre",
+      "to": "Albert Dupontel（导演）",
+      "arrow": "◎",
+      "why_zh": "《Au revoir là-haut》电影改编，César 共获",
+      "why_en": "film adaptation; shared César",
+      "conf": "verified",
+      "to_en": "Albert Dupontel (director)"
+    },
+    {
+      "from": "mandel",
+      "to": "Patrick Somerville（剧集主创）",
+      "arrow": "◎",
+      "why_zh": "《Station Eleven》HBO 改编 → Exit Party 回响",
+      "why_en": "Station Eleven HBO → the Exit Party echo",
+      "conf": "verified",
+      "to_en": "Patrick Somerville (series creator)"
+    }
   ],
   "cowrites": [
-    {"from": "pelicot", "to": "perrignon", "book": "《Et la joie de vivre》", "year": "2026-02-17", "why_zh": "证言转写合著", "why_en": "testimonial co-write", "conf": "verified"},
-    {"from": "perrignon", "to": "Marceline Loridan-Ivens", "book": "《Et tu n'es pas revenu》《L'Amour d'après》", "year": "2015/2018", "why_zh": "两度合著", "why_en": "two co-writes", "conf": "verified"}
+    {
+      "from": "pelicot",
+      "to": "perrignon",
+      "book": "《Et la joie de vivre》",
+      "year": "2026-02-17",
+      "why_zh": "证言转写合著",
+      "why_en": "testimonial co-write",
+      "conf": "verified"
+    },
+    {
+      "from": "perrignon",
+      "to": "Marceline Loridan-Ivens",
+      "book": "《Et tu n'es pas revenu》《L'Amour d'après》",
+      "year": "2015/2018",
+      "why_zh": "两度合著",
+      "why_en": "two co-writes",
+      "conf": "verified"
+    }
   ],
   "schools": [
-    {"author": "vargas", "school_zh": "法式 néo-polar 文学派（Adamsberg 脉）", "school_en": "French neo-polar", "why_zh": "罪案 = 文明史的病历；直觉/诗学是常识的另一面", "why_en": "crime as case-file of civilisation", "conf": "strong"},
-    {"author": "lemaitre", "school_zh": "法国 polar 文学派 → 社会史小说", "school_en": "polar to social history", "why_zh": "从 Balzac/Zola 到 20 世纪荣誉与废墟", "why_en": "Balzac/Zola to the century of glory and ru", "conf": "strong"},
-    {"author": "pelicot", "school_zh": "#MeToo 档案 / 见证文学", "school_en": "#MeToo archive / testimonial", "why_zh": "亲历者自夺笔", "why_en": "the survivor takes the pen", "conf": "verified"},
-    {"author": "perrignon", "school_zh": "法式传记/证言转写", "school_en": "literary transcription", "why_zh": "把第一人称还给经历者", "why_en": "returning first person to the lived", "conf": "strong"},
-    {"author": "mandel", "school_zh": "soft-apocalypse 跨界文学", "school_en": "soft-apocalypse crossover", "why_zh": "灾难—艺术—韧性母题", "why_en": "disaster-art-resilience", "conf": "strong"},
-    {"author": "manda", "school_zh": "日本在宅緩和ケア 生死观话语场", "school_en": "Japan home-palliative discourse", "why_zh": "延命 vs 尊厳 的常识化", "why_en": "dignity over prolonging", "conf": "medium"}
+    {
+      "author": "vargas",
+      "school_zh": "法式 néo-polar 文学派（Adamsberg 脉）",
+      "school_en": "French neo-polar",
+      "why_zh": "罪案 = 文明史的病历；直觉/诗学是常识的另一面",
+      "why_en": "crime as case-file of civilisation",
+      "conf": "strong"
+    },
+    {
+      "author": "lemaitre",
+      "school_zh": "法国 polar 文学派 → 社会史小说",
+      "school_en": "polar to social history",
+      "why_zh": "从 Balzac/Zola 到 20 世纪荣誉与废墟",
+      "why_en": "Balzac/Zola to the century of glory and ru",
+      "conf": "strong"
+    },
+    {
+      "author": "pelicot",
+      "school_zh": "#MeToo 档案 / 见证文学",
+      "school_en": "#MeToo archive / testimonial",
+      "why_zh": "亲历者自夺笔",
+      "why_en": "the survivor takes the pen",
+      "conf": "verified"
+    },
+    {
+      "author": "perrignon",
+      "school_zh": "法式传记/证言转写",
+      "school_en": "literary transcription",
+      "why_zh": "把第一人称还给经历者",
+      "why_en": "returning first person to the lived",
+      "conf": "strong"
+    },
+    {
+      "author": "mandel",
+      "school_zh": "soft-apocalypse 跨界文学",
+      "school_en": "soft-apocalypse crossover",
+      "why_zh": "灾难—艺术—韧性母题",
+      "why_en": "disaster-art-resilience",
+      "conf": "strong"
+    },
+    {
+      "author": "manda",
+      "school_zh": "日本在宅緩和ケア 生死观话语场",
+      "school_en": "Japan home-palliative discourse",
+      "why_zh": "延命 vs 尊厳 的常识化",
+      "why_en": "dignity over prolonging",
+      "conf": "medium"
+    }
   ]
 }

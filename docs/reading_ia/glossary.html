@@ -47,7 +47,7 @@ a:hover{color:var(--gold)}
 .hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
-.hero .metachip span{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
 .article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
 h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
 h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
@@ -170,103 +170,93 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 </nav>
 
 <section class="hero">
-  <p class="kicker">READING &amp; IA — TERMS</p>
-  <h1><span data-zh>术语架 · 全领域的名字</span><span data-en>术语架 · 全领域的名字</span></h1>
-  <div class="subtitle" data-both><span data-zh>概念 · 传统 · 原型 · 方法——先命名，再理解</span><span data-en>概念 · 传统 · 原型 · 方法——先命名，再理解</span></div>
-  <div class="metachip"><span>10 条术语</span> <span>跨学科</span></div>
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — TERMS</span><span data-en>READING &amp; IA — TERMS</span></p>
+  <h1><span data-zh>术语架 · 全领域的名字</span><span data-en>The term shelf — names across every field</span></h1>
+  <div class="subtitle" data-both><span data-zh>概念 · 传统 · 原型 · 方法——先命名，再理解</span><span data-en>Concepts · traditions · archetypes · methods — name first, then understand</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>10 条术语</span><span data-en>10 terms</span></span> <span class="chip"><span data-zh>跨学科</span><span data-en>cross-disciplinary</span></span></div>
 </section>
 
 <div class="article">
 <div class="srcnote"><div data-zh><b>单一来源。</b>术语架 = <code>readings/categories/glossary.md</code>（唯一源），由 <code>build_reading.py</code> 生成本页。新术语（文学/理论/哲学/数学/科学/社科/媒介）先落术语架，成熟后晋升为概念层原型簇。</div><div data-en><b>Single source.</b> Terms live in <code>readings/categories/glossary.md</code>; this page is generated. New terms land here first; mature ones are promoted to concept-layer archetype clusters.</div></div>
 <div class="links"><a class="pill" href="read/index.html">↝ <span data-zh>书目档案</span><span data-en>the library</span></a><a class="pill" href="methods.html">↝ <span data-zh>方法论与透镜</span><span data-en>methods &amp; lenses</span></a><a class="pill" href="index.html">↝ <span data-zh>板块首页</span><span data-en>the domain</span></a></div>
 <div class="card" id="counterlife" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">counterlife · 反生活</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>反生活</span><span data-en>counterlife</span></span></h3>
 <div><span class="modechip archetype">archetype</span><span class="domchip">literature</span><span class="ref">cluster → mirror-double</span></div>
-<div class="term-line"><b>定义 · </b>未曾活过的那种生活；人如此，国家亦然——「国家的反生活」是本项目的核心观察工具。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>The life you did not live; just as individuals have counterlives, so do states — the project&#x27;s core lens.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Emily St. John Mandel《Exit Party》(2026) —— A/B 两面皆国家的反生活；Philip Roth《The Plot Against America》(2004) 反事实极权美国</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Mandel 访谈（irishtimes.com · lithub.com 2026-09）✓</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>未曾活过的那种生活；人如此，国家亦然——「国家的反生活」是本项目的核心观察工具。</span><span data-en>The life you did not live; just as individuals have counterlives, so do states — the project&#x27;s core lens.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Emily St. John Mandel《Exit Party》(2026) —— A/B 两面皆国家的反生活；Philip Roth《The Plot Against America》(2004) 反事实极权美国</span><span data-en>Mandel, Exit Party (2026) — both A/B sides are national counterlives; Roth, The Plot Against America (2004), a counterfactual totalitarian America</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Mandel 访谈（irishtimes.com · lithub.com 2026-09）✓</span><span data-en>Mandel interviews (irishtimes.com · lithub.com, Sep 2026) ✓</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-mandel-exit-party</span> · <span class="ref">mandel</span></div>
 </div>
 <div class="card" id="mirror-double" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">mirror-double · 双身与镜像</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>双身与镜像</span><span data-en>mirror-double</span></span></h3>
 <div><span class="modechip archetype">archetype</span><span class="domchip">theory / literature</span><span class="ref">cluster → mirror-double</span></div>
-<div class="term-line"><b>定义 · </b>人物、国家或文本的镜像分裂与互认；以重复句、对应人物缝合两面——超越解谜，读作「同一焦虑的两种结局」。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>Mirror-selves sutured by repeated sentences; read as twin outcomes of one anxiety, not a puzzle.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Exit Party 的 Ari/Ibari 与双卡里姆；China Miéville《The City &amp; The City》(2009)；Naomi Klein《Doppelganger》(2023)</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Mandel 自述（lithub.com ✓）；Klein 对照 ◐</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>人物、国家或文本的镜像分裂与互认；以重复句、对应人物缝合两面——超越解谜，读作「同一焦虑的两种结局」。</span><span data-en>Mirror-selves sutured by repeated sentences; read as twin outcomes of one anxiety, not a puzzle.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Exit Party 的 Ari/Ibari 与双卡里姆；China Miéville《The City &amp; The City》(2009)；Naomi Klein《Doppelganger》(2023)</span><span data-en>Exit Party&#x27;s Ari/Ibari and the two Karims; China Miéville, The City &amp; The City (2009); Naomi Klein, Doppelganger (2023)</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Mandel 自述（lithub.com ✓）；Klein 对照 ◐</span><span data-en>Mandel&#x27;s own account (lithub.com ✓); Klein in comparison ◐</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">mirror-double</span> · <span class="ref">2026-mandel-exit-party</span></div>
 </div>
 <div class="card" id="aftermath-narrative" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">aftermath-narrative · 余波叙事</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>余波叙事</span><span data-en>aftermath-narrative</span></span></h3>
 <div><span class="modechip archetype">archetype</span><span class="domchip">literature</span><span class="ref">cluster → aftermath</span></div>
-<div class="term-line"><b>定义 · </b>聚焦灾难**之后**而非灾难本身的叙事——余波重于现场，希望与照护藏在废墟里。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>Narrative of the aftermath, not the disaster — what follows matters more than the event.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Mandel《Station Eleven》(2014) 与《Exit Party》；《The Leftovers》后启示录剧集</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Mandel: &quot;I am interested in its aftermath.&quot;（lithub.com ✓）；Perrotta 剧集对照 ✓</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>聚焦灾难**之后**而非灾难本身的叙事——余波重于现场，希望与照护藏在废墟里。</span><span data-en>Narrative of the aftermath, not the disaster — what follows matters more than the event.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Mandel《Station Eleven》(2014) 与《Exit Party》；《The Leftovers》后启示录剧集</span><span data-en>Mandel, Station Eleven (2014) and Exit Party; The Leftovers, the post-apocalyptic series</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Mandel: &quot;I am interested in its aftermath.&quot;（lithub.com ✓）；Perrotta 剧集对照 ✓</span><span data-en>Mandel: &quot;I am interested in its aftermath.&quot; (lithub.com ✓); Perrotta&#x27;s series in comparison ✓</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-mandel-exit-party</span></div>
 </div>
 <div class="card" id="aestheticized-violence" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">aestheticized-violence · 图像化暴力</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>图像化暴力</span><span data-en>aestheticized-violence</span></span></h3>
 <div><span class="modechip archetype">archetype</span><span class="domchip">theory / literature</span><span class="ref">cluster → aestheticized-violence</span></div>
-<div class="term-line"><b>定义 · </b>暴力被「排演」成美学构图——凶手以文学/影像为世界观，受害者被酿成偶像化身；罪案由此成为谜面本身。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>Violence staged as an aesthetic code — the killer&#x27;s lens is literature and film, the victim composed into an icon.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Fred Vargas《Une unique lueur》(2026) 银莲花女尸 + Bacall/Bogart 构图；J.G. Ballard 式「图像即罪行」</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Vargas 书评（lemonde 系 ◐）；Ballard 对照 ◐</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>暴力被「排演」成美学构图——凶手以文学/影像为世界观，受害者被酿成偶像化身；罪案由此成为谜面本身。</span><span data-en>Violence staged as an aesthetic code — the killer&#x27;s lens is literature and film, the victim composed into an icon.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Fred Vargas《Une unique lueur》(2026) 银莲花女尸 + Bacall/Bogart 构图；J.G. Ballard 式「图像即罪行」</span><span data-en>Vargas, Une unique lueur (2026) — anemone, the staged corpse in a Bacall/Bogart composition; J.G. Ballard&#x27;s &quot;image-as-crime&quot;</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Vargas 书评（lemonde 系 ◐）；Ballard 对照 ◐</span><span data-en>Vargas reviews (Le Monde press ◐); Ballard in comparison ◐</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-vargas-une-unique-lueur</span> · <span class="ref">vargas</span></div>
 </div>
 <div class="card" id="intertext-vault" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">intertext-vault · 互文宝匣</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>互文宝匣</span><span data-en>intertext-vault</span></span></h3>
 <div><span class="modechip tradition">tradition</span><span class="domchip">theory</span><span class="ref">cluster → language-meaning</span></div>
-<div class="term-line"><b>定义 · </b>以一首诗 / 一幅画 / 一部电影为全书的互文枢纽，标题即答案的一半——文本在文本之网中获得意义。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>One quoted artifact (a poem, a painting, a film) as the intertextual hinge; meaning lives in the network of texts.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Vargas 取 Nerval《El Desdichado》(1853)「一束唯一的光」为书名与谜面；Mandel《Swan Dive》画作串起全篇</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Vargas 官方出版信息 + 书评 ✓◐；Nerval 原诗 ✓</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>以一首诗 / 一幅画 / 一部电影为全书的互文枢纽，标题即答案的一半——文本在文本之网中获得意义。</span><span data-en>One quoted artifact (a poem, a painting, a film) as the intertextual hinge; meaning lives in the network of texts.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Vargas 取 Nerval《El Desdichado》(1853)「一束唯一的光」为书名与谜面；Mandel《Swan Dive》画作串起全篇</span><span data-en>Vargas takes Nerval&#x27;s El Desdichado (1853), &quot;one unique light&quot;, as title and riddle; Mandel&#x27;s painting Swan Dive threads the whole book</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Vargas 官方出版信息 + 书评 ✓◐；Nerval 原诗 ✓</span><span data-en>Vargas official publication info + reviews ✓◐; Nerval&#x27;s poem ✓</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">language-meaning</span> · <span class="ref">2026-vargas-une-unique-lueur</span></div>
 </div>
 <div class="card" id="memory-repetition" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">memory-repetition · 记忆与复诵</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>记忆与复诵</span><span data-en>memory-repetition</span></span></h3>
 <div><span class="modechip concept">concept</span><span class="domchip">philosophy / literature</span><span class="ref">cluster → language-meaning</span></div>
-<div class="term-line"><b>定义 · </b>人物的反复重述、行走、绕圈——记忆不被记住，而被迫上演；复诵既是创伤机制，也是解谜钥匙。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>Characters who repeat, walk, circle; memory is performed, not recalled — repetition is both trauma and key.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Vargas Adamsberg 系列；普鲁斯特式非自愿记忆传统</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> Vargas 书评 ◐</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>人物的反复重述、行走、绕圈——记忆不被记住，而被迫上演；复诵既是创伤机制，也是解谜钥匙。</span><span data-en>Characters who repeat, walk, circle; memory is performed, not recalled — repetition is both trauma and key.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Vargas Adamsberg 系列；普鲁斯特式非自愿记忆传统</span><span data-en>Vargas&#x27;s Adamsberg cycle; the Proustian tradition of involuntary memory</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>Vargas 书评 ◐</span><span data-en>Vargas reviews ◐</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-vargas-une-unique-lueur</span></div>
 </div>
 <div class="card" id="witness-aesthetics" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">witness-aesthetics · 见证美学</h3>
-<div><span class="modechip tradition">tradition</span><span class="domchip">history / literature</span><span class="ref">cluster → aftermath · 见证文学</span></div>
-<div class="term-line"><b>定义 · </b>亲历者把第一人称夺回自己手中——口述史 × 文学转写的传统；「若无人见证，你的过去就开始像虚构」。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>The survivor reclaims the first person — oral history × literary transcription; un-witnessed, the past feels fictional.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Gisèle Pelicot &amp; Judith Perrignon《Et la joie de vivre》(2026)；Primo Levi 见证文学线；Marceline Loridan-Ivens</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> 出版信息 ✓；关系表 ✓</div>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>见证美学</span><span data-en>witness-aesthetics</span></span></h3>
+<div><span class="modechip tradition">tradition</span><span class="domchip">history / literature</span><span class="ref">cluster → <span data-both><span data-zh>aftermath · 见证文学</span><span data-en>aftermath · witness literature</span></span></span></div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>亲历者把第一人称夺回自己手中——口述史 × 文学转写的传统；「若无人见证，你的过去就开始像虚构」。</span><span data-en>The survivor reclaims the first person — oral history × literary transcription; un-witnessed, the past feels fictional.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Gisèle Pelicot &amp; Judith Perrignon《Et la joie de vivre》(2026)；Primo Levi 见证文学线；Marceline Loridan-Ivens</span><span data-en>Gisèle Pelicot &amp; Judith Perrignon, Et la joie de vivre (2026); Primo Levi&#x27;s testimonial-literature line; Marceline Loridan-Ivens</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>出版信息 ✓；关系表 ✓</span><span data-en>publication record ✓; relations table ✓</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-pelicot-joie-de-vivre</span> · <span class="ref">perrignon</span></div>
 </div>
 <div class="card" id="testimonial-co-write" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">testimonial-co-write · 证言转写合著</h3>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>证言转写合著</span><span data-en>testimonial-co-write</span></span></h3>
 <div><span class="modechip practice">practice</span><span class="domchip">history / social-science</span><span class="ref">cluster → aftermath</span></div>
-<div class="term-line"><b>定义 · </b>经历者口述、作家转写成形——合著把声音还给本人，作家的手艺是透明的容器。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>The survivor speaks, a writer shapes it into form — the writer&#x27;s craft is a transparent vessel.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> Pelicot × Perrignon《Et la joie de vivre》(2026)；Perrignon × Loridan-Ivens《Et tu n&#x27;es pas revenu》(2015)</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> relations.json cowrites ✓</div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>经历者口述、作家转写成形——合著把声音还给本人，作家的手艺是透明的容器。</span><span data-en>The survivor speaks, a writer shapes it into form — the writer&#x27;s craft is a transparent vessel.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>Pelicot × Perrignon《Et la joie de vivre》(2026)；Perrignon × Loridan-Ivens《Et tu n&#x27;es pas revenu》(2015)</span><span data-en>Pelicot × Perrignon, Et la joie de vivre (2026); Perrignon × Loridan-Ivens, Et tu n&#x27;es pas revenu (2015)</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> relations.json cowrites ✓</div>
 <div style="margin-top:.5rem"><span class="ref">perrignon</span> · <span class="ref">pelicot</span></div>
 </div>
 <div class="card" id="good-death" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">good-death · 善终与生死观</h3>
-<div><span class="modechip tradition">tradition</span><span class="domchip">medicine-health</span><span class="ref">cluster → cosmos-place · 生死观话语场</span></div>
-<div class="term-line"><b>定义 · </b>从「延命」到「尊厳」的范式——在宅安宁医疗与死亡素养是文明史的病历。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>From prolonging life to preserving dignity — home palliative care as a case-file of civilisation.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> 萬田緑平《棺桶まで歩こう》(2026)；柏木哲夫 ホスピス缓和ケア谱系；青柳幸利 8000步/日实证线</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> 出版信息 ✓；对谈 2026-02-11 ✓</div>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>善终与生死观</span><span data-en>good-death</span></span></h3>
+<div><span class="modechip tradition">tradition</span><span class="domchip">medicine-health</span><span class="ref">cluster → <span data-both><span data-zh>cosmos-place · 生死观话语场</span><span data-en>cosmos-place · the life-and-death discourse</span></span></span></div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>从「延命」到「尊厳」的范式——在宅安宁医疗与死亡素养是文明史的病历。</span><span data-en>From prolonging life to preserving dignity — home palliative care as a case-file of civilisation.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> <span data-both><span data-zh>萬田緑平《棺桶まで歩こう》(2026)；柏木哲夫 ホスピス缓和ケア谱系；青柳幸利 8000步/日实证线</span><span data-en>Manda Ryōhei, Funeoke made arukō (&quot;Let&#x27;s walk to the coffin&quot;); Kashiwagi Tetsuo&#x27;s hospice palliative-care lineage; Aoyuki Yukitoshi&#x27;s 8,000-steps/day evidence line</span></span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> <span data-both><span data-zh>出版信息 ✓；对谈 2026-02-11 ✓</span><span data-en>publication record ✓; dialogue 2026-02-11 ✓</span></span></div>
 <div style="margin-top:.5rem"><span class="ref">2026-manda-kanoke-made</span> · <span class="ref">manda</span></div>
 </div>
 <div class="card" id="template" style="margin-top:1.4rem">
-<h3 class="sec" style="margin-top:.2rem">template · 占位示例</h3>
-<div><span class="modechip concept">concept</span><span class="domchip">cross-disciplinary</span><span class="ref">cluster → （待定）</span></div>
-<div class="term-line"><b>定义 · </b>占位模板——新术语随手复制本小节填写。</div>
-<div class="term-line" style="color:var(--ink-soft)"><b>en · </b>placeholder template — copy this section to register a new term.</div>
-<div class="term-line" style="font-size:.85rem"><b>典例 · epitome</b> —</div>
-<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>出处 · source</b> —</div>
+<h3 class="sec" style="margin-top:.2rem"><span data-both><span data-zh>占位示例</span><span data-en>template</span></span></h3>
+<div><span class="modechip concept">concept</span><span class="domchip">cross-disciplinary</span><span class="ref">cluster → <span data-both><span data-zh>（待定）</span><span data-en>(to be set)</span></span></span></div>
+<div class="term-line"><b><span data-zh>定义</span><span data-en>def</span></b><span data-zh>占位模板——新术语随手复制本小节填写。</span><span data-en>placeholder template — copy this section to register a new term.</span></div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>典例</span><span data-en>epitome</span></b> —</div>
+<div class="term-line" style="font-size:.85rem"><b><span data-zh>出处</span><span data-en>source</span></b> —</div>
 </div>
 <div class="links"><a class="pill" href="methods.html">↝ <span data-zh>方法论</span><span data-en>methods</span></a><a class="pill" href="read/index.html">↝ <span data-zh>读书</span><span data-en>the library</span></a></div>
 </div>

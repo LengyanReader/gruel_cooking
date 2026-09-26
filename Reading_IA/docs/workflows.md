@@ -102,6 +102,7 @@ Steps 常法:
 3. **Enrich**: 依据 corpus 全文补 `web/data/books.json` 的槽位（**只落摘要 + ≤300 字短引**，全文永不出 `corpus/`）。逐类透镜阈值见 `knowledge/lenses/`。
 4. **Graph**: `engine/graph_build.py` 重生成 `nodes/edges.jsonl`；`audit.py --graph` 保证 0 悬挂边 / 0 未注册类型。需要图库时 `engine/graph_export_neo4j.py` 出 `MERGE` 脚本（A1：文件权威，Neo4j 仅投影）。
 5. **Render**: `python -X utf8 Reading_IA/web/build_reading.py` 重建 `docs/reading_ia/`；`git diff --exit-code docs/reading_ia` 必须为空（P3 字节回归 + 单体确定性），再随 W4 校验链接/div。
+6. **Parity gate 中英对等门**：`python -X utf8 Reading_IA/_enview_leaks.py` —— HTMLParser 扫描 `docs/reading_ia/` 全部页面，凡是英文视图（`body.lang-en`）下可见的汉字（CJK）即泄漏；`data-zh`/`data-en` 配对、`data-both` 容器、`class="quote-src` 原文引文（附 inline 译文）豁免。必须输出 `TOTAL EN-VIEW HANZI LINES: 0`（铁律：所有内容中英文对等，新数据先补 `*_en` 镜像字段再渲染）。
 
 Evolution hooks 演化钩子（see **W-EVO** / `../harness/evolution.md`）:
 - 新格式**两次**出现 → S4 Fission：`adapters.manifest.json` 追加一行（数据）。

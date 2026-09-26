@@ -125,32 +125,38 @@
           {
             "orig": "An idea that I've been fascinated with for a long time is this notion of the counterlife, the life you didn't live.",
             "trans_zh": "「反生活」（counterlife）这个念头我着迷已久——那些你未曾活过的生活。",
-            "source": "irishtimes.com 2026-09-12"
+            "source": "irishtimes.com 2026-09-12",
+            "trans_en": "\"Counterlife\" — the life you did not live — is a notion that has fascinated me for a long time."
           },
           {
             "orig": "It's interesting to think about the counterlife of the individual, but it's also interesting to think about the counterlife of the state.",
             "trans_zh": "想象个体的反生活很有意思，但想想「国家的反生活」也耐人寻味。",
-            "source": "lithub.com (Jane Ciabattari) 2026-09-15"
+            "source": "lithub.com (Jane Ciabattari) 2026-09-15",
+            "trans_en": "It's interesting to think of the counterlife of the individual, but also of the counterlife of the state."
           },
           {
             "orig": "I've never been particularly interested in disaster, but I am interested in its aftermath. There's hope in thinking about the world that follows catastrophic events.",
             "trans_zh": "我对「灾难」本身从不特别感兴趣，我感兴趣的是灾难之后的事。想象大灾后的世界，其中是有希望的。",
-            "source": "lithub.com"
+            "source": "lithub.com",
+            "trans_en": "I've never been much interested in disaster itself — what interests me is its aftermath. There is hope in imagining the world that follows catastrophic events."
           },
           {
             "orig": "Who will you be at the end of the world? I think of that as the book's central question.",
             "trans_zh": "「世界落幕时你会成为怎样的人？」——我认为这是全书的核心之问。",
-            "source": "irishtimes.com"
+            "source": "irishtimes.com",
+            "trans_en": "\"Who will you be at the end of the world?\" — that I take to be the book's central question."
           },
           {
             "orig": "That feeling of desperate joy at the end of the world, that was something I was really trying to capture… There is a lot of joy even in these incredibly compromised times.",
             "trans_zh": "「世界尽头的绝望之乐」正是我想抓住的……哪怕在如此千疮百孔的时代，也仍有大量快乐。",
-            "source": "elle.com 2026-09-09"
+            "source": "elle.com 2026-09-09",
+            "trans_en": "That desperate joy at the end of the world is what I was trying to capture… even in these deeply compromised times there is a great deal of joy."
           },
           {
             "orig": "The collapse of consensual reality. When you get to a situation where half the electorate disagrees on basic reality… I don't know how you come back from that.",
             "trans_zh": "共识性现实的坍塌。当半数选民连最基本的事实都达不成一致……我不知道这该怎么弥合。",
-            "source": "theguardian.com 2026-09-13"
+            "source": "theguardian.com 2026-09-13",
+            "trans_en": "The collapse of consensual reality. Once half the electorate can't agree on basic facts… I don't know how you come back from that."
           }
         ],
         "reception_good_zh": "Kirkus——「自《大站十一》以来最好的作品……把平行时间线的概念天才地接上政治主题」；Booklist、Library Journal 星评；Publishers Weekly ★「tour de force」。NPR 的 Corrigan 说「派对值得等待」；New Yorker 的 Waldman 自称「一口读完」；Boston Globe「曼德尔最好的状态」；Saturday Paper「精彩、完全笃定」。",
@@ -258,7 +264,8 @@
           "lang": "en",
           "trans_en": "In the first spring after the collapse of the United States, the blossoming of the jacaranda trees felt to Ari like grace.",
           "note_zh": "「白莲木/蓝花楹」点燃的是春天——南美洲原生、被引进洛杉矶的树，花在干热的五月盛放成片紫云。一个被战争、宵禁与维和部队撤军标记的「第一个春天」，却由这棵外来树的气味打开：灾难之下的美，不来自宏大的国家，而来自仍按时开花的东西。",
-          "note_en": "The jacaranda — a South American native imported into Los Angeles — erupts in purple in the dry May heat. The \"first spring\" after the collapse is opened by a smell, not by the state: beauty that keeps to its own calendar. Note the past-simple precision — one clause, no flourish — pure Mandel."
+          "note_en": "The jacaranda — a South American native imported into Los Angeles — erupts in purple in the dry May heat. The \"first spring\" after the collapse is opened by a smell, not by the state: beauty that keeps to its own calendar. Note the past-simple precision — one clause, no flourish — pure Mandel.",
+          "source_en": "npr.org opening"
         },
         {
           "orig": "I think the party was also a door. / There's something wrong with the party. / There were extra people.",
@@ -338,7 +345,8 @@
           "note_en": "soft apocalypse; aftermath not disaster; art-as-thread",
           "axis": "aftermath",
           "pos": "lineage/direct",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Same author / Mandel-verse"
         },
         {
           "title": "The Singer's Gun",
@@ -349,7 +357,8 @@
           "note_en": "Ari, Anton, David Grissom return; A-side noir DNA",
           "axis": "noir/crime",
           "pos": "prequel/by-product",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Source text"
         },
         {
           "title": "The Glass Hotel",
@@ -360,7 +369,8 @@
           "note_en": "Swan Dive + the Alkaitis family; criminals' counterlives",
           "axis": "counterlife",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Source text"
         },
         {
           "title": "Sea of Tranquility",
@@ -371,7 +381,8 @@
           "note_en": "time travel; Paris domes return as refuge",
           "axis": "counterworlds",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Same author / Mandel-verse"
         },
         {
           "title": "Parable of the Sower",
@@ -382,7 +393,8 @@
           "note_en": "US fracture, survival picaresque, climate",
           "axis": "US-civil-fracture",
           "pos": "keynote precedent",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Precursor"
         },
         {
           "title": "1984",
@@ -393,7 +405,8 @@
           "note_en": "surveillance State; ministry-style slogans",
           "axis": "surveillance-dystopia",
           "pos": "keynote precedent",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "PW citation"
         },
         {
           "title": "The City & The City",
@@ -404,7 +417,8 @@
           "note_en": "trained \"not to see\" the other city",
           "axis": "doubled-reality",
           "pos": "influence",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Named influence"
         },
         {
           "title": "Doppelganger",
@@ -415,7 +429,8 @@
           "note_en": "political doubling & self-splitting",
           "axis": "counterlife/politics",
           "pos": "parallel-wave",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Contemporary dialogue"
         },
         {
           "title": "The Plot Against America",
@@ -426,7 +441,8 @@
           "note_en": "counterfactual authoritarian America",
           "axis": "alt-history-US",
           "pos": "precedent",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Precursor"
         },
         {
           "title": "American War",
@@ -437,7 +453,8 @@
           "note_en": "second civil war; \"no ceiling, no floor\"",
           "axis": "US-civil-fracture",
           "pos": "contemporary-peer",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Contemporary counterpart (shared activity)"
         },
         {
           "title": "The Dispossessed",
@@ -448,7 +465,8 @@
           "note_en": "twinned societies, diptych",
           "axis": "two-societies",
           "pos": "resonance",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Echo (Saturday Paper)"
         },
         {
           "title": "The Leftovers",
@@ -459,7 +477,8 @@
           "note_en": "aftermath of the inexplicable; lightness amid bleakness",
           "axis": "aftermath",
           "pos": "influence",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Named influence"
         },
         {
           "title": "Never Let Me Go / Klara and the Sun",
@@ -470,7 +489,8 @@
           "note_en": "love & art amid gentle collapse",
           "axis": "soft-apocalypse",
           "pos": "comparative",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Counterpart (WSJ)"
         }
       ],
       "characters": [
@@ -480,7 +500,8 @@
           "group": "A 面主角",
           "role_zh": "出狱前罪犯（雇凶杀兄）；洗碗/零售→俄亥俄民兵→军火→巴黎藏家「阿里·索里亚诺」；预感者",
           "role_en": "released convict; drifts to Paris art collector; unreliable clairvoyante",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side protagonist"
         },
         {
           "id": "C2",
@@ -488,7 +509,8 @@
           "group": "B 面镜像",
           "role_zh": "阿里的「反生活」；Service 资深探员（对外=城市规划讲师）；银胶带眼镜骗过人脸识别；终局弃航入海",
           "role_en": "Ari's dark twin; Service detective; ends by walking into the sea",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "B-side mirror"
         },
         {
           "id": "C3",
@@ -496,7 +518,8 @@
           "group": "A 面",
           "role_zh": "派对主人；无外门厨房消失→B 面营地；以「大卫·格里森」获释→养大尼科子女",
           "role_en": "party host who vanishes from a doorless kitchen; raises Nico's children",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side"
         },
         {
           "id": "C4",
@@ -504,7 +527,8 @@
           "group": "B 面",
           "role_zh": "UCLA 物理学家、尼科丈夫；实验中被复制为二；酗酒弃子、失踪入抵抗组织；病逝",
           "role_en": "physicist duplicated in the experiment; disappears into the Resistance; dies",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "B-side"
         },
         {
           "id": "C5",
@@ -512,7 +536,8 @@
           "group": "A 面",
           "role_zh": "阿里室友；派对幸存、怀卡里姆之子；偷画奔欧；是不尽责的母亲",
           "role_en": "Ari's roommate; steals the painting, flees to Europe pregnant",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side"
         },
         {
           "id": "C6",
@@ -528,7 +553,8 @@
           "group": "A/巴黎",
           "role_zh": "格洛丽亚与 A 卡里姆之子；20 岁偷画「还」给尼科",
           "role_en": "Gloria's son; steals the painting back at twenty",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "A-side / Paris"
         },
         {
           "id": "C8",
@@ -536,7 +562,8 @@
           "group": "B 面",
           "role_zh": "尼科与 B 卡里姆之子；月面殖民地建筑师",
           "role_en": "son of Nico & B-Kareem; architect on the lunar colony",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "B-side"
         },
         {
           "id": "C9",
@@ -544,7 +571,8 @@
           "group": "B 面",
           "role_zh": "女儿；传送物理学家；「时间线损坏」式复杂 PTSD",
           "role_en": "daughter; transport physicist; complex PTSD — \"timeline corruption\"",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "B-side"
         },
         {
           "id": "C10",
@@ -560,7 +588,8 @@
           "group": "B 面",
           "role_zh": "第四位 UCLA 物理学家（同事）",
           "role_en": "the fourth UCLA physicist",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "B-side"
         },
         {
           "id": "C12",
@@ -584,7 +613,8 @@
           "group": "A 面",
           "role_zh": "前芭蕾舞者军火商、阿里情人；「互相搀扶即防灾」金句者",
           "role_en": "ex-ballet gunrunner, Ari's lover",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side"
         },
         {
           "id": "C15",
@@ -592,7 +622,8 @@
           "group": "A 面",
           "role_zh": "雇佣兵、阿里交易式伴侣；阿里化名由此而来",
           "role_en": "mercenary; source of Ari's alias",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side"
         },
         {
           "id": "C16",
@@ -600,7 +631,8 @@
           "group": "A 面",
           "role_zh": "俄亥俄民兵头目；遣阿里监视尼科",
           "role_en": "militia boss who sets Ari to watch Nico",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "A-side"
         },
         {
           "id": "C17",
@@ -781,92 +813,115 @@
         {
           "claim": "Exit Party 出版信息：Knopf 2026-09-15，320pp，$32，ISBN 9780593321461",
           "source": "penguinrandomhouse.com; publishersweekly.com; wsj.com; kirkusreviews.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Exit Party publication facts: Knopf 2026-09-15, 320pp, $32, ISBN 9780593321461"
         },
         {
           "claim": "加版 HarperAvenue ISBN 9781443466141 · 英版 Picador 9781035081288 (2026-09-17)",
           "source": "thebcreview.ca; theguardian.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Canadian ed. HarperAvenue ISBN 9781443466141 · UK ed. Picador 9781035081288 (2026-09-17)"
         },
         {
           "claim": "三部分结构 A-Side / B-Side / Swan Dive",
           "source": "lithub.com; kirkusreviews.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Three-part structure: A-Side / B-Side / Swan Dive"
         },
         {
           "claim": "首句蓝花楹/恩典（jacaranda / grace）",
           "source": "npr.org; theatlantic.com; defector.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Opening sentence: jacaranda / grace"
         },
         {
           "claim": "「most political, most queer, best novel」自评",
           "source": "seattletimes.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Self-assessment: “most political, most queer, best novel”"
         },
         {
           "claim": "The City & The City 与 The Leftovers(TV) 为点名影响；与 Omar El Akkad 共同活动",
           "source": "irishtimes.com; therumpus.net; defector.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "The City & The City and The Leftovers (TV) are named influences; shared event with Omar El Akkad"
         },
         {
           "claim": "无大纲硬写；《Exit Party》后半推翻重写至少两次",
           "source": "theglobeandmail.com; therumpus.net; publishersweekly.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Written without an outline; the second half of Exit Party torn up and rewritten at least twice"
         },
         {
           "claim": "原名「James Exits the Party」；篇名由妻子定为 Exit Party",
           "source": "lithub.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Original title “James Exits the Party”; final title chosen by his wife"
         },
         {
           "claim": "电视改编售予 Laika 真人部门；曼德尔写 pilot；属 Netflix《刺客信条》编剧室",
           "source": "elle.com; irishexaminer.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "TV rights sold to Laika's live-action division; Mandel writes the pilot; from Netflix's Assassin's Creed writers' room"
         },
         {
           "claim": "Last Night in Montreal = 2009（旧卡的 2006 错误）",
           "source": "publishersweekly.com; amheath.com; emilymandel.com; en-wiki",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Last Night in Montreal = 2009 (the old card's 2006 was wrong)"
         },
         {
           "claim": "Station Eleven 售 150 万+、译 33+ 语",
           "source": "theguardian.com; es.wikipedia",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Station Eleven sold 1.5M+, translated into 33+ languages"
         },
         {
           "claim": "曼德尔涉 Anthropic 版权诉讼；经 Bartz v. Anthropic 和解（~$1.5B 获批 2025-09-25）",
           "source": "esquire.com 2026-09-09; apnews.com; authorsguild.org",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Mandel implicated in the Anthropic copyright suit; Bartz v. Anthropic settlement (~$1.5B approved 2025-09-25)"
         }
       ],
       "unverified": [
         {
           "item": "Literary Review of Canada（2026-10）书评正文未取到（锚点已知源，仅目录可见）",
-          "conf": "○/retrieval-failed"
+          "conf": "○/retrieval-failed",
+          "item_en": "Literary Review of Canada (2026-10) review text not retrievable (known anchor source, table of contents only)"
         },
         {
           "item": "「quantum rupture」一词为既有流行说辞，检索语料未见正文原文——机制多以「物体为交汇/意外传送/宇宙裂缝」表述",
-          "conf": "✗ 待查原文电子版"
+          "conf": "✗ 待查原文电子版",
+          "item_en": "“quantum rupture” is existing popular coinage; the phrase is not seen in the book text — the mechanism is phrased as “objects as crossings / accidental transit / a rift in the universe”",
+          "conf_en": "✗ pending the ebook of the original"
         },
         {
           "item": "Ari 刑期 18 vs 20 年（New Scientist 与 Boston Globe 记 20，疑误）",
-          "conf": "✓ 主流为 18 ✗ 二源"
+          "conf": "✓ 主流为 18 ✗ 二源",
+          "item_en": "Ari's sentence 18 vs 20 years (New Scientist and Boston Globe say 20, likely error)",
+          "conf_en": "✓ mainstream: 18 ✗ two sources"
         },
         {
           "item": "女儿出生年份 2015 vs 2016",
-          "conf": "✓ 偏 2015 ◐ Grokipedia"
+          "conf": "✓ 偏 2015 ◐ Grokipedia",
+          "item_en": "Daughter's birth year 2015 vs 2016",
+          "conf_en": "✓ leans 2015 ◐ Grokipedia"
         },
         {
           "item": "B 面纪元 2060s（Kirkus）vs 2065 巴黎（Irish Examiner）",
-          "conf": "◐ 同为 2060s 量级"
+          "conf": "◐ 同为 2060s 量级",
+          "item_en": "B-side era 2060s (Kirkus) vs 2065 Paris (Irish Examiner)",
+          "conf_en": "◐ same 2060s magnitude"
         },
         {
           "item": "「TRUE DILIGENCE」刺青/B 面幼年笔记互文：仅单源摘要 + 言辞印证",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "“TRUE DILIGENCE” tattoo / B-side childhood-note intertext: single-source summary + verbal corroboration only"
         }
       ],
       "kind": "novel",
-      "domain": "literature, theory, cross-disciplinary"
+      "domain": "literature, theory, cross-disciplinary",
+      "baseline_conf_en": "✓ publication facts verified via four source tiers; plot details mostly ◐ (early summaries single-source)"
     },
     {
       "id": "2026-vargas-une-unique-lueur",
@@ -925,7 +980,8 @@
         "zh": "瓦尔加《亚当斯贝格探案》第 11 卷，2026 年 4 月 8 日由 Flammarion 出版（528 页）。书名 « Une unique lueur »（一束唯一的光）取自内瓦尔《El Desdichado》名句，与全书的核心谜面直接挂钩。注意：2026 年另有同名异书（另一作者的同名小说），须以 Flammarion 本与 Adamsberg 线索区隔。此前的二手梗概（Fraixen 老翁、斯宾诺莎时代、1980 档案、自杀调查局）经检索均未见于任何权威源——判为证伪锚点，一律不录入；确证在书内的元素：街头「完美」女尸（银莲花、金哨）、内瓦尔《El Desdichado》、白考尔/鲍嘉形象、六年前的悬案翻查、记忆-复诵主题，以及全书多语种页注。",
         "en": "Adamsberg #11, published by Flammarion on 8 April 2026 (528 pp). The title \"Une unique lueur\" — one single glimmer — is taken from Nerval's El Desdichado and keys the whole enigma. Caution: another same-titled novel by a different author also appeared in 2026; distinguish by the Flammarion imprint and the Adamsberg series. Earlier secondhand plot anchors (Fraixen, the Spinoza era, 1980 archives, a suicide-investigations bureau) were falsified by search — none appear in any authoritative source, so they are not recorded. Confirmed in-book elements: the \"perfect\" corpse (anemones, golden whistle), Nerval's El Desdichado, the Bacall/Bogart imagery, re-opening of a six-year-old case, the memory-repetition theme, and the book's multi-language page notes.",
         "conf": "✓ 出版信息；情节锚点甄别后 ✓/◐",
-        "sources": "fr.wikipedia (Flammarion) · dequoilire · lemondedupolar · éditeur 目录"
+        "sources": "fr.wikipedia (Flammarion) · dequoilire · lemondedupolar · éditeur 目录",
+        "conf_en": "✓ publication facts; plot anchors screened ✓/◐"
       },
       "plot_acts": [
         {
@@ -935,7 +991,9 @@
           "zh": "巴黎街头发现一具被精心「造型」的年轻女性尸体：格纹套装、精致妆容、身旁银莲花、颈间金色哨子——谋杀被塑造成一场美学作品。亚当斯贝格（Adamsberg）直觉嗅到这不是普通的凶案，而是一种「图像生成」：凶手按某个文学/电影范本把受害者「酿」成偶像化身。",
           "en": "A young woman's body is found on a Paris street, meticulously \"styled\": skirt suit, precise make-up, anemones at her side, a golden whistle at her throat — murder staged as a work of art. Adamsberg senses this is not an ordinary killing but image-making: the killer is \"composing\" victims into icons according to a literary/film template.",
           "conf": "◐ (概要；核心意象与公开评论一致)",
-          "sources": "fr 媒体书评综合 · lemondedupolar · dequoilire"
+          "sources": "fr 媒体书评综合 · lemondedupolar · dequoilire",
+          "sources_en": "French-press review synthesis · lemondedupolar · dequoilire",
+          "conf_en": "◐ (summary; core images match public reviews)"
         },
         {
           "n": 2,
@@ -944,7 +1002,8 @@
           "zh": "调查通向内瓦尔《El Desdichado》（「孤毁者、鳏夫、无可慰藉者」）——书名「一束唯一的光」正出自该诗；另一条线索是白考尔（Lauren Bacall）与鲍嘉（Bogart）的电影形象。凶手把女性「排演」进偶像崇拜的构图里：文学与电影不是线索，而是他的世界观本身。",
           "en": "The case converges on Nerval's El Desdichado (\"the dark one, the widower, the disconsolate\") — the novel's title is lifted from it — and on the Bacall/Bogart film iconography. The killer stages women inside an idolatrous composition: literature and film are not clues, they are his worldview.",
           "conf": "◐",
-          "sources": "公开评论确认 Nerval/El Desdichado/白考尔/鲍嘉为在场元素"
+          "sources": "公开评论确认 Nerval/El Desdichado/白考尔/鲍嘉为在场元素",
+          "sources_en": "Public reviews confirm Nerval / El Desdichado / Bacall / Bogart as on-page elements"
         },
         {
           "n": 3,
@@ -953,7 +1012,8 @@
           "zh": "同一手法指向六年前一起不了了之的悬案。亚当斯贝格执意把两案并卷——「记忆-复诵」的母题（人物反复重述、行走、绕圈）成了解开谜题的关键。全书的页下注释多语种并置，呼应语言的边界与迷思的迁移。",
           "en": "The same method points back to a six-year-old cold case. Adamsberg insists on rejoining the two files — and the novel's memory-repetition motif (characters who repeat, walk, circle) becomes the key. Multi-language page notes mirror how words and delusions migrate across borders.",
           "conf": "◐",
-          "sources": "公开评论 · fr.wikipedia"
+          "sources": "公开评论 · fr.wikipedia",
+          "sources_en": "Public reviews · fr.wikipedia"
         }
       ],
       "narrative": {
@@ -982,7 +1042,8 @@
           "lang": "fr",
           "trans_en": "\"I am the dark one — the widower — the inconsolable one.\" (Gérard de Nerval, \"El Desdichado\")",
           "note_zh": "书名《Une unique lueur》（一束独光）正脱胎于这首诗。「ténébreux / veuf / inconsolé」三连呼，是法国浪漫主义最著名的一句——诗人以失星者自喻（「我的唯一的星已经熄灭」）。瓦尔加借这句诗把罪案谜面沉入法国文学传统的底色：一束光，在黑暗中辨认。",
-          "note_en": "The novel's title quotes this line from Nerval's great sonnet \"El Desdichado\" — \"my one Star is dead.\" Three vocatives (dark one / widower / inconsolable) make it the most famous opening in French Romanticism. Vargas plants her murder-mystery inside that literary shadow: one glimmer, held up against the dark."
+          "note_en": "The novel's title quotes this line from Nerval's great sonnet \"El Desdichado\" — \"my one Star is dead.\" Three vocatives (dark one / widower / inconsolable) make it the most famous opening in French Romanticism. Vargas plants her murder-mystery inside that literary shadow: one glimmer, held up against the dark.",
+          "source_en": "fr.wikipedia · public reviews confirm it is quoted in the book"
         }
       ],
       "deep_read": [
@@ -1007,7 +1068,9 @@
           "note_en": "11th in series; the unscientific detective line",
           "axis": "series",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Within the series",
+          "title_en": "Adamsberg series earlier novels"
         },
         {
           "title": "Pars vite et reviens tard",
@@ -1018,7 +1081,8 @@
           "note_en": "numerology precedent; the measuring motif",
           "axis": "series",
           "pos": "reference earlier",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Landmark earlier work"
         },
         {
           "title": "Quand sort la recluse",
@@ -1029,7 +1093,8 @@
           "note_en": "one of the solo CWA Daggers",
           "axis": "series",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Series predecessor"
         },
         {
           "title": "El Desdichado",
@@ -1040,7 +1105,8 @@
           "note_en": "title and killer's blueprint; poetry as criminal design",
           "axis": "intertext",
           "pos": "source-text",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Intertextual / puzzle source text"
         },
         {
           "title": "如何说明 El Desdichado 的幽灵",
@@ -1051,7 +1117,9 @@
           "note_en": "image-as-crime; Ballardian affinity",
           "axis": "aestheticized-violence",
           "pos": "parallel-wave",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Thematic counterpart",
+          "title_en": "How to Explain the Ghost of \"El Desdichado\""
         }
       ],
       "characters": [
@@ -1061,7 +1129,8 @@
           "group": "巴黎凶案组",
           "role_zh": "主角探长；直觉型、反学院；Athanase 兄弟——本作卷入「记忆-复诵」的谜局",
           "role_en": "intuitive commissaire; the absent-minded genius of the brigade",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Paris murder squad"
         },
         {
           "id": "V2",
@@ -1069,7 +1138,8 @@
           "group": "巴黎凶案组",
           "role_zh": "副手；博学、谨小慎微，常在酒馆；承担书内引文/史料的考证",
           "role_en": "erudite adjutant who glosses the literary evidence",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Paris murder squad"
         },
         {
           "id": "V3",
@@ -1077,7 +1147,8 @@
           "group": "巴黎凶案组",
           "role_zh": "同事/力士型警员；系列常驻",
           "role_en": "stalwart colleague; series staple",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Paris murder squad"
         },
         {
           "id": "V4",
@@ -1085,7 +1156,9 @@
           "group": "旧日女友",
           "role_zh": "大提琴手、Adamsberg 半固定的伴侣",
           "role_en": "cellist; Adamsberg's on-off partner",
-          "conf": "○ (仅在部分卷出现)"
+          "conf": "○ (仅在部分卷出现)",
+          "group_en": "Former lover",
+          "conf_en": "○ (appears in some volumes only)"
         }
       ],
       "charedges": [
@@ -1113,7 +1186,8 @@
           "n": 1,
           "zh": "发现「完美」女尸：格纹套装、银莲花、金哨",
           "en": "The styled corpse found: suit, anemones, golden whistle",
-          "conf": "✓ 意象"
+          "conf": "✓ 意象",
+          "conf_en": "✓ imagery"
         },
         {
           "n": 2,
@@ -1144,51 +1218,67 @@
         {
           "claim": "Une unique lueur = Adamsberg #11；Flammarion 2026-04-08",
           "source": "fr.wikipedia (éd. Flammarion); 出版社目录",
-          "conf": "✓"
+          "conf": "✓",
+          "source_en": "fr.wikipedia (éd. Flammarion); publisher catalogue"
         },
         {
           "claim": "ISBN broché 978-2-08-016071-3 / EPUB 978-2-08-016097-3（旧传 9791024219145 为错）",
           "source": "éditeur/分销目录核实",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "ISBN broché 978-2-08-016071-3 / EPUB 978-2-08-016097-3 (the circulated 9791024219145 was wrong)",
+          "source_en": "éditeur / distribution catalogue, verified"
         },
         {
           "claim": "官方页数 528（部分游评记 523/529）",
           "source": "éditeur",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Official page count 528 (some trade reviews list 523/529)"
         },
         {
           "claim": "标题取自 Nerval《El Desdichado》",
           "source": "fr.wikipedia; 多篇书评",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Title taken from Nerval's “El Desdichado”",
+          "source_en": "fr.wikipedia; several book reviews"
         },
         {
           "claim": "2026 年同名异书存在（另一作者）——按 Flammarion/Adamsberg 线索区隔",
           "source": "bibliographie 交叉",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "A different 2026 book shares the title (another author) — told apart via the Flammarion/Adamsberg thread",
+          "source_en": "bibliographie cross-check"
         },
         {
           "claim": "CWA Dagger 独奖 2006/2007/2009 + 2013 与 Lemaitre 共享 = 惯称「四冠」；fr.wikipedia「三度」仅指独奖",
           "source": "CWA annals; fr.wikipedia 条文辨析",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "CWA Dagger sole wins 2006/2007/2009 + 2013 shared with Lemaitre = the customary “four crowns”; fr.wikipedia's “three times” counts sole wins only",
+          "source_en": "CWA annals; fr.wikipedia clause analysis"
         },
         {
           "claim": "「Fraixen/斯宾诺莎时代/1980 档案/自杀调查局」等情节锚点：未见于任何权威源，证伪不录入",
           "source": "全面检索不命中",
-          "conf": "✗→剔除"
+          "conf": "✗→剔除",
+          "claim_en": "Plot anchors like “Fraixen / the Spinoza era / the 1980 file / a suicide-investigation bureau”: found in no authoritative source — falsified, not recorded",
+          "source_en": "exhaustive search, no hit",
+          "conf_en": "✗→removed"
         }
       ],
       "unverified": [
         {
           "item": "完整分幕（第二、三幕细节）无逐卷互证，标注 ◐ 待原文电子版/两岸长篇书评",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Full act division (act II/III details) lacks per-volume corroboration; marked ◐ pending the ebook and long-form reviews on both shores"
         },
         {
           "item": "是否重现 Ariel/Camille 等常驻角色成交叉不确定",
-          "conf": "○"
+          "conf": "○",
+          "item_en": "Whether recurring characters Ariel/Camille reappear is uncertain"
         }
       ],
       "kind": "novel",
-      "domain": "literature, theory"
+      "domain": "literature, theory",
+      "baseline_conf_en": "✓ publication facts verified; previously circulated plot anchors (“Fraixen / Spinoza / the 1980 file / a suicide-investigation bureau”) falsified by search — not recorded"
     },
     {
       "id": "2026-lemaitre-belles-promesses",
@@ -1252,7 +1342,9 @@
           "zh": "巴黎 1963–64。让·佩尔格为救火中婴儿成为国家英雄——媒体造神、「美丽的承诺」全民共情。家中老猫约瑟夫（Joseph）是沉默的观察者。弟弟弗朗索瓦试笔的小说《美丽的承诺》（书名即来自这部「手稿」）把兄长写成连环杀人犯，而现实中蹊跷的失踪案接踵而至。",
           "en": "Paris 1963–64. Jean Pelletier becomes a national hero rescuing a baby from a fire — the press canonizes him, \"beautiful promises\" everywhere. The family cat Joseph is the silent witness. Brother François's manuscript-novel Les Belles Promesses (the real title) imagines the eldest as a serial murderer — then girls really start disappearing.",
           "conf": "◐ (概要一致)",
-          "sources": "surbooke · nyctalopes 长篇评论"
+          "sources": "surbooke · nyctalopes 长篇评论",
+          "sources_en": "surbooke · nyctalopes long review",
+          "conf_en": "◐ (summary consistent)"
         },
         {
           "n": 2,
@@ -1270,7 +1362,8 @@
           "zh": "英雄神话与罪行在同一家族体内对质。终局并不给出廉价的救赎：进步年代的账单由谁付？——「光荣岁月」的每一分荣耀都被标了价。",
           "en": "The hero-myth and the crime collide inside the same family. No cheap redemption: someone pays for every ounce of the Glory Years' glory.",
           "conf": "◐",
-          "sources": "Médiapart 长评"
+          "sources": "Médiapart 长评",
+          "sources_en": "Médiapart long review"
         }
       ],
       "narrative": {
@@ -1309,7 +1402,8 @@
           "note_en": "Pelletier family opens; postwar trade & colonial debt",
           "axis": "series",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Quartet vol.1"
         },
         {
           "title": "Le Silence et la colère",
@@ -1320,7 +1414,8 @@
           "note_en": "the dark underside of les Trente Glorieuses",
           "axis": "series",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Quartet vol.2"
         },
         {
           "title": "Au revoir là-haut",
@@ -1331,7 +1426,8 @@
           "note_en": "WWI's promised glory — the motif's upstream",
           "axis": "war-accounting",
           "pos": "precedent",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Goncourt-winning precursor / lineage"
         },
         {
           "title": "Alex",
@@ -1342,7 +1438,8 @@
           "note_en": "the twist-perpetrator structure, family variant",
           "axis": "crime",
           "pos": "reference",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "polar (crime-novel) precursor"
         },
         {
           "title": "Les Forteresses",
@@ -1353,7 +1450,8 @@
           "note_en": "violence-and-silence inside a French family",
           "axis": "family-violence",
           "pos": "parallel-wave",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Contemporary counterpart"
         }
       ],
       "characters": [
@@ -1363,7 +1461,8 @@
           "group": "Pelletier 家族",
           "role_zh": "长子、英雄；救火婴孩的国民模范；被控连环杀手",
           "role_en": "eldest son, the hero; suspected murderer",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Pelletier family"
         },
         {
           "id": "L2",
@@ -1371,7 +1470,8 @@
           "group": "Pelletier 家族",
           "role_zh": "次子、作家；《美丽的承诺》手稿的作者；怀疑兄长",
           "role_en": "writer-brother; suspects his hero sibling",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Pelletier family"
         },
         {
           "id": "L3",
@@ -1379,7 +1479,8 @@
           "group": "Pelletier 家族",
           "role_zh": "母亲；持家的沉默核心",
           "role_en": "the mother; the house's silencing center",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Pelletier family"
         },
         {
           "id": "L4",
@@ -1387,7 +1488,8 @@
           "group": "Pelletier 家族",
           "role_zh": "弟妹；各有私算",
           "role_en": "younger siblings with private agendas",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Pelletier family"
         },
         {
           "id": "L5",
@@ -1395,7 +1497,9 @@
           "group": "家庭",
           "role_zh": "老猫；沉默的观察者——全书最锋利的意象",
           "role_en": "the cat; silent witness — the novel's sharpest image",
-          "conf": "✓ 意象广为书评引用"
+          "conf": "✓ 意象广为书评引用",
+          "group_en": "Household",
+          "conf_en": "✓ image widely cited by reviews"
         },
         {
           "id": "L6",
@@ -1403,7 +1507,8 @@
           "group": "乡村次线",
           "role_zh": "阿尔及利亚退伍兵；战争创伤的乡村回响",
           "role_en": "Algeria veteran; the war's rural echo",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Rural subplot"
         }
       ],
       "charedges": [
@@ -1474,36 +1579,46 @@
         {
           "claim": "Les Belles Promesses 真实 ISBN = 9782702191477，页数 512",
           "source": "calmann-levy 目录/distributor 核对",
-          "conf": "✓ (旧卡 9782702189825/543pp 错误)"
+          "conf": "✓ (旧卡 9782702189825/543pp 错误)",
+          "claim_en": "Les Belles Promesses real ISBN = 9782702191477, 512pp",
+          "source_en": "calmann-levy catalogue / distributor cross-check",
+          "conf_en": "✓ (old card 9782702189825/543pp was wrong)"
         },
         {
           "claim": "出版日期 2026-01-06，出版社 Calmann-Lévy",
           "source": "surbooke; nyctalopes; Médiapart",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Publication date 2026-01-06, publisher Calmann-Lévy"
         },
         {
           "claim": "《Les Années glorieuses》四部曲终章",
           "source": "多源一致",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Finale of the Les Années glorieuses quartet",
+          "source_en": "multiple sources agree"
         },
         {
           "claim": "猫约瑟夫意象广被书评引用为家庭沉默的具象",
           "source": "Médiapart; nyctalopes",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "The cat Joseph image widely cited by reviews as the figure of household silence"
         }
       ],
       "unverified": [
         {
           "item": "第一幕具体案情细节（失踪人数、凶器、走访细节）无单卷互证",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Act I case specifics (number missing, murder weapon, house-to-house detail) lack single-volume corroboration"
         },
         {
           "item": "「让是否为真凶」的终局反转，评论讳莫如深——留待读本确认",
-          "conf": "○"
+          "conf": "○",
+          "item_en": "The ending's reversal over whether Jean is the real killer — reviews stay mum; pending the actual read"
         }
       ],
       "kind": "novel",
-      "domain": "literature, history"
+      "domain": "literature, history",
+      "baseline_conf_en": "✓ publication facts verified (old card ISBN 9782702189825/543pp was wrong; corrected)"
     },
     {
       "id": "2026-pelicot-joie-de-vivre",
@@ -1599,12 +1714,15 @@
           {
             "orig": "«C'est la honte qui doit changer de camp.»",
             "trans_zh": "「羞耻要易边。」——全书与整场审判的纲领句。",
-            "source": "公开庭审/多方引用，全球通用"
+            "source": "公开庭审/多方引用，全球通用",
+            "trans_en": "\"It is shame that must change sides.\" — the guiding line of the whole book and of the entire trial.",
+            "source_en": "Open trial; quoted worldwide"
           },
           {
             "orig": "«Je suis née le 7 décembre 1952.»",
             "trans_zh": "「我生于 1952 年 12 月 7 日。」——回忆录开篇句。",
-            "source": "NPR excerpt"
+            "source": "NPR excerpt",
+            "trans_en": "\"I was born on 7 December 1952.\" — the memoir's opening line."
           }
         ],
         "reception_good_zh": "全球书评聚焦「把 la honte 从受害者移到施害者」的公共意义；英译以全题《A Hymn to Life: Shame Has to Change Sides》传达同一纲领；首周销量 63,574（GfK，法榜第一），印刷 150,000 册，至 2026-03 初约 90,000 册。",
@@ -1625,7 +1743,8 @@
           "lang": "fr",
           "trans_en": "\"After the Chapel, life stopped.\"",
           "note_zh": "「Chapelle」指 2011 年母女住进巴黎近郊的 Chapel 住宅——施害的十年自此开始。「La vie s'est arrêtée」（生活就此停止）：法语句法把「停止」放在最后，像末班车的门在身后关上。佩利科用最朴素的主谓结构说出最重的话——过去时，没有修饰。",
-          "note_en": "\"The Chapel\" is the house near Paris where the abuse began in 2011. The French sentence ends on the verb 'arrêtée,' snapping shut like a closing door. Pelicot states the heaviest fact in the plainest past tense — no metaphor, which is the point."
+          "note_en": "\"The Chapel\" is the house near Paris where the abuse began in 2011. The French sentence ends on the verb 'arrêtée,' snapping shut like a closing door. Pelicot states the heaviest fact in the plainest past tense — no metaphor, which is the point.",
+          "source_en": "NPR excerpt / widely quoted"
         },
         {
           "orig": "«On me disait qu'il fallait que je profite de la vie.»",
@@ -1634,7 +1753,8 @@
           "lang": "fr",
           "trans_en": "\"They told me I had to enjoy life.\"",
           "note_zh": "被麻醉、被侵害期间，人们还在劝她「好好享受生活」。「il fallait que je profite de la vie」——「profiter」在本义上是「利用/享用」：把人生当可得利益。日常话语在此刻的讽刺力，胜过任何控诉。",
-          "note_en": "While she was being drugged and abused, people kept telling her to \"make the most of life.\" The verb \"profiter\" implies turning life into a benefit. The irony of everyday language here outperforms any indictment — language betrays the speaker."
+          "note_en": "While she was being drugged and abused, people kept telling her to \"make the most of life.\" The verb \"profiter\" implies turning life into a benefit. The irony of everyday language here outperforms any indictment — language betrays the speaker.",
+          "source_en": "Global Voices / excerpt"
         }
       ],
       "deep_read": [
@@ -1659,7 +1779,8 @@
           "note_en": "the trauma-in-present-tense method",
           "axis": "method",
           "pos": "author lineage",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Co-author's methodological precedent"
         },
         {
           "title": "Ma vie contre la tienne",
@@ -1670,7 +1791,8 @@
           "note_en": "Perrignon's transcription upstream",
           "axis": "method",
           "pos": "lineage",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Co-writing lineage"
         },
         {
           "title": "La familia grande",
@@ -1681,7 +1803,8 @@
           "note_en": "family sexual violence and silence, another French file",
           "axis": "family-violence",
           "pos": "parallel-wave",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Contemporary counterpart"
         },
         {
           "title": "M'endors pas",
@@ -1692,7 +1815,8 @@
           "note_en": "the chemical-submission campaign; pointed at this case",
           "axis": "witness",
           "pos": "family/source",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Daughter's earlier work"
         },
         {
           "title": "Un obus sur la route",
@@ -1703,7 +1827,8 @@
           "note_en": "conference-adjacent accounts of the hearings",
           "axis": "legal",
           "pos": "context",
-          "conf": "○"
+          "conf": "○",
+          "relation_en": "Courtroom (trial reportage)"
         }
       ],
       "characters": [
@@ -1713,7 +1838,8 @@
           "group": "主体",
           "role_zh": "回忆录作者/受害者；拒绝匿名者",
           "role_en": "the memoir's subject; the woman who refused anonymity",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Subject"
         },
         {
           "id": "P2",
@@ -1721,7 +1847,8 @@
           "group": "施害者",
           "role_zh": "前夫；主犯，被诉 51 岁以下罪名，判 20 年",
           "role_en": "ex-husband, main perpetrator, 20 years",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Perpetrator"
         },
         {
           "id": "P3",
@@ -1729,7 +1856,8 @@
           "group": "女儿",
           "role_zh": "女儿；安眠药疑云提出者；写 M'endors pas",
           "role_en": "daughter who suspected the drugs; author of M'endors pas",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Daughter"
         },
         {
           "id": "P4",
@@ -1737,7 +1865,8 @@
           "group": "子女",
           "role_zh": "两子；2020 年底得知真相",
           "role_en": "sons; learned the truth in late 2020",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Children"
         },
         {
           "id": "P5",
@@ -1745,7 +1874,8 @@
           "group": "合著者",
           "role_zh": "转写执笔者（方法：合著）",
           "role_en": "co-writer via testimony transcription",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Co-author"
         }
       ],
       "charedges": [
@@ -1828,61 +1958,79 @@
         {
           "claim": "回忆录信息：Flammarion 2026-02-17，320pp，ISBN 9782080497260",
           "source": "editor 目录/NPR/机构记录",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Memoir facts: Flammarion 2026-02-17, 320pp, ISBN 9782080497260",
+          "source_en": "editor catalogue / NPR / institutional records"
         },
         {
           "claim": "英译全题 = A Hymn to Life: Shame Has to Change Sides",
           "source": "NYT/发行方",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Full English title = A Hymn to Life: Shame Has to Change Sides",
+          "source_en": "NYT / rights seller"
         },
         {
           "claim": "France 2 纪录片 Soumission chimique 播出于 2025-01-21（非 2026）",
           "source": "France 2 节目史",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "France 2 documentary Soumission chimique aired 2025-01-21 (not 2026)",
+          "source_en": "France 2 programme history"
         },
         {
           "claim": "上诉：仅 Husamettin D.；Nîmes 2025-10-08/09；2025-10-09 判 10 年（+1）",
           "source": "司法通讯",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Appeal: only Husamettin D.; Nîmes 2025-10-08/09; on 2025-10-09 sentenced to 10 years (+1)",
+          "source_en": "judicial wires"
         },
         {
           "claim": "首周 63,574（GfK）法榜第一；印刷 150,000；至 2026-03 初约 90,000",
           "source": "GfK/sales reports",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "First week 63,574 (GfK) — no. 1 in France; print run 150,000; ~90,000 by early 2026-03"
         },
         {
           "claim": "12-19 终审 20 年 + 51 人部分/全部定罪",
           "source": "tribunal/global coverage",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "12–19 final verdicts: 20 years + partial/full convictions for 51 defendants"
         },
         {
           "claim": "出生 1952-12-07 Villingen；结婚 1973-04",
           "source": "NPR excerpt",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Born 1952-12-07 in Villingen; married 1973-04"
         },
         {
           "claim": "EDF 物流干部 25 年；2003 退休",
           "source": "NPR excerpt",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "EDF logistics executive for 25 years; retired 2003"
         },
         {
           "claim": "离婚（2001）/再婚（2007）日期仅 fr.wikipedia——与部分一手自述（1973-2024 配偶史）存在出入",
           "source": "fr.wikipedia",
-          "conf": "✗ 待统一"
+          "conf": "✗ 待统一",
+          "claim_en": "Divorce (2001) / remarriage (2007) dates sourced only from fr.wikipedia — conflicts with the first-person spousal account (1973–2024)",
+          "conf_en": "✗ not unified"
         }
       ],
       "unverified": [
         {
           "item": "离婚/再婚年份的多源冲突（fr.wikipedia vs 一手叙事），不写入正文",
-          "conf": "✗ 待统一"
+          "conf": "✗ 待统一",
+          "item_en": "Multi-source conflict on divorce/remarriage years (fr.wikipedia vs first-person narrative) — kept out of the main text",
+          "conf_en": "✗ not unified"
         },
         {
           "item": "回忆录具体章节结构与「早餐桌」是否为全书开篇（NPR 引文在卷首，需以原书为准）",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Whether the memoir's chapter structure opens at the breakfast table (the NPR quote sits at the head; the original book governs)"
         }
       ],
       "kind": "memoir",
-      "domain": "history, social-science"
+      "domain": "history, social-science",
+      "baseline_conf_en": "✓ core publication data verified; English title completed to its full form"
     },
     {
       "id": "2026-manda-kanoke-made",
@@ -1958,7 +2106,8 @@
           "zh": "序章剖白书名来历：与患者的约定告白、以及作者对「延命治疗 = 延长痛苦」的临床反思。他从外科医生转往在宅缓和ケア的第一手见证。",
           "en": "Opening glosses the title as a lived pact and unloads the clinical case against over-extension treatment — a surgeon's first-hand turn to home hospice.",
           "conf": "✓",
-          "sources": "目次与书评综合"
+          "sources": "目次与书评综合",
+          "sources_en": "Contents listing and review synthesis"
         },
         {
           "n": 2,
@@ -1967,7 +2116,8 @@
           "zh": "「步けるうちは死なない」——步行能力是生命力最诚实的指针；每天一段能走的距离，就是身体还能走多远的地图。与之配合的是「每日 8000 步 / 快走 20 分钟」的实证线（中之条研究）。",
           "en": "\"While you can still walk, you are not yet dying\": walking is the honest index of vitality; daily 8,000 steps / 20 brisk minutes is the evidence line.",
           "conf": "✓",
-          "sources": "目次 · 中对内容广泛转载"
+          "sources": "目次 · 中对内容广泛转载",
+          "sources_en": "Contents · the book's contents widely reproduced in reviews"
         },
         {
           "n": 3,
@@ -1976,7 +2126,8 @@
           "zh": "倡导「在家离世」：停止无效治疗、重视心理满足、让死亡回到自家餐桌而非 ICU。对日本男性 8 年「不健康寿命」的批判性拆解——目标是把失能岁月压缩到接近零。",
           "en": "For dying at home: stop what no longer serves, honor the psychological, bring death back to the family table. The 8-years-unhealthy-life datum is the book's statistical spine.",
           "conf": "✓",
-          "sources": "目次 · 书评"
+          "sources": "目次 · 书评",
+          "sources_en": "Contents · reviews"
         },
         {
           "n": 4,
@@ -1985,7 +2136,8 @@
           "zh": "多年在宅看取り的案卷化叙述：家属与患者的心理、临终拒绝进食的「尽孝」陷阱、以及医生如何把「最后一次谈话」讲成日常。",
           "en": "Case-driven chapters: family psychology, the feeding-related \"filial duty\" traps, and how the physician frames the final conversations.",
           "conf": "◐",
-          "sources": "目次 · 阅读笔记摘引"
+          "sources": "目次 · 阅读笔记摘引",
+          "sources_en": "Contents · reading-note excerpts"
         },
         {
           "n": 5,
@@ -1994,7 +2146,8 @@
           "zh": "全书收束：把死亡从医疗系统的失败项改写为人生的最后一项完成品。作者反复提醒读者——我们与患者的约定，其实也是与自己的约定。",
           "en": "The book closes by rewriting death from system-failure into life's final accomplishment — the pact with patients is really a pact with yourself.",
           "conf": "◐",
-          "sources": "书评/试读摘要"
+          "sources": "书评/试读摘要",
+          "sources_en": "Reviews / preview excerpts"
         }
       ],
       "narrative": {
@@ -2008,7 +2161,9 @@
           {
             "orig": "「棺桶まで歩こう。——棺桶まで、一緒に歩くよ。」",
             "trans_zh": "「走到棺材为止吧。——到棺材为止，我陪你一起走。」（书名语境的告白）",
-            "source": "书名来历的双关（书评转述）"
+            "source": "书名来历的双关（书评转述）",
+            "trans_en": "\"Let's keep walking to the coffin — I'll walk with you, right to the coffin.\" (the confessional double meaning of the title)",
+            "source_en": "The pun behind the title (as recounted in reviews)"
           }
         ],
         "reception_good_zh": "成书即话题：六刷（2026-01-18，6 万 5 千）→13 万（2026-05-08）→15 万超（2026-07-13）；书评强调「把临终从医学动物收编回人伦日常」。",
@@ -2029,7 +2184,8 @@
           "lang": "ja",
           "trans_en": "\"We made it again today. Just a little closer to the coffin.\"",
           "note_zh": "书名《棺桶まで歩こう》（走到棺材为止）的第一引线：把死说成「通往棺材的路」——不是终点，而是每天早上还能「再走一天」的度量。日语习惯用「今日も歩けたね」(今天也走得动啊)温柔地互勉：向死而生的语调，是日语介护文化的底色。",
-          "note_en": "The novel's title-phrase: death as \"the road to the coffin\" — not an end but the measure of one more day walked. The gentle \"we made it again today\" is the standard cadence of Japanese care culture: living-toward-death spoken in the ordinary voice of a morning greeting."
+          "note_en": "The novel's title-phrase: death as \"the road to the coffin\" — not an end but the measure of one more day walked. The gentle \"we made it again today\" is the standard cadence of Japanese care culture: living-toward-death spoken in the ordinary voice of a morning greeting.",
+          "source_en": "review excerpt (secondhand)"
         }
       ],
       "deep_read": [
@@ -2054,7 +2210,8 @@
           "note_en": "parallel call for outcome-oriented good death",
           "axis": "good-death",
           "pos": "cross-border peer",
-          "conf": "✓"
+          "conf": "✓",
+          "relation_en": "Cross-national counterpart"
         },
         {
           "title": "看取りの作法",
@@ -2065,7 +2222,10 @@
           "note_en": "psychiatrist's home-death version",
           "axis": "good-death",
           "pos": "parallel-wave",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Japanese dying-care discourse",
+          "title_en": "Katsumi no Sahō — The Manners of Dying",
+          "author_en": "Rika Kayama"
         },
         {
           "title": "人間らしい死をかなえる在宅医療",
@@ -2076,7 +2236,10 @@
           "note_en": "home-palliative elder",
           "axis": "good-death",
           "pos": "lineage",
-          "conf": "◐"
+          "conf": "◐",
+          "relation_en": "Professional precedent",
+          "title_en": "Home Care for a Humane Death",
+          "author_en": "Toichi Kobori"
         },
         {
           "title": "五十嵐大輔 / ハロー、グッバイ",
@@ -2087,7 +2250,10 @@
           "note_en": "pop narratives of death in the everyday",
           "axis": "death-culture",
           "pos": "parallel-wave",
-          "conf": "○"
+          "conf": "○",
+          "relation_en": "Pop-culture counterpart",
+          "title_en": "Igarashi Daisuke / Hello, Goodbye",
+          "author_en": "Jun Akibe"
         }
       ],
       "characters": [
@@ -2097,7 +2263,9 @@
           "group": "作者",
           "role_zh": "外科→在宅緩和ケア医（b.1964 东京日野）；自 2008 年在高崎「いっぽ」执业，2017 年独立开设诊所；在宅看取り逾 1400 例（2008–2017）",
           "role_en": "surgeon turned home-hospice MD; 1,400+ home deaths 2008–2017, then 2,000+",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Author",
+          "name_en": "Ryōhei Manda"
         },
         {
           "id": "J2",
@@ -2105,7 +2273,9 @@
           "group": "对谈者",
           "role_zh": "临床心理師；2026-02-11 对谈「步行是活着」",
           "role_en": "clinical psychologist; 2026-02-11 dialogue",
-          "conf": "✓"
+          "conf": "✓",
+          "group_en": "Interlocutor",
+          "name_en": "Kaito Higashibata"
         },
         {
           "id": "J3",
@@ -2113,7 +2283,9 @@
           "group": "数据线",
           "role_zh": "中之条研究（8000 步）的研究者——本书实证坐标",
           "role_en": "8,000-steps research author — the book's evidentiary coordinate",
-          "conf": "◐"
+          "conf": "◐",
+          "group_en": "Data thread",
+          "name_en": "Yukitoshi Aoyagi"
         }
       ],
       "charedges": [
@@ -2166,41 +2338,56 @@
         {
           "claim": "真实 ISBN-13 = 9784344987937（9784344987934 无效作废）",
           "source": "河出書房新社/NDL 数据",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Real ISBN-13 = 9784344987937 (9784344987934 invalid, voided)",
+          "source_en": "Kadokawa Shoten / NDL data"
         },
         {
           "claim": "发售日 2025-11-27（初传 12 月实误）；河出書房新社；224pp；¥1034 (本体 ¥940+税)",
           "source": "河出/书店数据",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Released 2025-11-27 (the initially circulated December date was wrong); Kadokawa Shoten; 224pp; ¥1,034 (¥940 + tax)",
+          "source_en": "Kadokawa / booktrade data"
         },
         {
           "claim": "销量：6 万 5 千（2026-01-18，六刷）→13 万（2026-05-08）→15 万超（2026-07-13）",
           "source": "河出書房新社销售通讯",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Sales: 65,000 (2026-01-18, 6th printing) → 130,000 (2026-05-08) → 150,000+ (2026-07-13)",
+          "source_en": "Kadokawa Shoten sales report"
         },
         {
           "claim": "作者 b.1964 东京日野；外科医；2008 年创いっぽ（高崎）；2017 年独立诊所；在宅看取り 1400+（2008–2017）",
           "source": "作者简介/采访",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Author b.1964 Hino, Tokyo; surgeon; founded Ippo (Takasaki) 2008; independent clinic 2017; 1,400+ home deaths attended (2008–2017)",
+          "source_en": "author bio / interviews"
         },
         {
           "claim": "编辑标注「例外」：河出 885 系列本卷为特别发行编号 887（非 886）",
           "source": "NDL/出版页脚",
-          "conf": "◐"
+          "conf": "◐",
+          "claim_en": "Editor's “exception” note: this Kadokawa 885-series volume carries the special issue number 887 (not 886)",
+          "source_en": "NDL / publisher colophon"
         }
       ],
       "unverified": [
         {
           "item": "全约各章细致标题（目次 5 章）不完整掌握——部分章节名以摘要方式转述",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Exact chapter titles (5-chapter contents) only partially grasped — some section names are secondhand summaries"
         },
         {
           "item": "「棺桶まで歩こう」大奖/入选书展的传闻未逐一核实",
-          "conf": "○"
+          "conf": "○",
+          "item_en": "Rumours of prizes / book-fair selections for 「棺桶まで歩こう」 not individually verified"
         }
       ],
       "kind": "essay",
-      "domain": "medicine-health, cross-disciplinary"
+      "domain": "medicine-health, cross-disciplinary",
+      "baseline_conf_en": "✓ publication data verified (old card ISBN 9784344987934 was wrong; actual 9784344987937; release date actually 11-27)",
+      "author_en": "Manda Ryōhei",
+      "publisher_en": "Gentosha Shinsho"
     },
     {
       "id": "pe-volume1-birth-classical",
@@ -2767,7 +2954,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Price 与 Thonemann 用 900 年篇幅完成的是一部『欧洲对希腊罗马的层累记忆』。全书最独特的贡献不是任何单章的实证发现，而是把『古典』作为一个可分析的概念处理：每一章都问『这一世纪里的哪些人、在什么情境下、以什么目的引用更早的过去』。这个方法让本书与传统希腊罗马通史（如 Boardman、Holladay、Brunt、Goldsworthy）显著区别开。第二值得注意：作者对『欧洲 vs 亚洲』二元范畴的谱系追踪 —— 从希罗多德、埃斯库罗斯、伊索克拉底、亚历山大、罗马对迦太基的定性、直到 4 世纪护教学 —— 是全书最原创的隐性主线。第三：本书 34 位图版作者几乎都在书内文字里被处理，不是附录 —— 这在同类通史里是罕见的图文互证密度。局限：作者处理 146 BC-AD 14 的罗马扩张 (Ch.7-8) 相对粗疏，与 Ch.9 的宗教-文化密度不匹配；对晚期共和国的奴隶制与家庭经济的处理也过于压缩。",
         "en": "**Overall verdict after a full read**: Price & Thonemann's 900 years is really a study of Europe's layered memory of Greece/Rome. The book's contribution isn't any single chapter but the treatment of 'Classical' as an analysable concept — every chapter asks who, in what context, and for what purpose is citing the earlier past. This distinguishes it from standard Greece/Rome surveys (Boardman, Holladay, Brunt, Goldsworthy). Second: the genealogy of Europe-vs-Asia from Herodotus to Augustine is the book's most original implicit thread. Third: nearly all 34 plates are worked into the text — unusual density of text-image cross-reference. Limitation: Chs.7-8 covering 146 BC - AD 14 Roman expansion are comparatively thin versus Ch.9's religious-cultural density, and the treatment of slavery and household economy in the late Republic is compressed."
-      }
+      },
+      "claims_list_en": [
+        "memory-construction thesis",
+        "material culture first",
+        "1700 BC–AD 410"
+      ],
+      "baseline_conf_en": "✓ publication facts verified via multi-tier sources",
+      "domain_en": "Ancient History"
     },
     {
       "id": "pe-volume2-inheritance-rome",
@@ -3224,7 +3418,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Wickham 本书是他 2005 年 1200 页学术专著《Framing the Early Middle Ages》的通史版改写 —— 但内容不是简化，是重构。全书最独特之处是把 400-1000 处理为**同时**发生的东地中海史、西亚史、西北欧史，任何一处单极叙事都会破坏这个对称。第二条主线：物质连续性的证据密度 —— 陶器、贸易路线、税册、修道院田产登记 (polyptyques)、聚落形态 —— Wickham 让制度史从考古数据里生长出来，这是本书与任何同期中世纪通史 (如 Collins、Fouracre、Noble) 最根本的区别。局限：(1) 军事史与外交史几乎完全被抽象化 —— 732 Poitiers、843 Verdun、955 Lechfeld 这些事件只在结构讨论里被引用；(2) 对不列颠-爱尔兰-斯堪的纳维亚的处理相对薄弱，重心明显在地中海；(3) 女性与家庭的处理仅限于第 19 章的一节，与 Wickham 自己在《Framing》中已有的性别讨论相比反而收缩。",
         "en": "**Overall verdict after a full read**: Wickham's book is a survey-scale reconstruction (not simplification) of his 1,200-page academic Framing the Early Middle Ages (2005). The distinctive move is treating 400-1000 as simultaneously Eastern Mediterranean, West Asian, and North-West European history — any single-pole narrative breaks the symmetry. Second thread: material continuity evidence density (pottery, trade, taxation, monastery polyptyques, settlement form) lets institutional history grow from archaeology, which is the fundamental difference from contemporaries (Collins, Fouracre, Noble). Limitations: (1) military and diplomatic history is largely abstracted — 732, 843, 955 appear only within structural discussion; (2) Britain-Ireland-Scandinavia treatment is comparatively thin, weight is Mediterranean; (3) women and family limited to a single sub-section in Ch.19, a contraction relative to Framing's own gender discussion."
-      }
+      },
+      "claims_list_en": [
+        "the Dark Ages weren't dark",
+        "economic archaeology first",
+        "parallel trajectories"
+      ],
+      "baseline_conf_en": "✓ publication facts verified via multi-tier sources",
+      "domain_en": "Early Medieval"
     },
     {
       "id": "pe-volume3-high-middle-ages",
@@ -3689,7 +3890,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Jordan 本书是英语世界最好的中世纪教科书之一 —— 这个『最好』的核心是它的**克制**。作者既不把 1000-1300 写成进步叙事 (Pirenne 传统的商业化叙述)，也不写成衰亡前夜 (Huizinga 的 Autumn 传统)，而是把这三百年作为『一个刚刚成形的信仰-政治社会在其内部张力下同时达到顶峰与解体前夜』。方法上：Jordan 大量直接引用一手编年史 (Orderic Vitalis, Joinville, Matthew Paris, Jean de Joinville, Froissart) —— 让中世纪人自己说话，是本书在同类教科书里最坚持的一条。局限：(1) 对 11-13 世纪的商业革命处理过简 —— 与 Pirenne/Henri Pirenne 后续研究 (Abulafia, Lopez, Epstein) 相比明显收缩；(2) 对犹太人与穆斯林在盛期中世纪的位置只在第 IV 部分末尾各一节 —— 与今天中世纪史学界 (David Nirenberg, Jeremy Cohen) 的讨论相比滞后；(3) 十字军的处理偏政治-军事，缺少 Jonathan Riley-Smith / Thomas Asbridge 一代的内部社会史维度。",
         "en": "**Overall verdict after a full read**: Jordan's is among the finest English-language medieval textbooks — and 'finest' here means restraint. Neither progress narrative (Pirenne commercialisation) nor dusk-of-the-middle-ages (Huizinga), Jordan treats 1000-1300 as a just-formed faith-polity reaching apex and eve of dissolution simultaneously. Methodologically heavy direct quotation of chroniclers (Orderic, Joinville, Matthew Paris, Froissart) — letting medieval people speak. Limitations: (1) commercial revolution under-covered relative to Pirenne's successors (Abulafia, Lopez, Epstein); (2) Jews and Muslims only get sub-sections at end of Part IV, lagging Nirenberg/Cohen's current scholarship; (3) Crusades treated politically-militarily, missing Riley-Smith / Asbridge's internal social-history dimension."
-      }
+      },
+      "claims_list_en": [
+        "expansion as the key concept",
+        "four-thread weave",
+        "crisis of 1300"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "High Middle Ages"
     },
     {
       "id": "pe-volume4-renaissance-europe",
@@ -3778,7 +3986,14 @@
         "1300–1517 衔接",
         "Grafton 知识史",
         "Forthcoming"
-      ]
+      ],
+      "claims_list_en": [
+        "1300–1517 bridge",
+        "Grafton's history of knowledge",
+        "Forthcoming"
+      ],
+      "baseline_conf_en": "○ announced as of 2026-09; no publication facts yet",
+      "domain_en": "Renaissance"
     },
     {
       "id": "pe-volume5-christendom-destroyed",
@@ -4264,7 +4479,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Greengrass 本书的最大贡献是把宗教改革从『一场革命』重新处理成『一个一百三十年的溶解过程』—— 这使他在同类通史 (MacMullen, Dickens, Cameron, Tanner, MacCulloch) 中位置独特。方法上他同时是：文化史家 (印刷图像、生命史锚点)、政治史家 (奥格斯堡/南特/威斯特伐利亚的条约史)、宗教史家 (教义-圣礼-教会学)、跨国史家 (西班牙-德意志-法国-英格兰-意大利-波兰-瑞典的并行)。这种四重性在同一本书里同时执行是罕见的。局限：(1) 东正教几乎完全缺席 —— 1517-1648 的莫斯科与拜占庭继承问题不在书内；(2) 对女性与家庭的处理集中在少数几节 —— 相比 Merry Wiesner-Hanks 的性别研究未吸收；(3) 对宗教改革与新大陆 (Latin American colonial church) 的联系只有一节 —— 与 Benevent 学派的全球宗教改革讨论相比克制。",
         "en": "**Overall verdict after a full read**: Greengrass's real contribution is treating the Reformation as a 130-year dissolution rather than a revolution — this positions him uniquely among contemporaries (Dickens, Cameron, Tanner, MacCulloch). He executes four genres at once: cultural (print, life-histories), political (Augsburg / Nantes / Westphalia), religious (doctrine, sacraments, ecclesiology), transnational (Spain-Germany-France-England-Italy-Poland-Sweden in parallel). Rarity of all four in one book. Limitations: (1) Eastern Orthodoxy almost entirely absent — Muscovy and the Byzantine inheritance don't appear; (2) women and family in a few sections only, without fully absorbing Merry Wiesner-Hanks; (3) Reformation and New World (colonial Latin American church) covered in a single sub-section, restrained vs the global-Reformation school."
-      }
+      },
+      "claims_list_en": [
+        "rupture of shared imagination",
+        "the 130s price",
+        "three interwoven lines"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "Reformation"
     },
     {
       "id": "pe-volume6-pursuit-glory",
@@ -4694,7 +4916,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Blanning 本书是他自己在 1986-2002 十七年学术积累的收束 —— 每一部分都能在他之前的专著里找到源头 (Joseph II 1986 对应 Part II；French Revolutionary Wars 1989 对应 Part IV；Culture of Power and Power of Culture 2002 直接是 Part III 的扩展)。全书最原创的贡献是把『荣耀』(glory) 从心态史的氛围词改造为一种可追踪的社会资本 —— 让音乐、外交、宫廷、战争、艺术、沙龙进入同一分析框架。局限：(1) 『五场革命』的框架在书内实际只用三条 —— 农业革命与工业革命被压缩到 Ch.1 与 Ch.2 的一节内；(2) 对东欧 (波兰、俄罗斯、匈牙利) 的处理相对薄弱 —— 除彼得大帝的西化外，本书基本是西欧-中欧史；(3) 1789 之前的法国部分与 1789 之后的革命部分之间有一道方法论裂缝 —— Blanning 在旧制度部分用文化-社会史方法，在革命部分退回政治-军事史。",
         "en": "**Overall verdict after a full read**: Blanning's book is the summing of his own 1986-2002 research: every Part has a monograph source (Joseph II 1986 → Part II; French Revolutionary Wars 1989 → Part IV; Culture of Power 2002 → Part III). His most original contribution is transforming 'glory' from a mentalités mood-word into a traceable form of social capital — music, diplomacy, court, war, art, salon in one frame. Limitations: (1) the five-revolutions frame really uses only three in-text — agricultural and industrial revolutions compressed to sub-sections of Chs.1-2; (2) Eastern Europe (Poland, Russia, Hungary) under-covered — apart from Peter the Great's Westernisation, the book is West-Central European; (3) a methodological break between pre-1789 France and post-1789 Revolution — cultural-social history in the ancien régime sections, political-military in the revolutionary sections."
-      }
+      },
+      "claims_list_en": [
+        "five-revolutions framework",
+        "matrix comparison",
+        "polyphony"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "Enlightenment & Revolutions"
     },
     {
       "id": "pe-volume7-pursuit-power",
@@ -5199,7 +5428,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Evans 本书是英语世界 19 世纪欧洲通史最完整的一次重写 —— 与直接对话对象 Hobsbawm 三部曲相比：Hobsbawm 用生产方式作为主线，Evans 用权力的多维竞争作为主线；Hobsbawm 的叙述偏向英法德，Evans 严格执行六国 (UK-France-Germany-Russia-Austria-Hungary-Italy) 同叙事；Hobsbawm 的 19 世纪是『长 19 世纪』(1789-1914)，Evans 的 19 世纪从 1815 起。全书最原创的贡献是 Ch.5-6 的科学-情感双联画 —— 这是任何 19 世纪欧洲通史里都还没有过的处理。局限：(1) 对东欧 (俄罗斯帝国境内非俄罗斯民族、奥匈内的捷克-克罗地亚-罗马尼亚) 的处理以帝国为单位而非以民族为单位 —— 民族主义的复杂性被压缩；(2) 对欧洲之外的关系 (美国、日本、中国、拉美) 只在 Ch.3 与 Ch.8 触及 —— 与同期『全球 19 世纪』(Bayly, Beckert) 相比是刻意的收窄；(3) 全书插图密度大 —— 约每 15 页一幅 —— 但图的引用与文本论证的关系并不总是一致，有些图属于装饰性插图。",
         "en": "**Overall verdict after a full read**: Evans' is the most complete English-language rewrite of 19th-c. European general history. Against its explicit interlocutor Hobsbawm: Hobsbawm's main line is mode of production, Evans' is multi-dimensional competition of power; Hobsbawm leans UK-France-Germany, Evans strictly runs UK-France-Germany-Russia-Austria-Hungary-Italy simultaneously; Hobsbawm's long 19th c. runs 1789-1914, Evans' 1815-1914. The most original contribution is Chs.5-6's science-emotion diptych — no other 19th-c. European survey does this. Limitations: (1) Eastern Europe (non-Russian peoples inside the Empire, Czech-Croatian-Romanian inside Austria-Hungary) treated by empire rather than nationality — nationalist complexity is compressed; (2) extra-European relations (US, Japan, China, Latin America) only touched in Chs.3 and 8 — deliberately narrower than contemporary 'global 19th century' (Bayly, Beckert); (3) high illustration density (~1 per 15 pp) but the image-text argument isn't always aligned — some plates are decorative."
-      }
+      },
+      "claims_list_en": [
+        "four ideologies in competition",
+        "a century-long survey",
+        "micro anchoring macro"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "Century of Revolutions"
     },
     {
       "id": "pe-volume8-hell-and-back",
@@ -5778,7 +6014,14 @@
       "full_analysis": {
         "zh": "**通读后的整体判断**：Kershaw 本书的最大胆之处是把 1914-1949 处理为**一部**结构性崩塌，而不是两次大战加中间一段和平。这个『新型三十年战争』的框架不是他首创 (A.J.P. Taylor, Arno Mayer 都提过)，但他是第一个在通史层面把它完整执行的。全书的第二支柱是把大屠杀放在 1941-1945 的核心位置 —— 拒绝把它作为战争背景或注脚，这是他与很多同期二战史家 (Beevor, Overy) 的分水岭。第三支柱是 Ch.9 的『静默转身』—— 在最深崩塌里文化资本仍在迁移与保存 —— 这一章在整本书里最安静也最原创。局限：(1) 东欧 (波兰、苏联、巴尔干) 在 1944-1949 段的处理以苏联-西方对抗为主，本地视角 (Kuronia, 乌克兰民族主义, 铁托游击队) 相对薄弱；(2) 对女性经验的处理集中在 Ch.9 的一节 —— 与 Sheila Rowbotham / Orlando Figes 的性别维度相比是收缩的；(3) 西班牙内战在 Ch.6 用 8 页处理 —— 与本书其他部分的密度相比明显压缩；(4) 大萧条的经济机制在 Ch.5 内被简化，未吸收 2010 年后 Adam Tooze 一派的新研究。",
         "en": "**Overall verdict after a full read**: Kershaw's boldest move is treating 1914-49 as ONE structural collapse — not two wars with a peace in between. The 'new Thirty Years' frame isn't his invention (Taylor, Mayer precede him), but he is the first to execute it survey-wide. Second pillar: the Shoah placed at the centre of 1941-45, not as background or footnote — this is his watershed with Beevor/Overy-type WWII histories. Third pillar: Ch.9's 'quiet transitions' — cultural capital migrating and being preserved even at civilisation's nadir — the quietest and most original chapter. Limitations: (1) Eastern Europe (Poland, USSR, Balkans) 1944-49 is framed Soviet-vs-Western, with local voices (Kuron, Ukrainian nationalism, Tito's partisans) comparatively weak; (2) women's experience only in a Ch.9 sub-section, contracted relative to Rowbotham / Figes; (3) Spanish Civil War in 8 pp of Ch.6, clearly compressed against the book's general density; (4) Great Depression economics simplified in Ch.5, without absorbing post-2010 Adam Tooze-school research."
-      }
+      },
+      "claims_list_en": [
+        "the new Thirty Years' War",
+        "coexistent totalitarianisms",
+        "personal documents × macro"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "First Half of 20th C."
     },
     {
       "id": "pe-volume9-global-age",
@@ -6467,8 +6710,15 @@
       },
       "full_analysis": {
         "zh": "**通读后的整体判断**：Kershaw 本书与 Vol.8 一起构成他版的『漫长的 20 世纪』。最原创的框架是『两个不安时代』的对称 —— 使全书 12 章不再是编年而是辩证。第二支柱：他对 1950-1973 黄金三十年的估值 —— 与直接对话对象 Tony Judt『Postwar』的分歧在于：Judt 把战后处理为『以政治妥协换取和平』的时代，Kershaw 强调这 25 年首先是物质与文化的双重突破，制度只是这一突破的表层。第三支柱：Ch.12『polycrisis』的系统处理 —— 2008-2016 六重叠加危机 —— 是这一术语在通史层面的最早使用之一。局限：(1) 对 1945-1989 东欧的处理以『铁幕另一侧』为主 —— 未充分吸收 Padraic Kenney、Culbert等东欧本地视角；(2) 欧盟建制史在 Ch.10 与 Ch.11 内被处理为主要制度叙事 —— 与 Phillip Gorski、Friedrich Kratochwil 等对欧盟作为规范力量的讨论相比是内倾的；(3) 对 2015 难民潮与极右翼崛起的因果链只有一节的处理 —— 与 2020 年代的最新研究 (Castles, de Haas) 相比已经滞后；(4) 文化-思想史部分 (Ch.5) 相比 Vol.8 的 Ch.9 明显收缩 —— 本书的哲学-艺术-文学维度是全书最弱的一段。",
-        "en": "**Overall verdict after a full read**: Together with Vol.8, Kershaw's long 20th century. Most original frame: the two-eras-of-insecurity symmetry that lifts 12 chapters from chronology to dialectic. Second pillar: his valuation of 1950-73 against Judt's Postwar — for Judt postwar is peace-through-compromise, for Kershaw the 25 years were first a material and cultural breakthrough with institutions as its surface. Third pillar: Ch.12's systematic 'polycrisis' handling of 2008-16 is among the term's earliest uses at survey level. Limitations: (1) 1945-89 Eastern Europe largely framed as 'other side of the Iron Curtain' — without fully absorbing Kenney, Culbert et al.'s in-region视角; (2) EU institutional history in Chs.10-11 told from inside — inward-looking vs Gorski / Kratochwil's normative-power debate; (3) 2015 refugee wave and far-right rise causality in a single sub-section — already behind 2020s research (Castles, de Haas); (4) cultural-intellectual history in Ch.5 noticeably contracted relative to Vol.8's Ch.9 — philosophy, art, and literature are the book's weakest stretch."
-      }
+        "en": "**Overall verdict after a full read**: Together with Vol.8, Kershaw's long 20th century. Most original frame: the two-eras-of-insecurity symmetry that lifts 12 chapters from chronology to dialectic. Second pillar: his valuation of 1950-73 against Judt's Postwar — for Judt postwar is peace-through-compromise, for Kershaw the 25 years were first a material and cultural breakthrough with institutions as its surface. Third pillar: Ch.12's systematic 'polycrisis' handling of 2008-16 is among the term's earliest uses at survey level. Limitations: (1) 1945-89 Eastern Europe largely framed as 'other side of the Iron Curtain' — without fully absorbing Kenney, Culbert et al.'s in-region perspective; (2) EU institutional history in Chs.10-11 told from inside — inward-looking vs Gorski / Kratochwil's normative-power debate; (3) 2015 refugee wave and far-right rise causality in a single sub-section — already behind 2020s research (Castles, de Haas); (4) cultural-intellectual history in Ch.5 noticeably contracted relative to Vol.8's Ch.9 — philosophy, art, and literature are the book's weakest stretch."
+      },
+      "claims_list_en": [
+        "three-phase postwar",
+        "globalization as context",
+        "an open conclusion"
+      ],
+      "baseline_conf_en": "✓ publication facts verified",
+      "domain_en": "Postwar & Globalization"
     }
   ]
 }

@@ -58,7 +58,8 @@
           "edge": "◎",
           "why_zh": "Sea of Tranquility 影集合作方",
           "why_en": "Sea of Tranquility TV partner",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Sam Esmail (Mr. Robot creator)"
         },
         {
           "who": "Omar El Akkad",
@@ -72,7 +73,8 @@
           "edge": "◎",
           "why_zh": "2010 年起任 staff writer",
           "why_en": "staff writer since 2010",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "The Millions (editorial staff)"
         }
       ],
       "influences": [
@@ -285,59 +287,70 @@
           "y": "2020/2022",
           "award": "Obama 年度书单",
           "note": "Glass Hotel & Sea of Tranquility",
-          "conf": "✓"
+          "conf": "✓",
+          "award_en": "Obama Year-End Best Books"
         }
       ],
       "fact_ledger": [
         {
           "claim": "Last Night in Montreal = 2009（旧卡 2006 错误）",
           "source": "publishersweekly.com; emilymandel.com; amheath.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "\"Last Night in Montreal\" = 2009 (old card’s 2006 was wrong)"
         },
         {
           "claim": "2025 与 Laura Barisonzi 结婚（Greenlight 书店）",
           "source": "publishersweekly.com; en-wiki; theguardian.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Married Laura Barisonzi in 2025 (Greenlight Bookstore)"
         },
         {
           "claim": "2022 与 Kevin Mandel 离婚（‘prove divorce to Wikipedia’）",
           "source": "irishtimes.com; en-wiki",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Divorced Kevin Mandel in 2022 (\"had to prove the divorce to Wikipedia\")"
         },
         {
           "claim": "女儿 2015 出生（2026 时 10 岁）",
           "source": "en-wiki; theguardian.com",
-          "conf": "✓ (Grokipedia 2016 ◐)"
+          "conf": "✓ (Grokipedia 2016 ◐)",
+          "claim_en": "Daughter born 2015 (age 10 in 2026)"
         },
         {
           "claim": "homeschool 至约 15 岁、无高中文凭",
           "source": "theguardian.com; newyorker.com; monroeccc.edu",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Homeschooled to about 15; no high-school diploma"
         },
         {
           "claim": "The Millions staff writer 自 2010",
           "source": "themillions.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Staff writer at The Millions since 2010"
         },
         {
           "claim": "涉 Anthropic 版权诉讼（Bartz v. Anthropic 和解）",
           "source": "esquire.com 2026-09-09; apnews.com",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Party to the Anthropic copyright suit (Bartz v. Anthropic settlement)"
         },
         {
           "claim": "无大纲硬写；后半推翻重写",
           "source": "theglobeandmail.com; therumpus.net",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Writes without an outline; rewrote the second half from scratch"
         }
       ],
       "unverified": [
         {
           "item": "女儿出生年份 2015 vs 2016",
-          "conf": "✓/◐"
+          "conf": "✓/◐",
+          "item_en": "Daughter’s birth year: 2015 vs 2016"
         },
         {
           "item": "The Lola Quartet 具体奖项（缩写来源不确定）",
-          "conf": "○"
+          "conf": "○",
+          "item_en": "The Lola Quartet’s specific award (abbreviated source uncertain)"
         }
       ],
       "stance_zh": "灾难不是背景，是让「微小联结」显影的暗室：莎剧、酒店、画作、派对——都是人对抗熵的仪式。2026 年这套装置第一次直接对准「美国自身的宪政解体会发生什么」；心理上她承认「我无法预测大流行」，预兆之「失灵」正是其自嘲。",
@@ -345,7 +358,8 @@
       "read_status_zh": "Exit Party（阅读中）；Station Eleven 列为候补（先对照 HBO 版）。",
       "read_status_en": "Exit Party: reading; Station Eleven: backlist candidate (against HBO).",
       "why_now_zh": "2026 美国宪政焦虑（政变讨论、中选、AI 失控叙事）的客体化证词——「两个美国」一确二真；'I cannot overstate how stressful the US is at the moment'（irishtimes 2026-09-12）。",
-      "why_now_en": "The objectified testimony of 2026's American constitutional anxiety — two Americas, one-true-two."
+      "why_now_en": "The objectified testimony of 2026's American constitutional anxiety — two Americas, one-true-two.",
+      "born_en": "Spring 1979 · Merville, BC, Canada"
     },
     {
       "id": "vargas",
@@ -367,28 +381,32 @@
           "edge": "◎",
           "why_zh": "画家；笔名来源（借自《赤足天使》女主），常为法语版封面作画",
           "why_en": "painter; the pen-name's source and cover artist",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Jo Vargas (twin sister)"
         },
         {
           "who": "Stéphane Audoin-Rouzeau（兄）",
           "edge": "◎",
           "why_zh": "一战史家；The Three Evangelists 史家角色原型",
           "why_en": "WWI historian; character source",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Stéphane Audoin-Rouzeau (brother)"
         },
         {
           "who": "Philippe Audoin（父）",
           "edge": "◎",
           "why_zh": "作家/超现实主义圈（与 Breton 亲近）",
           "why_en": "writer in the Surrealist circle",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Philippe Audoin (father)"
         },
         {
           "who": "Siân Reynolds（英译者）",
           "edge": "✎",
           "why_zh": "长期译者；Dagger 奖随译共认",
           "why_en": "long-time translator; Dagger recognition follows",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Siân Reynolds (English translator)"
         },
         {
           "who": "Pierre Lemaitre",
@@ -554,28 +572,34 @@
         {
           "claim": "CWA 独奖三连 + 2013 共享 = 常见「四冠」（fr.wikipedia 合计独奖三度）",
           "source": "CWA annals",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Three solo CWA Dagger wins + a 2013 shared one = the oft-cited \"four crowns\" (fr.wikipedia counts three solo)"
         },
         {
           "claim": "父 Philippe Audoin、孪生姐 Jo、兄 Stéphane",
           "source": "fr.wikipedia; 多家访谈",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Father Philippe Audoin; twin sister Jo; brother Stéphane",
+          "source_en": "fr.wikipedia; several interviews"
         },
         {
           "claim": "笔名源自《赤足天使》/孪生姐 Jo",
           "source": "fr.wikipedia",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Pen name taken from \"The Barefoot Angel\" / twin sister Jo"
         },
         {
           "claim": "1979 Jussieu 考古动物学博士",
           "source": "fr.wikipedia",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "PhD in zooarchaeology, Jussieu, 1979"
         }
       ],
       "unverified": [
         {
           "item": "CNRS 结束具体年份（1990s 末？）跨源不一",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Exact year the CNRS post ended (late 1990s?) varies across sources"
         }
       ],
       "stance_zh": "她的小说里「谋杀」多为一种观念的病兆：凶手的妄想经由直觉被亚当斯贝格读出。直觉派破案长期被科学主义批评——她干脆把「un-scientific」当作美德。",
@@ -752,28 +776,35 @@
         {
           "claim": "Les Belles Promesses ISBN 9782702191477，512pp，2026-01-06 Calmann-Lévy",
           "source": "calmann-levy 目录",
-          "conf": "✓"
+          "conf": "✓",
+          "source_en": "Calmann-Lévy catalogue"
         },
         {
           "claim": "旧卡 ISBN 9782702189825 / 543pp 为错",
           "source": "对比核实",
-          "conf": "✓→更正"
+          "conf": "✓→更正",
+          "claim_en": "Old card ISBN 9782702189825 / 543pp was wrong",
+          "source_en": "comparative check",
+          "conf_en": "✓→corrected"
         },
         {
           "claim": "Goncourt 2013 Au revoir là-haut",
           "source": "多源一致",
-          "conf": "✓"
+          "conf": "✓",
+          "source_en": "consistent across sources"
         },
         {
           "claim": "1951 生；55 岁出道",
           "source": "fr.wikipedia",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Born 1951; debut at age 55"
         }
       ],
       "unverified": [
         {
           "item": "心理学家职业的精确时间线（1970s-80s 具体岗位）",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Exact timeline of his psychologist career (specific 1970s-80s posts)"
         }
       ],
       "stance_zh": "他的长篇剥开法国「光环三十年」的釉面：每个荣耀都被标价，每笔进步都有债主。极性反转、施害者同情是他的 signature。",
@@ -810,21 +841,24 @@
           "edge": "◎",
           "why_zh": "「M'endors pas」化学顺从运动 + France 2 纪录片",
           "why_en": "the M'endors pas campaign",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Caroline Darian (daughter)"
         },
         {
           "who": "Manon Garcia（哲学家）",
           "edge": "◎",
           "why_zh": "《Living With Men》分析 Mazan 审判",
           "why_en": "Living With Men on the trial",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Manon Garcia (philosopher)"
         },
         {
           "who": "Dominique Pelicot（前夫）",
           "edge": "◇",
           "why_zh": "施害者；主犯 20 年刑",
           "why_en": "the perpetrator; 20 years",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Dominique Pelicot (ex-husband)"
         }
       ],
       "influences": [
@@ -926,50 +960,60 @@
           "y": "2025",
           "award": "Time 年度女性（2024/2025 提名为全球象征）",
           "note": "public recognition",
-          "conf": "✓"
+          "conf": "✓",
+          "award_en": "Time Woman of the Year (named a global symbol, 2024/2025)"
         }
       ],
       "fact_ledger": [
         {
           "claim": "出生 1952-12-07，Villingen；农场出身",
           "source": "NPR excerpt",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Born 1952-12-07 in Villingen; farm background"
         },
         {
           "claim": "EDF 物流干部 25 年；2003 退休",
           "source": "NPR excerpt",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "EDF logistics executive for 25 years; retired 2003"
         },
         {
           "claim": "2020-10 超市监控拆穿；11-02 逮捕；4000+ 影像（12-2020）",
           "source": "BBC; le monde; Global Voices",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Uncovered via supermarket surveillance 2020-10; arrested 11-02; 4,000+ images (12-2020)"
         },
         {
           "claim": "2024-12-19 判 20 年/51 人；2025-10 唯一上诉 Husamettin D.（10 年）",
           "source": "tribunal records",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Convicted 2024-12-19 — 20 years; 51 defendants; only appellant Husamettin D. (10 years), 2025-10"
         },
         {
           "claim": "France 2 纪录片 2025-01-21",
           "source": "France 2 programming",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "France 2 documentary 2025-01-21"
         },
         {
           "claim": "回忆录 Flammarion 2026-02-17，ISBN 9782080497260，320pp",
           "source": "éditeur",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Memoir, Flammarion 2026-02-17, ISBN 9782080497260, 320pp"
         },
         {
           "claim": "离婚(2001)/再婚(2007)来源仅 fr.wikipedia，与一手配偶史冲突",
           "source": "fr.wikipedia",
-          "conf": "✗ 未统一"
+          "conf": "✗ 未统一",
+          "claim_en": "Divorce (2001) / remarriage (2007) sourced only from fr.wikipedia; conflicts with the first-person spousal account",
+          "conf_en": "✗ not unified"
         }
       ],
       "unverified": [
         {
           "item": "离婚/再婚年份多源冲突——正文回避",
-          "conf": "✗"
+          "conf": "✗",
+          "item_en": "Divorce/remarriage years conflict across sources — avoided in the main text"
         }
       ],
       "stance_zh": "拒绝匿名、公开姓名与面容——把私密疼痛锻造成公共建制改革的工具。她要的不是同情，而是结构性改变。",
@@ -1020,7 +1064,8 @@
           "edge": "◎",
           "why_zh": "纪录片/播客制作；2015 SGDL Révélation",
           "why_en": "radio documentary producer",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "France Culture (Grandes Traversées, etc.)"
         }
       ],
       "influences": [
@@ -1107,7 +1152,8 @@
         {
           "claim": "Libération 1991–2007",
           "source": "出版社简介",
-          "conf": "✓"
+          "conf": "✓",
+          "source_en": "publisher bio"
         },
         {
           "claim": "2015 SGDL Révélation",
@@ -1117,23 +1163,30 @@
         {
           "claim": "《Notre guerre civile》= Grasset–France Culture 合制（此前「Louise Michel 出版方」混淆已澄清）",
           "source": "出版社/电台节目志",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "\"Notre guerre civile\" = a Grasset–France Culture co-production (the earlier \"Louise Michel publisher\" confusion is now cleared up)",
+          "source_en": "publisher / radio-programme records"
         },
         {
           "claim": "Grandes Traversées 制作：Ali 2018、Sinatra 2019、Louise Michel 2021、Thatcher",
           "source": "France Culture 节目存档",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Grandes Traversées productions: Ali 2018, Sinatra 2019, Louise Michel 2021, Thatcher",
+          "source_en": "France Culture programme archive"
         },
         {
           "claim": "Springsteen 系列索引于 2023-06（2017 未确认）",
           "source": "France Culture 索引",
-          "conf": "◐"
+          "conf": "◐",
+          "claim_en": "Springsteen series indexed 2023-06 (2017 unconfirmed)",
+          "source_en": "France Culture index"
         }
       ],
       "unverified": [
         {
           "item": "Springsteen 主题系列确切年份（2017 vs 2023）",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Exact year of the Springsteen series (2017 vs 2023)"
         }
       ],
       "stance_zh": "她的工作本质是把「外部声音的在场」炼成一种文学装置：转写不是记录，是「把话筒还给人」的伦理实践。",
@@ -1141,7 +1194,8 @@
       "read_status_zh": "作为合著者随 Pelicot 书单入列。",
       "read_status_en": "on the list via the Pelicot co-write.",
       "why_now_zh": "法国见证文学的中枢执笔者——2026 年最强的公共证词出自她的转写案。",
-      "why_now_en": "the transcriber behind 2026's most consequential French testimony."
+      "why_now_en": "the transcriber behind 2026's most consequential French testimony.",
+      "born_en": "1967 · Paris (trained as a journaliste)"
     },
     {
       "id": "manda",
@@ -1163,21 +1217,24 @@
           "edge": "⇌",
           "why_zh": "2026-02-11 对谈「步行是活着」",
           "why_en": "2026-02-11 dialogue",
-          "conf": "✓"
+          "conf": "✓",
+          "who_en": "Kaito Higashibata (clinical psychologist)"
         },
         {
           "who": "青栁幸利（中之条研究）",
           "edge": "◎",
           "why_zh": "每日 8000 步 / 快走 20 分钟实证线",
           "why_en": "the 8,000-steps evidence line",
-          "conf": "◐"
+          "conf": "◐",
+          "who_en": "Yukitoshi Aoyagi (Nakajō Study)"
         },
         {
           "who": "香山リカ（精神科医）",
           "edge": "⇌",
           "why_zh": "《看取りの作法》作者；同话语场",
           "why_en": "fellow death-discourse voice",
-          "conf": "◐"
+          "conf": "◐",
+          "who_en": "Rika Kayama (psychiatrist)"
         }
       ],
       "influences": [
@@ -1239,14 +1296,16 @@
           "title": "言語化できない痛み（?）",
           "note_zh": "系列首作（书名以书评目录核）",
           "note_en": "first nonfiction (title id from reviews)",
-          "conf": "◐"
+          "conf": "◐",
+          "title_en": "The Pain That Cannot Be Put Into Words (?)"
         },
         {
           "y": "2020",
           "title": "がん治療とロングテール",
           "note_zh": "治疗与「长尾」的批判",
           "note_en": "treatment & the long tail",
-          "conf": "◐"
+          "conf": "◐",
+          "title_en": "Cancer Treatment and the Long Tail"
         },
         {
           "y": "2025",
@@ -1254,7 +1313,8 @@
           "note_zh": "本批书单日本代表；ISBN 9784344987937",
           "note_en": "this crop's Japanese entry",
           "conf": "✓",
-          "crop": true
+          "crop": true,
+          "title_en": "Kan’oke Made Arukō (Let’s Walk On to the Coffin)"
         }
       ],
       "awards": [],
@@ -1262,37 +1322,49 @@
         {
           "claim": "真实 ISBN-13 9784344987937（旧 9784344987934 无效）",
           "source": "NDL/河出",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "True ISBN-13 9784344987937 (old 9784344987934 invalid)",
+          "source_en": "NDL / Kawade Shobō"
         },
         {
           "claim": "发售 2025-11-27，224pp，¥1034",
           "source": "河出/书店",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Released 2025-11-27, 224pp, ¥1,034",
+          "source_en": "Kawade Shobō / booktrade"
         },
         {
           "claim": "销量 6.5 万(2026-01-18)→13 万(2026-05-08)→15 万+(2026-07-13)",
           "source": "河出销售通讯",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Sales 65k (2026-01-18) → 130k (2026-05-08) → 150k+ (2026-07-13)",
+          "source_en": "Kawade Shobō sales bulletin"
         },
         {
           "claim": "b.1964 东京日野；2 浪；群馬 1991；外科→2008 いっぽ→2017 自营",
           "source": "作者简介/采访",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "b. 1964 Hino, Tokyo; two failed entrance exams; Gunma 1991; surgery → 2008 Ippo Clinic → 2017 own practice",
+          "source_en": "author bio / interviews"
         },
         {
           "claim": "看取り 1400+（2008–2017）；累计 2000+",
           "source": "作者简介",
-          "conf": "✓"
+          "conf": "✓",
+          "claim_en": "Attended 1,400+ deaths (2008–2017); 2,000+ cumulative",
+          "source_en": "author bio"
         }
       ],
       "unverified": [
         {
           "item": "首部非虚构的确切书名/出版年（封面目录未能直核）",
-          "conf": "◐"
+          "conf": "◐",
+          "item_en": "Exact title / publication year of the first nonfiction (cover & catalogue not directly verifiable)"
         },
         {
           "item": "「棺桶まで歩こう」影视/书展获奖传闻未逐条核",
-          "conf": "○"
+          "conf": "○",
+          "item_en": "Rumored screen / book-fair awards for “Kan’oke Made Arukō” not checked item by item"
         }
       ],
       "stance_zh": "死亡不是医疗系统的失败项目，而是人生最后一个可以「一起练习」的日常。步行、家里、最后的谈话——他把终点站从 ICU 移到患者门口。",
@@ -1300,7 +1372,9 @@
       "read_status_zh": "《棺桶まで歩こう》（阅读中）。",
       "read_status_en": "Kanoke made arukou: reading.",
       "why_now_zh": "超老龄日本的在地答案；在「速度与延命」的时代提供反叙事。",
-      "why_now_en": "Japan's local answer to super-aging; a counter-narrative to speed and prolongation."
+      "why_now_en": "Japan's local answer to super-aging; a counter-narrative to speed and prolongation.",
+      "born_en": "1964 · Hino, Tokyo → Maebashi (Gunma)",
+      "name_native_en": "Ryōhei Manda"
     },
     {
       "id": "price-thonemann",
@@ -1418,9 +1492,12 @@
         {
           "y": "2011",
           "award": "Price 逝后学界追念",
-          "note": "The Guardian 讣告；TLS 悼念"
+          "note": "The Guardian 讣告；TLS 悼念",
+          "award_en": "Posthumous scholarly tribute to Price",
+          "note_en": "The Guardian obituary; TLS memorial"
         }
-      ]
+      ],
+      "born_en": "Price 27 Sep 1954 Manchester · d. 14 Jun 2011 · Thonemann 1977"
     },
     {
       "id": "wickham",
@@ -1576,7 +1653,8 @@
           "award": "Serena Medal (Royal Historical Society)",
           "note": "for Italian Renaissance / medieval studies"
         }
-      ]
+      ],
+      "born_en": "18 May 1950 · United Kingdom"
     },
     {
       "id": "jordan",
@@ -1690,7 +1768,8 @@
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "born_en": "7 April 1948 · United States"
     },
     {
       "id": "grafton",
@@ -1857,7 +1936,8 @@
           "award": "CISH International Prize for History",
           "note": "laureate"
         }
-      ]
+      ],
+      "born_en": "21 May 1950 · New York"
     },
     {
       "id": "greengrass",
@@ -1962,7 +2042,8 @@
           "conf": "✓"
         }
       ],
-      "circle": []
+      "circle": [],
+      "born_en": "7 September 1949 · United Kingdom"
     },
     {
       "id": "blanning",
@@ -1971,7 +2052,7 @@
       "name_native": "Tim Christopher Wiles Blanning FBA FRICS MRSA",
       "slug_display": "T. Blanning",
       "born": "26 June 1942 · 英国",
-      "native_lang": "英语 · 法语 · 德语",
+      "native_lang": "English · French · German",
       "domain_zh": "近代早期欧洲 · 法国史 · 十八世纪文化史 · 音乐史",
       "domain_en": "Early modern Europe · French history · long 18th century · history of music",
       "one_liner_zh": "《The Pursuit of Glory》以「五场革命」重写 1648–1815 的欧洲；《The Culture of Power and the Power of Culture》将 1780 年前后的欧洲文化生产重构为一个「荣誉-礼仪-公共领域」体系。",
@@ -2125,16 +2206,20 @@
           "edge": "同代",
           "why_zh": "近代早期欧洲研究的两位英国名家 —— Briggs 走心态/巫术，Blanning 走文化/宫廷与音乐",
           "why_en": "Two British early-modern historians: Briggs on mentalities/witchcraft, Blanning on culture/court/music",
-          "conf": "○"
+          "conf": "○",
+          "edge_en": "contemporary"
         },
         {
           "who": "Richard J. Evans",
           "edge": "接棒",
           "why_zh": "Vol.6→Vol.7 的接续 —— 1815 年维也纳是 Blanning 的闭幕，也是 Evans 的开场",
           "why_en": "Vol.6→Vol.7 — Vienna 1815 closes Blanning, opens Evans",
-          "conf": "✓"
+          "conf": "✓",
+          "edge_en": "successor"
         }
-      ]
+      ],
+      "born_en": "26 June 1942 · United Kingdom",
+      "school_en": "Cultural history × political history × music and society"
     },
     {
       "id": "evans",
@@ -2308,7 +2393,8 @@
           "award": "Norton Medlicott Medal",
           "note": "Historical Association"
         }
-      ]
+      ],
+      "born_en": "29 June 1947 · London"
     },
     {
       "id": "kershaw",

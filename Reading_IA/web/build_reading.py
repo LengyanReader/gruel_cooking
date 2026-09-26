@@ -86,7 +86,7 @@ a:hover{color:var(--gold)}
 .hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
-.hero .metachip span{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
 .article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
 h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
 h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
@@ -219,6 +219,17 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+_HAN = re.compile(r"[\u4e00-\u9fff]")
+
+
+def _en_label(kind):
+    """English edge-relation label for SVG views (zh/en parity): keep the Latin
+    words of the bilingual EDGE_KIND label, else fall back to the key."""
+    lab = EDGE_KIND.get(kind, (kind, ""))[0]
+    stripped = re.sub(r"[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]+", "", lab).strip()
+    return stripped or kind.replace("_", " ")
+
+
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:
         return json.load(f)
@@ -282,13 +293,42 @@ def zh_en(zh, en, tag="div"):
     return ('<div data-zh>%s</div><div data-en>%s</div>') % (esc(zh), esc(en))
 
 
+def _bilingual(s):
+    """Split a '中文 · English' (or 'EN · 中文') lockup into its two language sides.
+    Also handles space-lockups like '古代史 Ancient History' (zh first, en after)."""
+    if " · " in s:
+        a, b = s.split(" · ", 1)
+        if _HAN.search(a) and not _HAN.search(b):
+            return a, b
+        if _HAN.search(b) and not _HAN.search(a):
+            return b, a
+    m = re.match(r"^(.*?[\u4e00-\u9fff]+[\u4e00-\u9fff \u00b7\u3001]*?)\s+([A-Za-z][^\u4e00-\u9fff]*)$", s)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    return None
+
+
+def pair(zh, en=None, tag="span"):
+    """Language-pair renderer: toggles when an English side exists; otherwise the
+    value is source language and stays visible in both views (never hidden)."""
+    if en is None:
+        en = _bilingual(zh)
+        en = en[1] if en else ""
+    if not en or en == zh:
+        return esc(zh)
+    return zh_en(zh, en, tag)
+
+
 def srcnote(zh, en):
     return '<div class="srcnote"><div data-zh>%s</div><div data-en>%s</div></div>' % (zh, en)
 
 
-def conf_token(c):
-    r = {"✓": "c-ok", "◐": "c-part", "○": "c-part", "✗": "c-bad"}.get(c, "c-part")
-    return '<span class="conf %s">%s</span>' % (r, esc(c))
+def conf_token(c, c_en=None):
+    """Confidence chip; the label may carry a verification note ('✓ 主流为 18'),
+    toggled via c_en (or an embedded '中文 · EN' lockup) so the EN view stays English."""
+    m = re.search(r"[✓◐○✗]", c or "")
+    r = {"✓": "c-ok", "◐": "c-part", "○": "c-part", "✗": "c-bad"}.get(m.group(0) if m else c, "c-part")
+    return '<span class="conf %s">%s</span>' % (r, pair(c, c_en, "span"))
 
 
 # ---------- hybrid card helpers (Goodreads × Douban) ----------
@@ -336,21 +376,20 @@ def rating_line(b, cls=""):
         score = gr.get("score")
         stars = stars_svg(score, uid="s" + b["slug"][:6]) if score else ""
         score_el = f'<span class="score">{score:.2f}</span>' if score else ""
-        cnt_zh, cnt_en = [], []
+        cnts = []
         if gr.get("count"):
             n = f'{gr["count"]:,}'
-            cnt_zh.append(f'<span class="n">{n}</span> 评分')
-            cnt_en.append(f'<span class="n">{n}</span> ratings')
+            cnts.append(f'<span class="n">{n}</span> ' + zh_en("评分", "ratings", "span"))
         if gr.get("reviews"):
             n = f'{gr["reviews"]:,}'
-            cnt_zh.append(f'<span class="n">{n}</span> 评论')
-            cnt_en.append(f'<span class="n">{n}</span> reviews')
+            cnts.append(f'<span class="n">{n}</span> ' + zh_en("评论", "reviews", "span"))
         note_zh = r.get("note_zh", "")
         note_en = r.get("note_en", "")
-        zh = stars + score_el + '<span class="cnt">' + " · ".join(cnt_zh) + '</span>'
+        cnt_line = '<span class="cnt">' + " · ".join(cnts) + '</span>'
+        zh = stars + score_el + cnt_line
         if note_zh:
             zh += f'<span class="cnt" style="color:var(--ink-pale)">{esc(note_zh)}</span>'
-        en = stars + score_el + '<span class="cnt">' + " · ".join(cnt_en) + '</span>'
+        en = stars + score_el + cnt_line
         if note_en:
             en += f'<span class="cnt" style="color:var(--ink-pale)">{esc(note_en)}</span>'
         return f'<div class="bkrate {cls}" data-both><span data-zh>{zh}</span><span data-en>{en}</span></div>'
@@ -360,10 +399,9 @@ def rating_line(b, cls=""):
         copies = re.sub(r"(\d)(?=(\d{3})+(\+|$))", r"\1,", copies)
         note_zh = sales.get("note_zh", "")
         note_en = sales.get("note_en", "")
-        zh = (f'<span class="score">{esc(copies)}</span><span class="cnt"> 部销量 · {esc(note_zh)}</span>'
-              if note_zh else f'<span class="score">{esc(copies)}</span><span class="cnt"> 部销量</span>')
-        en = (f'<span class="score">{esc(copies)}</span><span class="cnt"> copies sold · {esc(note_en)}</span>'
-              if note_en else f'<span class="score">{esc(copies)}</span><span class="cnt"> copies sold</span>')
+        zh = (f'<span class="score">{esc(copies)}</span><span class="cnt"> ' + zh_en("部销量 · " + note_zh, "copies sold · " + note_en, "span") + '</span>'
+              if note_zh else f'<span class="score">{esc(copies)}</span><span class="cnt"> ' + zh_en("部销量", "copies sold", "span") + '</span>')
+        en = zh
         return f'<div class="bkrate {cls}" data-both><span data-zh>{zh}</span><span data-en>{en}</span></div>'
     return ""
 
@@ -423,8 +461,13 @@ def svg_cover(b, w=126, h=178):
     out.append(f'<rect x="0" y="0" width="9" height="{h}" fill="{accent}"/>')
     # inner frame
     out.append(f'<rect x="17" y="{sf(10)}" width="{w-30}" height="{h-sf(20)}" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/>')
-    # num badge
-    out.append(f'<text x="{w-16}" y="{sf(30)}" text-anchor="end" font-family="LXGW WenKai,serif" font-size="{sf(15)}" font-weight="700" fill="#E9D89B">{esc(num)}</text>')
+    # num badge (zh numeral / latin numeral toggled via CSS, works inside SVG)
+    _num_en = {"\u58f9": "I", "\u8d30": "II", "\u53c1": "III", "\u8086": "IV", "\u4f0d": "V",
+               "\u9646": "VI", "\u67d2": "VII", "\u634c": "VIII", "\u7396": "IX"}.get(num, num)
+    _num_common = f'text-anchor="end" font-family="LXGW WenKai,serif" font-size="{sf(15)}" font-weight="700" fill="#E9D89B"'
+    out.append(f'<text x="{w-16}" y="{sf(30)}" {_num_common} data-zh>{esc(num)}</text>')
+    if _num_en != num:
+        out.append(f'<text x="{w-16}" y="{sf(30)}" text-anchor="end" font-family="Inter,serif" font-size="{sf(13)}" font-weight="700" fill="#E9D89B" data-en>{esc(_num_en)}</text>')
     # title lines centered
     y0 = sf(52)
     ctx_fs = sf(15)
@@ -435,7 +478,9 @@ def svg_cover(b, w=126, h=178):
     out.append(f'<text x="{cx}" y="{yb+sf(20)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(9.5)}" fill="#D9E1EA">{esc(author)}</text>')
     out.append(f'<text x="{cx}" y="{yb+sf(36)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(8)}" fill="rgba(217,225,234,.75)">{esc(imprint[:18])} · {esc(b.get("year",""))}</text>')
     # spine label at bottom
-    out.append(f'<text x="{cx}" y="{h-sf(18)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(7.5)}" letter-spacing="1.5" fill="rgba(247,241,227,.6)">{esc(b.get("lang","").upper())} · {esc(b.get("country",""))}</text>')
+    _spine_zh = f'<tspan data-zh> \u00b7 {esc(b.get("country",""))}</tspan>'
+    _spine_en = f'<tspan data-en> \u00b7 {esc(b.get("country_en", b.get("country","")))}</tspan>'
+    out.append(f'<text x="{cx}" y="{h-sf(18)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="{sf(7.5)}" letter-spacing="1.5" fill="rgba(247,241,227,.6)">{esc(b.get("lang","").upper())}' + _spine_zh + _spine_en + '</text>')
     out.append('</svg>')
     return "".join(out)
 
@@ -484,6 +529,7 @@ def pubviz_svg(books, width=760):
     html_out = ['<div class="pubviz">']
     for k, bs in rows:
         col = pub_color(k)
+        _k_en = next((b.get("publisher_en") for b in bs if b.get("publisher_en")), k)
         blocks = []
         for b in bs:
             try:
@@ -493,7 +539,7 @@ def pubviz_svg(books, width=760):
             wpx = max(34, int(150 + 330 * p / maxp))
             short = b["title_orig"][:16]
             blocks.append(f'<div class="blk" style="background:{col};width:{wpx}px" title="{esc(b["title_orig"])} · {p}pp"><span>{esc(short)}</span></div>')
-        html_out.append(f'<div class="row"><div class="pname"><span class="dot" style="background:{col}"></span>{esc(k)}</div>'
+        html_out.append(f'<div class="row"><div class="pname"><span class="dot" style="background:{col}"></span>' + (zh_en(k, _k_en, "span") if _k_en != k else esc(k)) + '</div>'
                         f'<div class="bar">{"".join(blocks)}<span class="cnt">×{len(bs)}</span></div></div>')
     html_out.append('</div>')
     return "".join(html_out)
@@ -527,7 +573,7 @@ def textlinks_block(b):
         rows.append(f'<a href="{esc(t["url"])}" target="_blank" rel="noopener">'
                     f'<span data-zh>{esc(t["zh"])}</span><span data-en>{esc(t["en"])}</span>'
                     f'<span class="dom">{esc(dom)} ↗</span>'
-                    f'<span class="rtag" style="color:{ccol}">{esc(route)} · {tconf}</span></a>')
+                    f'<span class="rtag" style="color:{ccol}">{pair(route, None, "span")} · {tconf}</span></a>')
     note = ('本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，'
             '不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。',
             'This page links only verifiable sources — official previews, licensed '
@@ -539,10 +585,27 @@ def textlinks_block(b):
             '<div class="tl-list">' + "".join(rows) + '</div>')
 
 
-def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h1_en=None, hero_sub_en=None, nav_sub_zh="", nav_sub_en=""):
+def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h1_en=None, hero_sub_en=None, nav_sub_zh="", nav_sub_en="", hero_kicker_en=None, chips_en=None):
     nav_home = up_rel + "/index.html"
-    hl = ' '.join('<span>%s</span>' % esc(c) for c in chips)
+    # bilingual chrome: 'zh'-side strings may be (zh, en) tuples or '中文 · EN' lockups
+    if isinstance(hero_kicker, tuple):
+        hero_kicker, hero_kicker_en = hero_kicker
+    kicker_en = hero_kicker_en or (_bilingual(hero_kicker)[1] if _bilingual(hero_kicker) else hero_kicker)
+    if isinstance(hero_sub, tuple):
+        hero_sub, hero_sub_en = hero_sub
+    norm = []
+    for i, c in enumerate(chips):
+        if isinstance(c, tuple):
+            norm.append(c)
+        elif chips_en and i < len(chips_en):
+            norm.append((c, chips_en[i]))
+        else:
+            b = _bilingual(c)
+            norm.append((c, b[1]) if b else (c, c))
+    hl = ' '.join('<span class="chip"><span data-zh>%s</span><span data-en>%s</span></span>' % (esc(z), esc(e)) for z, e in norm)
     script = SCRIPT.replace("__STORAGE__", STORAGE_KEY)
+    if isinstance(hero_h1, tuple):
+        hero_h1, hero_h1_en = hero_h1
     h1_en = hero_h1_en if hero_h1_en is not None else hero_h1
     sub_en = hero_sub_en if hero_sub_en is not None else hero_sub
     ns_zh = nav_sub_zh or ""
@@ -561,7 +624,7 @@ def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h
 <body class="lang-zh">
 
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>{esc(hero_kicker)}</span><span data-en>{esc(hero_kicker)}</span><span class="sub" data-both><span data-zh>{esc(ns_zh)}</span><span data-en>{esc(ns_en)}</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>{esc(hero_kicker)}</span><span data-en>{esc(kicker_en)}</span><span class="sub" data-both><span data-zh>{esc(ns_zh)}</span><span data-en>{esc(ns_en)}</span></span></div>
   <div class="nav-right">
     <a class="nav-home" href="{nav_home}">
       <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
@@ -573,7 +636,7 @@ def page(title, hero_kicker, hero_h1, hero_sub, chips, body, up_rel="..", hero_h
 </nav>
 
 <section class="hero">
-  <p class="kicker">READING &amp; IA — {esc(hero_kicker)}</p>
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — {esc(hero_kicker)}</span><span data-en>READING &amp; IA — {esc(kicker_en)}</span></p>
   <h1><span data-zh>{esc(hero_h1)}</span><span data-en>{esc(h1_en)}</span></h1>
   <div class="subtitle" data-both><span data-zh>{esc(hero_sub)}</span><span data-en>{esc(sub_en)}</span></div>
   <div class="metachip">{hl}</div>
@@ -643,17 +706,20 @@ def svg_plot_flow(nodes, width=860):
         # zh
         ty = cy + 24
         for ln in zl:
-            out.append(f'<text x="{x+40}" y="{ty}" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">{esc(ln)}</text>')
+            out.append(f'<text x="{x+40}" y="{ty}" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F" data-zh>{esc(ln)}</text>')
             ty += zh_lh
         ty += 4
         # en
         for ln in el:
-            out.append(f'<text x="{x+40}" y="{ty}" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic">{esc(ln)}</text>')
+            out.append(f'<text x="{x+40}" y="{ty}" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic" data-en>{esc(ln)}</text>')
             ty += en_lh
-        # conf
+        # conf (may carry a verification note; toggled via conf_en)
         if nd.get("conf"):
             ccol = CONF_COLOR.get(nd["conf"], "#777069")
-            out.append(f'<text x="{x+box_w-14}" y="{cy+22}" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="{ccol}">{esc(nd["conf"])}</text>')
+            out.append(f'<text x="{x+box_w-14}" y="{cy+22}" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="{ccol}" data-zh>{esc(nd["conf"])}</text>')
+            _ce = nd.get("conf_en")
+            if _ce and _ce != nd["conf"]:
+                out.append(f'<text x="{x+box_w-14}" y="{cy+22}" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="{ccol}" data-en>{esc(_ce)}</text>')
         if i < len(nodes):
             out.append(f'<line class="eflow" x1="{x+box_w/2}" y1="{yb}" x2="{x+box_w/2}" y2="{yb+gap}" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>')
         cy = yb + gap
@@ -678,6 +744,17 @@ def svg_charedge(book, width=900):
         if g not in seen:
             seen.append(g); groups.append(g)
     by_id = {c["id"]: c for c in chars}
+    g_en = {}
+    for c in chars:
+        g_en.setdefault(c.get("group", "?"), c.get("group_en") or c.get("group", "?"))
+
+    def _nm_en(c):
+        n = c.get("name", "")
+        if c.get("name_en"):
+            return c["name_en"]
+        if " \u00b7 " in n and not _HAN.search(n.split(" \u00b7 ", 1)[0]):
+            return n.split(" \u00b7 ", 1)[0]
+        return n
     found = [(c["id"]) for c in chars]
     col_w = 210
     W = max(560, 90 + col_w * len(groups) + 40)
@@ -698,10 +775,10 @@ def svg_charedge(book, width=900):
         for j, c in enumerate(members):
             pos[c["id"]] = (colx[g], 46 + j * row_h)
             # group label
-            out.append(f'<text x="{colx[g]}" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D">{g}</text>')
+            out.append(f'<text x="{colx[g]}" y="28" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="13.5" font-weight="700" fill="#A5811D" data-zh>{esc(g)}</text><text x="{colx[g]}" y="28" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#A5811D" data-en>{esc(g_en.get(g, g))}</text>')
             # node
             out.append(f'<rect x="{colx[g]-62}" y="{pos[c["id"]][1]-16}" width="124" height="32" rx="16" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.3"/>')
-            out.append(f'<text x="{colx[g]}" y="{pos[c["id"]][1]+1}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F">{c["name"]}</text>')
+            out.append(f'<text x="{colx[g]}" y="{pos[c["id"]][1]+1}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F" data-zh>{esc(c["name"])}</text><text x="{colx[g]}" y="{pos[c["id"]][1]+1}" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#26261F" data-en>{esc(_nm_en(c))}</text>')
     for a, b, kind, note in edges:
         if a not in pos or b not in pos:
             continue
@@ -712,7 +789,7 @@ def svg_charedge(book, width=900):
         out.append(f'<path class="edge eflow" d="M{ax},{ay} C{ax},{my} {bx},{my} {bx},{by}" fill="none" stroke="{kcol}" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="{dash}" marker-end="url(#arwX)"/>')
         # bilingual edge-kind label at midpoint (small, low-contrast)
         lx, ly = (ax + bx) / 2, my - 7
-        out.append(f'<text x="{lx}" y="{ly}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066">{esc(note)}</text>')
+        out.append(f'<text x="{lx}" y="{ly}" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="9.5" fill="#8A8066" data-zh>{esc(note)}</text><text x="{lx}" y="{ly}" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#8A8066" data-en>{esc(_en_label(kind))}</text>')
     # legend: kinds used in this book, bilingual
     used = []
     for a, b, kind, note in edges:
@@ -730,7 +807,7 @@ def svg_charedge(book, width=900):
             if i > 0 and i % 6 == 0:
                 lx = 24
             out.append(f'<rect x="{lx}" y="{ly-8}" width="9" height="3" rx="1.5" fill="{kcol}"/>')
-            out.append(f'<text x="{lx+13}" y="{ly}" font-family="LXGW WenKai,serif" font-size="9.5" fill="#57524A">{esc(klabel)}</text>')
+            out.append(f'<text x="{lx+13}" y="{ly}" font-family="LXGW WenKai,serif" font-size="9.5" fill="#57524A" data-zh>{esc(klabel)}</text><text x="{lx+13}" y="{ly}" font-family="Inter,sans-serif" font-size="9.5" fill="#57524A" data-en>{esc(_en_label(kind))}</text>')
             lx += 30 + _cjk_w(klabel) + 8
         out.append('</g>')
     out.append('<defs><marker id="arwX" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker>'
@@ -809,19 +886,29 @@ def svg_works_years(a, width=860):
         ring = 'stroke="#E9D89B" stroke-width="2"' if is_crop else ""
         out.append(f'<circle cx="{cx:.1f}" cy="{base}" r="{5.5 if is_crop else 4.5}" fill="{fill}" {ring}/>')
         out.append(f'<text x="{cx:.1f}" y="{cy:.1f}" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" fill="{"#B08A2E" if is_crop else "#7C7568"}">{y}</text>')
-        out.append(f'<text x="{cx:.1f}" y="{cy + (17 if top else -9):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="{("#C9A227" if is_crop else "#4A4438")}">{esc(str(w["title"])[:20])}</text>')
+        _wt_zh = esc(str(w["title"])[:20])
+        _wt_en = esc(str(w.get("title_en") or w["title"])[:24])
+        out.append(f'<text x="{cx:.1f}" y="{cy + (17 if top else -9):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="11.5" fill="{("#C9A227" if is_crop else "#4A4438")}" data-zh>{_wt_zh}</text>')
+        out.append(f'<text x="{cx:.1f}" y="{cy + (17 if top else -9):.1f}" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="{("#C9A227" if is_crop else "#4A4438")}" data-en>{_wt_en}</text>')
         if is_crop:
-            out.append(f'<text x="{cx:.1f}" y="{cy + (30 if top else -22):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E">【本批书单】</text>')
+            out.append(f'<text x="{cx:.1f}" y="{cy + (30 if top else -22):.1f}" text-anchor="middle" font-family="LXGW WenKai, serif" font-size="10" fill="#B08A2E" data-zh>【本批书单】</text><text x="{cx:.1f}" y="{cy + (30 if top else -22):.1f}" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#B08A2E" data-en>[this batch]</text>')
     out.append('</svg>')
     return "\n".join(out)
 
 
 # ---------- book page ----------
 def blk(label, zh, en, cls="card"):
-    return f'<div class="{cls}"><h3 class="sec" data-both><span data-zh>{esc(label)}</span><span data-en>{esc(label)}</span></h3>{zh_en(zh, en)}</div>'
+    # `label` may carry a bilingual "中文 · English" section header; split it so
+    # each language view shows only its own side (zh/en parity).
+    if " · " in label:
+        label_zh, label_en = label.split(" · ", 1)
+    else:
+        label_zh = label_en = label
+    return (f'<div class="{cls}"><h3 class="sec" data-both><span data-zh>{esc(label_zh)}</span>'
+            f'<span data-en>{esc(label_en)}</span></h3>{zh_en(zh, en)}</div>')
 
 
-LANG_LABEL = {"en": "EN · english", "fr": "FR · français", "ja": "JA · 日本語"}
+LANG_LABEL = {"en": "EN \u00b7 english", "fr": "FR \u00b7 fran\u00e7ais", "ja": "JA \u00b7 Japanese"}
 
 
 def excerpt_block(e):
@@ -834,7 +921,7 @@ def excerpt_block(e):
     if e.get("note_zh") or e.get("note_en"):
         note = f'<div data-zh>{esc(e["note_zh"])}</div><div data-en>{esc(e["note_en"])}</div>'
         bits.append(f'<div class="note">{note}</div>')
-    bits.append(f'<div class="src">{esc(e["source"])}</div></div>')
+    bits.append(f'<div class="src">{pair(e["source"], e.get("source_en"), "span")}</div></div>')
     return "\n".join(bits)
 
 
@@ -845,7 +932,7 @@ def motif_block(m):
         bits.append(f'<div class="orig">{esc(m["orig"])}</div>')
     bits.append(f'<div class="mnote">{zh_en(m["evid_zh"], m["evid_en"])}</div>')
     if m.get("source"):
-        bits.append(f'<div class="src">{esc(m["source"])} · {conf_token(m.get("conf", "◐"))}</div>')
+        bits.append(f'<div class="src">{pair(m["source"], m.get("source_en"), "span")} · {conf_token(m.get("conf", "◐"))}</div>')
     bits.append('</div>')
     return "\n".join(bits)
 
@@ -854,19 +941,24 @@ def book_page(site, book, crop):
     title = f"{book['title_zh']}｜{book['title_orig']}"
     hero_sub = f"{book['author_zh']} · {book['country']} · {book['publines_zh']}"
     hero_h1 = f"{book['title_zh']} · {book['title_orig']}"
-    hero_h1_en = f"{book['title_orig']} — {book['title_zh']}"
-    hero_sub_en = f"{book['author']} · {book['country_en']} · {book['publines_en']}"
-    chips = [f"{crop['glyph_zh']} · {crop['date']}", book["meta_zh"], f"conf {book['baseline_conf']}"]
+    hero_h1_en = book['title_orig']
+    hero_sub_en = f"{book.get('author_en', book['author'])} · {book['country_en']} · {book['publines_en']}"
+    bc = book["baseline_conf"]
+    bc_en = book.get("baseline_conf_en") or bc
+    chips = [(f"{crop['glyph_zh']} · {crop['date']}", f"{crop['glyph_en']} · {crop['date']}"),
+             (book["meta_zh"], book.get("meta_en", book["meta_zh"])),
+             (f"conf {bc}", f"conf {bc_en}")]
     if book.get("kind"):
-        chips.insert(2, f"kind·{book['kind']}")
+        chips.insert(2, (f"kind·{book['kind']}", book["kind"]))
     if book.get("domain"):
-        chips.insert(3, book["domain"])
+        _dom_en = book.get("domain_en") or ((_bilingual(book["domain"]) or [None, book["domain"]])[1])
+        chips.insert(3, (book["domain"], _dom_en))
     is_hist = book.get("kind", "") in ("history", "nonfiction", "scholarship")
     s = []
     # provenance
     s.append(srcnote(
         "<b>来源说明。</b>" + esc(book["baseline_conf"]) + " · 档案：" + esc(book["id"]) + "（Books）核心数据经四级核实，情节细处标 ◐/○。",
-        "<b>Provenance.</b> " + esc(book["baseline_conf"]) + " · record: " + esc(book["id"]) + ". Publication facts verified; plot details marked ◐/○."))
+        "<b>Provenance.</b> " + esc(bc_en) + " · record: " + esc(book["id"]) + ". Publication facts verified; plot details marked ◐/○."))
     # read status banner
     if book.get("read_status"):
         rs_en = book.get("read_status_en", book["read_status"])
@@ -891,7 +983,7 @@ def book_page(site, book, crop):
         s.append('<div class="card" id="textlinks">' + tl + '</div>')
     # background
     s.append(blk("背景 · Background", book["background"]["zh"], book["background"]["en"]))
-    s.append('<p class="tok">' + conf_token(book["background"]["conf"]) + ' <span class="hidden"></span></p>')
+    s.append('<p class="tok">' + conf_token(book["background"]["conf"], book["background"].get("conf_en")) + ' <span class="hidden"></span></p>')
     # plot acts / thematic periods
     acts_label = ("时段章节 · Periods &amp; chapters", "Periods &amp; chapters") if is_hist else ("情节分幕 · Plot content", "Plot content")
     s.append(f'<h2 class="part" data-both><span data-zh>{acts_label[0]}</span><span data-en>{acts_label[1]}</span></h2>')
@@ -921,9 +1013,10 @@ def book_page(site, book, crop):
         s.append(zh_en(act["zh"], act["en"]))
         s.append(render_brief(act))
         if act.get("conf"):
-            s.append('<p class="tok">' + conf_token(act["conf"]) + "</p>")
+            s.append('<p class="tok">' + conf_token(act["conf"], act.get("conf_en")) + "</p>")
         if act.get("sources"):
-            s.append(f'<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">{act["sources"]}</span></p>')
+            _ase = act.get("sources_en") or act["sources"]
+            s.append('<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">' + zh_en(act["sources"], _ase, "span") + '</span></p>')
         s.append("</div>")
     # narrative structure / analytical framework
     narr_label = ("论述框架 · Analytical framework", "Analytical framework") if is_hist else ("叙事结构 · Narrative structure", "Narrative structure")
@@ -940,7 +1033,11 @@ def book_page(site, book, crop):
         s.append('<div class="diagram">' + svg_charedge(book) + '<p class="cap">' + zh_en(book["title_zh"] + " · 人物关系（虚点线=连接）", book["title_orig"] + " · character relations (dotted = link)", "span") + '</p></div>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>ID</th><th data-both><span data-zh>人物</span><span data-en>name</span></th><th data-both><span data-zh>阵营/组</span><span data-en>group</span></th><th data-both><span data-zh>角色</span><span data-en>role</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>')
         for c in book["characters"]:
-            s.append(f'<tr><td>{esc(c["id"])}</td><td>{esc(c["name"])}</td><td>{esc(c.get("group",""))}</td><td><div data-zh>{esc(c["role_zh"])}</div><div data-en>{esc(c["role_en"])}</div></td><td class="conf">{conf_token(c["conf"])}</td></tr>')
+            _nm = c["name"]
+            _nm_en = c.get("name_en") or (_nm.split(" \u00b7 ", 1)[0] if " \u00b7 " in _nm and not _HAN.search(_nm.split(" \u00b7 ", 1)[0]) else _nm)
+            _gr = c.get("group", "")
+            _gr_en = c.get("group_en") or _gr
+            s.append('<tr><td>' + esc(c["id"]) + '</td><td>' + zh_en(_nm, _nm_en, "span") + '</td><td>' + zh_en(_gr, _gr_en, "span") + '</td><td><div data-zh>' + esc(c["role_zh"]) + '</div><div data-en>' + esc(c["role_en"]) + '</div></td><td class="conf">' + pair(c["conf"], c.get("conf_en"), "span") + '</td></tr>')
         s.append('</tbody></table></div>')
     # intent / thesis
     intent_label = ("核心论题 · Thesis" if is_hist else "作者真意 · Intent", "Thesis" if is_hist else "The author&rsquo;s intent")
@@ -948,6 +1045,8 @@ def book_page(site, book, crop):
     if book["intent"].get("quotes"):
         for q in book["intent"].get("quotes"):
             _trs = '<div class="trs" data-zh>%s</div>' % esc(q["trans_zh"])
+            if q.get("trans_en"):
+                _trs += '<div class="trs" data-en>%s</div>' % esc(q["trans_en"])
             _src_en = q.get("source_en") or q["source"]
             _src = '<div class="src"><span data-both><span data-zh>%s</span><span data-en>%s</span></span></div>' % (esc(q["source"]), esc(_src_en))
             s.append('<div class="quote"><div class="orig">%s</div>%s%s</div>' % (esc(q["orig"]), _trs, _src))
@@ -981,7 +1080,7 @@ def book_page(site, book, crop):
     s.append(f'<h2 class="part" data-both><span data-zh>{craft_label[0]}</span><span data-en>{craft_label[1]}</span></h2>')
     if book.get("craft"):
         for c in book["craft"]:
-            s.append(f'<div class="card"><p>{esc(c["zh"])}</p><p style="color:var(--ink-soft);font-size:.9rem">{esc(c["en"])}</p></div>')
+            s.append(f'<div class="card"><p data-zh>{esc(c["zh"])}</p><p data-en style="color:var(--ink-soft);font-size:.9rem">{esc(c["en"])}</p></div>')
     else:
         s.append(f'<div class="srcnote">{zh_en("待通读原书后补充。", "Craft notes come after the full read.")}</div>')
     # motifs（母题簇 / key themes）
@@ -1004,37 +1103,42 @@ def book_page(site, book, crop):
         s.append(f'<div class="card">{zh_en(d["zh"], d["en"])}</div>')
     # related + positioning
     s.append('<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>')
-    s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th>年</th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>')
+    s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>')
     for r in book.get("related", []):
         why = '<div data-zh>%s</div><div data-en>%s</div>' % (esc(r["note_zh"]), esc(r["note_en"]))
-        s.append(f'<tr><td><b>{esc(r["title"])}</b></td><td>{esc(r["author"])}</td><td>{esc(r["year"])}</td><td>{esc(r["relation"])}</td><td>{why}</td><td>{esc(r["axis"])}</td><td class="conf">{conf_token(r["conf"])}</td></tr>')
+        _wt = pair(r["title"], r.get("title_en"), "span")
+        _wa = pair(r["author"], r.get("author_en"), "span")
+        _wr = pair(r["relation"], r.get("relation_en"), "span")
+        s.append('<tr><td><b>' + _wt + '</b></td><td>' + _wa + '</td><td>' + esc(r["year"]) + '</td><td>' + _wr + '</td><td>' + why + '</td><td>' + esc(r["axis"]) + '</td><td class="conf">' + conf_token(r["conf"]) + '</td></tr>')
     s.append('</tbody></table></div>')
     # fact ledger
     s.append('<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>')
     s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>')
     for f in book.get("fact_ledger", []):
-        s.append(f'<tr><td>{esc(f["claim"])}</td><td style="font-size:.8rem;color:var(--ink-pale)">{esc(f["source"])}</td><td class="conf">{conf_token(f["conf"])}</td></tr>')
+        s.append(f'<tr><td>{pair(f["claim"], f.get("claim_en"), "span")}</td><td style="font-size:.8rem;color:var(--ink-pale)">{pair(f["source"], f.get("source_en"), "span")}</td><td class="conf">{conf_token(f["conf"], f.get("conf_en"))}</td></tr>')
     s.append('</tbody></table></div>')
     # unverified
     if book.get("unverified"):
         s.append('<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>')
         for u in book["unverified"]:
-            s.append(f'<div class="card"><p>{esc(u["item"])} <span class="tok">{conf_token(u["conf"])}</span></p></div>')
+            s.append(f'<div class="card"><p>{pair(u["item"], u.get("item_en"), "span")} <span class="tok">{conf_token(u["conf"], u.get("conf_en"))}</span></p></div>')
     # links — dynamic back-link
     s.append('<div class="links">')
     s.append(f'<a class="pill" href="../{esc(crop["dir_page"])}">← <span data-zh>返回{esc(crop["glyph_zh"])}</span><span data-en>back to {esc(crop.get("glyph_en", crop["glyph_zh"]))}</span></a>')
     s.append(f'<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>')
     s.append(f'<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>')
     s.append('</div>')
-    nav_sub = f"{len(crop['book_ids'])} 部 · {crop['date'][:7]}"
-    return page(title, crop["glyph_zh"], hero_h1, hero_sub, chips, "\n".join(s), up_rel="../../..", hero_h1_en=hero_h1_en, hero_sub_en=hero_sub_en, nav_sub_zh=nav_sub, nav_sub_en=nav_sub)
+    nav_sub = (f"{len(crop['book_ids'])} 部 · {crop['date'][:7]}", f"{len(crop['book_ids'])} books · {crop['date'][:7]}")
+    return page(title, (crop["glyph_zh"], crop["glyph_en"]), hero_h1, (hero_sub, hero_sub_en), chips, "\n".join(s), up_rel="../../..", hero_h1_en=hero_h1_en, hero_sub_en=hero_sub_en, nav_sub_zh=nav_sub[0], nav_sub_en=nav_sub[1])
 
 
 # ---------- crop list page ----------
 def crop_page(site, crop, books):
     title = f"{crop['title_zh']}｜{crop['title_en']}"
     hero_sub = crop["subtitle_zh"]
-    chips = [crop["date"] + " · " + crop["glyph_zh"], crop["verdict_zh"] + "/" + crop["verdict_en"], "每书一页"]
+    chips = [(crop["date"] + " · " + crop["glyph_zh"], crop["date"] + " · " + crop["glyph_en"]),
+             ("判定 " + crop["verdict_zh"], crop["verdict_en"]),
+             ("每书一页", "a page per book")]
     s = []
     s.append(srcnote(
         '<b>来源说明。</b>本清单由 <code>web/data/books.json</code> 驱动（generator: build_reading.py）；每部均经 websearch/webfetch 定位实际版本（W2）。出版信息 <code>✓</code> 核实；情节细处标 <code>◐/○</code>。点击各书卡进入单书页码。',
@@ -1054,32 +1158,34 @@ def crop_page(site, crop, books):
                  '<span class="bknum" data-both><span data-zh>%s · %s</span><span data-en>%s · %s</span></span>'
                  '<span class="tag cn">%s</span></div>'
                  % (esc(b["num"]), esc(b["country"]), chr(64 + i), esc(b["country_en"]), esc(b.get("lang", "").upper())))
-        s.append(f'<h3 class="bktitle"><a href="books/{esc(b["slug"])}.html"><span data-zh>{esc(b["title_zh"])}</span><span data-en>{esc(b["title_orig"])}</span> <span class="orig" data-both><span data-zh>{esc(b["title_orig"])}</span><span data-en>{esc(b["title_zh"])}</span></span></a></h3>')
-        s.append(f'<div class="bkauthor"><a href="../authors/index.html#{esc(b["author_slug"])}" data-both><span data-zh>{esc(b["author_zh"])}</span><span data-en>{esc(b["author"])}</span></a>'
-                 f' <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· {esc(b.get("author",""))}</span></div>')
+        s.append(f'<h3 class="bktitle"><a href="books/{esc(b["slug"])}.html"><span data-zh>{esc(b["title_zh"])}</span><span data-en>{esc(b["title_orig"])}</span>' + (f' <span class="orig" data-zh>{esc(b["title_orig"])}</span>' if b["title_orig"] != b["title_zh"] else '') + '</a></h3>')
+        s.append(f'<div class="bkauthor"><a href="../authors/index.html#{esc(b["author_slug"])}" data-both><span data-zh>{esc(b["author_zh"])}</span><span data-en>{esc(b.get("author_en", b["author"]))}</span></a>'
+                 f' <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· {esc(b.get("author_en", b.get("author","")))}</span></div>')
         s.append(rating_line(b))
         # Douban-style publisher / date / pages / ISBN meta line
         s.append(f'<div class="bkmeta" data-both><span data-zh>{esc(b["publines_zh"])} · ISBN {esc(str(b.get("isbn","")).split(" · ")[0])}</span>'
                  f'<span data-en>{esc(b["publines_en"])} · ISBN {esc(str(b.get("isbn","")).split(" · ")[0])}</span></div>')
         # tags: series / meta / country / publisher chip
         s.append('<div class="bktags">')
-        s.append(f'<span class="tag pub" style="background:{pub_color(pub_key(b.get("publisher","")))}">{esc(pub_key(b.get("publisher","")))}</span>')
+        s.append(f'<span class="tag pub" style="background:{pub_color(pub_key(b.get("publisher","")))}">' + pair(pub_key(b.get("publisher","")), b.get("publisher_en"), "span") + '</span>')
         s.append(f'<span class="tag" data-both><span data-zh>{esc(b["country"])}</span><span data-en>{esc(b["country_en"])}</span></span>')
         s.append(f'<span class="tag" data-both><span data-zh>{esc(b.get("meta_zh",""))}</span><span data-en>{esc(b.get("meta_en",""))}</span></span>')
         if b.get("kind"):
             s.append(f'<span class="tag" data-both><span data-zh>kind · {esc(b["kind"])}</span><span data-en>{esc(b["kind"])}</span></span>')
         if b.get("domain"):
-            s.append(f'<span class="tag" data-both><span data-zh>{esc(b["domain"])}</span><span data-en>{esc(b["domain"])}</span></span>')
+            s.append(f'<span class="tag">' + pair(b["domain"], b.get("domain_en"), "span") + '</span>')
         s.append(read_chip(b))
         s.append('</div>')
         # why (Goodreads blurb position)
         s.append(f'<div class="bkwhy"><p data-zh>{esc(b["why_zh"])}</p><p data-en>{esc(b["why_en"])}</p></div>')
         # claims strip (Douban short-review feel)
         claims = b.get("claims_list") or []
+        claims_en = b.get("claims_list_en") or []
         if claims:
             s.append('<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">')
-            for c in claims:
-                s.append('<li style="font-size:.78rem;color:var(--gold-dim)">· %s</li>' % esc(c))
+            for ci, c in enumerate(claims):
+                ce = claims_en[ci] if ci < len(claims_en) else c
+                s.append('<li style="font-size:.78rem;color:var(--gold-dim)">· %s</li>' % pair(c, ce, "span"))
             s.append('</ul>')
         # actions: dossier + first original-text link inline (Goodreads action buttons row)
         s.append('<div class="bkact">')
@@ -1106,14 +1212,14 @@ def crop_page(site, crop, books):
     for slug, bs in seen_auth.items():
         col = COUNTRY_COLOR.get(bs[0].get("country", ""), "#777069")
         links = " ".join(f'<a href="books/{esc(x["slug"])}.html" style="font-size:.78rem">{esc(x["title_orig"])}</a>' for x in bs)
-        auth_zh = bs[0]["author_zh"]; auth_en = bs[0]["author"]
+        auth_zh = bs[0]["author_zh"]; auth_en = bs[0].get("author_en", bs[0]["author"])
         s.append(f'<div class="row"><div class="pname"><span class="dot" style="background:{col}"></span>'
                  f'<a href="../authors/index.html#{esc(slug)}" data-both><span data-zh>{esc(auth_zh)}</span><span data-en>{esc(auth_en)}</span></a></div>'
                  f'<div class="bar" style="gap:.9rem">{links}</div></div>')
     s.append('</div>')
     # verdict
     s.append('<h2 class="part" data-both><span data-zh>完备性核验 · Completeness review</span><span data-en>Completeness review</span></h2>')
-    s.append('<div class="gapbox"><div class="v-line"><span class="badge">判定 ' + esc(crop["verdict_zh"]) + '</span><span data-zh>' + esc(crop["verdict_body_zh"]) + '</span><span data-en>' + esc(crop["verdict_body_en"]) + '</span></div><ul>')
+    s.append('<div class="gapbox"><div class="v-line"><span class="badge">' + zh_en("判定 " + crop["verdict_zh"], crop["verdict_en"], "span") + '</span><span data-zh>' + esc(crop["verdict_body_zh"]) + '</span><span data-en>' + esc(crop["verdict_body_en"]) + '</span></div><ul>')
     for g in crop["verdict_gaps"]:
         s.append(f'<li data-zh>{esc(g["zh"])}</li><li data-en>{esc(g["en"])}</li>')
     s.append('</ul></div>')
@@ -1122,7 +1228,7 @@ def crop_page(site, crop, books):
     s.append('<a class="pill" href="../moment/year-2026.html">↝ <span data-zh>读年度思潮：活着的此刻</span><span data-en>read the year</span></a>')
     s.append('<a class="pill" href="../index.html">↝ <span data-zh>返回板块首页</span><span data-en>back to the domain</span></a>')
     s.append('</div>')
-    return page(title, crop["glyph_zh"], title, hero_sub, chips, "\n".join(s),
+    return page(title, (crop["glyph_zh"], crop["glyph_en"]), (crop["title_zh"], crop["title_en"]), (crop["subtitle_zh"], crop.get("subtitle_en", crop["subtitle_zh"])), chips, "\n".join(s),
                 nav_sub_zh=f"{len(crop['book_ids'])} 部 · {crop['date'][:7]}",
                 nav_sub_en=f"{len(crop['book_ids'])} books · {crop['date'][:7]}")
 
@@ -1139,17 +1245,20 @@ def archive_page(site, crops, books_by_id):
             b["title_zh"], b["title_orig"], b["author_zh"], b["country"],
             b["title_orig"], b["author"], b["lang"]) for b in books)
         s.append(f'<div class="card"><h3 class="sec"><span data-zh>{esc(crop["glyph_zh"])} · {esc(crop["title_zh"])}</span><span data-en>{esc(crop["glyph_en"])} · {esc(crop["title_en"])}</span></h3>')
-        s.append('<p style="font-size:.8rem;color:var(--ink-pale)">' + esc(crop["date"]) + ' · ' + esc(crop["lang_line_zh"]) + '</p>')
+        s.append('<p style="font-size:.8rem;color:var(--ink-pale)">' + esc(crop["date"]) + ' · ' + zh_en(crop["lang_line_zh"], crop.get("lang_line_en", crop["lang_line_zh"]), "span") + '</p>')
         s.append('<ul style="list-style:none;margin:.5rem 0">' + lines + '</ul>')
         s.append(f'<a class="pill" href="{esc(crop["dir_page"])}">☞ <span data-zh>打开本批书单</span><span data-en>open this list</span></a>')
         s.append('</div>')
     # next keel
     s.append('<div class="card" style="border-style:dashed"><h3 class="sec" data-both><span data-zh>下一批 · 待 W2 核验后登记</span><span data-en>next crop — registered after W2</span></h3><p style="font-size:.85rem;color:var(--ink-soft)">' + esc(site["keel"]) + '</p></div>')
-    s.append('<div class="links"><a class="pill" href="../authors/index.html">↝ 作者知识图谱</a><a class="pill" href="../index.html">↝ 板块首页</a></div>')
+    s.append('<div class="links"><a class="pill" href="../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a><a class="pill" href="../index.html">↝ <span data-zh>板块首页</span><span data-en>the domain home</span></a></div>')
     newest = crops[0] if crops else {"glyph_en": "CROPS", "glyph_zh": "书单", "date": ""}
     kicker = newest["glyph_en"].split("·")[-1].strip() or "CROPS"
-    latest_chip = f"最新批：{newest['date'][:7]}" if newest.get("date") else "新批在上"
-    return page("书单档案 · BOOK LIST ARCHIVE", kicker, "书单档案 · 一窗一书单", "书单是素材层，思潮是合成层——清单不入思潮之文", [latest_chip, "新批在上"], "\n".join(s),
+    latest_chip = (f"最新批：{newest['date'][:7]}", f"latest crop: {newest['date'][:7]}") if newest.get("date") else ("新批在上", "newest on top")
+    return page("书单档案 · BOOK LIST ARCHIVE", ("书单档案", "BOOK LIST ARCHIVE"),
+                ("书单档案 · 一窗一书单", "The book-list archive — one window, one list"),
+                ("书单是素材层，思潮是合成层——清单不入思潮之文", "Lists are the source layer; the moment-layer synthesises — lists never enter moment essays"),
+                [latest_chip, ("新批在上", "newest on top")], "\n".join(s),
                 nav_sub_zh=f"{len(crops)} 批 · 档案", nav_sub_en=f"{len(crops)} crops · archive")
 
 
@@ -1169,47 +1278,53 @@ def authors_page(site, authors, relations):
     for a in authors:
         s.append('<div class="card" style="margin:0">')
         face = author_art(a["id"])
-        name_block = '<h3 class="sec">%s <span style="font-size:.8rem;color:var(--ink-pale)">%s</span></h3>' % (esc(a["name_zh"]), esc(a["name_native"]))
+        _nn_en = a.get("name_native_en") or a["name_native"]
+        name_block = ('<h3 class="sec"><span data-zh>%s</span><span data-en>%s</span> '
+                      '<span style="font-size:.8rem;color:var(--ink-pale)"><span data-zh>%s</span><span data-en>%s</span></span></h3>'
+                      % (esc(a["name_zh"]), esc(a.get("name_en", a["name_zh"])), esc(a["name_native"]), esc(_nn_en)))
         if face:
             s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{name_block}</div></div>')
         else:
             s.append(f'<div class="anode">{svg_monogram(a.get("name_en", a["id"]), 48)}<div style="min-width:0">{name_block}</div></div>')
-        s.append('<p style="font-size:.76rem;color:var(--gold-dim)">' + esc(a["born"]) + ' · ' + esc(a["native_lang"]) + '</p>')
+        s.append('<p style="font-size:.76rem;color:var(--gold-dim)">' + zh_en(a["born"], a.get("born_en") or a["born"], "span") + ' · ' + esc(a["native_lang"]) + '</p>')
         s.append('<p data-zh style="font-size:.9rem">' + esc(a["one_liner_zh"]) + '</p><p data-en style="font-size:.9rem">' + esc(a["one_liner_en"]) + '</p>')
-        s.append('<div style="margin-top:.6rem"><span class="conf c-ok">' + esc(a["school_zh"]) + '</span></div>')
+        s.append('<div style="margin-top:.6rem"><span class="conf c-ok">' + zh_en(a["school_zh"], a.get("school_en") or a["school_zh"], "span") + '</span></div>')
         s.append('</div>')
     s.append('</div>')
     # schools
     s.append('<h2 class="part" data-both><span data-zh>二 · 流派归属 Schools</span><span data-en>II · Schools</span></h2>')
     for row in relations["schools"]:
         a = by_id.get(row["author"])
-        s.append(f'<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem">{esc(row["school_zh"])}</h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>{esc(row["why_zh"]) + (" · 成员：" + esc(a["name_zh"]) if a else "")}</span><span data-en>{esc(row["why_en"]) + (" · members: " + esc(a["name_en"]) if a else "")}</span></p></div>')
+        s.append(f'<div style="background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.1rem 1.4rem;margin-bottom:.8rem"><h3 class="sec" style="margin:0 0 .3rem"><span data-zh>{esc(row["school_zh"])}</span><span data-en>{esc(row.get("school_en") or row["school_zh"])}</span></h3><p style="font-size:.88rem;color:var(--ink-mid)"><span data-zh>{esc(row["why_zh"]) + (" · 成员：" + esc(a["name_zh"]) if a else "")}</span><span data-en>{esc(row["why_en"]) + (" · members: " + esc(a["name_en"]) if a else "")}</span></p></div>')
     # circles
     s.append('<h2 class="part" data-both><span data-zh>三 · 朋友圈 · 合著 Circles &amp; Co-writes</span><span data-en>III · Circles &amp; Co-writes</span></h2>')
     s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作者</span><span data-en>author</span></th><th>edge</th><th data-both><span data-zh>同代 · 合作者</span><span data-en>peer / collaborator</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th class="conf">conf</th></tr></thead><tbody>')
     for r in relations["circle"]:
         a = by_id.get(r["from"], {})
-        nm = a.get("name_zh", r["from"])
-        s.append(f'<tr><td>{esc(nm)}</td><td class="conf">{esc(r["arrow"])}</td><td>{esc(r["to"])}</td><td>{zh_en(r["why_zh"], r["why_en"], "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
+        _fz = a.get("name_zh", r["from"]); _fe = a.get("name_en", r.get("from_en", r["from"]))
+        s.append(f'<tr><td>{zh_en(_fz, _fe, "span")}</td><td class="conf">{esc(r["arrow"])}</td><td>{zh_en(r["to"], r.get("to_en") or r["to"], "span")}</td><td>{zh_en(r["why_zh"], r["why_en"], "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
     for r in relations["cowrites"]:
         a = by_id.get(r["from"], {})
-        nm = a.get("name_zh", r["from"])
-        s.append(f'<tr><td>{esc(nm)}</td><td class="conf">✎</td><td>{esc(r["to"])}</td><td>{zh_en(r["why_zh"] + " · " + r["book"], r["why_en"] + " · " + r["book"], "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
+        _fz = a.get("name_zh", r["from"]); _fe = a.get("name_en", r.get("from_en", r["from"]))
+        s.append(f'<tr><td>{zh_en(_fz, _fe, "span")}</td><td class="conf">✎</td><td>{zh_en(r["to"], r.get("to_en") or r["to"], "span")}</td><td>{zh_en(r["why_zh"] + " · " + r["book"], r["why_en"] + " · " + (r.get("book_en") or r["book"]), "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
     s.append('</tbody></table></div>')
     # influences
     s.append('<h2 class="part" data-both><span data-zh>四 · 影响链 Influence</span><span data-en>IV · Influence</span></h2>')
     s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>源</span><span data-en>from</span></th><th>edge</th><th data-both><span data-zh>向</span><span data-en>to</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th class="conf">conf</th></tr></thead><tbody>')
+    def _relname(key, side, r):
+        if key in by_id:
+            return by_id[key]["name_zh"], by_id[key].get("name_en", by_id[key]["name_zh"])
+        return key, r.get(side + "_en") or key
     for r in relations["influences"]:
-        def nm(key):
-            return by_id[key]["name_zh"] if key in by_id else key
-        s.append(f'<tr><td>{esc(nm(r["from"]))}</td><td class="conf">{esc(r["arrow"])}</td><td>{esc(nm(r["to"]))}</td><td>{zh_en(r["why_zh"], r["why_en"], "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
+        fz, fe = _relname(r["from"], "from", r); tz, te = _relname(r["to"], "to", r)
+        s.append(f'<tr><td>{zh_en(fz, fe, "span")}</td><td class="conf">{esc(r["arrow"])}</td><td>{zh_en(tz, te, "span")}</td><td>{zh_en(r["why_zh"], r["why_en"], "span")}</td><td class="conf">{esc(r["conf"])}</td></tr>')
     s.append('</tbody></table></div>')
     # per-author deep dossiers
     s.append('<h2 class="part" data-both><span data-zh>五 · 每位作者 Deep dossiers</span><span data-en>V · Per-author dossiers</span></h2>')
     for a in authors:
         s.append(f'<div class="card" id="{esc(a["id"])}">')
         face = author_art(a["id"])
-        head = '<h3 class="sec">' + esc(a["name_zh"]) + ' · ' + esc(a["slug_display"]) + '</h3>'
+        head = '<h3 class="sec">' + zh_en(a["name_zh"], a.get("name_en", a["name_zh"]), "span") + ' · ' + esc(a["slug_display"]) + '</h3>'
         if face:
             s.append(f'<div class="anode"><img src="../art/authors/{esc(os.path.basename(face))}" alt="{esc(a["name_en"])}" class="aface" loading="lazy"><div style="min-width:0">{head}</div></div>')
         else:
@@ -1227,21 +1342,21 @@ def authors_page(site, authors, relations):
             s.append('<div class="diagram">' + tline + '<p class="cap">' + zh_en(a["name_zh"] + " · " + a["name_native"] + " 作品年表（金环 = 本批书单）", a["name_en"] + " works by year (gold ring = this batch)", "span") + '</p></div>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>title</th><th data-both><span data-zh>备注</span><span data-en>note</span></th><th class="conf">conf</th></tr></thead><tbody>')
         for w in a["works"]:
-            s.append('<tr><td>%s</td><td><b>%s</b></td><td><div data-zh>%s</div><div data-en>%s</div></td><td class="conf">%s</td></tr>' % (esc(w["y"]), esc(w["title"]), esc(w["note_zh"]), esc(w["note_en"]), conf_token(w["conf"])))
+            s.append('<tr><td>%s</td><td><b>%s</b></td><td><div data-zh>%s</div><div data-en>%s</div></td><td class="conf">%s</td></tr>' % (esc(w["y"]), zh_en(w["title"], w.get("title_en") or w["title"], "span"), esc(w["note_zh"]), esc(w["note_en"]), conf_token(w["conf"])))
         s.append('</tbody></table></div>')
         # awards
         if a.get("awards"):
             s.append('<h4 class="sec" data-both><span data-zh>奖项 Awards</span><span data-en>Awards</span></h4>')
             s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>y</th><th>award</th><th>note</th></tr></thead><tbody>')
             for aw in a["awards"]:
-                s.append('<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (esc(aw["y"]), esc(aw["award"]), esc(aw.get("note", ""))))
+                s.append('<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (esc(aw["y"]), zh_en(aw["award"], aw.get("award_en") or aw["award"], "span"), zh_en(aw.get("note", ""), aw.get("note_en") or aw.get("note", ""), "span")))
             s.append('</tbody></table></div>')
         # circle & influences per author
         if a.get("circle"):
             s.append('<h4 class="sec" data-both><span data-zh>朋友圈 Circle</span><span data-en>Circle</span></h4>')
             s.append('<ul style="list-style:none">')
             for c in a["circle"]:
-                s.append('<li style="margin-bottom:.35rem">%s %s — <span style="color:var(--ink-soft)">%s</span> %s</li>' % (esc(c["who"]), esc(c["edge"]), zh_en(c["why_zh"], c["why_en"], "span"), conf_token(c["conf"])))
+                s.append('<li style="margin-bottom:.35rem">%s %s — <span style="color:var(--ink-soft)">%s</span> %s</li>' % (pair(c["who"], c.get("who_en"), "span"), pair(c["edge"], c.get("edge_en"), "span"), pair(c["why_zh"], c.get("why_en"), "span"), conf_token(c["conf"])))
             s.append('</ul>')
         # stance
         s.append('<h4 class="sec" data-both><span data-zh>立场与一贯关切 Stance</span><span data-en>Stance</span></h4>')
@@ -1253,16 +1368,44 @@ def authors_page(site, authors, relations):
         s.append('<h4 class="sec" data-both><span data-zh>核对账本 Ledger</span><span data-en>Ledger</span></h4>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>')
         for f in a["fact_ledger"]:
-            s.append('<tr><td>%s</td><td style="font-size:.78rem;color:var(--ink-pale)">%s</td><td class="conf">%s</td></tr>' % (esc(f["claim"]), esc(f["source"]), conf_token(f["conf"])))
+            s.append('<tr><td>%s</td><td style="font-size:.78rem;color:var(--ink-pale)">%s</td><td class="conf">%s</td></tr>' % (pair(f["claim"], f.get("claim_en"), "span"), pair(f["source"], f.get("source_en"), "span"), conf_token(f["conf"], f.get("conf_en"))))
         s.append('</tbody></table></div>')
         if a.get("unverified"):
             s.append('<h4 class="sec" data-both><span data-zh>未核 Unverified</span><span data-en>Unverified</span></h4>')
             for u in a["unverified"]:
-                s.append('<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">%s %s</div>' % (esc(u["item"]), conf_token(u["conf"])))
+                s.append('<div style="font-size:.85rem;color:var(--ink-soft);margin-bottom:.25rem">%s %s</div>' % (pair(u["item"], u.get("item_en"), "span"), conf_token(u["conf"], u.get("conf_en"))))
         s.append('</div>')
-    s.append('<div class="links"><a class="pill" href="../read/index.html">↝ 读书单档案</a><a class="pill" href="../index.html">↝ 板块首页</a></div>')
-    return page("作者知识图谱 · AUTHORS GRAPH", "AUTHORS", "作者知识图谱 · 谁在写，与谁同代", "生平 · 朋友圈 · 合著 · 流派归属 · 影响链——人物即思想的坐标", ["全批 · " + str(len(authors)) + " 位作者", "generator 维护"], "\n".join(s),
+    s.append('<div class="links"><a class="pill" href="../read/index.html">↝ <span data-zh>读书单档案</span><span data-en>the reading archive</span></a><a class="pill" href="../index.html">↝ <span data-zh>板块首页</span><span data-en>the domain home</span></a></div>')
+    return page("作者知识图谱 · AUTHORS GRAPH", "AUTHORS", ("作者知识图谱 · 谁在写，与谁同代", "The authors graph — who writes, and who alongside"), ("生平 · 朋友圈 · 合著 · 流派归属 · 影响链——人物即思想的坐标", "Lives · circles · co-writes · schools · chains of influence — people as coordinates of thought"), [("全批 · " + str(len(authors)) + " 位作者", "all crops · " + str(len(authors)) + " authors"), ("generator 维护", "kept by the generator")], "\n".join(s),
                 nav_sub_zh=str(len(authors)) + " 位作者", nav_sub_en=str(len(authors)) + " authors")
+
+
+def _md_title(t):
+    """'slug · 中文名' → toggling pair (English slug in EN view)."""
+    b = _bilingual(t)
+    if b:
+        return zh_en(b[0], b[1], "span")
+    return esc(t)
+
+
+def _term_line(label, zh_html, en_html=None):
+    """Glossary/methods line: 'label · content', fully toggled when an EN side exists."""
+    if not en_html:
+        return '<div class="term-line"><b>' + esc(label) + '</b>' + zh_html + "</div>"
+    lz, le = (label.split(" · ", 1) + [""])[:2] if " · " in label else (label, label)
+    return ('<div class="term-line"><b><span data-zh>%s</span><span data-en>%s</span></b>'
+            '<span data-zh>%s</span><span data-en>%s</span></div>') % (esc(lz), esc(le), zh_html, en_html)
+
+
+def _lbl_line(label, content_html):
+    """Glossary/methods 'label + toggled content' line: the <b> label itself is
+    bilingual ('典例 · epitome' → 典例 in zh view, epitome in en view)."""
+    if " · " in label:
+        lz, le = label.split(" · ", 1)
+    else:
+        lz = le = label
+    return ('<div class="term-line" style="font-size:.85rem"><b><span data-zh>%s</span><span data-en>%s</span></b> %s</div>'
+            % (esc(lz), esc(le), content_html))
 
 
 def glossary_page(site, entries):
@@ -1283,24 +1426,25 @@ def glossary_page(site, entries):
         en_sub = it.get("en", "")
         if en_sub:
             s.append('<h3 class="sec" style="margin-top:.2rem">%s <span style="font-size:.78rem;color:var(--ink-pale)">%s</span></h3>'
-                     % (esc(e["title"]), esc(en_sub)))
+                     % (_md_title(e["title"]), esc(en_sub)))
         else:
-            s.append('<h3 class="sec" style="margin-top:.2rem">%s</h3>' % esc(e["title"]))
+            s.append('<h3 class="sec" style="margin-top:.2rem">%s</h3>' % _md_title(e["title"]))
+        _cl = it.get("cluster", "").split("/")[-1].replace("]]", "")
+        _cl_en = it.get("cluster_en") or ""
         s.append(f'<div><span class="modechip {esc(mode)}">{esc(mode)}</span>'
                  f'<span class="domchip">{esc(dom)}</span>'
-                 f'<span class="ref">cluster → {esc(it.get("cluster","").split("/")[-1].replace("]]",""))}</span></div>')
-        s.append('<div class="term-line"><b>' + esc("定义 · ") + '</b>' + wl(it.get("def_zh", "")) + "</div>")
-        s.append('<div class="term-line" style="color:var(--ink-soft)"><b>' + esc("en · ") + '</b>' + wl(it.get("def_en", "")) + "</div>")
+                 f'<span class="ref">cluster → {pair(_cl, _cl_en if _HAN.search(_cl) else None, "span")}</span></div>')
+        s.append(_term_line("定义 · def", wl(it.get("def_zh", "")), wl(it.get("def_en", ""))))
         if it.get("epitome"):
-            s.append('<div class="term-line" style="font-size:.85rem"><b>' + esc("典例 · epitome") + '</b> ' + wl(it.get("epitome")) + "</div>")
+            s.append(_lbl_line("典例 · epitome", pair(it.get("epitome"), it.get("epitome_en"), "span")))
         if it.get("source"):
-            s.append('<div class="term-line" style="font-size:.82rem;color:var(--ink-pale)"><b>' + esc("出处 · source") + '</b> ' + wl(it.get("source")) + "</div>")
+            s.append(_lbl_line("出处 · source", pair(it.get("source"), it.get("source_en"), "span")))
         if it.get("links"):
             s.append('<div style="margin-top:.5rem">' + wl(it.get("links")) + "</div>")
         s.append("</div>")
     s.append('<div class="links"><a class="pill" href="methods.html">↝ <span data-zh>方法论</span><span data-en>methods</span></a>'
              '<a class="pill" href="read/index.html">↝ <span data-zh>读书</span><span data-en>the library</span></a></div>')
-    return page("术语架 · TERM REGISTRY", "TERMS", "术语架 · 全领域的名字", "概念 · 传统 · 原型 · 方法——先命名，再理解", ["%d 条术语" % count, "跨学科"], "\n".join(s))
+    return page("术语架 · TERM REGISTRY", "TERMS", ("术语架 · 全领域的名字", "The term shelf — names across every field"), ("概念 · 传统 · 原型 · 方法——先命名，再理解", "Concepts · traditions · archetypes · methods — name first, then understand"), [("%d 条术语" % count, "%d terms" % count), ("跨学科", "cross-disciplinary")], "\n".join(s))
 
 
 def methods_page(site, methods):
@@ -1316,19 +1460,19 @@ def methods_page(site, methods):
         it = m["items"]
         s.append('<div class="card" id="%s">' % esc(m["title"].split(" ")[0]))
         s.append('<h3 class="sec" style="margin-top:.2rem"><span class="method-num">%d</span>%s <span style="font-size:.78rem;color:var(--ink-pale)">%s</span></h3>'
-                 % (i, esc(m["title"]), esc(it.get("en", ""))))
+                 % (i, _md_title(m["title"]), esc(it.get("en", ""))))
         if it.get("applies"):
-            s.append('<div class="term-line" style="font-size:.82rem"><b>' + esc("适用 · applies") + '</b> ' + wl(it.get("applies")) + "</div>")
+            s.append(_lbl_line("适用 · applies", pair(it.get("applies"), it.get("applies_en"), "span")))
         if it.get("why 为何"):
-            s.append('<div class="term-line"><b>' + esc("为何 · why") + '</b> ' + wl(it.get("why 为何")) + "</div>")
+            s.append(_term_line("为何 · why", wl(it.get("why 为何")), wl(it.get("why_en", ""))))
         if it.get("how 怎么做"):
-            s.append('<div class="term-line" style="color:var(--ink-soft)"><b>' + esc("怎么做 · how") + '</b><br>' + wl(it.get("how 怎么做")) + "</div>")
+            s.append(_term_line("怎么做 · how", "<br>" + wl(it.get("how 怎么做")), "<br>" + wl(it.get("how_en", ""))))
         if it.get("rule 关联"):
-            s.append('<div class="term-line" style="font-size:.82rem;color:var(--gold-dim)"><b>' + esc("关联 · rule") + '</b> ' + wl(it.get("rule 关联")) + "</div>")
+            s.append(_lbl_line("关联 · rule", pair(it.get("rule 关联"), it.get("rule_en"), "span")))
         s.append("</div>")
     s.append('<div class="links"><a class="pill" href="glossary.html">↝ <span data-zh>术语架</span><span data-en>glossary</span></a>'
              '<a class="pill" href="index.html">↝ <span data-zh>板块首页</span><span data-en>the domain</span></a></div>')
-    return page("方法论与透镜 · METHODS & LENSES", "METHODS", "方法论与透镜 · 怎么读", "一手先于转述 · 追溯谱系 · 双身对读 · 原型猎袭 · 理论即透镜", ["%d 法" % len(methods), "practice i 义"], "\n".join(s))
+    return page("方法论与透镜 · METHODS & LENSES", "METHODS", ("方法论与透镜 · 怎么读", "Methods & lenses — how to read"), ("一手先于转述 · 追溯谱系 · 双身对读 · 原型猎袭 · 理论即透镜", "Primary before press · trace the genealogy · read as mirror · hunt the archetype · theory as lens"), [("%d 法" % len(methods), "%d methods" % len(methods)), ("实践出真知", "proven in practice")], "\n".join(s))
 
 
 def main():
