@@ -34,6 +34,12 @@ OUT = HERE / "static" / "articles"
 # files are written flat into docs/math_clarification/ and go live as they are.
 DOCS_SITE = BASE.parent / "docs" / "math_clarification"
 
+# Articles that are still built and published (so their direct URL works), but are
+# deliberately left out of the landing index so they cannot be reached by browsing
+# the site — only via the link itself. Their pages also carry a noindex hint so
+# they stay out of search results. Add a file's stem here to unlist it.
+UNLISTED = {"proofs_no_longer_scarce"}
+
 # ---------------------------------------------------------------- design ----
 
 CSS = """
@@ -308,7 +314,6 @@ body.lang-zh .titleblock h1 .t-en { display: none; }
 body.lang-en .lang-zh { display: none; }
 body.lang-zh .lang-en { display: none; }
 body.lang-en .lang-chip, body.lang-zh .lang-chip { display: none; }
-body.lang-en .lang-zh, body.lang-zh .lang-en { display: block; }
 body.lang-zh .lang-body, body.lang-en .lang-body { text-align: left; }
 body.lang-en .lang-block { border-left: none; padding-left: 0; }
 
@@ -502,7 +507,7 @@ PAGE = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>__TITLE__</title>
-<meta name="description" content="__DESC__">
+<meta name="description" content="__DESC__">__ROBOTS__
 <style>__CSS__</style>
 </head>
 <body class="lang-dual" data-title-zh="__TITLE_ZH__" data-title-en="__TITLE_EN__">
@@ -775,8 +780,13 @@ def build_article(md_path: Path) -> dict:
         kicker_zh, kicker_en = "长稿 · 七章全景", "Long-form · Seven chapters"
     else:
         kicker_zh, kicker_en = "综述 · Review", "Review · Survey"
+    robots_meta = (
+        '\n<meta name="robots" content="noindex, nofollow">'
+        if md_path.stem in UNLISTED else ""
+    )
     page = (PAGE
             .replace("__CSS__", CSS)
+            .replace("__ROBOTS__", robots_meta)
             .replace("__JS__", JS)
             .replace("__TOC__", "\n      ".join(toc))
             .replace("__NOTE__", '<p class="note">%s</p>' % note if note else "")
@@ -830,6 +840,8 @@ def build_once(slugs=None):
 
     cards = []
     for info in built:
+        if info["slug"] in UNLISTED:
+            continue  # published, but not discoverable from the landing page
         cards.append(
             '<article>\n'
             '  <h2><a href="%s.html"><span class="p-zh">%s</span>'
