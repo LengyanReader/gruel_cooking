@@ -34,11 +34,17 @@ OUT = HERE / "static" / "articles"
 # files are written flat into docs/math_clarification/ and go live as they are.
 DOCS_SITE = BASE.parent / "docs" / "math_clarification"
 
-# Articles that are still built and published (so their direct URL works), but are
-# deliberately left out of the landing index so they cannot be reached by browsing
-# the site — only via the link itself. Their pages also carry a noindex hint so
-# they stay out of search results. Add a file's stem here to unlist it.
-UNLISTED = {"proofs_no_longer_scarce"}
+# Articles deliberately left out of the landing index but still published, so they
+# are reachable only by their direct link (and carry a noindex hint to stay out of
+# search). Add a file's stem here to isolate a page. Empty for now: every published
+# article is listed on the landing page and indexed by search engines.
+UNLISTED = set()
+
+# Articles taken down entirely: not built, not published, not listed, and their
+# previously published HTML should be removed so the live URL no longer resolves.
+# The source markdown stays in articles/ so the work is preserved and can be
+# republished by deleting the stem below (and rebuilding). Add a stem to withdraw.
+OFFLINE = {"ai_and_math"}
 
 # ---------------------------------------------------------------- design ----
 
@@ -857,16 +863,31 @@ def build_article(md_path: Path) -> dict:
     }
 
 
+def take_down_offline(*dirs):
+    """Remove any generated page for an OFFLINE article so its live URL 404s.
+    The source markdown under articles/ is never touched, so deleting the stem
+    from OFFLINE (and rebuilding) is all it takes to republish the work."""
+    for d in dirs:
+        for stem in OFFLINE:
+            stale = d / (stem + ".html")
+            if stale.exists():
+                stale.unlink()
+                print("took down %s" % stale)
+
+
 def build_once(slugs=None):
     targets = sorted(p for p in ARTICLES.glob("*.md") if p.name != "README.md")
     if slugs:
         targets = [p for p in targets if p.stem in slugs]
+    # Withdrawn articles are never built; their published pages are deleted below.
+    targets = [p for p in targets if p.stem not in OFFLINE]
     if not targets:
         print("no articles found in %s" % ARTICLES)
         return None
 
     OUT.mkdir(parents=True, exist_ok=True)
     DOCS_SITE.mkdir(parents=True, exist_ok=True)
+    take_down_offline(OUT, DOCS_SITE)
     built = []
     for md in targets:
         info = build_article(md)
