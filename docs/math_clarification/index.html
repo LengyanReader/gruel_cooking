@@ -1,42 +1,10 @@
-"""Build self-contained static HTML from the Markdown articles.
-
-The FastAPI viewer in this folder is convenient while writing, but it needs a
-running server. This script renders the same Markdown into standalone files
-that open straight from disk (file://), so an article can be read, mailed or
-archived without any dependency.
-
-Design borrows the warm "dawn" palette and typography of
-docs/living_heritage/css/main.css, re-tuned for long-form academic reading:
-a serif body against sans headings, a measure capped for comfortable CJK
-line lengths, a sticky chapter list, and a three-way language switch.
-
-    python build_static.py              # export every article + index.html
-    python build_static.py --slug NAME  # export one article
-"""
-
-import html
-import re
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from parser import parse_entry, parse_markdown, extract_notes  # noqa: E402
-
-HERE = Path(__file__).resolve().parent
-BASE = HERE.parent
-ARTICLES = BASE / "articles"
-OUT = HERE / "static" / "articles"
-
-# GitHub Pages publishes this repo from docs/, and docs/index.html already links
-# to math_clarification/ -- a path that 404s until the pages land there. The
-# pages are self-contained and only ever use sibling-relative links, so the same
-# files are written flat into docs/math_clarification/ and go live as they are.
-DOCS_SITE = BASE.parent / "docs" / "math_clarification"
-
-# ---------------------------------------------------------------- design ----
-
-CSS = """
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数学释疑 · 文章 / Math Clarification</title>
+<style>
 :root {
   --cream: #FFFBF5;
   --cream-deep: #F7EFE2;
@@ -364,10 +332,40 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
         .unit { border-top: 1px solid #ddd; }
         .colophon { border-top: 1px solid #ccc; }
       }
-      """
-
-
-JS = """
+      </style>
+</head>
+<body class="lang-dual" data-title-zh="数学释疑 · 文章" data-title-en="Math Clarification">
+<div class="topbar">
+  <div class="brand">
+    <a href="index.html">Math Clarification</a>
+    <span class="zh"><span class="p-zh">数学释疑 · 文章</span><span class="p-en">Math Clarification · Essays</span></span>
+  </div>
+  <div class="spacer"></div>
+  <div class="langset" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="zh" aria-pressed="false">中</button>
+    <button type="button" data-lang="dual" aria-pressed="true">双语</button>
+  </div>
+</div>
+<div class="idx">
+  <h1><span class="p-zh">数学释疑 · 文章</span><span class="p-en">Math Clarification</span></h1>
+  <p class="lede"><span class="p-zh">本地静态页,双击即可阅读,无需启动服务。中英对照可随时切换。</span><span class="p-en">A local static page — double-click to read, no server needed. Switch between Chinese and English at any time.</span></p>
+  <article>
+  <h2><a href="ai_and_math.html"><span class="p-zh">数学真理不由共识决定</span><span class="p-en">Mathematical truth is not a matter of consensus</span></a></h2>
+  <p class="meta"><span class="p-zh">12 节 · 英文约 11,085 词 · 中文约 16,865 字</span><span class="p-en">12 sections · ~11,085 English words · ~16,865 Chinese characters</span></p>
+  <a class="open" href="ai_and_math.html"><span class="p-zh">打开</span><span class="p-en">Open</span></a>
+</article>
+<article>
+  <h2><a href="proofs_no_longer_scarce.html"><span class="p-zh">证明不再稀缺：AI 时代的数学边界与数学家之定位</span><span class="p-en">When proofs are no longer scarce: the boundaries of mathematics and the place of mathematicians in the age of AI</span></a></h2>
+  <p class="meta"><span class="p-zh">11 节 · 英文约 11,580 词 · 中文约 20,770 字</span><span class="p-en">11 sections · ~11,580 English words · ~20,770 Chinese characters</span></p>
+  <a class="open" href="proofs_no_longer_scarce.html"><span class="p-zh">打开</span><span class="p-en">Open</span></a>
+</article>
+  <p class="colophon">
+    <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
+    <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
+  </p>
+</div>
+<script>
 (function () {
   var body = document.body;
   var KEY = 'zh-article-lang';
@@ -494,428 +492,6 @@ JS = """
   window.addEventListener('scroll', spy, { passive: true });
   spy();
 })();
-"""
-
-PAGE = """<!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>__TITLE__</title>
-<meta name="description" content="__DESC__">
-<style>__CSS__</style>
-</head>
-<body class="lang-dual" data-title-zh="__TITLE_ZH__" data-title-en="__TITLE_EN__">
-<div id="draft" role="note">
-  <span class="flag"><span class="p-zh">草稿</span><span class="p-en">Draft</span></span>
-  <span class="msg">
-    <span class="p-zh"><em>本文仅为草稿，仅供参考</em>，恳请各位读者多多指正、批评指教；文中观点与疏漏之处，欢迎来信讨论。</span>
-    <span class="p-en"><em>This is a working draft, for reference only.</em> Comments and corrections are warmly welcome — please get in touch.</span>
-  </span>
-  <button type="button" class="dismiss" aria-label="关闭声明 / Dismiss notice">&times;</button>
-</div>
-<div id="progress"></div>
-
-<div class="topbar">
-  <div class="brand">
-    <a href="index.html">__NAVTITLE__</a>
-    <span class="zh"><span class="p-zh">__NAVZH__</span><span class="p-en">__NAV_EN__</span></span>
-  </div>
-  <div class="spacer"></div>
-  <div class="share">
-    <button type="button" data-share="copy" data-done-zh="已复制" data-done-en="Copied"><span class="p-zh">复制链接</span><span class="p-en">Copy link</span></button>
-  </div>
-  <div class="langset" role="group" aria-label="Language / 语言">
-    <button type="button" data-lang="en" aria-pressed="false">EN</button>
-    <button type="button" data-lang="zh" aria-pressed="false">中</button>
-    <button type="button" data-lang="dual" aria-pressed="true">双语</button>
-  </div>
-</div>
-
-<div class="shell">
-  <nav class="toc">
-    <h2><span class="p-zh">目录</span><span class="p-en">Contents</span></h2>
-    <ol>__TOC__</ol>
-  </nav>
-  <main>
-    <div class="doc">
-      <div class="titleblock">
-        <p class="kicker"><span class="p-zh">__KICKER_ZH__</span><span class="p-en">__KICKER_EN__</span></p>
-        <h1><span class="t-zh">__H1__</span><span class="t-en">__SUB__</span></h1>
-        __NOTE__
-        <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
-      </div>
-      __BODY__
-      <p class="colophon">
-        <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
-        <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
-      </p>
-    </div>
-  </main>
-</div>
-
-<script>__JS__</script>
+</script>
 </body>
 </html>
-"""
-
-INDEX = """<!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>__TITLE__</title>
-<style>__CSS__</style>
-</head>
-<body class="lang-dual" data-title-zh="__TITLE_ZH__" data-title-en="__TITLE_EN__">
-<div class="topbar">
-  <div class="brand">
-    <a href="index.html">__NAVTITLE__</a>
-    <span class="zh"><span class="p-zh">__NAVZH__</span><span class="p-en">__NAV_EN__</span></span>
-  </div>
-  <div class="spacer"></div>
-  <div class="langset" role="group" aria-label="Language / 语言">
-    <button type="button" data-lang="en" aria-pressed="false">EN</button>
-    <button type="button" data-lang="zh" aria-pressed="false">中</button>
-    <button type="button" data-lang="dual" aria-pressed="true">双语</button>
-  </div>
-</div>
-<div class="idx">
-  <h1><span class="p-zh">__TITLE_ZH__</span><span class="p-en">__TITLE_EN__</span></h1>
-  <p class="lede"><span class="p-zh">__LEDE_ZH__</span><span class="p-en">__LEDE_EN__</span></p>
-  __CARDS__
-  <p class="colophon">
-    <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
-    <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
-  </p>
-</div>
-<script>__JS__</script>
-</body>
-</html>
-"""
-
-
-# ------------------------------------------------------------- utilities ----
-
-LEVEL_OPEN = re.compile(r"^<!--\s*(L[0-5])\s*-->$")
-LEVEL_CLOSE = re.compile(r"^<!--\s*L[0-5]-end\s*-->$")
-LANG_OPEN = re.compile(r"^<!--\s*(zh|en|dual)\s*-->$")
-LANG_CLOSE = re.compile(r"^<!--\s*(zh|en|dual)-end\s*-->$")
-
-
-def esc(s):
-    return html.escape(s, quote=True)
-
-
-def strip_heading_ids(fragment):
-    """TocExtension gives every CJK heading the same id; drop them, we link per unit."""
-    return re.sub(r"(<h[2-4])\s+id=\"[^\"]*\"", r"\1", fragment)
-
-
-def first_h2_text(fragment):
-    """First heading of any rank, as plain text.
-
-    Continuation blocks open straight into `### 1.2 ...` with no chapter `##`,
-    so falling back through the ranks beats inventing a chapter number.
-    """
-    m = re.search(r"<h([2-4])[^>]*>(.*?)</h\1>", fragment, re.S)
-    if not m:
-        return ""
-    return re.sub(r"<[^>]+>", "", m.group(2)).strip()
-
-
-def to_html(markdown_text):
-    """Convert one language chunk to HTML, reusing the viewer's converter setup."""
-    if not markdown_text.strip():
-        return ""
-    return parse_markdown(markdown_text).sections[0][2]
-
-
-def split_blocks(raw):
-    """Split the source into per-block EN/ZH pairs.
-
-    The level alone cannot delimit chapters: every chapter is an L1 block, so
-    nine consecutive chapters all carry the same level and would collapse into
-    one. A chapter boundary is an opening <!-- Ln --> marker, so that is what
-    this walks. Returns (provenance, units) where each unit is
-    {"level", "en", "zh"} holding raw Markdown.
-    """
-    provenance_lines = []
-    units = []
-    cur = None
-    lang = None
-    buf = []
-
-    def flush():
-        if cur is not None and lang and any(l.strip() for l in buf):
-            if lang == "dual":
-                cur["en"].extend(buf)
-            else:
-                cur.setdefault(lang, []).extend(buf)
-        buf.clear()
-
-    for line in raw.split("\n"):
-        s = line.strip()
-        if LEVEL_OPEN.match(s):
-            flush()
-            if cur is not None and (cur["en"] or cur["zh"]):
-                units.append(cur)
-            cur = {"level": LEVEL_OPEN.match(s).group(1), "en": [], "zh": []}
-            lang = None
-            continue
-        if LEVEL_CLOSE.match(s):
-            flush()
-            continue
-        if LANG_OPEN.match(s):
-            flush()
-            lang = LANG_OPEN.match(s).group(1)
-            continue
-        if LANG_CLOSE.match(s):
-            flush()
-            lang = None
-            continue
-        if cur is None:
-            provenance_lines.append(line)
-        else:
-            buf.append(line)
-
-    flush()
-    if cur is not None and (cur["en"] or cur["zh"]):
-        units.append(cur)
-    provenance = "\n".join(provenance_lines).strip()
-    return provenance, units
-
-
-def group_units(entry):
-    """Kept for callers that already hold a ParsedEntry; pairs by level run."""
-    units = []
-    cur = None
-    for level, lang, frag in entry.sections:
-        if cur is None or level != cur["level"]:
-            if cur:
-                units.append(cur)
-            cur = {"level": level, "en": [], "zh": []}
-        if lang in ("en", "dual"):
-            cur["en"].append(frag)
-        if lang in ("zh", "dual"):
-            cur["zh"].append(frag)
-    if cur:
-        units.append(cur)
-    return units
-
-
-# ------------------------------------------------------------------ build ---
-
-def build_article(md_path: Path) -> dict:
-    raw = md_path.read_text(encoding="utf-8")
-    entry = parse_entry(md_path)
-    provenance, blocks = split_blocks(raw)
-    del provenance  # the preamble is surfaced through extract_note() below
-
-    title = entry.title
-    if " / " in title:
-        zh_title, en_title = title.split(" / ", 1)
-    else:
-        zh_title, en_title = title, title
-
-    body, toc = [], []
-    for i, b in enumerate(blocks):
-        en_html = strip_heading_ids(to_html("\n".join(b["en"]))).strip()
-        zh_html = strip_heading_ids(to_html("\n".join(b["zh"]))).strip()
-        if not en_html and not zh_html:
-            continue
-        uid = "u%d" % i
-        level = b["level"]
-
-        label_en = first_h2_text(en_html) or ("Section %d" % (i + 1))
-        label_zh = first_h2_text(zh_html) or label_en
-        # The chapter label is a language pair too, so the contents list follows
-        # the article instead of always reading "中文 / English".
-        toc.append(
-            '<li><a href="#%s"><span class="lv">%s</span>'
-            '<span class="p-zh">%s</span><span class="p-en">%s</span></a></li>'
-            % (uid, esc(level), esc(label_zh), esc(label_en))
-        )
-
-        cls = "unit is-src" if level == "L5" else "unit"
-        parts = ['<section class="%s" id="%s">' % (cls, uid)]
-        if en_html:
-            parts.append(
-                '<div class="lang-block lang-en"><span class="lang-chip">EN</span>'
-                '<div class="lang-body">%s</div></div>' % en_html
-            )
-        if zh_html:
-            parts.append(
-                '<div class="lang-block lang-zh"><span class="lang-chip">中</span>'
-                '<div class="lang-body">%s</div></div>' % zh_html
-            )
-        parts.append("</section>")
-        body.append("\n".join(parts))
-
-    # The house-style notes sit ahead of the first marker; keep them visible so the
-    # drafting status travels with the rendered page, and switch them with the
-    # article language.
-    note_zh, note_en = extract_notes(raw)
-    if note_zh or note_en:
-        note = '<p class="note">'
-        if note_zh:
-            note += '<span class="n-zh">%s</span>' % esc(note_zh)
-        if note_en:
-            note += '<span class="n-en">%s</span>' % esc(note_en)
-        note += '</p>'
-    else:
-        note = ""
-
-    cjk = sum(1 for c in raw if "\u4e00" <= c <= "\u9fff")
-    en_words = len(re.findall(
-        r"[A-Za-z][A-Za-z'-]*",
-        " ".join(re.sub(r"<[^>]+>", " ", "\n".join(b["en"])) for b in blocks)))
-
-    if "当证明不再稀缺" in title:
-        kicker_zh, kicker_en = "长稿 · 七章全景", "Long-form · Seven chapters"
-    else:
-        kicker_zh, kicker_en = "综述 · Review", "Review · Survey"
-    page = (PAGE
-            .replace("__CSS__", CSS)
-            .replace("__JS__", JS)
-            .replace("__TOC__", "\n      ".join(toc))
-            .replace("__NOTE__", '<p class="note">%s</p>' % note if note else "")
-            .replace("__BODY__", "\n".join(body))
-            .replace("__KICKER_ZH__", esc(kicker_zh))
-            .replace("__KICKER_EN__", esc(kicker_en))
-            .replace("__H1__", esc(zh_title))
-            .replace("__SUB__", esc(en_title))
-            .replace("__TITLE__", esc(zh_title))
-            .replace("__TITLE_ZH__", esc(zh_title))
-            .replace("__TITLE_EN__", esc(en_title))
-            .replace("__DESC__", esc(en_title))
-            .replace("__NAVTITLE__", "Math Clarification")
-            .replace("__NAVZH__", "数学释疑 · 文章")
-            .replace("__NAV_EN__", "Math Clarification · Essays"))
-
-    return {
-        "slug": md_path.stem,
-        "page": page,
-        "zh_title": zh_title,
-        "en_title": en_title,
-        "units": len(toc),
-        "cjk": cjk,
-        "en_words": en_words,
-    }
-
-
-def build_once(slugs=None):
-    targets = sorted(p for p in ARTICLES.glob("*.md") if p.name != "README.md")
-    if slugs:
-        targets = [p for p in targets if p.stem in slugs]
-    if not targets:
-        print("no articles found in %s" % ARTICLES)
-        return None
-
-    OUT.mkdir(parents=True, exist_ok=True)
-    DOCS_SITE.mkdir(parents=True, exist_ok=True)
-    built = []
-    for md in targets:
-        info = build_article(md)
-        dest = OUT / (info["slug"] + ".html")
-        dest.write_text(info["page"], encoding="utf-8")
-        published = DOCS_SITE / dest.name
-        published.write_text(info["page"], encoding="utf-8")
-        info["path"] = dest
-        info["published"] = published
-        built.append(info)
-        print("wrote %-34s %6.1f KB  units=%2d  en~%5d words  zh %5d chars"
-              % (dest.name, dest.stat().st_size / 1024, info["units"],
-                 info["en_words"], info["cjk"]))
-
-    cards = []
-    for info in built:
-        cards.append(
-            '<article>\n'
-            '  <h2><a href="%s.html"><span class="p-zh">%s</span>'
-            '<span class="p-en">%s</span></a></h2>\n'
-            '  <p class="meta"><span class="p-zh">%d 节 · 英文约 %s 词 · 中文约 %s 字</span>'
-            '<span class="p-en">%d sections · ~%s English words · ~%s Chinese characters</span></p>\n'
-            '  <a class="open" href="%s.html">'
-            '<span class="p-zh">打开</span><span class="p-en">Open</span></a>\n'
-            '</article>'
-            % (info["slug"], esc(info["zh_title"]), esc(info["en_title"]),
-               info["units"], "{:,}".format(info["en_words"]),
-               "{:,}".format(info["cjk"]),
-               info["units"], "{:,}".format(info["en_words"]),
-               "{:,}".format(info["cjk"]), info["slug"])
-        )
-
-    idx = (INDEX
-           .replace("__CSS__", CSS)
-           .replace("__JS__", JS)
-           .replace("__CARDS__", "\n".join(cards))
-           .replace("__LEDE_ZH__", "本地静态页,双击即可阅读,无需启动服务。中英对照可随时切换。")
-           .replace("__LEDE_EN__", "A local static page — double-click to read, no server needed. "
-                                   "Switch between Chinese and English at any time.")
-           .replace("__NAVTITLE__", "Math Clarification")
-           .replace("__NAVZH__", "数学释疑 · 文章")
-           .replace("__NAV_EN__", "Math Clarification · Essays")
-           .replace("__TITLE__", "数学释疑 · 文章 / Math Clarification")
-           .replace("__TITLE_ZH__", "数学释疑 · 文章")
-           .replace("__TITLE_EN__", "Math Clarification"))
-    dest = OUT / "index.html"
-    dest.write_text(idx, encoding="utf-8")
-    # Publish the same landing into docs/math_clarification/ so the root site's
-    # "Math Clarification" pillar (href="math_clarification/") resolves on Pages
-    # and lists every article. Links are sibling-relative, so the copy is live as-is.
-    (DOCS_SITE / "index.html").write_text(idx, encoding="utf-8")
-    print("wrote %-34s %6.1f KB  (%d articles)  -> published to %s"
-          % (dest.name, dest.stat().st_size / 1024, len(built), DOCS_SITE))
-    return dest
-
-
-def snapshot():
-    """(path, mtime, size) for every source article, for change detection."""
-    return {
-        p.name: (p.stat().st_mtime_ns, p.stat().st_size)
-        for p in ARTICLES.glob("*.md")
-        if p.name != "README.md"
-    }
-
-
-def watch(slugs=None, interval=1.0):
-    """Rebuild whenever a source .md changes, so a browser refresh is enough."""
-    import time
-    print("watching %s (Ctrl+C to stop)" % ARTICLES)
-    last = None
-    while True:
-        now = snapshot()
-        if now != last:
-            stamp = time.strftime("%H:%M:%S")
-            print("\n[%s] change detected, rebuilding..." % stamp)
-            try:
-                build_once(slugs)
-            except Exception as exc:  # keep watching through a bad edit
-                print("build failed: %s: %s" % (type(exc).__name__, exc))
-            last = snapshot()
-        time.sleep(interval)
-
-
-def main():
-    args = sys.argv[1:]
-    slugs = []
-    if "--slug" in args:
-        slugs = [args[args.index("--slug") + 1]]
-
-    if "--watch" in args or "-w" in args:
-        try:
-            watch(slugs)
-        except KeyboardInterrupt:
-            print("\nstopped")
-        return 0
-
-    dest = build_once(slugs)
-    if dest is None:
-        return 1
-    print("\nopen: %s" % dest)
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
