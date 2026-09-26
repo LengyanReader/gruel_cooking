@@ -2524,7 +2524,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "History is, at least in part, a constructed artefact, the product of intellectual, social and political pressures.",
+            "trans_zh": "历史至少部分是建构的产物——由智识、社会与政治的压力共同塑造。",
+            "source": "Price & Thonemann《古典欧洲的诞生：从特洛伊到奥古斯丁》· 序章 · Prologue"
+          },
+          {
+            "orig": "But of course even this ‘old Europe’ is not a natural but a historical and cultural construct.",
+            "trans_zh": "但即便是这个「旧欧洲」，也并非天然如此，而是一种历史与文化的建构。",
+            "source": "Price & Thonemann《古典欧洲的诞生：从特洛伊到奥古斯丁》· 序章 · Prologue"
+          }
+        ],
         "reception_good_zh": "被学界誉为「以最少文字提供最多问题」的古代史导论；对「古典」概念的建构论分析尤为精彩。",
         "reception_good_en": "Praised as an ancient-history primer offering 'the most questions in the fewest words'; the constructivist analysis of 'classical' is outstanding.",
         "reception_bad_zh": "批评集中于三点：其一，虽以「欧洲」为题，近东、埃及与凯尔特/日耳曼边缘仍着墨有限，被指内核实为希腊—罗马正典；其二，为统摄「从特洛伊到奥古斯丁」四千年，经济、制度与人口史被大幅压缩，物质分析让位于观念与认同史；其三，「古典是被建构的记忆」这一后设框架虽锋利，却使部分传统古典学者担忧它把古人自身的自我理解也一并解构。",
@@ -2946,7 +2957,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "And, as will be stressed often in this book, a common language had very little to do with any form of cultural or political solidarity at all.",
+            "trans_zh": "正如本书将反复强调的：共同的语言，与文化或政治上的团结几乎全无必然关系。",
+            "source": "Wickham《罗马的遗产：黑暗时代 400–1000》· 导论 · Introduction"
+          },
+          {
+            "orig": "This book intends to be comprehensible to people who know nothing about the period, a period that has few household names for a wider public, and it takes little for granted.",
+            "trans_zh": "本书力求让对该时期一无所知的读者也能读懂——那是一个对大众而言鲜有家喻户晓之名的时代——因而几乎不预设任何背景知识。",
+            "source": "Wickham《罗马的遗产：黑暗时代 400–1000》· 导论 · Introduction"
+          }
+        ],
         "reception_good_zh": "「自Pirenne《中世纪的城市》以来最有力的地中海经济史综合」；数据密度惊人但论证清晰。",
         "reception_good_en": "'The most powerful Mediterranean economic synthesis since Pirenne'; staggering data density with clear argumentation.",
         "reception_bad_zh": "主要保留有三：不列颠与爱尔兰在「欧洲」叙事里被显著淡化，重心始终在地中海与法兰克核心地带；经济论证高度依赖考古数据（陶器分布、贸易网络），部分学者质疑其从物证到生产关系的推断跳跃过大；至于以「照亮黑暗时代」为副题，作者虽在正文中解构这一标签，封面却仍倚仗其传播力，而中世纪学界对本是否应复活该词本就分歧。",
@@ -3350,7 +3372,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "The central bond tying man to man in rural society was the personal tie of loyalty.",
+            "trans_zh": "乡村社会中维系人与人的核心纽带，是忠诚这一私人关系。",
+            "source": "Jordan《中世纪盛期的欧洲》· 正文 · 社会结构"
+          },
+          {
+            "orig": "One of the most striking features of southern life in eleventh-century Europe was the presence of a strong urban culture, not entirely discontinuous with the ancient past.",
+            "trans_zh": "十一世纪欧洲南部生活最引人注目的特征之一，是一种强健的城市文化的存在——它与古代过去并非全然断裂。",
+            "source": "Jordan《中世纪盛期的欧洲》· 正文 · 地中海世界"
+          }
+        ],
         "reception_good_zh": "叙事清晰、结构优雅——被广泛用作欧美大学中世纪史课程教材。",
         "reception_good_en": "Clear narrative, elegant structure — widely adopted for undergraduate medieval-history courses.",
         "reception_bad_zh": "结构性保留有二：受制于教科书式篇幅，东欧、拜占庭与伊比利亚再征服被压缩，叙事重心仍是法兰西—英格兰—德意志的核心西欧；方法上偏重政治、宗教与制度的传统叙事，对社会—经济史、性别与边缘群体的新近研究吸收有限，故被一些学者视为稳健却略趋保守。作为断代合成，它对十二至十三世纪「危机」与「转折」的因果裁断有时让位于清晰时间线。",
@@ -3897,7 +3930,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "This eclipse of the older notion of ‘Christendom’ by ‘Europe’ in the sixteenth and early seventeenth centuries, and the extraordinary changes that went with it, is the subject of this book.",
+            "trans_zh": "十六至十七世纪初，旧有的「基督教世界」概念如何被「欧洲」所取代，以及随之而来的剧变——这正是本书的主题。",
+            "source": "Greengrass《基督教世界之覆灭：欧洲 1517–1648》· 开篇 · 总题"
+          },
+          {
+            "orig": "Europe was disunited in itself, and exported its divisions to the rest of the world.",
+            "trans_zh": "欧洲自身四分五裂，并把这种分裂输往世界其余部分。",
+            "source": "Greengrass《基督教世界之覆灭：欧洲 1517–1648》· 正文 · 中叶的崩解"
+          }
+        ],
         "reception_good_zh": "「对宗教改革时代最完整、最具文学性的英语叙述」——Times Literary Supplement。",
         "reception_good_en": "'The most complete and literary English account of the Reformation era' — TLS.",
         "reception_bad_zh": "批评不止于体量：其一，1517至1648的长时段全景在德意志、法兰西、伊比利亚、意大利与东欧之间频繁切换，牺牲了任何单一区域的纵深，被指「广而不深」；其二，书名所暗示的宏大论题与书中大量并置的宗教实践、艺术、科学、国家形成等专题之间，编织有时松散，「溶解」的总纲更多浮现于结论而非贯穿论证；其三，对非精英信仰与日常宗教经验的着墨相较政治—外交主线仍偏少。",
@@ -4284,7 +4328,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "It was from the public sphere that a new source of authority emerged to challenge the opinion-makers of the old regime: public opinion.",
+            "trans_zh": "正是从公共领域之中，一种新的权威源泉浮现，向旧制度的意见制定者发起挑战：即公众舆论。",
+            "source": "Blanning《荣耀的追求：塑造现代欧洲的五大革命 1648–1815》· 正文 · 文化革命"
+          },
+          {
+            "orig": "Late medieval and Renaissance Europe had been dominated by the Mediterranean.",
+            "trans_zh": "中世纪晚期与文艺复兴时代的欧洲，一直为地中海所主导。",
+            "source": "Blanning《荣耀的追求：塑造现代欧洲的五大革命 1648–1815》· 正文 · 经济与地理"
+          }
+        ],
         "reception_good_zh": "「以惊人的博学把两百年的多国历史融为可读的整体」——Literary Review。",
         "reception_good_en": "'Astounding erudition fusing two centuries of multi-national history into a readable whole' — Literary Review.",
         "reception_bad_zh": "框架的代价是主要争议点：以「五场革命」统摄1648至1815，使工业革命一章几乎只讲英格兰，欧陆与殖民地的经济变迁被边缘化；革命范式的取舍亦引发质疑——作者刻意淡化1789法国大革命的政治断裂，将其纳入渐进变革，部分革命史学者认为这低估了大革命的结构性冲击；此外「文化革命」一章以德法英美学为轴，对东欧几近略过。",
@@ -4720,7 +4775,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "The pursuit of power permeated European society in the nineteenth century.",
+            "trans_zh": "对权力的追求，渗透进十九世纪欧洲的整个社会。",
+            "source": "Evans《权力的追求：欧洲 1815–1914》· 导论 · Introduction"
+          },
+          {
+            "orig": "And yet, as well as being an evolving assemblage of individual states, Europe, as this book hopes to demonstrate, also had a definable existence as a collective entity.",
+            "trans_zh": "然而，欧洲不仅是众多主权国家不断演化的集合；本书试图证明，它同样具有一种可辨识的、作为共同体的存在。",
+            "source": "Evans《权力的追求：欧洲 1815–1914》· 导论 · Introduction"
+          }
+        ],
         "reception_good_zh": "「当代英语世界最权威的19世纪欧洲史」——The Guardian、TLS 一致好评。",
         "reception_good_en": "'The most authoritative 19th-century European history in contemporary English' — unanimous Guardian, TLS acclaim.",
         "reception_bad_zh": "体量与视角是主要保留：近千页、材料密度极高，对普通读者门槛不低；东欧、巴尔干与殖民帝国虽优于多数同类通史，主轴仍是「革命—民族国家—工业化」的西北欧轨迹。埃文斯以大量转引二手文献支撑全景，个别领域（全球经济、生态、技术）依赖他人研究而非原创综合，被一些评论者认为「最好的部分是叙述、最弱的是判断」；性别与种族线索虽前所未有地被织入，却有时呈专题拼贴而非贯穿的分析轴。",
@@ -5222,7 +5288,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "And it inaugurated an epoch – the ‘Thirty Years War’ of the twentieth century – in which the continent of Europe came close to destroying itself.",
+            "trans_zh": "它开启了一个时代——二十世纪的「三十年战争」——在这一时代里，欧洲大陆几乎走向自我毁灭。",
+            "source": "Kershaw《地狱归来：欧洲 1914–1949》· 序章 · 论题"
+          },
+          {
+            "orig": "Yet, remarkably, the Second World War, in stark contrast to the mayhem engendered by the First, paved the way for Europe’s rebirth in the latter half of the century.",
+            "trans_zh": "然而值得注意的是，第二次世界大战与一战所酿成的浩劫形成鲜明对照，反倒为世纪后半叶欧洲的重生铺平了道路。",
+            "source": "Kershaw《地狱归来：欧洲 1914–1949》· 正文 · 战争的遗产"
+          }
+        ],
         "reception_good_zh": "「Kershaw 把三十年写成一个连贯故事的能力令人叹服」——The Times。",
         "reception_good_en": "'Kershaw's ability to write thirty years as one coherent story is formidable' — The Times.",
         "reception_bad_zh": "两点最受质疑：其一，把1914至1945读作一场「第二次三十年战争」的内战叙事虽有力，却有把复杂的多线冲突塞进单一框架之嫌，尤其淡化了巴尔干与苏德战场的相对自主性；其二，「极权主义趋同」（纳粹与斯大林并置）的框架被东欧史学者批评为德国/西欧中心，且可能遮蔽两类政权在社会基础与运作逻辑上的差异。作为「从下面看」的尝试，日常经验虽丰富，地区覆盖仍向西欧倾斜。",
@@ -5803,7 +5880,18 @@
       ],
       "charedges": [],
       "intent": {
-        "quotes": [],
+        "quotes": [
+          {
+            "orig": "Europe in the Global Age was no longer in charge of its own destiny.",
+            "trans_zh": "处于全球时代的欧洲，已不再能主宰自己的命运。",
+            "source": "Kershaw《全球时代：欧洲 1950–2017》· 导论 · Introduction"
+          },
+          {
+            "orig": "At the same time immense impersonal global forces were transforming Europe.",
+            "trans_zh": "与此同时，无数非人格化的巨大全球力量，正在重塑欧洲。",
+            "source": "Kershaw《全球时代：欧洲 1950–2017》· 导论 · Introduction"
+          }
+        ],
         "reception_good_zh": "「以令人信服的广度把战后七十年写成整体」——Financial Times。",
         "reception_good_en": "'Writes post-war seven decades into a whole with compelling breadth' — Financial Times.",
         "reception_bad_zh": "修订自 Roller-Coaster，部分旧内容可能未充分更新；东欧1989后转型着墨不均。",
