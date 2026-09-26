@@ -1,0 +1,38 @@
+{
+  "kind": "history",
+  "page_template": "book",
+  "note": "L4 section order + presentation labels for a history/monograph book page. build_reading.py reads the brief labels and acts headings from here; the per-chapter lossless brief box is rendered by templates/brief_block.html. Order lists the blocks the page shows; condition gates optional ones. This is presentation DATA, not content.",
+  "acts_heading": {
+    "is_hist": true,
+    "label_zh": "时段章节 · Periods &amp; chapters",
+    "label_en": "Periods &amp; chapters",
+    "act_noun_zh": "节",
+    "act_noun_en": "Section"
+  },
+  "brief": {
+    "template": "brief_block.html",
+    "labels": [
+      ["main", "章旨 · Chapter argument", "Argument"],
+      ["flow", "论证展开 · Argument development", "Development"],
+      ["names", "关键人物 · 事件 · 年代 · 地名", "Key figures · events · dates · places"],
+      ["sources", "材料与方法 · Evidence base", "Evidence"],
+      ["link", "章际关系 · Relation to neighbouring chapters", "Chapter link"]
+    ]
+  },
+  "sections": [
+    {"key": "provenance", "template": null, "always": true},
+    {"key": "read_status", "condition": "has_read_status"},
+    {"key": "rating", "condition": "has_rating"},
+    {"key": "why_now", "always": true},
+    {"key": "textlinks", "condition": "has_textlinks"},
+    {"key": "background", "always": true},
+    {"key": "plot_acts", "always": true, "brief": true},
+    {"key": "characters", "condition": "has_characters"},
+    {"key": "narrative", "condition": "has_narrative"},
+    {"key": "craft", "condition": "has_craft"},
+    {"key": "motifs", "condition": "has_motifs"},
+    {"key": "read_through", "condition": "has_read_through"},
+    {"key": "fact_ledger", "condition": "has_fact_ledger"},
+    {"key": "related", "condition": "has_related"}
+  ]
+}

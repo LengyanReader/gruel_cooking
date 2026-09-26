@@ -6,7 +6,7 @@ Renders: per-book pages (read/books/<slug>.html), crop list page, archive page,
 authors graph page.  Bilingual via data-zh/data-en spans + a shared lang toggle
 (localStorage key from site.json).  Inline SVG visualizers only (no external deps).
 """
-import json, os, html, sys, argparse, math, re
+import json, os, html, sys, argparse, math, re, zlib
 from operator import itemgetter
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -32,22 +32,19 @@ def author_art(slug):
             return p
     return None
 
-CONF_COLOR = {"✓": "#3E7C5A", "◐": "#A5811D", "○": "#6C8AAF", "✗": "#B0413E"}
-EDGE_KIND = {
-    "mirror": ("双身 mirror", "#8C4A77"),
-    "parent": ("亲子 parent", "#3E5C76"),
-    "kin": ("亲属 kin", "#6C8AAF"),
-    "romance": ("恋人 romance", "#C0556B"),
-    "alliance": ("结盟 alliance", "#7A8F6E"),
-    "friend": ("挚友 friend", "#C9A227"),
-    "colleague": ("同组 colleague", "#A5811D"),
-    "cowrite": ("合著 co-write", "#8C6A4A"),
-    "dialogue": ("对谈 dialogue", "#C9A227"),
-    "evidence": ("实证 evidence", "#7A8F6E"),
-    "witness": ("旁观 witness", "#6C8AAF"),
-    "contrast": ("对照 contrast", "#777069"),
-    "bond": ("羁绊 bond", "#8C4A77"),
-}
+# ---- RKF L4: presentation constants are DATA, loaded from knowledge/ registries.
+# EDGE_KIND / CONF_COLOR / svg-dash formerly lived as hard-coded dicts here; they
+# now derive from knowledge/graph/schema.json (the L3 hub) so a new relation type
+# or confidence color is a data edit, never a Python edit.
+_ENGINE = os.path.abspath(os.path.join(BASE, "..", "engine"))
+if _ENGINE not in sys.path:
+    sys.path.insert(0, _ENGINE)
+import render as RDJ  # noqa: E402  -> Reading_IA/engine/render.py
+
+_GRAPH_SCHEMA = RDJ.graph_schema()
+CONF_COLOR = RDJ.conf_color_map(_GRAPH_SCHEMA)   # successor of the CONF_COLOR literal
+EDGE_KIND = RDJ.edge_kind_map(_GRAPH_SCHEMA)     # successor of the EDGE_KIND literal
+EDGE_DASH = RDJ.edge_dash_map(_GRAPH_SCHEMA)     # successor of the inline svg dash-rule
 
 CSS = """/* shared Reading & IA toolkit */
 :root {
@@ -209,6 +206,13 @@ buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 """
 
 STORAGE_KEY = "zhzz-reading-lang"
+
+# RKF L4: knowledge/styles.css + knowledge/script.js are the live source of the
+# stylesheet and toggle script (byte-identical to the inline literals above, kept
+# only so `--validate` still works without the knowledge/ dir). Overriding here
+# makes the registry authoritative; edit the .css/.js to restyle, not this file.
+CSS = RDJ.styles()
+SCRIPT = RDJ.script()
 
 
 def esc(s):
@@ -446,7 +450,9 @@ def svg_monogram(name, size=48):
     else:
         initials = "?"
     initials = initials.upper()
-    h = abs(hash(name)) % 360
+    # deterministic hue: builtin hash() is per-process randomized (PYTHONHASHSEED),
+    # which made rebuilds drift; crc32 keeps output byte-stable across runs.
+    h = zlib.crc32(name.encode("utf-8")) % 360
     bg = f"hsl({h}, 28%, 38%)"
     r = size / 2.0
     fs = size * 0.38
@@ -701,7 +707,7 @@ def svg_charedge(book, width=900):
             continue
         (ax, ay), (bx, by) = pos[a], pos[b]
         klabel, kcol = EDGE_KIND.get(kind, (kind, "#8C8C8C"))
-        dash = "4 3" if kind in ("witness", "dialogue", "contrast", "evidence", "colleague") else "1"
+        dash = EDGE_DASH.get(kind, "1")
         my = (ay + by) / 2
         out.append(f'<path class="edge eflow" d="M{ax},{ay} C{ax},{my} {bx},{my} {bx},{by}" fill="none" stroke="{kcol}" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="{dash}" marker-end="url(#arwX)"/>')
         # bilingual edge-kind label at midpoint (small, low-contrast)
@@ -902,24 +908,11 @@ def book_page(site, book, crop):
                         f'<span data-en style="color:var(--ink-soft)"><strong>Argument · </strong>{esc(act.get("arg_en",""))}</span>'
                         '</div>')
             return ""
-        labels = [
-            ("main", "章旨 · Chapter argument", "Argument"),
-            ("flow", "论证展开 · Argument development", "Development"),
-            ("names", "关键人物 · 事件 · 年代 · 地名", "Key figures · events · dates · places"),
-            ("sources", "材料与方法 · Evidence base", "Evidence"),
-            ("link", "章际关系 · Relation to neighbouring chapters", "Chapter link"),
-        ]
-        parts = ['<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65">']
-        for key, zh_lab, en_lab in labels:
-            txt = (br.get(key) or "").strip()
-            if not txt:
-                continue
-            parts.append(
-                f'<p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">{esc(zh_lab)}：</strong>{esc(txt)}</span>'
-                f'<span data-en style="color:var(--ink-soft)"><strong>{esc(en_lab)}: </strong>{esc(txt)}</span></p>'
-            )
-        parts.append("</div>")
-        return "".join(parts)
+        # RKF L4: the lossless brief box is a TEMPLATE (knowledge/templates/
+        # brief_block.html) bound to per-kind labels (knowledge/page_spec/
+        # <kind>.json). Escaping happens in the engine, so this is pure wiring.
+        spec = RDJ.page_spec(book.get("kind", "generic"))
+        return RDJ.brief_html(spec["brief"], spec["brief"]["labels"], br)
 
     for act in book.get("plot_acts", []):
         act_head_zh = f'第 {act["n"]} 节 · {act["title_zh"]}' if is_hist else f'第 {act["n"]} 幕 · {act["title_zh"]}'

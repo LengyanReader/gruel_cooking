@@ -1,0 +1,24 @@
+{
+  "theme": "rkf-theme.v1",
+  "note": "Semantic color/style tokens for the Reading & IA presentation layer. styles.css owns the actual CSS (:root vars); graph/schema.json owns relation colors. This registry records the shared palette by name so non-Python consumers (graph export, future themes) reference tokens, not literals. Values mirror styles.css :root — keep them in sync (audit --graph guards relation colors).",
+  "palette": {
+    "ink-deep": "#26261F", "ink-mid": "#4E4B42", "ink-soft": "#7C7568", "ink-pale": "#A89F90",
+    "paper": "#F7F1E3", "paper-soft": "#EFE6D3", "paper-deep": "#E7DCC4",
+    "gold": "#C9A227", "gold-soft": "#E3C457", "gold-dim": "#A5811D",
+    "lapis": "#3E5C76", "lapis-soft": "#6C8AAF", "sage": "#7A8F6E",
+    "cond": "#3E7C5A", "lueur": "#A5811D", "accent": "#C9A227",
+    "muted": "#777069"
+  },
+  "fonts": {
+    "display": "\"LXGW WenKai\",\"Noto Serif SC\",serif",
+    "body": "\"Inter\",\"LXGW WenKai\",\"Noto Sans SC\",sans-serif"
+  },
+  "lang_storage_key": "zhzz-reading-lang",
+  "registries": {
+    "styles": "styles.css",
+    "script": "script.js",
+    "graph": "graph/schema.json",
+    "page_spec": "page_spec/",
+    "templates": "templates/"
+  }
+}
