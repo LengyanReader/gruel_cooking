@@ -615,9 +615,11 @@ LEVEL_CLOSE = re.compile(r"^<!--\s*L[0-5]-end\s*-->$")
 LANG_OPEN = re.compile(r"^<!--\s*(zh|en|dual)\s*-->$")
 LANG_CLOSE = re.compile(r"^<!--\s*(zh|en|dual)-end\s*-->$")
 # Author-declared dates, kept in the source preamble so the build stays
-# deterministic (no file mtimes, no clock): <!-- 发表 2026-09-26 · 更新 2026-09-26 -->
+# deterministic (no file mtimes, no clock): <!-- 发表 2026-09-26 19:38 · 更新 2026-09-26 22:15 -->
+# The HH:MM time of day is optional; a bare date still works.
 DATE_META = re.compile(
-    r"^<!--\s*(?:发表|Published)\s*(\d{4}-\d{2}-\d{2})\s*·\s*(?:更新|Updated)\s*(\d{4}-\d{2}-\d{2})\s*-->$")
+    r"^<!--\s*(?:发表|Published)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?)\s*·\s*"
+    r"(?:更新|Updated)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?)\s*-->$")
 
 
 def esc(s):
@@ -635,7 +637,7 @@ def extract_dates(raw):
     for line in raw.splitlines():
         m = DATE_META.match(line.strip())
         if m:
-            return m.group(1), m.group(2)
+            return " ".join(m.group(1).split()), " ".join(m.group(2).split())
     return None
 
 
