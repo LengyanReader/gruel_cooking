@@ -1,5 +1,6 @@
 import re
 import os
+import json
 import sys
 import http.cookiejar
 import urllib.request
@@ -185,6 +186,40 @@ check("iso8601 dep served", len(get("/vendor/leaflet-timeslider/iso8601.min.js")
 mpe = get_en("/map")
 check("map en title", "Tongzhou Canal" in mpe)
 check("map en exposes plates disclosure", "never overlaid" in mpe or "not georeferenced" in mpe)
+
+# ── 河道演化 · canal-course states ────────────────────────────────────────────
+# Structural integrity: the layer may only recolour geometry that already exists
+# in the OSM-derived water layer, and may never plot a place the sources name
+# without locating.
+check("map course strip markup", 'id="tl-course"' in mp)
+check("viewer wires course states", "course_states" in mv and "renderCourse" in mv and "courseState" in mv)
+_mf = json.loads(tj[tj.index("{") : tj.rindex("}") + 1])
+_cs = _mf["course_states"]
+check("course states tile Yuan to today",
+      [c["id"] for c in _cs] == ["cs-suijin", "cs-yuan", "cs-ming-decay", "cs-mingqing", "cs-modern"])
+check("yuhe palaeo-channel added from OSM way 597880427",
+      "\u7389\u6cb3" in _mf["water"] and "597880427" in tj)
+check("course segments reuse existing water geometry",
+      all(s["water"] in _mf["water"] for c in _cs for s in c["segments"]),
+      [(c["id"], s["water"]) for c in _cs for s in c["segments"] if s["water"] not in _mf["water"]])
+check("course states carry no invented coordinates",
+      all("pts" not in s and "lat" not in s for c in _cs for s in c["segments"]))
+_anchor = {(d.get("lat"), d.get("lon")) for d in _mf["dossiers"]}
+_term = [c["terminus"] for c in _cs if c.get("terminus")]
+check("plotted termini reuse dossier anchors",
+      all((t["lat"], t["lon"]) in _anchor for t in _term if t.get("lat") is not None))
+_unloc = [t for t in _term if t.get("lat") is None]
+check("named-but-unlocated termini flagged, never plotted",
+      len(_unloc) == 1 and all(t.get("located") is False for t in _unloc))
+check("confluence named but not plotted",
+      any(c.get("confluence", {}).get("located") is False for c in _cs))
+_yr = {e["year"] for e in _mf["chronology"]["events"]}
+_spine = {250, 608, 1291, 1293, 1295, 1302, 1311, 1330, 1528, 1901, 2022, 2026}
+check("chronology carries the verified spine", _spine <= _yr, sorted(_spine - _yr))
+check("chronology range matches verified origin", _mf["chronology"]["range"] == [250, 2026])
+check("map slider agrees with manifest range", 'min="250" max="2026"' in mp)
+check("Yuan-shi events keep grade A",
+      all(e["level"] == "A" for e in _mf["chronology"]["events"] if "\u5143\u53f2" in e["src"]))
 
 ld = get("/literature?view=dimensions")
 check("literature dimensions tabs", "lit-tab" in ld)

@@ -264,7 +264,9 @@
       ["#033b4c", ZH ? "档 = 考据档案（点选右侧展开）" : "档 = node dossier (click to open)"],
       ["#7b2d8b", ZH ? "● = 时间轴事件（随年代切片显隐）" : "● = timeline event (appears in the year window)"],
       ["#155e63", ZH ? "▮ = 政策（无坐标，横幅著录，不绘几何）" : "▮ = policy (no coords, banner record, no geometry)"],
-      ["#8a5a2b", ZH ? "图版 = 历史图版（1875/1907，未配准 → 不叠加底图）" : "图版 = historical plate (1875/1907, unregistered → not overlaid)"]
+      ["#8a5a2b", ZH ? "图版 = 历史图版（1875/1907，未配准 → 不叠加底图）" : "图版 = historical plate (1875/1907, unregistered → not overlaid)"],
+      ["#1f6f8b", ZH ? "河道演化：按年代显隐，实线 = 当时通航" : "Course state: follows the year, solid = navigable then"],
+      ["#8a7a6a", ZH ? "河道演化：虚线 = 当时已废／今为故道（如玉河）" : "Course state: dashed = already abandoned / now palaeo-channel (e.g. Yuhe)"]
     ];
     legend.innerHTML = rows.map(function (r) {
       return '<li><i style="background:' + r[0] + '"></i>' + r[1] + "</li>";
@@ -377,6 +379,7 @@
         plateBtn.classList.toggle("is-live", lp > 0);
         if (plateCnt) plateCnt.textContent = lp ? String(lp) : "";
       }
+      renderCourse(y);
     }
 
     function play() {
@@ -407,6 +410,69 @@
     var sp = document.getElementById("tl-speed"); if (sp) sp.addEventListener("change", function () { speed = +sp.value; if (timer) { pause(); play(); } });
     var wn = document.getElementById("tl-window"); if (wn) wn.addEventListener("change", function () { winHalf = +wn.value; lastSig = ""; renderTimeline(); });
     var fo = document.getElementById("tl-follow"); if (fo) fo.addEventListener("change", function () { follow = fo.checked; lastSig = ""; });
+
+    /* ── 河道演化 · canal-course states ──
+     * Each state carries only segments whose coordinates already exist in the
+     * water layer (OpenStreetMap geometry) — a documented phase difference is
+     * expressed as *status* (通航 / 废弃 / 故道 / 今存), never as an invented
+     * palaeo-channel line. Places the sources name but no verifiable source
+     * locates (大通桥, 通州高丽庄) stay as text and are never plotted. */
+    var CS = D.course_states || [];
+    var gCourse = L.layerGroup().addTo(map);
+    var courseStrip = document.getElementById("tl-course");
+    var CS_STYLE = {
+      navigable: { color: "#1f6f8b", weight: 3.5, opacity: 0.95, dashArray: null },
+      abandoned: { color: "#8a7a6a", weight: 2.5, opacity: 0.8, dashArray: "6,7" },
+      heritage:  { color: "#8a5a2b", weight: 2.5, opacity: 0.9, dashArray: "2,6" },
+      extant:    { color: "#3c6e47", weight: 2.5, opacity: 0.85, dashArray: null }
+    };
+    var CS_LBL = { navigable: ["通航", "navigable"], abandoned: ["废弃／故道", "abandoned / palaeo-channel"],
+                   heritage: ["遗产构成项", "inscribed component"], extant: ["今存水系", "extant watercourse"] };
+    function courseState(y) {
+      for (var i = 0; i < CS.length; i++) {
+        var c = CS[i];
+        if (y >= c.year_from && (c.year_to == null || y <= c.year_to)) return c;
+      }
+      return null;
+    }
+    var _csId = "\u0000";
+    function renderCourse(y) {
+      var c = courseState(y), id = c ? c.id : "";
+      if (id === _csId) return; /* states change ~5 times across 1776 years */
+      _csId = id;
+      gCourse.clearLayers();
+      if (!c) { if (courseStrip) { courseStrip.hidden = true; courseStrip.innerHTML = ""; } return; }
+      c.segments.forEach(function (s) {
+        var lines = (D.water || {})[s.water];
+        if (!lines) return;
+        var st = CS_STYLE[s.state] || CS_STYLE.extant, lbl = CS_LBL[s.state] || [s.state, s.state];
+        lines.forEach(function (pts) {
+          var pl = L.polyline(pts, { color: st.color, weight: st.weight, opacity: st.opacity, dashArray: st.dashArray });
+          pl.bindPopup("<strong>" + s.water + " · " + (ZH ? s.role_zh : s.role_en) + "</strong><br>" +
+            (ZH ? lbl[0] : lbl[1]) + "<br><em>" + c.src + "</em>");
+          gCourse.addLayer(pl);
+        });
+      });
+      if (c.terminus && c.terminus.lat != null) {
+        var mk = hollow([c.terminus.lat, c.terminus.lon], "#1f6f8b");
+        mk.bindPopup("<strong>" + (ZH ? c.terminus.name_zh : c.terminus.name_en) + "</strong><br>" +
+          (ZH ? "终点（据文献，锚点待 GPS 复核）" : "terminus (textual; anchor pending GPS)") + "<br><em>" + c.src + "</em>");
+        gCourse.addLayer(mk);
+      }
+      if (courseStrip) {
+        var bits = [];
+        if (c.terminus) bits.push((ZH ? "终点：" : "terminus: ") + (ZH ? c.terminus.name_zh : c.terminus.name_en) +
+          (c.terminus.located === false || c.terminus.lat == null ? (ZH ? "（不落点）" : " (not plotted)") : ""));
+        if (c.confluence) bits.push((ZH ? "合流：" : "confluence: ") + (ZH ? c.confluence.name_zh : c.confluence.name_en) +
+          (c.confluence.located === false ? (ZH ? "（不落点）" : " (not plotted)") : ""));
+        courseStrip.hidden = false;
+        courseStrip.innerHTML = "<span class='cs-era'>" + (ZH ? c.label_zh : c.label_en) + "</span>" +
+          "<span class='cs-years'>" + c.year_from + "–" + (c.year_to == null ? (ZH ? "今" : "now") : c.year_to) + "</span>" +
+          (bits.length ? "<span class='cs-pts'>" + bits.join(" · ") + "</span>" : "") +
+          "<span class='cs-note'>" + (ZH ? c.note_zh : c.note_en) + "</span>" +
+          "<span class='cs-src'>" + c.src + "</span>";
+      }
+    }
 
     /* ── 历史图版 · archival plates ──
      * Linked to the timeline by date, but never draped over the basemap:

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>通州运河田野底图 — 周舟洲粥 · 活态文化廊道</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23033b4c'/%3E%3Cpath%20d='M2%2021c6-7%2012%206%2028-2v7c0%204-3%206-6%206H2z'%20fill='%23e8c39a'/%3E%3C/svg%3E">
-<meta name="description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
+<meta name="description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），随年代显隐的河道演化层（元—明—清—今，含玉河故道），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
 <link rel="canonical" href="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 
 
@@ -15,12 +15,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="通州运河田野底图 — 周舟洲粥 · 活态文化廊道">
-<meta property="og:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
+<meta property="og:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），随年代显隐的河道演化层（元—明—清—今，含玉河故道），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
 <meta property="og:url" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/map">
 <meta property="og:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="通州运河田野底图">
-<meta name="twitter:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
+<meta name="twitter:description" content="Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），随年代显隐的河道演化层（元—明—清—今，含玉河故道），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。">
 <meta name="twitter:image" content="https://lengyanreader.github.io/gruel_cooking/living_heritage/img/og-cover.jpg">
 
 <script>document.documentElement.classList.add('js');</script>
@@ -70,7 +70,7 @@
   <div class="container">
     <h1>通州运河 · 田野底图</h1>
     <p class="map-lede">
-      以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。点「档」标记展开每个点的<strong>考据档案</strong>（历史演变 / 交融 / 影响），逐条标注出处与分级。时间轴旁可展开<strong>历史图版</strong>（1875 / 1907 公共版权扫描）：因未获配准控制点，仅作图版著录，<strong>不叠加于底图</strong>。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。
+      以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。点「档」标记展开每个点的<strong>考据档案</strong>（历史演变 / 交融 / 影响），逐条标注出处与分级。时间轴旁可展开<strong>历史图版</strong>（1875 / 1907 公共版权扫描）：因未获配准控制点，仅作图版著录，<strong>不叠加于底图</strong>。河道按年代显隐：演化差异只以<strong>状态</strong>（通航 / 废弃 / 故道 / 今存）表达，<strong>不复原未公布的古河道线</strong>；文献点名而无可靠坐标者（大通桥、通州高丽庄）仅作文字，不落点。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。
     </p>
   </div>
 </section>
@@ -102,8 +102,8 @@
         <button id="tl-next" class="tl-btn" type="button" title="下一事件">⏭</button>
         <button id="tl-reset" class="tl-btn" type="button" title="回到起点">↺</button>
       </div>
-      <output id="tl-year" class="tl-year" for="tl-slider">557</output>
-      <input id="tl-slider" class="tl-slider" type="range" min="557" max="2025" step="1" value="557"
+      <output id="tl-year" class="tl-year" for="tl-slider">250</output>
+      <input id="tl-slider" class="tl-slider" type="range" min="250" max="2026" step="1" value="250"
              aria-label="年代">
       <label class="tl-opt">速度
         <select id="tl-speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select>
@@ -114,6 +114,7 @@
       <label class="tl-opt tl-check"><input id="tl-follow" type="checkbox" checked> 跟随</label>
       <button id="tl-plates" class="tl-plate-btn" type="button" aria-pressed="false" title="历史图版（公共版权，未配准）">历史图版<span id="tl-plates-count" class="tl-plates-count" aria-hidden="true"></span></button>
     </div>
+    <div id="tl-course" class="tl-course" role="status" aria-live="polite" hidden></div>
     <div class="tl-wrap">
       <h2 class="tl-heading">时间轴事件 · 逐条可定位与展开档案</h2>
       <ul id="tl-rail" class="tl-rail"></ul>
