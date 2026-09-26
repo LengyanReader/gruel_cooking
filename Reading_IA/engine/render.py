@@ -107,16 +107,20 @@ def render(template: str, ctx: dict) -> str:
 
 def brief_html(block: dict, labels: list, brief: dict) -> str:
     """Render a per-chapter lossless brief box from a template + label registry.
-    `labels` is [[key, zh, en], ...]; only non-empty fields become rows. Values
-    are HTML-escaped here so the template stays pure structure."""
+    `labels` is [[key, zh, en], ...]; zh text comes from ``brief[key]`` and the
+    English side from ``brief[key + '_en']``, falling back to the zh text when
+    the English has not been authored yet (graceful degradation). Only rows with
+    any content are shown; values are HTML-escaped here so the template stays
+    pure structure."""
     import html as _html
     rows = []
     for key, zh_lab, en_lab in labels:
-        txt = (brief.get(key) or "").strip()
-        if not txt:
+        zh = (brief.get(key) or "").strip()
+        en = (brief.get(key + "_en") or "").strip() or zh
+        if not zh and not en:
             continue
         rows.append({"zh_lab": _html.escape(zh_lab), "en_lab": _html.escape(en_lab),
-                     "txt": _html.escape(txt)})
+                     "txt_zh": _html.escape(zh), "txt_en": _html.escape(en)})
     if not rows:
         return ""
     tpl = load_template(block["template"])

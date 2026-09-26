@@ -946,8 +946,11 @@ def book_page(site, book, crop):
     intent_label = ("核心论题 · Thesis" if is_hist else "作者真意 · Intent", "Thesis" if is_hist else "The author&rsquo;s intent")
     s.append(f'<h2 class="part" data-both><span data-zh>{intent_label[0]}</span><span data-en>{intent_label[1]}</span></h2>')
     if book["intent"].get("quotes"):
-        for q in book["intent"]["quotes"]:
-            s.append(f'<div class="quote"><div class="orig">{esc(q["orig"])}</div><div class="trs">{esc(q["trans_zh"])}</div><div class="src">{esc(q["source"])}</div></div>')
+        for q in book["intent"].get("quotes"):
+            _trs = '<div class="trs" data-zh>%s</div>' % esc(q["trans_zh"])
+            _src_en = q.get("source_en") or q["source"]
+            _src = '<div class="src"><span data-both><span data-zh>%s</span><span data-en>%s</span></span></div>' % (esc(q["source"]), esc(_src_en))
+            s.append('<div class="quote"><div class="orig">%s</div>%s%s</div>' % (esc(q["orig"]), _trs, _src))
     s.append(blk("评价与合成 · Reception & synthesis", book["intent"]["reception_good_zh"] + "\n\n" + book["intent"]["reception_bad_zh"] + "\n\n**合成 Synthesis：** " + book["intent"]["syn_zh"], book["intent"]["reception_good_en"] + "\n\n" + book["intent"]["reception_bad_en"] + "\n\n**Synthesis:** " + book["intent"]["syn_en"], cls="gapbox"))
     # read-through notes (my own critical synthesis after reading through each book end-to-end)
     rt = book.get("read_through") or {}

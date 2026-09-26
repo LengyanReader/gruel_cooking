@@ -1,21 +1,29 @@
 {
-  "_note": "RKF L2 lens for kind=history — declarative slot thresholds consumed by engine/extract_driver.py and audit.py. Each layer names an output slot in the book record + a min bar. Thresholds live here, not in code; ratchet them up as corpus coverage proves capacity (evolution S6). Maps to framework.md 五维无损 for a scholarly history volume. | RATCHET 2026-09-26 (post-R8): after the re-enrichment lift, all 8 corpus-backed Penguin History of Europe volumes clear these higher bars with margin (measured minima kept strictly above each floor): background 120->150, brief.main 40->60, flow 60->90, names 30->45, sources 20->30, link 20->25, full_analysis 300->400, disagreements 40->80. craft(5)/intent.quotes(2) left at proven capacity.",
+  "_note": "RKF L2 lens for kind=history — declarative slot thresholds consumed by engine/extract_driver.py and audit.py. Each layer names an output slot in the book record + a min bar. Thresholds live here, not in code; ratchet them up as corpus coverage proves capacity (evolution S6). Maps to framework.md 五维无损 for a scholarly history volume. | RATCHET 2026-09-26 (post-R8): after the re-enrichment lift, all 8 corpus-backed Penguin History of Europe volumes clear these higher bars with margin (measured minima kept strictly above each floor): background 120->150, brief.main 40->60, flow 60->90, names 30->45, sources 20->30, link 20->25, full_analysis 300->400, disagreements 40->80. craft(5)/intent.quotes(2) left at proven capacity. | PARITY 2026-09-26 (R9): zh and en are BOTH primary display languages, so every content-bearing slot now has a mirrored *_en layer gated independently. Bars calibrated to measured minima across the 8 corpus-backed volumes, kept strictly below them: background.en>=300 (min 399), full_analysis.en>=700 (min 813), reception_bad_en>=400 (min 507); per-act brief_en main>=130(min166) flow>=200(min245) names>=60(min82) sources>=75(min98) link>=50(min67). Vol.4 is a forthcoming placeholder (no corpus, 0 acts) and is excluded by corpus_required.",
   "kind": "history",
   "corpus_required": true,
   "layers": [
     { "slot": "background",            "target": "background.zh",                     "min_chars": 150, "weight": "required", "guarantee": "content" },
+    { "slot": "background_en",         "target": "background.en",                     "min_chars": 300, "weight": "required", "guarantee": "content" },
     { "slot": "skeleton",              "target": "plot_acts",                         "min_items": 3,  "weight": "required", "guarantee": "structure" },
     { "slot": "brief.main",            "target": "plot_acts[].brief.main",            "per_item_min_chars": 60, "weight": "required", "guarantee": "content" },
+    { "slot": "brief.main_en",         "target": "plot_acts[].brief.main_en",         "per_item_min_chars": 130, "weight": "required", "guarantee": "content" },
     { "slot": "brief.flow",            "target": "plot_acts[].brief.flow",            "per_item_min_chars": 90, "weight": "required", "guarantee": "depth" },
+    { "slot": "brief.flow_en",         "target": "plot_acts[].brief.flow_en",         "per_item_min_chars": 200, "weight": "required", "guarantee": "depth" },
     { "slot": "brief.names",           "target": "plot_acts[].brief.names",           "per_item_min_chars": 45, "weight": "required", "guarantee": "content" },
+    { "slot": "brief.names_en",        "target": "plot_acts[].brief.names_en",        "per_item_min_chars": 60, "weight": "required", "guarantee": "content" },
     { "slot": "brief.sources",         "target": "plot_acts[].brief.sources",         "per_item_min_chars": 30, "weight": "required", "guarantee": "evidence" },
+    { "slot": "brief.sources_en",      "target": "plot_acts[].brief.sources_en",      "per_item_min_chars": 75, "weight": "required", "guarantee": "evidence" },
     { "slot": "brief.link",            "target": "plot_acts[].brief.link",            "per_item_min_chars": 25, "weight": "required", "guarantee": "structure" },
+    { "slot": "brief.link_en",         "target": "plot_acts[].brief.link_en",         "per_item_min_chars": 50, "weight": "required", "guarantee": "structure" },
     { "slot": "intent.quotes",         "target": "intent.quotes",                     "min_items": 2,  "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
     { "slot": "characters",            "target": "characters",                        "min_items": 5,  "weight": "required", "guarantee": "content" },
     { "slot": "craft",                 "target": "craft",                             "min_items": 5,  "weight": "required", "guarantee": "depth" },
     { "slot": "read_through",          "target": "read_through.observations",         "min_items": 3,  "weight": "required", "guarantee": "depth" },
     { "slot": "full_analysis",         "target": "full_analysis.zh",                  "min_chars": 400,"weight": "required", "guarantee": "depth" },
-    { "slot": "disagreements",         "target": "intent.reception_bad_zh",           "min_chars": 80, "weight": "required", "guarantee": "evidence" }
+    { "slot": "full_analysis_en",      "target": "full_analysis.en",                  "min_chars": 700,"weight": "required", "guarantee": "depth" },
+    { "slot": "disagreements",         "target": "intent.reception_bad_zh",           "min_chars": 80, "weight": "required", "guarantee": "evidence" },
+    { "slot": "disagreements_en",      "target": "intent.reception_bad_en",           "min_chars": 400,"weight": "required", "guarantee": "evidence" }
   ],
   "grounding": {
     "rule": "a history book is COMPLETE only if every required slot clears its bar AND a corpus file exists for its id AND n_plot_acts <= n_corpus_docs",
