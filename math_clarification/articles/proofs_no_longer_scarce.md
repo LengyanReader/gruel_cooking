@@ -11,7 +11,7 @@
 
 This essay was written to slow a news cycle down. Between 2024 and 2026 the machine's report card changed every year, silver, gold, then a Millennium Prize problem, and every announcement drew astonishment or alarm while the arguments around it almost never concerned whether the calculation was right. The seven chapters below are a systematic cleaning, in one order, of the questions the news kept raising: what the events actually establish, what the voices reveal, what mathematics is, who mathematicians are, whether AI is really inferior, what "originative" means, and what, seen in the large, is happening to us. The running thesis: the visible disputes are not about whether machine derivations are valid but about framing, disclosure, attribution and admissibility, and the deeper question of the division between human and machine cannot be settled apart from the older questions of what mathematics is, who mathematicians are and who assigns meaning. Each chapter states its claim, argues it against evidence whose reliability is labelled, faces the strongest counter-argument, and closes with explicit credibility verdicts wherever events are at stake. The whole can be read front to back, or each chapter on its own; the tree below shows what is where.
 
-- **1 · Events and credibility: a case-by-case audit**: five assessment dimensions and three certification settings, then eight events graded one by one (IMO 2024 and 2025, the FrontierMath score, AlphaEvolve, the Erdős problems in three acts, First Proof, Navier-Stokes, and two physics cases, the single-minus gluon amplitude conjectured and proved, the nine-loop hexagon amplitude computed), closing in the diagnosis that the battlefield of credibility is not the derivation.
+- **1 · Events and credibility: a case-by-case audit**: five assessment dimensions and three certification settings, then the events graded one by one (IMO 2024 and 2025, the FrontierMath score, AlphaEvolve, the Erdős problems in three acts, First Proof, Navier-Stokes, and two physics cases, the single-minus gluon amplitude conjectured and proved, the nine-loop hexagon amplitude computed), closing in the diagnosis that the battlefield of credibility is not the derivation.
   - 1.1 A workable framework
   - 1.2 From silver to gold
   - 1.3 When numbers leave their conditions
@@ -20,7 +20,7 @@ This essay was written to slow a news cycle down. Between 2024 and 2026 the mach
   - 1.6 Generation is easy, verification is not
   - 1.7 A valid derivation, a contested claim
   - 1.8 The pattern, and its limits
-- **2 · The voices, and whose crisis it is**: six voices (industry, rivals, careful scholars, institutions, grassroots, entangled participants) each read across argument, evidence, logic, position and motive; then the crisis unpacked into four layers, truth, livelihood, trust and meaning; the verdict: a structural adjustment of mathematics as institution, not a crisis of mathematics as truth.
+- **2 · The voices, and whose crisis it is**: six voices (industry, rivals, careful scholars, institutions, grassroots, entangled participants) each read across four registers, argument, evidence, logic, and the position and motive behind it; then the crisis unpacked into four layers, truth, livelihood, trust and meaning; the verdict: a structural adjustment of mathematics as institution, not a crisis of mathematics as truth.
   - 2.1 The spectrum of voices
   - 2.2 A crisis of mathematics, or of mathematicians
 - **3 · What mathematics is**: its place among logic, empirical science and natural language; the seven ontological positions and the AI-intuition each one carries; the question of an ultimate ground, answered by Gödel and Cohen; the four forces that shape it; its technical limits; and the few routes by which new questions and theories arise.
@@ -58,7 +58,7 @@ The 71 sources are numbered by first appearance at the end of the article, each 
 
 这篇文章想做一件事：把新闻的节奏放慢。2024 至 2026 年，机器的成绩单一年一换，银牌、金牌、千禧年难题，每一次宣布都引来一片惊叹或警惕，而围绕它的争论几乎从不落在「算得对不对」上。下面七章是对新闻不断抛出的一串问题的系统清理，顺序固定：这些事件究竟确立了什么，各种声音透露了什么，数学是什么，数学家是谁，AI 是不是真的不如人，「开创性」意味着什么，以及把这一切放到大处看，我们到底在经历什么。全文的核心命题是：可见的争执不关乎机器推导是否有效，而关乎框架、披露、归属与可入性；而人与机器如何分工这个更深的问题，无法脱离数学是什么、数学家是谁、意义由谁赋予这些更古老的追问被单独回答。每章先立论，再以标注了可靠程度的证据论证，正面回应最强的反驳，并在涉及事件处给出显式的信度判级。全文可以通读，也可以按章取读；下面的目录树标明各处所在。
 
-- **1 · 事件与信度：一次逐案审计**：五维评估框架与三种核验情形，随后逐案判级八个事件（IMO 2024 与 2025、FrontierMath 分数、AlphaEvolve、Erdős 问题三幕、First Proof、纳维-斯托克斯，以及理论物理两案：单负胶子振幅的猜想与证明、九圈六边形振幅的计算），收束于一个诊断：信度的战场不在推导。
+- **1 · 事件与信度：一次逐案审计**：五维评估框架与三种核验情形，随后逐案判级这些事件（IMO 2024 与 2025、FrontierMath 分数、AlphaEvolve、Erdős 问题三幕、First Proof、纳维-斯托克斯，以及理论物理两案：单负胶子振幅的猜想与证明、九圈六边形振幅的计算），收束于一个诊断：信度的战场不在推导。
   - 1.1 一套可操作的评估框架
   - 1.2 从银牌到金牌
   - 1.3 数字脱离条件之后
@@ -67,7 +67,7 @@ The 71 sources are numbered by first appearance at the end of the article, each 
   - 1.6 生成容易，核验难
   - 1.7 推导正确，主张受质疑
   - 1.8 小结
-- **2 · 众声喧哗与危机诊断**：六种声音（产业、竞争、审慎学者、建制、草根、被卷入当事人）各按论证、论据、逻辑、立场与动机四件套拆解；再把危机拆成真理、生计、信任、意义四个层次；结论：这不是数学作为真理的危机，而是数学界作为建制的结构性调适。
+- **2 · 众声喧哗与危机诊断**：六种声音（产业、竞争、审慎学者、建制、草根、被卷入当事人）各按论证、论据、逻辑，以及背后的立场与动机四个层面拆解；再把危机拆成真理、生计、信任、意义四个层次；结论：这不是数学作为真理的危机，而是数学界作为建制的结构性调适。
   - 2.1 众声的谱系
   - 2.2 是数学的危机，还是数学家的危机
 - **3 · 数学是什么**：数学在逻辑、经验科学与自然语言之间的位置；七种本体论立场及各自携带的 AI 直觉；终极根据之问，由哥德尔与科恩作答；塑造数学的四种力量；技术性的边界；以及新问题与新理论诞生的少数几条路径。

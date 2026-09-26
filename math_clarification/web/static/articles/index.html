@@ -276,6 +276,7 @@ body.lang-zh .titleblock h1 .t-en { display: none; }
 body.lang-en .lang-zh { display: none; }
 body.lang-zh .lang-en { display: none; }
 body.lang-en .lang-chip, body.lang-zh .lang-chip { display: none; }
+body.lang-en .lang-zh, body.lang-zh .lang-en { display: block; }
 body.lang-zh .lang-body, body.lang-en .lang-body { text-align: left; }
 body.lang-en .lang-block { border-left: none; padding-left: 0; }
 
@@ -354,6 +355,11 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
   <p class="meta"><span class="p-zh">12 节 · 英文约 11,085 词 · 中文约 16,865 字</span><span class="p-en">12 sections · ~11,085 English words · ~16,865 Chinese characters</span></p>
   <a class="open" href="ai_and_math.html"><span class="p-zh">打开</span><span class="p-en">Open</span></a>
 </article>
+<article>
+  <h2><a href="proofs_no_longer_scarce.html"><span class="p-zh">证明不再稀缺：AI 时代的数学边界与数学家之定位</span><span class="p-en">When proofs are no longer scarce: the boundaries of mathematics and the place of mathematicians in the age of AI</span></a></h2>
+  <p class="meta"><span class="p-zh">11 节 · 英文约 11,586 词 · 中文约 20,776 字</span><span class="p-en">11 sections · ~11,586 English words · ~20,776 Chinese characters</span></p>
+  <a class="open" href="proofs_no_longer_scarce.html"><span class="p-zh">打开</span><span class="p-en">Open</span></a>
+</article>
   <p class="colophon">
     <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
     <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
@@ -362,10 +368,7 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
 <script>
 (function () {
   var body = document.body;
-  // Scope the language choice per page: reading one essay in EN must not force
-  // another essay to open in EN. Each document remembers its own selection, and a
-  // page never chosen defaults to bilingual. An explicit ?lang= link still wins.
-  var KEY = 'zh-article-lang:' + location.pathname;
+  var KEY = 'zh-article-lang';
   var DRAFT_KEY = 'zh-draft-dismissed';
 
   /* ---------- draft notice: measure, pin, remember dismissal ---------- */
