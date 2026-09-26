@@ -263,7 +263,8 @@
       ["#7a5c1e", ZH ? "虚线 = 漕运 tracer（概念示意）" : "Dashed = grain tracer (conceptual)"],
       ["#033b4c", ZH ? "档 = 考据档案（点选右侧展开）" : "档 = node dossier (click to open)"],
       ["#7b2d8b", ZH ? "● = 时间轴事件（随年代切片显隐）" : "● = timeline event (appears in the year window)"],
-      ["#155e63", ZH ? "▮ = 政策（无坐标，横幅著录，不绘几何）" : "▮ = policy (no coords, banner record, no geometry)"]
+      ["#155e63", ZH ? "▮ = 政策（无坐标，横幅著录，不绘几何）" : "▮ = policy (no coords, banner record, no geometry)"],
+      ["#8a5a2b", ZH ? "图版 = 历史图版（1875/1907，未配准 → 不叠加底图）" : "图版 = historical plate (1875/1907, unregistered → not overlaid)"]
     ];
     legend.innerHTML = rows.map(function (r) {
       return '<li><i style="background:' + r[0] + '"></i>' + r[1] + "</li>";
@@ -371,6 +372,11 @@
           map.fitBounds(vis.map(function (e) { return [e.lat, e.lon]; }), { animate: true, duration: 0.5, maxZoom: 13, padding: [60, 60] });
         }
       } else if (!vis.length) { lastSig = ""; }
+      if (plateBtn) {
+        var lp = plateLive(y).length;
+        plateBtn.classList.toggle("is-live", lp > 0);
+        if (plateCnt) plateCnt.textContent = lp ? String(lp) : "";
+      }
     }
 
     function play() {
@@ -401,6 +407,85 @@
     var sp = document.getElementById("tl-speed"); if (sp) sp.addEventListener("change", function () { speed = +sp.value; if (timer) { pause(); play(); } });
     var wn = document.getElementById("tl-window"); if (wn) wn.addEventListener("change", function () { winHalf = +wn.value; lastSig = ""; renderTimeline(); });
     var fo = document.getElementById("tl-follow"); if (fo) fo.addEventListener("change", function () { follow = fo.checked; lastSig = ""; });
+
+    /* ── 历史图版 · archival plates ──
+     * Linked to the timeline by date, but never draped over the basemap:
+     * neither scan carries published control points (Commons prop=coordinates
+     * returned nothing), so an "overlay" would mean inventing a registration.
+     * Showing the gap is the honest move — same logic as drawing no boundary
+     * geometry where OSM has none. */
+    var HM = D.historical_maps || [];
+    var plateBtn = document.getElementById("tl-plates");
+    var plateCnt = document.getElementById("tl-plates-count");
+    var platePanel = document.getElementById("plate-panel");
+    function plateLive(y) {
+      return HM.filter(function (p) { return Math.abs(p.year - y) <= winHalf; });
+    }
+    function closePlate() {
+      if (!platePanel) return;
+      platePanel.classList.remove("open");
+      platePanel.setAttribute("aria-hidden", "true");
+      if (plateBtn) plateBtn.setAttribute("aria-pressed", "false");
+    }
+    function openPlate() {
+      if (!platePanel) return;
+      var live = plateLive(curYear());
+      var tEl = document.getElementById("plate-title");
+      var sEl = document.getElementById("plate-sub");
+      var bEl = document.getElementById("plate-body");
+      if (tEl) tEl.textContent = ZH ? "历史图版" : "Historical plates";
+      if (sEl) sEl.textContent = ZH
+        ? "公共版权扫描 · 未见配准控制点 → 不叠加于底图"
+        : "Public-domain scans · no published control points → never overlaid on the basemap";
+      if (bEl) {
+        bEl.innerHTML = HM.map(function (p, i) {
+          var evs = [];
+          EVENTS.forEach(function (e, j) { if (Math.abs(e.year - p.year) <= winHalf) evs.push(j); });
+          return "<figure class='plate-fig' data-i='" + i + "'>" +
+            "<img class='plate-img' src='" + p.thumb + "' alt='" + p.sheet + "' loading='lazy' width='" + p.px[0] + "' height='" + p.px[1] + "'>" +
+            "<figcaption><div class='plate-cap'>" +
+            "<span class='plate-year'>" + p.year + "</span>" + levelBadge(p.level) +
+            (live.indexOf(p) >= 0 ? "<span class='plate-live'>" + (ZH ? "当前时间窗内" : "in current window") + "</span>" : "") +
+            "<strong>" + (ZH ? p.title_zh : p.title_en) + "</strong>" +
+            "<span class='plate-creator'>" + p.creator + " · " + p.license + "</span>" +
+            "<p class='plate-disc'>" + (ZH ? p.note_zh : p.note_en) + "</p>" +
+            "<p class='plate-src'>" + p.src + " · " + p.sheet + "</p>" +
+            (p.corroboration ? "<p class='plate-corr'>" + (ZH ? p.corroboration : p.corroboration_en) + "</p>" : "") +
+            "<a class='plate-link' href='" + p.file_page + "' target='_blank' rel='noopener'>" +
+            (ZH ? "图版页（新窗口）" : "File page (new window)") + "</a>" +
+            (evs.length ? "<ul class='plate-ev'>" + evs.map(function (j) {
+              return "<li><button type='button' class='plate-ev-btn' data-yi='" + j + "'>" +
+                EVENTS[j].year + " · " + (ZH ? EVENTS[j].title_zh : EVENTS[j].title_en) + "</button></li>";
+            }).join("") + "</ul>" : "") +
+            "</div></figcaption></figure>";
+        }).join("");
+        Array.prototype.forEach.call(bEl.querySelectorAll(".plate-ev-btn"), function (b) {
+          b.addEventListener("click", function () {
+            var e = EVENTS[+b.getAttribute("data-yi")];
+            setYear(e.year); focusEvent(e);
+          });
+        });
+        Array.prototype.forEach.call(bEl.querySelectorAll("img.plate-img"), function (im) {
+          im.addEventListener("error", function () {
+            var n = document.createElement("div");
+            n.className = "plate-img-failed";
+            n.textContent = ZH
+              ? "图版图像需联网加载（由 Wikimedia 外链托管）"
+              : "Plate image needs a network (hosted externally by Wikimedia)";
+            if (im.parentNode) im.parentNode.replaceChild(n, im);
+          });
+        });
+      }
+      platePanel.classList.add("open");
+      platePanel.setAttribute("aria-hidden", "false");
+      if (plateBtn) plateBtn.setAttribute("aria-pressed", "true");
+    }
+    if (plateBtn) plateBtn.addEventListener("click", function () {
+      if (platePanel && platePanel.classList.contains("open")) closePlate(); else openPlate();
+    });
+    var plateCloseBtn = document.getElementById("plate-close");
+    if (plateCloseBtn) plateCloseBtn.addEventListener("click", closePlate);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePlate(); });
 
     if (HAS_TD && map.timeDimension) map.timeDimension.on("timeload", renderTimeline);
     renderTimeline();

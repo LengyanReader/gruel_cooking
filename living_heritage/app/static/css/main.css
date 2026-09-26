@@ -887,6 +887,58 @@ a.related-pub-title:hover { color: var(--amber-deep); }
 .dossier-facet li { margin: 0 0 10px; font-size: 0.9em; color: var(--ink); line-height: 1.6; }
 .dossier-facet li em { display: inline-block; margin-top: 2px; font-size: 0.82em; color: var(--ink-soft); font-style: normal; }
 
+/* historical plates: left slide-in, deliberately NOT a map overlay */
+.plate-panel {
+  position: absolute; top: 0; left: 0; height: 100%; width: min(430px, 92%);
+  transform: translateX(-100%); transition: transform .28s ease;
+  background: var(--cream, #fbf7ef); border-right: 3px solid #8a5a2b;
+  box-shadow: 8px 0 26px rgba(58,50,40,.18);
+  overflow-y: auto; padding: 20px 22px 28px; z-index: 900;
+}
+.plate-panel.open { transform: translateX(0); }
+.plate-close {
+  position: absolute; top: 10px; right: 12px; width: 30px; height: 30px;
+  border: 1px solid var(--line); border-radius: 50%; background: #fff;
+  font-size: 20px; line-height: 1; color: var(--ink); cursor: pointer;
+}
+.plate-close:hover { background: var(--gold-soft, #FBE9C8); }
+.plate-title { margin: 2px 40px 4px 0; font-size: 1.2rem; color: var(--ink); }
+.plate-sub { margin: 0 0 14px; font-size: 0.78em; color: var(--ink-soft); font-family: ui-monospace, monospace; }
+.plate-fig { margin: 0 0 22px; padding-bottom: 18px; border-bottom: 1px dashed var(--line); }
+.plate-img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
+.plate-img-failed {
+  padding: 18px 12px; border: 1px dashed var(--line); border-radius: 6px;
+  background: #f1ece1; color: var(--ink-soft); font-size: 0.82em; text-align: center;
+}
+.plate-cap { font-size: 0.88em; color: var(--ink); line-height: 1.6; }
+.plate-cap strong { display: block; margin: 4px 0 2px; }
+.plate-year { font-weight: 700; color: #8a5a2b; margin-right: 6px; font-family: ui-monospace, monospace; }
+.plate-live {
+  display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 10px;
+  background: #7b2d8b; color: #fff; font-size: 0.78em; letter-spacing: .02em;
+}
+.plate-creator { display: block; font-size: 0.84em; color: var(--ink-soft); }
+.plate-disc {
+  margin: 8px 0 6px; padding: 8px 10px; border-left: 3px solid #8a5a2b;
+  background: #f4eee2; font-size: 0.84em; color: var(--ink);
+}
+.plate-src, .plate-corr { margin: 4px 0; font-size: 0.78em; color: var(--ink-soft); font-style: normal; }
+.plate-link { display: inline-block; margin-top: 4px; font-size: 0.82em; color: var(--amber-deep, #a76b12); }
+.plate-ev { margin: 10px 0 0; padding-left: 0; list-style: none; }
+.plate-ev li { margin: 0 0 4px; }
+.plate-ev-btn {
+  border: 1px solid var(--line); border-radius: 6px; background: #fff; cursor: pointer;
+  font-size: 0.82em; padding: 3px 8px; color: var(--ink); text-align: left;
+}
+.plate-ev-btn:hover { background: var(--gold-soft, #FBE9C8); }
+.tl-plate-btn {
+  border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer;
+  padding: 5px 11px; font-size: 0.82rem; color: var(--ink); white-space: nowrap;
+}
+.tl-plate-btn:hover { background: var(--gold-soft, #FBE9C8); }
+.tl-plate-btn.is-live { border-color: #8a5a2b; box-shadow: 0 0 0 2px rgba(138,90,43,.22); }
+.tl-plates-count { font-weight: 700; color: #8a5a2b; margin-left: 5px; }
+
 /* policy era-banner (no geometry — text record overlay) */
 .era-banner {
   position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 850;

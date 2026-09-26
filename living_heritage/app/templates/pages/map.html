@@ -2,14 +2,14 @@
 {%- set zh = (locale == 'zh') -%}
 
 {% block title %}{% if zh %}通州运河田野底图{% else %}Tongzhou Canal Field Basemap{% endif %}{% endblock %}
-{% block meta_description %}{% if zh %}Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，以及可播放的历史进程时间轴（事件 / 政策，与档案联动）。{% else %}A multi-layer Leaflet fieldwork basemap (Leaflet.TimeDimension): waterways, parks, heritage grades, DB observations, the grain-trade tracer, red-line text records, and a playable historical-process timeline (events / policies, linked to each point's dossier).{% endif %}{% endblock %}
+{% block meta_description %}{% if zh %}Leaflet + Leaflet.TimeDimension 多图层田野底图：水系、绿地、文保分级、DB 观察、漕运 tracer、保护红线文本著录，可播放的历史进程时间轴（事件 / 政策，与档案联动），以及 1875 / 1907 公共版权历史图版（未配准，故不叠加）。{% else %}A multi-layer Leaflet fieldwork basemap (Leaflet.TimeDimension): waterways, parks, heritage grades, DB observations, the grain-trade tracer, red-line text records, a playable historical-process timeline (events / policies, linked to each point's dossier), and public-domain historical plates of 1875 / 1907 (not georeferenced, therefore never overlaid).{% endif %}{% endblock %}
 
 {% block content %}
 <section class="page-header map-page-header">
   <div class="container">
     <h1>{% if zh %}通州运河 · 田野底图{% else %}Tongzhou Canal · Field Basemap{% endif %}</h1>
     <p class="map-lede">
-      {% if zh %}以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。点「档」标记展开每个点的<strong>考据档案</strong>（历史演变 / 交融 / 影响），逐条标注出处与分级。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。{% else %}A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Click a “档” marker to open each point's <strong>dossier</strong> (Evolution / Contact / Influence), every line tagged with source and grade. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.{% endif %}
+      {% if zh %}以燃灯塔—城市绿心三馆—张家湾码头三角形为中心的多图层工作图。点「档」标记展开每个点的<strong>考据档案</strong>（历史演变 / 交融 / 影响），逐条标注出处与分级。时间轴旁可展开<strong>历史图版</strong>（1875 / 1907 公共版权扫描）：因未获配准控制点，仅作图版著录，<strong>不叠加于底图</strong>。底图瓦片需联网；<strong>无网络时矢量图层仍可浏览</strong>。所有点位标注可信层级：<em>OSM 已核实</em>或<em>近似锚点</em>。{% else %}A multi-layer working map centred on the Ran Pagoda — Green Heart trio — Zhangjiawan wharf triangle. Click a “档” marker to open each point's <strong>dossier</strong> (Evolution / Contact / Influence), every line tagged with source and grade. Beside the timeline, <strong>historical plates</strong> (1875 / 1907 public-domain scans) open as records: lacking registration control points they are <strong>never overlaid on the basemap</strong>. Basemap tiles need a network; <strong>vector layers keep working offline</strong>. Every point carries a trust tier: <em>OSM-verified</em> or <em>approximate anchor</em>.{% endif %}
     </p>
   </div>
 </section>
@@ -22,6 +22,12 @@
     <div id="map" class="map-stage" role="img"
          aria-label="{% if zh %}通州运河多图层可交互地图{% else %}Interactive multi-layer map of the Tongzhou canal{% endif %}"></div>
     <div id="era-banner" class="era-banner" hidden></div>
+    <aside id="plate-panel" class="plate-panel" aria-hidden="true" aria-live="polite">
+      <button id="plate-close" class="plate-close" type="button" aria-label="{% if zh %}关闭{% else %}Close{% endif %}">×</button>
+      <h3 id="plate-title" class="plate-title"></h3>
+      <p id="plate-sub" class="plate-sub"></p>
+      <div id="plate-body" class="plate-body"></div>
+    </aside>
     <aside id="dossier-panel" class="dossier-panel" aria-hidden="true" aria-live="polite">
       <button id="dossier-close" class="dossier-close" type="button" aria-label="{% if zh %}关闭{% else %}Close{% endif %}">×</button>
       <h3 id="dossier-title" class="dossier-title"></h3>
@@ -45,6 +51,7 @@
         <select id="tl-window"><option value="15">±15</option><option value="45" selected>±45</option><option value="120">±120</option><option value="2000">{% if zh %}全部{% else %}all{% endif %}</option></select>
       </label>
       <label class="tl-opt tl-check"><input id="tl-follow" type="checkbox" checked> {% if zh %}跟随{% else %}Follow{% endif %}</label>
+      <button id="tl-plates" class="tl-plate-btn" type="button" aria-pressed="false" title="{% if zh %}历史图版（公共版权，未配准）{% else %}Historical plates (public domain, not georeferenced){% endif %}">{% if zh %}历史图版{% else %}Plates{% endif %}<span id="tl-plates-count" class="tl-plates-count" aria-hidden="true"></span></button>
     </div>
     <div class="tl-wrap">
       <h2 class="tl-heading">{% if zh %}时间轴事件 · 逐条可定位与展开档案{% else %}Timeline events · click to locate and open the dossier{% endif %}</h2>
