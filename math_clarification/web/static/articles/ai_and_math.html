@@ -129,6 +129,10 @@ body.lang-zh .p-en { display: none !important; }
 .byline b { font-weight: 600; color: var(--ink-soft); }
 .byline a, .colophon a { color: var(--sky-deep); text-decoration: none; }
 .byline a:hover, .colophon a:hover { text-decoration: underline; }
+/* publication / update dateline, declared as metadata in the source preamble */
+.dateline { margin-top: 10px; font-family: var(--sans); font-size: .74rem; color: var(--ink-faint); letter-spacing: .02em; }
+.dateline b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.dateline .sep { margin: 0 10px; color: var(--line); }
 .colophon {
   margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line-soft);
   display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between;
@@ -383,6 +387,7 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
         <p class="kicker"><span class="p-zh">综述 · Review</span><span class="p-en">Review · Survey</span></p>
         <h1><span class="t-zh">数学真理不由共识决定</span><span class="t-en">Mathematical truth is not a matter of consensus</span></h1>
         <p class="note"><p class="note"><span class="n-en">Source of record for the bilingual Nature Review. Synopsis: essays/submission/comment_draft.md (EN) and essays/submission/comment_draft_zh.md (ZH). Build with: python essays/submission/build_reader.py</span></p></p>
+        
         <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
       </div>
       <section class="unit" id="u0">

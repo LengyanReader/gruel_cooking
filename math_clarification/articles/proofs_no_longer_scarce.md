@@ -2,6 +2,7 @@
 
 <!-- 长稿正式条目（论说体，house style 论点→论据→论证→反诘→来源）。AI 起草、未经作者逐条复核（harness §I.6）。双语逐段并列；英文侧与中文侧在内容与精神上对应，而非逐句对译（作者决定 2026-09-26）。来源标注四级（harness R-B）：一手 / 权威版本 / 学界共识·解读 / 存疑；【已审计】出自 essays/submission/citation_audit.md 语料，【待审】为待人工核验。L0 块为导读与目录（按受众层级裁剪：level=L0 只见导读）。 -->
 <!-- en: Long-form entry (essayistic; house style claim → evidence → argument → counter-question → sources). AI-drafted and not yet verified item by item by the author (harness §I.6). The two languages run paragraph by paragraph in parallel: the English and the Chinese correspond in content and in spirit rather than word for word (author's decision, 2026-09-26). Sources are graded on four levels (harness R-B): primary / authoritative edition / scholarly consensus or interpretation / doubtful; 【已审计】marks material drawn from essays/submission/citation_audit.md, 【待审】marks what still needs manual verification. The L0 block is the foreword and contents, cropped by audience level (level=L0 shows the foreword only). -->
+<!-- 发表 2026-09-26 · 更新 2026-09-26 -->
 
 <!-- L0 -->
 

@@ -166,6 +166,10 @@ body.lang-zh .p-en { display: none !important; }
 .byline b { font-weight: 600; color: var(--ink-soft); }
 .byline a, .colophon a { color: var(--sky-deep); text-decoration: none; }
 .byline a:hover, .colophon a:hover { text-decoration: underline; }
+/* publication / update dateline, declared as metadata in the source preamble */
+.dateline { margin-top: 10px; font-family: var(--sans); font-size: .74rem; color: var(--ink-faint); letter-spacing: .02em; }
+.dateline b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.dateline .sep { margin: 0 10px; color: var(--line); }
 .colophon {
   margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line-soft);
   display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between;
@@ -551,6 +555,7 @@ PAGE = """<!DOCTYPE html>
         <p class="kicker"><span class="p-zh">__KICKER_ZH__</span><span class="p-en">__KICKER_EN__</span></p>
         <h1><span class="t-zh">__H1__</span><span class="t-en">__SUB__</span></h1>
         __NOTE__
+        __DATES__
         <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
       </div>
       __BODY__
@@ -609,10 +614,29 @@ LEVEL_OPEN = re.compile(r"^<!--\s*(L[0-5])\s*-->$")
 LEVEL_CLOSE = re.compile(r"^<!--\s*L[0-5]-end\s*-->$")
 LANG_OPEN = re.compile(r"^<!--\s*(zh|en|dual)\s*-->$")
 LANG_CLOSE = re.compile(r"^<!--\s*(zh|en|dual)-end\s*-->$")
+# Author-declared dates, kept in the source preamble so the build stays
+# deterministic (no file mtimes, no clock): <!-- 发表 2026-09-26 · 更新 2026-09-26 -->
+DATE_META = re.compile(
+    r"^<!--\s*(?:发表|Published)\s*(\d{4}-\d{2}-\d{2})\s*·\s*(?:更新|Updated)\s*(\d{4}-\d{2}-\d{2})\s*-->$")
 
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+def extract_dates(raw):
+    """Pull the author-declared (published, updated) pair from the preamble.
+
+    The metadata line may be written with either label set (发表/更新 or
+    Published/Updated); both languages render from the one date pair.
+    Returns None when no line is present, so an article without the
+    comment renders exactly as before.
+    """
+    for line in raw.splitlines():
+        m = DATE_META.match(line.strip())
+        if m:
+            return m.group(1), m.group(2)
+    return None
 
 
 def strip_heading_ids(fragment):
@@ -774,6 +798,19 @@ def build_article(md_path: Path) -> dict:
     else:
         note = ""
 
+    # Dateline below the byline: 发表 / Published and 更新 / Updated, each half
+    # switching with the article language like every other bilingual label.
+    dates = extract_dates(raw)
+    if dates:
+        pub, upd = dates
+        dates_html = ('<p class="dateline">'
+                      '<span class="p-zh">发表</span><span class="p-en">Published</span>'
+                      ' <b>%s</b><span class="sep">·</span>'
+                      '<span class="p-zh">更新</span><span class="p-en">Updated</span>'
+                      ' <b>%s</b></p>' % (esc(pub), esc(upd)))
+    else:
+        dates_html = ""
+
     cjk = sum(1 for c in raw if "\u4e00" <= c <= "\u9fff")
     en_words = len(re.findall(
         r"[A-Za-z][A-Za-z'-]*",
@@ -793,6 +830,7 @@ def build_article(md_path: Path) -> dict:
             .replace("__JS__", JS)
             .replace("__TOC__", "\n      ".join(toc))
             .replace("__NOTE__", '<p class="note">%s</p>' % note if note else "")
+            .replace("__DATES__", dates_html)
             .replace("__BODY__", "\n".join(body))
             .replace("__KICKER_ZH__", esc(kicker_zh))
             .replace("__KICKER_EN__", esc(kicker_en))
