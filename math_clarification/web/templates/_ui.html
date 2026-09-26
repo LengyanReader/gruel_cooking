@@ -1,0 +1,24 @@
+{# Fixed UI strings, rendered in the reader's chosen language.
+
+   Dual mode is the default, so the chrome shows both halves and the stylesheet
+   (body.lang-en / body.lang-zh) decides which one the reader actually sees.
+   This mirrors the static pages so the two readers behave identically. #}
+
+{% macro t(zh, en) -%}
+{%- if lang == 'en' -%}{{ en }}
+{%- elif lang == 'zh' -%}{{ zh }}
+{%- else -%}<span class="p-zh">{{ zh }}</span><span class="p-en">{{ en }}</span>{%- endif -%}
+{%- endmacro %}
+
+
+{# Plain-text variant, for attributes (aria-label, title).
+
+   The `t` macro deliberately emits markup so the stylesheet can switch halves
+   in dual mode; that is invalid inside an attribute value, so attributes use
+   this one instead. #}
+
+{% macro tplain(zh, en) -%}
+{%- if lang == 'en' -%}{{ en }}
+{%- elif lang == 'zh' -%}{{ zh }}
+{%- else -%}{{ zh }} / {{ en }}{%- endif -%}
+{%- endmacro %}

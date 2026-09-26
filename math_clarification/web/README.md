@@ -52,7 +52,7 @@ Binary content blocks are wrapped with `<!-- zh -->` … `<!-- zh-end -->` (dual
 
 ## Extending
 
-- Add an entry as one Markdown file in `basics/`, `famous_problems/`, `proof_narratives/`, or `essays/`; it appears on the home page automatically (`essays` was added to the scanned categories in `parser.py`).
+- Add an entry as one Markdown file in `basics/`, `famous_problems/`, `proof_narratives/`, or `articles/`; it appears on the home page automatically (the scanned categories live in `parser.py`; `essays/` was renamed to `articles/` on 2026-09-26).
 - The level/language markers are optional: a plain Markdown file without markers still renders (as a single L0 English section).
 
 ## App structure

@@ -1,36 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or 'zh' }}">
+{% from "_ui.html" import t, tplain %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Math Clarification{% endblock %}</title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false},
-                {left: '\\(', right: '\\)', display: false},
-                {left: '\\[', right: '\\]', display: true}
-            ]
-        });"></script>
-    {% block head %}{% endblock %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Math Clarification{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="/static/page.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+        ]
+    });"></script>
+{% block head %}{% endblock %}
 </head>
-<body>
-    <nav class="top-nav">
-        <a href="/" class="nav-brand">Math Clarification / 数学释疑</a>
-        <div class="nav-links">
-            <a href="/?cat=basics">Basics / 基础</a>
-            <a href="/?cat=famous_problems">Famous Problems / 名题</a>
-        </div>
-    </nav>
-    <main class="container">
-        {% block content %}{% endblock %}
-    </main>
-    <footer class="site-footer">
-        <p>gruel_cooking / math_clarification — Cook a pot of understanding from the simplest ingredients.</p>
-    </footer>
+<body class="lang-{{ lang }}">
+
+<div id="draft" class="{% if hide_draft %}hidden{% endif %}" role="note">
+  <span class="flag">{{ t('草稿', 'Draft') }}</span>
+  <span class="msg">{{ t('本文仅为草稿，仅供参考，恳请各位读者多多指正、批评指教；文中观点与疏漏之处，欢迎来信讨论。',
+                     'For reference only — this is a working draft, and corrections are warmly welcome.') }}</span>
+  <button type="button" class="dismiss" aria-label="{{ tplain('关闭声明', 'Dismiss notice') }}">&times;</button>
+</div>
+
+<nav class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-en">Math Clarification</span>
+    <span class="brand-zh">{{ t('数学释疑', 'Math Clarification') }}</span>
+  </a>
+  <div class="topbar-spacer"></div>
+  <div class="share">
+    <button type="button" data-share="copy" data-done-zh="已复制" data-done-en="Copied" data-label-zh="复制链接" data-label-en="Copy link">{{ t('复制链接', 'Copy link') }}</button>
+  </div>
+  <ul class="topnav-links">
+    <li><a href="/?cat=basics" class="{% if current_cat == 'basics' %}active{% endif %}">{{ t('基础', 'Basics') }}</a></li>
+    <li><a href="/?cat=famous_problems" class="{% if current_cat == 'famous_problems' %}active{% endif %}">{{ t('名题', 'Famous') }}</a></li>
+    <li><a href="/?cat=proof_narratives" class="{% if current_cat == 'proof_narratives' %}active{% endif %}">{{ t('叙事', 'Narratives') }}</a></li>
+    <li><a href="/?cat=articles" class="{% if current_cat == 'articles' %}active{% endif %}">{{ t('文章', 'Articles') }}</a></li>
+    <li><a href="/static/articles/index.html">{{ t('静态页', 'Static') }}</a></li>
+  </ul>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer class="site-footer">
+  <p class="colophon">
+    <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
+    <span>{{ t('本文为草稿，仅供参考，欢迎批评指正', 'A working draft, for reference only — corrections welcome') }}</span>
+  </p>
+</footer>
 </body>
 </html>

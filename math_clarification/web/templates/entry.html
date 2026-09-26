@@ -1,42 +1,89 @@
 {% extends "base.html" %}
+{% from "_ui.html" import t, tplain %}
 
-{% block title %}{{ title }} — Math Clarification{% endblock %}
+{% block title %}{{ doc_title }} — Math Clarification{% endblock %}
 
 {% block content %}
-<div class="entry-header">
-    <a href="/" class="back-link">&larr; All Entries</a>
-    <h1>{{ title }}</h1>
+<div class="entry-top">
+  <a class="back-link" href="/">&larr; {{ t('全部条目', 'All entries') }}</a>
+  <p class="crumbs">
+    <a href="/?cat={{ category }}">{% if lang == 'en' %}{{ cat_en }}{% elif lang == 'zh' %}{{ cat_zh }}{% else %}{{ t(cat_zh, cat_en) }}{% endif %}</a>
+    <span class="dot">&middot;</span>
+    <span>{{ slug }}</span>
+  </p>
 </div>
+
+<header class="titleblock">
+  <h1>
+    {%- if current_lang == 'en' -%}
+    {{ title_en }}
+    {%- elif current_lang == 'zh' -%}
+    {{ title_zh }}
+    {%- else -%}
+    <span class="t-zh">{{ title_zh }}</span><span class="t-en">{{ title_en }}</span>
+    {%- endif -%}
+  </h1>
+  <p class="entry-meta">
+    {%- if lang == 'en' -%}{{ toc_items|length }} headings
+    {%- elif lang == 'zh' -%}{{ toc_items|length }} 个标题
+    {%- else -%}{{ t(toc_items|length ~ ' 个标题', toc_items|length ~ ' headings') }}{% endif -%}
+    {%- if has_static %} &middot; <a href="/static/articles/{{ slug }}.html">{{ t('离线静态页', 'Offline static page') }}</a>{% endif %}
+  </p>
+  {% if note_zh or note_en %}
+  <aside class="note">
+    <span class="note-label">{{ t('起草说明', 'Drafting note') }}</span>
+    {%- if current_lang == 'en' -%}
+    <p>{{ note_en or note_zh }}</p>
+    {%- elif current_lang == 'zh' -%}
+    <p>{{ note_zh or note_en }}</p>
+    {%- else -%}
+    {%- if note_zh %}<p class="n-zh">{{ note_zh }}</p>{% endif -%}
+    {%- if note_en %}<p class="n-en">{{ note_en }}</p>{% endif -%}
+    {%- endif -%}
+  </aside>
+  {% endif %}
+  <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
+</header>
 
 <div class="controls-bar">
-    <div class="level-control">
-        <label>Level / 层次:</label>
-        <div class="level-buttons">
-            {% for lv in levels %}
-            <a href="/entry/{{ category }}/{{ slug }}?level={{ lv }}&lang={{ current_lang }}"
-               class="level-btn {% if lv == current_level %}active{% endif %}"
-               title="Show up to {{ lv }}">
-                {{ lv }}
-            </a>
-            {% endfor %}
-        </div>
+  <div class="control">
+    <span class="control-label">{{ t('层次', 'Level') }}</span>
+    <div class="level-buttons">
+      {% for lv in levels %}
+      <a href="/entry/{{ category }}/{{ slug }}?level={{ lv }}&lang={{ current_lang }}"
+         class="level-btn {% if lv == current_level %}active{% endif %}"
+         title="{{ tplain('显示至', 'Show up to') }} {{ lv }}">{{ lv }}</a>
+      {% endfor %}
     </div>
-    <div class="lang-control">
-        <label>Language / 语言:</label>
-        <div class="lang-buttons">
-            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=en"
-               class="lang-btn {% if current_lang == 'en' %}active{% endif %}">EN</a>
-            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=zh"
-               class="lang-btn {% if current_lang == 'zh' %}active{% endif %}">中</a>
-            <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=dual"
-               class="lang-btn {% if current_lang == 'dual' %}active{% endif %}">双语</a>
-        </div>
+  </div>
+  <div class="control">
+    <span class="control-label">{{ t('语言', 'Language') }}</span>
+    <div class="lang-buttons">
+      <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=en"
+         class="lang-btn {% if current_lang == 'en' %}active{% endif %}">EN</a>
+      <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=zh"
+         class="lang-btn {% if current_lang == 'zh' %}active{% endif %}">{{ t('中', '中文') }}</a>
+      <a href="/entry/{{ category }}/{{ slug }}?level={{ current_level }}&lang=dual"
+         class="lang-btn {% if current_lang == 'dual' %}active{% endif %}">{{ t('双语', 'Dual') }}</a>
     </div>
+  </div>
 </div>
 
-<div class="entry-body">
+<div class="shell">
+  {% if toc_items %}
+  <nav class="toc">
+    <h2>{{ t('目录', 'Contents') }}</h2>
+    <ol>
+      {% for item in toc_items %}
+      <li class="toc-h{{ item.tag }}"><a href="#{{ item.id }}">{{ item.text }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+  <main class="entry-main">
     <div class="entry-content">
-        {{ entry_html | safe }}
+      {{ entry_html | safe }}
     </div>
+  </main>
 </div>
 {% endblock %}
