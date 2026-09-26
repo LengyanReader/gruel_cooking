@@ -1,0 +1,47 @@
+name: Reading CI
+
+on:
+  push:
+    paths:
+      - "Reading_IA/**"
+      - "docs/reading_ia/**"
+  pull_request:
+    paths:
+      - "Reading_IA/**"
+      - "docs/reading_ia/**"
+
+jobs:
+  fabric-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install extraction deps (best-effort; gates run on stdlib)
+        run: pip install -r Reading_IA/readings/extraction/requirements.txt || true
+
+      # L3 integrity: every edge resolves, every type registered, no bad orphans.
+      - name: Graph hub + integrity (--graph)
+        run: |
+          python -X utf8 Reading_IA/engine/graph_build.py
+          python -X utf8 Reading_IA/readings/extraction/audit.py --graph
+
+      # L1 grounding: every finished history chapter carries a 5-field brief.
+      # (raw corpus/ is gitignored — the gate checks committed structure only)
+      - name: Corpus brief gate (--corpus)
+        run: python -X utf8 Reading_IA/readings/extraction/audit.py --corpus
+
+      - name: Neo4j projection is generatable (schema-driven)
+        run: python -X utf8 Reading_IA/engine/graph_export_neo4j.py --summary
+
+      # L4 byte-parity: registries + templates must reproduce the committed HTML.
+      # Deterministic since the crc32 monogram fix, so any drift is a real edit
+      # that was not regenerated-and-committed. 铁律: 改源即重建并提交产物。
+      - name: Rebuild site
+        run: python -X utf8 Reading_IA/web/build_reading.py
+
+      - name: Enforce source → output sync (no render drift)
+        run: git diff --exit-code -- docs/reading_ia

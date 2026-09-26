@@ -82,6 +82,33 @@ python -m http.server 8080 --directory docs
 # open http://localhost:8080/reading_ia/
 ```
 
+### W5 · Knowledge fabric 读物知识提取系统（RKF）
+
+Trigger: 新格式/新来源的读物进入，或需要**基于全文重新充实**现有条目（把"不够充实"变成有依据的工作清单）。
+
+The layered, knowledge-driven pipeline (plan *Reading Knowledge Fabric*): engines thin & generic, all domain behavior in `knowledge/` registries — 加格式/关系/章节/透镜 = 改数据不改码。Five hops, each validated before the next:
+
+| Hop | Registry / engine | Gate |
+|---|---|---|
+| **L0 ingest** | `knowledge/adapters.manifest.json` → `engine/ingest.py` | route + emit + schema-validate |
+| **L1 Corpus IR** | `knowledge/corpus_ir.schema.json`; raw text in gitignored `web/data/corpus/` | `audit.py --corpus` |
+| **L2 slots** | `knowledge/kinds.json` + `knowledge/lenses/<kind>.json` → `engine/extract_driver.py` | per-slot OK/THIN/MISS |
+| **L3 graph** | `knowledge/graph/schema.json` → `engine/graph_build.py` (→ `graph_export_neo4j.py`) | `audit.py --graph` |
+| **L4 render** | `knowledge/{styles.css,script.js,theme.json,page_spec/,templates/}` → `engine/render.py` ← `web/build_reading.py` | rebuild + `git diff` byte-parity |
+
+Steps 常法:
+1. **Ingest**: `python -X utf8 Reading_IA/engine/ingest.py --source "<file|url>" [--id <id>]`（或 `--penguin-dir` 批量）。IR 过 schema 才落 `corpus/`。
+2. **Diagnose**: `python -X utf8 Reading_IA/engine/extract_driver.py <id>` —— 按 lens 列出缺失/偏薄槽位，即"下一步充实什么"的依据。
+3. **Enrich**: 依据 corpus 全文补 `web/data/books.json` 的槽位（**只落摘要 + ≤300 字短引**，全文永不出 `corpus/`）。逐类透镜阈值见 `knowledge/lenses/`。
+4. **Graph**: `engine/graph_build.py` 重生成 `nodes/edges.jsonl`；`audit.py --graph` 保证 0 悬挂边 / 0 未注册类型。需要图库时 `engine/graph_export_neo4j.py` 出 `MERGE` 脚本（A1：文件权威，Neo4j 仅投影）。
+5. **Render**: `python -X utf8 Reading_IA/web/build_reading.py` 重建 `docs/reading_ia/`；`git diff --exit-code docs/reading_ia` 必须为空（P3 字节回归 + 单体确定性），再随 W4 校验链接/div。
+
+Evolution hooks 演化钩子（see **W-EVO** / `../harness/evolution.md`）:
+- 新格式**两次**出现 → S4 Fission：`adapters.manifest.json` 追加一行（数据）。
+- 新关系类型 → `graph/schema.json` 追加 `edge_types` 一行。
+- 覆盖度上升后 ratchet 阈值 → S6 Consolidate：改 `lenses/<kind>.json` 的 `ledger`/`layers`（本文件即 ledger 的唯一来源，`audit.py` 从此读取，硬编码 `THRESHOLDS` 已退役）。
+- CI drift：`reading-ci.yml` 对每个 finished history 读物跑 `--corpus`/`--graph` 并做 `git diff` 字节回归检查。
+
 ---
 
 ## Cross-references 关联

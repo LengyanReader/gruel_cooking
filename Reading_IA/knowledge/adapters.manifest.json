@@ -45,12 +45,12 @@
     },
     {
       "id": "web-article",
-      "status": "planned",
+      "status": "wired",
       "fidelity": "flat",
       "detect": { "scheme": ["http", "https"] },
       "emitter": "extract_corpus:read_web_article",
       "backend": "trafilatura",
-      "note": "URL -> clean main text + provenance. P4. Stores source_url; commits only summaries/short quotes."
+      "note": "URL -> clean main text + provenance (source_url). Body stays in gitignored corpus/; commits only summaries/short quotes."
     },
     {
       "id": "web-catalog",

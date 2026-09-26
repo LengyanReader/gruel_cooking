@@ -1,0 +1,17 @@
+{
+  "_note": "RKF L2 lens for kind=generic (fallback). 'ledger' retires audit.py's inline THRESHOLDS generic entry. Used when a book's kind has no dedicated lens.",
+  "kind": "generic",
+  "corpus_required": false,
+  "ledger": {
+    "skeleton_parts": 3, "concepts": 4, "claims": 3, "excerpts": 2,
+    "related_edges": 2, "disagreements": 1
+  },
+  "layers": [
+    { "slot": "skeleton_parts", "target": "plot_acts",               "min_items": 3, "weight": "required", "guarantee": "structure" },
+    { "slot": "concepts",       "target": "deep_read",               "min_items": 4, "weight": "required", "guarantee": "depth" },
+    { "slot": "claims",         "target": "fact_ledger",             "min_items": 3, "weight": "required", "guarantee": "content" },
+    { "slot": "excerpts",       "target": "excerpts",                "min_items": 2, "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
+    { "slot": "related_edges",  "target": "related",                 "min_items": 2, "weight": "required", "guarantee": "structure" },
+    { "slot": "disagreements",  "target": "intent.reception_bad_zh", "min_chars": 40, "weight": "required", "guarantee": "evidence" }
+  ]
+}

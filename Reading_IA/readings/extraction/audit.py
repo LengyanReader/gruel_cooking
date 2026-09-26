@@ -35,49 +35,39 @@ GRAPH_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "knowledge", "graph"
 GRAPH_SCHEMA = os.path.join(GRAPH_DIR, "schema.json")
 GRAPH_NODES = os.path.join(GRAPH_DIR, "nodes.jsonl")
 GRAPH_EDGES = os.path.join(GRAPH_DIR, "edges.jsonl")
+LENSES_DIR = os.path.normpath(os.path.join(HERE, "..", "..", "knowledge", "lenses"))
 
 # The five lossless sub-fields every chapter brief must carry (framework.md §1).
 BRIEF_FIELDS = ("main", "flow", "names", "sources", "link")
 
 DONE_STATUS = {"done", "re-reading"}
 
+
+def _load_thresholds() -> dict:
+    """RKF L2: the card ledger thresholds are DATA, read from
+    ``knowledge/lenses/<kind>.json`` each lens's ``ledger`` map. This retires the
+    former hard-coded THRESHOLDS dict; a new kind = a new lens file, not a code
+    edit. Falls back to {} per-kind if a lens is absent (warns downstream)."""
+    table: dict[str, dict[str, int]] = {}
+    if not os.path.isdir(LENSES_DIR):
+        return table
+    for fn in sorted(os.listdir(LENSES_DIR)):
+        if not fn.endswith(".json"):
+            continue
+        try:
+            lens = json.load(io.open(os.path.join(LENSES_DIR, fn), encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        ledger = lens.get("ledger")
+        kind = lens.get("kind") or fn[:-5]
+        if isinstance(ledger, dict) and ledger:
+            table[kind] = {k: int(v) for k, v in ledger.items()}
+    return table
+
+
 # kind -> {ledger field: min}. A finished card under any of these is INCOMPLETE.
-THRESHOLDS: dict[str, dict[str, int]] = {
-    "novel": {
-        "skeleton_parts": 3,
-        "plot_nodes": 8,
-        "characters": 1,   # counts must be honest (all named chars listed)
-        "charedges": 5,
-        "motif_clusters": 2,
-        "craft_items": 5,
-        "intent_quotes": 2,
-        "excerpts": 3,
-        "disagreements": 1,
-        "related_edges": 3,
-    },
-    "memoir": {
-        "events": 5,
-        "turning_points": 3,
-        "plot_nodes": 5,
-        "excerpts": 2,
-        "disagreements": 1,
-    },
-    "essay": {
-        "claims": 5,
-        "excerpts": 2,
-        "concepts": 4,
-        "disagreements": 1,
-        "related_edges": 2,
-    },
-    "generic": {
-        "skeleton_parts": 3,
-        "concepts": 4,
-        "claims": 3,
-        "excerpts": 2,
-        "related_edges": 2,
-        "disagreements": 1,
-    },
-}
+# Loaded from lenses/*.json (see _load_thresholds); empty only if registries absent.
+THRESHOLDS: dict[str, dict[str, int]] = _load_thresholds()
 
 # optional informational fields shown when present (never gated)
 INFO_FIELDS = ("characters", "unverified_items", "intent_quotes", "craft_items",

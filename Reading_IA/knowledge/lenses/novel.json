@@ -1,0 +1,23 @@
+{
+  "_note": "RKF L2 lens for kind=novel. 'ledger' retires audit.py's inline THRESHOLDS dict (same slot->min numbers, now data). 'layers' drive engine/extract_driver.py against the books.json record. corpus_required=true: full text lives only in gitignored corpus/; excerpts committed are the user's own short quotes.",
+  "kind": "novel",
+  "corpus_required": true,
+  "ledger": {
+    "skeleton_parts": 3, "plot_nodes": 8, "characters": 1, "charedges": 5,
+    "motif_clusters": 2, "craft_items": 5, "intent_quotes": 2, "excerpts": 3,
+    "disagreements": 1, "related_edges": 3
+  },
+  "layers": [
+    { "slot": "skeleton_parts", "target": "plot_acts",            "min_items": 3, "weight": "required", "guarantee": "structure" },
+    { "slot": "plot_nodes",     "target": "plot_flow",            "min_items": 8, "weight": "required", "guarantee": "structure" },
+    { "slot": "characters",     "target": "characters",           "min_items": 1, "weight": "required", "guarantee": "content" },
+    { "slot": "charedges",      "target": "charedges",            "min_items": 5, "weight": "required", "guarantee": "structure" },
+    { "slot": "motif_clusters", "target": "motifs",               "min_items": 2, "weight": "required", "guarantee": "depth" },
+    { "slot": "craft_items",    "target": "craft",                "min_items": 5, "weight": "required", "guarantee": "depth" },
+    { "slot": "intent_quotes",  "target": "intent.quotes",        "min_items": 2, "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
+    { "slot": "excerpts",       "target": "excerpts",             "min_items": 3, "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
+    { "slot": "disagreements",  "target": "intent.reception_bad_zh", "min_chars": 40, "weight": "required", "guarantee": "evidence" },
+    { "slot": "related_edges",  "target": "related",              "min_items": 3, "weight": "required", "guarantee": "structure" }
+  ],
+  "grounding": { "rule": "n_plot_acts <= n_corpus_docs; a corpus file must exist for the id", "audit_mode": "--corpus" }
+}

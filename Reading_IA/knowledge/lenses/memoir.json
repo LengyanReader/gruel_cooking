@@ -1,0 +1,16 @@
+{
+  "_note": "RKF L2 lens for kind=memoir. 'ledger' retires audit.py's inline THRESHOLDS dict. 'layers' drive engine/extract_driver.py. memoirs have events/turning_points rather than craft/motif clusters; testimony is transcribed, committed excerpts are the reader's own short quotes.",
+  "kind": "memoir",
+  "corpus_required": true,
+  "ledger": {
+    "events": 5, "turning_points": 3, "plot_nodes": 5, "excerpts": 2, "disagreements": 1
+  },
+  "layers": [
+    { "slot": "events",         "target": "plot_acts",               "min_items": 5, "weight": "required", "guarantee": "content" },
+    { "slot": "turning_points", "target": "narrative",               "min_items": 3, "weight": "required", "guarantee": "structure" },
+    { "slot": "plot_nodes",     "target": "plot_flow",               "min_items": 5, "weight": "required", "guarantee": "structure" },
+    { "slot": "excerpts",       "target": "excerpts",                "min_items": 2, "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
+    { "slot": "disagreements",  "target": "intent.reception_bad_zh", "min_chars": 40, "weight": "required", "guarantee": "evidence" }
+  ],
+  "grounding": { "rule": "n_plot_acts <= n_corpus_docs; a corpus file must exist for the id", "audit_mode": "--corpus" }
+}

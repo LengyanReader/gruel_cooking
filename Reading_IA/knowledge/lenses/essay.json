@@ -1,0 +1,16 @@
+{
+  "_note": "RKF L2 lens for kind=essay. 'ledger' retires audit.py's inline THRESHOLDS dict. Essays are argument-first: claims + concepts carry the weight, not plot. committed excerpts are the reader's own short quotes.",
+  "kind": "essay",
+  "corpus_required": true,
+  "ledger": {
+    "claims": 5, "excerpts": 2, "concepts": 4, "disagreements": 1, "related_edges": 2
+  },
+  "layers": [
+    { "slot": "claims",        "target": "fact_ledger",             "min_items": 5, "weight": "required", "guarantee": "content" },
+    { "slot": "concepts",      "target": "deep_read",               "min_items": 4, "weight": "required", "guarantee": "depth" },
+    { "slot": "excerpts",      "target": "excerpts",                "min_items": 2, "weight": "required", "guarantee": "evidence", "ip": "short-quotes-only" },
+    { "slot": "disagreements", "target": "intent.reception_bad_zh", "min_chars": 40, "weight": "required", "guarantee": "evidence" },
+    { "slot": "related_edges", "target": "related",                 "min_items": 2, "weight": "required", "guarantee": "structure" }
+  ],
+  "grounding": { "rule": "a corpus file must exist for the id", "audit_mode": "--corpus" }
+}

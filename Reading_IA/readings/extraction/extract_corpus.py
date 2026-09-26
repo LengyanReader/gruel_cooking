@@ -351,6 +351,42 @@ def read_universal(path: str) -> dict:
             "chapters": chapters}
 
 
+def read_web_article(url: str) -> dict:
+    """L0 web-article adapter: URL -> trafilatura main-content extract -> Corpus IR
+    (format 'text'), storing the URL as provenance. The extracted body lands only
+    in the gitignored corpus/; committed records carry summaries/short quotes.
+    Degrades with a clear error if trafilatura or the fetch is unavailable."""
+    if not HAVE_TRAFI:
+        raise RuntimeError("trafilatura unavailable — web-article adapter needs it "
+                           "(pip install trafilatura)")
+    try:
+        html_doc = trafilatura.fetch(url)  # type: ignore[attr-defined]
+    except Exception as exc:  # noqa: BLE001
+        raise RuntimeError(f"fetch failed for {url}: {exc}")
+    if not html_doc:
+        raise RuntimeError(f"empty response for {url}")
+    meta = trafilatura.extract_metadata(html_doc)  # type: ignore[attr-defined]
+    body = trafilatura.extract(html_doc, include_comments=False,  # type: ignore[attr-defined]
+                              favor_recall=True) or ""
+    text = _clean_text(body)
+    if not text:
+        raise RuntimeError(f"no main content extracted from {url}")
+    title = (getattr(meta, "title", None) if meta else None) or url
+    author = (getattr(meta, "author", None) if meta else None) or ""
+    date = (getattr(meta, "date", None) if meta else None) or ""
+    return {
+        "format": "text",
+        "source_url": url,
+        "source_path": url,
+        "meta": {"title": _clean_text(title or ""), "author": _clean_text(author or ""),
+                 "date": _clean_text(date or ""), "backend": "trafilatura"},
+        "chapters": [{"index": 0, "href": url, "toc_title": _clean_text(title or url),
+                      "headings": [], "paras": [text], "char_count": len(text),
+                      "word_count": _word_count(text), "sentence_count": _sentence_count(text),
+                      "text": text}],
+    }
+
+
 def read_any(path: str) -> dict:
     low = path.lower()
     if low.endswith(".epub"):
