@@ -13,6 +13,58 @@
   },
   "crops": [
     {
+      "id": "2026-writing-canon",
+      "page": "docs/reading_ia/read/writing-canon-books.html",
+      "dir_page": "writing-canon-books.html",
+      "glyph_zh": "学术写作正典 · WRITING CANON",
+      "glyph_en": "WRITING CANON",
+      "date": "2026-09-27",
+      "title_zh": "世界学术写作正典 · 已读四种",
+      "title_en": "The Academic-Writing Canon — four read in full",
+      "subtitle_zh": "把论文与文章写好的四条根：清晰、认知、对话、诚信",
+      "subtitle_en": "Four roots of writing papers and articles well: clarity, cognition, conversation, integrity",
+      "verdict_zh": "GAPS",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "英文原版×4 — 从 wr_ref.md 正典中，本地/开放获取能实际通读者",
+      "lang_line_en": "English originals ×4 — the titles I could actually read (local / open-access) from the wr_ref canon",
+      "book_ids": [
+        "wcs-elements-of-style",
+        "wcs-sense-of-style",
+        "wcs-they-say-i-say",
+        "wcs-on-being-a-scientist"
+      ],
+      "verdict_body_zh": "wr_ref.md 列出五层共 23 本「学术写作正典」。本轮只发布其中能合法取得原书并实际通读的四种；其余 19 本本地无原书、且无授权获取渠道，未做精读卡片——它们保留为待读正典（见下缺口）。",
+      "verdict_body_en": "wr_ref.md lists a 23-book, five-tier academic-writing canon. This round publishes only the four I could obtain an authorized original of and actually read; the other 19 have no local original and no licensed channel, so no read-through cards were made — they stay a to-read canon (see gaps).",
+      "verdict_gaps": [
+        {
+          "zh": "Tier 1 待读：Day & Gastel《How to Write and Publish a Scientific Paper》、Schimel《Writing Science》、Alley《The Craft of Scientific Writing》、Swales & Feak《Academic Writing for Graduate Students》",
+          "en": "Tier 1 to read: Day & Gastel, Writing Science (Schimel), Craft of Scientific Writing (Alley), Academic Writing for Graduate Students (Swales & Feak)"
+        },
+        {
+          "zh": "Tier 2 待读：Sword《Stylish Academic Writing》、Hayot《The Elements of Academic Style》、Swales & Feak《English in Today's Research World》、Clark《Writing Tools》",
+          "en": "Tier 2 to read: Stylish Academic Writing (Sword), The Elements of Academic Style (Hayot), English in Today's Research World (Swales & Feak), Writing Tools (Clark)"
+        },
+        {
+          "zh": "Tier 3 待读：Germano《Getting It Published》《From Dissertation to Book》、Luey《Handbook for Academic Authors》、Kelsky《The Professor Is In》",
+          "en": "Tier 3 to read: Getting It Published & From Dissertation to Book (Germano), Handbook for Academic Authors (Luey), The Professor Is In (Kelsky)"
+        },
+        {
+          "zh": "Tier 4 待读：Belcher、Silvia、Bolker、Goodson、Jensen（写作习惯与完成博士论文五书）",
+          "en": "Tier 4 to read: Belcher, Silvia, Bolker, Goodson, Jensen (the five habit / dissertation-completion books)"
+        },
+        {
+          "zh": "Tier 5 待读：Eco《How to Write a Thesis》",
+          "en": "Tier 5 to read: How to Write a Thesis (Umberto Eco)"
+        },
+        {
+          "zh": "补充线索：写作正典可与「认知—清晰」（Pinker）及「对话—论证」（They Say）两条主轴继续向伦理/发表两端延展",
+          "en": "Lead: extend the canon along its two axes — cognition/clarity (Pinker) and conversation/argument (They Say) — toward the ethics/publishing ends"
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice"
+    },
+    {
       "id": "2026-penguin-europe",
       "page": "docs/reading_ia/read/penguin-europe-books.html",
       "dir_page": "penguin-europe-books.html",

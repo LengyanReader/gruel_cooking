@@ -10,11 +10,13 @@ A reading list (`书单`) is a dated, W2-verified crop of books bound to one rea
 
 | crop id | date | glyph | books（library 卡） | verdict | href | keel 下个窗口 |
 |---|---|---|---|---|---|---|
+| `2026-writing-canon` | 2026-09-27 | 学术写作正典 WRITING CANON | [[wcs-elements-of-style]] · [[wcs-sense-of-style]] · [[wcs-they-say-i-say]] · [[wcs-on-being-a-scientist]] | `gaps`（wr_ref 23 本正典，仅 4 本有授权原书可通读；19 本待读，见页内缺口） | `read/writing-canon-books.html` | 2026-12 冬至 Winter solstice |
 | `2026-penguin-europe` | 2026-09-25 | 企鹅欧洲史 PENGUIN EUROPE | [[pe-volume1-birth-classical]] · [[pe-volume2-inheritance-rome]] · [[pe-volume3-high-middle-ages]] · [[pe-volume4-renaissance-europe]] · [[pe-volume5-christendom-destroyed]] · [[pe-volume6-pursuit-glory]] · [[pe-volume7-pursuit-power]] · [[pe-volume8-hell-and-back]] · [[pe-volume9-global-age]] | `sufficient`（Vol.4 待出版；全套覆盖 1700BC–2017AD） | `read/penguin-europe-books.html` | 2026-12 冬至 Winter solstice |
 | `2026-autumn` | 2026-09-23 | 秋分 Autumn | [[library/2026-mandel-exit-party]] · [[library/2026-vargas-une-unique-lueur]] · [[library/2026-lemaitre-belles-promesses]] · [[library/2026-pelicot-joie-de-vivre]] · [[library/2026-manda-kanoke-made]] | `gaps`（缺 AI 反思轴等 5 项，见 `readings/review_2026-09-23.md`） | `read/2026-09-books.html`（= 规范页名） | 2026-12 冬至 Winter solstice |
 
 ## Crops 各批（每批在 `docs/reading_ia/read/<crop>-books.html` 一页）
 
+- **2026-writing-canon · 学术写作正典**（2026-09-27）：源自 `docs/wr_ref.md` 的五层 23 本正典。本轮只发布能合法取得原书并实际通读的 4 种（Elements of Style / Sense of Style / They Say·I Say / On Being a Scientist）；其余 19 本本地无原书、无授权渠道，标为待读。读点 = 清晰·认知·对话·诚信四条根。
 - **2026-penguin-europe · 企鹅欧洲史**（2026-09-25）：英国学术通史×9（全英文原版）。读点 = 三千年欧洲通读；判定 `sufficient`（Vol.4 Grafton 尚未出版，实际可读八卷）。来源 `C:\Docs_Here\newReading\企鹅欧洲`。
 - **2026-autumn · 秋分书单**（2026-09-23）：美国×1、法国×3、日本×1。读点 = 每书核心主张 + 为何读；判定 `gaps`。来源 `docs/read_moment_list/eg_20260923.md`；过程 W2。
 - *下一批去往*：2026-12 冬至书单（seasonal crop），届时按协议 §5 场景 B 执行。

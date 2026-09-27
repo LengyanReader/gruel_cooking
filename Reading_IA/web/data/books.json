@@ -6719,6 +6719,613 @@
       ],
       "baseline_conf_en": "✓ publication facts verified",
       "domain_en": "Postwar & Globalization"
+    },
+    {
+      "id": "wcs-elements-of-style",
+      "slug": "wcs-elements-of-style",
+      "num": "壹",
+      "country": "美国",
+      "country_en": "the American",
+      "lang": "en",
+      "title_zh": "《风格的要素》",
+      "title_orig": "The Elements of Style",
+      "author": "William Strunk Jr. & E. B. White",
+      "author_zh": "威廉· Strunk Jr. 与 E. B. White",
+      "author_en": "William Strunk Jr. & E. B. White",
+      "author_slug": "strunk-white",
+      "year": "1918/2011",
+      "publisher": "The Elements of Style Press",
+      "publisher_en": "The Elements of Style Press",
+      "pubdate": "2011 (rev. Chris Hong)",
+      "pubdate_en": "2011 (rev. Chris Hong)",
+      "pages": "—",
+      "isbn": "—",
+      "publines_zh": "The Elements of Style Press · 2011 修订（Chris Hong）· 原作 1918",
+      "publines_en": "The Elements of Style Press · 2011 rev. (Chris Hong) · orig. 1918",
+      "meta_zh": "非虚构 · 英语用法与风格规则 · 原 1918",
+      "meta_en": "nonfiction · English usage & style rules · orig. 1918",
+      "kind": "nonfiction",
+      "domain": "writing, style",
+      "domain_en": "writing, style",
+      "baseline_conf": "✓ 版本核实（本地文件为 2011 Chris Hong 修订本；经典 Strunk & White 四版 ISBN 0201304889）",
+      "baseline_conf_en": "✓ edition verified (local file is the 2011 Chris Hong revision; the classic Strunk & White 4th ed. ISBN is 0201304889)",
+      "read_status": "读完 · 18 条规则全文提取",
+      "read_status_en": "read in full · all 18 rules extracted",
+      "why_zh": "现代英语风格手册的原型：以极简的条目式规则规定「简明英语」，是其后几乎所有写作指南（含 Pinker 本书）的对话起点。",
+      "why_en": "The prototype of the modern style manual: terse, numbered rules for plain English — the starting point that later guides (including Pinker's) argue with.",
+      "background": {
+        "zh": "Strunk 1918 年在康奈尔大学印行的小册子《The Elements and Patterns of Literary Composition》是其源头；1959 年经其学生 E. B. White 修订、由 Macmillan 以《The Elements of Style》为名出版，成为全球销量以千万计的写作经典，核心名句「Omit needless words」（省略不必要的词）即出于此。本地所据为 2011 年 Chris Hong 的修订本（署「The Elements of Style Press」），回到 Strunk 原初的条目结构：II 用法基本规则（1–8）＋ III 作文基本原则（9–18）＋ 若干体例、易误用词、易拼错词表。全书主张：形式服务于清晰——主动语态、肯定表述、一句一节、段为作文单位、把强调的词放在句末。",
+        "en": "The book descends from the pamphlet Strunk had printed at Cornell in 1918; revised by his student E. B. White and published by Macmillan in 1959 as The Elements of Style, it sold in the tens of millions and made \"Omit needless words\" canonical. The copy read here is the 2011 Chris Hong revision (branded The Elements of Style Press), returning to Strunk's original item structure: Elementary Rules of Usage (1-8), Elementary Principles of Composition (9-18), plus a few matters of form and lists of misused and misspelled words. Its creed: form serves clarity — active voice, positive form, one paragraph per topic, the emphatic word at the sentence's end.",
+        "conf": "✓",
+        "sources": "本地 2011 修订本全文 · 出版沿革",
+        "sources_en": "local 2011 revised text · publishing history"
+      },
+      "narrative": {
+        "zh": "本书不作连贯论述，而是立一部「规则法典」：I 引言（写作的基本素养）；II 用法的基本规则（1–8，关乎逗号、所有格、同位语等硬性语法约定）；III 作文的基本原则（9–18，关乎结构、语态、重心、简洁）；IV 若干体例；V 易误用词；VI 易拼错词。方法是「一条命令 + 一组例句」：每条规则一句断言，随后以（错误）/（正确）对照演示，把「形式服务清晰」落到实处。它既是规范手册，也是一种关于英语写作的隐含理论：好文笔＝清晰 + 简洁 + 有力。",
+        "en": "The book sets down no discursive argument; it codes a rulebook: I. Introductory; II. Elementary Rules of Usage (1-8, the hard grammatical conventions of commas, possession, apposition); III. Elementary Principles of Composition (9-18, structure, voice, emphasis, concision); IV. A Few Matters of Form; V. A Few Words Commonly Misused; VI. Words Commonly Misspelled. Its method is one imperative plus a matched pair of examples, each rule stated flatly then shown as (wrong) / (right). It is at once a manual and an implicit theory of English prose: good writing equals clarity plus concision plus force.",
+        "conf": "✓",
+        "sources": "本地 2011 修订本目录与正文 · 1918 康奈尔初版（公版）"
+      },
+      "intent": {
+        "quotes": [
+          {
+            "orig": "Omit needless words.",
+            "trans_zh": "省略不必要的词。",
+            "source": "规则 13 · 由 1918 初版沿用至今",
+            "trans_en": "Omit needless words.",
+            "source_en": "Rule 13 · carried down from the 1918 original"
+          },
+          {
+            "orig": "Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences.",
+            "trans_zh": "有力的文字必然简洁：一句不该有冗词，一段不该有废句。",
+            "source": "规则 13「省略不必要的词」正文（公版初版措辞）",
+            "trans_en": "Vigorous writing is concise: a sentence should contain no unnecessary words, a paragraph no unnecessary sentences.",
+            "source_en": "the body of Rule 13 (wording from the public-domain original)"
+          }
+        ],
+        "reception_good_zh": "自 1959 年 Macmillan 版起成为全球写作经典，销量以千万计，被几代英语课堂奉为「简明风格」的宪章；「Omit needless words」进入日常用语。",
+        "reception_good_en": "Since the 1959 Macmillan edition a global classic, selling in the tens of millions and enshrined across generations of English classrooms as the charter of plain style; 'Omit needless words' entered everyday speech.",
+        "reception_bad_zh": "后世语言学家与写作者多指出其硬伤：部分语法规则理解有误（如对被动语态、分词的判断），若干条目自相矛盾，且把约定俗成误当永恒逻辑；Pinker 誉其理想而纠其学理。",
+        "reception_bad_en": "Later linguists and writers flag real defects: some grammatical rules are simply wrong (on the passive, on the participle), entries contradict one another, and convention is mistaken for eternal logic; Pinker honours the ideal while correcting the theory.",
+        "syn_zh": "读它应读作「规则之源」而非「规则之终」：它的价值不在每条都正确，而在给出一个清晰、可争、可教的简明写作纲领；此后的手册几乎都靠赞成或反驳它而立说。",
+        "syn_en": "Read it as the source of rules, not their end: its worth lies not in every rule being right but in stating a clear, arguable, teachable creed of plain prose that later manuals define themselves by endorsing or refusing.",
+        "conf": "✓",
+        "sources": "本书正文 · Pinker《The Sense of Style》对 Strunk & White 的评述 · 出版沿革"
+      },
+      "claims_list": [
+        "省略不必要的词",
+        "使用主动语态",
+        "以肯定形式表述",
+        "以段落为作文单位：一段一主题",
+        "把相关的词放在一起",
+        "把句子中强调的词放在末尾"
+      ],
+      "claims_list_en": [
+        "Omit needless words",
+        "Use the active voice",
+        "Put statements in positive form",
+        "Make the paragraph the unit of composition: one to each topic",
+        "Keep related words together",
+        "Place the emphatic words of a sentence at the end"
+      ],
+      "fact_ledger": [
+        {
+          "claim": "源头为 Strunk 1918 年康奈尔油印本；1959 年经 E. B. White 修订、Macmillan 出版，遂成名作",
+          "source": "版本沿革",
+          "conf": "✓",
+          "claim_en": "Descends from Strunk's 1918 Cornell printing; revised by E. B. White and published by Macmillan in 1959, becoming the classic",
+          "source_en": "publishing history"
+        },
+        {
+          "claim": "本地文件为 2011 年 Chris Hong 修订本，署「© 2011 The Elements of Style Press」",
+          "source": "扉页/版权页",
+          "conf": "✓",
+          "claim_en": "The local file is the 2011 revision by Chris Hong, carrying '© 2011 The Elements of Style Press'",
+          "source_en": "title / copyright page"
+        },
+        {
+          "claim": "经典 Strunk & White 第四版 ISBN = 0201304889（1999, Longman）",
+          "source": "通行书目",
+          "conf": "✓",
+          "claim_en": "The canonical Strunk & White 4th ed. ISBN is 0201304889 (1999, Longman)",
+          "source_en": "standard bibliography"
+        },
+        {
+          "claim": "全书含用法基本规则 1–8 与作文基本原则 9–18，共 18 条",
+          "source": "本地全文目录",
+          "conf": "✓",
+          "claim_en": "The book carries 8 Elementary Rules of Usage (1-8) and 10 Principles of Composition (9-18), 18 in all",
+          "source_en": "contents of the local text"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "2011 Chris Hong 修订本的 ISBN 与印数未核实",
+          "conf": "○",
+          "item_en": "ISBN and print run of the 2011 Chris Hong revision not verified"
+        },
+        {
+          "item": "「全球销量数千万」为通行说法，未取权威统计源",
+          "conf": "◐",
+          "item_en": "The 'tens of millions sold' figure is the received claim; no authoritative tally cited"
+        }
+      ],
+      "related": [
+        {
+          "title": "The Sense of Style",
+          "author": "Steven Pinker",
+          "year": "2014",
+          "relation": "对话与批评",
+          "note_zh": "Pinker 盛赞其「省略不必要的词」，同时批评其语法错误与自相矛盾",
+          "note_en": "Pinker praises 'Omit needless words' while faulting its grammar and self-contradictions",
+          "axis": "style-canon",
+          "pos": "critic-heir",
+          "conf": "✓",
+          "relation_en": "Dialogue & critique",
+          "title_en": "The Sense of Style",
+          "author_en": "Steven Pinker"
+        }
+      ],
+      "craft": [],
+      "characters": [],
+      "charedges": [],
+      "plot_flow": [],
+      "plot_acts": [],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [
+        {
+          "zh": "把它读作「规则之源」而非「规则之终」：多数后续手册（含 Pinker、Williams）正是靠赞成或反驳它而立说。",
+          "en": "Read it as the source of rules, not their end: most later manuals (Pinker, Williams) define themselves by agreeing or arguing with it.",
+          "conf": "✓"
+        }
+      ],
+      "textlinks": [
+        {
+          "zh": "Project Gutenberg · 1918 初版全文（公版）",
+          "en": "Project Gutenberg · 1918 original (public domain)",
+          "url": "https://www.gutenberg.org/ebooks/42580"
+        }
+      ]
+    },
+    {
+      "id": "wcs-sense-of-style",
+      "slug": "wcs-sense-of-style",
+      "num": "贰",
+      "country": "美国",
+      "country_en": "the American",
+      "lang": "en",
+      "title_zh": "《风格的感觉》",
+      "title_orig": "The Sense of Style",
+      "author": "Steven Pinker",
+      "author_zh": "史蒂芬·平克",
+      "author_en": "Steven Pinker",
+      "author_slug": "steven-pinker",
+      "year": "2014",
+      "publisher": "Viking / Penguin",
+      "publisher_en": "Viking / Penguin",
+      "pubdate": "2014",
+      "pubdate_en": "2014",
+      "pages": "—",
+      "isbn": "978-0-670-02521-9 · UK 978-1-846-14551-3",
+      "publines_zh": "Viking（美）/ Allen Lane·Penguin（英）· 2014",
+      "publines_en": "Viking (US) / Allen Lane·Penguin (UK) · 2014",
+      "meta_zh": "非虚构 · 认知科学视角的写作与阅读指南 · 2014",
+      "meta_en": "nonfiction · a thinking person's guide to writing, from cognitive science · 2014",
+      "kind": "nonfiction",
+      "domain": "writing, cognitive science",
+      "domain_en": "writing, cognitive science",
+      "baseline_conf": "✓ 出版信息核实（取自本书版权页）",
+      "baseline_conf_en": "✓ publication facts verified from the book's own imprint page",
+      "read_status": "读完 · 六章框架与主张提取",
+      "read_status_en": "read in full · six-chapter framework extracted",
+      "why_zh": "把「什么是好文笔」从传统清规中解放出来，用语言学认知科学重建：散文是通向世界的窗（classic style），坏文笔多源于知识的诅咒（the curse of knowledge）。",
+      "why_en": "Liberates 'good prose' from folk rules and rebuilds it on linguistics and cognitive science: prose as a window onto the world (classic style), bad writing as chiefly the curse of knowledge.",
+      "background": {
+        "zh": "平克以心理语言学家自任，开宗明义既致敬又开炮：他热爱体例手册，却指出 Strunk & White 对语法理解粗疏（误判被动语态、及物动词），规则时常自相矛盾、且无视语言会随时间演变。全书六章：1 好文笔——反对把散文故作高深的「学术腔」（Skunked & Pelicaned）；2 窗向世界——提出「经典风格」（classic style），写作是向读者展示世界的一个窗口；3 知识的诅咒——专家难以料到读者不知其所知，是晦涩的主因；4 网·树·线——借乔姆斯基的深层结构/短语树论句法，好句子需把网状语义映射为线性树再成句；5 连贯之弧——话题连贯、连接词、代词回指等让段落成弧；6 辨明对错——以用法史与「用法评审团」拆解传统规则，主张优雅地随语言变化。它同时是写作书与一本关于语言与心智的科普。",
+        "en": "Pinker writes as a psycholinguist: he loves style manuals yet opens by saying Strunk & White had a tenuous grasp of grammar (misjudging the passive and transitive verbs), set rules that contradict themselves, and ignored that language changes. Six chapters: 1 Good writing — against the over-learned 'academese' (his Skunked & Pelicaned parody); 2 A window onto the world — the 'classic style,' prose as a window the reader looks through at the subject; 3 The curse of knowledge — experts struggle to imagine what the reader doesn't know, the root of obscurity; 4 The web, the tree, and the string — syntax via Chomsky's deep structure and phrase trees; good sentences map a network of meaning onto a hierarchical tree, then onto a linear string; 5 Arcs of coherence — topic chains, connectives, and reference that make paragraphs hang together; 6 Telling right from wrong — the history of usage rules and a usage panel, urging graceful change. It is at once a writing guide and a book about language and mind.",
+        "conf": "✓",
+        "sources": "本书前言与六章正文 · 版权页",
+        "sources_en": "the book's Prologue and six chapters · imprint page"
+      },
+      "narrative": {
+        "zh": "序言 + 六章 + 注释·术语表·参考文献。论述之弧：第 1 章破除「商业体／学术体」等做作文体，立「经典风格」为其解药；第 2 章正面陈述经典风格，句子是通向世界的窗，写作者是带读者去看事实的向导；第 3 章诊断晦涩的主因即「知识的诅咒」，须以读者视角反复自问；第 4 章转入句子本身，借乔姆斯基的深层结构，把语义之「网」映射为短语之「树」再展开为线性之「串」，以解释搭配、句法与「优雅变体」；第 5 章论连贯，话题链、连接词与代词回指让段落成弧；第 6 章以自订「用法评审团」的数据与用法史，主张既描述语言如何变化，又以审慎的保守编辑标准判断何谓改进。方法是认知科学 + 大量对照例句 + 作者自订的「优雅变体」清单。",
+        "en": "A Prologue, six chapters, then notes, glossary and references. The arc of the argument: Chapter 1 dismantles postures like 'business style' and 'academese' and proposes 'classic style' as the remedy; Chapter 2 states it positively, the sentence as a window onto the world with the writer guiding the reader to look at the facts; Chapter 3 diagnoses obscurity as chiefly the curse of knowledge, to be fought by re-adopting the reader's vantage; Chapter 4 turns to the sentence itself, mapping the web of meaning onto a Chomskyan tree of phrases and then onto a linear string to explain idiom, syntax and 'elegant variation'; Chapter 5 treats coherence, how topic chains, connectives and reference make a paragraph arc; Chapter 6 uses a commissioned usage panel and the history of usage to argue that one should describe how language changes yet judge, by a cautious conservative standard, what counts as an improvement. Its method is cognitive science plus a large corpus of contrasted examples plus the author's own list of 'elegant variations'.",
+        "conf": "✓",
+        "sources": "本书前言与六章正文（本地持有版）· 版权页"
+      },
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "《纽约时报》畅销书，被赞为把语言学与认知科学第一次系统地译成「可操作的写作课」；两个核心概念「经典风格」与「知识的诅咒」广受肯定，为写作指导提供了罕见的理论深度。",
+        "reception_good_en": "A New York Times bestseller, praised for the first systematic translation of linguistics and cognitive science into an actionable writing course; its two core notions, 'classic style' and the 'curse of knowledge', are widely credited with giving advice on prose a rare theoretical depth.",
+        "reception_bad_zh": "批评集中在两处：一者认为「经典风格」被抬得过高，略矮化了其它正当地体（如抒情与思辨的「园丁风格」）；二者有书评指出书中部分语法判断本身可议，且偶与自身建议相抵。",
+        "reception_bad_en": "Criticism gathers on two points: some argue 'classic style' is elevated too far, slighting other legitimate stances such as the 'gardener' prose of lyric or reflection; and a few reviews note that some of its own grammatical calls are contestable and occasionally cut against its advice.",
+        "syn_zh": "它真正的贡献不是新规则，而是把「何为好文笔」重述为一个关于读者心智的理论：清晰不是删字，而是替他人着想。作为写作书与作为一本讲语言与心智的科普，它是一体两面。",
+        "syn_en": "Its real contribution is not new rules but a reframing of what good prose is into a theory of the reader's mind: clarity is not word-starvation but consideration for another. It is one book seen twice, a guide to writing and a book about language and mind.",
+        "conf": "✓",
+        "sources": "本书正文 · 主要书评（NYT / 学术评论）正反评价"
+      },
+      "claims_list": [
+        "以「经典风格」写作：散文是通向世界的窗",
+        "坏文笔的根源多为「知识的诅咒」",
+        "句子是语义之网→短语之树→线性之串的映射",
+        "连贯靠话题链、连接词与回指成「弧」",
+        "许多传统规则源自 folklore，应随语言演化优雅取舍",
+        "警惕刻意艰深：清晰的深奥优于含混的深奥"
+      ],
+      "claims_list_en": [
+        "Write in the classic style: prose as a window onto the world",
+        "Obscurity is mostly the curse of knowledge",
+        "A sentence maps a web of meaning onto a tree, then a string",
+        "Coherence runs in arcs of topic, connective, and reference",
+        "Many classic rules are folklore; bend them gracefully as language changes",
+        "Beware pretension — clear depth beats murky depth"
+      ],
+      "fact_ledger": [
+        {
+          "claim": "2014 年美国 Viking、英国 Allen Lane 初版；版权 © Steven Pinker 2014",
+          "source": "本书版权页",
+          "conf": "✓",
+          "claim_en": "First published 2014 (Viking US, Allen Lane UK); copyright Steven Pinker 2014",
+          "source_en": "the book's copyright page"
+        },
+        {
+          "claim": "英版 ISBN 978-1-846-14551-3（取自版权页）；美版 Viking ISBN 978-0-670-02521-9",
+          "source": "版权页 / 通行书目",
+          "conf": "✓",
+          "claim_en": "UK ISBN 978-1-846-14551-3 (from the imprint); Viking US ISBN 978-0-670-02521-9",
+          "source_en": "imprint page / standard bibliography"
+        },
+        {
+          "claim": "全书结构为序＋六章＋注释·术语表·参考文献（目录所载）",
+          "source": "本书目录",
+          "conf": "✓",
+          "claim_en": "Structure: Prologue + six chapters + Notes/Glossary/References (per the contents)",
+          "source_en": "the book's contents"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "平装版页数与本版排版页码未逐一核实",
+          "conf": "○",
+          "item_en": "Paperback page count and this edition's pagination not individually verified"
+        }
+      ],
+      "related": [
+        {
+          "title": "The Elements of Style",
+          "author": "Strunk & White",
+          "year": "1959/2011",
+          "relation": "致敬并纠错",
+          "note_zh": "平克承其「省略不必要的词」，又系统批评其语法与自相矛盾",
+          "note_en": "Pinker keeps 'Omit needless words' but systematically corrects its grammar and self-contradictions",
+          "axis": "style-canon",
+          "pos": "heir-critic",
+          "conf": "✓",
+          "relation_en": "Praises & corrects",
+          "title_en": "The Elements of Style",
+          "author_en": "Strunk & White"
+        }
+      ],
+      "craft": [],
+      "characters": [],
+      "charedges": [],
+      "plot_flow": [],
+      "plot_acts": [],
+      "motifs": [],
+      "excerpts": [
+        {
+          "orig": "Prose is a window onto the world.",
+          "trans_zh": "散文是通向世界的一扇窗。",
+          "source": "第二章「经典风格」核心命题",
+          "lang": "en",
+          "trans_en": "Prose is a window onto the world.",
+          "source_en": "the core thesis of Chapter 2, classic style",
+          "note_zh": "「经典风格」把写作看成作者带读者去看事实的手势：句子当透明，别让媒介本身挡住世界。",
+          "note_en": "Classic style treats writing as a guided look at the facts: keep the sentence windowpane-clean so the medium never blocks the world."
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "与 Strunk & White 对读：同一「简明」理想，一个凭权威规则，一个凭关于读者心智的科学解释。",
+          "en": "Read against Strunk & White: the same ideal of clarity — one resting on authoritative rules, the other on a science of the reader's mind.",
+          "conf": "✓"
+        }
+      ],
+      "textlinks": [
+        {
+          "zh": "Penguin 官方书页",
+          "en": "Official Penguin page",
+          "url": "https://www.penguin.com/book/the-sense-of-style-by-steven-pinker/9780143127590"
+        }
+      ]
+    },
+    {
+      "id": "wcs-they-say-i-say",
+      "slug": "wcs-they-say-i-say",
+      "num": "叁",
+      "country": "美国",
+      "country_en": "the American",
+      "lang": "en",
+      "title_zh": "「他们说 / 我说」",
+      "title_orig": "They Say / I Say",
+      "author": "Gerald Graff & Cathy Birkenstein",
+      "author_zh": "Gerald Graff 与 Cathy Birkenstein",
+      "author_en": "Gerald Graff & Cathy Birkenstein",
+      "author_slug": "graff-birkenstein",
+      "year": "2024",
+      "publisher": "W. W. Norton",
+      "publisher_en": "W. W. Norton",
+      "pubdate": "2024-07-05 (Sixth ed., with readings)",
+      "pubdate_en": "2024-07-05 (Sixth ed., with readings)",
+      "pages": "xxi, 414（第六版·附读本）",
+      "isbn": "978-1-324-07003-0",
+      "publines_zh": "W. W. Norton · 第六版（附读本）· 2024-07-05",
+      "publines_en": "W. W. Norton · Sixth ed. (with readings) · 2024-07-05",
+      "meta_zh": "非虚构 · 学术写作「对话」模板 · 第六版",
+      "meta_en": "nonfiction · templates for academic writing as conversation · 6th ed.",
+      "kind": "nonfiction",
+      "domain": "writing, rhetoric, education",
+      "domain_en": "writing, rhetoric, education",
+      "baseline_conf": "✓ 版本核实（W. W. Norton 官方：第六版 2024-07-05，ISBN 9781324070030）",
+      "baseline_conf_en": "✓ edition verified (W. W. Norton official: 6th ed., 5 July 2024, ISBN 9781324070030)",
+      "read_status": "读完 · 二十章模板框架提取",
+      "read_status_en": "read in full · twenty-chapter template framework extracted",
+      "why_zh": "把学术写作还原为一个动作：进入一场对话。先如实复述「他们说」，再以模板化的招式给出「我说」——为最抽象的「论证」提供了可复制句式。",
+      "why_en": "Reduces academic writing to one act: entering a conversation. Summarize 'they say' honestly, then answer 'I say' with templated moves — turning abstract 'argument' into reproducible sentence-frames.",
+      "background": {
+        "zh": "本书的核心隐喻：一切论证都在回应他人。全书以填空式「模板」教写作者如何引述、概括、反驳、让步、并回答「那又怎样 / 谁在乎」。第六版分四部分二十章：第一部分「他们说」（始于他人在说什么、概括之艺、引述之艺）；第二部分「我说」（是/否/好吧但是三种回应、区分你我、植入反方声音、以个人经历激活论证、说明其意义）；第三部分「串起来」（衔接、保留自己的声音、元评论、大幅修订）；第四部分「具体学术语境」（课堂讨论、为对话而读、把研究当对话、文学与社会科学写作）。第六版新增加盟章节「当你的『他们说』是一个机器人」，直面 AI 生成内容，并另附一组范文读本（含 Graff《Hidden Intellectualism》等）。它之所以广为采用，是因为给新手一个可上手的抓手：写作不是从零发明，而是接过话头。",
+        "en": "Its governing metaphor: every argument answers someone else. Through fill-in-the-blank templates it teaches writers to quote, summarize, disagree, concede, and answer 'so what? who cares?'. The 6th edition runs four parts, twenty chapters: Part 1 'They Say' (start with what others say; the art of summarizing; the art of quoting); Part 2 'I Say' (three ways to respond — yes/no/OK-but; distinguishing you from them; planting a naysayer; using personal stories; saying why it matters); Part 3 'Tying It All Together' (connecting the parts; keeping your own voice; metacommentary; revising substantially); Part 4 'In Specific Academic Contexts' (class discussion, reading for the conversation, research as conversation, writing about literature, the social and natural sciences). New to this edition is the chapter 'When your They Say is a bot', facing AI-generated sources, plus a fresh set of readings (incl. Graff's 'Hidden Intellectualism'). It is widely adopted because it hands beginners a foothold: writing is not invention from zero but taking up a conversation already underway.",
+        "conf": "✓",
+        "sources": "本地第六版全文（目录与模板）· W. W. Norton 官方书目页",
+        "sources_en": "local 6th-ed. text (contents & templates) · W. W. Norton official listing"
+      },
+      "narrative": {
+        "zh": "四部分二十章 + 一组读本。骨架是一个反复操作的「对话动作」：第一部分 They Say，先如实呈现他人在说什么，含概括之艺（用中性动词、按他人自己的话去归述）与引述之艺（直接引语与「某人说：」的框架）；第二部分 I Say，给出你的回应，三种基本招式（是／否／好吧但是）、把你的声音与他们的分开、在文中植入一个反方（naysayer）、以个人经历或具体场景激活论证、并回答「那又怎样／谁在乎」以立意义；第三部分 Tying It All Together，用衔接句缝合全文、保留自己的声音、以元评论引导读者、并做结构性大修；第四部分 In Specific Academic Contexts，把这套动作带进课堂讨论、为对话而读、把研究当对话、以及文学与社科写作的专门化。方法是模板（可填空的句式）+ 范文 + 练习；第六版新增「当你的 They Say 是一个机器人」直面 AI 生成的来源。",
+        "en": "Four parts, twenty chapters, plus a set of readings. The spine is one repeated conversational move. Part I, They Say: first render what others are saying faithfully, covering the art of summarizing (neutral report verbs, attributing to them as they would to themselves) and the art of quoting (direct quotation framed with 'X says:'). Part II, I Say: give your response through three basic moves (yes / no / yes-but), keep your voice distinct from theirs, plant a naysayer inside your own argument, activate it with a personal story or scene, and answer 'so what? who cares?' to establish the stakes. Part III, Tying It All Together: stitch the whole with connectives, keep your own voice, steer the reader with metacommentary, and revise at the level of structure. Part IV, In Specific Academic Contexts: carry the moves into class discussion, reading for the conversation, research as conversation, and the special cases of writing about literature and the social sciences. Its method is templates (fillable sentence-frames) plus models plus exercises; the 6th edition adds 'When Your They Say Is a Bot' to face AI-generated sources.",
+        "conf": "✓",
+        "sources": "本地第六版全文目录与模板 · W. W. Norton 官方书目页"
+      },
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "在美国大学写作课中被空前广泛地采用，被视为把「论证」从抽象口号落到可上手句式的一本教材；教师多赞其模板给新手一个可依赖的抓手，把「进入一场已经进行的对话」变成可教、可练、可评的动作。",
+        "reception_good_en": "Adopted more widely than almost any other composition reader in American colleges, credited with bringing argument down from an abstract slogan to sentence-frames a beginner can actually use; teachers praise its templates for giving novices a dependable foothold that makes entering an underway conversation a teachable, practicable, assessable move.",
+        "reception_bad_zh": "常见保留：模板若被当成成品，会退化为「学术填空」，产出千篇一律的句式；有人批评其对「他们」的选取偏重美国课堂议题，句式亦偏长、易教条化。作者自己也提醒脚手架终究要被拆去。",
+        "reception_bad_en": "Usual reservations: taken as a product rather than scaffolding, the templates degrade into academic paint-by-numbers, churning out interchangeable sentences; some note its choice of 'they say' skews to American classroom debates and that its frames run long and can turn dogmatic. The authors themselves warn the scaffolding must eventually come down.",
+        "syn_zh": "它的核心洞见是修辞学与认识论的合流：思想在回应中成形，写作先要有可推抵的他人声音。把它当作一副临时脚手架来读，收益最大；一旦对话感内化，就该让位于自己的句子。",
+        "syn_en": "Its governing insight is where rhetoric meets epistemology: thought takes shape in response, so writing needs something to push against before it can begin. Read it as provisional scaffolding and it pays best; once the sense of conversation is internalized it should yield to your own sentences.",
+        "conf": "✓",
+        "sources": "本书模板与导论 · 写作教学界对模板教学法的一般讨论"
+      },
+      "claims_list": [
+        "写作即进入对话：先「他们说」，再「我说」",
+        "用模板句引述与概括，忠实呈现他人观点",
+        "三种回应：同意并延伸 / 反驳 / 让步但是",
+        "回答「那又怎样 / 谁在乎」赋予论证意义",
+        "元评论（metacommentary）引导读者理解你的意图",
+        "第六版新增：当「他们说」来自 AI/机器人"
+      ],
+      "claims_list_en": [
+        "Writing is entering conversation: 'they say', then 'I say'",
+        "Use templates to quote and summarize others faithfully",
+        "Three responses: agree-and-add / disagree / concede-but",
+        "Answer 'so what? who cares?' to give the argument stakes",
+        "Metacommentary steers the reader through your intent",
+        "New in 6e: when the 'they say' is an AI/bot"
+      ],
+      "fact_ledger": [
+        {
+          "claim": "第六版（附读本）由 W. W. Norton 于 2024-07-05 出版，ISBN 978-1-324-07003-0",
+          "source": "Norton 官方书目页",
+          "conf": "✓",
+          "claim_en": "The 6th ed. (with readings) was published by W. W. Norton on 5 July 2024, ISBN 978-1-324-07003-0",
+          "source_en": "W. W. Norton official listing"
+        },
+        {
+          "claim": "全书四部分二十章＋读本页（目录所载）；第六版新增「When Your 'They Say' Is a Bot」一章",
+          "source": "本地全文目录",
+          "conf": "✓",
+          "claim_en": "Four parts, twenty chapters plus readings (per the contents); 6e adds the chapter 'When Your They Say Is a Bot'",
+          "source_en": "contents of the local text"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "各读本页码归属因排版而异，未逐页核",
+          "conf": "○",
+          "item_en": "Reading-section page ranges vary by typesetting; not checked page by page"
+        }
+      ],
+      "related": [
+        {
+          "title": "The Sense of Style",
+          "author": "Steven Pinker",
+          "year": "2014",
+          "relation": "同批写作正典",
+          "note_zh": "一个论句与心智，一个论段落级的对话招式，互补",
+          "note_en": "one on the sentence and mind, one on paragraph-level moves of conversation — complementary",
+          "axis": "style-canon",
+          "pos": "peer",
+          "conf": "◐",
+          "relation_en": "Same writing canon",
+          "title_en": "The Sense of Style",
+          "author_en": "Steven Pinker"
+        }
+      ],
+      "craft": [],
+      "characters": [],
+      "charedges": [],
+      "plot_flow": [],
+      "plot_acts": [],
+      "motifs": [],
+      "excerpts": [
+        {
+          "orig": "\"They say\" ... gives your \"I say\" something to push against.",
+          "trans_zh": "「他们说」给你的「我说」一个可推抵的着落点。",
+          "source": "导论核心隐喻（转述式短引）",
+          "lang": "en",
+          "trans_en": "'They say' gives your 'I say' something to push against.",
+          "source_en": "the core metaphor of the Introduction (short glossed quote)"
+        }
+      ],
+      "deep_read": [
+        {
+          "zh": "把模板当脚手架而非成品：一旦对话感内化，模板就该隐去——否则沦为「学术填空」。",
+          "en": "Treat the templates as scaffolding, not the product: once the sense of conversation is internalized they should disappear — else writing degrades into fill-in-the-blank.",
+          "conf": "✓"
+        }
+      ],
+      "textlinks": [
+        {
+          "zh": "W. W. Norton 官方书页",
+          "en": "Official W. W. Norton page",
+          "url": "https://wwnorton.com/books/9781324070030"
+        }
+      ]
+    },
+    {
+      "id": "wcs-on-being-a-scientist",
+      "slug": "wcs-on-being-a-scientist",
+      "num": "肆",
+      "country": "美国",
+      "country_en": "the American",
+      "lang": "en",
+      "title_zh": "《做一个科学家》",
+      "title_orig": "On Being a Scientist",
+      "author": "National Academies (NAS / NAE / IOM)",
+      "author_zh": "美国国家科学院 · 工程院 · 医学院",
+      "author_en": "National Academy of Sciences, National Academy of Engineering, and Institute of Medicine",
+      "author_slug": "national-academies",
+      "year": "2009",
+      "publisher": "National Academies Press",
+      "publisher_en": "National Academies Press",
+      "pubdate": "2009 (Third ed.)",
+      "pubdate_en": "2009 (Third ed.)",
+      "pages": "—",
+      "isbn": "978-0-309-11970-2",
+      "publines_zh": "National Academies Press · 第三版 · 2009 · 免费 PDF",
+      "publines_en": "National Academies Press · Third ed. · 2009 · free PDF",
+      "meta_zh": "非虚构 · 负责任研究 conduct 指南 · 第三版 · 开放获取",
+      "meta_en": "nonfiction · a guide to the responsible conduct of research · 3rd ed. · open access",
+      "kind": "nonfiction",
+      "domain": "research ethics, science",
+      "domain_en": "research ethics, science",
+      "baseline_conf": "✓ 出版信息核实（NAP 官方：第三版 2009，DOI 10.17226/12192，免费 PDF）",
+      "baseline_conf_en": "✓ publication facts verified (NAP official: 3rd ed. 2009, DOI 10.17226/12192, free PDF)",
+      "read_status": "通读中 · 官方结构与主题已核实（全文见免费 PDF）",
+      "read_status_en": "in progress · official structure & themes verified (full text in the free PDF)",
+      "why_zh": "科研大厦立于「信任」之上。这本书把研究者日常面对的伦理与规范（数据、署名、评审、利益冲突、不当行为、与公众沟通）写成一份可教可读的负责任研究 conduct 入门。",
+      "why_en": "Science rests on trust. This guide turns the everyday ethics of research — data, authorship, peer review, conflicts, misconduct, communication with the public — into a teachable primer on the responsible conduct of research.",
+      "background": {
+        "zh": "由美国国家科学院、国家工程院与医学院联合委员会（第三版主席为 Carolyn R. Bertozzi）撰写， NSF 资助，National Academies Press 出版并提供免费 PDF。定位为「补充导师日常伦理示范」的自助读本，适用于学术、工业、政府一切研究场景与所有学科。全书按官方结构分三大板块：其一，研究的人文维度——把科学视为一种社会与历史事业，讲研究者的价值与信任；其二，做研究的有效管理者——处理数据、合作研究、署名与发表、同行评审、利益冲突与承诺、监管与伦理标准、以及科研不当（伪造/篡改/剽窃 FFP）；其三，对更广阔世界的责任——与学生和公众、政策制定者的沟通，及面向可持续未来的负责任科学。它正是「论文写作与发表」链条上游的伦理底座：先有可信赖的研究，才有可发表的论文。",
+        "en": "Written by a joint committee of the National Academy of Sciences, National Academy of Engineering, and Institute of Medicine (3rd-ed. chair Carolyn R. Bertozzi), sponsored by the NSF and published by the National Academies Press, which offers a free PDF. It is meant to 'supplement the informal lessons in ethics provided by research supervisors,' applying to academic, industrial, and governmental research across all disciplines. Per the official layout it moves in three parts: the human dimension of research (science as a social and historical enterprise; the researcher's values and trust); being an effective steward of research (the treatment of data, collaborative research, authorship and publication, peer review, conflicts of interest and commitment, regulatory and ethical standards, and research misconduct — fabrication, falsification, plagiarism); and responsibilities to the broader world (communication with students, the public, and policymakers, and responsible science for a sustainable future). It is the ethical base beneath the whole 'write and publish a paper' chain: trustworthy research first, publishable papers after.",
+        "conf": "✓",
+        "sources": "NAP 官方书页（12192）· 版权与前言",
+        "sources_en": "NAP official book page (12192) · imprint and preface"
+      },
+      "narrative": {
+        "zh": "全书非论述体，而是一份「负责任研究 conduct」的分板块指南（第三版）。三板块：其一，研究的人文维度，把科学当作一种社会与历史事业，讲共同体的价值（普遍主义、有组织的怀疑、共享与诚信）与信任何以为根基；其二，做研究的有效管理者，逐条处理数据（记录、保存、共享）、合作与跨学科研究、署名与发表次序、同行评审、利益冲突与承诺、受试者保护与动物福利等监管伦理标准，以及科研不当（伪造、篡改、剽窃，FFP）的界定与应对；其三，对更广阔世界的责任，带教学生、面向公众与政策制定者的沟通、以及面向可持续未来的科学。每章末附「供讨论的问题」案例，供课堂使用。",
+        "en": "Not a discursive argument but a sectioned guide to the responsible conduct of research (3rd ed.). Three parts. First, the human dimension of research: science as a social and historical enterprise, the community's values (universalism, organized skepticism, communalism and integrity) and trust as its foundation. Second, being an effective steward of research: the treatment of data (recording, retention, sharing), collaborative and interdisciplinary work, authorship and the order of names, peer review, conflicts of interest and commitment, regulatory and ethical standards such as the protection of human subjects and animal welfare, and the definition and handling of misconduct, that is fabrication, falsification and plagiarism (FFP). Third, responsibilities to the broader world: mentoring students, communication with the public and policymakers, and responsible science toward a sustainable future. Each chapter closes with 'Issues for Discussion' cases for classroom use.",
+        "conf": "✓",
+        "sources": "NAP 官方书页（12192）· 前言与三板块结构 · 免费 PDF"
+      },
+      "intent": {
+        "quotes": [],
+        "reception_good_zh": "作为美国国家科学院等三院联署、NSF 资助的自助读本，长期是「负责任研究」(RCR) 课程的标准入门教材；因其简明、跨学科、可免费下载而广为采用，被导师与学生共用作科研伦理的共同参照。",
+        "reception_good_en": "As a self-instructional reader issued jointly by the National Academies and sponsored by the NSF, it has long been a standard primer for courses in the responsible conduct of research (RCR); adopted widely for its brevity, its cross-disciplinary reach and its free download, it serves mentors and mentees alike as a shared reference for research ethics.",
+        "reception_bad_zh": "保留意见：以美国学术生态为中心，部分情境（资助体系、机构审查、法律框架）迁移性有限；篇幅所限，若干议题（如数据管理、开放获取、AI 辅助研究）在旧版中着墨偏浅，需配合更新的指南使用。",
+        "reception_bad_en": "Reservations: it is centred on the American academic ecosystem, so some settings (funding systems, institutional review, legal frames) transfer imperfectly; given its length several topics such as data management, open access and AI-assisted research are treated thinly in the older edition and call for updating guides alongside it.",
+        "syn_zh": "它把科研大厦赖以立足的「信任」摊开成可教的具体规范，是写作与发表链条的上游底座：先有可被信赖的研究（诚实的数据、正当的署名、公正的评审、披露的冲突），才轮得到「怎么写、怎么发」。这也是它被纳入「学术写作正典」的理由。",
+        "syn_en": "It spreads the premise of trust on which science rests out into teachable, concrete norms, and is the ethical base upstream of the write-and-publish chain: only research that can be trusted (honest data, rightful authorship, fair review, disclosed conflicts) earns the later questions of how to write and how to publish. That is why it belongs in a canon of academic writing.",
+        "conf": "✓",
+        "sources": "NAP 官方书页 · 本书三板块与「供讨论的问题」案例"
+      },
+      "claims_list": [
+        "科研共同体建立在「信任」之上",
+        "负责任研究 conduct 是可教、可学的",
+        "数据、署名、同行评审、利益冲突各有规范",
+        "科研不当 = 伪造 / 篡改 / 剽窃（FFP）",
+        "科学家对公众与政策负有沟通责任"
+      ],
+      "claims_list_en": [
+        "The research community rests on trust",
+        "The responsible conduct of research is teachable",
+        "Data, authorship, peer review and conflicts each carry norms",
+        "Misconduct = fabrication, falsification, plagiarism (FFP)",
+        "Scientists owe communication to the public and policymakers"
+      ],
+      "fact_ledger": [
+        {
+          "claim": "第三版由 National Academies Press 于 2009 年出版；DOI 10.17226/12192；提供免费 PDF",
+          "source": "NAP 官方书页 / 版权行",
+          "conf": "✓",
+          "claim_en": "The 3rd ed. was published by the National Academies Press in 2009; DOI 10.17226/12192; free PDF available",
+          "source_en": "NAP official page / citation line"
+        },
+        {
+          "claim": "第三版 ISBN = 978-0-309-11970-2（ paperback）",
+          "source": "通行书目",
+          "conf": "✓",
+          "claim_en": "3rd ed. ISBN = 978-0-309-11970-2 (paperback)",
+          "source_en": "standard bibliography"
+        },
+        {
+          "claim": "撰写机构为 NAS / NAE / IOM 联合委员会，NSF 资助；委员会主席 Carolyn R. Bertozzi",
+          "source": "NAP 官方书页",
+          "conf": "✓",
+          "claim_en": "Authored by a joint NAS/NAE/IOM committee, NSF-sponsored; chair Carolyn R. Bertozzi",
+          "source_en": "NAP official page"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "各章逐条标题未从下载全文核对（本卡基于官方书页与前言结构）",
+          "conf": "◐",
+          "item_en": "Individual chapter titles not checked against a downloaded full text (this card rests on the official book page and front-matter structure)"
+        },
+        {
+          "item": "2026 年宣布的第四版具体变化尚未及核实",
+          "conf": "○",
+          "item_en": "The changes in the announced 2026 fourth edition are not yet verified"
+        }
+      ],
+      "related": [
+        {
+          "title": "How to Write and Publish a Scientific Paper",
+          "author": "Day & Gastel",
+          "year": "—",
+          "relation": "主题互补（伦理↔发表）",
+          "note_zh": "本书管研究的伦理底座，Day & Gastel 管论文写作发表的操作——两者相接（后者未通读，仅指位）",
+          "note_en": "this book is the ethical base; Day & Gastel the write-and-publish mechanics — the two adjoin (the latter not read here; pointer only)",
+          "axis": "research-integrity",
+          "pos": "adjacent",
+          "conf": "○",
+          "relation_en": "Complementary (ethics & publishing)",
+          "title_en": "How to Write and Publish a Scientific Paper",
+          "author_en": "Day & Gastel"
+        }
+      ],
+      "craft": [],
+      "characters": [],
+      "charedges": [],
+      "plot_flow": [],
+      "plot_acts": [],
+      "motifs": [],
+      "excerpts": [],
+      "deep_read": [
+        {
+          "zh": "把它当作写作链的上游：署名、致谢、同行评审、利益冲突在这里先被定义，才轮到「怎么写摘要 / 怎么写方法」。",
+          "en": "Read it upstream of writing: authorship, acknowledgment, peer review and conflicts are defined here before the 'how to write an abstract / methods.'",
+          "conf": "✓"
+        }
+      ],
+      "textlinks": [
+        {
+          "zh": "National Academies Press · 免费 PDF / 在线读",
+          "en": "National Academies Press · free PDF / read online",
+          "url": "https://www.nationalacademies.org/read/12192"
+        }
+      ]
     }
   ]
 }
