@@ -2,7 +2,7 @@
 
 <!-- 长稿正式条目（论说体，house style 论点→论据→论证→反诘→来源）。AI 起草、未经作者逐条复核（harness §I.6）。双语逐段并列；英文侧与中文侧在内容与精神上对应，而非逐句对译（作者决定 2026-09-26）。来源标注四级（harness R-B）：一手 / 权威版本 / 学界共识·解读 / 存疑；【已审计】出自 essays/submission/citation_audit.md 语料，【待审】为待人工核验。L0 块为导读与目录（按受众层级裁剪：level=L0 只见导读）。 -->
 <!-- en: Long-form entry (essayistic; house style claim → evidence → argument → counter-question → sources). AI-drafted and not yet verified item by item by the author (harness §I.6). The two languages run paragraph by paragraph in parallel: the English and the Chinese correspond in content and in spirit rather than word for word (author's decision, 2026-09-26). Sources are graded on four levels (harness R-B): primary / authoritative edition / scholarly consensus or interpretation / doubtful; [audited] marks material drawn from essays/submission/citation_audit.md, [pending] marks what still needs manual verification. The L0 block is the foreword and contents, cropped by audience level (level=L0 shows the foreword only). -->
-<!-- 发表 2026-09-26 19:38 · 更新 2026-09-27 10:58 -->
+<!-- 发表 2026-09-26 19:38 · 更新 2026-09-27 10:58 · 后记 2026-10-09 -->
 
 <!-- L0 -->
 
@@ -10,7 +10,7 @@
 
 ## Foreword and contents
 
-This essay was written to slow a news cycle down. Between 2024 and 2026 the report card kept changing, and each announcement stirred more argument about framing, disclosure, and credit than about the calculation itself. The seven chapters below are a systematic cleaning, in one order, of the questions the news kept raising: what the events actually establish, what the voices reveal, what mathematics is, who mathematicians are, whether AI is really inferior, what "originative" means, and what, seen in the large, is happening to us. The running thesis: the visible disputes are not about whether machine derivations are valid but about framing, disclosure, attribution, and admissibility, and the deeper question of the division between human and machine cannot be settled apart from the older questions of what mathematics is, who mathematicians are and who assigns meaning. Each chapter states its claim, argues it against evidence whose reliability is labelled, faces the strongest counter-argument, and closes with explicit credibility verdicts wherever events are at stake. The whole can be read front to back, or each chapter on its own; the tree below shows what is where.
+This essay was written to slow a news cycle down. Between 2024 and 2026 the report card kept changing, and each announcement stirred more argument about framing, disclosure, and credit than about the calculation itself. The seven chapters below are a systematic cleaning, in one order, of the questions the news kept raising: what the events actually establish, what the voices reveal, what mathematics is, who mathematicians are, whether AI is really inferior, what "originative" means, and what, seen in the large, is happening to us. The running thesis: the visible disputes are not about whether machine derivations are valid but about framing, disclosure, attribution, and admissibility, and the deeper question of the division between human and machine cannot be settled apart from the older questions of what mathematics is, who mathematicians are and who assigns meaning. Each chapter states its claim, argues it against evidence whose reliability is labelled, faces the strongest counter-argument, and closes with explicit credibility verdicts wherever events are at stake. The whole can be read front to back, or each chapter on its own; the tree below shows what is where. An independent postscript, dated 9 October 2026, is appended after the sources for the events that followed the last update; it is not counted among the seven chapters, and where it differs from them the difference is stated in the postscript itself.
 
 - **1 · Events and credibility: a case-by-case audit**: five assessment dimensions and three certification settings, then the events graded one by one (IMO 2024 and 2025, the FrontierMath score, AlphaEvolve, the Erdős problems in three acts, First Proof, Navier-Stokes, and two physics cases, the single-minus gluon amplitude conjectured and proved, the nine-loop hexagon amplitude computed), closing in the diagnosis that the battlefield of credibility is not the derivation.
   - 1.1 A workable framework
@@ -51,6 +51,7 @@ This essay was written to slow a news cycle down. Between 2024 and 2026 the repo
   - 7.1 Gathering the threads
   - 7.2 Process, prediction, and mutual constitution
   - 7.3 Concrete stakes are not dissolved by the wide view
+- **Postscript · 27 September – 9 October 2026**: an independent section appended directly after the sources, recording the events that followed the last update — the September guidelines and the release-day statement of the advisory group, arXiv's new submission cap, a seven-sphere construction and its late-surfacing acknowledgment, the October release of a mathematics repository, the withdrawal of three of its manuscripts, and the debates over the manner of the release; where the postscript differs from the chapters, the difference is stated in the postscript rather than by altering the chapters.
 
 The sources are numbered by first appearance at the end of the article, each carrying its reliability tier (primary / authoritative / scholarly consensus or interpretation / doubtful) and its audit status; entries marked [pending] await human verification.
 
@@ -58,7 +59,7 @@ The sources are numbered by first appearance at the end of the article, each car
 
 ## 导读与目录
 
-这篇文章想做一件事：把新闻的节奏放慢。2024 至 2026 年间，机器的成绩单不断刷新；每一次宣布所激起的争论，落在框架、披露与归属上的，都远多于落在计算本身上的。下面七章是对新闻不断抛出的一串问题的系统清理，顺序固定：这些事件究竟确立了什么，各种声音透露了什么，数学是什么，数学家是谁，AI 是不是真的不如人，「开创性」意味着什么，以及把这一切放到大处看，我们到底在经历什么。全文的核心命题是：可见的争执不关乎机器推导是否有效，而关乎框架、披露、归属与可入性；而人与机器如何分工这个更深的问题，无法脱离数学是什么、数学家是谁、意义由谁赋予这些更古老的追问被单独回答。每章先立论，再以标注了可靠程度的证据论证，正面回应最强的反驳，并在涉及事件处给出显式的信度判级。全文可以通读，也可以按章取读；下面的目录树标明各处所在。
+这篇文章想做一件事：把新闻的节奏放慢。2024 至 2026 年间，机器的成绩单不断刷新；每一次宣布所激起的争论，落在框架、披露与归属上的，都远多于落在计算本身上的。下面七章是对新闻不断抛出的一串问题的系统清理，顺序固定：这些事件究竟确立了什么，各种声音透露了什么，数学是什么，数学家是谁，AI 是不是真的不如人，「开创性」意味着什么，以及把这一切放到大处看，我们到底在经历什么。全文的核心命题是：可见的争执不关乎机器推导是否有效，而关乎框架、披露、归属与可入性；而人与机器如何分工这个更深的问题，无法脱离数学是什么、数学家是谁、意义由谁赋予这些更古老的追问被单独回答。每章先立论，再以标注了可靠程度的证据论证，正面回应最强的反驳，并在涉及事件处给出显式的信度判级。全文可以通读，也可以按章取读；下面的目录树标明各处所在。另附一篇独立的「后记」（2026 年 10 月 9 日），接续文末来源之后，记录上次更新之后的事件；后记不计入七章，凡与正文有出入处，均在后记中说明。
 
 - **1 · 事件与信度：一次逐案审计**：五维评估框架与三种核验情形，随后逐案判级这些事件（IMO 2024 与 2025、FrontierMath 分数、AlphaEvolve、Erdős 问题三幕、First Proof、纳维-斯托克斯，以及理论物理两案：单负胶子振幅的猜想与证明、九圈六边形振幅的计算），收束于一个诊断：信度的战场不在推导。
   - 1.1 一套可操作的评估框架
@@ -99,6 +100,7 @@ The sources are numbered by first appearance at the end of the article, each car
   - 7.1 收束
   - 7.2 统观：过程、预测与互相成就
   - 7.3 具体利害不因整体视野而消解
+- **后记 · 2026年9月27日至10月9日**：作为独立部分直接接续文末来源之后，记录上次更新之后的事态——AGMAI 的九月指南与发布当日声明、arXiv 的新投稿限额、一篇七维球面构造及其迟到致谢、十月数学仓库的发布、其中三篇手稿的撤回，以及围绕发布方式的争论；凡与正文有出入处，皆在后记中说明，而不改动正文。
 
 文末各条来源按首次出现编号，每条标注来源层级（一手 / 权威版本 / 学界共识·解读 / 存疑）与审计状态；标注【待审】者待人工核验。
 
@@ -727,6 +729,24 @@ Whether "crisis" or "breakthrough", what is happening is a node of this mutually
 77. Whitehead, A. N. *Process and Reality: An Essay in Cosmology*. Macmillan (1929). [audited · authoritative]
 78. Friston, K. The free-energy principle: a unified brain theory? *Nat. Rev. Neurosci.* **11**, 127–138 (2010). https://doi.org/10.1038/nrn2787 [audited · authoritative]
 79. Leibniz, G. W. *Monadologie* (written 1714; first published 1720). [audited · authoritative]
+80. Advisory Group on Mathematics and Artificial Intelligence. Responsible Release of AI-Generated Mathematics (29 September 2026). https://agmai.org/general-sep29/ [audited · primary]
+81. arXiv. Updated rate limit policy (1 October 2026). https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy [audited · primary]
+82. He, Y.-H., Liu, Z. & Yau, S.-T. Positive sectional curvature on all smooth 7-spheres. arXiv:2609.29426 (24 September 2026). https://doi.org/10.48550/arXiv.2609.29426 [audited · primary (preprint)]
+83. QuantumBit. Yau's new paper thanks GPT and Claude (2 October 2026). https://qbitai.com/2026/10/499991.html [audited · doubtful (press-transmitted)]
+84. New Scientist. arXiv might not survive the AI slop onslaught, warn mathematicians (5 October 2026). https://www.newscientist.com/article/2591679-arxiv-might-not-survive-ai-slop-onslaught-warn-mathematicians/ [audited · doubtful (press-transmitted)]
+85. OpenAI. Sharing AI progress in mathematics (6 October 2026). https://openai.com/index/sharing-ai-progress-in-mathematics/ [audited · primary]
+86. OpenAI. openai/math: catalogue of mathematical manuscripts and supporting proof artifacts from an internal frontier model (posted 6 October 2026; accessed 9 October 2026). https://github.com/openai/math [audited · primary]
+87. OpenAI. openai/math repository history: withdrawn and revised manuscripts (accessed 9 October 2026). https://github.com/openai/math/blob/main/history.md [audited · primary]
+88. Advisory Group on Mathematics and Artificial Intelligence. Statement on the OpenAI release of mathematical documents (6 October 2026). https://agmai.org/#openai-release [audited · primary]
+89. Retraction Watch. OpenAI withdraws preprints from its 722-manuscript release (8 October 2026). https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/ [audited · doubtful (press-transmitted)]
+90. AHM. Statement on OpenAI's 6 October release of mathematical documents (October 2026). https://ahmath.org/statements/ [audited · primary]
+91. Tao, T. AHM statement on OpenAI's 6 October release of mathematical documents (guest post, 7 October 2026). https://terrytao.wordpress.com/2026/10/07/ahm-statement-on-openais-october-6-release-of-mathematical-documents/ [audited · primary]
+92. IT之家 (reproduced by AIHOT). Terence Tao criticizes OpenAI's way of releasing mathematical results (9 October 2026). https://aihot.news/items/u6gge44az9k77bh34680uylbk [audited · doubtful (press-transmitted)]
+93. Aaronson, S. The Mathocalypse. *Shtetl-Optimized* (7 October 2026). https://scottaaronson.blog/?p=10169 [audited · primary]
+94. New Scientist. OpenAI announces 722 mathematical discoveries in one go (7 October 2026). https://www.newscientist.com/article/2592421-openai-announces-722-mathematical-discoveries-in-one-go/ [audited · doubtful (press-transmitted)]
+95. New Scientist. OpenAI has dumped 722 maths papers – now it must clean up the mess (7 October 2026). https://www.newscientist.com/article/2592684-openai-has-dumped-722-maths-papers-now-it-must-clean-up-the-mess/ [audited · doubtful (press-transmitted)]
+96. New Scientist. OpenAI mistranslated mathematics into code for its Navier–Stokes proof (8 October 2026). https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/ [audited · doubtful (press-transmitted)]
+97. New Scientist. The most interesting mathematical discoveries in OpenAI's 722 new papers (8 October 2026). https://www.newscientist.com/article/2592703-the-most-interesting-mathematical-discoveries-in-openais-722-new-papers/ [audited · doubtful (press-transmitted)]
 
 <!-- zh -->
 ## 来源
@@ -810,4 +830,154 @@ Whether "crisis" or "breakthrough", what is happening is a node of this mutually
 77. Whitehead, A. N. *Process and Reality: An Essay in Cosmology*. Macmillan (1929). 【已审计·权威版本】
 78. Friston, K. The free-energy principle: a unified brain theory? *Nat. Rev. Neurosci.* **11**, 127–138 (2010). https://doi.org/10.1038/nrn2787 【已审计·权威版本】
 79. Leibniz, G. W. *Monadologie* (written 1714; first published 1720). 【已审计·权威版本】
+80. Advisory Group on Mathematics and Artificial Intelligence. 关于 AI 生成数学的责任披露（2026年9月29日）。https://agmai.org/general-sep29/ 【已审计·一手】
+81. arXiv. 更新后的投稿限额政策（2026年10月1日生效）。https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy 【已审计·一手】
+82. He, Y.-H., Liu, Z. & Yau, S.-T. Positive sectional curvature on all smooth 7-spheres. arXiv:2609.29426（2026年9月24日）。https://doi.org/10.48550/arXiv.2609.29426 【已审计·一手（预印本）】
+83. 量子位（梦晨、克雷西）。丘成桐新论文致谢了 GPT 和 Claude（2026年10月2日）。https://qbitai.com/2026/10/499991.html 【已审计·存疑（媒体转述）】
+84. New Scientist. 数学家警告：arXiv 或将倒在新一轮 AI 内容冲击之下（2026年10月5日）。https://www.newscientist.com/article/2591679-arxiv-might-not-survive-ai-slop-onslaught-warn-mathematicians/ 【已审计·存疑（媒体转述）】
+85. OpenAI. 共享数学领域的 AI 进展（2026年10月6日）。https://openai.com/index/sharing-ai-progress-in-mathematics/ 【已审计·一手】
+86. OpenAI. openai/math：内部前沿模型产出之数学手稿与证明支撑材料目录（2026年10月6日发布，10月9日访问）。https://github.com/openai/math 【已审计·一手】
+87. OpenAI. openai/math 目录事件记录：撤回与修订手稿（2026年10月9日访问）。https://github.com/openai/math/blob/main/history.md 【已审计·一手】
+88. Advisory Group on Mathematics and Artificial Intelligence. 关于 OpenAI 发布数学文件的声明（2026年10月6日）。https://agmai.org/#openai-release 【已审计·一手】
+89. Retraction Watch. OpenAI 自其 722 篇手稿发布中撤回预印本（2026年10月8日）。https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/ 【已审计·存疑（媒体转述）】
+90. AHM. 关于 OpenAI 2026年10月6日发布数学文件的声明（2026年10月）。https://ahmath.org/statements/ 【已审计·一手】
+91. Tao, T. AHM 关于 OpenAI 2026年10月6日发布数学文件的声明（客座转载，2026年10月7日）。https://terrytao.wordpress.com/2026/10/07/ahm-statement-on-openais-october-6-release-of-mathematical-documents/ 【已审计·一手】
+92. IT之家（经 AIHOT 转载）。菲尔兹奖得主陶哲轩批评 OpenAI 的数学成果发布方式（2026年10月9日）。https://aihot.news/items/u6gge44az9k77bh34680uylbk 【已审计·存疑（媒体转述）】
+93. Aaronson, S. The Mathocalypse. *Shtetl-Optimized*（2026年10月7日）。https://scottaaronson.blog/?p=10169 【已审计·一手】
+94. New Scientist. OpenAI 一次性宣布 722 项数学发现（2026年10月7日）。https://www.newscientist.com/article/2592421-openai-announces-722-mathematical-discoveries-in-one-go/ 【已审计·存疑（媒体转述）】
+95. New Scientist. OpenAI 倾倒 722 篇数学论文，如今必须收拾残局（2026年10月7日）。https://www.newscientist.com/article/2592684-openai-has-dumped-722-maths-papers-now-it-must-clean-up-the-mess/ 【已审计·存疑（媒体转述）】
+96. New Scientist. OpenAI 将数学「误译」为代码：纳维–斯托克斯证明的自动形式化与自然语言版本对不上（2026年10月8日）。https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/ 【已审计·存疑（媒体转述）】
+97. New Scientist. OpenAI 722 篇新论文中最有趣的数学发现（2026年10月8日）。https://www.newscientist.com/article/2592703-the-most-interesting-mathematical-discoveries-in-openais-722-new-papers/ 【已审计·存疑（媒体转述）】
 <!-- L5-end -->
+
+<!-- L1 -->
+
+<!-- en -->
+
+## Postscript · 27 September – 9 October 2026
+
+This postscript is an independent part appended after the sources, at the end of the article; it is not counted among the seven chapters. It records the events that followed this essay's last update on 27 September 2026 and closes by stating the differences between the postscript and the chapters. Sources introduced here continue the article's numbering from [80], each carrying the same reliability tier and the same audit marker. The seven chapters are the essay's argument; this postscript is its annals.
+
+### i. The scope of this postscript
+
+The window runs from 28 September to 9 October 2026, about twelve days. Within it fall the Advisory Group's September guidelines and its statement on the release day, arXiv's new submission cap, a seven-sphere construction whose acknowledgment surfaced late, the public release of a large mathematics repository, the withdrawal of three of its manuscripts within days, and a debate about the manner of the release that played out almost entirely in the register the essay called framing, disclosure, attribution, and admissibility. The postscript applies the same rule as the chapters: every claim follows its evidence, every piece of evidence carries a stated reliability, and every conclusion ends in a verdict.
+
+### ii. The Advisory Group's September guidelines
+
+On 29 September the independent Advisory Group on Mathematics and Artificial Intelligence published a document titled "Responsible Release of AI-Generated Mathematics" [80]. It is addressed precisely to the practice that produced the 6 October release: "we do not endorse this practice, and we ask them to stop testing advanced mathematical problems on proprietary models" [80]. The document was shaped by community feedback; the group reports receiving over 600 replies [80]. Its norms: human understanding of mathematics remains of paramount importance; a lab that releases results nobody yet understands must take responsibility, including funding, for ensuring that human understanding follows, organically and led by the community; each result should be deposited in a scholarly repository with recorded revisions; and a release should name the model, disclose prompts, a summarized chain of thought, the time, and the cost, document per result exactly how AI was used, and add one document stating how many comparable problems were tried and failed [80]. These norms are the yardstick against which the release below is judged.
+
+### iii. arXiv caps submissions
+
+arXiv's updated rate-limit policy took effect on 1 October 2026 [81]. It caps each submitter at two submissions per calendar month, with at most three submissions under moderation at any time [81]. The context arXiv records: September 2026 brought 40,363 submissions, a monthly record, and roughly 9,000 support tickets, against 20,569 submissions in September 2024 — the flow has doubled in two years [81]. The chapters' institutional account (ch. 2, ch. 5) predicted that the bottleneck of mathematics would move from derivation to intake; the cap is the intake moving.
+
+### iv. A seven-sphere construction at the border of the update
+
+On 24 September, three days before this essay's last update, Yang-Hui He, Ziran Liu and Shing-Tung Yau posted "Positive Sectional Curvature on All Smooth 7-spheres" [82]. It constructs a smooth Riemannian metric of strictly positive sectional curvature on every smooth homotopy seven-sphere, covering all 28 oriented diffeomorphism classes, in thirty-two pages across differential geometry and high-energy theory [82]. The chapters do not cover it because, at the moment of the last update, one fact had not yet been reported: the paper acknowledges suggestions made by GPT and Claude. That detail surfaced in early October, when the Chinese press reported it [83]. The postscript records a boundary case honestly: the paper sits inside the chapters' period, its acknowledgment outside it. The construction itself is stated on the primary source [82]; the acknowledgment detail is press-transmitted [83].
+
+### v. A warning that arXiv may not survive the flood
+
+On 5 October New Scientist published mathematicians' warnings that arXiv might not survive the onslaught of AI submissions, quoting "pre-preprint" proposals associated with the Hexagon project; Kevin Buzzard figures among the alarmed [84]. The essay's five institutional rules anticipated exactly this strain; the warning is the strain becoming audible. The piece is used here as a press-transmitted report of the community's anxiety and is therefore marked doubtful wherever it reports facts on its own account.
+
+### vi. The release: 719 manuscripts in 372 families
+
+On 6 October OpenAI announced "Sharing AI progress in mathematics" [85]. An unnamed internal frontier model produced a broad range of new mathematical results; the results were published in a GitHub repository with protocols for revisions and citations; many proofs were formalized in Lean; ten summaries of the model's reasoning were released, together with compute statistics, the repository stating that the average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking [85]. The repository as retrieved on 9 October is the primary catalogue: 719 manuscripts organized into 372 result families; about 42% of top-line results formalized; about 4,000 problems posed [86,87]. The chapters' §1 framework is exercised almost to the letter here: a release that separates generation from understanding cannot be assessed in one sentence, and assessment now runs through the Advisory Group's criteria rather than through the derivation [80]; the community's framing follows in §vii, §ix and §x, and the verification events that followed, in §viii.
+
+### vii. The Advisory Group's statement on the release day
+
+On the same day, 6 October, the Advisory Group issued a statement on the release [88]. Its advisory role, it says, "should not be interpreted as a judgment of the impact of these results or an endorsement of the process by which OpenAI obtained them"; "only the mathematical community can undertake the assessment that is needed"; and the release is "the beginning, not the completion, of the process of human understanding" [88]. The Group's nine members are François Charles, Camillo De Lellis, Timothy Gowers, Martin Hairer, Nikhil Srivastava, Ulrike Tillmann, Ravi Vakil, Edward Witten, and Melanie Matchett Wood [33]; Terence Tao is not a member (§ix, §x). The statement is best read as the Group applying its own September guidelines to the very event that prompted them.
+
+### viii. Three withdrawals, fourteen revisions
+
+The repository's history records the first verification event [87]. A sign error in "Algebraicity of Weil classes on split abelian eightfolds" invalidates a stabilization–trace cancellation argument, and the construction is used by two dependent papers [87]. Three manuscripts were withdrawn: that one, "Algebraicity of Kuga–Satake Correspondences for K3 Surfaces", and "The rational Hodge conjecture for products of K3 surfaces" [87]. Withdrawn manuscripts now carry notices explaining the gap and linking the archived versions [87]. Fourteen other manuscripts were revised with proof repairs, corrected statements, and clarified hypotheses and dependencies [87]. The same round added formalizations, bringing the share of top-line results formalized to 300 of 719, about 42% [87]. Retraction Watch reported the withdrawals on 8 October, eleven days after the essay's last update [89]. In the essay's §1 categories this is a dispute filed against a derivation, not against a problem choice or an admissibility ruling — the mechanism working as the chapters described.
+
+### ix. The AHM statement and the guest post
+
+On 7 October the board publishing at ahmath.org (the "AHM" board) issued a statement: "Releasing over 700 files at once is not a demonstration of scholarship, but a demonstration of power"; it urges mathematicians to discontinue work with OpenAI and points to pending plagiarism, copyright, and trademark lawsuits [90]. The statement was reposted the same day on Terence Tao's blog as a guest post [91]. The essay's attribution rule forces two clarifications: this is not a joint Tao–AHM statement, and Tao is not a member of the Advisory Group [33,90,91].
+
+### x. Terence Tao's own criticism
+
+Tao's own criticism appeared the same day (7 October) on Mathstodon, transmitted in full by the Chinese press [92]. Summarized: he does not oppose AI-assisted research and is an active user of such tools; what he resists is turning mathematics into a showroom in which famous open problems are bagged as product demonstrations; he worries about a huge collection of proofs that no one can digest; he notes that once a problem has been publicly declared solved, it can almost never return to the "unsolved" state that keeps open problems open; and he observes that the release did not meet the disclosure standards it was supposed to meet — the model was not named, only ten reasoning chains were provided, and the count of failed attempts was not reported [92]. This is a complaint about manner and disclosure, not about validity: precisely the chapters' diagnosis. The critical content is transmitted by the press [92]; the standard appealed to is the Advisory Group's own [80].
+
+### xi. Aaronson on "the biggest day in mathematical history"
+
+Scott Aaronson's Shtetl-Optimized post of 7 October called the release "one of the biggest days in mathematical history", with observations the essay's §1 grading would care about: among the 372 families sits a proof of the Unique Games Conjecture; no Millennium-level question beyond Navier–Stokes figures as solved; cryptography is absent; and the contrasting practice is Anthropic's, which releases results its own named human co-authors have understood first [93]. Aaronson also reports the model was tried on "about 8,000 problems" — a figure that does not match the catalogue's "about 4,000"; both are recorded as stated, and the mismatch is noted, not adjudicated (§xiii) [93,86].
+
+### xii. New Scientist's coverage
+
+New Scientist covered the release as news ("OpenAI announces 722 mathematical discoveries in one go", 7 October) [94]; ran a column the same day asking OpenAI to clean up the mess, quoting the average "three hours of ChatGPT Pro thinking" per result [95]; reported, in a piece whose title compresses the whole dispute, Cambridge findings that the natural-language Navier–Stokes proof and its Lean auto-formalization do not match ("OpenAI mistranslated mathematics into code for its Navier–Stokes proof", 8 October) [96]; and surveyed the most interesting discoveries in the batch (8 October) [97]. The Cambridge team is explicit about what does and does not follow: "This formalisation process is trying to replace peer review… using this type of AI auto-formalisation can't serve the same purpose", and, no less important, this does not mean the Navier–Stokes claim is false [96]. The Cambridge assertion on formalization mismatches reaches us through the press and is marked doubtful; the formalization counts rest on the primary catalogue [86,87].
+
+### xiii. What differs from the original, and reliability verdicts
+
+Three figures circulating in the press, each reconciled here. First, the count: 722 was the launch figure; the primary catalogue after the withdrawals is 719, and both appear across the reports cited above [94,87,89,97]. Second, a Chinese report renders the figure as about 42% of results not formalized; the primary catalogue and its history state the inverse, 300 of 719 top-line results ≈ 42% formalized [92,86,87]. Third, Aaronson's "about 8,000 problems" stands against the catalogue's "about 4,000"; the discrepancy is recorded, not adjudicated, per §1's method [93,86].
+
+What the chapters could not do, stated plainly. They could not cite arXiv's cap or the Advisory Group's guidelines, both effective after the last update [81,80]. They could not grade the Navier–Stokes proof against its Lean version, because the mismatch finding postdates them [96]. And they could not record the release and its withdrawal, events of 6–8 October — precisely the sort of events §1's framework and ch.2's registers were built to read [85,86,87,88,90,92].
+
+What differs from the original: nothing in the seven chapters needs retraction or revision. The thesis — that the visible disputes concern framing, disclosure, attribution, and admissibility, and that belief is earned at the verification end rather than the generation end — is reinforced rather than disturbed by these twelve days: the three withdrawals [87], the formalization–text mismatch [96], the guidelines and their application [80,88], and the criticism of the release's manner [92] are all events in the disclosure and verification register, not in the derivation register. If the chapters promised a settling-in of the mathematics (mise au point), the postscript records its first two installments.
+
+Reliability verdicts. Timeline, counts, withdrawal details, and the quoted primary statements rest on primary sources [80,81,82,85,86,87,88,90,91,93]. Press pieces [83,84,89,92,94,95,96,97] are used to transmit primary voices or to note second-hand figures and are marked doubtful wherever they report facts on their own account. Wherever a press figure conflicts with the primary catalogue, the catalogue wins [86,87].
+
+<!-- zh -->
+
+## 后记 · 2026年9月27日至10月9日
+
+本部分是独立的后记，直接接续正文与来源表，附于全文之末，不计入七章。它记录本篇上次更新（2026年9月27日）之后的事态，并在结尾把后记与正文的出入交代明白。本节新引用的来源，接续全文的编号自 [80] 起，逐条沿用四级信度标注与审计标记。七章是全文的论点；后记是它的编年。
+
+### 一、本后记的范围
+
+窗口自 2026 年 9 月 28 日到 10 月 9 日，约十二天。其间的要紧事包括：AGMAI 的九月指南与发布当日的声明，arXiv 的新投稿限额，一篇致谢细节迟迟浮出水面的七维球面构造，一个大型数学仓库的公开与其中三篇手稿的数日内撤回，以及一场几乎完全发生在「框架、披露、归属与可入性」这一层面上的、关于发布方式的争论。后记沿用全文的同一纪律：每个论断跟着证据走，每处证据标明可靠程度，每一条结论给出判级。
+
+### 二、AGMAI 的九月指南
+
+9 月 29 日，独立的咨询组织 AGMAI 发布《关于 AI 生成数学的责任披露》[80]。这份文件直指 10 月 6 日发布所代表的那种做法，开篇即言：「我们不认可这种做法，并请他们停止在专有模型上测试高等数学问题」[80]。指南以共同体反馈为据，该组织称收到 600 余份回响[80]。其规范大致如此：人类对数学的理解仍是第一位的；发布尚无人能懂之结果的实验室，必须承担责任（包括出资），促成人类理解跟进，且这种跟进应当是自发的、由共同体主导的；每项成果应存入学问性仓库并记录修订；发布时应披露模型名称、提示词、推理摘要、耗时与成本，逐题写明 AI 的使用方式，并另附一份总说明，交代共尝试过多少同难度的问题、失败了多少[80]。下文正是以这份指南为标尺来评判那次发布的。
+
+### 三、arXiv 的投稿限额
+
+arXiv 的更新投稿限额政策于 2026 年 10 月 1 日生效[81]：每位提交者每月至多投稿两篇，同一时刻至多三篇处于审核中[81]。arXiv 自己给出的背景是：2026 年 9 月收稿 40,363 篇，创月度纪录，技术工单约 9,000 张；两年前的 2024 年 9 月为 20,569 篇——投稿量两年翻了一倍[81]。正文第二章与第五章对建制的判断，曾预言数学的拥堵点会从「推导」移向「入口」；这个限额正是入口在收紧。
+
+### 四、一篇落在更新线边上的七维球面构造
+
+9 月 24 日，即本篇上次更新的三天前，何杨辉、刘子然与丘成桐上传了《全部光滑七维球面正向截面曲率的构造》[82]：为每一个光滑同伦七维球面构造严格正截面曲率的黎曼度量，覆盖全部 28 个定向微分同胚类，共 32 页，分属微分几何与高能理论[82]。正文没有写到它，因为在更新那一刻，有一件事尚未见诸报道：该文在致谢部分感谢了 GPT 与 Claude 提出的建议。这个细节到 10 月初才由中国媒体披露[83]。后记在此记一件边界之事的诚实处理：论文本身落在正文的时段之内，致谢细节落在时段之外。构造本身以一手来源为准[82]；致谢细节经媒体转述[83]。
+
+### 五、一场关于 arXiv 能否扛住洪流的警告
+
+10 月 5 日，《新科学家》刊出数学家的警告：arXiv 或将倒在新一轮 AI 内容洪流之下；文中引用了与 Hexagon 项目相关的「预印本之先（pre-preprint）」式提议，凯文·巴扎德亦在忧虑者之列[84]。正文第五章列出的五项制度规则早已预言这一重压力；这则警告不过是压力发而为声。此处把它当作媒体对共同体焦虑的转述来使用，凡属其独立陈述事实处，判为存疑。
+
+### 六、发布：719 篇手稿、372 个家族
+
+10 月 6 日，OpenAI 宣布《共享数学领域的 AI 进展》[85]：一个未点名的内部前沿模型产出一批新的数学结果，以 GitHub 仓库形式发布，并附修订与引用规范；许多证明给出了 Lean 形式化；同步公开十条模型推理摘要与算力统计，仓库称每题平均约相当于三小时 ChatGPT Pro 思考量[85]。我在 10 月 9 日读取的仓库本身便是一手口径：719 篇手稿，分属 372 个结果家族；顶层结果约 42% 已形式化；共挑战约 4,000 道题[86,87]。正文第一章的框架在这里几乎逐一应验：把「生成」与「理解」分开的发布，无法用一句话评估；对它的评估如今沿着 AGMAI 的标准走，而不是沿着推导本身走[80]；其后的共同体定调见第七、九、十节，随后的核验事件见第八节。
+
+### 七、发布当日的 AGMAI 声明
+
+同一天（10 月 6 日），AGMAI 就这次发布发表声明[88]：它的咨询角色「不应被解读为对结果影响的判断，或对 OpenAI 取得结果之过程的背书」；「只有数学共同体才能作出所需要的评估」；发布是「人类理解过程的开始，而非完成」[88]。该组织九名成员为夏尔、德莱利斯、古尔斯、海尔、斯里瓦斯塔瓦、蒂尔曼、瓦基尔、威滕与伍德[33]；陶哲轩不在其中（第九、十节详）。这份声明，最好理解为 AGMAI 以其九月底的指南，去裁量那件恰好促成这些指南的事件本身。
+
+### 八、三篇撤回，十四篇修订
+
+仓库的事件记录记下了第一起核验事件[87]。因《分裂阿贝尔八秩簇上 Weil 类的代数性》中的一处符号错误，使「稳定化–迹相消」论证失效，而该构造又为另两篇论文所用，撤回三篇：即上述这篇、《K3 曲面的 Kuga–Satake 对应之代数性》，以及《K3 曲面乘积的有理霍奇猜想》[87]。被撤手稿均已携带说明，解释缺口并保留存档[87]。同轮另有十四篇修订，涉及补证、更正陈述、厘清假设与依赖关系[87]；又新增一批形式化，使顶层结果形式化比例达到 719 篇中 300 篇、约 42% 的当前口径[87]。Retraction Watch 于 10 月 8 日报道这次撤回，距本篇上次更新不过十一天[89]。用正文第一章的分类说，这是一桩针对「推导」提出、而非针对「问题选择」或「可入性」裁决的争执——机制正如七章所描述的那样在运转。
+
+### 九、AHM 声明与客座转载
+
+10 月 7 日，出版 ahmath.org 的委员会发表声明：「一次倾倒七百余份文件不是学术的展示，而是权力的展示」；它呼吁数学家中止与 OpenAI 的合作，并提及抄袭、版权与商标层面的未决诉讼[90]。同日，这份声明以客座文章的形式转载于陶哲轩博客[91]。按正文立下的归属纪律，须澄清两句：这不是陶哲轩与 AHM 的联合声明；陶哲轩亦非 AGMAI 成员[33,90,91]。
+
+### 十、陶哲轩本人的批评
+
+陶哲轩本人于同日（10 月 7 日）在 Mathstodon 上发表的批评，被中国媒体全文转述[92]。其大意：他不反对 AI 辅助研究，本人就是这类工具的积极使用者；他不满的是把数学做成橱窗，让著名难题以产品秀的方式被「攻克」；他担心「一大摞无人能消化的证明」；他提醒，一个问题一旦被公开宣称为「已解决」，几乎就不可能再回到「未解决」的公开状态，而那种状态正是开放问题得以保持开放的条件；他还指出，这次发布并没有达到它本应达到的披露标准——模型未点名，推理链只给了十条，失败尝试的次数也未报[92]。这是一桩关于方式与披露、而非关于有效性的抱怨——正是七章的诊断。批评内容经媒体转述[92]；其诉诸的标准为 AGMAI 自己的指南[80]。
+
+### 十一、Aaronson：数学史上最重大的日子之一
+
+斯科特·阿伦森 10 月 7 日在《Shtetl-Optimized》撰文，称这次发布是「数学史上最重大的日子之一」，并补充了几条正文第一章判级会在意的观察：372 个家族中有一例唯一游戏猜想（UGC）的证明；千禧年级别的问题，除纳维–斯托克斯外并无新解；密码学缺席；作为对照，Anthropic 的做法是让具名的人类合著者先读懂再发布[93]。阿伦森另称模型「在约 8,000 道题上」被尝试——这个数字与仓库口径的「约 4,000」对不上；此处两说并列记录，不作仲裁（见第十三节）[93,86]。
+
+### 十二、《新科学家》的成套报道
+
+《新科学家》以新闻刊发这次发布（10 月 7 日，《OpenAI 一次性宣布 722 项数学发现》）[94]；同日刊发评论，请 OpenAI 收拾残局，并引「每题平均约三小时 ChatGPT Pro 思考量」[95]；同日在另一篇标题几乎压缩了整场争论的报道里，写出剑桥团队的发现：纳维–斯托克斯的自然语言证明与其 Lean 自动形式化文本对不上（《OpenAI 将数学「误译」为代码》，10 月 8 日）[96]；次日又评点了其中最有意思的一批发现[97]。剑桥团队对被断言与未被断言之事都讲得清楚：「自动形式化这一过程意欲取代同行评审……我们这篇论文表明，这类 AI 自动形式化并不能履行同一职能」；同样要紧的是，这并不等于说 OpenAI 的纳维–斯托克斯主张是错的[96]。形式化不匹配这一断言经媒体转达，判为存疑；形式化比例以一手仓库为准[86,87]。
+
+### 十三、与原文的出入，与本后记的信度判级
+
+三个流传于媒体的数字，在此一一对账。其一，篇数：722 是发布当口的数据；撤回之后的仓库一手口径是 719，二者分别见于上文所引诸条[94,87,89,97]。其二，有中文媒体称约 42% 的结果未经形式化，与仓库一手口径恰好互倒——后者是 719 篇顶层结果中 300 篇已形式化，约 42%[92,86,87]。其三，阿伦森所称「约 8,000 道题」与仓库口径「约 4,000」并存[93,86]，截至本文写作时只记录、不仲裁，正是第一章的方法。
+
+正文做不到的三件事，在此明白交代。它无法引用 arXiv 的投稿限额与 AGMAI 的指南，二者都生效于上次更新之后[81,80]；它无法将纳维–斯托克斯证明与其 Lean 版本对照，因为「对不上」的发现晚于更新[96]；它更无法记录 10 月 6 日至 8 日的发布及其撤回——而这几日恰恰是第一章的框架与第二章的「众声谱系」为之而设的事件[85,86,87,88,90,92]。
+
+与原文的出入：七章没有任何一处需要撤回或改写。核心命题——可见的争执关乎框架、披露、归属与可入性，信任挣得于核验的一端而非生成的一端——在这十二天里非但未被撼动，反而再次得到印证：三篇撤回[87]、形式化与文本对不上[96]、指南及其适用[80,88]，以及针对发布方式的批评[92]，全都落在披露与核验的层面，而非推导的层面。若七章曾许诺一种「经过沉淀而成型」（mise au point）的局面，那么后记记录的，正是它的头两章。
+
+本后记的信度判级：时间线、数字、撤回细节与所引一手语句，以一手来源为准[80,81,82,85,86,87,88,90,91,93]；媒体文本[83,84,89,92,94,95,96,97]用于转述一手声音或记录二手数字之处，凡属其独立陈述事实者皆判为存疑；凡媒体数字与仓库一手口径冲突，以仓库为准[86,87]。
+
+<!-- L1-end -->

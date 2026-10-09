@@ -625,7 +625,8 @@ LANG_CLOSE = re.compile(r"^<!--\s*(zh|en|dual)-end\s*-->$")
 # The HH:MM time of day is optional; a bare date still works.
 DATE_META = re.compile(
     r"^<!--\s*(?:发表|Published)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?)\s*·\s*"
-    r"(?:更新|Updated)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?)\s*-->$")
+    r"(?:更新|Updated)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?)\s*"
+    r"(?:·\s*(?:后记|Postscript)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{2}:\d{2})?))?\s*-->$")
 
 
 def esc(s):
@@ -636,14 +637,18 @@ def extract_dates(raw):
     """Pull the author-declared (published, updated) pair from the preamble.
 
     The metadata line may be written with either label set (发表/更新 or
-    Published/Updated); both languages render from the one date pair.
+    Published/Updated); both languages render from the one date pair. An
+    optional trailing `· 后记 <date>` / `· Postscript <date>` segment carries
+    the postscript date, rendered as a third element of the dateline.
     Returns None when no line is present, so an article without the
     comment renders exactly as before.
     """
     for line in raw.splitlines():
         m = DATE_META.match(line.strip())
         if m:
-            return " ".join(m.group(1).split()), " ".join(m.group(2).split())
+            pub, upd = " ".join(m.group(1).split()), " ".join(m.group(2).split())
+            ps = " ".join(m.group(3).split()) if m.group(3) else ""
+            return pub, upd, ps
     return None
 
 
@@ -810,12 +815,17 @@ def build_article(md_path: Path) -> dict:
     # switching with the article language like every other bilingual label.
     dates = extract_dates(raw)
     if dates:
-        pub, upd = dates
+        pub, upd, ps = dates
         dates_html = ('<p class="dateline">'
                       '<span class="p-zh">发表</span><span class="p-en">Published</span>'
                       ' <b>%s</b><span class="sep">·</span>'
                       '<span class="p-zh">更新</span><span class="p-en">Updated</span>'
-                      ' <b>%s</b></p>' % (esc(pub), esc(upd)))
+                      ' <b>%s</b>' % (esc(pub), esc(upd)))
+        if ps:
+            dates_html += ('<span class="sep">·</span>'
+                           '<span class="p-zh">后记</span><span class="p-en">Postscript</span>'
+                           ' <b>%s</b>' % esc(ps))
+        dates_html += '</p>'
     else:
         dates_html = ""
 
