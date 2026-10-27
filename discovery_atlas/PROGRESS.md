@@ -145,7 +145,22 @@
 
 **待加密（影视批 2）**：各圈电影节/发行商加密（威尼斯/多伦多/鹿特丹、日韩印发行）；中文专业批评与选片人待补。
 
+## 2026-10-27 · P2 艺术域·首批（`sources/art.json` 开账）
+
+**流程**：候选 19 URL 探针 + Wikimedia Commons 补测。无一凭记忆错域（皆知名机构）。
+
+**落盘产物**：新建 `sources/art.json` **20 条**（书 88 + 乐 19 + 影 19 + 艺 20 = **全库 146**）。
+
+| 维度 | 首批 |
+|---|---|
+| 层 | discovery 8（Google Arts&Culture·Met·Louvre·MoMA·Rijks·British Museum·Uffizi·Tate）· criticism 6（Hyperallergic·The Art Newspaper·Frieze·Artforum·e-flux·La Biennale）· publishing 3（Gagosian·Hauser&Wirth·White Cube）· infrastructure 2（WikiArt·Artnet）· access 1（Wikimedia Commons）——**五层齐备** |
+| 核验 | ✔ 200 共 11 · ○ bot-gated 共 8（Artnet/Frieze/Gagosian/BM 403、H&W/Met 429、Google…）· ○ pending 1（WikiArt 网络失败） |
+
+## P2 三域开账 收束
+
+全库 **146 条 = 书 88 + 乐 19 + 影 19 + 艺 20**，四域五层均已成图。
+
 ## 下一步（连批推进中）
 
-影视域开账（P2）→ 艺术域开账（P2）→ 三域各批 2 加密 → wikidata_qid 全库回填。
+三域各批 2 加密（音乐厂牌层、影视各圈节/印发行、艺术非英语圈）→ wikidata_qid 全库回填（查重主键，146 条）。
 
