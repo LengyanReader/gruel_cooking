@@ -254,6 +254,49 @@ a:hover { color: var(--sky-deep); }
   border: 1px solid rgba(228,220,208,0.6);
 }
 
+/* ═══ CATALOG (grouped directory) ═══ */
+.catalog { display: flex; flex-direction: column; gap: 3.25rem; }
+.cat-group-head {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.85rem;
+  margin-bottom: 1.5rem; padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(228,220,208,0.6);
+}
+.cat-group-head .cat-idx {
+  font-family: var(--ff-display); font-size: 1.5rem; font-weight: 700; color: var(--warm-amber);
+}
+.cat-group-head h3 {
+  font-family: var(--ff-display); font-size: 1.35rem; font-weight: 700; color: var(--ink-deep);
+}
+.cat-group-head .cat-sub { font-size: 0.85rem; color: var(--ink-soft); letter-spacing: 0.06em; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.75rem; }
+.cat-grid .pillar-card { padding: 2.4rem 1.75rem 1.5rem; }
+.cat-grid .pillar-card h3 { display: inline; }
+.cat-path {
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Code", monospace;
+  font-size: 0.78rem; color: var(--ink-pale); margin: -0.4rem 0 0.7rem;
+}
+.type-badge {
+  display: inline-block; padding: 2px 9px; border-radius: 99px;
+  font-size: 0.68rem; font-weight: 600; margin-left: 0.5rem; vertical-align: middle;
+}
+.type-badge.site { background: #E0F0F0; color: #3F7A7A; }
+.type-badge.notes { background: #FFF3DD; color: #9A7233; }
+.sub-links { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.25rem 0 0.6rem; }
+.sub-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 11px; border-radius: 8px; font-size: 0.76rem; font-weight: 500;
+  background: var(--warm-soft); color: var(--ink-soft);
+  border: 1px solid rgba(228,220,208,0.5); transition: 0.2s;
+}
+.sub-link:hover { background: var(--warm-gold); color: #fff; border-color: transparent; }
+.sub-link .sdot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.55; }
+.cat-legend {
+  display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center;
+  margin-top: 2.5rem; font-size: 0.82rem; color: var(--ink-soft);
+}
+.cat-legend .lg { display: inline-flex; align-items: center; gap: 6px; }
+.cat-legend .lg .type-badge { margin-left: 0; }
+
 /* ═══ PRINCIPLES ═══ */
 .principles-section {
   background: linear-gradient(180deg, var(--warm-cream) 0%, var(--warm-soft) 100%);
@@ -313,11 +356,13 @@ a:hover { color: var(--sky-deep); }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .pillars { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: 1fr; }
   .pillar-card.featured { grid-column: auto; }
   .hero { min-height: 90vh; padding-top: 4rem; }
   .hero h1 { font-size: 2.5rem; }
   .section { padding: 3rem 1rem; }
   .principles-grid { grid-template-columns: 1fr; }
+  .cat-group-head { gap: 0.5rem; }
 }
 </style>
 </head>
@@ -328,7 +373,7 @@ a:hover { color: var(--sky-deep); }
   <div class="nav-brand">舟洲粥<span class="pinyin">zhōu</span></div>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="#pillars"><span data-zh>领域</span><span data-en>Domains</span></a></li>
+      <li><a href="#pillars"><span data-zh>目录</span><span data-en>Directory</span></a></li>
       <li><a href="#principles"><span data-zh>原则</span><span data-en>Principles</span></a></li>
       <li><a href="#about"><span data-zh>缘起</span><span data-en>About</span></a></li>
     </ul>
@@ -379,186 +424,248 @@ a:hover { color: var(--sky-deep); }
   </div>
 </section>
 
-<!-- ═══ PILLARS ═══ -->
+<!-- ═══ CATALOG / DIRECTORY ═══ -->
 <section class="section" id="pillars">
   <div class="section-header">
-    <h2><span data-zh>舟行万洲</span><span data-en>Sailing the Continents</span></h2>
-    <div class="subtitle"><span data-zh>研究领域</span><span data-en>Research Domains</span></div>
+    <h2><span data-zh>舟行万洲 · 内容总览</span><span data-en>Sailing the Continents · Full Directory</span></h2>
+    <div class="subtitle"><span data-zh>分组内容导航</span><span data-en>Grouped content navigation</span></div>
     <span class="divider"></span>
   </div>
 
-  <div class="pillars">
+  <div class="catalog">
 
-    <!-- 1. Core -->
-    <div class="pillar-card" data-color="sky">
-      <div class="pillar-icon">◆</div>
-      <h3>First Principles</h3>
-      <div class="card-subtitle">
-        <span data-zh>第一性原理 · 元思考</span>
-        <span data-en>First Principles · Meta-thinking</span>
+    <!-- ── Group 1 · 道 元思与方法 ── -->
+    <div class="cat-group">
+      <div class="cat-group-head">
+        <span class="cat-idx">一</span>
+        <h3><span data-zh>道 · 元思与方法</span><span data-en>The Way · Meta-thinking &amp; Method</span></h3>
+        <span class="cat-sub"><span data-zh>如何思考，如何自治</span><span data-en>How we think &amp; self-govern</span></span>
       </div>
-      <p>
-        <span data-zh>从物理、逻辑、信息论与系统思维中提炼根本原理，并追问：这些原理为何成立？边界在哪里？</span>
-        <span data-en>Distilling fundamental principles from physics, logic, information theory, and systems thinking — then asking: why do they hold? Where do they break?</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>天</span><span data-en>Heaven</span></span>
-        <span class="tag" data-both><span data-zh>地</span><span data-en>Earth</span></span>
-        <span class="tag" data-both><span data-zh>人</span><span data-en>Society</span></span>
-        <span class="tag" data-both><span data-zh>元思考</span><span data-en>Meta-thinking</span></span>
+      <div class="cat-grid">
+
+        <!-- core -->
+        <div class="pillar-card" data-color="sky">
+          <div class="pillar-icon">◆</div>
+          <h3><span data-zh>第一性原理 · 元思考</span><span data-en>First Principles · Meta-thinking</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">core/</div>
+          <p><span data-zh>从物理、逻辑、信息论与系统思维中提炼根本原理，并追问其成立之由与失效之界。</span><span data-en>Fundamental principles distilled from physics, logic, information theory and systems thinking — then asked why they hold and where they break.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../core/heavenly/README.md"><span class="sdot"></span><span data-zh>天</span><span data-en>Heaven</span></a>
+            <a class="sub-link" href="../core/earthly/README.md"><span class="sdot"></span><span data-zh>地</span><span data-en>Earth</span></a>
+            <a class="sub-link" href="../core/societal/README.md"><span class="sdot"></span><span data-zh>人</span><span data-en>Society</span></a>
+            <a class="sub-link" href="../core/metathinking/README.md"><span class="sdot"></span><span data-zh>元思考</span><span data-en>Meta-thinking</span></a>
+          </div>
+          <a href="../core/README.md" class="enter-link"><span data-zh>进入 core/</span><span data-en>Enter core/</span><span class="arrow">→</span></a>
+        </div>
+
+        <!-- harness -->
+        <div class="pillar-card" data-color="teal">
+          <div class="pillar-icon">⚙</div>
+          <h3><span data-zh>仓库方法与自治</span><span data-en>Repo Methods &amp; Governance</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">harness/</div>
+          <p><span data-zh>贯穿全库的方法、技能、工具与规则；含自治演化机制与自动审计器。</span><span data-en>Repo-wide methods, skills, tools &amp; rules — including the self-evolution mechanism and an automatic auditor.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../harness/principles.md"><span class="sdot"></span><span data-zh>原则</span><span data-en>Principles</span></a>
+            <a class="sub-link" href="../harness/workflows.md"><span class="sdot"></span><span data-zh>工作流</span><span data-en>Workflows</span></a>
+            <a class="sub-link" href="../harness/skills.md"><span class="sdot"></span><span data-zh>技能</span><span data-en>Skills</span></a>
+            <a class="sub-link" href="../harness/evolution.md"><span class="sdot"></span><span data-zh>自治演化</span><span data-en>Evolution</span></a>
+          </div>
+          <a href="../harness/README.md" class="enter-link"><span data-zh>进入 harness/</span><span data-en>Enter harness/</span><span class="arrow">→</span></a>
+        </div>
+
       </div>
-      <a href="core/" class="enter-link">
-        <span data-zh>进入 core/</span><span data-en>Enter core/</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
 
-    <!-- 2. Heaven & Climate -->
-    <div class="pillar-card" data-color="gold">
-      <div class="pillar-icon">☉</div>
-      <h3>Heaven &amp; Climate</h3>
-      <div class="card-subtitle">
-        <span data-zh>天文 · 天象 · 气候</span>
-        <span data-en>Astronomy · Celestial Phenomena · Climate</span>
+    <!-- ── Group 2 · 域 主题研究 ── -->
+    <div class="cat-group">
+      <div class="cat-group-head">
+        <span class="cat-idx">二</span>
+        <h3><span data-zh>域 · 天地人主题研究</span><span data-en>Domains · Thematic Research</span></h3>
+        <span class="cat-sub"><span data-zh>第一性原理的落地</span><span data-en>Where first principles are applied</span></span>
       </div>
-      <p>
-        <span data-zh>从天文观测到气候动力学，追踪研究脉络——溯源、谱系、一手文献，用第一性原理重新解读。</span>
-        <span data-en>From astronomical observation to climate dynamics — tracing research lineages, genealogies, and primary sources, reinterpreted through first principles.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>天象</span><span data-en>Celestial phenomena</span></span>
-        <span class="tag" data-both><span data-zh>气候</span><span data-en>Climate</span></span>
-        <span class="tag" data-both><span data-zh>思想史</span><span data-en>Intellectual history</span></span>
+      <div class="cat-grid">
+
+        <!-- heaven_climate -->
+        <div class="pillar-card" data-color="gold">
+          <div class="pillar-icon">☉</div>
+          <h3><span data-zh>天文 · 天象 · 气候</span><span data-en>Astronomy · Celestial · Climate</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">heaven_climate/</div>
+          <p><span data-zh>从天文观测到气候动力学，追踪研究脉络——溯源、谱系、一手文献。</span><span data-en>From astronomical observation to climate dynamics — tracing lineages, genealogies and primary sources.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../heaven_climate/celestial_appearance/README.md"><span class="sdot"></span><span data-zh>天象</span><span data-en>Celestial</span></a>
+            <a class="sub-link" href="../heaven_climate/climate_dynamics/README.md"><span class="sdot"></span><span data-zh>气候动力学</span><span data-en>Climate</span></a>
+            <a class="sub-link" href="../heaven_climate/history_of_ideas/README.md"><span class="sdot"></span><span data-zh>思想史</span><span data-en>History of ideas</span></a>
+            <a class="sub-link" href="../heaven_climate/current_research/README.md"><span class="sdot"></span><span data-zh>前沿</span><span data-en>Current research</span></a>
+          </div>
+          <a href="../heaven_climate/README.md" class="enter-link"><span data-zh>进入 heaven_climate/</span><span data-en>Enter heaven_climate/</span><span class="arrow">→</span></a>
+        </div>
+
+        <!-- economics -->
+        <div class="pillar-card" data-color="teal">
+          <div class="pillar-icon">⬡</div>
+          <h3><span data-zh>跨文化经济学</span><span data-en>Cross-Cultural Economics</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">economics_cross_culture/</div>
+          <p><span data-zh>西方、中国、伊斯兰、印度、非洲——各文明的经济智慧，比较中发现盲区与共识。</span><span data-en>West, China, Islamic, Indian, African — comparing economic wisdom across civilizations.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../economics_cross_culture/western/README.md"><span class="sdot"></span><span data-zh>西方</span><span data-en>Western</span></a>
+            <a class="sub-link" href="../economics_cross_culture/chinese/README.md"><span class="sdot"></span><span data-zh>中国</span><span data-en>Chinese</span></a>
+            <a class="sub-link" href="../economics_cross_culture/comparative/README.md"><span class="sdot"></span><span data-zh>比较</span><span data-en>Comparative</span></a>
+            <a class="sub-link" href="../economics_cross_culture/other_traditions/README.md"><span class="sdot"></span><span data-zh>其他传统</span><span data-en>Other traditions</span></a>
+            <a class="sub-link" href="../economics_cross_culture/cases/README.md"><span class="sdot"></span><span data-zh>案例</span><span data-en>Cases</span></a>
+          </div>
+          <a href="../economics_cross_culture/README.md" class="enter-link"><span data-zh>进入 economics_cross_culture/</span><span data-en>Enter economics_cross_culture/</span><span class="arrow">→</span></a>
+        </div>
+
       </div>
-      <a href="heaven_climate/" class="enter-link">
-        <span data-zh>进入 heaven_climate/</span><span data-en>Enter heaven_climate/</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
 
-    <!-- 3. Economics -->
-    <div class="pillar-card" data-color="teal">
-      <div class="pillar-icon">⬡</div>
-      <h3>Cross-Culture Economics</h3>
-      <div class="card-subtitle">
-        <span data-zh>跨文化经济学</span>
-        <span data-en>Cross-Cultural Economics</span>
+    <!-- ── Group 3 · 释 数理与语言 ── -->
+    <div class="cat-group">
+      <div class="cat-group-head">
+        <span class="cat-idx">三</span>
+        <h3><span data-zh>释 · 数理与语言</span><span data-en>Clarifications · Number &amp; Language</span></h3>
+        <span class="cat-sub"><span data-zh>第一性原理的语言</span><span data-en>The language of first principles</span></span>
       </div>
-      <p>
-        <span data-zh>西方、中国、伊斯兰、印度、非洲——各文明的经济智慧，比较中发现盲区与共识。</span>
-        <span data-en>West, China, Islamic, Indian, African — comparing economic wisdom across civilizations to discover blind spots and shared insights.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>西方</span><span data-en>Western</span></span>
-        <span class="tag" data-both><span data-zh>中国经济思想</span><span data-en>Chinese economic thought</span></span>
-        <span class="tag" data-both><span data-zh>比较</span><span data-en>Comparative</span></span>
-        <span class="tag" data-both><span data-zh>案例</span><span data-en>Case studies</span></span>
+      <div class="cat-grid">
+
+        <!-- math_clarification -->
+        <div class="pillar-card" data-color="coral">
+          <div class="pillar-icon">∑</div>
+          <h3><span data-zh>数学释疑</span><span data-en>Math Clarification</span></h3>
+          <span class="type-badge site"><span data-zh>站点</span><span data-en>Site</span></span>
+          <div class="cat-path">math_clarification/</div>
+          <p><span data-zh>极简阐释，先图后式，直觉先行；关键结论以 Lean 4 机器可检。</span><span data-en>Radical simplicity — visuals first, intuition always; key claims machine-checked in Lean 4.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../math_clarification/basics/README.md"><span class="sdot"></span><span data-zh>基础</span><span data-en>Basics</span></a>
+            <a class="sub-link" href="../math_clarification/famous_problems/README.md"><span class="sdot"></span><span data-zh>名题</span><span data-en>Famous problems</span></a>
+            <a class="sub-link" href="../math_clarification/lean/README.md"><span class="sdot"></span>Lean 4</a>
+            <a class="sub-link" href="../math_clarification/proof_narratives/README.md"><span class="sdot"></span><span data-zh>证明叙事</span><span data-en>Proof narratives</span></a>
+            <a class="sub-link" href="../math_clarification/articles/README.md"><span class="sdot"></span><span data-zh>文章</span><span data-en>Articles</span></a>
+            <a class="sub-link" href="../math_clarification/essays/README.md"><span class="sdot"></span><span data-zh>论说</span><span data-en>Essays</span></a>
+          </div>
+          <a href="math_clarification/index.html" class="enter-link"><span data-zh>进入数学释疑</span><span data-en>Enter Math Clarification</span><span class="arrow">→</span></a>
+        </div>
+
+        <!-- language_stacking -->
+        <div class="pillar-card" data-color="night">
+          <div class="pillar-icon">言</div>
+          <h3><span data-zh>语言叠织</span><span data-en>Language Stacking</span></h3>
+          <span class="type-badge site"><span data-zh>站点</span><span data-en>Site</span></span>
+          <div class="cat-path">Language Stacking-Linguistic Weaving/</div>
+          <p><span data-zh>同一心象，八面语法之镜——多语对照叠放、互为注释，听见语法，闻到文明。</span><span data-en>One image of thought, eight mirrors of grammar — stacked multilingual renderings, each faithful in its own way.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="language_stacking/learning/index.html"><span class="sdot"></span><span data-zh>学习台</span><span data-en>Learning hub</span></a>
+            <a class="sub-link" href="language_stacking/learning/ja/index.html"><span class="sdot"></span><span data-zh>五十音</span><span data-en>Gojūon</span></a>
+            <a class="sub-link" href="language_stacking/learning/glossary/index.html"><span class="sdot"></span><span data-zh>术语库</span><span data-en>Glossary</span></a>
+          </div>
+          <a href="language_stacking/index.html" class="enter-link"><span data-zh>进入语言叠织</span><span data-en>Enter Language Stacking</span><span class="arrow">→</span></a>
+        </div>
+
       </div>
-      <a href="economics_cross_culture/" class="enter-link">
-        <span data-zh>进入 economics_cross_culture/</span><span data-en>Enter economics_cross_culture/</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
 
-    <!-- 4. Math -->
-    <div class="pillar-card" data-color="coral">
-      <div class="pillar-icon">∑</div>
-      <h3>Math Clarification</h3>
-      <div class="card-subtitle">
-        <span data-zh>数学释疑</span>
-        <span data-en>Math Clarification</span>
+    <!-- ── Group 4 · 识 阅读与廊道 ── -->
+    <div class="cat-group">
+      <div class="cat-group-head">
+        <span class="cat-idx">四</span>
+        <h3><span data-zh>识 · 阅读与廊道</span><span data-en>Knowledge · Reading &amp; Heritage</span></h3>
+        <span class="cat-sub"><span data-zh>知识系统与田野</span><span data-en>Knowledge systems &amp; fieldwork</span></span>
       </div>
-      <p>
-        <span data-zh>第一性原理的语言，极简阐释。每个条目一屏读完——先图后式，直觉先行。</span>
-        <span data-en>The language of first principles, explained with radical simplicity. One concept per page — visuals first, formulas second, intuition always.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>基础</span><span data-en>Fundamentals</span></span>
-        <span class="tag" data-both><span data-zh>名题</span><span data-en>Classic problems</span></span>
-        <span class="tag">Lean 4</span>
-        <span class="tag" data-both><span data-zh>证明叙事</span><span data-en>Proof narratives</span></span>
+      <div class="cat-grid">
+
+        <!-- reading_ia -->
+        <div class="pillar-card" data-color="ink">
+          <div class="pillar-icon">读</div>
+          <h3><span data-zh>阅读与智识</span><span data-en>Reading &amp; IA</span></h3>
+          <span class="type-badge site"><span data-zh>站点</span><span data-en>Site</span></span>
+          <div class="cat-path">Reading_IA/</div>
+          <p><span data-zh>留阅读之痕，察时代之形。一书一卡、作者一卡、交叉分类与显式关系；并在时间窗内追踪思潮演化。</span><span data-en>Keep the traces of reading, read the shape of the moment — one card per book and author, cross-cutting categories and explicit relations, plus trend tracking inside time windows.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="reading_ia/index.html"><span class="sdot"></span><span data-zh>总览</span><span data-en>Overview</span></a>
+            <a class="sub-link" href="reading_ia/glossary.html"><span class="sdot"></span><span data-zh>术语</span><span data-en>Glossary</span></a>
+            <a class="sub-link" href="reading_ia/methods.html"><span class="sdot"></span><span data-zh>方法</span><span data-en>Methods</span></a>
+            <a class="sub-link" href="reading_ia/authors/index.html"><span class="sdot"></span><span data-zh>作者</span><span data-en>Authors</span></a>
+            <a class="sub-link" href="reading_ia/read/index.html"><span class="sdot"></span><span data-zh>书目</span><span data-en>Readings</span></a>
+            <a class="sub-link" href="reading_ia/moment/year-2026.html"><span class="sdot"></span><span data-zh>当下</span><span data-en>Moment</span></a>
+          </div>
+          <a href="reading_ia/index.html" class="enter-link"><span data-zh>进入阅读与智识</span><span data-en>Enter Reading &amp; IA</span><span class="arrow">→</span></a>
+        </div>
+
+        <!-- living_heritage (featured) -->
+        <div class="pillar-card featured" data-color="violet">
+          <div class="pillar-icon">⌇</div>
+          <h3><span data-zh>活态文化廊道</span><span data-en>Living Cultural Corridors</span></h3>
+          <span class="type-badge site"><span data-zh>站点</span><span data-en>Site</span></span>
+          <div class="cat-path">living_heritage/ · 北京大运河 × 哥特兰</div>
+          <p><span data-zh>以田野为基础、以比较为方法、以数字技术为支撑——探究文化关系如何经由流动、地方、物质生活与交换网络而持续、转型与再生。北京大运河为核心田野实验室，哥特兰为主要瑞典比较案例。</span><span data-en>Fieldwork-based, comparative in method, digitally-enabled — how cultural relations persist, transform and regenerate through movement, place, material life and exchange. Beijing's Grand Canal as primary field laboratory, Gotland as main Swedish comparative case.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="living_heritage/corridors/index.html"><span class="sdot"></span><span data-zh>廊道</span><span data-en>Corridors</span></a>
+            <a class="sub-link" href="living_heritage/fieldwork/index.html"><span class="sdot"></span><span data-zh>田野</span><span data-en>Fieldwork</span></a>
+            <a class="sub-link" href="living_heritage/map/index.html"><span class="sdot"></span><span data-zh>地图</span><span data-en>Map</span></a>
+            <a class="sub-link" href="living_heritage/graph/index.html"><span class="sdot"></span><span data-zh>图谱</span><span data-en>Graph</span></a>
+            <a class="sub-link" href="living_heritage/literature/index.html"><span class="sdot"></span><span data-zh>文献</span><span data-en>Literature</span></a>
+            <a class="sub-link" href="living_heritage/methodology/index.html"><span class="sdot"></span><span data-zh>方法论</span><span data-en>Methodology</span></a>
+            <a class="sub-link" href="living_heritage/plan/index.html"><span class="sdot"></span><span data-zh>规划</span><span data-en>Plan</span></a>
+            <a class="sub-link" href="living_heritage/publications/index.html"><span class="sdot"></span><span data-zh>成果</span><span data-en>Publications</span></a>
+            <a class="sub-link" href="living_heritage/scholars/index.html"><span class="sdot"></span><span data-zh>学者</span><span data-en>Scholars</span></a>
+          </div>
+          <a href="living_heritage/index.html" class="enter-link"><span data-zh>进入活态文化廊道</span><span data-en>Enter Living Cultural Corridors</span><span class="arrow">→</span></a>
+        </div>
+
       </div>
-      <a href="math_clarification/" class="enter-link">
-        <span data-zh>进入 math_clarification/</span><span data-en>Enter math_clarification/</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
 
-    <!-- 5. Language Stacking -->
-    <div class="pillar-card" data-color="night">
-      <div class="pillar-icon">言</div>
-      <h3>Language Stacking</h3>
-      <div class="card-subtitle">
-        <span data-zh>语言叠织 · 一意而万语</span>
-        <span data-en>One meaning, a thousand tongues</span>
+    <!-- ── Group 5 · 储 文献储备 ── -->
+    <div class="cat-group">
+      <div class="cat-group-head">
+        <span class="cat-idx">五</span>
+        <h3><span data-zh>储 · 文献储备</span><span data-en>Reserves · Reference Pools</span></h3>
+        <span class="cat-sub"><span data-zh>为方向供养的文献池</span><span data-en>Literature feeding future directions</span></span>
       </div>
-      <p>
-        <span data-zh>同一心象，八面语法之镜——中文、英文、法文、日文、梵文、拉丁、德文、瑞典文对照叠放、互为注释。让每种语言用自己的方式忠于原意，听见语法，闻到文明。</span>
-        <span data-en>One image of thought, eight mirrors of grammar — Chinese, English, French, Japanese, Sanskrit, Latin, German, Swedish stacked and woven, each faithful in its own way. Hear the grammar, smell the civilization.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>叠 · 织 · 照</span><span data-en>Stack · Weave · Illuminate</span></span>
-        <span class="tag" data-both><span data-zh>八语 × 五主题</span><span data-en>8 tongues × 5 themes</span></span>
-        <span class="tag" data-both><span data-zh>平行语料</span><span data-en>Parallel corpus</span></span>
-        <span class="tag" data-both><span data-zh>视频 × 词卡</span><span data-en>Video × word cards</span></span>
-        <span class="tag" data-both><span data-zh>32 语蓝图</span><span data-en>32-language blueprint</span></span>
+      <div class="cat-grid">
+
+        <!-- contemplative science -->
+        <div class="pillar-card" data-color="gold">
+          <div class="pillar-icon">禅</div>
+          <h3><span data-zh>冥想科学 · 文献对齐</span><span data-en>Contemplative Science · Alignment</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">contemplative science/</div>
+          <p><span data-zh>冥想与认知科学相关文献的集成、对齐与对审记录（中英双版）。</span><span data-en>Integrated, aligned and adversarially-reviewed literature on contemplative practice and cognitive science (bilingual).</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../contemplative%20science/ref_integrated.md"><span class="sdot"></span><span data-zh>集成 · EN</span><span data-en>Integrated · EN</span></a>
+            <a class="sub-link" href="../contemplative%20science/ref_integrated_zh.md"><span class="sdot"></span><span data-zh>集成 · ZH</span><span data-en>Integrated · ZH</span></a>
+            <a class="sub-link" href="../contemplative%20science/align_review_full.md"><span class="sdot"></span><span data-zh>对审</span><span data-en>Alignment review</span></a>
+            <a class="sub-link" href="../contemplative%20science/ref_alignment_literature.md"><span class="sdot"></span><span data-zh>对齐文献</span><span data-en>Alignment literature</span></a>
+          </div>
+          <a href="../contemplative%20science/ref_integrated.md" class="enter-link"><span data-zh>进入 contemplative science/</span><span data-en>Enter contemplative science/</span><span class="arrow">→</span></a>
+        </div>
+
+        <!-- direction_refs -->
+        <div class="pillar-card" data-color="sky">
+          <div class="pillar-icon">↯</div>
+          <h3><span data-zh>方向参考文献</span><span data-en>Direction References</span></h3>
+          <span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span>
+          <div class="cat-path">direction_refs/</div>
+          <p><span data-zh>为特定研究方向暂存的简报与一手文献片段。</span><span data-en>Briefs and primary-source fragments staged for specific research directions.</span></p>
+          <div class="sub-links">
+            <a class="sub-link" href="../direction_refs/mostik-latent-bridge-brief.md"><span class="sdot"></span>Mostik · Latent Bridge</a>
+            <a class="sub-link" href="../direction_refs/scholars_d1/ref_openai1.md"><span class="sdot"></span><span data-zh>OpenAI 文献</span><span data-en>OpenAI ref</span></a>
+          </div>
+          <a href="../direction_refs/mostik-latent-bridge-brief.md" class="enter-link"><span data-zh>进入 direction_refs/</span><span data-en>Enter direction_refs/</span><span class="arrow">→</span></a>
+        </div>
+
       </div>
-      <a href="language_stacking/index.html" class="enter-link">
-        <span data-zh>进入语言叠织</span><span data-en>Enter Language Stacking</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
 
-    <!-- 7. Reading & IA -->
-    <div class="pillar-card" data-color="ink">
-      <div class="pillar-icon">读</div>
-      <h3>Reading &amp; IA</h3>
-      <div class="card-subtitle">
-        <span data-zh>阅读与智识</span>
-        <span data-en>Reading · Ideas &amp; Awareness</span>
-      </div>
-      <p>
-        <span data-zh>留阅读之痕，察时代之形。一部书一卡、一位作者一卡、交叉分类与显式关系——阅读的个人知识管理系统；并在时间窗内追踪文化运动与思潮的演化，从材料出发向广度与深度生长。</span>
-        <span data-en>Keep the traces of reading, read the shape of the moment. One card per book, one per author, cross-cutting categories and explicit relations — a personal knowledge system for reading; and tracking how cultural movements and thought trends develop inside time windows, growing outward in breadth and inward in depth from the materials you provide.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>书目 · 作者 · 延伸</span><span data-en>Readings · Writers · Extensions</span></span>
-        <span class="tag" data-both><span data-zh>当下的形状</span><span data-en>The Shape of the Moment</span></span>
-        <span class="tag" data-both><span data-zh>知识管理</span><span data-en>Knowledge management</span></span>
-        <span class="tag" data-both><span data-zh>思潮追踪</span><span data-en>Trend tracking</span></span>
-      </div>
-      <a href="reading_ia/index.html" class="enter-link">
-        <span data-zh>进入阅读与智识</span><span data-en>Enter Reading &amp; IA</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
+  </div>
 
-    <!-- 6. Living Heritage — featured -->
-    <div class="pillar-card featured" data-color="violet">
-      <div class="pillar-icon">⌇</div>
-      <h3>Living Cultural Corridors</h3>
-      <div class="card-subtitle">
-        <span data-zh>活态文化廊道</span>
-        <span data-en>Living Cultural Corridors</span>
-      </div>
-      <p>
-        <span data-zh>以田野为基础、以比较为方法、以数字技术为支撑——探究人类文化关系如何通过流动、地方、物质生活和交换网络而持续、转型与再生。以北京大运河为核心田野实验室，哥特兰为主要瑞典比较案例，聚焦大运河与丝绸之路体系之间的微妙接口。</span>
-        <span data-en>Fieldwork-based, comparative in method, digitally-enabled — investigating how human cultural relations persist, transform, and regenerate through movement, place, material life, and exchange networks. Beijing's Grand Canal as primary field laboratory, Gotland as main Swedish comparative case, focusing on the subtle interfaces between the Grand Canal and Silk Roads systems.</span>
-      </p>
-      <div class="tags">
-        <span class="tag" data-both><span data-zh>大运河</span><span data-en>Grand Canal</span></span>
-        <span class="tag" data-both><span data-zh>丝绸之路</span><span data-en>Silk Roads</span></span>
-        <span class="tag">Gotland 哥特兰</span>
-        <span class="tag" data-both><span data-zh>遗产未来</span><span data-en>Heritage Futures</span></span>
-        <span class="tag" data-both><span data-zh>数字人文</span><span data-en>Digital Humanities</span></span>
-        <span class="tag" data-both><span data-zh>田野研究</span><span data-en>Fieldwork</span></span>
-      </div>
-      <a href="living_heritage/index.html" class="enter-link">
-        <span data-zh>进入活态文化廊道</span><span data-en>Enter Living Cultural Corridors</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-
+  <div class="cat-legend">
+    <span class="lg"><span class="type-badge site"><span data-zh>站点</span><span data-en>Site</span></span><span data-zh>本地双击即可完整离线浏览</span><span data-en>Opens fully offline on double-click</span></span>
+    <span class="lg"><span class="type-badge notes"><span data-zh>笔记</span><span data-en>Notes</span></span><span data-zh>指向仓库 .md 源，本地以纯文本打开；上线 Pages 后正常渲染</span><span data-en>Links to repo .md sources — plain text locally, rendered on GitHub Pages</span></span>
   </div>
 </section>
 
