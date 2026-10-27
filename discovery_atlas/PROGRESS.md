@@ -196,3 +196,17 @@
 
 **全库迄今 159 条**（书 91 + 乐 23 + 影 21 + 艺 24），gate 159/159 PASS。
 
+## 2026-10-27 · P2 加密批 2（音乐厂牌层补齐 + 影/艺非英语圈，+15）
+
+**能力**：verification-gate + traceable-sources/outlet-map + M0.1/M0.4。
+
+**音乐③厂牌/集团层（原空→ 8）**：Blue Note✔ · ECM✔(de) · Sub Pop✔ · Warp○403 · 4AD○403 · XL✔ · 摩登天空✔(zh) · Beggars Group✔——**音乐域五层至此齐备**。
+
+**影②/③（+3）**：TIFF✔202 · IFFR 鹿特丹✔(新开 nl 圈) · Janus Films✔(distributor，首轮 ERR 复测 200)。
+
+**艺①/②（+4）**：Centre Pompidou○pending(fr) · Reina Sofía✔(es) · MALBA✔(es/拉美 AR) · artpress○pending(fr)。
+
+**回源纠偏（M0.1·再抓一个凭记忆错域）**：Beggars Group 候选 `beggarsgroup.co.uk` 错→正典 **`beggars.com`**（官网/维基互证，复测 200）。Centre Pompidou/artpress/Janus 本环境 ERR 但域名经回源确认：Janus 复测 200 入库✔；Pompidou/artpress 仍网络失败→诚实标 `pending`。Warp/4AD 403=bot-gated（正典域名未本次确认）。
+
+**全库迄今 174 条**（书 91 + 乐 31 + 影 24 + 艺 28），gate 174/174 PASS。
+
