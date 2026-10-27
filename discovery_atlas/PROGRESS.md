@@ -34,6 +34,30 @@
 - `wikidata_qid` 全空 → P1 起逐条回填（查重主键）
 - 乐/影/艺三域尚未开账（P2）；`zh-Hant`、印、突厥、佛教圈、东南亚圈未启动
 
+## 2026-10-27 · P1 书域·批 1（zh + en 圈加密，铺满五层）
+
+**流程**：候选 27 URL → 内联探针（修正 `pwsh -File` 传数组字面量的绑定报错：改为清单文件 + `Select-Object -Unique` 循环 HEAD→GET 回退）→ 可疑域名 WebSearch 回源 → 只把核实过的入库。
+
+**落盘产物**：`sources/books.json` 33 → **57 条**（+24）。
+
+**本批统计**：
+
+| 维度 | 本批新增 |
+|---|---|
+| 圈 | zh +5（微信读书·中华读书报·国家图书馆·三联·译林）· en +14 · global +5（IA/Standard Ebooks/Wikisource/LibriVox/ISBN Agency） |
+| 层 | discovery +1 · criticism +10 · publishing +7 · infrastructure +2 · access +4 |
+| 核验 | ✔ 实测 21 · ○ bot-gated 2（pulitzer/faber 403）· ○ pending 1（yilin 网络失败） |
+
+**回源纠偏（M0.1，本批 3 处凭记忆域名全为错）**：
+1. `sanlianbook.com`（臆造）→ 三联书店正典官网 **`www.sdxjpc.com`**（GET 200）
+2. `yilin.net`（错）→ 译林出版社正典 **`www.yilin.com`**（维基/豆瓣官方俱乐部互证；本环境双探针网络失败→标 pending）
+3. `bkweekly.com`（臆造）→ 新周刊正典 `neweekly.com.cn` 属时事生活类杂志、非书域发现主干 → **诚实剔除不硬凑**（中华读书报已在批内更贴切）
+
+**闸门结论**：`gate.py` exit=0，57/57 PASS（id/host/qid 全唯一，无冲突）。
+
+**本批未动（诚实缺口）**：nyrb.com 与 nybooks.com 实体未完全区分 → 只入 `nybooks.com`（NYRB 书评刊），nyrb.com 待下次回源再定；ja/fr/de/es 圈未加密；`wikidata_qid` 全空未回填。
+
 ## 下一步（待启动确认）
 
-**P1 书域全量**：按 圈×层 分批（每批 25–40 条：草拟→探针→闸门→commit 不 push，批间心跳续接），顺序建议 zh/en 加密 → ja/fr/de/es 成圈 → ar/fa/he/非洲成圈 → 印/突厥/东南亚/原住民圈。
+**P1 批 2 候选**：zh-Hant（诚品/国家图书馆）+ ja（国立国会图书馆/新潮→岩波·集英社加密）+ fr（伽利玛/瑟伊/法兰西学院书目）成圈；shadow 层 Anna's Archive 换网络复测。顺序建议：zh/en 剩余 → ja/fr/de/es 成圈 → ar/fa/he/非洲成圈 → 印/突厥/东南亚/原住民圈。
+
