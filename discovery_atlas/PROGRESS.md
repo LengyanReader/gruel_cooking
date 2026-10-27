@@ -129,6 +129,22 @@
 
 **待加密（音乐批 2）**：③「厂牌/唱片公司」层尚空（Sub Pop、Warp、ECM、4AD、XL、Blue Note 等）；日/韩/法/德/巴西等各圈音乐发现与奖项（日本唱片大赏、韩国 Melon、巴西、印度）待成圈。
 
+## 2026-10-27 · P2 影视域·首批（`sources/film.json` 开账）
+
+**流程**：候选 17 URL 探针 + Sight&Sound/Cahiers 回源→再测。**19 条全入库**（12 ✔ 可达 + 7 ○ bot-gated）。
+
+**落盘产物**：新建 `sources/film.json` **19 条**（书 88 + 乐 19 + 影 19 = **全库 126**）。
+
+| 维度 | 首批 |
+|---|---|
+| 层 | discovery 6（Letterboxd·AlloCiné·Filmaffinity·豆瓣电影·时光网·Filmarks）· criticism 9（RogerEbert·Metacritic·RT·Sight&Sound·Cahiers·Oscars·Cannes·Berlinale·Sundance）· infrastructure 2（IMDb·TMDB）· publishing 1（Criterion）· access 1（MUBI）——**五层齐备** |
+| 圈 | en 主 · fr 4（Cahiers·Cannes·AlloCiné·+）· de 1（Berlinale）· es 1（Filmaffinity）· zh 2（豆瓣电影·时光网）· ja 1（Filmarks）· global（TMDB） |
+| 核验 | ✔ 可达 12（含 IMDb 202）· ○ bot-gated 7（Letterboxd/TMDB/RogerEbert/Criterion/Oscars/Cannes/Filmaffinity 403/400） |
+
+**回源纠偏（M0.1）**：Sight&Sound 现归 BFI → **`bfi.org.uk/sight-and-sound`**（非旧 sightandSound 独立域）；Cahiers du cinéma 确认 **`cahiersducinema.com`**。bot-gated 七条皆公认正典，403=反爬非错域，未回源。
+
+**待加密（影视批 2）**：各圈电影节/发行商加密（威尼斯/多伦多/鹿特丹、日韩印发行）；中文专业批评与选片人待补。
+
 ## 下一步（连批推进中）
 
 影视域开账（P2）→ 艺术域开账（P2）→ 三域各批 2 加密 → wikidata_qid 全库回填。
