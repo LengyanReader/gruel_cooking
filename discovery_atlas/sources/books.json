@@ -292,7 +292,7 @@
     },
     {
       "id": "maodun-prize",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q451809",
       "domain": "books",
       "layer": "criticism",
       "circle": "zh",
@@ -314,7 +314,7 @@
     },
     {
       "id": "librairie-goncourt",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q621737",
       "domain": "books",
       "layer": "criticism",
       "circle": "fr",
@@ -426,7 +426,7 @@
     },
     {
       "id": "deutscher-buecherpreis",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q700236",
       "domain": "books",
       "layer": "criticism",
       "circle": "de",
@@ -1221,7 +1221,7 @@
     },
     {
       "id": "graywolf",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q5598450",
       "domain": "books",
       "layer": "publishing",
       "circle": "en",
@@ -1421,7 +1421,7 @@
     },
     {
       "id": "hayakawa",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q11511323",
       "domain": "books",
       "layer": "publishing",
       "circle": "ja",
@@ -1577,7 +1577,7 @@
     },
     {
       "id": "jarir",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q6160243",
       "domain": "books",
       "layer": "discovery",
       "circle": "ar",
@@ -1601,7 +1601,7 @@
     },
     {
       "id": "abjjad",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q19903167",
       "domain": "books",
       "layer": "access",
       "circle": "ar",
@@ -1917,7 +1917,7 @@
     },
     {
       "id": "lib-ru",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2371298",
       "domain": "books",
       "layer": "access",
       "circle": "ru",

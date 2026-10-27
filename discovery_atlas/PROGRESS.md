@@ -226,3 +226,11 @@
 
 **浏览器实测验收**（本地 http.server）：页面非空、统计 174/139/123/17 圈、域与层叠加筛选生效（乐→10、书→91）、搜 reddit 命中 12 条社区、EN 切换正常、**控制台 0 报错**。卡片正文保留中文（why/not_for 为登记员按条撰写，设计如此）。
 
+## 2026-10-27 · QID 诚实缺口清欠（+11 → 150/174）
+
+**方法**：对上轮 35 留空做人工实体消解。先 `wbsearchentities` 出候选，再 `wbgetentities&props=claims` 取候选的 P856 官网声明——**严守 M0.4：只在 ①P856 可注域与条目 URL 完全一致，或 ②候选带 en.wikipedia 站点链接且标签与条目实体一致时采纳，绝不凭标签近似臆造。**
+
+**采纳 11**（gate PASS、QID 全局唯一、150/174）：书 茅盾文学奖 Q451809·Académie Goncourt Q621737·Deutscher Buchpreis Q700236·Graywolf Press Q5598450·早川书房 Q11511323·Jarir Q6160243·Abjjad Q19903167·Lib.ru Q2371298；影 Sundance Institute Q1764307；乐 摩登天空 Q112967075·Beggars Group Q814309（后两条即上轮标注「可人工补」的 CJK 混名，经 P856 精确命中官网域补齐）。
+
+**仍诚实留空 24**：① 12 个 reddit 分区（非独立实体）；② douban 读书/电影（同属 Douban Q5299559 一个实体，两条分面若同赋会破 QID 唯一性，留空）；③ 检索命中的是同名异实或无官网声明者：ganjoor/aladin（命中为书卷/迪士尼地名等错实）、jrdc·libby·consequence·booker·planeta·taqsim·elpais-babelia·bungakushinko（无 P856 匹配或不唯一）。留空均为不臆造的必然结果。
+
