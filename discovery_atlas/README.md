@@ -39,11 +39,11 @@ status, note                                  # active|bot-gated|moved|contested
 
 可选：`wikidata_qid`（查重主键，P1 起逐条补）、`language`（登记条目自身双语）。
 
-**查重与实体之辨（`entity-resolution`）**：同名站点、一地多站、站与奖同名同实之辨，以 Wikidata QID 为主键去重；无 QID 时以 `domain` 去点小写为次键。
+**查重与实体之辨（`entity-resolution`）**：同名站点、一地多站、站与奖同名同实之辨，以 Wikidata QID 为主键去重；无 QID 时以 `domain` 去点小写为次键。**例外·同域多实体**：`en.wikipedia.org`（各条目）与 `reddit.com`（各子社区 r/*）一域承载多个各自独立的实体，豁免 host 去重，改由 `id`(+QID) 守护唯一——故可登记多个高影响力社区。
 
 ## 闸门 · Gate
 
-`python gate.py` 检查：字段完整 · 枚举合法 · `id`/`domain`/QID 唯一 · `✔` 必配 `access_date`。FAIL 即退出码 1（结构闸门只机器可判者；「是否高质量」永远是人的判断）。
+`python gate.py` 检查：字段完整 · 枚举合法 · `id`/`host`/QID 唯一（`ANCHOR_HOSTS` 同域多实体豁免 host 去重）· `✔` 必配 `access_date`·裸 `○` 必为 `pending`。FAIL 即退出码 1（结构闸门只机器可判者；「是否高质量」永远是人的判断）。
 
 ## 核验规程 · Verification protocol
 

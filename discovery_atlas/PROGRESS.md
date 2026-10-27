@@ -184,3 +184,15 @@
 
 **闸门复验**：`gate.py` exit=0，146/146 PASS（ids/hosts/**qids 全局唯一**）。
 
+## 2026-10-27 · 社区专项批 1（四域高影响力社区，+13）
+
+**能力**：verification-gate + traceable-sources + M0.4。**schema 演进**：闸门 `ANCHOR_HOSTS` 新增 `reddit.com`/`old.reddit.com`——一域承载多个各自独立的子社区，豁免 host 去重、改由 `id`(+QID) 守护唯一（与现有 en.wikipedia.org 锚点同构）；README 同步。
+
+**流程**：候选 21 → 探针（reddit 全域 403 反爬、deviantart 403、anobii 网络 ERR）→ 探针无法定存在，逐条**检索回源**确认存在与规模 → 只把核实过的入库。
+
+**入库 13**：书 r/books·r/Fantasy·r/RomanceBooks(~541k)；乐 r/hiphopheads·r/indieheads(~1.9M)·r/listentothis(最大音乐发现)·r/metal；影 r/movies·r/TrueFilm(~504k)；艺 r/Art(~22.5M、有独立维基条目)·r/ArtHistory·r/ContemporaryArt·DeviantArt。均 `○` bot-gated + 今日 access_date（反爬非死，浏览器可读）。
+
+**诚实剔除（未回源到存在证据→不录入）**：r/Mystery·r/writing·r/scifi·r/jazz（本轮检索未直接命中）；aNobii（网络 ERR 且域名未回源）。留作后续候选。
+
+**全库迄今 159 条**（书 91 + 乐 23 + 影 21 + 艺 24），gate 159/159 PASS。
+

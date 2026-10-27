@@ -23,9 +23,11 @@ REQUIRED = [
     "kind", "why", "not_for", "verified", "access_date", "status", "note",
 ]
 QID_RE = re.compile(r"^Q\d+$")
-# Anchor hosts carry one entry per distinct entity (different articles),
-# so host-uniqueness does not apply there — identity is guarded by id/qid.
-ANCHOR_HOSTS = {"en.wikipedia.org"}
+# Anchor hosts carry one entry per distinct entity (different articles/sub-
+# communities), so host-uniqueness does not apply there — identity is guarded
+# by id/qid instead. Wikipedia articles and Reddit sub-communities each host
+# many independent, separately-notable entities under one registrable domain.
+ANCHOR_HOSTS = {"en.wikipedia.org", "reddit.com", "old.reddit.com"}
 
 
 def host_of(url: str) -> str:
