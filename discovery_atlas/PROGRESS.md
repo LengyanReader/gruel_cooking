@@ -72,7 +72,23 @@
 
 **闸门结论**：exit=0，67/67 PASS。
 
+## 2026-10-27 · P1 书域·批 3（ar/he/非洲/fa/es/zh-Hant 成圈，新开 zh-Hant）
+
+**流程**：候选 13 URL 探针 + Cassava/Brittle Paper 回源→再测。**13 条全入库**（10 ✔ 200 + 3 ○ bot-gated）。
+
+**落盘产物**：`sources/books.json` 67 → **80 条**（+13）。
+
+| 维度 | 本批新增 |
+|---|---|
+| 圈 | ar +2（Jarir·Abjjad）· he +1（Steimatzky）· afr +3（Jacana·Cassava·Brittle Paper）· es +2（Planeta·BNE）· zh-Hant +3（国家图书馆·誠品·博客来）**新圈启动** · fa +2（Fidibo·Taqsim） |
+| 层 | discovery +4 · access +3 · publishing +3 · criticism +1 · infrastructure +2 |
+| 核验 | ✔ 实测 10 · ○ bot-gated 3（BNE/誠品/博客来 403） |
+
+**回源纠偏（M0.1）**：Cassava Republic 候选 `.org` 失败 → 正典 **`cassavarepublic.biz`**（维基/官方）；Brittle Paper 确认裸域 **`brittlepaper.com`**（www 变体失败）；Abjjad 确认 **`abjjad.com`**。
+
+**闸门结论**：exit=0，80/80 PASS。
+
 ## 下一步（连批推进中）
 
-**P1 批 3 候选**：ar/fa/he/非洲成圈加密（需逐个回源：埃及/阿联酋作协、希伯来国家书目、Bibalex、Jacana/Currny 等）；es 圈加密（Premio Cervantes、Planeta 等待回源）；zh-Hant（诚品/台湾国家图书馆）。
+**P1 批 4 候选**：南亚（hi 印度）/突厥（tr 土耳其）/东南亚（vi/th/id）/俄语圈加密；韩国 ko 成圈；待定是否本批就启动 wikidata_qid 回填（查重主键）。
 
