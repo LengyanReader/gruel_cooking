@@ -112,7 +112,24 @@
 - 乐/影/艺三域尚未开账（P2）
 - Anna's Archive、JRDC 等国家/影子层网络失败项待换网络复测
 
-## 下一步（待方向调整）
+## 方向调整（用户 2026-10-27 确认）
 
-**P1 批 4 候选**：南亚（hi 印度）/突厥（tr 土耳其）/东南亚（vi/th/id）/俄语圈加密；韩国 ko 成圈；待定是否本批就启动 wikidata_qid 回填（查重主键）。
+用户选定：**开 P2 音乐/影视/艺术三域（尽可能穷尽，含各影响力社区）+ 回填 wikidata_qid**；东南亚/南亚其他语/中小文明圈 **暂不做、保留缺口**。
+
+## 2026-10-27 · P2 音乐域·首批（`sources/music.json` 开账）
+
+**流程**：候选 19 URL 探针。15 ✔ 200 + 4 ○ bot-gated（RYM/Album of the Year/AllMusic/Discogs 域名皆公认正典，403=反爬，无需回源）。
+
+**落盘产物**：新建 `sources/music.json` **19 条**（书 88 + 乐 19 = **全库 107**）。
+
+| 维度 | 首批 |
+|---|---|
+| 层 | discovery 4（RYM·AOTY·Billboard·网易云）· criticism 10（Pitchfork·Stereogum·AllMusic·NME·Rolling Stone·Grammy·Mercury·Consequence·Slant·Paste）· infrastructure 2（Discogs·MusicBrainz）· access 3（Spotify·Bandcamp·QQ音乐） |
+| 圈 | en 主 · global（Discogs/MusicBrainz）· zh 2（网易云·QQ音乐）**新域开账** |
+
+**待加密（音乐批 2）**：③「厂牌/唱片公司」层尚空（Sub Pop、Warp、ECM、4AD、XL、Blue Note 等）；日/韩/法/德/巴西等各圈音乐发现与奖项（日本唱片大赏、韩国 Melon、巴西、印度）待成圈。
+
+## 下一步（连批推进中）
+
+影视域开账（P2）→ 艺术域开账（P2）→ 三域各批 2 加密 → wikidata_qid 全库回填。
 
