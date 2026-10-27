@@ -57,7 +57,22 @@
 
 **本批未动（诚实缺口）**：nyrb.com 与 nybooks.com 实体未完全区分 → 只入 `nybooks.com`（NYRB 书评刊），nyrb.com 待下次回源再定；ja/fr/de/es 圈未加密；`wikidata_qid` 全空未回填。
 
-## 下一步（待启动确认）
+## 2026-10-27 · P1 书域·批 2（ja/fr/de 成圈加密）
 
-**P1 批 2 候选**：zh-Hant（诚品/国家图书馆）+ ja（国立国会图书馆/新潮→岩波·集英社加密）+ fr（伽利玛/瑟伊/法兰西学院书目）成圈；shadow 层 Anna's Archive 换网络复测。顺序建议：zh/en 剩余 → ja/fr/de/es 成圈 → ar/fa/he/非洲成圈 → 印/突厥/东南亚/原住民圈。
+**流程**：候选 8 URL 探针 + 4 个不确定域名并行 WebSearch 回源 → 再测回源确认域名。全部核实才入库。
+
+**落盘产物**：`sources/books.json` 57 → **67 条**（+10，均 ✔ 200）。
+
+| 维度 | 本批新增 |
+|---|---|
+| 圈 | ja +5（NDL·岩波·集英社·早川·読書メーター）· fr +2（Gallimard·Seuil）· de +3（Suhrkamp·Rowohlt·Fischer） |
+| 层 | infrastructure +1 · discovery +1 · publishing +8 |
+
+**回源纠偏（M0.1）**：岩波書店 → 候选 iwanami-shoten.co.jp 测错误，正典 **`www.iwanami.co.jp`**；Le Seuil 确认 **`seuil.com`**；読書メーター 确认 **`bookmeter.com`**。诚实剔除：`tokuma-shoten.co.jp`（德间，猜域+双探针失败）不硬凑。
+
+**闸门结论**：exit=0，67/67 PASS。
+
+## 下一步（连批推进中）
+
+**P1 批 3 候选**：ar/fa/he/非洲成圈加密（需逐个回源：埃及/阿联酋作协、希伯来国家书目、Bibalex、Jacana/Currny 等）；es 圈加密（Premio Cervantes、Planeta 等待回源）；zh-Hant（诚品/台湾国家图书馆）。
 
