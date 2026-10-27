@@ -12,8 +12,12 @@
       "circle": "en",
       "name": "r/books",
       "url": "https://www.reddit.com/r/books/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 旗舰综合读书社区（百万级成员），书单推荐帖与 BookClub/共读活动，英语世界众包式阅读发现的主入口",
       "not_for": "评价散于点赞机制、缺专业批评；热门类型偏向",
@@ -30,8 +34,12 @@
       "circle": "en",
       "name": "r/Fantasy",
       "url": "https://www.reddit.com/r/Fantasy/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "最大类型文学社区，奇幻/史诗奇幻新书·系列阅读顺序·作者动态的高强度众包讨论与推荐",
       "not_for": "类型聚焦（奇幻为主）； fandom 声量压倒评价",
@@ -48,8 +56,12 @@
       "circle": "en",
       "name": "r/RomanceBooks",
       "url": "https://www.reddit.com/r/RomanceBooks/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": " romance 小说读者社区（约 54 万成员）， Tropes 检索与求书荐书极活跃，类型阅读发现高效",
       "not_for": "仅 romance 类型；口味向、非中立评价",
@@ -1387,7 +1399,7 @@
     },
     {
       "id": "shueisha",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q844822",
       "domain": "books",
       "layer": "publishing",
       "circle": "ja",

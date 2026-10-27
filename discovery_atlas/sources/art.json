@@ -6,14 +6,20 @@
   "sources": [
     {
       "id": "centre-pompidou",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q178065",
       "domain": "art",
       "layer": "discovery",
       "circle": "fr",
       "name": "Centre Pompidou",
       "url": "https://www.centrepompidou.fr/",
-      "langs": ["fr", "en"],
-      "regions": ["FR", "GLOBAL"],
+      "langs": [
+        "fr",
+        "en"
+      ],
+      "regions": [
+        "FR",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "欧洲最大现代/当代艺术馆藏（毕加索/杜尚/当代），与奥赛古典线互补，法语现当代艺术主入口",
       "not_for": "浏览非评价；当代部分偏西方",
@@ -24,14 +30,20 @@
     },
     {
       "id": "reina-sofia",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q460889",
       "domain": "art",
       "layer": "discovery",
       "circle": "es",
       "name": "Museo Reina Sofía",
       "url": "https://www.museoreinasofia.es/",
-      "langs": ["es", "en"],
-      "regions": ["ES", "GLOBAL"],
+      "langs": [
+        "es",
+        "en"
+      ],
+      "regions": [
+        "ES",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "西班牙现代艺术国家馆（格尔尼卡/塔皮埃斯），20 世纪西班牙与拉丁美洲现代艺术主线",
       "not_for": "地域以西班牙/拉美为轴；浏览非评价",
@@ -42,14 +54,20 @@
     },
     {
       "id": "malba",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1808336",
       "domain": "art",
       "layer": "discovery",
       "circle": "es",
       "name": "MALBA（布宜诺斯艾利斯）",
       "url": "https://www.malba.org.ar/",
-      "langs": ["es", "en"],
-      "regions": ["AR", "GLOBAL"],
+      "langs": [
+        "es",
+        "en"
+      ],
+      "regions": [
+        "AR",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "拉丁美洲现当代艺术标杆馆藏（迭戈·里维拉/南美几何抽象），拉美现代主义发现主线",
       "not_for": "地域聚焦拉美；馆藏体量中型",
@@ -60,14 +78,20 @@
     },
     {
       "id": "artpress",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2864718",
       "domain": "art",
       "layer": "criticism",
       "circle": "fr",
       "name": "artpress",
       "url": "https://www.artpress.com/",
-      "langs": ["fr", "en"],
-      "regions": ["FR", "GLOBAL"],
+      "langs": [
+        "fr",
+        "en"
+      ],
+      "regions": [
+        "FR",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "法国当代艺术批评双语文月刊（1972 创刊），欧洲/法语圈展览与理论批评主渠道",
       "not_for": "法语/欧洲中心；付费墙深",
@@ -84,8 +108,12 @@
       "circle": "en",
       "name": "r/Art",
       "url": "https://www.reddit.com/r/Art/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 最大视觉艺术社区（2000 万+，有独立维基条目），作品分享与风格讨论，大众向艺术发现入口",
       "not_for": "作品质参差；社交点赞非专业评价",
@@ -102,8 +130,12 @@
       "circle": "en",
       "name": "r/ArtHistory",
       "url": "https://www.reddit.com/r/ArtHistory/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "艺术史求答与资料社区，按流派/时代/图像的识图与源流讨论，顺藤查画家与风格谱系的民间入口",
       "not_for": "答案非学术权威；碎片问答为主",
@@ -120,8 +152,12 @@
       "circle": "en",
       "name": "r/ContemporaryArt",
       "url": "https://www.reddit.com/r/ContemporaryArt/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "当代艺术与艺术界讨论社区，展览/理论/市场动态交流，追踪当代现场的大众视角",
       "not_for": "观点多元非中立；与专业机构批评有距",
@@ -132,14 +168,19 @@
     },
     {
       "id": "deviantart",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q46523",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "DeviantArt",
       "url": "https://www.deviantart.com/",
-      "langs": ["en", "MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en",
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "全球最大艺术家投稿与互评社区，海量独立/数字艺术作，可直接接触创作者与其作品系谱",
       "not_for": "技艺参差、偏同人/数字插画；商业画廊与学术批评覆盖浅",

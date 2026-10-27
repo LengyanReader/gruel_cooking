@@ -6,14 +6,18 @@
   "sources": [
     {
       "id": "blue-note",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q885833",
       "domain": "music",
       "layer": "publishing",
       "circle": "en",
       "name": "Blue Note Records",
       "url": "https://www.bluenote.com/",
-      "langs": ["en"],
-      "regions": ["US"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US"
+      ],
       "kind": "label",
       "why": "爵士乐第一厂牌（Lee Morgan/Thelonious Monk 等），目录即现代爵士 canon，顺藤听爵士经典与当代新人",
       "not_for": "仅爵士一类型；厂牌宣传非中立评价",
@@ -24,14 +28,19 @@
     },
     {
       "id": "ecm",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q311439",
       "domain": "music",
       "layer": "publishing",
       "circle": "de",
       "name": "ECM Records",
       "url": "https://ecmrecords.com/",
-      "langs": ["en"],
-      "regions": ["DE", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "DE",
+        "GLOBAL"
+      ],
       "kind": "label",
       "why": "慕尼黑厂牌，ECM“爵士与古典之间”清音美学（Keith Jarrett/Jan Garbarek），欧洲先锋/即兴聆听主线",
       "not_for": "美学高度一致也意味着同质；目录偏冷",
@@ -42,14 +51,18 @@
     },
     {
       "id": "sub-pop",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q778673",
       "domain": "music",
       "layer": "publishing",
       "circle": "en",
       "name": "Sub Pop",
       "url": "https://subpop.com/",
-      "langs": ["en"],
-      "regions": ["US"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US"
+      ],
       "kind": "label",
       "why": "西雅图独立摇滚标志厂牌（Nirvana/Mudhoney/Bat for Lashes），grunge 与独立摇滚发现目录",
       "not_for": "摇滚/独立为主；商业运作宣传性",
@@ -60,14 +73,19 @@
     },
     {
       "id": "warp-records",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q543707",
       "domain": "music",
       "layer": "publishing",
       "circle": "en",
       "name": "Warp Records",
       "url": "https://www.warp.net/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "label",
       "why": "英国电子/IDM 重镇厂牌（Aphex Twin/Björk/Squarepusher），实验电子与智能舞曲 canon",
       "not_for": "实验/电子小众向；非主流流行",
@@ -78,14 +96,19 @@
     },
     {
       "id": "4ad",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q238095",
       "domain": "music",
       "layer": "publishing",
       "circle": "en",
       "name": "4AD",
       "url": "https://www.4ad.com/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "label",
       "why": "Beggars 旗下梦核/独立名厂（Cocteau Twins/Bon Iver/The National），气质化独立音景发现",
       "not_for": "美学挑拣强；商业宣传性",
@@ -96,14 +119,19 @@
     },
     {
       "id": "xl-recordings",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1123947",
       "domain": "music",
       "layer": "publishing",
       "circle": "en",
       "name": "XL Recordings",
       "url": "https://www.xlrecordings.com/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "label",
       "why": "Beggars 旗下独立/电子名厂（Radiohead 英区/Madeleine Peyroux/The White Stripes），当代独立主流交叉发现",
       "not_for": "厂牌宣传；代理阵容决定覆盖",
@@ -120,8 +148,13 @@
       "circle": "zh",
       "name": "摩登天空 Modern Sky",
       "url": "https://www.modernsky.com/",
-      "langs": ["zh", "en"],
-      "regions": ["CN"],
+      "langs": [
+        "zh",
+        "en"
+      ],
+      "regions": [
+        "CN"
+      ],
       "kind": "label",
       "why": "中国最具影响力原创独立厂牌（新裤子/重塑雕像的权利），下设多分厂牌与草莓音乐节，中文独立音乐发现中枢",
       "not_for": "商业公司宣传；青年文化/流行偏重",
@@ -138,8 +171,13 @@
       "circle": "en",
       "name": "Beggars Group",
       "url": "https://beggars.com/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "label-group",
       "why": "独立厂牌集团母公（旗下 4AD/Matador/Rough Trade/XL/Young），看当代独立音乐资本与谱系总图",
       "not_for": "母公层面，具体发现需下到子厂牌；与 4AD/XL 条目归属交叉",
@@ -156,8 +194,12 @@
       "circle": "en",
       "name": "r/hiphopheads",
       "url": "https://www.reddit.com/r/hiphopheads/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 嘻哈音乐核心社区，新专发布/采样溯源/现场资讯的高强度讨论，嘻哈发现首站",
       "not_for": "类型单一；点赞机制使声量压倒评价",
@@ -174,8 +216,12 @@
       "circle": "en",
       "name": "r/indieheads",
       "url": "https://www.reddit.com/r/indieheads/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 最大独立/另类/实验/地下音乐社区（约 190 万），新发行与深潜推荐，独立音乐发现重镇",
       "not_for": "独立/另类偏向；主流流行覆盖浅",
@@ -192,8 +238,12 @@
       "circle": "en",
       "name": "r/listentothis",
       "url": "https://www.reddit.com/r/listentothis/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 最大音乐发现 sub（数百万成员），专注冷门与新兴艺术家、一发一首即听，纯发现导向",
       "not_for": "仅推歌不推人/不产批评；主流厂牌艺人不收录",
@@ -210,8 +260,12 @@
       "circle": "en",
       "name": "r/metal",
       "url": "https://www.reddit.com/r/metal/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "重型金属乐核心社区，各子流派新专/现场/入门推荐的高活跃讨论",
       "not_for": "仅金属类型；子流派门户之见",

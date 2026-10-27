@@ -210,3 +210,11 @@
 
 **全库迄今 174 条**（书 91 + 乐 31 + 影 24 + 艺 28），gate 174/174 PASS。
 
+## 2026-10-27 · QID 攻坚复跑（+15 → 139/174）
+
+**方法**：全库复跑 `resolve_qid.py`（断点续跑，自动跳过已有 QID）；新增条 + 上轮瞬时 URLError 均重解，仍经 P856 核验。
+
+**新采纳 15**：艺 Centre Pompidou·Reina Sofía·MALBA·artpress·DeviantArt；书 集英社(上轮 URLError 本轮解)；影 TIFF·IFFR·Janus；乐 Blue Note·ECM·Sub Pop·Warp·4AD·XL。**139/174，gate PASS、QID 全局唯一。**
+
+**诚实下限（35 留空）**：① 12 个 reddit 子社区——为 Reddit 分区、非独立实体，无自身 P856，方法学上应留空；② 评奖/门户/机构无匹配官网声明者（douban·booker·maodun·goncourt·ganjoor·libby·graywolf·planeta·sundance·consequence 等）；③ 2 条 CJK 混名检索未命中（modern-sky/beggars-group，可人工补）。留空≠错误，为不臆造的必然结果。
+

@@ -6,14 +6,20 @@
   "sources": [
     {
       "id": "tiff",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q390018",
       "domain": "film",
       "layer": "criticism",
       "circle": "en",
       "name": "TIFF（多伦多国际电影节）",
       "url": "https://www.tiff.net/",
-      "langs": ["en", "fr"],
-      "regions": ["CA", "GLOBAL"],
+      "langs": [
+        "en",
+        "fr"
+      ],
+      "regions": [
+        "CA",
+        "GLOBAL"
+      ],
       "kind": "festival",
       "why": "“人民的电影节”与北美秋季申奥季风向标，Platform 单元与发现奖是艺术片与人场发现入口",
       "not_for": "产业/市场属性强；大众观展为主",
@@ -24,14 +30,20 @@
     },
     {
       "id": "iffr",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1666554",
       "domain": "film",
       "layer": "criticism",
       "circle": "nl",
       "name": "IFFR（鹿特丹国际电影节）",
       "url": "https://www.iffr.com/",
-      "langs": ["en", "nl"],
-      "regions": ["NL", "GLOBAL"],
+      "langs": [
+        "en",
+        "nl"
+      ],
+      "regions": [
+        "NL",
+        "GLOBAL"
+      ],
       "kind": "festival",
       "why": "欧洲先锋/独立电影重镇，Hivos Big Screen 与 Bright 单元聚焦非主流与新导演，艺术电影发现",
       "not_for": "体量小于戛纳/威尼斯；北美发行关联弱",
@@ -42,14 +54,19 @@
     },
     {
       "id": "janus-films",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q6155948",
       "domain": "film",
       "layer": "publishing",
       "circle": "en",
       "name": "Janus Films",
       "url": "https://www.janusfilms.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "distributor",
       "why": "1956 年起将国际艺术片引入北美的标杆发行商（与 Criterion 同源），跟随其片单即艺术电影 canon",
       "not_for": "发行商宣传性；片单精选非全貌",
@@ -66,8 +83,12 @@
       "circle": "en",
       "name": "r/movies",
       "url": "https://www.reddit.com/r/movies/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "Reddit 最大电影社区（千万级），院线新片/预告片讨论与大众向片单推荐，观影发现流量入口",
       "not_for": "热门大片中心；粉丝向与新闻聚合多于深度评价",
@@ -84,8 +105,12 @@
       "circle": "en",
       "name": "r/TrueFilm",
       "url": "https://www.reddit.com/r/TrueFilm/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "强调深度分析与电影形式讨论的长文社区（约 50 万），接近影迷批评而非新闻聚合，发现值得细看的作品",
       "not_for": "规则严、氛围学术化；热门爆片覆盖少",
