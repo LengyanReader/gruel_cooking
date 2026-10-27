@@ -88,7 +88,31 @@
 
 **闸门结论**：exit=0，80/80 PASS。
 
-## 下一步（连批推进中）
+## 2026-10-27 · P1 书域·批 4（ko/ru/tr/hi 成圈，新开四圈）
+
+**流程**：候选 7 URL 探针 + Sahitya Akademi / Can Yayınları 回源→再测。**8 条全入库**（7 ✔ 200 + 1 ○ bot-gated）。
+
+**落盘产物**：`sources/books.json` 80 → **88 条**（+8）。
+
+| 维度 | 本批新增 |
+|---|---|
+| 圈 | ko +2（Aladdin·Yes24）· ru +3（Lib.ru·LitRes·RGB）**新圈** · tr +2（İletişim·Can）**新圈** · hi +1（Sahitya Akademi）**新圈** |
+| 层 | discovery +2 · access +2 · infrastructure +1 · publishing +2 · criticism +1 |
+| 核验 | ✔ 实测 7 · ○ bot-gated 1（Can Yayınları 403） |
+
+**回源纠偏（M0.1）**：Sahitya Akademi 确认 **`sahitya-akademi.gov.in`**；Can Yayınları 确认 **`canyayinlari.com`**（回源后探针 403→标 bot-gated）。诚实剔除：`sahapedia.org`（双探针失败且偏艺术非书域主干）。
+
+## P1 书域 收束（主要文明圈已成图）
+
+累计 **88 条**，15 个文明圈已开账：zh · zh-Hant · en · ja · fr · de · es · ar · fa · he · afr · ko · ru · tr · hi（+ global 多归属）。
+
+**尚未启动（诚实缺口，待方向调整）**：
+- 东南亚（vi/th/id）、梵语/南亚其他语（sa/ta/ur/bn）、柏柏尔/库尔德/蒙古/藏等中小文明圈——这些圈 registry 级发现源稀疏、域名回源成本高，建议优先用维基锚或降优先级
+- `wikidata_qid` 全 88 条未回填（查重主键）
+- 乐/影/艺三域尚未开账（P2）
+- Anna's Archive、JRDC 等国家/影子层网络失败项待换网络复测
+
+## 下一步（待方向调整）
 
 **P1 批 4 候选**：南亚（hi 印度）/突厥（tr 土耳其）/东南亚（vi/th/id）/俄语圈加密；韩国 ko 成圈；待定是否本批就启动 wikidata_qid 回填（查重主键）。
 
