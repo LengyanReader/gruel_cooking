@@ -6,14 +6,18 @@
   "sources": [
     {
       "id": "google-arts-culture",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q369089",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "Google Arts & Culture",
       "url": "https://artsandculture.google.com/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "aggregator",
       "why": "聚合全球数千博物馆/档案高清藏品与主题展，按流派·文明·馆藏顺藤看画的第一发现入口",
       "not_for": "聚合展示非一手馆藏登记；深度批评需回专业刊",
@@ -24,14 +28,18 @@
     },
     {
       "id": "wikiart",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q7999862",
       "domain": "art",
       "layer": "infrastructure",
       "circle": "global",
       "name": "WikiArt",
       "url": "https://www.wikiart.org/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "visual-art-encyclopedia",
       "why": "视觉艺术百科（按艺术家/流派/年代索引数万作品），查画家与风格谱系的开放数据库",
       "not_for": "图像元数据为主，不含市场/评论；社区著录校勘不一",
@@ -42,14 +50,18 @@
     },
     {
       "id": "artnet",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q266566",
       "domain": "art",
       "layer": "infrastructure",
       "circle": "en",
       "name": "Artnet",
       "url": "https://www.artnet.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "database-market",
       "why": "艺术市场数据库（拍卖记录、艺术家价格）+ Artnet News，看市场风向与艺术家履历数据",
       "not_for": "市场视角=价格非质量；付费墙深",
@@ -60,14 +72,18 @@
     },
     {
       "id": "hyperallergic",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q16845741",
       "domain": "art",
       "layer": "criticism",
       "circle": "en",
       "name": "Hyperallergic",
       "url": "https://hyperallergic.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "批评性当代艺术首站，政治/社会视角长评与展览评论，发现先锋与议题性艺术",
       "not_for": "立场偏左翼/activist；主流市场覆盖浅",
@@ -78,14 +94,18 @@
     },
     {
       "id": "the-art-newspaper",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2331628",
       "domain": "art",
       "layer": "criticism",
       "circle": "en",
       "name": "The Art Newspaper",
       "url": "https://www.theartnewspaper.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "国际艺术界行业新闻旗舰（博物馆/拍卖/政策/大事件），追艺术界动态与全球大展",
       "not_for": "新闻体非深度批评；西方大馆中心",
@@ -96,14 +116,18 @@
     },
     {
       "id": "frieze",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q3435481",
       "domain": "art",
       "layer": "criticism",
       "circle": "en",
       "name": "Frieze",
       "url": "https://frieze.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "当代艺术批评与展览评论名刊（附 Frieze 艺博会），欧洲/北美当代一线视角",
       "not_for": "偏西方当代与艺博会生态；市场关联",
@@ -114,14 +138,19 @@
     },
     {
       "id": "artforum",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q386599",
       "domain": "art",
       "layer": "criticism",
       "circle": "en",
       "name": "Artforum",
       "url": "https://www.artforum.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "美国当代艺术批评重镇，理论长文与专题（如 great women artists），学术性策展话语",
       "not_for": "精英理论化；纽约中心",
@@ -132,14 +161,18 @@
     },
     {
       "id": "e-flux",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q10478728",
       "domain": "art",
       "layer": "criticism",
       "circle": "en",
       "name": "e-flux",
       "url": "https://www.e-flux.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "全球策展/理论平台与公告网，Classics 影像与期刊连接机构前沿，找观念性艺术",
       "not_for": "理论/机构导向，大众观赏门槛高",
@@ -150,14 +183,18 @@
     },
     {
       "id": "gagosian",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2748031",
       "domain": "art",
       "layer": "publishing",
       "circle": "en",
       "name": "Gagosian",
       "url": "https://gagosian.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "gallery",
       "why": "全球最大商业画廊，代理一线现当代艺术家，展讯即当代艺术市场与史标位风向",
       "not_for": "商业画廊宣传性；市场导向非中立评价",
@@ -168,14 +205,18 @@
     },
     {
       "id": "hauser-wirth",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1591119",
       "domain": "art",
       "layer": "publishing",
       "circle": "en",
       "name": "Hauser & Wirth",
       "url": "https://www.hauserwirth.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "gallery",
       "why": "顶级国际画廊（已故大师遗产+当代），展览与研究出版是追艺术家谱系的高质量目录",
       "not_for": "商业宣传性；遗产代理利益相关",
@@ -186,14 +227,19 @@
     },
     {
       "id": "white-cube",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1423414",
       "domain": "art",
       "layer": "publishing",
       "circle": "en",
       "name": "White Cube",
       "url": "https://www.whitecube.com/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "gallery",
       "why": "伦敦/柏林一线画廊，YBA 与当代英国艺术重镇，展讯追踪现当代市场标的",
       "not_for": "商业宣传性；英国当代偏重",
@@ -204,14 +250,19 @@
     },
     {
       "id": "met",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q160236",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "The Met（大都会艺术博物馆）",
       "url": "https://www.metmuseum.org/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "跨文明通史馆藏在线（Heilbrunn 时间线），按年代/地域/媒介看世界艺术的第一馆",
       "not_for": "馆藏浏览非评价；西方与埃及/古典强，部分地域薄",
@@ -222,14 +273,20 @@
     },
     {
       "id": "louvre",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q19675",
       "domain": "art",
       "layer": "discovery",
       "circle": "fr",
       "name": "Musée du Louvre",
       "url": "https://www.louvre.fr/",
-      "langs": ["fr", "en"],
-      "regions": ["FR", "GLOBAL"],
+      "langs": [
+        "fr",
+        "en"
+      ],
+      "regions": [
+        "FR",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "世界最大博物馆之一，藏品在线（古代至19世纪）跨文明，法语艺术主干入口",
       "not_for": "古典/前现代为主，当代另需蓬皮杜；浏览非评价",
@@ -240,14 +297,19 @@
     },
     {
       "id": "moma",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q188740",
       "domain": "art",
       "layer": "discovery",
       "circle": "en",
       "name": "MoMA（纽约现代艺术博物馆）",
       "url": "https://www.moma.org/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "现当代艺术旗舰馆，collection online 与电影/设计部是20世纪以降现代主义主线",
       "not_for": "欧美现代主义中心；当代新近覆盖有限",
@@ -258,14 +320,20 @@
     },
     {
       "id": "rijksmuseum",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q190804",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "Rijksmuseum",
       "url": "https://www.rijksmuseum.nl/",
-      "langs": ["nl", "en"],
-      "regions": ["NL", "GLOBAL"],
+      "langs": [
+        "nl",
+        "en"
+      ],
+      "regions": [
+        "NL",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "荷兰国家博物馆，黄金时代（伦勃朗/维米尔）与亚洲藏品在线，Rijksstudio 高清下载",
       "not_for": "荷兰为主线；Rijksstudio 偏馆藏体验",
@@ -276,14 +344,19 @@
     },
     {
       "id": "british-museum",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q6373",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "British Museum",
       "url": "https://www.britishmuseum.org/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "世界文明通史馆藏在线（罗塞塔石碑等），按地域/时代跨文明查实物的一手数据库",
       "not_for": "殖民来源争议在；浏览非评价",
@@ -294,14 +367,20 @@
     },
     {
       "id": "uffizi",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q51252",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
       "name": "Galleria degli Uffizi",
       "url": "https://www.uffizi.it/",
-      "langs": ["it", "en"],
-      "regions": ["IT", "GLOBAL"],
+      "langs": [
+        "it",
+        "en"
+      ],
+      "regions": [
+        "IT",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "佛罗伦萨乌菲兹，文艺复兴重镇（波提切利/达芬奇/米开朗基罗），线上馆藏看意大利 master",
       "not_for": "文艺复兴/早期现代为主；浏览非评价",
@@ -312,14 +391,19 @@
     },
     {
       "id": "tate",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q430682",
       "domain": "art",
       "layer": "discovery",
       "circle": "en",
       "name": "Tate（含 Turner Prize）",
       "url": "https://www.tate.org.uk/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "museum",
       "why": "英国国家现代艺术馆群+Turner Prize 主办方，英国现代/当代艺术与年度奖片单式发现",
       "not_for": "英国中心；Turner 有争议与年景口味",
@@ -330,14 +414,21 @@
     },
     {
       "id": "la-biennale",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q205751",
       "domain": "art",
       "layer": "criticism",
       "circle": "global",
       "name": "La Biennale di Venezia（威尼斯双年展）",
       "url": "https://www.labiennale.org/",
-      "langs": ["it", "en", "fr"],
-      "regions": ["IT", "GLOBAL"],
+      "langs": [
+        "it",
+        "en",
+        "fr"
+      ],
+      "regions": [
+        "IT",
+        "GLOBAL"
+      ],
       "kind": "biennale",
       "why": "当代艺术最权威双年展（金狮奖），国家馆与主展即全球当代艺术风向总览",
       "not_for": "周期与主题导向；策展政治与理论门槛",
@@ -348,14 +439,18 @@
     },
     {
       "id": "wikimedia-commons",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q565",
       "domain": "art",
       "layer": "access",
       "circle": "global",
       "name": "Wikimedia Commons",
       "url": "https://commons.wikimedia.org/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "public-domain-images",
       "why": "公版/自由授权艺术图像总库，高清原作图与跨馆藏分类，看与用经典画作的第一获取渠道",
       "not_for": "许可状态逐文件核对；不含策展评价与断代权威",

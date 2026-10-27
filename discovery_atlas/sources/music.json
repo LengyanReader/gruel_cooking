@@ -6,14 +6,18 @@
   "sources": [
     {
       "id": "rateyourmusic",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q1145963",
       "domain": "music",
       "layer": "discovery",
       "circle": "en",
       "name": "Rate Your Music (RYM)",
       "url": "https://rateyourmusic.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "全球音乐爱好者评分/排行数据库，chart 可按流派·年代·地域细分，找某流派内公认好碟的第一社区入口",
       "not_for": "评分偏乐迷精英口味（前卫/独立加权），主流与地域音乐覆盖不均",
@@ -24,14 +28,18 @@
     },
     {
       "id": "albumoftheyear",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q48989591",
       "domain": "music",
       "layer": "discovery",
       "circle": "en",
       "name": "Album of the Year",
       "url": "https://www.albumoftheyear.org/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "community",
       "why": "聚合专业乐评均分+用户评分的专辑榜，快速看'某专辑整体口碑'与年度候选",
       "not_for": "以英文乐评聚合为主；均分掩盖分歧",
@@ -42,14 +50,19 @@
     },
     {
       "id": "pitchfork",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q721140",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Pitchfork",
       "url": "https://pitchfork.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "独立/另类音乐评分与长评的世纪标杆，Best New 系列曾是发现风向标",
       "not_for": "口味偏 indie/实验，大众与黑人音乐历史欠账；评分非终审",
@@ -60,14 +73,19 @@
     },
     {
       "id": "stereogum",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2532689",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Stereogum",
       "url": "https://www.stereogum.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "独立音乐新闻+每周新歌首选，追当代 indie/另类动向高效",
       "not_for": "覆盖面偏欧美独立；新闻体非系统评审",
@@ -78,14 +96,18 @@
     },
     {
       "id": "allmusic",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q31181",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "AllMusic",
       "url": "https://www.allmusic.com/",
-      "langs": ["en"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "database-review",
       "why": "数十万唱片编目+专家评论与流派标签，查'某艺人/专辑如何被评'并按流派顺藤",
       "not_for": "评论体例老旧偏保守；流媒体试听需订阅",
@@ -96,14 +118,18 @@
     },
     {
       "id": "discogs",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q504063",
       "domain": "music",
       "layer": "infrastructure",
       "circle": "global",
       "name": "Discogs",
       "url": "https://www.discogs.com/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "release-database",
       "why": "全球最大实体唱片/版本数据库（发行、母带、变体），查版本与矩阵号的第一基础设施",
       "not_for": "社区著录质量不一；含市场买卖属性，非评价源",
@@ -114,14 +140,18 @@
     },
     {
       "id": "musicbrainz",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q14005",
       "domain": "music",
       "layer": "infrastructure",
       "circle": "global",
       "name": "MusicBrainz",
       "url": "https://musicbrainz.org/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "open-catalog",
       "why": "开放音乐元数据脑库（MBID/关系边），API 可接入本库做实体查重与元数据锚",
       "not_for": "纯标识与著录，不含质量/热度信号",
@@ -132,14 +162,19 @@
     },
     {
       "id": "nme",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q192632",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "NME",
       "url": "https://www.nme.com/",
-      "langs": ["en"],
-      "regions": ["UK", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "英国老牌流行音乐周刊，榜单/评论兼具英伦与全球流行时新",
       "not_for": "大众化倾斜；转型数字后长评变浅",
@@ -150,14 +185,19 @@
     },
     {
       "id": "rolling-stone",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q33511",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Rolling Stone",
       "url": "https://www.rollingstone.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "美国流行文化音乐旗舰，历史 500 大专辑/歌曲榜是英语流行主干的书单式清单",
       "not_for": "排名有怀旧与美式中心；深度让位于人物特稿",
@@ -168,14 +208,19 @@
     },
     {
       "id": "grammys",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q41254",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "GRAMMYs (Recording Academy)",
       "url": "https://www.grammy.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "prize",
       "why": "录音学院年度奖（含世界音乐/流派分科），General Field 与各品类得主是业界把关书目",
       "not_for": "美国工业导向、提名博弈；冷门佳作易漏",
@@ -186,14 +231,19 @@
     },
     {
       "id": "mercury-prize",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q501876",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Mercury Prize",
       "url": "https://mercuryprize.com/",
-      "langs": ["en"],
-      "regions": ["UK", "IE"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "UK",
+        "IE"
+      ],
       "kind": "prize",
       "why": "英爱年度最佳专辑奖 shortlist，每年 12 张即一帧当代英国/爱尔兰高质量图景",
       "not_for": "限英爱；体量小，一年一锤",
@@ -204,14 +254,19 @@
     },
     {
       "id": "billboard",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q485240",
       "domain": "music",
       "layer": "discovery",
       "circle": "en",
       "name": "Billboard",
       "url": "https://www.billboard.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "chart",
       "why": "美国权威排行榜（Hot 100 / Billboard 200），大众流行热度与流派榜的实时风向",
       "not_for": "榜单反映销量/流量而非质量；刷榜与电台权重",
@@ -222,14 +277,18 @@
     },
     {
       "id": "spotify",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q689141",
       "domain": "music",
       "layer": "access",
       "circle": "en",
       "name": "Spotify",
       "url": "https://open.spotify.com/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "streaming",
       "why": "全球最大流媒体，算法/编辑歌单与 Release Radar 是当代听歌获取与发现主渠道",
       "not_for": "曲库因地域版权而异；推荐易信息茧房",
@@ -240,14 +299,18 @@
     },
     {
       "id": "bandcamp",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q545966",
       "domain": "music",
       "layer": "access",
       "circle": "en",
       "name": "Bandcamp",
       "url": "https://bandcamp.com/",
-      "langs": ["MULTI"],
-      "regions": ["GLOBAL"],
+      "langs": [
+        "MULTI"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
       "kind": "platform",
       "why": "独立音乐直销平台，Bandcamp Friday 与标签页是找先锋/地下/小语种新品的高效入口",
       "not_for": "大众主流覆盖薄；发现依赖主动逛标签",
@@ -264,8 +327,12 @@
       "circle": "en",
       "name": "Consequence",
       "url": "https://consequence.net/",
-      "langs": ["en"],
-      "regions": ["US"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US"
+      ],
       "kind": "media",
       "why": "音乐/影视交叉评论网刊（原 Consequence of Sound），长评与现场报道",
       "not_for": "综合性媒体，深度不及专科刊",
@@ -276,14 +343,19 @@
     },
     {
       "id": "slant",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2086297",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Slant Magazine",
       "url": "https://www.slantmagazine.com/",
-      "langs": ["en"],
-      "regions": ["US", "GLOBAL"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US",
+        "GLOBAL"
+      ],
       "kind": "media",
       "why": "音乐与电影批评并重，评分体系严格，长评偏作者性",
       "not_for": "体量中，更新节奏起伏",
@@ -294,14 +366,18 @@
     },
     {
       "id": "paste",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q12811336",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
       "name": "Paste Magazine",
       "url": "https://www.pastemagazine.com/",
-      "langs": ["en"],
-      "regions": ["US"],
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "US"
+      ],
       "kind": "media",
       "why": "美国独立音乐/文化月刊+网站，现场录音与年度榜有品味",
       "not_for": "偏美国 indie；商业内容混排",
@@ -312,14 +388,18 @@
     },
     {
       "id": "netease-music",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q20063955",
       "domain": "music",
       "layer": "discovery",
       "circle": "zh",
       "name": "网易云音乐",
       "url": "https://music.163.com/",
-      "langs": ["zh"],
-      "regions": ["CN"],
+      "langs": [
+        "zh"
+      ],
+      "regions": [
+        "CN"
+      ],
       "kind": "streaming-community",
       "why": "中文音乐社区核心（歌单/评论区/年度听歌报告），按中文听众口味找华语与欧美",
       "not_for": "版权分散致灰歌单；评论情绪化非评审",
@@ -330,14 +410,18 @@
     },
     {
       "id": "qq-music",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q10852229",
       "domain": "music",
       "layer": "access",
       "circle": "zh",
       "name": "QQ音乐",
       "url": "https://y.qq.com/",
-      "langs": ["zh"],
-      "regions": ["CN"],
+      "langs": [
+        "zh"
+      ],
+      "regions": [
+        "CN"
+      ],
       "kind": "streaming",
       "why": "腾讯旗下流媒体，华语曲库最全之一，与数字专辑/榜单结合",
       "not_for": "付费墙与版权独占；社区发现弱于网易云",

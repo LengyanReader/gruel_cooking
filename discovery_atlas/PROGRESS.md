@@ -164,3 +164,23 @@
 
 三域各批 2 加密（音乐厂牌层、影视各圈节/印发行、艺术非英语圈）→ wikidata_qid 全库回填（查重主键，146 条）。
 
+## 2026-10-27 · QID 回填（entity-resolution，经 P856 官网核验，绝不臆造）
+
+**能力**：harness_factory entity-resolution + M0.4 no-fabrication。
+
+**脚本**：`scripts/resolve_qid.py` —— Wiki 锚定条目走 enwiki sitelink 精确解；其余 `wbsearchentities` 按名检索 → 批量 `wbgetentities` 取候选 **P856 官网声明**，仅当候选 P856 可注册域名与本条 url 域名一致才采纳；无法确认→留空（不猜 QID）。支持 429/5xx `Retry-After` 退避、逐条 try/except、实时 checkpoint、按文件名断点续跑。
+
+**排障（本环境）**：首轮持续 HTTP 429 —— 根因是一个**前次未退出的 `resolve_qid.py` 进程在并发打同一 API、互抢限流额度**；结束僵尸进程 + 加节流（每请求间隔 ≥1s）后吞吐恢复正常。
+
+**结果**（146 条）：
+
+| 域 | 采纳 QID | 留空（无 P856 匹配/瞬时网络） |
+|---|---|---|
+| art | 20/20 | 0 |
+| music | 18/19 | consequence |
+| film | 17/19 | sundance · douban-movie |
+| books | 69/88 | 评奖/门户类无官网声明者（douban-book·booker·maodun·goncourt·bungakushinko·ganjoor·deutscher-buecherpreis·elpais-babelia·jrdc·libby·graywolf·shueisha*·hayakawa*·jarir·abjjad·planeta·taqsim·aladin·lib-ru）*为瞬时 URLError |
+| **合计** | **124/146** | **22（诚实留空，可复跑）** |
+
+**闸门复验**：`gate.py` exit=0，146/146 PASS（ids/hosts/**qids 全局唯一**）。
+
