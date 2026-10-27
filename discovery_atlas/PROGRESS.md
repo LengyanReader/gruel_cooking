@@ -234,3 +234,7 @@
 
 **仍诚实留空 24**：① 12 个 reddit 分区（非独立实体）；② douban 读书/电影（同属 Douban Q5299559 一个实体，两条分面若同赋会破 QID 唯一性，留空）；③ 检索命中的是同名异实或无官网声明者：ganjoor/aladin（命中为书卷/迪士尼地名等错实）、jrdc·libby·consequence·booker·planeta·taqsim·elpais-babelia·bungakushinko（无 P856 匹配或不唯一）。留空均为不臆造的必然结果。
 
+## 2026-10-27 · 数据导出（CSV / NDJSON / JSON）
+
+**产物**：`scripts/export_data.py`——纯变换（不新增数据），从 `sources/*.json` 归并 174 条 → `docs/discovery_atlas/atlas.csv`（含 BOM、全列引用、langs/regions 以 `;` 拼接）、`atlas.ndjson`（逐行完整条目）、`atlas.json`（单对象 indent=2）。静态页页脚新增下载栏（CSV/NDJSON/JSON），重建后视图同步 150 QID。
+
