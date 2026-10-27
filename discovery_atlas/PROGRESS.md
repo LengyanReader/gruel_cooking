@@ -218,3 +218,11 @@
 
 **诚实下限（35 留空）**：① 12 个 reddit 子社区——为 Reddit 分区、非独立实体，无自身 P856，方法学上应留空；② 评奖/门户/机构无匹配官网声明者（douban·booker·maodun·goncourt·ganjoor·libby·graywolf·planeta·sundance·consequence 等）；③ 2 条 CJK 混名检索未命中（modern-sky/beggars-group，可人工补）。留空≠错误，为不臆造的必然结果。
 
+## 2026-10-27 · Web 视图（发现星图静态站）
+
+**产物**：`scripts/build_view.py` 从 `sources/*.json` 生成自包含双语可筛静态页 → `docs/discovery_atlas/index.html`（104KB·离线双击可开）；不硬编码数据，随批次可重跑。已接入仓库主目录 `docs/index.html`（第四组新 pillar “发现星图”）。
+
+**功能**：域/层/圈/核验四维筛选 + 搜索 + 中英切换；卡片显示 name(链)/层/圈/kind/why/not_for/实测状态（✔绿·○黄）+ QID 外链。
+
+**浏览器实测验收**（本地 http.server）：页面非空、统计 174/139/123/17 圈、域与层叠加筛选生效（乐→10、书→91）、搜 reddit 命中 12 条社区、EN 切换正常、**控制台 0 报错**。卡片正文保留中文（why/not_for 为登记员按条撰写，设计如此）。
+
