@@ -74,6 +74,14 @@ Reading as intelligence — a personal knowledge management system for books, wr
 - **Part 1**: one card per book / per author, cross-cutting categories, explicit relation edges, reading notes, and a growing map of reading leads (`reading/extensions/`)
 - **Part 2**: dated research briefs, rolling window syntheses, and persistent theme dossiers — every claim marked for reliability (see root `harness/` for the repo-wide methods, skills, tools and rules)
 
+### 7. Discovery Atlas (`/discovery_atlas`)
+
+A registry of **discovery sources** — where to find the next thing to read / listen to / watch / look at / research. Five domains (books / music / film / art / **science**) × five layers (discovery / criticism / publishing / infrastructure / access) × civilizational circles, schema-gated and Wikidata-resolved, rendered as an offline bilingual site + constellation graph.
+
+### 8. Frontier Academic Research (`/academic_research`)
+
+A **direction × momentum × accessibility** reconnaissance map — searching, organizing and evaluating frontier academic and scientific research directions and the scholars behind them (basic science, AI, data & computational science, interdiscipline, transdiscipline, culture / civilization / humanities). Companion to the `science` domain above: that registers *where to look*; this answers *what is worth pursuing and how to plug in*. All claims are source-verified (zero-fabrication), with a five-dimension evaluation rubric.
+
 ---
 
 ## Directory Structure
@@ -116,6 +124,13 @@ gruel_cooking/
 ├── harness/                    # Repo-wide methods, skills, tools & rules (README.md = registry)
     ├── evolution.md            # Self-evolution mechanism + journal (W-EVO)
     └── audit.py                # Automatic harness auditor (drift → evolution signals)
+├── discovery_atlas/            # Registry of discovery sources (5 domains × 5 layers × circles)
+│   ├── sources/                # books / music / film / art / science (.json = SSOT)
+│   ├── gate.py                 # Structural validator (schema / enums / uniqueness / marks-dated)
+│   └── scripts/                # build_view / build_graph / export_data / resolve_qid / probe
+├── academic_research/          # Frontier research directions & scholars (reconnaissance map)
+│   ├── README.md               # Scope (6 axes) / method / evaluation rubric
+│   └── frontier_scan.md        # v1: 10 directions × 5-dim scores × collaboration entry points
 ```
 
 ---
