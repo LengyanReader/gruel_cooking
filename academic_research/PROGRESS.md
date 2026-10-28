@@ -98,3 +98,13 @@
 **产物**：frontier_scan 新增 F 轴五节（F1–F5）+ 评分速览五行；scholars.md 新增 F1–F4 学者节 + QID 表扩 3 行（留空由 7→11）；references.md 新增 F1–F5 一手文献；entry_points.md 新增 F 行并标注“用户新好轴里 F4/F2 门槛最低”；README 范围六轴→七轴。
 
 **诚实缺口（本轴）**：① Pilcher/Leddy/Carter 确职机构未直接命中→◇；② F5 具名修行传统学者未锁定→◇；③ Sheller《mobilities turn》、Lyubomirsky 2005 Psych Bulletin、nature-based recreation 综述的确切 DOI 未直接命中→◇待 Crossref。
+
+## 2026-10-28 · 衍生物化：「文化月旦」双语期刊第一期发布
+
+用户新请：做 2026 年 10 月文化梳理（读物/研究/影视/艺术/音乐），中英双语，第三语言作品重点引原文精华配中英解释，生成 HTML 发布到站点相关位置，作为系列第一篇。另补：「文化界各层面最值得谈的作品都梳理，以世界顶级文化学者的视野和胸怀」。
+
+**回源检索（第 5 批·≈12 组 WebSearch）**：诺奖五档（卡森/光遗传/IceCube/不对称自催化/Hall×Woodford）、布克短名单与影视联动、国际布克《大稻埕》（中文首次）、京都奖（宫坂力/Azam/Anderson/Yao/Roeder，11·10 授奖典）、Frieze 周 318 画廊/72 位艺术家公共项目、特纳奖 @MIMA、Met《林肯在阴间》世界首演、北京保利 10·18 亨德尔、WAF 416 入围（11·12–13/20）、十月票房（Clayface/Wildwood/Street Fighter）、Billboard（Showgirl 五周冠/十月年历）、游戏（PBZ 10·29、GTA VI 11·19）、卡森中译书目（21jingji/澎湃/潮闻）。
+**第三语言原文校证**：萨福 fr.31 起四行（gutenberg/inamidst/uchicago/academia/cordite 多源一致）；芭蕉「古池や」（ja.wikipedia/山梨教研所）；《臺灣漫遊錄》书名三层（正文受版权→只存书名+自撰题解）。无法一手核证的归属（如「Patient Zero」）一律不采。
+
+**产物**：`docs/culture_review/2026-10.html`（总第 01 号；五轴+点睛八点+方法凡例；双语 toggle 与站体同源 zhzz-lang；离线单文件）；`docs/culture_review/README.md`（系列凡例与期号索引）；站点导航 `docs/index.html` Group四新增 culture_review 卡片。预览 http://127.0.0.1:8777 两页 200 ✔。
+**诚实缺口（下期订正栏）**：佐井敬三机构 ◇；Billboard 十月工业乐队所指 ◇；沃尔普上市日 ◇；音乐轴整体材料薄→下期回补。

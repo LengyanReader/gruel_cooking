@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文化月旦 · 2026年10月号 | Monthly Culture Review · October 2026</title>
+<meta name="description" content="舟洲粥文化月梳第一期：读物、研究、影视剧场、艺术建筑、音乐生活——以世界顶级文化学者的视野与胸怀，逐条回源核实。Issue 1 of a bilingual monthly culture review, every item source-verified.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-deep:#4A90C2; --sky-mid:#7AB8D9; --sky-light:#A8D4EC;
+  --warm-cream:#FFFBF5; --warm-soft:#FFF5E6;
+  --warm-gold:#F5C97E; --warm-amber:#E8A855; --warm-peach:#F0C4A8;
+  --ink-deep:#3A3228; --ink-mid:#5C5248; --ink-soft:#8A7E72; --ink-pale:#B8AFA4;
+  --accent-teal:#5BA3A3; --accent-coral:#D4836A;
+  --accent-violet:#8B7BAA; --accent-sage:#7A9E7E;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --ff-zh:"LXGW WenKai","Noto Serif SC",serif;
+  --shadow-md:0 6px 20px rgba(58,50,40,.07); --shadow-lg:0 12px 40px rgba(58,50,40,.09);
+}
+/* ── Bilingual toggle (same scheme & storage key as site index) ── */
+body.lang-zh [data-en] { display:none !important; }
+body.lang-en [data-zh] { display:none !important; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--warm-cream);line-height:1.85;overflow-x:hidden}
+a{color:var(--accent-teal);text-decoration:none;transition:color .25s} a:hover{color:var(--sky-deep)}
+small{color:var(--ink-pale)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.75rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,251,245,.72);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(228,220,208,.4)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand a{color:inherit}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(228,220,208,.6);background:var(--warm-cream);font-size:.8rem;font-weight:500;cursor:pointer}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;color:var(--ink-soft);background:transparent;transition:all .25s}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff}
+
+/* MASTHEAD */
+.masthead{padding:8rem 2rem 4rem;text-align:center;background:linear-gradient(170deg,#F3E9D6 0%,#FFF5E6 45%,var(--warm-cream) 100%);border-bottom:1px solid rgba(228,220,208,.5)}
+.issue-tag{display:inline-block;padding:.3rem 1.1rem;border-radius:99px;border:1px solid var(--warm-amber);color:var(--warm-amber);font-size:.8rem;letter-spacing:.25em;margin-bottom:1.4rem;font-weight:600}
+.masthead h1{font-family:var(--ff-display);font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;letter-spacing:.1em;line-height:1.25}
+.masthead .en-title{font-size:clamp(1rem,2.4vw,1.4rem);color:var(--ink-soft);font-style:italic;font-weight:300;letter-spacing:.05em;margin-top:.4rem}
+.masthead .dateline{margin-top:1.4rem;color:var(--ink-pale);font-size:.85rem;letter-spacing:.08em}
+.masthead .epigraph{max-width:680px;margin:2.2rem auto 0;font-family:var(--ff-zh);color:var(--ink-mid);font-size:1.05rem;line-height:2.1;font-weight:300}
+.masthead .epigraph .src{display:block;margin-top:.5rem;font-size:.8rem;color:var(--ink-pale);font-family:var(--ff-body)}
+
+/* SECTION */
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+.sec{padding:4.2rem 0 1rem}
+.sec-head{display:flex;align-items:baseline;gap:1rem;border-bottom:2px solid var(--warm-gold);padding-bottom:.7rem;margin-bottom:.4rem;flex-wrap:wrap}
+.sec-head .glyph{font-family:var(--ff-display);font-size:1.6rem;color:var(--warm-amber);font-weight:700}
+.sec-head h2{font-family:var(--ff-display);font-size:1.7rem;letter-spacing:.04em}
+.sec-head .lens{margin-left:auto;font-size:.8rem;color:var(--ink-soft);border:1px solid rgba(228,220,208,.7);border-radius:99px;padding:.2rem .9rem;background:var(--warm-soft)}
+.sec-lede{color:var(--ink-soft);font-size:.98rem;margin:.9rem 0 2rem;font-weight:300}
+
+/* ITEM */
+.item{background:var(--warm-cream);border:1px solid rgba(228,220,208,.55);border-left:3px solid var(--warm-gold);border-radius:14px;padding:1.5rem 1.7rem;margin-bottom:1.4rem;box-shadow:var(--shadow-md);transition:transform .3s,box-shadow .3s}
+.item:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.item h3{font-family:var(--ff-display);font-size:1.15rem;margin-bottom:.35rem;letter-spacing:.02em}
+.item .kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--accent-teal);text-transform:uppercase;margin-bottom:.5rem}
+.item p{color:var(--ink-mid);font-size:.95rem;margin-bottom:.55rem}
+.item .gist{font-family:var(--ff-zh);color:var(--ink-deep);font-weight:400}
+.srcs{font-size:.76rem;color:var(--ink-pale);line-height:1.7;border-top:1px dashed rgba(228,220,208,.8);padding-top:.5rem;margin-top:.4rem}
+.srcs a{color:var(--ink-soft)}
+.stamp{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:1px 8px;border-radius:99px;margin-right:.4rem;vertical-align:1px}
+.stamp.ok{background:#E4F0E4;color:#4C7A4F}
+.stamp.warn{background:#FFF3DD;color:#9A7233}
+
+/* QUOTE BLOCK — third-language stack */
+.q{background:linear-gradient(135deg,#FFF9EF 0%,#FDF3E3 100%);border:1px solid rgba(232,168,85,.35);border-radius:18px;padding:2rem 2.2rem;margin:0 0 1.4rem;box-shadow:var(--shadow-md)}
+.q .lang-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.2em;padding:.25rem .9rem;border-radius:99px;background:var(--ink-deep);color:var(--warm-gold);margin-bottom:1.1rem}
+.q .orig{font-family:"Gentium Plus","LXGW WenKai","Noto Serif SC",serif;font-size:1.25rem;line-height:2;color:var(--ink-deep);white-space:pre-line}
+.q .tr{margin-top:1rem;color:var(--ink-mid);font-size:.93rem;line-height:1.9}
+.q .tr b{color:var(--ink-deep);font-weight:600}
+.q .note{margin-top:.9rem;padding-top:.8rem;border-top:1px dashed rgba(232,168,85,.5);font-size:.85rem;color:var(--ink-soft)}
+
+/* POINTS — 画龙点睛 strip */
+.eyebrow-band{background:linear-gradient(180deg,var(--warm-cream),var(--warm-soft));padding:3.4rem 2rem;border-top:1px solid rgba(228,220,208,.5);border-bottom:1px solid rgba(228,220,208,.5);margin-top:4rem}
+.eyebrow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;max-width:1100px;margin:1.6rem auto 0}
+.eyebrow{background:var(--warm-cream);border-radius:14px;padding:1.2rem 1.3rem;border:1px solid rgba(228,220,208,.5)}
+.eyebrow .n{font-family:var(--ff-display);font-weight:700;color:var(--warm-amber);font-size:1.3rem;line-height:1}
+.eyebrow h4{font-family:var(--ff-display);font-size:1rem;margin:.35rem 0 .3rem}
+.eyebrow p{font-size:.85rem;color:var(--ink-soft);line-height:1.75}
+
+/* METHOD / FOOTER */
+.method{font-size:.88rem;color:var(--ink-soft);line-height:2}
+.method ul{margin:.6rem 0 1rem 1.4rem}
+.footer{text-align:center;padding:3rem 2rem 2.5rem;color:var(--ink-pale);font-size:.85rem;border-top:1px solid rgba(228,220,208,.4)}
+.footer .motto{font-family:var(--ff-zh);font-size:1.05rem;color:var(--ink-soft);letter-spacing:.12em;margin-bottom:.3rem}
+@media (max-width:720px){.sec-head .lens{margin-left:0}.masthead{padding-top:6.5rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav">
+  <div class="nav-brand"><a href="../index.html">舟洲粥<span style="font-size:.6em;color:var(--ink-soft);margin-left:.4em">culture review</span></a></div>
+  <div class="nav-right">
+    <a href="../index.html" style="font-size:.85rem" data-zh>← 返回总览</a>
+    <a href="../index.html" style="font-size:.85rem" data-en>← Directory</a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <div class="issue-tag"><span data-zh>第 一 期 · 总 第 0 1 号</span><span data-en>ISSUE 1 · THE FIRST NUMBER</span></div>
+  <h1 data-zh>文化月旦</h1>
+  <h1 data-en style="font-size:clamp(2rem,5vw,3.4rem)">Monthly Culture Review</h1>
+  <div class="en-title" data-zh>Monthly Culture Review · October 2026</div>
+  <div class="en-title" data-en>文化月旦 · 二〇二六年十月号</div>
+  <div class="dateline"><span data-zh>2026 年 10 月 · 梳成于月末 · 逐条回源核于 2026-10-28</span><span data-en>October 2026 · compiled at month's end · every item re-sourced on 2026-10-28</span></div>
+  <div class="epigraph">
+    <span data-zh>「月旦」者何？汉末许劭与郭泰每月初一品评乡党人物、臧否文章，谓之<b>月旦评</b>。自兹以降，「月旦」遂为定期品评之雅名。今取此义：每月一梳，梳读物、梳研究、梳影艺、梳舞台、梳声音——只梳当月最值得谈的作品，且每一条都要回得去源头。</span>
+    <span data-en>Why "Month's Verdict" (月旦)? At the end of the Han dynasty, the critics Xu Shao and Guo Tai appraised their age's persons and writings on the first of every month — an assessment known as the <b>Yuèdàn Píng</b>. We revive the name: one monthly combing of reading, research, screen and stage, sound and space — only the works worth talking about, and every line traceable back to its source.</span>
+    <span class="src"><span data-zh>——《后汉书·许劭传》：「月旦辄更，汝南号曰月旦评」</span><span data-en>— Hou Han shu, biography of Xu Shao: "changed each first-of-month; all Runan called it the Month's Verdict"</span></span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ═══ I 读物 ═══ -->
+<section class="sec" id="books">
+  <div class="sec-head">
+    <span class="glyph">一</span>
+    <h2><span data-zh>读物 · 手稿与译本</span><span data-en>Reading · Manuscripts &amp; Translations</span></h2>
+    <span class="lens"><span data-zh>视角：文学奖是气象站，不是终点线</span><span data-en>Lens: prizes as weather stations, not finish lines</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>本月的文学气候由三股气团决定：诺奖把文学奖给了古典学者兼诗人；布克把六本书送进十一月的长桌；而中文小说第一次登上了国际布克的领奖台——它其实是今年五月摘的果，十月仍是我们谈中文写作出海时绕不开的名字。</span><span data-en>Three air-masses set this month's literary weather: the Nobel went to a classicist-poet; the Booker fed six novels to a November long table; and a Chinese-language novel stood on the International Booker podium — picked in May, yet unavoidable this October whenever Chinese writing's voyage outward is discussed.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>诺贝 尔文学奖</span><span data-en>NOBEL LITERATURE</span></div>
+    <h3><span data-zh>安妮·卡森（Anne Carson）——授奖之年的中文回潮</span><span data-en>Anne Carson — and the Chinese re-tide of her award year</span></h3>
+    <p><span data-zh>10 月 8 日，瑞典学院将 2026 年诺贝尔文学奖授予 76 岁的加拿大诗人、古典学家、翻译家安妮·卡森。她毕生在做一件极罕见的事：<b class="gist">以当代诗的自觉去译两千六百年前的萨福残卷</b>，又以西学的手感写《红的自传》。中文世界早有伏笔——《红的自传·丈夫之美》《夜》、译著《若非，冬季：萨福断章》（黄茜译，商务印书馆）等已陆续引进，获奖当日各大中文媒体连夜整理卡森书单。评者谓其「让断裂处显形」——这正是本仓《语言叠织》奉为圭臬的那类写作：翻译不是透明玻璃，是叠放的镜片。</span><span data-en>On 8 October the Swedish Academy awarded the 2026 Nobel to Anne Carson, 76 — Canadian poet, classicist, translator. Her life's rare work: <b class="gist">rendering Sappho's fragments with a contemporary poet's self-awareness</b>, while writing Autobiography of Red with a classicist's hands. Chinese shelves were already laid — Autobiography of Red · The Beauty of the Husband, If No, Winter (trans. Huang Qian, Commercial Press), Night — and the award night saw every Chinese book desk rush out a Carson list. Her praise: "letting the fractures show" — precisely the writing the Language Stacking module reveres: translation as stacked lenses, not clear glass.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：nobelprize.org · britannica.com · 21jingji.com（中译书单）· thepaper.cn · tidenews.com.cn（出版方：译林/文汇/商务）</span><span data-en>Sources: nobelprize.org · britannica.com · 21jingji.com (Chinese list) · thepaper.cn · tidenews.com.cn (Yilin / Wenhui / Commercial Press)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>布 克奖 2026</span><span data-en>BOOKER PRIZE 2026</span></div>
+    <h3><span data-zh>短名单六书入冬 —— 11 月 9 日开签</span><span data-en>Six novels sent into winter — draw on 9 November</span></h3>
+    <h3><span data-zh style="font-weight:400;color:var(--ink-soft);font-size:.95rem">Marlon James《The Disappearers》、Douglas Stuart、《Mother Mary Comes to Me》等在列</span><span data-en style="font-weight:400;color:var(--ink-soft);font-size:.95rem">incl. Marlon James's The Disappearers, Douglas Stuart, Mother Mary Comes to Me</span></h3>
+    <p><span data-zh>9 月 30 日入围、十月发酵：本届评委以<b class="gist">「影视人读小说</b>」班底出名（Himesh Patel、Maxine Peake、Kathryn Hunter 等），古典学者 Mary Beard 任主席，胜者得五万英镑。评委班底如此「出圈」，恰是文学作为公共话题的自我策展——值得注意的不是谁得奖，而是<b class="gist">评奖如何被设计成一场全民阅读事件</b>。</span><span data-en>Shortlisted 30 September, fermenting through October: this year's judges are a famously "outward" panel — screen actors reading novels (Himesh Patel, Maxine Peake, Kathryn Hunter), chaired by classicist Mary Beard; £50,000 to the winner. The point is not who wins but <b class="gist">how award season is engineered into a public-reading event</b> — literature curating its own common talk.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：thebookerprizes.com（评委/11·9 决选）· fivebooks.com（10·13 解读）· lonesomereader.com（短名单）</span><span data-en>Sources: thebookerprizes.com (panel / 9 Nov) · fivebooks.com (13 Oct read) · lonesomereader.com (shortlist)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>国 际布 克</span><span data-en>INTERNATIONAL BOOKER</span></div>
+    <h3><span data-zh>杨双子《台湾漫游录》（林 King 译）——中文小说首次折桂</span><span data-en>Yáng Shuāng-zǐ's Taiwan Travelogue (trans. Lin King) — first for Chinese-language fiction</span></h3>
+    <p><span data-zh>五月摘桂、十月仍是最值得复述的一桩：<b class="gist">《台湾漫游录》成为国际布克历史上第一部中文原作</b>，由译者与作家共享奖金。这是一篇嵌套在日据时期台湾文坛里的双女之情，语言策略是「中文里藏着日语的骨骼、英文里再藏一次中文的呼吸」——一书的三重翻译生态，恰是本仓「同一心象、多面语法之镜」的现成一例。</span><span data-en>Won in May, worth retelling in October: <b class="gist">Taiwan Travelogue is the first Chinese-language original ever to take the International Booker</b>, prize split between author and translator. A love between two women nested in Japanese-occupation literary Taiwan, its language carries Japanese bones inside Chinese, and Chinese breath again inside English — a three-layer translation ecology, a ready-made case for our "one image of thought, many mirrors of grammar."</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：thebookerprizes.com · cbc.ca · roc-taiwan.org（中文原作首次）· andotherstories.org（Lin King 译本）</span><span data-en>Sources: thebookerprizes.com · cbc.ca · roc-taiwan.org (first Chinese original) · andotherstories.org (Lin King's translation)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>中文 出版 动态</span><span data-en>CHINESE PUBLISHING</span></div>
+    <h3><span data-zh>卡森来潮之外：迟子建《朋友们来看雪吧》与「器物与文学」</span><span data-en>Beyond the Carson tide: Chi Zijian's snow stories; objects in literature</span></h3>
+    <p><span data-zh>岁末中文书市的两条暗线：其一，短篇小说名家集中发力——迟子建十个与雪相关的故事已成书（浙江文艺出版社）；其二，引进线把「文学 × 物质文化」做成显学——索菲·沃尔普关于文学器物的研究（启真馆｜浙江大学出版社）<b class="gist">追问小说里的器物是历史实证还是虚构符号</b>，十月前后上市。诺奖引进与本土原创同月共振，是本月中文读物最值得留意的气压变化。</span><span data-en>Two under-currents in the year-end Chinese market. One: short-fiction masters converging — Chi Zijian's ten snow stories are out (Zhejiang Literature &amp; Art). Two: the import line making "literature × material culture" fashionable — Sophie Volpp's study of literary objects (Qizhen Hall / Zhejiang UP), <b class="gist">asking whether things in novels are historical evidence or invented signs</b>, landing around October. Nobel imports and home-grown originals breathing in the same month — the season's truest barometric shift.</span></p>
+    <div class="src"><span class="stamp warn">◇ 部分待核</span><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：tidenews.com.cn（迟子建，已见面）· bjnews.com.cn（沃尔普，预计 2026-10）；具体上市日以出版方为准 ◇</span><span data-en>Sources: tidenews.com.cn (Chi, published) · bjnews.com.cn (Volpp, due Oct 2026); exact on-sale date per publisher ◇</span></div>
+  </div>
+</section>
+
+<!-- ═══ II 研究 ═══ -->
+<section class="sec" id="research">
+  <div class="sec-head">
+    <span class="glyph">二</span>
+    <h2><span data-zh>研究 · 可复制的奇迹</span><span data-en>Research · Reproducible Miracles</span></h2>
+    <span class="lens"><span data-zh>视角：今年诺贝尔全赏「实验室里的手艺」</span><span data-en>Lens: an Nobel season rewarding lab craft</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十月科学气候的最大特征：四个诺贝尔都颁给了<b class="gist">可被复制进生命与物质本身的技艺</b>——用光控制神经、用冰立方捕获幽灵粒子、用手性分子自我复制、用微观激励重建经济学地基。科学的「可介入性」因此本月史上最高。</span><span data-en>The October scientific weather: every Nobel went to a craft <b class="gist">that can be copied into living matter or physical substance itself</b> — light steering neurons, ice capturing ghost particles, chirality self-replicating, incentives rebuilding economics from its micro-foundations. Science's "intervene-ability" has rarely read higher.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>诺贝 尔生理 学或医学</span><span data-en>NOBEL MEDICINE</span></div>
+    <h3><span data-zh>光遗传学：Deisseroth · Hegemann · Nagel（10 月 5 日）</span><span data-en>Optogenetics: Deisseroth · Hegemann · Nagel (5 Oct)</span></h3>
+    <h3 data-zh style="font-weight:400;color:var(--ink-soft);font-size:.95rem">Karl Deisseroth（Stanford / 美）· Peter Hegemann · Georg Nagel（德）</h3>
+    <h3 data-en style="font-weight:400;color:var(--ink-soft);font-size:.95rem">Karl Deisseroth (Stanford, US) · Peter Hegemann · Georg Nagel (Germany)</h3>
+    <p><span data-zh>把光敏蛋白装进神经元，用一束光给大脑「按开关」。<b class="gist">这是沉思科学与 F3 幸福科学共用的那把新钥匙</b>——当第一人称的禅修报告与第三人称的光控神经记录同桌，「修行的神经机制」才从隐喻变为可实验的命题。注意获奖者之一 Nagel 已故（瑞典学院不追授）——奖项名单本身即是科学史的时间戳。</span><span data-en>Light-sensitive proteins installed in neurons; one beam becomes a switch for the brain. <b class="gist">This is the very key contemplative science and wellbeing science (axes F3/F5 of our frontier scan) have been waiting for</b> — only when first-person meditation reports and third-person optically controlled recordings share a table can "the neural mechanics of practice" leave metaphor for experiment. Note co-laureate Nagel is deceased — laureate lists are themselves timestamps of the history of science.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：nobelprize.org（10·5 新闻稿）· aljazeera.com（美德三国科学家·光遗传）</span><span data-en>Sources: nobelprize.org (5 Oct press release) · aljazeera.com (US–German scientists, optogenetics)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>诺贝 尔物理 学</span><span data-en>NOBEL PHYSICS</span></div>
+    <h3><span data-zh>Francis Halzen 与冰立方：在南极听宇宙（10 月 6 日）</span><span data-en>Francis Halzen and IceCube: listening to the universe at the South Pole (6 Oct)</span></h3>
+    <p><span data-zh>因「为揭开宇宙中微子之谜作出奠基性贡献」（IceCube 中微子天文台）获奖。一立方千米的南极冰被驯化为望远镜——<b class="gist">基础科学中最浪漫也最昂贵的那种「可介入性」：数据公开，人人都可从 IceCube Open Data 入手做宇宙线分析</b>。与本仓 heaven_climate「天象×思想史」双入口完全同构。</span><span data-en>Cited for laying bare the cosmic-neutrino mystery via the IceCube observatory. A cubic kilometre of Antarctic ice domesticated into a telescope — <b class="gist">the most romantic, most expensive form of intervenable basic science: the data are open; anyone may start neutrino analysis from IceCube Open Data</b>. Perfectly homologous to our heaven_climate's twin entry of celestial observation × history of ideas.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：nobelprize.org（10·6 新闻稿·UW–Madison）· reuters.com（南极中微子·奖金 1200 万克朗）· pbs.org</span><span data-en>Sources: nobelprize.org (6 Oct release, UW–Madison) · reuters.com (Antarctic neutrinos; SEK 12M) · pbs.org</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>诺贝 尔化学</span><span data-en>NOBEL CHEMISTRY</span></div>
+    <h3><span data-zh>Kagan × 佐井敬三：不对称自催化——分子层面的「镜像选择」</span><span data-en>Henri B. Kagan × Kenso Soai: asymmetric autocatalysis — molecular mirror-choice</span></h3>
+    <p><span data-zh>「不对称自催化」意味着一个手性分子能诱导自己成百万倍地复制同一种手性。<b class="gist">这是化学为「生命为何全选左手氨基酸」递交的候选答案之一</b>——一个自放大、可追溯、关乎生命起源的手性事件。授奖本身即是超学科信号：化学奖第一次这样正面奖励「从分子通向起源」的叙事。</span><span data-en>Asymmetric autocatalysis: one chiral molecule teaching itself to replicate its own handedness a millionfold. <b class="gist">A candidate answer to why life chose left-handed amino acids exclusively</b> — a self-amplifying, traceable, origin-adjacent event in chirality. The award itself is a transdisciplinary signal: chemistry honouring, this squarely, a narrative that runs from molecule to origin.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span class="stamp warn">◇</span><span data-zh>回源：nobelprize.org（10·7 新闻稿：Kagan 巴黎第十一大学；Soai）· vajiramandravi.com（授奖事由）；佐井机构（长崎大学）本会话未直接命中一手页 → ◇待核</span><span data-en>Sources: nobelprize.org (7 Oct: Kagan, Univ. Paris-Sud; Soai) · vajiramandravi.com (citation); Soai's institution (Nagasaki) not directly hit this session → ◇</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>京都 奖 · 十一月 京都会典</span><span data-en>KYOTO PRIZE · ceremony in November</span></div>
+    <h3><span data-zh>宫坂力（钙钛矿）·  Laurie Anderson（艺术哲思）· 姚期智·Roeder·Azam</span><span data-en>Tsutomu Miyasaka (perovskite) · Laurie Anderson (arts &amp; philosophy) · Andrew Yao · Roeder · Azam</span></h3>
+    <p><span data-zh>六月 announced 的 2026 京都奖，十月正是它「沉入公众意识」的季节，11 月 10 日京都国际会馆授奖：钙钛矿光伏创造者<b class="gist">宫坂力（永守重信赏侧翼的能源功臣）</b>、海洋微生物学家 Farooq Azam、实验艺术全能者 Laurie Anderson（艺术哲学奖）、算法与密码学家姚期智、染色质生物学家 Robert Roeder。京都奖之于日本，犹如一种「东方精神院外」：科技与沉思艺术同坛，与本仓「生命修行」轴（F5）互照。</span><span data-en>Announced in June, the 2026 Kyoto Prize has been settling into public consciousness through October ahead of the 10 November ceremony at Kyoto International Conference Center: perovskite-solar pioneer <b class="gist">Tsutomu Miyasaka</b>, marine microbiologist Farooq Azam, all-hazard experimental artist <b class="gist">Laurie Anderson</b> (Arts &amp; Philosophy), cryptographer Andrew Chi-Chih Yao, chromatin biologist Robert Roeder. The Kyoto Prize is Japan's "open courtyard of the spirit": technology and contemplative art on one dais — mirroring our life-cultivation axis (F5).</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：kyotoprize.org（laureates & 11·10 授奖典）· nonesuch.com（Anderson 艺术哲思奖）· kyotoprize.ox.ac.uk</span><span data-en>Sources: kyotoprize.org (laureates &amp; 10 Nov ceremony) · nonesuch.com (Anderson, Arts &amp; Philosophy) · kyotoprize.ox.ac.uk</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>经济 学奖</span><span data-en>ECONOMIC SCIENCES</span></div>
+    <h3><span data-zh>Hall × Woodford：把宏观装回微观的抽屉（10 月 12 日）</span><span data-en>Robert E. Hall × Michael Woodford: macro put back into its micro drawer (12 Oct)</span></h3>
+    <p><span data-zh>瑞典央行经济学奖授 Hall 与 Woodford「<b class="gist">for microeconomic foundations of macroeconomic policy</b>」一类事由——激励、承诺与时间一致性的地基重修。与本仓 economics_cross_culture 相切处在于：激励设计从来不止是数学，也是一种关于人性的叙事体裁——恰是 Hall 一生用「随机行走消费」拆解的那个叙事。</span><span data-en>The Riksbank prize to Hall &amp; Woodford — <b class="gist">micro-foundations of macroeconomic policy</b>: incentives, commitment, time-consistency rebuilt from below. It touches our economics_cross_culture module where incentive design is never only mathematics but a genre of storytelling about human nature — the very story Hall spent a lifetime unpicking with the random walk of consumption.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：nobelprize.org（10·12）· kva.se · riksbank.se</span><span data-en>Sources: nobelprize.org (12 Oct) · kva.se · riksbank.se</span></div>
+  </div>
+</section>
+
+<!-- ═══ III 艺文 ═══ -->
+<section class="sec" id="arts">
+  <div class="sec-head">
+    <span class="glyph">三</span>
+    <h2><span data-zh>艺文 · 市场、空间与舞台</span><span data-en>Arts &amp; Stage · Market, Space, Scene</span></h2>
+    <span class="lens"><span data-zh>视角：艺术的公共性在此月有三副面孔</span><span data-en>Lens: publicity wears three faces this month</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>摄政公园的帐篷（市场）、蒂赛德的 MIMA（公共艺塾）、大都会与保利（舞台）。三副面孔合起来问同一个问题：艺术作为「共同在场」如何继续组织。</span><span data-en>Tents in Regent's Park (market), MIMA in Teesside (civic studio), the Met and Beijing's Poly (stage). Three faces of one question: how art as co-presence keeps being organised.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>艺 术市 场</span><span data-en>ART MARKET</span></div>
+    <h3><span data-zh>Frieze 周：318 家画廊撑起伦敦的五天（10 月 14–18 日）</span><span data-en>Frieze Week: 318 galleries, five days, north London (14–18 Oct)</span></h3>
+    <p><span data-zh>Frieze London × Masters 双城帐篷对望，318 家画廊、新作与「一切在它之前的作品」同场。更值得文化学者侧目的是外场：<b class="gist">72 位艺术家自 10 月 29 日起接管公共空间至 2027 年 2 月</b>——艺术离开白盒子进入通勤路线，是本月最实在的「公共性实验」。</span><span data-en>Frieze London and Masters face each other across Regent's Park — 318 galleries, the new and "everything made before it" in one field. The more telling data for a cultural scholar is the outer frame: <b class="gist">72 artists take over public space from 29 October through February 2027</b> — art leaving the white cube for the commute, this month's most material experiment in publicness.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：flolondon.co.uk（14–18 日·318 家）· biennale.com（Regent's Park）· theartjournal.com（72 位艺术家公共项目 10·29 起）</span><span data-en>Sources: flolondon.co.uk (14–18 Oct, 318 galleries) · biennale.com (Regent's Park) · theartjournal.com (72-artist public programme from 29 Oct)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>公 共艺 塾</span><span data-en>CIVIC STUDIO</span></div>
+    <h3><span data-zh>特纳奖 2026 @ MIMA：Barclay · Freije · Humeau · Sasraku（9·26 开展，12 月决奖）</span><span data-en>Turner Prize 2026 @ MIMA: Barclay · Freije · Humeau · Sasraku (opened 26 Sep, verdict in Dec)</span></h3>
+    <p><span data-zh>英国最争议艺术奖把展览放在伦敦之外的蒂赛德（Middlesbrough Institute of Modern Art），本身就是宣言。四提名中<b class="gist">Marguerite Humeau（虚构古生物/失落文明的雕塑人类学）最贴近本仓的跨学科口味</b>；Kira Freije 以金属、织物、石膏与现成物拼「未知的兴奋」。12 月决奖——本栏保留十月判断，待十二月更新。</span><span data-en>Britain's most argued-over prize planting its show outside London — in Teesside — is itself a manifesto. Of the four, <b class="gist">Marguerite Humeau (an archaeology of invented species and lost civilisations) is closest to this repo's inter-disciplinary palate</b>; Kira Freije assembles "the excitement of the unknown" from metal, fabric, plaster and found things. Verdict in December — this column holds its October judgement, to be revised with the month's own.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：tate.org.uk · artforum.com（四提名）· anothermag.com（MIMA 指南）· museumsassociation.org · ocula.com（雕塑倾向）</span><span data-en>Sources: tate.org.uk · artforum.com (shortlist) · anothermag.com (MIMA guide) · museumsassociation.org · ocula.com (sculptural tilt)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>舞台 首演</span><span data-en>PREMIERE ON STAGE</span></div>
+    <h3><span data-zh>大都会歌剧院：《林肯在阴间》(Saunders 原著改编) 世界首演（10·19–11·14）</span><span data-en>Met Opera: Lincoln in the Bardo — world premiere from George Saunders (19 Oct–14 Nov)</span></h3>
+    <p><span data-zh>2017 布克小说的歌剧化委约，本月在大都会落地。同一旬里，北京保利剧院 10 月 18 日由中国爱乐演亨德尔《朱利叶斯·凯撒》。<b class="gist">东西两个舞台同时把「历史幽灵」请进音乐厅</b>——纽约请的是丧子之痛里的林肯，北京请的是权谋与柔肠并存的凯撒。剧场仍是文明处理记忆的主要器官。</span><span data-en>A commission made novel-into-opera lands this month at the Met. In the same ten-day span, China Philharmonic stages Handel's Giulio Cesare at Beijing's Poly Theatre on 18 October. <b class="gist">Two stages, east and west, seating the ghosts of history in the concert hall at once</b> — Lincoln in his grief at New York, Caesar in his policy and tenderness at Beijing. Theatre remains a civilisation's chief organ for processing memory.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：operawire.com（Met 10·19–11·14 首演名单）· trip.com（北京保利 10·18 亨德尔）· westendtheatre.com（伦敦秋季新戏）</span><span data-en>Sources: operawire.com (Met premiere, 19 Oct–14 Nov) · trip.com (Poly Beijing, Handel 18 Oct) · westendtheatre.com (London autumn openings)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>银幕（ 影）</span><span data-en>SCREEN</span></div>
+    <h3><span data-zh>《Clayface》登顶周末票房；《Wildwood》《街头霸王》同旬接棒</span><span data-en>Clayface tops the weekend chart; Wildwood and Street Fighter follow in the same fortnight</span></h3>
+    <p><span data-zh>十月北美周末票房前三（10·23 当周）：<b class="gist">新片《Clayface》第一、《You Can See Everything》第二、《Wildwood》第三</b>，《Street Fighter》退居其后。流媒体侧 Variety 点名的片单里《The Invite》《Disclosure Day》《 Evil Dead Burn》各安其位。另一支来自书坛的暗线：布克入围作品正在影视化——Himesh Patel 参与制作，评奖与制片同季发酵，文学—影视供应链进入高速档。</span><span data-en>North American weekend top three for 23 October: <b class="gist">debuting Clayface at number one, You Can See Everything second, Wildwood third</b>, Street Fighter slipping behind. On streaming, Variety's October list keeps The Invite, Disclosure Day and Evil Dead Burn in place. The quieter book-side line: Booker titles are being filmed — judge-linked Himesh Patel producing; judging and production ferment in the same season, the literature–screen supply chain shifting into high gear.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：the-numbers.com（10·23 周末榜）· boxofficemojo.com（10·25 日榜）· variety.com（流媒体片单）· thebookerprizes.com（影视联动）</span><span data-en>Sources: the-numbers.com (23 Oct weekend) · boxofficemojo.com (25 Oct daily) · variety.com (streaming list) · thebookerprizes.com (screen tie-ins)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>建筑（ 空间）</span><span data-en>SPACE (ARCHITECTURE)</span></div>
+    <h3><span data-zh>世界建筑节 2026：416 个入围项目悬于十一月（11·20 颁奖）</span><span data-en>WAF 2026: 416 shortlisted projects suspended above November (awards 20 Nov)</span></h3>
+    <p><span data-zh>今年 WAF 入围名单 416 项，含 Foster + Partners、Herzog &amp; de Meuron、Studio Gang、RSHP 等事务所；11 月 12–13 日现场评审、20 日揭晓。<b class="gist">「建筑师在评委室里当众讲解自己的图」是建筑界独有的仪式</b>——评审公开化本身即是一种认识论姿态，与本仓「知识共产」（E1）原则同调。</span><span data-en>416 projects on this year's WAF shortlist — Foster + Partners, Herzog &amp; de Meuron, Studio Gang, RSHP among them; live juries 12–13 November, awards on the 20th. <b class="gist">Architects defending their drawings in open crit rooms is architecture's own ritual</b> — the publicity of judgement is itself an epistemic stance, in key with our co-production principle (axis E1).</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：worldarchitecturefestival.com（416 入围·11 月节奏）· archdaily.com（入围解析）</span><span data-en>Sources: worldarchitecturefestival.com (416 shortlist; November calendar) · archdaily.com (shortlist analysis)</span></div>
+  </div>
+</section>
+
+<!-- ═══ IV 声活 ═══ -->
+<section class="sec" id="sound">
+  <div class="sec-head">
+    <span class="glyph">四</span>
+    <h2><span data-zh>声活 · 被命名的声音</span><span data-en>Sound &amp; Life · Naming the Noise</span></h2>
+    <span class="lens"><span data-zh>视角：流行乐是当月最诚实的自传</span><span data-en>Lens: pop is the month's most honest autobiography</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>音乐轴本月材料稀疏——我们不臆造热闹，只登记可回源者：一张在 2026 全年-charting 的冠军专辑、一张十月新专辑（Billboard 年历预告）、一支与修行同坛的艺术家。</span><span data-en>The music shelf is thin this month and we will not invent a clamour — only what is re-sourcable: a chart-kingdom album of 2026, an October new release flagged in Billboard's calendar, one artist honoured on the same dais as cultivation.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>冠 军（ 专辑）</span><span data-en>THE RUNAWAY</span></div>
+    <h3><span data-zh>Taylor Swift《The Life of a Showgirl》：2026 最长冠专</span><span data-en>Taylor Swift, The Life of a Showgirl: longest-running number-one album of 2026</span></h3>
+    <p><span data-zh>据 Billboard 200 年度冠军榜，2025 年 11 月发行的《The Life of a Showgirl》<b class="gist">在 2026 年累计五周登顶，为全年最长冠</b>——十月仍在榜上供人。这是流行音乐作为「时代自传」的标准样本：Showgirl 意象把 20 世纪巡演的脂粉气接到流媒体时代的个人神话。</span><span data-en>Per Billboard's roll of 2026's chart-toppers, the November-2025 LP <b class="gist">spent five weeks at number one during 2026 — the year's longest coronation</b> — still drawing in October. A standard sample of pop as the age's autobiography: the Showgirl image stitches century-old tour-paint onto streaming-era personal myth.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：en.wikipedia.org/wiki/List_of_Billboard_200_number-one_albums_of_2026</span><span data-en>Source: en.wikipedia.org/wiki/List_of_Billboard_200_number-one_albums_of_2026</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>十 月新 声</span><span data-en>OCTOBER ON AIR</span></div>
+    <h3><span data-zh>Nickelback 新辑与工业传奇回归（Billboard 年历十月档）；北京「国家大剧院十月演出季」</span><span data-en>A Nickelback album and an industrial-legend return (Billboard's October column); Beijing's October opera season</span></h3>
+    <p><span data-zh>Billboard 2026 发行年历将十月留给 <b class="gist">Nickelback 新专辑与一支标志性工业乐队的回归</b>。同旬华语剧场侧：10 月 18 日中国爱乐在保利剧院演亨德尔（见「舞台」条），上海大剧院两日连演（22、24 日）。古典、摇滚、工业——三种风格同一旬里各自破一次「过气」的预言。</span><span data-en>Billboard's 2026 calendar assigns October <b class="gist">a Nickelback album and a return by an iconic industrial act</b>. In the same fortnight, the Chinese season opens: China Philharmonic's Handel at Poly on 18 Oct (see Stage), Shanghai Grand Theatre on the 22nd and 24th. Classical, rock, industrial — three antonyms of "past prime", all opening for business.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span class="stamp warn">◇</span><span data-zh>回源：billboard.com（年历；工业乐队具体所指待核 ◇）· trip.com（十月演出季单）</span><span data-en>Sources: billboard.com (calendar; which industrial act — ◇) · trip.com (October season list)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>艺术家与修行</span><span data-en>ARTIST AS PRACTICE</span></div>
+    <h3><span data-zh>Laurie Anderson 获京都奖（艺术哲思）：声音艺术的正名时刻</span><span data-en>Laurie Anderson's Kyoto Prize (Arts &amp; Philosophy): sound art's investiture</span></h3>
+    <p><span data-zh>电话机里读说明书、用机器人和提琴说话的人，获得了日本最高民间荣誉。<b class="gist">「艺术哲思」赏给一个以声音为哲学方法的艺术家</b>，恰与本月诺奖文学（卡森）、F5 修行轴连成一条暗线：把创作当修行、把修行当创作。</span><span data-en>The one who read telephone manuals aloud and let a robot and a violin do the talking receives Japan's highest civilian honour. That the <b class="gist">Kyoto's Arts &amp; Philosophy prize should go to an artist whose medium is a philosophical method of sound</b> draws a thread across this month's Literature Nobel (Carson) and our contemplative-praxis axis (F5): making as practice, practice as making.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：nonesuch.com/journal · kyotoprize.org/en/260619</span><span data-en>Sources: nonesuch.com/journal · kyotoprize.org/en/260619</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>第 九艺 术（ 游戏）</span><span data-en>NINTH ART (GAMES)</span></div>
+    <h3><span data-zh>《Phantom Blade Zero》10·29 发售：中国动作 RPG 的全球首秀；《GTA VI》11·19 压境</span><span data-en>Phantom Blade Zero ships 29 Oct — a Chinese action RPG's global opening; GTA VI looms on 19 Nov</span></h3>
+    <p><span data-zh>十月游戏版面的真正事件：<b class="gist">国产团队 Game Science 系出圈的《黑神话》之后，另一支中国工作室以 Phantom Blade Zero 在月底冲入全球视野</b>；Steam 十月日历另有 Fortnite: Rocket Racing（10·1）、Castlevania: Belmont's Curse 等。而整个行业屏息等 11 月 19 日的 GTA VI。游戏作为「第九艺术」的文化份额，从未像今年十月这样不言自明。</span><span data-en>The month's real games event: <b class="gist">after Black Myth put a Chinese team on the world map, another Chinese studio storms global sightlines with Phantom Blade Zero at month's end</b>; the Steam October calendar also carries Fortnite: Rocket Racing (1 Oct), Castlevania: Belmont's Curse and more, while an industry holds its breath for GTA VI on 19 November. The cultural share of the "ninth art" has never argued itself more eloquently than this October.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：imdb.com（PBZ 10·29）· gamespot.com（GTA VI 11·19 与年度预期）· en.wikipedia.org/wiki/2026_in_video_games · steamdb.info（十月日历）</span><span data-en>Sources: imdb.com (PBZ 29 Oct) · gamespot.com (GTA VI 19 Nov, year's anticipation) · en.wikipedia.org/wiki/2026_in_video_games · steamdb.info (October calendar)</span></div>
+  </div>
+</section>
+
+<!-- ═══ V 点睛 · 第三语言精华引文 ═══ -->
+<section class="sec" id="tongue">
+  <div class="sec-head">
+    <span class="glyph">五</span>
+    <h2><span data-zh>点睛 · 第三语言的原文</span><span data-en>The Dragon's Eye · The Originals in a Third Tongue</span></h2>
+    <span class="lens"><span data-zh>本期三镜：古希腊 · 日语 · 中文（原文对译）</span><span data-en>This issue's three mirrors: Ancient Greek · Japanese · Chinese</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>本期每月一梳，绕不开三种原文——它们恰好构成本月文学轴的全部因果链：卡森译萨福，萨福归希腊，而芭蕉的蛙声与《台湾漫游录》的三重语层，说明一切「翻译年」都是错觉。原文即事件。</span><span data-en>Three originals set the whole causal chain of this month's literary axis: Carson translated Sappho; Sappho belongs to Greek; Bashō's frog and Taiwan Travelogue's three language-layers prove that every "year of translation" is an illusion. The original is the event.</span></p>
+
+  <div class="q">
+    <span class="lang-tag">ΣΑΠΦΩ · 古希腊语 ANCIENT GREEK</span>
+    <div class="orig">φαίνεταί μοι κῆνος ἴσος θέοισιν
+ἔμμεν', ὄττις ἐναντίος τοι ἰζάνει
+καὶ πλυσίον ἀδυ φωνεύ-
+σας ὑπακούει</div>
+    <div class="tr"><b>EN</b> — That man seems to me peer of the gods: he sits opposite you and hears your sweet voice, close to a whisper.</div>
+    <div class="tr"><b>中</b> — 那人在我眼里，堪比诸神：他坐你对面，听你贴近低语的柔声。</div>
+    <div class="note"><span data-zh>萨福残篇 31 起四行。原文校记多源核证（见下方来源）；英汉两解为本仓依权威直译（Wilson 转写「phainetai moi kênos isos theoisin」, literal gloss "level to the gods"）自撰之简明对译。卡森获诺，其《If No, Winter: Sappho 断章》与黄茜中译，使这 2,600 年前的起句本月同时活在希腊语、英语与汉语中。</span><span data-en>Sappho, fragment 31, opening lines — text collated from the sources below; the English and Chinese renderings are this atlas's own plain gloss after the literal tradition ("…equal to the gods"). With Carson's Nobel, her If No, Winter (Sappho fragments, trans. Huang Qian) puts these 2,600-year-old syllables into Greek, English and Chinese at the same moment this October.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>原文回源：gutenberg.org/files/57390 · inamidst.com/stuff/sappho · math.uchicago.edu（Eros the Bittersweet 页）· academia.edu（fr.31 长引本）· cordite.org.au</span><span data-en>Original sources: gutenberg.org/files/57390 · inamidst.com/stuff/sappho · math.uchicago.edu · academia.edu · cordite.org.au</span></div>
+  </div>
+
+  <div class="q">
+    <span class="lang-tag">日本語 · JAPANESE（俳句 HAIKU）</span>
+    <div class="orig">古池や 蛙飛びこむ 水の音</div>
+    <div class="tr"><b>Rōmaji</b> — furuike ya / kawazu tobikomu / mizu no oto</div>
+    <div class="tr"><b>EN</b> — the old pond — a frog leaps in, sound of water.</div>
+    <div class="tr"><b>中</b> — 古池哟，青蛙跃入，一声水响。（松尾芭蕉）</div>
+    <div class="note"><span data-zh>芭蕉此句的「独创」恰在于：古来和歌只咏蛙<b>鸣</b>，芭蕉偏写蛙<b>跃入之水音</b>——由「声音的类型」翻为「声音的事件」。日本维基与山梨县立教研所页均存原文与解说（17·02 口径）。它在本期的位置：与卡森同框，说明「最先锋的文学奖，颁给了最古老的耳朵」；与本仓 F4 日常生活美学轴同框，说明一碗粥般的瞬间即可成立一整个美学范畴。</span><span data-en>Bashō's originality: waka sang only a frog's <b>cry</b>; he wrote the <b>splash of its leap</b> — type of sound turned event of sound. Original and commentary on the two cited Japanese sources. Its seat in this issue: beside Carson — the most avant-garde prize given to the oldest ear — and beside axis F4, everyday aesthetics: a porridge-simple instant founding a whole aesthetic category.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>原文回源：ja.wikipedia.org（古池や蛙飛びこむ水の音）· www2.yamanashi-ken.ac.jp/~itoyo/basho</span><span data-en>Original sources: ja.wikipedia.org · www2.yamanashi-ken.ac.jp/~itoyo/basho</span></div>
+  </div>
+
+  <div class="q">
+    <span class="lang-tag">中文原作 · CHINESE ORIGINAL（英译对照）</span>
+    <div class="orig">《臺灣漫遊錄》——楊雙子<br><span style="font-size:.85em;color:var(--ink-soft)">Taiwan Travelogue — Yáng Shuāng-zǐ, trans. Lin King</span></div>
+    <div class="tr"><b>EN · 题解</b> — the first Chinese-language original ever to win the International Booker Prize (2026); a love between two women nested in Japanese-occupation literary Taipei.</div>
+    <div class="tr"><b>中 · 题解</b> — 国际布克史上第一部中文获奖原作；日据时代台北文坛里嵌套的双女之情，作家与译者共享奖座。</div>
+    <div class="note"><span data-zh>原文小说文本受版权所护，此处不引正文，只存书名原文与中英题解。但书名本身即一个微型三重语层：繁体「臺灣漫遊錄」/ 拼音名 Yáng Shuāng-zǐ / 英译 Taiwan Travelogue——一部以日语书写时代、以中文追忆、再以英文获奖的书。它的三层，正是本期「第三语言」栏目存在的理由。</span><span data-en>The novel itself is under copyright, so no interior lines are quoted — only the book's own title, held in its three official skins: traditional 臺灣漫遊錄, romanised Yáng Shuāng-zǐ, English Taiwan Travelogue. A book that wrote its era in Japanese-inflected Chinese, remembered it in Chinese, was crowned in English. Its three layers are the reason this column exists.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-10-28</span><span data-zh>回源：thebookerprizes.com · cbc.ca · andotherstories.org · roc-taiwan.org（「中文首次」定论）</span><span data-en>Sources: thebookerprizes.com · cbc.ca · andotherstories.org · roc-taiwan.org (the "first for Chinese" finding)</span></div>
+  </div>
+</section>
+
+<!-- ═══ 龙睛 · 本月八点 ═══ -->
+<div class="eyebrow-band" id="points">
+  <div class="wrap">
+    <div class="sec-head" style="border-bottom-color:var(--warm-amber)">
+      <span class="glyph">睛</span>
+      <h2><span data-zh>画龙点睛 · 本月八点</span><span data-en>Eight Dots on the Dragon</span></h2>
+      <span class="lens"><span data-zh>读完可以忘掉的清单，忘不掉的判断</span><span data-en>Lists you may forget; judgements you will not</span></span>
+    </div>
+    <div class="eyebrow-grid">
+      <div class="eyebrow"><div class="n">1</div><h4 data-zh>文学年 = 翻译年</h4><h4 data-en>A literary year = a year of translation</h4><p><span data-zh>诺奖给了译萨福的人，国际布克给了中译英的小说——翻译不再是次等技艺，而是本年度的第一文体。</span><span data-en>The Nobel went to Sappho's translator, the International Booker to a Chinese-to-English novel. Translation is not the lesser craft — it is this year's primary genre.</span></p></div>
+      <div class="eyebrow"><div class="n">2</div><h4 data-zh>诺贝尔赏「手艺」</h4><h4 data-en>The Nobels reward craft</h4><p><span data-zh>光、冰、手性、激励——四奖皆授「能装进世界里的方法」，而非「关于世界的说法」。</span><span data-en>Light, ice, chirality, incentives — four prizes to methods that can be installed into the world, not accounts about it.</span></p></div>
+      <div class="eyebrow"><div class="n">3</div><h4 data-zh>科学的入口史上最平</h4><h4 data-en>Science's front door never lower</h4><p><span data-zh>IceCube 数据公开、WAF 评审当众进行——本月两个「可介入性」坐标，普通人可入场。</span><span data-en>IceCube's open data, WAF's public crits — two intervenability coordinates where a layperson may walk in.</span></p></div>
+      <div class="eyebrow"><div class="n">4</div><h4 data-zh>公共性三件套</h4><h4 data-en>Three kit-parts of publicness</h4><p><span data-zh>Frieze 外场的 72 个公共空间项目、特纳奖离开伦敦、Met 与保利的同旬首演——艺术把「在场」重新定价。</span><span data-en>72 public-space works around Frieze, the Turner leaving London, simultaneous premieres at the Met and the Poly — art repricing co-presence.</span></p></div>
+      <div class="eyebrow"><div class="n">5</div><h4 data-zh>声音轴诚实声明</h4><h4 data-en>A frank note on the music shelf</h4><p><span data-zh>本月音乐可回源的硬材料有限——我们宁缺毋滥，留白即刻度。</span><span data-en>Re-sourcable music this month was scarce; we prefer the blank to the clamour — the blank is also a measurement.</span></p></div>
+      <div class="eyebrow"><div class="n">6</div><h4 data-zh>第九艺术进主场</h4><h4 data-en>The ninth art on home ground</h4><p><span data-zh>Phantom Blade Zero 月底全球发售——中国工作室接棒《黑神话》，游戏已是文明输出生成器。</span><span data-en>Phantom Blade Zero ships worldwide at month's end — China's studios taking the relay from Black Myth; games are now civilisation-output devices.</span></p></div>
+      <div class="eyebrow"><div class="n">7</div><h4 data-zh>修行与科技同坛</h4><h4 data-en>Cultivation shares the dais</h4><p><span data-zh>京都奖把艺术哲思赏给 Laurie Anderson、钙钛矿赏给宫坂力——日本把「沉思」与「装置」视为同一件事的两面。</span><span data-en>Kyoto gives Arts &amp; Philosophy to Laurie Anderson and the energy prize to Miyasaka — Japan treating contemplation and apparatus as two faces of one work.</span></p></div>
+      <div class="eyebrow"><div class="n">8</div><h4 data-zh>十一月预告</h4><h4 data-en>Next month</h4><p><span data-zh>11·9 布克开奖 · 11·10 京都授奖典 · 11·12–13 WAF 评审 / 20 颁奖 · 11·14 美大都会《林肯在阴间》收官 · 11·19 GTA VI。</span><span data-en>9 Nov Booker verdict · 10 Nov Kyoto ceremony · 12–13 WAF crits, 20 awards · 14 Nov Met's Bardo closes · 19 Nov GTA VI.</span></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 方法 · 诚实缺口 ═══ -->
+<section class="sec" id="method">
+  <div class="sec-head">
+    <span class="glyph">法</span>
+    <h2><span data-zh>方法与诚实缺口 · Method &amp; Honest Gaps</span><span data-en>Method &amp; Honest Gaps</span></h2>
+  </div>
+  <div class="method">
+    <p><span data-zh><b>凡例</b>：① 全部条目经 2026-10-28 检索回源，<span class="stamp ok">✔</span> = 权威来源直接命中；<span class="stamp warn">◇</span> = 事实成立但一手机构/日期待下月复核。② 第三语言引文只采公共记录之原文；在版权期内的正文一律不引正文，只存书名与自撰题解。③ 一时性事实（榜单、日期、机构归属）随时间漂移，下期以「订正」栏回看本期。④ 本页为系列第一篇（总第 01 号）；系列命名取《后汉书》「月旦评」义。</span><span data-en><b>Conventions</b>: ① every item re-sourced on 2026-10-28; <span class="stamp ok">✔</span> = direct hit in an authoritative source; <span class="stamp warn">◇</span> = holds, but the institution/date awaits next month's check. ② In a third language we quote originals that are matters of public record; nothing under copyright is quoted beyond the title — only the title and our own gloss. ③ Time-sensitive facts (charts, dates, affiliations) drift; next issue carries a corrections column. ④ This is Issue 1 of the series; its name revives the Hou Han shu's "Month's Verdict".</span></p>
+    <p style="margin-top:.8rem"><span data-zh><b>已知缺口</b>：佐井敬三机构（◇）；Billboard 十月工业乐队所指（◇）；沃尔普新书确切上市日（◇）；本月中国国内长篇小说大奖（茅盾文学奖今年不在评选年——其缺席出于历年，非漏检）。</span><span data-en><b>Known gaps</b>: Soai's institution (◇); which industrial act Billboard's October column means (◇); Volpp's exact on-sale date (◇); no major mainland long-fiction prize falls in this window (the Mao Dun cycle skips this year — an absence by calendar, not by oversight).</span></p>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<footer class="footer">
+  <div class="motto"><span data-zh>舟行万洲 · 月旦一品</span><span data-en>Sail the continents · a verdict each month</span></div>
+  <p><span data-zh>文化月旦 · 总第 01 号 · 舟洲粥出品 — 下一页：<a href="../discovery_atlas/index.html">发现星图</a> · <a href="../../academic_research/frontier_scan.md">前沿学术侦察</a></span><span data-en>Monthly Culture Review · Issue 1 · by Zhōu Zhōu Zhōu — next: <a href="../discovery_atlas/index.html">Discovery Atlas</a> · <a href="../../academic_research/frontier_scan.md">Frontier Scan</a></span></p>
+</footer>
+
+<script>
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));try{localStorage.setItem('zhzz-lang',lang)}catch(e){};document.documentElement.lang=lang==='zh'?'zh':'en'}
+const saved=localStorage.getItem('zhzz-lang');if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+
+</body>
+</html>
