@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-27",
-  "total": 222,
+  "total": 237,
   "sources": [
     {
       "id": "wikimedia-commons",
@@ -4981,6 +4981,336 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "xlrecordings.com GET 实测 200"
+    },
+    {
+      "id": "aeon",
+      "wikidata_qid": "",
+      "domain": "science",
+      "layer": "criticism",
+      "circle": "global",
+      "name": "Aeon",
+      "url": "https://aeon.co/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "magazine",
+      "why": "哲学、心理、文化与「如何生活」的长文杂志，把学术人文议题写成公共散文，是人文/文明思辨与跨学科作者发现的高质量入口。",
+      "not_for": "随笔评论体，不替代学术文献。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "edge",
+      "wikidata_qid": "Q5337653",
+      "domain": "science",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "EDGE Foundation",
+      "url": "https://www.edge.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "「第三文化」思想平台（John Brockman 主理），以年度「最后发问」汇聚顶尖科学家与思想家的前沿论断，是跨学科智识风向标。",
+      "not_for": "观点访谈体，不宜作可引证实证来源。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "nautilus",
+      "wikidata_qid": "",
+      "domain": "science",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Nautilus",
+      "url": "https://nautil.us/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "magazine",
+      "why": "科学与人文学科-crossing 的在线杂志，串联神经科学、哲学、艺术与环境议题，擅长呈现跨学科「大想法」与新锐研究者。",
+      "not_for": "大众科学写作，不保证学术级严谨。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "publicdomainreview",
+      "wikidata_qid": "Q7758689",
+      "domain": "science",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "The Public Domain Review",
+      "url": "https://www.publicdomainreview.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "公共数字学术智库 Wellcome 的同行评审在线杂志，以图像与档案重写文化/医学/科学史，是「人文×视觉×科学史」的新兴富矿。",
+      "not_for": "主题策展式长文，非系统数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "quanta",
+      "wikidata_qid": "Q28403687",
+      "domain": "science",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Quanta Magazine",
+      "url": "https://www.quantamagazine.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "magazine",
+      "why": "Simons 基金会旗下的数学与理论物理/前沿科学深度刊物，由专家把最抽象的基础研究讲给跨界读者，是发现「下一个大问题」的灯塔。",
+      "not_for": "面向大众的深度报道，非一手文献。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "connectedpapers",
+      "wikidata_qid": "",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Connected Papers",
+      "url": "https://www.connectedpapers.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "graph",
+      "why": "以一篇种子论文生成相似与引用网络的可视化图，顺藤摸瓜进入一个研究簇，是横向打开陌生领域视野的发现工具。",
+      "not_for": "基于向量相似而非严格引用链；高清导出付费。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "elicit",
+      "wikidata_qid": "Q134895255",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Elicit",
+      "url": "https://elicit.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "assistant",
+      "why": "AI 研究助手，围绕一个问题检索并跨多篇文献抽取字段做横向比对与综述起草，加速跨学科前沿扫描与文献筛读。",
+      "not_for": "抽取结果依赖模型，须回原文核验；有额度限制。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "huggingface-papers",
+      "wikidata_qid": "",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Hugging Face Daily Papers",
+      "url": "https://huggingface.co/papers",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "Hugging Face 每日论文榜，社区投票聚焦 AI/ML 最新预印本并直连配套模型与数据集，是追踪 AI 前沿日更的热度入口（Papers with Code 停站后的实际接续者）。",
+      "not_for": "偏 AI/ML 与开源生态，传统学科覆盖弱。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "ourworldindata",
+      "wikidata_qid": "Q23680080",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Our World in Data",
+      "url": "https://ourworldindata.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "dataset",
+      "why": "牛津 Global Change Data Lab 的数据驱动长文库，把贫困/健康/环境/人口/技术/文明级趋势做成可复现图表，是「用数据看人类进程」的跨学科富矿。",
+      "not_for": "以可视化叙事为主，方法细节散见各数据集页。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "scite",
+      "wikidata_qid": "Q130484713",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "scite",
+      "url": "https://scite.ai/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "citation-tool",
+      "why": "「智能引用」数据库，把每处引用按「支持/反驳/提及」语境分类，据此看一项工作是否被后续验证，是评估前沿可信度的利器。",
+      "not_for": "引用语境覆盖不全；多为订阅制。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "semanticscholar",
+      "wikidata_qid": "Q22908627",
+      "domain": "science",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "search-engine",
+      "why": "Allen AI 研究院的学术搜索引擎，两亿余篇论文带摘要、引用图谱与 TLDR 自动要点，Semantic Reader 助快速筛读新方向。",
+      "not_for": "CS/生物医学最强，部分学科全文与覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "arxiv",
+      "wikidata_qid": "Q118398",
+      "domain": "science",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "preprint-server",
+      "why": "全球学术预印本鼻祖（康奈尔运营），覆盖物理/数学/计算机/AI/定量生物/定量金融/经济等，几乎一切前沿工作的首发地，是追踪新兴方向的第一手水源。",
+      "not_for": "未经同行评审、质量参差；无内置影响力度量与去重。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "biorxiv",
+      "wikidata_qid": "Q19835482",
+      "domain": "science",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "bioRxiv",
+      "url": "https://www.biorxiv.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "preprint-server",
+      "why": "生命科学预印本服务器（2013，CSHL 运营），新实验、组学与神经科学结果抢先发布地，并标注同行评审/正式刊发状态。",
+      "not_for": "仅生命科学；预印本结论未经正式刊发确认。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；biorxiv.org 官方域与运营方经回源确认，浏览器可读"
+    },
+    {
+      "id": "cnki",
+      "wikidata_qid": "",
+      "domain": "science",
+      "layer": "infrastructure",
+      "circle": "zh",
+      "name": "中国知网 CNKI",
+      "url": "https://www.cnki.net/",
+      "langs": [
+        "zh"
+      ],
+      "regions": [
+        "CN"
+      ],
+      "kind": "database",
+      "why": "中文世界最大的学术整合库（期刊/学位论文/会议/报纸），是检索中文各学科前沿成果与学者谱系的主入口。",
+      "not_for": "付费墙重、界面庞杂；国际覆盖与开放度有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "openalex",
+      "wikidata_qid": "Q107507571",
+      "domain": "science",
+      "layer": "infrastructure",
+      "circle": "global",
+      "name": "OpenAlex",
+      "url": "https://openalex.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "catalog",
+      "why": "全球最大开放学术图谱（OurResearch 非营利，逾五亿作品及作者/机构/引用/主题，数据 CC0），是自建文献计量与前沿探测管道的数据底座。",
+      "not_for": "元数据聚合而非全文；主题需自行解读。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 ERR（根域走 JS/CDN）；openalex.org 官方域与维基条目经回源确认，站点/API 可用"
     }
   ]
 }

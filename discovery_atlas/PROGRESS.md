@@ -296,6 +296,20 @@
 
 **重建同步**（graph→view→export 依序）：`build_graph.py` 178 实体/262 边、`build_view.py` 视图内联新图、`export_data.py` CSV/NDJSON/JSON、`gate.py` 222/222 PASS；统一态 **222 条 · 178 QID · 154 实测 ✔**。
 
+## 2026-10-28 · 新开 `science` 域·学术研究发现批（第五域开账 +15 → 237）
+
+**动因**：用户新开「学术研究」方向——检索/梳理/评估前沿学术与科研方向及相关学者（基础科学、interdiscipline、transdiscipline、AI、数据科学、计算科学、文化/文明/人文）。架构决策：不复制工具链，而是把 `discovery_atlas` 扩为**第五域 `science`**（复用 gate/view/export/graph 全套），登记「学术研究发现基础设施」；配套的「前沿方向 × 学者 × 评估」分析另置于仓库根新模块 `academic_research/`。
+
+**改动**：`gate.py` `DOMAINS` 加 `science`；`build_view.py` 六处（DOMAINS 列表、CSS `.card[data-d="science"]`、`D_ZH` 学、`GC` `#5BA3A3`、`buildChips` 兜底、hero 副标「书·乐·影·艺·学」）；`README.md` 四域→五域并加 `science` 域说明。
+
+**候选→探针→回源**：16 候选 → 探针（浏览器 UA）：**13 条 200** 采 ✔（arxiv·semanticscholar·scite·connectedpapers·huggingface-papers·elicit·ourworldindata·quanta·nautilus·edge·aeon·publicdomainreview·cnki）；**2 条非 200 经回源确认官方域与重要性后以 ○ 入库**：biorxiv（403，Q19835482）、openalex（ERR，回源确证 openalex.org·WP 在案，Q107507571）。**诚实剔除 1**：paperswithcode——探针虽返 200，实为重定向落至 HuggingFace；回源发现 Meta 已于 **2025-07 关停**（前车之鉴同 fxhash），不登，其继任者已由 huggingface-papers 覆盖。
+
+**新条 15**（infrastructure 5：arxiv、biorxiv、openalex、cnki(中国知网，circle zh/regions CN/langs zh)、publicdomainreview；discovery 5：semanticscholar、scite、connectedpapers、huggingface-papers、elicit、ourworldindata；criticism 4：quanta、nautilus、edge(EDGE Foundation)、aeon）——层覆盖 discovery/criticism/infrastructure 三层。
+
+**QID 实体消解**（`resolve_qid.py science.json`，严守 P856 精确一致或 en-wiki 站点链接+标签一致）：命中 **10**（arxiv Q118398·biorxiv Q19835482·openalex Q107507571·semanticscholar Q22908627·scite Q130484713·elicit Q134895255·ourworldindata Q23680080·edge Q5337653·publicdomainreview Q7758689·quanta Q28403687）；**5 诚实留空**（connectedpapers·huggingface-papers·nautilus·aeon·cnki——无 P856 精确匹配/不唯一，不臆造）。
+
+**重建同步**（graph→view→export 依序）：`build_graph.py` 188 实体/273 边、`build_view.py` 视图内联新图、`export_data.py` CSV/NDJSON/JSON、`gate.py` 237/237 PASS（五域）；统一态 **237 条 · 188 QID · 167 实测 ✔**（书 106 · 艺 42 · 乐 41 · 影 33 · 学 15）。
+
 
 
 

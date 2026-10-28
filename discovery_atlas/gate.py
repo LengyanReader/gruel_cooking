@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 LAYERS = {"discovery", "criticism", "publishing", "infrastructure", "access"}
-DOMAINS = {"books", "music", "film", "art"}
+DOMAINS = {"books", "music", "film", "art", "science"}
 STATUSES = {"active", "bot-gated", "moved", "contested", "pending"}
 REQUIRED = [
     "id", "domain", "layer", "circle", "name", "url", "langs", "regions",

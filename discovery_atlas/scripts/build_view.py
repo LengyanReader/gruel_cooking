@@ -16,7 +16,7 @@ REPO = ROOT.parent                                       # .../gruel_cooking
 OUT = REPO / "docs" / "discovery_atlas" / "index.html"
 
 LAYERS = ["discovery", "criticism", "publishing", "infrastructure", "access"]
-DOMAINS = ["books", "music", "film", "art"]
+DOMAINS = ["books", "music", "film", "art", "science"]
 
 
 def load_entries():
@@ -126,6 +126,7 @@ select.chip{border-radius:10px}
 .card[data-d="music"]::before{background:linear-gradient(90deg,var(--accent-coral),#E8A890)}
 .card[data-d="film"]::before{background:linear-gradient(90deg,var(--accent-violet),#AEA0CC)}
 .card[data-d="art"]::before{background:linear-gradient(90deg,var(--accent-sage),#9CBEA0)}
+.card[data-d="science"]::before{background:linear-gradient(90deg,#5BA3A3,#7FC4C4)}
 .card h3{font-family:var(--ff-display);font-size:1.2rem;font-weight:700;color:var(--ink-deep);line-height:1.3;margin-bottom:.5rem}
 .card h3 a{color:var(--ink-deep)}.card h3 a:hover{color:var(--accent-teal)}
 .badges{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:.7rem}
@@ -166,7 +167,7 @@ select.chip{border-radius:10px}
 </nav>
 <section class="hero">
   <h1><span data-zh>发现星图 · 跨媒介发现源登记库</span><span data-en>Discovery Atlas · A registry of discovery sources</span></h1>
-  <p class="sub"><span data-zh>书 · 乐 · 影 · 艺——按 五层 × 文明圈 归档的「去哪儿找好东西」的地图。每条均经实测探针与回源核实；<b>只登记信息，不代为获取</b>。</span><span data-en>Books · Music · Film · Art — a map of "where to find good things", filed across five layers and civilizational circles. Every entry is probe-tested and source-verified; the atlas only records information, never fetches on your behalf.</span></p>
+  <p class="sub"><span data-zh>书 · 乐 · 影 · 艺 · 学——按 五层 × 文明圈 归档的「去哪儿找好东西」的地图。每条均经实测探针与回源核实；<b>只登记信息，不代为获取</b>。</span><span data-en>Books · Music · Film · Art · Science — a map of "where to find good things", filed across five layers and civilizational circles. Every entry is probe-tested and source-verified; the atlas only records information, never fetches on your behalf.</span></p>
   <div class="stat-row" id="statRow"></div>
 </section>
 <div class="controls">
@@ -191,7 +192,7 @@ const DATA = __DATA__;
 const GRAPH = __GRAPH__;
 const L_ZH={discovery:"发现",criticism:"批评",publishing:"出版",infrastructure:"基础设施",access:"获取"};
 const L_EN={discovery:"Discovery",criticism:"Criticism",publishing:"Publishing",infrastructure:"Infrastructure",access:"Access"};
-const D_ZH={books:"书",music:"乐",film:"影",art:"艺"};
+const D_ZH={books:"书",music:"乐",film:"影",art:"艺",science:"学"};
 const S_ZH={active:"可达","bot-gated":"反爬",pending:"待复测",moved:"已迁移",contested:"有争议"};
 const state={domain:"",layer:"",circle:"",ver:"",q:""};
 function el(t,c,h){const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
@@ -231,7 +232,7 @@ function render(){const g=document.getElementById("grid");g.innerHTML="";
       `<span class="meta-dim">${host}${qidLink?" · "+qidLink:""}</span></div>`;
     g.appendChild(c);});}
 function applyLang(){document.querySelectorAll(".badge.layer,.card .vdot").forEach(()=>{});render();}
-const GC={books:"#7AB8D9",music:"#D4836A",film:"#8B7BAA",art:"#7A9E7E"};
+const GC={books:"#7AB8D9",music:"#D4836A",film:"#8B7BAA",art:"#7A9E7E",science:"#5BA3A3"};
 let G=null;
 function initGraph(){const cv=document.getElementById("graph");if(!cv||!GRAPH.nodes||!GRAPH.nodes.length)return;
   const tip=document.getElementById("gtip");const W=cv.clientWidth,H=cv.clientHeight;const idx={};
@@ -267,7 +268,7 @@ function setMode(v){const gr=document.getElementById("grid"),ct=document.querySe
   if(v==="graph"){if(!G)initGraph();else{sizeG();G.alpha=Math.max(G.alpha,.4);}}}
 document.addEventListener("DOMContentLoaded",()=>{
   initStats();
-  buildChips("domChips",DATA.domains?Object.keys(DATA.domains):["books","music","film","art"],"domain");
+  buildChips("domChips",DATA.domains?Object.keys(DATA.domains):["books","music","film","art","science"],"domain");
   buildChips("layerChips",["discovery","criticism","publishing","infrastructure","access"],"layer");
   const cs=document.getElementById("circleSel");
   cs.innerHTML='<option value="">'+(document.body.classList.contains("lang-en")?"All circles":"全部圈")+'</option>'+

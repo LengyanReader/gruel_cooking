@@ -1,7 +1,9 @@
 # Discovery Atlas · 发现源总库
 
-> 状态：**P0 规划已确认，种子库已落盘**。四域（书 / 乐 / 影 / 艺）· 五层 · 全文明圈的发现源登记库，服务「下一步读什么 / 听什么 / 看什么」。
-> Status: **plan confirmed at R4, seed registered.** A registry of discovery sources across four media domains, five source layers and the world's civilizational circles.
+> 状态：**P0 规划已确认，种子库已落盘**。五域（书 / 乐 / 影 / 艺 / 学）· 五层 · 全文明圈的发现源登记库，服务「下一步读什么 / 听什么 / 看什么 / 研究什么」。
+> Status: **plan confirmed at R4, seed registered.** A registry of discovery sources across five domains (books / music / film / art / science), five source layers and the world's civilizational circles.
+>
+> **`science` 域（2026-10-28 新开）**：面向「前沿学术与科研方向」的发现基础设施——基础科学 / AI / 数据与计算科学 / 跨·超学科 / 人文文明。同享五层分类（多为 discovery / criticism / infrastructure），同受 `gate.py` 与探针-回源规程约束；配套的「前沿方向 × 学者 × 评估」分析见仓库根 `academic_research/` 模块。
 
 **用法一句话**：想读书时按 `域 → 层 → 文明圈` 三维翻 `sources/*.json`——①层找人气与同好，②层找专业评价与奖项书单调性，③层追有品味的出版者，④层用国家书目/开放书目对元数据，⑤层解决"去哪儿拿到"。
 
