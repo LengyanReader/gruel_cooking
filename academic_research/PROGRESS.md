@@ -103,8 +103,18 @@
 
 用户新请：做 2026 年 10 月文化梳理（读物/研究/影视/艺术/音乐），中英双语，第三语言作品重点引原文精华配中英解释，生成 HTML 发布到站点相关位置，作为系列第一篇。另补：「文化界各层面最值得谈的作品都梳理，以世界顶级文化学者的视野和胸怀」。
 
-**回源检索（第 5 批·≈12 组 WebSearch）**：诺奖五档（卡森/光遗传/IceCube/不对称自催化/Hall×Woodford）、布克短名单与影视联动、国际布克《大稻埕》（中文首次）、京都奖（宫坂力/Azam/Anderson/Yao/Roeder，11·10 授奖典）、Frieze 周 318 画廊/72 位艺术家公共项目、特纳奖 @MIMA、Met《林肯在阴间》世界首演、北京保利 10·18 亨德尔、WAF 416 入围（11·12–13/20）、十月票房（Clayface/Wildwood/Street Fighter）、Billboard（Showgirl 五周冠/十月年历）、游戏（PBZ 10·29、GTA VI 11·19）、卡森中译书目（21jingji/澎湃/潮闻）。
+**回源检索（第 5 批·≈12 组 WebSearch）**：诺奖五档（卡森/光遗传/IceCube/不对称自催化/Hall×Woodford）、布克短名单与影视联动、国际布克《臺灣漫遊錄》（中文首次）、京都奖（宫坂力/Azam/Anderson/Yao/Roeder，11·10 授奖典）、Frieze 周 318 画廊/72 位艺术家公共项目、特纳奖 @MIMA、Met《林肯在阴间》世界首演、北京保利 10·18 亨德尔、WAF 416 入围（11·12–13/20）、十月票房（Clayface/Wildwood/Street Fighter）、Billboard（Showgirl 五周冠/十月年历）、游戏（PBZ 10·29、GTA VI 11·19）、卡森中译书目（21jingji/澎湃/潮闻）。
 **第三语言原文校证**：萨福 fr.31 起四行（gutenberg/inamidst/uchicago/academia/cordite 多源一致）；芭蕉「古池や」（ja.wikipedia/山梨教研所）；《臺灣漫遊錄》书名三层（正文受版权→只存书名+自撰题解）。无法一手核证的归属（如「Patient Zero」）一律不采。
 
 **产物**：`docs/culture_review/2026-10.html`（总第 01 号；五轴+点睛八点+方法凡例；双语 toggle 与站体同源 zhzz-lang；离线单文件）；`docs/culture_review/README.md`（系列凡例与期号索引）；站点导航 `docs/index.html` Group四新增 culture_review 卡片。预览 http://127.0.0.1:8777 两页 200 ✔。
 **诚实缺口（下期订正栏）**：佐井敬三机构 ◇；Billboard 十月工业乐队所指 ◇；沃尔普上市日 ◇；音乐轴整体材料薄→下期回补。
+
+## 2026-10-28 · 总第 01 号加注「采言四单」（4×10）与本期订正
+
+用户续请：在本期增四组各 10 条——本月全球各层面的金句、最令人清醒的事实陈述、最暖心句段、最令觉悟明心句段。**纪律前置**：四单不得臆造——句必归人、人必归源、源必归年，故本批全部为真实检索回源所得，未命中者标 ◇ 或不采。
+
+**回源检索（第 6 批·≈12 组 WebSearch + 1 组 WebFetch）**：卡森语录（nobelprize.org 授课页“Start in the middle. It's the only rule I have”、The Glass Essay 与 Eros the Bittersweet 四句、Glass, Irony and God“我对愤怒感兴趣”）；李翊云“aloneness … happiness itself”一语确属〈Amongst People〉（theartsdesk 确认是《Dear Friend…》开篇章）；教宗良十四世（“only peace is holy”·亚西西致辞 / vatican.va 和平日文告）；Deisseroth “dream-like state”（firstpost 10-11 专访全文）；清醒事实（Pew 9-17 AI 岗位预期、fmcgroup 175,796 ◇、Gallup 1540 亿 ◇、UNEP 《排放差距 2026》10-21、CBD COP 埃里温、EU×GCC 10-24、挪威 16 岁以下社媒禁令法案）；暖心单以 Positive News 第 43 周（10-23）为底稿，替下四条不可核的“救援犬重逢”影像：兰卡斯特 Nick Graham 海鸟×珊瑚礁 2.5 倍、巴斯大学 Neil Howard 亚马逊基本收入（73%→26%）、KCL Maria Cotofan GoodGym 2,800 人（接上幸福轴 F3/F5）、Chiricahua 成美国第 64 个国家公园；觉悟单兼采 RIBA 国际奖得主 Khondker“工厂不该是消耗人的机器”。
+
+**本期订正（三处，已写进页面「本期已订正」栏）**：① 初稿正文“获奖者之一 Nagel 已故”——不成立（诺奖不追授，三人均在世宣布），已删改并换为 Deisseroth 可核自述；② 人名汉译校正：李翀云→李翊云、代塞罗思→卡尔·戴塞罗斯（MIT 科技评论中文口径）；③ 自查自改的中文错字与表述（一栉→一项法案、红橙→红毛猩猩、皮→皮尤、太→太平洋、周末语→转发之句、兵→缺席等 9 处）。
+
+**产物**：`docs/culture_review/2026-10.html` 新增第六门「采言 · 本月四张拾单」（+~90 行，全文 473 行/86.3 KB）；页面凡例增第 ⑤ 条（四单规矩）与「本期已订正」段；`docs/culture_review/README.md` 将「采言四单」定为系列固定栏目并载明每期骨架。结构自检：标签闭合无异常、`<li>` 40/40、data-zh/data-en 各 214 条对偶、无畸形属性；预览 8777 两页 200 ✔。第三语言原文（芭蕉 / 萨福）已补入中文视图，不再仅在英文视图出现。
