@@ -248,4 +248,15 @@
 
 **现况**：**189 条**（书 96 · 乐 35 · 影 27 · 艺 31），150 QID·130 实测 ✔；gate 189/189 PASS、id/host/qid 全局唯一。视图与导出已重跑同步 189/150/130。
 
+## 2026-10-27 · 图谱深化（QID 关系边 + 星图视图）
+
+**产物**：`scripts/build_graph.py`——仅从 Wikidata 声明派生实体星座（不臆造）：① 机构直连边（某登记实体 P127/P176/P355/P361/P527 的指向命中另一登记 QID）；② 类簇节点（P31/P279 共享值，取连接 ≥ 3 实体者、按度取前 30）。输出 `docs/discovery_atlas/graph.json`。
+
+**图结构**：150 实体 + 30 类簇 = 180 节点、227 边。直连 3 条（Kirkus→NYRB 拥有·Open Library→Internet Archive 隶属·Janus→Criterion 子公司）；类簇如 website(27)·publishing house(26)·magazine(15)·record label(8)·art museum(8)·national library(8)·social cataloging(8)。批量 `wbgetentities` 拉取，尊重 Retry-After。
+
+**Web 视图**：`build_view.py` 新增「列表/星图」切换（graph.json 内联进页，保持离线），自带零依赖的 canvas 力导向图（按域着色·类簇灰菱形·金线=直连）。修复画布尺寸 bug（backing store = CSS×devicePixelRatio，否则仅 300×150 默认→约 81% 节点不可见）。**浏览器实测验收**：180/180 节点全铺满画布、标签正常、悬停命中对齐、拖拽重布局、EN/中切换、控制台 0 报错。
+
+**全库迄今**：189 条·150 QID·20 圈·gate PASS。本次四方向（社区批 2·加密·导出·图谱·QID 清欠）均已入库。
+
+
 
