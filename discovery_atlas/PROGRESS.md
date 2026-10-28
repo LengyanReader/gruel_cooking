@@ -270,5 +270,20 @@
 
 **重建同步**：`gate.py` 199/199 PASS（id/host/qid 全局唯一）；`build_view.py` → 视图、`export_data.py` → CSV/NDJSON/JSON、`build_graph.py` → 图谱，均刷新至 **199 条 · 168 QID · 138 实测 ✔**。
 
+## 2026-10-28 · 新兴潜力批 2（下一代发现平台加密，+10 → 209）
+
+**目标**：沿「新兴且有潜力」继续——先拉全库 184 个已存主机去重，避开已登记的巨头（Letterboxd/MUBI/RYM/StoryGraph/Hyperallergic/e-flux/Artsy…），另选 12 个新站候选 → 探针 → 逐条回源。
+
+**探针**：**7 条 live**（wordswithborders·gnoosic·musicmap(202)·lwlies·reverseshot·thisiscolossal·objkt）采 ✔；**5 条 ERR** 中四个经回源发现是记忆域名错写（thebookriot→**bookriot.com**、getfable→**fable.co**、arselectronica.net→**ars.electronica.art**、fxhash.io→**fxhash.xyz**）。**诚实剔除 2**：① chosic——探针 ERR 且回源无确证结果，无法核实→不登；② fxhash——回源发现已于 **2026-08-17 关停**（非“潜力”，属已没），不登。objkt 鉴于 fxhash 前车之鉴额外回源，确认 2026 仍在运营。
+
+**新条 10**（书 3：bookriot(最大独立书单媒体)、fable(BookTok 读书会社交应用)、wordswithborders(世界文学英译管道)；乐 2：gnoosic(Gnod 自学习口味推荐)、musicmap(信息之美奖流派谱系图)；影 2：lwlies(小白色影评志)、reverseshot(深度艺术电影批评)；艺 3：colossal(视觉艺术策展博客)、objkt(Tezos 生成/数字艺术市场)、arselectronica(新媒体艺术机构/Prix)）。未新开文明圈（仍 20 圈）。
+
+**闸门小修**：fable 初填 `status=app-shell` 非枚举→改为 `bot-gated`（JS 外壳需浏览器），gate 209/209 PASS。
+
+**QID 实体消解**：本会话新条命中 **3**（colossal Q16988507·arselectronica Q678361·bookriot Q135003540），**7 诚实留空**（fable·wwb·gnoosic·musicmap·lwlies·reverseshot·objkt——无 P856 精确匹配或不唯一，不臆造）。全库 **171 QID / 209**。
+
+**重建同步**（graph→view→export 依序）：`build_graph.py` 171 实体/257 边、`build_view.py` 视图内联新图、`export_data.py` CSV/NDJSON/JSON、`gate.py` 209/209 PASS；统一态 **209 条 · 171 QID · 145 实测 ✔**。
+
+
 
 

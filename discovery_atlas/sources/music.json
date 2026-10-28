@@ -1,9 +1,53 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "music",
-  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
+  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
   "note": "音乐域：五层齐备（①社区/榜单 ②批评/奖项 ③厂牌/集团 8 条：Blue Note·ECM·Sub Pop·Warp·4AD·XL·摩登天空·Beggars ④基础设施 ⑤获取）。社区批1 4 sub；③厂牌层已由批 2 补齐。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "gnoosic",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Gnoosic",
+      "url": "https://gnoosic.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "algorithm",
+      "why": "基于自学习推荐引擎「Gnod」的音乐发现站：输入三个喜欢的艺人，逐张「是/否」反馈即不断逼近你的口味，是无需登录、以耳代搜的清爽发现工具。",
+      "not_for": "只给相似艺人，缺曲目库、元数据与社区。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；Gnod 引擎用途经回源确认"
+    },
+    {
+      "id": "musicmap",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Musicmap",
+      "url": "https://musicmap.info/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "chart",
+      "why": "获「信息之美」奖的流行音乐流派谱系动态图，把 1900 年至今各流派的血缘与脉络汇成一张可导航的家谱，是按历史脉络发现相邻声音的地图。",
+      "not_for": "重谱系叙事轻实时推荐；与 music-map.com、musicmap.global 为不同项目。",
+      "verified": "✔ 202",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 202 可达；规范域 musicmap.info（用户编辑流派谱系），经回源与同名站区分"
+    },
     {
       "id": "everynoise",
       "wikidata_qid": "Q108538124",

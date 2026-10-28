@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-27",
-  "total": 199,
+  "total": 209,
   "sources": [
     {
       "id": "wikimedia-commons",
@@ -320,6 +320,28 @@
       "note": "本环境 GET 双探针网络失败（ERR）；域名经回源确认正典（官网/维基互证），待换网络复测"
     },
     {
+      "id": "colossal",
+      "wikidata_qid": "Q16988507",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Colossal",
+      "url": "https://www.thisiscolossal.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "由 Sarah Rose 主理的视觉艺术／设计博客，兼收插画、摄影、街头与手工，擅长发掘独立与被忽视的艺术家，是跨媒介美学发现的新兴策展站。",
+      "not_for": "博客式策展，非学术评论或市场情报数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "dailyart",
       "wikidata_qid": "",
       "domain": "art",
@@ -503,6 +525,28 @@
       "note": "复测 GET 实测 200"
     },
     {
+      "id": "objkt",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "objkt",
+      "url": "https://objkt.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "Tezos 链上最大的数字／生成艺术市场与社区，策展画廊与算法艺术家聚集，是代码派、新媒体与生成艺术发现与收藏的新兴场域。",
+      "not_for": "以加密艺术为主，实体与古典艺术不涉及；NFT 语境。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；2026 仍在运营经回源确认"
+    },
+    {
       "id": "reddit-art",
       "wikidata_qid": "",
       "domain": "art",
@@ -662,6 +706,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "www.uffizi.it HEAD 实测 200"
+    },
+    {
+      "id": "arselectronica",
+      "wikidata_qid": "Q678361",
+      "domain": "art",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "Ars Electronica",
+      "url": "https://ars.electronica.art/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "institution",
+      "why": "奥地利林茨的电子／新媒体艺术机构（1979 创），集节展、美术馆、Prix 奖与庞档于一体，是全球数字与科技艺术最重要的发现与风向标。",
+      "not_for": "机构／节展视角，非市场交易或大众普及入门。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 arselectronica.net 为误域(ERR)，回源确认官方域 ars.electronica.art（维基条目在案），浏览器可读"
     },
     {
       "id": "artnet",
@@ -1200,6 +1266,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": ""
+    },
+    {
+      "id": "bookriot",
+      "wikidata_qid": "Q135003540",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Book Riot",
+      "url": "https://bookriot.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "北美最大的独立书籍编辑站点（2011 创），书评、荐书、新闻、播客与Newsletter 并举，以多元与反主流书单见长，是发现新书与读书社群意见的新兴枢纽。",
+      "not_for": "编辑荐书为主，书目元数据与馆藏不如图书馆数据库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 thebookriot.com 为误域(ERR)，回源确认官方域 bookriot.com（维基条目在案），浏览器可读"
     },
     {
       "id": "brittle-paper",
@@ -1894,6 +1982,28 @@
       "note": "www.eslite.com HEAD/GET 403（反爬），规范域名未本次确认"
     },
     {
+      "id": "fable",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Fable",
+      "url": "https://fable.co/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "社交化读书会应用（渐进式 Web 应用），由作者、名人与 BookTok 影响人主持虚拟书会，按兴趣加入或自建读书会，是下一代「一起读」的社群发现场域。",
+      "not_for": "App 优先、网页需 JS；书目检索弱于 Goodreads/LibraryThing。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 getfable.com 为误域(ERR)，回源确认官方域 fable.co 与各应用商店条目；网页为 JS 外壳，需浏览器渲染"
+    },
+    {
       "id": "goodreads",
       "wikidata_qid": "Q2359213",
       "domain": "books",
@@ -2182,6 +2292,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "weread.qq.com HEAD 实测 200"
+    },
+    {
+      "id": "wwb",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Words Without Borders",
+      "url": "https://wordswithoutborders.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "专注「世界文学英译」的非营利平台与杂志，遴选、译介并评论全球新作，是发现翻译文学与跨语写作的前沿管道与人才库。",
+      "not_for": "聚焦翻译文学，本语原创大宗覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "yes24",
@@ -3135,6 +3267,28 @@
       "note": "iffr.com GET 实测 200"
     },
     {
+      "id": "lwlies",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Little White Lies",
+      "url": "https://www.lwlies.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "创刊于 2007 的影评比文化刊物（纸媒＋线上），以长文、访谈与视觉见长，聚焦艺术电影与新声音，是发现被主流忽略之佳作的新兴批评阵地。",
+      "not_for": "偏作者/艺术电影，商业大片与评分数据库非其重点。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "metacritic",
       "wikidata_qid": "Q150248",
       "domain": "film",
@@ -3200,6 +3354,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "回源确认 ~504k 订阅；reddit.com 自动探针 403"
+    },
+    {
+      "id": "reverseshot",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Reverse Shot",
+      "url": "https://reverseshot.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "以深度长论著称的在线影评刊物，深耕艺术电影、冷门与当代影像实践，主题特辑与年度榜单是进阶影迷的策展型发现入口。",
+      "not_for": "批评向、更新节奏不快，非流媒体或片库检索工具。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "roger-ebert",
@@ -4073,6 +4249,50 @@
       "access_date": "2026-10-28",
       "status": "active",
       "note": "本会话探针 200 可达；维基词条与创建者身份经回源确认"
+    },
+    {
+      "id": "gnoosic",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Gnoosic",
+      "url": "https://gnoosic.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "algorithm",
+      "why": "基于自学习推荐引擎「Gnod」的音乐发现站：输入三个喜欢的艺人，逐张「是/否」反馈即不断逼近你的口味，是无需登录、以耳代搜的清爽发现工具。",
+      "not_for": "只给相似艺人，缺曲目库、元数据与社区。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；Gnod 引擎用途经回源确认"
+    },
+    {
+      "id": "musicmap",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Musicmap",
+      "url": "https://musicmap.info/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "chart",
+      "why": "获「信息之美」奖的流行音乐流派谱系动态图，把 1900 年至今各流派的血缘与脉络汇成一张可导航的家谱，是按历史脉络发现相邻声音的地图。",
+      "not_for": "重谱系叙事轻实时推荐；与 music-map.com、musicmap.global 为不同项目。",
+      "verified": "✔ 202",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 202 可达；规范域 musicmap.info（用户编辑流派谱系），经回源与同名站区分"
     },
     {
       "id": "netease-music",

@@ -1,9 +1,75 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "art",
-  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
+  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
   "note": "艺术域：五层齐备。批2 非英语圈加密：Centre Pompidou(fr)·Reina Sofía(es)·MALBA(es/拉美)·artpress(fr)。社区批1 r/Art·r/ArtHistory·r/ContemporaryArt·DeviantArt。博物馆多为跨文明通史馆藏，circle 依机构主语言或标 global。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "colossal",
+      "wikidata_qid": "Q16988507",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Colossal",
+      "url": "https://www.thisiscolossal.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "由 Sarah Rose 主理的视觉艺术／设计博客，兼收插画、摄影、街头与手工，擅长发掘独立与被忽视的艺术家，是跨媒介美学发现的新兴策展站。",
+      "not_for": "博客式策展，非学术评论或市场情报数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "objkt",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "objkt",
+      "url": "https://objkt.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "Tezos 链上最大的数字／生成艺术市场与社区，策展画廊与算法艺术家聚集，是代码派、新媒体与生成艺术发现与收藏的新兴场域。",
+      "not_for": "以加密艺术为主，实体与古典艺术不涉及；NFT 语境。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；2026 仍在运营经回源确认"
+    },
+    {
+      "id": "arselectronica",
+      "wikidata_qid": "Q678361",
+      "domain": "art",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "Ars Electronica",
+      "url": "https://ars.electronica.art/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "institution",
+      "why": "奥地利林茨的电子／新媒体艺术机构（1979 创），集节展、美术馆、Prix 奖与庞档于一体，是全球数字与科技艺术最重要的发现与风向标。",
+      "not_for": "机构／节展视角，非市场交易或大众普及入门。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 arselectronica.net 为误域(ERR)，回源确认官方域 ars.electronica.art（维基条目在案），浏览器可读"
+    },
     {
       "id": "rhizome",
       "wikidata_qid": "Q7320757",

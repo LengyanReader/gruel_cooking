@@ -1,9 +1,75 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "books",
-  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
+  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
   "note": "P0 种子 33 + P1 批1(+24) + P1 批2(+10) + P1 批3(+13) + P1 批4(+8，新开 ko/ru/tr/hi 四圈）。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "bookriot",
+      "wikidata_qid": "Q135003540",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Book Riot",
+      "url": "https://bookriot.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "北美最大的独立书籍编辑站点（2011 创），书评、荐书、新闻、播客与Newsletter 并举，以多元与反主流书单见长，是发现新书与读书社群意见的新兴枢纽。",
+      "not_for": "编辑荐书为主，书目元数据与馆藏不如图书馆数据库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 thebookriot.com 为误域(ERR)，回源确认官方域 bookriot.com（维基条目在案），浏览器可读"
+    },
+    {
+      "id": "fable",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Fable",
+      "url": "https://fable.co/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "社交化读书会应用（渐进式 Web 应用），由作者、名人与 BookTok 影响人主持虚拟书会，按兴趣加入或自建读书会，是下一代「一起读」的社群发现场域。",
+      "not_for": "App 优先、网页需 JS；书目检索弱于 Goodreads/LibraryThing。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 getfable.com 为误域(ERR)，回源确认官方域 fable.co 与各应用商店条目；网页为 JS 外壳，需浏览器渲染"
+    },
+    {
+      "id": "wwb",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Words Without Borders",
+      "url": "https://wordswithoutborders.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "专注「世界文学英译」的非营利平台与杂志，遴选、译介并评论全球新作，是发现翻译文学与跨语写作的前沿管道与人才库。",
+      "not_for": "聚焦翻译文学，本语原创大宗覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "bookshop",
       "wikidata_qid": "Q96373794",

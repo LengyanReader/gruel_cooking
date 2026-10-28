@@ -1,9 +1,53 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "film",
-  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
+  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
   "note": "影视域：五层齐备（发现/批评/出版/基础设施/获取），跨 en/fr/de/es/zh/ja/nl 圈。社区批1 r/movies·r/TrueFilm；批2 TIFF·IFFR·Janus Films。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "lwlies",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Little White Lies",
+      "url": "https://www.lwlies.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "创刊于 2007 的影评比文化刊物（纸媒＋线上），以长文、访谈与视觉见长，聚焦艺术电影与新声音，是发现被主流忽略之佳作的新兴批评阵地。",
+      "not_for": "偏作者/艺术电影，商业大片与评分数据库非其重点。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "reverseshot",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Reverse Shot",
+      "url": "https://reverseshot.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "以深度长论著称的在线影评刊物，深耕艺术电影、冷门与当代影像实践，主题特辑与年度榜单是进阶影迷的策展型发现入口。",
+      "not_for": "批评向、更新节奏不快，非流媒体或片库检索工具。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "shortoftheweek",
       "wikidata_qid": "",
