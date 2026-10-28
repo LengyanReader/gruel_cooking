@@ -1,9 +1,120 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "books",
-  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27)",
+  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27)",
   "note": "P0 种子 33 + P1 批1(+24) + P1 批2(+10) + P1 批3(+13) + P1 批4(+8，新开 ko/ru/tr/hi 四圈）。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "babelio",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "fr",
+      "name": "Babelio",
+      "url": "https://www.babelio.com/",
+      "langs": [
+        "fr"
+      ],
+      "regions": [
+        "FR"
+      ],
+      "kind": "community",
+      "why": "法语区最大的读书社交与书目共建社区（2007 创），用户书评、摘录与年度票选「Babelio 奖」，是发现法语新书与读者口碑的主阵地。",
+      "not_for": "内容几乎全法语，非圈内读者检索门槛高。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；域名与「法语区第一读书社区」地位经维基百科及官网回源确认，浏览器可读"
+    },
+    {
+      "id": "anobii",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "it",
+      "name": "aNobii",
+      "url": "https://www.anobii.com/",
+      "langs": [
+        "it"
+      ],
+      "regions": [
+        "IT"
+      ],
+      "kind": "community",
+      "why": "意大利起源的独立读书社交网络，跨语种藏书与书评社区，现属 Ovolab／Mondadori 系，是意大利语读者发现与讨论的核心。",
+      "not_for": "以意大利语社群为主，英法西语内容零散。",
+      "verified": "○",
+      "access_date": "",
+      "status": "pending",
+      "note": "本会话网络 ERR（握手/超时）；域名 anobii.com 与「独立读书社交网络」定位经应用商店与维基系回源确认，待复测可达"
+    },
+    {
+      "id": "naver-book",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "ko",
+      "name": "Naver 책 (Book)",
+      "url": "https://book.naver.com/",
+      "langs": [
+        "ko"
+      ],
+      "regions": [
+        "KR"
+      ],
+      "kind": "community",
+      "why": "韩国最大门户 Naver 的读书频道，聚合书评、读书博客与出版社信息，是韩语新书发现与读者讨论的枢纽。",
+      "not_for": "界面与 UGC 基本全韩语；深度依赖 Naver 生态。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 418（Naver 反爬）；book.naver.com 为 Naver Books 官方域名经回源确认，浏览器可读"
+    },
+    {
+      "id": "lubimyczytac",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "pl",
+      "name": "Lubimy Czytać",
+      "url": "https://www.lubimyczytac.pl/",
+      "langs": [
+        "pl"
+      ],
+      "regions": [
+        "PL"
+      ],
+      "kind": "community",
+      "why": "波兰最大的读书社区与书目数据库，读者评分、书评与小组讨论密集，是波兰语图书发现与口碑的主来源。",
+      "not_for": "几乎全波兰语；国际书目覆盖不如 Goodreads。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "storyweaver",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "access",
+      "circle": "hi",
+      "name": "StoryWeaver (Pratham Books)",
+      "url": "https://storyweaver.org.in/",
+      "langs": [
+        "hi",
+        "en"
+      ],
+      "regions": [
+        "IN"
+      ],
+      "kind": "community",
+      "why": "Pratham Books 的开放授权多语童书平台，数万故事以数十种南亚语言免费共创与翻译，是开源阅读与本地化童书发现的典范社区。",
+      "not_for": "面向儿童／早期阅读，非一般文学或学术书目的发现源。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达；CC 开放许可"
+    },
     {
       "id": "reddit-books",
       "wikidata_qid": "",

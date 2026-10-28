@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-27",
-  "total": 174,
+  "total": 189,
   "sources": [
     {
       "id": "wikimedia-commons",
@@ -183,6 +183,72 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "www.theartnewspaper.com HEAD 实测 200"
+    },
+    {
+      "id": "artstation",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "ArtStation",
+      "url": "https://www.artstation.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "游戏／影视／娱乐概念与数字艺术的首发展示社区，行业美术发现与人才聚合的核心。",
+      "not_for": "聚焦娱乐／数字美术，架上与当代艺术几乎不涉及。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；artstation.com 官方域名与「娱乐数字艺术首要平台」定位经官网回源确认，浏览器可读"
+    },
+    {
+      "id": "artsy",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Artsy",
+      "url": "https://www.artsy.net/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "聚合画廊、艺博会、艺术家与拍卖的当代艺术发现与收藏平台，是进入市场级当代艺术语境的索引层。",
+      "not_for": "偏市场／收藏导向，公共教育与美术馆档案覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "behance",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Behance",
+      "url": "https://www.behance.net/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "Adobe 旗下全球最大创意作品社区，平面／插画／摄影／设计的策展与发现集散地。",
+      "not_for": "偏应用与商业设计，纯艺术与学术批评较少。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（Adobe 反爬）；behance.net 官方域名与「最大创意网络」定位经官网回源确认，浏览器可读"
     },
     {
       "id": "british-museum",
@@ -890,6 +956,29 @@
       "note": "standardebooks.org HEAD 实测 200"
     },
     {
+      "id": "storyweaver",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "access",
+      "circle": "hi",
+      "name": "StoryWeaver (Pratham Books)",
+      "url": "https://storyweaver.org.in/",
+      "langs": [
+        "hi",
+        "en"
+      ],
+      "regions": [
+        "IN"
+      ],
+      "kind": "community",
+      "why": "Pratham Books 的开放授权多语童书平台，数万故事以数十种南亚语言免费共创与翻译，是开源阅读与本地化童书发现的典范社区。",
+      "not_for": "面向儿童／早期阅读，非一般文学或学术书目的发现源。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达；CC 开放许可"
+    },
+    {
       "id": "taqsim",
       "wikidata_qid": "",
       "domain": "books",
@@ -1563,6 +1652,50 @@
       "note": "www.aladin.co.kr HEAD 实测 200"
     },
     {
+      "id": "anobii",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "it",
+      "name": "aNobii",
+      "url": "https://www.anobii.com/",
+      "langs": [
+        "it"
+      ],
+      "regions": [
+        "IT"
+      ],
+      "kind": "community",
+      "why": "意大利起源的独立读书社交网络，跨语种藏书与书评社区，现属 Ovolab／Mondadori 系，是意大利语读者发现与讨论的核心。",
+      "not_for": "以意大利语社群为主，英法西语内容零散。",
+      "verified": "○",
+      "access_date": "",
+      "status": "pending",
+      "note": "本会话网络 ERR（握手/超时）；域名 anobii.com 与「独立读书社交网络」定位经应用商店与维基系回源确认，待复测可达"
+    },
+    {
+      "id": "babelio",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "fr",
+      "name": "Babelio",
+      "url": "https://www.babelio.com/",
+      "langs": [
+        "fr"
+      ],
+      "regions": [
+        "FR"
+      ],
+      "kind": "community",
+      "why": "法语区最大的读书社交与书目共建社区（2007 创），用户书评、摘录与年度票选「Babelio 奖」，是发现法语新书与读者口碑的主阵地。",
+      "not_for": "内容几乎全法语，非圈内读者检索门槛高。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；域名与「法语区第一读书社区」地位经维基百科及官网回源确认，浏览器可读"
+    },
+    {
       "id": "bookmeter",
       "wikidata_qid": "Q28682137",
       "domain": "books",
@@ -1717,6 +1850,50 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "HEAD 实测 403（反爬），列为已知未本次确认"
+    },
+    {
+      "id": "lubimyczytac",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "pl",
+      "name": "Lubimy Czytać",
+      "url": "https://www.lubimyczytac.pl/",
+      "langs": [
+        "pl"
+      ],
+      "regions": [
+        "PL"
+      ],
+      "kind": "community",
+      "why": "波兰最大的读书社区与书目数据库，读者评分、书评与小组讨论密集，是波兰语图书发现与口碑的主来源。",
+      "not_for": "几乎全波兰语；国际书目覆盖不如 Goodreads。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "naver-book",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "ko",
+      "name": "Naver 책 (Book)",
+      "url": "https://book.naver.com/",
+      "langs": [
+        "ko"
+      ],
+      "regions": [
+        "KR"
+      ],
+      "kind": "community",
+      "why": "韩国最大门户 Naver 的读书频道，聚合书评、读书博客与出版社信息，是韩语新书发现与读者讨论的枢纽。",
+      "not_for": "界面与 UGC 基本全韩语；深度依赖 Naver 生态。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 418（Naver 反爬）；book.naver.com 为 Naver Books 官方域名经回源确认，浏览器可读"
     },
     {
       "id": "reddit-books",
@@ -3074,6 +3251,28 @@
       "note": "filmarks.com HEAD 实测 200"
     },
     {
+      "id": "kinopoisk",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "ru",
+      "name": "КиноПоиск (Kinopoisk)",
+      "url": "https://www.kinopoisk.ru/",
+      "langs": [
+        "ru"
+      ],
+      "regions": [
+        "RU"
+      ],
+      "kind": "community",
+      "why": "俄语世界最大的电影数据库与观影社区，观众评分、影评与片单对俄影及引进片的发现与口碑极具分量。",
+      "not_for": "界面与评分以俄语用户为主；跨语种检索不便。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "letterboxd",
       "wikidata_qid": "Q18709181",
       "domain": "film",
@@ -3118,6 +3317,28 @@
       "note": "www.mtime.com HEAD 实测 200"
     },
     {
+      "id": "mydramalist",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "sea",
+      "name": "MyDramaList",
+      "url": "https://mydramalist.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "SEA"
+      ],
+      "kind": "community",
+      "why": "泛亚洲剧集与电影爱好者社区（韩／中／日／泰／菲等），看单、评分与讨论覆盖欧美数据库忽视的亚洲影视发现。",
+      "not_for": "以剧集为主，艺术电影与纪录片覆盖较弱；不可观影。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；mydramalist.com 官方域名与「亚洲剧社区 DB」定位经官网／应用商店回源确认，浏览器可读"
+    },
+    {
       "id": "reddit-movies",
       "wikidata_qid": "",
       "domain": "film",
@@ -3160,6 +3381,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "www.imdb.com 实测 202（Amazon 反爬常态码，站点可达）"
+    },
+    {
+      "id": "justwatch",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "infrastructure",
+      "circle": "global",
+      "name": "JustWatch",
+      "url": "https://www.justwatch.com/",
+      "langs": [
+        "multi"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "跨平台「在哪儿能看」聚合检索器，按地区与订阅服务索引影视可看性，是从发现到收看的桥梁层。",
+      "not_for": "不提供内容本身，只提供正版流媒体去向。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "themoviedb",
@@ -3252,6 +3495,28 @@
       "note": "bandcamp.com HEAD 实测 200"
     },
     {
+      "id": "melon",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "access",
+      "circle": "ko",
+      "name": "Melon",
+      "url": "https://www.melon.com/",
+      "langs": [
+        "ko"
+      ],
+      "regions": [
+        "KR"
+      ],
+      "kind": "platform",
+      "why": "韩国主流音乐流媒体与权威榜单（Melon Chart），反映 K-pop 与韩语音乐的实时流行度与发现。",
+      "not_for": "曲库偏韩国本土；海外需会员与韩语界面。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "qq-music",
       "wikidata_qid": "Q10852229",
       "domain": "music",
@@ -3338,6 +3603,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "consequence.net HEAD 实测 200"
+    },
+    {
+      "id": "genius",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Genius",
+      "url": "https://genius.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "以众包注释构建的歌词与音乐知识库，社区对词句、制作与背景的解读是理解与发现音乐文本的独特入口。",
+      "not_for": "非听音／发行渠道；注释质量取决于贡献者。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；genius.com 官方域名与「最大歌词注释社区」定位经官网回源确认，浏览器可读"
     },
     {
       "id": "grammys",
@@ -3590,6 +3877,28 @@
       "note": "music.163.com HEAD 实测 200"
     },
     {
+      "id": "oricon",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "ja",
+      "name": "ORICON NEWS",
+      "url": "https://www.oricon.co.jp/",
+      "langs": [
+        "ja"
+      ],
+      "regions": [
+        "JP"
+      ],
+      "kind": "chart",
+      "why": "日本权威销量／收视榜 ORICON 的资讯站，音乐与娱乐排名是把握日本流行文化风向的发现源。",
+      "not_for": "以榜单与娱乐新闻为主，深度评论与小众发现有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "rateyourmusic",
       "wikidata_qid": "Q1145963",
       "domain": "music",
@@ -3698,6 +4007,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "回源（音乐 sub 清单）确认存在；reddit.com 自动探针 403"
+    },
+    {
+      "id": "soundcloud",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "SoundCloud",
+      "url": "https://soundcloud.com/",
+      "langs": [
+        "multi"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "全球最大的音频／音乐创作者社区（320M+ 曲目），独立音乐人首发、混音与场景发现的核心场域。",
+      "not_for": "以上传与流播为主，元数据与乐评质量参差。",
+      "verified": "○",
+      "access_date": "",
+      "status": "pending",
+      "note": "本会话网络 ERR（TLS/超时）；soundcloud.com 官方域名与规模经维基百科回源确认，待复测"
     },
     {
       "id": "discogs",

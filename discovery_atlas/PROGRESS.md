@@ -236,5 +236,16 @@
 
 ## 2026-10-27 · 数据导出（CSV / NDJSON / JSON）
 
-**产物**：`scripts/export_data.py`——纯变换（不新增数据），从 `sources/*.json` 归并 174 条 → `docs/discovery_atlas/atlas.csv`（含 BOM、全列引用、langs/regions 以 `;` 拼接）、`atlas.ndjson`（逐行完整条目）、`atlas.json`（单对象 indent=2）。静态页页脚新增下载栏（CSV/NDJSON/JSON），重建后视图同步 150 QID。
+**产物**：`scripts/export_data.py`——纯变换（不新增数据），从 `sources/*.json` 归并 174 条 → `docs/discovery_atlas/atlas.csv`（含 BOM、全列引用、langs/regions 以 `;` 拼接）、`atlas.ndjson`（逐行完整条目）、`atlas.json`（单对象 indent=2）。静态页页脚新增下载栏（CSV/NDJSON/JSON），重建后视图同步 150 QID。（导出与视图随每个登记批次重跑，最新态见下条。)
+
+## 2026-10-27 · 社区专项批 2 + 稀疏圈加密（+15 → 189）
+
+**目标**：继续「尽可能穷尽」——登记非 Reddit 的各媒介重量级社区，并新开稀疏文明圈。候选 16 → 探针 → 逐条回源。
+
+**方法**：候选先探针（浏览器 UA），**7 条 200**（lubimyczytac·storyweaver·melon·oricon·kinopoisk·justwatch·artsy）直接入库；**9 条 403/418/ERR** 逐条 WebSearch 回源确认官方域名与重要性后以 ○ 入库（babelio·anobii·naver-book·soundcloud·genius·mydramalist·behance·artstation）。**诚实剔除 1**：eksisozluk（Sözlük）——虽回源确认为土耳其重量级社区，但属综合向而非媒介发现专用，不合五域分类，不登。所有新条域名均为记忆域，均经回源；未臆造。
+
+**新条 15**（书 5：babelio(fr)、anobii(it)、naver-book(ko)、lubimyczytac(pl)、storyweaver(hi)；乐 4：soundcloud、genius、melon(ko)、oricon(ja)；影 3：kinopoisk(ru)、justwatch、mydramalist(sea)；艺 3：artsy、behance、artstation）。新开 **it / pl / sea 三圈→ 共 20 圈**。
+
+**现况**：**189 条**（书 96 · 乐 35 · 影 27 · 艺 31），150 QID·130 实测 ✔；gate 189/189 PASS、id/host/qid 全局唯一。视图与导出已重跑同步 189/150/130。
+
 

@@ -1,9 +1,97 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "music",
-  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27)",
+  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27)",
   "note": "音乐域：五层齐备（①社区/榜单 ②批评/奖项 ③厂牌/集团 8 条：Blue Note·ECM·Sub Pop·Warp·4AD·XL·摩登天空·Beggars ④基础设施 ⑤获取）。社区批1 4 sub；③厂牌层已由批 2 补齐。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "soundcloud",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "SoundCloud",
+      "url": "https://soundcloud.com/",
+      "langs": [
+        "multi"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "全球最大的音频／音乐创作者社区（320M+ 曲目），独立音乐人首发、混音与场景发现的核心场域。",
+      "not_for": "以上传与流播为主，元数据与乐评质量参差。",
+      "verified": "○",
+      "access_date": "",
+      "status": "pending",
+      "note": "本会话网络 ERR（TLS/超时）；soundcloud.com 官方域名与规模经维基百科回源确认，待复测"
+    },
+    {
+      "id": "genius",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Genius",
+      "url": "https://genius.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "以众包注释构建的歌词与音乐知识库，社区对词句、制作与背景的解读是理解与发现音乐文本的独特入口。",
+      "not_for": "非听音／发行渠道；注释质量取决于贡献者。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；genius.com 官方域名与「最大歌词注释社区」定位经官网回源确认，浏览器可读"
+    },
+    {
+      "id": "melon",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "access",
+      "circle": "ko",
+      "name": "Melon",
+      "url": "https://www.melon.com/",
+      "langs": [
+        "ko"
+      ],
+      "regions": [
+        "KR"
+      ],
+      "kind": "platform",
+      "why": "韩国主流音乐流媒体与权威榜单（Melon Chart），反映 K-pop 与韩语音乐的实时流行度与发现。",
+      "not_for": "曲库偏韩国本土；海外需会员与韩语界面。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "oricon",
+      "wikidata_qid": "",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "ja",
+      "name": "ORICON NEWS",
+      "url": "https://www.oricon.co.jp/",
+      "langs": [
+        "ja"
+      ],
+      "regions": [
+        "JP"
+      ],
+      "kind": "chart",
+      "why": "日本权威销量／收视榜 ORICON 的资讯站，音乐与娱乐排名是把握日本流行文化风向的发现源。",
+      "not_for": "以榜单与娱乐新闻为主，深度评论与小众发现有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "blue-note",
       "wikidata_qid": "Q885833",

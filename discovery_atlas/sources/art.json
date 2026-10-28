@@ -1,9 +1,75 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "art",
-  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27)",
+  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27)",
   "note": "艺术域：五层齐备。批2 非英语圈加密：Centre Pompidou(fr)·Reina Sofía(es)·MALBA(es/拉美)·artpress(fr)。社区批1 r/Art·r/ArtHistory·r/ContemporaryArt·DeviantArt。博物馆多为跨文明通史馆藏，circle 依机构主语言或标 global。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "artsy",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Artsy",
+      "url": "https://www.artsy.net/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "聚合画廊、艺博会、艺术家与拍卖的当代艺术发现与收藏平台，是进入市场级当代艺术语境的索引层。",
+      "not_for": "偏市场／收藏导向，公共教育与美术馆档案覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-27",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "behance",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Behance",
+      "url": "https://www.behance.net/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "Adobe 旗下全球最大创意作品社区，平面／插画／摄影／设计的策展与发现集散地。",
+      "not_for": "偏应用与商业设计，纯艺术与学术批评较少。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（Adobe 反爬）；behance.net 官方域名与「最大创意网络」定位经官网回源确认，浏览器可读"
+    },
+    {
+      "id": "artstation",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "ArtStation",
+      "url": "https://www.artstation.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "游戏／影视／娱乐概念与数字艺术的首发展示社区，行业美术发现与人才聚合的核心。",
+      "not_for": "聚焦娱乐／数字美术，架上与当代艺术几乎不涉及。",
+      "verified": "○",
+      "access_date": "2026-10-27",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；artstation.com 官方域名与「娱乐数字艺术首要平台」定位经官网回源确认，浏览器可读"
+    },
     {
       "id": "centre-pompidou",
       "wikidata_qid": "Q178065",
