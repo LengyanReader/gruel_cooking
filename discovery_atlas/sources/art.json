@@ -1,12 +1,100 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "art",
-  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27)",
+  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
   "note": "艺术域：五层齐备。批2 非英语圈加密：Centre Pompidou(fr)·Reina Sofía(es)·MALBA(es/拉美)·artpress(fr)。社区批1 r/Art·r/ArtHistory·r/ContemporaryArt·DeviantArt。博物馆多为跨文明通史馆藏，circle 依机构主语言或标 global。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
     {
-      "id": "artsy",
+      "id": "rhizome",
+      "wikidata_qid": "Q7320757",
+      "domain": "art",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "Rhizome",
+      "url": "https://rhizome.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "archive",
+      "why": "降生于网络的数字艺术先锋机构（1999 创，New Museum 附属），ArtBase 档案与 Net Art Anthology 是数字艺术史保存与发现的核心基础设施。",
+      "not_for": "聚焦网络／数字艺术，传统架上艺术覆盖有限。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；rhizome.org 官方域名与机构地位经维基／官网回源确认，浏览器可读"
+    },
+    {
+      "id": "foundation",
       "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Foundation",
+      "url": "https://foundation.app/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "面向数字／加密艺术家的策展式创作与收藏社区，编辑精选与算法并重，是新一代数字艺术发现与交易场域。",
+      "not_for": "以 NFT／数字艺术为主，实体与古典艺术不涉及。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "dailyart",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "DailyArt Magazine",
+      "url": "https://www.dailyartmagazine.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "以「每日一件艺术品」普及艺术史与当代艺术的数字杂志，多语种、短小易读，是大众艺术审美发现的新兴入口。",
+      "not_for": "通俗普及向，非学术批评或市场情报。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "arena",
+      "wikidata_qid": "Q48803839",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "面向创作者的连接式研究／灵感板工具，以「通道（Channels）」沉淀并串联图像、文本与链接，是跨设计／艺术／写作的深度发现与知识织网平台。",
+      "not_for": "私密协作优先，公开内容需主动挖掘；非大众社交。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；跨媒介灵感发现（登记于 art 主域）"
+    },
+    {
+      "id": "artsy",
+      "wikidata_qid": "Q4796642",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
@@ -28,7 +116,7 @@
     },
     {
       "id": "behance",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q4880667",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
@@ -50,7 +138,7 @@
     },
     {
       "id": "artstation",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q65551500",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",

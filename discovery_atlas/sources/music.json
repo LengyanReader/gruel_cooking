@@ -1,12 +1,56 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "music",
-  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27)",
+  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
   "note": "音乐域：五层齐备（①社区/榜单 ②批评/奖项 ③厂牌/集团 8 条：Blue Note·ECM·Sub Pop·Warp·4AD·XL·摩登天空·Beggars ④基础设施 ⑤获取）。社区批1 4 sub；③厂牌层已由批 2 补齐。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
     {
+      "id": "everynoise",
+      "wikidata_qid": "Q108538124",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Every Noise at Once",
+      "url": "https://everynoise.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "chart",
+      "why": "前 Spotify「数据炼金术师」Glenn McDonald 建的算法流派地图，把六千余微流派散列成可点击试听的星图，是按声音质地顺藤摸瓜发现新音乐的利器。",
+      "not_for": "地图化而非检索库，艺术家／曲目元数据有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；维基词条与创建者身份经回源确认"
+    },
+    {
+      "id": "audius",
+      "wikidata_qid": "Q108934318",
+      "domain": "music",
+      "layer": "access",
+      "circle": "global",
+      "name": "Audius",
+      "url": "https://audius.co/",
+      "langs": [
+        "multi"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "去中心化音乐流媒体与发现协议，独立音乐人与链上治理，算法与社区推荐并重，是流媒体时代的新兴替代场域。",
+      "not_for": "曲库以独立／电子为主，主流版权内容有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "soundcloud",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q568769",
       "domain": "music",
       "layer": "discovery",
       "circle": "global",
@@ -28,7 +72,7 @@
     },
     {
       "id": "genius",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q3419343",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
@@ -50,7 +94,7 @@
     },
     {
       "id": "melon",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q12595115",
       "domain": "music",
       "layer": "access",
       "circle": "ko",
@@ -72,7 +116,7 @@
     },
     {
       "id": "oricon",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q69059552",
       "domain": "music",
       "layer": "discovery",
       "circle": "ja",

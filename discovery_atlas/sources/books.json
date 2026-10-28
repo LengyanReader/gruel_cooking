@@ -1,12 +1,78 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "books",
-  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27)",
+  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
   "note": "P0 种子 33 + P1 批1(+24) + P1 批2(+10) + P1 批3(+13) + P1 批4(+8，新开 ko/ru/tr/hi 四圈）。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
     {
-      "id": "babelio",
+      "id": "bookshop",
+      "wikidata_qid": "Q96373794",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Bookshop.org",
+      "url": "https://bookshop.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "支持独立书店的电商与荐书联盟（2020 创），八成以上利润回流本地书店；借店员选书、主题书单发现好书，是反亚马逊式的伦理发现路径。",
+      "not_for": "偏购买转化，社区讨论弱于 Goodreads／Reddit。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；bookshop.org 官方域名与使命经回源确认，浏览器可读"
+    },
+    {
+      "id": "ream",
       "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Ream",
+      "url": "https://www.ream.app/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "作者—读者直连的社区化连载与发现平台（渐进式 Web 应用），以 BookTok／浪漫科幻等类型社群见长，读者按兴趣订阅、共创并发现新作。",
+      "not_for": "新兴、体量小，书目与元数据不如成熟库全。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；平台定位经官网／帮助中心回源确认"
+    },
+    {
+      "id": "substack",
+      "wikidata_qid": "Q63435709",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Substack",
+      "url": "https://substack.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "长文订阅／通讯平台，书评、影评、艺评与深度写作者聚集地；Notes 与推荐网络是发现高质量批评与写作的新兴枢纽。",
+      "not_for": "以作者通讯为主，非书目／影音数据库；质量因人而异。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；跨媒介写作发现（登记于 books 主域）"
+    },
+    {
+      "id": "babelio",
+      "wikidata_qid": "Q2877812",
       "domain": "books",
       "layer": "discovery",
       "circle": "fr",
@@ -28,7 +94,7 @@
     },
     {
       "id": "anobii",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q306936",
       "domain": "books",
       "layer": "discovery",
       "circle": "it",

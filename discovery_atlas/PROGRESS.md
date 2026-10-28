@@ -258,5 +258,17 @@
 
 **全库迄今**：189 条·150 QID·20 圈·gate PASS。本次四方向（社区批 2·加密·导出·图谱·QID 清欠）均已入库。
 
+## 2026-10-28 · 新兴潜力批（下一代发现平台，+10 → 199）
+
+**目标**：应需聚焦「新兴且有潜力」的下一代发现源（上升中的平台/社区，非已固化巨头），四媒介各取若干。候选 12 → 内联探针（浏览器 UA）→ 逐条回源（M0.4，记忆域一律核实）→ 只把可达且重要性经确认者入库。
+
+**探针**：**8 条 200**（ream·substack·everynoise·audius·shortoftheweek·foundation·dailyartmagazine·are.na）直接采 ✔；**2 条 403**（bookshop·rhizome）经回源确认官方域名与重要性后以 ○ 入库；**诚实剔除 2**：① talefy——记忆把它当作 BookTok 书目发现，回源发现现为 **AI 角色陪聊应用**（名实漂移，又一记 M0.1 教训），不登；② omeleto——`omeleto.com` 探针 ERR，其真正落点是 YouTube 频道而非独立站点，无稳定规范域，不臆造，不登。
+
+**新条 10**（书 3：bookshop.org(伦理独立书店荐书)、ream(作者—读者直连社区)、substack(长文/批评通讯枢纽)；乐 2：everynoise(算法微流派地图)、audius(去中心化流媒体)；影 1：shortoftheweek(短片策展)；艺 4：rhizome(网络艺术档案机构)、foundation(数字艺术策展市场)、dailyart(艺术史普及)、are.na(连接式研究/灵感板，跨媒介登记于 art 主域)）。本批为平台现代化，未新开文明圈（仍 20 圈）。
+
+**QID 实体消解**：对新条及既有留空重跑 `resolve_qid.py`（严守 P856 官网精确一致或 en-wiki 站点链接 + 标签一致方采）。本会话新条命中 **6**（bookshop·substack·everynoise·audius Q108934318·rhizome·are.na），**4 诚实留空**（ream·shortoftheweek·foundation·dailyart——无匹配维基项，不臆造）；顺带补齐上轮留空的旧条 **soundcloud·genius·melon·oricon·kinopoisk·justwatch·mydramalist** 等。全库 **168 QID / 199**。
+
+**重建同步**：`gate.py` 199/199 PASS（id/host/qid 全局唯一）；`build_view.py` → 视图、`export_data.py` → CSV/NDJSON/JSON、`build_graph.py` → 图谱，均刷新至 **199 条 · 168 QID · 138 实测 ✔**。
+
 
 

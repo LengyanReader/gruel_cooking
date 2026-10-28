@@ -1,12 +1,34 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "film",
-  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27)",
+  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28)",
   "note": "影视域：五层齐备（发现/批评/出版/基础设施/获取），跨 en/fr/de/es/zh/ja/nl 圈。社区批1 r/movies·r/TrueFilm；批2 TIFF·IFFR·Janus Films。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
     {
-      "id": "kinopoisk",
+      "id": "shortoftheweek",
       "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Short of the Week",
+      "url": "https://www.shortoftheweek.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "curator",
+      "why": "老牌短片策展站，每周遴选叙事／纪录／动画／实验短片并配评论，是发现新兴导演与短片美学的首选入口。",
+      "not_for": "只覆盖短片，非长片／影库；并非全部免费可看。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "kinopoisk",
+      "wikidata_qid": "Q2389071",
       "domain": "film",
       "layer": "discovery",
       "circle": "ru",
@@ -28,7 +50,7 @@
     },
     {
       "id": "justwatch",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q59315430",
       "domain": "film",
       "layer": "infrastructure",
       "circle": "global",
@@ -50,7 +72,7 @@
     },
     {
       "id": "mydramalist",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q29214296",
       "domain": "film",
       "layer": "discovery",
       "circle": "sea",

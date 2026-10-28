@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-27",
-  "total": 189,
+  "total": 199,
   "sources": [
     {
       "id": "wikimedia-commons",
@@ -185,8 +185,30 @@
       "note": "www.theartnewspaper.com HEAD 实测 200"
     },
     {
+      "id": "arena",
+      "wikidata_qid": "Q48803839",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "面向创作者的连接式研究／灵感板工具，以「通道（Channels）」沉淀并串联图像、文本与链接，是跨设计／艺术／写作的深度发现与知识织网平台。",
+      "not_for": "私密协作优先，公开内容需主动挖掘；非大众社交。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；跨媒介灵感发现（登记于 art 主域）"
+    },
+    {
       "id": "artstation",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q65551500",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
@@ -208,7 +230,7 @@
     },
     {
       "id": "artsy",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q4796642",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
@@ -230,7 +252,7 @@
     },
     {
       "id": "behance",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q4880667",
       "domain": "art",
       "layer": "discovery",
       "circle": "global",
@@ -298,6 +320,28 @@
       "note": "本环境 GET 双探针网络失败（ERR）；域名经回源确认正典（官网/维基互证），待换网络复测"
     },
     {
+      "id": "dailyart",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "DailyArt Magazine",
+      "url": "https://www.dailyartmagazine.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "以「每日一件艺术品」普及艺术史与当代艺术的数字杂志，多语种、短小易读，是大众艺术审美发现的新兴入口。",
+      "not_for": "通俗普及向，非学术批评或市场情报。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "deviantart",
       "wikidata_qid": "Q46523",
       "domain": "art",
@@ -319,6 +363,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "deviantart.com 自动探针 403（反爬），域名公认正典，未本次确认 200"
+    },
+    {
+      "id": "foundation",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Foundation",
+      "url": "https://foundation.app/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "面向数字／加密艺术家的策展式创作与收藏社区，编辑精选与算法并重，是新一代数字艺术发现与交易场域。",
+      "not_for": "以 NFT／数字艺术为主，实体与古典艺术不涉及。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "google-arts-culture",
@@ -618,6 +684,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "HEAD/GET 实测 403（反爬），公认正典域名未本次确认"
+    },
+    {
+      "id": "rhizome",
+      "wikidata_qid": "Q7320757",
+      "domain": "art",
+      "layer": "infrastructure",
+      "circle": "en",
+      "name": "Rhizome",
+      "url": "https://rhizome.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "archive",
+      "why": "降生于网络的数字艺术先锋机构（1999 创，New Museum 附属），ArtBase 档案与 Net Art Anthology 是数字艺术史保存与发现的核心基础设施。",
+      "not_for": "聚焦网络／数字艺术，传统架上艺术覆盖有限。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；rhizome.org 官方域名与机构地位经维基／官网回源确认，浏览器可读"
     },
     {
       "id": "wikiart",
@@ -1653,7 +1741,7 @@
     },
     {
       "id": "anobii",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q306936",
       "domain": "books",
       "layer": "discovery",
       "circle": "it",
@@ -1675,7 +1763,7 @@
     },
     {
       "id": "babelio",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2877812",
       "domain": "books",
       "layer": "discovery",
       "circle": "fr",
@@ -1738,6 +1826,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "www.books.com.tw HEAD/GET 403（反爬），规范域名未本次确认"
+    },
+    {
+      "id": "bookshop",
+      "wikidata_qid": "Q96373794",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Bookshop.org",
+      "url": "https://bookshop.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "支持独立书店的电商与荐书联盟（2020 创），八成以上利润回流本地书店；借店员选书、主题书单发现好书，是反亚马逊式的伦理发现路径。",
+      "not_for": "偏购买转化，社区讨论弱于 Goodreads／Reddit。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；bookshop.org 官方域名与使命经回源确认，浏览器可读"
     },
     {
       "id": "douban-book",
@@ -1896,6 +2006,28 @@
       "note": "探针 418（Naver 反爬）；book.naver.com 为 Naver Books 官方域名经回源确认，浏览器可读"
     },
     {
+      "id": "ream",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Ream",
+      "url": "https://www.ream.app/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "community",
+      "why": "作者—读者直连的社区化连载与发现平台（渐进式 Web 应用），以 BookTok／浪漫科幻等类型社群见长，读者按兴趣订阅、共创并发现新作。",
+      "not_for": "新兴、体量小，书目与元数据不如成熟库全。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；平台定位经官网／帮助中心回源确认"
+    },
+    {
       "id": "reddit-books",
       "wikidata_qid": "",
       "domain": "books",
@@ -2006,6 +2138,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "HEAD 实测 403（反爬），列为已知未本次确认"
+    },
+    {
+      "id": "substack",
+      "wikidata_qid": "Q63435709",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Substack",
+      "url": "https://substack.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "长文订阅／通讯平台，书评、影评、艺评与深度写作者聚集地；Notes 与推荐网络是发现高质量批评与写作的新兴枢纽。",
+      "not_for": "以作者通讯为主，非书目／影音数据库；质量因人而异。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；跨媒介写作发现（登记于 books 主域）"
     },
     {
       "id": "weread",
@@ -3252,7 +3406,7 @@
     },
     {
       "id": "kinopoisk",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q2389071",
       "domain": "film",
       "layer": "discovery",
       "circle": "ru",
@@ -3318,7 +3472,7 @@
     },
     {
       "id": "mydramalist",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q29214296",
       "domain": "film",
       "layer": "discovery",
       "circle": "sea",
@@ -3361,6 +3515,28 @@
       "note": "reddit.com 自动探针 403（反爬）；经回源确认存在与影响"
     },
     {
+      "id": "shortoftheweek",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Short of the Week",
+      "url": "https://www.shortoftheweek.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "curator",
+      "why": "老牌短片策展站，每周遴选叙事／纪录／动画／实验短片并配评论，是发现新兴导演与短片美学的首选入口。",
+      "not_for": "只覆盖短片，非长片／影库；并非全部免费可看。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "imdb",
       "wikidata_qid": "Q37312",
       "domain": "film",
@@ -3384,7 +3560,7 @@
     },
     {
       "id": "justwatch",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q59315430",
       "domain": "film",
       "layer": "infrastructure",
       "circle": "global",
@@ -3473,6 +3649,28 @@
       "note": "janusfilms.com GET 实测 200（首轮 ERR，复测 200）"
     },
     {
+      "id": "audius",
+      "wikidata_qid": "Q108934318",
+      "domain": "music",
+      "layer": "access",
+      "circle": "global",
+      "name": "Audius",
+      "url": "https://audius.co/",
+      "langs": [
+        "multi"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "去中心化音乐流媒体与发现协议，独立音乐人与链上治理，算法与社区推荐并重，是流媒体时代的新兴替代场域。",
+      "not_for": "曲库以独立／电子为主，主流版权内容有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "bandcamp",
       "wikidata_qid": "Q545966",
       "domain": "music",
@@ -3496,7 +3694,7 @@
     },
     {
       "id": "melon",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q12595115",
       "domain": "music",
       "layer": "access",
       "circle": "ko",
@@ -3606,7 +3804,7 @@
     },
     {
       "id": "genius",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q3419343",
       "domain": "music",
       "layer": "criticism",
       "circle": "en",
@@ -3855,6 +4053,28 @@
       "note": "www.billboard.com HEAD 实测 200"
     },
     {
+      "id": "everynoise",
+      "wikidata_qid": "Q108538124",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Every Noise at Once",
+      "url": "https://everynoise.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "chart",
+      "why": "前 Spotify「数据炼金术师」Glenn McDonald 建的算法流派地图，把六千余微流派散列成可点击试听的星图，是按声音质地顺藤摸瓜发现新音乐的利器。",
+      "not_for": "地图化而非检索库，艺术家／曲目元数据有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；维基词条与创建者身份经回源确认"
+    },
+    {
       "id": "netease-music",
       "wikidata_qid": "Q20063955",
       "domain": "music",
@@ -3878,7 +4098,7 @@
     },
     {
       "id": "oricon",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q69059552",
       "domain": "music",
       "layer": "discovery",
       "circle": "ja",
@@ -4010,7 +4230,7 @@
     },
     {
       "id": "soundcloud",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q568769",
       "domain": "music",
       "layer": "discovery",
       "circle": "global",
