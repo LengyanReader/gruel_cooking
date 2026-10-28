@@ -44,6 +44,29 @@
 - Schmidt Sciences · Research Frontiers Network（RFN）。schmidtsciences.org/rfn ✔
 - Our World in Data（开放数据，已登记于 `discovery_atlas` science 域，✔ 实测可达）。ourworldindata.org
 
+## F1 · 流动与旅游研究
+- Sheller M, Urry J. **From spatial turn to mobilities turn.** 2017（被引 ~493）。mobilistiek.nl PDF ✔（DOI 待核）
+- Sheller M. **Advanced Introduction to Mobilities.** Edward Elgar（ISBN `9781788979580`）✔
+- Hosany ARS. **On Scarcity and Tourism: Theoretical Perspectives.** *Journal of Travel Research* (2025). DOI `10.1177/00472875251406552` ✔
+
+## F2 · 食物研究
+- Pilcher JM. **The Embodied Imagination in Recent Writings on Food History.** 2016（被引 ~64）。jstor.org/stable/43954967 ✔
+- Parrish S. **Anthropology of Food: History, Topics, and Trajectories.** 2025（被引 ~14）。mdpi.com/2673-8392/5/1/22 ✔
+
+## F3 · 幸福科学
+- Lyubomirsky S, King L, Diener E. **The benefits of frequent positive affect: does happiness lead to success?** *Psychological Bulletin* 2005 ✔（DOI 待核）
+- Heintzelman SJ, et al. **Eudaimonia in the Contemporary Science of Subjective Well-Being.** Handbook of Wellbeing 2018（被引 ~259）✔
+- Lyubomirsky S. **The How of Happiness.** Penguin (2008)（ISBN `159420148X` 命中）✔
+
+## F4 · 日常生活美学
+- **Aesthetics of the Everyday.** *Stanford Encyclopedia of Philosophy*（plato.stanford.edu）✔
+- Carter C. **Introduction to Aesthetics of Everyday Life: East and West.** Marquette phil_fac 2014 ✔
+- **The Good Life, Lived: Eudaimonia as Praxis.** 2026 手稿。doi:10.31235/osf.io/k5yjf ✔
+
+## F5 · 生命修行
+- **Re-envisioning the Good Life.** Center for Contemplative Research ✔
+- **Mental health benefits of nature-based recreation: a systematic review.** *Annals of Leisure Research* 24(3):379–393 ✔（DOI 待核）
+
 ---
 
 ## 诚实缺口

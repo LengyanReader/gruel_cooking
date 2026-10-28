@@ -9,7 +9,7 @@
 
 ## 一、范围 · Scope
 
-覆盖用户点名的六条主轴，且优先关注它们**相互咬合**的地带：
+覆盖用户点名的六条主轴 + 一条新增偏好轴（共七轴），且优先关注它们**相互咬合**的地带：
 
 1. **基础科学**（basic science）——物理、数学、生命科学前沿
 2. **人工智能**（AI）——尤其是 AI-for-Science、推理与科学发现
@@ -17,6 +17,7 @@
 4. **跨学科**（interdiscipline）——学科间的方法迁移与新范式
 5. **超学科**（transdiscipline）——学术系统与 societal 知识的共产（co-production）
 6. **文化 / 文明 / 人文**（culture / civilization / humanities）——含数字人文、文化分析
+7. **休闲 · 良好生活 · 人生觉悟 · 生命修行**（leisure / the good life / life-cultivation）——用户 2026-10-28 新明好而增：旅游（mobilities/tourism）、美食（food studies/gastronomy）、幸福科学（wellbeing）、日常美学与人生觉悟、沉思修行（contemplative praxis）——均为正经学科，且与本仓「以一碗粥释天下」气质内通。
 
 **取向**：只要「正在生成、尚未固化」的方向。已成熟的教科书领域除非作为**交叉枢纽**，一律不列。
 
@@ -44,7 +45,7 @@
 
 ## 四、产物 · Deliverables
 
-- `frontier_scan.md` — 侦察图 v1：六轴下的方向条目（含学者锚点、五维评估、合作切入点）
+- `frontier_scan.md` — 侦察图 v1：七轴下的方向条目（含学者锚点、五维评估、合作切入点）
 - `scholars.md` — 已核实学者名录：逐条回源的机构 · 代表作 · 回源锚 · 介入线索（frontier_scan 点名学者的佐证；含 Wikidata QID 回填）
 - `references.md` — 一手文献清单：各方向代表作的 DOI / arXiv / PMCID（逐字照录命中原文，未确证者标 ◇ 待核）
 - `entry_points.md` — 可复现介入入口：10 方向 × 公开数据/工具/基准 × 独立介入成本（🟢🟡🔴）× 本地模块接缝

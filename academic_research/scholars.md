@@ -85,6 +85,41 @@
 
 - **纠偏**：前版 frontier_scan 曾将奠基作者记为“Bergmann”，经回源应为 **Norström et al. 2020**（Nature Sustainability）为最权威原则框架；Bergmann 系另一篇 2021 参与式综述，不再当首援引。
 
+## F1 · 流动与旅游研究
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Mimi Sheller ✔ | Worcester Polytechnic Institute·The Global School 院长 | 与 John Urry 共同创立 mobilities 范式；《Tourism Mobilities》；《From spatial turn to mobilities turn》2017（被引 ~493） | scholar.google BOJTCFo；wpi.edu·2024-06；mobilistiek.nl |
+| John Urry ✔ | Lancaster University（已故） | 「tourist gaze」奠基；《The Tourist》；mobilities 范式 | theoryculturesociety.org（悼念文）；sheller 合著 |
+
+- **介入线索**：`living_heritage` 大运河/丝绸之路走廊可直接用 mobilities 框架重读（移动·场所·正义）。QID：Sheller Q6862191；Urry 因同名异人（命中为“苏格兰图书编辑”）未采。
+
+## F2 · 食物研究 / 美食学
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Jennifer (Jane) Pilcher ✔ | 食物史学者（《Oxford Handbook of Food History》主编） | 《The Embodied Imagination in Recent Writings on Food History》2016（被引 ~64）；数字食物研究方法综述 | jstor.org/stable/43954967；guides.library.barnard.edu/foodstudies |
+
+- **机构待核 ◇**（本会话未直接命中确职机构）；入会入口：ASFS（food-culture.org）、*Food, Culture & Society*、food-studies.com 开放期刊。
+
+## F3 · 幸福科学
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Ed Diener ✔ | （主观幸福感研究奠基人·美国心理学家） | 定义与体系化 subjective well-being 研究 | en.wikipedia.org/wiki/Subjective_well-being；Q4858257 |
+| Sonja Lyubomirsky ✔ | University of California, Riverside·心理学讲座教授 | 《The How of Happiness》；三因素幸福模型（设定点×情境×有意活动） | sonjalyubomirsky.com；Q2906372（描述含 UC Riverside） |
+
+- **介入线索**：与 D2 Davidson 同属实证幸福研究潮流；本仓可做儒/道/佛与积极心理学的幸福对照。
+
+## F4 · 日常生活美学
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Thomas Leddy ✔ | （日常生活美学开创者） | 将伦理—审美关联作为 everyday aesthetics 核心；亚里士多德幸福论与孔子“成型生活”并置 | plato.stanford.edu《Aesthetics of the Everyday》；csp sample pdf |
+| Cheri Carter ✔ | （《Aesthetics of Everyday Life: East and West》作者） | 东西方日常美学会通（2014） | epublications.marquette.edu/phil_fac/1449 |
+
+- **QID**：Leddy/Carter 本会话无可靠 en-wiki 实体→诚实留空。◇
+
 ## Wikidata QID 回填（实体消解·与 discovery_atlas 同纪律）
 
 > 方法同 `discovery_atlas/scripts/resolve_qid.py`：`wbsearchentities` 出候选 → `wbgetentities props=sitelinks|labels` 确认——**仅当 en-label 与目标人名一致且有 en.wikipedia 站点链接时采 QID，否则诚实留空，绝不臆造。**日期 2026-10-28。
@@ -101,8 +136,11 @@
 | Lev Manovich | Q716367 | American academic (born 1960) |
 | Franco Moretti | Q971600 | Italian literary historian and theorist |
 | Richard Davidson | Q2149302 | American psychologist |
+| Mimi Sheller | Q6862191 | American sociologist |
+| Sonja Lyubomirsky | Q2906372 | American academic, professor of psychology (UC Riverside) |
+| Ed Diener | Q4858257 | American psychologist |
 
-**诚实留空 7**（无匹配 en-wiki 实体或首命中为同名异人，不采）：Charles Bick（命中为 1891 美国演员，拒）、Pietro Battiston、Joseph L. Watson、David Juergens（新兴学者无独立 wikidata）、Kevin Lesko、Åsa Norström、Brenna Klein。留空为不臆造的必然结果。
+**诚实留空 11**（无匹配 en-wiki 实体或首命中为同名异人，不采）：Charles Bick（命中为 1891 美国演员，拒）、Pietro Battiston、Joseph L. Watson、David Juergens（新兴学者无独立 wikidata）、Kevin Lesko、Åsa Norström、Brenna Klein；新增休闲轴——**John Urry**（命中为“苏格兰图书编辑”同名异人，拒）、Jennifer Pilcher、Thomas Leddy、Cheri Carter、Karl Spracklen。留空为不臆造的必然结果。
 
 ---
 

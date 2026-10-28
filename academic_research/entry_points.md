@@ -16,9 +16,14 @@
 | **D2** 正念神经科学 | Center for Healthy Minds 公开研究综述（原始数据多不开放） | 🔴（临床门槛） | 以 `contemplative science` 对齐文献做方法论对话；探「LLM 能否模拟第一人称报告」 | **`contemplative science`**（已在场） |
 | **E1** 知识共产 | Norström 2020 原则（开放获取·Stockholm Resilience）；Chambers 六模式 PDF（ora.ox.ac.uk 开放） | 🟢 | 用 8 条 co-production 原则自评本仓库，写方法论文条目 | `living_heritage`（社区田野）·全仓 |
 | **E2** 地球系统 | Our World in Data（开放数据·atlas 已登记✔）；Schmidt RFN 公报 | 🟢 | 用 OWID 数据做「气候观念 vs 气候数据」跨文化可视化 | `heaven_climate/climate_dynamics`·`living_heritage` |
+| **F1** 流动与旅游 | Annals of Tourism Research / Mobilities 期刊（文摘开放）；Sheller 开放著作 PDF | 🟡 | 用 mobilities 框架重读大运河走廊，写「移动·场所·正义」条目 | **`living_heritage`**（已在场） |
+| **F2** 食物研究 | food-studies.com 开放期刊；Barnard 食物研究指南；ASFS 书目 | 🟢 | 写「清谈食物哲学 vs 食物科学」双语条目（本仓即名「粥」） | `economics_cross_culture`·仓题本身 |
+| **F3** 幸福科学 | 《Bit by Bit》式开放课程；Lyubomirsky 开放页；Handbook of Wellbeing 章节 | 🟢 | 做「幸福可训练性：儒/道/佛 vs 积极心理学」对照条目 | `contemplative science`·`core/metathinking` |
+| **F4** 日常美学 | SEP《Aesthetics of the Everyday》（全文开放）；Marquette 开放 PDF | 🟢 | 纯文本即可产出：「一碗粥的日常美学」札记系列 | **`core/metathinking`**（已在场） |
+| **F5** 生命修行 | Center for Contemplative Research 开放文章；顶刊正念综述 | 🟡 | 发布沉思实践的双语论说；接 D2 实证 | **`contemplative science`**（已在场） |
 
 ## 按「可独立介入」排序（最易 → 最难）
-1. 🟢 **B1 / C2 / D1 / E1 / E2 / A2** —— 全开源或自有数据，个人即可产出真结果；**建议首批选这三个自有数据接缝**：B1（discovery_atlas graph）、C2（math_clarification/lean）、D1/E2（Reading_IA + OWID）。
+1. 🟢 **B1 / C2 / D1 / E1 / E2 / A2 / F2 / F3 / F4** —— 全开源、自有数据、或纯文本即可产出真结果；**建议首批选这三个自有数据接缝**：B1（discovery_atlas graph）、C2（math_clarification/lean）、D1/E2（Reading_IA + OWID）。**用户新好轴里 F4（日常美学）与 F2（食物）门槛最低**，无需实验、只靠思辨与双语即可开工。
 2. 🟡 **A1 / B2** —— 需模型权重或 GPU，可做元研究而非本体。
 3. 🔴 **C1 / D2** —— 实验/临床门槛，只从科学史与认识论外围介入（与本仓库 `heaven_climate`、`contemplative science` 的取向天然一致）。
 

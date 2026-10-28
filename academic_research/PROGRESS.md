@@ -78,3 +78,23 @@
 **产物**：新增 `references.md`（逐字照录一手 DOI/arXiv/PMCID/ISBN，未确证者标 ◇）与 `entry_points.md`（10 方向可复现入口×🟢🟡🔴成本×本地接缝）；`scholars.md` 补 B2/C1/E1 三节 + Wikidata QID 回填表；frontier_scan 下批待办 1-4 均标 ✔；README 产物清单新增两文件。
 
 **诚实缺口（仍存）**：① 7 人无可靠 QID（多为新一代学者）；② ORCID 未接入；③ Bick/Lambiotte/LZ/Chambers 的确切 DOI 本会话未直接命中→标 ◇，下批经 Crossref 解析补全。
+
+## 2026-10-28 · 新增第七轴 F（休闲·良好生活·人生觉悟·生命修行）
+
+**动因**：用户新增偏好轴—“还比较喜欢休娱乐轻松闲类的，比如旅游、美食、良好生活、人生觉悟、生命修行…可以也都加上”。这些并非“非学术”：各自成学科（mobilities/tourism studies、food studies/gastronomy、wellbeing science、everyday aesthetics、contemplative praxis），且与本仓“以一碗粥释天下”气质内通。
+
+**回源检索（第 4 批·6 组 WebSearch）**：
+
+| 轴 | 关键命中 | 成果 |
+|---|---|---|
+| F1 旅游/mobilities | wpi.edu（Sheller 院长·可持续旅游）；scholar.google BOJTCFo；mobilistiek.nl（被引~493） | ✔ Mimi Sheller + 已故 John Urry |
+| F2 食物研究 | guides.library.barnard.edu/foodstudies；jstor.org/stable/43954967（Pilcher）；mdpi 2673-8392/5/1/22 | ✔ Jennifer Pilcher；ASFS/BU/UNISG/SOAS |
+| F3 幸福科学 | sonjalyubomirsky.com（UC Riverside）；Wikipedia SWB（Diener）；handbookofwellbeing（Heintzelman 2018 被引~259） | ✔ Ed Diener + Sonja Lyubomirsky |
+| F4 日常美学 | plato.stanford.edu《Aesthetics of the Everyday》；epublications.marquette.edu/phil_fac/1449（Carter 2014） | ✔ Thomas Leddy + Cheri Carter（东与西会通） |
+| F5 生命修行 | centerforcontemplativeresearch.org；Annals of Leisure Research（nature-based recreation 综述） | ✔ 机构 + 期刊；具名修行学者仍 ◇ |
+
+**Wikidata QID（临时脚本 `_resolve_leisure.py`，同 resolve_qid.py 纪律）**：新增命中 **3**—Sheller Q6862191·Lyubomirsky Q2906372（描述含 UC Riverside）·Diener Q4858257。**诚实留空**—**John Urry 首命中为“苏格兰图书编辑”同名异人→拒采**；Pilcher/Leddy/Carter/Spracklen 无可靠 en-wiki 实体。脚本用后即删。全库已核实 QID 学者由 10 → **13**。
+
+**产物**：frontier_scan 新增 F 轴五节（F1–F5）+ 评分速览五行；scholars.md 新增 F1–F4 学者节 + QID 表扩 3 行（留空由 7→11）；references.md 新增 F1–F5 一手文献；entry_points.md 新增 F 行并标注“用户新好轴里 F4/F2 门槛最低”；README 范围六轴→七轴。
+
+**诚实缺口（本轴）**：① Pilcher/Leddy/Carter 确职机构未直接命中→◇；② F5 具名修行传统学者未锁定→◇；③ Sheller《mobilities turn》、Lyubomirsky 2005 Psych Bulletin、nature-based recreation 综述的确切 DOI 未直接命中→◇待 Crossref。

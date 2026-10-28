@@ -1,6 +1,6 @@
 # frontier_scan v1 · 前沿方向侦察图
 
-> 检索日期 **2026-10-28**；方法见 `README.md`。条目按六轴排布，每条给：一句话定义 · 为什么是现在 · 锚点（机构/人/可复用入口）· 五维评分 · 合作切入点。
+> 检索日期 **2026-10-28**；方法见 `README.md`。条目按七轴排布（含用户新好的休闲·生活·觉悟轴），每条给：一句话定义 · 为什么是现在 · 锚点（机构/人/可复用入口）· 五维评分 · 合作切入点。
 > 标记：`✔` = 本会话经 WebSearch 命中权威来源；`◇` = 基于通识定位、机构/人名待逐条复核（下批加深）。所有一时性事实（经费、归属、奖项）随时间漂移，复核请复跑 `PROGRESS.md` 流程。
 
 **评分速览**（前沿度/势能/可介入/交叉杠杆/本地契合，满分 5）：
@@ -17,6 +17,11 @@
 | D2 | 思辨科学的神经—现象学交叉 | 3 | 3 | 3 | 4 | 5 | contemplative science 的实证化 |
 | E1 | 超学科知识共产（co-production） | 3 | 3 | 4 | 5 | 4 | 方法论层，贯穿全模块 |
 | E2 | 地球系统 / 气候的科学—社会接口 | 4 | 4 | 3 | 4 | 5 | heaven_climate + living_heritage |
+| F1 | 流动与旅游研究（mobilities / tourism） | 4 | 3 | 4 | 4 | 4 | living_heritage 走廊的当下化 |
+| F2 | 食物研究 / 美食学（food studies） | 3 | 3 | 4 | 4 | 5 | 本仓「粥」主题的正牌学术对应 |
+| F3 | 幸福科学（hedonic / eudaimonic wellbeing） | 3 | 4 | 4 | 4 | 4 | 良好生活的实证面 |
+| F4 | 日常生活美学 / 人生觉悟哲学 | 3 | 2 | 5 | 4 | 5 | 东西方会通，贴 metathinking |
+| F5 | 生命修行 / 沉思生活传统（contemplative praxis） | 3 | 3 | 3 | 4 | 5 | contemplative science 的实践面 |
 
 ---
 
@@ -107,6 +112,42 @@
 - **锚点** ✔：Schmidt Sciences RFN。**入口**：Our World in Data（已在 atlas `science` 域，✔ 实测可达）。
 - **评分** 前沿4/势能4/可介入3/交叉4/本地5。
 - **合作切入点**：`heaven_climate`（气候与观念史）+ `living_heritage`（遗产与社区）是本土接口；用 OWID 公开数据做「气候观念 vs 气候数据」的跨文化可视化条目。
+
+---
+
+## F. 休闲 · 良好生活 · 人生觉悟 · 生命修行（用户新增偏好轴）
+
+> 本轴应用户 2026-10-28 明好而新开：旅游、美食、良好生活、人生觉悟、生命修行。它们并非「非学术」——各自成学科，且与本仓「以一碗粥释天下」的气质高度内通。
+
+### F1 · 流动与旅游研究（mobilities / tourism studies）
+- **一句话**：把「旅行/移动」当作社会构成的本体——旅游凝视、移动正义、可持续旅游。
+- **为什么是现在** ✔： mobilities 范式由已故 John Urry 与 **Mimi Sheller**（WPI 全球研究学院院长）创立，Sheller 近年连发可持续旅游·移动正义·气候方向论文 ✔；疫情后「旅游回归与正义」成为新议题 ✔。
+- **锚点** ✔：Mimi Sheller（WPI，Q6862191）；John Urry（Lancaster，「tourist gaze」奠基人，同名异人未得可靠 QID）。入口：Annals of Tourism Research、Mobilities 期刊。
+- **评分** 前沿4/势能3/可介入4/交叉4/本地4。**切入点**：`living_heritage` 大运河/丝绸之路走廊本就是「移动与场所」的田野——用 mobilities 框架重读走廊，直接对接 F1。
+
+### F2 · 食物研究 / 美食学（food studies / gastronomy）
+- **一句话**：跨学科研究人—食关系：食物史、饮食人类学、美食学、食物正义。
+- **为什么是现在** ✔：Food Studies 作为新 interdisciplinary 领域已有方法论综述（含数字食物研究）✔；人类学食物子领域 2025 有系统综述✔；BU Gastronomy、UNISG、SOAS 为重量级学位点 ✔。
+- **锚点** ✔：Jennifer **Pilcher**（食物史，《Oxford Handbook of Food History》主编）；ASFS（食物与文化研究学会）与期刊 *Food, Culture & Society* ◇ 机构待核。入口：伯罗纳德图书馆食物研究指南、food-studies.com 开放期刊。
+- **评分** 前沿3/势能3/可介入4/交叉4/本地5。**切入点**：本仓项目即名「gruel_cooking（粥）」——F2 是最具自我反光的轴；可写「清谈食物哲学 vs 食物科学」双语条目，接跨文化经济。
+
+### F3 · 幸福科学（hedonic / eudaimonic wellbeing）
+- **一句话**：用实证心理学研究「良好生活」——主观幸福感（SWB）与幸福主义（eudaimonia）双传统。
+- **为什么是现在** ✔：Ed **Diener** 为 SWB 研究奠基人（Q4858257）✔；Sonja **Lyubomirsky**（UC Riverside 讲座教授，Q2906372）《The How of Happiness》提出「基因设定点×情境×有意活动」可训练模型 ✔；eudaimonia 入当代 SWB 手册（Heintzelman 2018，被引 259）✔。
+- **锚点** ✔：Diener（Q4858257）；Lyubomirsky（Q2906372）；Handbook of Wellbeing。与 D2（Davidson 并属于同一实证幸福研究潮流）。
+- **评分** 前沿3/势能4/可介入4/交叉4/本地4。**切入点**：与 D2 正念神经科学合流；本仓可做「幸福的可训练性：儒/道/佛与积极心理学对照」，接 contemplative science。
+
+### F4 · 日常生活美学 / 人生觉悟哲学
+- **一句话**：把「日常生活中的审美与觉悟」当作正经哲学议题——超越「只有艺术才美学」。
+- **为什么是现在** ✔：斯坦福哲学百科《Aesthetics of the Everyday》持续更新 ✔；Thomas Leddy 与 Cheri (Carter) 将亚里士多德幸福论与孔子「成型生活」并置，开创「日常生活美学：东与西」✔；eudaimonia as praxis 新近手稿（2026）提出「自我与僧团（sangha）」交织 ✔。
+- **锚点** ✔：Thomas Leddy（日常生活美学，无可靠 QID）；SEP 条目（plato.stanford.edu）。本仓 `core/metathinking` 与之天然相接。
+- **评分** 前沿3/势能2/可介入5/交叉4/本地5。**切入点**：本轴无需实验、纯文本与思辨即可独立产出，且本仓双语优势天然适用；可写「一碗粥的日常美学」札记系列。
+
+### F5 · 生命修行 / 沉思生活传统（contemplative praxis）
+- **一句话**：冥想、修行、沉思传统作为学术—实践交叉（与 D2 同源但重实践与人文）。
+- **为什么是现在** ✔：Contemplative Research Center 等机构把「重新构想良好生活」作为课题 ✔；正念/沉思实践已进入同行评议顶刊（接 D2 的 Center for Healthy Minds）。
+- **锚点** ✔：Center for Contemplative Research（与 D2 互补）；本仓 `contemplative science` 已是主体。◇ 具名修行传统学者待核。
+- **评分** 前沿3/势能3/可介入3/交叉4/本地5。**切入点**：与 D2/F3 三角打通，本仓 contemplative science 模块直接可发布双语论说。
 
 ---
 
