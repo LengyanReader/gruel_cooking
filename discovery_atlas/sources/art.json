@@ -1,9 +1,97 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "art",
-  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
+  "batch": "P2 seed batch1 art + community batch1 + P2 batch2 non-en museums/criticism (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28) + emerging batch 3 (2026-10-28)",
   "note": "艺术域：五层齐备。批2 非英语圈加密：Centre Pompidou(fr)·Reina Sofía(es)·MALBA(es/拉美)·artpress(fr)。社区批1 r/Art·r/ArtHistory·r/ContemporaryArt·DeviantArt。博物馆多为跨文明通史馆藏，circle 依机构主语言或标 global。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "ocula",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Ocula",
+      "url": "https://ocula.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "现代与当代艺术的领先在线平台，聚合全球顶级画廊的展览、作品与在线展厅（Viewing Rooms）＋杂志，按画廊/展览维度发现艺术家。",
+      "not_for": "面向画廊市场，公共教育与市场情报不如专业数据库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；ocula.com 官方域与「leading contemporary-art platform」定位经回源确认，浏览器可读"
+    },
+    {
+      "id": "juxtapoz",
+      "wikidata_qid": "Q6319143",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Juxtapoz",
+      "url": "https://juxtapoz.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "街头／低眉／当代插画艺术的旗舰刊物与网站（1994 创），深耕地下与跨界创作者，是发现潮流插画、涂鸦与新锐视觉艺术家的入口。",
+      "not_for": "聚焦街头/插画亚文化，学院与主流当代艺术覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "artblocks",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Art Blocks",
+      "url": "https://www.artblocks.io/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "链上生成艺术的代表平台，策展与开放系列并重，算法艺术家以代码铸造可收藏作品，是生成/代码艺术发现与收藏的核心场域。",
+      "not_for": "以加密生成艺术为主；与已关停的 fxhash 同类但仍在运营（本会话 200 实测）。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "superrare",
+      "wikidata_qid": "Q113995966",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "SuperRare",
+      "url": "https://superrare.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "策展制的独特加密数字艺术市场与收藏社区，编辑精选艺术家与作品，是数字绘画/新媒体艺术发现与收藏的新兴场域。",
+      "not_for": "NFT/数字艺术语境，实体与古典艺术不涉及。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "colossal",
       "wikidata_qid": "Q16988507",

@@ -284,6 +284,19 @@
 
 **重建同步**（graph→view→export 依序）：`build_graph.py` 171 实体/257 边、`build_view.py` 视图内联新图、`export_data.py` CSV/NDJSON/JSON、`gate.py` 209/209 PASS；统一态 **209 条 · 171 QID · 145 实测 ✔**。
 
+## 2026-10-28 · 新兴潜力批 3（全方位扫荡，+13 → 222）
+
+**目标**：四媒介全方位加密新兴发现源。先拉全库 198 主机去重，取 16 个新站候选 → 探针 → 逐条回源。
+
+**探针**：**9 条 200**（catapult·booktrib·sofarsounds·thefilmstage·filmcomment·nonfiction·juxtapoz·artblocks·superrare）；**3 条 403**（asymptote·screenslate·ocula）经回源（前两者维基在案）确认后以 ○ 入库；**4 条 ERR** 逐一回源。**诚实剔除 4**：① emptymirror——记忆混淆，`emptymirror.co` 不存、真正的 Empty Mirror（emptymirrorbooks.com）系美 avant 诗刊而非我意图的日本翻译→不登，改用同位的 **Monkey**（`monkeymagazine.org`，日本文学英译，探针 200）；② hypemachine→修正为官方域 **hypem.com**（维基在案，本会话 ERR 但回源确证）→○ 入库；③ musicfy——回源无确证→不登；④ utopiamusic——搜索空→不登；⑤ nonfiction.org——虽 200 但用途无法回源确认→不登。
+
+**新条 13**（书 4：asymptote(世界文学翻译旗舰)、catapult(叙事非虚构杂志)、monkey(日本文学英译)、booktrib(全类型书评)；乐 2：hypem(乐评博客聚合器)、sofarsounds(神秘现场发现网络)；影 3：screenslate(arthouse 片单聚合)、thefilmstage(影展/新片发现)、filmcomment(资深影评刊)；艺 4：ocula(画廊聚合平台)、juxtapoz(街头/低眉艺术刊)、artblocks(链上生成艺术)、superrare(策展加密数字艺术)。artblocks 鉴于 fxhash 前车之鉴以 200 实测确认仍在运营。未新开文明圈（仍 20 圈）。
+
+**QID 实体消解**：本会话新条命中 **6**（juxtapoz Q6319143·superrare Q113995966·catapult Q110908984·filmcomment Q4038736·hypem Q3521346·sofarsounds Q22313035），顺带补齐上轮留空的 **wwb Q4020822**；**7 诚实留空**（asymptote·monkey·booktrib·screenslate·thefilmstage·ocula·artblocks——无 P856 精确匹配/不唯一，thefilmstage 另因瞬时 URLError）。全库 **178 QID / 222**。
+
+**重建同步**（graph→view→export 依序）：`build_graph.py` 178 实体/262 边、`build_view.py` 视图内联新图、`export_data.py` CSV/NDJSON/JSON、`gate.py` 222/222 PASS；统一态 **222 条 · 178 QID · 154 实测 ✔**。
+
+
 
 
 

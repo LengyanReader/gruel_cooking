@@ -1,9 +1,97 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "books",
-  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
+  "batch": "seed-2026-10 (P0) + P1 batch1 zh/en + P1 batch2 ja/fr/de + P1 batch3 ar/he/afr/fa/es/zh-Hant + P1 batch4 ko/ru/tr/hi + community batch1 (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28) + emerging batch 3 (2026-10-28)",
   "note": "P0 种子 33 + P1 批1(+24) + P1 批2(+10) + P1 批3(+13) + P1 批4(+8，新开 ko/ru/tr/hi 四圈）。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "asymptote",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Asymptote Journal",
+      "url": "https://www.asymptotejournal.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "世界文学翻译的头牌在线季刊（维基在案），已刊 130 余国、116 种语言的未译新作，双语对照呈现，是发现跨语文学与新译者的旗舰。",
+      "not_for": "翻译文学为主，本语原创与大众类型阅读非其重点。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；asymptotejournal.com 官方域与「premier world-lit translation」定位经回源/维基确认"
+    },
+    {
+      "id": "catapult",
+      "wikidata_qid": "Q110908984",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Catapult",
+      "url": "https://catapult.co/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "Grove Atlantic 旗下的叙事非虚构与虚构杂志＋出版品牌，「Don't Write Alone」专栏与深度个人随笔见长，是发现新声音与非虚构佳作的新兴阵地。",
+      "not_for": "偏叙事非虚构/写作社区，书目数据库功能弱。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；Catapult 杂志/出版定位经回源确认"
+    },
+    {
+      "id": "monkey",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Monkey Magazine",
+      "url": "https://monkeymagazine.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "专注当代日本小说与诗歌英译的文学杂志（纽约），以精致选文与翻译品质著称，是发现日语文学新血与译者的一扇窗。",
+      "not_for": "只覆盖日语→英语翻译，非综合或日语原创书库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；替代记忆误域的 Empty Mirror（后者实为美 avant 诗刊，非日本翻译）"
+    },
+    {
+      "id": "booktrib",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Booktrib",
+      "url": "https://booktrib.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "覆盖全类型的书评、作者访谈、赠书与荐书站点，兼顾主流与独立作者，是发现新书与追踪作者动向的日常入口。",
+      "not_for": "编辑/众包书评混杂，学术性与元数据不如图书馆数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "bookriot",
       "wikidata_qid": "Q135003540",
@@ -50,7 +138,7 @@
     },
     {
       "id": "wwb",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q4020822",
       "domain": "books",
       "layer": "discovery",
       "circle": "en",

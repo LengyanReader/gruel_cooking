@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-27",
-  "total": 209,
+  "total": 222,
   "sources": [
     {
       "id": "wikimedia-commons",
@@ -205,6 +205,28 @@
       "access_date": "2026-10-28",
       "status": "active",
       "note": "本会话探针 200 可达；跨媒介灵感发现（登记于 art 主域）"
+    },
+    {
+      "id": "artblocks",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Art Blocks",
+      "url": "https://www.artblocks.io/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "链上生成艺术的代表平台，策展与开放系列并重，算法艺术家以代码铸造可收藏作品，是生成/代码艺术发现与收藏的核心场域。",
+      "not_for": "以加密生成艺术为主；与已关停的 fxhash 同类但仍在运营（本会话 200 实测）。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "artstation",
@@ -431,6 +453,28 @@
       "note": "artsandculture.google.com HEAD 实测 200"
     },
     {
+      "id": "juxtapoz",
+      "wikidata_qid": "Q6319143",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Juxtapoz",
+      "url": "https://juxtapoz.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "街头／低眉／当代插画艺术的旗舰刊物与网站（1994 创），深耕地下与跨界创作者，是发现潮流插画、涂鸦与新锐视觉艺术家的入口。",
+      "not_for": "聚焦街头/插画亚文化，学院与主流当代艺术覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "louvre",
       "wikidata_qid": "Q19675",
       "domain": "art",
@@ -547,6 +591,28 @@
       "note": "本会话探针 200 可达；2026 仍在运营经回源确认"
     },
     {
+      "id": "ocula",
+      "wikidata_qid": "",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Ocula",
+      "url": "https://ocula.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "现代与当代艺术的领先在线平台，聚合全球顶级画廊的展览、作品与在线展厅（Viewing Rooms）＋杂志，按画廊/展览维度发现艺术家。",
+      "not_for": "面向画廊市场，公共教育与市场情报不如专业数据库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；ocula.com 官方域与「leading contemporary-art platform」定位经回源确认，浏览器可读"
+    },
+    {
       "id": "reddit-art",
       "wikidata_qid": "",
       "domain": "art",
@@ -659,6 +725,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "www.rijksmuseum.nl HEAD 实测 200"
+    },
+    {
+      "id": "superrare",
+      "wikidata_qid": "Q113995966",
+      "domain": "art",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "SuperRare",
+      "url": "https://superrare.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "策展制的独特加密数字艺术市场与收藏社区，编辑精选艺术家与作品，是数字绘画/新媒体艺术发现与收藏的新兴场域。",
+      "not_for": "NFT/数字艺术语境，实体与古典艺术不涉及。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "tate",
@@ -1224,6 +1312,28 @@
       "note": ""
     },
     {
+      "id": "asymptote",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Asymptote Journal",
+      "url": "https://www.asymptotejournal.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "世界文学翻译的头牌在线季刊（维基在案），已刊 130 余国、116 种语言的未译新作，双语对照呈现，是发现跨语文学与新译者的旗舰。",
+      "not_for": "翻译文学为主，本语原创与大众类型阅读非其重点。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；asymptotejournal.com 官方域与「premier world-lit translation」定位经回源/维基确认"
+    },
+    {
       "id": "booker-prizes",
       "wikidata_qid": "",
       "domain": "books",
@@ -1288,6 +1398,28 @@
       "access_date": "2026-10-28",
       "status": "bot-gated",
       "note": "探针 thebookriot.com 为误域(ERR)，回源确认官方域 bookriot.com（维基条目在案），浏览器可读"
+    },
+    {
+      "id": "booktrib",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Booktrib",
+      "url": "https://booktrib.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "覆盖全类型的书评、作者访谈、赠书与荐书站点，兼顾主流与独立作者，是发现新书与追踪作者动向的日常入口。",
+      "not_for": "编辑/众包书评混杂，学术性与元数据不如图书馆数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "brittle-paper",
@@ -1938,6 +2070,28 @@
       "note": "探针 403（反爬）；bookshop.org 官方域名与使命经回源确认，浏览器可读"
     },
     {
+      "id": "catapult",
+      "wikidata_qid": "Q110908984",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Catapult",
+      "url": "https://catapult.co/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "Grove Atlantic 旗下的叙事非虚构与虚构杂志＋出版品牌，「Don't Write Alone」专栏与深度个人随笔见长，是发现新声音与非虚构佳作的新兴阵地。",
+      "not_for": "偏叙事非虚构/写作社区，书目数据库功能弱。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；Catapult 杂志/出版定位经回源确认"
+    },
+    {
       "id": "douban-book",
       "wikidata_qid": "",
       "domain": "books",
@@ -2092,6 +2246,28 @@
       "access_date": "2026-10-27",
       "status": "active",
       "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "monkey",
+      "wikidata_qid": "",
+      "domain": "books",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Monkey Magazine",
+      "url": "https://monkeymagazine.org/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "专注当代日本小说与诗歌英译的文学杂志（纽约），以精致选文与翻译品质著称，是发现日语文学新血与译者的一扇窗。",
+      "not_for": "只覆盖日语→英语翻译，非综合或日语原创书库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达；替代记忆误域的 Empty Mirror（后者实为美 avant 诗刊，非日本翻译）"
     },
     {
       "id": "naver-book",
@@ -2295,7 +2471,7 @@
     },
     {
       "id": "wwb",
-      "wikidata_qid": "",
+      "wikidata_qid": "Q4020822",
       "domain": "books",
       "layer": "discovery",
       "circle": "en",
@@ -3243,6 +3419,28 @@
       "note": "www.festival-cannes.com HEAD/GET 实测 403（反爬），公认正典域名未本次确认"
     },
     {
+      "id": "filmcomment",
+      "wikidata_qid": "Q4038736",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Film Comment",
+      "url": "https://www.filmcomment.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "美国历史最久的影评刊物之一（1962 创刊，现由 Criterion 出版），深度访谈、导演论谈与年度榜单，是进阶影迷与新导发现的批评重镇。",
+      "not_for": "作者/艺术电影取向，商业片与大众评分覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
       "id": "iffr",
       "wikidata_qid": "Q1666554",
       "domain": "film",
@@ -3691,6 +3889,28 @@
       "note": "reddit.com 自动探针 403（反爬）；经回源确认存在与影响"
     },
     {
+      "id": "screenslate",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Screen Slate",
+      "url": "https://www.screenslate.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "纽约＋旧金山艺术/复映/实验电影与画廊放映的每日片单聚合器（2011 创，维基在案），兼营批评与策展，是线下arthouse放映发现的核心枢纽。",
+      "not_for": "以北美两城线下排片为主，线上片库/流媒体非其重点。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；screenslate.com 官方域与维基条目、片单定位经回源确认，浏览器可读"
+    },
+    {
       "id": "shortoftheweek",
       "wikidata_qid": "",
       "domain": "film",
@@ -3707,6 +3927,28 @@
       "kind": "curator",
       "why": "老牌短片策展站，每周遴选叙事／纪录／动画／实验短片并配评论，是发现新兴导演与短片美学的首选入口。",
       "not_for": "只覆盖短片，非长片／影库；并非全部免费可看。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "thefilmstage",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "The Film Stage",
+      "url": "https://thefilmstage.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "聚焦艺术电影、影展与片单的独立影评新闻站，「Need to Know」每周新片清单与影评人合集是策展型发现佳作的好入口。",
+      "not_for": "新闻/影评向，非流媒体检索或评分数据库。",
       "verified": "✔ 200",
       "access_date": "2026-10-28",
       "status": "active",
@@ -4273,6 +4515,28 @@
       "note": "本会话探针 200 可达；Gnod 引擎用途经回源确认"
     },
     {
+      "id": "hypem",
+      "wikidata_qid": "Q3521346",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Hype Machine",
+      "url": "https://hypem.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "老牌音乐博客聚合器（2005 创，维基在案），监测数百个乐评站把「众人正在写」的新歌汇成热门榜，以社区热度驱动发现新音乐。",
+      "not_for": "随博客生态兴衰，热度偏独立/电子；非流媒体或曲库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 hypemachine.com 为误域、hypem.com 本会话 ERR；hypem.com 官方域与重要性经维基/App Store 回源确认，浏览器可读"
+    },
+    {
       "id": "musicmap",
       "wikidata_qid": "",
       "domain": "music",
@@ -4447,6 +4711,28 @@
       "access_date": "2026-10-27",
       "status": "bot-gated",
       "note": "回源（音乐 sub 清单）确认存在；reddit.com 自动探针 403"
+    },
+    {
+      "id": "sofarsounds",
+      "wikidata_qid": "Q22313035",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Sofar Sounds",
+      "url": "https://sofarsounds.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "「神秘场地＋秘密演出」的现场音乐发现网络，在城市非传统空间办小型演唱会，观众盲选入场、按现场投票，是挖掘新兴艺人的线下发现引擎。",
+      "not_for": "限覆盖城市的线下场景，非线上曲库或流媒体。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
     },
     {
       "id": "soundcloud",

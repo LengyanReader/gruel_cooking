@@ -1,9 +1,75 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "film",
-  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
+  "batch": "P2 seed batch1 film + community batch1 + P2 batch2 festivals/distributor (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28) + emerging batch 3 (2026-10-28)",
   "note": "影视域：五层齐备（发现/批评/出版/基础设施/获取），跨 en/fr/de/es/zh/ja/nl 圈。社区批1 r/movies·r/TrueFilm；批2 TIFF·IFFR·Janus Films。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "screenslate",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Screen Slate",
+      "url": "https://www.screenslate.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "纽约＋旧金山艺术/复映/实验电影与画廊放映的每日片单聚合器（2011 创，维基在案），兼营批评与策展，是线下arthouse放映发现的核心枢纽。",
+      "not_for": "以北美两城线下排片为主，线上片库/流媒体非其重点。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 403（反爬）；screenslate.com 官方域与维基条目、片单定位经回源确认，浏览器可读"
+    },
+    {
+      "id": "thefilmstage",
+      "wikidata_qid": "",
+      "domain": "film",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "The Film Stage",
+      "url": "https://thefilmstage.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "聚焦艺术电影、影展与片单的独立影评新闻站，「Need to Know」每周新片清单与影评人合集是策展型发现佳作的好入口。",
+      "not_for": "新闻/影评向，非流媒体检索或评分数据库。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
+    {
+      "id": "filmcomment",
+      "wikidata_qid": "Q4038736",
+      "domain": "film",
+      "layer": "criticism",
+      "circle": "en",
+      "name": "Film Comment",
+      "url": "https://www.filmcomment.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "publication",
+      "why": "美国历史最久的影评刊物之一（1962 创刊，现由 Criterion 出版），深度访谈、导演论谈与年度榜单，是进阶影迷与新导发现的批评重镇。",
+      "not_for": "作者/艺术电影取向，商业片与大众评分覆盖有限。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "lwlies",
       "wikidata_qid": "",

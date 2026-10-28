@@ -1,9 +1,53 @@
 {
   "kind": "discovery-atlas/sources",
   "domain": "music",
-  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28)",
+  "batch": "P2 seed batch1 music + community batch1 + P2 batch2 labels (2026-10-27) + community batch2 (2026-10-27) + emerging batch (2026-10-28) + emerging batch 2 (2026-10-28) + emerging batch 3 (2026-10-28)",
   "note": "音乐域：五层齐备（①社区/榜单 ②批评/奖项 ③厂牌/集团 8 条：Blue Note·ECM·Sub Pop·Warp·4AD·XL·摩登天空·Beggars ④基础设施 ⑤获取）。社区批1 4 sub；③厂牌层已由批 2 补齐。why/not_for 为登记员一句话评估，非站点自述；verified=实测状态。",
   "sources": [
+    {
+      "id": "hypem",
+      "wikidata_qid": "Q3521346",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "en",
+      "name": "Hype Machine",
+      "url": "https://hypem.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "aggregator",
+      "why": "老牌音乐博客聚合器（2005 创，维基在案），监测数百个乐评站把「众人正在写」的新歌汇成热门榜，以社区热度驱动发现新音乐。",
+      "not_for": "随博客生态兴衰，热度偏独立/电子；非流媒体或曲库。",
+      "verified": "○",
+      "access_date": "2026-10-28",
+      "status": "bot-gated",
+      "note": "探针 hypemachine.com 为误域、hypem.com 本会话 ERR；hypem.com 官方域与重要性经维基/App Store 回源确认，浏览器可读"
+    },
+    {
+      "id": "sofarsounds",
+      "wikidata_qid": "Q22313035",
+      "domain": "music",
+      "layer": "discovery",
+      "circle": "global",
+      "name": "Sofar Sounds",
+      "url": "https://sofarsounds.com/",
+      "langs": [
+        "en"
+      ],
+      "regions": [
+        "GLOBAL"
+      ],
+      "kind": "platform",
+      "why": "「神秘场地＋秘密演出」的现场音乐发现网络，在城市非传统空间办小型演唱会，观众盲选入场、按现场投票，是挖掘新兴艺人的线下发现引擎。",
+      "not_for": "限覆盖城市的线下场景，非线上曲库或流媒体。",
+      "verified": "✔ 200",
+      "access_date": "2026-10-28",
+      "status": "active",
+      "note": "本会话探针 200 可达"
+    },
     {
       "id": "gnoosic",
       "wikidata_qid": "",
