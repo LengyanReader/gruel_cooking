@@ -29,7 +29,7 @@
 | 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
 |---|---|---|---|
 | Charles Bick ✔ | （Vrije Universiteit Amsterdam 载文） | 《What Are Higher-Order Networks?》SIAM Review 2023（被引 ~690） | ora.ox.ac.uk；research.vu.nl |
-| Reiko Lambiotte ✔ | （U. Namur 系网络科学家） | 《From networks to optimal higher-order models》2019（被引 ~650） | PMC6445364 |
+| Renaud Lambiotte ✔ | University of Oxford（维基 Q37838557 所载；原发于 Namur） | 《From networks to optimal higher-order models of complex systems》Nature Physics 2019（被引 ~650） | PMC6445364；wikidata Q37838557 |
 | Pietro Battiston ✔ | CEU（Central European University） | 高阶交互与集体动力学/同步（hypergraph vs simplicial） | research.ceu.edu 2023 PDF |
 | Alessandro Vespignani ✔ | Northeastern University·Network Science Institute | 网络科学攻健康—复杂性交织问题 | theinterplex.org·2026-09 |
 
@@ -60,10 +60,53 @@
 
 - **介入线索**：本仓库 `contemplative science` 的跨文献对齐工作，可与 Center for Healthy Minds 的实证范式对话（注意：媒体常见名「Ricardo」系误记，正名为 Richard J. Davidson）。
 
+## B2 · 蛋白质从头设计（接 A1，补 Baker 之外的流水线代表）
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Joseph L. Watson ✔ | UW·Institute for Protein Design（Baker Lab） | RFdiffusion 一作：《De novo design of protein structure and function with RFdiffusion》Nature 2023（被引 ~3744） | nature.com/articles/s41586-023-06415-8；bakerlab.org·2023-07-11 |
+| David Juergens ✔ | UW·Institute for Protein Design（Baker Lab） | RFdiffusion 共同作者（Nature 2023 作者列 Watson, Juergens, Bennett, Trippe…） | bakerlab.org/publications；doi:10.1038/s41586-023-06415-8 |
+
+- **介入线索**：RFdiffusion 已免费开源（ipd.uw.edu·2023-03），个人可下载权重跑 de novo 设计 demo；作为 A1「AI 改造一个领域」的成熟样本入库。
+
+## C1 · 宇宙学与暗物质前沿（本仓库从科学侧首次落到具名实验人）
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Kevin Lesko ✔ | Lawrence Berkeley National Laboratory | LUX-ZEPLIN (LZ) 暗物质探测实验发言人；2026-09 LZ 报出令人意外的候选信号 | newscenter.lbl.gov·2026-09-01；lz.lbl.gov；ucla newsroom |
+
+- **介入线索**：不做物理本体，以「不可见实体如何被推出来」为认识论题（接 `heaven_climate/celestial_appearance`）；LZ 2026-09 结果与后续解释争论为现成的科学哲学素材。
+
+## E1 · 超学科知识共产（首次锁定奠基文献具名作者）
+
+| 学者 | 机构（核实日期） | 代表性贡献 | 回源锚 |
+|---|---|---|---|
+| Åsa V. Norström ✔ | Stockholm Resilience Centre | 《Principles for knowledge co-production in sustainability research》Nature Sustainability 3:182–190 (2020)（被引 ~2197）·—领域最高被引的原则框架 | doi:10.1038/s41893-019-0448-2；stockholmresilience.org；cgspace.cgiar.org |
+
+- **纠偏**：前版 frontier_scan 曾将奠基作者记为“Bergmann”，经回源应为 **Norström et al. 2020**（Nature Sustainability）为最权威原则框架；Bergmann 系另一篇 2021 参与式综述，不再当首援引。
+
+## Wikidata QID 回填（实体消解·与 discovery_atlas 同纪律）
+
+> 方法同 `discovery_atlas/scripts/resolve_qid.py`：`wbsearchentities` 出候选 → `wbgetentities props=sitelinks|labels` 确认——**仅当 en-label 与目标人名一致且有 en.wikipedia 站点链接时采 QID，否则诚实留空，绝不臆造。**日期 2026-10-28。
+
+| 学者 | QID | 维基描述（佐证） |
+|---|---|---|
+| Demis Hassabis | Q3022141 | British AI researcher (born 1976) |
+| John Jumper | Q89620738 | John Michael Jumper·American chemist and AI expert |
+| David Baker | Q3814528 | American biochemist and computational biologist (born 1962) |
+| Matthew Salganik | Q56273186 | Matthew J. Salganik·American sociologist |
+| Renaud Lambiotte | Q37838557 | researcher, University of Oxford |
+| Alessandro Vespignani | Q4716441 | Italian physicist |
+| Leonardo de Moura | Q84844322 | American computer scientist, known for Lean and Z3 |
+| Lev Manovich | Q716367 | American academic (born 1960) |
+| Franco Moretti | Q971600 | Italian literary historian and theorist |
+| Richard Davidson | Q2149302 | American psychologist |
+
+**诚实留空 7**（无匹配 en-wiki 实体或首命中为同名异人，不采）：Charles Bick（命中为 1891 美国演员，拒）、Pietro Battiston、Joseph L. Watson、David Juergens（新兴学者无独立 wikidata）、Kevin Lesko、Åsa Norström、Brenna Klein。留空为不臆造的必然结果。
+
 ---
 
 ## 诚实缺口（下一批加深）
-- **B2 蛋白质**除 Baker 外的设计流水线代表（如 RFdiffusion 作者）未逐条点名核实，暂缓。
-- **C1 宇宙学暗物质**方向未落到具名学者（本会话仅确认 PIA会议/奖项，无具名个体），仍为 ◇。
-- **E1 超学科 co-production** 概念有权威文献但未锁定单一代表学者，暂缓。
-- 各人机构以官网/维基当期所载为准；若需建正式档案，下批补 ORCID / Wikidata QID，并与 `discovery_atlas` 的实体消解流程统一。
+- B2/C1/E1 已首次锁定具名学者（Watson/Juergens、Lesko、Norström）✔；但他们的 **QID 未能验证**（多为新一代学者无独立词条）。
+- ORCID 尚未接入（本批只做 Wikidata QID）；下批可补 ORCID 并与 QID 交叉校验。
+- 各人机构以官网/维基当期所载为准，随时间可漂移；如需正式档案，与 `discovery_atlas` 实体消解流程统一维护。

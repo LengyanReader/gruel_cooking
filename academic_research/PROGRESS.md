@@ -55,3 +55,26 @@
 **产物**：`scholars.md`（A1/A2/B1/C2/D1/D2 六轴共 **10 名已核实学者**，每人机构·代表作·回源锚·介入线索）；frontier_scan 对应锚点 ◇→✔（B1 代表作者、C2 推动者）并回链 scholars.md；README 产物清单新增 scholars.md。
 
 **仍存缺（下批）**：B2（除 Baker 外）、C1 宇宙学、E1 co-production 的具名学者未逐条命中→仍 ◇，不臆造；待补 ORCID/QID 入正式档案。
+
+## 2026-10-28 · 四项诚实缺口清欠（references / entry_points / QID / B2-C1-E1）
+
+**动因**：用户命「continue to solve these gaps」——逐项闭合上一轮列出的四项缺口。
+
+**回源检索（第 3 批·6 组 WebSearch）**：
+
+| 目标 | 关键命中 | 成果 |
+|---|---|---|
+| B2 RFdiffusion 作者 | nature.com/articles/s41586-023-06415-8（Watson/Juergens/Bennett/Trippe，被引~3744）；ipd.uw.edu 开源 | ✔ 锁定 Watson & Juergens |
+| C1 暗物质 | newscenter.lbl.gov·2026-09-01（LZ spokesperson **Kevin Lesko**，LBNL）；lz.lbl.gov | ✔ 首落具名实验人 |
+| E1 co-production | doi:10.1038/s41893-019-0448-2（**Norström** et al. 2020 Nat Sustain，被引~2197）；Chambers 2021 | ✔ 奠基作者 |
+| AlphaFold DOI | nature.com/articles/s41586-021-03819-2（Jumper 2021，被引~57133） | ✔ |
+| FrontierScience | arXiv:2601.21165；openai.com/index/frontierscience（160 题）；github EnvCommons | ✔ |
+| PNAS 三人 profile | doi:10.1073/pnas.2422539123（Berger 2026） | ✔ |
+
+**Wikidata QID 实体消解**（临时脚本 `_resolve_scholars.py`，跑 wikidata API，**仅当 en-label 一致且有 enwiki 站点链时采**，同 resolve_qid.py 纪律）：命中 **10**——Hassabis Q3022141·Jumper Q89620738·Baker Q3814528·Salganik Q56273186·Lambiotte Q37838557·Vespignani Q4716441·de Moura Q84844322·Manovich Q716367·Moretti Q971600·Davidson Q2149302。**诚实留空 7**（Charles Bick 首命中为 1891 演员——同名异人拒采；Battiston/Watson/Juergens/Lesko/Norström/Klein 无可靠实体）。脚本用后即删。
+
+**正名与纠偏**：① Lambiotte 前名误写 “Reiko”→正为 **Renaud**；机构据 Q37838557 改为 **University of Oxford**（原注 Namur）。② E1 奠基框架 frontier_scan v1 曾记为 “Bergmann”→据回源正为 **Norström et al. 2020**（Bergmann 系另一篇 2021 参与式综述）。
+
+**产物**：新增 `references.md`（逐字照录一手 DOI/arXiv/PMCID/ISBN，未确证者标 ◇）与 `entry_points.md`（10 方向可复现入口×🟢🟡🔴成本×本地接缝）；`scholars.md` 补 B2/C1/E1 三节 + Wikidata QID 回填表；frontier_scan 下批待办 1-4 均标 ✔；README 产物清单新增两文件。
+
+**诚实缺口（仍存）**：① 7 人无可靠 QID（多为新一代学者）；② ORCID 未接入；③ Bick/Lambiotte/LZ/Chambers 的确切 DOI 本会话未直接命中→标 ◇，下批经 Crossref 解析补全。

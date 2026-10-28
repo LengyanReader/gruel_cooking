@@ -116,7 +116,8 @@
 - `math_clarification` → **C2** 直接落地阵地。
 
 ## 下批待办（诚实缺口）
-1. ~~**学者名录加深**~~ ✔ 已交付 `scholars.md`（A1/A2/B1/C2/D1/D2 各补具名学者并逐条回源）；余下 B2/C1/E1 的具名学者仍待补（见该文件「诚实缺口」）。
-2. **代表性论文/基准链接**：A1/A2/C2 各挂 2–3 篇一手 arXiv/Nature 文献（带 DOI/arXiv id）。
-3. **可复现入口清单**：把各「公开数据/基准/工具」做成可点链接表，评估个人独立介入成本。
-4. 标 ◇ 者一律转 ✔ 或删除。
+1. ~~**学者名录加深**~~ ✔ 已交付 `scholars.md`（六轴均补具名学者并逐条回源）；B2/C1/E1 具名学者（Watson/Juergens、Lesko、Norström）已首次锁定。
+2. ~~**代表性论文/基准链接**~~ ✔ 已交付 `references.md`（AlphaFold/RFdiffusion/Norström/FrontierScience 等一手 DOI/arXiv 逐字照录；未直接命中确切号者标 ◇待核）。
+3. ~~**可复现入口清单**~~ ✔ 已交付 `entry_points.md`（10 方向 × 公开入口 × 🟢🟡🔴 成本 × 本地接缝）。
+4. ~~**Wikidata QID**~~ ✔ `scholars.md` 已回填 10 名学者 QID（与 `discovery_atlas` 同纪律）；余下 7 人无可靠实体，诚实留空。
+5. **新待办**：补 ORCID 与 QID 交叉校验；将自有数据接缝（B1 discovery_atlas graph 升超图、C2 math_clarification/lean）从「计划」推为可跑脚本。

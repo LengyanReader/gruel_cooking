@@ -45,7 +45,9 @@
 ## 四、产物 · Deliverables
 
 - `frontier_scan.md` — 侦察图 v1：六轴下的方向条目（含学者锚点、五维评估、合作切入点）
-- `scholars.md` — 已核实学者名录：逐条回源的机构 · 代表作 · 回源锚 · 介入线索（frontier_scan 点名学者的佐证）
+- `scholars.md` — 已核实学者名录：逐条回源的机构 · 代表作 · 回源锚 · 介入线索（frontier_scan 点名学者的佐证；含 Wikidata QID 回填）
+- `references.md` — 一手文献清单：各方向代表作的 DOI / arXiv / PMCID（逐字照录命中原文，未确证者标 ◇ 待核）
+- `entry_points.md` — 可复现介入入口：10 方向 × 公开数据/工具/基准 × 独立介入成本（🟢🟡🔴）× 本地模块接缝
 - `PROGRESS.md` — 台账：每次检索的问题、命中来源、核实/存疑记录（可审计）
 
 ## 五、立场 · Stance
