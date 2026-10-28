@@ -45,6 +45,7 @@
 ## 四、产物 · Deliverables
 
 - `frontier_scan.md` — 侦察图 v1：六轴下的方向条目（含学者锚点、五维评估、合作切入点）
+- `scholars.md` — 已核实学者名录：逐条回源的机构 · 代表作 · 回源锚 · 介入线索（frontier_scan 点名学者的佐证）
 - `PROGRESS.md` — 台账：每次检索的问题、命中来源、核实/存疑记录（可审计）
 
 ## 五、立场 · Stance

@@ -31,3 +31,27 @@
 2. 代表性一手论文/基准补 DOI/arXiv id。
 3. 「公开数据/工具」做成可点链接并评估独立介入成本。
 4. ◇ 全部转 ✔ 或删除。
+
+## 2026-10-28 · 学者名录回源核实（scholars.md 交付）
+
+**动因**：用户授权继续深入。优先闭合 frontier_scan 的最大零臆造缺口——把点名学者逐条回源，机构/姓名不凭标签。
+
+**检索记录（第 2 批·6 组 WebSearch）**：
+
+| 学者 | 命中关键（来源域） | 状 |
+|---|---|:--:|
+| Hassabis & Jumper | nobelprize.org 2024-10-09；deepmind.google；APS Physics 17.149 | ✔ |
+| David Baker | ipd.uw.edu；nobelprize.org；hhmi.org；PNAS doi:10.1073/pnas.2422539123 | ✔ |
+| Matthew Salganik | princeton.edu；bitbybitbook.com；scholar.google（《Bit by Bit》 2018） | ✔ |
+| 高阶网络（Bick/Lambiotte/Battiston） | SIAM Review（ora.ox.ac.uk）；PMC6445364；research.ceu.edu；arXiv:2203.06601 | ✔ |
+| Vespignani | theinterplex.org 2026-09（Northeastern NetSI） | ✔ |
+| Leo de Moura | leodemoura.github.io；en.wikipedia Lean_(proof_assistant)（2025 ACM SIGPLAN 奖） | ✔ |
+| Lev Manovich | manovich.net/about（CUNY Graduate Center·Cultural Analytics Lab） | ✔ |
+| Franco Moretti | english.stanford.edu；en.wikipedia（Stanford Literary Lab 2010） | ✔ |
+| Richard Davidson | centerhealthyminds.org；psychiatry.wisc.edu（UW–Madison） | ✔ |
+
+**正名纠偏**：上一轮查询中把 Davidson 误拼为 “Ricardo”→ 回源正名为 **Richard (Richie) J. Davidson**；frontier_scan 与 scholars.md 均已标注媒体常见误记。
+
+**产物**：`scholars.md`（A1/A2/B1/C2/D1/D2 六轴共 **10 名已核实学者**，每人机构·代表作·回源锚·介入线索）；frontier_scan 对应锚点 ◇→✔（B1 代表作者、C2 推动者）并回链 scholars.md；README 产物清单新增 scholars.md。
+
+**仍存缺（下批）**：B2（除 Baker 外）、C1 宇宙学、E1 co-production 的具名学者未逐条命中→仍 ◇，不臆造；待补 ORCID/QID 入正式档案。

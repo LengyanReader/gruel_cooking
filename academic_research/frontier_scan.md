@@ -43,7 +43,7 @@
 ### B1 · 高阶网络与复杂系统（higher-order networks）
 - **一句话**：传统网络只画两两连边；「高阶」用单纯复形/超图刻画**群体同时耦合**，重新定义 contagion、协作、涌现。
 - **为什么是现在** ✔：Network Science Institute London（NetSI）2025 扩张并把「高阶交互塑造复杂系统」列为**新范式**前沿 ✔；Northeastern 的 Vespignani 等以网络科学攻健康—复杂性交织问题 ✔；NYU 已有高阶网络专题研讨课程在开 ✔。
-- **锚点** ✔：NetSI London；Northeastern Network Science Institute（Vespignani）；NYU NETS。◇ 高阶网络系统综述的代表作者待下批点名核实。
+- **锚点** ✔：NetSI London；Northeastern·Network Science Institute（Vespignani）；NYU NETS；高阶网络综述代表作者已核实（Bick、Lambiotte、Battiston，逐条见 `scholars.md`）。
 - **评分** 前沿4/势能4/可介入4/交叉5/本地4。
 - **合作切入点**：`discovery_atlas` 的图谱**本身就是网络**（当前 188 实体/273 边，来自 Wikidata 声明）——可升级为一阶→高阶示范：把「共享类簇的多元共现」建成超图，做「发现源生态的结构涌现」研究，是零成本、真数据的上手项目。
 
@@ -68,7 +68,7 @@
 ### C2 · 数学的形式化与机器辅助证明（Lean / 自动推理）
 - **一句话**：把定理与证明写入可机器验证的构造系统（Lean 等），数学可靠性与 AI 可训练性同时被重构。
 - **为什么是现在** ✔：AI 推理浪潮使「可验证的数学证明」既成训练目标又成防幻觉锚；本仓库 `math_clarification/lean` 目录**已在场**，是最该深耕的自有阵地 ✔（本地既有工作）。
-- **锚点** ◇：Lean / mathlib 社区与代表推动者待点名核实；本地入口：`math_clarification/lean`。
+- **锚点** ✔：Lean/Z3 创建者 Leo de Moura（AWS·Lean FRO Chief Architect；2025 ACM SIGPLAN 软件奖；详 `scholars.md`）；本地入口：`math_clarification/lean`。
 - **评分** 前沿4/势能4/可介入4/交叉3/本地5。
 - **合作切入点**：与 A1 合流——「AI 生成证明 + 形式化验证」是当下最热交叉；本仓库已有 `proof_narratives`（证明叙事），可做「叙事证明 ↔ 形式证明」的双向翻译研究。
 
@@ -86,7 +86,7 @@
 ### D2 · 思辨科学的神经—现象学交叉
 - **一句话**：冥想/意识等第一人称研究，与神经科学、现象学方法的正规交叉。
 - **为什么是现在** ✔：Center for Healthy Minds（UW–Madison，Richie Davidson）2025 持续输出正念冥想的神经科学研究 ✔——本仓库已有 `contemplative science` 模块（含对齐文献综述），该领域实证基础设施可对接。
-- **锚点** ✔：Center for Healthy Minds（Davidson）。◇ 现象学一侧代表人物待核。
+- **锚点** ✔：Center for Healthy Minds（Richard “Richie” Davidson——媒体常误作 “Ricardo”，正名见 `scholars.md`）。◇ 现象学一侧代表人物待核。
 - **评分** 前沿3/势能3/可介入3/交叉4/本地5。
 - **合作切入点**：以本仓库 `contemplative science` 的跨文献对齐工作为桥，接 D2 实证圈；结合 A2，可探讨「LLM 能否模拟第一人称报告」这一激进交叉题。
 
@@ -116,7 +116,7 @@
 - `math_clarification` → **C2** 直接落地阵地。
 
 ## 下批待办（诚实缺口）
-1. **学者名录加深**（f5）：为每条方向补 2–3 位**具名**学者，逐条 WebSearch 核实机构与代表作后再写，杜绝凭标签臆造。
+1. ~~**学者名录加深**~~ ✔ 已交付 `scholars.md`（A1/A2/B1/C2/D1/D2 各补具名学者并逐条回源）；余下 B2/C1/E1 的具名学者仍待补（见该文件「诚实缺口」）。
 2. **代表性论文/基准链接**：A1/A2/C2 各挂 2–3 篇一手 arXiv/Nature 文献（带 DOI/arXiv id）。
 3. **可复现入口清单**：把各「公开数据/基准/工具」做成可点链接表，评估个人独立介入成本。
 4. 标 ◇ 者一律转 ✔ 或删除。
