@@ -85,11 +85,16 @@ body.lang-en [data-zh]{display:none!important}
 /* scholar cards */
 .scholars{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.35rem}
 .scard{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.5rem 1.4rem 1.3rem;transition:transform .3s,box-shadow .3s;overflow:hidden}
-.scard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.scard .head-text{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem}
+.scard .head-text h3{margin:0 0 .2rem}
+.scard .hp{font-size:.78rem;margin-left:.5rem;color:var(--accent-teal);text-decoration:none}
+.scard .hp:hover{text-decoration:underline}
+.scard .ethos,.scard .vision,.scard .tp,.scard .trends,.scard .trend-analysis,.scard .what-real,.scard .risk,.scard .entry{margin:.5rem 0;font-size:.88rem;line-height:1.55}
+.scard .ethos strong,.scard .vision strong,.scard .tp strong,.scard .trends strong,.scard .trend-analysis strong,.scard .what-real strong,.scard .risk strong,.scard .entry strong{color:var(--ink-soft)}
 .scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
 .scard[data-tier="卓越开明"]::before{background:linear-gradient(90deg,var(--warm-amber),var(--warm-gold))}
 .scard[data-tier="有潜力"]::before{background:linear-gradient(90deg,var(--accent-teal),#8CC5C5)}
-.scard .head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.15rem;flex-wrap:wrap}
+.scard .head{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:.4rem}
 .scard h3{font-family:var(--ff-display);font-size:1.15rem;font-weight:700;color:var(--ink-deep)}
 .scard .tier{font-size:.7rem;padding:2px 10px;border-radius:99px;font-weight:600;letter-spacing:.05em}
 .scard[data-tier="卓越开明"] .tier{background:linear-gradient(135deg,var(--warm-soft),var(--warm-gold));color:#7C5A20}
@@ -460,15 +465,33 @@ function renderScholarCard(s){
   const current = Array.isArray(s.current_work) ? s.current_work.map(x=>'  · '+x).join('\n') : (s.current_work||'');
   const tags = (s.axes||[]).map(k=>`<span class="tag">${esc(axisLabel(k))}</span>`).join('')
     + (s.mode ? `<span class="tag mode">${esc(s.mode)}</span>` : '');
-  const stamps = (s.stamps||[]).map(st=>`<span class="tag" title="${esc(st.asof||'')}">${esc(st.mark||'')}</span>`).join('');
+  const stamps = (s.stamps||[]).map(st=>{
+    if (typeof st === 'string') return `<span class="tag">${esc(st)}</span>`;
+    return `<span class="tag" title="${esc(st.asof||'')}">${esc(st.mark||'')}</span>`;
+  }).join('');
+  const homepage = s.homepage ? `<a class="hp" href="${esc(s.homepage)}" target="_blank" rel="noopener">↗ ${isEn?'homepage':'主页'}</a>` : '';
+  const ethos = s.ethos ? `<div class="ethos"><strong>${isEn?'ethos':'内在情怀'}</strong>：${esc(s.ethos)}</div>` : '';
+  const vision = s.vision ? `<div class="vision"><strong>${isEn?'vision':'愿景'}</strong>：${esc(s.vision)}</div>` : '';
+  const tp = Array.isArray(s.theory_practice) && s.theory_practice.length
+    ? `<div class="tp"><strong>${isEn?'theory↔practice':'理论与实践'}</strong><ul>${s.theory_practice.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
+  const trends = Array.isArray(s.trends) && s.trends.length
+    ? `<div class="trends"><strong>${isEn?'trends':'动向'}</strong><ul>${s.trends.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
+  const trendAnalysis = s.trends_analysis ? `<div class="trend-analysis"><strong>${isEn?'trend analysis':'动向分析'}</strong>：${esc(s.trends_analysis)}</div>` : '';
+  const whatReal = s.what_real ? `<div class="what-real"><strong>${isEn?'real problem':'真问题'}</strong>：${esc(s.what_real)}</div>` : '';
+  const risk = s.risk ? `<div class="risk"><strong>${isEn?'risk':'风险'}</strong>：${esc(s.risk)}</div>` : '';
+  const entry = s.entry ? `<div class="entry"><strong>${isEn?'entry':'入口'}</strong>：${esc(s.entry)}</div>` : '';
   return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
-    <div class="head"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span></div>
+    <div class="head"><div class="head-text"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span>${homepage}</div></div>
     <div class="affil">${esc(s.affiliation||'')}</div>
     <div class="field">${esc(s.field||'')}</div>
+    ${ethos}${vision}${tp}
     <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    ${trends}${trendAnalysis}
     <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
+    ${whatReal}
     <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
     <div class="hook">${esc(s.dialogue_hook||'')}</div>
+    ${entry}${risk}
     <div class="tags">${tags}${stamps}</div>
     <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>
   </div>`;

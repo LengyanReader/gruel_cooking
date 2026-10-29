@@ -6,7 +6,7 @@
 
 | 人 / 节点 | 档 | 此刻在做的有意义工作（✔带源） | 可接的 MVP | 对话切入 | 状态 |
 |---|---|---|---|---|---|
-| Lev Manovich | `../scholars/manovich-lev.md` | Artificial Aesthetics(免费)/「AI becomes culture」/媒体积累 | MVP-001 跨文明语料压其「不可见」论 | 带方法与图，请他指正一处张力 | MVP规划中 |
+| Lev Manovich | `../scholars/manovich-lev.md` | Artificial Aesthetics(免费)/「AI becomes culture」/媒体积累（✔ 2026-10-29） | MVP-001 跨文明语料压其「不可见」论 | 带方法与图，请他指正一处张力 | ◑ 画像补全 |
 | Frauke Behrendt | `../scholars/behrendt-frauke.md` | Mobility Data Justice(2024,新框架)/MaaS-AI 治理 | MVP-002 大运河走廊移动数据审计 | 用其框架喂一个稀缺非西方案例 | 待议 |
 | Mimi Sheller | `../scholars/sheller-mimi.md` | 数据正义×AI×流动正义(Global School/New Mobilities Ctr) | MVP-002 共材 | 先接 Behrendt 框架再引到她 | 待议 |
 | Sarah Oberbichler / C²DH | `../scholars/oberbichler-sarah.md` | 新设 AI×历史讲席；「AI through History」CfP(2026-06) | MVP-003 遗产数据 AI 可见性 | 投公开 workshop / 会前请判方向 | 待议 |
@@ -15,7 +15,7 @@
 | Richard Davidson | `../scholars/davidson-richard.md` | 幸福可训练性实证；Healthy Minds | （硬方法门槛，MVP 需另设） | `contemplative science` 对齐工作与其范式对话 | 待议 |
 | Franco Moretti | `../scholars/moretti-franco.md` | 远读/Literary Lab(开放 pamphlet) | 可并入 MVP-001 | 藏书 distant-reading 趋势图 | 待议 |
 | Matthew Salganik | `../scholars/salganik-matthew.md` | 计算社科开放方法(bitbybit/sicss) | 「LLM 作为社科被试」小实验 | 复用其框架做阅读迹线实验 | 待议 |
-| **Wendy Hui Kyong Chun** | `../scholars/chun-wendy.md` | LLM×批判理论(2026 CDH 讲座)/Digital Democracies/hypo-real 气候 | 气候话语×「再现的贫乏」小分析 | 撞其 hypo-real/气候论题请指正 | 待议 |
+| **Wendy Hui Kyong Chun** | `../scholars/chun-wendy.md` | LLM×批判理论(2026 CDH 讲座)/Digital Democracies/hypo-real 气候 | 气候话语×「再现的贫乏」小分析 | 撞其 hypo-real/气候论题请指正 | ◑ 画像补全 |
 | **Anna Tsing** | `../scholars/tsing-anna.md` | Mushroom/Arts of Noticing/多物种人类世 | 大运河走廊多行动者扰动志 | 按其路子记一条水陆走廊 | 待议 |
 | **Arturo Escobar** | `../scholars/escobar-arturo.md` | Pluriverse/autonomous design | 跨文化经济×遗产的地方宇宙观重读 | 用其透镜读非西方材料 | 待议 |
 | **Tania Singer** | `../scholars/singer-tania.md` | ReConnect/ReSource 冥想训练研究 | 东亚修行谱系结构化对照 | 喂其训练类型区分 | 待议 |
