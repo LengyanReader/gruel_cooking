@@ -28,3 +28,11 @@ _tmp_profile*/
 _tmp_*.html
 screenshot_*.png
 math_clarification/essays/ref1/ca1.md
+
+# 文化月旦预生成语音的重建中间物（build_audio.py 的按段缓存与临时 wav，成品 .ogg 才入库）
+docs/culture_review/_audio_cache/
+docs/culture_review/_audio_tmp/
+docs/culture_review/_audio_sentences.json
+docs/culture_review/_audio_test/
+# 文化月旦开发与核对阶段的一次性草稿（_ 前缀，成品不在此列）
+docs/culture_review/_*
