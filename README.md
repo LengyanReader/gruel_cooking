@@ -82,6 +82,10 @@ A registry of **discovery sources** — where to find the next thing to read / l
 
 A **direction × momentum × accessibility** reconnaissance map — searching, organizing and evaluating frontier academic and scientific research directions and the scholars behind them (basic science, AI, data & computational science, interdiscipline, transdiscipline, culture / civilization / humanities). Companion to the `science` domain above: that registers *where to look*; this answers *what is worth pursuing and how to plug in*. All claims are source-verified (zero-fabrication), with a five-dimension evaluation rubric.
 
+### 9. Research Opportunities & Open-Minded Scholars (`/reseArch_X`)
+
+The **opportunity layer** under `academic_research/` — comprehensively scanning published and foreseeable PhD / RA / postdoc / professor positions at universities, institutes and independent labs, and evaluating them for the AI era (2026): which projects still constitute *meaningful work* worth years of life, and which scholars are genuinely open-minded and deep enough to pursue real collaboration. Six-dimension rubric (real-problem-ness, AI exposure, mentor quality, resources, accessibility, open-mindedness), every record source-marked ✔/◐/◇ with an `asof` date and an auditable scan ledger.
+
 ---
 
 ## Directory Structure
@@ -131,6 +135,12 @@ gruel_cooking/
 ├── academic_research/          # Frontier research directions & scholars (reconnaissance map)
 │   ├── README.md               # Scope (6 axes) / method / evaluation rubric
 │   └── frontier_scan.md        # v1: 10 directions × 5-dim scores × collaboration entry points
+├── reseArch_X/                 # Research opportunities & open-minded scholars (opportunity layer)
+│   ├── README.md               # Mission / coverage / six-dimension rubric / schemas
+│   ├── opportunities/          # phd / ra / postdoc / professor dossiers (one file each)
+│   ├── scholars/               # Open-minded scholar cards (evidence-of-behaviour, not adjectives)
+│   ├── indexes/                # shortlist.md (apply) / contacts.md (collaborate)
+│   └── scan_log/               # Auditable search ledger (queries, hits, ✔/◐/◇ transitions)
 ```
 
 ---
