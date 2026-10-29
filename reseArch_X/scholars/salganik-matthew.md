@@ -2,12 +2,19 @@
 
 ```yaml
 name: Matthew J. Salganik
+tier: 卓越开明
 affiliation: Princeton University · Sociology（原 Microsoft Research 背景）  # ✔ 2026-10-28
 field: 计算社会科学 / 数字迹数据
 homepage: bitbybitbook.com
 qid: Q56273186
+current_work:
+  - 《Bit by Bit: Social Research in the Digital Age》开放评审版持续更新；sicss.io 方法课件公开复用  # ✔ 2026-10-28
+  - 普林斯顿 Computational Social Science 方向（含重心 Data + Public Life 议程）持续招生
 why_open: 《Bit by Bit: Social Research in the Digital Age》以**开放评审版**发布、方法课件（sicss.io）公开复用——把计算社科的入门墙主动拆掉（✔ 见 academic_research/scholars.md A2）
 what_real: 用数字迹数据做社会科学，但对「数据即真理」保持方法论警觉
+mode: 合作/受教
+mvp: 把其「数字迹」框架嫁接到本仓 `Reading_IA` 阅读迹线，做一个「LLM 作为社科被试」的小实验（可复用其 bitbybit/sicss 协议）
+dialogue_hook: 「按您 bitbybit 的框架用 LLM 复现了一格数字迹实验，撞到一个 consent/被试定义的问题，想请您看这算不算合规的扩展」
 entry: Princeton Sociology / 关联计算社科通道；其书与 sicss.io 是零摩擦首触点
 risk: 偏量化社会结构，与用户人文/修行轴契合度低于 Manovich/Moretti，列为「数据 × 社会」一侧的方法基石
 stamps:

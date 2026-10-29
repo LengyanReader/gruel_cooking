@@ -115,6 +115,7 @@ stamps: [ ✔/◐/◇ + asof ]
 - `indexes/dialogue_map.md` — 对话优先名册（谁在做什么 → MVP → 话柄 → 进展）—**本模块主视图**
 - `indexes/shortlist.md` — 机会排序（保留，但时间线弱化、verdict 口径改为「值得先做 MVP 对话」）
 - `scan_log/` — 检索台账：每轮的 query、命中、来源域、核实记录（可审计）
+- `web/build_reseArch_X.py` + `web/template.html` — **调研面板生成器**：从上述所有源重生一份只读仪表盘 `docs/reseArch_X/index.html`（对话名册 / 学者卡片 / 方向轴覆盖 / MVP 轨道 / 机会档案 / 六维标尺 / 调研日志 / 新方向登记）。定期调研→分析→评估→加新轴的工作循环，界面入口在此。`.md` 是唯一事实源，页面每次重生不手改。详见 `web/README.md`。
 - 方法论变更须同步修订本 README 并记台账
 
 ## 七、启动路线 · Roadmap

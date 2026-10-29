@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>reseArch_X · 科研机会与开放学者检索评估 | Research Opportunities &amp; Open-Minded Scholars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-deep:#4A90C2; --sky-mid:#7AB8D9; --sky-light:#A8D4EC;
+  --warm-cream:#FFFBF5; --warm-soft:#FFF5E6;
+  --warm-gold:#F5C97E; --warm-amber:#E8A855; --warm-peach:#F0C4A8;
+  --ink-deep:#3A3228; --ink-mid:#5C5248; --ink-soft:#8A7E72; --ink-pale:#B8AFA4;
+  --accent-teal:#5BA3A3; --accent-coral:#D4836A;
+  --accent-violet:#8B7BAA; --accent-sage:#7A9E7E;
+  --line:#EDE4D3;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --ff-mono:ui-monospace,SFMono-Regular,"Cascadia Code",monospace;
+  --shadow-md:0 6px 20px rgba(58,50,40,.07);
+  --shadow-lg:0 12px 40px rgba(58,50,40,.09);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--warm-cream);line-height:1.75;overflow-x:hidden}
+a{color:var(--accent-teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--sky-deep)}
+
+/* bilingual toggle visibility */
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,251,245,.75);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(228,220,208,.4)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.72em;color:var(--ink-soft);margin-left:.5em;font-weight:400}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--ink-soft);font-size:.85rem;font-weight:500;letter-spacing:.04em}
+.nav-links a:hover{color:var(--ink-deep)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(228,220,208,.6);background:var(--warm-cream);font-size:.78rem;font-weight:500;cursor:pointer}
+.lang-toggle button{border:none;padding:4px 12px;cursor:pointer;font-family:var(--ff-body);font-size:.78rem;font-weight:500;color:var(--ink-soft);background:transparent;transition:all .2s}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff}
+
+/* hero */
+.hero{position:relative;padding:8rem 2rem 4rem;text-align:center;background:linear-gradient(170deg,#F5E5C7 0%,#FFF5E6 45%,#FFFBF5 100%);overflow:hidden}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:2}
+.hero .eyebrow{font-size:.78rem;color:var(--ink-soft);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.05em;margin-bottom:.5rem}
+.hero .subtitle{font-family:var(--ff-display);font-size:1.1rem;color:var(--ink-mid);font-weight:300;letter-spacing:.08em;margin-bottom:1.5rem}
+.hero .stance-quote{max-width:700px;margin:0 auto;background:rgba(255,255,255,.6);border-left:3px solid var(--warm-amber);padding:1.25rem 1.5rem;text-align:left;font-family:var(--ff-display);color:var(--ink-mid);font-size:1rem;line-height:1.9;border-radius:0 12px 12px 0}
+.hero .stance-quote strong{color:var(--ink-deep)}
+
+/* section shell */
+.section{padding:4rem 2rem;max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:2.5rem}
+.section-header h2{font-family:var(--ff-display);font-size:1.75rem;font-weight:700;color:var(--ink-deep);letter-spacing:.03em}
+.section-header .subtitle{font-size:.9rem;color:var(--ink-soft);letter-spacing:.08em;margin-top:.35rem}
+.section-header .divider{display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,var(--warm-gold),transparent);margin:.9rem auto;border-radius:1px}
+
+/* dashboard tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.15rem;text-align:center;transition:transform .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.tile .num{font-family:var(--ff-display);font-size:2rem;font-weight:700;color:var(--ink-deep);line-height:1.1}
+.tile .lbl{font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-top:.35rem}
+.tile.accent .num{color:var(--warm-amber)}
+
+/* stance card row */
+.stance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.stance-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.35rem 1.4rem;border-top:3px solid var(--warm-gold)}
+.stance-item .num{font-family:var(--ff-display);color:var(--warm-amber);font-weight:700;font-size:.9rem;letter-spacing:.1em}
+.stance-item h4{font-family:var(--ff-display);font-size:1.05rem;color:var(--ink-deep);margin:.35rem 0 .4rem;font-weight:700}
+.stance-item p{font-size:.88rem;color:var(--ink-mid);line-height:1.85}
+
+/* filters */
+.filterbar{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1.75rem;font-size:.82rem}
+.chip{padding:.35rem .85rem;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;font-weight:500;transition:all .2s;user-select:none}
+.chip:hover{border-color:var(--warm-amber);color:var(--ink-deep)}
+.chip.on{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff;border-color:transparent}
+.chip .cnt{opacity:.65;font-weight:400;margin-left:.3em;font-size:.9em}
+
+/* scholar cards */
+.scholars{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.35rem}
+.scard{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.5rem 1.4rem 1.3rem;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.scard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.scard[data-tier="卓越开明"]::before{background:linear-gradient(90deg,var(--warm-amber),var(--warm-gold))}
+.scard[data-tier="有潜力"]::before{background:linear-gradient(90deg,var(--accent-teal),#8CC5C5)}
+.scard .head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.15rem;flex-wrap:wrap}
+.scard h3{font-family:var(--ff-display);font-size:1.15rem;font-weight:700;color:var(--ink-deep)}
+.scard .tier{font-size:.7rem;padding:2px 10px;border-radius:99px;font-weight:600;letter-spacing:.05em}
+.scard[data-tier="卓越开明"] .tier{background:linear-gradient(135deg,var(--warm-soft),var(--warm-gold));color:#7C5A20}
+.scard[data-tier="有潜力"] .tier{background:#E0F0F0;color:#3F7A7A}
+.scard .affil{font-size:.8rem;color:var(--ink-soft);margin-bottom:.7rem;line-height:1.65}
+.scard .field{font-size:.78rem;color:var(--ink-mid);font-style:italic;margin-bottom:.65rem;line-height:1.55}
+.scard .current{background:var(--warm-soft);border-radius:10px;padding:.7rem .85rem;margin-bottom:.75rem;font-size:.83rem;color:var(--ink-mid);line-height:1.7}
+.scard .current .lbl{font-size:.68rem;color:var(--warm-amber);letter-spacing:.1em;font-weight:700;text-transform:uppercase;margin-bottom:.3rem;display:block}
+.scard .current ul{margin:0;padding-left:1rem}
+.scard .current li{margin-bottom:.25rem}
+.scard .why-open,.scard .mvp,.scard .hook{font-size:.82rem;color:var(--ink-mid);margin-top:.55rem;line-height:1.7}
+.scard .why-open strong,.scard .mvp strong,.scard .hook strong{color:var(--ink-deep);font-weight:600}
+.scard .hook{background:rgba(91,163,163,.08);border-left:2px solid var(--accent-teal);padding:.5rem .7rem;border-radius:0 8px 8px 0;font-family:var(--ff-display);color:var(--ink-deep);font-size:.85rem;margin-top:.7rem;line-height:1.7}
+.scard .tags{display:flex;flex-wrap:wrap;gap:5px;margin:.55rem 0 .3rem}
+.scard .tag{padding:2px 9px;border-radius:99px;font-size:.68rem;background:#F3EEE1;color:var(--ink-soft);font-weight:500}
+.scard .tag.mode{background:#E9F0F5;color:var(--sky-deep)}
+.scard .file-link{font-family:var(--ff-mono);font-size:.72rem;color:var(--ink-pale);margin-top:.6rem;display:inline-block}
+
+/* opportunities */
+.opps{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem}
+.ocard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.3rem;position:relative;transition:transform .25s,box-shadow .25s}
+.ocard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.ocard .row1{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.3rem;flex-wrap:wrap}
+.ocard h4{font-family:var(--ff-display);font-size:1rem;color:var(--ink-deep);font-weight:700}
+.ocard .mark{font-size:1rem;padding:2px 8px;border-radius:6px;font-weight:700}
+.ocard .mark.ok{background:#E4F3E4;color:#3F7A3F}
+.ocard .mark.prev{background:#FFF3DD;color:#9A7233}
+.ocard .mark.pending{background:#F0EDE7;color:var(--ink-soft)}
+.ocard .meta{font-size:.78rem;color:var(--ink-soft);line-height:1.65;margin-bottom:.4rem}
+.ocard .dims{display:flex;gap:.4rem;font-size:.72rem;color:var(--ink-mid);margin:.5rem 0;flex-wrap:wrap}
+.ocard .dim{background:var(--warm-soft);padding:2px 8px;border-radius:6px;font-family:var(--ff-mono)}
+.ocard .verdict{font-family:var(--ff-display);color:var(--ink-deep);font-size:.85rem;padding:.4rem .6rem;background:rgba(139,123,170,.06);border-radius:6px;border-left:2px solid var(--accent-violet);line-height:1.6}
+
+/* dialogue map table */
+.dm-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;overflow-x:auto;box-shadow:var(--shadow-md)}
+table.dm{width:100%;border-collapse:collapse;font-size:.85rem;min-width:900px}
+table.dm thead th{text-align:left;padding:.9rem 1rem;background:linear-gradient(180deg,#FFF9EC,#FFF3DD);color:var(--ink-deep);font-weight:700;font-family:var(--ff-display);border-bottom:2px solid var(--warm-gold);letter-spacing:.05em}
+table.dm tbody td{padding:.85rem 1rem;border-bottom:1px solid var(--line);color:var(--ink-mid);vertical-align:top;line-height:1.65}
+table.dm tbody tr:hover{background:#FFFBF2}
+table.dm tbody tr:last-child td{border-bottom:none}
+table.dm .who{font-family:var(--ff-display);font-weight:700;color:var(--ink-deep);font-size:.9rem}
+table.dm .status-badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.7rem;font-weight:600}
+table.dm .status-badge.pending{background:#F0EDE7;color:var(--ink-soft)}
+table.dm .status-badge.mvpg{background:#FFF3DD;color:#9A7233}
+table.dm .status-badge mvpb{background:#E4F3E4;color:#3F7A3F}
+table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
+.sort-logic{background:linear-gradient(135deg,#FFF9EC,#FFFBF5);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.35rem;margin-top:1.25rem;font-size:.85rem;color:var(--ink-mid);line-height:1.8}
+.sort-logic strong{color:var(--ink-deep);font-family:var(--ff-display);letter-spacing:.05em}
+
+/* MVP tracker */
+.mvp-tracker{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.35rem 1.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.mvp-item{border-left:3px solid var(--warm-gold);padding:.7rem .9rem;border-radius:0 10px 10px 0;background:linear-gradient(90deg,#FFFBF2,transparent);transition:transform .2s}
+.mvp-item:hover{transform:translateX(3px)}
+.mvp-item .mvp-id{font-family:var(--ff-mono);font-size:.72rem;color:var(--warm-amber);letter-spacing:.1em;font-weight:600}
+.mvp-item .mvp-target{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700;font-size:.95rem;margin:.15rem 0}
+.mvp-item .mvp-sum{font-size:.83rem;color:var(--ink-mid);line-height:1.65}
+.mvp-item[data-status="planned"]{border-left-color:var(--warm-peach)}
+.mvp-item[data-status="built"]{border-left-color:var(--accent-sage)}
+.mvp-status{font-size:.68rem;padding:1px 8px;border-radius:4px;background:#F0EDE7;color:var(--ink-soft);margin-left:.4rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.mvp-status.built{background:#DFF0DF;color:#3F7A3F}
+
+/* axes heat */
+.axes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.85rem}
+.axis-cell{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;position:relative;transition:transform .25s,box-shadow .25s}
+.axis-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.axis-cell h5{font-family:var(--ff-display);font-size:.95rem;color:var(--ink-deep);margin-bottom:.2rem;font-weight:700}
+.axis-cell .desc{font-size:.75rem;color:var(--ink-soft);line-height:1.6;min-height:2.2em}
+.axis-cell .bars{margin-top:.55rem;display:flex;flex-direction:column;gap:.3rem;font-size:.72rem;color:var(--ink-mid)}
+.axis-cell .bar{display:flex;align-items:center;gap:.45rem}
+.axis-cell .bar-lbl{width:42px;color:var(--ink-soft)}
+.axis-cell .bar-track{flex:1;height:6px;background:#F5EEE0;border-radius:3px;overflow:hidden}
+.axis-cell .bar-fill{height:100%;border-radius:3px;transition:width .5s}
+.axis-cell .bar-fill.scholars{background:linear-gradient(90deg,var(--warm-amber),var(--warm-gold))}
+.axis-cell .bar-fill.opps{background:linear-gradient(90deg,var(--accent-teal),#8CC5C5)}
+.axis-cell .bar-num{width:24px;text-align:right;font-family:var(--ff-mono);color:var(--ink-deep);font-weight:600}
+.axis-cell.gap{background:linear-gradient(135deg,#FFF7F3,#FFFBF5)}
+.axis-cell.gap::after{content:"空缺";position:absolute;top:.6rem;right:.8rem;font-size:.62rem;padding:2px 8px;border-radius:99px;background:var(--accent-coral);color:#fff;font-weight:600;letter-spacing:.05em}
+
+/* rubric */
+.rubric{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.85rem}
+.rubric-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.15rem;display:flex;gap:.85rem;align-items:flex-start}
+.rubric-key{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff;font-family:var(--ff-display);font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}
+.rubric-body h5{font-family:var(--ff-display);font-size:.95rem;color:var(--ink-deep);margin-bottom:.25rem;font-weight:700}
+.rubric-body p{font-size:.8rem;color:var(--ink-mid);line-height:1.7}
+
+/* marks legend */
+.marks{display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;font-size:.8rem;color:var(--ink-mid);flex-wrap:wrap}
+.marks span{display:inline-flex;align-items:center;gap:.35rem}
+.marks .m{font-weight:700;font-size:.95rem}
+.marks .m.ok{color:var(--accent-sage)}
+.marks .m.prev{color:var(--warm-amber)}
+.marks .m.pending{color:var(--ink-pale)}
+
+/* scan log timeline */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:9px;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(180deg,var(--warm-gold),transparent)}
+.tl-item{position:relative;margin-bottom:1.5rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.15rem}
+.tl-item::before{content:"";position:absolute;left:-19px;top:1.2rem;width:12px;height:12px;border-radius:50%;background:var(--warm-amber);box-shadow:0 0 0 3px var(--warm-cream)}
+.tl-item .date{font-family:var(--ff-mono);font-size:.72rem;color:var(--warm-amber);letter-spacing:.05em;font-weight:600}
+.tl-item .wave{display:inline-block;padding:1px 8px;border-radius:4px;background:var(--warm-soft);color:var(--ink-soft);font-size:.7rem;margin-left:.5rem;font-weight:600}
+.tl-item h4{font-family:var(--ff-display);font-size:1rem;color:var(--ink-deep);margin:.35rem 0 .3rem;font-weight:700}
+.tl-item p{font-size:.83rem;color:var(--ink-mid);line-height:1.75}
+
+/* intake schema */
+.intake{background:#fff;border:1px dashed var(--warm-amber);border-radius:14px;padding:1.5rem 1.6rem;font-family:var(--ff-mono);font-size:.82rem;color:var(--ink-mid);line-height:1.85;white-space:pre-wrap;overflow-x:auto}
+.intake-header{font-family:var(--ff-display);color:var(--ink-deep);font-size:1rem;font-weight:700;margin-bottom:.7rem;white-space:normal;letter-spacing:.03em}
+
+/* footer */
+.footer{text-align:center;padding:3rem 2rem 2rem;color:var(--ink-pale);font-size:.85rem;border-top:1px solid var(--line);background:var(--warm-cream);margin-top:3rem}
+.footer .motto{font-family:var(--ff-display);font-size:1rem;color:var(--ink-soft);font-weight:300;letter-spacing:.12em;margin-bottom:.35rem}
+
+/* empty state */
+.empty{text-align:center;padding:2rem;color:var(--ink-pale);font-size:.9rem;font-style:italic}
+
+/* responsive */
+@media (max-width:768px){
+  .nav-links{display:none}
+  .section{padding:3rem 1rem}
+  .hero{padding:6rem 1rem 3rem}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .scholars,.opps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">reseArch_X<span class="sub">· <span data-zh>机会与学者</span><span data-en>Opportunities &amp; Scholars</span></span></div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#dialogue"><span data-zh>对话名册</span><span data-en>Dialogue</span></a></li>
+      <li><a href="#scholars"><span data-zh>学者</span><span data-en>Scholars</span></a></li>
+      <li><a href="#axes"><span data-zh>方向轴</span><span data-en>Axes</span></a></li>
+      <li><a href="#mvp"><span data-zh>MVP</span><span data-en>MVP</span></a></li>
+      <li><a href="#opp"><span data-zh>机会</span><span data-en>Opportunities</span></a></li>
+      <li><a href="#rubric"><span data-zh>标尺</span><span data-en>Rubric</span></a></li>
+      <li><a href="#log"><span data-zh>调研日志</span><span data-en>Log</span></a></li>
+      <li><a href="#intake"><span data-zh>新方向</span><span data-en>Intake</span></a></li>
+    </ul>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">research · opportunities · open-minded scholars</div>
+    <h1 data-both>科研机会与开放学者 · reseArch_X</h1>
+    <div class="subtitle"><span data-zh>对话优先 · 以 MVP 接住真正在做有意义工作的人</span><span data-en>Dialogue-first · Meeting meaningful work with a small, real deliverable</span></div>
+    <blockquote class="stance-quote">
+      <span data-zh>不走「海投申请流水线」。关心的次序是：<strong>①</strong> 谁在做什么有意义的工作——卓越而开明的导师，以及<strong>有潜力的新人</strong>；<strong>②</strong> 若值得，先做一件 MVP 开启专业对话；<strong>③</strong> 借工作建立相互了解，再看有无机会<strong>合作 或 受教</strong>。时间线只作跟踪字段，不作驱动理由。</span>
+      <span data-en>Not the "broadcast-application pipeline". The order of concern is: <strong>(1)</strong> who is doing meaningful work — outstanding and open-minded advisors, plus <strong>promising newcomers</strong>; <strong>(2)</strong> if worth it, build a small MVP first to open a professional dialogue; <strong>(3)</strong> use the work to build mutual understanding, then see whether <strong>collaboration or mentorship</strong> is possible. Timeline is a tracking field, never the driver.</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="section" id="dash">
+  <div class="section-header">
+    <h2><span data-zh>盘面速览</span><span data-en>Dashboard</span></h2>
+    <div class="subtitle"><span data-zh>· 截至 <span id="asof-date"></span></span><span data-en>· as of <span id="asof-date-en"></span></span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<!-- DIALOGUE MAP (main view) -->
+<section class="section" id="dialogue">
+  <div class="section-header">
+    <h2><span data-zh>对话名册 · 本模块主视图</span><span data-en>Dialogue Map · Primary View</span></h2>
+    <div class="subtitle"><span data-zh>谁在做什么 → 可接的 MVP → 对话切入 → 状态</span><span data-en>Who · What they're doing · MVP hook · Dialogue opener · Status</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="dm-wrap"><table class="dm"><thead><tr>
+    <th><span data-zh>人 / 节点</span><span data-en>Who</span></th>
+    <th><span data-zh>此刻在做的有意义工作</span><span data-en>Meaningful work now</span></th>
+    <th><span data-zh>可接的 MVP</span><span data-en>MVP hook</span></th>
+    <th><span data-zh>对话切入</span><span data-en>Opener</span></th>
+    <th><span data-zh>状态</span><span data-en>Status</span></th>
+  </tr></thead><tbody id="dm-body"></tbody></table></div>
+  <div class="sort-logic" id="dm-sort"></div>
+</section>
+
+<!-- SCHOLARS -->
+<section class="section" id="scholars">
+  <div class="section-header">
+    <h2><span data-zh>学者档案</span><span data-en>Scholar Dossiers</span></h2>
+    <div class="subtitle"><span data-zh>按 tier / 方向轴 / 期望形态 筛选</span><span data-en>Filter by tier / axis / mode</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="filterbar" id="sch-filters"></div>
+  <div class="scholars" id="sch-grid"></div>
+</section>
+
+<!-- AXES -->
+<section class="section" id="axes">
+  <div class="section-header">
+    <h2><span data-zh>方向轴覆盖 · 空缺可见</span><span data-en>Axis Coverage · Gaps Made Visible</span></h2>
+    <div class="subtitle"><span data-zh>九条既定轴 · 学者 × 机会 分布</span><span data-en>Nine axes · distribution of scholars × opportunities</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="axes-grid" id="axes-grid"></div>
+</section>
+
+<!-- MVP -->
+<section class="section" id="mvp">
+  <div class="section-header">
+    <h2><span data-zh>MVP 轨道</span><span data-en>MVP Tracker</span></h2>
+    <div class="subtitle"><span data-zh>每件小而真实、可公开的东西 —— 用来开启专业对话</span><span data-en>Small, real, public deliverables — each opens a professional dialogue</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="mvp-tracker" id="mvp-grid"></div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="section" id="opp">
+  <div class="section-header">
+    <h2><span data-zh>机会档案 · 降为跟踪副产物</span><span data-en>Opportunities · Now a Tracking By-product</span></h2>
+    <div class="subtitle"><span data-zh>非驱动目标 · 按标记 / 类型 筛选</span><span data-en>Not the driver · Filter by mark / type</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="filterbar" id="opp-filters"></div>
+  <div class="opps" id="opp-grid"></div>
+</section>
+
+<!-- RUBRIC -->
+<section class="section" id="rubric">
+  <div class="section-header">
+    <h2><span data-zh>六维评估标尺</span><span data-en>Six-Dimension Rubric</span></h2>
+    <div class="subtitle"><span data-zh>★1–5 · 每分附一句可证由</span><span data-en>★1–5 · each score needs one provable reason</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="rubric" id="rubric-grid"></div>
+  <div class="marks">
+    <span><span class="m ok">✔</span><span data-zh>命中（官方来源，带日期）</span><span data-en>Hit (official source, dated)</span></span>
+    <span><span class="m prev">◐</span><span data-zh>外推（周期/资助推断）</span><span data-en>Inferred (cyclical / funding-based)</span></span>
+    <span><span class="m pending">◇</span><span data-zh>待核（倾向存在，一手未落地）</span><span data-en>Pending (leaning, primary not yet)</span></span>
+  </div>
+</section>
+
+<!-- SCAN LOG -->
+<section class="section" id="log">
+  <div class="section-header">
+    <h2><span data-zh>调研日志</span><span data-en>Scan Log</span></h2>
+    <div class="subtitle"><span data-zh>每一轮的 query · 命中 · 核实记录 · 空手而归</span><span data-en>Every wave · queries · hits · verification · what came back empty</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="timeline" id="log-body"></div>
+</section>
+
+<!-- INTAKE -->
+<section class="section" id="intake">
+  <div class="section-header">
+    <h2><span data-zh>新方向 / 新档案登记</span><span data-en>New Direction / Dossier Intake</span></h2>
+    <div class="subtitle"><span data-zh>沿用 schema，添加即扩展盘面</span><span data-en>Follow the schema — add a file, extend the dashboard</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="intake"><div class="intake-header"><span data-zh>新增学者档案（scholars/&lt;slug&gt;.md）</span><span data-en>New scholar dossier (scholars/&lt;slug&gt;.md)</span></div>
+```yaml
+name:
+tier: 卓越开明 | 有潜力
+affiliation:              # asof 有效，机构漂移要重核
+field:
+current_work:             # 回源，带日期与出处
+  - 「…」 ✔ &lt;source&gt; YYYY-MM-DD
+why_open:                 # 眼界开放的可证行为（不写形容词）
+what_real:                # 其"真问题"表述
+mvp:                      # 我们能造的一件小而真实的东西
+dialogue_hook:            # 一句不带索取的真实话柄
+mode: 合作 | 受教 | 两者
+entry:                    # 后续入口（对话成立后再启用）
+risk:
+stamps:
+  - {mark: ✔, asof: YYYY-MM-DD}
+```
+
+<div class="intake-header" style="margin-top:1.5rem"><span data-zh>新增机会档案（opportunities/&lt;type&gt;/RX-&lt;type&gt;-&lt;机构&gt;-&lt;yyyymm&gt;.md）</span><span data-en>New opportunity (opportunities/&lt;type&gt;/RX-&lt;type&gt;-&lt;slug&gt;-&lt;yyyymm&gt;.md)</span></div>
+```yaml
+id: RX-&lt;type&gt;-&lt;slug&gt;-&lt;yyyymm&gt;
+type: phd | ra | postdoc | professor | fellowship
+institution:
+country:
+program:
+pi:
+application_url:
+deadline:                 # ISO / "rolling" / ◐外推
+funding:
+status: ✔ | ◐ | ◇
+asof: YYYY-MM-DD
+dims: {q: , ai: , m: , r: , a: , o: }
+verdict:
+sources: [ url1, url2 ]
+```
+
+<div class="intake-header" style="margin-top:1.5rem"><span data-zh>新增方向轴</span><span data-en>New thematic axis</span></div>
+<span data-zh>在 <code>reseArch_X/web/build_reseArch_X.py</code> 的 <code>AXES</code> 列表加一条 (zh, key, desc)；
+在 <code>SCHOLAR_AXES</code> / <code>OPP_AXES</code> 补该轴命中的档案 slug；重跑 build。轴是策展判断，不入 .md 源。</span>
+<span data-en>Add a row (zh, key, desc) to <code>AXES</code> in <code>reseArch_X/web/build_reseArch_X.py</code>; extend <code>SCHOLAR_AXES</code> / <code>OPP_AXES</code> with matching slugs; rebuild. Axes are curation, not authored fact — kept out of .md sources.</span>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="motto"><span data-zh>不追 deadline · 追对话</span><span data-en>Chase dialogues, not deadlines</span></div>
+  <p><span data-zh>reseArch_X · 由 <code>build_reseArch_X.py</code> 从 scholars / opportunities / mvp / scan_log 源重生</span><span data-en>reseArch_X · regenerated from scholars / opportunities / mvp / scan_log by <code>build_reseArch_X.py</code></span></p>
+</footer>
+
+<script id="rx-data" type="application/json">__DATA_JSON__</script>
+<script>
+const DATA = JSON.parse(document.getElementById('rx-data').textContent);
+const LANG_KEY = 'rx-lang';
+const $ = (sel, root=document) => root.querySelector(sel);
+const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// ------- language toggle -------
+function setLang(l){
+  document.body.className = 'lang-' + l;
+  $$('#langToggle button').forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
+  localStorage.setItem(LANG_KEY, l);
+  document.documentElement.lang = l==='zh'?'zh':'en';
+  render();
+}
+$$('#langToggle button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+const saved = localStorage.getItem(LANG_KEY);
+if (saved) document.body.className = 'lang-'+saved;
+
+// ------- dashboard tiles -------
+function renderTiles(){
+  const c = DATA.counts;
+  const zh=[['学者','scholars',''],['卓越开明',c['卓越开明'],'accent'],['有潜力',c['有潜力'],''],['机会档案',c.opportunities,''],['MVP',c.mvp_total,''],['调研轮次',c.scans,'accent']];
+  const en=[['Scholars',c.scholars,''],['Outstanding',c['卓越开明'],'accent'],['Promising',c['有潜力'],''],['Opportunities',c.opportunities,''],['MVPs',c.mvp_total,''],['Scan waves',c.scans,'accent']];
+  const src = document.body.classList.contains('lang-en') ? en : zh;
+  $('#tiles').innerHTML = src.map(([lbl,n,cls])=>`<div class="tile ${cls}"><div class="num">${n}</div><div class="lbl">${esc(lbl)}</div></div>`).join('');
+  const asof = DATA.latest_asof || '—';
+  $('#asof-date').textContent = asof;
+  $('#asof-date-en').textContent = asof;
+}
+
+// ------- dialogue map -------
+function statusClass(s){
+  if(!s) return 'pending';
+  if(/已成|built/i.test(s)) return 'mvpb';
+  if(/规划|MVP/i.test(s)) return 'mvpg';
+  if(/已发|有回音|talking/i.test(s)) return 'talked';
+  return 'pending';
+}
+function renderDialogue(){
+  const rows = DATA.dialogue_map.rows;
+  $('#dm-body').innerHTML = rows.map(r=>`<tr>
+    <td class="who">${esc(r.who)}</td>
+    <td>${esc(r.work)}</td>
+    <td>${esc(r.mvp)}</td>
+    <td>${esc(r.hook)}</td>
+    <td><span class="status-badge ${statusClass(r.status)}">${esc(r.status)}</span></td>
+  </tr>`).join('') || '<tr><td colspan="5" class="empty">—</td></tr>';
+  $('#dm-sort').innerHTML = esc(DATA.dialogue_map.sort_logic || '').replace(/^##+ /,'').replace(/\n/g,'<br>');
+}
+
+// ------- scholars -------
+const SCH_STATE = {tier:'', axis:'', mode:''};
+function axisLabel(k){ const m = DATA.axes_meta.find(a=>a.key===k); return m ? m.zh : k; }
+function renderScholarCard(s){
+  const isEn = document.body.classList.contains('lang-en');
+  const current = Array.isArray(s.current_work) ? s.current_work.map(x=>'  · '+x).join('\n') : (s.current_work||'');
+  const tags = (s.axes||[]).map(k=>`<span class="tag">${esc(axisLabel(k))}</span>`).join('')
+    + (s.mode ? `<span class="tag mode">${esc(s.mode)}</span>` : '');
+  const stamps = (s.stamps||[]).map(st=>`<span class="tag" title="${esc(st.asof||'')}">${esc(st.mark||'')}</span>`).join('');
+  return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
+    <div class="head"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span></div>
+    <div class="affil">${esc(s.affiliation||'')}</div>
+    <div class="field">${esc(s.field||'')}</div>
+    <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
+    <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
+    <div class="hook">${esc(s.dialogue_hook||'')}</div>
+    <div class="tags">${tags}${stamps}</div>
+    <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>
+  </div>`;
+}
+function renderScholars(){
+  let items = DATA.scholars.slice();
+  if(SCH_STATE.tier) items = items.filter(s=>s.tier===SCH_STATE.tier);
+  if(SCH_STATE.axis) items = items.filter(s=>(s.axes||[]).includes(SCH_STATE.axis));
+  if(SCH_STATE.mode) items = items.filter(s=>(s.mode||'').includes(SCH_STATE.mode));
+  $('#sch-grid').innerHTML = items.map(renderScholarCard).join('') || '<div class="empty">— 无命中 · 无 hits —</div>';
+  renderSchFilters();
+}
+function renderSchFilters(){
+  const isEn = document.body.classList.contains('lang-en');
+  const tiers = {}; DATA.scholars.forEach(s=>{ if(s.tier) tiers[s.tier]=(tiers[s.tier]||0)+1; });
+  const modes = {}; DATA.scholars.forEach(s=>{ (s.mode||'').split(/[；;/、｜|]/).forEach(x=>{const t=x.trim();if(t&&t.length<10)modes[t]=(modes[t]||0)+1;}); });
+  const all = DATA.scholars.length;
+  const mk = (label, on, count, act)=>`<span class="chip ${on?'on':''}" data-act="${act}">${esc(label)}<span class="cnt">${count}</span></span>`;
+  const tierChips = ['','卓越开明','有潜力'].map(t=>mk(t||( isEn?'all':'全部'), SCH_STATE.tier===t, t?tiers[t]||0:all, 'tier:'+t)).join('');
+  const axisChips = [''].concat(DATA.axes_meta.map(a=>a.key)).map(k=>{
+    const label = k ? axisLabel(k) : (isEn?'axis: all':'轴：全部');
+    const cnt = k ? DATA.scholars.filter(s=>(s.axes||[]).includes(k)).length : all;
+    return mk(label, SCH_STATE.axis===k, cnt, 'axis:'+k);
+  }).join('');
+  const modeChips = [''].concat(Object.keys(modes)).map(m=>{
+    const label = m || (isEn?'mode: all':'形态：全部');
+    const cnt = m ? DATA.scholars.filter(s=>(s.mode||'').includes(m)).length : all;
+    return mk(label, SCH_STATE.mode===m, cnt, 'mode:'+m);
+  }).join('');
+  $('#sch-filters').innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${tierChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${axisChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${modeChips}</div>`;
+  $$('#sch-filters .chip').forEach(el=>el.addEventListener('click',()=>{
+    const [k,v] = el.dataset.act.split(':');
+    SCH_STATE[k] = (SCH_STATE[k]===v) ? '' : v;
+    renderScholars();
+  }));
+}
+
+// ------- opportunities -------
+const OPP_STATE = {type:'', status:''};
+function markClass(s){
+  if((s||'').includes('✔')) return 'ok';
+  if((s||'').includes('◐')) return 'prev';
+  return 'pending';
+}
+function renderOppCard(o){
+  const isEn = document.body.classList.contains('lang-en');
+  const d = o.dims||{};
+  const dimStr = ['q','ai','m','r','a','o'].map(k=>`<span class="dim" title="${k}">${k}:${esc(d[k]??'?')}</span>`).join('');
+  const tags = (o.axes||[]).map(k=>`<span class="tag">${esc(axisLabel(k))}</span>`).join('');
+  return `<div class="ocard">
+    <div class="row1"><h4>${esc(o.institution||o.id)}</h4><span class="mark ${markClass(o.status)}">${esc(o.status||'')}</span></div>
+    <div class="meta">${esc(o.program||'')} ${o.country?' · '+esc(o.country):''} ${o.deadline?' · '+esc(o.deadline):''}<br>${o.pi?'PI: '+esc(o.pi):''}</div>
+    <div class="dims">${dimStr}</div>
+    <div class="verdict"><strong>${isEn?'verdict':'断语'}</strong>：${esc(o.verdict||'')}</div>
+    <div class="tags">${tags}</div>
+    <a class="file-link" href="../../${esc(o._file)}">↗ ${esc(o.id||o._slug)}</a>
+  </div>`;
+}
+function renderOpps(){
+  let items = DATA.opportunities.slice();
+  if(OPP_STATE.type) items = items.filter(o=>o.type===OPP_STATE.type);
+  if(OPP_STATE.status) items = items.filter(o=>(o.status||'').includes(OPP_STATE.status));
+  $('#opp-grid').innerHTML = items.map(renderOppCard).join('') || '<div class="empty">—</div>';
+  renderOppFilters();
+}
+function renderOppFilters(){
+  const isEn = document.body.classList.contains('lang-en');
+  const types = {}; DATA.opportunities.forEach(o=>{ if(o.type) types[o.type]=(types[o.type]||0)+1; });
+  const all = DATA.opportunities.length;
+  const mk = (label,on,cnt,act)=>`<span class="chip ${on?'on':''}" data-act="${act}">${esc(label)}<span class="cnt">${cnt}</span></span>`;
+  const typeChips = [''].concat(Object.keys(types)).map(t=>mk(t||(isEn?'all':'全部'), OPP_STATE.type===t, t?types[t]:all, 'type:'+t)).join('');
+  const statusChips = ['','✔','◐','◇'].map(s=>mk(s||(isEn?'mark: all':'标记：全部'), OPP_STATE.status===s, s?DATA.opportunities.filter(o=>(o.status||'').includes(s)).length:all, 'status:'+s)).join('');
+  $('#opp-filters').innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${typeChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${statusChips}</div>`;
+  $$('#opp-filters .chip').forEach(el=>el.addEventListener('click',()=>{
+    const [k,v] = el.dataset.act.split(':');
+    OPP_STATE[k] = (OPP_STATE[k]===v) ? '' : v;
+    renderOpps();
+  }));
+}
+
+// ------- axes -------
+function renderAxes(){
+  const cov = DATA.axis_coverage;
+  const maxS = Math.max(1, ...cov.map(c=>c.scholars));
+  const maxO = Math.max(1, ...cov.map(c=>c.opportunities));
+  const isEn = document.body.classList.contains('lang-en');
+  $('#axes-grid').innerHTML = cov.map(c=>{
+    const gap = c.scholars===0;
+    return `<div class="axis-cell ${gap?'gap':''}">
+      <h5>${esc(c.zh)}</h5>
+      <div class="desc">${esc(c.desc)}</div>
+      <div class="bars">
+        <div class="bar"><span class="bar-lbl">${isEn?'sch':'学者'}</span><div class="bar-track"><div class="bar-fill scholars" style="width:${(c.scholars/maxS*100).toFixed(0)}%"></div></div><span class="bar-num">${c.scholars}</span></div>
+        <div class="bar"><span class="bar-lbl">${isEn?'opp':'机会'}</span><div class="bar-track"><div class="bar-fill opps" style="width:${(c.opportunities/maxO*100).toFixed(0)}%"></div></div><span class="bar-num">${c.opportunities}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ------- MVP -------
+function renderMvp(){
+  const items = DATA.mvp;
+  $('#mvp-grid').innerHTML = items.map(m=>{
+    const link = m.file ? `<a class="file-link" href="../../${esc(m.file)}">↗ ${esc(m.id)}</a>` : '';
+    return `<div class="mvp-item" data-status="${esc(m.status||'planned')}">
+      <div><span class="mvp-id">${esc(m.id)}</span><span class="mvp-status ${/built/i.test(m.status)?'built':''}">${esc(m.status||'planned')}</span></div>
+      <div class="mvp-target">${esc(m.target)}</div>
+      <div class="mvp-sum">${esc(m.summary)}</div>
+      ${link}
+    </div>`;
+  }).join('') || '<div class="empty">—</div>';
+}
+
+// ------- rubric -------
+const RUBRIC = [
+  ['q', '真问题性', 'Real question', '去掉 AI 热点词后，这个问题本身还成立吗？产出是理解还是 benchmark 增量？','Strip the AI buzzwords — does the question still stand? Does the output advance understanding, or only benchmark deltas?'],
+  ['ai','AI 暴露度','AI exposure','AI 进步让这个项目<strong>增值</strong>（判断、数据、现场、品味稀缺）还是<strong>贬值</strong>（生产环节可被替代）？','Does AI progress make this project <strong>appreciate</strong> (judgment, data, field, taste scarce) or <strong>depreciate</strong> (its production steps automatable)?'],
+  ['m', '导师质量','Mentor quality','近 5 年：组内 PhD 中位毕业年限、去向、师生合著生态、独立指导 vs 放养/压榨。','Last 5 years: median PhD completion time, alumni destinations, co-authorship ecology, active mentoring vs. hands-off/exploitative.'],
+  ['r', '资源稳定','Resources &amp; stability','资助来源与期限（ERC / DFG / NSF-CORE / 青基…）、计算与数据条件、组规模。','Funding source and horizon (ERC / DFG / NSF-CORE…), compute and data access, group size.'],
+  ['a', '可及性','Accessibility','对「我」的申请画像的匹配与竞争面：签证/语言/经费通道/届期。','Match to my profile and competitive surface: visa, language, funding route, window.'],
+  ['o', '眼界开放','Open-mindedness','跨域接纳、允许失败、真名对话——决定「真正合作交流」是否可能。','Cross-domain reception, room to fail, named dialogue — decides whether genuine collaboration is possible.'],
+];
+function renderRubric(){
+  const isEn = document.body.classList.contains('lang-en');
+  $('#rubric-grid').innerHTML = RUBRIC.map(([k,zh,en,dzh,den])=>
+    `<div class="rubric-item"><div class="rubric-key">${esc(k)}</div><div class="rubric-body"><h5>${isEn?esc(en):esc(zh)}</h5><p>${isEn?den:dzh}</p></div></div>`
+  ).join('');
+}
+
+// ------- scan log -------
+function renderLog(){
+  const logs = DATA.scan_logs;
+  $('#log-body').innerHTML = logs.map(l=>
+    `<div class="tl-item"><div class="date">${esc(l.date)} <span class="wave">${esc(l.wave)}</span></div>
+    <h4>${esc(l.title)}</h4><p>${esc(l.summary||'')}</p>
+    <a class="file-link" href="../../${esc(l.file)}">↗ ${esc(l.file.split('/').pop())}</a></div>`
+  ).join('') || '<div class="empty">—</div>';
+}
+
+// ------- master render -------
+function render(){
+  renderTiles(); renderDialogue(); renderScholars(); renderAxes();
+  renderMvp(); renderOpps(); renderRubric(); renderLog();
+}
+render();
+document.addEventListener('DOMContentLoaded', render);
+</script>
+
+</body>
+</html>

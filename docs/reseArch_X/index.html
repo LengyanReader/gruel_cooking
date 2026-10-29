@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>reseArch_X · 科研机会与开放学者检索评估 | Research Opportunities &amp; Open-Minded Scholars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-deep:#4A90C2; --sky-mid:#7AB8D9; --sky-light:#A8D4EC;
+  --warm-cream:#FFFBF5; --warm-soft:#FFF5E6;
+  --warm-gold:#F5C97E; --warm-amber:#E8A855; --warm-peach:#F0C4A8;
+  --ink-deep:#3A3228; --ink-mid:#5C5248; --ink-soft:#8A7E72; --ink-pale:#B8AFA4;
+  --accent-teal:#5BA3A3; --accent-coral:#D4836A;
+  --accent-violet:#8B7BAA; --accent-sage:#7A9E7E;
+  --line:#EDE4D3;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --ff-mono:ui-monospace,SFMono-Regular,"Cascadia Code",monospace;
+  --shadow-md:0 6px 20px rgba(58,50,40,.07);
+  --shadow-lg:0 12px 40px rgba(58,50,40,.09);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--warm-cream);line-height:1.75;overflow-x:hidden}
+a{color:var(--accent-teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--sky-deep)}
+
+/* bilingual toggle visibility */
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,251,245,.75);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(228,220,208,.4)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.72em;color:var(--ink-soft);margin-left:.5em;font-weight:400}
+.nav-right{display:flex;align-items:center;gap:1.25rem}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--ink-soft);font-size:.85rem;font-weight:500;letter-spacing:.04em}
+.nav-links a:hover{color:var(--ink-deep)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(228,220,208,.6);background:var(--warm-cream);font-size:.78rem;font-weight:500;cursor:pointer}
+.lang-toggle button{border:none;padding:4px 12px;cursor:pointer;font-family:var(--ff-body);font-size:.78rem;font-weight:500;color:var(--ink-soft);background:transparent;transition:all .2s}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff}
+
+/* hero */
+.hero{position:relative;padding:8rem 2rem 4rem;text-align:center;background:linear-gradient(170deg,#F5E5C7 0%,#FFF5E6 45%,#FFFBF5 100%);overflow:hidden}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:2}
+.hero .eyebrow{font-size:.78rem;color:var(--ink-soft);letter-spacing:.2em;text-transform:uppercase;margin-bottom:.5rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.05em;margin-bottom:.5rem}
+.hero .subtitle{font-family:var(--ff-display);font-size:1.1rem;color:var(--ink-mid);font-weight:300;letter-spacing:.08em;margin-bottom:1.5rem}
+.hero .stance-quote{max-width:700px;margin:0 auto;background:rgba(255,255,255,.6);border-left:3px solid var(--warm-amber);padding:1.25rem 1.5rem;text-align:left;font-family:var(--ff-display);color:var(--ink-mid);font-size:1rem;line-height:1.9;border-radius:0 12px 12px 0}
+.hero .stance-quote strong{color:var(--ink-deep)}
+
+/* section shell */
+.section{padding:4rem 2rem;max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:2.5rem}
+.section-header h2{font-family:var(--ff-display);font-size:1.75rem;font-weight:700;color:var(--ink-deep);letter-spacing:.03em}
+.section-header .subtitle{font-size:.9rem;color:var(--ink-soft);letter-spacing:.08em;margin-top:.35rem}
+.section-header .divider{display:block;width:50px;height:2px;background:linear-gradient(90deg,transparent,var(--warm-gold),transparent);margin:.9rem auto;border-radius:1px}
+
+/* dashboard tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:2rem}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.15rem;text-align:center;transition:transform .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.tile .num{font-family:var(--ff-display);font-size:2rem;font-weight:700;color:var(--ink-deep);line-height:1.1}
+.tile .lbl{font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em;margin-top:.35rem}
+.tile.accent .num{color:var(--warm-amber)}
+
+/* stance card row */
+.stance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.stance-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.35rem 1.4rem;border-top:3px solid var(--warm-gold)}
+.stance-item .num{font-family:var(--ff-display);color:var(--warm-amber);font-weight:700;font-size:.9rem;letter-spacing:.1em}
+.stance-item h4{font-family:var(--ff-display);font-size:1.05rem;color:var(--ink-deep);margin:.35rem 0 .4rem;font-weight:700}
+.stance-item p{font-size:.88rem;color:var(--ink-mid);line-height:1.85}
+
+/* filters */
+.filterbar{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1.75rem;font-size:.82rem}
+.chip{padding:.35rem .85rem;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer;font-weight:500;transition:all .2s;user-select:none}
+.chip:hover{border-color:var(--warm-amber);color:var(--ink-deep)}
+.chip.on{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff;border-color:transparent}
+.chip .cnt{opacity:.65;font-weight:400;margin-left:.3em;font-size:.9em}
+
+/* scholar cards */
+.scholars{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.35rem}
+.scard{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.5rem 1.4rem 1.3rem;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.scard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
+.scard[data-tier="卓越开明"]::before{background:linear-gradient(90deg,var(--warm-amber),var(--warm-gold))}
+.scard[data-tier="有潜力"]::before{background:linear-gradient(90deg,var(--accent-teal),#8CC5C5)}
+.scard .head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.15rem;flex-wrap:wrap}
+.scard h3{font-family:var(--ff-display);font-size:1.15rem;font-weight:700;color:var(--ink-deep)}
+.scard .tier{font-size:.7rem;padding:2px 10px;border-radius:99px;font-weight:600;letter-spacing:.05em}
+.scard[data-tier="卓越开明"] .tier{background:linear-gradient(135deg,var(--warm-soft),var(--warm-gold));color:#7C5A20}
+.scard[data-tier="有潜力"] .tier{background:#E0F0F0;color:#3F7A7A}
+.scard .affil{font-size:.8rem;color:var(--ink-soft);margin-bottom:.7rem;line-height:1.65}
+.scard .field{font-size:.78rem;color:var(--ink-mid);font-style:italic;margin-bottom:.65rem;line-height:1.55}
+.scard .current{background:var(--warm-soft);border-radius:10px;padding:.7rem .85rem;margin-bottom:.75rem;font-size:.83rem;color:var(--ink-mid);line-height:1.7}
+.scard .current .lbl{font-size:.68rem;color:var(--warm-amber);letter-spacing:.1em;font-weight:700;text-transform:uppercase;margin-bottom:.3rem;display:block}
+.scard .current ul{margin:0;padding-left:1rem}
+.scard .current li{margin-bottom:.25rem}
+.scard .why-open,.scard .mvp,.scard .hook{font-size:.82rem;color:var(--ink-mid);margin-top:.55rem;line-height:1.7}
+.scard .why-open strong,.scard .mvp strong,.scard .hook strong{color:var(--ink-deep);font-weight:600}
+.scard .hook{background:rgba(91,163,163,.08);border-left:2px solid var(--accent-teal);padding:.5rem .7rem;border-radius:0 8px 8px 0;font-family:var(--ff-display);color:var(--ink-deep);font-size:.85rem;margin-top:.7rem;line-height:1.7}
+.scard .tags{display:flex;flex-wrap:wrap;gap:5px;margin:.55rem 0 .3rem}
+.scard .tag{padding:2px 9px;border-radius:99px;font-size:.68rem;background:#F3EEE1;color:var(--ink-soft);font-weight:500}
+.scard .tag.mode{background:#E9F0F5;color:var(--sky-deep)}
+.scard .file-link{font-family:var(--ff-mono);font-size:.72rem;color:var(--ink-pale);margin-top:.6rem;display:inline-block}
+
+/* opportunities */
+.opps{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem}
+.ocard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.3rem;position:relative;transition:transform .25s,box-shadow .25s}
+.ocard:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.ocard .row1{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.3rem;flex-wrap:wrap}
+.ocard h4{font-family:var(--ff-display);font-size:1rem;color:var(--ink-deep);font-weight:700}
+.ocard .mark{font-size:1rem;padding:2px 8px;border-radius:6px;font-weight:700}
+.ocard .mark.ok{background:#E4F3E4;color:#3F7A3F}
+.ocard .mark.prev{background:#FFF3DD;color:#9A7233}
+.ocard .mark.pending{background:#F0EDE7;color:var(--ink-soft)}
+.ocard .meta{font-size:.78rem;color:var(--ink-soft);line-height:1.65;margin-bottom:.4rem}
+.ocard .dims{display:flex;gap:.4rem;font-size:.72rem;color:var(--ink-mid);margin:.5rem 0;flex-wrap:wrap}
+.ocard .dim{background:var(--warm-soft);padding:2px 8px;border-radius:6px;font-family:var(--ff-mono)}
+.ocard .verdict{font-family:var(--ff-display);color:var(--ink-deep);font-size:.85rem;padding:.4rem .6rem;background:rgba(139,123,170,.06);border-radius:6px;border-left:2px solid var(--accent-violet);line-height:1.6}
+
+/* dialogue map table */
+.dm-wrap{background:#fff;border:1px solid var(--line);border-radius:16px;overflow-x:auto;box-shadow:var(--shadow-md)}
+table.dm{width:100%;border-collapse:collapse;font-size:.85rem;min-width:900px}
+table.dm thead th{text-align:left;padding:.9rem 1rem;background:linear-gradient(180deg,#FFF9EC,#FFF3DD);color:var(--ink-deep);font-weight:700;font-family:var(--ff-display);border-bottom:2px solid var(--warm-gold);letter-spacing:.05em}
+table.dm tbody td{padding:.85rem 1rem;border-bottom:1px solid var(--line);color:var(--ink-mid);vertical-align:top;line-height:1.65}
+table.dm tbody tr:hover{background:#FFFBF2}
+table.dm tbody tr:last-child td{border-bottom:none}
+table.dm .who{font-family:var(--ff-display);font-weight:700;color:var(--ink-deep);font-size:.9rem}
+table.dm .status-badge{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.7rem;font-weight:600}
+table.dm .status-badge.pending{background:#F0EDE7;color:var(--ink-soft)}
+table.dm .status-badge.mvpg{background:#FFF3DD;color:#9A7233}
+table.dm .status-badge mvpb{background:#E4F3E4;color:#3F7A3F}
+table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
+.sort-logic{background:linear-gradient(135deg,#FFF9EC,#FFFBF5);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.35rem;margin-top:1.25rem;font-size:.85rem;color:var(--ink-mid);line-height:1.8}
+.sort-logic strong{color:var(--ink-deep);font-family:var(--ff-display);letter-spacing:.05em}
+
+/* MVP tracker */
+.mvp-tracker{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.35rem 1.4rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.mvp-item{border-left:3px solid var(--warm-gold);padding:.7rem .9rem;border-radius:0 10px 10px 0;background:linear-gradient(90deg,#FFFBF2,transparent);transition:transform .2s}
+.mvp-item:hover{transform:translateX(3px)}
+.mvp-item .mvp-id{font-family:var(--ff-mono);font-size:.72rem;color:var(--warm-amber);letter-spacing:.1em;font-weight:600}
+.mvp-item .mvp-target{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700;font-size:.95rem;margin:.15rem 0}
+.mvp-item .mvp-sum{font-size:.83rem;color:var(--ink-mid);line-height:1.65}
+.mvp-item[data-status="planned"]{border-left-color:var(--warm-peach)}
+.mvp-item[data-status="built"]{border-left-color:var(--accent-sage)}
+.mvp-status{font-size:.68rem;padding:1px 8px;border-radius:4px;background:#F0EDE7;color:var(--ink-soft);margin-left:.4rem;font-weight:500;text-transform:uppercase;letter-spacing:.05em}
+.mvp-status.built{background:#DFF0DF;color:#3F7A3F}
+
+/* axes heat */
+.axes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.85rem}
+.axis-cell{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;position:relative;transition:transform .25s,box-shadow .25s}
+.axis-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.axis-cell h5{font-family:var(--ff-display);font-size:.95rem;color:var(--ink-deep);margin-bottom:.2rem;font-weight:700}
+.axis-cell .desc{font-size:.75rem;color:var(--ink-soft);line-height:1.6;min-height:2.2em}
+.axis-cell .bars{margin-top:.55rem;display:flex;flex-direction:column;gap:.3rem;font-size:.72rem;color:var(--ink-mid)}
+.axis-cell .bar{display:flex;align-items:center;gap:.45rem}
+.axis-cell .bar-lbl{width:42px;color:var(--ink-soft)}
+.axis-cell .bar-track{flex:1;height:6px;background:#F5EEE0;border-radius:3px;overflow:hidden}
+.axis-cell .bar-fill{height:100%;border-radius:3px;transition:width .5s}
+.axis-cell .bar-fill.scholars{background:linear-gradient(90deg,var(--warm-amber),var(--warm-gold))}
+.axis-cell .bar-fill.opps{background:linear-gradient(90deg,var(--accent-teal),#8CC5C5)}
+.axis-cell .bar-num{width:24px;text-align:right;font-family:var(--ff-mono);color:var(--ink-deep);font-weight:600}
+.axis-cell.gap{background:linear-gradient(135deg,#FFF7F3,#FFFBF5)}
+.axis-cell.gap::after{content:"空缺";position:absolute;top:.6rem;right:.8rem;font-size:.62rem;padding:2px 8px;border-radius:99px;background:var(--accent-coral);color:#fff;font-weight:600;letter-spacing:.05em}
+
+/* rubric */
+.rubric{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.85rem}
+.rubric-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.15rem;display:flex;gap:.85rem;align-items:flex-start}
+.rubric-key{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff;font-family:var(--ff-display);font-weight:700;font-size:1.05rem;display:flex;align-items:center;justify-content:center}
+.rubric-body h5{font-family:var(--ff-display);font-size:.95rem;color:var(--ink-deep);margin-bottom:.25rem;font-weight:700}
+.rubric-body p{font-size:.8rem;color:var(--ink-mid);line-height:1.7}
+
+/* marks legend */
+.marks{display:flex;gap:1rem;justify-content:center;margin-top:1.5rem;font-size:.8rem;color:var(--ink-mid);flex-wrap:wrap}
+.marks span{display:inline-flex;align-items:center;gap:.35rem}
+.marks .m{font-weight:700;font-size:.95rem}
+.marks .m.ok{color:var(--accent-sage)}
+.marks .m.prev{color:var(--warm-amber)}
+.marks .m.pending{color:var(--ink-pale)}
+
+/* scan log timeline */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:9px;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(180deg,var(--warm-gold),transparent)}
+.tl-item{position:relative;margin-bottom:1.5rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.15rem}
+.tl-item::before{content:"";position:absolute;left:-19px;top:1.2rem;width:12px;height:12px;border-radius:50%;background:var(--warm-amber);box-shadow:0 0 0 3px var(--warm-cream)}
+.tl-item .date{font-family:var(--ff-mono);font-size:.72rem;color:var(--warm-amber);letter-spacing:.05em;font-weight:600}
+.tl-item .wave{display:inline-block;padding:1px 8px;border-radius:4px;background:var(--warm-soft);color:var(--ink-soft);font-size:.7rem;margin-left:.5rem;font-weight:600}
+.tl-item h4{font-family:var(--ff-display);font-size:1rem;color:var(--ink-deep);margin:.35rem 0 .3rem;font-weight:700}
+.tl-item p{font-size:.83rem;color:var(--ink-mid);line-height:1.75}
+
+/* intake schema */
+.intake{background:#fff;border:1px dashed var(--warm-amber);border-radius:14px;padding:1.5rem 1.6rem;font-family:var(--ff-mono);font-size:.82rem;color:var(--ink-mid);line-height:1.85;white-space:pre-wrap;overflow-x:auto}
+.intake-header{font-family:var(--ff-display);color:var(--ink-deep);font-size:1rem;font-weight:700;margin-bottom:.7rem;white-space:normal;letter-spacing:.03em}
+
+/* footer */
+.footer{text-align:center;padding:3rem 2rem 2rem;color:var(--ink-pale);font-size:.85rem;border-top:1px solid var(--line);background:var(--warm-cream);margin-top:3rem}
+.footer .motto{font-family:var(--ff-display);font-size:1rem;color:var(--ink-soft);font-weight:300;letter-spacing:.12em;margin-bottom:.35rem}
+
+/* empty state */
+.empty{text-align:center;padding:2rem;color:var(--ink-pale);font-size:.9rem;font-style:italic}
+
+/* responsive */
+@media (max-width:768px){
+  .nav-links{display:none}
+  .section{padding:3rem 1rem}
+  .hero{padding:6rem 1rem 3rem}
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  .scholars,.opps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body class="lang-zh">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">reseArch_X<span class="sub">· <span data-zh>机会与学者</span><span data-en>Opportunities &amp; Scholars</span></span></div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#dialogue"><span data-zh>对话名册</span><span data-en>Dialogue</span></a></li>
+      <li><a href="#scholars"><span data-zh>学者</span><span data-en>Scholars</span></a></li>
+      <li><a href="#axes"><span data-zh>方向轴</span><span data-en>Axes</span></a></li>
+      <li><a href="#mvp"><span data-zh>MVP</span><span data-en>MVP</span></a></li>
+      <li><a href="#opp"><span data-zh>机会</span><span data-en>Opportunities</span></a></li>
+      <li><a href="#rubric"><span data-zh>标尺</span><span data-en>Rubric</span></a></li>
+      <li><a href="#log"><span data-zh>调研日志</span><span data-en>Log</span></a></li>
+      <li><a href="#intake"><span data-zh>新方向</span><span data-en>Intake</span></a></li>
+    </ul>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">research · opportunities · open-minded scholars</div>
+    <h1 data-both>科研机会与开放学者 · reseArch_X</h1>
+    <div class="subtitle"><span data-zh>对话优先 · 以 MVP 接住真正在做有意义工作的人</span><span data-en>Dialogue-first · Meeting meaningful work with a small, real deliverable</span></div>
+    <blockquote class="stance-quote">
+      <span data-zh>不走「海投申请流水线」。关心的次序是：<strong>①</strong> 谁在做什么有意义的工作——卓越而开明的导师，以及<strong>有潜力的新人</strong>；<strong>②</strong> 若值得，先做一件 MVP 开启专业对话；<strong>③</strong> 借工作建立相互了解，再看有无机会<strong>合作 或 受教</strong>。时间线只作跟踪字段，不作驱动理由。</span>
+      <span data-en>Not the "broadcast-application pipeline". The order of concern is: <strong>(1)</strong> who is doing meaningful work — outstanding and open-minded advisors, plus <strong>promising newcomers</strong>; <strong>(2)</strong> if worth it, build a small MVP first to open a professional dialogue; <strong>(3)</strong> use the work to build mutual understanding, then see whether <strong>collaboration or mentorship</strong> is possible. Timeline is a tracking field, never the driver.</span>
+    </blockquote>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="section" id="dash">
+  <div class="section-header">
+    <h2><span data-zh>盘面速览</span><span data-en>Dashboard</span></h2>
+    <div class="subtitle"><span data-zh>· 截至 <span id="asof-date"></span></span><span data-en>· as of <span id="asof-date-en"></span></span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="tiles" id="tiles"></div>
+</section>
+
+<!-- DIALOGUE MAP (main view) -->
+<section class="section" id="dialogue">
+  <div class="section-header">
+    <h2><span data-zh>对话名册 · 本模块主视图</span><span data-en>Dialogue Map · Primary View</span></h2>
+    <div class="subtitle"><span data-zh>谁在做什么 → 可接的 MVP → 对话切入 → 状态</span><span data-en>Who · What they're doing · MVP hook · Dialogue opener · Status</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="dm-wrap"><table class="dm"><thead><tr>
+    <th><span data-zh>人 / 节点</span><span data-en>Who</span></th>
+    <th><span data-zh>此刻在做的有意义工作</span><span data-en>Meaningful work now</span></th>
+    <th><span data-zh>可接的 MVP</span><span data-en>MVP hook</span></th>
+    <th><span data-zh>对话切入</span><span data-en>Opener</span></th>
+    <th><span data-zh>状态</span><span data-en>Status</span></th>
+  </tr></thead><tbody id="dm-body"></tbody></table></div>
+  <div class="sort-logic" id="dm-sort"></div>
+</section>
+
+<!-- SCHOLARS -->
+<section class="section" id="scholars">
+  <div class="section-header">
+    <h2><span data-zh>学者档案</span><span data-en>Scholar Dossiers</span></h2>
+    <div class="subtitle"><span data-zh>按 tier / 方向轴 / 期望形态 筛选</span><span data-en>Filter by tier / axis / mode</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="filterbar" id="sch-filters"></div>
+  <div class="scholars" id="sch-grid"></div>
+</section>
+
+<!-- AXES -->
+<section class="section" id="axes">
+  <div class="section-header">
+    <h2><span data-zh>方向轴覆盖 · 空缺可见</span><span data-en>Axis Coverage · Gaps Made Visible</span></h2>
+    <div class="subtitle"><span data-zh>九条既定轴 · 学者 × 机会 分布</span><span data-en>Nine axes · distribution of scholars × opportunities</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="axes-grid" id="axes-grid"></div>
+</section>
+
+<!-- MVP -->
+<section class="section" id="mvp">
+  <div class="section-header">
+    <h2><span data-zh>MVP 轨道</span><span data-en>MVP Tracker</span></h2>
+    <div class="subtitle"><span data-zh>每件小而真实、可公开的东西 —— 用来开启专业对话</span><span data-en>Small, real, public deliverables — each opens a professional dialogue</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="mvp-tracker" id="mvp-grid"></div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="section" id="opp">
+  <div class="section-header">
+    <h2><span data-zh>机会档案 · 降为跟踪副产物</span><span data-en>Opportunities · Now a Tracking By-product</span></h2>
+    <div class="subtitle"><span data-zh>非驱动目标 · 按标记 / 类型 筛选</span><span data-en>Not the driver · Filter by mark / type</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="filterbar" id="opp-filters"></div>
+  <div class="opps" id="opp-grid"></div>
+</section>
+
+<!-- RUBRIC -->
+<section class="section" id="rubric">
+  <div class="section-header">
+    <h2><span data-zh>六维评估标尺</span><span data-en>Six-Dimension Rubric</span></h2>
+    <div class="subtitle"><span data-zh>★1–5 · 每分附一句可证由</span><span data-en>★1–5 · each score needs one provable reason</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="rubric" id="rubric-grid"></div>
+  <div class="marks">
+    <span><span class="m ok">✔</span><span data-zh>命中（官方来源，带日期）</span><span data-en>Hit (official source, dated)</span></span>
+    <span><span class="m prev">◐</span><span data-zh>外推（周期/资助推断）</span><span data-en>Inferred (cyclical / funding-based)</span></span>
+    <span><span class="m pending">◇</span><span data-zh>待核（倾向存在，一手未落地）</span><span data-en>Pending (leaning, primary not yet)</span></span>
+  </div>
+</section>
+
+<!-- SCAN LOG -->
+<section class="section" id="log">
+  <div class="section-header">
+    <h2><span data-zh>调研日志</span><span data-en>Scan Log</span></h2>
+    <div class="subtitle"><span data-zh>每一轮的 query · 命中 · 核实记录 · 空手而归</span><span data-en>Every wave · queries · hits · verification · what came back empty</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="timeline" id="log-body"></div>
+</section>
+
+<!-- INTAKE -->
+<section class="section" id="intake">
+  <div class="section-header">
+    <h2><span data-zh>新方向 / 新档案登记</span><span data-en>New Direction / Dossier Intake</span></h2>
+    <div class="subtitle"><span data-zh>沿用 schema，添加即扩展盘面</span><span data-en>Follow the schema — add a file, extend the dashboard</span></div>
+    <span class="divider"></span>
+  </div>
+  <div class="intake"><div class="intake-header"><span data-zh>新增学者档案（scholars/&lt;slug&gt;.md）</span><span data-en>New scholar dossier (scholars/&lt;slug&gt;.md)</span></div>
+```yaml
+name:
+tier: 卓越开明 | 有潜力
+affiliation:              # asof 有效，机构漂移要重核
+field:
+current_work:             # 回源，带日期与出处
+  - 「…」 ✔ &lt;source&gt; YYYY-MM-DD
+why_open:                 # 眼界开放的可证行为（不写形容词）
+what_real:                # 其"真问题"表述
+mvp:                      # 我们能造的一件小而真实的东西
+dialogue_hook:            # 一句不带索取的真实话柄
+mode: 合作 | 受教 | 两者
+entry:                    # 后续入口（对话成立后再启用）
+risk:
+stamps:
+  - {mark: ✔, asof: YYYY-MM-DD}
+```
+
+<div class="intake-header" style="margin-top:1.5rem"><span data-zh>新增机会档案（opportunities/&lt;type&gt;/RX-&lt;type&gt;-&lt;机构&gt;-&lt;yyyymm&gt;.md）</span><span data-en>New opportunity (opportunities/&lt;type&gt;/RX-&lt;type&gt;-&lt;slug&gt;-&lt;yyyymm&gt;.md)</span></div>
+```yaml
+id: RX-&lt;type&gt;-&lt;slug&gt;-&lt;yyyymm&gt;
+type: phd | ra | postdoc | professor | fellowship
+institution:
+country:
+program:
+pi:
+application_url:
+deadline:                 # ISO / "rolling" / ◐外推
+funding:
+status: ✔ | ◐ | ◇
+asof: YYYY-MM-DD
+dims: {q: , ai: , m: , r: , a: , o: }
+verdict:
+sources: [ url1, url2 ]
+```
+
+<div class="intake-header" style="margin-top:1.5rem"><span data-zh>新增方向轴</span><span data-en>New thematic axis</span></div>
+<span data-zh>在 <code>reseArch_X/web/build_reseArch_X.py</code> 的 <code>AXES</code> 列表加一条 (zh, key, desc)；
+在 <code>SCHOLAR_AXES</code> / <code>OPP_AXES</code> 补该轴命中的档案 slug；重跑 build。轴是策展判断，不入 .md 源。</span>
+<span data-en>Add a row (zh, key, desc) to <code>AXES</code> in <code>reseArch_X/web/build_reseArch_X.py</code>; extend <code>SCHOLAR_AXES</code> / <code>OPP_AXES</code> with matching slugs; rebuild. Axes are curation, not authored fact — kept out of .md sources.</span>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="motto"><span data-zh>不追 deadline · 追对话</span><span data-en>Chase dialogues, not deadlines</span></div>
+  <p><span data-zh>reseArch_X · 由 <code>build_reseArch_X.py</code> 从 scholars / opportunities / mvp / scan_log 源重生</span><span data-en>reseArch_X · regenerated from scholars / opportunities / mvp / scan_log by <code>build_reseArch_X.py</code></span></p>
+</footer>
+
+<script id="rx-data" type="application/json">{"latest_asof": "2026-10-29", "counts": {"scholars": 14, "卓越开明": 12, "有潜力": 2, "opportunities": 9, "mvp_total": 3, "mvp_built": 0, "scans": 4, "dialogue_rows": 15}, "axes_meta": [{"zh": "AI 与数据科学", "key": "ai_ds", "desc": "AI/ML 方法本身 · 数据基础设施 · 计算社科"}, {"zh": "AI × 人文交叉", "key": "ai_hum", "desc": "LLM 时代人文批评 · 媒介理论 · 数字民主"}, {"zh": "可持续发展", "key": "sus", "desc": "人类世 ·  pluriverse · 韧性 · 跨文明经济"}, {"zh": "数字人文", "key": "dh", "desc": "批评性 DH · 远读 · Graphesis · 数据可视化"}, {"zh": "文化遗产", "key": "herit", "desc": "活态遗产 · 遗产 AI 可见性 · 走廊与场"}, {"zh": "美食", "key": "food", "desc": "食物人类学 · 慢食 · 烹饪文化"}, {"zh": "旅游", "key": "tour", "desc": "流动 · 廊道旅游 · Heritage × Tourism"}, {"zh": "人生修行", "key": "cultiv", "desc": "沉思科学 · 冥想训练实证 · 社会情绪神经"}, {"zh": "良好生活", "key": "goodlife", "desc": "幸福可训练性 · 共同生活 · 生活设计"}], "axis_coverage": [{"zh": "AI 与数据科学", "key": "ai_ds", "desc": "AI/ML 方法本身 · 数据基础设施 · 计算社科", "scholars": 6, "opportunities": 3}, {"zh": "AI × 人文交叉", "key": "ai_hum", "desc": "LLM 时代人文批评 · 媒介理论 · 数字民主", "scholars": 9, "opportunities": 5}, {"zh": "可持续发展", "key": "sus", "desc": "人类世 ·  pluriverse · 韧性 · 跨文明经济", "scholars": 6, "opportunities": 2}, {"zh": "数字人文", "key": "dh", "desc": "批评性 DH · 远读 · Graphesis · 数据可视化", "scholars": 5, "opportunities": 4}, {"zh": "文化遗产", "key": "herit", "desc": "活态遗产 · 遗产 AI 可见性 · 走廊与场", "scholars": 5, "opportunities": 5}, {"zh": "美食", "key": "food", "desc": "食物人类学 · 慢食 · 烹饪文化", "scholars": 1, "opportunities": 1}, {"zh": "旅游", "key": "tour", "desc": "流动 · 廊道旅游 · Heritage × Tourism", "scholars": 3, "opportunities": 3}, {"zh": "人生修行", "key": "cultiv", "desc": "沉思科学 · 冥想训练实证 · 社会情绪神经", "scholars": 3, "opportunities": 0}, {"zh": "良好生活", "key": "goodlife", "desc": "幸福可训练性 · 共同生活 · 生活设计", "scholars": 3, "opportunities": 0}], "scholars": [{"name": "Frauke Behrendt", "tier": "有潜力", "affiliation": "Eindhoven University of Technology (TU/e) · 交通/城市与出行规划（研究页载于 research.tue.nl）", "field": "流动 × 数据正义 × 可持续交通 × AI", "homepage": "(research.tue.nl / scholar.google hqYeaCIAAAAJ)", "qid": "# 诚实留空（无匹配 en-wiki 实体，不臆造）", "current_work": ["「**Mobility Data Justice**」(Mobilities 2024, 与 M. Sheller 合著, 被引 ~85)—— mobility justice × data justice 的合成框架（✔ research.tue.nl / ideas.repec.org, 2026-10-29）", "「Data, AI and governance in MaaS – Leading to sustainable mobility?」——AI/数据治理与出行即服务（✔ scholar.google）", "「Alternative Mobilities in the Age of AI」（与 Carly Gilbert-Patricks 等，进行中）（✔ linkedin 2026-10 快照）"], "why_open": "直接研究「数据/AI 治理」与公平的接口，问题本身就问「谁的移动数据、被谁治理」；框架新、仍在成形，外部贡献易被看见", "what_real": "数据化把新的不平等写进移动系统——可持续交通转型若不顾数据正义，会复制既有排除", "mvp": "把她的 mobility data justice 框架**落到一个具体语料**——用本仓 `living_heritage` 走廊的移动数据做一次「谁被记录/谁被抹去」的小审计；或对其 MaaS-AI 治理命题补一个非欧洲案例", "dialogue_hook": "「把您的 mobility data justice 框架试用于一条中国历史水道走廊，发现一处框架未覆盖的 X，附上数据请您指正」", "entry": "对话成立后再谈（其新框架期，联合短文/工作坊报告比「申请」更自然）", "risk": "机构归属与当期项目须回 TU/e 页核实（◇）", "stamps": ["{mark: ✔, asof: 2026-10-29}   # 三件 current_work 命中当年出处", "{mark: ◇, asof: 2026-10-29}   # 院系/当期项目待落页"], "_slug": "behrendt-frauke", "_file": "reseArch_X/scholars/behrendt-frauke.md", "_body": "- 为何值得优先：她比 Sheller 更「在过程中」——mobility data justice 是 2024 才立起来的新框架，正是需要跨语料、跨文明案例的阶段；本仓的大运河/丝路走廊是能喂给该框架的稀缺非西方材料。\n- 与 `sheller-mimi.md` 构成一条对话链：先接 Behrendt 的框架，再自然引到 Sheller。", "axes": ["ai_hum", "sus", "ai_ds", "tour"]}, {"name": "Wendy Hui Kyong Chun", "tier": "卓越开明", "affiliation": "Simon Fraser University · Canada 150 Research Chair in New Media；Digital Democracies Institute 主任", "field": "AI × 人文批评 × 媒介理论 × 气候/人类世", "homepage": "https://www.sfu.ca/communication/people/faculty/wendy-chun.html", "qid": "# 诚实留空", "current_work": ["2026 剑桥 CDH 讲座「**Large Language Models and the Returns of Critical Theory**」（✔ cdh.cam.ac.uk 2026-02-06）——把 LLM 直接放进批判理论对话", "「Taking the Reparative Pill: Cyberspace, Machine Learning and the Closure of the Real」(forthcoming)；「On Hypo-Real Models or Global Climate Change: A Challenge for the Humanities」（✔ digitaldemocracies CV / scholar.google）", "领衔 Digital Democracies Institute；任国际科学面板（IPIE）主席（✔）"], "why_open": "被引 ~9677；做的是**跨文理的硬对话**（把 ML/气候/人文焊在一起），且不躲在纯理论里——数字民主所有实际公共议程（✔）", "what_real": "数字习惯与「更新以保持不变」的悖论；LLM 时代批判理论何以为继——正对「AI 环境下人文学科还有没有真问题」这一问", "mode": "两者（受教 + 合作皆可；其所在所即交叉共同体）", "mvp": "就其「Hypo-Real Models + 气候对人文的挑战」，用本仓 `heaven_climate` 气候数据史 + 一份气候话语语料，做一次「模型/再现的贫乏」小分析，接其论题", "dialogue_hook": "「读到您 2026 CDH 讲 LLM 与批判理论——我用气候话语数据试做了一件 related 的小分析，正撞在您说的 hypo-real 问题上，想请您看方向对不对」", "entry": "其 Institute + 公开讲座是自然入口；对话成立后再谈访问/合作", "risk": "Canada 150 讲席带行政与项目负担（◇ 招生态待落页）", "stamps": ["{mark: ✔, asof: 2026-10-29}   # 机构/讲座/论题命中当年出处"], "_slug": "chun-wendy", "_file": "reseArch_X/scholars/chun-wendy.md", "_body": "- 为什么是本轮**头名**：她的工作正面回答用户的核心关切——AI（LLM）时代人文批评还能不能做真问题。Cambridge CDH 请她开 2026 讲座，说明她正处「AI×人文」对话的枢纽位。\n- 接缝：`heaven_climate`（气候×观念史）+ `docs/culture_review`（时代判断）正是其 hypo-real/气候话语命题的落点。", "axes": ["ai_hum", "ai_ds", "sus", "dh"]}, {"name": "Richard J. (Richie) Davidson", "tier": "卓越开明", "affiliation": "University of Wisconsin–Madison · Psychiatry；Center for Healthy Minds 创办/主任", "field": "思辨科学 / 冥想神经科学 / 幸福的可训练性", "homepage": "centerhealthyminds.org", "qid": "Q2149302", "current_work": ["Center for Healthy Minds 长期冥想-情绪可塑性实证（lifelong 训练 × 神经影像范式 ongoing）  # ✔ 2026-10-28", "「幸福可训练性」作可证伪命题的持续验证（✔ academic_research/scholars.md D2）"], "why_open": "把「幸福感可被训练」做成可证伪的神经科学命题并建中心长期实证；对冥想/沉思传统持研究而非猎奇态度（✔ 见 academic_research/scholars.md D2）。纠偏留档：媒体常见「Ricardo」系误记，正名 Richard J. Davidson", "what_real": "情绪与沉思是可训练的心智能力——为「人生修行/良好生活」轴提供实证底座", "mode": "受教", "mvp": "把本仓 `contemplative science/` 的跨文献对齐（含佛/道/儒修行文本）整理成「东亚训练阶梯 × 现代实证」结构化对照，与其范式对话", "dialogue_hook": "「按您情绪可训练性的框架，我做了一份东亚几支修行传统的训练阶梯对照，想请您看能否用作纵向研究的分层依据」", "entry": "Center for Healthy Minds 关联 PhD（UW Neuroscience/Psychiatry/Humanities 交叉）；本仓 `contemplative science` 跨文献对齐工作可与其范式直接对话", "risk": "硬神经科学门槛（统计/影像方法），跨到美区需方法论补课", "stamps": [{"mark": "✔", "asof": "2026-10-29"}, "{mark: ◇, asof: 2026-10-29}   # 中心当期招生通道待落页"], "_slug": "davidson-richard", "_file": "reseArch_X/scholars/davidson-richard.md", "_body": "- 接缝：直接对上 `contemplative science/` 与用户「觉悟明心/人生修行」清单；与 F3 幸福科学（Diener、Lyubomirsky）同流，可并读。", "axes": ["cultiv", "goodlife", "ai_ds"]}, {"name": "Virginia Dignum", "tier": "卓越开明", "affiliation": "Umeå University · Professor of Responsible AI；Social & Ethical AI 组组长；AI Policy Lab 主持", "field": "负责任的 AI / 价值敏感设计 / AI 伦理×社会×计算", "homepage": "https://aipolicylab.se/people/virginia-dignum/", "qid": "# 诚实留空", "current_work": ["主持 Umeå **AI Policy Lab** + Social & Ethical AI 组；价值敏感（value-sensitive）AI 研究（✔ aipolicylab.se / kaw.wallenberg.org）", "《Responsible Artificial Intelligence》(Springer)；AI4People《伦理框架：Good AI Society》核心作者之一（✔ scholar.google）", "瑞典 KAW 计划「Leading the way for ethical AI」主角（✔ 2024-08 umu.se）"], "why_open": "横跨计算机科学×伦理×政策，且**把伦理做进工程**而非事后贴标签；公共政策参与度高（欧盟 HLEG 背景）（✔）", "what_real": "AI 不是中性工具——开发与使用阶段就应内嵌价值与责任；「好社会」需要可操作的 AI 伦理原则", "mode": "合作（政策×技术交叉，外部实证研究易接入）", "mvp": "把其五伦理原则框架，套到一个**具体案例**（本仓 `docs/culture_review` 的 AI 工具条目 / 或一个遗产数据集）做一次「价值审计」小文", "dialogue_hook": "「用您的责任 AI 原则审了一个中国语境的具体数据/内容场景，发现某条原则在此特别吃紧，想请您判判是不是真问题」", "entry": "AI Policy Lab + 公开报告场合；对话成立后再谈", "risk": "政策事务繁忙（◇ 带生节奏未核）", "stamps": [{"mark": "✔", "asof": "2026-10-29"}], "_slug": "dignum-virginia", "_file": "reseArch_X/scholars/dignum-virginia.md", "_body": "- 补上「AI × 社会/伦理」这一硬交叉的可对话锚点；与 Chun（批判理论侧）一硬一软，覆盖 AI 人文讨论的两翼。", "axes": ["ai_ds", "ai_hum"]}, {"name": "Johanna Drucker", "tier": "卓越开明", "affiliation": "UCLA · Breslauer Professor of Bibliographical Studies, Information Studies", "field": "数字人文理论 / 图形知识论 / 批评性 DH", "homepage": "https://seis.ucla.edu/faculty/johanna-drucker/", "qid": "# 诚实留空", "current_work": ["《**Graphesis: Visual Forms of Knowledge Production**》(Harvard UP 2014) 持续被引（scholar 列 2025 条目 129 引）；《Digital Humanities Coursebook》二版（✔ seis.ucla / scholar.google / wikipedia）", "以艺术家书、排版史、实验诗为底，做「**批评性/理论性**数字人文」——反「数据即客观」"], "why_open": "一生跨艺术×学术×工具设计；其「graphesis」把「用图形生产知识」做成可教可辩的公共框架（✔）", "what_real": "「infographic vs capricorn」式反讽——数据可视化不是透明呈现而是**论证**；DH 该有理论而非只谈工具", "mode": "受教（理论纵深，适合长期问学）", "mvp": "用本仓 `discovery_atlas` 星图 / `Reading_IA` 图谱，按 Graphesis 的「图形即论证」原则重做一张图，写一段「这张图在论证什么」的自反说明", "dialogue_hook": "「按您 Graphesis 的读法，我把自家知识图谱重画了一版，刻意标注了它在替我做哪些论证——想请您看看这种自反够不够」", "entry": "其课book/公开著述是入口；对话成立后再谈", "risk": "资深，直接带生名额有限（◇）", "stamps": [{"mark": "✔", "asof": "2026-10-29"}], "_slug": "drucker-johanna", "_file": "reseArch_X/scholars/drucker-johanna.md", "_body": "- 与 Manovich 互补：Manovich 做「文化分析的方法」，Drucker 做「知识图形的批评理论」——两条合起来正是一个「既会用数据、又不天真」的数字人文进路。", "axes": ["dh", "herit"]}, {"name": "Arturo Escobar", "tier": "卓越开明", "affiliation": "University of North Carolina at Chapel Hill · 人类学（长聘；具体当期状态待核 ◇）", "field": "后发展/去殖民 × 可持续 × 设计人类学 × 多世界(pluriverse)", "homepage": "(UNC)", "qid": "# 诚实留空", "current_work": ["《**Designs for the Pluriverse: Radical Interdependence, Autonomy, and the Making of Worlds**》(Duke UP 2018/2020, 被引~7281)——把「设计」重导向自主性、草根民主与生态完整（✔ degruyter/jstor/projects.au.dk, 2026-10-29）", "「autonomous design」「pluriverse」纲领；与后发展、生态运动深度结合"], "why_open": "一生跨人类学×发展研究×设计×社会运动；「pluriverse（多个世界共存的世界）」本身就是把「谁的知识算数」彻底敞开（✔）", "what_real": "可持续发展若脱离地方宇宙观与草根自治，仍是全球秩序的自我复制——需要「多个世界」的设计", "mode": "受教/合作（社区-学术交织的开放网络，问学空间大）", "mvp": "用其 pluriverse/autonomous design 透镜，重读本仓 `economics_cross_culture` 的非西方经济智慧 + `living_heritage` 走廊的在地实践，做一份「地方宇宙观 × 设计」小案例", "dialogue_hook": "「用您 autonomous design 读了一批跨文化经济/遗产材料，发现一处与主流可持续话语的张力，想请您看是否值得深挖」", "entry": "其著述 + 设计/去殖民社区；对话成立后再谈", "risk": "年资高，正式招生或有限；但其思想网络本身就是可加入的「场」（◇ 细节）", "stamps": [{"mark": "✔", "asof": "2026-10-29"}, "{mark: ◇, asof: 2026-10-29}   # 当期身份/招生待核"], "_slug": "escobar-arturo", "_file": "reseArch_X/scholars/escobar-arturo.md", "_body": "- 与 Tsing 构成「人类世 × 去殖民」两极：Escobar 给纲领（pluriverse、autonomous design），Tsing 给方法（多物种民族志、在废墟中活着）。二者共同命中用户「可持续 + 跨文明 + 有意义工作」。", "axes": ["sus", "herit", "ai_hum"]}, {"name": "Lev Manovich", "tier": "卓越开明", "affiliation": "CUNY Graduate Center（Presidential Professor）；Cultural Analytics Lab 主任", "field": "数字人文 / 文化分析 / 视觉 AI", "homepage": "https://manovich.net", "qid": "Q716367", "current_work": ["《Artificial Aesthetics: Generative AI, Art and Visual Media》——**逐章免费公开**、汇编成册亦 free；用六种方法研究生成 AI 如何改变美学/创造/艺术鉴赏（✔ manovich.net/projects/artificial-aesthetics, 2026-10-29）", "「When AI becomes culture」(2025)——论点：生成 AI 把文化数据库扩到数十亿图/万亿文，却使其**对肉眼不可见**（✔ nextnature.org 2026-06-01）", "「Visual AI and Media Accumulation」——把 GenAI 重述为**媒体积累**的一种新层（✔ medium.com/@manovich, 2026-10-29）"], "why_open": "新作全程 open-access、方法（Image Search、selfie 系列、文化分析教程）可复用；把「用数据看文化」做成公共工具而非门派（✔ 见 academic_research/scholars.md D1）", "what_real": "用数据理解文化，但不把文化还原为数据；GenAI 时代「文化的可见性」本身成了问题", "mvp": "接他「AI becomes culture / media accumulation」这条线——对**一个非英语、非西方的语料**（本仓 `Reading_IA` 多文明藏书 + `Language Stacking` 数据）做一次可复现的 visual/cultural analytics，检验其「积累」论在跨文明语料上是否成立，公开成一份带图的短文 + notebook", "dialogue_hook": "不是「想跟您读博」，而是「用您 Artificial Aesthetics 的方法跑了一份中文/多文明语料，发现 X 与您的假设有一处张力，附上数据与图，请您指正」", "entry": "对话成立后再谈（CUNY GC / Cultural Analytics Lab workshop / 联合短文）", "risk": "名嘴带宽有限；但其开放方法意味着「先做出东西—公开对话」这条路对他尤其走得通", "stamps": ["{mark: ✔, asof: 2026-10-29}   # current_work 三条均命中当年出处"], "_slug": "manovich-lev", "_file": "reseArch_X/scholars/manovich-lev.md", "_body": "- 接缝：本仓已有的真实语料 + 图谱，正是他「文化积累/可见性」命题的现成试验台；MVP 完成即成作品集一页，也直接是 `docs/culture_review` 一条可发内容。\n- 追踪记录：（待）MVP v0 跑通后，据其当期新文增补对话切入点。", "axes": ["dh", "ai_hum", "ai_ds"]}, {"name": "Franco Moretti", "tier": "卓越开明", "affiliation": "Stanford University · Department of Comparative Literature / English", "field": "数字人文 / 世界文学 / 远读", "homepage": "(Stanford English dept)", "qid": "Q971600", "current_work": ["Stanford Literary Lab pamphlet 系列持续开放（free/open access）  # ✔ 2026-10-28", "「distant reading」作可复用工具而非门派秘传的方法主张持续扩散"], "why_open": "与 Jockers 创办 Stanford Literary Lab——产出以 free/open pamphlet 系列公开，方法（distant reading）刻意做成可复用工具而非门派秘传（✔ 见 academic_research/scholars.md D1）", "what_real": "「远读」：不读单一文本，而让文学习惯在规模化数据上显形——对「微言大义」式精读是一种建设性的对立 Complement", "mode": "受教/合作", "mvp": "用本仓 `Reading_IA` 的藏书与关系边做 distant-reading 趋势图（非西方语料的方法适配挑战）", "dialogue_hook": "「按您 pamphlet 的路子跑了一份跨文明藏书的远读趋势图，撞到一套非西方文本的粒度问题，想请您看方法上是否成立」", "entry": "Stanford Comparative Literature / English PhD； Literary Lab pamphlet 公开可下载，是首触点", "risk": "年资高、招生周期不定；pamphlet 方法已有大量后继者，未必需直接师从", "stamps": [{"mark": "✔", "asof": "2026-10-29"}, "{mark: ◇, asof: 2026-10-29}   # 当期是否收生待系页核实"], "_slug": "moretti-franco", "_file": "reseArch_X/scholars/moretti-franco.md", "_body": "- 接缝：`Reading_IA` 的关系边与类别切面，天然是远读的实验场；可先做一份「本仓藏书的 distant-reading 趋势图」作对话引子。", "axes": ["dh", "ai_hum"]}, {"name": "Åsa V. Norström", "tier": "卓越开明", "affiliation": "Stockholm Resilience Centre (SRC)", "field": "可持续科学 / 超学科知识共产", "homepage": "(stockholmresilience.org people)", "qid": "# 诚实留空（前批无匹配 en-wiki 实体，不臆造）", "current_work": ["SRC 超学科知识共产原则的持续应用与更新；《Principles for knowledge co-production in sustainability research》(Nature Sustainability 2020, 被引~2197)为其纲领锚点  # ✔ 2026-10-28", "SRC 当期招聘/博士通道滚动 open（见 `../opportunities/phd/RX-phd-stockholm-resilience-202610.md`）"], "why_open": "其代表作即《Principles for knowledge co-production in sustainability research》(Nature Sustainability 2020, 被引 ~2197)——把「谁算知识的共同生产者」写成一整套可操作原则；「开放」是其研究对象本身，不是附带气质（✔ 见 academic_research/scholars.md E1）", "what_real": "学术系统与 societal 知识的共产（co-production）——可持续议题必须由研究者与在地行动者共同定义问题", "mode": "合作", "mvp": "用其 co-production 原则，为本仓 `living_heritage` 大运河走廊 + `economics_cross_culture` 地方知识场景搭一份可执行的共生产研究草图", "dialogue_hook": "「按您 2020 那套原则，我用两条中国走廊的地方知识做了份共生产草图，撞到学界-社区权责边界一处难落，想请您判这算不算真 co-production」", "entry": "SRC PhD（见 ../opportunities/phd/RX-phd-stockholm-resilience-202610.md）；其 co-production 原则可直接用作申请研究计划的脚手架", "risk": "瑞典岗位制，须盯具体 vacancy；英语通行，无统一申请季", "stamps": [{"mark": "✔", "asof": "2026-10-29"}], "_slug": "norstrom-asa", "_file": "reseArch_X/scholars/norstrom-asa.md", "_body": "- 接缝：本仓 `living_heritage` 田野方法、`economics_cross_culture` 的在地知识，正卡在 co-production 的门口；这是「超学科」轴上最实的一位。", "axes": ["sus"]}, {"name": "Sarah Oberbichler", "tier": "有潜力", "affiliation": "University of Luxembourg · C²DH（Luxembourg Centre for Contemporary and Digital History）Assistant Professor in Artificial Intelligence", "field": "AI × 数字历史 / 文化遗产 × 机器学习", "homepage": "(uni.lu/c2dh-en)", "qid": "# 诚实留空", "current_work": ["C²DH「Artificial intelligence」研究主题线的核心成员（✔ uni.lu/c2dh-en/articles-topic/artificial-intelligence）", "组织/参与 CfP「**AI through History, History through AI**」研讨会（2026-06-15/16，University of Luxembourg）（✔ uni.lu/c2dh-en/news）", "具体在研课题（模型/数据集）未逐条命中 → ◇，待落其个人主页核实"], "why_open": "C²DH 本身以「public dissemination + digital methods」为纲，新设 AI 讲席即在主动把 AI 引进人文学科议程；公开 CfP 是低门槛对话场", "what_real": "不是「用 AI 跑历史数据」，而是双向——AI 通过历史、历史通过 AI（研讨会题名即其问题观）（✔ 命中原文题名）", "mvp": "为其 2026-06「AI through History」这类公开场子备一件作品——把本仓 `Language Stacking`/`Reading_IA` 的跨文明语料做成一个「历史视角下的 AI 可见性」小分析，投 workshop / 或直接作为接话材料", "dialogue_hook": "「读到您新在 C²DH 主持的 AI×历史议程——我用一份多文明语料做了个相关的小分析，想在 workshop 前请您判判方向」", "entry": "公开 workshop/CfP 是最自然的入口；对话成立后再谈访问/合作", "risk": "上任未久，招生/带学生节奏未定（◇）", "stamps": ["{mark: ✔, asof: 2026-10-29}   # 机构/讲席/CfP 命中", "{mark: ◇, asof: 2026-10-29}   # 具体课题与其个人方法待落页"], "_slug": "oberbichler-sarah", "_file": "reseArch_X/scholars/oberbichler-sarah.md", "_body": "- 机构红利：C²DH 之外，**Europeana / European Collaborative Cloud for Cultural Heritage**（2026，DARIAH-EU 教程有述）与 Open Future 的《Publishing cultural heritage data in the age of AI》(2025-12-03) 构成一整个「开放遗产数据 × AI」的活生态——做 MVP 有现成公开数据与规范接口，比盯单个导师更易起步。\n- 建议：把 Oberbichler/C²DH 作为「人」的接点，把 Europeana/E-Cloud 作为「数据与共同体」的接点，两件 MVP 可并行（见 `../mvp/`）。", "axes": ["dh", "herit", "ai_hum"]}, {"name": "Matthew J. Salganik", "tier": "卓越开明", "affiliation": "Princeton University · Sociology（原 Microsoft Research 背景）", "field": "计算社会科学 / 数字迹数据", "homepage": "bitbybitbook.com", "qid": "Q56273186", "current_work": ["《Bit by Bit: Social Research in the Digital Age》开放评审版持续更新；sicss.io 方法课件公开复用  # ✔ 2026-10-28", "普林斯顿 Computational Social Science 方向（含重心 Data + Public Life 议程）持续招生"], "why_open": "《Bit by Bit: Social Research in the Digital Age》以**开放评审版**发布、方法课件（sicss.io）公开复用——把计算社科的入门墙主动拆掉（✔ 见 academic_research/scholars.md A2）", "what_real": "用数字迹数据做社会科学，但对「数据即真理」保持方法论警觉", "mode": "合作/受教", "mvp": "把其「数字迹」框架嫁接到本仓 `Reading_IA` 阅读迹线，做一个「LLM 作为社科被试」的小实验（可复用其 bitbybit/sicss 协议）", "dialogue_hook": "「按您 bitbybit 的框架用 LLM 复现了一格数字迹实验，撞到一个 consent/被试定义的问题，想请您看这算不算合规的扩展」", "entry": "Princeton Sociology / 关联计算社科通道；其书与 sicss.io 是零摩擦首触点", "risk": "偏量化社会结构，与用户人文/修行轴契合度低于 Manovich/Moretti，列为「数据 × 社会」一侧的方法基石", "stamps": [{"mark": "✔", "asof": "2026-10-29"}], "_slug": "salganik-matthew", "_file": "reseArch_X/scholars/salganik-matthew.md", "_body": "- 接缝：把其「数字迹」框架嫁接到 `Reading_IA` 的阅读迹线，可做一个「LLM 作为社科被试」的小实验——低成本、可发表、且能生成与其对话的话柄。", "axes": ["ai_ds", "ai_hum"]}, {"name": "Mimi Sheller", "tier": "卓越开明", "affiliation": "Worcester Polytechnic Institute · The Global School 院长；New Mobilities Research and Policy Center 创始主任", "field": "mobilities / 流动正义 / 旅游 × 可持续 × AI", "homepage": "(WPI Global School / Global Lab podcast)", "qid": "Q6862191", "current_work": ["「**Mobility Data Justice**」(Mobilities 19(1):151-169, 2024, 与 Frauke Behrendt 合著, 被引 ~85)——把 mobility justice 与 data justice 合成框架，正对 AI 时代移动数据（✔ research.tue.nl / scholar.google, 2026-10-29）", "「Mobility Data Justice in the Age of AI」主题报告；Global Lab 播客谈 cascading climate risks + justice（✔ youtube/kth + global-lab.wpi.edu, 2026-10-29）", "rebalance 项目：低碳转型 + 公平（十五年积累）（✔ rebalancemobility.eu）"], "why_open": "「开放」在其**建制**里——Global School 把气候/流动/可持续/正义捆进同一跨学院体；且其数据正义框架本质是在问「谁的数据、谁说了算」", "what_real": "移动不只是位移，而是权力、殖民、提取与生态问题；AI 数据化正把新的不平等写进移动系统", "mvp": "以其 mobility data justice 框架，审计**本仓 `living_heritage` 大运河/丝绸之路走廊**的一处移动数据（谁被记录、谁被抹去、谁从中获益），做成一份小案例 + 图", "dialogue_hook": "「用您和 Behrendt 的 mobility data justice 框架重读了一条中国历史水道走廊的当代移动数据，得到一处关于 X 的观察，想请您看是否站得住」", "entry": "对话成立后再谈（Global School PhD 只是一个可选后续，非目的）", "risk": "行政职重，面谈窗口窄；但结构性跨域氛围是可核绿灯", "stamps": [{"mark": "✔", "asof": "2026-10-29"}, "{mark: ◇, asof: 2026-10-29}   # New Mobilities Center 当期成员/活动待落页"], "_slug": "sheller-mimi", "_file": "reseArch_X/scholars/sheller-mimi.md", "_body": "- 一条同时命中用户「旅游 + 可持续 + 遗产 + AI/数据」多轴；其「AI 数据正义」分支正是把 mobilities 接入 AI 环境的接口。\n- 强连带：**Frauke Behrendt**（数据正义合著者，见 `behrendt-frauke.md`）是更年轻、可能更好接话的一翼。", "axes": ["ai_hum", "sus", "herit", "tour"]}, {"name": "Tania Singer", "tier": "卓越开明", "affiliation": "社会/情感神经科学奠基人之一（曾共同创立 Max Planck 莱比锡社会神经科学）；现独立主持 ReConnect 训练与研究（确切机构名待核 ◇）", "field": "人生修行（沉思/冥想）× 社会神经科学 × 共情与慈悲训练", "homepage": "https://taniasinger.de/", "qid": "# 诚实留空", "current_work": ["「**ReConnect!**」课程，基于其 25+ 年「不同冥想/心理训练对身心效应」研究（✔ taniasinger.de, 2026-10-29）", "2025 NYAS《A neuroscience perspective on the plasticity of the social and emotional brain》综述（被引~37）（✔）", "大型 **ReSource Project**：九个月纵向冥想心智训练研究；主谈共情耗竭、慈悲训练（✔ Mind & Life podcast 2025-05-15）"], "why_open": "把佛学/沉思传统当作**可训练、可证伪**的心智科学对象，而非猎奇或信仰背书；长期做大规模纵向实证（✔）", "what_real": "社会脑与情绪可被心智训练塑形——「良好生活/人生修行」的实证底座", "mode": "受教（其训练/研究共同体是问学场；是否正式带 PhD 待核 ◇）", "mvp": "与其 ReConnect/ReSource 对话——把本仓 `contemplative science` 的跨文献对齐（含佛/道/儒修行文本）整理成一份「训练谱系 × 现代实证」对照，供其比较框架使用", "dialogue_hook": "「我把东亚几支修行传统的『训练阶梯』做成结构化对照，正好能喂您 ReSource 的训练类型区分，想请您看有无科学用处」", "entry": "ReConnect / Mind & Life 场；对话成立后再谈", "risk": "已离开马普体系，当前机构与学生通道未逐条核实（◇）", "stamps": ["{mark: ✔, asof: 2026-10-29}   # 工作三条命中当年出处", "{mark: ◇, asof: 2026-10-29}   # 现机构/招生态待落页"], "_slug": "singer-tania", "_file": "reseArch_X/scholars/singer-tania.md", "_body": "- 与 Davidson（`davidson-richard.md`）同属沉思神经科学，但 Singer 更偏「社会/慈悲训练 + 大规模纵向 + 独立于传统院系」，气质更贴用户「人生修行 × 真好学者」的取向。", "axes": ["cultiv", "goodlife"]}, {"name": "Anna Lowenhaupt Tsing", "tier": "卓越开明", "affiliation": "University of California, Santa Cruz · 人类学（\"Arts of Living on a Damaged Planet\" / \"End of the World\" 研究群）", "field": "多物种民族志 / 人类世 / 艺术×科学 / 资本主义废墟中的生命", "homepage": "(UCSC)", "qid": "# 诚实留空", "current_work": ["《**The Mushroom at the End of the World: On the Possibility of Life in Capitalist Ruins**》(2015, 累积被引~6886/研究项 49)——松茸跨芬兰/日本/俄勒冈的「扰动世界」方法（✔ researchgate / uchicago journals, 2026-10-29）", "\"Arts of Living on a Damaged Planet\"（与生态科学家、影像、诗歌协作的跨媒介项目）", "「Contamination Lab」等以她为纲的跨学科教学/研究在扩散（✔ 2026-10 快照）"], "why_open": "与生态学家、艺术家、诗人**共同生产**知识（\"arts of noticing\"），学科边界对她近乎不存在——这是「眼界开放」的最高样本之一（✔）", "what_real": "在受创的星球上「如何一起活着」——需要跨物种、跨学科的「注意力的艺术」", "mode": "受教/合作（其集体式、跨媒介方法天然吸纳外部合作者）", "mvp": "借其「multispecies / arts of noticing」，对本仓 `living_heritage` 大运河走廊做一次「非人行动者 + 场所」的扰动式记录（物种、水、货、路——多模态小志）", "dialogue_hook": "「按您 arts of noticing 的路子，记了一条中国水陆走廊的多物种/多行动者扰动志，想请您看这种『在废墟中活着』的读法成不成立」", "entry": "其集体项目/公开写作；对话成立后再谈", "risk": "年资高；但其方法重共同体，问学以「加入项目/对话」而非「注册」为主（◇）", "stamps": [{"mark": "✔", "asof": "2026-10-29"}], "_slug": "tsing-anna", "_file": "reseArch_X/scholars/tsing-anna.md", "_body": "- 用户所有轴的**总交汇点**：可持续、遗产、跨文明、美食（松茸＝食物）、多物种、艺术与科学——Tsing 一人几乎全覆盖，且是最「开明」的具身样本。与 Escobar 同挂，作「人类世 × 去殖民」双子。", "axes": ["sus", "herit", "cultiv", "goodlife", "food", "tour"]}], "opportunities": [{"id": "RX-phd-cambridge-cdh-202610", "type": "phd", "institution": "University of Cambridge · Centre for Digital Humanities (CDH)", "country": "UK", "program": "MPhil in Digital Humanities / PhD in Digital Humanities", "pi": "CDH 委员会（结构化项目，入学后再选导师）", "application_url": "https://www.cdh.cam.ac.uk/about/news/applications-open-mphil-and-phd-in-digital-humanities/", "deadline": "2027-01-06（Gates Cambridge 美籍通道 1 月中，另计）", "funding": "三年 fellowship；50% 薪资缺口由 Isaac Newton Trust 补，余由项目方覆盖（公告原文口径）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "5", "ai": "4", "m": "?", "r": "4", "a": "3", "o": "4"}, "verdict": "值得申请——本轴全球结构化项目的头名候选，届期在即", "sources": ["https://www.cdh.cam.ac.uk/about/news/applications-open-mphil-and-phd-in-digital-humanities/  # 官方公告，检索快照 2026-09-10"], "_slug": "RX-phd-cambridge-cdh-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-cambridge-cdh-202610.md", "_body": "- **项目陈述**：官方公告明列 MPhil 与 PhD 双通道、三年 fellowship 资助；页面直查返回 403（拦机器不拦人），届期以公告快照为准。\n- **AI 暴露度**（ai:4）：DH 的方法层（标注、可视化、文本挖掘）正在被 LLM 商品化；价值上移到问题选择、批评眼光与数据伦理——恰是可增值的那一环。\n- **导师质量**（m:?）：v1 未展开组级档案；候选锚点见 `../../scholars/manovich-lev.md`（跨校合作视角）。\n- **可及性**（a:3）：国际生可申、全奖通道明确；竞争面极高（观察，非事实）。\n- **申请成本**：研究计划 + 写作样本；12 月初须定稿。", "axes": ["dh", "ai_hum", "herit"]}, {"id": "RX-phd-esrc-sw-dtc-202610", "type": "phd", "institution": "ESRC South West Doctoral Training Partnership（Bristol/Exeter/Bath 等联合）", "country": "UK", "program": "ESRC-accredited PhD studentships（经济/社科/数据路径含 wellbeing、社会数据）", "pi": "各校导师（经 DTP 匹配）", "application_url": "https://www.jobs.ac.uk/job/DTB766/economic-and-social-science-research-council-phd-studentships", "deadline": "34 个 fully-funded studentships，2026-10-01 起开放投递（各白热通道分批）◐", "funding": "ESRC 全额 studentship（学费 + stipend，UKRI 标准）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "4", "ai": "4", "m": "3", "r": "4", "a": "2", "o": "3"}, "verdict": "值得申请（留意资格）——「良好生活/幸福」可走经济社科量化路径的现成全额通道", "sources": ["https://www.jobs.ac.uk/job/DTB766/economic-and-social-science-research-council-phd-studentships  # 快照 2026-10-01"], "_slug": "RX-phd-esrc-sw-dtc-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-esrc-sw-dtc-202610.md", "_body": "- **命中理由**：用户「良好生活/幸福科学」轴的落地，多挂在经济·社会·数据类量化项目下；ESRC SW DTP 正开 34 个全额位，是当下（2026-10）少有的“即开即投”窗口。\n- **可及性**（a:2，红旗预警）：英国 UKRI/ESRC studentship 对国际生名额有限（多数通道限 home students 或国际名额封顶），须逐条核对资格——这常是中国申请者最大的隐性墙。\n- 「幸福」若走纯心理学实验侧，另见 `../../scholars/davidson-richard.md`（UW Center for Healthy Minds，美区通道）。", "axes": ["dh", "herit", "ai_ds"]}, {"id": "RX-phd-msca-heritour-202610", "type": "phd", "institution": "HERITOUR MSCA Doctoral Network（泛欧多校 + 遗产/旅游机构）", "country": "EU（多 beneficiary）", "program": "MSCA-DN Doctoral Candidates — Cultural Heritage × Tourism", "pi": "网络内各 supervisor + 机构 secondment 导师", "application_url": "https://www.europeanheritagehub.eu/funding/heritour-msca-doctoral-network/", "deadline": "依网络招募批次（MSCA DN 2026 call 于 2026-05-28 开放提交，候选人由各项目分别招）◐", "funding": "MSCA 全额（带薪雇佣 +  mobility + 研究训练），标准 ERC/MSCA 口径", "status": "✔", "asof": "2026-10-29", "dims": {"q": "4", "ai": "3", "m": "4", "r": "5", "a": "3", "o": "5"}, "verdict": "值得申请——一网打中「文化遗产 + 旅游」两轴，含遗产/旅游机构 3 个月 secondment", "sources": ["https://www.europeanheritagehub.eu/funding/heritour-msca-doctoral-network/", "https://marie-sklodowska-curie-actions.ec.europa.eu/node/1591  # DN 2026 call 时间线"], "_slug": "RX-phd-msca-heritour-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-msca-heritour-202610.md", "_body": "- **精准命中**：官方明文「Doctoral Candidates will be seconded at heritage and tourism organisations for three months」——遗产×旅游的双轴在同一个 MSCA 网络内闭合，全列表独此一家。\n- **资源与稳定性**（r:5）：MSCA 资助为欧盟层全额雇佣，薪级标准化，组级不稳风险低。\n- **可及性**（a:3）：MSCA DN 对候选人有 mobility/研究员资历限制规则，须逐项目核对；竞争面向全欧开放。\n- **同类可蹲**：UNVEIL MSCA DN（文化遗产诊断，12 个全额 PhD 位）；UNCHANGE MSCA DN（2027–2031，15 位/9 beneficiary）；RAISE DN for AI in Science（2026-05-28 开放）——均属「欧盟资助、按批招募」家族，进 watchlist 逐个回源。", "axes": ["herit", "tour", "dh"]}, {"id": "RX-phd-nyu-cds-202610", "type": "phd", "institution": "New York University · Center for Data Science (CDS)", "country": "USA", "program": "PhD in Data Science（另有 NYU Shanghai Data Science PhD 平行通道）", "pi": "导师制（GSAS 统一录取后匹配）", "application_url": "https://cds.nyu.edu/", "deadline": "美区统一轮，历史口径 12 月上旬（如 2024 周期 Dec 5）→ 2027 周期具体日待官方页 ◐", "funding": "Full financial support up to 5 years（官方口径，含 tuition + stipend）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "3", "ai": "5", "m": "4", "r": "5", "a": "2", "o": "3"}, "verdict": "值得申请（若走数据本体侧）——纯数据科学旗舰，人文交叉需自证与导师契合", "sources": ["https://shanghai.nyu.edu/page/data-science-phd-program", "https://cds.nyu.edu  # PhD Admissions"], "_slug": "RX-phd-nyu-cds-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-nyu-cds-202610.md", "_body": "- **定位**：此为「AI/数据」硬核心一侧的锚点，与本列表偏人文交叉的候选互补；q（真问题性）分取决于所选导师，非项目本身。\n- **可及性**（a:2）：美区全奖 PhD 竞争极烈，且须 GRE/托福类硬门槛（观察）；上海校区通道门槛结构不同，可并申。\n- **时间线**：美区 12 月截止是本轮最早者之一——若纳入，须与剑桥 CDH 同批在 11 月完成材料。", "axes": ["ai_ds", "ai_hum"]}, {"id": "RX-phd-oxford-oii-202610", "type": "phd", "institution": "University of Oxford · Oxford Internet Institute (OII)", "country": "UK", "program": "DPhil in Information, Communication and the Social Sciences（另有 DPhil in Social Data Science 并轨）", "pi": "OII 多学科教员（入学后匹配；申请前无须先联系导师——官方明文）", "application_url": "https://www.oii.ox.ac.uk/study/dphil-in-information-communication-and-the-social-sciences/", "deadline": "2027-28 入学的官方 deadline 挂在课程页（历年 1 月上旬口径；本次检索快照未截到具体日，落页为准）◐", "funding": "Oxford 校级 studentships + ESRC 通道（须另行勾选竞争）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "4", "ai": "5", "m": "4", "r": "4", "a": "3", "o": "5"}, "verdict": "值得申请——「AI/数据 × 社科人文」交叉的正统学术入口，眼界开放度是该院立身之本", "sources": ["https://www.ox.ac.uk/admissions/graduate/courses/dphil-information-communication-social-sciences", "https://www.oii.ox.ac.uk/study/dphil-in-information-communication-and-the-social-sciences/"], "_slug": "RX-phd-oxford-oii-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-oxford-oii-202610.md", "_body": "- **AI 暴露度**（ai:5）：OII 的看家问题正是「信息/通信/社会世界」——AI 越进步，这一层越稀缺，属增值侧。\n- **眼界开放度**（o:5）：全院即交叉学科建制；「不必先联系导师」的规则本身降低门第摩擦。\n- **可及性**（a:3）：全额资助竞争激烈；观察≠事实。\n- 与 Cambridge CDH 同属 1 月窗口，材料可复用（一稿两投须按项目改写 focus）。", "axes": ["ai_ds", "ai_hum"]}, {"id": "RX-phd-stockholm-resilience-202610", "type": "phd", "institution": "Stockholm University · Stockholm Resilience Centre (SRC)", "country": "Sweden", "program": "PhD in Sustainability Science（含 nature-related financial risk & resilience 等当期课题）", "pi": "SRC 联合指导（跨学科委员会）", "application_url": "https://www.stockholmresilience.org/", "deadline": "当期「four new PhD candidates」招募进行中（快照 2026-10 前后）；瑞典博士岗多为岗位制滚动招聘 ◐", "funding": "瑞典 doctoral student = 带薪雇佣（employment，非学费制）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "5", "ai": "3", "m": "4", "r": "5", "a": "3", "o": "5"}, "verdict": "值得申请——可持续轴的旗舰；带薪雇佣 + 超学科知识共产传统，正合「有意义的工作」", "sources": ["https://www.stockholmresilience.org/download/18.36c25848153d54bdba342d4/1460105030398/PhD_Sustainability_Science_160406-160502.pdf", "https://kdphd.com/job/phd-student-in-sustainability-science-5  # 快照 2026-10-13", "https://www.facebook.com/opportunitiesforyouth/posts/1488970803260268/  # Lund 2027 平行候选"], "_slug": "RX-phd-stockholm-resilience-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-stockholm-resilience-202610.md", "_body": "- **眼界开放度**（o:5）：SRC 的立身之作即超学科知识共产框架（Norström et al. 2020, Nature Sustainability）——见 `../../scholars/norstrom-asa.md`，是本轴最实的「开放」证据。\n- **AI 暴露度**（ai:3）：韧性/可持续的判断与现场数据难被自动化；ML 在此是工具而非本体。\n- **平行候选**：Lund University PhD in Sustainability Science（2027，带薪 4 年，fully funded）——同国同类，可一稿两投。\n- 瑞典岗位制特点：每个 vacancy 独立 deadline，须盯官方页，非统一入学季。", "axes": ["sus"]}, {"id": "RX-phd-ucd-ai-heritage-202610", "type": "phd", "institution": "University College Dublin · ICV / Heritage", "country": "Ireland", "program": "PhD scholarship in AI and Heritage Futures", "pi": "项目挂导师（vacancy 页列名，须落页核实具体 PI）", "application_url": "https://www.ucd.ie/ics/vacancies/phdopenings/phdscholarshipinaiandheritagefutures/", "deadline": "2026-04-30（本周期已截止；面试 5 月，入学 2026-09 或 2027-01）→ 下一周期 ◐ 待公告", "funding": "fully funded PhD scholarship（UCD 官方口径）", "status": "◐", "asof": "2026-10-29", "dims": {"q": "4", "ai": "4", "m": "?", "r": "4", "a": "3", "o": "4"}, "verdict": "值得蹲下一周期——AI×遗产的少数全额资助博士位之一，本周期刚关，进 watchlist", "sources": ["https://www.ucd.ie/ics/vacancies/phdopenings/phdscholarshipinaiandheritagefutures/", "https://www.applykite.com/scholarships/fully-funded-phd-in-artificial-intelligence-and-cultural-heritage-at-university-college-dublin-ws5qjuf1t0"], "_slug": "RX-phd-ucd-ai-heritage-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-ucd-ai-heritage-202610.md", "_body": "- **状态说明**：命中的是 2026 招生周期（deadline 2026-04-30 已过）。职位真实存在 ✔，但当前不可投 → 整条记 ◐，待 UCD 挂出新周期升 ✔。\n- **交叉杠杆**：AI×Heritage Futures 与本仓 `living_heritage`、`docs/culture_review` 直接同题。\n- 同期 UCD 另有 **PhD Quantitative and Computational Social Science**（SPIRE 中心，Honohan Doctoral Scholarship 通道）——可作同校备选。", "axes": ["herit", "ai_hum", "tour"]}, {"id": "RX-phd-ucl-sas-202610", "type": "phd", "institution": "UCL · Institute of Advanced Studies (School of Advanced Study)", "country": "UK", "program": "PhD Digital Humanities（by research / publication / practice 三通道）", "pi": "导师制（入学前须锁定导师意向）", "application_url": "https://www.sas.ac.uk/postgraduate-study/our-courses/research-degree/phd-digital-humanities", "deadline": "2027-07-31 关闭（2026-11-01 开放，2027-09 入学）", "funding": "SAS 各项目奖学金另申（档案暂不记数额，数字过时快）", "status": "✔", "asof": "2026-10-29", "dims": {"q": "4", "ai": "4", "m": "3", "r": "3", "a": "4", "o": "4"}, "verdict": "值得申请——时间窗最长的主力候选，practice 通道对跨媒介研究者友好", "sources": ["https://www.sas.ac.uk/postgraduate-study/our-courses/research-degree/phd-digital-humanities"], "_slug": "RX-phd-ucl-sas-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-ucl-sas-202610.md", "_body": "- **可及性**（a:4）：申请窗 2026-11 → 2027-07，是全列表里最从容的一个；可作主线项目，剑桥/牛津作冲刺。\n- 由研究/出版物/实践三种结业方式——本仓已有的知识工程（图谱、月旦、遗产走廊）本身可作 practice 证据链（观察，非事实）。\n- 伦敦区学术生态（Senate House 图书馆、RHUL 语音与语料传统、V&A 收藏圈）对「语言 × 遗产 × 数据」组合天然友好。", "axes": ["dh", "herit", "ai_hum"]}, {"id": "RX-phd-unisg-gastronomy-202610", "type": "phd", "institution": "University of Gastronomic Sciences (UNISG) · Pollenzo/Bra, Italy", "country": "Italy", "program": "Doctoral research pathway in Food / Gastronomic Sciences（现有 cohort 38/39/40 在读）", "pi": "导师制（与学界及食物产业联合培养）", "application_url": "https://www.unisg.it/en/", "deadline": "博士周期以当年公告为准（未截到具体日）◐", "funding": "奖学金/费用结构落页核实，暂不记数字 ◇", "status": "◐", "asof": "2026-10-29", "dims": {"q": "4", "ai": "2", "m": "?", "r": "3", "a": "3", "o": "5"}, "verdict": "值得先建立联系——美食/食物研究轴最正统的跨学科机构，气质与本仓「一碗粥」内通", "sources": ["https://www.unisg.it/en/course/master-in-world-food-studies/", "https://www.instagram.com/p/DCmvGKNIAPv/  # PhD cohorts 38/39/40 佐证", "https://www.linkedin.com/posts/university-of-gastronomic-sciences-pollenzo_..."], "_slug": "RX-phd-unisg-gastronomy-202610", "_file": "reseArch_X/opportunities/phd/RX-phd-unisg-gastronomy-202610.md", "_body": "- **AI 暴露度**（ai:2）：食物研究重田野、文化与身体经验，自动化替代压力小（此低分对「有意义工作」反而是加分）。\n- **眼界开放度**（o:5）：慢食运动衍生机构，science × gastronomy culture 对话是其立校纲领。\n- **诚实标注**：博士具体届期与资助未截一手确认 → ◐/◇；硕士 World Food Studies（1 年，英语，2026-10-20 开学）可作进入其博士的跳板。\n- 平行候选：Barcelona Culinary Institute「Gastronomic Sciences Doctorate」；Queen Margaret University（Scotland）曾有 fully funded PhD in Gastronomy（topic 不限 food studies）◇ 需回源当期。", "axes": ["food", "sus", "tour"]}], "dialogue_map": {"rows": [{"who": "Lev Manovich", "file": "../scholars/manovich-lev.md", "work": "Artificial Aesthetics(免费)/「AI becomes culture」/媒体积累", "mvp": "MVP-001 跨文明语料压其「不可见」论", "hook": "带方法与图，请他指正一处张力", "status": "MVP规划中"}, {"who": "Frauke Behrendt", "file": "../scholars/behrendt-frauke.md", "work": "Mobility Data Justice(2024,新框架)/MaaS-AI 治理", "mvp": "MVP-002 大运河走廊移动数据审计", "hook": "用其框架喂一个稀缺非西方案例", "status": "待议"}, {"who": "Mimi Sheller", "file": "../scholars/sheller-mimi.md", "work": "数据正义×AI×流动正义(Global School/New Mobilities Ctr)", "mvp": "MVP-002 共材", "hook": "先接 Behrendt 框架再引到她", "status": "待议"}, {"who": "Sarah Oberbichler / C²DH", "file": "../scholars/oberbichler-sarah.md", "work": "新设 AI×历史讲席；「AI through History」CfP(2026-06)", "mvp": "MVP-003 遗产数据 AI 可见性", "hook": "投公开 workshop / 会前请判方向", "status": "待议"}, {"who": "Europeana / E-Cloud for Cultural Heritage", "file": "（机构节点，待建档）", "work": "开放遗产数据空间 + AI 规范（2025-12 impulse paper）", "mvp": "MVP-003 数据底座", "hook": "以其公开数据与规范起步", "status": "待议"}, {"who": "Åsa Norström / SRC", "file": "../scholars/norstrom-asa.md", "work": "超学科知识共产原则；SRC 当期在招", "mvp": "（需田野入口，暂缓 MVP）", "hook": "以其原则搭一份共生产研究草图", "status": "待议"}, {"who": "Richard Davidson", "file": "../scholars/davidson-richard.md", "work": "幸福可训练性实证；Healthy Minds", "mvp": "（硬方法门槛，MVP 需另设）", "hook": "`contemplative science` 对齐工作与其范式对话", "status": "待议"}, {"who": "Franco Moretti", "file": "../scholars/moretti-franco.md", "work": "远读/Literary Lab(开放 pamphlet)", "mvp": "可并入 MVP-001", "hook": "藏书 distant-reading 趋势图", "status": "待议"}, {"who": "Matthew Salganik", "file": "../scholars/salganik-matthew.md", "work": "计算社科开放方法(bitbybit/sicss)", "mvp": "「LLM 作为社科被试」小实验", "hook": "复用其框架做阅读迹线实验", "status": "待议"}, {"who": "Wendy Hui Kyong Chun", "file": "../scholars/chun-wendy.md", "work": "LLM×批判理论(2026 CDH 讲座)/Digital Democracies/hypo-real 气候", "mvp": "气候话语×「再现的贫乏」小分析", "hook": "撞其 hypo-real/气候论题请指正", "status": "待议"}, {"who": "Anna Tsing", "file": "../scholars/tsing-anna.md", "work": "Mushroom/Arts of Noticing/多物种人类世", "mvp": "大运河走廊多行动者扰动志", "hook": "按其路子记一条水陆走廊", "status": "待议"}, {"who": "Arturo Escobar", "file": "../scholars/escobar-arturo.md", "work": "Pluriverse/autonomous design", "mvp": "跨文化经济×遗产的地方宇宙观重读", "hook": "用其透镜读非西方材料", "status": "待议"}, {"who": "Tania Singer", "file": "../scholars/singer-tania.md", "work": "ReConnect/ReSource 冥想训练研究", "mvp": "东亚修行谱系结构化对照", "hook": "喂其训练类型区分", "status": "待议"}, {"who": "Johanna Drucker", "file": "../scholars/drucker-johanna.md", "work": "Graphesis/批评性 DH", "mvp": "本仓图谱重画+自反标注", "hook": "用其 Graphesis 读法自审", "status": "待议"}, {"who": "Virginia Dignum", "file": "../scholars/dignum-virginia.md", "work": "负责任 AI/AI Policy Lab/value-sensitive", "mvp": "遗产或内容场景价值审计", "hook": "用其原则审中国语境场景", "status": "待议"}], "sort_logic": "## 排序逻辑（本轮，2026-10-29 深化）\n用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：\n1. **Wendy Chun（新，本轮头名）**——正面回答「AI 时代人文还能不能做真问题」，且正处 CDH 2026 讲座的枢纽位；气候×hypo-real 命题与本仓 `heaven_climate` 直接咬合。\n2. **Anna Tsing / Arturo Escobar（新）**——「人类世 × 去殖民」双子，几乎覆盖用户全部轴；本仓走廊/跨文化经济是其方法现成落点。\n3. **Tania Singer（新）**——人生修行轴的实证真学者，比专业学位型 Naropa 更可对话。\n4. **Manovich**——MVP-001 已就绪（语料全本地、方法全开源），是「先做出来再说」的最佳第一件。\n5. **Frauke Behrendt / Mimi Sheller**——mobility data justice 新框架正缺非西方案例。\n6. **Johanna Drucker / Virginia Dignum（新）**——分别补 DH 批评理论与责任 AI 两翼。\n7. Oberbichler/C²DH、Norström/SRC、Davidson、Moretti、Salganik 顺次。"}, "mvp": [{"id": "MVP-001", "target": "Manovich", "summary": "用其文化分析方法跑本仓多文明语料，检验「媒体积累/AI-as-culture」", "status": "planned", "file": "reseArch_X/mvp/MVP-001-manovich-accumulation-on-corpus.md"}, {"id": "MVP-002", "target": "Behrendt / Sheller", "summary": "用 mobility data justice 框架审计大运河走廊移动数据", "status": "planned"}, {"id": "MVP-003", "target": "Oberbichler / C²DH + Europeana", "summary": "开放遗产数据上的「AI 可见性」小分析", "status": "planned"}], "scan_logs": [{"date": "2026-10-29", "wave": "v1", "slug": "scan", "title": "20261029 · v1 广扫台账", "summary": "", "file": "reseArch_X/scan_log/20261029-v1-scan.md"}, {"date": "2026-10-29", "wave": "v15", "slug": "dialogue", "title": "20261029 · v1.5 转向对话优先（第二轮检索台账）", "summary": "用户指示——不强调时间线、不走海投申请；核心改为「哪些卓越开明/有潜力的导师在做什么有意义的工作 → 先做 MVP → 对话 → 建立相互了解 → 再谈后续」。", "file": "reseArch_X/scan_log/20261029-v15-dialogue.md"}, {"date": "2026-10-29", "wave": "v2", "slug": "scholar-discovery", "title": "20261029 · v2 学者深化（第三轮检索台账）", "summary": "用户再聚焦——重点是「能否发现优秀卓越开明的学者，再看有无机会合作或受教」。故本轮不动 MVP 数据工程，专攻**学者发现**，并把「受教(mentorship)」升为一级正当结果（README 第〇节 + schema `mode` 字段）。", "file": "reseArch_X/scan_log/20261029-v2-scholar-discovery.md"}, {"date": "2026-10-29", "wave": "v25", "slug": "dashboard", "title": "20261029 · v2.5 调研面板（工具轮）", "summary": "用户 2026-10-29 指示「也请做一个设计良好的页面吧，我们需要定期进行调研、分析、评估，增加新的方向」。本轮不新增研究命中，改为把散在 `.md` 里的判读装进一份**只读面板**，把「调研→分析→评估→加新轴」的工作循环固化到可复跑的一步 build。", "file": "reseArch_X/scan_log/20261029-v25-dashboard.md"}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('rx-data').textContent);
+const LANG_KEY = 'rx-lang';
+const $ = (sel, root=document) => root.querySelector(sel);
+const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// ------- language toggle -------
+function setLang(l){
+  document.body.className = 'lang-' + l;
+  $$('#langToggle button').forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
+  localStorage.setItem(LANG_KEY, l);
+  document.documentElement.lang = l==='zh'?'zh':'en';
+  render();
+}
+$$('#langToggle button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+const saved = localStorage.getItem(LANG_KEY);
+if (saved) document.body.className = 'lang-'+saved;
+
+// ------- dashboard tiles -------
+function renderTiles(){
+  const c = DATA.counts;
+  const zh=[['学者','scholars',''],['卓越开明',c['卓越开明'],'accent'],['有潜力',c['有潜力'],''],['机会档案',c.opportunities,''],['MVP',c.mvp_total,''],['调研轮次',c.scans,'accent']];
+  const en=[['Scholars',c.scholars,''],['Outstanding',c['卓越开明'],'accent'],['Promising',c['有潜力'],''],['Opportunities',c.opportunities,''],['MVPs',c.mvp_total,''],['Scan waves',c.scans,'accent']];
+  const src = document.body.classList.contains('lang-en') ? en : zh;
+  $('#tiles').innerHTML = src.map(([lbl,n,cls])=>`<div class="tile ${cls}"><div class="num">${n}</div><div class="lbl">${esc(lbl)}</div></div>`).join('');
+  const asof = DATA.latest_asof || '—';
+  $('#asof-date').textContent = asof;
+  $('#asof-date-en').textContent = asof;
+}
+
+// ------- dialogue map -------
+function statusClass(s){
+  if(!s) return 'pending';
+  if(/已成|built/i.test(s)) return 'mvpb';
+  if(/规划|MVP/i.test(s)) return 'mvpg';
+  if(/已发|有回音|talking/i.test(s)) return 'talked';
+  return 'pending';
+}
+function renderDialogue(){
+  const rows = DATA.dialogue_map.rows;
+  $('#dm-body').innerHTML = rows.map(r=>`<tr>
+    <td class="who">${esc(r.who)}</td>
+    <td>${esc(r.work)}</td>
+    <td>${esc(r.mvp)}</td>
+    <td>${esc(r.hook)}</td>
+    <td><span class="status-badge ${statusClass(r.status)}">${esc(r.status)}</span></td>
+  </tr>`).join('') || '<tr><td colspan="5" class="empty">—</td></tr>';
+  $('#dm-sort').innerHTML = esc(DATA.dialogue_map.sort_logic || '').replace(/^##+ /,'').replace(/\n/g,'<br>');
+}
+
+// ------- scholars -------
+const SCH_STATE = {tier:'', axis:'', mode:''};
+function axisLabel(k){ const m = DATA.axes_meta.find(a=>a.key===k); return m ? m.zh : k; }
+function renderScholarCard(s){
+  const isEn = document.body.classList.contains('lang-en');
+  const current = Array.isArray(s.current_work) ? s.current_work.map(x=>'  · '+x).join('\n') : (s.current_work||'');
+  const tags = (s.axes||[]).map(k=>`<span class="tag">${esc(axisLabel(k))}</span>`).join('')
+    + (s.mode ? `<span class="tag mode">${esc(s.mode)}</span>` : '');
+  const stamps = (s.stamps||[]).map(st=>`<span class="tag" title="${esc(st.asof||'')}">${esc(st.mark||'')}</span>`).join('');
+  return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
+    <div class="head"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span></div>
+    <div class="affil">${esc(s.affiliation||'')}</div>
+    <div class="field">${esc(s.field||'')}</div>
+    <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
+    <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
+    <div class="hook">${esc(s.dialogue_hook||'')}</div>
+    <div class="tags">${tags}${stamps}</div>
+    <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>
+  </div>`;
+}
+function renderScholars(){
+  let items = DATA.scholars.slice();
+  if(SCH_STATE.tier) items = items.filter(s=>s.tier===SCH_STATE.tier);
+  if(SCH_STATE.axis) items = items.filter(s=>(s.axes||[]).includes(SCH_STATE.axis));
+  if(SCH_STATE.mode) items = items.filter(s=>(s.mode||'').includes(SCH_STATE.mode));
+  $('#sch-grid').innerHTML = items.map(renderScholarCard).join('') || '<div class="empty">— 无命中 · 无 hits —</div>';
+  renderSchFilters();
+}
+function renderSchFilters(){
+  const isEn = document.body.classList.contains('lang-en');
+  const tiers = {}; DATA.scholars.forEach(s=>{ if(s.tier) tiers[s.tier]=(tiers[s.tier]||0)+1; });
+  const modes = {}; DATA.scholars.forEach(s=>{ (s.mode||'').split(/[；;/、｜|]/).forEach(x=>{const t=x.trim();if(t&&t.length<10)modes[t]=(modes[t]||0)+1;}); });
+  const all = DATA.scholars.length;
+  const mk = (label, on, count, act)=>`<span class="chip ${on?'on':''}" data-act="${act}">${esc(label)}<span class="cnt">${count}</span></span>`;
+  const tierChips = ['','卓越开明','有潜力'].map(t=>mk(t||( isEn?'all':'全部'), SCH_STATE.tier===t, t?tiers[t]||0:all, 'tier:'+t)).join('');
+  const axisChips = [''].concat(DATA.axes_meta.map(a=>a.key)).map(k=>{
+    const label = k ? axisLabel(k) : (isEn?'axis: all':'轴：全部');
+    const cnt = k ? DATA.scholars.filter(s=>(s.axes||[]).includes(k)).length : all;
+    return mk(label, SCH_STATE.axis===k, cnt, 'axis:'+k);
+  }).join('');
+  const modeChips = [''].concat(Object.keys(modes)).map(m=>{
+    const label = m || (isEn?'mode: all':'形态：全部');
+    const cnt = m ? DATA.scholars.filter(s=>(s.mode||'').includes(m)).length : all;
+    return mk(label, SCH_STATE.mode===m, cnt, 'mode:'+m);
+  }).join('');
+  $('#sch-filters').innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${tierChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${axisChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${modeChips}</div>`;
+  $$('#sch-filters .chip').forEach(el=>el.addEventListener('click',()=>{
+    const [k,v] = el.dataset.act.split(':');
+    SCH_STATE[k] = (SCH_STATE[k]===v) ? '' : v;
+    renderScholars();
+  }));
+}
+
+// ------- opportunities -------
+const OPP_STATE = {type:'', status:''};
+function markClass(s){
+  if((s||'').includes('✔')) return 'ok';
+  if((s||'').includes('◐')) return 'prev';
+  return 'pending';
+}
+function renderOppCard(o){
+  const isEn = document.body.classList.contains('lang-en');
+  const d = o.dims||{};
+  const dimStr = ['q','ai','m','r','a','o'].map(k=>`<span class="dim" title="${k}">${k}:${esc(d[k]??'?')}</span>`).join('');
+  const tags = (o.axes||[]).map(k=>`<span class="tag">${esc(axisLabel(k))}</span>`).join('');
+  return `<div class="ocard">
+    <div class="row1"><h4>${esc(o.institution||o.id)}</h4><span class="mark ${markClass(o.status)}">${esc(o.status||'')}</span></div>
+    <div class="meta">${esc(o.program||'')} ${o.country?' · '+esc(o.country):''} ${o.deadline?' · '+esc(o.deadline):''}<br>${o.pi?'PI: '+esc(o.pi):''}</div>
+    <div class="dims">${dimStr}</div>
+    <div class="verdict"><strong>${isEn?'verdict':'断语'}</strong>：${esc(o.verdict||'')}</div>
+    <div class="tags">${tags}</div>
+    <a class="file-link" href="../../${esc(o._file)}">↗ ${esc(o.id||o._slug)}</a>
+  </div>`;
+}
+function renderOpps(){
+  let items = DATA.opportunities.slice();
+  if(OPP_STATE.type) items = items.filter(o=>o.type===OPP_STATE.type);
+  if(OPP_STATE.status) items = items.filter(o=>(o.status||'').includes(OPP_STATE.status));
+  $('#opp-grid').innerHTML = items.map(renderOppCard).join('') || '<div class="empty">—</div>';
+  renderOppFilters();
+}
+function renderOppFilters(){
+  const isEn = document.body.classList.contains('lang-en');
+  const types = {}; DATA.opportunities.forEach(o=>{ if(o.type) types[o.type]=(types[o.type]||0)+1; });
+  const all = DATA.opportunities.length;
+  const mk = (label,on,cnt,act)=>`<span class="chip ${on?'on':''}" data-act="${act}">${esc(label)}<span class="cnt">${cnt}</span></span>`;
+  const typeChips = [''].concat(Object.keys(types)).map(t=>mk(t||(isEn?'all':'全部'), OPP_STATE.type===t, t?types[t]:all, 'type:'+t)).join('');
+  const statusChips = ['','✔','◐','◇'].map(s=>mk(s||(isEn?'mark: all':'标记：全部'), OPP_STATE.status===s, s?DATA.opportunities.filter(o=>(o.status||'').includes(s)).length:all, 'status:'+s)).join('');
+  $('#opp-filters').innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${typeChips}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;width:100%">${statusChips}</div>`;
+  $$('#opp-filters .chip').forEach(el=>el.addEventListener('click',()=>{
+    const [k,v] = el.dataset.act.split(':');
+    OPP_STATE[k] = (OPP_STATE[k]===v) ? '' : v;
+    renderOpps();
+  }));
+}
+
+// ------- axes -------
+function renderAxes(){
+  const cov = DATA.axis_coverage;
+  const maxS = Math.max(1, ...cov.map(c=>c.scholars));
+  const maxO = Math.max(1, ...cov.map(c=>c.opportunities));
+  const isEn = document.body.classList.contains('lang-en');
+  $('#axes-grid').innerHTML = cov.map(c=>{
+    const gap = c.scholars===0;
+    return `<div class="axis-cell ${gap?'gap':''}">
+      <h5>${esc(c.zh)}</h5>
+      <div class="desc">${esc(c.desc)}</div>
+      <div class="bars">
+        <div class="bar"><span class="bar-lbl">${isEn?'sch':'学者'}</span><div class="bar-track"><div class="bar-fill scholars" style="width:${(c.scholars/maxS*100).toFixed(0)}%"></div></div><span class="bar-num">${c.scholars}</span></div>
+        <div class="bar"><span class="bar-lbl">${isEn?'opp':'机会'}</span><div class="bar-track"><div class="bar-fill opps" style="width:${(c.opportunities/maxO*100).toFixed(0)}%"></div></div><span class="bar-num">${c.opportunities}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ------- MVP -------
+function renderMvp(){
+  const items = DATA.mvp;
+  $('#mvp-grid').innerHTML = items.map(m=>{
+    const link = m.file ? `<a class="file-link" href="../../${esc(m.file)}">↗ ${esc(m.id)}</a>` : '';
+    return `<div class="mvp-item" data-status="${esc(m.status||'planned')}">
+      <div><span class="mvp-id">${esc(m.id)}</span><span class="mvp-status ${/built/i.test(m.status)?'built':''}">${esc(m.status||'planned')}</span></div>
+      <div class="mvp-target">${esc(m.target)}</div>
+      <div class="mvp-sum">${esc(m.summary)}</div>
+      ${link}
+    </div>`;
+  }).join('') || '<div class="empty">—</div>';
+}
+
+// ------- rubric -------
+const RUBRIC = [
+  ['q', '真问题性', 'Real question', '去掉 AI 热点词后，这个问题本身还成立吗？产出是理解还是 benchmark 增量？','Strip the AI buzzwords — does the question still stand? Does the output advance understanding, or only benchmark deltas?'],
+  ['ai','AI 暴露度','AI exposure','AI 进步让这个项目<strong>增值</strong>（判断、数据、现场、品味稀缺）还是<strong>贬值</strong>（生产环节可被替代）？','Does AI progress make this project <strong>appreciate</strong> (judgment, data, field, taste scarce) or <strong>depreciate</strong> (its production steps automatable)?'],
+  ['m', '导师质量','Mentor quality','近 5 年：组内 PhD 中位毕业年限、去向、师生合著生态、独立指导 vs 放养/压榨。','Last 5 years: median PhD completion time, alumni destinations, co-authorship ecology, active mentoring vs. hands-off/exploitative.'],
+  ['r', '资源稳定','Resources &amp; stability','资助来源与期限（ERC / DFG / NSF-CORE / 青基…）、计算与数据条件、组规模。','Funding source and horizon (ERC / DFG / NSF-CORE…), compute and data access, group size.'],
+  ['a', '可及性','Accessibility','对「我」的申请画像的匹配与竞争面：签证/语言/经费通道/届期。','Match to my profile and competitive surface: visa, language, funding route, window.'],
+  ['o', '眼界开放','Open-mindedness','跨域接纳、允许失败、真名对话——决定「真正合作交流」是否可能。','Cross-domain reception, room to fail, named dialogue — decides whether genuine collaboration is possible.'],
+];
+function renderRubric(){
+  const isEn = document.body.classList.contains('lang-en');
+  $('#rubric-grid').innerHTML = RUBRIC.map(([k,zh,en,dzh,den])=>
+    `<div class="rubric-item"><div class="rubric-key">${esc(k)}</div><div class="rubric-body"><h5>${isEn?esc(en):esc(zh)}</h5><p>${isEn?den:dzh}</p></div></div>`
+  ).join('');
+}
+
+// ------- scan log -------
+function renderLog(){
+  const logs = DATA.scan_logs;
+  $('#log-body').innerHTML = logs.map(l=>
+    `<div class="tl-item"><div class="date">${esc(l.date)} <span class="wave">${esc(l.wave)}</span></div>
+    <h4>${esc(l.title)}</h4><p>${esc(l.summary||'')}</p>
+    <a class="file-link" href="../../${esc(l.file)}">↗ ${esc(l.file.split('/').pop())}</a></div>`
+  ).join('') || '<div class="empty">—</div>';
+}
+
+// ------- master render -------
+function render(){
+  renderTiles(); renderDialogue(); renderScholars(); renderAxes();
+  renderMvp(); renderOpps(); renderRubric(); renderLog();
+}
+render();
+document.addEventListener('DOMContentLoaded', render);
+</script>
+
+</body>
+</html>
