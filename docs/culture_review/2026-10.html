@@ -733,12 +733,12 @@ window.SR=(function(){
       if(mode==='playing'){try{audio.pause()}catch(e){};mode='paused';st.textContent=cs().pause;label('resume');return}
       if(mode==='paused'){anchor(audio.currentTime);audio.play().catch(aFail);mode='playing';label('pause');tick();return}
       if(mode==='done'||!AQ.length){aqi=0;if(!loadAQ()){toLocal();return start()}}
-      mode='playing';label('pause');playClip(aqi);return}
+      aqLim=null;ssEnd=0;mode='playing';label('pause');playClip(aqi);return}
     if(!synth)return;
     if(mode==='playing'){synth.pause();mode='paused';st.textContent=tx().pause;label('resume');return}
     if(mode==='done'||!Q.length||i>=Q.length){if(!build()){st.textContent=tx().none;return}i=0}
     synth.cancel();mode='playing';label('pause');speakCur()}
-  function stopAll(){mode='idle';if(synth)synth.cancel();i=0;Q=[];AQ=[];aqi=0;stopAudio();if(window.CSS&&CSS.highlights)try{CSS.highlights.clear()}catch(e){}
+  function stopAll(){mode='idle';if(synth)synth.cancel();i=0;Q=[];AQ=[];aqi=0;aqLim=null;ssEnd=0;stopAudio();if(window.CSS&&CSS.highlights)try{CSS.highlights.clear()}catch(e){}
     document.querySelectorAll('.speak-now').forEach(e=>e.classList.remove('speak-now'));
     try{ssHide()}catch(e){};try{gHide()}catch(e){}
     play.children[0].textContent='▶ 听读本期';play.children[1].textContent='▶ Listen';st.textContent=tx().idle}
@@ -758,7 +758,7 @@ window.SR=(function(){
   const audio=new Audio();audio.preload='metadata';
   let engine=(function(){var v='';try{v=localStorage.getItem('zhzz-engine')||''}catch(e){}
     return v||(TR?'natural':'local')})();
-  let AQ=[],aqi=0,aSec=-1,aWant=null,aWall=0,aRef=0,domIdx={},audIdx={};
+  let AQ=[],aqi=0,aSec=-1,aWant=null,aWall=0,aRef=0,domIdx={},audIdx={},aqLim=null,ssEnd=0;
   function anchor(tt){aWall=Date.now();aRef=tt}
 
   function fmt(s,r){return String(s==null?'':s).replace(/\{(\w)\}/g,(m,k)=>(r[k]==null?m:r[k]))}
@@ -807,7 +807,7 @@ window.SR=(function(){
     st.textContent=fmt(cs().playing,{k:k+1,n:AQ.length});
   }
   function playClip(k){
-    if(k>=AQ.length){mode='done';st.textContent=fmt(cs().end,{n:AQ.length});label('play');return}
+    if(k>=AQ.length||(aqLim!=null&&k>=aqLim)){if(aqLim!=null){stopAudio();}mode='done';st.textContent=ssEnd?(L()==='en'?'selection finished':'所选已读完'):fmt(cs().end,{n:AQ.length});label('play');aqLim=null;ssEnd=0;return}
     aqi=k;paintClip(k);
     var tid=trackId(),sec=TR[tid].secs[AQ[k].si];
     if(!sec){tick();return}
@@ -853,7 +853,7 @@ window.SR=(function(){
     if(engine==='natural'&&TR){
       if(!AQ.length&&!loadAQ())return;
       var ai=audIdx[Q[k].blk+'_'+Q[k].sub];if(ai==null)return;
-      aqi=ai;mode='playing';label('pause');playClip(aqi);return}
+      aqi=ai;aqLim=null;ssEnd=0;mode='playing';label('pause');playClip(aqi);return}
     if(!synth)return;
     i=k;mode='playing';label('pause');synth.cancel();speakCur();
   });
@@ -871,8 +871,9 @@ window.SR=(function(){
     try{location.href='microsoft-edge:'+encodeURI(location.href)}catch(e){}});
 
   /* ── 选读 · select any body text, then hear it ──
-     The neural track is pre-rendered per cue, so an arbitrary selection has no clip to seek;
-     selection-play therefore uses SpeechSynthesis directly - an ad-hoc act valid in either engine. */
+     Selection-play is neural-first: whole-sentence selections reuse the pre-rendered natural voice
+     clips (bounded by aqLim so only the selected span plays); a mid-sentence selection, which has
+     no clip to seek, falls back to SpeechSynthesis with the best-ranked (Natural/Online) voice. */
   const ssBtn=document.getElementById('rSelSpeak');
   let ssRange=null;
   function ssHide(){if(ssBtn)ssBtn.classList.remove('show');ssRange=null;if(window.CSS&&CSS.highlights)try{CSS.highlights.delete('selspeak')}catch(e){}}
@@ -898,14 +899,35 @@ window.SR=(function(){
     if(!ssRange)return;
     var rng=ssRange, txt=clean(rng.toString());
     ssRange=null; if(ssBtn)ssBtn.classList.remove('show');
-    if(!synth){st.textContent=tx().none;return}
+    if(!synth&&!TR){st.textContent=tx().none;return}
     stopAll();
+    /* 自然声优先 · neural first: when the selection covers whole cue sentences, play the very
+       same pre-rendered clips the issue uses - a real human voice (Xiaoxiao/Yunxi per 自然声 pick).
+       Only a partial, mid-sentence selection falls back to SpeechSynthesis. */
+    if(TR&&loadAQ()){
+      var k0=-1,k1=-1;
+      try{
+        for(var x=0;x<Q.length;x++){
+          var cr=Q[x].range;if(!cr)continue;
+          if(rng.compareBoundaryPoints(Range.START_TO_START,cr)<=0&&rng.compareBoundaryPoints(Range.END_TO_END,cr)>=0){
+            if(k0<0)k0=x;k1=x;
+          }
+        }
+      }catch(e){k0=-1}
+      if(k0>=0){
+        var ai0=audIdx[Q[k0].blk+'_'+Q[k0].sub],ai1=audIdx[Q[k1].blk+'_'+Q[k1].sub];
+        if(ai0!=null&&ai1!=null&&ai1>=ai0){
+          aqLim=ai1+1;ssEnd=1;aqi=ai0;mode='playing';label('pause');playClip(ai0);return;
+        }
+      }
+    }
+    if(!synth){st.textContent=cs().noaudio;return}
     try{if(window.Highlight&&window.CSS&&CSS.highlights)CSS.highlights.set('selspeak',new Highlight(rng))}catch(e){}
     var u=new SpeechSynthesisUtterance(txt);
     var v=chosen(); if(v){u.voice=v;u.lang=v.lang} else u.lang=L()==='zh'?'zh-CN':'en-US';
     u.rate=parseFloat(selR.value||'1');
     u.onend=u.onerror=function(){if(window.CSS&&CSS.highlights)try{CSS.highlights.delete('selspeak')}catch(e){}};
-    st.textContent=L()==='en'?'speaking selection…':'正在朗读所选…';
+    st.textContent=L()==='en'?'speaking selection (browser voice)…':'正在朗读所选（本机语音）…';
     synth.speak(u);
   }
   document.addEventListener('mouseup',function(e){if(ssBtn&&ssBtn.contains(e.target))return;setTimeout(ssUpdate,0)});
