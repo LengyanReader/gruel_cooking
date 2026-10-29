@@ -15,8 +15,19 @@
 | Richard Davidson | `../scholars/davidson-richard.md` | 幸福可训练性实证；Healthy Minds | （硬方法门槛，MVP 需另设） | `contemplative science` 对齐工作与其范式对话 | 待议 |
 | Franco Moretti | `../scholars/moretti-franco.md` | 远读/Literary Lab(开放 pamphlet) | 可并入 MVP-001 | 藏书 distant-reading 趋势图 | 待议 |
 | Matthew Salganik | `../scholars/salganik-matthew.md` | 计算社科开放方法(bitbybit/sicss) | 「LLM 作为社科被试」小实验 | 复用其框架做阅读迹线实验 | 待议 |
+| **Wendy Hui Kyong Chun** | `../scholars/chun-wendy.md` | LLM×批判理论(2026 CDH 讲座)/Digital Democracies/hypo-real 气候 | 气候话语×「再现的贫乏」小分析 | 撞其 hypo-real/气候论题请指正 | 待议 |
+| **Anna Tsing** | `../scholars/tsing-anna.md` | Mushroom/Arts of Noticing/多物种人类世 | 大运河走廊多行动者扰动志 | 按其路子记一条水陆走廊 | 待议 |
+| **Arturo Escobar** | `../scholars/escobar-arturo.md` | Pluriverse/autonomous design | 跨文化经济×遗产的地方宇宙观重读 | 用其透镜读非西方材料 | 待议 |
+| **Tania Singer** | `../scholars/singer-tania.md` | ReConnect/ReSource 冥想训练研究 | 东亚修行谱系结构化对照 | 喂其训练类型区分 | 待议 |
+| **Johanna Drucker** | `../scholars/drucker-johanna.md` | Graphesis/批评性 DH | 本仓图谱重画+自反标注 | 用其 Graphesis 读法自审 | 待议 |
+| **Virginia Dignum** | `../scholars/dignum-virginia.md` | 负责任 AI/AI Policy Lab/value-sensitive | 遗产或内容场景价值审计 | 用其原则审中国语境场景 | 待议 |
 
-## 排序逻辑（本轮）
-1. **MVP-001 / Manovich 优先**：语料全本地、方法全公开、成本最低、可发布性最高——是「先做出来再说」的最佳第一件。
-2. **MVP-002 / Behrendt 次之**：新框架正缺非西方案例，本仓走廊是稀缺供给，对话价值对称。
-3. 其余待各自 MVP 成型后启动；Davidson/Salganik 需方法论补课，列后置。
+## 排序逻辑（本轮，2026-10-29 深化）
+用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：
+1. **Wendy Chun（新，本轮头名）**——正面回答「AI 时代人文还能不能做真问题」，且正处 CDH 2026 讲座的枢纽位；气候×hypo-real 命题与本仓 `heaven_climate` 直接咬合。
+2. **Anna Tsing / Arturo Escobar（新）**——「人类世 × 去殖民」双子，几乎覆盖用户全部轴；本仓走廊/跨文化经济是其方法现成落点。
+3. **Tania Singer（新）**——人生修行轴的实证真学者，比专业学位型 Naropa 更可对话。
+4. **Manovich**——MVP-001 已就绪（语料全本地、方法全开源），是「先做出来再说」的最佳第一件。
+5. **Frauke Behrendt / Mimi Sheller**——mobility data justice 新框架正缺非西方案例。
+6. **Johanna Drucker / Virginia Dignum（新）**——分别补 DH 批评理论与责任 AI 两翼。
+7. Oberbichler/C²DH、Norström/SRC、Davidson、Moretti、Salganik 顺次。
