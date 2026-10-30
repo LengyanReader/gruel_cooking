@@ -252,19 +252,55 @@ def speakable(text):
     return bool(re.search(r"\w", text))
 
 
+# ── reading overrides: the synthesis layer only ─────────────────────────────────────
+# The free endpoint refuses <phoneme> SSML (probe: _pron_probe.py -> NoAudioReceived),
+# so a forced reading goes in as ordinary text: replace the risky span with homophones
+# that have ONE reading. Applied to a cue's text before units are glued, so the cache
+# key, the request, and the SentenceBoundary comparison all see the same string; the
+# page and _audio_sentences.json keep displaying the original. List built by pron_audit
+# (pypinyin G2P over every zh cue): each row is a span whose default reading the G2P
+# either demonstrably gets wrong (朝阳公园 in phrase mode -> zhāo) or splits ambiguously
+# (爱乐 -> ài lè). Replacement preserves syllables, not characters.
+READING_ZH = [
+    ("朝阳公园", "潮阳公园"),      # 朝阳 as a place name is cháo yáng, not zhāo
+    ("朝光游去", "晨光游去"),      # the alga swims toward MORNING light: zhāo, and a
+                                # bare 朝 before 光 reads more safely as 晨
+    ("爱乐", "音乐"),             # 中国爱乐 / 爱乐乐团: yuè, G2P's first reading is lè
+    ("流行乐", "流行音乐"),        # when 乐 ends a breath it tends to flatten to lè
+    ("供应链", "公应链"),          # 供 is gōng here, not gòng
+    ("供人改编", "公人改编"),      # same verb 供 (= provide) in "供人改编的资源"
+    ("和歌", "贺歌"),             # the Japanese form is hè gē, not hé
+    ("千鶴", "千鹤"),             # the variant 鶴 can be dropped by the reader
+    ("硤合", "峡合"),             # rare 硤 stands for 峡 in this name
+    ("社媒帖", "社媒贴"),          # a social-media post is tiē, 帖 alone flirts with tiě
+]
+
+
+def reading(text):
+    """Cue text as the page shows it, with the risky spans swapped for their forced
+    readings. Length may change (音乐 for 乐): the boundary check in cue_starts falls
+    back to proportional placement, and the cache key is hash(text) either way."""
+    for old, new in READING_ZH:
+        if old in text:
+            text = text.replace(old, new)
+    return text
+
+
 def units_of(items):
     """Consecutive cues of the same element, glued into one request. Splitting stays on
-    cue borders, so the manifest's (blk, sub) addressing is untouched."""
+    cue borders, so the manifest's (blk, sub) addressing is untouched. Cue text enters at
+    the reading layer: an en cue never matches a zh span, so one path serves both."""
     out = []
     for it in items:
-        if out and out[-1]["blk"] == it["blk"] and out[-1]["chars"] + len(it["text"]) <= UNIT_MAX:
+        text = reading(it["text"])
+        if out and out[-1]["blk"] == it["blk"] and out[-1]["chars"] + len(text) <= UNIT_MAX:
             u = out[-1]
         else:
             u = {"blk": it["blk"], "subs": [], "parts": [], "chars": 0}
             out.append(u)
         u["subs"].append(it["sub"])
-        u["parts"].append(it["text"])
-        u["chars"] += len(it["text"])
+        u["parts"].append(text)
+        u["chars"] += len(text)
     for u in out:
         u["text"] = " ".join(u["parts"])
     return out
