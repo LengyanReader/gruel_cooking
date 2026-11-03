@@ -1,0 +1,85 @@
+{
+  "version": "1.5.0",
+  "created": "2026-10-29T17:00:00+08:00",
+  "task": {
+    "text": "reseArch_X 科研机会与学者评估",
+    "domain": "digital-humanities",
+    "goal": "基于 harness-factory 纪律，深入开展 reseArch_X 的科研机会与学者评估工作，确保真相优先与来源可溯。",
+    "notes": null
+  },
+  "features": {
+    "horizon": "long",
+    "verifiability": "high",
+    "stakes": "medium",
+    "grounding": "deep",
+    "artifact": "dataset",
+    "tool_surface": "research",
+    "collaboration": "solo",
+    "domain": "digital-humanities",
+    "source": "llm",
+    "notes": []
+  },
+  "capabilities": [
+    "baseline-discipline",
+    "traceable-sources",
+    "ontology-as-contract",
+    "entity-resolution",
+    "expression-design"
+  ],
+  "modules": [
+    {
+      "module_id": "M0",
+      "title_en": "Meta-principles",
+      "title_zh": "元原则",
+      "rule_en": "Truth and traceability outrank speed; automate only observe/record/rank",
+      "enabled": true,
+      "params": {},
+      "reasons": ["always: load-bearing invariants (M0)", "capability: baseline-discipline"]
+    },
+    {
+      "module_id": "M1",
+      "title_en": "Context engineering",
+      "title_zh": "上下文工程",
+      "rule_en": "Context is a finite, scarce resource - curate, don't dump",
+      "enabled": true,
+      "params": {"context_policy": "index-first; minimal high-signal set"},
+      "reasons": ["always: context (M0.6)", "capability: baseline-discipline"]
+    },
+    {
+      "module_id": "M3",
+      "title_en": "Verification & gates",
+      "title_zh": "验证与门禁",
+      "rule_en": "Define done before work; verify the verifier; hard vs soft gates",
+      "enabled": true,
+      "params": {"gate_strictness": "strict"},
+      "reasons": ["always: verify before done (M0.3)", "capability: baseline-discipline"]
+    },
+    {
+      "module_id": "M4",
+      "title_en": "Provenance & integrity",
+      "title_zh": "来源与完整性",
+      "rule_en": "Every fact traceable to a primary source; uncertain means uncertain",
+      "enabled": true,
+      "params": {"provenance": "required"},
+      "reasons": ["capability: traceable-sources, ontology-as-contract, entity-resolution, expression-design"]
+    },
+    {
+      "module_id": "M6",
+      "title_en": "Tools & skills",
+      "title_zh": "工具与技能",
+      "rule_en": "Minimal toolset; biased errors; skills load progressively",
+      "enabled": true,
+      "params": {"tool_surface": "research"},
+      "reasons": ["capability: ontology-as-contract, entity-resolution"]
+    }
+  ],
+  "files": [
+    "AGENTS.md",
+    "tasks/PLAN.md",
+    "tasks/PROGRESS.md",
+    ".harness/pointer.json",
+    ".harness/capabilities.local.md",
+    ".harness/PROVENANCE.md",
+    ".harness/manifest.json"
+  ]
+}
