@@ -9,7 +9,7 @@ homepage: https://seis.ucla.edu/faculty/johanna-drucker/
 qid:                 # 诚实留空
 current_work:
   - 《**Graphesis: Visual Forms of Knowledge Production**》(Harvard UP 2014) 持续被引（scholar 列 2025 条目 129 引）；《Digital Humanities Coursebook》二版（✔ seis.ucla / scholar.google / wikipedia）
-  - 以艺术家书、排版史、实验诗为底，做「**批评性/理论性**数字人文」——反「数据即客观」
+  - 以艺术家书、排版史、实验诗为底，做「**批评性/理论性**数字人文」——反「数据即客观」（✔ 沿本档已溯源条目）
 trends_analysis: 档案可溯锚点仍是「批评性 DH」的持续教学化与影响扩散——《Digital Humanities Coursebook》出至二版、Graphesis 引用持续走高（scholar 2025 条目 129 引）；判读：无新纲领迹象，其图形知识论正以教材与引用网络缓慢增值，近 6 个月新事件未入档（✔ 2026-10-29，沿本档 current_work）
 why_open: 一生跨艺术×学术×工具设计；其「graphesis」把「用图形生产知识」做成可教可辩的公共框架（✔）
 what_real: 「infographic vs capricorn」式反讽——数据可视化不是透明呈现而是**论证**；DH 该有理论而非只谈工具

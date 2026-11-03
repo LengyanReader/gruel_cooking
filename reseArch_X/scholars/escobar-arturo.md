@@ -9,7 +9,7 @@ homepage: (UNC)
 qid:                 # 诚实留空
 current_work:
   - 《**Designs for the Pluriverse: Radical Interdependence, Autonomy, and the Making of Worlds**》(Duke UP 2018/2020, 被引~7281)——把「设计」重导向自主性、草根民主与生态完整（✔ degruyter/jstor/projects.au.dk, 2026-10-29）
-  - 「autonomous design」「pluriverse」纲领；与后发展、生态运动深度结合
+  - 「autonomous design」「pluriverse」纲领；与后发展、生态运动深度结合（✔ 沿本档已溯源条目）
 trends_analysis: 本档可溯锚点止于 pluriverse/autonomous design 纲领（Designs for the Pluriverse, 2018/2020, 被引~7281）——纲领仍在被大规模引用与扩散，但学者本人近 6 个月的具体动向本档未命中，不臆测（✔ 2026-10-29 纲领层；近况 ◇ 待回源）
 why_open: 一生跨人类学×发展研究×设计×社会运动；「pluriverse（多个世界共存的世界）」本身就是把「谁的知识算数」彻底敞开（✔）
 what_real: 可持续发展若脱离地方宇宙观与草根自治，仍是全球秩序的自我复制——需要「多个世界」的设计

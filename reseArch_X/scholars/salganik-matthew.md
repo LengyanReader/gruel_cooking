@@ -9,7 +9,7 @@ homepage: bitbybitbook.com
 qid: Q56273186
 current_work:
   - 《Bit by Bit: Social Research in the Digital Age》开放评审版持续更新；sicss.io 方法课件公开复用  # ✔ 2026-10-28
-  - 普林斯顿 Computational Social Science 方向（含重心 Data + Public Life 议程）持续招生
+  - 普林斯顿 Computational Social Science 方向（含重心 Data + Public Life 议程）持续招生（◇ 当期通道待核）
 trends_analysis: 档案可溯轨迹是方法学的持续维护与议程延展——《Bit by Bit》开放评审版持续更新、sicss.io 课件公开复用，重心可见移向 Princeton「Data + Public Life」议程并持续招生；判读：路线连续无转向，其开放性在制度（书/课件/通道）而非单点事件（✔ 2026-10-28，沿本档 current_work）
 why_open: 《Bit by Bit: Social Research in the Digital Age》以**开放评审版**发布、方法课件（sicss.io）公开复用——把计算社科的入门墙主动拆掉（✔ 见 academic_research/scholars.md A2）
 what_real: 用数字迹数据做社会科学，但对「数据即真理」保持方法论警觉
