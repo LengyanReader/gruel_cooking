@@ -11,6 +11,7 @@ current_work:
   - 《**The Mushroom at the End of the World: On the Possibility of Life in Capitalist Ruins**》(2015, 累积被引~6886/研究项 49)——松茸跨芬兰/日本/俄勒冈的「扰动世界」方法（✔ researchgate / uchicago journals, 2026-10-29）
   - "Arts of Living on a Damaged Planet"（与生态科学家、影像、诗歌协作的跨媒介项目）
   - 「Contamination Lab」等以她为纲的跨学科教学/研究在扩散（✔ 2026-10 快照）
+trends_analysis: 重心不在个人新著而在共同体扩散——Mushroom（2015，累积被引~6886）之后，可见轨迹是「Arts of Living on a Damaged Planet」跨媒介协作与以她为纲的 Contamination Lab 等跨学科教学/研究在扩散（2026-10 快照）：其方法重集体生产，问学宜以「加入项目」而非「注册」入（✔ 2026-10-29，沿本档 current_work）
 why_open: 与生态学家、艺术家、诗人**共同生产**知识（"arts of noticing"），学科边界对她近乎不存在——这是「眼界开放」的最高样本之一（✔）
 what_real: 在受创的星球上「如何一起活着」——需要跨物种、跨学科的「注意力的艺术」
 mode: 受教/合作（其集体式、跨媒介方法天然吸纳外部合作者）

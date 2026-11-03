@@ -11,6 +11,7 @@ current_work:
   - 主持 Umeå **AI Policy Lab** + Social & Ethical AI 组；价值敏感（value-sensitive）AI 研究（✔ aipolicylab.se / kaw.wallenberg.org）
   - 《Responsible Artificial Intelligence》(Springer)；AI4People《伦理框架：Good AI Society》核心作者之一（✔ scholar.google）
   - 瑞典 KAW 计划「Leading the way for ethical AI」主角（✔ 2024-08 umu.se）
+trends_analysis: 轨迹是「从写原则到建建制」——AI4People 伦理框架与 Springer 专著立论在前，当期落点为主持 Umeå AI Policy Lab + Social & Ethical AI 组并任 KAW「Leading the way for ethical AI」主角：动向是把价值敏感 AI 做成政策实验室的运行件而非文本倡议（✔ 2026-10-29，沿本档 current_work）
 why_open: 横跨计算机科学×伦理×政策，且**把伦理做进工程**而非事后贴标签；公共政策参与度高（欧盟 HLEG 背景）（✔）
 what_real: AI 不是中性工具——开发与使用阶段就应内嵌价值与责任；「好社会」需要可操作的 AI 伦理原则
 mode: 合作（政策×技术交叉，外部实证研究易接入）

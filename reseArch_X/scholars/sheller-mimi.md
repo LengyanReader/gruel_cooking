@@ -11,6 +11,7 @@ current_work:
   - 「**Mobility Data Justice**」(Mobilities 19(1):151-169, 2024, 与 Frauke Behrendt 合著, 被引 ~85)——把 mobility justice 与 data justice 合成框架，正对 AI 时代移动数据（✔ research.tue.nl / scholar.google, 2026-10-29）
   - 「Mobility Data Justice in the Age of AI」主题报告；Global Lab 播客谈 cascading climate risks + justice（✔ youtube/kth + global-lab.wpi.edu, 2026-10-29）
   - rebalance 项目：低碳转型 + 公平（十五年积累）（✔ rebalancemobility.eu）
+trends_analysis: 正把 2024 年与 Behrendt 合立的 mobility data justice 推进为「AI 时代」专题（「Mobility Data Justice in the Age of AI」主题报告），同时经 Global Lab 播客谈 cascading climate risks + justice、rebalance 项目延续低碳转型×公平——mobilities×数据正义×气候风险三线并进（✔ 2026-10-29，沿本档 current_work）
 why_open: 「开放」在其**建制**里——Global School 把气候/流动/可持续/正义捆进同一跨学院体；且其数据正义框架本质是在问「谁的数据、谁说了算」
 what_real: 移动不只是位移，而是权力、殖民、提取与生态问题；AI 数据化正把新的不平等写进移动系统
 mvp: 以其 mobility data justice 框架，审计**本仓 `living_heritage` 大运河/丝绸之路走廊**的一处移动数据（谁被记录、谁被抹去、谁从中获益），做成一份小案例 + 图

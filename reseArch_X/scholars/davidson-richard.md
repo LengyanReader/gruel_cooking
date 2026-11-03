@@ -10,6 +10,7 @@ qid: Q2149302
 current_work:
   - Center for Healthy Minds 长期冥想-情绪可塑性实证（lifelong 训练 × 神经影像范式 ongoing）  # ✔ 2026-10-28
   - 「幸福可训练性」作可证伪命题的持续验证（✔ academic_research/scholars.md D2）
+trends_analysis: 档案可溯轨迹高度连续而非转向——Center for Healthy Minds 的冥想-情绪可塑性长期实证 ongoing，「幸福感可训练」仍作为可证伪命题持续推进；判读：重心在把命题推向终身（lifelong）纵向实证，近 6 个月新事件未入档（✔ 2026-10-28，沿本档 current_work；新事件待补 ◇）
 why_open: 把「幸福感可被训练」做成可证伪的神经科学命题并建中心长期实证；对冥想/沉思传统持研究而非猎奇态度（✔ 见 academic_research/scholars.md D2）。纠偏留档：媒体常见「Ricardo」系误记，正名 Richard J. Davidson
 what_real: 情绪与沉思是可训练的心智能力——为「人生修行/良好生活」轴提供实证底座
 mode: 受教

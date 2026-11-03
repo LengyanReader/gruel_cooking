@@ -10,6 +10,7 @@ qid: Q971600
 current_work:
   - Stanford Literary Lab pamphlet 系列持续开放（free/open access）  # ✔ 2026-10-28
   - 「distant reading」作可复用工具而非门派秘传的方法主张持续扩散
+trends_analysis: 档案可溯轨迹是方法公共品化——Stanford Literary Lab pamphlet 系列持续 free/open access，「distant reading 作可复用工具」的主张持续扩散；判读：无个人新转向迹象，其入口价值在方法与实验室公共产出而非新著（✔ 2026-10-28，沿本档 current_work；当期招生待核 ◇）
 why_open: 与 Jockers 创办 Stanford Literary Lab——产出以 free/open pamphlet 系列公开，方法（distant reading）刻意做成可复用工具而非门派秘传（✔ 见 academic_research/scholars.md D1）
 what_real: 「远读」：不读单一文本，而让文学习惯在规模化数据上显形——对「微言大义」式精读是一种建设性的对立 Complement
 mode: 受教/合作

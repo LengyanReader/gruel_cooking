@@ -10,6 +10,7 @@ qid:            # 诚实留空（前批无匹配 en-wiki 实体，不臆造）
 current_work:
   - SRC 超学科知识共产原则的持续应用与更新；《Principles for knowledge co-production in sustainability research》(Nature Sustainability 2020, 被引~2197)为其纲领锚点  # ✔ 2026-10-28
   - SRC 当期招聘/博士通道滚动 open（见 `../opportunities/phd/RX-phd-stockholm-resilience-202610.md`）
+trends_analysis: 轨迹是从「写原则」进入「原则的应用与更新」——Nature Sustainability 2020 共产原则（被引~2197）之后，当期是 SRC 超学科知识共产原则的持续应用/更新，且 SRC 博士通道滚动 open：对话窗口实时开着，宜以 co-production 草图接话而非等 vacancy（✔ 2026-10-28，沿本档 current_work）
 why_open: 其代表作即《Principles for knowledge co-production in sustainability research》(Nature Sustainability 2020, 被引 ~2197)——把「谁算知识的共同生产者」写成一整套可操作原则；「开放」是其研究对象本身，不是附带气质（✔ 见 academic_research/scholars.md E1）
 what_real: 学术系统与 societal 知识的共产（co-production）——可持续议题必须由研究者与在地行动者共同定义问题
 mode: 合作

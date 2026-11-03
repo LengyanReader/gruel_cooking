@@ -11,6 +11,7 @@ current_work:
   - C²DH「Artificial intelligence」研究主题线的核心成员（✔ uni.lu/c2dh-en/articles-topic/artificial-intelligence）
   - 组织/参与 CfP「**AI through History, History through AI**」研讨会（2026-06-15/16，University of Luxembourg）（✔ uni.lu/c2dh-en/news）
   - 具体在研课题（模型/数据集）未逐条命中 → ◇，待落其个人主页核实
+trends_analysis: 2026-01 新设 AI 讲席后正处「立议程」窗口——身为 C²DH「Artificial intelligence」主题线核心成员，正组织 2026-06-15/16「AI through History, History through AI」研讨会，以公开 CfP 召集社群；具体在研课题（模型/数据集）本档未逐条溯源（✔ 2026-10-29 机构/CfP 层；课题层 ◇ 待落其个人主页）
 why_open: C²DH 本身以「public dissemination + digital methods」为纲，新设 AI 讲席即在主动把 AI 引进人文学科议程；公开 CfP 是低门槛对话场
 what_real: 不是「用 AI 跑历史数据」，而是双向——AI 通过历史、历史通过 AI（研讨会题名即其问题观）（✔ 命中原文题名）
 mvp: 为其 2026-06「AI through History」这类公开场子备一件作品——把本仓 `Language Stacking`/`Reading_IA` 的跨文明语料做成一个「历史视角下的 AI 可见性」小分析，投 workshop / 或直接作为接话材料

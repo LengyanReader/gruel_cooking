@@ -11,6 +11,7 @@ current_work:
   - 「**Mobility Data Justice**」(Mobilities 2024, 与 M. Sheller 合著, 被引 ~85)—— mobility justice × data justice 的合成框架（✔ research.tue.nl / ideas.repec.org, 2026-10-29）
   - 「Data, AI and governance in MaaS – Leading to sustainable mobility?」——AI/数据治理与出行即服务（✔ scholar.google）
   - 「Alternative Mobilities in the Age of AI」（与 Carly Gilbert-Patricks 等，进行中）（✔ linkedin 2026-10 快照）
+trends_analysis: 由本档已溯源三条可见一条清晰轨迹——2024 年与 Sheller 立起 mobility data justice 框架，继而推进「MaaS 的数据/AI 治理」，当下「AI 时代的替代性流动」进行中：动向是把正义框架全面推入 AI 语境，正处需要外部语料检验的成形期（✔ 2026-10-29，沿本档 current_work）
 why_open: 直接研究「数据/AI 治理」与公平的接口，问题本身就问「谁的移动数据、被谁治理」；框架新、仍在成形，外部贡献易被看见
 what_real: 数据化把新的不平等写进移动系统——可持续交通转型若不顾数据正义，会复制既有排除
 mvp: 把她的 mobility data justice 框架**落到一个具体语料**——用本仓 `living_heritage` 走廊的移动数据做一次「谁被记录/谁被抹去」的小审计；或对其 MaaS-AI 治理命题补一个非欧洲案例

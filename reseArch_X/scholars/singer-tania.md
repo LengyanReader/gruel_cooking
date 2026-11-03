@@ -11,6 +11,7 @@ current_work:
   - 「**ReConnect!**」课程，基于其 25+ 年「不同冥想/心理训练对身心效应」研究（✔ taniasinger.de, 2026-10-29）
   - 2025 NYAS《A neuroscience perspective on the plasticity of the social and emotional brain》综述（被引~37）（✔）
   - 大型 **ReSource Project**：九个月纵向冥想心智训练研究；主谈共情耗竭、慈悲训练（✔ Mind & Life podcast 2025-05-15）
+trends_analysis: 轨迹是从院系建制转向独立的训练-研究综合体——离开马普体系后以 ReConnect! 课程承载 25+ 年训练研究，2025 年 NYAS 综述（社会/情绪脑可塑性）表明正做阶段性理论总结；判读：重心在「训练即研究」的纵向实证路线，当前机构与带生通道待核（✔ 2026-10-29，沿本档 current_work；机构层 ◇）
 why_open: 把佛学/沉思传统当作**可训练、可证伪**的心智科学对象，而非猎奇或信仰背书；长期做大规模纵向实证（✔）
 what_real: 社会脑与情绪可被心智训练塑形——「良好生活/人生修行」的实证底座
 mode: 受教（其训练/研究共同体是问学场；是否正式带 PhD 待核 ◇）
