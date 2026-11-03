@@ -17,7 +17,7 @@ verdict: 值得先建立联系——美食/食物研究轴最正统的跨学科�
 sources:
   - https://www.unisg.it/en/course/master-in-world-food-studies/
   - https://www.instagram.com/p/DCmvGKNIAPv/  # PhD cohorts 38/39/40 佐证
-  - https://www.linkedin.com/posts/university-of-gastronomic-sciences-pollenzo_...
+  - https://www.linkedin.com/posts/university-of-gastronomic-sciences-pollenzo_...  # PhD cohorts 38/39/40 佐证（URL 截断待补全 ◇，M4.16 悬空指针登记）
 ```
 
 ## 正文

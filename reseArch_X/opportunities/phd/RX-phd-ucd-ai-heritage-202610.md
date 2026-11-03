@@ -23,4 +23,4 @@ sources:
 
 - **状态说明**：命中的是 2026 招生周期（deadline 2026-04-30 已过）。职位真实存在 ✔，但当前不可投 → 整条记 ◐，待 UCD 挂出新周期升 ✔。
 - **交叉杠杆**：AI×Heritage Futures 与本仓 `living_heritage`、`docs/culture_review` 直接同题。
-- 同期 UCD 另有 **PhD Quantitative and Computational Social Science**（SPIRE 中心，Honohan Doctoral Scholarship 通道）——可作同校备选。
+- 同期 UCD 另有 **PhD Quantitative and Computational Social Science**（SPIRE 中心，Honohan Doctoral Scholarship 通道）——可作同校备选（◇ 当期是否开设待回源）。

@@ -24,4 +24,4 @@ sources:
 - **精准命中**：官方明文「Doctoral Candidates will be seconded at heritage and tourism organisations for three months」——遗产×旅游的双轴在同一个 MSCA 网络内闭合，全列表独此一家。
 - **资源与稳定性**（r:5）：MSCA 资助为欧盟层全额雇佣，薪级标准化，组级不稳风险低。
 - **可及性**（a:3）：MSCA DN 对候选人有 mobility/研究员资历限制规则，须逐项目核对；竞争面向全欧开放。
-- **同类可蹲**：UNVEIL MSCA DN（文化遗产诊断，12 个全额 PhD 位）；UNCHANGE MSCA DN（2027–2031，15 位/9 beneficiary）；RAISE DN for AI in Science（2026-05-28 开放）——均属「欧盟资助、按批招募」家族，进 watchlist 逐个回源。
+- **同类可蹲**：UNVEIL MSCA DN（文化遗产诊断，12 个全额 PhD 位）；UNCHANGE MSCA DN（2027–2031，15 位/9 beneficiary）；RAISE DN for AI in Science（2026-05-28 开放）——均属「欧盟资助、按批招募」家族（◇ 三项数字均待回源），进 watchlist 逐个回源。
