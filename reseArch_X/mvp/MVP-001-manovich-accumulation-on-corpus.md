@@ -2,7 +2,7 @@
 
 ```yaml
 id: MVP-001
-status: planned        # planned → built
+status: built-v0      # planned → built-v0（2026-11-03；v1=Gutenberg 外部基线复测）
 target_scholar: ../scholars/manovich-lev.md
 hook_work: 「When AI becomes culture」(2025) + 《Artificial Aesthetics》(free) + 「Visual AI and Media Accumulation」
 cost: 中（纯本地数据，无需新采集；1–2 周可做 v0）
@@ -32,3 +32,8 @@ Manovich 主张：生成 AI 把文化数据库扩到数十亿图/万亿文，却
 ## 风险 / 诚实
 - 本仓数据规模未必足以支撑强结论 → v0 只求「一个有意思的张力」，不求定论（避免过度断言）。
 - 方法须忠于 Manovich 原文（引《Artificial Aesthetics》具体章，勿转述成他的立场）。
+
+## v0 交付（2026-11-03）
+- [mvp001_analysis.py](mvp001_analysis.py)（纯标准库，秒级可复现）→ [mvp001_data.json](mvp001_data.json) + [mvp001_fig1.svg](mvp001_fig1.svg)；[MVP-001-notebook.md](MVP-001-notebook.md)（仪器声明/发现/中英短文/诚实边界/Manovich 锚点）。
+- v0 结果：登记层构成偏西（78%），但 bot-gating 反向集中（西组 29.7% vs 其他组 11.5%；en 36%，zh/ja/de/ar/fa/ru/afr 均 0%）；Wikidata 解析率两组持平（78.9%/80.8%）——「AI 使文化不可见」在发现源层呈**反转迹象**（张力，非定论）。
+- 与原设计的差异（诚实记录）：规格原设想以 `Reading_IA/library` 为主语料——实查仅书卡 5 张，撑不起分布计算；主语料改用 `discovery_atlas` 登记层（n=237，字段恰好齐备），library 降为语境对照（见 notebook §五.5）。Gutenberg 对照留 v1。

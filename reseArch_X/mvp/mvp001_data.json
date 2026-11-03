@@ -1,0 +1,364 @@
+{
+  "generated_at": "2026-11-03",
+  "script": "reseArch_X/mvp/mvp001_analysis.py",
+  "instrument": "exact enumeration over versioned SSOT; descriptive only (no sampling inference)",
+  "inputs": {
+    "specimen_a": [
+      "art.json",
+      "books.json",
+      "film.json",
+      "music.json",
+      "science.json"
+    ],
+    "specimen_b_counts": {
+      "library_cards": 5,
+      "authors": 6,
+      "relations_files": 3
+    }
+  },
+  "totals": {
+    "n_sources": 237,
+    "by_domain": {
+      "art": 42,
+      "books": 106,
+      "film": 33,
+      "music": 41,
+      "science": 15
+    },
+    "by_layer": {
+      "discovery": 86,
+      "infrastructure": 26,
+      "criticism": 67,
+      "publishing": 36,
+      "access": 22
+    },
+    "by_status": {
+      "bot-gated": 61,
+      "active": 166,
+      "pending": 8,
+      "contested": 2
+    },
+    "by_circle": {
+      "global": 50,
+      "en": 107,
+      "fr": 12,
+      "es": 7,
+      "it": 1,
+      "ko": 4,
+      "pl": 1,
+      "hi": 2,
+      "zh": 14,
+      "ja": 10,
+      "ar": 3,
+      "fa": 3,
+      "de": 6,
+      "he": 2,
+      "afr": 4,
+      "zh-Hant": 3,
+      "ru": 4,
+      "tr": 2,
+      "sea": 1,
+      "nl": 1
+    }
+  },
+  "domain_x_layer": {
+    "books": {
+      "discovery": 26,
+      "criticism": 29,
+      "publishing": 23,
+      "infrastructure": 13,
+      "access": 15
+    },
+    "art": {
+      "discovery": 27,
+      "criticism": 7,
+      "publishing": 3,
+      "infrastructure": 4,
+      "access": 1
+    },
+    "music": {
+      "discovery": 15,
+      "criticism": 11,
+      "publishing": 8,
+      "infrastructure": 2,
+      "access": 5
+    },
+    "film": {
+      "discovery": 12,
+      "criticism": 15,
+      "publishing": 2,
+      "infrastructure": 3,
+      "access": 1
+    },
+    "science": {
+      "discovery": 6,
+      "criticism": 5,
+      "publishing": 0,
+      "infrastructure": 4,
+      "access": 0
+    }
+  },
+  "global_langs_note": {
+    "en_listed": 33,
+    "multi": 17
+  },
+  "group_contrast": {
+    "group_def": {
+      "west_lang": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "global",
+        "it",
+        "nl",
+        "pl"
+      ],
+      "other": "其余全部语言圈(含 he 2 条——文明归属有争议, 如实归入其他组)",
+      "note": "分析性切分(v0), 非语料自带; global 圈的语言构成见 global_langs_note"
+    },
+    "west_lang": {
+      "n": 185,
+      "share": 0.7806,
+      "bot_gated": 55,
+      "active": 122,
+      "qid": 146,
+      "bot_gated_rate": 0.2973,
+      "qid_rate": 0.7892,
+      "active_rate": 0.6595
+    },
+    "other": {
+      "n": 52,
+      "share": 0.2194,
+      "bot_gated": 6,
+      "active": 44,
+      "qid": 42,
+      "bot_gated_rate": 0.1154,
+      "qid_rate": 0.8077,
+      "active_rate": 0.8462
+    }
+  },
+  "per_circle": {
+    "en": {
+      "n": 107,
+      "share": 0.4515,
+      "bot_gated": 39,
+      "active": 68,
+      "qid": 82,
+      "bot_gated_rate": 0.3645,
+      "qid_rate": 0.7664,
+      "active_rate": 0.6355,
+      "in_fig": true
+    },
+    "global": {
+      "n": 50,
+      "share": 0.211,
+      "bot_gated": 11,
+      "active": 35,
+      "qid": 39,
+      "bot_gated_rate": 0.22,
+      "qid_rate": 0.78,
+      "active_rate": 0.7,
+      "in_fig": true
+    },
+    "zh": {
+      "n": 14,
+      "share": 0.0591,
+      "bot_gated": 0,
+      "active": 13,
+      "qid": 11,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 0.7857,
+      "active_rate": 0.9286,
+      "in_fig": true
+    },
+    "fr": {
+      "n": 12,
+      "share": 0.0506,
+      "bot_gated": 2,
+      "active": 8,
+      "qid": 12,
+      "bot_gated_rate": 0.1667,
+      "qid_rate": 1.0,
+      "active_rate": 0.6667,
+      "in_fig": true
+    },
+    "ja": {
+      "n": 10,
+      "share": 0.0422,
+      "bot_gated": 0,
+      "active": 9,
+      "qid": 8,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 0.8,
+      "active_rate": 0.9,
+      "in_fig": true
+    },
+    "es": {
+      "n": 7,
+      "share": 0.0295,
+      "bot_gated": 3,
+      "active": 3,
+      "qid": 5,
+      "bot_gated_rate": 0.4286,
+      "qid_rate": 0.7143,
+      "active_rate": 0.4286,
+      "in_fig": true
+    },
+    "de": {
+      "n": 6,
+      "share": 0.0253,
+      "bot_gated": 0,
+      "active": 6,
+      "qid": 6,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 1.0,
+      "in_fig": true
+    },
+    "ko": {
+      "n": 4,
+      "share": 0.0169,
+      "bot_gated": 1,
+      "active": 3,
+      "qid": 2,
+      "bot_gated_rate": 0.25,
+      "qid_rate": 0.5,
+      "active_rate": 0.75,
+      "in_fig": true
+    },
+    "afr": {
+      "n": 4,
+      "share": 0.0169,
+      "bot_gated": 0,
+      "active": 4,
+      "qid": 4,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 1.0,
+      "in_fig": true
+    },
+    "ru": {
+      "n": 4,
+      "share": 0.0169,
+      "bot_gated": 0,
+      "active": 4,
+      "qid": 4,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 1.0,
+      "in_fig": true
+    },
+    "ar": {
+      "n": 3,
+      "share": 0.0127,
+      "bot_gated": 0,
+      "active": 3,
+      "qid": 3,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 1.0,
+      "in_fig": true
+    },
+    "fa": {
+      "n": 3,
+      "share": 0.0127,
+      "bot_gated": 0,
+      "active": 3,
+      "qid": 1,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 0.3333,
+      "active_rate": 1.0,
+      "in_fig": true
+    },
+    "zh-Hant": {
+      "n": 3,
+      "share": 0.0127,
+      "bot_gated": 2,
+      "active": 1,
+      "qid": 3,
+      "bot_gated_rate": 0.6667,
+      "qid_rate": 1.0,
+      "active_rate": 0.3333,
+      "in_fig": true
+    },
+    "hi": {
+      "n": 2,
+      "share": 0.0084,
+      "bot_gated": 0,
+      "active": 2,
+      "qid": 1,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 0.5,
+      "active_rate": 1.0,
+      "in_fig": false
+    },
+    "he": {
+      "n": 2,
+      "share": 0.0084,
+      "bot_gated": 1,
+      "active": 1,
+      "qid": 2,
+      "bot_gated_rate": 0.5,
+      "qid_rate": 1.0,
+      "active_rate": 0.5,
+      "in_fig": false
+    },
+    "tr": {
+      "n": 2,
+      "share": 0.0084,
+      "bot_gated": 1,
+      "active": 1,
+      "qid": 2,
+      "bot_gated_rate": 0.5,
+      "qid_rate": 1.0,
+      "active_rate": 0.5,
+      "in_fig": false
+    },
+    "it": {
+      "n": 1,
+      "share": 0.0042,
+      "bot_gated": 0,
+      "active": 0,
+      "qid": 1,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 0.0,
+      "in_fig": false
+    },
+    "pl": {
+      "n": 1,
+      "share": 0.0042,
+      "bot_gated": 0,
+      "active": 1,
+      "qid": 0,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 0.0,
+      "active_rate": 1.0,
+      "in_fig": false
+    },
+    "sea": {
+      "n": 1,
+      "share": 0.0042,
+      "bot_gated": 1,
+      "active": 0,
+      "qid": 1,
+      "bot_gated_rate": 1.0,
+      "qid_rate": 1.0,
+      "active_rate": 0.0,
+      "in_fig": false
+    },
+    "nl": {
+      "n": 1,
+      "share": 0.0042,
+      "bot_gated": 0,
+      "active": 1,
+      "qid": 1,
+      "bot_gated_rate": 0.0,
+      "qid_rate": 1.0,
+      "active_rate": 1.0,
+      "in_fig": false
+    }
+  },
+  "fig_min_n": 3
+}
