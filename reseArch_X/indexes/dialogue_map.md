@@ -21,6 +21,18 @@
 | **Tania Singer** | `../scholars/singer-tania.md` | ReConnect/ReSource 冥想训练研究 | 东亚修行谱系结构化对照 | 喂其训练类型区分 | 待议 |
 | **Johanna Drucker** | `../scholars/drucker-johanna.md` | Graphesis/批评性 DH | 本仓图谱重画+自反标注 | 用其 Graphesis 读法自审 | 待议 |
 | **Virginia Dignum** | `../scholars/dignum-virginia.md` | 负责任 AI/AI Policy Lab/value-sensitive | 遗产或内容场景价值审计 | 用其原则审中国语境场景 | 待议 |
+| Yuk Hui 许煜 | `../scholars/hui-yuk.md` | Vici「Technodiversity: A New Lens on AI」(2026)/Kant Machine(2026)/cosmotechnics（✔ 2026-11-03） | 跨文明技术宇宙观小案例（economics_cross_culture×living_heritage） | 用其 technodiversity 读中日材料，请判张力 | 待议 |
+| Shannon Mattern | `../scholars/mattern-shannon.md` | 「AI smog」索引批判(2026-03)/媒介基础设施史（✔ 2026-11-03） | MVP-001 bot-gating 数据注短文 | 附 237 源关门数据请指正 | 待议 |
+| Kate Crawford | `../scholars/crawford-kate.md` | Calculating Empires(银狮 2025)/Nature 情绪 AI 监管（✔ 2026-11-03） | atlas infrastructure 层×遗产可见性审计 | 物质性透镜打 infrastructure 层请指正 | 待议 |
+| Melanie Walsh | `../scholars/walsh-melanie.md` | FAccT 2026 AI 儿童故事审计/开放教材（✔ 2026-11-03） | Reading_IA 跨文明分析 notebook（MVP-001 数据延伸） | 其审计法换成文明圈审计请判 | 待议 |
+| Sarah Kenderdine | `../scholars/kenderdine-sarah.md` | Museum of the Future(2025–26)/Digital Heritage 2025 主席/深图（✔ 2026-11-03） | 大运河走廊深图原型 | 深图「场」读法成不成立请判 | 待议 |
+| Jane Winters | `../scholars/winters-jane.md` | 新书 Exploring Digital Cultural Heritage(2026)/存档网（✔ 2026-11-03） | culture_review 十月号来源存档化审计 | 活文献怎么进存档网议程请判 | 待议 |
+| Peter K. Bol 包弼德 | `../scholars/bol-peter.md` | CBDB 657k+ 开放库/2025 AI×DH 系列（✔ 2026-11-03） | 科举-商网小问（CBDB×economics_cross_culture） | 库的延伸用法请判是否成立 | 待议 |
+| 王晓光 | `../scholars/wang-xiaoguang.md` | 敦煌智慧数据/文化遗产智能计算教育部实验室/长江文明时光机（✔◐ 2026-11-03） | 走廊智慧数据原型（living_heritage 语义化） | 语义化方向对不对请判 | 待议 |
+| Krishnendu Ray | `../scholars/ray-krishnendu.md` | taste 等级×移民(2016 纲领)/2025-10 公共访谈（✔ 2026-11-03） | 中餐 taste 等级小审计 | 跨文明美食张力请判 | 待议 |
+| Stefan Gössling | `../scholars/gossling-stefan.md` | 旅游碳 8.8%/decarbonisation impasse（✔◐ 2026-11-03） | 走廊访客碳结构审计 | 「遗产旅游低碳」话术张力请指正 | 待议 |
+| Willoughby Britton | `../scholars/britton-willoughby.md` | 冥想相关困难/Cheetah House(2025-01 特写)（✔ 2026-11-03） | 传统风险叙事×现代实证结构化对照 | 障碍/魔境对 adverse-effects 请判 | 待议 |
+| Quinn Dombrowski | `../scholars/dombrowski-quinn.md` | Multilingual DH/2025 主旨巡讲（✔ 2026-11-03） | 本仓双语实践自审短文 | 隐性英语中心 X 处请判 | 待议 |
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：

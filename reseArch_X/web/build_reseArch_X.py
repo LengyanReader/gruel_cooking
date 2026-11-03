@@ -283,6 +283,18 @@ SCHOLAR_AXES = {
     "singer-tania":       ["cultiv", "goodlife"],
     "drucker-johanna":    ["dh", "herit"],
     "dignum-virginia":    ["ai_ds", "ai_hum"],
+    "hui-yuk":            ["ai_hum", "sus"],
+    "mattern-shannon":    ["dh", "ai_hum"],
+    "crawford-kate":      ["ai_hum", "ai_ds", "sus"],
+    "walsh-melanie":      ["dh", "ai_ds", "ai_hum"],
+    "kenderdine-sarah":   ["herit", "dh", "tour"],
+    "winters-jane":       ["dh", "herit"],
+    "bol-peter":          ["dh", "herit", "ai_ds"],
+    "wang-xiaoguang":     ["herit", "dh", "ai_ds"],
+    "ray-krishnendu":     ["food"],
+    "gossling-stefan":    ["tour", "sus"],
+    "britton-willoughby": ["cultiv", "goodlife"],
+    "dombrowski-quinn":   ["dh", "ai_hum"],
 }
 
 OPP_AXES = {

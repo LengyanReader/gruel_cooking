@@ -3,7 +3,7 @@
 ```yaml
 id: RX-phd-ucl-sas-202610
 type: phd
-institution: UCL · Institute of Advanced Studies (School of Advanced Study)
+institution: School of Advanced Study, University of London（档案旧称「UCL · Institute of Advanced Studies」混淆建制——SAS 属 University of London，非 UCL；2026-11-03 依 sas.ac.uk 及 winters-jane.md 订正加注）  # ✔ sas.ac.uk, 2026-11-03
 country: UK
 program: PhD Digital Humanities（by research / publication / practice 三通道）
 pi: 导师制（入学前须锁定导师意向）
