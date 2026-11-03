@@ -1,0 +1,12 @@
+id,year,event,regime,dispute,q1_framing,q2_reproducible,q3_independent,q4_symmetric_disclosure,q5_found_or_made,ref
+1,2024,"IMO 2024 (AlphaProof, AlphaGeometry 2) — marked by Gowers & Myers, re-checked in Lean",HG,0,+,+,+,+,made,"4,7"
+2,2025,"IMO 2025 — DeepMind route, graded by official coordinators",HG,0,+,±,+,+,made,"4"
+3,2025,"IMO 2025 — self-selected former medallists, no formal checker",CG,1,±,−,−,−,made,"4"
+4,2024,"o3 on FrontierMath — 75.7% on a selected subset, 25.2% full set",MG,1,−,−,−,−,found,"8,9"
+5,2026,"FrontierMath v2 — errors fixed in 42% of the original problems by the benchmark's own builders",MG,0,+,+,+,+,na,"8"
+6,2026,"Unit-distance disproof, digested by nine named verifiers",CG,0,+,+,+,+,made,"1,10,11,12"
+7,2026,"Harvard 'First Proof' — 10 lemmas set, 2 confirmed by the setters; the checking, not the writing, was the bottleneck",CG,0,±,±,+,−,made,"23"
+8,2025,"AlphaEvolve — 48 multiplications vs Strassen's 49; fifty open problems",MG,0,+,±,±,±,made,"5"
+9,2026,"FrontierMath Erdős — 68 open problems in Lean; best 3%, all others 0",MG,0,+,+,+,+,na,"6"
+10,2026,"Navier–Stokes — Lean-checked derivation; admissibility undecided",CG,1,±,−,−,−,made,"2,13,14,15"
+11,2026,"Attribution dispute over the forced/unforced result",na,1,na,na,na,na,na,"3"

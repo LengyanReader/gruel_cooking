@@ -1,5 +1,11 @@
 # Census runbook — how to take the instruments from blank to a registered, gated study
 
+> **WITHDRAWN 撤回 · 2026-09-26.** This runbook is **not** an executable procedure and is **not** part of the Nature Review. The sequence it describes was voided when the census was removed from the manuscript following the audit recorded in [`citation_audit.md`](citation_audit.md); its parent section no longer exists, so the cross-references below are dead.
+>
+> Do not work through the steps as written. The kit is internally consistent but externally falsified: the pilot contradicts the protocol's P1 prediction, `na` is not coded as its own stratum, and the event corpus is publicity-selected. Running the sequence would produce a registered study of a design that has already failed review, and the reliability and power gates below would certify a coding that cannot support the endpoint it is meant to protect.
+>
+> What survives is worth keeping. The coder-agreement requirement, the pre-deposit timestamp rule, and the insistence that `na` be visible rather than absorbed are all correct, and the Review's section 7 proposes the same discipline as future work. Keep this file as a record of the operating procedure as it stood on the date above, and rebuild it from the rewritten protocol if the study is revived. Do not cite anything here from the Review or the Synopsis.
+
 > **Status 状态**: Operating procedure for the census kit. **AI-drafted, unreviewed** (harness §I.6). Adds no design; it sequences the files that already carry the design (`census_protocol.md` = the protocol, `census_prereg.md` = the registry wrapper, `census_coding_template.csv` = the blank schema, `census_coder2_packet.md` = the second-coder workflow, `checks/kappa_csv.py` = the reliability gate, `checks/power_fisher.py` = the sample-size table). Everything below is the author's to run; nothing here is a result.
 
 ---

@@ -1,5 +1,11 @@
 # Second-coder packet — independent reliability coding for the census
 
+> **WITHDRAWN 撤回 · 2026-09-26.** This packet is **not** part of the Nature Review and must not be sent to a coder as written. It is operationalising [`census_protocol.md`](census_protocol.md) §5 and §8, and both parents are withdrawn following the audit recorded in [`citation_audit.md`](citation_audit.md). Specifically, the "decision rule §11.2 and coding cards §11.3" of [`../ai_and_math.md`](../ai_and_math.md) that item 2 of section 2 freezes as authoritative **no longer exist**, so a second coder would be asked to apply a text they cannot read. The same applies to the framing decisions this packet inherits: the `na` regime has no written rule, which is precisely the ambiguity that produced the withdrawn 3/5 denominator.
+>
+> The premise of the packet is nonetheless sound and is the part worth preserving. Inter-coder agreement measures agreement between human judgements, so a second coder must be a human; a design that claims to test one unreplicated coder needs that coder. The Review's section 7 keeps the same requirement for the future study it proposes.
+>
+> Keep this file as a record of the instrument as it stood on the date above. To revive it, copy the decision rules and coding cards into this file so the packet is self-contained, and add an explicit rule for rows with no applicable regime. Do not cite anything here from the Review or the Synopsis.
+
 > **Status 状态**: Working instrument for [`census_protocol.md`](census_protocol.md) §5 and §8. **AI-drafted, unreviewed** (harness §I.6). The coder named below must be a **human**: inter-coder reliability is a measure of human judgement agreement, and the protocol's whole point is to test a single unreplicated coder (the Comment's admitted weakest link). This packet adds no design; it operationalises §8.
 
 ---

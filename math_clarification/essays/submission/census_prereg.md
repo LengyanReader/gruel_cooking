@@ -1,5 +1,11 @@
 # Preregistration draft — Machine-graded mathematics 2024–2026 (census)
 
+> **WITHDRAWN 撤回 · 2026-09-26.** Do not deposit this text. It is **not** part of the Nature Review, and the study it registers was withdrawn from the manuscript after the audit recorded in [`citation_audit.md`](citation_audit.md). Its parent section no longer exists, so the "parent §11.8" reference below is dead.
+>
+> The fatal problem is P1. This registration states a machine-graded dispute rate of 0 as a **prediction**, but the pilot corpus already contains a machine-graded event that produced a recorded dispute, so the prediction is contradicted by the data that motivated it. The registration also inherits an `na` regime that was silently binned with community-graded events. A preregistration whose primary prediction is already falsified by the pilot cannot be deposited in this form, and depositing it would misrepresent the state of the design.
+>
+> Keep this file as a record of the wrapper as it stood on the date above. To revive it, restate P1 as a two-sided hypothesis, code `na` as its own stratum, and deposit only after the protocol is rewritten. Do not cite anything here from the Review or the Synopsis.
+
 > **Status 状态**: Fill-in-and-paste registration text. **AI-drafted, unreviewed** (harness §I.6). This is a *submission-ready wrapper* around [`census_protocol.md`](census_protocol.md); it adds no design, only the fields a registry (OSF / asPredicted / arXiv-annex) asks for. Angle-bracket items `⟨author⟩` must be completed by a human before deposit. **Do not deposit after inspecting any post-registration leaderboard snapshot** — the whole value of the registration is that its timestamp precedes coding (parent §11.8; census_protocol §8).
 
 ---

@@ -21,7 +21,7 @@ All Python runs in `conda activate hy_py312`（Lean 编译用本机 `lean`；web
 
 ## MC-W1 · Add an entry 新增条目
 
-1. 放置：`basics/<topic>.md`（基础）或 `famous_problems/<topic>.md`（名题）或 `proof_narratives/<topic>.md`（叙事）或 `essays/<essay>.md`（论说，体例见 `essays/README.md`，不走九段式）。投稿衍生物（面向外部的改写稿、后续研究方案与其校验脚本）放 `essays/submission/`——不入渲染（`web/parser.py` 只扫 `essays/*.md`），须在 `essays/README.md` 登记，并按 §I.6 标注 AI-drafted。
+1. 放置：`basics/<topic>.md`（基础）或 `famous_problems/<topic>.md`（名题）或 `proof_narratives/<topic>.md`（叙事）或 `articles/<article>.md`（文章/论说，体例见 `essays/README.md`，不走九段式）。投稿衍生物（面向外部的改写稿、后续研究方案与其校验脚本）放 `essays/submission/`——不入渲染（`web/parser.py` 只扫 `articles/*.md`），须在 `articles/README.md` 索引登记，并按 §I.6 标注 AI-drafted。
 2. 结构：遵循 **house style 九段式**（`README.md` §House Style）：
    `一行为想 → 精确表述 → 譬喻直觉 → 前提与成立条件 → 一点数学 → 解题方向与历史 → 它出现在哪里（天/地/人）→ 常错处 → 来源`。
 3. 声明条件：**前提/成立条件必须显式**——一个题不能精确表述，就没有开始；不能画出画面，就没有理解。
@@ -74,7 +74,7 @@ R-D: **可查则查**——能机器验证的命题必须过 Lean，并在条目
 
 本域 harness 的演化入口见根目录 **`../harness/evolution.md`（W-EVO）**；本域专属信号：
 - 新增一种条目类型/渲染档位 → 在 MC-W1/MC-W3 与 `README.md` House Style 补对应段。
-- 论说类（`essays/`）是已登记的条目类型，九段式不适用；其体例（论点→论据→论证→反诘→来源）见 `essays/README.md`，出现写法分叉时回写该处。
+- 文章类（`articles/`，即原论说类 `essays/`，2026-09-26 迁出）是已登记的条目类型，九段式不适用；其体例（论点→论据→论证→反诘→来源）见 `essays/README.md`，出现写法分叉时回写该处。
 - 新 Lean 校验文件 → 更新 MC-W2 与 `lean/README.md` 对照表。
 - house style 九段式出现歧义（不同条目写法分叉）→ 此处加重版描述，必要时抽出共享模板。
 - 一条规则跨域复用 → **晋升**到根 harness，本域只留指针。
