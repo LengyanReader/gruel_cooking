@@ -327,6 +327,7 @@ SCHOLAR_AXES = {
     "juul-jesper":        ["play", "dh", "goodlife"],
     "liestol-gunnar":     ["play", "herit", "dh"],
     "klein-richard":      ["play", "sus", "xsci"],
+    "rusch-doris":        ["play", "herit", "goodlife", "cultiv"],
 }
 
 OPP_AXES = {

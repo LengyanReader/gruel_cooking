@@ -37,3 +37,8 @@
 - 四档 ⚠ 直补项（对话发起前必须落地）：Sotamaa 系页 / 2025 新著细目；Juul 皇家艺术学院现职细目 /《Too Much Fun》全书；Liestøl 系页 URL / 2026 论文署名位次；**Klein 气候模拟游戏的具体命名与现行版本（◐→✔ 是本轮最大缺口）**。
 - TPI / Uppsala 游设系机构节点是否升为独立档，待用户定夺瑞典侧要不要真起一个落地入口。
 - 「尤其是瑞典」本轮以 **Klein（个体）+ Gotland/TPI（机构）** 双锚应答；瑞典其余实践者（Paradox、Simulation Game 瑞典圈、Malmö Heide Petersson 线）留作 ◇，下轮按用户节奏扩。
+
+## 七、修正（v11 写入本注，不回写当时正文）
+
+- **TPI 成员名**：本台账四节列 “Aaron Hugaas” 有误——经 uu.se TPI 研究页直采，正确姓名为 **Kjell Hedgard Hugaas**（作品与发言列于 TPI 项目及 “The Final Chapter: Practicing Dying Through Play” “Death and Dying in Games” 两条目下）。v11 已正式建档 Doris Rusch 并充实 TPI 机构节点；详见 `20261104-v11-sweden-deep-dive.md`。
+- **瑞典同名不同人提醒**：Malmö 大学 “Bo Petersson” 系全球政治研究学者（ Putin 合法性/民族主义方向），与本台账列 “Jonas Heide Petersson / Jonas Heide Smith”（游戏研究）不同人，不得混淆归队。
