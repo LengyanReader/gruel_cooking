@@ -48,7 +48,7 @@
 | **Maui Hudson** | `../scholars/hudson-maui.md` | ANUAC 2026 原住民主导 AI 未来；2025 开放基因组×数据主权平衡；Te Mana Raraunga 持续（✔ 2026-11-04） | 本仓语料（含影子书库来源）照其框架做自审账 | 无部落身份借框架——结盟还是挪用请判 | 待议（v6 新档·🇳🇿） |
 | **Camilla Brattland** | `../scholars/brattland-camilla.md` | SAMFORSK「萨米研究之研究」新文集；MAHTUT；原住民知识入土地治理（2025）（✔ 2026-11-04） | 运河廊道遗产书写的表征自反审计 | 找出的代言硬伤请判审计成色 | 待议（v6 新档·🇳🇴） |
 | **Ole G. Mouritsen** | `../scholars/mouritsen-ole.md` | 《Blue Foods》2026-11-27 新书在即；2025 可持续菜系跨时空品味（✔ 2026-11-04） | 「粥的胃物理解析」双语小册（糊化×umami×文明） |  gastrophysics 用到东亚家常餐桌请判延续还是走样 | 待议（v6 新档·🇩🇰） |
-| **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译）→《游戏的人》圆桌合订本（场景版，v8） | 两处考据请判歪了没有；圆桌棋棚口述+谱系英译为其档 | 待议（v6 新档·Book-of-Go 余线落子·v8 入游戏圆桌） |
+| **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译）→《游戏的人》圆桌合订本（场景版·MVP-004 已建 v0） | 两处考据请判歪了没有；思想史×围棋论坛席 | 待议（v6 新档·Book-of-Go 余线落子·v8 入游戏圆桌） |
 | **Emily Bender** | `../scholars/bender-emily.md` | LLM「意义何在」追问推向法律场域（Yale Law 2025-10 主旨）；UW CompLing 项目育人建制（✔ 2026-11-04） | 自家 LLM 抽取管线的「意义失踪账」（形似换义×责任断环） | 账目请判应用还是误读 | 待议（v7 新档·xsci） |
 | **Kalevi Kull** | `../scholars/kull-kalevi.md` | Tartu 符号学派 biosemiotics 线现行守人（2025-08 学派聚落在列）；「生命即符号行动」定题（✔ 2026-11-04） | 「熬粥=细胞/生态/文化三层 semiosis 同锅」一页札记 | 正当延伸还是漂亮越界请判 | 待议（v7 新档·xsci） |
 | **Peter Turchin** | `../scholars/turchin-peter.md` | SDT×法国 1950–2023 政治不稳定实证 v3（2025-10 挂载）；公开预测判卷传统（✔ 2026-11-04） | 运河-北京编年的前工业东亚 SDT 试算（附缺口清单） | 帝国中国是扩展还是范畴错位请判 | 待议（v7 新档·xsci） |
@@ -63,7 +63,7 @@
 
 > 依 README §〇 修订：MVP 从「求批便条」升为**能立住、能公开、多位学者可进同一场对话的作品**。各档 `mvp`/`dialogue_hook` 为个人入场版；下表为场景版登记（建成后逐档改挂）。
 
-- **《游戏的人》圆桌**（v8 主场）—— Boellstorff × Gobet × Sicart × 张厚泉：玩法地图一页（线上世界/棋盘/茶肆/走廊四场地）+ Book-of-Go 考 + 论坛谱系合订；公开载体：网页+一页讲义；入口：RAI 系列专题场提议
+- **《游戏的人》圆桌**（v8 主场·**成件 v0，2026-11-04**）—— Boellstorff × Gobet × Sicart × 张厚泉：以已核实的 **Book-of-Go 标本**（Sterling 2002 围棋礼品书 + Open Library 四位同名者并档账）为边界物，四席各从自己学科读同一件（商品化/认知下限/田野即数据库/不对称旅程）；成品见 [`../mvp/MVP-004-homo-ludens-roundtable.md`](../mvp/MVP-004-homo-ludens-roundtable.md)；入口：RAI 系列专题场提议。**纠偏**：旧列「茶肆/走廊玩法场地」本仓无据，已删（见 v9 台账）
 - **意义失踪审计站**—— Bender × Manovich × Mattern：Reading_IA 抽取管线产出的「形似换义」公开案例集（MVP-001 数据同源，三人各从批评/美学/基础设施进言）
 - **运河长弧数据台**—— West × Turchin × 包弼德：同一份运河-北京编年切三刀（标度/SDT/科举网络），公开可复算底账（CBDB 接口为现成底座）
 - **一锅粥的三层 semiosis**—— Kull × Mouritsen × Ray × 王思明：粥的胃物理解析双语小册升级为公开作品（符号学× gastrophysics × taste 等级 × 农遗辨认同锅）

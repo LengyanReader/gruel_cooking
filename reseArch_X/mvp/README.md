@@ -11,3 +11,4 @@
 | MVP-001 | Manovich | 用其文化分析方法跑本仓多文明语料，检验「媒体积累/AI-as-culture」 | planned |
 | MVP-002 | Behrendt / Sheller | 用 mobility data justice 框架审计大运河走廊移动数据 | planned |
 | MVP-003 | Oberbichler / C²DH + Europeana | 开放遗产数据上的「AI 可见性」小分析 | planned |
+| MVP-004 | Sicart / Gobet / Boellstorff / 张厚泉 | **场景作品首件**：《游戏的人》圆桌——以 Book-of-Go 实物标本为边界物，四席共读 | **built-v0**（2026-11-04） |
