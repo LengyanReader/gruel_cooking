@@ -23,7 +23,7 @@
   --shadow-lg:0 12px 40px rgba(58,50,40,.09);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--warm-cream);line-height:1.75;overflow-x:hidden}
 a{color:var(--accent-teal);text-decoration:none;transition:color .2s}
 a:hover{color:var(--sky-deep)}
@@ -226,6 +226,34 @@ table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
 /* empty state */
 .empty{text-align:center;padding:2rem;color:var(--ink-pale);font-size:.9rem;font-style:italic}
 
+/* floating TOC */
+#toc-toggle{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:200;background:rgba(255,251,245,.92);backdrop-filter:blur(8px);border:1px solid var(--line);border-right:none;border-radius:8px 0 0 8px;padding:.7rem .42rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;box-shadow:var(--shadow-md);transition:background .2s,opacity .25s;user-select:none}
+#toc-toggle:hover{background:var(--warm-soft)}
+#toc-toggle.hidden{opacity:0;pointer-events:none}
+#toc-toggle .toc-ico{display:flex;flex-direction:column;align-items:center;gap:3px}
+#toc-toggle .toc-ico i{display:block;width:16px;height:2px;background:var(--ink-soft);border-radius:1px}
+#toc-toggle .toc-ico i:nth-child(2){width:11px}
+#toc-toggle .toc-txt{font-size:.6rem;letter-spacing:.14em;color:var(--ink-soft);writing-mode:vertical-rl;font-weight:700;font-family:var(--ff-display)}
+#toc-panel{position:fixed;top:0;right:0;bottom:0;width:264px;background:rgba(255,251,245,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-left:1px solid var(--line);z-index:210;transform:translateX(100%);transition:transform .3s cubic-bezier(.25,.8,.25,1);display:flex;flex-direction:column;box-shadow:-8px 0 32px rgba(58,50,40,.13)}
+#toc-panel.open{transform:translateX(0)}
+.toc-head{padding:0 1rem .75rem;border-bottom:1px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding-top:calc(58px + .75rem)}
+.toc-head .toc-title{font-family:var(--ff-display);font-size:.92rem;font-weight:700;color:var(--ink-deep);letter-spacing:.03em}
+.toc-head .toc-sub{font-size:.65rem;color:var(--ink-pale);margin-top:.18rem;letter-spacing:.06em}
+#toc-close{background:none;border:none;cursor:pointer;color:var(--ink-soft);font-size:1.3rem;line-height:1;padding:.15rem .35rem;border-radius:5px}
+#toc-close:hover{color:var(--ink-deep);background:rgba(228,220,208,.5)}
+#toc-body{flex:1;overflow-y:auto;padding:.4rem 0 1.5rem}
+#toc-body::-webkit-scrollbar{width:4px}
+#toc-body::-webkit-scrollbar-track{background:transparent}
+#toc-body::-webkit-scrollbar-thumb{background:rgba(180,170,160,.35);border-radius:2px}
+.toc-group{margin-bottom:.3rem}
+.toc-group-lbl{font-size:.58rem;letter-spacing:.18em;color:var(--ink-pale);font-weight:700;padding:.5rem 1rem .18rem;text-transform:uppercase}
+.toc-item{display:block;padding:.28rem .85rem .28rem 1.25rem;font-size:.78rem;color:var(--ink-mid);cursor:pointer;transition:all .12s;border-left:2px solid transparent;text-decoration:none;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.toc-item:hover{color:var(--ink-deep);background:rgba(176,143,67,.08);border-left-color:var(--warm-gold)}
+.toc-item.sec{font-size:.82rem;font-weight:500;color:var(--ink-deep);letter-spacing:.02em}
+.toc-item.tier-1{color:var(--warm-amber);font-weight:500}
+#toc-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.14);opacity:0;pointer-events:none;transition:opacity .25s}
+#toc-overlay.open{opacity:1;pointer-events:auto}
+
 /* responsive */
 @media (max-width:768px){
   .nav-links{display:none}
@@ -233,6 +261,8 @@ table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
   .hero{padding:6rem 1rem 3rem}
   .tiles{grid-template-columns:repeat(2,1fr)}
   .scholars,.opps{grid-template-columns:1fr}
+  #toc-panel{width:100%}
+  #toc-toggle .toc-txt{display:none}
 }
 </style>
 </head>
@@ -258,6 +288,24 @@ table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
     </div>
   </div>
 </nav>
+
+<!-- floating TOC -->
+<div id="toc-overlay"></div>
+<button id="toc-toggle" title="目录导航">
+  <span class="toc-ico"><i></i><i></i><i></i></span>
+  <span class="toc-txt" data-zh>目录</span>
+  <span class="toc-txt" data-en>TOC</span>
+</button>
+<aside id="toc-panel">
+  <div class="toc-head">
+    <div>
+      <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+      <div class="toc-sub" id="toc-count"></div>
+    </div>
+    <button id="toc-close">&times;</button>
+  </div>
+  <nav id="toc-body"></nav>
+</aside>
 
 <!-- HERO -->
 <section class="hero">
@@ -517,7 +565,7 @@ function renderScholarCard(s){
   const feasibility = s.feasibility ? `<div class="dim-line"><strong>${isEn?'reachability':'可达性'}</strong>：${esc(s.feasibility)}</div>` : '';
   const vItems = [[s.v_insight, isEn?'insight':'悟性'],[s.v_character, isEn?'character':'人格'],[s.v_temperament, isEn?'temperament':'性格'],[s.v_compassion, isEn?'compassion':'慈悲']].filter(([v])=>v);
   const virtues = (vItems.length||s.v_overall) ? `<div class="virtues"><span class="v-lbl">${isEn?'virtue reading (◐ judgment, not fact)':'感受性评估（◐ 判读非事实）'}</span><ul>${vItems.map(([v,l])=>`<li><strong>${l}</strong>：${esc(v)}</li>`).join('')}</ul>${s.v_overall?`<div class="v-overall">${esc(s.v_overall)}</div>`:''}</div>` : '';
-  return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
+  return `<div class="scard" id="sch-${esc(s._slug)}" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
     <div class="head"><div class="head-text"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span>${homepage}</div></div>
     <div class="affil">${esc(s.affiliation||'')}</div>
     <div class="field">${esc(s.field||'')}</div>
@@ -677,10 +725,69 @@ function renderLog(){
   ).join('') || '<div class="empty">—</div>';
 }
 
+// ------- floating TOC -------
+function openToc(){
+  document.getElementById('toc-panel').classList.add('open');
+  document.getElementById('toc-overlay').classList.add('open');
+  document.getElementById('toc-toggle').classList.add('hidden');
+  document.getElementById('toc-close').focus();
+}
+function closeToc(){
+  document.getElementById('toc-panel').classList.remove('open');
+  document.getElementById('toc-overlay').classList.remove('open');
+  document.getElementById('toc-toggle').classList.remove('hidden');
+}
+document.getElementById('toc-toggle')?.addEventListener('click', openToc);
+document.getElementById('toc-close')?.addEventListener('click', closeToc);
+document.getElementById('toc-overlay')?.addEventListener('click', closeToc);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeToc(); });
+function buildToc(){
+  const isEn = document.body.classList.contains('lang-en');
+  const SECTIONS = [
+    {id:'dialogue', zh:'对话名册', en:'Dialogue Map'},
+    {id:'scholars', zh:'学者档案', en:'Scholar Dossiers'},
+    {id:'axes',     zh:'方向轴覆', en:'Axes Coverage'},
+    {id:'mvp',      zh:'MVP 轨道', en:'MVP Tracker'},
+    {id:'opp',      zh:'机会档案', en:'Opportunities'},
+    {id:'rubric',   zh:'六维标尺', en:'Six-Dim Rubric'},
+    {id:'log',      zh:'调研日志', en:'Scan Log'},
+    {id:'intake',   zh:'新方向登记', en:'New Intake'},
+  ];
+  let html = '<div class="toc-group"><div class="toc-group-lbl">' +
+    (isEn ? 'SECTIONS' : '章节') + '</div>';
+  SECTIONS.forEach(s => {
+    html += `<a class="toc-item sec" href="#${s.id}" onclick="closeToc()">${isEn?s.en:s.zh}</a>`;
+  });
+  html += '</div>';
+  // scholars list
+  const scholars = DATA.scholars.slice().sort((a,b)=>{
+    const ta=a.tier==='卓越开明'?0:1, tb=b.tier==='卓越开明'?0:1;
+    return ta-tb || (a.name||a._slug).localeCompare(b.name||b._slug,'zh');
+  });
+  html += `<div class="toc-group"><div class="toc-group-lbl">${isEn?'SCHOLARS ('+scholars.length+')':'学者 ('+scholars.length+')'}</div>`;
+  let lastTier = '';
+  scholars.forEach(s => {
+    if (s.tier !== lastTier && s.tier) {
+      if (lastTier) html += '<div style="border-top:1px solid var(--line);margin:.3rem 1rem"></div>';
+      html += `<div style="font-size:.58rem;letter-spacing:.14em;color:var(--ink-pale);padding:.28rem 1.25rem 0;font-weight:700">${esc(s.tier)}</div>`;
+      lastTier = s.tier;
+    }
+    const cls = s.tier==='卓越开明' ? 'toc-item tier-1' : 'toc-item';
+    const label = s.name || s._slug;
+    html += `<a class="${cls}" href="#sch-${s._slug}" onclick="closeToc()">${esc(label)}</a>`;
+  });
+  html += '</div>';
+  document.getElementById('toc-body').innerHTML = html;
+  const cnt = document.getElementById('toc-count');
+  if (cnt) cnt.textContent = isEn
+    ? DATA.counts.scholars + ' scholars · ' + DATA.counts.scans + ' waves'
+    : DATA.counts.scholars + ' 位学者 · ' + DATA.counts.scans + ' 轮调研';
+}
+
 // ------- master render -------
 function render(){
   renderTiles(); renderDialogue(); renderScholars(); renderAxes();
-  renderMvp(); renderOpps(); renderRubric(); renderLog();
+  renderMvp(); renderOpps(); renderRubric(); renderLog(); buildToc();
 }
 render();
 document.addEventListener('DOMContentLoaded', render);
