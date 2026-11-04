@@ -25,6 +25,29 @@ v_character: 显现良善 ◐ —— 30+ 年做科学↔政策↔公众的桥、
 v_temperament: 倾向良善 ◐ —— 在评估报告与政策博弈两侧周旋、公开发声不回避；面谈交锋样本未直验 ◇
 v_compassion: 显现良善 ◐ —— 适应科学的落点是**最易受气候冲击的脆弱社群**——把弱势者处境设为研究因变量（痕迹：field/what_real ✔；具体行动细节 ◇）
 v_overall: `play`×`sus` 交叉的政策实践者——瑞典线里「游戏×直面时代真问题」最硬的一位（气候适应）；把游戏线从「文化批评」接到「政策—生存」这一端，与本仓 `heaven_climate`/`economics_cross_culture` 直接咬合（asof 2026-11-04）
+essence: SEI 国际气候风险与适应研究团队负责人 + IPCC AR5 WGII lead author——把「看不见终局的慢变量」做成一局可玩模拟的政策科学家；最硬一条：COP28 前替「必须现在行动」公开发声（sei.org 2023-10-04）
+key_works:
+  - 「IPCC AR5 WGII《Climate Change 2014: Impacts, Adaptation and Vulnerability》lead author」
+  - 「SEI 气候风险与适应团队负责人公开评论（sei.org 2023-10-04，「无可否认，我们必须现在就行动」）」
+  - 「30+ 年适应科学↔政策桥接（climatestrategies.org 评『internationally leading expert』）」
+repo_anchors:
+  - heaven_climate/README.md
+  - economics_cross_culture/README.md
+peer_bridges:
+  - Raworth（甜甜圈安全空间）
+  - Gössling（旅游碳）
+  - Fanzo（食物×气候）
+  - Chun（hypo-real 气候话语）
+why_now: COP 周期 + 适应主流化当下为焦点；其标志沟通法（模拟/严肃游戏）恰把本仓 `heaven_climate`/`economics_cross_culture` 长时段材料翻译成可参与的一局
+entry_sequence:
+  - 带一份用本仓史料搭的「历史—区域气候适应模拟」剧本初稿（含可复算取值表）
+  - SEI / climatestrategies.org 政策圈 → COP side-event
+  - 与 Raworth/Gössling 的安全空间—碳账同场试跑
+feasibility: ◐ 推断——政策科学家、落点在脆弱社群，对「能上桌的真实剧本」较可能回应；但游戏非其学科本业（沟通方法之一），话柄须以适应实政领头
+open_questions:
+  - 气候模拟游戏具体命名与现行版本（Cancun Game 一类）◐ 待直证
+  - 个人页 URL ◇
+  - SEI 现职/独立身份过渡细目 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◐, asof: 2026-11-04}   # 气候模拟游戏为其标志实践（Cancun Game 一类），命名/现行版本待直证

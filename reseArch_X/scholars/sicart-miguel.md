@@ -24,6 +24,31 @@ v_character: 显现良善 ◐ —— 中心建制+公开办会+博士指导 chai
 v_temperament: 倾向良善 ◐ —— 以期刊短文顶撞「游戏化乐观论」不借行业话术；交锋细节未直验 ◇
 v_compassion: 倾向良善 ◐ —— 其伦理落点是玩家的处境与孩子的游戏权而非平台指标；直接行动痕迹未见 ◇
 v_overall: 游戏线「伦理×设计」翼的锚——与 Boellstorff（人类学）、Gobet（认知×棋）、张厚泉（思想史×围棋）成游戏四方，恰为 `xsci`「基础科学×人文」在游戏场域的完整交叉；兼入 v6 北欧圈（哥本哈根/ITU）（asof 2026-11-04）
+essence: ITU 哥本哈根 Professor of Digital Play + Center for Digital Play 主任，把玩立为「人把自己交给方式性活动的德性实践」，2026《The Failure of Play》正面诊断玩沦为商品；最硬一条：SAGE 2026 论文作者自述「愤怒而乐观的檄文」
+key_works:
+  - 《The Ethics of Computer Games》（MIT Press，2009）
+  - 「Defining Game Mechanics（2008）」
+  - 《The Playful Brain》（MIT Press，2014）
+  - 《Playthings》（MIT Press，2016，玩作为德性实践）
+  - 「The Failure of Play（SAGE 游戏研究刊 OnlineFirst，2026）」
+repo_anchors:
+  - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
+  - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+peer_bridges:
+  - Boellstorff（人类学席）
+  - Gobet（认知席）
+  - 张厚泉（思想史×围棋席）
+  - Juul（物的寿命）
+why_now: 2026《The Failure of Play》正值游戏化/AI 生成世界收编玩的节点——圆桌「您的问、围棋的古老答」把三千年之玩放上同一张桌，议题随平台语境改题而主轴不撤
+entry_sequence:
+  - 以已核实 Book-of-Go 标本（3000 年之玩被压成零售商品）喂其「玩的失败」框架
+  - Center for Digital Play 公开会议（其自办系列）→ IJGC 短评通道
+  - 圆桌札记进言（文本×实践，非审计清单）
+feasibility: ◐ 推断——中心公开办会+开放指导，机构公地气质对跨界札记友好；但伦理批评者对「数据说话」项目或不感冒，话柄须显文本×实践诚意
+open_questions:
+  - 个人页 URL ◇
+  - SAGE 2026 刊名全称 ◇
+  - 2026 论文全文细目 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 个人页 URL；2026 论文全文细目；刊名全称

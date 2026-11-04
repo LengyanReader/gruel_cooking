@@ -117,6 +117,16 @@ body.lang-en [data-zh]{display:none!important}
 .scard .tag{padding:2px 9px;border-radius:99px;font-size:.68rem;background:#F3EEE1;color:var(--ink-soft);font-weight:500}
 .scard .tag.mode{background:#E9F0F5;color:var(--sky-deep)}
 .scard .file-link{font-family:var(--ff-mono);font-size:.72rem;color:var(--ink-pale);margin-top:.6rem;display:inline-block}
+.scard .essence{margin:.1rem 0 .7rem;font-size:.92rem;line-height:1.6;font-family:var(--ff-display);color:var(--ink-deep);background:rgba(176,143,67,.09);border-left:3px solid var(--warm-gold);padding:.45rem .75rem;border-radius:0 8px 8px 0}
+.scard .essence strong{color:var(--warm-amber);font-weight:700}
+.scard .dim{background:rgba(91,163,163,.05);border-radius:10px;padding:.6rem .8rem;margin:.55rem 0;font-size:.82rem;color:var(--ink-mid);line-height:1.7}
+.scard .dim .lbl{font-size:.68rem;color:var(--accent-teal);letter-spacing:.1em;font-weight:700;text-transform:uppercase;margin-bottom:.3rem;display:block}
+.scard .dim ul,.scard .dim ol{margin:0;padding-left:1.15rem}
+.scard .dim li{margin-bottom:.25rem}
+.scard .dim .mono{font-family:var(--ff-mono);font-size:.82em}
+.scard .dim-line{font-size:.82rem;color:var(--ink-mid);margin-top:.5rem;line-height:1.7}
+.scard .dim-line strong{color:var(--ink-deep);font-weight:600}
+.scard .tag.bridge{background:#EAF2EC;color:#3F6B4A}
 
 /* opportunities */
 .opps{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem}
@@ -490,20 +500,36 @@ function renderScholarCard(s){
   const whatReal = s.what_real ? `<div class="what-real"><strong>${isEn?'real problem':'真问题'}</strong>：${esc(s.what_real)}</div>` : '';
   const risk = s.risk ? `<div class="risk"><strong>${isEn?'risk':'风险'}</strong>：${esc(s.risk)}</div>` : '';
   const entry = s.entry ? `<div class="entry"><strong>${isEn?'entry':'入口'}</strong>：${esc(s.entry)}</div>` : '';
+  const essence = s.essence ? `<div class="essence"><strong>${isEn?'essence':'要点'}</strong>：${esc(s.essence)}</div>` : '';
+  const listDim = (arr, cls, lblZh, lblEn, mono) => (Array.isArray(arr) && arr.length)
+    ? `<div class="dim ${cls}"><span class="lbl">${isEn?lblEn:lblZh}</span><ul>${arr.map(x=>`<li${mono?' class="mono"':''}>${esc(x)}</li>`).join('')}</ul></div>` : '';
+  const keyWorks = listDim(s.key_works, 'keyworks', '代表作', 'KEY WORKS', false);
+  const repoAnchors = listDim(s.repo_anchors, 'anchors', '本仓接口', 'REPO ANCHORS', true);
+  const entrySeq = (Array.isArray(s.entry_sequence) && s.entry_sequence.length)
+    ? `<div class="dim entryseq"><span class="lbl">${isEn?'ENTRY SEQUENCE':'触达次序'}</span><ol>${s.entry_sequence.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>` : '';
+  const openQs = listDim(s.open_questions, 'openq', '待追问', 'OPEN QUESTIONS', false);
+  const peerBridges = (Array.isArray(s.peer_bridges) && s.peer_bridges.length)
+    ? `<div class="tags">${s.peer_bridges.map(x=>`<span class="tag bridge">${esc(x)}</span>`).join('')}</div>` : '';
+  const whyNow = s.why_now ? `<div class="dim-line"><strong>${isEn?'why now':'时代抓手'}</strong>：${esc(s.why_now)}</div>` : '';
+  const feasibility = s.feasibility ? `<div class="dim-line"><strong>${isEn?'reachability':'可达性'}</strong>：${esc(s.feasibility)}</div>` : '';
   const vItems = [[s.v_insight, isEn?'insight':'悟性'],[s.v_character, isEn?'character':'人格'],[s.v_temperament, isEn?'temperament':'性格'],[s.v_compassion, isEn?'compassion':'慈悲']].filter(([v])=>v);
   const virtues = (vItems.length||s.v_overall) ? `<div class="virtues"><span class="v-lbl">${isEn?'virtue reading (◐ judgment, not fact)':'感受性评估（◐ 判读非事实）'}</span><ul>${vItems.map(([v,l])=>`<li><strong>${l}</strong>：${esc(v)}</li>`).join('')}</ul>${s.v_overall?`<div class="v-overall">${esc(s.v_overall)}</div>`:''}</div>` : '';
   return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
     <div class="head"><div class="head-text"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span>${homepage}</div></div>
     <div class="affil">${esc(s.affiliation||'')}</div>
     <div class="field">${esc(s.field||'')}</div>
+    ${essence}
     ${ethos}${vision}${tp}
     <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
     ${trends}${trendAnalysis}
+    ${keyWorks}${repoAnchors}
     <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
-    ${whatReal}
+    ${whatReal}${whyNow}
     <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
     <div class="hook">${esc(s.dialogue_hook||'')}</div>
-    ${entry}${risk}
+    ${peerBridges}
+    ${entry}${entrySeq}${feasibility}${risk}
+    ${openQs}
     ${virtues}
     <div class="tags">${tags}${stamps}</div>
     <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>

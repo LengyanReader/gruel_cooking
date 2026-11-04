@@ -24,6 +24,31 @@ v_character: 显现良善 ◐ —— 荣誉（HEVGA Fellow）公开归给研究�
 v_temperament: 倾向良善 ◐ —— 以课程与共同体建设而非论战推进范式；面谈交锋样本未直验 ◇
 v_compassion: 显现良善 ◐ —— 「How to Play Academia」的落点是博士生「在竞争环境中可持续地自处」——把学术生态里弱者的处境设为要改造的对象（痕迹：current_work 课程题旨 ✔）
 v_overall: 北欧游戏线「游戏×社会批判」翼的锚——与 Sicart（伦理）、Boellstorff（人类学）、Juul（历史）同挂 `play` 轴；「How to Play Academia」与本仓学习器/阅读线直接咬合，是游戏线里最贴「直面时代×有人情味」的一位（asof 2026-11-04）
+essence: 坦佩雷国家「游戏文化研究中心」该校带头人 + HEVGA Fellow 2025（全球仅授 5）——北欧游戏「社会批判」翼最高建制人；最硬一条：2025 秋亲开「How to Play Academia」把游戏概念反身对准大学本身
+key_works:
+  - 「Game Research Lab 共同创办（2000 年代初，tuni 官方新闻自述）」
+  - 「The Player's Game（2009，玩家生产研究）」
+  - 《Game Production Studies》（与 Jan Svelch 合编，Amsterdam University Press，开放获取，2025-10）
+  - 「HEVGA Fellow 2025（全球高等教育游戏研究界仅授 5 人，tuni.fi 2025-08-08）」
+repo_anchors:
+  - Reading_IA/engine/ingest.py
+  - reseArch_X/scan_log/20261104-v10-nordic-sweden-games.md
+peer_bridges:
+  - Rusch（学术作为一种游戏·三线汇流）
+  - Sicart（游戏伦理）
+  - Juul（游戏史）
+  - Boellstorff（游戏人类学）
+  - Bender（育人建制）
+why_now: 2025 集中爆发——HEVGA Fellow + 「How to Play Academia」秋季开 + 《Game Production Studies》开放获取上线，同期把「游戏照亮学术自身」推到台前
+entry_sequence:
+  - 先读其 tuni 新闻与课程自述，备一份「学术游戏机制重读」小册
+  - 借 DiGRA / HEVGA 学术共同体场合进言
+  - 课程公开对谈邀请（其「可持续自处」题旨 × 本仓阅读—学习器同场）
+feasibility: ◐ 推断——CoE 带头人带宽有限，但「How to Play Academia」正处开设期，跨界对话样本有现成课程落点，冷启动命中其当期兴趣
+open_questions:
+  - CoE 团队现职细目待直补 ◇
+  - 2025《Game Production Studies》全书待读 ◇
+  - 回信带宽预期待估 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 带宽/回信预期；2025 新著细目待读

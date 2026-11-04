@@ -24,6 +24,29 @@ v_character: 显现良善 ◐ —— 1998 公开修订恩师西蒙的成名假�
 v_temperament: 倾向良善 ◐ —— 学术交锋以建模与再实证出牌（chunking 之争的处理方式）；面谈样本未直验 ◇
 v_compassion: 倾向良善 ◐ —— 巡讲落点在「学习」——把 expertise 研究交还教育与普通棋手；直接行动痕迹为间接证据 ◇
 v_overall: 游戏线「认知×本领」翼的锚——与 Sicart（伦理）、Boellstorff（人类学）、张厚泉（思想史）成游戏四方；为 `cultiv`（人生修行）补「练习如何成材」的实证层（asof 2026-11-04）
+essence: LSE Professorial Research Fellow + 国际象棋大师，把「本领从何而来」做成可检验机制（chunking→template→CHREST），1998 公开修订恩师 Simon 的成名假说；最硬一条：Gobet & Simon 1998《Expert chess memory: Revisiting the chunking hypothesis》被引 ~527
+key_works:
+  - 「Expert chess memory: Revisiting the chunking hypothesis（Gobet & H. A. Simon，Memory，1998，被引 ~527）」
+  - 《Moves in Mind》（与 Charness 等，2001）
+  - 《The Psychology of Chess》（2018）
+  - 「Chess, Cognition and Learning 巡讲（亚美尼亚国际象棋学院 2025-26 场次）」
+repo_anchors:
+  - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
+  - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+peer_bridges:
+  - 张厚泉（围棋×思想史席）
+  - Sicart（玩的伦理）
+  - Boellstorff（田野）
+why_now: 2025-26「棋、认知与学习」巡讲现行——把 expertise 研究交还课堂与棋校，正是围棋认知底账（本仓《棋的本领账》双语一页）可直接对话的当口
+entry_sequence:
+  - 用其 template/CHREST 架构给围棋做认知底账 + Book-of-Go 一例
+  - 其巡讲通道 / 棋科学会议 / LSE 公开活动 → 皇家学会讲座类场合
+  - 请判「象棋架构移到围棋是延伸还是错位」
+feasibility: ◐ 推断——高龄线学者带宽有限；场合须选科学侧而非竞技侧（棋神童叙事文化圈或对其祛魅立场有抵触）
+open_questions:
+  - LSE 官方 profile 页 ◇
+  - 现职细目 ◇
+  - 带宽/回信预期 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # LSE 官方页；现职细目；带宽/回信预期

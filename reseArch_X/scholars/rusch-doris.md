@@ -26,6 +26,32 @@ v_character: 显现良善 ◐ —— 学院教授兼**获奖游戏制作者**，
 v_temperament: 倾向良善 ◐ —— 跨设计/心理学/仪式研究/教育多个社群组织协作（TPI 合编、edu-larp 工作坊）；面谈交锋样本未直验 ◇
 v_compassion: 显现良善 ◐ —— 落点反复在**心理健康、跨性别结盟（Strengthening Trans Allyship through Game Design）、弱势群体的参与式设计伦理、以及『有灵魂的、可持续的学术生态』**——把易受冲击者的处境设为设计因变量（痕迹：TPI 项目/书目 多条 ✔）
 v_overall: 瑞典游戏线「学者×实践者」最强个体锚——比 Klein（政策侧）更贴本仓 `cultiv`×`goodlife`×`herit`：其「转化性玩／深游戏」与 contemplative science 修行语料、Living Heritage「Role-playing, Culture and Heritage」研讨直接咬合；且她是 v10 所立 Gotland/TPI 机构节点的学术带头人（asof 2026-11-04）
+essence: 游戏设计教授兼获奖游戏制作者——「深游戏/转化性设计」把游戏从娱乐推向内在意义，学者×实践者一体；最硬一条：uu.se 员工页现职 + 自研《The Witch's Way》获 FDG'21 best-of-show 二等奖
+key_works:
+  - 《Making Deep Games: Designing Games with Meaning and Purpose》（Taylor & Francis，2017）
+  - 「Existential, Transformative Game Design（Journal of Games, Self & Society，2020）」
+  - 「Harnessing the『Psychomagic』of Symbolic Enactment（Frontiers in Psychology，2020，与 A. Phelps 合著）」
+  - 《The Witch's Way》（可玩游戏，Itch.io 公开，FDG'21 best-of-show 二等奖，2021）
+  - 《Role-playing Games for Interdisciplinary Research Collaborations》（合编，Uppsala University，2024）
+repo_anchors:
+  - contemplative science/ref_integrated.md
+  - living_heritage/ref_canal_beijing_chronicle.md
+  - reseArch_X/scan_log/20261104-v11-sweden-deep-dive.md
+peer_bridges:
+  - Sotamaa（How to Play Academia）
+  - Britton（冥想风险）
+  - Kringelbach（flourishing 三层）
+  - Davidson（幸福可训练）
+why_now: 2024 合编书 + TPI「转化性游戏设计」证书课现行——「AI 时代游戏能否承接内在体验」正被制度化，与本仓 contemplative science 修行语料同题
+entry_sequence:
+  - 先真玩一遍《The Witch's Way》并写与东亚安顿文本的对照读表
+  - 带这份「象征 enact×对读」工作坊脚本上桌
+  - Uppsala 游戏设计系 / Games & Society Lab / DiGRA·FDG·Nordic Game·Knutepunkt 场合
+feasibility: ◐ 推断——领系+证书课带宽有限，但其「转化性玩」与本仓修行语料是罕见的正面咬合，且已有「Role-playing, Culture and Heritage」制度化接口，切入点具体
+open_questions:
+  - 证书课程当期细节 ◇
+  - 2024 合编书全书 ◇
+  - 《The Witch's Way》需实玩并写读表（话柄成件前置）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 证书课程当期细节；2024 合编书全书；Google Scholar 仍挂旧机构 DePaul（过渡以 uu.se 现页为准）

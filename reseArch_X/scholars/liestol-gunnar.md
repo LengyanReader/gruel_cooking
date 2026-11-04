@@ -24,6 +24,28 @@ v_character: 倾向良善 ◐ —— 研究落向公共文化遗产传播与地�
 v_temperament: 痕迹不足 ◇ —— 未见公开交锋样本；不以形容词填充
 v_compassion: 倾向良善 ◐ —— 「中心/边缘」之问把地方遗址与边缘社区的位置设为要弥合的对象——遗产民主化的关切；直接行动痕迹未见 ◇
 v_overall: `play`×`herit` 的交叉锚——游戏/在场玩法与活态遗产在本仓最直接的接榫人；其「AR 送回原地」与运河故道遗存天然对撞，是游戏线里最贴 `living_heritage` 的一位（asof 2026-11-04）
+essence: AR×文化遗产「把遗址连同故事送回原地、弥合馆内/馆外与中心/边缘」的一线实践者（奥斯陆大学教授，C2HO 2024-09 主讲）；最硬一条：Journal of Computer Archaeology 2026 移动 AR×遗址现行 + C2HO 公共活动
+key_works:
+  - 「AR 弥合文化遗产馆内/馆外、中心/边缘论述（2021，academia.edu）」
+  - 「C2HO『AR Reconstruction of Cultural Heritage』主讲（2024-09-13，ub.uio.no）」
+  - 「Using Mobile AR to Reconnect Museum…（Journal of Computer Archaeology，2026，署名位次待补 ◇）」
+repo_anchors:
+  - living_heritage/ref_canal_beijing_chronicle.md
+  - reseArch_X/scan_log/20261104-v10-nordic-sweden-games.md
+peer_bridges:
+  - Kenderdine（深图）
+  - 王晓光（敦煌智慧数据）
+  - Sotamaa（游戏×场所）
+why_now: 2024-09 C2HO 到 2026 JCA 论文一条线——AR×遗产正从技术可行转向「边缘遗址可达」的公共目标，与本仓运河故道遗存（已核实史据、未虚构几何）直接对撞
+entry_sequence:
+  - 带运河故道已核史据（玉河/澄清闸）的 AR 现场复原可行演示
+  - 借 C2HO / Journal of Computer Archaeology / CAA 会议圈
+  - 请其「中心/边缘」透镜判这块东亚故道
+feasibility: ◐ 推断——媒体学科公开活动（C2HO）在列，较易以演示切入；但其本业偏媒介设计，若话柄无真史据将视作满街 AR demo 之一
+open_questions:
+  - 系页个人 URL ◇
+  - 2026 论文署名位次 ◇
+  - SARVI 等旧项目细节 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 系页 URL；2026 论文署名位次；SARVI 旧项目细节

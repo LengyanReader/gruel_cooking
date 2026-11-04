@@ -24,6 +24,30 @@ v_character: 显现良善 ◐ —— 把「虚拟世界能否做田野」的争�
 v_temperament: 倾向良善 ◐ —— 与学科主流阻力的周旋以出书与建制而非论战；交锋样本未直验 ◇
 v_compassion: 倾向良善 ◐ —— 给玩家以人类学的尊严（不猎奇、不病理化）；直接行动痕迹未见 ◇
 v_overall: 游戏线的**建制枢纽**——RAI「玩与游戏的人类学」系列（2025-2026 现行）正是「游戏相关整合」一词对应的现成场所；其本人为人类学侧正主（asof 2026-11-04）
+essence: UC Irvine 人类学教授，虚拟世界民族志定标者（《Coming of Age in Second Life》），现为 RAI「Anthropology of Play and Games」系列（2025-26 现行）讲员——游戏人类学正被建制化为常设论坛；最硬一条：therai.org.uk 系列页 2026-03-24 列名主讲
+key_works:
+  - 《Coming of Age in Second Life》（Princeton University Press，2008）
+  - 《Ethnography and Virtual Worlds: A Handbook of Method》（Princeton，2012，方法论定标册）
+  - 「RAI『Anthropology of Play and Games』系列讲员（2025-11-12 / 2026-03-24 场次）」
+  - 「Metaverse 公共论述（UNESCO Courier，2023）」
+repo_anchors:
+  - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
+  - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+peer_bridges:
+  - Sicart（伦理席）
+  - Gobet（认知席）
+  - 张厚泉（思想史席）
+  - Juul（物的寿命）
+why_now: 2025-26 RAI「玩与游戏的人类学」系列把游戏人类学做成常设场所——正对应「游戏整合」一词的现成桌子；其「虚拟生活即真实活」与 Open Library 把四人生平拼成一人数据库的鬼打墙标本同构
+entry_sequence:
+  - 拿 Open Library 元数据鬼打墙标本（把四位 Cobb 并成一人的围棋礼品书）上桌
+  - RAI 系列组织者 Hazel Andrews/Kellynn Wee 为更易触达的次级入口 → UC Irvine 系公开活动
+  - 向系列提议「棋·书·数据库：玩法跨文明旅行的标本」专题场
+feasibility: ◐ 推断——RAI 系列是现成的桌子（「带菜来」非「请开门」），中生代组织者入口更易达；但其站位常被「元宇宙生意」话语骚扰，话柄须显人类学诚意而非概念新鲜
+open_questions:
+  - 系页个人 URL ◇
+  - 2025-26 新著细目 ◇
+  - 专题场提议是否被接 ◇
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 系页 URL；2025-26 新著细目
