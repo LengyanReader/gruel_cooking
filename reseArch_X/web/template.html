@@ -264,6 +264,22 @@ table.dm .status-badge.talked{background:#E9F0F5;color:var(--sky-deep)}
   #toc-panel{width:100%}
   #toc-toggle .toc-txt{display:none}
 }
+
+/* scholar card fold */
+.scard-fold{margin:.45rem 0 .25rem}
+.scard-fold>summary{display:flex;align-items:center;gap:.45rem;cursor:pointer;padding:.4rem .65rem;background:rgba(91,163,163,.07);border-radius:8px;font-size:.8rem;color:var(--accent-teal);font-weight:600;letter-spacing:.04em;list-style:none;transition:background .15s,border-radius .15s;user-select:none}
+.scard-fold>summary::-webkit-details-marker{display:none}
+.scard-fold>summary::before{content:'▸';font-size:.9em;transition:transform .2s;flex-shrink:0;color:var(--accent-teal)}
+.scard-fold>summary:hover{background:rgba(91,163,163,.15)}
+.scard-fold[open]>summary{background:rgba(91,163,163,.14);border-radius:8px 8px 0 0}
+.scard-fold[open]>summary::before{transform:rotate(90deg)}
+.scard-fold-body{border:1px solid rgba(91,163,163,.18);border-top:none;border-radius:0 0 10px 10px;padding:.5rem .55rem .25rem}
+/* fold control bar */
+.fold-bar{display:flex;align-items:center;gap:.6rem;padding:.52rem 1rem;background:rgba(176,143,67,.07);border-radius:12px;margin-bottom:1.15rem;font-size:.79rem;color:var(--ink-mid)}
+.fold-bar .fb-label{font-family:var(--ff-display);font-weight:700;color:var(--ink-deep);font-size:.85rem}
+.fb-btn{padding:.28rem .8rem;border-radius:99px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.78rem;font-weight:500;color:var(--ink-soft);transition:all .15s;font-family:var(--ff-body);white-space:nowrap}
+.fb-btn:hover{background:var(--warm-gold);color:#fff;border-color:var(--warm-gold)}
+.fb-hint{margin-left:auto;font-size:.72rem;opacity:.55}
 </style>
 </head>
 <body class="lang-zh">
@@ -570,19 +586,24 @@ function renderScholarCard(s){
     <div class="affil">${esc(s.affiliation||'')}</div>
     <div class="field">${esc(s.field||'')}</div>
     ${essence}
-    ${ethos}${vision}${tp}
-    <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
-    ${trends}${trendAnalysis}
-    ${keyWorks}${repoAnchors}
-    <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
-    ${whatReal}${whyNow}
-    <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
-    <div class="hook">${esc(s.dialogue_hook||'')}</div>
-    ${circle}
-    ${peerBridges}
-    ${entry}${entrySeq}${feasibility}${risk}
-    ${openQs}
-    ${virtues}
+    <details class="scard-fold">
+      <summary>${isEn?'full dossier':'完整档案'}</summary>
+      <div class="scard-fold-body">
+        ${ethos}${vision}${tp}
+        <div class="current"><span class="lbl">${isEn?'current work':'此刻在做'}</span><ul>${(Array.isArray(s.current_work)?s.current_work:[current]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+        ${trends}${trendAnalysis}
+        ${keyWorks}${repoAnchors}
+        <div class="why-open"><strong>${isEn?'open-mind evidence':'开明可证由'}</strong>：${esc(s.why_open||'')}</div>
+        ${whatReal}${whyNow}
+        <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
+        <div class="hook">${esc(s.dialogue_hook||'')}</div>
+        ${circle}
+        ${peerBridges}
+        ${entry}${entrySeq}${feasibility}${risk}
+        ${openQs}
+        ${virtues}
+      </div>
+    </details>
     <div class="tags">${tags}${stamps}</div>
     <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>
   </div>`;
@@ -594,6 +615,7 @@ function renderScholars(){
   if(SCH_STATE.mode) items = items.filter(s=>(s.mode||'').includes(SCH_STATE.mode));
   $('#sch-grid').innerHTML = items.map(renderScholarCard).join('') || '<div class="empty">— 无命中 · 无 hits —</div>';
   renderSchFilters();
+  installFoldBar();
 }
 function renderSchFilters(){
   const isEn = document.body.classList.contains('lang-en');
@@ -690,7 +712,7 @@ function renderMvp(){
   const items = DATA.mvp;
   $('#mvp-grid').innerHTML = items.map(m=>{
     const link = m.file ? `<a class="file-link" href="../../${esc(m.file)}">↗ ${esc(m.id)}</a>` : '';
-    return `<div class="mvp-item" data-status="${esc(m.status||'planned')}">
+    return `<div class="mvp-item" id="mvp-${esc(m.id)}" data-status="${esc(m.status||'planned')}">
       <div><span class="mvp-id">${esc(m.id)}</span><span class="mvp-status ${/built/i.test(m.status)?'built':''}">${esc(m.status||'planned')}</span></div>
       <div class="mvp-target">${esc(m.target)}</div>
       <div class="mvp-sum">${esc(m.summary)}</div>
@@ -719,10 +741,46 @@ function renderRubric(){
 function renderLog(){
   const logs = DATA.scan_logs;
   $('#log-body').innerHTML = logs.map(l=>
-    `<div class="tl-item"><div class="date">${esc(l.date)} <span class="wave">${esc(l.wave)}</span></div>
+    `<div class="tl-item" id="log-${esc(l.wave)}"><div class="date">${esc(l.date)} <span class="wave">${esc(l.wave)}</span></div>
     <h4>${esc(l.title)}</h4><p>${esc(l.summary||'')}</p>
     <a class="file-link" href="../../${esc(l.file)}">↗ ${esc(l.file.split('/').pop())}</a></div>`
   ).join('') || '<div class="empty">—</div>';
+}
+
+// ------- scroll-reveal: open folded ancestors before scrolling -------
+function _scrollReveal(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  let d = el.closest('details');
+  while(d){ d.open = true; d = d.parentElement?.closest('details') || null; }
+  if(el.classList.contains('scard')){
+    const fold = el.querySelector('.scard-fold');
+    if(fold) fold.open = true;
+  }
+  setTimeout(() => el.scrollIntoView({behavior:'smooth', block:'start'}), 60);
+}
+
+// ------- fold control bar for scholar grid -------
+function installFoldBar(){
+  const old = document.getElementById('sch-fold-bar');
+  if(old) old.remove();
+  const grid = document.getElementById('sch-grid');
+  if(!grid) return;
+  const isEn = document.body.classList.contains('lang-en');
+  const bar = document.createElement('div');
+  bar.id = 'sch-fold-bar';
+  bar.className = 'fold-bar';
+  bar.innerHTML = '<span class="fb-label">'+(isEn?'Dossiers':'学者档案')+'</span>'
+    + '<button class="fb-btn" data-fb="fold">'+(isEn?'Collapse all':'全部折叠')+'</button>'
+    + '<button class="fb-btn" data-fb="open">'+(isEn?'Expand all':'全部展开')+'</button>'
+    + '<span class="fb-hint">'+(isEn?'click per card':'点各卡片 \u25b8 单独展开')+'</span>';
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('.fb-btn');
+    if(!btn) return;
+    const fold = btn.dataset.fb === 'fold';
+    grid.querySelectorAll('.scard-fold').forEach(d => { d.open = !fold; });
+  });
+  grid.parentNode.insertBefore(bar, grid);
 }
 
 // ------- floating TOC -------
@@ -741,47 +799,74 @@ document.getElementById('toc-toggle')?.addEventListener('click', openToc);
 document.getElementById('toc-close')?.addEventListener('click', closeToc);
 document.getElementById('toc-overlay')?.addEventListener('click', closeToc);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeToc(); });
+document.getElementById('toc-body')?.addEventListener('click', e => {
+  const link = e.target.closest('a[data-target]');
+  if(!link) return;
+  e.preventDefault();
+  closeToc();
+  _scrollReveal(link.dataset.target);
+});
+function tocItem(target, label, cls){
+  return '<a class="'+(cls||'toc-item')+'" href="#'+target+'" data-target="'+target+'">'
+    + esc(label) + '</a>';
+}
 function buildToc(){
   const isEn = document.body.classList.contains('lang-en');
   const SECTIONS = [
-    {id:'dialogue', zh:'对话名册', en:'Dialogue Map'},
-    {id:'scholars', zh:'学者档案', en:'Scholar Dossiers'},
-    {id:'axes',     zh:'方向轴覆', en:'Axes Coverage'},
-    {id:'mvp',      zh:'MVP 轨道', en:'MVP Tracker'},
-    {id:'opp',      zh:'机会档案', en:'Opportunities'},
-    {id:'rubric',   zh:'六维标尺', en:'Six-Dim Rubric'},
-    {id:'log',      zh:'调研日志', en:'Scan Log'},
+    {id:'dialogue', zh:'对话名册',   en:'Dialogue Map'},
+    {id:'scholars', zh:'学者档案',   en:'Scholar Dossiers'},
+    {id:'axes',     zh:'方向轴覆',   en:'Axes Coverage'},
+    {id:'mvp',      zh:'MVP 轨道',   en:'MVP Tracker'},
+    {id:'opp',      zh:'机会档案',   en:'Opportunities'},
+    {id:'rubric',   zh:'六维标尺',   en:'Six-Dim Rubric'},
+    {id:'log',      zh:'调研日志',   en:'Scan Log'},
     {id:'intake',   zh:'新方向登记', en:'New Intake'},
   ];
-  let html = '<div class="toc-group"><div class="toc-group-lbl">' +
-    (isEn ? 'SECTIONS' : '章节') + '</div>';
-  SECTIONS.forEach(s => {
-    html += `<a class="toc-item sec" href="#${s.id}" onclick="closeToc()">${isEn?s.en:s.zh}</a>`;
-  });
+  let html = '<div class="toc-group"><div class="toc-group-lbl">'
+    + (isEn?'SECTIONS':'章节') + '</div>';
+  SECTIONS.forEach(s => { html += tocItem(s.id, isEn?s.en:s.zh, 'toc-item sec'); });
   html += '</div>';
-  // scholars list
   const scholars = DATA.scholars.slice().sort((a,b)=>{
     const ta=a.tier==='卓越开明'?0:1, tb=b.tier==='卓越开明'?0:1;
     return ta-tb || (a.name||a._slug).localeCompare(b.name||b._slug,'zh');
   });
-  html += `<div class="toc-group"><div class="toc-group-lbl">${isEn?'SCHOLARS ('+scholars.length+')':'学者 ('+scholars.length+')'}</div>`;
+  html += '<div class="toc-group"><div class="toc-group-lbl">'
+    + (isEn?'SCHOLARS ('+scholars.length+')':'学者 ('+scholars.length+')') + '</div>';
   let lastTier = '';
   scholars.forEach(s => {
-    if (s.tier !== lastTier && s.tier) {
-      if (lastTier) html += '<div style="border-top:1px solid var(--line);margin:.3rem 1rem"></div>';
-      html += `<div style="font-size:.58rem;letter-spacing:.14em;color:var(--ink-pale);padding:.28rem 1.25rem 0;font-weight:700">${esc(s.tier)}</div>`;
+    if(s.tier !== lastTier && s.tier){
+      if(lastTier) html += '<div style="border-top:1px solid var(--line);margin:.3rem 1rem"></div>';
+      html += '<div style="font-size:.58rem;letter-spacing:.14em;color:var(--ink-pale);'
+        + 'padding:.28rem 1.25rem 0;font-weight:700">' + esc(s.tier) + '</div>';
       lastTier = s.tier;
     }
-    const cls = s.tier==='卓越开明' ? 'toc-item tier-1' : 'toc-item';
-    const label = s.name || s._slug;
-    html += `<a class="${cls}" href="#sch-${s._slug}" onclick="closeToc()">${esc(label)}</a>`;
+    html += tocItem('sch-'+s._slug, s.name||s._slug,
+      s.tier==='卓越开明' ? 'toc-item tier-1' : 'toc-item');
   });
   html += '</div>';
+  if(DATA.mvp && DATA.mvp.length){
+    html += '<div class="toc-group"><div class="toc-group-lbl">MVP ('
+      + DATA.mvp.length + ')</div>';
+    DATA.mvp.forEach(m => {
+      const lbl = m.id + (m.target ? ' \u00b7 ' + m.target.slice(0,30) : '');
+      html += tocItem('mvp-'+m.id, lbl);
+    });
+    html += '</div>';
+  }
+  if(DATA.scan_logs && DATA.scan_logs.length){
+    html += '<div class="toc-group"><div class="toc-group-lbl">'
+      + (isEn?'SCAN LOG ('+DATA.scan_logs.length+')':'\u8c03\u7814\u65e5\u5fd7 ('+DATA.scan_logs.length+')')
+      + '</div>';
+    DATA.scan_logs.forEach(l => {
+      html += tocItem('log-'+l.wave, l.wave + ' \u00b7 ' + l.title.slice(0,32));
+    });
+    html += '</div>';
+  }
   document.getElementById('toc-body').innerHTML = html;
   const cnt = document.getElementById('toc-count');
-  if (cnt) cnt.textContent = isEn
-    ? DATA.counts.scholars + ' scholars · ' + DATA.counts.scans + ' waves'
-    : DATA.counts.scholars + ' 位学者 · ' + DATA.counts.scans + ' 轮调研';
+  if(cnt) cnt.textContent = isEn
+    ? DATA.counts.scholars + ' scholars \u00b7 ' + DATA.counts.scans + ' waves'
+    : DATA.counts.scholars + ' \u4f4d\u5b66\u8005 \u00b7 ' + DATA.counts.scans + ' \u8f6e\u8c03\u7814';
 }
 
 // ------- master render -------
