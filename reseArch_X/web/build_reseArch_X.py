@@ -300,6 +300,11 @@ SCHOLAR_AXES = {
     "kringelbach-morten": ["cultiv", "goodlife"],
     "friston-karl":       ["cultiv", "ai_ds", "ai_hum"],
     "chandaria-shamil":   ["cultiv", "goodlife", "ai_hum"],
+    "fanzo-jessica":      ["food", "sus"],
+    "patel-raj":          ["food", "sus"],
+    "buzzard-kevin":      ["ai_ds"],
+    "tao-terence":        ["ai_ds"],
+    "sawin-will":         ["ai_ds"],
 }
 
 OPP_AXES = {

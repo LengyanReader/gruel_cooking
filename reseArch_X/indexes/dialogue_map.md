@@ -37,6 +37,11 @@
 | Morten Kringelbach | `../scholars/kringelbach-morten.md` | Neuron 2024 繁荣科学纲领/Eudaimonia 中心创始主任（✔ 2026-11-04） | pleasure–meaning–flourishing 三层对照 | 东亚乐/安文本喂纲领请判 | 待议 |
 | Karl Friston | `../scholars/friston-karl.md` | 自由能原理/主动推理（MIT Press 开放专著；AII 开放社群）（✔ 2026-11-04） | 论说文 FEP 用法精读注记 | 借框架立论是否成立请判 | 待议 |
 | Shamil Chandaria | `../scholars/chandaria-shamil.md` | beautiful loop 合著/Rewiring 公开课/DeepMind 顾问（✔◐ 2026-11-04） | 冥想课×东亚阶梯共创内容提案 | 跨传统同构处进课程请判 | 待议 |
+| Jessica Fanzo | `../scholars/fanzo-jessica.md` | 食物政策×气候讲席(JHU SAIS)/NAS（✔ 2026-11-04） | 走廊食物系统三层审计（农业-气候-健康） | 三联框架打走廊材料请判 | 待议 |
+| Raj Patel | `../scholars/patel-raj.md` | 七廉价世界史/Inflamed/食物政治经济学（✔ 2026-11-04） | 中国食物史的廉价化读法（economics 激活） | 框架需非西方版本处请判 | 待议 |
+| Kevin Buzzard | `../scholars/buzzard-kevin.md` | FLT 形式化(EPSRC)/Xena 外延/LIMS AI×形式化 2026-03（✔ 2026-11-04） | math_clarification/lean 外行附录教学案例 | 给外行的形式化请判 | 待议 |
+| Terence Tao | `../scholars/tao-terence.md` | Lean 可靠性指南(2026-10)/Analysis I Lean 伴侣/PFR 形式化（✔ 2026-11-04） | 论说文五问审计表请判 | 审计含其亲历事件线 | 待议 |
+| Will Sawin | `../scholars/sawin-will.md` | 反证余波显式下界+1.2143 上限（✔ 2026-11-04） | proof_narrative 外行叙事请纠 | 引用其论文的叙事请判 | 待议 |
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：
