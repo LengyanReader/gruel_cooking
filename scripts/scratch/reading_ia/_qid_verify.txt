@@ -1,0 +1,1 @@
+C:\Users\data\miniconda3\envs\hy_py312\python.exe: can't open file 'C:\\DA_Practice\\cookbooks\\gruel_cooking\\scripts\\_qid_verify.py': [Errno 2] No such file or directory
