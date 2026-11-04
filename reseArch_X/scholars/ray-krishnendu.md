@@ -19,6 +19,11 @@ mvp: 用其 taste-hierarchy 框架，对本仓 `economics_cross_culture` 美食�
 dialogue_hook: 「按您 taste 等级的框架读了一批跨文明美食材料，发现 X 与『全球味觉趋同』叙事的张力，想请您判」
 entry: NYU Steinhardt 食物研究 PhD / 公开讲座
 risk: 非理工轴——MVP 须有数据或田野实据，不能只是书评；2026 论文层待回源（◇）
+v_insight: 显现良善 ◐ —— 看穿「taste」是等级——精粗之辨背后是移民与城市政治的位置，问题框架把伪装看穿（痕迹：what_real ✔）
+v_character: 显现良善 ◐ —— 卸任系主任后回到公共写作且密度高（Zócalo 2025 访谈）——把学问交给公共域一贯之（痕迹：why_open/current_work ✔）
+v_temperament: 倾向良善 ◐ —— 公共访谈形态本身即开放交锋；当面风格未直验 ◇
+v_compassion: 显现良善 ◐ —— 研究对象就是族裔餐馆主与移民的餐桌——一生站在「味道不被承认」者一边（痕迹：current_work/what_real ✔）
+v_overall: 慈悲与研究同构明确（移民×食物即其题）；2026 论文层 ◇ 待回源；MVP 须数据或田野、不能只书评（risk ✔）（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # 2026 论文层；早期著一手页

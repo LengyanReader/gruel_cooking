@@ -18,6 +18,11 @@ mvp: 用其 co-production 原则，为本仓 `living_heritage` 大运河走廊 +
 dialogue_hook: 「按您 2020 那套原则，我用两条中国走廊的地方知识做了份共生产草图，撞到学界-社区权责边界一处难落，想请您判这算不算真 co-production」
 entry: SRC PhD（见 ../opportunities/phd/RX-phd-stockholm-resilience-202610.md）；其 co-production 原则可直接用作申请研究计划的脚手架
 risk: 瑞典岗位制，须盯具体 vacancy；英语通行，无统一申请季
+v_insight: 显现良善 ◐ —— 把「谁算知识生产者」作为研究对象本身，且写成可操作原则——开放被她技术化了（痕迹：why_open/what_real ✔）
+v_character: 显现良善 ◐ —— 2020 原则（被引~2197）之后持续应用与更新自己立的原则，立场不漂移（痕迹：trends_analysis）
+v_temperament: 痕迹不足 ◇ —— 未见交锋痕迹；共生产研究以多主体协商为前提，属方向推断 ◐
+v_compassion: 显现良善 ◐ —— 原则本身即站在地行动者一边：「可持续议题必须由研究者与在地行动者共同定义问题」，定义权让渡给近端者（痕迹：what_real ✔）
+v_overall: 理论与行事同构（co-production 即她自己的做事方式）；当期对话窗口实开（SRC 滚动通道），判读可信度较高（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
 ```

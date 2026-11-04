@@ -18,6 +18,11 @@ mvp: 用 CBDB 开放数据对本仓 `economics_cross_culture` 做「科举-商�
 dialogue_hook: 「用 CBDB 做了一格科举-商网小问，方法是您库的延伸用法，发现 X，想请您看是否成立」
 entry: CBDB 项目协作 / 其主持的公开汇报场；Harvard 带生通道因身份待核（◇）
 risk: 年资高，接话口在数据与方法而非申请；教席/退休状态未落哈佛页核实（◇）
+v_insight: 显现良善 ◐ —— 把精英再生产的毕生问题从纸本转成可计算的开放数据库，且正把 AI/NER 抽取管线接入人物库（痕迹：what_real/trends_analysis）
+v_character: 显现良善 ◐ —— 开放近二十年不改其志，CBDB 全库免费含 API/离线库——开放即其作品本身（痕迹：why_open ✔）
+v_temperament: 痕迹不足 ◇ —— 资深汉学家，本档未见交锋风格；AI×DH 系列汇报由其主办，显示接纳新工具的姿态（◐）
+v_compassion: 倾向良善 ◐ —— prosopography 方法把师承/婚姻网络作为公共知识，但研究对象以精英为主（本档未见对弱势者痕迹）
+v_overall: 「开放近二十年不改」是全库最硬的持续行为证据（CBDB 657,000+ 人）；年资高，接话口在数据而非申请（risk ✔）（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # emeritus 状态；带生通道

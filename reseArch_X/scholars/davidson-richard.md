@@ -18,6 +18,11 @@ mvp: 把本仓 `contemplative science/` 的跨文献对齐（含佛/道/儒修�
 dialogue_hook: 「按您情绪可训练性的框架，我做了一份东亚几支修行传统的训练阶梯对照，想请您看能否用作纵向研究的分层依据」
 entry: Center for Healthy Minds 关联 PhD（UW Neuroscience/Psychiatry/Humanities 交叉）；本仓 `contemplative science` 跨文献对齐工作可与其范式直接对话
 risk: 硬神经科学门槛（统计/影像方法），跨到美区需方法论补课
+v_insight: 倾向良善 ◐ —— 把「幸福可训练」这种含混命题做成可证伪研究计划并维持数十年（痕迹：why_open/what_real）
+v_character: 显现良善 ◐ —— 创办 Center for Healthy Minds 长期建制化实证，立场连续；仓内纠偏（媒体误记 Ricardo）✔ 留档显其对准确的责任
+v_temperament: 痕迹不足 ◇ —— 组内文化与交锋风格未入档；纵向稳健风格旁证耐心，属间接推断 ◐
+v_compassion: 倾向良善 ◐ —— 研究位置落在普通人可训练的幸福而非仅病患；对具体弱势群体的公共行动痕迹未直验
+v_overall: 连续性与建制化是其最可见的美德；温度与交锋风格待对话补证；受教考量要把 risk 的硬方法门槛计入（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
   - {mark: ◇, asof: 2026-10-29}   # 中心当期招生通道待落页

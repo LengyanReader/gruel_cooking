@@ -19,6 +19,11 @@ mvp: 与其 ReConnect/ReSource 对话——把本仓 `contemplative science` 的
 dialogue_hook: 「我把东亚几支修行传统的『训练阶梯』做成结构化对照，正好能喂您 ReSource 的训练类型区分，想请您看有无科学用处」
 entry: ReConnect / Mind & Life 场；对话成立后再谈
 risk: 已离开马普体系，当前机构与学生通道未逐条核实（◇）
+v_insight: 显现良善 ◐ —— 看得出冥想传统与神经科学本位都对对象不公，选第三条路「可训练、可证伪」（痕迹：why_open/what_real）
+v_character: 显现良善 ◐ —— 离开马普建制仍维持独立的训练-研究综合体，研究设计优先于职衔积累（痕迹：trends_analysis/risk）
+v_temperament: 痕迹不足 ◇ —— 未见交锋痕迹；25+ 年长期纵向项目本身需耐心，属方向性推断 ◐
+v_compassion: 显现良善 ◐ —— 恰好把「慈悲训练/共情耗竭」作为 25 年实证对象——关怀的主题即她的实验（痕迹：current_work/why_open）
+v_overall: 全库中「研究主题与美德同构」程度最高的一位；性情层未直验，现机构 ◇ 待重核（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}   # 工作三条命中当年出处
   - {mark: ◇, asof: 2026-10-29}   # 现机构/招生态待落页

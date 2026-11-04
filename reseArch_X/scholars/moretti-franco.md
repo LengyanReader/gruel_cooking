@@ -18,6 +18,11 @@ mvp: 用本仓 `Reading_IA` 的藏书与关系边做 distant-reading 趋势图�
 dialogue_hook: 「按您 pamphlet 的路子跑了一份跨文明藏书的远读趋势图，撞到一套非西方文本的粒度问题，想请您看方法上是否成立」
 entry: Stanford Comparative Literature / English PhD； Literary Lab pamphlet 公开可下载，是首触点
 risk: 年资高、招生周期不定；pamphlet 方法已有大量后继者，未必需直接师从
+v_insight: 显现良善 ◐ —— 「反过来精读」把文学习惯本身变成可观察对象，问题是范式级的（痕迹：what_real）
+v_character: 显现良善 ◐ —— 方法刻意做成可复用公共品而非门派秘传，pamphlet 系列免费——把知识生产手段公开放（痕迹：why_open/trends_analysis ✔）
+v_temperament: 倾向良善 ◐ —— 对精读传统的对立是「建设性对立 Complement」而非拆台，论战方式留余地（痕迹：what_real ✔）
+v_compassion: 痕迹不足 ◇ —— 关切的对象是文学系统整体而非具体弱势群体，未见相关行为痕迹
+v_overall: 美德清晰在「方法公共化」；性情温和但证据少；受教入口实为公开的 pamphlet，不依赖其人是否收生（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
   - {mark: ◇, asof: 2026-10-29}   # 当期是否收生待系页核实

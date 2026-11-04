@@ -19,6 +19,11 @@ mvp: 接其「AI smog / 索引批判」——把本仓 MVP-001 的 bot-gating �
 dialogue_hook: 「您写 AI smog 的索引批判——我们把 237 个发现源的 bot-gating 按语言圈量了一遍，关门最密的恰是英文圈，附数据请您指正」
 entry: wordsinspace 公开写作 + Places 专栏是对话自然入口
 risk: 非招生主任岗，带生结构未核（◇）；对话窗口以写作为主
+v_insight: 显现良善 ◐ —— 自铸「AI smog」概念，把基础设施史的耐心搬到 AI 检索层——见新物能看穿其旧索引（痕迹：what_real/trends_analysis ✔）
+v_character: 显现良善 ◐ —— 学术产出本身即公共品：自有站持续更新至 2026、Places 定期专栏，全部公开都在写（痕迹：why_open ✔）
+v_temperament: 倾向良善 ◐ —— 交锋方式是随笔体（概念创造而非人身），对话窗口以写作为主，直接互动待验 ◇
+v_compassion: 倾向良善 ◐ —— 关切落在隐形的基础设施与隐形劳动者（目录员/书梯/索引工），她的对象一直是沉默者；个人行动痕迹薄（◇）
+v_overall: 学者式耐心从产出连续性可读；非招生主任岗（risk ✔）意味着受教需以写作对话形态进行（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # 带生结构；METRO 兼职仅见搜索摘要，不采

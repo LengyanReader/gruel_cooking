@@ -19,6 +19,11 @@ mvp: 用其 multilingual DH 框架自审本仓双语/多语实践（`Reading_IA`
 dialogue_hook: 「我们仓里双语并行已是常态——按您的 multilingual DH 清单自审，发现 X 处隐性英语中心，附材料请您判」
 entry: ADHO/DARIAH 场子 + Stanford DLCL 公开活动
 risk: ATS（职员轨）非教授岗——无带生通道；其影响力在社群与方法论（◇）
+v_insight: 显现良善 ◐ —— 指出「DH 的默认语言是英语」——别人看成中立工具，她看成系统性不利（痕迹：what_real ✔）
+v_character: 显现良善 ◐ —— 反 Anglocentrism 不是口号：课程硬性非英语语言、2025 多语主旨连场、CV 全公开——言行一致（痕迹：why_open/current_work ✔）
+v_temperament: 倾向良善 ◐ —— 用桌游教 DH、社区 makerspace——交锋方式轻、门开得低；论战风格未直验 ◇
+v_compassion: 显现良善 ◐ —— linguistic justice——站在「因工作语言非英语而被评价体系系统性打折」的研究者一边，最隐蔽的弱势（痕迹：what_real/2025 keynote）
+v_overall: 其论其行一贯（教学+议程+社区同一线）；ATS 岗无带生通道（risk ✔）——受教不可行、合作/社群可行；本仓双语实践恰是其一手案例（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # 无带生通道

@@ -18,6 +18,11 @@ mvp: 把她的 mobility data justice 框架**落到一个具体语料**——用
 dialogue_hook: 「把您的 mobility data justice 框架试用于一条中国历史水道走廊，发现一处框架未覆盖的 X，附上数据请您指正」
 entry: 对话成立后再谈（其新框架期，联合短文/工作坊报告比「申请」更自然）
 risk: 机构归属与当期项目须回 TU/e 页核实（◇）
+v_insight: 倾向良善 ◐ —— 把 mobility justice×data justice 合成新框架，正切中可持续转型的盲区，问题嗅觉准（痕迹：what_real/trends_analysis）
+v_character: 倾向良善 ◐ —— 框架本身即「谁的移动数据、被谁治理」，建制期站在正义一边（痕迹：why_open）
+v_temperament: 痕迹不足 ◇ —— 新框架期欢迎外部贡献（对话面开放，属方向推断 ◐）；个人风格未入档
+v_compassion: 显现良善 ◐ —— 研究纲领整体围绕「谁被数据化移动系统抹去」，被排除者即其对象（痕迹：what_real/mvp）
+v_overall: 问题与慈悲同构；证据层尚薄（上升期学者，痕迹天然少，属正常）；机构 ◇ 待重核；判读留成长空间（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}   # 三件 current_work 命中当年出处
   - {mark: ◇, asof: 2026-10-29}   # 院系/当期项目待落页

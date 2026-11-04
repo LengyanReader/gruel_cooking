@@ -19,6 +19,11 @@ mvp: 用其 deep mapping 路子对本仓 `living_heritage` 大运河走廊做一
 dialogue_hook: 「按您 Atlas of Maritime Buddhism 的 deep mapping，把一条中国运河走廊记成了多行动者深图初稿，想请您看这种『场』的读法成不成立」
 entry: Digital Heritage 2025 / EPFL Pavilions 展览场是对话自然入口
 risk: 顶级策展带宽；EPFL 招生通道未核（◇）；HKUST 兼职旧闻不采（◇）
+v_insight: 显现良善 ◐ —— 看出遗产的数字化不是扫描而是「可进入的场」，deep mapping 把多文明丝路读成层叠地理——概念能落地为行动（痕迹：what_real/current_work）
+v_character: 显现良善 ◐ —— 实验室与展览页全程公开、执掌 Digital Heritage 社群主席位——把计算博物馆学做成开放建制的实践而非私人手艺（痕迹：why_open ✔）
+v_temperament: 痕迹不足 ◇ —— 策展型领导者，交锋痕迹未入档；17 个实验打包成宣言显示对外对话意愿（方向推断 ◐）
+v_compassion: 倾向良善 ◐ —— Atlas of Maritime Buddhism 跨 12 国把非精英海上遗产列入保护，但本档未见对个人弱势者的行动痕迹
+v_overall: 建制化与公开化痕迹强；性情层待观察；顶级策展带宽（risk ✔）使受教需走展览/会议场（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # HKUST 当期职务；EPFL 带生通道

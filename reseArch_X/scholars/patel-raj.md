@@ -19,6 +19,11 @@ mvp: 用其「廉价化」透镜读本仓 `economics_cross_culture` 的农业经
 dialogue_hook: 「用您七廉价框架读了一批中国经济史食物材料，发现 X 处该框架需要非西方版本，附案例请您判」
 entry: UT Austin LBJ 公开活动 / rajpatel.org 公告场
 risk: 政治经济学立场鲜明——对话话柄须以材料和史实为硬通货，避免立场对话（◇ 带生通道未核）
+v_insight: 显现良善 ◐ —— 一个「廉价化」把生态、劳动、关怀、食物四层串成世界史统一解释，再经 Inflamed 收到身体尺度——悟性跳尺度而一贯（痕迹：what_real/trends_analysis ✔）
+v_character: 显现良善 ◐ —— 立场鲜明二十年不漂移（Stuffed and Starved→七廉价→Inflamed），且不入纯书斋：纪录片/播客/Food First——承担立场代价的公共知识分子行径（痕迹：current_work/why_open ✔）
+v_temperament: 倾向良善 ◐ —— 交锋形态是公开论战（书/片/讲），立场摆在明处；是否接得住批评性对话待验 ◇（risk 已提示：话柄须硬通货、避免立场对话）
+v_compassion: 显现良善 ◐ —— 全部写作在为「被外部化成本」者立证——被剥削的生态与劳力；Inflamed 更把不义写进身体的炎症（痕迹：what_real/current_work ✔）
+v_overall: 全库四项痕迹最鲜明的一位；对话要慎的恰是其立场鲜明外的硬要求：材料与史实（risk ✔）（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 带生通道

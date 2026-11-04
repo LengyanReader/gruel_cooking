@@ -19,6 +19,11 @@ mvp: 本仓 `math_clarification/lean/` 正是一个「给外行的 Lean 附录�
 dialogue_hook: 「我们在一个数学释疑仓里做了个给外行的 Lean 附录——把蒙提霍尔/折纸月球/生日悖论 formalize 了一行版，附目录请您判这条路值不值得走」
 entry: Xena Project 公开场 / Mathlib 社区 / LIMS 类活动
 risk: FLT 工程极耗带宽；但其外延项目的设计初衷就是接外部学习者——话柄越「外行友好」越对路
+v_insight: 显现良善 ◐ —— 身为纯数学家却先看穿「信任正从同行评审迁移到编译器」——对时代关节的直觉（痕迹：what_real ✔）
+v_character: 显现良善 ◐ —— 十年免费教学外延（Xena）、手册/GitHub/博客全公开、Mathlib 维护——「开放证据全仓最强之一」（痕迹：why_open ✔）
+v_temperament: 倾向良善 ◐ —— 外延项目的设计初衷就是接外部学习者（risk ✔），门是开的；具体交锋记录未入档 ◇
+v_compassion: 显现良善 ◐ —— Xena 的对象是「被形式化门槛挡在外面的本科生」，十年免费——教学慈悲无歧义（痕迹：why_open/current_work ✔）
+v_overall: 本仓资产咬合最直接的学者；美德判读有十年公开行为痕迹背书，可信度高；话柄越「外行友好」越对路（risk ✔）（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 带生通道

@@ -42,6 +42,10 @@
 | Kevin Buzzard | `../scholars/buzzard-kevin.md` | FLT 形式化(EPSRC)/Xena 外延/LIMS AI×形式化 2026-03（✔ 2026-11-04） | math_clarification/lean 外行附录教学案例 | 给外行的形式化请判 | 待议 |
 | Terence Tao | `../scholars/tao-terence.md` | Lean 可靠性指南(2026-10)/Analysis I Lean 伴侣/PFR 形式化（✔ 2026-11-04） | 论说文五问审计表请判 | 审计含其亲历事件线 | 待议 |
 | Will Sawin | `../scholars/sawin-will.md` | 反证余波显式下界+1.2143 上限（✔ 2026-11-04） | proof_narrative 外行叙事请纠 | 引用其论文的叙事请判 | 待议 |
+| **王思明** | `../scholars/wang-siming.md` | 农业文化遗产学学科建设；2025-11 文集发布+南京农遗研究院揭牌+首设农史科教奖青年英才奖（✔ 2026-11-04） | 本仓食物条目照其框架做中外对照辨认样例（gruel_cooking 即题眼） | 样例库请判农史层面认对否 | 待议（v5 新档） |
+| **Kate Raworth** | `../scholars/raworth-kate.md` | Nature 2025 甜甜圈 35 指标更新框架；DEAL 2026 城市实操社区运转（✔ 2026-11-04） | 运河府志×35 指标历史试映射（标失灵点） | 失灵处请判是指标问题还是框架的文明边界 | 待议（v5 新档） |
+
+> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）、**游戏即遗产**（围棋×AI×文化，Book-of-Go 余线）。详见 `../scan_log/20261104-v5-virtues-and-gate.md`。
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：

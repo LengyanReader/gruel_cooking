@@ -19,6 +19,11 @@ mvp: 把其五伦理原则框架，套到一个**具体案例**（本仓 `docs/c
 dialogue_hook: 「用您的责任 AI 原则审了一个中国语境的具体数据/内容场景，发现某条原则在此特别吃紧，想请您判判是不是真问题」
 entry: AI Policy Lab + 公开报告场合；对话成立后再谈
 risk: 政策事务繁忙（◇ 带生节奏未核）
+v_insight: 显现良善 ◐ —— 知道光写原则不够，把伦理做成政策实验室运行件——「想通→建制」的火候拿捏准（痕迹：trends_analysis/why_open）
+v_character: 显现良善 ◐ —— 把伦理做进工程流程而非事后贴标签，HLEG/KAW 公共任职持续背书其言行一致（痕迹：why_open/current_work ✔）
+v_temperament: 痕迹不足 ◇ —— 政策工作需协商能力，但本档无交锋痕迹；带生节奏 ◇
+v_compassion: 倾向良善 ◐ —— value-sensitive 框架本身就在问「谁被 AI 伤害」，问题落在风险承受者一边（痕迹：what_real）
+v_overall: 美德清晰表现为「责任落地」——从原则到运行件；温度与交锋风格待对话；合作形态对路（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
 ```

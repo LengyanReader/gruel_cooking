@@ -27,6 +27,11 @@ dialogue_hook: "用您 Artificial Aesthetics 的方法跑了一份多文明语�
 mode: 两者
 entry: CUNY GC / Cultural Analytics Lab workshop / 联合短文
 risk: 名嘴带宽有限；但其开放方法意味着「先做出东西—公开对话」这条路对他尤其走得通
+v_insight: 显现良善 ◐ —— 在数据主义与 AI 热潮双向夹击下仍坚持「用数据理解文化而不把文化还原为数据」，且能把方法拆成可教可复现的开源教程体系（痕迹：ethos/theory_practice）
+v_character: 显现良善 ◐ —— 新作全程逐章免费公开、工具开源、把手段交给公众——学术生产公共性不是口号而是持续行为（痕迹：ethos/why_open/theory_practice ✔）
+v_temperament: 倾向良善 ◐ —— 接得住「带数据与图指正一处张力」的对话式（MVP-001 即按此设定）；公开反驳他人时的风度未直验 ◇（痕迹：why_open/dialogue_hook）
+v_compassion: 倾向良善 ◐ —— 问题层关切「不可见的」非西方语料（跨文明压测的方向即证）；对具体弱势者的行动痕迹尚少（痕迹：trends ◇ 方向）
+v_overall: 「开明」是其有行为证据的鲜明人格；温度类判断证据薄——倾向良善，待真实对话补足（asof 2026-11-04）
 stamps: [ ✔ + 2026-10-29 ]
 ```
 

@@ -18,6 +18,11 @@ mvp: 以其 mobility data justice 框架，审计**本仓 `living_heritage` 大�
 dialogue_hook: 「用您和 Behrendt 的 mobility data justice 框架重读了一条中国历史水道走廊的当代移动数据，得到一处关于 X 的观察，想请您看是否站得住」
 entry: 对话成立后再谈（Global School PhD 只是一个可选后续，非目的）
 risk: 行政职重，面谈窗口窄；但结构性跨域氛围是可核绿灯
+v_insight: 显现良善 ◐ —— 把 mobility 从不读作「位移」而读作权力/殖民/提取的纠缠，以局部见全局（痕迹：what_real/trends_analysis）
+v_character: 显现良善 ◐ —— 「开放」在其建制里：把气候/流动/正义捆进跨学院体，框架本身问「谁的数据谁说了算」（痕迹：why_open ✔）
+v_temperament: 痕迹不足 ◇ —— 行政职重、交锋痕迹未入档；面谈窗口窄（risk ✔）
+v_compassion: 显现良善 ◐ —— 数据正义+低碳转型×公平+气候级联风险三线并进，均围绕承担移动代价者（痕迹：current_work ✔）
+v_overall: 正义立场与建制化痕迹强；性情层待对话观察；受教/合作对话链上 Behrendt 是第一棒、Sheller 为远端（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
   - {mark: ◇, asof: 2026-10-29}   # New Mobilities Center 当期成员/活动待落页

@@ -19,6 +19,11 @@ mvp: 用其「农业-气候-健康三联」框架，读本仓 `living_heritage` 
 dialogue_hook: 「用您的三联框架审了一条中国运河走廊的食物材料，气候层与在地饮食文化的一处张力，想请您判是否值得深挖」
 entry: SAIS Europe / Columbia Climate School 公开活动；NAS 报告圈
 risk: 讲席+跨机构行政重；带生通道未核（◇）
+v_insight: 倾向良善 ◐ —— 看出食物系统是人类世气候与健康的「共同驱动层」而非下游部门——问题位置感（痕迹：what_real ✔）
+v_character: 倾向良善 ◐ —— 讲席+NAS+跨机构公开网络——把食物议题做成国家级顾问与公开课程，言行一致在建制（痕迹：why_open/current_work ✔）
+v_temperament: 痕迹不足 ◇ —— 档案未见交锋痕迹；报告/课程公开度属方向旁证 ◐
+v_compassion: 显现良善 ◐ —— 食物系统纲领的对象是营养不良人群与气候脆弱区——关切落在付代价而无声者（痕迹：what_real/mvp）
+v_overall: 系统层的公共性有聘书背书；讲席行政重（risk ✔）、带生通道 ◇——对话宜走报告与公开活动场（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 官网直链；带生通道

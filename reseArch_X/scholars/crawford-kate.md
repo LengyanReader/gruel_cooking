@@ -19,6 +19,11 @@ mvp: 用其「AI 物质地理」透镜审计本仓 discovery_atlas 的 infrastru
 dialogue_hook: 「把您 Atlas of AI 的物质-权力透镜放到文化遗产发现源层，infrastructure 条目里 X 的集中度与您的判断有张力，附数据请您指正」
 entry: ENS Paris 讲席 / 公开活动 / 计算帝国项目公开页
 risk: 顶级带宽，公开通道竞争极烈；话柄须有数据硬通货（MVP-001 类发现是其可即时判读的类型）
+v_insight: 显现良善 ◐ —— 在人人谈 AI 为智能时坚持它是物质-权力复合体（矿藏/劳力/分类体系），问题位置摆得准（痕迹：what_real/trends_analysis）
+v_character: 显现良善 ◐ —— 批判立场与公共行动一致：Nature 政策文把情绪识别 AI 推向监管实务，Atlas 图系谱全免费公开（痕迹：why_open/current_work ✔）
+v_temperament: 倾向良善 ◐ —— 论战形态是公共知识分子式（双年展装置+政策文），面向公众；个人风格未直验 ◇
+v_compassion: 显现良善 ◐ —— Atlas of AI 把被剥削者（采掘劳力、原住民土地）列为核心论据，关怀取向明确（痕迹：what_real ✔）
+v_overall: 正义立场与公开化行动痕迹俱佳；顶级带宽（risk ✔）不折损品行判读；数据硬通货是接入正路（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # MSR 现职；USC 无直招通道

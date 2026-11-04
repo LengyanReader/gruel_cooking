@@ -18,6 +18,11 @@ mvp: 用本仓 `discovery_atlas` 星图 / `Reading_IA` 图谱，按 Graphesis �
 dialogue_hook: 「按您 Graphesis 的读法，我把自家知识图谱重画了一版，刻意标注了它在替我做哪些论证——想请您看看这种自反够不够」
 entry: 其课book/公开著述是入口；对话成立后再谈
 risk: 资深，直接带生名额有限（◇）
+v_insight: 显现良善 ◐ —— 一句「数据可视化不是透明呈现而是论证」拆掉工具天真，反讽见判别力（痕迹：what_real/why_open）
+v_character: 显现良善 ◐ —— 数十年反对「数据即客观」不漂移，把立场做成教材可教可辩（痕迹：current_work/trends_analysis）
+v_temperament: 倾向良善 ◐ —— 交锋风格是公开理论反对（反数据膜拜）而非人身；课堂风格未验 ◇（痕迹：what_real）
+v_compassion: 痕迹不足 ◇ —— 问题指向知识生产认识论，对弱势者位置未见行为痕迹，如实留 ◇
+v_overall: 风骨与立场一致性痕迹强；慈悲维度本档未展开——判读与理论分开读；受教入口实为她的教材与公开著述（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
 ```

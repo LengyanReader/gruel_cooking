@@ -18,6 +18,11 @@ mvp: 把其「数字迹」框架嫁接到本仓 `Reading_IA` 阅读迹线，做�
 dialogue_hook: 「按您 bitbybit 的框架用 LLM 复现了一格数字迹实验，撞到一个 consent/被试定义的问题，想请您看这算不算合规的扩展」
 entry: Princeton Sociology / 关联计算社科通道；其书与 sicss.io 是零摩擦首触点
 risk: 偏量化社会结构，与用户人文/修行轴契合度低于 Manovich/Moretti，列为「数据 × 社会」一侧的方法基石
+v_insight: 显现良善 ◐ —— 看出一个领域的入门墙才是公共问题，并把它做成开放教材——方法自觉且制度化（痕迹：why_open/trends_analysis ✔）
+v_character: 显现良善 ◐ —— 开放评审版持续更新+课件公开复用是多年一贯行为，拆墙不是一次姿态（痕迹：current_work ✔）
+v_temperament: 倾向良善 ◐ —— 对「数据即真理」保持方法论警觉，不随 hype 起舞；开放评审本身即接得住批评（交锋现场未直验 ◇）
+v_compassion: 倾向良善 ◐ —— 拆入门墙是对后来者的利益（教学慈悲）；未见对具体弱势人群的直接行动痕迹
+v_overall: 美德清晰表现为「把公开做成制度」；与用户轴契合度低（risk ✔）属事实匹配问题，不折损其品行判读（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
 ```

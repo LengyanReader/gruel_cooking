@@ -19,6 +19,11 @@ mvp: 把本仓 `contemplative science/` + 「良好生活」轴的跨传统材�
 dialogue_hook: 「按您 Neuron 2024 的三层纲领读了一批东亚『乐/安』文本，pleasure 与 meaning 的分层对得上 X 处，附对照表请您看有无科学用处」
 entry: Centre for Eudaimonia 公开活动（Linacre）；奥胡斯侧的马普 Centre for Music in the Brain 等公开网络
 risk: 双聘行政重；正式带生通道未核（◇）
+v_insight: 显现良善 ◐ —— 看出快乐单独不成「良好生活」的科学，立 pleasure–meaning–flourishing 三层纲领——问题火候感（痕迹：what_real/trends_analysis ✔）
+v_character: 倾向良善 ◐ —— 纲领文+中心公开页+引入 FLIP 计算-意识线并轨——把 eudaimonia 做成可测对象而非口号（痕迹：current_work/why_open ✔）
+v_temperament: 痕迹不足 ◇ —— 交锋痕迹未入档；引入年轻合作者（Laukkonen）是开明带队的旁证 ◐
+v_compassion: 倾向良善 ◐ —— 纲领即「人类繁荣」，但对具体弱势者的行动痕迹未直验 ◇
+v_overall: 「良好生活」轴的建筑师；带后学入制是治理开放性的旁证；双聘行政重（risk ✔）影响带生带宽（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # 带生通道

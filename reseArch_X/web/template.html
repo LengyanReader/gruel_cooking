@@ -108,6 +108,11 @@ body.lang-en [data-zh]{display:none!important}
 .scard .why-open,.scard .mvp,.scard .hook{font-size:.82rem;color:var(--ink-mid);margin-top:.55rem;line-height:1.7}
 .scard .why-open strong,.scard .mvp strong,.scard .hook strong{color:var(--ink-deep);font-weight:600}
 .scard .hook{background:rgba(91,163,163,.08);border-left:2px solid var(--accent-teal);padding:.5rem .7rem;border-radius:0 8px 8px 0;font-family:var(--ff-display);color:var(--ink-deep);font-size:.85rem;margin-top:.7rem;line-height:1.7}
+.scard .virtues{margin:.6rem 0 0;padding:.55rem .7rem;border:1px solid rgba(176,143,67,.35);border-radius:8px;background:rgba(176,143,67,.05);font-size:.8rem;line-height:1.6;color:var(--ink-mid)}
+.scard .virtues .v-lbl{color:var(--ink-deep);font-weight:600;font-size:.78rem}
+.scard .virtues ul{margin:.35rem 0 0;padding-left:1.15rem}
+.scard .virtues li{margin:.22rem 0}
+.scard .virtues .v-overall{margin-top:.4rem;padding-top:.35rem;border-top:1px dashed rgba(176,143,67,.3);font-family:var(--ff-display);color:var(--ink-deep)}
 .scard .tags{display:flex;flex-wrap:wrap;gap:5px;margin:.55rem 0 .3rem}
 .scard .tag{padding:2px 9px;border-radius:99px;font-size:.68rem;background:#F3EEE1;color:var(--ink-soft);font-weight:500}
 .scard .tag.mode{background:#E9F0F5;color:var(--sky-deep)}
@@ -371,6 +376,11 @@ dialogue_hook:            # 一句不带索取的真实话柄
 mode: 合作 | 受教 | 两者
 entry:                    # 后续入口（对话成立后再启用）
 risk:
+v_insight:                # 悟性·感受性判读（显现良善|倾向良善|痕迹不足，锚回已溯源行为，一律 ◐）
+v_character:              # 人格·感受性判读（同上口径）
+v_temperament:            # 性格·感受性判读（交锋/容错方式）
+v_compassion:             # 慈悲心·感受性判读（对弱者/边缘/非人的位置）
+v_overall:                # 总评一句 + 证据边界（公共材料≠私密人格）
 stamps:
   - {mark: ✔, asof: YYYY-MM-DD}
 ```
@@ -480,6 +490,8 @@ function renderScholarCard(s){
   const whatReal = s.what_real ? `<div class="what-real"><strong>${isEn?'real problem':'真问题'}</strong>：${esc(s.what_real)}</div>` : '';
   const risk = s.risk ? `<div class="risk"><strong>${isEn?'risk':'风险'}</strong>：${esc(s.risk)}</div>` : '';
   const entry = s.entry ? `<div class="entry"><strong>${isEn?'entry':'入口'}</strong>：${esc(s.entry)}</div>` : '';
+  const vItems = [[s.v_insight, isEn?'insight':'悟性'],[s.v_character, isEn?'character':'人格'],[s.v_temperament, isEn?'temperament':'性格'],[s.v_compassion, isEn?'compassion':'慈悲']].filter(([v])=>v);
+  const virtues = (vItems.length||s.v_overall) ? `<div class="virtues"><span class="v-lbl">${isEn?'virtue reading (◐ judgment, not fact)':'感受性评估（◐ 判读非事实）'}</span><ul>${vItems.map(([v,l])=>`<li><strong>${l}</strong>：${esc(v)}</li>`).join('')}</ul>${s.v_overall?`<div class="v-overall">${esc(s.v_overall)}</div>`:''}</div>` : '';
   return `<div class="scard" data-tier="${esc(s.tier||'')}" data-slug="${esc(s._slug)}">
     <div class="head"><div class="head-text"><h3>${esc(s.name||s._slug)}</h3><span class="tier">${esc(s.tier||'')}</span>${homepage}</div></div>
     <div class="affil">${esc(s.affiliation||'')}</div>
@@ -492,6 +504,7 @@ function renderScholarCard(s){
     <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
     <div class="hook">${esc(s.dialogue_hook||'')}</div>
     ${entry}${risk}
+    ${virtues}
     <div class="tags">${tags}${stamps}</div>
     <a class="file-link" href="../../${esc(s._file)}">↗ ${esc(s._file)}</a>
   </div>`;

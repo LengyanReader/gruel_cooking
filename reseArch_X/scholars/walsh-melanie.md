@@ -19,6 +19,11 @@ mvp: 用其 open-textbook 方法把本仓 `Reading_IA` 藏书做一份可复现�
 dialogue_hook: 「按您 Cultural Analytics 教材的方法跑了本仓跨文明藏书，把您的性别审计换成文明圈审计，附 notebook 请您指正」
 entry: iSchool PhD 通道 + 开放教材社区（GitHub issues 即低门槛对话场）
 risk: 助理教授带宽有限但正建组——早期对话价值最高
+v_insight: 显现良善 ◐ —— 把文化分析的对象转向「AI 的文化输出」，用 23,800 条回应把多样性话术拆成数字——问题转向准且执行硬（痕迹：trends_analysis/current_work ✔）
+v_character: 显现良善 ◐ —— 开放教材 CC 授权、代码可复现，「开放是方法论而非姿态」——早期职业即言行一致（痕迹：why_open ✔）
+v_temperament: 倾向良善 ◐ —— GitHub issues 即低门槛对话场，其设计本身把交锋面打开；当面风格未入档 ◇
+v_compassion: 显现良善 ◐ —— 审计选题站在被表征者一边：儿童故事的性别偏差、公共图书馆的多样性——护的是不会说话的读者（痕迹：current_work ✔）
+v_overall: 四项均有直痕，「有潜力」层中证据密度最高的一位；建组期对话窗口价值最大（risk ✔）；论文精确题名 ◇ 照常（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # FAccT 2026 论文精确题名仅见二手转述

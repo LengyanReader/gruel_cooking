@@ -18,6 +18,11 @@ mvp: 为其 2026-06「AI through History」这类公开场子备一件作品—�
 dialogue_hook: 「读到您新在 C²DH 主持的 AI×历史议程——我用一份多文明语料做了个相关的小分析，想在 workshop 前请您判判方向」
 entry: 公开 workshop/CfP 是最自然的入口；对话成立后再谈访问/合作
 risk: 上任未久，招生/带学生节奏未定（◇）
+v_insight: 显现良善 ◐ —— 问题设为双向（AI through History, History through AI）而非流行的「用 AI 跑历史数据」，研讨会题目即其问题观，立意高一层（痕迹：what_real ✔）
+v_character: 倾向良善 ◐ —— 新设讲席即以公开 CfP 召集社群立议程，走开放路线而非闭门建仓（痕迹：why_open/current_work ✔）
+v_temperament: 痕迹不足 ◇ —— 上任未久，本档交锋/互动痕迹少；公开 CfP 的低门槛对话场是方向旁证 ◐
+v_compassion: 痕迹不足 ◇ —— 遗产数据的公益面向存在，但个人对弱势者位置未见行为痕迹，不臆测
+v_overall: 处于「立议程窗口期」，开放建制痕迹明确而性格/慈悲证据未积——判读宜轻、待对话补录；机构 ◇ 层照常重核（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}   # 机构/讲席/CfP 命中
   - {mark: ◇, asof: 2026-10-29}   # 具体课题与其个人方法待落页

@@ -305,6 +305,8 @@ SCHOLAR_AXES = {
     "buzzard-kevin":      ["ai_ds"],
     "tao-terence":        ["ai_ds"],
     "sawin-will":         ["ai_ds"],
+    "wang-siming":        ["food", "herit", "sus"],
+    "raworth-kate":       ["sus", "goodlife"],
 }
 
 OPP_AXES = {

@@ -19,6 +19,11 @@ mvp: 把本仓 `contemplative science/` 跨文献对齐（佛/道/儒修行文�
 dialogue_hook: 「按您『从多到（非）一』的预测加工模型读了一批东亚修行文本，『能所双泯』与精度加权崩塌对得上 X 处、错位 Y 处，附对照表请您指正」
 entry: FLIP / Centre for Eudaimonia 公开活动；其播客/公开写作场
 risk: 新任行政职（FLIP 主任），建组初期带宽与招生通道未定（◇）
+v_insight: 显现良善 ◐ —— 把「从多到（非）一」的神秘体验建成精度加权的可计算模型——能把修行第一人称报告翻译成可证伪机制是罕见的悟性（痕迹：what_real/trends_analysis ✔）
+v_character: 倾向良善 ◐ —— 2025 意识论与 Chandaria 合著分署其想；热点领域保持公开访谈与写作；2026 建制未改其题（痕迹：current_work/why_open ✔）
+v_temperament: 倾向良善 ◐ —— 其模型「本身邀请跨传统检验」——理论设计成可被他人证伪的，交锋面内置；面谈风格未验 ◇
+v_compassion: 痕迹不足 ◇ —— 研究意识与繁荣，但对具体弱势者的行动痕迹本档未见
+v_overall: 悟性与开放性痕迹俱强；新任计划主任带宽未定（risk ◇）；本仓文言语料恰是其模型缺的跨文明层，对话契合度高（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # FLIP 带生通道

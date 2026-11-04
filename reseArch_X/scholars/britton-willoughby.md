@@ -19,6 +19,11 @@ mvp: 把本仓 `contemplative science/` 跨文献对齐中的「障碍/风险/�
 dialogue_hook: 「东亚修行传统文本里本就有大量『障碍/魔境』叙事——我们整理成结构化对照，发现 X 与现代 adverse-effects 分类对得上，想请您看有无科学用处」
 entry: Cheetah House / 其 Brown lab 公开场
 risk: 临床侧方法论门槛（统计/量表）；对话敏感点在「不把传统浪漫化」；带生通道 ◇
+v_insight: 显现良善 ◐ —— 在热潮中第一个问「冥想不总是有益吗」——悟性在反常识的时机判断（痕迹：what_real ✔）
+v_character: 显现良善 ◐ —— 在全行业报喜时做伤害研究且建成 Cheetah House——独立立场不避两方得罪；诚实纪律「先问伤害、不浪漫化传统」（痕迹：why_open ✔）
+v_temperament: 倾向良善 ◐ —— 研究对象敏感（对传统表态）却做成了服务机构而非论战——交锋方式建设性，未直验 ◇
+v_compassion: 显现良善 ◐ —— Cheetah House 即为「被冥想伤到的人」提供循证信息与支持——慈悲不是主题而是建制（痕迹：current_work ✔）
+v_overall: 全库「慈悲清晰度」最高的一位——她为受 practicing 伤害者建了求助机构；受教须先尊重其不浪漫化纪律（risk ✔）（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-03}
   - {mark: ◇, asof: 2026-11-03}   # 带生通道

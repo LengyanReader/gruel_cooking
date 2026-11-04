@@ -19,6 +19,11 @@ mvp: 本仓论说文《证明不再稀缺》以「非宗派语域」引用其 FE
 dialogue_hook: 「我们在一篇论说文里借您的自由能原理为『数学家之定位』立论（非宗派语域），附该节与用法注记——请您判这个借用是否成立」
 entry: UCL 公开讲演 / Active Inference Institute 的公开 session（低门槛问学场）/ open-access 专著本身
 risk: 顶级带宽 + 邮件海量；AII 社群是比直邮更现实的接入路径（其公开 session 常有 Friston 本人参与 ◇ 待核）
+v_insight: 显现良善 ◐ —— 把知觉、行动、学习归为同一个最小化的三面——理论级统一性；且看穿生命即抵抗耗散（痕迹：what_real ✔）
+v_character: 显现良善 ◐ —— 专著 open access、SPM/FIL 开源传统、最大研习社群（AII）是第三方自组织而非其私产——公共性三证（痕迹：why_open ✔）
+v_temperament: 倾向良善 ◐ —— 框架 invites 跨域应用与证伪（AII 社群公开讨论实证缺口）；本人交锋风格未直验 ◇
+v_compassion: 痕迹不足 ◇ —— 理论对象含一切自组织生命，但对人的具体关怀未见档案痕迹——慈悲在理论层被抽象化了
+v_overall: 「把地基公开」是一贯行为线；直邮极难（risk ✔），AII session 是现实路径；本仓已认真用过其框架，对话非冷接触（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-11-04}
   - {mark: ◇, asof: 2026-11-04}   # AII session 本人出席节奏

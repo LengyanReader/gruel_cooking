@@ -19,6 +19,11 @@ mvp: 借其「multispecies / arts of noticing」，对本仓 `living_heritage` �
 dialogue_hook: 「按您 arts of noticing 的路子，记了一条中国水陆走廊的多物种/多行动者扰动志，想请您看这种『在废墟中活着』的读法成不成立」
 entry: 其集体项目/公开写作；对话成立后再谈
 risk: 年资高；但其方法重共同体，问学以「加入项目/对话」而非「注册」为主（◇）
+v_insight: 显现良善 ◐ —— 能把人类世的难题转译成可习可练的「注意力的艺术」，方法容得下松茸、水、货、路众多存在（痕迹：what_real/why_open）
+v_character: 显现良善 ◐ —— 长期站在「废墟中共同活着」一边而不转向安全的抽象理论，著述与教学一致（痕迹：current_work/trends_analysis）
+v_temperament: 倾向良善 ◐ —— 与生态学家、艺术家、诗人共同生产知识，合著为常态，交锋方式非对抗式（痕迹：why_open ✔）
+v_compassion: 显现良善 ◐ —— 把非人（松茸/多物种）列为道德行动者来书写，关切落在受创者与边缘（痕迹：current_work/what_real）
+v_overall: 四项同根——「共同生产而不占署」是全库少见的高清晰行为痕迹；问学宜「加入项目」而非「注册」（risk ✔）；公共材料界限照旧（asof 2026-11-04）
 stamps:
   - {mark: ✔, asof: 2026-10-29}
 ```
