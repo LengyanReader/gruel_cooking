@@ -34,6 +34,13 @@ key_works:
 repo_anchors:
   - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
   - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
+circle:
+  - 丹麦皇家艺术学院（Royal Danish Academy）哥本哈根·游戏理论研究员
+  - 前 MIT / NYU / ITU Copenhagen（教职线）
+  - MIT Press「Playful Thinking」书系（共同编者）
+  - Nordic Game 会议讲员
+  - 独立游戏开发者圈（自认「偶尔的开发者」）
+  - spillhistorie.no 游戏史平台（挪威；2025-01 作者访谈）
 peer_bridges:
   - Boellstorff（虚拟田野）
   - Sicart（玩的失败）

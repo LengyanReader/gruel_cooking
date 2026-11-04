@@ -34,6 +34,13 @@ key_works:
 repo_anchors:
   - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
   - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+circle:
+  - IT University of Copenhagen · Center for Digital Play（主任）
+  - MIT Press（《The Ethics of Computer Games》/《Playthings》等出版处）
+  - SAGE 游戏研究刊（2026 OnlineFirst《The Failure of Play》）
+  - DiGRA 游戏研究学群
+  - IJGC（国际游戏评论期刊网络）
+  - 游戏伦理 × 玩法哲学（play as praxis）学派
 peer_bridges:
   - Boellstorff（人类学席）
   - Gobet（认知席）

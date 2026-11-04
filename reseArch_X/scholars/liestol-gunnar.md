@@ -32,6 +32,12 @@ key_works:
 repo_anchors:
   - living_heritage/ref_canal_beijing_chronicle.md
   - reseArch_X/scan_log/20261104-v10-nordic-sweden-games.md
+circle:
+  - 奥斯陆大学 · 媒体与传播系（教授）
+  - C2HO（Creative Computing Hub Oslo）—— 2024-09 公开活动主讲
+  - Journal of Computer Archaeology · CAA 会议圈（数字考古）
+  - AR × 文化遗产传播 × 定位叙事学术网络
+  - SARVI 等欧盟旧项目（细节待补 ◇）
 peer_bridges:
   - Kenderdine（深图）
   - 王晓光（敦煌智慧数据）

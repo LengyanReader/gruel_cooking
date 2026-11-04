@@ -33,6 +33,12 @@ key_works:
 repo_anchors:
   - heaven_climate/README.md
   - economics_cross_culture/README.md
+circle:
+  - 斯德哥尔摩环境研究所 SEI（高级研究员，气候风险与适应团队前负责人）
+  - IPCC AR5 WGII lead author（评估科学网络）
+  - climatestrategies.org 适应政策学术—政策桥接圈
+  - COP 气候大会 side-event 现员
+  - 瑞典气候严肃游戏/模拟游戏圈（Cancun Game 一类 ◐ 待直证）
 peer_bridges:
   - Raworth（甜甜圈安全空间）
   - Gössling（旅游碳）

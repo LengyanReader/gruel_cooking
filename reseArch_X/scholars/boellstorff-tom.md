@@ -33,6 +33,14 @@ key_works:
 repo_anchors:
   - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
   - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+circle:
+  - UC Irvine · 人类学系（教授）
+  - RAI（皇家人类学研究所）· Anthropology of Play and Games 系列（2025-26 现行）
+  - Hazel Andrews / Liverpool John Moores（RAI 系列共同组织者）
+  - Kellynn Wee / UCL（RAI 系列共同组织者）
+  - Princeton University Press（《Coming of Age in Second Life》/《Ethnography in Virtual Worlds》出版处）
+  - UNESCO Courier（公共写作平台，2023）
+  - 虚拟世界民族志 / Second Life 研究学派（定标者）
 peer_bridges:
   - Sicart（伦理席）
   - Gobet（认知席）

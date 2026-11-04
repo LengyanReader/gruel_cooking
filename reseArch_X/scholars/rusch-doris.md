@@ -37,6 +37,15 @@ repo_anchors:
   - contemplative science/ref_integrated.md
   - living_heritage/ref_canal_beijing_chronicle.md
   - reseArch_X/scan_log/20261104-v11-sweden-deep-dive.md
+circle:
+  - 乌普萨拉大学 · 游戏设计系 · Campus Gotland（教授）
+  - Transformative Play Initiative / Games & Society Lab（学术核心）
+  - Andy Phelps（《The Witch's Way》开合作者，FDG'21）
+  - Bowman / Westborg / Baird（2024 合编书同书）
+  - Kjell Hedgard Hugaas（TPI 现职同事，uu.se TPI 页核实）
+  - DiGRA · FDG · Nordic Game · Knutepunkt 会议圈
+  - GDC · TEDx 讲员
+  - 维也纳大学（语言学/交互系统博士出身）· DePaul University（前机构）
 peer_bridges:
   - Sotamaa（How to Play Academia）
   - Britton（冥想风险）

@@ -33,6 +33,12 @@ key_works:
 repo_anchors:
   - Reading_IA/engine/ingest.py
   - reseArch_X/scan_log/20261104-v10-nordic-sweden-games.md
+circle:
+  - 坦佩雷大学 · Game Research Lab（共同创办，2000 年代初）· 国家游戏文化研究中心 CoE（该校团队带头人）
+  - HEVGA（高等教育游戏联盟）· Fellow 2025
+  - DiGRA 游戏研究学术共同体
+  - Jan Svelch（《Game Production Studies》合编者，Amsterdam University Press）
+  - 芬兰—北欧游戏研究学派（游戏生产文化·批判透镜）
 peer_bridges:
   - Rusch（学术作为一种游戏·三线汇流）
   - Sicart（游戏伦理）

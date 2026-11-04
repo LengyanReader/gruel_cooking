@@ -33,6 +33,14 @@ key_works:
 repo_anchors:
   - reseArch_X/mvp/MVP-004-homo-ludens-roundtable.md
   - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+circle:
+  - LSE（Professorial Research Fellow）· 前利物浦大学心理科学教授
+  - H. A. Simon（卡内基梅隆大学，1998 合著导师）
+  - 皇家研究院（Royal Institution）讲座
+  - 亚美尼亚国际象棋学院（2025-26 巡讲场）
+  - 国际象棋大师（International Master）——棋界身份
+  - 专业本领计算建模学派（chunking → template → CHREST）
+  - chessprogramming 社区
 peer_bridges:
   - 张厚泉（围棋×思想史席）
   - Sicart（玩的伦理）

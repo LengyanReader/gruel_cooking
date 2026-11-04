@@ -33,6 +33,12 @@ key_works:
 repo_anchors:
   - Language Stacking-Linguistic Weaving/languages/glossary.md
   - reseArch_X/scan_log/20261103-the-book-of-go-cobb.md
+circle:
+  - 上海财经大学 · 外国语学院日语系（教授）· 前东华大学（2011 报道口径）
+  - 日中关系学会（评议员）
+  - 羽田正（东京大学东洋文化研究所）「AI·围棋·人类」座谈会发起人（2022-02 谱系开端）
+  - 「围棋·AI·人类」跨界论坛（共同主持 2025-05 上财）
+  - 江南大学外国语言文化讲座（近代化比较主题）
 peer_bridges:
   - Sicart/Gobet/Boellstorff（圆桌三席）
   - 羽田正（东大座谈发起人·v6 线索）

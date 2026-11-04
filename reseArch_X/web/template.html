@@ -124,6 +124,8 @@ body.lang-en [data-zh]{display:none!important}
 .scard .dim ul,.scard .dim ol{margin:0;padding-left:1.15rem}
 .scard .dim li{margin-bottom:.25rem}
 .scard .dim .mono{font-family:var(--ff-mono);font-size:.82em}
+.scard .dim.circle{background:rgba(107,82,155,.06)}
+.scard .dim.circle .lbl{color:#5C3D7A}
 .scard .dim-line{font-size:.82rem;color:var(--ink-mid);margin-top:.5rem;line-height:1.7}
 .scard .dim-line strong{color:var(--ink-deep);font-weight:600}
 .scard .tag.bridge{background:#EAF2EC;color:#3F6B4A}
@@ -508,6 +510,7 @@ function renderScholarCard(s){
   const entrySeq = (Array.isArray(s.entry_sequence) && s.entry_sequence.length)
     ? `<div class="dim entryseq"><span class="lbl">${isEn?'ENTRY SEQUENCE':'触达次序'}</span><ol>${s.entry_sequence.map(x=>`<li>${esc(x)}</li>`).join('')}</ol></div>` : '';
   const openQs = listDim(s.open_questions, 'openq', '待追问', 'OPEN QUESTIONS', false);
+  const circle = listDim(s.circle, 'circle', '学术圈子', 'ACADEMIC CIRCLE', false);
   const peerBridges = (Array.isArray(s.peer_bridges) && s.peer_bridges.length)
     ? `<div class="tags">${s.peer_bridges.map(x=>`<span class="tag bridge">${esc(x)}</span>`).join('')}</div>` : '';
   const whyNow = s.why_now ? `<div class="dim-line"><strong>${isEn?'why now':'时代抓手'}</strong>：${esc(s.why_now)}</div>` : '';
@@ -527,6 +530,7 @@ function renderScholarCard(s){
     ${whatReal}${whyNow}
     <div class="mvp"><strong>${isEn?'MVP to build':'可造之 MVP'}</strong>：${esc(s.mvp||'')}</div>
     <div class="hook">${esc(s.dialogue_hook||'')}</div>
+    ${circle}
     ${peerBridges}
     ${entry}${entrySeq}${feasibility}${risk}
     ${openQs}
