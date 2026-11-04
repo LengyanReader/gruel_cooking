@@ -296,6 +296,10 @@ SCHOLAR_AXES = {
     "gossling-stefan":    ["tour", "sus"],
     "britton-willoughby": ["cultiv", "goodlife"],
     "dombrowski-quinn":   ["dh", "ai_hum"],
+    "laukkonen-ruben":    ["cultiv", "goodlife", "ai_hum"],
+    "kringelbach-morten": ["cultiv", "goodlife"],
+    "friston-karl":       ["cultiv", "ai_ds", "ai_hum"],
+    "chandaria-shamil":   ["cultiv", "goodlife", "ai_hum"],
 }
 
 OPP_AXES = {

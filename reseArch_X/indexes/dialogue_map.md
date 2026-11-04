@@ -33,6 +33,10 @@
 | Stefan Gössling | `../scholars/gossling-stefan.md` | 旅游碳 8.8%/decarbonisation impasse（✔◐ 2026-11-03） | 走廊访客碳结构审计 | 「遗产旅游低碳」话术张力请指正 | 待议 |
 | Willoughby Britton | `../scholars/britton-willoughby.md` | 冥想相关困难/Cheetah House(2025-01 特写)（✔ 2026-11-03） | 传统风险叙事×现代实证结构化对照 | 障碍/魔境对 adverse-effects 请判 | 待议 |
 | Quinn Dombrowski | `../scholars/dombrowski-quinn.md` | Multilingual DH/2025 主旨巡讲（✔ 2026-11-03） | 本仓双语实践自审短文 | 隐性英语中心 X 处请判 | 待议 |
+| Ruben Laukkonen | `../scholars/laukkonen-ruben.md` | 主动推理意识论(2025)/FLIP 主任(2026,牛津)/预测加工冥想模型（✔ 2026-11-04） | 训练阶梯×预测层级对照（contemplative science 语料） | 能所双泯对精度加权崩塌请判 | 待议 |
+| Morten Kringelbach | `../scholars/kringelbach-morten.md` | Neuron 2024 繁荣科学纲领/Eudaimonia 中心创始主任（✔ 2026-11-04） | pleasure–meaning–flourishing 三层对照 | 东亚乐/安文本喂纲领请判 | 待议 |
+| Karl Friston | `../scholars/friston-karl.md` | 自由能原理/主动推理（MIT Press 开放专著；AII 开放社群）（✔ 2026-11-04） | 论说文 FEP 用法精读注记 | 借框架立论是否成立请判 | 待议 |
+| Shamil Chandaria | `../scholars/chandaria-shamil.md` | beautiful loop 合著/Rewiring 公开课/DeepMind 顾问（✔◐ 2026-11-04） | 冥想课×东亚阶梯共创内容提案 | 跨传统同构处进课程请判 | 待议 |
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：
