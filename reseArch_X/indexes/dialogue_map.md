@@ -42,6 +42,11 @@
 | Kevin Buzzard | `../scholars/buzzard-kevin.md` | FLT 形式化(EPSRC)/Xena 外延/LIMS AI×形式化 2026-03（✔ 2026-11-04） | math_clarification/lean 外行附录教学案例 | 给外行的形式化请判 | 待议 |
 | Terence Tao | `../scholars/tao-terence.md` | Lean 可靠性指南(2026-10)/Analysis I Lean 伴侣/PFR 形式化（✔ 2026-11-04） | 论说文五问审计表请判 | 审计含其亲历事件线 | 待议 |
 | Will Sawin | `../scholars/sawin-will.md` | 反证余波显式下界+1.2143 上限（✔ 2026-11-04） | proof_narrative 外行叙事请纠 | 引用其论文的叙事请判 | 待议 |
+| N. Katherine Hayles | `../scholars/hayles-katherine.md` | 后人类理论/非意识认知（UCLA/Duke）（✔ 2026-11-05） | 论说文「数学家之定位」的分布式认知注记 | 认知拆出人体后数学实践如何读请判 | 待议（v16） |
+| Safiya Noble | `../scholars/noble-safiya.md` | Algorithms of Oppression/C2i2 共同主任（✔ 2026-11-05） | MVP-001 bot-gating×检索压迫对照 | 语言圈关门梯度是否同构请判 | 待议（v16） |
+| Luciano Floridi | `../scholars/floridi-luciano.md` | 信息哲学/EU AI Act/Yale DEC（✔ 2026-11-05） | 信息哲学视角下的数学共识注记 | 真值 vs 共识之结请切 | 待议（v16） |
+| Melanie Mitchell | `../scholars/mitchell-melanie.md` | Jagged Intelligence/SFI/Complexity Explorer（✔ 2026-11-05） | 五问审计表的锯齿性标注 | 事件内锯齿证据请判 | 待议（v16） |
+| Fabio Parasecoli | `../scholars/parasecoli-fabio.md` | Digital Foodscapes 工作坊(2026-07 柏林)/NYU Shanghai 课（✔ 2026-11-05） | 运河走廊数字食物景观小志投工作坊 | 会前方向请判 | 待议（v16） |
 | **王思明** | `../scholars/wang-siming.md` | 农业文化遗产学学科建设；2025-11 文集发布+南京农遗研究院揭牌+首设农史科教奖青年英才奖（✔ 2026-11-04） | 本仓食物条目照其框架做中外对照辨认样例（gruel_cooking 即题眼） | 样例库请判农史层面认对否 | 待议（v5 新档） |
 | **Kate Raworth** | `../scholars/raworth-kate.md` | Nature 2025 甜甜圈 35 指标更新框架；DEAL 2026 城市实操社区运转（✔ 2026-11-04） | 运河府志×35 指标历史试映射（标失灵点） | 失灵处请判是指标问题还是框架的文明边界 | 待议（v5 新档） |
 | **Karen McNamara** | `../scholars/mcnamara-karen.md` | 2025 ARC Industry Laureate：气候驱动的祖先土地·文化·生计损失；Nature Climate Change 人权透镜（✔ 2026-11-04） | 运河沿岸村落气候-遗产损失首版清点（含「损失的声音」口述） | 框架跨到农耕遗产语境请判应用还是误用 | 待议（v6 新档·🇦🇺） |
