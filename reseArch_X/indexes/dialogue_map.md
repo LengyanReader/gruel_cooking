@@ -44,8 +44,13 @@
 | Will Sawin | `../scholars/sawin-will.md` | 反证余波显式下界+1.2143 上限（✔ 2026-11-04） | proof_narrative 外行叙事请纠 | 引用其论文的叙事请判 | 待议 |
 | **王思明** | `../scholars/wang-siming.md` | 农业文化遗产学学科建设；2025-11 文集发布+南京农遗研究院揭牌+首设农史科教奖青年英才奖（✔ 2026-11-04） | 本仓食物条目照其框架做中外对照辨认样例（gruel_cooking 即题眼） | 样例库请判农史层面认对否 | 待议（v5 新档） |
 | **Kate Raworth** | `../scholars/raworth-kate.md` | Nature 2025 甜甜圈 35 指标更新框架；DEAL 2026 城市实操社区运转（✔ 2026-11-04） | 运河府志×35 指标历史试映射（标失灵点） | 失灵处请判是指标问题还是框架的文明边界 | 待议（v5 新档） |
+| **Karen McNamara** | `../scholars/mcnamara-karen.md` | 2025 ARC Industry Laureate：气候驱动的祖先土地·文化·生计损失；Nature Climate Change 人权透镜（✔ 2026-11-04） | 运河沿岸村落气候-遗产损失首版清点（含「损失的声音」口述） | 框架跨到农耕遗产语境请判应用还是误用 | 待议（v6 新档·🇦🇺） |
+| **Maui Hudson** | `../scholars/hudson-maui.md` | ANUAC 2026 原住民主导 AI 未来；2025 开放基因组×数据主权平衡；Te Mana Raraunga 持续（✔ 2026-11-04） | 本仓语料（含影子书库来源）照其框架做自审账 | 无部落身份借框架——结盟还是挪用请判 | 待议（v6 新档·🇳🇿） |
+| **Camilla Brattland** | `../scholars/brattland-camilla.md` | SAMFORSK「萨米研究之研究」新文集；MAHTUT；原住民知识入土地治理（2025）（✔ 2026-11-04） | 运河廊道遗产书写的表征自反审计 | 找出的代言硬伤请判审计成色 | 待议（v6 新档·🇳🇴） |
+| **Ole G. Mouritsen** | `../scholars/mouritsen-ole.md` | 《Blue Foods》2026-11-27 新书在即；2025 可持续菜系跨时空品味（✔ 2026-11-04） | 「粥的胃物理解析」双语小册（糊化×umami×文明） |  gastrophysics 用到东亚家常餐桌请判延续还是走样 | 待议（v6 新档·🇩🇰） |
+| **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译） | 两处考据请判歪了没有 | 待议（v6 新档·Book-of-Go 余线落子） |
 
-> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）、**游戏即遗产**（围棋×AI×文化，Book-of-Go 余线）。详见 `../scan_log/20261104-v5-virtues-and-gate.md`。
+> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：

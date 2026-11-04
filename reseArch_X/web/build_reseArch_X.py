@@ -307,6 +307,11 @@ SCHOLAR_AXES = {
     "sawin-will":         ["ai_ds"],
     "wang-siming":        ["food", "herit", "sus"],
     "raworth-kate":       ["sus", "goodlife"],
+    "mcnamara-karen":     ["sus", "herit"],
+    "hudson-maui":        ["dh", "ai_hum", "herit"],
+    "brattland-camilla":  ["herit", "sus"],
+    "mouritsen-ole":      ["food", "goodlife"],
+    "zhang-houquan":      ["ai_hum", "cultiv"],
 }
 
 OPP_AXES = {
