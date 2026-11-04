@@ -48,13 +48,26 @@
 | **Maui Hudson** | `../scholars/hudson-maui.md` | ANUAC 2026 原住民主导 AI 未来；2025 开放基因组×数据主权平衡；Te Mana Raraunga 持续（✔ 2026-11-04） | 本仓语料（含影子书库来源）照其框架做自审账 | 无部落身份借框架——结盟还是挪用请判 | 待议（v6 新档·🇳🇿） |
 | **Camilla Brattland** | `../scholars/brattland-camilla.md` | SAMFORSK「萨米研究之研究」新文集；MAHTUT；原住民知识入土地治理（2025）（✔ 2026-11-04） | 运河廊道遗产书写的表征自反审计 | 找出的代言硬伤请判审计成色 | 待议（v6 新档·🇳🇴） |
 | **Ole G. Mouritsen** | `../scholars/mouritsen-ole.md` | 《Blue Foods》2026-11-27 新书在即；2025 可持续菜系跨时空品味（✔ 2026-11-04） | 「粥的胃物理解析」双语小册（糊化×umami×文明） |  gastrophysics 用到东亚家常餐桌请判延续还是走样 | 待议（v6 新档·🇩🇰） |
-| **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译） | 两处考据请判歪了没有 | 待议（v6 新档·Book-of-Go 余线落子） |
+| **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译）→《游戏的人》圆桌合订本（场景版，v8） | 两处考据请判歪了没有；圆桌棋棚口述+谱系英译为其档 | 待议（v6 新档·Book-of-Go 余线落子·v8 入游戏圆桌） |
 | **Emily Bender** | `../scholars/bender-emily.md` | LLM「意义何在」追问推向法律场域（Yale Law 2025-10 主旨）；UW CompLing 项目育人建制（✔ 2026-11-04） | 自家 LLM 抽取管线的「意义失踪账」（形似换义×责任断环） | 账目请判应用还是误读 | 待议（v7 新档·xsci） |
 | **Kalevi Kull** | `../scholars/kull-kalevi.md` | Tartu 符号学派 biosemiotics 线现行守人（2025-08 学派聚落在列）；「生命即符号行动」定题（✔ 2026-11-04） | 「熬粥=细胞/生态/文化三层 semiosis 同锅」一页札记 | 正当延伸还是漂亮越界请判 | 待议（v7 新档·xsci） |
 | **Peter Turchin** | `../scholars/turchin-peter.md` | SDT×法国 1950–2023 政治不稳定实证 v3（2025-10 挂载）；公开预测判卷传统（✔ 2026-11-04） | 运河-北京编年的前工业东亚 SDT 试算（附缺口清单） | 帝国中国是扩展还是范畴错位请判 | 待议（v7 新档·xsci） |
 | **Geoffrey West** | `../scholars/west-geoffrey.md` | 城市标度律×人口退化议程（2026-10-08 长谈现行在更）（✔ 2026-11-04） | 运河城镇带前工业城市群标度切面试算 | 标度律是否制度中立请判 | 待议（v7 新档·xsci） |
+| **Miguel Sicart** | `../scholars/sicart-miguel.md` | 「The Failure of Play」2026 发表；Center for Digital Play（ITU 哥本哈根）建制中（✔ 2026-11-04） | 《游戏的人》圆桌·「玩的失败」札记进言 | 您的问，围棋的答：同一场对话（非请您裁决） | 待议（v8 新档·🇩🇰游戏线伦理翼） |
+| **Fernand Gobet** | `../scholars/gobet-fernand.md` | 「棋、认知与学习」巡讲现行；expertise 计算建模（template/CHREST）在更（✔ 2026-11-04） | 《棋的本领账》双语一页：围棋认知底账 | 象棋架构移到围棋是延伸还是错位 | 待议（v8 新档·游戏线认知翼） |
+| **Tom Boellstorff** | `../scholars/boellstorff-tom.md` | RAI「Anthropology of Play and Games」系列现行（2025-11/2026-03 场次）；虚拟世界民族志定标者（✔ 2026-11-04） | 圆桌玩法地图：棋·粥·运河专题场提议 | 您的系列是现成的桌子，我们带菜来 | 待议（v8 新档·游戏线建制枢纽） |
 
-> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。
+> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。v8（游戏线）过闸建档：**Sicart / Gobet / Boellstorff**（🇩🇰/🇬🇧/🇺🇸）；**Bogost 不入库**——bogost.com 现仅自述「WashU 教授+教务行政」，棋类近作与学术产出侧本轮未获直证（名气大不够格者不进）；线索保留：**Hazel Andrews（LJMU）/ Kellynn Wee（UCL）**（RAI 系列组织者，Junior 入口）、张厚泉已在前档。另记：**话柄 MVP 口径拓宽**（用户 2026-11-04 批评「过于狭隘」）——见 README §〇 修订与本表「场景作品」节，详见 `../scan_log/20261104-v8-games-and-scene-works.md`。
+
+## 场景作品（MVP 口径拓宽层，2026-11-04 v8 起）
+
+> 依 README §〇 修订：MVP 从「求批便条」升为**能立住、能公开、多位学者可进同一场对话的作品**。各档 `mvp`/`dialogue_hook` 为个人入场版；下表为场景版登记（建成后逐档改挂）。
+
+- **《游戏的人》圆桌**（v8 主场）—— Boellstorff × Gobet × Sicart × 张厚泉：玩法地图一页（线上世界/棋盘/茶肆/走廊四场地）+ Book-of-Go 考 + 论坛谱系合订；公开载体：网页+一页讲义；入口：RAI 系列专题场提议
+- **意义失踪审计站**—— Bender × Manovich × Mattern：Reading_IA 抽取管线产出的「形似换义」公开案例集（MVP-001 数据同源，三人各从批评/美学/基础设施进言）
+- **运河长弧数据台**—— West × Turchin × 包弼德：同一份运河-北京编年切三刀（标度/SDT/科举网络），公开可复算底账（CBDB 接口为现成底座）
+- **一锅粥的三层 semiosis**—— Kull × Mouritsen × Ray × 王思明：粥的胃物理解析双语小册升级为公开作品（符号学× gastrophysics × taste 等级 × 农遗辨认同锅）
+- **甜甜圈城市账**—— Raworth × Patel × Fanzo × McNamara：运河府志×35 指标历史试映射做成公开仪表盘（失灵点标注即四人次各可进言处）
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：

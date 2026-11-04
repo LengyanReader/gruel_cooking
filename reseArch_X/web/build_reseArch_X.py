@@ -318,6 +318,9 @@ SCHOLAR_AXES = {
     "kull-kalevi":        ["xsci", "cultiv"],
     "turchin-peter":      ["xsci", "sus"],
     "west-geoffrey":      ["xsci", "sus"],
+    "sicart-miguel":      ["xsci", "cultiv", "goodlife"],
+    "gobet-fernand":      ["cultiv", "xsci"],
+    "boellstorff-tom":    ["xsci", "ai_hum", "herit"],
 }
 
 OPP_AXES = {
