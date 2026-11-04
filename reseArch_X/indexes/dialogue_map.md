@@ -55,9 +55,14 @@
 | **Geoffrey West** | `../scholars/west-geoffrey.md` | 城市标度律×人口退化议程（2026-10-08 长谈现行在更）（✔ 2026-11-04） | 运河城镇带前工业城市群标度切面试算 | 标度律是否制度中立请判 | 待议（v7 新档·xsci） |
 | **Miguel Sicart** | `../scholars/sicart-miguel.md` | 「The Failure of Play」2026 发表；Center for Digital Play（ITU 哥本哈根）建制中（✔ 2026-11-04） | 《游戏的人》圆桌·「玩的失败」札记进言 | 您的问，围棋的答：同一场对话（非请您裁决） | 待议（v8 新档·🇩🇰游戏线伦理翼） |
 | **Fernand Gobet** | `../scholars/gobet-fernand.md` | 「棋、认知与学习」巡讲现行；expertise 计算建模（template/CHREST）在更（✔ 2026-11-04） | 《棋的本领账》双语一页：围棋认知底账 | 象棋架构移到围棋是延伸还是错位 | 待议（v8 新档·游戏线认知翼） |
-| **Tom Boellstorff** | `../scholars/boellstorff-tom.md` | RAI「Anthropology of Play and Games」系列现行（2025-11/2026-03 场次）；虚拟世界民族志定标者（✔ 2026-11-04） | 圆桌玩法地图：棋·粥·运河专题场提议 | 您的系列是现成的桌子，我们带菜来 | 待议（v8 新档·游戏线建制枢纽） |
+| **Tom Boellstorff** | `../scholars/boellstorff-tom.md` | RAI「Anthropology of Play and Games」系列现行（2025-11/2026-03 场次）；虚拟世界民族志定标者（✔ 2026-11-04） | MVP-004 圆桌·人类学席（田野即造假冒作者的聚合体） | 您的系列是现成的桌子，我们带菜来 | 待议（v8 新档·游戏线建制枢纽） |
+| **Olli Sotamaa** | `../scholars/sotamaa-olli.md` | 🇫🇮 HEVGA Fellow 2025（全球仅 5）；坦佩雷游戏文化研究中心带头人；2025 秋开「How to Play Academia」（✔ 2026-11-04） | 场景《学术作为一种游戏》公开对谈 | 游戏概念反身照亮大学本身，非请裁决 | 待议（v10 新档·play） |
+| **Jesper Juul** | `../scholars/juul-jesper.md` | 🇩🇰 《Too Much Fun: The Five Lives of the Commodore 64》（MIT 2024-12）；理论家兼开发者（✔ 2026-11-04） | 场景《游戏物的寿命》：邀入 Book-of-Go 一件 | 物的续命 vs 产业胜利叙事，同场非裁决 | 待议（v10 新档·play） |
+| **Gunnar Liestøl** | `../scholars/liestol-gunnar.md` | 🇳🇴 奥斯陆大学教授；AR×文化遗产传播（C2HO 2024-09；中心/边缘之弥合）（✔ 2026-11-04） | 场景《走廊的 AR 复原》：运河故道现场演示 | 中心/边缘透镜判这块东亚故道，非裁决 | 待议（v10 新档·play×herit） |
+| **Richard Klein** | `../scholars/klein-richard.md` | 🇸🇪 SEI 气候风险与适应团队负责人；IPCC AR5 lead author；以模拟/严肃游戏做政策沟通（✔ 2026-11-04；游戏命名 ◐） | 场景《把气候适应做成一局》公开 playtest | 适应透镜×Raworth/Gössling 同场试跑，非裁决 | 待议（v10 新档·play×sus） |
+| Uppsala 游戏设计系 · Campus Gotland / **Transformative Play Initiative** | （机构节点，待建档） | 🇸🇪 游设系 2001 创系；GGC/Gotland Game Hub；TPI「游戏作为改变载体」2026-03「角色扮演游戏可化解冲突、强化民主」（✔ 2026-11-04） | 《走廊的 AR 复原》/《游戏强化民主》可入的场景伙伴 | 以其 TPI/Games & Society Lab 为瑞典侧入口 | 待议（v10 机构节点·play） |
 
-> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。v8（游戏线）过闸建档：**Sicart / Gobet / Boellstorff**（🇩🇰/🇬🇧/🇺🇸）；**Bogost 不入库**——bogost.com 现仅自述「WashU 教授+教务行政」，棋类近作与学术产出侧本轮未获直证（名气大不够格者不进）；线索保留：**Hazel Andrews（LJMU）/ Kellynn Wee（UCL）**（RAI 系列组织者，Junior 入口）、张厚泉已在前档。另记：**话柄 MVP 口径拓宽**（用户 2026-11-04 批评「过于狭隘」）——见 README §〇 修订与本表「场景作品」节，详见 `../scan_log/20261104-v8-games-and-scene-works.md`。
+> **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。v8（游戏线）过闸建档：**Sicart / Gobet / Boellstorff**（🇩🇰/🇬🇧/🇺🇸）；**Bogost 不入库**——bogost.com 现仅自述「WashU 教授+教务行政」，棋类近作与学术产出侧本轮未获直证（名气大不够格者不进）；线索保留：**Hazel Andrews（LJMU）/ Kellynn Wee（UCL）**（RAI 系列组织者，Junior 入口）、张厚泉已在前档。另记：**话柄 MVP 口径拓宽**（用户 2026-11-04 批评「过于狭隘」）——见 README §〇 修订与本表「场景作品」节，详见 `../scan_log/20261104-v8-games-and-scene-works.md`。v10（北欧-瑞典游戏线，用户 2026-11-04 指定「北欧，尤其是瑞典」）开第 11 轴 `play`（游戏×人文，方法学变更见台账），过闸建档 4 人：**Sotamaa**（🇫🇮 坦佩雷，HEVGA Fellow 2025·最强）、**Juul**（🇩🇰 皇家丹院，《Too Much Fun》）、**Liestøl**（🇳🇴 奥斯陆，AR×遗产）、**Klein**（🇸🇪 SEI，气候适应×模拟游戏）；建 **Uppsala 游戏设计系/Campus Gotland/TPI** 机构节点（瑞典侧入口）；**◇ 线索保留不建档**：Göran Bucht、Jonas Heide Petersson/Smith、Frederik Jensen、Sarah Lynne Bowman、Aaron Hugaas（现职/角色未直证）。详见 `../scan_log/20261104-v10-nordic-sweden-games.md`。
 
 ## 场景作品（MVP 口径拓宽层，2026-11-04 v8 起）
 
@@ -68,6 +73,10 @@
 - **运河长弧数据台**—— West × Turchin × 包弼德：同一份运河-北京编年切三刀（标度/SDT/科举网络），公开可复算底账（CBDB 接口为现成底座）
 - **一锅粥的三层 semiosis**—— Kull × Mouritsen × Ray × 王思明：粥的胃物理解析双语小册升级为公开作品（符号学× gastrophysics × taste 等级 × 农遗辨认同锅）
 - **甜甜圈城市账**—— Raworth × Patel × Fanzo × McNamara：运河府志×35 指标历史试映射做成公开仪表盘（失灵点标注即四人次各可进言处）
+- **《学术作为一种游戏》**（v10）—— Sotamaa 主场：其「How to Play Academia」课程 × 「游戏照亮大学本身」反身命题，公开对谈多学者可进（博五压力/学术游戏化）
+- **《游戏物的寿命》**（v10）—— Juul 主场 × Book-of-Go：物的续命（C64 五世）vs 产业胜利叙事，邀入本仓已核实 Book-of-Go 标本同场
+- **《走廊的 AR 复原》**（v10）—— Liestøl × Kenderdine × 王晓光：运河故道（玉河/澄清闸，`ref_canal_beijing_chronicle` 已核 [A]/[B] 史据）AR 现场复原公开演示，绝不虚构几何
+- **《把气候适应做成一局》**（v10）—— Klein × Raworth × Gössling：以本仓 `heaven_climate`/`economics_cross_culture` 长时段材料搭「历史—区域适应模拟」公开剧本，四方同场 playtest
 
 ## 排序逻辑（本轮，2026-10-29 深化）
 用户聚焦「发现卓越开明/有潜力的学者 → 看有无合作或受教机会」。按「工作之有意义 × 眼界开放之可证 × 与本仓真实语料的接得住程度」重排：
