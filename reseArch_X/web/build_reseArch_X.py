@@ -328,6 +328,7 @@ SCHOLAR_AXES = {
     "liestol-gunnar":     ["play", "herit", "dh"],
     "klein-richard":      ["play", "sus", "xsci"],
     "rusch-doris":        ["play", "herit", "goodlife", "cultiv"],
+    "wilhelmsson-ulf":      ["play", "herit", "xsci"],
 }
 
 OPP_AXES = {
