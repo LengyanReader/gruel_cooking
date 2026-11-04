@@ -46,7 +46,7 @@
 |---|---|---|
 | 第一性原理 · 元思考 | [`core/`](core/) | 骨架——仅 README 与工作方法 |
 | 天文 · 天象 · 气候 | [`heaven_climate/`](heaven_climate/) | 骨架 |
-| 跨文化经济学 | [`economics_cross_culture/`](economics_cross_culture/) | 骨架——**最接近激活**：它是 reseArch_X 各 MVP 的语料（technodiversity × taste 等级对话话柄） |
+| 跨文化经济学 | [`economics_cross_culture/`](economics_cross_culture/) | **喂料启动（2026-11-04）**——首个溯源案例见 [`cases/001-salt-and-iron-debate.md`](economics_cross_culture/cases/001-salt-and-iron-debate.md)；它是 reseArch_X 各 MVP 的语料（technodiversity × taste 等级对话话柄） |
 | 沉思科学 | `contemplative science/` | 近空；学术覆盖移至 [`reseArch_X/scholars/`](reseArch_X/scholars/)（Davidson / Singer / Britton） |
 | 方向参考 | `direction_refs/` | 有意仅本地（`.gitignore`） |
 

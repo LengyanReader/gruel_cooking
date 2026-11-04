@@ -48,7 +48,7 @@ A direction × momentum × accessibility map of frontier research, with its oppo
 |---|---|---|
 | First Principles & Metathinking | [`core/`](core/) | skeleton — README + working method only |
 | Heaven & Climate | [`heaven_climate/`](heaven_climate/) | skeleton |
-| Cross-Culture Economics | [`economics_cross_culture/`](economics_cross_culture/) | skeleton — **nearest to activation**: it is the corpus for reseArch_X MVPs (technodiversity × taste-hierarchy dialogue hooks) |
+| Cross-Culture Economics | [`economics_cross_culture/`](economics_cross_culture/) | **feeding started 2026-11-04** — first sourced case in [`cases/001-salt-and-iron-debate.md`](economics_cross_culture/cases/001-salt-and-iron-debate.md); corpus for reseArch_X MVPs (technodiversity × taste-hierarchy hooks) |
 | Contemplative Science | `contemplative science/` | near-empty; the scholarship lives in [`reseArch_X/scholars/`](reseArch_X/scholars/) (Davidson / Singer / Britton) |
 | Direction Refs | `direction_refs/` | local-only by design (`.gitignore`) |
 
