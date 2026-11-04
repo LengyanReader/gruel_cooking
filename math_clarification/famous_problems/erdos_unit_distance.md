@@ -179,7 +179,7 @@ The original disproof is a theoretical construction, not a computable finite obj
 - **一手 (verification)**: Alon, N., Bloom, T. F., Gowers, W. T., Litt, D., Sawin, W., Shankar, A., Tsimerman, J., Wang, V., Wood, M. M. (2026). "Remarks on the disproof of the unit distance conjecture." arXiv: [2605.20695](https://arxiv.org/abs/2605.20695)
 - **一手 (exponent refinement)**: Sawin, W. (2026). "An explicit lower bound for the unit distance problem." arXiv: [2605.20579](https://arxiv.org/abs/2605.20579)
 
-**Machine-checked line**: The companion paper's correctness has been certified by peer review (Fields Medalist + 8 specialists). The Lean-formalization of the underlying Golod–Shafarevich theorem exists in Mathlib; the specific asymptotic construction has not been formalized.
+**Machine-checked line**: the counterexample's correctness is certified by the companion paper — a 19-page expository note **human-verified** and digested by nine leading specialists (Alon, Bloom, Gowers, Litt, Sawin, Shankar, Tsimerman, V. Wang, Wood) — arXiv:2605.20695, **preprint** (2026-05-20), not yet peer-reviewed. The Lean-formalization of the underlying Golod–Shafarevich theorem exists in Mathlib; the specific asymptotic construction has not been formalized.
 <!-- zh -->
 ## 应用 (Where It Shows Up)
 
@@ -195,5 +195,5 @@ The original disproof is a theoretical construction, not a computable finite obj
 - **一手 (验证)**: Alon, N., Bloom, T. F., Gowers, W. T., Litt, D., Sawin, W., Shankar, A., Tsimerman, J., Wang, V., Wood, M. M. (2026). "Remarks on the disproof of the unit distance conjecture." arXiv: [2605.20695](https://arxiv.org/abs/2605.20695)
 - **一手 (指数精化)**: Sawin, W. (2026). "An explicit lower bound for the unit distance problem." arXiv: [2605.20579](https://arxiv.org/abs/2605.20579)
 
-**Machine-checked line**: 伴随论文的正确性已通过同行评审认证（菲尔兹奖得主 + 8位专家）。基础 Golod–Shafarevich 定理的 Lean 形式化存在于 Mathlib 中；具体渐近构造尚未被形式化。
+**Machine-checked line**：反例正确性的认证来自伴随论文——九位顶尖专家（Alon、Bloom、Gowers、Litt、Sawin、Shankar、Tsimerman、V. Wang、Wood）**人工核验**并精编的 19 页阐述性短文——arXiv:2605.20695，**预印本**（2026-05-20），尚未经同行评审。基础 Golod–Shafarevich 定理的 Lean 形式化已存在于 Mathlib；具体渐近构造尚未被形式化。
 <!-- L5-end -->

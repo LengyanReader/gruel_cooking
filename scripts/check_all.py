@@ -49,6 +49,8 @@ def gates(audio: bool, living: bool):
          [PY, *UTF8, "submission/checks/refcheck.py"], None, None),
         ("math review_scope", essays,
          [PY, *UTF8, "submission/checks/review_scope.py"], None, None),
+        ("math build_static --check", REPO / "math_clarification",
+         [PY, *UTF8, "web/build_static.py", "--check"], None, None),
     ]
     hf = factory_path()
     if hf and (Path(hf) / "SKILL.md").is_file():

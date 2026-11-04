@@ -1,0 +1,43 @@
+name: Math Lean CI
+
+on:
+  push:
+    paths:
+      - "math_clarification/lean/**"
+      - ".github/workflows/math-lean-ci.yml"
+  pull_request:
+    paths:
+      - "math_clarification/lean/**"
+      - ".github/workflows/math-lean-ci.yml"
+
+jobs:
+  lean-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # elan installs the Lean toolchain; core/ needs no project and no Mathlib.
+      - name: Install elan (stable toolchain)
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain stable
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Toolchain version (recorded for provenance)
+        run: lean --version
+
+      # Every core file is checked standalone by the kernel; any sorry in a
+      # claimed proof, or any version drift that breaks a proof, fails the job.
+      - name: Kernel-check every core file
+        run: |
+          set -e
+          for f in math_clarification/lean/core/*.lean; do
+            echo "checking $f"
+            lean "$f"
+          done
+
+      # The mathlib/ tier intentionally has no committed lake project (see
+      # lean/README.md): its files are checked by the author locally, not in CI.
+      - name: Report unverified mathlib tier (expected)
+        run: |
+          echo "mathlib/ files are NOT kernel-checked here (no lake project in repo):"
+          ls math_clarification/lean/mathlib/

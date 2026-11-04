@@ -10,8 +10,9 @@ docs/living_heritage/css/main.css, re-tuned for long-form academic reading:
 a serif body against sans headings, a measure capped for comfortable CJK
 line lengths, a sticky chapter list, and a three-way language switch.
 
-    python build_static.py              # export every article + index.html
+    python build_static.py              # export every article + entry + index.html
     python build_static.py --slug NAME  # export one article
+    python build_static.py --check      # verify docs/math_clarification/ is current (no writes)
 """
 
 import html
@@ -33,6 +34,21 @@ OUT = HERE / "static" / "articles"
 # pages are self-contained and only ever use sibling-relative links, so the same
 # files are written flat into docs/math_clarification/ and go live as they are.
 DOCS_SITE = BASE.parent / "docs" / "math_clarification"
+
+# Entry directories, rendered with the same marker system as the articles.
+# kind = directory name; each gets its own kicker on the rendered page and its
+# own subdirectory on the site (slugs collide across categories — e.g. the
+# Erdős entry and its proof narrative — so flat names are not an option).
+ENTRY_DIRS = [
+    (BASE / "basics", "basics"),
+    (BASE / "famous_problems", "famous_problems"),
+    (BASE / "proof_narratives", "proof_narratives"),
+]
+KICKERS = {
+    "basics": ("基础 · Basics", "Basics · Foundations"),
+    "famous_problems": ("名题 · Famous Problem", "Famous problem"),
+    "proof_narratives": ("证明叙事 · Proof Narrative", "Proof narrative"),
+}
 
 # Articles deliberately left out of the landing index but still published, so they
 # are reachable only by their direct link (and carry a noindex hint to stay out of
@@ -512,6 +528,22 @@ JS = """
   window.addEventListener('scroll', spy, { passive: true });
   spy();
 })();
+// KaTeX auto-render: entries are math-heavy ($...$, $$...$$); the FastAPI viewer
+// loads the same CDN pair (see templates/base.html). Deferred scripts above, so
+// renderMathInElement exists by DOMContentLoaded.
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\\[', right: '\\]', display: true },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '$', right: '$', display: false }
+      ],
+      throwOnError: false
+    });
+  }
+});
 """
 
 PAGE = """<!DOCTYPE html>
@@ -522,6 +554,9 @@ PAGE = """<!DOCTYPE html>
 <title>__TITLE__</title>
 <meta name="description" content="__DESC__">__ROBOTS__
 <style>__CSS__</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </head>
 <body class="lang-dual" data-title-zh="__TITLE_ZH__" data-title-en="__TITLE_EN__">
 <div id="draft" role="note">
@@ -751,11 +786,19 @@ def group_units(entry):
 
 # ------------------------------------------------------------------ build ---
 
-def build_article(md_path: Path) -> dict:
+def build_article(md_path: Path, kind: str = "article") -> dict:
     raw = md_path.read_text(encoding="utf-8")
     entry = parse_entry(md_path)
     provenance, blocks = split_blocks(raw)
-    del provenance  # the preamble is surfaced through extract_note() below
+
+    if not blocks:
+        # A marker-less plain file: the viewer's contract (README "markers are
+        # optional — a plain Markdown file still renders") applies here too, or
+        # the static page would silently come out empty. Render the whole body
+        # as a single un-cropped unit; the prose narrative is the live case.
+        body = provenance if isinstance(provenance, str) else "\n".join(provenance)
+        if body.strip():
+            blocks = [{"level": "L1", "en": body.split("\n"), "zh": []}]
 
     title = entry.title
     if " / " in title:
@@ -834,10 +877,13 @@ def build_article(md_path: Path) -> dict:
         r"[A-Za-z][A-Za-z'-]*",
         " ".join(re.sub(r"<[^>]+>", " ", "\n".join(b["en"])) for b in blocks)))
 
-    if "当证明不再稀缺" in title:
-        kicker_zh, kicker_en = "长稿 · 七章全景", "Long-form · Seven chapters"
+    if kind == "article":
+        if "当证明不再稀缺" in title:
+            kicker_zh, kicker_en = "长稿 · 七章全景", "Long-form · Seven chapters"
+        else:
+            kicker_zh, kicker_en = "综述 · Review", "Review · Survey"
     else:
-        kicker_zh, kicker_en = "综述 · Review", "Review · Survey"
+        kicker_zh, kicker_en = KICKERS[kind]
     robots_meta = (
         '\n<meta name="robots" content="noindex, nofollow">'
         if md_path.stem in UNLISTED else ""
@@ -859,11 +905,19 @@ def build_article(md_path: Path) -> dict:
             .replace("__TITLE_EN__", esc(en_title))
             .replace("__DESC__", esc(en_title))
             .replace("__NAVTITLE__", "Math Clarification")
-            .replace("__NAVZH__", "数学释疑 · 文章")
-            .replace("__NAV_EN__", "Math Clarification · Essays"))
+            .replace("__NAVZH__", "数学释疑 · 文章" if kind == "article" else "数学释疑 · 条目")
+            .replace("__NAV_EN__", "Math Clarification · Essays" if kind == "article"
+                     else "Math Clarification · Entries"))
+
+    if kind != "article":
+        # Entries cross-link by .md path (e.g. [proofs](proofs.md)); on the static
+        # site those must resolve to the sibling HTML page. Relative links only —
+        # absolute URLs and anchors are left alone.
+        page = re.sub(r'href="([^":#]+?)\.md"', r'href="\1.html"', page)
 
     return {
         "slug": md_path.stem,
+        "kind": kind,
         "page": page,
         "zh_title": zh_title,
         "en_title": en_title,
@@ -885,75 +939,121 @@ def take_down_offline(*dirs):
                 print("took down %s" % stale)
 
 
-def build_once(slugs=None):
+def build_pages(slugs=None):
+    """Render every article and entry into {site-relative path: html}. No writes."""
+    pages, cards = {}, []
     targets = sorted(p for p in ARTICLES.glob("*.md") if p.name != "README.md")
     if slugs:
         targets = [p for p in targets if p.stem in slugs]
-    # Withdrawn articles are never built; their published pages are deleted below.
     targets = [p for p in targets if p.stem not in OFFLINE]
-    if not targets:
-        print("no articles found in %s" % ARTICLES)
-        return None
-
-    OUT.mkdir(parents=True, exist_ok=True)
-    DOCS_SITE.mkdir(parents=True, exist_ok=True)
-    take_down_offline(OUT, DOCS_SITE)
-    built = []
     for md in targets:
         info = build_article(md)
-        dest = OUT / (info["slug"] + ".html")
-        dest.write_text(info["page"], encoding="utf-8")
-        published = DOCS_SITE / dest.name
-        published.write_text(info["page"], encoding="utf-8")
-        info["path"] = dest
-        info["published"] = published
-        built.append(info)
-        print("wrote %-34s %6.1f KB  units=%2d  en~%5d words  zh %5d chars"
-              % (dest.name, dest.stat().st_size / 1024, info["units"],
-                 info["en_words"], info["cjk"]))
+        pages[info["slug"] + ".html"] = info["page"]
+        cards.append(info)
+        print("render  %-44s units=%2d  en~%5d words  zh %5d chars"
+              % (info["slug"] + ".html", info["units"], info["en_words"], info["cjk"]))
+    for d, cat in ENTRY_DIRS:
+        for md in sorted(d.glob("*.md")):
+            if md.name == "README.md":
+                continue
+            info = build_article(md, kind=cat)
+            rel = cat + "/" + md.stem + ".html"
+            pages[rel] = info["page"]
+            cards.append(info)
+            print("render  %-44s units=%2d  en~%5d words  zh %5d chars"
+                  % (rel, info["units"], info["en_words"], info["cjk"]))
+    return pages, cards
 
-    cards = []
-    for info in built:
-        if info["slug"] in UNLISTED:
+
+def build_index(cards):
+    cards_html = []
+    for info in cards:
+        if info["slug"] in UNLISTED and info["kind"] == "article":
             continue  # published, but not discoverable from the landing page
-        cards.append(
+        if info["kind"] == "article":
+            href = info["slug"] + ".html"
+        else:
+            href = info["kind"] + "/" + info["slug"] + ".html"
+        cards_html.append(
             '<article>\n'
-            '  <h2><a href="%s.html"><span class="p-zh">%s</span>'
+            '  <h2><a href="%s"><span class="p-zh">%s</span>'
             '<span class="p-en">%s</span></a></h2>\n'
             '  <p class="meta"><span class="p-zh">%d 节 · 英文约 %s 词 · 中文约 %s 字</span>'
             '<span class="p-en">%d sections · ~%s English words · ~%s Chinese characters</span></p>\n'
-            '  <a class="open" href="%s.html">'
+            '  <a class="open" href="%s">'
             '<span class="p-zh">打开</span><span class="p-en">Open</span></a>\n'
             '</article>'
-            % (info["slug"], esc(info["zh_title"]), esc(info["en_title"]),
+            % (href, esc(info["zh_title"]), esc(info["en_title"]),
                info["units"], "{:,}".format(info["en_words"]),
                "{:,}".format(info["cjk"]),
                info["units"], "{:,}".format(info["en_words"]),
-               "{:,}".format(info["cjk"]), info["slug"])
+               "{:,}".format(info["cjk"]), href)
         )
 
     idx = (INDEX
            .replace("__CSS__", CSS)
            .replace("__JS__", JS)
-           .replace("__CARDS__", "\n".join(cards))
-           .replace("__LEDE_ZH__", "本地静态页,双击即可阅读,无需启动服务。中英对照可随时切换。")
-           .replace("__LEDE_EN__", "A local static page — double-click to read, no server needed. "
-                                   "Switch between Chinese and English at any time.")
+           .replace("__CARDS__", "\n".join(cards_html))
+           .replace("__LEDE_ZH__", "条目与文章的静态页,双击即可阅读,无需启动服务。中英对照可随时切换。")
+           .replace("__LEDE_EN__", "Static pages for entries and essays — double-click to read, "
+                                   "no server needed. Switch between Chinese and English at any time.")
            .replace("__NAVTITLE__", "Math Clarification")
-           .replace("__NAVZH__", "数学释疑 · 文章")
-           .replace("__NAV_EN__", "Math Clarification · Essays")
-           .replace("__TITLE__", "数学释疑 · 文章 / Math Clarification")
-           .replace("__TITLE_ZH__", "数学释疑 · 文章")
+           .replace("__NAVZH__", "数学释疑")
+           .replace("__NAV_EN__", "Math Clarification")
+           .replace("__TITLE__", "数学释疑 / Math Clarification")
+           .replace("__TITLE_ZH__", "数学释疑")
            .replace("__TITLE_EN__", "Math Clarification"))
-    dest = OUT / "index.html"
-    dest.write_text(idx, encoding="utf-8")
-    # Publish the same landing into docs/math_clarification/ so the root site's
-    # "Math Clarification" pillar (href="math_clarification/") resolves on Pages
-    # and lists every article. Links are sibling-relative, so the copy is live as-is.
-    (DOCS_SITE / "index.html").write_text(idx, encoding="utf-8")
-    print("wrote %-34s %6.1f KB  (%d articles)  -> published to %s"
-          % (dest.name, dest.stat().st_size / 1024, len(built), DOCS_SITE))
-    return dest
+    return idx
+
+
+def write_pages(pages, index_html):
+    OUT.mkdir(parents=True, exist_ok=True)
+    DOCS_SITE.mkdir(parents=True, exist_ok=True)
+    take_down_offline(OUT, DOCS_SITE)
+    for root in (OUT, DOCS_SITE):
+        for rel, content in pages.items():
+            dest = root / rel
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(content, encoding="utf-8")
+        (root / "index.html").write_text(index_html, encoding="utf-8")
+    print("wrote %d pages + index.html  ->  %s  (mirrored to web/static)"
+          % (len(pages) + 1, DOCS_SITE))
+
+
+def check_pages(pages, index_html) -> int:
+    """Fail unless every expected page is published byte-identical and nothing
+    stale lingers (same orphan rule build_reader.py applies to manuscripts/)."""
+    expected = dict(pages)
+    expected["index.html"] = index_html
+    missing, changed = [], []
+    for rel, content in expected.items():
+        p = DOCS_SITE / rel
+        if not p.exists():
+            missing.append(rel)
+        elif p.read_text(encoding="utf-8") != content:
+            changed.append(rel)
+    orphans = sorted(
+        p.relative_to(DOCS_SITE).as_posix()
+        for p in DOCS_SITE.rglob("*.html")
+        if p.relative_to(DOCS_SITE).as_posix() not in expected
+    )
+    for rel in missing:
+        print("[FAIL] missing from %s: %s" % (DOCS_SITE, rel))
+    for rel in changed:
+        print("[FAIL] stale: %s" % rel)
+    for rel in orphans:
+        print("[FAIL] orphan (no source in build set): %s" % rel)
+    if missing or changed or orphans:
+        print("FAIL: %d missing, %d stale, %d orphan — run: python web/build_static.py"
+              % (len(missing), len(changed), len(orphans)))
+        return 1
+    print("PASS: %d pages + index.html current in %s" % (len(expected), DOCS_SITE))
+    return 0
+
+
+def build_once(slugs=None):
+    pages, cards = build_pages(slugs)
+    write_pages(pages, build_index(cards))
 
 
 def snapshot():
@@ -996,10 +1096,12 @@ def main():
             print("\nstopped")
         return 0
 
-    dest = build_once(slugs)
-    if dest is None:
-        return 1
-    print("\nopen: %s" % dest)
+    pages, cards = build_pages(slugs)
+    index_html = build_index(cards)
+    if "--check" in args:
+        return check_pages(pages, index_html)
+    write_pages(pages, index_html)
+    print("\nopen: %s" % (DOCS_SITE / "index.html"))
     return 0
 
 

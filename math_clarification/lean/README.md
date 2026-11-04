@@ -11,8 +11,8 @@ What Lean does **not** do here, by design: no analogies, no historical narrative
 
 ## Structure
 
-- **`core/`** — files using only Lean 4's built-in library (no Mathlib). Check any file with `lean <file>.lean` — no project needed. The proofs are real: exact rational arithmetic, verified by the kernel.
-- **`mathlib/`** — files that need [Mathlib](https://github.com/leanprover-community/mathlib4) (the main math library). These live in a `lake` project; see below. Optional tier.
+- **`core/`** — files using only Lean 4's built-in library (no Mathlib). Check any file with `lean <file>.lean` — no project needed. The proofs are real: exact rational arithmetic, verified by the kernel. **CI verifies these eight files on every push** (`.github/workflows/math-lean-ci.yml`), so the "Machine-checked" lines in the entries carry observed, not remembered, evidence.
+- **`mathlib/`** — files that need [Mathlib](https://github.com/leanprover-community/mathlib4) (the main math library). There is **no lake project committed in this repo**, so these two files are *not* verified in CI — checking them requires scaffolding a lake project locally (see below). Until that project exists here, treat their claims as checked-by-author, not machine-checked-in-repo. Optional tier.
 
 ## What is stated & checked where
 

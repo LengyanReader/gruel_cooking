@@ -337,6 +337,9 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
         .colophon { border-top: 1px solid #ccc; }
       }
       </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </head>
 <body class="lang-dual" data-title-zh="证明不再稀缺：AI 时代的数学边界与数学家之定位" data-title-en="When proofs are no longer scarce: the boundaries of mathematics and the place of mathematicians in the age of AI">
 <div id="draft" role="note">
@@ -1226,6 +1229,22 @@ body.lang-en .lang-block { border-left: none; padding-left: 0; }
   window.addEventListener('scroll', spy, { passive: true });
   spy();
 })();
+// KaTeX auto-render: entries are math-heavy ($...$, $$...$$); the FastAPI viewer
+// loads the same CDN pair (see templates/base.html). Deferred scripts above, so
+// renderMathInElement exists by DOMContentLoaded.
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\[', right: '\]', display: true },
+        { left: '\(', right: '\)', display: false },
+        { left: '$', right: '$', display: false }
+      ],
+      throwOnError: false
+    });
+  }
+});
 </script>
 </body>
 </html>

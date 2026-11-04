@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)</title>
+<meta name="description" content="Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)">
+<style>
+:root {
+  --cream: #FFFBF5;
+  --cream-deep: #F7EFE2;
+  --paper: #FFFDF9;
+  --gold: #F5C97E;
+  --gold-soft: #FBE9C8;
+  --amber: #E8A855;
+  --amber-deep: #C9852F;
+  --ink: #332C23;
+  --ink-soft: #6B5F4F;
+  --ink-faint: #9A8D7A;
+  --sky-deep: #407CB0;
+  --line: #EBDCC4;
+  --line-soft: #F3E9D8;
+  --measure: 42rem;
+  --sans: "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "LXGW WenKai",
+           "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", "SimSun", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--bh, 0px) + 84px); }
+body {
+  margin: 0;
+  padding-top: var(--bh, 0px);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.85;
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: radial-gradient(rgba(232, 168, 85, 0.055) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- bilingual text pairs ----------
+   Dual mode shows both halves; lang-en and lang-zh each keep their own.
+   `revert` restores the element's default display, so a pair can sit inside
+   a span or a <p> without either one changing the surrounding layout. */
+.p-zh, .p-en { display: revert; }
+body.lang-en .p-zh { display: none !important; }
+body.lang-zh .p-en { display: none !important; }
+
+/* ---------- draft notice (pinned, floating) ---------- */
+#draft {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 70;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 9px 52px 9px 20px;
+  font-family: var(--sans); font-size: .78rem; line-height: 1.5;
+  color: #6B4A12; text-align: center;
+  background: repeating-linear-gradient(135deg, #FBE9C8, #FBE9C8 12px, #F8E0B8 12px, #F8E0B8 24px);
+  border-bottom: 1px solid var(--amber);
+  box-shadow: 0 2px 10px rgba(58, 50, 40, .07);
+}
+#draft .flag {
+  flex: none; font-size: .62rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: #fff; background: var(--amber-deep);
+  border-radius: 4px; padding: 2px 7px;
+}
+#draft .msg { min-width: 0; }
+#draft .msg em { font-style: normal; font-weight: 600; }
+#draft .dismiss {
+  position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
+  width: 26px; height: 26px; padding: 0; cursor: pointer;
+  font: inherit; font-size: 1.05rem; line-height: 1;
+  color: var(--amber-deep); background: rgba(255, 255, 255, .6);
+  border: 1px solid var(--amber); border-radius: 50%;
+}
+#draft .dismiss:hover { background: #fff; color: #8A4B12; }
+#draft[hidden] { display: none; }
+
+/* ---------- reading progress ---------- */
+#progress {
+  position: fixed; top: var(--bh, 0px); left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--amber), var(--gold));
+  z-index: 60; transition: width .1s linear;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 18px;
+  padding: 12px 26px;
+  background: rgba(255, 251, 245, 0.93);
+  backdrop-filter: blur(9px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .brand { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.topbar .brand a { color: var(--ink); font-weight: 600; font-size: .95rem;
+                   text-decoration: none; font-family: var(--sans); }
+.topbar .brand .zh { font-size: .74rem; color: var(--ink-faint); letter-spacing: .04em; }
+.topbar .spacer { flex: 1; }
+.topbar .langset { display: flex; gap: 6px; font-family: var(--sans); }
+.langset { display: flex; gap: 6px; font-family: var(--sans); }
+.langset button {
+  font: inherit; font-size: .82rem; cursor: pointer; line-height: 1.4;
+  padding: 5px 13px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--cream); color: var(--ink-soft);
+  transition: all .16s ease;
+}
+.langset button:hover { border-color: var(--amber); color: var(--ink); }
+.langset button[aria-pressed="true"] {
+  background: var(--amber); border-color: var(--amber); color: #fff; font-weight: 600;
+}
+
+/* ---------- share ---------- */
+.share { display: flex; align-items: center; gap: 6px; font-family: var(--sans); }
+.share button {
+  font: inherit; font-size: .78rem; line-height: 1.4; cursor: pointer;
+  padding: 5px 11px; border-radius: 999px; text-decoration: none;
+  border: 1px solid var(--line); background: var(--cream); color: var(--ink-soft);
+  transition: all .16s ease; white-space: nowrap;
+}
+.share button:hover { border-color: var(--amber); color: var(--ink); background: var(--cream-deep); }
+.share button.done { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+/* ---------- signature ---------- */
+.byline, .colophon {
+  font-family: var(--sans); font-size: .74rem; color: var(--ink-faint);
+}
+.byline { margin-top: 14px; letter-spacing: .02em; }
+.byline b { font-weight: 600; color: var(--ink-soft); }
+.byline a, .colophon a { color: var(--sky-deep); text-decoration: none; }
+.byline a:hover, .colophon a:hover { text-decoration: underline; }
+/* publication / update dateline, declared as metadata in the source preamble */
+.dateline { margin-top: 10px; font-family: var(--sans); font-size: .74rem; color: var(--ink-faint); letter-spacing: .02em; }
+.dateline b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.dateline .sep { margin: 0 10px; color: var(--line); }
+.colophon {
+  margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line-soft);
+  display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between;
+}
+
+/* ---------- shell ---------- */
+.shell { display: grid; grid-template-columns: 262px minmax(0, 1fr); gap: 0; align-items: start; }
+.toc {
+  position: sticky; top: calc(var(--bh, 0px) + 62px); align-self: start;
+  max-height: calc(100vh - var(--bh, 0px) - 62px); overflow-y: auto;
+  padding: 30px 20px 60px 26px; border-right: 1px solid var(--line-soft);
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 0 0 14px;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: c; }
+.toc li { counter-increment: c; margin: 0 0 2px; }
+.toc a {
+  display: block; padding: 5px 10px; border-radius: 7px;
+  font-family: var(--sans); font-size: .855rem; line-height: 1.45;
+  color: var(--ink-soft); text-decoration: none;
+  border-left: 2px solid transparent; transition: all .16s ease;
+}
+.toc a:hover { background: var(--cream-deep); color: var(--ink); }
+.toc a.active {
+  background: var(--gold-soft); color: var(--amber-deep);
+  border-left-color: var(--amber); font-weight: 600;
+}
+.toc .lv { font-size: .95em; opacity: .55; margin-right: .4em; }
+
+main { padding: 40px 56px 140px; min-width: 0; }
+.doc { max-width: var(--measure); margin: 0 auto; }
+
+/* ---------- title block ---------- */
+.titleblock { border-bottom: 1px solid var(--line); padding-bottom: 26px; margin-bottom: 12px; }
+.kicker {
+          font-family: var(--sans); font-size: .72rem; font-weight: 600;
+          letter-spacing: .18em; text-transform: uppercase; color: var(--amber-deep);
+          margin: 0 0 14px;
+        }
+        .kicker { margin: 0 0 14px; }
+
+.titleblock h1 {
+  font-family: var(--sans); font-weight: 700; color: var(--ink);
+  font-size: clamp(1.65rem, 3.4vw, 2.35rem); line-height: 1.32; margin: 0 0 10px;
+  letter-spacing: -.005em;
+}
+.titleblock h1 .t-zh, .titleblock h1 .t-en { display: block; }
+/* In dual mode the English title rides under the Chinese one; the lang-en and
+   lang-zh modes each promote their own half to full heading size. */
+.titleblock h1 .t-en {
+  margin-top: .32em; font-size: .54em; font-weight: 500;
+  color: var(--ink-soft); line-height: 1.44; letter-spacing: 0;
+}
+body.lang-en .titleblock h1 .t-zh { display: none; }
+body.lang-en .titleblock h1 .t-en {
+  margin-top: 0; font-size: 1em; font-weight: 700;
+  color: var(--ink); line-height: 1.32; letter-spacing: -.005em;
+}
+body.lang-zh .titleblock h1 .t-en { display: none; }
+.titleblock .sub {
+  font-family: var(--sans); font-size: 1.02rem; color: var(--ink-soft);
+  line-height: 1.6; margin: 0;
+}
+.titleblock .note {
+          font-family: var(--sans); font-size: .78rem; line-height: 1.65;
+          color: var(--ink-faint); margin: 16px 0 0; padding: 10px 14px;
+          background: var(--cream-deep); border-left: 3px solid var(--line);
+          border-radius: 0 8px 8px 0;
+        }
+        .titleblock .note .n-en { display: block; }
+        .titleblock .note .n-en + .n-zh, .titleblock .note .n-zh + .n-en { margin-top: 8px; }
+        body.lang-en .titleblock .note .n-zh,
+        body.lang-zh .titleblock .note .n-en { display: none; }
+
+
+/* ---------- units (one per source block) ---------- */
+.unit { padding: 34px 0 10px; border-top: 1px solid var(--line-soft); }
+.unit:first-of-type { border-top: none; }
+.unit.is-src .lang-body ol { columns: 2; column-gap: 34px; font-size: .84rem; line-height: 1.62; }
+.unit.is-src .lang-body li { break-inside: avoid; margin-bottom: 9px; }
+
+.lang-block { position: relative; margin: 0 0 26px; }
+.lang-chip {
+  display: inline-block; font-family: var(--sans); font-size: .64rem; font-weight: 700;
+  letter-spacing: .14em; color: var(--ink-faint);
+  border: 1px solid var(--line); border-radius: 4px;
+  padding: 1px 7px; margin-bottom: 12px; background: var(--paper);
+}
+.lang-zh { border-left: 3px solid var(--gold); padding-left: 20px; }
+
+/* ---------- heading hierarchy ----------
+   Chapters (h2) sit flush against the measure with a rule above; numbered
+   sub-sections (h3/h4) step in by one level each, and their body copy follows
+   them in, so the outline is readable at a glance. */
+.lang-body .sub { margin: 0; }
+.lang-body h2 {
+  font-family: var(--sans); font-weight: 650; font-size: 1.32rem; line-height: 1.4;
+  color: var(--ink); letter-spacing: -.003em;
+  margin: 38px 0 8px; padding-top: 24px; border-top: 1px solid var(--line);
+}
+.lang-body .sub.d0 > h2:first-child,
+.lang-body > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.lang-body h3 {
+  font-family: var(--sans); font-weight: 600; font-size: 1.06rem; line-height: 1.5;
+  color: var(--amber-deep); margin: 28px 0 9px;
+  padding-left: .8rem; border-left: 2px solid var(--gold);
+}
+.lang-body h4 {
+  font-family: var(--sans); font-weight: 600; font-size: .97rem; color: var(--ink-soft);
+  margin: 22px 0 7px; padding-left: .7rem; border-left: 2px solid var(--line);
+}
+.lang-body .sub.d1 { margin-left: 1.5rem; }
+.lang-body .sub.d2 { margin-left: 1.5rem; }
+.lang-body .sub.d2 > h4 { border-left-color: var(--line); }
+.lang-body .sub > :first-child { margin-top: 0; }
+.lang-body p { margin: 0 0 17px; }
+.lang-zh .lang-body p { text-align: justify; text-justify: inter-ideograph; letter-spacing: .01em; }
+.lang-body ul, .lang-body ol { margin: 0 0 18px; padding-left: 1.35em; }
+.lang-body li { margin-bottom: 7px; }
+.lang-body li > ul, .lang-body li > ol { margin-top: 7px; }
+.lang-body strong { font-weight: 650; color: #241E17; }
+.lang-body em { font-style: italic; }
+.lang-body a { color: var(--sky-deep); text-underline-offset: 2px; }
+.lang-body hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
+.lang-body blockquote {
+  margin: 0 0 18px; padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--line); color: var(--ink-soft); font-style: italic;
+}
+.lang-body code {
+  font-family: "Cascadia Mono", Consolas, monospace; font-size: .88em;
+  background: var(--cream-deep); padding: 1px 5px; border-radius: 4px;
+}
+.lang-body pre {
+  background: var(--cream-deep); border: 1px solid var(--line);
+  padding: 14px 16px; border-radius: 10px; overflow-x: auto; line-height: 1.55;
+}
+.lang-body pre code { background: none; padding: 0; }
+.lang-body table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 0 0 18px; }
+.lang-body th, .lang-body td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
+.lang-body th { background: var(--cream-deep); font-family: var(--sans); font-weight: 600; }
+
+/* ---------- language modes ---------- */
+body.lang-en .lang-zh { display: none; }
+body.lang-zh .lang-en { display: none; }
+body.lang-en .lang-chip, body.lang-zh .lang-chip { display: none; }
+body.lang-zh .lang-body, body.lang-en .lang-body { text-align: left; }
+body.lang-en .lang-block { border-left: none; padding-left: 0; }
+
+/* ---------- index page ---------- */
+.idx { max-width: 780px; margin: 0 auto; padding: 64px 26px 120px; }
+.idx h1 { font-family: var(--sans); font-size: 2rem; margin: 0 0 6px; }
+.idx .lede { color: var(--ink-soft); font-size: 1.02rem; margin: 0 0 34px; font-family: var(--sans); }
+.idx article {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 14px; padding: 24px 26px; margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(58, 50, 40, .05);
+}
+.idx article h2 { font-family: var(--sans); font-size: 1.15rem; margin: 0 0 8px; line-height: 1.45; }
+.idx article h2 a { color: var(--ink); text-decoration: none; }
+.idx article h2 a:hover { color: var(--amber-deep); }
+.idx article p { margin: 0 0 12px; font-size: .95rem; color: var(--ink-soft); }
+.idx .meta { font-family: var(--sans); font-size: .78rem; color: var(--ink-faint); }
+.idx .open {
+  display: inline-block; font-family: var(--sans); font-size: .8rem; font-weight: 600;
+  color: #fff; background: var(--amber); text-decoration: none;
+  padding: 6px 16px; border-radius: 999px;
+}
+.idx .open:hover { background: var(--amber-deep); color: #fff; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1000px) {
+  .shell { grid-template-columns: 1fr; }
+  .toc {
+    position: static; max-height: none; border-right: none;
+    border-bottom: 1px solid var(--line-soft); padding: 20px 26px;
+  }
+  .toc ol { columns: 2; column-gap: 18px; }
+  main { padding: 26px 26px 100px; }
+  .unit.is-src .lang-body ol { columns: 1; }
+}
+@media (max-width: 620px) {
+        body { font-size: 16.5px; }
+        .toc ol { columns: 1; }
+        .lang-zh { padding-left: 14px; }
+        .topbar { flex-wrap: wrap; gap: 10px 14px; padding: 10px 18px; }
+        #draft { font-size: .72rem; padding: 7px 40px 7px 14px; }
+      }
+
+      /* ---------- print ---------- */
+      @media print {
+        body { background: #fff; font-size: 11.5pt; line-height: 1.6; padding-top: 0; }
+        #draft, #progress, .topbar, .toc, .lang-chip, .langset, .share { display: none !important; }
+        .shell { display: block; }
+        main { padding: 0; }
+        .doc { max-width: none; }
+        body.lang-en .lang-zh, body.lang-zh .lang-en { display: none; }
+        .lang-block { break-inside: avoid; }
+        .unit { border-top: 1px solid #ddd; }
+        .colophon { border-top: 1px solid #ccc; }
+      }
+      </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body class="lang-dual" data-title-zh="Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)" data-title-en="Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)">
+<div id="draft" role="note">
+  <span class="flag"><span class="p-zh">草稿</span><span class="p-en">Draft</span></span>
+  <span class="msg">
+    <span class="p-zh"><em>本文仅为草稿，仅供参考</em>，恳请各位读者多多指正、批评指教；文中观点与疏漏之处，欢迎来信讨论。</span>
+    <span class="p-en"><em>This is a working draft, for reference only.</em> Comments and corrections are warmly welcome — please get in touch.</span>
+  </span>
+  <button type="button" class="dismiss" aria-label="关闭声明 / Dismiss notice">&times;</button>
+</div>
+<div id="progress"></div>
+
+<div class="topbar">
+  <div class="brand">
+    <a href="index.html">Math Clarification</a>
+    <span class="zh"><span class="p-zh">数学释疑 · 条目</span><span class="p-en">Math Clarification · Entries</span></span>
+  </div>
+  <div class="spacer"></div>
+  <div class="share">
+    <button type="button" data-share="copy" data-done-zh="已复制" data-done-en="Copied"><span class="p-zh">复制链接</span><span class="p-en">Copy link</span></button>
+  </div>
+  <div class="langset" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="zh" aria-pressed="false">中</button>
+    <button type="button" data-lang="dual" aria-pressed="true">双语</button>
+  </div>
+</div>
+
+<div class="shell">
+  <nav class="toc">
+    <h2><span class="p-zh">目录</span><span class="p-en">Contents</span></h2>
+    <ol><li><a href="#u0"><span class="lv">L1</span><span class="p-zh">Scene 1 — The Puzzle (谜题)</span><span class="p-en">Scene 1 — The Puzzle (谜题)</span></a></li></ol>
+  </nav>
+  <main>
+    <div class="doc">
+      <div class="titleblock">
+        <p class="kicker"><span class="p-zh">证明叙事 · Proof Narrative</span><span class="p-en">Proof narrative</span></p>
+        <h1><span class="t-zh">Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)</span><span class="t-en">Proof Narrative — The Day the Grid Fell (单位距离猜想的推翻：一则证明叙事)</span></h1>
+        
+        
+        <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
+      </div>
+      <section class="unit" id="u0">
+<div class="lang-block lang-en"><span class="lang-chip">EN</span><div class="lang-body"><blockquote>
+<p><strong>The creed</strong> (证明叙事的原则): <em>Math is never a difficult thing — when a proof feels hard, the exposition has failed, not the reader.</em> 数学从不难——当证明让人感到困难，是讲解的失败，而非读者的失败。</p>
+<p>This narrative retells one entry's proof as an arc: the puzzle → the false starts → the one key idea → the click. It pairs with <a href="../famous_problems/erdos_unit_distance.html">the formal entry</a>.</p>
+</blockquote>
+<hr />
+
+<section class="sub d0"><h2>Scene 1 — The Puzzle (谜题)</h2>
+<p>Put $n$ dots on an infinite flat table. Stretch a one-unit string between every pair of dots that is exactly one unit apart. How many strings can you possibly stretch?</p>
+<p>Even before Erdős formalized it in 1946, everyone could see the floor. Line the dots up like beads:</p>
+<ul>
+<li><strong>A straight line</strong>: neighboring dots one apart → about $n$ strings.</li>
+<li><strong>A chessboard</strong>: each interior dot touches 4 neighbors → about $2n$ strings. Better.</li>
+</ul>
+<p>Then Erdős found a trick. Take the chessboard but <em>rescale</em> it by a carefully chosen number — an irrational one. Now the distance-1 strings no longer come only from adjacent dots. Pairs that used to sit $\sqrt{2}$ apart, or $\sqrt{5}$, or $\sqrt{13}$ — after the rescaling, <em>all of them</em> become exactly one unit. The count jumps: instead of $2n$, you get roughly $n^{1 + C/\log\log n}$.</p>
+<p>That exponent $1 + C/\log\log n$ is stubborn. As $n$ grows, $\log\log n$ grows too — agonizingly slowly — so the exponent creeps down toward 1, but never quite reaches it. The grid gives you "slightly better than linear, forever."</p>
+<p>Erdős looked at this and made a bet: <strong>nobody can do meaningfully better.</strong> Not by a fixed polynomial amount. $u(n) = n^{1 + o(1)}$. Beat that if you can.</p>
+<p>For eighty years, nobody could. And nobody proved it either. The problem just sat there, the most famous open question in discrete geometry, with a cash prize Erdős himself had put on it.</p>
+<hr />
+</section>
+<section class="sub d0"><h2>Scene 2 — The False Starts (失败的起点)</h2>
+<p>Why is the problem hard? Because there are two directions of attack, and neither human instinct went far enough.</p>
+<p><strong>Attack 1 — the upper bound (证明不能更好).</strong> This is the "hard" direction: prove no clever arrangement beats the grid. It took until 1984 for Spencer, Szemerédi and Trotter to get <em>any</em> upper bound, and it was a weak one: $u(n) = O(n^{4/3})$. Not $n^{1+\epsilon}$ — a full $n^{1/3}$ above where anyone thought the truth lay. The gap between "we think it's about $n^1$" and "we can prove it's at most $n^{4/3}$" was enormous and would not budge.</p>
+<p><strong>Attack 2 — the counterexample (寻找反例).</strong> Mathematicians <em>did</em> try to beat the grid. They tried ragged point clouds, random scatterings, sphere packings. Nothing worked. Every cleverer arrangement fell back to about the same exponent. The grid, or its rescaled cousins, looked like the ceiling of what geometry alone could do.</p>
+<p>Here is the trap. Everyone who attacked this problem thought of it <em>geometrically</em>. Dots on a plane, distances, arrangements. It's a picture. Of course you think in pictures.</p>
+<p>The pictures were a cage. Nobody could beat the grid <em>because everyone was thinking in the wrong language.</em> The key wasn't hidden in geometry at all. It was hiding in a completely different branch of mathematics — one that has nothing, visually, to do with dots on a table.</p>
+<hr />
+</section>
+<section class="sub d0"><h2>Scene 3 — The Key Idea (关键一步)</h2>
+<p>Stop thinking about <em>arrangements of dots</em>. Start thinking about where the distances $1,\sqrt{2},\sqrt{5},\sqrt{13}\ldots$ come from.</p>
+<p>Erdős's grid works because the count of unit distances is secretly controlled by a <strong>norm form</strong>. Write a grid point as a Gaussian integer $a + bi$ (with $a,b$ integers and $i^2 = -1$). Its distance from the origin is $|a + bi| = \sqrt{a^2 + b^2}$. So the question "how many points are exactly distance 1 from the origin" is the same as "how many ways can 1 be written as $a^2 + b^2$ with $a,b$ integers."</p>
+<p>And here's the hard wall: <strong>1 has only finitely many such representations.</strong> The Gaussian integers — the symmetries of the square grid — simply don't have enough room for the unit distances to pile up fast. That finiteness is <em>exactly</em> the reason the grid can't do better than $n^{1+o(1)}$. Erdős's lower bound and his conjectured ceiling both sit on this finiteness.</p>
+<p>So the question became: <em>what if there were a number system with infinitely many ways to write 1 as a distance?</em></p>
+<p>That is the whole astonishing leap, and it took an AI to make it. The OpenAI model asked: <strong>what if we replace the Gaussian integers with the ring of integers of a much richer number field $K$ — one whose symmetries are so vast that unit distances can pile up indefinitely?</strong></p>
+<p>Two ingredients from algebraic number theory — utterly unused in this geometry problem for 80 years — turn that vague wish into a theorem:</p>
+<ol>
+<li>
+<p><strong>Dirichlet's unit theorem</strong> says the unit group of a number field $K$ (its "symmetries") has rank $r_1 + r_2 - 1$, where $r_1$ counts real embeddings and $2r_2$ counts complex ones. Pick a field with many embeddings and its units explode.</p>
+</li>
+<li>
+<p><strong>Golod–Shafarevich</strong> (1964) guarantees you can build number fields whose <em>class group</em> — a measure of how "unbalanced" the arithmetic is — has arbitrarily large rank. And <strong>Hajir–Maire–Ramakrishna</strong> showed you can stack these into infinite towers with controlled behavior.</p>
+</li>
+</ol>
+<p>Through the <em>Minkowski embedding</em>, a number field with a huge unit group maps into the plane, and each unit becomes a lattice point. The more symmetries the field has, the more pairs at distance exactly 1 you can lay down — <em>without limit.</em></p>
+<p>The finiteness that had quietly capped the grid for 80 years was gone. Replace the Gaussian integers with a field of unbounded symmetry, and the exponent above $n$ stops being "a small amount toward 0" and becomes a <em>fixed positive number</em> $\delta$:</p>
+<p>$$u(n) \geq n^{1 + \delta} \qquad \text{for infinitely many } n.$$</p>
+<hr />
+</section>
+<section class="sub d0"><h2>Scene 4 — The Click (豁然开朗)</h2>
+<p>Look at what actually happened. The counterexample wasn't a cleverer arrangement of dots — it was a <em>change of number system</em>. The grid's ceiling wasn't a law of geometry; it was an artifact of ordinary integers having only finitely many representations of 1.</p>
+<p>Once you see it, the whole shape of the 80-year failure makes sense:
+- Humans thought geometrically → stayed inside the cage of finiteness.
+- The key was <em>arithmetic</em> — a different language entirely.
+- The AI, unbothered by the "obvious" way to look at a dots-and-distances problem, wandered into algebraic number theory and found the cage was made of glass.</p>
+<p>Within days the result was sharpened and certified. Whit Sawin gave the explicit value $\delta = 0.014$. Nine mathematicians — including Fields medalist Tim Gowers — wrote the 19-page companion paper verifying the construction.</p>
+<p><strong>And note what did <em>not</em> happen.</strong> The problem is not solved. The gap is <em>wider</em> now, not narrower: we know $n^{1.014} \leq u(n) \leq n^{4/3}$. The true growth rate of $u(n)$ is still unknown. The AI demolished one conjecture and, in doing so, revealed how much terrain nobody has mapped — the space between the grid's true ceiling and the weak upper bound is enormous, and most of it is terra incognita.</p>
+<p>The lesson of the whole arc is the cookbook's central creed made concrete: <strong>a problem you cannot state exactly, you have not begun; a problem you cannot picture, you have not understood — but a problem you picture <em>too well</em> becomes a cage.</strong> The unit distance conjecture fell not to harder work in the same direction, but to the refusal to stay inside the picture.</p>
+<hr />
+</section>
+<section class="sub d0"><h2>Postscript — What this story is not (并非如此)</h2>
+<ul>
+<li><strong>Not "AI solved it alone."</strong> The model produced the construction; nine specialists wrote the human-verified proof, and Sawin found the constant. Collaboration — the model proposing, humans judging — is the accurate read.</li>
+<li><strong>Not a settled result overnight.</strong> The disproof is human-verified and peer-reviewed by leading experts, but the full story of $u(n)$ is far from told. The gap tripled in mystery.</li>
+<li><strong>Not the end of algebraic geometry's use in combinatorics.</strong> It's the beginning — the cross-domain pipeline this proof opened is likely to reappear.</li>
+</ul>
+<hr />
+</section>
+<section class="sub d0"><h2>Sources (参考文献)</h2>
+<ul>
+<li>一手 (2026 disproof): OpenAI (2026-05-20). "An OpenAI model has disproved a central conjecture in discrete geometry." <a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">https://openai.com/index/model-disproves-discrete-geometry-conjecture/</a></li>
+<li>一手 (verification): Alon, N., Bloom, T. F., Gowers, W. T., Litt, D., Sawin, W., Shankar, A., Tsimerman, J., Wang, V., Wood, M. M. (2026). "Remarks on the disproof of the unit distance conjecture." arXiv: <a href="https://arxiv.org/abs/2605.20695">https://arxiv.org/abs/2605.20695</a></li>
+<li>一手 (exponent refinement): Sawin, W. (2026). "An explicit lower bound for the unit distance problem." arXiv: <a href="https://arxiv.org/abs/2605.20579">https://arxiv.org/abs/2605.20579</a></li>
+<li>一手 (upper bound): Spencer, J., Szemerédi, E., Trotter, W. T. (1984). "Unit distances in the Euclidean plane." <em>Graph Theory and Combinatorics</em> (Cambridge, 1983), 293–303. Academic Press.</li>
+</ul></section></div></div>
+</section>
+      <p class="colophon">
+        <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
+        <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
+      </p>
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  var body = document.body;
+  // Scope the language choice per page: reading one essay in EN must not force
+  // another essay to open in EN. Each document remembers its own selection, and a
+  // page never chosen defaults to bilingual. An explicit ?lang= link still wins.
+  var KEY = 'zh-article-lang:' + location.pathname;
+  var DRAFT_KEY = 'zh-draft-dismissed';
+
+  /* ---------- draft notice: measure, pin, remember dismissal ---------- */
+  var draft = document.getElementById('draft');
+  function syncBanner() {
+    var h = (draft && !draft.hidden) ? draft.offsetHeight : 0;
+    document.documentElement.style.setProperty('--bh', h + 'px');
+  }
+  if (draft) {
+    try {
+      if (localStorage.getItem(DRAFT_KEY) === '1') { draft.hidden = true; }
+    } catch (e) { /* file:// may block */ }
+    var dismiss = draft.querySelector('.dismiss');
+    if (dismiss) {
+      dismiss.addEventListener('click', function () {
+        draft.hidden = true;
+        try { localStorage.setItem(DRAFT_KEY, '1'); } catch (e) { /* ignore */ }
+        syncBanner();
+      });
+    }
+    syncBanner();
+    window.addEventListener('resize', syncBanner);
+  }
+
+  /* ---------- share: copy the page link ---------- */
+  var here = location.href;
+  Array.prototype.forEach.call(document.querySelectorAll('.share [data-share]'), function (el) {
+    if (el.getAttribute('data-share') === 'copy') {
+      // Keep the bilingual markup intact: swapping textContent would delete the
+      // .p-zh/.p-en spans and freeze the button in one language after one click.
+      var rest = el.innerHTML;
+      el.addEventListener('click', function () {
+        function ok() {
+          el.innerHTML = '<span class="p-zh">' + (el.getAttribute('data-done-zh') || '已复制')
+            + '</span><span class="p-en">' + (el.getAttribute('data-done-en') || 'Copied')
+            + '</span>';
+          el.classList.add('done');
+          setTimeout(function () {
+            el.innerHTML = rest;
+            el.classList.remove('done');
+          }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(here).then(ok, fallback);
+        } else { fallback(); }
+        function fallback() {
+          // file:// and older browsers block the async clipboard API
+          var ta = document.createElement('textarea');
+          ta.value = here;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); ok(); } catch (e) { /* give up */ }
+          body.removeChild(ta);
+        }
+      });
+    }
+  });
+
+  /* ---------- language ---------- */
+  function setLang(mode) {
+    body.classList.remove('lang-en', 'lang-zh', 'lang-dual');
+    body.classList.add('lang-' + mode);
+    Array.prototype.forEach.call(document.querySelectorAll('.langset button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === mode));
+    });
+    var tz = body.getAttribute('data-title-zh');
+    var te = body.getAttribute('data-title-en');
+    if (tz && te) {
+      document.title = mode === 'en' ? te : (mode === 'zh' ? tz : tz + ' / ' + te);
+    }
+    try { localStorage.setItem(KEY, mode); } catch (e) { /* file:// may block */ }
+    if (history.replaceState) {
+      history.replaceState(null, '', '?lang=' + mode);
+    }
+    spy();
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.langset button'), function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+
+  var initial = 'dual';
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) { initial = saved; }
+  } catch (e) { /* ignore */ }
+  var q = (location.search.match(/lang=(en|zh|dual)/) || [])[1];
+  if (q) { initial = q; }
+  setLang(initial);
+
+  // reading progress
+  var bar = document.getElementById('progress');
+  function progress() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', progress, { passive: true });
+  progress();
+
+  // scroll spy
+  var links = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.toc a'), function (a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  var units = Array.prototype.slice.call(document.querySelectorAll('.unit'));
+  var current = null;
+  function spy() {
+    var y = window.scrollY + 140, found = null;
+    for (var i = 0; i < units.length; i++) {
+      if (units[i].offsetTop <= y) { found = units[i].id; } else { break; }
+    }
+    if (found === current) { return; }
+    current = found;
+    Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+    if (found && links[found]) { links[found].classList.add('active'); }
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+// KaTeX auto-render: entries are math-heavy ($...$, $$...$$); the FastAPI viewer
+// loads the same CDN pair (see templates/base.html). Deferred scripts above, so
+// renderMathInElement exists by DOMContentLoaded.
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\[', right: '\]', display: true },
+        { left: '\(', right: '\)', display: false },
+        { left: '$', right: '$', display: false }
+      ],
+      throwOnError: false
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -34,3 +34,8 @@ jobs:
       # Gate 3: synopsis in band, withdrawn apparatus stays out.
       - name: Scope gate (review_scope)
         run: python -X utf8 submission/checks/review_scope.py
+
+      # Gate 4: the published Pages set (entries + essays + index) must be
+      # byte-identical to a fresh render of the Markdown source.
+      - name: Static site gate (build_static --check)
+        run: python -X utf8 web/build_static.py --check
