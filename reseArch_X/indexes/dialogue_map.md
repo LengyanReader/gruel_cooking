@@ -49,6 +49,10 @@
 | **Camilla Brattland** | `../scholars/brattland-camilla.md` | SAMFORSK「萨米研究之研究」新文集；MAHTUT；原住民知识入土地治理（2025）（✔ 2026-11-04） | 运河廊道遗产书写的表征自反审计 | 找出的代言硬伤请判审计成色 | 待议（v6 新档·🇳🇴） |
 | **Ole G. Mouritsen** | `../scholars/mouritsen-ole.md` | 《Blue Foods》2026-11-27 新书在即；2025 可持续菜系跨时空品味（✔ 2026-11-04） | 「粥的胃物理解析」双语小册（糊化×umami×文明） |  gastrophysics 用到东亚家常餐桌请判延续还是走样 | 待议（v6 新档·🇩🇰） |
 | **张厚泉** | `../scholars/zhang-houquan.md` | 「围棋·AI·人类」跨界论坛五年续办（2022 东大→2025 上财）（✔ 2026-11-04） | Book-of-Go 作者考×论坛谱系互勘（含英译） | 两处考据请判歪了没有 | 待议（v6 新档·Book-of-Go 余线落子） |
+| **Emily Bender** | `../scholars/bender-emily.md` | LLM「意义何在」追问推向法律场域（Yale Law 2025-10 主旨）；UW CompLing 项目育人建制（✔ 2026-11-04） | 自家 LLM 抽取管线的「意义失踪账」（形似换义×责任断环） | 账目请判应用还是误读 | 待议（v7 新档·xsci） |
+| **Kalevi Kull** | `../scholars/kull-kalevi.md` | Tartu 符号学派 biosemiotics 线现行守人（2025-08 学派聚落在列）；「生命即符号行动」定题（✔ 2026-11-04） | 「熬粥=细胞/生态/文化三层 semiosis 同锅」一页札记 | 正当延伸还是漂亮越界请判 | 待议（v7 新档·xsci） |
+| **Peter Turchin** | `../scholars/turchin-peter.md` | SDT×法国 1950–2023 政治不稳定实证 v3（2025-10 挂载）；公开预测判卷传统（✔ 2026-11-04） | 运河-北京编年的前工业东亚 SDT 试算（附缺口清单） | 帝国中国是扩展还是范畴错位请判 | 待议（v7 新档·xsci） |
+| **Geoffrey West** | `../scholars/west-geoffrey.md` | 城市标度律×人口退化议程（2026-10-08 长谈现行在更）（✔ 2026-11-04） | 运河城镇带前工业城市群标度切面试算 | 标度律是否制度中立请判 | 待议（v7 新档·xsci） |
 
 > **连接闸口（用户 2026-11-04）**：入库只收「有价值×有人情味×直面时代×非学术垃圾」且**人格光辉+切实实践**者（见 README §〇）。v5 过闸待建档线索：**Mike Hulme**（气候观念文化史→heaven_climate）、**Evan Thompson**（现象学×佛学×认知→contemplative science 正梁）、**Manu Kapur**（Productive Failure→学习器教育学依据）、**赖建诚**（量化经济史→盐铁线接续）、**Graff/Birkenstein**（They Say/I Say→Reading_IA 作者本人）；v6 新增线索：**羽田正**（东大「AI·围棋·人类」座谈发起人）、**Linda Tuhiwai Smith**（健在待核）；方向级：**潜桥 latent bridge**（Mostik/Smirnov，意义载体换层后理解能否跨桥）。详见 `../scan_log/20261104-v5-virtues-and-gate.md` 与 `../scan_log/20261104-v6-nordics-oceania.md`。
 

@@ -254,7 +254,8 @@ def load_scan_logs() -> list[dict]:
 
 
 # ----------------------------------------------------------------- axis map --
-# The nine user-declared axes. Kept here (not in source .md) because tags are
+# The nine user-declared axes + `xsci` (基础科学×人文交叉/AI前沿, 用户 2026-11-04
+# 方向拓展指令开启). Kept here (not in source .md) because tags are
 # curation judgments, not authored facts. Re-run build after editing.
 
 AXES = [
@@ -267,6 +268,7 @@ AXES = [
     ("旅游",                 "tour",      "流动 · 廊道旅游 · Heritage × Tourism"),
     ("人生修行",             "cultiv",    "沉思科学 · 冥想训练实证 · 社会情绪神经"),
     ("良好生活",             "goodlife",  "幸福可训练性 · 共同生活 · 生活设计"),
+    ("基础科学×人文交叉",   "xsci",      "复杂系统×文明 · 理论生物学×符号学 · 历史动力学 · 语言哲学×LLM · 潜桥"),
 ]
 
 SCHOLAR_AXES = {
@@ -312,6 +314,10 @@ SCHOLAR_AXES = {
     "brattland-camilla":  ["herit", "sus"],
     "mouritsen-ole":      ["food", "goodlife"],
     "zhang-houquan":      ["ai_hum", "cultiv"],
+    "bender-emily":       ["ai_hum", "xsci"],
+    "kull-kalevi":        ["xsci", "cultiv"],
+    "turchin-peter":      ["xsci", "sus"],
+    "west-geoffrey":      ["xsci", "sus"],
 }
 
 OPP_AXES = {
