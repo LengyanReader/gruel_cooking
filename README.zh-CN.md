@@ -14,63 +14,54 @@
 
 ---
 
-## 五大板块
+## 仓库现状（2026-11）
 
-### 1. 第一性原理 · 元思考（`/core`）
+> 诚实的分层，依据 [tasks/REVIEW-2026-11.md](tasks/REVIEW-2026-11.md)：三条活跃线、一条共享工具带、以及立项目的骨架区——各自标注真实状态。下表即模块状态总表（Pages 落地页渐次对齐此表）。
 
-从物理、逻辑、信息论与系统思维中提炼根本原理，应用于三域：
+### 三条活跃线
 
-| 域 | 内容 |
-|---|---|
-| **天** | 天体运行、宇宙结构、天文观测 |
-| **地** | 气候系统、地质过程、生态动力学 |
-| **人** | 人类行为、制度结构、经济模式 |
+**1. 文化月旦（[`docs/culture_review/`](docs/culture_review/)）**
+双语月刊文化梳评——2026 年十月号已上线：十一栏、四声部预生成神经音频（44 轨，`verify_audio` 门禁）、词内注、选段朗读、仅追加的订正登记；每条主张回源（✔/◐/◇ + 访问日期）。
 
-每个原理附带**元思考**：不仅问"这个原理如何运作"，更问"它为何成立？在何处失效？"
+**2. 数学释疑（[`math_clarification/`](math_clarification/)）**
+极简数学：一屏一题，先图后式（`basics/`、`famous_problems/`、Lean 4 机器验证 `lean/`、证明叙事 `proof_narratives/`），按受众等级（L0–L5）与语言（en/zh/dual）渲染。另有旗舰双语论说与三道门禁的投稿套件（`essays/`：`build_reader --check`、`refcheck`、`review_scope`——均已入 CI）。
 
-### 2. 天文 · 天象 · 气候（`/heaven_climate`）
+**3. 科研侦察（[`academic_research/`](academic_research/) → [`reseArch_X/`](reseArch_X/)）**
+「方向 × 势能 × 可介入性」的前沿侦察图及其机会层 [`reseArch_X/`](reseArch_X/)：**26 份开放学者档案**（只记可证行为，逐条溯源）、9 份 PhD 机会档案、5 轮可审计检索台账、只读调研面板（[`docs/reseArch_X/index.html`](docs/reseArch_X/index.html)）。**对话优先**：每位学者配一件小而真实的 MVP 话柄；申请退居次要。未经明确人工授权不对外联系。
 
-研究的起点——追踪前沿课题：
+### 工具带（横切）
 
-- 天象观测与历史天象记录
-- 气候动力学与古气候证据
-- 文献溯源与思想谱系
+| 工具 | 职能 | 状态 |
+|---|---|---|
+| [`discovery_atlas/`](discovery_atlas/) | 237 个发现源：5 域 × 5 层 × 文明圈；schema 门禁（CI）；离线站 + 星座图；支撑「机器可见性」研究（MVP-001） | 活跃 |
+| [`Reading_IA/`](Reading_IA/) | 阅读语料与知识引擎（graph 构建/审计/导出，CI 门禁）；手工书卡层同步生长 | 成形 |
+| [`living_heritage/`](living_heritage/) | 全栈运河应用（Docker、pytest CI、PythonAnywhere 部署）；田野实验室：北京大运河 × 哥特兰 | **暂停**（2026-09 起）——绑定 reseArch_X MVP-002 复活或显式降级 |
+| [`Language Stacking-Linguistic Weaving/`](Language%20Stacking-Linguistic%20Weaving/) | 跨语词表/语料切面；build-test CI | 低频 |
+| [`harness/`](harness/) | 全仓操作手册：方法、技能、工具、规则与工作流（W-GEN/W-ENV/W-PRE/W-EVO/W-CAP）、audit.py | 维护中 |
+| `tasks/` | 会话协议（PLAN/PROGRESS）与 2026-11 全仓评估 | 维护中 |
 
-### 3. 跨文化经济学（`/economics_cross_culture`）
+### 骨架区（立项目的——承诺暂缓，如实标注）
 
-各文明经济智慧的独立收集、比较与分析：
+| 区 | 路径 | 状态 |
+|---|---|---|
+| 第一性原理 · 元思考 | [`core/`](core/) | 骨架——仅 README 与工作方法 |
+| 天文 · 天象 · 气候 | [`heaven_climate/`](heaven_climate/) | 骨架 |
+| 跨文化经济学 | [`economics_cross_culture/`](economics_cross_culture/) | 骨架——**最接近激活**：它是 reseArch_X 各 MVP 的语料（technodiversity × taste 等级对话话柄） |
+| 沉思科学 | `contemplative science/` | 近空；学术覆盖移至 [`reseArch_X/scholars/`](reseArch_X/scholars/)（Davidson / Singer / Britton） |
+| 方向参考 | `direction_refs/` | 有意仅本地（`.gitignore`） |
 
-- **西方经济学**：古典、新古典、奥地利、凯恩斯、制度学派
-- **中国经济思想**：历史财政体系、关系经济学、王朝经济思想
-- **其他传统**：伊斯兰、印度、非洲经济思想
-- **比较分析**：各传统的共识、分歧与互照
+### 模块状态总表
 
-### 4. 数学释疑（`/math_clarification`）
-
-第一性原理的语言，极简阐释——基础数学与名题，一屏读完，先图后式，直觉先行：
-
-- **`basics/`** 基础：数、指数与对数、增长、概率、无穷、证明
-- **`famous_problems/`** 名题：蒙提霍尔、生日悖论、柯尼斯堡七桥、哥德巴赫与孪生素数、考拉兹、费马大定理、2026 Erdős 单位距离反证
-- **`lean/`** Lean 4 机器验证：核心命题的形式化证明，编译器即裁判
-- **`proof_narratives/`** 证明叙事：将证明讲成故事，Erdős 反证为第一篇
-- **`web/`** Web 查看器：按受众等级（L0–L5）与语言（en/zh/dual）渲染
-
-### 5. 活态文化廊道（`/living_heritage`）
-
-以田野为基础、以比较为方法、以数字技术为支撑——
-
-探究人类文化关系如何通过流动、地方、物质生活和交换网络而持续、转型与再生。
-
-- 核心田野实验室：**北京大运河**
-- 主要瑞典比较案例：**哥特兰**
-- 聚焦：大运河与丝绸之路体系之间的微妙接口
-
-### 6. 阅读与智识（`/Reading_IA`）
-
-阅读即智识——书目、作者、分类、关系与延伸的个人知识管理系统，并置「当下的形状」：追踪文化运动与思潮在 7 天、14 天、1 月、1 年窗口内的演化。
-
-- **其一**：一书一卡、一人一卡，交叉分类、显式关系、读书笔记与不断生长的延伸线索（`readings/extensions/`）
-- **其二**：带日期的研究简报、滚动窗口综述与持久思潮档案——每一条判断都标注可信度（全仓库方法、技能、工具与规则见根目录 `harness/`）
+| 模块 | 层 | 门禁 | CI（2026-11） | 最近提交 |
+|---|---|---|---|---|
+| docs/culture_review | 内容 | verify_audio | ✅ culture-review-ci | 2026-11-03 |
+| math_clarification | 内容 | build_reader --check · refcheck · review_scope | ✅ math-ci | 2026-11-03 |
+| reseArch_X | 内容 | build_reseArch_X --check | ✅ research-ci | 2026-11-04 |
+| discovery_atlas | 工具 | gate.py | ✅ discovery-ci | 2026-11-04 |
+| Reading_IA | 工具 | graph/corpus 审计（fabric） | ✅ reading-ci | 2026-09-27 |
+| living_heritage | 工具 | pytest + verify_seed | ✅ ci | 2026-09-26 |
+| Language Stacking | 工具 | build-test | ✅ learning-ci | 2026-09-17 |
+| core / heaven_climate / economics | 内容 | — | — | 2026-09-08 |
 
 ---
 
@@ -78,42 +69,24 @@
 
 ```
 gruel_cooking/
-├── README.md                   # 英文说明
-├── README.zh-CN.md             # 本文（中文说明）
-├── docs/                       # GitHub Pages 首页
-├── core/                       # 第一性原理 & 元思考
-│   ├── heavenly/               # 解读"天"
-│   ├── earthly/                # 解读"地"
-│   ├── societal/               # 解读"人"
-│   └── metathinking/           # 原理为何成立？
-├── heaven_climate/             # 天文 & 气候
-│   ├── celestial_appearance/   # 天象观测
-│   ├── climate_dynamics/       # 气候系统
-│   ├── history_of_ideas/       # 思想史
-│   └── current_research/       # 前沿课题
-├── economics_cross_culture/    # 跨文化经济学
-│   ├── western/                # 西方
-│   ├── chinese/                # 中国经济思想
-│   ├── other_traditions/       # 其他传统
-│   ├── comparative/            # 比较
-│   └── cases/                  # 案例
-├── math_clarification/         # 数学释疑
-│   ├── basics/                 # 基础
-│   ├── famous_problems/        # 名题
-│   ├── lean/                   # Lean 4 形式化
-│   ├── proof_narratives/       # 证明叙事
-│   └── web/                    # Web 查看器
-└── living_heritage/            # 活态文化廊道
-    ├── app/                    # 应用层
-    ├── data/                   # 数据层
-    └── scripts/                # 脚本
-├── Reading_IA/                 # 阅读与智识
-    ├── readings/               # 其一：书目、作者、分类、关系、笔记、延伸
-    ├── moment/                 # 其二：简报、滚动窗口、思潮档案
-    └── web/                    # 站点构建计划（阶段一生成器）
-├── harness/                    # 全仓库方法、技能、工具与规则（README 为注册表）
-    ├── evolution.md            # 自我演化机制与日志（W-EVO）
-    └── audit.py                # 自动审校器（漂移检测 → 演化信号）
+├── README.md / README.zh-CN.md  # 双语说明（本文）
+├── docs/                        # GitHub Pages：落地页 + 各模块站点
+│   ├── index.html               #   落地页
+│   ├── culture_review/          #   文化月旦（正刊 HTML + 音频资产）
+│   ├── reseArch_X/              #   学者/机会调研面板
+│   ├── math_clarification/      #   条目阅读器
+│   ├── reading_ia/ · living_heritage/ · language_stacking/ · discovery_atlas/
+├── math_clarification/          # 条目 + 论说 + 投稿机器 + web
+├── reseArch_X/                  # scholars/ · opportunities/ · mvp/ · indexes/ · scan_log/ · web/
+├── academic_research/           # 方向侦察图（喂给 reseArch_X）
+├── discovery_atlas/             # sources/*.json（SSOT）· gate.py · scripts/
+├── Reading_IA/                  # readings/ · moment/ · knowledge/ · engine/ · web/
+├── living_heritage/             # app/ · data/ · scripts/（Docker；CI）
+├── Language Stacking-Linguistic Weaving/  # languages/ · web/
+├── core/ · heaven_climate/ · economics_cross_culture/   # 骨架区
+├── harness/                     # 全仓手册 + audit.py
+├── scripts/                     # 仓库级工具（scratch/ 收一次性脚本）
+└── tasks/                       # PLAN · PROGRESS · REVIEW-2026-11
 ```
 
 ---
@@ -126,15 +99,14 @@ gruel_cooking/
 4. **追溯谱系**——每个想法都有来历，记录影响的链条。
 5. **跨界授粉**——经济学滋养气候学，气候学滋养天文学，让连接活着。
 6. **以最朴素的食材**——复杂性从简单规则的交互中涌现，相信那碗粥。
-7. **来源先于叙述**——引用一手文献，核实来源，标注可靠度。
+7. **来源先于叙述**——引用一手文献，核实来源，标注可靠度（✔ 已核 / ◐ 部分 / ◇ 未核，附访问日期）。
 
 ---
 
 ## 如何参与
 
-- 在 `/core` 中添加原理及其元思考
-- 在 `/heaven_climate` 中研究天象/气候课题，附完整溯源
-- 在 `/economics_cross_culture` 中记录任一文化传统的经济案例
-- 在 `/math_clarification` 中以极简方式阐释数学概念
+- 向三条活跃线供稿：月旦条目、数学条目、学者档案（schema 与溯源标记有门禁把关）。
+- 改进工具带：每个生成器都有 `--check` 类门禁；提交前跑 [`scripts/check_all.py`](scripts/check_all.py)。
+- 复活骨架区：喂一个真实的、带来源的案例；或在 issue 里提议冻结。
 
 始终回答：**"这个现象最简单的解释版本是什么？"**

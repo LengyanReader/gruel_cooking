@@ -1,0 +1,25 @@
+name: Research-X CI
+
+on:
+  push:
+    paths:
+      - "reseArch_X/**"
+      - "docs/reseArch_X/**"
+  pull_request:
+    paths:
+      - "reseArch_X/**"
+      - "docs/reseArch_X/**"
+
+jobs:
+  dashboard-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The committed dashboard must reproduce byte-for-byte from the .md SSOT.
+      - name: Dashboard is current (build_reseArch_X --check)
+        run: python -X utf8 reseArch_X/web/build_reseArch_X.py --check

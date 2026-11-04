@@ -16,75 +16,54 @@ Porridge is the simplest food, made from the most fundamental ingredients. This 
 
 ---
 
-## Five Pillars
+## Repository Reality · 仓库现状（2026-11）
 
-### 1. First Principles & Metathinking (`/core`)
+> Honest layering, per [tasks/REVIEW-2026-11.md](tasks/REVIEW-2026-11.md): three active lines, a shared tool belt, and the founding skeleton zones — each marked with its real status. The table below is the module manifest of record (the Pages landing page aligns to it incrementally).
 
-Distilling fundamental principles from physics, logic, information theory, and systems thinking, applied across three domains:
+### Three Active Lines · 三条活跃线
 
-| Domain | Content |
-|---|---|
-| **Heaven (天)** | Celestial mechanics, cosmological structure, astronomical observation |
-| **Earth (地)** | Climate systems, geological processes, ecological dynamics |
-| **Society (人)** | Human behavior, institutional structures, economic patterns |
+**1. Culture Monthly · 文化月旦（[`docs/culture_review/`](docs/culture_review/)）**
+A bilingual monthly review of cultural currents — 2026-10 issue live: eleven sections, four-voice pre-generated neural audio (44 tracks, `verify_audio` gate), inline glossary, selection read-aloud, an append-only corrections register, and every claim traced to sources (✔/◐/◇ + asof).
 
-Each principle includes **metathinking**: not just "how does it work" but "why does it hold, and where does it break?"
+**2. Math Clarification · 数学释疑（[`math_clarification/`](math_clarification/)）**
+Radical-simplicity math: one entry per concept/problem, visuals first (`basics/`, `famous_problems/`, Lean 4 machine-checked `lean/`, story-proof `proof_narratives/`), rendered by audience level (L0–L5) and language (en/zh/dual). Plus the flagship bilingual essays with a three-gate submission package (`essays/`: `build_reader --check`, `refcheck`, `review_scope` — all enforced in CI).
 
-### 2. Heaven & Climate (`/heaven_climate`)
+**3. Research Reconnaissance · 科研侦察（[`academic_research/`](academic_research/) → [`reseArch_X/`](reseArch_X/)）**
+A direction × momentum × accessibility map of frontier research, with its opportunity layer [`reseArch_X/`](reseArch_X/): **26 open-minded scholar dossiers** (evidence-of-behaviour, source-marked), 9 PhD opportunity files, 5 auditable scan ledgers, and a read-only dashboard ([`docs/reseArch_X/index.html`](docs/reseArch_X/index.html)). Dialogue-first: each scholar carries a small real MVP hook; applications are secondary. No outreach without explicit human authorization.
 
-The starting point for investigation — tracking leading topics:
+### Tool Belt · 工具带（cross-cutting）
 
-- Celestial phenomena and historical records
-- Climate dynamics and paleoclimate evidence
-- Source tracking and intellectual genealogy
+| Tool | What it does | Status |
+|---|---|---|
+| [`discovery_atlas/`](discovery_atlas/) | 237 discovery sources, 5 domains × 5 layers × civilizational circles; schema gate (CI); offline site + constellation graph; feeds the machine-visibility study (MVP-001) | active |
+| [`Reading_IA/`](Reading_IA/) | Reading corpus & knowledge engine (graph build/audit/export, CI gates); hand-curated book cards growing alongside | forming |
+| [`living_heritage/`](living_heritage/) | Full-stack canal app (Docker, pytest CI, PythonAnywhere deploy guide); field lab: Beijing Grand Canal × Gotland | **paused** since 2026-09 — reactivation bound to reseArch_X MVP-002 or explicit downgrade |
+| [`Language Stacking-Linguistic Weaving/`](Language%20Stacking-Linguistic%20Weaving/) | Cross-lingual vocab/corpus facets; build-test CI | low-frequency |
+| [`harness/`](harness/) | Repo-wide operating manual: methods, skills, tools, rules, workflows (W-GEN/W-ENV/W-PRE/W-EVO/W-CAP), audit.py | maintained |
+| `tasks/` | Session protocol (PLAN/PROGRESS), the 2026-11 full-repo review | maintained |
 
-### 3. Cross-Culture Economics (`/economics_cross_culture`)
+### Skeleton Zone · 骨架区（founding intentions — promise deferred, marked honestly）
 
-An independent collection, comparison, and analysis of economic wisdom across civilizations:
+| Zone | Path | Status |
+|---|---|---|
+| First Principles & Metathinking | [`core/`](core/) | skeleton — README + working method only |
+| Heaven & Climate | [`heaven_climate/`](heaven_climate/) | skeleton |
+| Cross-Culture Economics | [`economics_cross_culture/`](economics_cross_culture/) | skeleton — **nearest to activation**: it is the corpus for reseArch_X MVPs (technodiversity × taste-hierarchy dialogue hooks) |
+| Contemplative Science | `contemplative science/` | near-empty; the scholarship lives in [`reseArch_X/scholars/`](reseArch_X/scholars/) (Davidson / Singer / Britton) |
+| Direction Refs | `direction_refs/` | local-only by design (`.gitignore`) |
 
-- **Western economics**: classical, neoclassical, Austrian, Keynesian, institutional
-- **Chinese economic thought**: historical fiscal systems, guanxi economics, dynastic economic thought
-- **Other traditions**: Islamic, Indian, African economic thought
-- **Comparative analysis**: consensus, divergence, and mutual illumination across traditions
+### Module Status Manifest · 模块状态总表
 
-### 4. Math Clarification (`/math_clarification`)
-
-The language of first principles, explained with radical simplicity — basics and famous problems, one page each, visuals first, formulas second, intuition always:
-
-- **`basics/`**: numbers, exponents & logarithms, growth, probability, infinity, proofs
-- **`famous_problems/`**: Monty Hall, birthday paradox, Königsberg bridges, Goldbach & twin primes, Collatz, Fermat's Last Theorem, the 2026 Erdős unit-distance disproof
-- **`lean/`**: key claims as machine-checked Lean 4 — the compiler is the referee
-- **`proof_narratives/`**: proofs retold as stories (the Erdős disproof first)
-- **`web/`**: a web viewer rendering each entry by audience level (L0–L5) and language (en/zh/dual)
-
-### 5. Living Cultural Corridors (`/living_heritage`)
-
-Fieldwork-based, comparative in method, digitally-enabled —
-
-Investigating how human cultural relations persist, transform, and regenerate through movement, place, material life, and exchange networks.
-
-- Primary field laboratory: **Beijing Grand Canal**
-- Main Swedish comparative case: **Gotland**
-- Focus: the subtle interfaces between the Grand Canal and Silk Roads systems
-
-### 6. Reading & IA (`/Reading_IA`)
-
-Reading as intelligence — a personal knowledge management system for books, writers, categories, relations and extensions, side by side with **The Shape of the Moment**: how cultural movements and thought trends develop across 7-day, 14-day, 1-month, and 1-year windows.
-
-- **Part 1**: one card per book / per author, cross-cutting categories, explicit relation edges, reading notes, and a growing map of reading leads (`reading/extensions/`)
-- **Part 2**: dated research briefs, rolling window syntheses, and persistent theme dossiers — every claim marked for reliability (see root `harness/` for the repo-wide methods, skills, tools and rules)
-
-### 7. Discovery Atlas (`/discovery_atlas`)
-
-A registry of **discovery sources** — where to find the next thing to read / listen to / watch / look at / research. Five domains (books / music / film / art / **science**) × five layers (discovery / criticism / publishing / infrastructure / access) × civilizational circles, schema-gated and Wikidata-resolved, rendered as an offline bilingual site + constellation graph.
-
-### 8. Frontier Academic Research (`/academic_research`)
-
-A **direction × momentum × accessibility** reconnaissance map — searching, organizing and evaluating frontier academic and scientific research directions and the scholars behind them (basic science, AI, data & computational science, interdiscipline, transdiscipline, culture / civilization / humanities). Companion to the `science` domain above: that registers *where to look*; this answers *what is worth pursuing and how to plug in*. All claims are source-verified (zero-fabrication), with a five-dimension evaluation rubric.
-
-### 9. Research Opportunities & Open-Minded Scholars (`/reseArch_X`)
-
-The **opportunity layer** under `academic_research/` — comprehensively scanning published and foreseeable PhD / RA / postdoc / professor positions at universities, institutes and independent labs, and evaluating them for the AI era (2026): which projects still constitute *meaningful work* worth years of life, and which scholars are genuinely open-minded and deep enough to pursue real collaboration. Six-dimension rubric (real-problem-ness, AI exposure, mentor quality, resources, accessibility, open-mindedness), every record source-marked ✔/◐/◇ with an `asof` date and an auditable scan ledger.
+| Module | Layer | Gates | CI (2026-11) | Last commit |
+|---|---|---|---|---|
+| docs/culture_review | content | verify_audio | ✅ culture-review-ci | 2026-11-03 |
+| math_clarification | content | build_reader --check · refcheck · review_scope | ✅ math-ci | 2026-11-03 |
+| reseArch_X | content | build_reseArch_X --check | ✅ research-ci | 2026-11-04 |
+| discovery_atlas | tool | gate.py | ✅ discovery-ci | 2026-11-04 |
+| Reading_IA | tool | graph/corpus audits (fabric) | ✅ reading-ci | 2026-09-27 |
+| living_heritage | tool | pytest + verify_seed | ✅ ci | 2026-09-26 |
+| Language Stacking | tool | build-test | ✅ learning-ci | 2026-09-17 |
+| core / heaven_climate / economics | content | — | — | 2026-09-08 |
 
 ---
 
@@ -92,55 +71,24 @@ The **opportunity layer** under `academic_research/` — comprehensively scannin
 
 ```
 gruel_cooking/
-├── README.md                   # English readme
-├── README.zh-CN.md             # Chinese readme
-├── docs/                       # GitHub Pages landing page
-├── core/                       # First principles & metathinking
-│   ├── heavenly/               # Interpreting "heaven"
-│   ├── earthly/                # Interpreting "earth"
-│   ├── societal/               # Interpreting "society"
-│   └── metathinking/           # Why do these principles hold?
-├── heaven_climate/             # Astronomy & climate
-│   ├── celestial_appearance/   # Observable sky phenomena
-│   ├── climate_dynamics/       # Climate systems
-│   ├── history_of_ideas/       # Intellectual history
-│   └── current_research/       # Leading topics
-├── economics_cross_culture/    # Cross-culture economics
-│   ├── western/                # Western traditions
-│   ├── chinese/                # Chinese economic thought
-│   ├── other_traditions/       # Other traditions
-│   ├── comparative/            # Comparative analysis
-│   └── cases/                  # Specific cases
-├── math_clarification/         # Math clarification
-│   ├── basics/                 # Fundamentals
-│   ├── famous_problems/        # Classic problems
-│   ├── lean/                   # Lean 4 formalization
-│   ├── proof_narratives/       # Proof narratives
-│   └── web/                    # Web viewer
-└── living_heritage/            # Living Cultural Corridors
-    ├── app/                    # Application layer
-    ├── data/                   # Data layer
-    └── scripts/                # Scripts
-├── Reading_IA/                 # Reading & IA (阅读与智识)
-    ├── readings/               # Part 1: books, authors, categories, relations, notes, extensions
-    ├── moment/                 # Part 2: briefs, rolling series, theme dossiers
-    └── web/                    # Site build plan (phase-1 generator)
-├── harness/                    # Repo-wide methods, skills, tools & rules (README.md = registry)
-    ├── evolution.md            # Self-evolution mechanism + journal (W-EVO)
-    └── audit.py                # Automatic harness auditor (drift → evolution signals)
-├── discovery_atlas/            # Registry of discovery sources (5 domains × 5 layers × circles)
-│   ├── sources/                # books / music / film / art / science (.json = SSOT)
-│   ├── gate.py                 # Structural validator (schema / enums / uniqueness / marks-dated)
-│   └── scripts/                # build_view / build_graph / export_data / resolve_qid / probe
-├── academic_research/          # Frontier research directions & scholars (reconnaissance map)
-│   ├── README.md               # Scope (6 axes) / method / evaluation rubric
-│   └── frontier_scan.md        # v1: 10 directions × 5-dim scores × collaboration entry points
-├── reseArch_X/                 # Research opportunities & open-minded scholars (opportunity layer)
-│   ├── README.md               # Mission / coverage / six-dimension rubric / schemas
-│   ├── opportunities/          # phd / ra / postdoc / professor dossiers (one file each)
-│   ├── scholars/               # Open-minded scholar cards (evidence-of-behaviour, not adjectives)
-│   ├── indexes/                # shortlist.md (apply) / contacts.md (collaborate)
-│   └── scan_log/               # Auditable search ledger (queries, hits, ✔/◐/◇ transitions)
+├── README.md / README.zh-CN.md  # bilingual readme (this file)
+├── docs/                        # GitHub Pages: landing + all module sites
+│   ├── index.html               #   landing page
+│   ├── culture_review/          #   文化月旦 (issue HTML + assets/audio)
+│   ├── reseArch_X/              #   scholar/opportunity dashboard
+│   ├── math_clarification/      #   entry viewer
+│   ├── reading_ia/ · living_heritage/ · language_stacking/ · discovery_atlas/
+├── math_clarification/          # entries + essays + submission machinery + web
+├── reseArch_X/                  # scholars/ · opportunities/ · mvp/ · indexes/ · scan_log/ · web/
+├── academic_research/           # direction recon map (feeds reseArch_X)
+├── discovery_atlas/             # sources/*.json (SSOT) · gate.py · scripts/
+├── Reading_IA/                  # readings/ · moment/ · knowledge/ · engine/ · web/
+├── living_heritage/             # app/ · data/ · scripts/ (Docker; CI)
+├── Language Stacking-Linguistic Weaving/  # languages/ · web/
+├── core/ · heaven_climate/ · economics_cross_culture/   # skeleton zones
+├── harness/                     # repo-wide manual + audit.py
+├── scripts/                     # repo-level utilities (scratch/ for one-offs)
+└── tasks/                       # PLAN · PROGRESS · REVIEW-2026-11
 ```
 
 ---
@@ -153,15 +101,14 @@ gruel_cooking/
 4. **Trace the genealogy** — every idea has an origin; record the chain of influence.
 5. **Cross-pollinate** — economics nourishes climate, climate nourishes astronomy; keep the connections alive.
 6. **The simplest ingredients** — complexity emerges from the interaction of simple rules. Trust the porridge.
-7. **Sources before narrative** — cite primary sources, verify origins, mark reliability.
+7. **Sources before narrative** — cite primary sources, verify origins, mark reliability (✔ verified / ◐ partial / ◇ unverified, with an access date).
 
 ---
 
 ## How to Contribute
 
-- Add a principle with its metathinking to `/core`
-- Research a celestial/climate topic with full source tracking to `/heaven_climate`
-- Document an economic case from any cultural tradition to `/economics_cross_culture`
-- Explain a math concept with radical simplicity to `/math_clarification`
+- Add to the three active lines: a culture-monthly entry, a math entry, a scholar dossier (schema + source marks are enforced by gates).
+- Improve the tool belt: every generator has a `--check`-style gate; run [`scripts/check_all.py`](scripts/check_all.py) before committing.
+- Revive a skeleton zone by feeding it one real, sourced case — or propose freezing it in an issue.
 
 Always ask: **"What is the simplest version of this that still explains what we observe?"**

@@ -21,6 +21,7 @@ Determinism: no clock is embedded. Every date in the output is either an
 from __future__ import annotations
 import json
 import re
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -382,9 +383,19 @@ def render(data: dict) -> str:
 
 
 def main():
+    check = "--check" in sys.argv
     data = build_dataset()
-    OUT.parent.mkdir(parents=True, exist_ok=True)
     html = render(data)
+    if check:
+        if OUT.is_file() and OUT.read_text(encoding="utf-8") == html:
+            print(f"[ok] current · scholars={data['counts']['scholars']} · "
+                  f"opportunities={data['counts']['opportunities']} · "
+                  f"scans={data['counts']['scans']}")
+            return
+        print("[FAIL] docs/reseArch_X/index.html is stale — run: "
+              "python reseArch_X/web/build_reseArch_X.py", file=sys.stderr)
+        raise SystemExit(1)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(html, encoding="utf-8", newline="\n")
     print(f"[ok] wrote {OUT.relative_to(REPO).as_posix()} "
           f"({len(html):,} chars) · "

@@ -36,3 +36,9 @@ docs/culture_review/_audio_sentences.json
 docs/culture_review/_audio_test/
 # 文化月旦开发与核对阶段的一次性草稿（_ 前缀，成品不在此列）
 docs/culture_review/_*
+
+# Kilo Code 编辑器的本地 plans 目录（会话工作台，非项目内容）
+.kilo/
+
+# 一次性渲染核验截图（fig/页面 PNG 自检产物，源文件均可再生）
+*_check.png

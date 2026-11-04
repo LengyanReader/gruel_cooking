@@ -1,0 +1,35 @@
+name: Culture Review CI
+
+on:
+  push:
+    paths:
+      - "docs/culture_review/**"
+  pull_request:
+    paths:
+      - "docs/culture_review/**"
+
+jobs:
+  audio-gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docs/culture_review
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg + ffprobe (verify_audio shells out to both)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Install HTML parser (build_audio.extract reads the issue HTML)
+        run: pip install beautifulsoup4
+
+      # verify_audio re-derives the sentence cue sheet from 2026-10.html and checks
+      # every committed .ogg track (cue counts + durations). ALL OK or exit 1.
+      - name: Audio integrity gate (verify_audio)
+        run: python -X utf8 verify_audio.py
+        env:
+          FFMPEG: ffmpeg

@@ -1,0 +1,36 @@
+name: Math Essays CI
+
+on:
+  push:
+    paths:
+      - "math_clarification/essays/**"
+      - "math_clarification/articles/**"
+  pull_request:
+    paths:
+      - "math_clarification/essays/**"
+      - "math_clarification/articles/**"
+
+jobs:
+  essay-gates:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: math_clarification/essays
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Gate 1: generated manuscripts must be current (build_reader has its own check).
+      - name: Generated views are current (build_reader --check)
+        run: python -X utf8 submission/build_reader.py --check
+
+      # Gate 2: citations resolve, no em dash, first-appearance order, under ceiling.
+      - name: Citation gate (refcheck)
+        run: python -X utf8 submission/checks/refcheck.py
+
+      # Gate 3: synopsis in band, withdrawn apparatus stays out.
+      - name: Scope gate (review_scope)
+        run: python -X utf8 submission/checks/review_scope.py

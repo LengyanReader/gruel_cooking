@@ -6,6 +6,18 @@ This folder is the **operating manual for every domain in this repo**: which too
 
 这里是**全仓库操作手册**：有哪些工具、何时调用哪个技能、公共工作流（环境 / 源出同步 / 提交卫生）如何运行、以及所有板块的工作必须遵守的规则。
 
+## 「harness」一词在本仓的三个含义 · The three harnesses
+
+新会话与 newcomer 最易混淆的一处，先导航：
+
+| 名字 | 是什么 | 入口 |
+|---|---|---|
+| **`harness/`**（本目录） | 全仓操作手册：方法、技能、工具、规则、工作流注册表 | 本 README + `skills.md` + `workflows.md` |
+| **`.harness/`**（隐藏目录） | 单个任务的 harness 产物（当前只有 reseArch_X 线）：PLAN/PROGRESS/台账/门禁，由外部 harness-factory 生成 | `AGENTS.md`（任务操作手册）+ `tasks/` |
+| **harness_factory**（外部仓库） | 「harness 编译器」本身——常驻能力参考，按需路由加载，不随本仓分发 | `.harness/pointer.json` 记录其绝对路径；用法见 `AGENTS.md` 顶部常驻引用条款 |
+
+一句话：**本目录管「怎么干活」，`.harness/` 管某条线干活的合同，harness_factory 是造合同的工厂**。
+
 ## Layout 结构
 
 | File 文件 | Content 内容 |

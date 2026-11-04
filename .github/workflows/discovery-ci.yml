@@ -1,0 +1,28 @@
+name: Discovery Atlas CI
+
+on:
+  push:
+    paths:
+      - "discovery_atlas/**"
+      - "docs/discovery_atlas/**"
+  pull_request:
+    paths:
+      - "discovery_atlas/**"
+      - "docs/discovery_atlas/**"
+
+jobs:
+  schema-gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: discovery_atlas
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Structural gate: schema/enums/uniqueness/marks-dated (exit 1 on any defect).
+      - name: Sources schema gate (gate.py)
+        run: python -X utf8 gate.py
