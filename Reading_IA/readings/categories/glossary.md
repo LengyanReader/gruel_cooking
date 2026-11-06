@@ -132,6 +132,114 @@ Single source for **term-level** knowledge across the whole reading domain — l
 - **source_en**: publication record ✓; dialogue 2026-02-11 ✓
 - **links**: [[library/2026-manda-kanoke-made]] · [[authors/manda]]
 
+## mono-no-aware · 物哀
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 知物之情——见落花而心有所动的审美感应，先于善恶判断。
+- **def_en**: The moved heart at falling petals: an aesthetic attunement prior to moral judgment.
+- **epitome**: 本居宣长《源氏物语》诠释；紫式部《源氏物语》；大西克礼《物哀》
+- **epitome_en**: Motoori Norinaga's reading of The Tale of Genji; Murasaki Shikibu; Onishi's aware volume
+- **source**: 回源书目 ◐
+- **source_en**: sources re-verified ◐
+- **links**: [[library/jp-monoaware-en]] · [[library/jp-onishi-trilogy]]
+
+## yugen · 幽玄
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 能艺与和歌里的幽深难测之美；花为秘，秘为花。
+- **def_en**: The dim, unfathomable beauty of Noh and waka — the flower is the secret, the secret the flower.
+- **epitome**: 世阿弥《风姿花传》；大西克礼《幽玄》
+- **epitome_en**: Zeami's Fūshikaden; Onishi's yūgen volume
+- **source**: 原典 15 世纪初 ✓
+- **source_en**: original early 15th c. ✓
+- **links**: [[library/jp-fushikaden]] · [[library/jp-onishi-trilogy]]
+
+## wabi-sabi · 侘寂
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 侘＝安于不足的枯淡心境；寂＝时间沉积的静默——不是风格而是观照世界的方式。
+- **def_en**: Wabi rests willingly in lack; sabi is the quiet sediment of time — a way of contemplating the world, not a style.
+- **epitome**: 冈仓天心《茶之书》；大西克礼《日本侘寂》
+- **epitome_en**: Okakura's Book of Tea; Onishi's Wabi-Sabi
+- **source**: 公版 + 特辑 ✓
+- **source_en**: PD + Special ✓
+- **links**: [[library/jp-wabisabi]] · [[library/jp-book-of-tea]]
+
+## iki · 粹
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 江户游里文化里带着分寸的媚：媚态＋节制＋达观的三重契机。
+- **def_en**: The measured allure of Edo's pleasure-quarter: coquetry + restraint + resignation.
+- **epitome**: 九鬼周造《いきの構造》1930；阿部次郎《贞操的理想》
+- **epitome_en**: Kuki's Iki (1930); Abe's Chastity
+- **source**: 原典 1930 ✓
+- **source_en**: original 1930 ✓
+- **links**: [[library/jp-iki-kouzou]] · [[library/jp-shikike]]
+
+## masshitsu · 摩灭
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 磨损、消逝之光——美不在生成而在被时间慢慢抹去的过程。
+- **def_en**: The light of wearing away: beauty not in making but in the erasing.
+- **epitome**: 四方田犬彦《摩灭之赋》
+- **epitome_en**: Yomitari's In Praise of Erosion
+- **source**: 特辑版 ✓
+- **source_en**: Special edition ✓
+- **links**: [[library/jp-masshitsu]] · [[library/jp-inpraise-shadows]]
+
+## in-ei · 阴翳
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 爱惜幽暗：把暗当作美的容器；东方的美不在显露而在藏。
+- **def_en**: The love of shadow: darkness as the vessel of beauty — Japanese aesthetics hides rather than reveals.
+- **epitome**: 谷崎润一郎《阴翳礼赞》1933-34
+- **epitome_en**: Tanizaki's In Praise of Shadows, 1933-34
+- **source**: 原典 1930s ✓
+- **source_en**: original 1930s ✓
+- **links**: [[library/jp-inpraise-shadows]] · [[library/jp-masshitsu]]
+
+## ichigo-ichie · 一期一会
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 一生只有一次的相会——茶道把每一次待客当作不可复制的伦理现场。
+- **def_en**: One time, one meeting: tea turns every gathering into an unrepeatable ethical scene.
+- **epitome**: 冈仓天心《茶之书》；千利休茶道谱系
+- **epitome_en**: Okakura's Book of Tea; the Rikyū line
+- **source**: 公版 ✓
+- **source_en**: PD ✓
+- **links**: [[library/jp-book-of-tea]]
+
+## zasshu-bunka · 杂种文化
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 日本文化是「输入—消化—再输出」的杂种：既不纯粹也不自卑，而是夹缝里的创造。
+- **def_en**: Hybrid culture: Japan digests imports and re-exports — creation in the seam, not purity or inferiority.
+- **epitome**: 加藤周一《杂种文化》1956
+- **epitome_en**: Katō周一's Zasshu Bunka, 1956
+- **source**: 原典 1956 ✓
+- **source_en**: original 1956 ✓
+- **links**: [[library/jp-zasshu-bunka]] · [[library/jp-fenshen]]
+
+## tenzen-kyosha · 则天去私
+- **mode**: concept
+- **domain**: aesthetics / Japan
+- **cluster**: [[categories/japanese-aesthetics]]
+- **def_zh**: 顺应自然、去除小我——漱石晚年给出的知识人自处之道。
+- **def_en**: Surrender to nature, put away the petty self: Sōseki's late answer to the intellectual's dilemma.
+- **epitome**: 夏目漱石 晚岁随笔与书简（1914-1916）
+- **epitome_en**: Sōseki's late essays and letters, 1914-16
+- **source**: 《浮世与病榻》选目 ✓
+- **source_en**: in The Floating World & the Sickbed ✓
+- **links**: [[library/jp-usei]] · [[library/jp-kusamakura]]
+
 ## template · 占位示例
 - **mode**: concept
 - **domain**: cross-disciplinary
