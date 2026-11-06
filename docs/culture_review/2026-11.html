@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文化月旦 · 2026年11月号 | Monthly Culture Review · November 2026</title>
+<meta name="description" content="舟洲粥文化月梳第二期：读物、研究、影艺舞台、声音生活、众生圈层——以世界顶级文化学者的视野与胸怀，逐条回源核实。Issue 2 of a bilingual monthly culture review, every item source-verified.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky-deep:#4A90C2; --sky-mid:#7AB8D9; --sky-light:#A8D4EC;
+  --warm-cream:#FFFBF5; --warm-soft:#FFF5E6;
+  --warm-gold:#F5C97E; --warm-amber:#E8A855; --warm-peach:#F0C4A8;
+  --ink-deep:#3A3228; --ink-mid:#5C5248; --ink-soft:#8A7E72; --ink-pale:#B8AFA4;
+  --accent-teal:#5BA3A3; --accent-coral:#D4836A;
+  --accent-violet:#8B7BAA; --accent-sage:#7A9E7E;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --ff-zh:"LXGW WenKai","Noto Serif SC",serif;
+  --shadow-md:0 6px 20px rgba(58,50,40,.07); --shadow-lg:0 12px 40px rgba(58,50,40,.09);
+}
+/* ── Bilingual toggle (same scheme & storage key as site index) ── */
+body.lang-zh [data-en] { display:none !important; }
+body.lang-en [data-zh] { display:none !important; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--warm-cream);line-height:1.85;overflow-x:hidden}
+a{color:var(--accent-teal);text-decoration:none;transition:color .25s} a:hover{color:var(--sky-deep)}
+small{color:var(--ink-pale)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.75rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,251,245,.72);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(228,220,208,.4)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand a{color:inherit}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(228,220,208,.6);background:var(--warm-cream);font-size:.8rem;font-weight:500;cursor:pointer}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;color:var(--ink-soft);background:transparent;transition:all .25s}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff}
+
+/* MASTHEAD */
+.masthead{padding:8rem 2rem 4rem;text-align:center;background:linear-gradient(170deg,#F3E9D6 0%,#FFF5E6 45%,var(--warm-cream) 100%);border-bottom:1px solid rgba(228,220,208,.5)}
+.issue-tag{display:inline-block;padding:.3rem 1.1rem;border-radius:99px;border:1px solid var(--warm-amber);color:var(--warm-amber);font-size:.8rem;letter-spacing:.25em;margin-bottom:1.4rem;font-weight:600}
+.masthead h1{font-family:var(--ff-display);font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;letter-spacing:.1em;line-height:1.25}
+.masthead .en-title{font-size:clamp(1rem,2.4vw,1.4rem);color:var(--ink-soft);font-style:italic;font-weight:300;letter-spacing:.05em;margin-top:.4rem}
+.masthead .dateline{margin-top:1.4rem;color:var(--ink-pale);font-size:.85rem;letter-spacing:.08em}
+.masthead .epigraph{max-width:680px;margin:2.2rem auto 0;font-family:var(--ff-zh);color:var(--ink-mid);font-size:1.05rem;line-height:2.1;font-weight:300}
+.masthead .epigraph .src{display:block;margin-top:.5rem;font-size:.8rem;color:var(--ink-pale);font-family:var(--ff-body)}
+
+/* SECTION */
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+.sec{padding:4.2rem 0 1rem}
+.sec-head{display:flex;align-items:baseline;gap:1rem;border-bottom:2px solid var(--warm-gold);padding-bottom:.7rem;margin-bottom:.4rem;flex-wrap:wrap}
+.sec-head .glyph{font-family:var(--ff-display);font-size:1.6rem;color:var(--warm-amber);font-weight:700}
+.sec-head h2{font-family:var(--ff-display);font-size:1.7rem;letter-spacing:.04em}
+.sec-head .lens{margin-left:auto;font-size:.8rem;color:var(--ink-soft);border:1px solid rgba(228,220,208,.7);border-radius:99px;padding:.2rem .9rem;background:var(--warm-soft)}
+.sec-lede{color:var(--ink-soft);font-size:.98rem;margin:.9rem 0 2rem;font-weight:300}
+
+/* ITEM */
+.item{background:var(--warm-cream);border:1px solid rgba(228,220,208,.55);border-left:3px solid var(--warm-gold);border-radius:14px;padding:1.5rem 1.7rem;margin-bottom:1.4rem;box-shadow:var(--shadow-md);transition:transform .3s,box-shadow .3s}
+.item:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.item h3{font-family:var(--ff-display);font-size:1.15rem;margin-bottom:.35rem;letter-spacing:.02em}
+.item .kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--accent-teal);text-transform:uppercase;margin-bottom:.5rem}
+.item p{color:var(--ink-mid);font-size:.95rem;margin-bottom:.55rem}
+.item .gist{font-family:var(--ff-zh);color:var(--ink-deep);font-weight:400}
+.item .crit{border-left:2px solid rgba(232,168,85,.55);padding-left:.9rem;margin:.75rem 0 .1rem;color:var(--ink-deep);font-size:.93rem}
+.item .crit::before{content:"月旦曰";font-family:var(--ff-display);font-weight:700;color:var(--warm-amber);letter-spacing:.1em;margin-right:.6rem;font-size:.82rem}
+body.lang-en .item .crit::before{content:"Verdict"}
+.src{font-size:.76rem;color:var(--ink-pale);line-height:1.7;border-top:1px dashed rgba(228,220,208,.8);padding-top:.5rem;margin-top:.4rem}
+.src a,.ten .who a,.media a{color:var(--ink-soft);border-bottom:1px solid rgba(91,163,163,.3);padding-bottom:1px;word-break:break-all}
+.src a:hover,.ten .who a:hover,.media a:hover{color:var(--sky-deep);border-bottom-color:var(--sky-deep)}
+.src a::after,.media a.go::after{content:"↗";font-size:.72em;margin-left:.15em;opacity:.6}
+.stamp{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;padding:1px 8px;border-radius:99px;margin-right:.4rem;vertical-align:1px}
+.stamp.ok{background:#E4F0E4;color:#4C7A4F}
+.stamp.warn{background:#FFF3DD;color:#9A7233}
+
+/* FIGURE — self-hosted, licence-cleared images */
+.fig{margin:1.3rem 0 1.5rem;border:1px solid rgba(228,220,208,.6);border-radius:14px;overflow:hidden;background:var(--warm-soft);box-shadow:var(--shadow-md)}
+.fig img{display:block;width:100%;height:auto}
+.fig figcaption{padding:.7rem 1.05rem .8rem;font-size:.78rem;line-height:1.75;color:var(--ink-soft)}
+.fig figcaption b{color:var(--ink-mid);font-weight:600}
+.fig .lic{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.06em;padding:1px 7px;border-radius:99px;background:#EAF0EA;color:#4C7A4F;margin:0 .35rem}
+
+/* MEDIA BAND 声色 */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(276px,1fr));gap:1rem;margin-top:1.3rem}
+.mcard{background:var(--warm-cream);border:1px solid rgba(228,220,208,.55);border-left:3px solid var(--accent-teal);border-radius:14px;padding:1rem 1.15rem;box-shadow:var(--shadow-md)}
+.mcard .mtag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.16em;padding:.15rem .62rem;border-radius:99px;margin-bottom:.55rem;color:#fff;background:var(--accent-teal)}
+.mcard.t-watch .mtag{background:var(--accent-coral)} .mcard.t-read .mtag{background:var(--accent-violet)} .mcard.t-proof .mtag{background:var(--accent-sage)}
+.mcard h4{font-family:var(--ff-display);font-size:.99rem;margin-bottom:.3rem;line-height:1.5}
+.mcard p{font-size:.82rem;color:var(--ink-soft);line-height:1.75}
+.mcard .go{display:inline-block;margin-top:.5rem;font-size:.76rem;font-weight:600}
+.mcard audio{width:100%;margin-top:.55rem}
+
+/* READER 听读 */
+.reader{position:fixed;left:50%;bottom:1rem;transform:translateX(-50%);z-index:120;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;justify-content:center;max-width:min(940px,94vw);padding:.45rem .7rem;background:rgba(255,251,245,.93);backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(232,168,85,.55);border-radius:99px;box-shadow:var(--shadow-lg);font-size:.76rem;color:var(--ink-soft)}
+.reader button{font-family:var(--ff-body);font-size:.78rem;font-weight:600;border:1px solid rgba(228,220,208,.8);background:var(--warm-cream);color:var(--ink-mid);border-radius:99px;padding:.3rem .85rem;cursor:pointer;transition:all .25s}
+.reader button:hover{border-color:var(--warm-amber);color:var(--ink-deep)}
+.reader button.main{background:linear-gradient(135deg,var(--warm-gold),var(--warm-amber));color:#fff;border-color:transparent}
+.reader select{font-family:var(--ff-body);font-size:.74rem;max-width:210px;border:1px solid rgba(228,220,208,.8);border-radius:8px;background:var(--warm-cream);color:var(--ink-mid);padding:.22rem .3rem}
+.reader .rlabel{display:inline-flex;align-items:center;gap:.3rem}
+.reader .off{display:none!important}
+.reader .rstatus{font-size:.72rem;color:var(--ink-pale);max-width:100%;text-align:center;line-height:1.5}
+.speak-now{background:linear-gradient(0deg,rgba(245,201,126,.28),rgba(245,201,126,.28));border-radius:6px}
+::highlight(readaloud){background-color:rgba(245,201,126,.42)}
+::highlight(selspeak){background-color:rgba(232,168,85,.42)}
+/* SELECTION READ-ALOUD 选读：随选区浮出的朗读按钮 */
+.selspeak{position:fixed;z-index:130;display:none;align-items:center;gap:.35rem;padding:.34rem .68rem;background:rgba(58,50,40,.94);color:#fff;border:none;border-radius:99px;box-shadow:var(--shadow-lg);font-family:var(--ff-body);font-size:.76rem;font-weight:600;cursor:pointer;white-space:nowrap;line-height:1}
+.selspeak.show{display:inline-flex}
+.selspeak:hover{background:rgba(58,50,40,1)}
+.selspeak::after{content:"";position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:rgba(58,50,40,.94);border-bottom:0}
+/* INLINE GLOSSARY 词内注：正文只留原词，解释藏于悬停/点按，不改文本流（音频高亮不漂移） */
+.gx{border-bottom:1px dotted var(--accent-teal);cursor:help;outline:none}
+.gx:hover,.gx:focus,.gx.gopen{color:var(--sky-deep);border-bottom-style:solid}
+.gcard{position:fixed;z-index:131;display:none;max-width:min(340px,90vw);padding:.72rem .9rem;background:#fff;border:1px solid rgba(232,168,85,.5);border-left:3px solid var(--warm-amber);border-radius:12px;box-shadow:var(--shadow-lg);font-size:.82rem;line-height:1.75;color:var(--ink-mid);font-family:var(--ff-body)}
+.gcard.show{display:block}
+.gcard b{color:var(--ink-deep);font-weight:600}
+.gcard .gsrc{display:block;margin-top:.4rem;font-size:.72rem}
+.gcard .gsrc a{color:var(--accent-teal);border-bottom:1px solid rgba(91,163,163,.3)}
+.gcard .gsrc a::after{content:"↗";font-size:.72em;margin-left:.15em;opacity:.6}
+@media (max-width:720px){.reader{border-radius:22px;gap:.4rem}.reader select{max-width:150px}}
+@media print{.reader{display:none}}
+
+/* QUOTE BLOCK — third-language stack */
+.q{background:linear-gradient(135deg,#FFF9EF 0%,#FDF3E3 100%);border:1px solid rgba(232,168,85,.35);border-radius:18px;padding:2rem 2.2rem;margin:0 0 1.4rem;box-shadow:var(--shadow-md)}
+.q .lang-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.2em;padding:.25rem .9rem;border-radius:99px;background:var(--ink-deep);color:var(--warm-gold);margin-bottom:1.1rem}
+.q .orig{font-family:"Gentium Plus","LXGW WenKai","Noto Serif SC",serif;font-size:1.25rem;line-height:2;color:var(--ink-deep);white-space:pre-line}
+.q .tr{margin-top:1rem;color:var(--ink-mid);font-size:.93rem;line-height:1.9}
+.q .tr b{color:var(--ink-deep);font-weight:600}
+.q .note{margin-top:.9rem;padding-top:.8rem;border-top:1px dashed rgba(232,168,85,.5);font-size:.85rem;color:var(--ink-soft)}
+
+/* POINTS — 画龙点睛 strip */
+.eyebrow-band{background:linear-gradient(180deg,var(--warm-cream),var(--warm-soft));padding:3.4rem 2rem;border-top:1px solid rgba(228,220,208,.5);border-bottom:1px solid rgba(228,220,208,.5);margin-top:4rem}
+.eyebrow-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;max-width:1100px;margin:1.6rem auto 0}
+.eyebrow{background:var(--warm-cream);border-radius:14px;padding:1.2rem 1.3rem;border:1px solid rgba(228,220,208,.5)}
+.eyebrow .n{font-family:var(--ff-display);font-weight:700;color:var(--warm-amber);font-size:1.3rem;line-height:1}
+.eyebrow h4{font-family:var(--ff-display);font-size:1rem;margin:.35rem 0 .3rem}
+.eyebrow p{font-size:.85rem;color:var(--ink-soft);line-height:1.75}
+
+/* METHOD / FOOTER */
+.method{font-size:.88rem;color:var(--ink-soft);line-height:2}
+.method ul{margin:.6rem 0 1rem 1.4rem}
+.footer{text-align:center;padding:3rem 2rem 2.5rem;color:var(--ink-pale);font-size:.85rem;border-top:1px solid rgba(228,220,208,.4)}
+.footer .motto{font-family:var(--ff-zh);font-size:1.05rem;color:var(--ink-soft);letter-spacing:.12em;margin-bottom:.3rem}
+@media (max-width:720px){.sec-head .lens{margin-left:0}.masthead{padding-top:6.5rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav">
+  <div class="nav-brand"><a href="../index.html">舟洲粥<span style="font-size:.6em;color:var(--ink-soft);margin-left:.4em">culture review</span></a></div>
+  <div class="nav-right">
+    <a href="../index.html" style="font-size:.85rem" data-zh>← 返回总览</a>
+    <a href="../index.html" style="font-size:.85rem" data-en>← Directory</a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ MASTHEAD ═══ -->
+<header class="masthead">
+  <div class="issue-tag"><span data-zh>第二期 · 总第 02 号</span><span data-en>ISSUE 2 · THE SECOND NUMBER</span></div>
+  <h1 data-zh>文化月旦</h1>
+  <h1 data-en style="font-size:clamp(2rem,5vw,3.4rem)">Monthly Culture Review</h1>
+  <div class="en-title" data-zh>Monthly Culture Review · November 2026</div>
+  <div class="en-title" data-en>文化月旦 · 二〇二六年十一月号</div>
+  <div class="dateline"><span data-zh>2026 年 11 月 · 开局于月初 · 逐周补齐 · 逐条回源核于 2026-11-06</span><span data-en>November 2026 · opened at the month's start · topped up weekly · every item re-sourced on 2026-11-06</span></div>
+  <div class="epigraph">
+    <span data-zh>「月旦」者何？汉末许劭与郭泰每月初一品评乡党人物、臧否文章，谓之<b>月旦评</b>。自兹以降，「月旦」遂为定期品评之雅名。今取此义：每月一梳，梳读物、梳研究、梳影艺、梳舞台、梳声音——只梳当月最值得谈的作品，且每一条都要回得去源头。</span>
+    <span data-en>Why "Month's Verdict" (月旦)? At the end of the Han dynasty, the critics Xu Shao and Guo Tai appraised their age's persons and writings on the first of every month — an assessment known as the <b>Yuèdàn Píng</b>. We revive the name: one monthly combing of reading, research, screen and stage, sound and space — only the works worth talking about, and every line traceable back to its source.</span>
+    <span class="src"><span data-zh>——《后汉书·许劭传》：「月旦辄更，汝南号曰月旦评」</span><span data-en>— Hou Han shu, biography of Xu Shao: "changed each first-of-month; all Runan called it the Month's Verdict"</span></span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ═══ I 读物 ═══ -->
+<section class="sec" id="books">
+  <div class="sec-head">
+    <span class="glyph">一</span>
+    <h2><span data-zh>读物 · 长桌与开奖</span><span data-en>Reading · The Long Table &amp; The Verdict</span></h2>
+    <span class="lens"><span data-zh>视角：文学奖是气象站，不是终点线</span><span data-en>Lens: prizes as weather stations, not finish lines</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十一月的文学气候，由一张尚未收场的长桌决定。布克奖六书已入冬，评审的闭门与公开用膳定在伦敦 Old Billingsgate，11 月 9 日揭晓——本号开局于月初，赛果留待周更补入。往右看，十二月的斯德哥尔摩已在候场：十月摘果的安妮·卡森，授奖礼与领奖演说定在 12 月 10 日。往左看，中文世界的文学奖此刻不在颁奖季，而在征稿季——这是它容易被忽略的一拍。</span><span data-en>November's literary weather turns on a long table not yet cleared. The Booker's six novels are in for the winter; the judges' private and public meals sit at Old Billingsgate in London, the verdict on 9 November — this issue opens at the month's first week, and the result will be entered on a weekly update. To the right, December's Stockholm is already waiting: Anne Carson, whose fruit was picked in October, takes her medal and reads her lecture on 10 December. To the left, the Chinese-language prizes are not in their awards season but their submission season — a beat the calendar usually misses.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>布克奖 2026 · 开奖闸</span><span data-en>BOOKER PRIZE 2026 · The Verdict Gate</span></div>
+    <h3><span data-zh>短名单六书用膳 Old Billingsgate，11 月 9 日在伦敦揭晓</span><span data-en>Six shortlisted novels dine at Old Billingsgate; verdict 9 November in London</span></h3>
+    <p><span data-zh>九月二十六日公布短名单，十月发酵，十一月开奖。六书各有题眼（详见本仓总第 01 号）：<b class="gist">M. John Harrison、Marlon James、Luke Kennard、Rebecca Perry、Elizabeth Strout、Douglas Stuart</b>。奖金 50,000 英镑，是英语小说界「一场公开晚餐换一次全国书单」的老规矩——评审团与出版人同席，颁奖即是晚餐。本号开局于月初，尚在此闸之前，胜者未卜；11 月 9 日一过，周更即把赛果与授奖语原样补入此处，◇ 亦随撤。</span><span data-en>The shortlist came on 26 September, fermented through October, and is drawn in November. Each of the six has its hinge (see Issue 1 of this review): <b class="gist">M. John Harrison, Marlon James, Luke Kennard, Rebecca Perry, Elizabeth Strout, Douglas Stuart</b>. The prize is £50,000, and the old rule holds — one public dinner for one national reading list, judges and publishers at the same table, the award itself being the supper. This issue opens before that gate; the winner is not yet known. Once 9 November passes, the weekly update enters the result and the citation here verbatim, and the ◇ comes off.</span></p>
+    <p class="crit"><span data-zh>把开奖写进一份月初创刊的月报，是明知它还没发生。诚实的做法不是假装知道，而是留一道闸、标一个 ◇，把「待定」本身当作本月的一条事实记下来。</span><span data-en>To print a verdict in a monthly that opens at the month's first week is to write it down knowing it has not happened. The honest move is not to feign knowledge but to leave the gate, mark a ◇, and record "pending" itself as one of the month's facts.</span></p>
+    <div class="src"><span class="stamp warn">◇ 赛果待 11·9 后周更补入</span><span data-zh>回源：<a href="https://thebookerprizes.com/the-booker-library/prize-years/2026" target="_blank" rel="noopener">thebookerprizes.com</a>（2026 届短名单与 11·9 伦敦颁奖档期）</span><span data-en>Sources: <a href="https://thebookerprizes.com/the-booker-library/prize-years/2026" target="_blank" rel="noopener">thebookerprizes.com</a> (2026 shortlist and the 9 Nov London verdict)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>诺贝尔文学奖 · 授奖礼</span><span data-en>NOBEL LITERATURE · The Ceremony</span></div>
+    <h3><span data-zh>安妮·卡森的奖章在十二月：斯德哥尔摩授奖礼定 12 月 10 日</span><span data-en>Anne Carson's medal is a December matter: Stockholm, 10 December</span></h3>
+    <p><span data-zh>十月八日瑞典学院宣布卡森（Anne Carson）获 2026 年诺贝尔文学奖，但诺奖的节律是「秋天公布、冬天授奖」。音乐会与颁奖在斯德哥尔摩音乐厅举行，国王授章，得主须于 12 月 10 日（诺贝尔忌日）致领奖词——这一「演说窗口」是诺奖真正交付文本的时刻，往往比新闻稿更能显出一位作者如何谈论自己的方法。卡森惯于以古典为镜，其演说值得逐句回读。本栏以 ◇ 记下档期，演说全文待十二月号回源补入。</span><span data-en>The Swedish Academy named Carson on 8 October, but the Nobel's rhythm is announce in autumn, award in winter. The concert and presentation are in the Stockholm Concert Hall, the King hands the medal, and the laureate must deliver the lecture on 10 December — the anniversary of Nobel's death. That lecture window is where the Nobel actually delivers a text, and it often shows more of how an author talks about her method than any press release does. Carson makes a mirror of the classics; her words will repay a line-by-line re-reading. This column logs the date under ◇; the lecture itself will be re-sourced into the December issue.</span></p>
+    <p class="crit"><span data-zh>「公布」是给新闻的，「授奖礼与演说」才是给文学史的。一份月报若只报十月那通电话，就漏掉了诺奖一年里唯一由得主自己开口的那一场。</span><span data-en>The announcement is for the news; the ceremony and lecture are for the literary record. A monthly that reports only October's phone call misses the one hour in the year when the Nobel lets the laureate speak for herself.</span></p>
+    <div class="src"><span class="stamp warn">◇ 12·10 授奖礼待十二月号补</span><span data-zh>回源：<a href="https://www.nobelprize.org/prizes/literature/2026/summary/" target="_blank" rel="noopener">nobelprize.org</a>（2026 文学奖得主主页与颁奖周日程）</span><span data-en>Sources: <a href="https://www.nobelprize.org/prizes/literature/2026/summary/" target="_blank" rel="noopener">nobelprize.org</a> (the 2026 literature laureate page and Prize Week schedule)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>中文文学奖 · 征稿季</span><span data-en>CHINESE-LANGUAGE PRIZES · The Submission Season</span></div>
+    <h3><span data-zh>漓江文学奖第三届：十一月不在领奖台，而在来稿箱</span><span data-en>The Lijiang Prize, third cycle: in November not at the podium but in the slush pile</span></h3>
+    <p><span data-zh>与布克、诺奖的「开奖叙事」相反，中文世界若干项专设奖金的文学奖，此刻正落在征集与初评的区间。以漓江文学奖为例，第三届的公开征稿已于 2026 年 10 月 11 日截止，进入审读——它演示的是文学奖气候的另一面：不是聚光灯下的一夜，而是灯光之外的几个月案头劳作。本栏记下这一「无奖可报」的月份，正因为一个健康的文学现场，其大半时间本该花在还没有获奖名单的时候。</span><span data-en>Against the "verdict narrative" of the Booker and the Nobel, several Chinese-language prizes with endowment this November sit in the window of solicitation and first reading. The Lijiang Literature Prize, third cycle, closed its open submissions on 11 October 2026 and is now in assessment — it shows the other face of a literary prize's weather: not one night under the light, but months of desk-labour outside it. This column logs the month that has no winner to report precisely because a healthy literary scene spends most of its year at a time when there is no winners list yet.</span></p>
+    <p class="crit"><span data-zh>只报道揭晓的文学奖媒体，等于只拍潮汐的最高点。征稿、初评、入围——这些低水位的时刻才决定一个国家明年能拿出什么样的书。</span><span data-en>A literary press that covers only the announcement films the tide at its peak. Solicitation, first reading, the longlist — the low-water hours are what decide what books a country can field next year.</span></p>
+    <div class="src"><span class="stamp warn">◇ 第三届评审进度以后续公告为准</span><span data-zh>回源：<a href="https://www.ljwl.com/" target="_blank" rel="noopener">漓江文学奖</a>（第三届征稿启事：2026·10·11 截止）· 站方首页为准（◇ 具体入口以浏览器可开为准）</span><span data-en>Sources: Lijiang Literature Prize (third-cycle call; submissions closed 11 Oct 2026) · site front page as opened in a browser (◇ exact entry per what a browser opens)</span></div>
+  </div>
+</section>
+
+<!-- ═══ II 研究 ═══ -->
+<section class="sec" id="research">
+  <div class="sec-head">
+    <span class="glyph">二</span>
+    <h2><span data-zh>研究 · 大气与授奖</span><span data-en>Research · Atmosphere &amp; Awards</span></h2>
+    <span class="lens"><span data-zh>视角：科学既有会场，也有坛上</span><span data-en>Lens: science has a room, and a dais</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十一月，科学的两副面孔同时出牌：一副在谈判桌——《联合国气候变化框架公约》第三十一次缔约方大会（COP31）于 11 月 9 至 20 日在土耳其安塔利亚开幕；另一副在颁奖台——京都奖 11 月 10 日在京都颁出其「Advanced Technology／Basic Research／Arts and Philosophy」三奖。前者是关于未来的博弈，后者是把已经做成的事交还社会。本号把两副面孔并置，因为「研究」既是论文，也是它落进公共世界的方式。</span><span data-en>In November science plays two faces at once. One is at the negotiating table: the 31st Conference of the Parties to the UNFCCC (COP31) opens 9–20 November at Antalya, Turkey. The other is on the dais: the Kyoto Prize is awarded 10 November in Kyoto across its three fields — Advanced Technology, Basic Research, and Arts and Philosophy. The first is a game played over the future; the second hands what has already been done back to society. This issue sets them side by side because "research" is both the paper and the way it lands in the public world.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>COP31 · 安塔利亚</span><span data-en>COP31 · ANTALYA</span></div>
+    <h3><span data-zh>《联合国气候变化框架公约》第三十一次缔约方大会：11 月 9–20 日，安塔利亚</span><span data-en>The 31st Conference of the Parties: 9–20 November, Antalya</span></h3>
+    <p><span data-zh>COP31 于 11 月 9 至 20 日在土耳其安塔利亚举行（本届采「共同主办」安排，巴西贡献议程、土耳其贡献承办）。缔约方大会是《联合国气候变化框架公约》的最高决策机构，一年一度的谈判把「科学已说出的」转译成「各国愿签的」。本号开局于此会开幕前后，进程未定，故以 ◇ 记档期与机构，成果（文本、资金数额、损失与损害安排的细则）留待周更与十二月号回源补入。此刻可确定的是：会期、地点、届次。</span><span data-en>COP31 runs 9–20 November at Antalya, Türkiye (this cycle is a "co-hosting" arrangement — Brazil on the agenda, Türkiye on the logistics). The Conference of the Parties is the UNFCCC's supreme decision-making body; its annual negotiation translates "what science has said" into "what states will sign". This issue opens around the gavel, the process undecided, so the dates and body are logged and the outcomes — the text, the money figures, the rules of the loss-and-damage facility — await the weekly update and the December issue. What is certain now: the window, the place, the number.</span></p>
+    <p class="crit"><span data-zh>气候谈判的可回源之处不在宣言的形容词，而在数目：谁出多少、何时到、如何核。月报只该在数目落地时把 ◇ 换成 ✔，在此之前，报档期即已尽责。</span><span data-en>COP is re-sourcable not in the adjectives of a declaration but in the numbers: who pays how much, by when, verified how. A monthly should swap its ◇ for a ✔ only when a number lands; before that, logging the date is the whole duty.</span></p>
+    <div class="src"><span class="stamp warn">◇ 进程与文本待会后补</span><span data-zh>回源：<a href="https://unfccc.int/cop31" target="_blank" rel="noopener">unfccc.int</a>（公约官网：COP31 会期 11·9–20 安塔利亚与共同主办安排）</span><span data-en>Sources: <a href="https://unfccc.int/cop31" target="_blank" rel="noopener">unfccc.int</a> (the Convention's official COP31 page: 9–20 Nov, Antalya, co-hosting)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>京都奖 · 授奖典</span><span data-en>KYOTO PRIZE · The Ceremony</span></div>
+    <h3><span data-zh>稻盛财团的三座奖：11 月 10 日在京都，把「沉思」与「装置」并置同台</span><span data-en>Inamori's three prizes: 10 November in Kyoto, contemplation and apparatus on one dais</span></h3>
+    <p><span data-zh>京都奖由稻盛财团于一九八五年创设，每年在「高度科学技术（Advanced Technology）／基础学问（Basic Research）／艺术与哲学（Arts and Philosophy）」三部各授一人，被视为日本的「半个诺贝尔」——因诺奖不设数学与哲学，京都奖的「艺术与哲学」恰好补其罅。授奖典例于十一月在京都举行，得主享终身荣誉。本号开局于授奖前，得主名单与授奖语（若已依例于九月公布，则此处补入）以 ◇ 记下档期，授奖典实况待周更回源补入。</span><span data-en>Founded by the Inamori Foundation in 1985, the Kyoto Prize is given each year in three divisions — Advanced Technology, Basic Research, and Arts and Philosophy — one laureate apiece, and is read as Japan's "half-Nobel": the Nobel seats no mathematics or philosophy, and the Kyoto "Arts and Philosophy" fills exactly that gap. The ceremony is held each November in Kyoto. This issue opens before it; the class and citations are logged under ◇ and the ceremony itself re-sourced on a weekly update.</span></p>
+    <p class="crit"><span data-zh>把「艺术与哲学」与「高度技术」列为同功同酬，是京都奖最值得一记的姿态：它拒绝把沉思当作科学的装饰，而当作同一项工作的另一面。</span><span data-en>To rank "Arts and Philosophy" as co-equal and co-paid with "Advanced Technology" is the Kyoto Prize's most telling gesture: it refuses to treat contemplation as science's decoration, and holds it as the other face of one and the same work.</span></p>
+    <div class="src"><span class="stamp warn">◇ 11·10 授奖典实况待周更补</span><span data-zh>回源：<a href="https://www.inamori-f.or.jp/en/" target="_blank" rel="noopener">inamori-f.or.jp</a>（稻盛财团官网：京都奖三部与年度授奖档期）</span><span data-en>Sources: <a href="https://www.inamori-f.or.jp/en/" target="_blank" rel="noopener">inamori-f.or.jp</a> (Inamori Foundation: the three Kyoto Prize divisions and the annual awards calendar)</span></div>
+  </div>
+</section>
+
+<!-- ═══ III 艺文 ═══ -->
+<section class="sec" id="arts">
+  <div class="sec-head">
+    <span class="glyph">三</span>
+    <h2><span data-zh>艺文 · 画廊与院线</span><span data-en>Arts &amp; Letters · Galleries &amp; the Box Office</span></h2>
+    <span class="lens"><span data-zh>视角：美术馆是慢变量，票房是快变量</span><span data-en>Lens: the museum is a slow variable, the box office a fast one</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十一月的艺文有两副时间。一副很慢：国家美术馆把九幅凡·艾克聚于一室，展期跨过冬天，直抵来春；特纳奖已离开伦敦、北上米德尔斯堡，十二月十日才揭晓。另一副很快：周末票房榜以千万美元为单位起落，一部纪录片压过一部大片登顶。慢的那副考校策展的功力，快的这副暴露大众当周的心绪——本栏两样都记。</span><span data-en>The arts this November keep two clocks. One runs slow: the National Gallery gathers nine Van Eycks into one room for a run that crosses the winter into next spring; the Turner Prize, having left London for Middlesbrough, is not decided until 10 December. The other runs fast: the weekend box office rises and falls by tens of millions, a documentary beating a blockbuster to the top. The slow clock tests curation; the fast one betrays the public's mood that week. This column keeps both.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>凡·艾克 · 伦敦</span><span data-en>VAN EYCK · LONDON</span></div>
+    <h3><span data-zh>国家美术馆把九幅凡·艾克聚于一室：11·21 开展，跨冬至来年四月</span><span data-en>The National Gallery gathers nine Van Eycks in one room: opens 21 Nov, through winter to April</span></h3>
+    <p><span data-zh>伦敦国家美术馆的扬·凡·艾克（Jan van Eyck）专题展于 11 月 21 日开展，展至 2027 年 4 月 11 日，将九幅真迹同室并置——对一位存世作品本已稀少的十五世纪尼德兰大师而言，这几乎是「一生一次」的策展。凡·艾克的油彩层叠把光关进颜料里，其细节之密，须以放大镜读，故聚九作于一处的意义，不只是数量，而是让人得以横向比对同一双手在不同委托下的取舍。展期横跨整个冬天，本号只记开幕档期，具体到场次与借展名录以官网为准。</span><span data-en>The National Gallery's Jan van Eyck show opens 21 November and runs to 11 April 2027, seating nine autograph works in one room — for a fifteenth-century Netherlandish master whose surviving oeuvre is scant, close to a once-in-a-lifetime piece of curation. Van Eyck's glazed oils trap light inside the paint, and the density of his detail asks for a magnifying glass; the point of nine at once is not the count but the chance to read, side by side, what the same hand conceded under different commissions. The run spans the whole winter; this issue logs only the opening, with hours and the loan list per the gallery's own page.</span></p>
+    <p class="crit"><span data-zh>把真迹聚齐是一种「不可复制的公共财」：论文随时能读，凡·艾克的手却几年不能重聚一次。美术馆的价值，恰在这类限时、限地、限次方可成立的经验。</span><span data-en>Bringing autograph works together is an unreplicable public good: papers can be read any day, but Van Eyck's hand cannot be reassembled more than once in years. A museum's worth lives exactly in experiences that are possible only under a limit of time, place and number.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.nationalgallery.org.uk/" target="_blank" rel="noopener">nationalgallery.org.uk</a>（英国国家美术馆：凡·艾克展 11·21–2027·4·11 与九幅真迹）</span><span data-en>Sources: <a href="https://www.nationalgallery.org.uk/" target="_blank" rel="noopener">nationalgallery.org.uk</a> (National Gallery, London: Van Eyck, 21 Nov – 11 Apr 2027, nine autograph works)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>特纳奖 · 米德尔斯堡</span><span data-en>TURNER PRIZE · MIDDLESBROUGH</span></div>
+    <h3><span data-zh>特纳奖北上：展在Riverfront，12 月 10 日揭晓，评奖仍在进行</span><span data-en>The Turner goes north: at the Riverfront, verdict 10 December, judging still running</span></h3>
+    <p><span data-zh>以英国风景画家透纳命名的特纳奖，本年将颁奖地点放在英格兰东北的米德尔斯堡（Riverfront 会场），入围展自九月延至来年三月，获奖者 12 月 10 日才公布。特纳奖历来是「英国当代艺术的晴雨表」，近年刻意把典礼移出伦敦，让艺术圈的注意力随展址北上——这是本号「公共性再定价」主题在十一月的延续。本号开局于揭晓之前，入围名单以当年公布为准，赛果留待十二月号补入。</span><span data-en>The Turner Prize — named for the landscape painter, and this year staged in Middlesbrough in north-east England at the Riverfront — runs its shortlist exhibition from September into March, with the winner announced 10 December. Long read as a barometer of British contemporary art, it has in recent years deliberately moved the ceremony out of London, pulling the art world's attention north along with the venue — this issue's theme of "repricing the public" carried into November. This issue opens before the verdict; the shortlist per the year's announcement, the result into the December number.</span></p>
+    <p class="crit"><span data-zh>奖还是那个奖，把地图折一下，意义就变了：特纳奖北上是把「谁有资格被全国看见」这道题重新出一遍。</span><span data-en>Same prize, fold the map, and the meaning shifts: sending the Turner north re-issues the question of who gets to be seen by the whole country.</span></p>
+    <div class="src"><span class="stamp warn">◇ 12·10 赛果待十二月号补</span><span data-zh>回源：<a href="https://www.tate.org.uk/turner-prize" target="_blank" rel="noopener">tate.org.uk</a>（泰特：特纳奖档期与本年举办地）</span><span data-en>Sources: <a href="https://www.tate.org.uk/turner-prize" target="_blank" rel="noopener">tate.org.uk</a> (Tate: the Turner Prize calendar and this year's host city)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>周末票房 · 北美</span><span data-en>WEEKEND BOX OFFICE · N. AMERICA</span></div>
+    <h3><span data-zh>一部纪录片压过一部大片登顶万圣节档：快变量里的心绪</span><span data-en>A documentary tops a blockbuster across Halloween: mood in a fast variable</span></h3>
+    <p><span data-zh>十月末的北美周末票房榜上，纪录片 <i>You Can See Everything</i> 以约 1140 万美元压过新片《Clayface》（约 1040 万）登顶，累计已达约 6388 万美元——一部低成本的纪实片在万圣节档击败恐怖片新片，是「快变量」里少见的信号。票房榜是每月最诚实的情绪表：它不问评论界怎么想，只统计这一个周末，多少人愿意为哪一种真实买票。数字以档期票房站为准，随周更刷新。</span><span data-en>On the late-October North American weekend chart, the documentary <i>You Can See Everything</i> took the number one with roughly $11.4 million, edging past the new <i>Clayface</i> (about $10.4 million), its run to date near $63.88 million — a low-cost nonfiction beating a new horror picture across Halloween is a rare signal inside a fast variable. The chart is the month's most honest mood-meter: it asks nothing of critics and counts only how many people, this one weekend, would buy a ticket for which kind of reality. Figures per the box-office tracker, refreshed on the weekly update.</span></p>
+    <p class="crit"><span data-zh>把票房放进「艺文」栏，不是崇拜数字，而是因为它是当月唯一按周末结账的公众选择——比任何问卷都少修饰。</span><span data-en>The chart belongs in an arts column not out of reverence for numbers but because it is the month's only public choice settled weekend by weekend — less dressed-up than any survey.</span></p>
+    <div class="src"><span class="stamp warn">◇ 榜单逐周漂移，以最新周末为准</span><span data-zh>回源：<a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">boxofficemojo.com</a>（北美周末票房榜）</span><span data-en>Sources: <a href="https://www.boxofficemojo.com/" target="_blank" rel="noopener">boxofficemojo.com</a> (North American weekend chart)</span></div>
+  </div>
+</section>
+
+<!-- ═══ IV 声活 ═══ -->
+<section class="sec" id="sound">
+  <div class="sec-head">
+    <span class="glyph">四</span>
+    <h2><span data-zh>声活 · 唱片与现场</span><span data-en>Sound &amp; Life · Records &amp; The Stage</span></h2>
+    <span class="lens"><span data-zh>视角：声音是这个月最快的史料</span><span data-en>Lens: sound is this month's fastest primary source</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十一月的声音轴有三条硬线索，都可回源：U2 的新专辑、鲍勃·迪伦的盒装与一次梵蒂冈会面、以及一场九年后才落地的游戏配乐。它们分别代表音乐的三种当下——老牌乐团的新作、档案的打捞、以及游戏工业开始认真做原声带。本栏逐条回源，未发者标◇。</span><span data-en>The sound shelf has three hard threads this November, all traceable: U2's new album, a Bob Dylan box set and an audience at the Vatican, and a game soundtrack nine years in the landing. They stand for three musical presents at once — a veteran band's new record, the recovery of the archive, and an industry finally scoring itself seriously. Each is re-sourced below; what has not yet dropped is marked ◇.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>U2 · 新专辑</span><span data-en>U2 · NEW ALBUM</span></div>
+    <h3><span data-zh>《Carnaval De Luz》11 月 13 日：九年来的第一张 U2 新专</span><span data-en>Carnaval De Luz, 13 November: the first new U2 album in nine years</span></h3>
+    <p><span data-zh>U2 的新专辑《Carnaval De Luz》定于 11 月 13 日发行，是这支爱尔兰乐团九年来的第一张全新录音室作品。对一张尚未问世的专辑，本栏不引乐评判词，只记录可确定的事实：艺人、题名、发行日。专辑的艺术评价须等它落进公共耳中，届时（或周更、或十二月号）再补一句本仓判语。这是「声音轴诚实声明」的又一次执行：宁记档期，不预写口碑。</span><span data-en>U2's <i>Carnaval De Luz</i> is set for 13 November — the Irish band's first new studio album in nine years. For a record not yet out, this column quotes no critical verdict and logs only the certain: artist, title, release date. Judgement waits until the thing lands in the public ear, and a line from us follows then (on a weekly update, or in the December issue). This is the "frank note on the music shelf" carried out again: log the date, do not pre-write the reputation.</span></p>
+    <p class="crit"><span data-zh>把「未发行」与「已发行」分标◇/✔，是音乐栏能做到的最朴素的诚实——预告不是乐评，日历不是判断。</span><span data-en>Marking unreleased ◇ against released ✔ is the plainest honesty a music column can keep — a trailer is not a review, and a calendar is not a judgement.</span></p>
+    <div class="src"><span class="stamp warn">◇ 11·13 发行，口碑待发行后补</span><span data-zh>回源：<a href="https://u2.com/" target="_blank" rel="noopener">u2.com</a>（乐团官网：《Carnaval De Luz》11·13 发行）</span><span data-en>Sources: <a href="https://u2.com/" target="_blank" rel="noopener">u2.com</a> (the band's site: Carnaval De Luz, out 13 Nov)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>鲍勃·迪伦 · 盒装 × 梵蒂冈</span><span data-en>BOB DYLAN · BOX SET × THE VATICAN</span></div>
+    <h3><span data-zh>39 张盘的《1976 Live Recordings》与一次教廷会面：档案与当下同日到场</span><span data-en>The 39-disc 1976 Live Recordings and an audience at the Vatican: archive and present on the same day</span></h3>
+    <p><span data-zh>十一月初，迪伦两头出消息。一头是档案：《The Bootleg Series Vol. 18 — The 1976 Live Recordings》11 月 6 日发行，三十九张光盘收尽一九七六年的巡演现场，是「打捞式」唱片的极致——把半个世纪前的私录变成可购的公共记忆。另一头是当下：11 月 4 日迪伦获教廷接见，与教方互赠——一串玫瑰经念珠与一部《编年纪》（Chronicles）；会前他七月为教宗书写的一篇序言里，收入了一首 1963 年从未发行的《Go Away You Bomb》。因文本在版权期内，本栏依凡例只存书名与自撰题解，不引正文；此行以 ✔ 记两桩已发生的日期与互赠，具体引文回罗马官方页面自取。</span><span data-en>Early November brought Dylan from two ends. The archive end: <i>The Bootleg Series Vol. 18 — The 1976 Live Recordings</i>, out 6 November, thirty-nine discs of that year's tours — recovery pushed to its limit, half-a-century-old private tapes turned into a memory you can buy. The present end: on 4 November Dylan was received at the Vatican, gifts exchanged — a rosary for a copy of his <i>Chronicles</i>; and in a preface he wrote in July for the Pope, a never-released 1963 song, "Go Away You Bomb," surfaced. The texts are in copyright, so per our convention this column holds only titles and our own gloss, quoting no body; the line carries a ✔ for the two dates and the exchange, with any quotation to be taken from Rome's own pages.</span></p>
+    <p class="crit"><span data-zh>一位作者同时以「五十几年前的私带」和「昨天在梵蒂冈」成为新闻，说明伟大的流行作者如何持续生产史料：他的过去和他的现在，都是当月可回源的硬事实。</span><span data-en>For an artist to be in the news at once through "tapes from fifty years ago" and "the Vatican yesterday" shows how a major popular author keeps generating sources: his past and his present are both hard, re-sourcable facts of the month.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a>（梵蒂冈新闻网：11·4 迪伦获接见、互赠与七月序言详情）· <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a>（Bootleg Series Vol.18 · 1976 Live Recordings 11·6 发行）</span><span data-en>Sources: <a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a> (Vatican News: the 4 Nov audience, the gifts and the July preface) · <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a> (Bootleg Series Vol. 18 · 1976 Live Recordings, out 6 Nov)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>《侠盗猎车手 VI》· 第九艺术</span><span data-en>GRAND THEFT AUTO VI · THE NINTH ART</span></div>
+    <h3><span data-zh>11 月 19 日《GTA VI》发售，次日原声带单独到场</span><span data-en>GTA VI ships 19 November; its radio soundtrack lands the next day</span></h3>
+    <p><span data-zh>Rockstar Games 官宣《侠盗猎车手 VI》定于 11 月 19 日发售——距上一部正统作品已九年，是「第九艺术」年度最大的一次流量。值得单记一笔的是：随游戏而来的原创电台配乐，另于 11 月 20 日作为独立唱片发行。游戏原声带以「可单独聆听的专辑」身份上市，标志着游戏音乐已不再只是配乐的附属，而成为被当作音乐本身来发行、被回源的对象。此项为已官宣档期，发售实况与口碑随周更补。</span><span data-en>Rockstar Games has confirmed <i>Grand Theft Auto VI</i> for 19 November — nine years after the last mainline entry, and the ninth art's biggest single draw of the year. Worth a line of its own: the game's original radio soundtrack is released 20 November as a stand-alone record. For a game score to ship with the identity of "an album you can just listen to" marks game music no longer as an appendix to a licence but a thing issued, and re-sourced, as music. The date is confirmed; the drop and its reception follow on the weekly update.</span></p>
+    <p class="crit"><span data-zh>把一款游戏写进「声活」栏，理由不在销量，而在那张能脱离游戏独立发行的原声带——那是第九艺术开始为「声音」本身负责的时刻。</span><span data-en>A game earns a place in a sound column not for its sales but for the soundtrack that can ship free of it — the moment the ninth art starts answerable for sound itself.</span></p>
+    <div class="src"><span class="stamp warn">◇ 11·19 发售，实况待周更补</span><span data-zh>回源：<a href="https://www.rockstargames.com/" target="_blank" rel="noopener">rockstargames.com</a>（Rockstar 官网：GTA VI 11·19 发售）</span><span data-en>Sources: <a href="https://www.rockstargames.com/" target="_blank" rel="noopener">rockstargames.com</a> (Rockstar Games: GTA VI, 19 Nov)</span></div>
+  </div>
+</section>
+
+<!-- ═══ V 点睛 · 第三语言精华引文 ═══ -->
+<section class="sec" id="tongue">
+  <div class="sec-head">
+    <span class="glyph">五</span>
+    <h2><span data-zh>点睛 · 第三语言的原文</span><span data-en>The Dragon's Eye · The Originals in a Third Tongue</span></h2>
+    <span class="lens"><span data-zh>本期三镜：日语（公有领域）· 中文（公有领域）· 英语（在版权期内）</span><span data-en>This issue's three mirrors: Japanese (public domain) · Chinese (public domain) · English (in copyright)</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>十一月的三面原文之镜，恰好落在版权线的两侧：芭蕉的临终句与柳宗元的《江雪》，皆是公有领域，原文照录、中英对译；迪伦本月浮出的 1963 年旧歌仍在版权期内，依凡例只存书名与自撰题解，不引正文。三面并置，是要让读者亲眼看见本仓那条纪律如何运作——公有领域者给原文，版权期内者给题解，界线分明，不因作者是名人而通融。</span><span data-en>November's three mirrors of the original tongue fall on both sides of the copyright line. Bashō's deathbed verse and Liu Zongyuan's River Snow are public domain — quoted in the original, glossed into English and Chinese. Dylan's 1963 song that surfaced this month is still in copyright, so by our convention only the title and our own gloss appear, no body. The three together let the reader watch the rule work: originals when the work is free, a title and a gloss when it is not, with no passage bent because the author is famous.</span></p>
+
+  <div class="q">
+    <span class="lang-tag">日本語 · JAPANESE（俳句 HAIKU · 公有领域）</span>
+    <div class="orig">旅に病んで 夢は枯野を かけめぐる</div>
+    <div class="tr"><b>Rōmaji</b> — tabi ni yande / yume wa kareno o / kakemeguru</div>
+    <div class="tr"><b>EN</b> — sick on the road: my dreams run to and fro across the withered fields.</div>
+    <div class="tr"><b>中</b> — 旅中抱病，梦在枯野上往复奔走。（<span class="gx" tabindex="0" data-gzh="松尾芭蕉（1644–1694），日本俳句圣，编有《奥之细道》；元禄七年十月十二日（公历 1694·11·28）殁于大阪" data-gen="Matsuo Bashō (1644–1694), Japan's master of haiku, author of the Narrow Road to the Deep North; died at Osaka on the 12th day of the 10th month of Genroku 7 — 28 November 1694" data-url="https://en.wikipedia.org/wiki/Matsuo_Bash%C5%8D">松尾芭蕉</span>）</div>
+    <div class="note"><span data-zh>芭蕉忌在十一月二十八日（元禄七年十月十二，公历 1694·11·28）。此句作于临终的旅次：不写「死」，只写病中的梦在枯野上来回奔逐——「枯野」是秋冬的原野，也是生命将尽的图像，而他给它的动作是「かけめぐる」（往复、盘旋），不是远去。这正是本月「点睛」栏的方法：把一个季节的将尽，读成一次不肯停下的巡游。原文日文公有领域，维基日语条目与《奥之细道》校注本均可回源。</span><span data-en>Bashō's memorial falls on 28 November (the 12th of the 10th month, Genroku 7). Written in his last days on the road, the verse never says "death": it shows a sick man's dreams running back and forth over the withered winter fields — 枯野 is the autumn-grey moor and the image of a life spent, and the motion he gives it, kakemeguru, is to pace and circle, not to leave. That is this column's method for the month: to read a season's ending as a circling that will not stop. The Japanese is public domain; the sources below carry the original and its commentary.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>原文回源：<a href="https://ja.wikipedia.org/wiki/松尾芭蕉" target="_blank" rel="noopener">ja.wikipedia.org</a>（芭蕉辞世与临终句·公有领域）</span><span data-en>Original sources: <a href="https://ja.wikipedia.org/wiki/松尾芭蕉" target="_blank" rel="noopener">ja.wikipedia.org</a> (Bashō's deathbed verse; public domain)</span></div>
+  </div>
+
+  <div class="q">
+    <span class="lang-tag">中文原作 · CHINESE ORIGINAL（唐 · 柳宗元 · 公有领域）</span>
+    <div class="orig">江雪 · 柳宗元（约 773–819）</div>
+    <div class="tr"><b>原文</b> — 千山鸟飞绝，万径人踪灭。孤舟蓑笠翁，独钓寒江雪。</div>
+    <div class="tr"><b>EN</b> — From a thousand hills a bird's flight is cut off; on ten thousand paths, all human trace is gone. A lone boat, an old man in straw cape and hat, fishing the snow alone on the cold river.</div>
+    <div class="note"><span data-zh>立冬在十一月上旬（二〇二六年立冬为 11 月 7 日前后）。取柳宗元《江雪》应此节：二十字里，天地先被一层层抽空——无鸟、无人、千山万径尽成空白，最后才在漫天寒雪中落下一个独钓的老翁。它写的不是热闹的反面，而是「孤绝」如何反过来撑起一个中心。唐诗意象为公有领域，此为中国古典的常见读本；本仓自撰英译，不作学术直译之争。</span><span data-en>The Start of Winter falls in early November (around the 7th in 2026). Liu Zongyuan's "River Snow" answers the season: in twenty characters the world is emptied layer by layer — no bird, no walker, a thousand hills and ten thousand paths gone blank — and only at the last is a lone angler set down in cape and hat amid the cold-river snow. What it writes is not noise's opposite but how sheer solitariness can, in turn, hold up a centre. Tang imagery is public domain; the English here is our own gloss, not a claim to the standard literal rendering.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>原文回源：柳宗元《江雪》，见《柳河东集》，通行本；公有领域，古籍不附外链（凡例⑥）</span><span data-en>Original source: Liu Zongyuan, "River Snow," in his collected works, the received edition; public domain — no link for ancient texts (see Convention ⑥)</span></div>
+  </div>
+
+  <div class="q">
+    <span class="lang-tag">英语 · ENGLISH（在版权期内 · 只存书名与题解）</span>
+    <div class="orig">"Go Away You Bomb" — Bob Dylan (1963, 长期未发行)</div>
+    <div class="tr"><b>EN · 题解</b> — a Dylan composition recorded in 1963 and long unheard; the title and date only, with our gloss — the lyric itself is in copyright and is not quoted here.</div>
+    <div class="tr"><b>中 · 题解</b> — 迪伦 1963 年录、长期未问世的一曲；此处只存题名与年份及本仓题解，歌词在版权期内，一概不引。</div>
+    <div class="note"><span data-zh>这首歌浮出于迪伦七月为教宗方济各《希望》通谕相关出版物撰写的一篇序言，随即在十一月初的梵蒂冈会面前后被媒体反复引用——但它是一首从未正式发行、词作者健在的在版权作品。依凡例②，第三语言在版权期内的正文一律不引，只存书名与自撰题解。本栏以此示范纪律的边界：正因为它是名人的冷门票，才更要守住「只给题目、不给正文」这条线，而不是相反。曲名与「1963」的年份，为可回源的公共记录。</span><span data-en>The song surfaced in a preface Dylan wrote in July, and was quoted again around his Vatican audience in early November — but it is an unissued, in-copyright work by a living writer. Under Convention ②, a third-language text under copyright yields only its title and our gloss, never its body. This entry demonstrates the boundary on purpose: precisely because it is a famous unreleased item, the line "title, not text" is held firm rather than waived. The title and the year 1963 are matters of public record.</span></div>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a>（11·4 会见与迪伦自述之序文背景）· <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a>（官方页面）——歌词不转引（版权期）</span><span data-en>Sources: <a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a> (the 4 Nov audience and Dylan's own preface) · <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a> — the lyric is not reproduced (copyright)</span></div>
+  </div>
+</section>
+
+<!-- ═══ 八 · 众生 · 圈层之境（本期新增维度）═══ -->
+<section class="sec" id="strata">
+  <div class="sec-head">
+    <span class="glyph">众</span>
+    <h2><span data-zh>众生 · 圈层之境</span><span data-en>The Strata · In What Condition, Each of Them</span></h2>
+    <span class="lens"><span data-zh>视角：把镜头从「作品」摇回「人」——各行各业、各阶各群、各龄各圈，此刻各在何种境况</span><span data-en>Lens: pan the camera from works back to people — every trade, class, community and age cohort, and the condition each is in</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>前几栏梳的是作品与事件；这一栏梳的是人。同一轮十一月的气候，落在不同的圈层上并不同温：青年与老年、领薪者与平台接活者、有产者与流离者、城市与田野——各有各的处境。本栏不拟下总判断，只逐圈给出「要点」（可回源的事实）与「精评」（本仓的一句秤）。凡数据，注明机构与年份；一时性数字随周更刷新，未能一手锁定者标 <span class="stamp warn">◇</span>。这一维度自本期起加入，作为常设栏。</span><span data-en>The earlier columns comb works and events; this one combs people. The same November weather does not land at one temperature on every stratum: young and old, salaried and platform, propertied and displaced, city and field — each in its own condition. This column withholds a total verdict and gives each stratum two things: the point (a re-sourcable fact) and the cut (one line of our scale). Data are named to their institution and year; time-sensitive figures refresh weekly, and anything not pinned first-hand carries <span class="stamp warn">◇</span>. This dimension joins the review as a standing column from this issue.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>年龄段 · 青年</span><span data-en>AGE · The Young</span></div>
+    <h3><span data-zh>被关在好工种门外的世代</span><span data-en>The generation locked out of the good jobs</span></h3>
+    <p><span data-zh><b>要点</b>：国际劳工组织《全球青年就业趋势 2026：回到未来》（2026 年 8 月 11 日）测算——全球青年失业率二〇二五年升至 <b class="gist">12.4%</b>，约 6,700 万 15–24 岁者失业；不就业、不受教育、不受训（NEET）的青年占比回升至 20%，逾 <b class="gist">2.57 亿</b>。最陡的上升反而出现在高收入经济体（北美 8.3%→9.8%）；阿拉伯地区与北非仍以 26.2%／22.6% 居首；约 15–29 岁青年所从事岗位中的 <b class="gist">6.1%</b> 属高度暴露于 AI 的职业。</span><span data-en><b>The point</b>: the ILO's Global Employment Trends for Youth 2026: Back to the Future (11 August 2026) puts global youth unemployment at <b class="gist">12.4%</b> in 2025 — some 67 million jobless aged 15–24 — with the share neither working nor in education or training (NEET) back up to 20%, over <b class="gist">257 million</b> people. The sharpest rises came in higher-income economies (Northern America 8.3% → 9.8%); the Arab States (26.2%) and Northern Africa (22.6%) remain the highest; and <b class="gist">6.1%</b> of jobs held by 15–29-year-olds sit in occupations highly exposed to AI.</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：青年失业不是「他们不够努力」的道德题，而是入门岗位本身在消失的结构题——中间技能岗先塌，最先失足的正是刚起步者。</span><span data-en><b>The cut</b>: youth unemployment is not a moral test of effort but a structural one — the entry rungs are themselves disappearing; when middle-skilled jobs sag first, it is those just starting who fall.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a>（ILO 新闻稿：12.4%／6,700 万／2.57 亿／6.1% 诸数）· <a href="https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026-back-future" target="_blank" rel="noopener">报告全文 PDF</a></span><span data-en>Sources: <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a> (ILO press release: the 12.4% / 67m / 257m / 6.1% figures) · <a href="https://www.ilo.org/publications/major-publications/global-employment-trends-youth-2026-back-future" target="_blank" rel="noopener">the report (PDF)</a></span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>阶层 · 领薪者与夹心层主管</span><span data-en>CLASS · The Salaried and the Squeezed Middle</span></div>
+    <h3><span data-zh>投入度跌到二十年低位，代价被估成十万亿美元</span><span data-en>Engagement at a multi-year low, its cost priced at ten trillion</span></h3>
+    <p><span data-zh><b>要点</b>：盖洛普《全球职场状况 2026》（2026 年 4 月）测得全球员工投入度降至 <b class="gist">20%</b>，为二〇二〇年以来最低，且是该指标首次连续两年下滑（二〇二二年峰值为 23%）。跌幅主要在管理者一层：主管投入度自 2022 年的 31% 掉到 2025 年的 <b class="gist">22%</b>。盖洛普同时估：低投入每年给全球经济造成约 <b class="gist">10 万亿美元</b> 的生产力损失，约占 GDP 的 9%；员工的压力、愤怒、悲伤与孤独，仍全面高于疫情前。</span><span data-en><b>The point</b>: Gallup's State of the Global Workplace 2026 (April 2026) finds world employee engagement down to <b class="gist">20%</b> — the lowest since 2020 and the metric's first back-to-back annual fall (its 2022 peak was 23%). The drop sits mostly on managers: engagement among them fell from 31% in 2022 to <b class="gist">22%</b> in 2025. Gallup also estimates low engagement costs the world economy roughly <b class="gist">$10 trillion</b> a year in lost productivity — about 9% of GDP — while employees' stress, anger, sadness and loneliness remain above pre-pandemic levels.</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：夹心层（中层主管）最先塌，恰因投入度的损耗先从「既要向上又要向下」的那一层开始——报表上写「员工敬业度下降」，真实主语往往是那个两头受挤的人。</span><span data-en><b>The cut</b>: the squeezed middle gives way first, because engagement burns out earliest in the layer that must face both up and down. What the chart calls "falling employee engagement" more often names the one person caught between the two.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">gallup.com</a>（2026 版：20%／主管 22%／$10 万亿≈9% GDP 诸数）</span><span data-en>Sources: <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">gallup.com</a> (2026 edition: the 20% / 22% managers / $10T ≈ 9% GDP figures)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>社群 · 平台接活者</span><span data-en>COMMUNITY · The Platform precarious</span></div>
+    <h3><span data-zh>几千万人的「老板是我自己」，代价是没有人为我兜底</span><span data-en>Millions whose boss is themselves, with no one beneath them</span></h3>
+    <p><span data-zh><b>要点</b>：国际劳工组织《印度平台经济与零工》（2026 年 3 月）与多项同期研究一致指出：平台零工的处境由「收入不稳定＋保障缺位」共同定义——接活者多无医疗保险、无失业救济、无带薪病假，定价与派单权握在平台手中；低、中低收入国家里近九成的 15–29 岁青年工人从事非正规工作，其「灵活就业」的另一面是社会保护的缺席。全球以平台为生的接活者数以千万计（确切口径随定义漂移 <span class="stamp warn">◇</span>）。</span><span data-en><b>The point</b>: the ILO's work on India's platform and gig economy (March 2026) and parallel studies converge: the platform worker's condition is set by income instability plus absent protection — mostly no health cover, no unemployment benefit, no paid sick leave, with the power to set prices and assign jobs held by the platform. In low- and lower-middle-income countries nearly nine in ten young workers aged 15–29 are in informal work, whose "flexibility" has the withdrawal of social protection as its other face. Tens of millions worldwide earn a living through platforms (the exact count drifts with the definition <span class="stamp warn">◇</span>).</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：零工经济把「创业者的自由」发给最需要稳定的人——「我是自己的老板」这句广告词，翻译过来其实是「没有人替我承担下行风险」。</span><span data-en><b>The cut</b>: the gig economy hands "entrepreneur's freedom" to those who most need a floor. "I'm my own boss," translated, means "no one absorbs my downside."</span></p>
+    <div class="src"><span class="stamp warn">◇ 全球零工总数随口径而变</span><span data-zh>回源：<a href="https://www.ilo.org/sites/default/files/2026-03/ILO%20Platform%20workers%20and%20EBMOs%20India%20Report_3%20April%20%28LIGHT%20PDF%29_Edited%2023022026.pdf" target="_blank" rel="noopener">ilo.org</a>（ILO：印度平台与零工报告，2026·03）· <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a>（非正规就业近九成）</span><span data-en>Sources: <a href="https://www.ilo.org/" target="_blank" rel="noopener">ilo.org</a> (ILO, India platform &amp; gig report, Mar 2026) · <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a> (nine in ten in informal work)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>年龄段 · 年长与老龄</span><span data-en>AGE · The Older and the Aged</span></div>
+    <h3><span data-zh>六十岁之上，是被当作「市场」还是「负担」的一代</span><span data-en>Sixty and up: a generation courted as a market and discounted as a load</span></h3>
+    <p><span data-zh><b>要点</b>：联合国开发计划署《老龄化》报告与多方口径一致：全球 60 岁以上人口已约占 <b class="gist">15%</b>，增速为其余年龄段的三倍以上，预计到本世纪中叶达 21 亿。中国大陆方面，据官方统计，2025 年底 60 岁及以上人口约 <b class="gist">3.2 亿</b>，占总人口约 23%。于是「银发经济」被反复提出（如中国二十届四中全会 2025 年 10 月将「发展银发经济、积极应对老龄化」写入建议），而老龄的另一面——孤独与照护缺口——仍是未解之数 <span class="stamp warn">◇</span>。</span><span data-en><b>The point</b>: UNDP's ageing work and comparable tallies agree: people aged 60+ are already about <b class="gist">15%</b> of the world, growing over three times faster than the rest, and projected to reach 2.1 billion by mid-century. In mainland China, official statistics put the 60-and-over population at roughly <b class="gist">320 million</b> by end-2025, some 23% of the total. Hence the recurring theme of a "silver economy" (China's October 2025 Fourth Plenum wrote "developing the silver economy, actively responding to ageing" into its recommendations) — while ageing's other face, loneliness and the care gap, remains an open number <span class="stamp warn">◇</span>.</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：一个社会如何同时称呼老人为「市场」与「负担」，暴露它其实把「人」折算成了两样东西：购买力与抚养比。老龄化的真正考题，是这两折算之外，还留不留下不产出、也值得过的日子。</span><span data-en><b>The cut</b>: a society that calls its old both "a market" and "a burden" has quietly converted persons into two things — purchasing power and a dependency ratio. The real test of ageing is whether any life that produces neither is still held to be worth living.</span></p>
+    <div class="src"><span class="stamp warn">◇ 孤独与照护缺口的确切基数待补</span><span data-zh>回源：<a href="https://www.undp.org/publications" target="_blank" rel="noopener">undp.org</a>（UNDP《老龄化》报告，2026·04）· <a href="https://research.hktdc.com/en/article/MjI5NDg4MTY1OQ" target="_blank" rel="noopener">hktdc research</a>（中国大陆 60 岁及以上 3.2 亿/23%，源于国家统计局）</span><span data-en>Sources: <a href="https://www.undp.org/" target="_blank" rel="noopener">undp.org</a> (UNDP ageing report, Apr 2026) · <a href="https://research.hktdc.com/en/article/MjI5NDg4MTY1OQ" target="_blank" rel="noopener">hktdc research</a> (Mainland: 320m aged 60+, 23%, after the National Bureau of Statistics)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>族群 · 流离者</span><span data-en>PEOPLES · The Displaced</span></div>
+    <h3><span data-zh>一亿三千六百万人的「回国」，仍是尚未排上日程的一词</span><span data-en>For 136 million, "home" is still a date that has not been set</span></h3>
+    <p><span data-zh><b>要点</b>：内部流离者监测中心《2026 全球境内流离失所报告》（GRID 2026）记录约 <b class="gist">8,220 万</b>人境内流离失所；联合国难民署《2026 全球呼吁》预计被迫流离失所与无国籍者到 2026 年底达 <b class="gist">1.36 亿</b>；国际移民组织《世界移民报告 2026》则以 2024 年底逾 1.2 亿为基线。三个数字口径不同（境内／全口径／跨年基线），不可混为一谈，却同指一件事：在全球人口中，越来越大的一个圈层，其处境是一个词——「在途中」 <span class="stamp warn">◇ 各口径以机构原文为准</span>。</span><span data-en><b>The point</b>: the IDMC's Global Report on Internal Displacement 2026 logs about <b class="gist">82.2 million</b> internally displaced; UNHCR's Global Appeal 2026 projects forced displacement and statelessness reaching <b class="gist">136 million</b> by end-2026; the IOM's World Migration Report 2026 uses a baseline of over 120 million at end-2024. The three rest on different definitions (internal / all-forced / a cross-year base) and must not be merged, yet all name one thing: a growing stratum of humankind whose condition is a single word — in transit <span class="stamp warn">◇ figures per each agency's own text</span>.</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：流离数字年年刷新，本身就是一份判决书——它证明「临时收容」正变成一种长期身份。对这一圈层，最缺的不是统计，而是一个能落进日历的归期。</span><span data-en><b>The cut</b>: that the displacement count keeps resetting is itself a verdict — proof that "temporary shelter" has hardened into a lasting status. This stratum lacks not statistics but a date of return that can go into a calendar.</span></p>
+    <div class="src"><span class="stamp warn">◇ 各口径以机构原文为准</span><span data-zh>回源：<a href="https://www.internal-displacement.org/global-report/grid2026/" target="_blank" rel="noopener">internal-displacement.org</a>（IDMC GRID 2026：8,220 万境内流离）· <a href="https://www.unhcr.org/publications/global-appeal-2026" target="_blank" rel="noopener">unhcr.org</a>（UNHCR 2026 全球呼吁：1.36 亿）· <a href="https://www.iom.int/" target="_blank" rel="noopener">iom.int</a>（IOM 世界移民报告 2026）</span><span data-en>Sources: <a href="https://www.internal-displacement.org/global-report/grid2026/" target="_blank" rel="noopener">internal-displacement.org</a> (IDMC GRID 2026: 82.2m internally displaced) · <a href="https://www.unhcr.org/publications/global-appeal-2026" target="_blank" rel="noopener">unhcr.org</a> (UNHCR Global Appeal 2026: 136m) · <a href="https://www.iom.int/" target="_blank" rel="noopener">iom.int</a> (World Migration Report 2026)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>行当 · 田野与餐桌之间</span><span data-en>TRADES · Between the Field and the Table</span></div>
+    <h3><span data-zh>粮荒预警里的那道缺口：要 290 亿美元，到手不足三分之一</span><span data-en>The gap inside the hunger warning: $29 billion asked, under a third received</span></h3>
+    <p><span data-zh><b>要点</b>：粮农组织与世界粮食计划署《饥饿热点》预警（覆盖 2025 年 11 月至 2026 年 5 月）指出，全球多个热点面临急性粮食不安全感加剧，而在需要救助的人最危急的窗口，资金却严重不足——按两机构同期口径，到 2025 年 10 月底，290 亿美元的人道援助需求中仅到位约 <b class="gist">105 亿</b>。这条圈层关乎种地的人与被饿到的餐桌两端：气候与冲突把田野抛荒，资金缺口又把援助拦在半路。</span><span data-en><b>The point</b>: the FAO–WFP Hunger Hotspots early warning (covering November 2025 – May 2026) finds acute food insecurity deepening across several hotspots while the money to act on it falls short — on the two agencies' own figures, of a $29 billion humanitarian requirement only about <b class="gist">$10.5 billion</b> had been received by end-October 2025. This stratum spans both ends of one chain — those who farm and those at the table: climate and conflict leave fields fallow, and the funding gap halts the aid halfway.</span></p>
+    <p class="crit"><span data-zh><b>精评</b>：饥荒在当代几乎从不是「粮食不够生产」，而是「不够有钱、不够有路把粮运到」。预警报告年年提前半年点名，恰说明真正稀缺的不是信息，是行动的时间与预算。</span><span data-en><b>The cut</b>: famine today is almost never that too little was grown, but that too little money and too few roads moved it. That the early warnings are issued half a year in advance proves the scarce resource is not information but the time and budget to act.</span></p>
+    <div class="src"><span class="stamp warn">◇ 到位资金随拨付滚动，以机构最新通报为准</span><span data-zh>回源：<a href="https://www.wfp.org/news/new-fao-wfp-report-warns-shrinking-window-prevent-millions-more-people-facing-acute-food" target="_blank" rel="noopener">wfp.org</a>（FAO–WFP：$10.5B／$29B 缺口与饥饿热点预警）</span><span data-en>Sources: <a href="https://www.wfp.org/news/new-fao-wfp-report-warns-shrinking-window-prevent-millions-more-people-facing-acute-food" target="_blank" rel="noopener">wfp.org</a> (FAO–WFP: the $10.5bn of $29bn gap and the hunger hotspots warning)</span></div>
+  </div>
+</section>
+
+<!-- ═══ 六采言 · The Combed Word (4×10) ═══ -->
+<section class="sec" id="words">
+  <style>
+  .ten{list-style:none;counter-reset:t;margin:.4rem 0 0}
+  .ten li{counter-increment:t;position:relative;padding:.7rem 0 .7rem 2.4rem;border-bottom:1px dashed rgba(228,220,208,.7)}
+  .ten li:last-child{border-bottom:none}
+  .ten li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;top:.75rem;font-family:var(--ff-display);font-weight:700;color:var(--warm-amber);font-size:.9rem}
+  .ten .quote{font-family:"Gentium Plus","LXGW WenKai","Noto Serif SC",serif;font-size:1.02rem;color:var(--ink-deep);line-height:1.85;font-style:normal}
+  .ten .orig{display:block;color:var(--accent-violet);font-style:italic;font-size:.92rem;margin-top:.15rem}
+  .ten .who{display:block;margin-top:.35rem;font-size:.78rem;color:var(--ink-soft)}
+  .ten .who a{color:var(--ink-pale)}
+  </style>
+  <div class="sec-head">
+    <span class="glyph">六</span>
+    <h2><span data-zh>采言 · 本月四张拾单</span><span data-en>The Combed Word · Four Tens</span></h2>
+    <span class="lens"><span data-zh>金句·清醒·暖心·觉悟</span><span data-en>Lines · Facts · Warmth · Awakening</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>四张拾单皆取本月真实说过、且回得去源头者。十一月的可采之语，大半出在东京国际电影节的颁奖礼上——那是一年里少数几位导演、制片、陪审员当众开口、句句留有纪录的场合。凡例：句必归人，人必归源，源必归年；未能一手确证者标 <span class="stamp warn">◇</span>；本仓自撰的引申一律注明，不混入引语。本期首版先落「金句」「清醒事实」两单，「暖心」「觉悟」两单留待周更补入——宁缺毋滥。</span><span data-en>Every line here was actually spoken this month and can be traced. November's harvest sits mostly at the Tokyo International Film Festival's awards ceremony — one of the few hours a year when directors, producers and jurors speak in public on the record. Rule: a line belongs to a person, the person to a source, the source to a year; anything not pinned first-hand carries <span class="stamp warn">◇</span>; our own gloss is always marked and never posed as quotation. This first version lands the "Golden Lines" and "Sobering Facts" tens; "Warm Hearts" and "Awakening" await the weekly update — we prefer the blank to the clamour.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>其一 · 金句（影响力之语）</span><span data-en>I · Golden Lines (words that carry)</span></div>
+    <ol class="ten">
+      <li><span class="quote" data-zh>「这个奖，多少是对一部差点没拍成的古怪电影的一种申辩……它讲的不是讯息，是人。」</span><span class="quote" data-en>"This award is a little vindication for a quirky film that almost did not happen… A film not about messages, but about people."</span><span class="who"><span data-zh>——Milcho Manchevski，《Sister Brother Manhole Cover》获东京大奖，以视频致辞（人名依凡例⑩保留原文写法）· <span class="stamp ok">✔ 2026-11-04</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span><span data-en>— Milcho Manchevski, accepting the Tokyo Grand Prix by video · <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span></span></li>
+      <li><span class="quote" data-zh>「我们带着一只井盖来到东京，要带着一个漂亮的奖回马其顿——这笔交易不亏吧？」</span><span class="quote" data-en>"We came here to Tokyo with a manhole cover, and we are going back to Macedonia with a beautiful award. I'd say it's a pretty good deal, huh?"</span><span class="who"><span data-zh>——制片人 Jane Kortoshev 登台之言（人名依凡例⑩保留原文写法）· <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span><span data-en>— producer Jane Kortoshev, on stage · <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span></span></li>
+      <li><span class="quote" data-zh>「评委会选它，是因为它对笔下人物显出的人性与悲悯——一部复杂而自洽、既动人又顽皮的片子。」</span><span class="quote" data-en>"…for the humanity and compassion shown towards its characters… a complex, coherent film that manages to be both touching and playful."</span><span class="who"><span data-zh>——Rolf de Heer，第 39 届东京国际电影节评审团主席（人名依凡例⑩保留原文写法）· <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span><span data-en>— Rolf de Heer, jury president, 39th TIFF · <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span></span></li>
+      <li><span class="quote" data-zh>「把这个奖献给塞尔维亚的学生与公民——过去两年，他们一直在为自由而抗争。」</span><span class="quote" data-en>"…dedicated to the students and citizens of Serbia who have spent the past two years fighting for freedom."</span><span class="who"><span data-zh>——Jelena Maksimović，《Until the Day Ends》获最佳艺术贡献（人名依凡例⑩保留原文写法）· <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span><span data-en>— Jelena Maksimović, best artistic contribution · <span class="stamp ok">✔</span> <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a></span></span></li>
+      <li><span class="quote" data-zh>「一代人若找不到体面的工作，就无从有信心地建构自己的未来。」</span><span class="quote" data-en>"A generation that cannot find decent work cannot build its future with confidence."</span><span class="who"><span data-zh>——吉尔伯特·洪博（Gilbert F. Houngbo），国际劳工组织总干事（《全球青年就业趋势 2026》）· <span class="stamp ok">✔ 2026-08-11</span> <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a></span><span data-en>— ILO Director-General Gilbert F. Houngbo · <span class="stamp ok">✔</span> <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a></span></span></li>
+      <li><span class="quote" data-zh>「技术进步，包括人工智能，必须为年轻人服务，而不是与他们作对。」</span><span class="quote" data-en>"Technological progress, including AI, must work for young people, not against them."</span><span class="who"><span data-zh>——Sukti Dasgupta，国际劳工组织就业与技能司司长（人名依凡例⑩保留原文写法）· <span class="stamp ok">✔ 2026-08-11</span> <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a></span><span data-en>— Sukti Dasgupta, ILO Employment &amp; Skills director · <span class="stamp ok">✔</span> <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a></span></span></li>
+    </ol>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>其二 · 清醒事实（本月各圈层的处境）</span><span data-en>II · Sobering Facts (each stratum's condition)</span></div>
+    <ol class="ten">
+      <li><span class="quote" data-zh>2025 年全球青年失业率达 12.4%，约 6,700 万 15–24 岁者无业。</span><span class="quote" data-en>Global youth unemployment hit 12.4% in 2025 — about 67 million jobless aged 15–24.</span><span class="who"><span data-zh>——国际劳工组织《全球青年就业趋势 2026》· <span class="stamp ok">✔</span> <a href="https://www.ilo.org/resource/news/youth-unemployment-rises-young-people-face-harder-road-decent-work" target="_blank" rel="noopener">ilo.org</a></span><span data-en>— ILO, Global Employment Trends for Youth 2026 · <span class="stamp ok">✔</span> <a href="https://www.ilo.org/" target="_blank" rel="noopener">ilo.org</a></span></span></li>
+      <li><span class="quote" data-zh>逾 2.57 亿青年不就业、不受教育、不受训（NEET 占 20%）。</span><span class="quote" data-en>Over 257 million young people are NEET — not in employment, education or training (20%).</span><span class="who"><span data-zh>——国际劳工组织（同上）· <span class="stamp ok">✔</span> <a href="https://www.ilo.org/" target="_blank" rel="noopener">ilo.org</a></span><span data-en>— ILO (ibid.) · <span class="stamp ok">✔</span> <a href="https://www.ilo.org/" target="_blank" rel="noopener">ilo.org</a></span></span></li>
+      <li><span class="quote" data-zh>全球员工投入度降至 20%，为五年低点；低投入每年约耗掉全球经济 10 万亿美元。</span><span class="quote" data-en>Global employee engagement fell to 20%, a multi-year low; low engagement drains roughly $10 trillion from the world economy each year.</span><span class="who"><span data-zh>——盖洛普《全球职场状况 2026》· <span class="stamp ok">✔</span> <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank" rel="noopener">gallup.com</a></span><span data-en>— Gallup, State of the Global Workplace 2026 · <span class="stamp ok">✔</span> <a href="https://www.gallup.com/" target="_blank" rel="noopener">gallup.com</a></span></span></li>
+      <li><span class="quote" data-zh>到 2026 年底，全球被迫流离失所与无国籍者预计达 1.36 亿。</span><span class="quote" data-en>Forced displacement and statelessness worldwide is projected at 136 million by end-2026.</span><span class="who"><span data-zh>——联合国难民署《2026 全球呼吁》· <span class="stamp ok">✔</span> <a href="https://www.unhcr.org/publications/global-appeal-2026" target="_blank" rel="noopener">unhcr.org</a></span><span data-en>— UNHCR Global Appeal 2026 · <span class="stamp ok">✔</span> <a href="https://www.unhcr.org/" target="_blank" rel="noopener">unhcr.org</a></span></span></li>
+      <li><span class="quote" data-zh>290 亿美元人道粮援需求，到 2025 年 10 月底仅到位约 105 亿。</span><span class="quote" data-en>Of a $29 billion food-aid requirement, only about $10.5 billion had been received by the end of October 2025.</span><span class="who"><span data-zh>——粮农组织／世界粮食计划署《饥饿热点》· <span class="stamp ok">✔</span> <a href="https://www.wfp.org/" target="_blank" rel="noopener">wfp.org</a></span><span data-en>— FAO–WFP Hunger Hotspots · <span class="stamp ok">✔</span> <a href="https://www.wfp.org/" target="_blank" rel="noopener">wfp.org</a></span></span></li>
+    </ol>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>其三 · 暖心句 ｜ 其四 · 觉悟句</span><span data-en>III · Warm Hearts | IV · Awakening</span></div>
+    <p><span data-zh>本周内，「暖心」与「觉悟」两单尚无经一手核证、句可归人、人可归源者。依凡例⑤「本月无据者不采」，此处留白，待后续周更回源后补入——留白即刻度，不是缺席。</span><span data-en>Within this week's sweep, the Warm Hearts and Awakening tens hold no line yet that is first-hand verifiable — a line to a person, a person to a source. Under Convention ⑤, nothing unsupported is admitted this month; the space is left blank for the weekly update to fill. The blank is also a measurement, not an absence.</span></p>
+  </div>
+</section>
+
+<!-- ═══ 七 · 四方 · 远方分讯 ═══ -->
+<section class="sec" id="elsewhere">
+  <div class="sec-head">
+    <span class="glyph">七</span>
+    <h2><span data-zh>四方 · 远方分讯</span><span data-en>Elsewhere Dispatches</span></h2>
+    <span class="lens"><span data-zh>地区轮值：金马·东京·上海·拉各斯×内罗毕·罗马·阿拉伯</span><span data-en>On rotation: Taipei · Tokyo · Shanghai · Lagos × Nairobi · Rome · the Arab world</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>「四方」栏每期轮值补入若干非英语文化圈的当月之事，回源日期单记。十一月这条带子上，台北与东京已在赛果里（金马影展 11·6 启幕、颁奖 11·22；东京电影节 11·4 收官），上海的艺术节正走向 11·15 的闭幕，拉各斯双年展 11·14 待开、内罗毕双年展 11·8 收官，罗马有一条迪伦与梵蒂冈的会讯，阿拉伯小说国际奖的长名单则留到十二月。</span><span data-en>The Dispatches belt rotates through non-Anglophone spheres each month, dated separately. On November's belt, Taipei and Tokyo already carry results (the Golden Horse film festival opens 6 Nov, its gala 22 Nov; Tokyo's festival closed 4 Nov); Shanghai's arts festival is running toward its 15 November close; Lagos's biennial opens 14 November and Nairobi's closes 8 November; Rome has a Dylan–Vatican dispatch; and the Arab novel prize's longlist waits until December.</span></p>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其一 · 银幕｜台北</span><span data-en>Dispatch I · SCREEN · Taipei</span></div>
+    <h3><span data-zh>第 63 届金马奖：影展 11·6 开幕，颁奖礼 11·22 移师台北流行音乐中心</span><span data-en>The 63rd Golden Horse: festival opens 6 Nov, gala 22 Nov at the Taipei Music Center</span></h3>
+    <p><span data-zh>华语世界历史最久的电影奖——金马奖，今年第 63 届。金马影展于 11 月 6 日开幕，颁奖典礼例于十一月的最后一个周日、今年定 11 月 22 日在台北流行音乐中心举行。入围名单已公布：《狂忘警探》以十一项提名领跑，陈哲艺的《我们不是陌生人》获七项。本号开局于颁奖礼之前，各奖归属 11·22 才揭晓，故以 ◇ 记下入围与档期，赛果待周更回源补入。</span><span data-en>The oldest film prize in the Chinese-speaking world, the Golden Horse, reaches its 63rd year. The festival opens 6 November and the gala — held the last Sunday of November by custom — lands 22 November at the Taipei Music Center. The nominations are out: <i>狂忘警探</i> leads with eleven, and Anthony Chen's <i>我们不是陌生人</i> takes seven. This issue opens before the ceremony, so the nominations and dates sit under ◇ and the awards enter on a weekly update.</span></p>
+    <p class="crit"><span data-zh>金马的特别，在于它是华语电影唯一跨越数个地区、以作品而非籍贯论英雄的场子；把颁奖礼移进流行音乐中心，是老牌电影奖向新一代观众挪一步。</span><span data-en>The Golden Horse is singular in judging Chinese-language film across several regions by the work, not the passport; moving the gala into a pop-music arena is an old prize stepping one notch toward a younger audience.</span></p>
+    <div class="src"><span class="stamp warn">◇ 11·22 赛果待周更补</span><span data-zh>回源：<a href="https://www.goldenhorse.org.tw/" target="_blank" rel="noopener">goldenhorse.org.tw</a>（金马执委会官网：63 届影展 11·6 开幕、颁奖 11·22 台北流行音乐中心、入围名单）</span><span data-en>Sources: <a href="https://www.goldenhorse.org.tw/" target="_blank" rel="noopener">goldenhorse.org.tw</a> (Golden Horse Executive Committee: 63rd edition, festival 6 Nov, gala 22 Nov at the Taipei Music Center, nominations)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其二 · 银幕｜东京</span><span data-en>Dispatch II · SCREEN · Tokyo</span></div>
+    <h3><span data-zh>第 39 届东京国际电影节收官：Manchevski 夺东京大奖，中国演员 Hu Ling 影后</span><span data-en>The 39th Tokyo International Film Festival closes: Manchevski takes the Grand Prix; China's Hu Ling best actress</span></h3>
+    <p><span data-zh>10 月 26 日至 11 月 4 日，第 39 届东京国际电影节举行，11 月 4 日颁奖。评审团主席 Rolf de Heer 把东京大奖（300 万日元）授予北马其顿等六国合拍、Milcho Manchevski 的《Sister Brother Manhole Cover》——一部讲斯科普里两兄妹扒街头废金属的讽喻喜剧。评委会特别奖（50 万日元）归新加坡、华裔动画艺术家 Sun Xun 历时约十年完成的动画长片《Magic Atlas》；最佳导演归 Lisandro Alonso《Double Freedom》；最佳男演员归日本的 Narita Ryo，出自主演 Mishima Yukiko 执导的《Two Cigarettes, Three Nights》，为日本在主竞赛唯一斩获；<b class="gist">最佳女演员归中国演员 Hu Ling，出自 Wang Jiangyong 首作《The Night That Binds Us》，她在台上感谢母校北京电影学院</b>；最佳艺术贡献归塞尔维亚导演 Jelena Maksimović 的《Until the Day Ends》。按凡例⑩，人名与片名未经汉字一手核实者一律保留罗马字，不臆造中文写法。</span><span data-en>The 39th TIFF ran 26 October – 4 November, its awards on 4 November. Jury president Rolf de Heer gave the Tokyo Grand Prix (JPY 3 million) to Milcho Manchevski's <i>Sister Brother Manhole Cover</i>, a six-country Balkan co-production and comic allegory about two siblings in Skopje who strip scrap metal off the streets. The Special Jury Prize (JPY 500,000) went to <i>Magic Atlas</i>, an animated feature the Chinese-born artist Sun Xun spent about a decade making, from Singapore; best director to Lisandro Alonso's <i>Double Freedom</i>; best actor to Japan's Narita Ryo, in Mishima Yukiko's <i>Two Cigarettes, Three Nights</i> — Japan's only main-competition win; <b class="gist">best actress to China's Hu Ling in Wang Jiangyong's debut <i>The Night That Binds Us</i>, who thanked her alma mater, the Beijing Film Academy</b>; and best artistic contribution to Jelena Maksimović's <i>Until the Day Ends</i> from Serbia.</span></p>
+    <p class="crit"><span data-zh>东京的名单把北马其顿、新加坡、阿根廷、塞尔维亚与中国并列，恰是戛纳—威尼斯—柏林之外另一幅亚洲自画像；而 Hu Ling 以首作出演者折桂、开口谢的是北京电影学院（人名依凡例⑩保留罗马字）——华语新面孔正从 A 类电影节的表演奖回流入池。</span><span data-en>Tokyo's list sets North Macedonia, Singapore, Argentina, Serbia and China side by side — an Asian self-portrait beyond Cannes, Venice and Berlin. And Hu Ling, winning for a debut performance, thanked the Beijing Film Academy: new Chinese faces are flowing back into the frame through an A-festival's acting prize.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a>（2026-11-04：东京国际电影节 39 届赛果全单与颁奖礼引语）· <a href="https://www.tiff.ne.jp/en/" target="_blank" rel="noopener">tiff.ne.jp</a>（官网会期）</span><span data-en>Sources: <a href="https://variety.com/" target="_blank" rel="noopener">variety.com</a> (4 Nov 2026: full 39th TIFF winners and ceremony quotes) · <a href="https://www.tiff.ne.jp/en/" target="_blank" rel="noopener">tiff.ne.jp</a> (the festival's own dates)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其三 · 舞台｜上海</span><span data-en>Dispatch III · STAGE · Shanghai</span></div>
+    <h3><span data-zh>上海艺术节推向 11·15 闭幕：近 400 项、近 1100 场，尾声请来了美国芭蕾舞剧院</span><span data-en>Shanghai's arts festival runs to its 15 Nov close: ~400 items, ~1,100 shows, ABT for the finale</span></h3>
+    <p><span data-zh>上海本届艺术节规模录得近 400 项活动、近 1100 场演出，11 月 15 日闭幕；闭幕重磅为美国芭蕾舞剧院（American Ballet Theatre）的《天鹅湖》。相关营业性演出已按规定在文旅主管部门备案。本号开局于 11·6，闭幕演出尚未登场，故以 ◇ 记下闭幕档期与安排，实际上演与反响待 11·15 之后随周更补入。</span><span data-en>Shanghai's current arts festival logs some 400 events and nearly 1,100 performances, closing 15 November with American Ballet Theatre's <i>Swan Lake</i> as the marquee finale; the commercial performances are filed with the culture-and-tourism authority as required. This issue opens on 6 November, before the close, so the closing date and billing sit under ◇; the actual performance and its reception enter after 15 November on a weekly update.</span></p>
+    <p class="crit"><span data-zh>城市艺术节的分量，写在两个数上：项目数与场次。前者量策展的胃口，后者量剧场运转的耐力——把世界级舞团放进闭幕档，是把「办得长」与「请得动」同时证明一遍。</span><span data-en>A city arts festival weighs two numbers: items and performances — the first measures curatorial appetite, the second a theatre district's endurance. Booking a world-class company for the closing slot proves you can run long and reach far at once.</span></p>
+    <div class="src"><span class="stamp warn">◇ 11·15 闭幕上演待周更补</span><span data-zh>回源：<a href="https://www.mct.gov.cn/" target="_blank" rel="noopener">mct.gov.cn</a>（文化和旅游部：涉外营业性演出备案）· <a href="https://www.shct.gov.cn/" target="_blank" rel="noopener">上海文旅</a>（艺术节规模与闭幕安排）</span><span data-en>Sources: <a href="https://www.mct.gov.cn/" target="_blank" rel="noopener">mct.gov.cn</a> (ministry filing for cross-border commercial performances) · Shanghai culture-&-tourism (festival scale and closing billing)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其四 · 艺文｜拉各斯 × 内罗毕</span><span data-en>Dispatch IV · ARTS · Lagos × Nairobi</span></div>
+    <h3><span data-zh>非洲双年展的两道时差：内罗毕首届 11·8 收官，拉各斯第五届 11·14 接棒</span><span data-en>Two time zones of the African biennale: Nairobi's first closes 8 Nov, Lagos's fifth takes over 14 Nov</span></h3>
+    <p><span data-zh>承上月「非洲艺术界一开一候」之局：首届内罗毕艺术双年展（10 月 24 日至 11 月 8 日，基贝拉艺术区）本月上旬收官；第五届拉各斯双年展「The Museum of Things Unseen」随即于 11 月 14 日至 12 月 6 日在 Eko Atlantic 展开，公众节目占 11·13–16 与 12·4–6 两个周末。本号开局于两场之间的空档，内罗毕收官实况与拉各斯开幕反响分别以 ◇ 记档期，随周更与展期回源补入。</span><span data-en>Carrying October's "one opened, one waiting": the first Nairobi Arts Biennale (24 October – 8 November, in the Kibera Arts District) closes in this first week, and the fifth Lagos Biennial, "The Museum of Things Unseen," immediately opens 14 November – 6 December at Eko Atlantic, with public programmes on the opening and closing weekends. This issue opens in the gap between the two, so each event's status sits under ◇, entering on the weekly update as the runs unfold.</span></p>
+    <p class="crit"><span data-zh>双年展的密度，是文化主权的刻度。内罗毕从聚居区起步、拉各斯连办五届——非洲的当代艺术叙事，正在从「被策展出去」转为「自己排日历」。</span><span data-en>Biennale density is a gauge of cultural sovereignty. Nairobi begins from a settlement; Lagos is into its fifth edition. Africa's contemporary-art story is turning from being curated out to setting its own calendar.</span></p>
+    <div class="src"><span class="stamp warn">◇ 两场实况随展期回源补</span><span data-zh>回源：<a href="https://www.lagostenabiennial.org/" target="_blank" rel="noopener">拉各斯双年展</a>（第五届 11·14–12·6 Eko Atlantic·公众周末 11·13–16 与 12·4–6）· <a href="https://www.artreview.com/" target="_blank" rel="noopener">artreview.com</a>（参展名单）· 内罗毕双年展站方页面</span><span data-en>Sources: Lagos Biennial (5th edition, 14 Nov – 6 Dec, Eko Atlantic; public weekends 13–16 Nov and 4–6 Dec) · <a href="https://www.artreview.com/" target="_blank" rel="noopener">artreview.com</a> (participant list) · the Nairobi Biennale's own page</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其五 · 现场｜罗马</span><span data-en>Dispatch V · ON THE RECORD · Rome</span></div>
+    <h3><span data-zh>迪伦进梵蒂冈：一串念珠、一部《编年纪》，与一场「不许掏手机」的罗马演唱会</span><span data-en>Dylan at the Vatican: a rosary, a copy of Chronicles, and a phone-free Rome concert</span></h3>
+    <p><span data-zh>11 月 4 日，鲍勃·迪伦获教廷接见，与教方互赠——一串玫瑰经念珠，与他本人的《编年纪》（Chronicles）；此前七月，他为教宗相关出版物写过一篇序言。11 月 5 日，他在罗马开唱，且是巡演中主打「手机禁用」（phone-free）的一站。此讯回源于梵蒂冈新闻网的专稿；因涉及在版权期的歌词与自传正文，本栏只记已发生的日期与互赠，不引正文。</span><span data-en>On 4 November Bob Dylan was received at the Vatican, gifts exchanged — a rosary for his own <i>Chronicles</i>; in July he had written a preface for a papal publication. On 5 November he played Rome, a date billed as phone-free on the tour. The dispatch re-sources to a Vatican News feature; because it touches in-copyright lyrics and memoir, this column logs only the dates and the exchange, quoting no body.</span></p>
+    <p class="crit"><span data-zh>一位六〇年代的抗议歌手，如今与教宗交换念珠与自传，并在「不许录像」的场次里被现场观看——这是关于「流行文化如何变成古典」的一句旁注：它终于被允许只以在场，而非以复制来享用。</span><span data-en>That a 1960s protest singer should now exchange rosaries and memoirs with a Pope, and be met at shows where recording is barred, is a marginal note on how pop becomes classic: at last allowed to be enjoyed as presence, not as copies.</span></p>
+    <div class="src"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>回源：<a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a>（11·4 会见、互赠、七月序言与罗马演唱会详情）· <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a>（巡演页：phone-free 场次）</span><span data-en>Sources: <a href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener">vaticannews.va</a> (the 4 Nov audience, gifts, July preface and Rome show) · <a href="https://www.bobdylan.com/" target="_blank" rel="noopener">bobdylan.com</a> (tour dates, phone-free)</span></div>
+  </div>
+
+  <div class="item">
+    <div class="kicker"><span data-zh>四方其六 · 文学｜阿拉伯</span><span data-en>Dispatch VI · LETTERS · The Arab World</span></div>
+    <h3><span data-zh>阿拉伯小说国际奖（IPAF）：十二月才启闸，本月留一道 ◇</span><span data-en>The International Prize for Arabic Fiction: the gate opens in December; a ◇ held this month</span></h3>
+    <p><span data-zh>阿拉伯小说国际奖（IPAF，常被称为「阿拉伯布克」）的节律是年初公布长名单、五月颁奖，其下届名单依历年节奏多在岁末年初启动。本栏承上月「下届长名单今年 12 月公布」之预估，仍以 ◇ 记之——这是「四方」栏地区轮值在十一月的阿拉伯一极：不为凑数而臆断，只把一个尚未落地的档期如实标成待定。</span><span data-en>The International Prize for Arabic Fiction (IPAF, often "the Arab Booker") runs on a rhythm of a longlist in early spring and a ceremony in May; the next cycle's list, by yearly habit, starts toward the year's turn. Carrying last month's forecast — "the new longlist in December" — it stays under ◇. This is the belt's Arab pole for November: not a guess to fill a slot, but an unset date honestly marked as pending.</span></p>
+    <p class="crit"><span data-zh>一份月报愿意为某个文化圈留一格「本月暂无、待补」的空位，本身就是一种尊重：它承认那个现场的存在，又不替它编造新闻。</span><span data-en>Keeping one blank square for a cultural sphere — nothing yet, to be filled — is itself a respect: it acknowledges the scene exists without inventing news for it.</span></p>
+    <div class="src"><span class="stamp warn">◇ 下届长名单预计 12 月公布</span><span data-zh>回源：<a href="https://www.arabicfiction.org/" target="_blank" rel="noopener">arabicfiction.org</a>（IPAF 官网：历届节律与下届启动窗口）</span><span data-en>Sources: <a href="https://www.arabicfiction.org/" target="_blank" rel="noopener">arabicfiction.org</a> (IPAF: past cycles and the next longlist window)</span></div>
+  </div>
+</section>
+
+<!-- ═══ 声色 · 本月可点开的影像与声音 ═══ -->
+<section class="sec media" id="media">
+  <div class="sec-head">
+    <span class="glyph">色</span>
+    <h2><span data-zh>声色 · 本月可点开的影像与声音</span><span data-en>Sight &amp; Sound · Everything Here Is Clickable</span></h2>
+    <span class="lens"><span data-zh>声音与影像不转存，只送回权利人页面</span><span data-en>Sound and vision are not copied, only sent back to the rights-holders</span></span>
+  </div>
+  <p class="sec-lede"><span data-zh>本栏规矩不变：录音、影片与纪录片一律不转存，只送回权利人自己的页面；能落到条目页的绝不落首页，落不到的落该站首页或栏目页并如此标明（凡例⑥）。本期先给四扇可直接点开的门，随周更补入经核的一手图像。</span><span data-en>The rule holds: recordings, films and reports are not copied but sent back to their rights-holders' own pages; item pages where they exist, front or section pages where they do not, marked as such (Convention ⑥). Four doors are open now; first-hand images are added on the weekly update.</span></p>
+
+  <div class="media-grid">
+    <div class="mcard">
+      <span class="mtag"><span data-zh>听</span><span data-en>LISTEN</span></span>
+      <h4><span data-zh>迪伦《1976 Live Recordings》：三十九张盘的巡演现场</span><span data-en>Dylan's 1976 Live Recordings: thirty-nine discs of the road</span></h4>
+      <p><span data-zh>Bootleg Series Vol. 18 官方页：1976 年巡演试听与曲目。本仓「声活」迪伦条与「四方·罗马」条的音响原件，皆指向此页；歌词与自传正文在版权期内，不在本站转存。</span><span data-en>The official Bootleg Series Vol. 18 page: 1976 tour samples and tracklist. The audio original behind our Dylan and Rome-Vatican entries; lyric and memoir stay in copyright and are not hosted here.</span></p>
+      <a class="go" href="https://www.bobdylan.com/" target="_blank" rel="noopener"><span data-zh>直接听</span><span data-en>Play it</span></a>
+    </div>
+
+    <div class="mcard">
+      <span class="mtag"><span data-zh>听</span><span data-en>LISTEN</span></span>
+      <h4><span data-zh>U2《Carnaval De Luz》：九年首张新专的官方入口</span><span data-en>U2's Carnaval De Luz: the door to the first new album in nine years</span></h4>
+      <p><span data-zh>乐团官网的《Carnaval De Luz》页面：先行曲目与 11·13 发行信息。本栏只把读者送到版权人自己的门前，不作转录。</span><span data-en>The band's own Carnaval De Luz page: advance tracks and the 13 November release. We leave readers at the rights-holder's own door, with no transcription.</span></p>
+      <a class="go" href="https://u2.com/" target="_blank" rel="noopener"><span data-zh>直接听</span><span data-en>Play it</span></a>
+    </div>
+
+    <div class="mcard t-watch">
+      <span class="mtag"><span data-zh>看</span><span data-en>WATCH</span></span>
+      <h4><span data-zh>第 39 届东京电影节：赛果全单与颁奖礼影像</span><span data-en>The 39th Tokyo festival: the full winners list and ceremony</span></h4>
+      <p><span data-zh>电影节官网与报道页：11·4 颁奖礼与获奖影片资料。本仓「四方·东京」与「采言·金句」的赛果与引语原件在此。</span><span data-en>The festival's own site and coverage: the 4 November ceremony and the winners. The source behind our Tokyo dispatch and the Golden Lines quoted from that ceremony.</span></p>
+      <a class="go" href="https://www.tiff.ne.jp/en/" target="_blank" rel="noopener"><span data-zh>看页</span><span data-en>Open</span></a>
+    </div>
+
+    <div class="mcard t-watch">
+      <span class="mtag"><span data-zh>读</span><span data-en>READ</span></span>
+      <h4><span data-zh>梵蒂冈新闻网：迪伦会见与七月序言专稿</span><span data-en>Vatican News: the Dylan audience and the July preface</span></h4>
+      <p><span data-zh>圣座官方新闻端 11·4 报道：互赠细节、七月为教宗书写之序言（其中浮出 1963 年旧曲名）。本仓多处迪伦条的原始出处即在此页。</span><span data-en>The Holy See's news service, 4 November: the exchange of gifts and the July preface Dylan wrote (in which the 1963 song title surfaced). The original behind several of our Dylan entries.</span></p>
+      <a class="go" href="https://www.vaticannews.va/en.html" target="_blank" rel="noopener"><span data-zh>读原文</span><span data-en>Read it</span></a>
+    </div>
+  </div>
+
+  <p class="src" style="border-top:none"><span class="stamp ok">✔ 2026-11-06</span><span data-zh>以上四门均于发稿日验证可点开（拦截机器访问的站点，浏览器可正常打开）；声音与影像不转存，图像随后续周更补入并注明来源页与授权。若链接失效，请在下期「订正」栏报我们。</span><span data-en>The four doors above were checked openable on the day of publication (sites that block machines still open in a browser); sound and vision are not copied, and images follow on later weekly updates with source page and licence named. If a link has died, tell us and the corrections column will carry it.</span></p>
+</section>
+
+<!-- ═══ 龙睛 · 本月八点 ═══ -->
+<div class="eyebrow-band" id="points">
+  <div class="wrap">
+    <div class="sec-head" style="border-bottom-color:var(--warm-amber)">
+      <span class="glyph">睛</span>
+      <h2><span data-zh>画龙点睛 · 本月八点</span><span data-en>Eight Dots on the Dragon</span></h2>
+      <span class="lens"><span data-zh>读完可以忘掉的清单，忘不掉的判断</span><span data-en>Lists you may forget; judgements you will not</span></span>
+    </div>
+    <div class="eyebrow-grid">
+      <div class="eyebrow"><div class="n">1</div><h4 data-zh>月报开局于月初</h4><h4 data-en>Opening a monthly at the month's start</h4><p><span data-zh>本号不再等月末梳全，而是月初开局、逐周补齐——◇ 与 ✔ 的差，成了新的时间刻度。</span><span data-en>This issue opens at the month's first week and is topped up weekly — the gap between ◇ and ✔ becomes a new unit of measure.</span></p></div>
+      <div class="eyebrow"><div class="n">2</div><h4 data-zh>新增「众生」栏</h4><h4 data-en>A new column: The Strata</h4><p><span data-zh>把镜头从作品摇回人：青年、领薪者、平台接活者、老龄、流离、田野——各圈层此刻之境，逐条给要点与精评。</span><span data-en>Panning from works to people: the young, the salaried, the platform precarious, the aged, the displaced, the field — each stratum's condition, point and cut.</span></p></div>
+      <div class="eyebrow"><div class="n">3</div><h4 data-zh>东京名单的亚洲自画像</h4><h4 data-en>Tokyo's Asian self-portrait</h4><p><span data-zh>北马其顿、新加坡、塞尔维亚、中国同列 TIFF 获奖名单——三大欧洲节之外，另一种亚洲策展正在成形。</span><span data-en>North Macedonia, Singapore, Serbia and China share one TIFF list — an Asian curation taking shape beyond the European three.</span></p></div>
+      <div class="eyebrow"><div class="n">4</div><h4 data-zh>凡·艾克与限时公共财</h4><h4 data-en>Van Eyck, a time-limited common</h4><p><span data-zh>九幅真迹跨冬聚于一室，几年不能重一次——美术馆的价值，恰在限时、限地方能成立。</span><span data-en>Nine autograph canvases across one winter, unrepeatable for years — the museum's worth lives in what holds only under a limit of time.</span></p></div>
+      <div class="eyebrow"><div class="n">5</div><h4 data-zh>版权线两侧的点睛</h4><h4 data-en>The Eye, straddling the copyright line</h4><p><span data-zh>芭蕉忌、《江雪》给原文；迪伦旧歌只给题解。名人不是通融的理由，恰恰是要守线的理由。</span><span data-en>Bashō and River Snow get the original; Dylan's old song, only a gloss. Fame is not a reason to bend the rule but to keep it.</span></p></div>
+      <div class="eyebrow"><div class="n">6</div><h4 data-zh>投入度塌在夹心层</h4><h4 data-en>Engagement breaks in the squeezed middle</h4><p><span data-zh>全球员工投入度 20% 新低、主管一层跌幅最巨、代价估为十万亿美元——「敬业度」先亏在两头受挤者身上。</span><span data-en>Engagement at a 20% low, managers hit hardest, its cost priced near $10 trillion — the burn starts on the layer facing both up and down.</span></p></div>
+      <div class="eyebrow"><div class="n">7</div><h4 data-zh>数字口径不可混用</h4><h4 data-en>Definitions must not be merged</h4><p><span data-zh>流离者 8,220 万／1.36 亿／1.2 亿三个数各出其门、各按各的界——并置而不相加，是本栏对数据的纪律。</span><span data-en>82.2 million, 136 million, 120 million: each from its own body on its own definition — set side by side, never summed. That is this column's discipline about numbers.</span></p></div>
+      <div class="eyebrow"><div class="n">8</div><h4 data-zh>十二月预告</h4><h4 data-en>Next month</h4><p><span data-zh>11·9 布克开奖（周更先补）· 11·22 金马 · 12·10 诺奖授奖礼与特纳奖揭晓 · 12 月 IPAF 长名单 · 12·4–6 拉各斯闭幕周末。</span><span data-en>9 Nov Booker (entered first on a weekly update) · 22 Nov Golden Horse · 10 Dec the Nobel lecture and the Turner verdict · an IPAF longlist in December · 4–6 Dec the Lagos closing weekend.</span></p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 方法 · 诚实缺口 ═══ -->
+<section class="sec" id="method">
+  <div class="sec-head">
+    <span class="glyph">法</span>
+    <h2><span data-zh>方法与诚实缺口 · Method &amp; Honest Gaps</span><span data-en>Method &amp; Honest Gaps</span></h2>
+  </div>
+  <div class="method">
+    <p><span data-zh><b>凡例</b>：① 全部条目经 2026-11-06 检索回源，<span class="stamp ok">✔</span> = 权威来源直接命中；<span class="stamp warn">◇</span> = 事实成立但一手机构与日期待复核，或事件尚未发生、留作待开之闸。② 第三语言引文只采公共记录之原文；在版权期内的正文一律不引正文，只存书名与自撰题解。③ 一时性事实（榜单、日期、机构归属）随时间漂移，下期以「订正」栏回看本期。④ 本页为系列第二篇（总第 02 号）；系列命名取《后汉书》「月旦评」义。⑤ 「采言」四张拾单的额外规矩：句必归人，人必归源，源必归年——本月无据者不采。⑥ 回源与声色两栏的每个域名都可点开原文：能落到条目页的绝不落首页，落不到的落该站首页或栏目页并如此标明；站点拦截机器访问而报 403/401/432/520 或连接被拒的，一律以浏览器能打开为准。古籍不附链接。⑦ 图像只取公有领域或已授权文件；声音与影像不转存，只指向版权人自己的页面。⑧ 听读只念正文：栏目名、日期、出处行、图注与第三语言原文一概跳过，语言一切换，朗读即止。⑨ 听读两路声音：「预生成自然声」按分节存取、读一句亮一句，双击正文任一段即从该段起读；「本机浏览器语音」用浏览器自带语音。⑩「四方」栏为地区轮值：每期至少补两个非英语文化圈的当月可回源之事，回源日期随该栏单记；凡未核实汉字之专名，一律保留其罗马字，不臆造中文写法。⑪<b>周更机制</b>（本期新立）：本号开局于月初，其后基本每周补齐一次——每逢周更，逐条把「待开之闸」（◇）对照其实际结果升级为 ✔ 并补入赛果、演说、展演实况等一手内容，同时为本月新发生之事增补条目，并在「本期已订正」栏如实登记每一次改动。⑫<b>「众生」栏</b>（本期新增维度）：把镜头从作品摇回人，逐圈层（行业·阶层·社群·族群·文化圈·年龄段）给出可回源之「要点」与本仓一句「精评」；数据一律注明机构与年份，一时性数字随周更刷新。</span><span data-en><b>Conventions</b>: ① every item re-sourced on 2026-11-06; <span class="stamp ok">✔</span> = direct hit in an authoritative source; <span class="stamp warn">◇</span> = holds but the institution/date awaits re-checking, or the event has not yet happened and the gate stands open. ② In a third language we quote originals that are matters of public record; nothing under copyright is quoted beyond the title — only the title and our own gloss. ③ Time-sensitive facts drift; next issue carries a corrections column. ④ This is Issue 2 of the series; its name revives the Hou Han shu's "Month's Verdict". ⑤ For the four tens: a line must belong to a person, the person to a source, the source to a year; nothing invented is admitted. ⑥ Every domain opens the original: item page where one exists, front or section page where none does, marked as such; where a site refuses machines we rely on what a browser opens; ancient texts carry no link. ⑦ Images are public-domain or licensed and hosted here; sound and vision are not copied, only pointed at the rights-holders' pages. ⑧ The reader speaks body text only: kickers, dates, source lines, captions and third-language originals are skipped, and switching language stops the voice. ⑨ Two sound sources: pre-rendered neural audio loaded a section at a time, one cue highlighted as it is read, double-click any paragraph to start there; or the browser's own voice. ⑩ The Dispatches belt rotates: each issue adds at least two non-Anglophone spheres with re-sourcable events, dated separately; a proper name whose characters are unverified keeps its romanisation — we do not invent its Chinese spelling. ⑪ <b>Weekly update</b> (new this issue): the number opens at the month's start and is topped up about once a week — each round checks every open gate (◇) against what actually happened, upgrades it to ✔ with the result, lecture, performance and so on entered first-hand, adds items for whatever new events the month has produced, and logs every change in the corrections column below. ⑫ <b>The Strata column</b> (a new dimension this issue): panning from works to people, each stratum — trade, class, community, people, cultural sphere, age cohort — gets a re-sourcable point and one line of our cut; every figure is named to its institution and year, refreshed weekly.</span></p>
+    <p style="margin-top:.8rem"><span data-zh><b>已知缺口</b>：本月多数为「待开之闸」——布克（11·9）、京都授奖典（11·10）、金马（11·22）、上海闭幕（11·15）、拉各斯开幕（11·14）与内罗毕收官（11·8）、诺奖授奖礼与特纳奖（12·10）、IPAF 下届长名单（12 月）皆以 ◇ 记档期，结果待周更与下期回源补入；「众生」栏中，全球平台零工总数、老龄孤独与照护缺口的确切基数、各机构流离者口径（均 ◇）；采言「暖心」「觉悟」两单本周尚无一手可归者，留白待补。漓江文学奖第三届评审进度以后续官方公告为准；U2 新专《Carnaval De Luz》11·13、GTA VI 11·19 之发行实况与口碑，均待发行后回源。自然声以非官方接口调用微软 Edge 神经网络语音预生成，接口一旦不可用即退回本机语音（◇）。</span><span data-en><b>Known gaps</b>: most of this month is open gates — the Booker (9 Nov), the Kyoto ceremony (10 Nov), the Golden Horse (22 Nov), Shanghai's close (15 Nov), Lagos's opening (14 Nov) and Nairobi's close (8 Nov), the Nobel lecture and the Turner (10 Dec), and the IPAF longlist (December) — all logged under ◇ pending the weekly update; in The Strata, the global total of platform workers, the base of the loneliness and care gap among the aged, and each agency's definition of the displaced (all ◇); and in the four tens, the Warm Hearts and Awakening lists have nothing first-hand yet and stand blank. The Lijiang Prize's assessment proceeds per later notices; U2's Carnaval De Luz (13 Nov) and GTA VI (19 Nov) await re-sourcing after release. The natural reading voice is rendered ahead through an unofficial client for Microsoft Edge's neural text-to-speech, falling back to the browser's own voice if the endpoint fails (◇).</span></p>
+    <p style="margin-top:.8rem"><span data-zh><b>本期已订正</b>：本号为创刊第二号，开局于月初，订正栏自本号起随周更逐条积累——每逢周更对上一版之事实、日期、机构与赛果的改动，在此按「初稿如何、回源如何、今改如何」三段如实登记，不抹去、不覆盖。首期（总第 01 号）之订正共十三项，见该号「本期已订正」栏。</span><span data-en><b>Corrections this issue</b>: as the series' second number, opened at the month's start, this column begins accumulating with the weekly updates — every change a later round makes to a fact, date, institution or result is logged here in three beats (what the draft said, what the source says, what we now print), never erased or silently overwritten. The thirteen corrections to the first number (Issue 1) are listed in that issue's own column.</span></p>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<footer class="footer">
+  <div class="motto"><span data-zh>舟行万洲 · 月旦一品</span><span data-en>Sail the continents · a verdict each month</span></div>
+  <p><span data-zh>文化月旦 · 总第 02 号 · 舟洲粥出品 — 下一页：<a href="../discovery_atlas/index.html">发现星图</a> · <a href="../../academic_research/frontier_scan.md">前沿学术侦察</a></span><span data-en>Monthly Culture Review · Issue 2 · by Zhōu Zhōu Zhōu — next: <a href="../discovery_atlas/index.html">Discovery Atlas</a> · <a href="../../academic_research/frontier_scan.md">Frontier Scan</a></span></p>
+</footer>
+
+<div class="reader" id="reader" role="region" aria-label="听读 / Read aloud">
+  <button class="main" id="rPlay" type="button"><span data-zh>▶ 听读本期</span><span data-en>▶ Listen</span></button>
+  <button id="rStop" type="button" title="Esc"><span data-zh>■ 停</span><span data-en>■ Stop</span></button>
+  <span class="rlabel"><span id="rEngLab"></span><select id="rEngine"></select></span>
+  <span class="rlabel" id="rNVRow"><span id="rNVLab"></span><select id="rNVoice"></select></span>
+  <span class="rlabel" id="rLVRow"><span data-zh>语音</span><span data-en>Voice</span><select id="rVoice"></select></span>
+  <button id="rEdge" class="off" type="button"><span data-zh>用 Edge 打开</span><span data-en>Open in Edge</span></button>
+  <span class="rlabel"><span data-zh>倍速</span><span data-en>Rate</span><select id="rRate"><option value="0.85">0.85×</option><option value="1" selected>1×</option><option value="1.2">1.2×</option><option value="1.5">1.5×</option></select></span>
+  <span class="rstatus" id="rStatus"></span>
+</div>
+
+<button class="selspeak" id="rSelSpeak" type="button" aria-label="朗读所选 / Read selection"><span data-zh>▶ 朗读所选</span><span data-en>▶ Read selection</span></button>
+<div class="gcard" id="gCard" role="tooltip" aria-live="polite"></div>
+
+<script type="application/json" id="rvCfg">{"zh":{"engine":"声音","natural":"预生成自然声","local":"本机浏览器语音","voice":"自然声","ready":"自然声就绪 · {n} 段 · 全期约 {m} 分钟 · 双击正文任一段即从此起读","playing":"自然声 {k} / {n}","pause":"已暂停","end":"读完，共 {n} 段","noaudio":"本机无预生成音频，请改用本机语音","fallback":"音频未能播放，已改用本机语音","zh-F":"女声 · 晓晓（Xiaoxiao）","zh-M":"男声 · 云希（Yunxi）"},"en":{"engine":"Sound","natural":"Pre-rendered neural","local":"Browser voice","voice":"Neural","ready":"neural ready · {n} cues · about {m} min for the whole issue · double-click any paragraph to start there","playing":"neural {k} / {n}","pause":"paused","end":"finished, {n} cues","noaudio":"no pre-rendered audio here: switch to Browser voice","fallback":"audio could not play; switched to Browser voice","en-F":"Ava (female)","en-M":"Andrew (male)"}}</script>
+<script>/*AM-BEGIN*/window.AUDIO={"format":"opus+ogg","sr":24000,"bitrate":32000,"dir":"assets/audio/2026-11/","tracks":{"zh-F":{"voice":"zh-CN-XiaoxiaoNeural","lang":"zh","secs":[{"sec":"front","file":"zh-F/front.ogg","clips":[{"blk":0,"sub":0,"t":0.0,"d":1.599},{"blk":2,"sub":0,"t":1.599,"d":1.445},{"blk":2,"sub":1,"t":3.043,"d":6.763},{"blk":2,"sub":2,"t":9.806,"d":3.975},{"blk":2,"sub":3,"t":13.781,"d":11.86}]},{"sec":"books","file":"zh-F/books.ogg","clips":[{"blk":3,"sub":0,"t":0.0,"d":2.469},{"blk":4,"sub":0,"t":2.469,"d":4.538},{"blk":4,"sub":1,"t":7.007,"d":11.675},{"blk":4,"sub":2,"t":18.682,"d":9.812},{"blk":4,"sub":3,"t":28.495,"d":8.344},{"blk":5,"sub":0,"t":36.839,"d":5.718},{"blk":6,"sub":0,"t":42.557,"d":4.893},{"blk":6,"sub":1,"t":47.45,"d":1.917},{"blk":6,"sub":2,"t":49.367,"d":9.096},{"blk":6,"sub":3,"t":58.463,"d":10.262},{"blk":6,"sub":4,"t":68.725,"d":4.072},{"blk":6,"sub":5,"t":72.797,"d":6.422},{"blk":7,"sub":0,"t":79.22,"d":5.109},{"blk":7,"sub":1,"t":84.329,"d":8.855},{"blk":8,"sub":0,"t":93.184,"d":6.36},{"blk":9,"sub":0,"t":99.544,"d":9.973},{"blk":9,"sub":1,"t":109.517,"d":17.738},{"blk":9,"sub":2,"t":127.255,"d":4.688},{"blk":9,"sub":3,"t":131.942,"d":5.424},{"blk":10,"sub":0,"t":137.367,"d":4.559},{"blk":10,"sub":1,"t":141.926,"d":7.754},{"blk":11,"sub":0,"t":149.681,"d":5.425},{"blk":12,"sub":0,"t":155.106,"d":9.463},{"blk":12,"sub":1,"t":164.569,"d":15.275},{"blk":12,"sub":2,"t":179.844,"d":9.682},{"blk":13,"sub":0,"t":189.526,"d":4.785},{"blk":13,"sub":1,"t":194.31,"d":7.644}]},{"sec":"research","file":"zh-F/research.ogg","clips":[{"blk":14,"sub":0,"t":0.0,"d":2.53},{"blk":15,"sub":0,"t":2.53,"d":11.254},{"blk":15,"sub":1,"t":13.784,"d":12.501},{"blk":15,"sub":2,"t":26.285,"d":5.638},{"blk":15,"sub":3,"t":31.923,"d":6.918},{"blk":16,"sub":0,"t":38.84,"d":7.898},{"blk":17,"sub":0,"t":46.739,"d":10.247},{"blk":17,"sub":1,"t":56.986,"d":9.887},{"blk":17,"sub":2,"t":66.873,"d":13.725},{"blk":17,"sub":3,"t":80.598,"d":4.489},{"blk":18,"sub":0,"t":85.088,"d":8.325},{"blk":18,"sub":1,"t":93.413,"d":6.676},{"blk":19,"sub":0,"t":100.089,"d":6.456},{"blk":20,"sub":0,"t":106.545,"d":21.672},{"blk":20,"sub":1,"t":128.217,"d":4.987},{"blk":20,"sub":2,"t":133.204,"d":11.862},{"blk":21,"sub":0,"t":145.066,"d":12.073}]},{"sec":"arts","file":"zh-F/arts.ogg","clips":[{"blk":22,"sub":0,"t":0.0,"d":2.415},{"blk":23,"sub":0,"t":2.415,"d":2.838},{"blk":23,"sub":1,"t":5.252,"d":7.277},{"blk":23,"sub":2,"t":12.529,"d":5.811},{"blk":23,"sub":3,"t":18.34,"d":7.775},{"blk":23,"sub":4,"t":26.115,"d":7.156},{"blk":24,"sub":0,"t":33.271,"d":7.841},{"blk":25,"sub":0,"t":41.112,"d":18.299},{"blk":25,"sub":1,"t":59.411,"d":14.725},{"blk":25,"sub":2,"t":74.136,"d":7.74},{"blk":26,"sub":0,"t":81.876,"d":8.446},{"blk":26,"sub":1,"t":90.322,"d":6.3},{"blk":27,"sub":0,"t":96.622,"d":6.302},{"blk":28,"sub":0,"t":102.924,"d":14.181},{"blk":28,"sub":1,"t":117.104,"d":13.1},{"blk":28,"sub":2,"t":130.204,"d":7.284},{"blk":29,"sub":0,"t":137.488,"d":9.366},{"blk":30,"sub":0,"t":146.854,"d":5.89},{"blk":31,"sub":0,"t":152.744,"d":20.961},{"blk":31,"sub":1,"t":173.705,"d":9.613},{"blk":31,"sub":2,"t":183.317,"d":4.314},{"blk":32,"sub":0,"t":187.632,"d":9.826}]},{"sec":"sound","file":"zh-F/sound.ogg","clips":[{"blk":33,"sub":0,"t":0.0,"d":2.606},{"blk":34,"sub":0,"t":2.606,"d":12.428},{"blk":34,"sub":1,"t":15.034,"d":8.8},{"blk":34,"sub":2,"t":23.834,"d":3.174},{"blk":35,"sub":0,"t":27.008,"d":5.379},{"blk":36,"sub":0,"t":32.387,"d":9.189},{"blk":36,"sub":1,"t":41.575,"d":8.838},{"blk":36,"sub":2,"t":50.413,"d":8.425},{"blk":36,"sub":3,"t":58.838,"d":6.161},{"blk":37,"sub":0,"t":64.999,"d":8.505},{"blk":38,"sub":0,"t":73.503,"d":7.539},{"blk":39,"sub":0,"t":81.042,"d":3.086},{"blk":39,"sub":1,"t":84.128,"d":3.225},{"blk":39,"sub":2,"t":87.353,"d":14.838},{"blk":39,"sub":3,"t":102.191,"d":8.721},{"blk":39,"sub":4,"t":110.912,"d":8.342},{"blk":39,"sub":5,"t":119.253,"d":6.362},{"blk":39,"sub":6,"t":125.615,"d":7.029},{"blk":40,"sub":0,"t":132.644,"d":14.045},{"blk":41,"sub":0,"t":146.689,"d":5.363},{"blk":42,"sub":0,"t":152.052,"d":10.473},{"blk":42,"sub":1,"t":162.525,"d":8.162},{"blk":42,"sub":2,"t":170.687,"d":12.113},{"blk":42,"sub":3,"t":182.8,"d":5.121},{"blk":43,"sub":0,"t":187.921,"d":11.113}]},{"sec":"tongue","file":"zh-F/tongue.ogg","clips":[{"blk":44,"sub":0,"t":0.0,"d":2.688},{"blk":45,"sub":0,"t":2.688,"d":11.175},{"blk":45,"sub":1,"t":13.863,"d":8.588},{"blk":45,"sub":2,"t":22.451,"d":12.991},{"blk":46,"sub":0,"t":35.442,"d":5.181},{"blk":47,"sub":0,"t":40.623,"d":5.1},{"blk":48,"sub":0,"t":45.723,"d":3.593},{"blk":48,"sub":1,"t":49.316,"d":1.757},{"blk":49,"sub":0,"t":51.073,"d":6.971},{"blk":49,"sub":1,"t":58.045,"d":14.525},{"blk":49,"sub":2,"t":72.57,"d":6.725},{"blk":49,"sub":3,"t":79.295,"d":6.502},{"blk":50,"sub":0,"t":85.796,"d":3.559},{"blk":50,"sub":1,"t":89.356,"d":3.159},{"blk":51,"sub":0,"t":92.515,"d":6.928},{"blk":51,"sub":1,"t":99.443,"d":6.29},{"blk":52,"sub":0,"t":105.733,"d":5.302},{"blk":52,"sub":1,"t":111.035,"d":12.838},{"blk":52,"sub":2,"t":123.872,"d":5.775},{"blk":52,"sub":3,"t":129.647,"d":4.735},{"blk":52,"sub":4,"t":134.383,"d":3.505},{"blk":53,"sub":0,"t":137.888,"d":12.524},{"blk":54,"sub":0,"t":150.412,"d":4.623},{"blk":54,"sub":1,"t":155.034,"d":6.313},{"blk":55,"sub":0,"t":161.347,"d":17.148},{"blk":55,"sub":1,"t":178.495,"d":7.275},{"blk":55,"sub":2,"t":185.77,"d":9.9},{"blk":55,"sub":3,"t":195.67,"d":4.354}]},{"sec":"strata","file":"zh-F/strata.ogg","clips":[{"blk":56,"sub":0,"t":0.0,"d":2.396},{"blk":57,"sub":0,"t":2.396,"d":2.577},{"blk":57,"sub":1,"t":4.973,"d":1.653},{"blk":57,"sub":2,"t":6.626,"d":12.725},{"blk":57,"sub":3,"t":19.351,"d":7.213},{"blk":57,"sub":4,"t":26.564,"d":2.598},{"blk":57,"sub":5,"t":29.162,"d":4.677},{"blk":57,"sub":6,"t":33.839,"d":4.17},{"blk":58,"sub":0,"t":38.008,"d":2.772},{"blk":59,"sub":0,"t":40.78,"d":17.191},{"blk":59,"sub":1,"t":57.971,"d":7.458},{"blk":59,"sub":2,"t":65.429,"d":6.276},{"blk":59,"sub":3,"t":71.705,"d":5.135},{"blk":59,"sub":4,"t":76.84,"d":8.159},{"blk":60,"sub":0,"t":85.0,"d":12.224},{"blk":61,"sub":0,"t":97.224,"d":4.925},{"blk":62,"sub":0,"t":102.15,"d":17.142},{"blk":62,"sub":1,"t":119.292,"d":8.588},{"blk":62,"sub":2,"t":127.879,"d":9.492},{"blk":62,"sub":3,"t":137.371,"d":5.177},{"blk":63,"sub":0,"t":142.548,"d":15.037},{"blk":64,"sub":0,"t":157.586,"d":5.071},{"blk":65,"sub":0,"t":162.656,"d":20.416},{"blk":65,"sub":1,"t":183.073,"d":10.577},{"blk":65,"sub":2,"t":193.649,"d":6.189},{"blk":66,"sub":0,"t":199.838,"d":11.818},{"blk":67,"sub":0,"t":211.656,"d":4.423},{"blk":68,"sub":0,"t":216.078,"d":14.921},{"blk":68,"sub":1,"t":231.0,"d":9.875},{"blk":68,"sub":2,"t":240.875,"d":15.452},{"blk":69,"sub":0,"t":256.326,"d":10.076},{"blk":69,"sub":1,"t":266.403,"d":7.181},{"blk":70,"sub":0,"t":273.583,"d":5.259},{"blk":71,"sub":0,"t":278.842,"d":10.726},{"blk":71,"sub":1,"t":289.569,"d":8.742},{"blk":71,"sub":2,"t":298.31,"d":6.949},{"blk":71,"sub":3,"t":305.259,"d":13.244},{"blk":72,"sub":0,"t":318.504,"d":8.761},{"blk":72,"sub":1,"t":327.265,"d":5.794},{"blk":73,"sub":0,"t":333.058,"d":6.201},{"blk":74,"sub":0,"t":339.259,"d":26.779},{"blk":74,"sub":1,"t":366.039,"d":10.074},{"blk":75,"sub":0,"t":376.113,"d":7.985},{"blk":75,"sub":1,"t":384.097,"d":7.723}]},{"sec":"words","file":"zh-F/words.ogg","clips":[{"blk":76,"sub":0,"t":0.0,"d":2.707},{"blk":77,"sub":0,"t":2.707,"d":4.972},{"blk":77,"sub":1,"t":7.679,"d":13.012},{"blk":77,"sub":2,"t":20.692,"d":3.813},{"blk":77,"sub":3,"t":24.505,"d":2.179},{"blk":77,"sub":4,"t":26.684,"d":4.358},{"blk":77,"sub":5,"t":31.042,"d":7.798},{"blk":78,"sub":0,"t":38.84,"d":5.284},{"blk":78,"sub":1,"t":44.124,"d":2.867},{"blk":80,"sub":0,"t":46.991,"d":6.849},{"blk":82,"sub":0,"t":53.84,"d":8.903},{"blk":84,"sub":0,"t":62.743,"d":7.173},{"blk":86,"sub":0,"t":69.915,"d":6.012},{"blk":88,"sub":0,"t":75.927,"d":6.293},{"blk":90,"sub":0,"t":82.22,"d":8.273},{"blk":92,"sub":0,"t":90.493,"d":6.679},{"blk":94,"sub":0,"t":97.172,"d":4.091},{"blk":94,"sub":1,"t":101.262,"d":4.771},{"blk":96,"sub":0,"t":106.033,"d":6.758},{"blk":98,"sub":0,"t":112.791,"d":6.996},{"blk":100,"sub":0,"t":119.788,"d":6.684},{"blk":100,"sub":1,"t":126.472,"d":8.613}]},{"sec":"elsewhere","file":"zh-F/elsewhere.ogg","clips":[{"blk":101,"sub":0,"t":0.0,"d":2.43},{"blk":102,"sub":0,"t":2.43,"d":6.55},{"blk":102,"sub":1,"t":8.979,"d":7.871},{"blk":102,"sub":2,"t":16.85,"d":19.609},{"blk":103,"sub":0,"t":36.459,"d":8.536},{"blk":104,"sub":0,"t":44.995,"d":5.383},{"blk":104,"sub":1,"t":50.378,"d":10.562},{"blk":104,"sub":2,"t":60.941,"d":7.85},{"blk":104,"sub":3,"t":68.791,"d":10.374},{"blk":105,"sub":0,"t":79.165,"d":7.511},{"blk":105,"sub":1,"t":86.676,"d":6.173},{"blk":106,"sub":0,"t":92.849,"d":7.92},{"blk":107,"sub":0,"t":100.769,"d":7.664},{"blk":107,"sub":1,"t":108.433,"d":15.162},{"blk":107,"sub":2,"t":123.596,"d":7.251},{"blk":107,"sub":3,"t":130.847,"d":4.641},{"blk":107,"sub":4,"t":135.487,"d":10.586},{"blk":107,"sub":5,"t":146.073,"d":9.571},{"blk":107,"sub":6,"t":155.645,"d":6.526},{"blk":107,"sub":7,"t":162.171,"d":8.001},{"blk":108,"sub":0,"t":170.171,"d":10.068},{"blk":108,"sub":1,"t":180.24,"d":13.291},{"blk":109,"sub":0,"t":193.53,"d":8.861},{"blk":110,"sub":0,"t":202.391,"d":6.081},{"blk":110,"sub":1,"t":208.472,"d":6.657},{"blk":110,"sub":2,"t":215.129,"d":4.7},{"blk":110,"sub":3,"t":219.829,"d":11.695},{"blk":111,"sub":0,"t":231.525,"d":4.971},{"blk":111,"sub":1,"t":236.496,"d":10.185},{"blk":112,"sub":0,"t":246.681,"d":8.099},{"blk":113,"sub":0,"t":254.781,"d":9.044},{"blk":113,"sub":1,"t":263.825,"d":15.344},{"blk":113,"sub":2,"t":279.169,"d":10.507},{"blk":114,"sub":0,"t":289.676,"d":3.528},{"blk":114,"sub":1,"t":293.204,"d":9.676},{"blk":115,"sub":0,"t":302.88,"d":7.157},{"blk":116,"sub":0,"t":310.037,"d":9.617},{"blk":116,"sub":1,"t":319.654,"d":4.166},{"blk":116,"sub":2,"t":323.82,"d":6.862},{"blk":116,"sub":3,"t":330.682,"d":3.234},{"blk":116,"sub":4,"t":333.916,"d":7.6},{"blk":117,"sub":0,"t":341.515,"d":16.948},{"blk":118,"sub":0,"t":358.464,"d":5.838},{"blk":119,"sub":0,"t":364.302,"d":12.389},{"blk":119,"sub":1,"t":376.69,"d":15.377},{"blk":120,"sub":0,"t":392.068,"d":10.922}]},{"sec":"media","file":"zh-F/media.ogg","clips":[{"blk":121,"sub":0,"t":0.0,"d":3.602},{"blk":122,"sub":0,"t":3.602,"d":7.177},{"blk":122,"sub":1,"t":10.779,"d":7.949},{"blk":122,"sub":2,"t":18.728,"d":6.162},{"blk":123,"sub":0,"t":24.89,"d":5.451},{"blk":124,"sub":0,"t":30.341,"d":1.844},{"blk":124,"sub":1,"t":32.185,"d":4.4},{"blk":124,"sub":2,"t":36.585,"d":5.89},{"blk":124,"sub":3,"t":42.475,"d":4.818},{"blk":125,"sub":0,"t":47.293,"d":4.684},{"blk":126,"sub":0,"t":51.977,"d":6.412},{"blk":126,"sub":1,"t":58.39,"d":4.875},{"blk":127,"sub":0,"t":63.265,"d":5.169},{"blk":128,"sub":0,"t":68.433,"d":5.896},{"blk":128,"sub":1,"t":74.329,"d":5.728},{"blk":129,"sub":0,"t":80.058,"d":4.485},{"blk":130,"sub":0,"t":84.542,"d":9.605},{"blk":130,"sub":1,"t":94.147,"d":3.794}]},{"sec":"eyebrow","file":"zh-F/eyebrow.ogg","clips":[{"blk":131,"sub":0,"t":0.0,"d":2.605},{"blk":132,"sub":0,"t":2.605,"d":2.108},{"blk":134,"sub":0,"t":4.713,"d":7.933},{"blk":135,"sub":0,"t":12.646,"d":1.928},{"blk":137,"sub":0,"t":14.574,"d":11.445},{"blk":138,"sub":0,"t":26.019,"d":2.699},{"blk":140,"sub":0,"t":28.718,"d":9.993},{"blk":141,"sub":0,"t":38.711,"d":2.938},{"blk":143,"sub":0,"t":41.65,"d":8.558},{"blk":144,"sub":0,"t":50.208,"d":2.368},{"blk":146,"sub":0,"t":52.575,"d":2.206},{"blk":146,"sub":1,"t":54.781,"d":2.256},{"blk":146,"sub":2,"t":57.038,"d":4.216},{"blk":147,"sub":0,"t":61.254,"d":2.422},{"blk":149,"sub":0,"t":63.676,"d":10.628},{"blk":150,"sub":0,"t":74.303,"d":2.425},{"blk":152,"sub":0,"t":76.728,"d":10.498},{"blk":153,"sub":0,"t":87.227,"d":1.711},{"blk":155,"sub":0,"t":88.938,"d":14.249}]},{"sec":"method","file":"zh-F/method.ogg","clips":[{"blk":156,"sub":0,"t":0.0,"d":4.196},{"blk":157,"sub":0,"t":4.196,"d":7.406},{"blk":157,"sub":1,"t":11.601,"d":7.444},{"blk":157,"sub":2,"t":19.045,"d":3.974},{"blk":157,"sub":3,"t":23.02,"d":5.713},{"blk":157,"sub":4,"t":28.733,"d":8.438},{"blk":157,"sub":5,"t":37.17,"d":3.554},{"blk":157,"sub":6,"t":40.724,"d":3.046},{"blk":157,"sub":7,"t":43.77,"d":8.637},{"blk":157,"sub":8,"t":52.408,"d":11.457},{"blk":157,"sub":9,"t":63.864,"d":9.118},{"blk":157,"sub":10,"t":72.983,"d":1.875},{"blk":157,"sub":11,"t":74.858,"d":3.756},{"blk":157,"sub":12,"t":78.613,"d":4.757},{"blk":157,"sub":13,"t":83.37,"d":10.363},{"blk":157,"sub":14,"t":93.733,"d":8.77},{"blk":157,"sub":15,"t":102.502,"d":3.555},{"blk":157,"sub":16,"t":106.058,"d":9.572},{"blk":157,"sub":17,"t":115.63,"d":5.765},{"blk":157,"sub":18,"t":121.395,"d":23.126},{"blk":157,"sub":19,"t":144.52,"d":13.405},{"blk":157,"sub":20,"t":157.926,"d":5.727},{"blk":158,"sub":0,"t":163.653,"d":25.846},{"blk":158,"sub":1,"t":189.499,"d":8.97},{"blk":158,"sub":2,"t":198.469,"d":5.382},{"blk":158,"sub":3,"t":203.851,"d":4.387},{"blk":158,"sub":4,"t":208.238,"d":9.401},{"blk":158,"sub":5,"t":217.638,"d":8.967},{"blk":159,"sub":0,"t":226.605,"d":19.921},{"blk":159,"sub":1,"t":246.526,"d":6.02}]}],"bytes":9252971,"minutes":6.7},"zh-M":{"voice":"zh-CN-YunxiNeural","lang":"zh","secs":[{"sec":"front","file":"zh-M/front.ogg","clips":[{"blk":0,"sub":0,"t":0.0,"d":1.425},{"blk":2,"sub":0,"t":1.425,"d":1.423},{"blk":2,"sub":1,"t":2.848,"d":6.775},{"blk":2,"sub":2,"t":9.623,"d":3.925},{"blk":2,"sub":3,"t":13.548,"d":11.783}]},{"sec":"books","file":"zh-M/books.ogg","clips":[{"blk":3,"sub":0,"t":0.0,"d":2.54},{"blk":4,"sub":0,"t":2.54,"d":4.204},{"blk":4,"sub":1,"t":6.743,"d":10.375},{"blk":4,"sub":2,"t":17.118,"d":9.537},{"blk":4,"sub":3,"t":26.656,"d":8.011},{"blk":5,"sub":0,"t":34.666,"d":5.297},{"blk":6,"sub":0,"t":39.964,"d":4.686},{"blk":6,"sub":1,"t":44.649,"d":1.859},{"blk":6,"sub":2,"t":46.508,"d":8.829},{"blk":6,"sub":3,"t":55.337,"d":9.625},{"blk":6,"sub":4,"t":64.962,"d":3.924},{"blk":6,"sub":5,"t":68.886,"d":5.899},{"blk":7,"sub":0,"t":74.784,"d":5.123},{"blk":7,"sub":1,"t":79.907,"d":8.806},{"blk":8,"sub":0,"t":88.713,"d":6.191},{"blk":9,"sub":0,"t":94.904,"d":9.418},{"blk":9,"sub":1,"t":104.322,"d":15.963},{"blk":9,"sub":2,"t":120.285,"d":4.862},{"blk":9,"sub":3,"t":125.147,"d":5.139},{"blk":10,"sub":0,"t":130.286,"d":4.554},{"blk":10,"sub":1,"t":134.841,"d":7.304},{"blk":11,"sub":0,"t":142.145,"d":5.178},{"blk":12,"sub":0,"t":147.323,"d":8.98},{"blk":12,"sub":1,"t":156.303,"d":14.287},{"blk":12,"sub":2,"t":170.59,"d":8.543},{"blk":13,"sub":0,"t":179.133,"d":4.59},{"blk":13,"sub":1,"t":183.723,"d":7.748}]},{"sec":"research","file":"zh-M/research.ogg","clips":[{"blk":14,"sub":0,"t":0.0,"d":2.848},{"blk":15,"sub":0,"t":2.848,"d":10.476},{"blk":15,"sub":1,"t":13.325,"d":11.615},{"blk":15,"sub":2,"t":24.939,"d":5.287},{"blk":15,"sub":3,"t":30.227,"d":6.189},{"blk":16,"sub":0,"t":36.416,"d":7.659},{"blk":17,"sub":0,"t":44.075,"d":9.588},{"blk":17,"sub":1,"t":53.663,"d":9.55},{"blk":17,"sub":2,"t":63.213,"d":13.125},{"blk":17,"sub":3,"t":76.338,"d":4.518},{"blk":18,"sub":0,"t":80.856,"d":8.462},{"blk":18,"sub":1,"t":89.318,"d":6.799},{"blk":19,"sub":0,"t":96.117,"d":6.45},{"blk":20,"sub":0,"t":102.566,"d":20.981},{"blk":20,"sub":1,"t":123.548,"d":4.812},{"blk":20,"sub":2,"t":128.36,"d":11.573},{"blk":21,"sub":0,"t":139.934,"d":11.239}]},{"sec":"arts","file":"zh-M/arts.ogg","clips":[{"blk":22,"sub":0,"t":0.0,"d":2.491},{"blk":23,"sub":0,"t":2.491,"d":2.619},{"blk":23,"sub":1,"t":5.109,"d":7.061},{"blk":23,"sub":2,"t":12.17,"d":5.639},{"blk":23,"sub":3,"t":17.809,"d":7.463},{"blk":23,"sub":4,"t":25.272,"d":6.34},{"blk":24,"sub":0,"t":31.611,"d":7.471},{"blk":25,"sub":0,"t":39.083,"d":16.43},{"blk":25,"sub":1,"t":55.512,"d":13.613},{"blk":25,"sub":2,"t":69.125,"d":7.414},{"blk":26,"sub":0,"t":76.539,"d":8.459},{"blk":26,"sub":1,"t":84.998,"d":6.122},{"blk":27,"sub":0,"t":91.12,"d":5.725},{"blk":28,"sub":0,"t":96.844,"d":13.054},{"blk":28,"sub":1,"t":109.899,"d":11.738},{"blk":28,"sub":2,"t":121.636,"d":6.872},{"blk":29,"sub":0,"t":128.508,"d":9.122},{"blk":30,"sub":0,"t":137.63,"d":5.478},{"blk":31,"sub":0,"t":143.108,"d":19.417},{"blk":31,"sub":1,"t":162.525,"d":8.575},{"blk":31,"sub":2,"t":171.1,"d":4.161},{"blk":32,"sub":0,"t":175.261,"d":8.674}]},{"sec":"sound","file":"zh-M/sound.ogg","clips":[{"blk":33,"sub":0,"t":0.0,"d":2.697},{"blk":34,"sub":0,"t":2.697,"d":11.43},{"blk":34,"sub":1,"t":14.127,"d":8.113},{"blk":34,"sub":2,"t":22.239,"d":3.263},{"blk":35,"sub":0,"t":25.502,"d":5.182},{"blk":36,"sub":0,"t":30.684,"d":8.684},{"blk":36,"sub":1,"t":39.368,"d":8.275},{"blk":36,"sub":2,"t":47.643,"d":8.662},{"blk":36,"sub":3,"t":56.306,"d":5.77},{"blk":37,"sub":0,"t":62.076,"d":8.143},{"blk":38,"sub":0,"t":70.219,"d":7.462},{"blk":39,"sub":0,"t":77.681,"d":2.867},{"blk":39,"sub":1,"t":80.547,"d":3.138},{"blk":39,"sub":2,"t":83.685,"d":14.025},{"blk":39,"sub":3,"t":97.71,"d":8.35},{"blk":39,"sub":4,"t":106.06,"d":7.987},{"blk":39,"sub":5,"t":114.047,"d":5.838},{"blk":39,"sub":6,"t":119.885,"d":6.151},{"blk":40,"sub":0,"t":126.036,"d":12.714},{"blk":41,"sub":0,"t":138.75,"d":5.54},{"blk":42,"sub":0,"t":144.291,"d":9.845},{"blk":42,"sub":1,"t":154.136,"d":7.3},{"blk":42,"sub":2,"t":161.436,"d":10.825},{"blk":42,"sub":3,"t":172.261,"d":5.056},{"blk":43,"sub":0,"t":177.317,"d":9.96}]},{"sec":"tongue","file":"zh-M/tongue.ogg","clips":[{"blk":44,"sub":0,"t":0.0,"d":2.776},{"blk":45,"sub":0,"t":2.776,"d":10.513},{"blk":45,"sub":1,"t":13.289,"d":8.062},{"blk":45,"sub":2,"t":21.351,"d":11.798},{"blk":46,"sub":0,"t":33.149,"d":5.133},{"blk":47,"sub":0,"t":38.282,"d":5.416},{"blk":48,"sub":0,"t":43.697,"d":3.35},{"blk":48,"sub":1,"t":47.047,"d":1.749},{"blk":49,"sub":0,"t":48.797,"d":7.171},{"blk":49,"sub":1,"t":55.967,"d":13.912},{"blk":49,"sub":2,"t":69.88,"d":5.987},{"blk":49,"sub":3,"t":75.867,"d":6.821},{"blk":50,"sub":0,"t":82.688,"d":3.935},{"blk":50,"sub":1,"t":86.623,"d":3.154},{"blk":51,"sub":0,"t":89.777,"d":7.038},{"blk":51,"sub":1,"t":96.816,"d":6.839},{"blk":52,"sub":0,"t":103.655,"d":5.281},{"blk":52,"sub":1,"t":108.937,"d":12.838},{"blk":52,"sub":2,"t":121.774,"d":5.838},{"blk":52,"sub":3,"t":127.612,"d":4.662},{"blk":52,"sub":4,"t":132.273,"d":3.153},{"blk":53,"sub":0,"t":135.426,"d":12.861},{"blk":54,"sub":0,"t":148.287,"d":4.279},{"blk":54,"sub":1,"t":152.566,"d":5.467},{"blk":55,"sub":0,"t":158.033,"d":15.975},{"blk":55,"sub":1,"t":174.008,"d":6.5},{"blk":55,"sub":2,"t":180.508,"d":8.762},{"blk":55,"sub":3,"t":189.27,"d":4.413}]},{"sec":"strata","file":"zh-M/strata.ogg","clips":[{"blk":56,"sub":0,"t":0.0,"d":2.565},{"blk":57,"sub":0,"t":2.565,"d":2.394},{"blk":57,"sub":1,"t":4.959,"d":1.546},{"blk":57,"sub":2,"t":6.505,"d":11.975},{"blk":57,"sub":3,"t":18.48,"d":7.062},{"blk":57,"sub":4,"t":25.543,"d":2.518},{"blk":57,"sub":5,"t":28.061,"d":4.532},{"blk":57,"sub":6,"t":32.593,"d":4.221},{"blk":58,"sub":0,"t":36.813,"d":2.545},{"blk":59,"sub":0,"t":39.358,"d":16.358},{"blk":59,"sub":1,"t":55.717,"d":7.084},{"blk":59,"sub":2,"t":62.8,"d":5.84},{"blk":59,"sub":3,"t":68.64,"d":4.778},{"blk":59,"sub":4,"t":73.418,"d":7.317},{"blk":60,"sub":0,"t":80.735,"d":11.732},{"blk":61,"sub":0,"t":92.467,"d":4.697},{"blk":62,"sub":0,"t":97.163,"d":16.731},{"blk":62,"sub":1,"t":113.894,"d":7.775},{"blk":62,"sub":2,"t":121.669,"d":9.303},{"blk":62,"sub":3,"t":130.973,"d":4.792},{"blk":63,"sub":0,"t":135.764,"d":14.581},{"blk":64,"sub":0,"t":150.346,"d":4.726},{"blk":65,"sub":0,"t":155.072,"d":19.519},{"blk":65,"sub":1,"t":174.591,"d":10.099},{"blk":65,"sub":2,"t":184.69,"d":6.036},{"blk":66,"sub":0,"t":190.727,"d":10.868},{"blk":67,"sub":0,"t":201.595,"d":4.338},{"blk":68,"sub":0,"t":205.933,"d":14.043},{"blk":68,"sub":1,"t":219.976,"d":9.438},{"blk":68,"sub":2,"t":229.414,"d":14.885},{"blk":69,"sub":0,"t":244.299,"d":9.606},{"blk":69,"sub":1,"t":253.905,"d":6.811},{"blk":70,"sub":0,"t":260.716,"d":4.708},{"blk":71,"sub":0,"t":265.423,"d":9.471},{"blk":71,"sub":1,"t":274.894,"d":7.701},{"blk":71,"sub":2,"t":282.595,"d":6.121},{"blk":71,"sub":3,"t":288.716,"d":12.837},{"blk":72,"sub":0,"t":301.553,"d":7.829},{"blk":72,"sub":1,"t":309.383,"d":5.59},{"blk":73,"sub":0,"t":314.972,"d":5.62},{"blk":74,"sub":0,"t":320.592,"d":24.983},{"blk":74,"sub":1,"t":345.575,"d":9.32},{"blk":75,"sub":0,"t":354.895,"d":7.779},{"blk":75,"sub":1,"t":362.674,"d":7.413}]},{"sec":"words","file":"zh-M/words.ogg","clips":[{"blk":76,"sub":0,"t":0.0,"d":2.794},{"blk":77,"sub":0,"t":2.794,"d":4.669},{"blk":77,"sub":1,"t":7.463,"d":11.75},{"blk":77,"sub":2,"t":19.213,"d":3.726},{"blk":77,"sub":3,"t":22.939,"d":2.129},{"blk":77,"sub":4,"t":25.068,"d":4.258},{"blk":77,"sub":5,"t":29.326,"d":7.84},{"blk":78,"sub":0,"t":37.166,"d":4.421},{"blk":78,"sub":1,"t":41.586,"d":2.99},{"blk":80,"sub":0,"t":44.577,"d":6.108},{"blk":82,"sub":0,"t":50.685,"d":8.79},{"blk":84,"sub":0,"t":59.475,"d":6.63},{"blk":86,"sub":0,"t":66.105,"d":5.57},{"blk":88,"sub":0,"t":71.675,"d":5.831},{"blk":90,"sub":0,"t":77.506,"d":7.273},{"blk":92,"sub":0,"t":84.779,"d":6.59},{"blk":94,"sub":0,"t":91.368,"d":4.312},{"blk":94,"sub":1,"t":95.68,"d":4.744},{"blk":96,"sub":0,"t":100.424,"d":6.334},{"blk":98,"sub":0,"t":106.759,"d":6.556},{"blk":100,"sub":0,"t":113.314,"d":6.219},{"blk":100,"sub":1,"t":119.534,"d":8.309}]},{"sec":"elsewhere","file":"zh-M/elsewhere.ogg","clips":[{"blk":101,"sub":0,"t":0.0,"d":2.448},{"blk":102,"sub":0,"t":2.448,"d":5.817},{"blk":102,"sub":1,"t":8.265,"d":7.404},{"blk":102,"sub":2,"t":15.669,"d":18.19},{"blk":103,"sub":0,"t":33.859,"d":8.347},{"blk":104,"sub":0,"t":42.206,"d":5.091},{"blk":104,"sub":1,"t":47.296,"d":9.162},{"blk":104,"sub":2,"t":56.459,"d":8.05},{"blk":104,"sub":3,"t":64.509,"d":9.574},{"blk":105,"sub":0,"t":74.083,"d":6.794},{"blk":105,"sub":1,"t":80.877,"d":5.255},{"blk":106,"sub":0,"t":86.132,"d":7.253},{"blk":107,"sub":0,"t":93.385,"d":7.08},{"blk":107,"sub":1,"t":100.466,"d":14.188},{"blk":107,"sub":2,"t":114.653,"d":6.877},{"blk":107,"sub":3,"t":121.53,"d":4.402},{"blk":107,"sub":4,"t":125.932,"d":10.041},{"blk":107,"sub":5,"t":135.973,"d":9.078},{"blk":107,"sub":6,"t":145.051,"d":6.19},{"blk":107,"sub":7,"t":151.241,"d":7.765},{"blk":108,"sub":0,"t":159.006,"d":9.613},{"blk":108,"sub":1,"t":168.618,"d":12.35},{"blk":109,"sub":0,"t":180.968,"d":8.466},{"blk":110,"sub":0,"t":189.435,"d":5.682},{"blk":110,"sub":1,"t":195.117,"d":6.234},{"blk":110,"sub":2,"t":201.351,"d":4.338},{"blk":110,"sub":3,"t":205.689,"d":11.255},{"blk":111,"sub":0,"t":216.943,"d":4.996},{"blk":111,"sub":1,"t":221.939,"d":9.175},{"blk":112,"sub":0,"t":231.114,"d":8.158},{"blk":113,"sub":0,"t":239.272,"d":8.352},{"blk":113,"sub":1,"t":247.624,"d":14.089},{"blk":113,"sub":2,"t":261.712,"d":9.841},{"blk":114,"sub":0,"t":271.553,"d":3.421},{"blk":114,"sub":1,"t":274.974,"d":9.055},{"blk":115,"sub":0,"t":284.03,"d":6.941},{"blk":116,"sub":0,"t":290.97,"d":8.959},{"blk":116,"sub":1,"t":299.93,"d":3.894},{"blk":116,"sub":2,"t":303.824,"d":6.85},{"blk":116,"sub":3,"t":310.674,"d":2.99},{"blk":116,"sub":4,"t":313.664,"d":6.722},{"blk":117,"sub":0,"t":320.386,"d":15.207},{"blk":118,"sub":0,"t":335.593,"d":5.556},{"blk":119,"sub":0,"t":341.15,"d":11.77},{"blk":119,"sub":1,"t":352.92,"d":14.368},{"blk":120,"sub":0,"t":367.288,"d":9.523}]},{"sec":"media","file":"zh-M/media.ogg","clips":[{"blk":121,"sub":0,"t":0.0,"d":3.117},{"blk":122,"sub":0,"t":3.117,"d":7.004},{"blk":122,"sub":1,"t":10.121,"d":7.765},{"blk":122,"sub":2,"t":17.886,"d":5.476},{"blk":123,"sub":0,"t":23.362,"d":5.656},{"blk":124,"sub":0,"t":29.017,"d":1.981},{"blk":124,"sub":1,"t":30.999,"d":4.213},{"blk":124,"sub":2,"t":35.211,"d":5.54},{"blk":124,"sub":3,"t":40.751,"d":4.226},{"blk":125,"sub":0,"t":44.977,"d":4.789},{"blk":126,"sub":0,"t":49.766,"d":6.499},{"blk":126,"sub":1,"t":56.266,"d":4.46},{"blk":127,"sub":0,"t":60.726,"d":4.821},{"blk":128,"sub":0,"t":65.547,"d":5.254},{"blk":128,"sub":1,"t":70.801,"d":5.632},{"blk":129,"sub":0,"t":76.433,"d":4.268},{"blk":130,"sub":0,"t":80.701,"d":9.904},{"blk":130,"sub":1,"t":90.605,"d":3.555}]},{"sec":"eyebrow","file":"zh-M/eyebrow.ogg","clips":[{"blk":131,"sub":0,"t":0.0,"d":2.567},{"blk":132,"sub":0,"t":2.567,"d":1.989},{"blk":134,"sub":0,"t":4.556,"d":7.97},{"blk":135,"sub":0,"t":12.526,"d":1.963},{"blk":137,"sub":0,"t":14.49,"d":11.358},{"blk":138,"sub":0,"t":25.847,"d":2.601},{"blk":140,"sub":0,"t":28.448,"d":9.042},{"blk":141,"sub":0,"t":37.49,"d":3.219},{"blk":143,"sub":0,"t":40.709,"d":8.686},{"blk":144,"sub":0,"t":49.395,"d":2.133},{"blk":146,"sub":0,"t":51.528,"d":2.353},{"blk":146,"sub":1,"t":53.881,"d":2.406},{"blk":146,"sub":2,"t":56.287,"d":4.02},{"blk":147,"sub":0,"t":60.307,"d":2.25},{"blk":149,"sub":0,"t":62.557,"d":9.532},{"blk":150,"sub":0,"t":72.089,"d":2.073},{"blk":152,"sub":0,"t":74.162,"d":9.682},{"blk":153,"sub":0,"t":83.844,"d":1.528},{"blk":155,"sub":0,"t":85.372,"d":13.346}]},{"sec":"method","file":"zh-M/method.ogg","clips":[{"blk":156,"sub":0,"t":0.0,"d":4.071},{"blk":157,"sub":0,"t":4.071,"d":6.913},{"blk":157,"sub":1,"t":10.985,"d":6.975},{"blk":157,"sub":2,"t":17.96,"d":3.55},{"blk":157,"sub":3,"t":21.51,"d":5.175},{"blk":157,"sub":4,"t":26.685,"d":8.562},{"blk":157,"sub":5,"t":35.247,"d":3.83},{"blk":157,"sub":6,"t":39.077,"d":3.283},{"blk":157,"sub":7,"t":42.36,"d":8.875},{"blk":157,"sub":8,"t":51.235,"d":11.046},{"blk":157,"sub":9,"t":62.281,"d":8.792},{"blk":157,"sub":10,"t":71.072,"d":1.825},{"blk":157,"sub":11,"t":72.897,"d":3.524},{"blk":157,"sub":12,"t":76.421,"d":4.464},{"blk":157,"sub":13,"t":80.885,"d":10.787},{"blk":157,"sub":14,"t":91.672,"d":7.987},{"blk":157,"sub":15,"t":99.659,"d":3.238},{"blk":157,"sub":16,"t":102.897,"d":8.984},{"blk":157,"sub":17,"t":111.881,"d":5.106},{"blk":157,"sub":18,"t":116.987,"d":21.696},{"blk":157,"sub":19,"t":138.683,"d":13.6},{"blk":157,"sub":20,"t":152.283,"d":5.468},{"blk":158,"sub":0,"t":157.751,"d":26.933},{"blk":158,"sub":1,"t":184.685,"d":9.335},{"blk":158,"sub":2,"t":194.02,"d":5.601},{"blk":158,"sub":3,"t":199.621,"d":4.248},{"blk":158,"sub":4,"t":203.869,"d":9.102},{"blk":158,"sub":5,"t":212.971,"d":8.472},{"blk":159,"sub":0,"t":221.443,"d":17.715},{"blk":159,"sub":1,"t":239.158,"d":6.284}]}],"bytes":8498806,"minutes":6.3},"en-F":{"voice":"en-US-AvaMultilingualNeural","lang":"en","secs":[{"sec":"front","file":"en-F/front.ogg","clips":[{"blk":1,"sub":0,"t":0.0,"d":2.074},{"blk":2,"sub":0,"t":2.074,"d":2.298},{"blk":2,"sub":1,"t":4.372,"d":10.787},{"blk":2,"sub":2,"t":15.16,"d":12.333}]},{"sec":"books","file":"en-F/books.ogg","clips":[{"blk":3,"sub":0,"t":0.0,"d":2.895},{"blk":4,"sub":0,"t":2.895,"d":4.707},{"blk":4,"sub":1,"t":7.601,"d":13.963},{"blk":4,"sub":2,"t":21.564,"d":9.875},{"blk":4,"sub":3,"t":31.439,"d":8.341},{"blk":5,"sub":0,"t":39.78,"d":6.212},{"blk":6,"sub":0,"t":45.992,"d":6.083},{"blk":6,"sub":1,"t":52.075,"d":4.07},{"blk":6,"sub":2,"t":56.145,"d":6.693},{"blk":6,"sub":3,"t":62.837,"d":11.45},{"blk":6,"sub":4,"t":74.287,"d":4.213},{"blk":6,"sub":5,"t":78.5,"d":8.106},{"blk":7,"sub":0,"t":86.606,"d":6.737},{"blk":7,"sub":1,"t":93.343,"d":8.904},{"blk":8,"sub":0,"t":102.246,"d":5.132},{"blk":9,"sub":0,"t":107.378,"d":7.366},{"blk":9,"sub":1,"t":114.744,"d":10.613},{"blk":9,"sub":2,"t":125.357,"d":8.887},{"blk":9,"sub":3,"t":134.244,"d":6.297},{"blk":9,"sub":4,"t":140.541,"d":5.943},{"blk":10,"sub":0,"t":146.484,"d":5.557},{"blk":10,"sub":1,"t":152.041,"d":8.356},{"blk":11,"sub":0,"t":160.397,"d":6.281},{"blk":12,"sub":0,"t":166.678,"d":9.545},{"blk":12,"sub":1,"t":176.224,"d":16.1},{"blk":12,"sub":2,"t":192.324,"d":9.941},{"blk":13,"sub":0,"t":202.265,"d":4.839},{"blk":13,"sub":1,"t":207.104,"d":8.042}]},{"sec":"research","file":"en-F/research.ogg","clips":[{"blk":14,"sub":0,"t":0.0,"d":2.984},{"blk":15,"sub":0,"t":2.984,"d":3.115},{"blk":15,"sub":1,"t":6.1,"d":10.613},{"blk":15,"sub":2,"t":16.712,"d":10.325},{"blk":15,"sub":3,"t":27.037,"d":6.263},{"blk":15,"sub":4,"t":33.3,"d":6.884},{"blk":16,"sub":0,"t":40.184,"d":5.447},{"blk":17,"sub":0,"t":45.631,"d":11.078},{"blk":17,"sub":1,"t":56.709,"d":10.3},{"blk":17,"sub":2,"t":67.009,"d":13.3},{"blk":17,"sub":3,"t":80.309,"d":4.381},{"blk":18,"sub":0,"t":84.689,"d":7.666},{"blk":18,"sub":1,"t":92.355,"d":7.322},{"blk":19,"sub":0,"t":99.677,"d":7.569},{"blk":20,"sub":0,"t":107.246,"d":20.814},{"blk":20,"sub":1,"t":128.06,"d":3.388},{"blk":20,"sub":2,"t":131.448,"d":7.837},{"blk":21,"sub":0,"t":139.285,"d":15.166}]},{"sec":"arts","file":"en-F/arts.ogg","clips":[{"blk":22,"sub":0,"t":0.0,"d":3.746},{"blk":23,"sub":0,"t":3.746,"d":2.621},{"blk":23,"sub":1,"t":6.367,"d":13.738},{"blk":23,"sub":2,"t":20.104,"d":8.3},{"blk":23,"sub":3,"t":28.404,"d":5.237},{"blk":23,"sub":4,"t":33.642,"d":2.333},{"blk":24,"sub":0,"t":35.975,"d":7.69},{"blk":25,"sub":0,"t":43.665,"d":17.199},{"blk":25,"sub":1,"t":60.864,"d":15.537},{"blk":25,"sub":2,"t":76.401,"d":8.197},{"blk":26,"sub":0,"t":84.598,"d":10.259},{"blk":26,"sub":1,"t":94.857,"d":7.532},{"blk":27,"sub":0,"t":102.388,"d":6.62},{"blk":28,"sub":0,"t":109.008,"d":12.741},{"blk":28,"sub":1,"t":121.749,"d":14.887},{"blk":28,"sub":2,"t":136.636,"d":7.087},{"blk":29,"sub":0,"t":143.723,"d":9.133},{"blk":30,"sub":0,"t":152.856,"d":5.718},{"blk":31,"sub":0,"t":158.575,"d":23.593},{"blk":31,"sub":1,"t":182.168,"d":10.312},{"blk":31,"sub":2,"t":192.48,"d":4.737},{"blk":32,"sub":0,"t":197.217,"d":10.605}]},{"sec":"sound","file":"en-F/sound.ogg","clips":[{"blk":33,"sub":0,"t":0.0,"d":3.462},{"blk":34,"sub":0,"t":3.462,"d":11.752},{"blk":34,"sub":1,"t":15.214,"d":9.963},{"blk":34,"sub":2,"t":25.176,"d":4.248},{"blk":35,"sub":0,"t":29.424,"d":5.866},{"blk":36,"sub":0,"t":35.291,"d":6.848},{"blk":36,"sub":1,"t":42.138,"d":8.537},{"blk":36,"sub":2,"t":50.676,"d":8.575},{"blk":36,"sub":3,"t":59.251,"d":7.493},{"blk":37,"sub":0,"t":66.744,"d":9.743},{"blk":38,"sub":0,"t":76.488,"d":8.219},{"blk":39,"sub":0,"t":84.707,"d":2.898},{"blk":39,"sub":1,"t":87.605,"d":2.866},{"blk":39,"sub":2,"t":90.472,"d":12.809},{"blk":39,"sub":3,"t":103.28,"d":16.236},{"blk":39,"sub":4,"t":119.517,"d":14.626},{"blk":40,"sub":0,"t":134.143,"d":14.897},{"blk":41,"sub":0,"t":149.04,"d":5.932},{"blk":42,"sub":0,"t":154.972,"d":10.205},{"blk":42,"sub":1,"t":165.177,"d":7.312},{"blk":42,"sub":2,"t":172.49,"d":11.088},{"blk":42,"sub":3,"t":183.577,"d":5.287},{"blk":43,"sub":0,"t":188.864,"d":9.884}]},{"sec":"tongue","file":"en-F/tongue.ogg","clips":[{"blk":44,"sub":0,"t":0.0,"d":3.521},{"blk":45,"sub":0,"t":3.521,"d":5.167},{"blk":45,"sub":1,"t":8.688,"d":8.775},{"blk":45,"sub":2,"t":17.463,"d":9.175},{"blk":45,"sub":3,"t":26.638,"d":11.152},{"blk":46,"sub":0,"t":37.79,"d":5.24},{"blk":47,"sub":0,"t":43.03,"d":6.387},{"blk":48,"sub":0,"t":49.417,"d":4.072},{"blk":48,"sub":1,"t":53.489,"d":1.843},{"blk":49,"sub":0,"t":55.332,"d":6.24},{"blk":49,"sub":1,"t":61.572,"d":18.05},{"blk":49,"sub":2,"t":79.622,"d":5.938},{"blk":49,"sub":3,"t":85.559,"d":6.303},{"blk":50,"sub":0,"t":91.862,"d":3.792},{"blk":50,"sub":1,"t":95.654,"d":3.226},{"blk":51,"sub":0,"t":98.88,"d":7.802},{"blk":51,"sub":1,"t":106.682,"d":6.942},{"blk":52,"sub":0,"t":113.624,"d":5.316},{"blk":52,"sub":1,"t":118.94,"d":18.012},{"blk":52,"sub":2,"t":136.952,"d":7.162},{"blk":52,"sub":3,"t":144.115,"d":7.813},{"blk":53,"sub":0,"t":151.928,"d":12.532},{"blk":54,"sub":0,"t":164.46,"d":4.599},{"blk":54,"sub":1,"t":169.059,"d":6.458},{"blk":55,"sub":0,"t":175.516,"d":10.714},{"blk":55,"sub":1,"t":186.23,"d":7.463},{"blk":55,"sub":2,"t":193.693,"d":10.425},{"blk":55,"sub":3,"t":204.118,"d":4.566}]},{"sec":"strata","file":"en-F/strata.ogg","clips":[{"blk":56,"sub":0,"t":0.0,"d":3.076},{"blk":57,"sub":0,"t":3.076,"d":4.236},{"blk":57,"sub":1,"t":7.312,"d":13.025},{"blk":57,"sub":2,"t":20.337,"d":8.625},{"blk":57,"sub":3,"t":28.962,"d":7.912},{"blk":57,"sub":4,"t":36.874,"d":4.546},{"blk":58,"sub":0,"t":41.421,"d":3.247},{"blk":59,"sub":0,"t":44.668,"d":23.459},{"blk":59,"sub":1,"t":68.126,"d":1.791},{"blk":59,"sub":2,"t":69.918,"d":20.336},{"blk":60,"sub":0,"t":90.254,"d":12.487},{"blk":61,"sub":0,"t":102.741,"d":5.176},{"blk":62,"sub":0,"t":107.917,"d":16.912},{"blk":62,"sub":1,"t":124.829,"d":8.863},{"blk":62,"sub":2,"t":133.692,"d":15.92},{"blk":63,"sub":0,"t":149.612,"d":7.267},{"blk":63,"sub":1,"t":156.879,"d":6.386},{"blk":64,"sub":0,"t":163.265,"d":4.41},{"blk":65,"sub":0,"t":167.675,"d":21.227},{"blk":65,"sub":1,"t":188.902,"d":12.248},{"blk":65,"sub":2,"t":201.15,"d":5.941},{"blk":66,"sub":0,"t":207.09,"d":5.554},{"blk":66,"sub":1,"t":212.644,"d":5.127},{"blk":67,"sub":0,"t":217.772,"d":5.463},{"blk":68,"sub":0,"t":223.234,"d":14.81},{"blk":68,"sub":1,"t":238.044,"d":11.588},{"blk":68,"sub":2,"t":249.632,"d":17.941},{"blk":69,"sub":0,"t":267.573,"d":10.494},{"blk":69,"sub":1,"t":278.066,"d":6.024},{"blk":70,"sub":0,"t":284.09,"d":6.016},{"blk":71,"sub":0,"t":290.106,"d":26.902},{"blk":71,"sub":1,"t":317.008,"d":14.476},{"blk":72,"sub":0,"t":331.484,"d":8.992},{"blk":72,"sub":1,"t":340.477,"d":5.35},{"blk":73,"sub":0,"t":345.827,"d":6.103},{"blk":74,"sub":0,"t":351.93,"d":21.386},{"blk":74,"sub":1,"t":373.316,"d":3.889},{"blk":74,"sub":2,"t":377.205,"d":10.878},{"blk":75,"sub":0,"t":388.083,"d":6.542},{"blk":75,"sub":1,"t":394.625,"d":8.037}]},{"sec":"words","file":"en-F/words.ogg","clips":[{"blk":76,"sub":0,"t":0.0,"d":2.538},{"blk":77,"sub":0,"t":2.538,"d":4.096},{"blk":77,"sub":1,"t":6.634,"d":11.088},{"blk":77,"sub":2,"t":17.721,"d":12.713},{"blk":77,"sub":3,"t":30.434,"d":10.737},{"blk":79,"sub":0,"t":41.171,"d":4.641},{"blk":79,"sub":1,"t":45.812,"d":3.258},{"blk":81,"sub":0,"t":49.07,"d":6.033},{"blk":81,"sub":1,"t":55.103,"d":2.91},{"blk":83,"sub":0,"t":58.013,"d":0.05},{"blk":83,"sub":1,"t":58.063,"d":4.122},{"blk":83,"sub":2,"t":62.185,"d":4.833},{"blk":85,"sub":0,"t":67.018,"d":0.05},{"blk":85,"sub":1,"t":67.068,"d":6.095},{"blk":87,"sub":0,"t":73.163,"d":5.58},{"blk":89,"sub":0,"t":78.743,"d":5.971},{"blk":91,"sub":0,"t":84.713,"d":9.239},{"blk":93,"sub":0,"t":93.952,"d":8.191},{"blk":95,"sub":0,"t":102.144,"d":9.844},{"blk":97,"sub":0,"t":111.988,"d":7.702},{"blk":99,"sub":0,"t":119.689,"d":9.173},{"blk":100,"sub":0,"t":128.862,"d":9.782},{"blk":100,"sub":1,"t":138.644,"d":7.625},{"blk":100,"sub":2,"t":146.269,"d":3.746}]},{"sec":"elsewhere","file":"en-F/elsewhere.ogg","clips":[{"blk":101,"sub":0,"t":0.0,"d":2.043},{"blk":102,"sub":0,"t":2.043,"d":5.514},{"blk":102,"sub":1,"t":7.557,"d":28.343},{"blk":103,"sub":0,"t":35.9,"d":8.049},{"blk":104,"sub":0,"t":43.949,"d":6.261},{"blk":104,"sub":1,"t":50.21,"d":9.3},{"blk":104,"sub":2,"t":59.51,"d":6.7},{"blk":104,"sub":3,"t":66.21,"d":7.866},{"blk":105,"sub":0,"t":74.076,"d":13.008},{"blk":106,"sub":0,"t":87.085,"d":8.382},{"blk":107,"sub":0,"t":95.467,"d":6.153},{"blk":107,"sub":1,"t":101.62,"d":15.875},{"blk":107,"sub":2,"t":117.495,"d":20.317},{"blk":107,"sub":3,"t":137.812,"d":16.27},{"blk":108,"sub":0,"t":154.082,"d":10.692},{"blk":108,"sub":1,"t":164.774,"d":10.787},{"blk":109,"sub":0,"t":175.561,"d":9.227},{"blk":110,"sub":0,"t":184.788,"d":16.079},{"blk":110,"sub":1,"t":200.867,"d":11.656},{"blk":111,"sub":0,"t":212.523,"d":9.99},{"blk":111,"sub":1,"t":222.514,"d":6.053},{"blk":112,"sub":0,"t":228.567,"d":8.088},{"blk":113,"sub":0,"t":236.655,"d":22.214},{"blk":113,"sub":1,"t":258.869,"d":8.329},{"blk":114,"sub":0,"t":267.198,"d":3.169},{"blk":114,"sub":1,"t":270.367,"d":4.763},{"blk":114,"sub":2,"t":275.129,"d":6.186},{"blk":115,"sub":0,"t":281.315,"d":6.594},{"blk":116,"sub":0,"t":287.909,"d":10.385},{"blk":116,"sub":1,"t":298.293,"d":5.037},{"blk":116,"sub":2,"t":303.331,"d":10.802},{"blk":117,"sub":0,"t":314.133,"d":15.186},{"blk":118,"sub":0,"t":329.319,"d":6.121},{"blk":119,"sub":0,"t":335.44,"d":13.806},{"blk":119,"sub":1,"t":349.246,"d":5.3},{"blk":119,"sub":2,"t":354.546,"d":7.87},{"blk":120,"sub":0,"t":362.416,"d":10.389}]},{"sec":"media","file":"en-F/media.ogg","clips":[{"blk":121,"sub":0,"t":0.0,"d":3.76},{"blk":122,"sub":0,"t":3.76,"d":13.894},{"blk":122,"sub":1,"t":17.654,"d":5.196},{"blk":123,"sub":0,"t":22.851,"d":5.416},{"blk":124,"sub":0,"t":28.267,"d":3.411},{"blk":124,"sub":1,"t":31.677,"d":4.207},{"blk":124,"sub":2,"t":35.885,"d":8.409},{"blk":125,"sub":0,"t":44.294,"d":5.426},{"blk":126,"sub":0,"t":49.721,"d":5.707},{"blk":126,"sub":1,"t":55.427,"d":4.944},{"blk":127,"sub":0,"t":60.371,"d":5.265},{"blk":128,"sub":0,"t":65.636,"d":5.202},{"blk":128,"sub":1,"t":70.839,"d":5.415},{"blk":129,"sub":0,"t":76.254,"d":4.992},{"blk":130,"sub":0,"t":81.246,"d":9.764},{"blk":130,"sub":1,"t":91.01,"d":3.351}]},{"sec":"eyebrow","file":"en-F/eyebrow.ogg","clips":[{"blk":131,"sub":0,"t":0.0,"d":2.249},{"blk":133,"sub":0,"t":2.249,"d":2.77},{"blk":134,"sub":0,"t":5.019,"d":7.109},{"blk":136,"sub":0,"t":12.127,"d":2.783},{"blk":137,"sub":0,"t":14.91,"d":10.405},{"blk":139,"sub":0,"t":25.314,"d":2.595},{"blk":140,"sub":0,"t":27.91,"d":9.4},{"blk":142,"sub":0,"t":37.31,"d":3.093},{"blk":143,"sub":0,"t":40.402,"d":9.854},{"blk":145,"sub":0,"t":50.257,"d":3.197},{"blk":146,"sub":0,"t":53.454,"d":5.425},{"blk":146,"sub":1,"t":58.879,"d":3.779},{"blk":148,"sub":0,"t":62.658,"d":3.131},{"blk":149,"sub":0,"t":65.789,"d":9.908},{"blk":151,"sub":0,"t":75.696,"d":3.095},{"blk":152,"sub":0,"t":78.791,"d":11.095},{"blk":152,"sub":1,"t":89.886,"d":3.051},{"blk":154,"sub":0,"t":92.937,"d":1.59},{"blk":155,"sub":0,"t":94.528,"d":14.029}]},{"sec":"method","file":"en-F/method.ogg","clips":[{"blk":156,"sub":0,"t":0.0,"d":2.496},{"blk":157,"sub":0,"t":2.496,"d":15.382},{"blk":157,"sub":1,"t":17.878,"d":9.977},{"blk":157,"sub":2,"t":27.855,"d":4.866},{"blk":157,"sub":3,"t":32.72,"d":6.005},{"blk":157,"sub":4,"t":38.725,"d":8.851},{"blk":157,"sub":5,"t":47.576,"d":13.883},{"blk":157,"sub":6,"t":61.459,"d":8.729},{"blk":157,"sub":7,"t":70.189,"d":9.629},{"blk":157,"sub":8,"t":79.817,"d":11.368},{"blk":157,"sub":9,"t":91.185,"d":14.815},{"blk":157,"sub":10,"t":106.0,"d":21.789},{"blk":157,"sub":11,"t":127.79,"d":17.801},{"blk":158,"sub":0,"t":145.59,"d":41.282},{"blk":158,"sub":1,"t":186.872,"d":11.176},{"blk":158,"sub":2,"t":198.048,"d":10.706},{"blk":159,"sub":0,"t":208.753,"d":20.926},{"blk":159,"sub":1,"t":229.68,"d":5.579}]}],"bytes":9326632,"minutes":6.7},"en-M":{"voice":"en-US-AndrewMultilingualNeural","lang":"en","secs":[{"sec":"front","file":"en-M/front.ogg","clips":[{"blk":1,"sub":0,"t":0.0,"d":1.904},{"blk":2,"sub":0,"t":1.904,"d":2.363},{"blk":2,"sub":1,"t":4.267,"d":11.213},{"blk":2,"sub":2,"t":15.48,"d":12.63}]},{"sec":"books","file":"en-M/books.ogg","clips":[{"blk":3,"sub":0,"t":0.0,"d":3.223},{"blk":4,"sub":0,"t":3.223,"d":4.597},{"blk":4,"sub":1,"t":7.819,"d":14.125},{"blk":4,"sub":2,"t":21.944,"d":9.887},{"blk":4,"sub":3,"t":31.832,"d":8.686},{"blk":5,"sub":0,"t":40.518,"d":6.672},{"blk":6,"sub":0,"t":47.19,"d":6.312},{"blk":6,"sub":1,"t":53.502,"d":4.349},{"blk":6,"sub":2,"t":57.85,"d":7.151},{"blk":6,"sub":3,"t":65.002,"d":11.05},{"blk":6,"sub":4,"t":76.052,"d":4.237},{"blk":6,"sub":5,"t":80.289,"d":7.757},{"blk":7,"sub":0,"t":88.046,"d":6.946},{"blk":7,"sub":1,"t":94.991,"d":9.074},{"blk":8,"sub":0,"t":104.065,"d":4.74},{"blk":9,"sub":0,"t":108.805,"d":7.317},{"blk":9,"sub":1,"t":116.122,"d":10.875},{"blk":9,"sub":2,"t":126.997,"d":9.088},{"blk":9,"sub":3,"t":136.084,"d":6.436},{"blk":9,"sub":4,"t":142.52,"d":6.185},{"blk":10,"sub":0,"t":148.705,"d":5.361},{"blk":10,"sub":1,"t":154.066,"d":8.631},{"blk":11,"sub":0,"t":162.697,"d":6.806},{"blk":12,"sub":0,"t":169.502,"d":10.219},{"blk":12,"sub":1,"t":179.721,"d":16.8},{"blk":12,"sub":2,"t":196.521,"d":10.346},{"blk":13,"sub":0,"t":206.867,"d":5.37},{"blk":13,"sub":1,"t":212.237,"d":7.994}]},{"sec":"research","file":"en-M/research.ogg","clips":[{"blk":14,"sub":0,"t":0.0,"d":3.093},{"blk":15,"sub":0,"t":3.093,"d":3.51},{"blk":15,"sub":1,"t":6.603,"d":10.188},{"blk":15,"sub":2,"t":16.79,"d":11.3},{"blk":15,"sub":3,"t":28.09,"d":6.487},{"blk":15,"sub":4,"t":34.578,"d":6.874},{"blk":16,"sub":0,"t":41.451,"d":5.355},{"blk":17,"sub":0,"t":46.807,"d":11.247},{"blk":17,"sub":1,"t":58.054,"d":10.787},{"blk":17,"sub":2,"t":68.841,"d":14.325},{"blk":17,"sub":3,"t":83.166,"d":3.955},{"blk":18,"sub":0,"t":87.122,"d":8.241},{"blk":18,"sub":1,"t":95.363,"d":7.046},{"blk":19,"sub":0,"t":102.409,"d":8.188},{"blk":20,"sub":0,"t":110.597,"d":21.547},{"blk":20,"sub":1,"t":132.144,"d":3.263},{"blk":20,"sub":2,"t":135.406,"d":8.637},{"blk":21,"sub":0,"t":144.043,"d":16.206}]},{"sec":"arts","file":"en-M/arts.ogg","clips":[{"blk":22,"sub":0,"t":0.0,"d":3.419},{"blk":23,"sub":0,"t":3.419,"d":2.681},{"blk":23,"sub":1,"t":6.1,"d":14.175},{"blk":23,"sub":2,"t":20.275,"d":8.85},{"blk":23,"sub":3,"t":29.125,"d":4.825},{"blk":23,"sub":4,"t":33.95,"d":2.341},{"blk":24,"sub":0,"t":36.291,"d":7.786},{"blk":25,"sub":0,"t":44.076,"d":17.948},{"blk":25,"sub":1,"t":62.025,"d":15.601},{"blk":25,"sub":2,"t":77.626,"d":8.368},{"blk":26,"sub":0,"t":85.994,"d":10.542},{"blk":26,"sub":1,"t":96.536,"d":7.894},{"blk":27,"sub":0,"t":104.43,"d":6.087},{"blk":28,"sub":0,"t":110.517,"d":13.193},{"blk":28,"sub":1,"t":123.71,"d":15.338},{"blk":28,"sub":2,"t":139.048,"d":7.086},{"blk":29,"sub":0,"t":146.134,"d":9.194},{"blk":30,"sub":0,"t":155.327,"d":6.089},{"blk":31,"sub":0,"t":161.416,"d":24.631},{"blk":31,"sub":1,"t":186.046,"d":10.613},{"blk":31,"sub":2,"t":196.659,"d":4.816},{"blk":32,"sub":0,"t":201.475,"d":10.989}]},{"sec":"sound","file":"en-M/sound.ogg","clips":[{"blk":33,"sub":0,"t":0.0,"d":3.22},{"blk":34,"sub":0,"t":3.22,"d":11.905},{"blk":34,"sub":1,"t":15.124,"d":10.3},{"blk":34,"sub":2,"t":25.424,"d":4.26},{"blk":35,"sub":0,"t":29.685,"d":6.025},{"blk":36,"sub":0,"t":35.709,"d":7.301},{"blk":36,"sub":1,"t":43.01,"d":9.125},{"blk":36,"sub":2,"t":52.135,"d":8.8},{"blk":36,"sub":3,"t":60.935,"d":7.555},{"blk":37,"sub":0,"t":68.49,"d":9.817},{"blk":38,"sub":0,"t":78.307,"d":7.89},{"blk":39,"sub":0,"t":86.197,"d":3.133},{"blk":39,"sub":1,"t":89.33,"d":2.887},{"blk":39,"sub":2,"t":92.217,"d":12.901},{"blk":39,"sub":3,"t":105.118,"d":15.846},{"blk":39,"sub":4,"t":120.964,"d":14.761},{"blk":40,"sub":0,"t":135.725,"d":15.073},{"blk":41,"sub":0,"t":150.799,"d":6.153},{"blk":42,"sub":0,"t":156.952,"d":9.927},{"blk":42,"sub":1,"t":166.878,"d":7.612},{"blk":42,"sub":2,"t":174.491,"d":10.938},{"blk":42,"sub":3,"t":185.428,"d":5.411},{"blk":43,"sub":0,"t":190.84,"d":9.887}]},{"sec":"tongue","file":"en-M/tongue.ogg","clips":[{"blk":44,"sub":0,"t":0.0,"d":3.824},{"blk":45,"sub":0,"t":3.824,"d":5.558},{"blk":45,"sub":1,"t":9.383,"d":8.738},{"blk":45,"sub":2,"t":18.12,"d":10.113},{"blk":45,"sub":3,"t":28.233,"d":11.336},{"blk":46,"sub":0,"t":39.569,"d":5.579},{"blk":47,"sub":0,"t":45.148,"d":6.361},{"blk":48,"sub":0,"t":51.509,"d":4.499},{"blk":48,"sub":1,"t":56.008,"d":1.888},{"blk":49,"sub":0,"t":57.896,"d":6.188},{"blk":49,"sub":1,"t":64.084,"d":18.137},{"blk":49,"sub":2,"t":82.221,"d":6.013},{"blk":49,"sub":3,"t":88.234,"d":6.399},{"blk":50,"sub":0,"t":94.633,"d":4.361},{"blk":50,"sub":1,"t":98.995,"d":3.716},{"blk":51,"sub":0,"t":102.711,"d":8.115},{"blk":51,"sub":1,"t":110.825,"d":6.603},{"blk":52,"sub":0,"t":117.428,"d":5.439},{"blk":52,"sub":1,"t":122.867,"d":18.562},{"blk":52,"sub":2,"t":141.43,"d":8.525},{"blk":52,"sub":3,"t":149.955,"d":8.001},{"blk":53,"sub":0,"t":157.956,"d":13.063},{"blk":54,"sub":0,"t":171.018,"d":5.673},{"blk":54,"sub":1,"t":176.691,"d":7.92},{"blk":55,"sub":0,"t":184.611,"d":11.549},{"blk":55,"sub":1,"t":196.16,"d":7.612},{"blk":55,"sub":2,"t":203.773,"d":10.775},{"blk":55,"sub":3,"t":214.548,"d":4.726}]},{"sec":"strata","file":"en-M/strata.ogg","clips":[{"blk":56,"sub":0,"t":0.0,"d":3.243},{"blk":57,"sub":0,"t":3.243,"d":3.978},{"blk":57,"sub":1,"t":7.222,"d":12.238},{"blk":57,"sub":2,"t":19.459,"d":9.475},{"blk":57,"sub":3,"t":28.934,"d":8.512},{"blk":57,"sub":4,"t":37.447,"d":4.795},{"blk":58,"sub":0,"t":42.242,"d":3.387},{"blk":59,"sub":0,"t":45.629,"d":23.537},{"blk":59,"sub":1,"t":69.166,"d":1.797},{"blk":59,"sub":2,"t":70.963,"d":20.674},{"blk":60,"sub":0,"t":91.636,"d":12.267},{"blk":61,"sub":0,"t":103.903,"d":4.6},{"blk":62,"sub":0,"t":108.503,"d":16.836},{"blk":62,"sub":1,"t":125.338,"d":9.188},{"blk":62,"sub":2,"t":134.526,"d":16.566},{"blk":63,"sub":0,"t":151.092,"d":8.342},{"blk":63,"sub":1,"t":159.434,"d":6.603},{"blk":64,"sub":0,"t":166.037,"d":4.064},{"blk":65,"sub":0,"t":170.101,"d":22.067},{"blk":65,"sub":1,"t":192.168,"d":12.766},{"blk":65,"sub":2,"t":204.935,"d":6.754},{"blk":66,"sub":0,"t":211.689,"d":5.683},{"blk":66,"sub":1,"t":217.372,"d":5.587},{"blk":67,"sub":0,"t":222.959,"d":5.782},{"blk":68,"sub":0,"t":228.741,"d":14.657},{"blk":68,"sub":1,"t":243.398,"d":11.275},{"blk":68,"sub":2,"t":254.673,"d":17.736},{"blk":69,"sub":0,"t":272.409,"d":11.209},{"blk":69,"sub":1,"t":283.618,"d":6.802},{"blk":70,"sub":0,"t":290.42,"d":5.477},{"blk":71,"sub":0,"t":295.896,"d":27.729},{"blk":71,"sub":1,"t":323.626,"d":14.831},{"blk":72,"sub":0,"t":338.457,"d":9.872},{"blk":72,"sub":1,"t":348.328,"d":5.557},{"blk":73,"sub":0,"t":353.885,"d":5.886},{"blk":74,"sub":0,"t":359.77,"d":20.886},{"blk":74,"sub":1,"t":380.656,"d":3.799},{"blk":74,"sub":2,"t":384.455,"d":11.83},{"blk":75,"sub":0,"t":396.284,"d":8.186},{"blk":75,"sub":1,"t":404.471,"d":8.716}]},{"sec":"words","file":"en-M/words.ogg","clips":[{"blk":76,"sub":0,"t":0.0,"d":2.615},{"blk":77,"sub":0,"t":2.615,"d":3.777},{"blk":77,"sub":1,"t":6.392,"d":11.075},{"blk":77,"sub":2,"t":17.467,"d":12.287},{"blk":77,"sub":3,"t":29.755,"d":11.224},{"blk":79,"sub":0,"t":40.979,"d":5.377},{"blk":79,"sub":1,"t":46.356,"d":3.075},{"blk":81,"sub":0,"t":49.431,"d":6.082},{"blk":81,"sub":1,"t":55.512,"d":2.124},{"blk":83,"sub":0,"t":57.637,"d":0.05},{"blk":83,"sub":1,"t":57.687,"d":4.242},{"blk":83,"sub":2,"t":61.928,"d":5.108},{"blk":85,"sub":0,"t":67.037,"d":0.05},{"blk":85,"sub":1,"t":67.087,"d":6.697},{"blk":87,"sub":0,"t":73.784,"d":5.671},{"blk":89,"sub":0,"t":79.455,"d":6.237},{"blk":91,"sub":0,"t":85.692,"d":10.009},{"blk":93,"sub":0,"t":95.701,"d":8.398},{"blk":95,"sub":0,"t":104.099,"d":10.294},{"blk":97,"sub":0,"t":114.393,"d":8.583},{"blk":99,"sub":0,"t":122.976,"d":8.807},{"blk":100,"sub":0,"t":131.783,"d":10.891},{"blk":100,"sub":1,"t":142.674,"d":7.575},{"blk":100,"sub":2,"t":150.249,"d":3.416}]},{"sec":"elsewhere","file":"en-M/elsewhere.ogg","clips":[{"blk":101,"sub":0,"t":0.0,"d":1.932},{"blk":102,"sub":0,"t":1.932,"d":6.15},{"blk":102,"sub":1,"t":8.082,"d":29.055},{"blk":103,"sub":0,"t":37.138,"d":8.098},{"blk":104,"sub":0,"t":45.236,"d":6.635},{"blk":104,"sub":1,"t":51.871,"d":9.137},{"blk":104,"sub":2,"t":61.009,"d":7.775},{"blk":104,"sub":3,"t":68.784,"d":7.838},{"blk":105,"sub":0,"t":76.622,"d":14.155},{"blk":106,"sub":0,"t":90.777,"d":8.913},{"blk":107,"sub":0,"t":99.69,"d":6.852},{"blk":107,"sub":1,"t":106.541,"d":16.938},{"blk":107,"sub":2,"t":123.479,"d":20.874},{"blk":107,"sub":3,"t":144.352,"d":16.85},{"blk":108,"sub":0,"t":161.203,"d":10.722},{"blk":108,"sub":1,"t":171.924,"d":11.051},{"blk":109,"sub":0,"t":182.975,"d":9.174},{"blk":110,"sub":0,"t":192.15,"d":17.822},{"blk":110,"sub":1,"t":209.972,"d":12.346},{"blk":111,"sub":0,"t":222.318,"d":9.723},{"blk":111,"sub":1,"t":232.041,"d":6.435},{"blk":112,"sub":0,"t":238.476,"d":9.179},{"blk":113,"sub":0,"t":247.654,"d":23.182},{"blk":113,"sub":1,"t":270.836,"d":8.43},{"blk":114,"sub":0,"t":279.266,"d":3.507},{"blk":114,"sub":1,"t":282.773,"d":4.85},{"blk":114,"sub":2,"t":287.623,"d":6.774},{"blk":115,"sub":0,"t":294.397,"d":6.735},{"blk":116,"sub":0,"t":301.132,"d":10.292},{"blk":116,"sub":1,"t":311.424,"d":5.237},{"blk":116,"sub":2,"t":316.661,"d":12.046},{"blk":117,"sub":0,"t":328.708,"d":15.745},{"blk":118,"sub":0,"t":344.452,"d":6.644},{"blk":119,"sub":0,"t":351.096,"d":14.086},{"blk":119,"sub":1,"t":365.182,"d":5.625},{"blk":119,"sub":2,"t":370.807,"d":8.002},{"blk":120,"sub":0,"t":378.81,"d":11.455}]},{"sec":"media","file":"en-M/media.ogg","clips":[{"blk":121,"sub":0,"t":0.0,"d":3.946},{"blk":122,"sub":0,"t":3.946,"d":13.277},{"blk":122,"sub":1,"t":17.222,"d":4.873},{"blk":123,"sub":0,"t":22.095,"d":5.335},{"blk":124,"sub":0,"t":27.43,"d":3.799},{"blk":124,"sub":1,"t":31.229,"d":4.696},{"blk":124,"sub":2,"t":35.925,"d":8.374},{"blk":125,"sub":0,"t":44.299,"d":5.39},{"blk":126,"sub":0,"t":49.689,"d":5.929},{"blk":126,"sub":1,"t":55.618,"d":4.333},{"blk":127,"sub":0,"t":59.951,"d":5.27},{"blk":128,"sub":0,"t":65.221,"d":5.376},{"blk":128,"sub":1,"t":70.597,"d":5.295},{"blk":129,"sub":0,"t":75.892,"d":4.489},{"blk":130,"sub":0,"t":80.381,"d":10.14},{"blk":130,"sub":1,"t":90.521,"d":3.484}]},{"sec":"eyebrow","file":"en-M/eyebrow.ogg","clips":[{"blk":131,"sub":0,"t":0.0,"d":1.863},{"blk":133,"sub":0,"t":1.863,"d":2.476},{"blk":134,"sub":0,"t":4.339,"d":7.89},{"blk":136,"sub":0,"t":12.229,"d":2.428},{"blk":137,"sub":0,"t":14.656,"d":11.14},{"blk":139,"sub":0,"t":25.797,"d":2.937},{"blk":140,"sub":0,"t":28.733,"d":9.446},{"blk":142,"sub":0,"t":38.179,"d":2.691},{"blk":143,"sub":0,"t":40.87,"d":10.416},{"blk":145,"sub":0,"t":51.286,"d":2.983},{"blk":146,"sub":0,"t":54.27,"d":5.492},{"blk":146,"sub":1,"t":59.762,"d":3.743},{"blk":148,"sub":0,"t":63.505,"d":3.458},{"blk":149,"sub":0,"t":66.962,"d":10.322},{"blk":151,"sub":0,"t":77.285,"d":2.759},{"blk":152,"sub":0,"t":80.044,"d":10.369},{"blk":152,"sub":1,"t":90.412,"d":3.107},{"blk":154,"sub":0,"t":93.519,"d":1.325},{"blk":155,"sub":0,"t":94.843,"d":14.723}]},{"sec":"method","file":"en-M/method.ogg","clips":[{"blk":156,"sub":0,"t":0.0,"d":2.184},{"blk":157,"sub":0,"t":2.184,"d":15.473},{"blk":157,"sub":1,"t":17.657,"d":9.631},{"blk":157,"sub":2,"t":27.288,"d":5.024},{"blk":157,"sub":3,"t":32.311,"d":6.335},{"blk":157,"sub":4,"t":38.646,"d":8.867},{"blk":157,"sub":5,"t":47.512,"d":14.382},{"blk":157,"sub":6,"t":61.894,"d":8.847},{"blk":157,"sub":7,"t":70.742,"d":9.855},{"blk":157,"sub":8,"t":80.597,"d":11.068},{"blk":157,"sub":9,"t":91.665,"d":14.724},{"blk":157,"sub":10,"t":106.389,"d":21.439},{"blk":157,"sub":11,"t":127.829,"d":18.083},{"blk":158,"sub":0,"t":145.912,"d":42.271},{"blk":158,"sub":1,"t":188.183,"d":11.953},{"blk":158,"sub":2,"t":200.136,"d":11.702},{"blk":159,"sub":0,"t":211.838,"d":21.776},{"blk":159,"sub":1,"t":233.615,"d":5.561}]}],"bytes":9492785,"minutes":6.9}}};/*AM-END*/</script>
+<script>
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));try{localStorage.setItem('zhzz-lang',lang)}catch(e){};document.documentElement.lang=lang==='zh'?'zh':'en';if(window.SR)SR.onLangChange()}
+const saved=localStorage.getItem('zhzz-lang');if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+/* ── 听读 · Read-aloud via the Web Speech API ──
+   Scope rule: only body text is spoken. Source lines (.src), attributions (.who),
+   date stamps (.stamp), kickers, lens chips, figure captions, nav and footer are
+   skipped, and whichever language the toggle has hidden is skipped too
+   (hidden spans are display:none, which is exactly what we test for).           */
+window.SR=(function(){
+  const synth=window.speechSynthesis||null;
+  const play=document.getElementById('rPlay'),stop=document.getElementById('rStop');
+  const selV=document.getElementById('rVoice'),selR=document.getElementById('rRate');
+  const st=document.getElementById('rStatus');
+  const SKIP='nav,footer,.reader,.src,.who,.stamp,.kicker,.lens,.lang-tag,.fig figcaption,.issue-tag,.en-title,.dateline,.orig';
+  const READ='.masthead h1,.masthead .epigraph,.sec-head h2,.sec-lede,.item h3,.item p,.q .tr,.q .note,.ten .quote,.eyebrow h4,.eyebrow p,.method p,.mcard h4,.mcard p';
+  const T={zh:{idle:'待读',load:'枚举语音中…',ready:n=>'本机语音 '+n+' 个 · 点▶ 只读正文',none:'未见到匹配语言的语音：请用 Edge 打开本页，微软在线自然语音（Xiaoxiao/Yunxi 等）只在 Edge 里出现',play:'朗读中 ',pause:'已暂停',end:'读完一段，共 '},
+            en:{idle:'idle',load:'listing voices…',ready:n=>n+' voices ready · ▶ reads body text only',none:'no matching voice: open this page in Edge for Microsoft\u2019s online natural voices (Xiaoxiao/Yunxi)',play:'reading ',pause:'paused',end:'finished, '}};
+  const L=()=>document.body.classList.contains('lang-en')?'en':'zh';
+  const tx=()=>T[L()];
+  let Q=[],i=0,mode='idle',voices=[];
+
+  function hidden(el){let p=el.nodeType===1?el:el.parentElement;while(p){if(p.matches&&p.matches(SKIP))return true;if(getComputedStyle(p).display==='none')return true;p=p.parentElement}return false}
+  function textNodes(el){const out=[];(function w(n){if(n.nodeType===3){if(!hidden(n))out.push(n);return}if(n.nodeType!==1||hidden(n))return;for(const c of n.childNodes)w(c)})(el);return out}
+  function segs(t){const r=[];let s=0;for(let k=0;k<t.length;k++){const c=t[k],nx=t[k+1]||'';const term='。！？；…'.indexOf(c)>=0||(/[.!?]/.test(c)&&(k===t.length-1||/\s/.test(nx)));if(term){r.push({a:s,b:k+1,term:term});s=k+1}}if(s<t.length)r.push({a:s,b:t.length,term:false});return r}
+  function clean(t){return t.replace(/[✔✓◇]/g,'').replace(/https?:\/\/\S+/g,'').replace(/\b[a-z0-9.-]+\.(?:org|com|net|edu|gov|au|uk|io|cn|news)\b/g,'').replace(/\s+/g,' ').replace(/[，、：；·\-–—]\s*$/,'').trim()}
+
+  function build(){
+    Q=[];const blocks=document.querySelectorAll(READ);
+    for(let bi=0;bi<blocks.length;bi++){
+      const el=blocks[bi];
+      if(hidden(el))continue;let parts=[],sub=0;
+      const flush=()=>{if(!parts.length)return;const text=clean(parts.map(p=>p.seg).join(''));
+        if(text.length>1){const r=document.createRange();try{r.setStart(parts[0].node,parts[0].a);const e=parts[parts.length-1];r.setEnd(e.node,e.b)}catch(err){}
+          Q.push({el,text,range:r,blk:bi,sub:sub++})}parts=[]};
+      for(const n of textNodes(el)){const t=n.nodeValue;for(const g of segs(t)){parts.push({node:n,a:g.a,b:g.b,seg:t.slice(g.a,g.b)});const joined=clean(parts.map(p=>p.seg).join(''));if(g.term||joined.length>260)flush()}}
+      flush();
+    }
+    return Q.length;
+  }
+
+  function score(v){const n=(v.name||'').toLowerCase();let s=0;if(/natural/.test(n))s-=60;if(/online/.test(n))s-=25;if(/aria|xiaoxiao|yunxi|yunjian|yunxe|michelle|jenny|guy|sonia|molly/.test(n))s-=10;if((v.lang||'').toLowerCase().slice(0,2)===L())s-=5;return s}
+  function langVoices(){const w=L();return voices.filter(v=>(v.lang||'').toLowerCase().startsWith(w))}
+  function fillVoices(){
+    if(!synth){st.textContent='Web Speech API unavailable';return}
+    voices=synth.getVoices()||[];
+    const list=(langVoices().length?langVoices():voices).slice().sort((a,b)=>score(a)-score(b));
+    const prev=selV.value||(function(){try{return localStorage.getItem('zhzz-tts-voice')}catch(e){return ''}})();
+    selV.innerHTML='';
+    list.forEach((v,k)=>{const o=document.createElement('option');o.value=v.name;
+      o.textContent=(/natural/i.test(v.name)?'★ ':'')+v.name+' · '+v.lang;if(k===0)o.dataset.best='1';selV.appendChild(o)});
+    if(!list.length){st.textContent=tx().none;return}
+    let pick=null;
+    for(const o of selV.options)if(o.value===prev){pick=o;break}
+    if(!pick)for(const o of selV.options)if(o.dataset.best){pick=o;break}
+    if(!pick)pick=selV.options[0];
+    if(pick)selV.value=pick.value;
+    st.textContent=tx().ready(list.length);
+  }
+  function chosen(){const all=L()==='zh'?langVoices():voices;return all.find(v=>v.name===selV.value)||((langVoices().length?langVoices():voices)[0])||null}
+
+  function paint(c){
+    document.querySelectorAll('.speak-now').forEach(e=>e.classList.remove('speak-now'));
+    if(window.Highlight&&window.CSS&&CSS.highlights){try{CSS.highlights.set('readaloud',new Highlight(c.range))}catch(e){c.el.classList.add('speak-now')}}
+    else c.el.classList.add('speak-now');
+    try{const r=c.range.getBoundingClientRect();if(r.top<70||r.top>innerHeight-150)c.el.scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}
+  }
+  function label(k){const z={play:'▶ 听读本期',resume:'▶ 继续',pause:'⏸ 暂停'}[k],e={play:'▶ Listen',resume:'▶ Resume',pause:'⏸ Pause'}[k];
+    if(z){play.children[0].textContent=z;play.children[1].textContent=e}}
+  function speakCur(){
+    if(i>=Q.length){mode='done';st.textContent=tx().end+Q.length+' 段';label('play');return}
+    const c=Q[i];paint(c);
+    const u=new SpeechSynthesisUtterance(c.text);
+    const v=chosen();if(v){u.voice=v;u.lang=v.lang}
+    u.rate=parseFloat(selR.value||'1');
+    u.onend=()=>{if(mode==='playing'){i++;speakCur()}};
+    u.onerror=(e)=>{if(mode==='playing'){i++;speakCur()}};
+    synth.speak(u);
+    st.textContent=tx().play+(i+1)+' / '+Q.length;
+  }
+  function start(){
+    if(engine==='natural'&&!TR){toLocal();return start()}
+    if(engine==='natural'){
+      if(mode==='playing'){try{audio.pause()}catch(e){};mode='paused';st.textContent=cs().pause;label('resume');return}
+      if(mode==='paused'){anchor(audio.currentTime);audio.play().catch(aFail);mode='playing';label('pause');tick();return}
+      if(mode==='done'||!AQ.length){aqi=0;if(!loadAQ()){toLocal();return start()}}
+      aqLim=null;ssEnd=0;mode='playing';label('pause');playClip(aqi);return}
+    if(!synth)return;
+    if(mode==='playing'){synth.pause();mode='paused';st.textContent=tx().pause;label('resume');return}
+    if(mode==='done'||!Q.length||i>=Q.length){if(!build()){st.textContent=tx().none;return}i=0}
+    synth.cancel();mode='playing';label('pause');speakCur()}
+  function stopAll(){mode='idle';if(synth)synth.cancel();i=0;Q=[];AQ=[];aqi=0;aqLim=null;ssEnd=0;stopAudio();if(window.CSS&&CSS.highlights)try{CSS.highlights.clear()}catch(e){}
+    document.querySelectorAll('.speak-now').forEach(e=>e.classList.remove('speak-now'));
+    try{ssHide()}catch(e){};try{gHide()}catch(e){}
+    play.children[0].textContent='▶ 听读本期';play.children[1].textContent='▶ Listen';st.textContent=tx().idle}
+
+  /* ── 预生成自然声 · pre-rendered neural audio (rendered by build_audio.py) ──
+     The browser this page is usually heard in exposes only legacy desktop voices, so the
+     natural voice has to arrive as ordinary audio: one Ogg/Opus file per section per
+     voice, plus a manifest that says where each sentence starts. Highlighting reuses the
+     same ranges the live reader builds, matched by (blk, sub).                    */
+  const CFG=(function(){try{return JSON.parse(document.getElementById('rvCfg').textContent)}catch(e){return{}}})();
+  const cs=()=>CFG[L()]||CFG.en||{};
+  const TR=(window.AUDIO&&window.AUDIO.tracks)||null;
+  const engSel=document.getElementById('rEngine'),nvSel=document.getElementById('rNVoice'),
+        nvRow=document.getElementById('rNVRow'),lvRow=document.getElementById('rLVRow'),
+        edgeBtn=document.getElementById('rEdge'),engLab=document.getElementById('rEngLab'),
+        nvLab=document.getElementById('rNVLab');
+  const audio=new Audio();audio.preload='metadata';
+  let engine=(function(){var v='';try{v=localStorage.getItem('zhzz-engine')||''}catch(e){}
+    return v||(TR?'natural':'local')})();
+  let AQ=[],aqi=0,aSec=-1,aWant=null,aWall=0,aRef=0,domIdx={},audIdx={},aqLim=null,ssEnd=0;
+  function anchor(tt){aWall=Date.now();aRef=tt}
+
+  function fmt(s,r){return String(s==null?'':s).replace(/\{(\w)\}/g,(m,k)=>(r[k]==null?m:r[k]))}
+  function trackId(){
+    if(!TR)return null;
+    var saved='';try{saved=localStorage.getItem('zhzz-nv')||''}catch(e){}
+    var ids=Object.keys(TR).filter(k=>TR[k].lang===L());
+    if(!ids.length)return null;
+    return ids.indexOf(saved)>=0?saved:ids[0];
+  }
+  function fillNV(){
+    if(!engSel)return;
+    engSel.innerHTML='';
+    [[cs().natural,'natural'],[cs().local,'local']].forEach(p=>{
+      if(p[0]==null)return;const o=document.createElement('option');o.value=p[1];o.textContent=p[0];engSel.appendChild(o)});
+    engSel.value=engine;
+    if(engLab)engLab.textContent=cs().engine||'Sound';
+    if(nvLab)nvLab.textContent=cs().voice||'Neural';
+    if(nvSel){nvSel.innerHTML='';
+      (TR?Object.keys(TR).filter(k=>TR[k].lang===L()):[]).forEach(k=>{
+        const o=document.createElement('option');o.value=k;o.textContent=(CFG[L()]||{})[k]||TR[k].voice;nvSel.appendChild(o)});
+      var tid=trackId();if(tid)nvSel.value=tid;}
+    if(nvRow)nvRow.classList.toggle('off',!(TR&&engine==='natural'));
+    if(lvRow)lvRow.classList.toggle('off',engine!=='local');
+    if(edgeBtn)edgeBtn.classList.toggle('off',engine!=='local');
+  }
+  function loadAQ(){
+    AQ=[];domIdx={};audIdx={};aSec=-1;
+    if(!build())return 0;
+    Q.forEach((q,k)=>{domIdx[q.blk+'_'+q.sub]=k});
+    var tid=trackId();if(!tid)return 0;
+    TR[tid].secs.forEach((s,si)=>{(s.clips||[]).forEach(c=>AQ.push({si:si,t:c.t,d:c.d,blk:c.blk,sub:c.sub}))});
+    AQ.forEach((c,k)=>{audIdx[c.blk+'_'+c.sub]=k});
+    return AQ.length;
+  }
+  function audioEnd(){var c=AQ[AQ.length-1];return c?c.t+c.d:0}
+  function aReady(){if(TR&&loadAQ()){var tid=trackId(),tot=0;if(tid)TR[tid].secs.forEach(function(s){var e=0;(s.clips||[]).forEach(function(c){if(c.t+c.d>e)e=c.t+c.d;});tot+=e;});st.textContent=fmt(cs().ready,{n:AQ.length,m:Math.ceil(tot/60)})}}
+  function toLocal(){engine='local';try{localStorage.setItem('zhzz-engine','local')}catch(e){}
+    fillNV();if(synth&&build())fillVoices()}
+  function stopAudio(){aWant=null;try{audio.pause()}catch(e){}
+    if(audio.dataset.u){audio.removeAttribute('src');try{audio.load()}catch(e){};audio.dataset.u=''}aSec=-1}
+  function paintClip(k){
+    var c=AQ[k];if(!c)return;
+    var qi=domIdx[c.blk+'_'+c.sub];
+    if(qi!=null&&Q[qi])paint(Q[qi]);
+    st.textContent=fmt(cs().playing,{k:k+1,n:AQ.length});
+  }
+  function playClip(k){
+    if(k>=AQ.length||(aqLim!=null&&k>=aqLim)){if(aqLim!=null){stopAudio();}mode='done';st.textContent=ssEnd?(L()==='en'?'selection finished':'所选已读完'):fmt(cs().end,{n:AQ.length});label('play');aqLim=null;ssEnd=0;return}
+    aqi=k;paintClip(k);
+    var tid=trackId(),sec=TR[tid].secs[AQ[k].si];
+    if(!sec){tick();return}
+    var url=((window.AUDIO&&window.AUDIO.dir)||'assets/audio/')+(sec.file||sec);
+    if(audio.dataset.u!==url){
+      audio.dataset.u=url;aWant=AQ[k].t;anchor(AQ[k].t);
+      try{audio.src=url;audio.load()}catch(e){}
+      try{audio.playbackRate=parseFloat(selR.value||'1')}catch(e){}
+    } else seekPlay(AQ[k].t);
+    tick();
+  }
+  function seekPlay(tt){
+    anchor(tt);
+    if(audio.readyState>=1){
+      try{if(Math.abs(audio.currentTime-tt)>0.05)audio.currentTime=tt}catch(e){}
+      aWant=null;audio.play().catch(aFail);
+    } else aWant=tt;
+  }
+  function aFail(err){
+    if(err&&err.name==='AbortError')return;
+    if(mode!=='playing'&&mode!=='paused')return;
+    if(!synth){st.textContent=cs().noaudio;mode='idle';label('play');return}
+    if(AQ[aqi]){toLocal();try{synth.cancel()}catch(e){}
+      var qi=domIdx[AQ[aqi].blk+'_'+AQ[aqi].sub];i=qi==null?0:qi;
+      st.textContent=cs().fallback;mode='playing';label('pause');speakCur()}
+  }
+  audio.addEventListener('loadedmetadata',()=>{if(aWant!=null)seekPlay(aWant)});
+  audio.addEventListener('error',aFail);
+  function tick(){
+    if(engine!=='natural'||mode!=='playing')return;
+    var c=AQ[aqi];
+    if(!c){st.textContent=fmt(cs().end,{n:AQ.length});mode='done';label('play');return}
+    var r=parseFloat(selR.value||'1')||1,lim=c.t+c.d-0.04;
+    if(audio.currentTime>=lim||Date.now()>aWall+(c.t+c.d-aRef)*1000/r+900){playClip(aqi+1);return}
+    setTimeout(tick,90);
+  }
+  document.addEventListener('dblclick',e=>{
+    if(e.target.closest('.reader')||e.target.closest('a'))return;
+    var el=e.target.closest(READ);if(!el)return;
+    if(!Q.length&&!build())return;
+    var k=-1;for(var x=0;x<Q.length;x++)if(Q[x].el===el){k=x;break}
+    if(k<0)return;
+    if(engine==='natural'&&TR){
+      if(!AQ.length&&!loadAQ())return;
+      var ai=audIdx[Q[k].blk+'_'+Q[k].sub];if(ai==null)return;
+      aqi=ai;aqLim=null;ssEnd=0;mode='playing';label('pause');playClip(aqi);return}
+    if(!synth)return;
+    i=k;mode='playing';label('pause');synth.cancel();speakCur();
+  });
+  if(engSel)engSel.addEventListener('change',()=>{
+    engine=engSel.value;try{localStorage.setItem('zhzz-engine',engine)}catch(e){}
+    stopAll();fillNV();if(engine==='natural')aReady();else if(synth)fillVoices()});
+  if(nvSel)nvSel.addEventListener('change',()=>{
+    try{localStorage.setItem('zhzz-nv',nvSel.value)}catch(e){}
+    if(engine!=='natural')return;
+    var keep=aqi,was=mode;stopAll();
+    if(loadAQ()){aqi=Math.min(keep,Math.max(0,AQ.length-1));
+      if(was==='playing'){mode='playing';label('pause');playClip(aqi)}else aReady()}
+    else st.textContent=cs().noaudio;});
+  if(edgeBtn)edgeBtn.addEventListener('click',()=>{
+    try{location.href='microsoft-edge:'+encodeURI(location.href)}catch(e){}});
+
+  /* ── 选读 · select any body text, then hear it ──
+     Selection-play is neural-first: whole-sentence selections reuse the pre-rendered natural voice
+     clips (bounded by aqLim so only the selected span plays); a mid-sentence selection, which has
+     no clip to seek, falls back to SpeechSynthesis with the best-ranked (Natural/Online) voice. */
+  const ssBtn=document.getElementById('rSelSpeak');
+  let ssRange=null;
+  function ssHide(){if(ssBtn)ssBtn.classList.remove('show');ssRange=null;if(window.CSS&&CSS.highlights)try{CSS.highlights.delete('selspeak')}catch(e){}}
+  function ssUpdate(){
+    if(!ssBtn)return;
+    var s=window.getSelection?window.getSelection():null;
+    if(!s||s.isCollapsed||!s.rangeCount){ssHide();return}
+    var r=s.getRangeAt(0), txt=clean(r.toString());
+    if(txt.replace(/\s+/g,'').length<2){ssHide();return}
+    var anc=r.commonAncestorContainer, host=anc.nodeType===1?anc:anc.parentElement;
+    var rd=host&&host.closest?host.closest(READ):null;
+    if(!rd||rd.closest('.reader')||hidden(s.anchorNode)||hidden(s.focusNode)){ssHide();return}
+    var rect=r.getBoundingClientRect();
+    if(!rect.width&&!rect.height){ssHide();return}
+    ssRange=r.cloneRange();
+    ssBtn.classList.add('show');
+    var bw=ssBtn.offsetWidth,bh=ssBtn.offsetHeight;
+    var x=rect.left+rect.width/2-bw/2; x=Math.max(8,Math.min(x,innerWidth-bw-8));
+    var y=rect.top-bh-11; if(y<8)y=rect.bottom+11;
+    ssBtn.style.left=x+'px'; ssBtn.style.top=y+'px';
+  }
+  function ssSpeak(){
+    if(!ssRange)return;
+    var rng=ssRange, txt=clean(rng.toString());
+    ssRange=null; if(ssBtn)ssBtn.classList.remove('show');
+    if(!synth&&!TR){st.textContent=tx().none;return}
+    stopAll();
+    /* 自然声优先 · neural first: when the selection covers whole cue sentences, play the very
+       same pre-rendered clips the issue uses - a real human voice (Xiaoxiao/Yunxi per 自然声 pick).
+       Only a partial, mid-sentence selection falls back to SpeechSynthesis. */
+    if(TR&&loadAQ()){
+      var k0=-1,k1=-1;
+      try{
+        for(var x=0;x<Q.length;x++){
+          var cr=Q[x].range;if(!cr)continue;
+          if(rng.compareBoundaryPoints(Range.START_TO_START,cr)<=0&&rng.compareBoundaryPoints(Range.END_TO_END,cr)>=0){
+            if(k0<0)k0=x;k1=x;
+          }
+        }
+      }catch(e){k0=-1}
+      if(k0>=0){
+        var ai0=audIdx[Q[k0].blk+'_'+Q[k0].sub],ai1=audIdx[Q[k1].blk+'_'+Q[k1].sub];
+        if(ai0!=null&&ai1!=null&&ai1>=ai0){
+          aqLim=ai1+1;ssEnd=1;aqi=ai0;mode='playing';label('pause');playClip(ai0);return;
+        }
+      }
+    }
+    if(!synth){st.textContent=cs().noaudio;return}
+    try{if(window.Highlight&&window.CSS&&CSS.highlights)CSS.highlights.set('selspeak',new Highlight(rng))}catch(e){}
+    var u=new SpeechSynthesisUtterance(txt);
+    var v=chosen(); if(v){u.voice=v;u.lang=v.lang} else u.lang=L()==='zh'?'zh-CN':'en-US';
+    u.rate=parseFloat(selR.value||'1');
+    u.onend=u.onerror=function(){if(window.CSS&&CSS.highlights)try{CSS.highlights.delete('selspeak')}catch(e){}};
+    st.textContent=L()==='en'?'speaking selection (browser voice)…':'正在朗读所选（本机语音）…';
+    synth.speak(u);
+  }
+  document.addEventListener('mouseup',function(e){if(ssBtn&&ssBtn.contains(e.target))return;setTimeout(ssUpdate,0)});
+  document.addEventListener('touchend',function(){setTimeout(ssUpdate,10)},{passive:true});
+  document.addEventListener('selectionchange',function(){var s=window.getSelection&&window.getSelection();if(s&&s.isCollapsed)ssHide()});
+  window.addEventListener('scroll',function(){if(ssBtn&&ssBtn.classList.contains('show'))ssHide()},{passive:true,capture:true});
+  if(ssBtn)ssBtn.addEventListener('click',ssSpeak);
+
+  /* ── 词内注 · inline glossary: the explanation lives in data-*, never in the text flow,
+     so the paragraph reads aloud and the audio highlight stay exactly as they were ── */
+  const gcard=document.getElementById('gCard');
+  function gHide(){if(gcard)gcard.classList.remove('show');document.querySelectorAll('.gx.gopen').forEach(function(x){x.classList.remove('gopen')})}
+  function gShow(g){
+    if(!gcard)return;
+    var lang=L(), txt=g.getAttribute(lang==='zh'?'data-gzh':'data-gen');
+    if(!txt){gHide();return}
+    gcard.textContent=''; gcard.appendChild(document.createTextNode(txt));
+    var url=g.getAttribute('data-url');
+    if(url){var wrap=document.createElement('span');wrap.className='gsrc';var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=(lang==='zh'?'→ 详情 · 回源':'→ more · source');wrap.appendChild(a);gcard.appendChild(wrap)}
+    gcard.classList.add('show');
+    var r=g.getBoundingClientRect(), cw=gcard.offsetWidth, ch=gcard.offsetHeight;
+    var x=r.left+r.width/2-cw/2; x=Math.max(8,Math.min(x,innerWidth-cw-8));
+    var y=r.top-ch-9; if(y<8)y=r.bottom+9;
+    gcard.style.left=x+'px'; gcard.style.top=y+'px';
+  }
+  document.addEventListener('mouseover',function(e){var g=e.target.closest&&e.target.closest('.gx');if(g)gShow(g)});
+  document.addEventListener('mouseout',function(e){var g=e.target.closest&&e.target.closest('.gx');if(!g)return;var to=e.relatedTarget;if(to&&to.closest&&to.closest('.gx'))return;if(gcard&&(to===gcard||gcard.contains(to)))return;if(g.classList.contains('gopen'))return;gHide()});
+  document.addEventListener('focusin',function(e){var g=e.target.closest&&e.target.closest('.gx');if(g)gShow(g)});
+  document.addEventListener('focusout',function(e){var g=e.target.closest&&e.target.closest('.gx');if(g&&!g.classList.contains('gopen'))gHide()});
+  document.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('.gx');
+    if(g){e.preventDefault();if(g.classList.contains('gopen')){gHide()}else{document.querySelectorAll('.gx.gopen').forEach(function(x){x.classList.remove('gopen')});g.classList.add('gopen');gShow(g)}}
+    else if(!(e.target.closest&&e.target.closest('.gcard'))){gHide()}});
+
+  play.addEventListener('click',start);
+  stop.addEventListener('click',stopAll);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')stopAll()});
+  selV.addEventListener('change',()=>{try{localStorage.setItem('zhzz-tts-voice',selV.value)}catch(e){}
+    if(mode==='playing'&&engine==='local'){i++;speakCur()}});
+  selR.addEventListener('change',()=>{try{localStorage.setItem('zhzz-tts-rate',selR.value)}catch(e){}if(engine==='natural'){try{audio.playbackRate=parseFloat(selR.value||'1')}catch(e){}}});
+  try{const r=localStorage.getItem('zhzz-tts-rate');if(r)selR.value=r}catch(e){}
+  fillNV();
+  if(synth){fillVoices();synth.onvoiceschanged=fillVoices;setTimeout(fillVoices,300)}else st.textContent='Web Speech API unavailable';
+  if(engine==='natural')aReady();
+  return{onLangChange(){stopAll();fillNV();if(engine==='natural')aReady();else setTimeout(fillVoices,60)},stop:stopAll}
+})();
+</script>
+
+</body>
+</html>

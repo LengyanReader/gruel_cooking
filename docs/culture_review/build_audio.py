@@ -4,10 +4,17 @@ as a set of Ogg/Opus files (one per section per voice) plus a cue manifest that 
 back into the page.
 
     python build_audio.py                 # whole issue, all four voices
+    python build_audio.py --issue 2026-10 # another issue of the series
     python build_audio.py --dry           # extract and measure only
     python build_audio.py --pilot         # one voice, one section (smoke test)
     python build_audio.py --only zh-M     # one track
     python build_audio.py --refresh       # ignore the cache and re-render every unit
+
+Each issue keeps its page (<issue>.html), its audio (assets/audio/<issue>/) and its manifest
+(assets/audio/<issue>/manifest.json) in its own namespace; the unit cache is shared, because
+a unit is addressed by the hash of its text, so two issues quoting the same passage render
+it once. ISSUE names the issue this checkout is working on (the newest), so a bare
+`python build_audio.py` never needs the flag.
 
 Why pre-rendered audio at all: the browser this page is heard in (an Electron/Chromium
 webview) exposes only legacy SAPI desktop voices, and Edge's "(Natural)" online voices can
@@ -61,11 +68,23 @@ from array import array
 from bs4 import BeautifulSoup, NavigableString
 
 HERE = pathlib.Path(__file__).resolve().parent          # docs/culture_review
-HTML = HERE / "2026-10.html"
-DUMP = HERE / "_audio_sentences.json"
+ISSUE = "2026-11"                                       # the issue a bare run works on
 CACHE = HERE / "_audio_cache"
 TMP = HERE / "_audio_tmp"
-OUT = HERE / "assets" / "audio"
+
+
+def set_issue(issue):
+    """Point every issue-bound path at one issue of the series (page, dump, audio dir).
+    The unit cache stays shared: a unit is addressed by the hash of its text, so two
+    issues quoting the same passage render it once."""
+    global ISSUE, HTML, DUMP, OUT
+    ISSUE = issue
+    HTML = HERE / ("%s.html" % issue)
+    DUMP = HERE / ("_audio_sentences_%s.json" % issue)
+    OUT = HERE / "assets" / "audio" / issue
+
+
+set_issue(ISSUE)
 FFMPEG = os.environ.get("FFMPEG", r"C:\Users\data\AppData\Local\Microsoft\WinGet\Links\ffmpeg.exe")
 SR = 24000
 BITRATE = "32k"
@@ -654,7 +673,7 @@ def run(only=None, sec_only=None, dry=False, refresh=False):
 
     TMP.mkdir(exist_ok=True)
     manifest = {"format": "opus+ogg", "sr": SR, "bitrate": int(BITRATE[:-1]) * 1000,
-                "dir": "assets/audio/", "tracks": {}}
+                "dir": "assets/audio/%s/" % ISSUE, "tracks": {}}
     seconds = 0.0
     breaths, handovers = [], []      # measured, not asserted: see the report below
     for tid, voice, lang, sec, us in plan:
@@ -723,12 +742,14 @@ def run(only=None, sec_only=None, dry=False, refresh=False):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
+    ap.add_argument("--issue", default=ISSUE, help="issue of the series, e.g. 2026-11")
     ap.add_argument("--only", nargs="*", default=None, help="track ids, e.g. zh-F en-M")
     ap.add_argument("--sec", default=None, help="only this section")
     ap.add_argument("--pilot", action="store_true", help="zh-F, section books, nothing else")
     ap.add_argument("--dry", action="store_true", help="extract and measure, no audio")
     ap.add_argument("--refresh", action="store_true", help="ignore the cache, re-render units")
     a = ap.parse_args()
+    set_issue(a.issue)
     if a.pilot:
         run({"zh-F"}, "books")
     else:
