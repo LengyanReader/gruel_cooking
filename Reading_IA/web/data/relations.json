@@ -1,7 +1,7 @@
 {
   "schema": "reading-relations.v1",
   "crop": "2026-autumn",
-  "note": "边表唯一源 → build_reading.py 生成 authors/index.html 的边表。与 relations/influences.md 一一对应。",
+  "note": "边表唯一源 → build_reading.py 生成 authors/index.html 的边表。与 relations/influences.md 一一对应。现跨 2026-autumn 与 2026-japan-culture 两批。",
   "influences": [
     {
       "from": "vargas",
@@ -68,6 +68,54 @@
       "why_zh": "皆用「一件艺术图像作谜面发动机」（美学化为装置）",
       "why_en": "both drive plot from a single work of art",
       "conf": "medium"
+    },
+    {
+      "from": "soseki",
+      "to": "akutagawa",
+      "arrow": "⇒",
+      "why_zh": "漱石激赏《鼻》，提携芥川；冷峭的箴语里有师影",
+      "why_en": "Soseki praised The Nose and mentored Akutagawa",
+      "conf": "verified"
+    },
+    {
+      "from": "huang-zunxian",
+      "to": "dai-jitao",
+      "arrow": "⇒",
+      "why_zh": "从志书到策论：知日传统由记录转为判断",
+      "why_en": "from gazetteer to policy: record turns to judgement",
+      "conf": "verified"
+    },
+    {
+      "from": "dai-jitao",
+      "to": "li-yongjing",
+      "arrow": "⇒",
+      "why_zh": "《分身》自陈的直接前身之一",
+      "why_en": "a predecessor Avatar names outright",
+      "conf": "verified"
+    },
+    {
+      "from": "kuki",
+      "to": "onishi",
+      "arrow": "⇒",
+      "why_zh": "「粹」的范畴化先例，大西续以「幽玄·物哀·寂」",
+      "why_en": "iki categorised first; Onishi continues with yugen, aware, sabi",
+      "conf": "primary"
+    },
+    {
+      "from": "tanizaki",
+      "to": "yomota",
+      "arrow": "⇒",
+      "why_zh": "阴翳之美下启「摩灭」：从光的消逝到物的消逝",
+      "why_en": "shadow leads to masshitsu: from fading light to fading matter",
+      "conf": "primary"
+    },
+    {
+      "from": "onishi",
+      "to": "yomota",
+      "arrow": "⇒",
+      "why_zh": "范畴之学转为当代随笔：定义之后重新观看",
+      "why_en": "category theory becomes contemporary essay: looking again after definition",
+      "conf": "primary"
     }
   ],
   "circle": [
@@ -159,6 +207,38 @@
       "why_en": "Station Eleven HBO → the Exit Party echo",
       "conf": "verified",
       "to_en": "Patrick Somerville (series creator)"
+    },
+    {
+      "from": "kuki",
+      "to": "abe",
+      "arrow": "◎",
+      "why_zh": "同卷合刊（《日本色气》收两家之文）",
+      "why_en": "bound in one volume, Japanese Iki",
+      "conf": "verified"
+    },
+    {
+      "from": "okakura",
+      "to": "nitobe",
+      "arrow": "⇌",
+      "why_zh": "同代对西方自述：一讲美，一讲德",
+      "why_en": "contemporary self-accounts to the West: beauty and virtue",
+      "conf": "verified"
+    },
+    {
+      "from": "soseki",
+      "to": "kafu",
+      "arrow": "⇌",
+      "why_zh": "同代反近代：一以病榻自剖，一以江户凭吊",
+      "why_en": "contemporary anti-moderns: sickbed and Edo elegy",
+      "conf": "primary"
+    },
+    {
+      "from": "benedict",
+      "to": "kato-shuichi",
+      "arrow": "⇌",
+      "why_zh": "定型与拆解：加藤以「杂种」回应文化模式",
+      "why_en": "typing and dismantling: hybridity answers the culture pattern",
+      "conf": "primary"
     }
   ],
   "cowrites": [
@@ -229,6 +309,126 @@
       "why_zh": "延命 vs 尊厳 的常识化",
       "why_en": "dignity over prolonging",
       "conf": "medium"
+    },
+    {
+      "author": "soseki",
+      "school_zh": "近代日本文学 · 反自然主义",
+      "school_en": "modern Japanese literature · anti-naturalism",
+      "why_zh": "以「非人情」对抗自然主义的裸露",
+      "why_en": "disinterestedness against naturalist exposure",
+      "conf": "verified"
+    },
+    {
+      "author": "akutagawa",
+      "school_zh": "新思潮派 · 大正文学",
+      "school_en": "Shinshicho school · Taisho literature",
+      "why_zh": "理智与技巧优先，短篇为体",
+      "why_en": "intellect and craft first, the short story as form",
+      "conf": "verified"
+    },
+    {
+      "author": "kafu",
+      "school_zh": "唯美派 · 反近代",
+      "school_en": "aestheticism · anti-modernism",
+      "why_zh": "江户趣味作为对明治功利的拒绝",
+      "why_en": "Edo taste as refusal of Meiji utility",
+      "conf": "verified"
+    },
+    {
+      "author": "tanizaki",
+      "school_zh": "唯美派 · 恶魔主义",
+      "school_en": "aestheticism · diabolism",
+      "why_zh": "官能与阴影的美学",
+      "why_en": "an aesthetics of the senses and of shadow",
+      "conf": "verified"
+    },
+    {
+      "author": "kuki",
+      "school_zh": "京都学派 · 现象学美学",
+      "school_en": "Kyoto School · phenomenological aesthetics",
+      "why_zh": "以现象学方法定义「粹」",
+      "why_en": "defining iki phenomenologically",
+      "conf": "verified"
+    },
+    {
+      "author": "onishi",
+      "school_zh": "东京帝大美学 · 范畴研究",
+      "school_en": "Tokyo Imperial aesthetics · category studies",
+      "why_zh": "把审美感受拆成概念结构",
+      "why_en": "aesthetic feeling resolved into concepts",
+      "conf": "verified"
+    },
+    {
+      "author": "okakura",
+      "school_zh": "日本美术复兴 · 文化外宣",
+      "school_en": "Japanese art revival · cultural export",
+      "why_zh": "以英文向西方陈述东方",
+      "why_en": "the East stated to the West in English",
+      "conf": "verified"
+    },
+    {
+      "author": "nitobe",
+      "school_zh": "武士道论 · 基督教人格主义",
+      "school_en": "bushido discourse · Christian personalism",
+      "why_zh": "以骑士道翻译武士伦理",
+      "why_en": "warrior ethics translated into chivalry",
+      "conf": "verified"
+    },
+    {
+      "author": "kenko",
+      "school_zh": "中世隐逸文学 · 三大随笔",
+      "school_en": "medieval recluse literature · three great essays",
+      "why_zh": "无常之趣，随笔之祖",
+      "why_en": "the pleasure of impermanence, ancestor of the essay",
+      "conf": "verified"
+    },
+    {
+      "author": "zeami",
+      "school_zh": "能乐 · 观世流",
+      "school_en": "no · Kanze school",
+      "why_zh": "艺道论：秘与花",
+      "why_en": "poetics of the art: secrecy and the flower",
+      "conf": "verified"
+    },
+    {
+      "author": "huang-zunxian",
+      "school_zh": "诗界革命 · 经世之学",
+      "school_en": "poetry revolution · statecraft",
+      "why_zh": "以志书写外国，以诗存见闻",
+      "why_en": "gazetteer for the foreign, poetry for observation",
+      "conf": "verified"
+    },
+    {
+      "author": "dai-jitao",
+      "school_zh": "国民党理论 · 日本论",
+      "school_en": "Kuomintang theory · Japan discourse",
+      "why_zh": "知日以对日的策论传统",
+      "why_en": "knowing Japan in order to face it",
+      "conf": "verified"
+    },
+    {
+      "author": "benedict",
+      "school_zh": "哥伦比亚学派 · 文化与人格",
+      "school_en": "Columbia school · culture and personality",
+      "why_zh": "文化模式与国民性研究",
+      "why_en": "culture pattern and national character",
+      "conf": "verified"
+    },
+    {
+      "author": "kato-shuichi",
+      "school_zh": "战后日本文化论 · 公共批评",
+      "school_en": "post-war cultural theory · public criticism",
+      "why_zh": "杂种文化论与文学史",
+      "why_en": "hybrid culture and literary history",
+      "conf": "verified"
+    },
+    {
+      "author": "kawabata",
+      "school_zh": "新感觉派 · 日本美论",
+      "school_en": "Neo-Sensationalism · Japanese beauty discourse",
+      "why_zh": "以空无收束日本美",
+      "why_en": "Japanese beauty closed on emptiness",
+      "conf": "verified"
     }
   ]
 }

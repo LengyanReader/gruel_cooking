@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《日本侘寂》｜Japanese Wabi-Sabi | 阅读与智识</title>
+<title>《日本侘寂》｜わび・さび | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,215 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 特辑本体 · Ring 1</span><span data-en>JAPAN CULTURE — the Set · Ring 1</span></p>
-  <h1><span data-zh>《日本侘寂》</span><span data-en>Japanese Wabi-Sabi · わび・さび</span></h1>
-  <div class="subtitle" data-both><span data-zh>[日] 大西克礼（Onishi Takehiro）· 北京联合 · 特辑版 2020 · 美学轴「侘寂」站</span><span data-en>Onishi Takehiro · Beijing United · 2020 · the wabi-sabi station on the aesthetic axis</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·美学 aesthetics</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>孤寂接纳</span><span data-en>lonely acceptance</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>把笼统贩卖的「侘寂」拆成侘与寂两义，是理解茶道与俳谐之美的钥匙</span><span data-en>splits the loosely-sold wabi-sabi into wabi and sabi — a key to tea and haiku</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑里最系统的一册美学解剖，也是大西「幽玄·物哀·寂」三部曲的中文一环。</div><div data-en>The Special's most systematic anatomising, the Chinese link in Onishi's trilogy.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>侘＝主动安于不足、枯淡的心境；寂＝时间沉积的静默。大西克礼再析其枯、寒、简、远等三重审美构造，把常被当作装饰风格的侘寂还原为一种观照世界的方式。</div><div data-en>Wabi is a heart resting willingly in lack; sabi the quiet sediment of time. Onishi parses its triple structure and restores wabi-sabi from décor to a way of contemplating the world.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=日本文化特辑" target="_blank" rel="noopener"><span data-zh>豆瓣 · 特辑套装检索</span><span data-en>Douban · the set</span><span class="dom">search.douban.com ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=幽玄 物哀 寂 大西克礼" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>侘寂不是风格，而是一种观照世界的方式。（论旨概述，非逐字原文）</div><div class="trs" data-en>Wabi-sabi is not a style but a way of contemplating the world. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>全书主旨 · ✓</span><span data-en>book's argument · ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>侘＝安于不足；寂＝时间沉积之美</span><span data-en>wabi = resting in lack; sabi = beauty deposited by time</span></li><li>· <span data-zh>以概念史方法析三重审美构造</span><span data-en>dissects the triple structure by concept-history</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>把「侘寂」从消费语汇救回学术语汇。合成：配三部曲中的幽玄、物哀两册，见出大西以三关键词贯通日本美学史的雄心。</div><div data-en>Rescues wabi-sabi from marketing back to scholarship. Synthesis: pair with yugen and mono no aware to see Onishi's ambition.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-onishi-trilogy.html">《幽玄·物哀·寂》三部曲</a></td><td><span data-zh>同源底座</span><span data-en>shared base</span></td><td><div data-zh>特辑侘寂与三部曲同源</div><div data-en>the volume and trilogy share a base</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-inpraise-shadows.html">《阴翳礼赞》</a></td><td><span data-zh>上游</span><span data-en>upstream</span></td><td><div data-zh>侘寂之美上承阴翳</div><div data-en>wabi-sabi runs upstream to shadow</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>上海译文 2017 出版王向远译三部曲（侘寂同源）</span><span data-en>the Onishi trilogy in Wang Yuanyuan's trans., Shanghai Translation 2017</span></td><td><span data-zh>书目</span><span data-en>bibliography</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>特辑分册与三部曲版本的页目对应待核</span><span data-en>the mapping to the trilogy imprint to verify</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《日本侘寂》 · わび・さび</span><span data-en>わび・さび</span></h1>
+  <div class="subtitle" data-both><span data-zh>大西克礼 · 日本 · 一頁folio · 北京联合 · 2019-10 · 日本美学关键词丛书</span><span data-en>Onishi Yoshinori · Japan · Yīyè folio · Beijing United · 2019-10 · Keywords in Japanese Aesthetics series</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>美学范畴论 · 侘寂</span><span data-en>category aesthetics · wabi-sabi</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>美学</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>conf ✓ 版本 / 丛书 / 译者已核；1888-1959 生平 ✓</span><span data-en>conf ✓ edition, series, translator verified; life dates ✓</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本 / 丛书 / 译者已核；1888-1959 生平 ✓ · 档案：jp-wabisabi（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition, series, translator verified; life dates ✓ · record: jp-wabisabi. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与访谈 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, interviews now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑里最系统的一册美学解剖：把常被当作装修风格的「侘寂」，还原为一个有概念史、有层次结构的审美范畴。</div><div data-en>The Special&#x27;s most systematic anatomy: it restores wabi-sabi, often taken for a décor style, to an aesthetic category with a conceptual history and a layered structure.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://m.douban.com/book/subject/26945178/" target="_blank" rel="noopener"><span data-zh>豆瓣 · 三部曲条目（含译本序）</span><span data-en>Douban · trilogy record (with preface)</span><span class="dom">m.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=日本侘寂 大西克礼" target="_blank" rel="noopener"><span data-zh>豆瓣 · 《日本侘寂》检索</span><span data-en>Douban · search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://www.dedao.cn/ebook/detail?id=AnKgjNlArlXVNGKD1yL2Ek6YaogQv0YyKm0bZ4RBn7j589zJpMxmdPeqOYDxqL4y" target="_blank" rel="noopener"><span data-zh>得到 · 电子书试读</span><span data-en>Dedao · e-book sample</span><span class="dom">www.dedao.cn ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>大西克礼（1888—1959）是日本学院派美学的确立者之一，译过康德《判断力批判》，著有《美学原论》《幽玄与物哀》等。本书是「日本美学关键词」丛书的一种，由王向远翻译，2019 年 10 月出版；其底本是收在《幽玄·物哀·寂》三部曲中的《「寂」论》，单行时以「侘寂」为名。侘（わび）源于千利休的侘茶：安于不足、以枯淡为美；寂（さび）则是时间在物上留下的静默。大西把二者合成一个范畴来处理。</div><div data-en>Onishi Yoshinori (1888–1959) was a founder of academic aesthetics in Japan, translator of Kant&#x27;s Critique of Judgement and author of An Introduction to Aesthetics and Yūgen and Mono no Aware. This volume, translated by Wang Yuanyuan and published in October 2019, belongs to the &#x27;Keywords in Japanese Aesthetics&#x27; series; its base text is the &#x27;Sabi&#x27; study from the Yūgen–Mono no Aware–Sabi trilogy, issued standalone under the name wabi-sabi. Wabi descends from Sen no Rikyū&#x27;s wabi tea — a contentment with lack, a beauty of the withered; sabi is the silence time leaves on things. Onishi treats the two as one category.</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 版本与译者</span><span data-en>✓ edition and translator</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>时段章节 · Periods &amp; chapters</span><span data-en>Periods &amp; chapters</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 语源与用例</span><span data-en>Section 1 · Etymology and usage</span></h3>
+<div data-zh>从「侘」「寂」的古用法与茶书、俳谐中的用例入手，说明它们并非同义词，而是在不同语境里各自成立。</div><div data-en>Starting from old usages of wabi and sabi in tea texts and haikai, it shows they are not synonyms but each valid in different contexts.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 审美构造</span><span data-en>Section 2 · Aesthetic structure</span></h3>
+<div data-zh>核心章：把枯淡、简素、寂静等契机分析为一个统一结构，回答「为何残缺也能美」。</div><div data-en>The core chapter analyses motifs of the withered, the plain and the still as one structure, answering why the incomplete can be beautiful.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 范畴的边界</span><span data-en>Section 3 · The category's boundary</span></h3>
+<div data-zh>末章把侘寂与幽玄、物哀区分开，并讨论它与西方「崇高」「优美」的可比性。</div><div data-en>The close separates wabi-sabi from yūgen and aware and asks how it compares with the Western sublime and beautiful.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论述框架 · Analytical framework</span><span data-en>Analytical framework</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>论证是三层的：先做语源与用例的概念史，再析其审美构造（枯、寒、简、远一类契机如何统一），最后把它放进「日本美」的整体框架。大西的方法自觉来自德国美学，因此书中不断在「日本固有」与「普遍美学范畴」之间往返。</div><div data-en>The argument runs in three layers: a conceptual history of etymology and usage; an analysis of aesthetic structure (how motifs such as the withered, the cold, the simple and the distant unify); and a placement within &#x27;Japanese beauty&#x27; as a whole. Onishi&#x27;s method is self-consciously German, so the book shuttles between the natively Japanese and the universally aesthetic.</div></div>
+<h2 class="part" data-both><span data-zh>时间线索引 · Chronological flow</span><span data-en>Chronological flow</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《日本侘寂》 · 时段链（数字为顺序）</span><span data-en>わび・さび · the chronological chain</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">侘寂不是风格，而是一种观照世界的方式。</div><div class="trs" data-zh>侘寂不是风格，而是一种观照世界的方式。</div><div class="trs" data-en>Wabi-sabi is not a style but a way of contemplating the world.</div><div class="src"><span data-both><span data-zh>全书主旨概述（非逐字原文） · ✓</span><span data-en>summary of the book&#x27;s argument (not verbatim) · ✓</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>中文世界最完整的侘寂概念研究之一；王向远的译本与译后记把「侘」的会意（人在宅中）讲清楚，纠正了不少流行读物把侘寂等同于「破旧风」的误解。
+
+作为学院美学，行文密度高、例子偏古典，普通读者容易在第二章失去线索；另外把三部曲拆成单行本，读者若只看这一册，会看不到「寂」与「幽玄」「物哀」的对照。
+
+**合成 Synthesis：** 把它当「工具书」而非「散文」：先读导论与结论，再用它去校准特辑中《日本侘寂》之外的两册（色气、摩灭）的范畴边界。</div><div data-en>One of the fullest studies of the concept in Chinese; Wang Yuanyuan&#x27;s translation and afterword explain the character wabi (a person within a house) and correct the popular equation of wabi-sabi with a shabby-chic look.
+
+As academic aesthetics it is dense and classically exemplified, and general readers may lose the thread in chapter two; splitting the trilogy into standalones also hides the contrast with yūgen and aware.
+
+**Synthesis:** Use it as a reference rather than an essay: read the introduction and conclusion first, then use it to calibrate the categorical borders of the Special&#x27;s other aesthetic volumes (iki, erosion).</div></div>
+<h2 class="part" data-both><span data-zh>史学方法 · Historiography</span><span data-en>Historiography</span></h2>
+<div class="card"><p data-zh>概念史写法：每个词先给出历史用例，再抽象为结构，避免直接下定义。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Conceptual history: historical usages first, abstraction after — definitions are postponed.</p></div>
+<div class="card"><p data-zh>德国美学的手术刀：用「契机」（Moment）一类术语拆解日本范畴，优点是精确，代价是失掉一部分语感。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The scalpel of German aesthetics: terms like &#x27;moment&#x27; dissect Japanese categories — precise, at the cost of some verbal atmosphere.</p></div>
+<div class="card"><p data-zh>译后记值得单读：王向远交代了「侘寂」这一译名的取舍。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The translator&#x27;s afterword deserves separate reading: Wang explains the choice of the compound &#x27;chaji&#x27;.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>侘</span><span data-en>wabi</span></div>
+<div class="orig">わび</div>
+<div class="mnote"><div data-zh>安于不足：不是没有能力富足，而是主动选择枯淡。</div><div data-en>Contentment with lack: not inability to be rich but a chosen plainness.</div></div>
+<div class="src"><span data-both><span data-zh>第一章</span><span data-en>ch. 1</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>寂</span><span data-en>sabi</span></div>
+<div class="orig">さび</div>
+<div class="mnote"><div data-zh>时间沉积的静：旧、暗、寂，不是衰败而是深。</div><div data-en>The stillness time deposits: old, dim, quiet — depth rather than decay.</div></div>
+<div class="src"><span data-both><span data-zh>第二章</span><span data-en>ch. 2</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>残缺之美</span><span data-en>beauty of the incomplete</span></div>
+<div class="mnote"><div data-zh>大西的关键论证：不完整之所以美，因它把观者卷入完成的动作。</div><div data-en>Onishi&#x27;s key argument: the incomplete is beautiful because it draws the viewer into the act of completion.</div></div>
+<div class="src"><span data-both><span data-zh>审美构造章</span><span data-en>chapter on structure</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>大西克礼把「侘寂」从趣味词提升为美学范畴：先追溯侘、寂各自的语源与用例，再分析枯、寒、简、远等契机如何结成统一结构，最后追问它究竟是日本固有，还是可被普遍美学把握的范畴。</div><div data-en>Onishi Yoshinori lifts wabi-sabi from a word of taste to an aesthetic category. He traces the etymology and usage of wabi and sabi, analyses how poverty, coldness, simplicity and distance cohere into one structure, and asks whether it is uniquely Japanese or a universal aesthetic category.</div></div><div class="src"><span data-both><span data-zh>《日本侘寂》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>わび・さび: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读王向远的译本序与译后记，弄清「侘寂」是译者造的合称，再读正文，可免把两个范畴当成一个。</div><div data-en>Read Wang&#x27;s preface and afterword first to see that &#x27;wabi-sabi&#x27; is a translator&#x27;s compound, then the text — this prevents treating two categories as one.</div></div>
+<div class="card"><div data-zh>带着一个问题读：如果侘寂是「观照方式」，它能否被商业化？今天的侘寂风家居正是对这个问题的反讽回答。</div><div data-en>Read with one question: if wabi-sabi is a way of seeing, can it be commercialised? Today&#x27;s wabi-sabi interiors are the ironic answer.</div></div>
+<div class="card"><div data-zh>与《阴翳礼赞》对读「暗」：谷崎从感官经验出发，大西从范畴结构出发，两条路在同一处汇合。</div><div data-en>Read &#x27;darkness&#x27; against In Praise of Shadows: Tanizaki starts from sensation, Onishi from categorical structure, and the two roads meet.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《幽玄·物哀·寂》</span><span data-en>Yūgen · Mono no Aware · Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2017</td><td><span data-both><span data-zh>同源 · 三部曲</span><span data-en>same source · trilogy</span></span></td><td><div data-zh>本书的底本所在，三范畴合读才见全貌。</div><div data-en>The trilogy from which this volume is drawn; read all three for the full picture.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《阴翳礼赞》</span><span data-en>In Praise of Shadows</span></span></b></td><td><span data-both><span data-zh>谷崎润一郎</span><span data-en>Tanizaki Jun&#x27;ichirō</span></span></td><td>1933</td><td><span data-both><span data-zh>上游</span><span data-en>upstream</span></span></td><td><div data-zh>侘寂之美上承阴翳的感官经验。</div><div data-en>Wabi-sabi runs upstream to the sensory experience of shadow.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《茶之书》</span><span data-en>The Book of Tea</span></span></b></td><td><span data-both><span data-zh>冈仓天心</span><span data-en>Okakura Kakuzō</span></span></td><td>1906</td><td><span data-both><span data-zh>远源</span><span data-en>distant source</span></span></td><td><div data-zh>茶室是侘寂最早的制度性场所。</div><div data-en>The tea-room is wabi-sabi&#x27;s earliest institutional site.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>中译 2019 年 10 月，北京联合出版公司，王向远译</span><span data-en>Chinese edition October 2019, Beijing United, trans. Wang Yuanyuan</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目与商品页</span><span data-en>catalogue and retail listing</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>ISBN 978-7-5596-3518-0；属「日本美学关键词」丛书</span><span data-en>ISBN 978-7-5596-3518-0; in the &#x27;Keywords in Japanese Aesthetics&#x27; series</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目记录</span><span data-en>bibliographic record</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>大西克礼生卒 1888-10-04 — 1959-02-06</span><span data-en>Onishi Yoshinori, 4 Oct 1888 – 6 Feb 1959</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>底本为三部曲中的《「寂」论》</span><span data-en>Base text is the &#x27;Sabi&#x27; study from the trilogy</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>译本序 / 目录</span><span data-en>translator&#x27;s preface / TOC</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>单行本是否另增删篇目（相对三部曲）待对版权页。</span><span data-en>Whether the standalone adds or cuts material relative to the trilogy — check colophon.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>页数与定价未记。</span><span data-en>Page count and price not recorded.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

@@ -912,6 +912,11 @@ LANG_LABEL = {"en": "EN \u00b7 english", "fr": "FR \u00b7 fran\u00e7ais", "ja": 
 
 
 def excerpt_block(e):
+    if e.get("paraphrase"):
+        return ('<div class="exq">'
+                '<div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div>'
+                f'<div class="mnote">{zh_en(e["trans_zh"], e.get("trans_en", ""))}</div>'
+                f'<div class="src">{pair(e["source"], e.get("source_en"), "span")} · {conf_token(e.get("conf", "◐"))}</div></div>')
     lang = LANG_LABEL.get(e.get("lang", ""), "")
     bits = [f'<div class="exq">', f'<div class="orig">{esc(e["orig"])}' + (f'<span class="lang">{lang}</span>' if lang else '') + '</div>']
     trs = f'<div data-zh>{esc(e["trans_zh"])}</div>'
@@ -937,6 +942,34 @@ def motif_block(m):
     return "\n".join(bits)
 
 
+def _page_labels(kind):
+    """Section labels per book kind: history/nonfiction/scholarship read as
+    periods, essays as pieces, fiction as plot. Shared by book_page."""
+    if kind in ("history", "nonfiction", "scholarship"):
+        return dict(
+            acts=("时段章节 · Periods &amp; chapters", "Periods &amp; chapters"),
+            act=("第 {n} 节 · {t}", "Section {n} · {t}"),
+            narr=("论述框架 · Analytical framework", "Analytical framework"),
+            flow=("时间线索引 · Chronological flow", "Chronological flow"),
+            flow_cap=("{t} · 时段链（数字为顺序）", "{o} · the chronological chain"),
+            chars=("关键人物 · Key Figures", "Key Figures"))
+    if kind == "essay":
+        return dict(
+            acts=("篇章结构 · Pieces &amp; sections", "Pieces &amp; sections"),
+            act=("第 {n} 篇 · {t}", "Piece {n} · {t}"),
+            narr=("篇章脉络 · The shape of the sequence", "The shape of the sequence"),
+            flow=("篇章链 · Sequence of pieces", "Sequence of pieces"),
+            flow_cap=("{t} · 篇章链（数字为顺序）", "{o} · the sequence of pieces (numbers = order)"),
+            chars=("关键人物 · Key Figures", "Key Figures"))
+    return dict(
+        acts=("情节分幕 · Plot content", "Plot content"),
+        act=("第 {n} 幕 · {t}", "Act {n} · {t}"),
+        narr=("叙事结构 · Narrative structure", "Narrative structure"),
+        flow=("情节流程图 · Plot flow", "Plot flow"),
+        flow_cap=("{t} · 事件链（数字为顺序）", "{o} · the event chain (numbers = order)"),
+        chars=("人物关系图 · Characters", "Characters &amp; relations"))
+
+
 def book_page(site, book, crop):
     title = f"{book['title_zh']}｜{book['title_orig']}"
     hero_sub = f"{book['author_zh']} · {book['country']} · {book['publines_zh']}"
@@ -954,6 +987,7 @@ def book_page(site, book, crop):
         _dom_en = book.get("domain_en") or ((_bilingual(book["domain"]) or [None, book["domain"]])[1])
         chips.insert(3, (book["domain"], _dom_en))
     is_hist = book.get("kind", "") in ("history", "nonfiction", "scholarship")
+    LB = _page_labels(book.get("kind", ""))
     s = []
     # provenance
     s.append(srcnote(
@@ -985,7 +1019,7 @@ def book_page(site, book, crop):
     s.append(blk("背景 · Background", book["background"]["zh"], book["background"]["en"]))
     s.append('<p class="tok">' + conf_token(book["background"]["conf"], book["background"].get("conf_en")) + ' <span class="hidden"></span></p>')
     # plot acts / thematic periods
-    acts_label = ("时段章节 · Periods &amp; chapters", "Periods &amp; chapters") if is_hist else ("情节分幕 · Plot content", "Plot content")
+    acts_label = LB["acts"]
     s.append(f'<h2 class="part" data-both><span data-zh>{acts_label[0]}</span><span data-en>{acts_label[1]}</span></h2>')
     def render_brief(act):
         """Render a per-chapter lossless brief block if the act has one.
@@ -1007,8 +1041,8 @@ def book_page(site, book, crop):
         return RDJ.brief_html(spec["brief"], spec["brief"]["labels"], br)
 
     for act in book.get("plot_acts", []):
-        act_head_zh = f'第 {act["n"]} 节 · {act["title_zh"]}' if is_hist else f'第 {act["n"]} 幕 · {act["title_zh"]}'
-        act_head_en = f'Section {act["n"]} · {act["title_en"]}' if is_hist else f'Act {act["n"]} · {act["title_en"]}'
+        act_head_zh = LB["act"][0].format(n=act["n"], t=act["title_zh"])
+        act_head_en = LB["act"][1].format(n=act["n"], t=act["title_en"])
         s.append(f'<div class="card"><h3 class="sec" data-both><span data-zh>{act_head_zh}</span><span data-en>{act_head_en}</span></h3>')
         s.append(zh_en(act["zh"], act["en"]))
         s.append(render_brief(act))
@@ -1019,16 +1053,16 @@ def book_page(site, book, crop):
             s.append('<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)">' + zh_en(act["sources"], _ase, "span") + '</span></p>')
         s.append("</div>")
     # narrative structure / analytical framework
-    narr_label = ("论述框架 · Analytical framework", "Analytical framework") if is_hist else ("叙事结构 · Narrative structure", "Narrative structure")
+    narr_label = LB["narr"]
     s.append(f'<h2 class="part" data-both><span data-zh>{narr_label[0]}</span><span data-en>{narr_label[1]}</span></h2>')
     s.append(blk("结构 · Structure", book["narrative"]["zh"], book["narrative"]["en"], cls="card"))
     # plot flow svg / chronological flow
-    flow_label = ("时间线索引 · Chronological flow", "Chronological flow") if is_hist else ("情节流程图 · Plot flow", "Plot flow")
+    flow_label = LB["flow"]
     s.append(f'<h2 class="part" data-both><span data-zh>{flow_label[0]}</span><span data-en>{flow_label[1]}</span></h2>')
-    s.append('<div class="diagram">' + svg_plot_flow(book.get("plot_flow", [])) + '<p class="cap">' + zh_en(book["title_zh"] + " · 时段链（数字为顺序）" if is_hist else book["title_zh"] + " · 事件链（数字为顺序）", book["title_orig"] + " · the chronological chain" if is_hist else book["title_orig"] + " · the event chain (numbers = order)", "span") + '</p></div>')
+    s.append('<div class="diagram">' + svg_plot_flow(book.get("plot_flow", [])) + '<p class="cap">' + zh_en(LB["flow_cap"][0].format(t=book["title_zh"]), LB["flow_cap"][1].format(o=book["title_orig"]), "span") + '</p></div>')
     # characters + charedge svg / key figures
     if book.get("characters"):
-        chars_label = ("关键人物 · Key Figures", "Key Figures") if is_hist else ("人物关系图 · Characters", "Characters &amp; relations")
+        chars_label = LB["chars"]
         s.append(f'<h2 class="part" data-both><span data-zh>{chars_label[0]}</span><span data-en>{chars_label[1]}</span></h2>')
         s.append('<div class="diagram">' + svg_charedge(book) + '<p class="cap">' + zh_en(book["title_zh"] + " · 人物关系（虚点线=连接）", book["title_orig"] + " · character relations (dotted = link)", "span") + '</p></div>')
         s.append('<div class="tablewrap"><table class="ledger"><thead><tr><th>ID</th><th data-both><span data-zh>人物</span><span data-en>name</span></th><th data-both><span data-zh>阵营/组</span><span data-en>group</span></th><th data-both><span data-zh>角色</span><span data-en>role</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>')
@@ -1133,6 +1167,95 @@ def book_page(site, book, crop):
 
 
 # ---------- crop list page ----------
+def crop_reading_map(crop, books):
+    """Renders the crop's reading map (rings / axes / reading order / pointers)
+    stored in site.json. Returns '' for crops without a map."""
+    rings = crop.get("rings") or []
+    axes = crop.get("axes") or []
+    order = crop.get("reading_order") or []
+    ptrs = crop.get("pointers") or []
+    if not (rings or axes or order or ptrs):
+        return ""
+    by_id = {b["id"]: b for b in books}
+
+    def _link(b):
+        return (f'<a href="books/{esc(b["slug"])}.html"><span data-zh>{esc(b["title_zh"])}</span>'
+                f'<span data-en>{esc(b["title_orig"])}</span></a>')
+
+    def _who(b):
+        return f'<span style="color:var(--ink-pale);font-size:.8rem"> · {esc(b["author_zh"])}</span>'
+
+    s = []
+    s.append('<h2 class="part" data-both><span data-zh>读法 · 两圈三轴一条路径</span><span data-en>How to read this crop</span></h2>')
+    s.append(srcnote(
+        '读法图由 <code>web/data/site.json</code> 的 <code>rings / axes / reading_order / pointers</code> 生成；书名可点进单书档案。',
+        'The map is generated from <code>rings / axes / reading_order / pointers</code> in <code>web/data/site.json</code>; every title opens its dossier.'))
+    # rings
+    if rings:
+        s.append('<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin:1rem 0">')
+        for r in rings:
+            items = []
+            for i, bid in enumerate(r.get("book_ids", []), 1):
+                b = by_id.get(bid)
+                if not b:
+                    continue
+                items.append('<li style="margin:.3rem 0;line-height:1.55">'
+                             f'<span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">{i:02d}</span>'
+                             + _link(b) + _who(b) + '</li>')
+            s.append('<div class="card" style="margin:0">'
+                     f'<h3 class="sec" data-both><span data-zh>{esc(r["label_zh"])}</span><span data-en>{esc(r["label_en"])}</span></h3>'
+                     + zh_en(r.get("note_zh", ""), r.get("note_en", ""))
+                     + '<ol style="list-style:none;margin:.8rem 0 0">' + "".join(items) + '</ol></div>')
+        s.append('</div>')
+    # axes
+    if axes:
+        s.append('<h3 class="sec" data-both><span data-zh>三条轴 · 三条谱系</span><span data-en>Three axes · three genealogies</span></h3>')
+        for a in axes:
+            nodes = []
+            for bid in a.get("chain", []):
+                b = by_id.get(bid)
+                if not b:
+                    continue
+                nodes.append('<a href="books/%s.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px">'
+                             '<b style="font-size:.84rem;font-weight:600" data-zh>%s</b>'
+                             '<b style="font-size:.84rem;font-weight:600" data-en>%s</b>'
+                             '<span style="font-size:.72rem;color:var(--ink-pale)">%s · %s</span></a>'
+                             % (esc(b["slug"]), esc(b["title_zh"]), esc(b["title_orig"]), esc(b["author_zh"]), esc(str(b["year"]))))
+            s.append('<div class="card">'
+                     f'<h3 class="sec" data-both><span data-zh>{esc(a["key"])} · {esc(a["label_zh"])}</span><span data-en>{esc(a["label_en"])}</span></h3>'
+                     + zh_en(a.get("note_zh", ""), a.get("note_en", ""))
+                     + '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-top:.9rem">'
+                     + '<span style="color:var(--gold-dim);font-weight:700">→</span>'.join(nodes) + '</div></div>')
+    # reading order
+    if order:
+        s.append('<h3 class="sec" data-both><span data-zh>阅读路径 · 三步</span><span data-en>Reading order · three steps</span></h3>')
+        s.append('<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0">')
+        for lv in order:
+            items = []
+            for bid in lv.get("book_ids", []):
+                b = by_id.get(bid)
+                if not b:
+                    continue
+                items.append('<li style="margin:.28rem 0">' + _link(b) + _who(b) + '</li>')
+            s.append('<div class="card" style="margin:0">'
+                     f'<h3 class="sec" data-both><span data-zh>{esc(lv["level_zh"])}</span><span data-en>{esc(lv["level_en"])}</span></h3>'
+                     + zh_en(lv.get("note_zh", ""), lv.get("note_en", ""))
+                     + '<ol style="list-style:none;margin:.7rem 0 0">' + "".join(items) + '</ol></div>')
+        s.append('</div>')
+    # pointers
+    if ptrs:
+        s.append('<h3 class="sec" data-both><span data-zh>延伸 · 出口</span><span data-en>Pointers</span></h3>')
+        s.append('<div class="card"><ul style="list-style:none">')
+        for p in ptrs:
+            s.append('<li style="margin:.5rem 0;line-height:1.6">'
+                     f'<a href="{esc(p["href"])}" style="font-weight:600">'
+                     f'<span data-zh>{esc(p["label_zh"])}</span><span data-en>{esc(p["label_en"])}</span></a> '
+                     '<span style="color:var(--ink-soft);font-size:.85rem">— '
+                     + zh_en(p.get("note_zh", ""), p.get("note_en", ""), "span") + '</span></li>')
+        s.append('</ul></div>')
+    return "\n".join(s)
+
+
 def crop_page(site, crop, books):
     title = f"{crop['title_zh']}｜{crop['title_en']}"
     hero_sub = crop["subtitle_zh"]
@@ -1146,6 +1269,10 @@ def crop_page(site, crop, books):
     s.append(srcnote(
         '<b>书封与照片。</b>书封图取自各出版社/书店公开页（<code>docs/reading_ia/art/covers/</code>，仅本地引用）；作者照片取自 Wikimedia Commons 等公开来源，版权归原作者，个人笔记内引用。',
         '<b>Covers &amp; portraits.</b> Cover art referenced locally from publisher/bookseller pages (<code>art/covers/</code>); author photos from public sources (Wikimedia Commons etc.). All rights remain with their owners; cited here for a personal reading journal.'))
+    rmap = crop_reading_map(crop, books)
+    if rmap:
+        s.append(rmap)
+        s.append('<h2 class="part" data-both><span data-zh>全书目 · ' + str(len(books)) + ' 部</span><span data-en>All ' + str(len(books)) + ' dossiers</span></h2>')
     for i, b in enumerate(books, 1):
         s.append('<article class="bkcard">')
         cov = cover_art(b["slug"])
@@ -1481,7 +1608,31 @@ def main():
     args = ap.parse_args()
     site = load("site.json"); books = load("books.json")["books"]; authors = load("authors.json")["authors"]; relations = load("relations.json")
     if args.validate:
-        print("books=%d authors=%d relations=ok site=ok" % (len(books), len(authors)))
+        errs = []
+        ids = [b["id"] for b in books]
+        slugs = [b["slug"] for b in books]
+        if len(ids) != len(set(ids)):
+            errs.append("duplicate book ids")
+        if len(slugs) != len(set(slugs)):
+            errs.append("duplicate book slugs")
+        known = set(ids)
+        for crop in site["crops"]:
+            refs = [("book_ids", crop.get("book_ids", []))]
+            for r in crop.get("rings") or []:
+                refs.append((crop["id"] + "/rings", r.get("book_ids", [])))
+            for a in crop.get("axes") or []:
+                refs.append((crop["id"] + "/axes", a.get("chain", [])))
+            for lv in crop.get("reading_order") or []:
+                refs.append((crop["id"] + "/reading_order", lv.get("book_ids", [])))
+            for where, ref in refs:
+                miss = [i for i in ref if i not in known]
+                if miss:
+                    errs.append("%s: unresolved %s" % (where, ", ".join(miss)))
+        if errs:
+            for e in errs:
+                print("FAIL", e)
+            return 1
+        print("books=%d authors=%d relations=ok site=ok crops=%d" % (len(books), len(authors), len(site["crops"])))
         return 0
     crops = site["crops"]
     root = os.path.join(ROOT, *site["site"]["base"].split("/"))
@@ -1491,17 +1642,18 @@ def main():
     bdir = os.path.join(root, "read", "books")
     os.makedirs(bdir, exist_ok=True)
     for crop in crops:
-        for b_id in crop["book_ids"]:
-            b = books_all.get(b_id)
-            if not b:
-                continue
+        missing = [i for i in crop["book_ids"] if i not in books_all]
+        if missing:
+            raise SystemExit("crop %s: unresolved book ids: %s" % (crop["id"], ", ".join(missing)))
+        crop_books = [books_all[i] for i in crop["book_ids"]]
+        for b in crop_books:
             fp = os.path.join(bdir, b["slug"] + ".html")
             with open(fp, "w", encoding="utf-8") as f:
                 f.write(book_page(site, b, crop))
             out.append(fp)
         fp = os.path.join(root, "read", crop["dir_page"])
         with open(fp, "w", encoding="utf-8") as f:
-            f.write(crop_page(site, crop, [books_all[i] for i in crop["book_ids"] if i in books_all]))
+            f.write(crop_page(site, crop, crop_books))
         out.append(fp)
     # archive
     fp = os.path.join(root, "read", "index.html")

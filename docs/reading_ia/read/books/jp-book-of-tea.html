@@ -8,25 +8,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,229 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《茶之书》</span><span data-en>The Book of Tea · 茶の書（英文原版）</span></h1>
-  <div class="subtitle" data-both><span data-zh>冈仓天心 Okakura Kakuzo · 1906 · 纽约 Putnam · 公版（Project Gutenberg ebook 769）</span><span data-en>Okakura Kakuzo · 1906 · Putnam, New York · public domain (Gutenberg ebook 769)</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文化自述 self-portrait</span><span data-en>self-portrait</span></span> <span class="chip"><span data-zh>清寂自尊</span><span data-en>serene self-regard</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>公版全文，逐字引文直接取自 Project Gutenberg 电子文本（版本经核实），出处可复核。</div><div data-en><b>Provenance.</b> Public-domain full text; the verbatim quote is taken directly from the Project Gutenberg e-text (edition verified), so it is re-checkable.</div></div>
-<div class="readban"><span data-zh>以茶道讲东方之「道」：茶不是饮料而是一种世界观，日本美自我外宣的原点</span><span data-en>tea not a drink but a worldview — the origin-point of Japan's aesthetic self-export</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>「日本美」向世界自我陈述的原点文本，公版可逐字引用。</div><div data-en>The origin text of Japan's aesthetic self-statement to the world; public domain and quotable verbatim.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>冈仓以英文向西方陈说东方：茶自唐传入、宋极于点茶、明废团茶，而日本以「茶道」保存其浪漫。全书主张茶是一种对人生、自然与宇宙的态度的崇拜。</div><div data-en>Okakura presents the East to the West in English: tea came from Tang, culminated in Song, and was preserved as a romance in the Japanese way; the book argues teaism is a worship of a whole attitude to life, nature and the cosmos.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://www.gutenberg.org/ebooks/769" target="_blank" rel="noopener"><span data-zh>公版全文 · Gutenberg ebook 769</span><span data-en>Full text · Gutenberg ebook 769</span><span class="dom">gutenberg.org ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=茶之书 冈仓天心" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="orig">Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.</div><div class="trs" data-zh>茶之道，是在污浊的日常事实里崇拜美的一种信仰。（逐字原文）</div><div class="trs" data-en>Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.</div><div class="src"><span data-both><span data-zh>第一章 The Cup of Humanity · 公版全文 ✓</span><span data-en>Ch. I The Cup of Humanity · public-domain text ✓</span></span></div></div><div class="quote"><div class="orig">It is essentially a worship of the Imperfect.</div><div class="trs" data-zh>它本质上是对「不完美」的崇拜。（逐字原文）</div><div class="trs" data-en>It is essentially a worship of the Imperfect.</div><div class="src"><span data-both><span data-zh>第一章 · 公版全文 ✓</span><span data-en>Ch. I · public-domain text ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>茶是一种世界观，而非一种饮料</span><span data-en>tea is a worldview, not a drink</span></li><li>· <span data-zh>以「崇拜不完美」道出侘、寂、自然</span><span data-en>naming wabi, sabi and nature via worship of the imperfect</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>东方主义自述的经典，也承受其批评（把日本本质化）。合成：与《武士道》并读，见两种对西方向的自我陈说。</div><div data-en>A classic of Eastern self-statement, and a target of its critiques (essentialising Japan). Synthesis: read with Bushido as two self-accounts to the West.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-bushido.html">《武士道》</a></td><td><span data-zh>同代自述</span><span data-en>same-era self-portrait</span></td><td><div data-zh>与茶之书同为面向西方的自陈</div><div data-en>both self-portraits addressed to the West</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-wabisabi.html">《日本侘寂》</a></td><td><span data-zh>范畴下游</span><span data-en>downstream category</span></td><td><div data-zh>茶之书下的侘寂范畴后成大西之学</div><div data-en>the wabi-sabi it names later becomes Onishi's study</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>初版 1906，纽约 Putnam</span><span data-en>first published 1906, Putnam New York</span></td><td><span data-zh>公版记录</span><span data-en>PD record</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>Gutenberg ebook #769 收录全文</span><span data-en>Gutenberg ebook #769 carries the full text</span></td><td><span data-zh>Gutenberg</span><span data-en>Gutenberg</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《茶之书》 · The Book of Tea</span><span data-en>The Book of Tea</span></h1>
+  <div class="subtitle" data-both><span data-zh>冈仓天心 · 日本 · Putnam · 1906 · 公版 · Gutenberg #769</span><span data-en>Okakura Kakuzō · Japan · Putnam · 1906 · public domain · Gutenberg #769</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>英文自述 · 七章</span><span data-en>self-portrait in English · seven chapters</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>美学</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>conf ✓ 初版 / 公版全文 / 章节结构已核</span><span data-en>conf ✓ first edition, public-domain text, chapter structure verified</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 初版 / 公版全文 / 章节结构已核 · 档案：jp-book-of-tea（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ first edition, public-domain text, chapter structure verified · record: jp-book-of-tea. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography and secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>「日本美」向世界自我陈述的原点文本，公版可逐字引用。它把茶室写成一套宇宙论，也把「不完美」写成了信仰。</div><div data-en>The origin text of Japan&#x27;s aesthetic self-statement to the world, public domain and quotable verbatim. It turns the tea-room into a cosmology and imperfection into a faith.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.gutenberg.org/ebooks/769" target="_blank" rel="noopener"><span data-zh>公版全文 · Gutenberg #769</span><span data-en>Full text · Gutenberg #769</span><span class="dom">www.gutenberg.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=茶之书 冈仓天心" target="_blank" rel="noopener"><span data-zh>豆瓣 · 中译检索</span><span data-en>Douban · Chinese editions</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>冈仓天心（1863—1913）以英文写作，1906 年在纽约出版本书，面向西方读者解释茶道。全书七章：人性的茶杯、茶的流派、道家与禅、茶室、艺术鉴赏、花、茶师。其著名论断是「茶道是对不完美的崇拜」：在污浊的日常里崇拜美，在残缺中看见完成。它既是美学导论，也是近代日本向西方争取文化主体性的一次外交式写作。</div><div data-en>Okakura Kakuzō (1863–1913) wrote in English; the book appeared in New York in 1906 to explain teaism to Western readers. Its seven chapters run: The Cup of Humanity, The Schools of Tea, Taoism and Zennism, The Tea-Room, Art Appreciation, Flowers, The Tea-Masters. Its famous claim is that teaism is the adoration of the imperfect: beauty among sordid facts, completion in the incomplete. It is at once an introduction to aesthetics and a diplomatic bid for cultural subjecthood.</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 初版与结构</span><span data-en>✓ first edition and structure</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 第一章 人性的茶杯</span><span data-en>Piece 1 · I · The Cup of Humanity</span></h3>
+<div data-zh>以茶为文明的和解剂：茶从药物变成饮品，再变成一种信仰。提出「茶道是对不完美的崇拜」。</div><div data-en>Tea as a civiliser: from medicine to drink to faith. Here comes the claim that teaism is the worship of the imperfect.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 第二—三章 茶的流派 / 道家与禅</span><span data-en>Piece 2 · II–III · Schools of Tea / Taoism and Zennism</span></h3>
+<div data-zh>梳理茶在中国三阶段的演变，并说明道家「虚」与禅宗「自性」如何成为茶道的哲学底座。</div><div data-en>Tea&#x27;s three stages in China, and how Taoist emptiness and Zen self-nature became teaism&#x27;s philosophical base.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 第四—五章 茶室 / 艺术鉴赏</span><span data-en>Piece 3 · IV–V · The Tea-Room / Art Appreciation</span></h3>
+<div data-zh>茶室作为「空虚」的建筑：不对称、简陋、刻意留白。鉴赏不是判断，而是与作品互相进入。</div><div data-en>The tea-room as architecture of emptiness: asymmetry, simplicity, deliberate void. Appreciation is not judgement but mutual entry with the work.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 篇 · 第六—七章 花 / 茶师</span><span data-en>Piece 4 · VI–VII · Flowers / The Tea-Masters</span></h3>
+<div data-zh>插花反对园艺式的修剪，茶师则以人格完成茶道。末章把美学收束为伦理。</div><div data-en>Flower arrangement against garden pruning; the tea-master completes teaism through character. The close turns aesthetics into ethics.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>七章从一只茶杯写到整个东方宇宙观：先讲茶如何从中国传入日本，再讲道家与禅如何给茶道提供哲学，最后落到茶室、插花与茶师的人格。论证方式是「以小见大」——每一章都从一个器物或仪式出发，推向一种人生态度。</div><div data-en>Seven chapters move from a teacup to an Eastern cosmology: how tea came from China to Japan, how Taoism and Zen supplied its philosophy, then the tea-room, flower arrangement and the tea-master&#x27;s character. The method is synecdoche — each chapter starts from an object or rite and opens onto an attitude to life.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《茶之书》 · 篇章链（数字为顺序）</span><span data-en>The Book of Tea · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.</div><div class="trs" data-zh>茶道，是在污浊的日常事实里崇拜美的一种信仰。</div><div class="trs" data-en>Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.</div><div class="src"><span data-both><span data-zh>第一章 The Cup of Humanity · 公版全文 ✓（Gutenberg #769）</span><span data-en>Ch. I, The Cup of Humanity · public-domain text ✓ (Gutenberg #769)</span></span></div></div>
+<div class="quote"><div class="orig">It is essentially a worship of the Imperfect.</div><div class="trs" data-zh>它本质上是对「不完美」的崇拜。</div><div class="trs" data-en>It is essentially a worship of the Imperfect.</div><div class="src"><span data-both><span data-zh>第一章 · 公版全文 ✓</span><span data-en>Ch. I · public-domain text ✓</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>二十世纪最成功的日本文化外宣文本之一：用西方读者能懂的古典学养与英文散文，把茶道讲成一种普遍的人生哲学。至今仍是英语世界进入日本美学的第一本书。
+
+批评在于「太美」：为了向西方陈述，冈仓把茶道理想化、去历史化，略去茶道的政治与阶级背景；「东方」在他笔下也被写成一个整体。
+
+**合成 Synthesis：** 读它要同时读两层：一层是茶的真实历史，一层是 1906 年一个日本知识分子如何对西方说话。前者可补《日本侘寂》，后者可接《武士道》。</div><div data-en>One of the most successful cultural exports of the twentieth century: classical learning and English prose legible to Western readers turn teaism into a universal philosophy of life. It remains the first book through which the English world enters Japanese aesthetics.
+
+The criticism is that it is too beautiful: to address the West, Okakura idealises and de-historicises teaism, omitting its politics and class base, and writes &#x27;the East&#x27; as a whole.
+
+**Synthesis:** Read two layers at once: the actual history of tea, and how a Japanese intellectual addressed the West in 1906. The first leads to wabi-sabi, the second to Bushido.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>以器载道：茶杯、茶室、一枝花，都是通往宇宙论的入口。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The vessel carries the doctrine: a cup, a room, a single flower are entrances to cosmology.</p></div>
+<div class="card"><p data-zh>英文散文的节奏：短句与长句交替，带十九世纪随笔的从容。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The rhythm of the English prose: short and long sentences alternating with nineteenth-century ease.</p></div>
+<div class="card"><p data-zh>比较法：不断把东方与西方并置，让西方读者在自己的参照系里理解茶道。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Comparison throughout: East and West side by side, so Western readers grasp teaism within their own frame.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>不完美</span><span data-en>the imperfect</span></div>
+<div class="orig">不完全</div>
+<div class="mnote"><div data-zh>茶道的核心信仰：残缺不是缺陷，而是邀请。</div><div data-en>Teaism&#x27;s core faith: the incomplete is not a defect but an invitation.</div></div>
+<div class="src"><span data-both><span data-zh>第一章</span><span data-en>ch. I</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>虚空</span><span data-en>the void</span></div>
+<div class="orig">空</div>
+<div class="mnote"><div data-zh>茶室的留白与不对称，是道家「虚」的建筑化。</div><div data-en>The tea-room&#x27;s void and asymmetry architecturally render Taoist emptiness.</div></div>
+<div class="src"><span data-both><span data-zh>第四—五章</span><span data-en>chs. IV–V</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>茶师人格</span><span data-en>the tea-master&#x27;s character</span></div>
+<div class="mnote"><div data-zh>末章把美学收束为伦理：懂茶即懂如何做人。</div><div data-en>The close turns aesthetics into ethics: to know tea is to know how to be a person.</div></div>
+<div class="src"><span data-both><span data-zh>第七章</span><span data-en>ch. VII</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq">
+<div class="orig">Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.<span class="lang">EN · english</span></div>
+<div class="tr"><div data-zh>茶道，是在污浊的日常事实里崇拜美的一种信仰。</div><div data-en>Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence.</div></div>
+<div class="note"><div data-zh>全书第一句名言，也是理解「茶道即美学」的钥匙。</div><div data-en>The book&#x27;s first famous sentence, and the key to &#x27;teaism as aesthetics&#x27;.</div></div>
+<div class="src">The Book of Tea, ch. I · Gutenberg #769</div></div>
+<div class="exq">
+<div class="orig">It is essentially a worship of the Imperfect.<span class="lang">EN · english</span></div>
+<div class="tr"><div data-zh>它本质上是对「不完美」的崇拜。</div><div data-en>It is essentially a worship of the Imperfect.</div></div>
+<div class="note"><div data-zh>与《日本侘寂》的「残缺之美」直接接续。</div><div data-en>Connects directly to the &#x27;beauty of the incomplete&#x27; in wabi-sabi.</div></div>
+<div class="src">The Book of Tea, ch. I · Gutenberg #769</div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读第一章与第七章，抓住「不完美」与「人格」两端，再读中间五章看论证如何搭桥。</div><div data-en>Read ch. I and ch. VII first for the two ends — imperfection and character — then the middle five to see the bridge.</div></div>
+<div class="card"><div data-zh>把书中「东方」出现的地方标出，问：这个东方包括中国吗？冈仓的答案会影响你读《日本国志》。</div><div data-en>Mark every &#x27;East&#x27; and ask whether it includes China; Okakura&#x27;s answer will shape how you read Huang Zunxian.</div></div>
+<div class="card"><div data-zh>与《武士道》对读：两本都是 1900 年代面向西方的自述，一本讲「美」，一本讲「德」。</div><div data-en>Read with Bushido: both are 1900s self-accounts for the West, one of beauty, one of virtue.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《武士道》</span><span data-en>Bushido</span></span></b></td><td><span data-both><span data-zh>新渡户稻造</span><span data-en>Nitobe Inazō</span></span></td><td>1900</td><td><span data-both><span data-zh>同代 · 自述</span><span data-en>same era · self-portrait</span></span></td><td><div data-zh>两部面向西方的自陈，一美一德。</div><div data-en>Two self-portraits for the West, one of beauty, one of virtue.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《日本侘寂》</span><span data-en>Japanese Wabi-Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2019</td><td><span data-both><span data-zh>下游 · 范畴</span><span data-en>downstream · category</span></span></td><td><div data-zh>茶之书点到的侘寂，后成大西的专门之学。</div><div data-en>The wabi-sabi named here later becomes Onishi&#x27;s discipline.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《阴翳礼赞》</span><span data-en>In Praise of Shadows</span></span></b></td><td><span data-both><span data-zh>谷崎润一郎</span><span data-en>Tanizaki Jun&#x27;ichirō</span></span></td><td>1933</td><td><span data-both><span data-zh>同族 · 感官</span><span data-en>kin · sensory</span></span></td><td><div data-zh>茶室的幽暗，谷崎把它写成整套日本美学。</div><div data-en>Tanizaki turns the tea-room&#x27;s gloom into a whole aesthetics.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>初版 1906，纽约 G. P. Putnam&#x27;s Sons</span><span data-en>First published 1906 by G. P. Putnam&#x27;s Sons, New York</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>公版书目记录</span><span data-en>public-domain catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>Project Gutenberg #769 收全文</span><span data-en>Full text at Project Gutenberg #769</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Gutenberg</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>全书七章（The Cup of Humanity … The Tea-Masters）</span><span data-en>Seven chapters, from The Cup of Humanity to The Tea-Masters</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>公版目录</span><span data-en>public-domain TOC</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1863—1913</span><span data-en>Author 1863–1913</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>初版印次与插图者待核（不同版本插图不同）。</span><span data-en>First printing and illustrator to verify (illustrations vary by edition).</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

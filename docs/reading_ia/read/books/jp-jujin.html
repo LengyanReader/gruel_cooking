@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《侏儒的话》｜Dwarf's Words | 阅读与智识</title>
+<title>《侏儒的话》｜侏儒の言葉 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,219 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《侏儒的话》</span><span data-en>Dwarf's Words · Jujin no Mon · 侏儒の言葉</span></h1>
-  <div class="subtitle" data-both><span data-zh>芥川龙之介 Akutagawa Ryunosuke · 1923-1925 · 中译多种（文洁若等）· 箴语随笔集 · 特辑《妄想者手记》同源</span><span data-en>Akutagawa Ryunosuke · 1923-25 · several Chinese eds. · aphorisms · kin to the Visionary volume</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文豪侧翼 literary</span><span data-en>literary wing</span></span> <span class="chip"><span data-zh>冷峭箴言</span><span data-en>bracing aphorism</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>侏儒虽小，却敢刺穿巨人的脚：写文艺、人生、恋爱与悲观，冷到见骨又处处自嘲</span><span data-en>a dwarf may pierce a giant's heel: on art, life, love and pessimism — bone-cold yet wryly self-mocking</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>读《妄想者手记》时最好的箴语对读本。</div><div data-en>The best aphoristic companion to the Visionary volume.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《侏儒的话》以短峭的箴语成集，芥川自称「侏儒」，故敢言大人不敢言。它把理智与自嘲锻成警句，与手记体的散文互为内外。</div><div data-en>Gathered as terse aphorisms, Akutagawa calls himself a dwarf and so dares what giants dare not; it forges intellect and self-mockery into sententiae, the inner and outer of his notebook prose.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=侏儒的话 芥川" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a><a href="https://openlibrary.org/search?q=Akutagawa jujin no mon" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>侏儒虽小，敢刺巨人之足。（论旨概述，非逐字原文）</div><div class="trs" data-en>Small as a dwarf, he dares to pierce the giant's heel. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>自况 · ◐ 译文随版本</span><span data-en>self-portrait · ◐ wording per edition</span></span></div></div><ul class="pts"><li>· <span data-zh>以箴语写理智的抒情</span><span data-en>intellectual lyricism in aphorisms</span></li><li>· <span data-zh>悲观而不失机智的自嘲</span><span data-en>pessimism shot through with witty self-mockery</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>芥川思想的格言体提要。合成：与《妄想者手记》同读，见箴语与手记之一体。</div><div data-en>An aphoristic digest of Akutagawa's thought. Synthesis: read with the Visionary volume as one body.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-mososhu.html">《妄想者手记》</a></td><td><span data-zh>同源</span><span data-en>same root</span></td><td><div data-zh>手记与侏儒的话同源</div><div data-en>the notes and Dwarf's Words share a root</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>成书约 1923-1925</span><span data-en>composed about 1923-25</span></td><td><span data-zh>作品年表</span><span data-en>chronology</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>芥川自取侏儒为喻</span><span data-en>Akutagawa chose the dwarf as his figure</span></td><td><span data-zh>自序</span><span data-en>preface</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>中译本篇目取舍待核</span><span data-en>the selection in Chinese editions to verify</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《侏儒的话》 · 侏儒の言葉</span><span data-en>侏儒の言葉</span></h1>
+  <div class="subtitle" data-both><span data-zh>芥川龙之介 · 日本 · 1923-1927 陆续写成 · 河北教育 2002-06 · 广西师大 2024-04 邹波译《侏儒的话：士说新语》</span><span data-en>Akutagawa Ryunosuke · Japan · written 1923-1927 · Hebei Education 2002-06 · Guangxi Normal UP 2024-04, trans. Zou Bo</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>箴语随笔 · 遗作</span><span data-en>aphorisms · posthumous</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>文学 · 随笔</span><span data-en>literature · essays</span></span> <span class="chip"><span data-zh>conf ✓ 写作年代 / 中译两种已核；篇目与初版待核 ◐</span><span data-en>conf ✓ writing span and two Chinese editions verified; contents and first edition to check ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 写作年代 / 中译两种已核；篇目与初版待核 ◐ · 档案：jp-jujin（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ writing span and two Chinese editions verified; contents and first edition to check ◐ · record: jp-jujin. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>读《妄想者手记》时最好的箴语对读本。手记是长的自剖，侏儒的话是短的自嘲，两者合起来才是一个完整的芥川。</div><div data-en>The best aphoristic companion to the Visionary volume. The notebook is long self-dissection, Dwarf&#x27;s Words short self-mockery; together they make a whole Akutagawa.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://zh.wikipedia.org/zh-cn/%E4%BE%8F%E5%84%92%E7%9A%84%E8%AF%9D" target="_blank" rel="noopener"><span data-zh>维基百科 · 侏儒的话</span><span data-en>Wikipedia · Jujin no kotoba</span><span class="dom">zh.wikipedia.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=侏儒的话 芥川" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《侏儒的话》写于大正十二年（1923）至昭和二年（1927），是芥川晚年的箴语、随笔与短章结集，因作者 1927 年自杀而成为遗作之一。他以「侏儒」自况：身材小，故敢说大人不敢说的话；姿态低，故看得见高处的破绽。内容遍及人生、道德、艺术、政治、恋爱与社交，句句短峭，常以反转收束。中译有河北教育出版社 2002 年 6 月版，以及广西师范大学出版社 2024 年 4 月邹波译《侏儒的话：士说新语》。</div><div data-en>Written between 1923 and 1927 and gathered as aphorisms, sketches and short pieces, Dwarf&#x27;s Words became one of Akutagawa&#x27;s posthumous works after his suicide in 1927. He takes the dwarf as his figure: small in stature, therefore free to say what giants dare not; low in position, therefore able to see the cracks above. The subjects run through life, morals, art, politics, love and society, each sentence short and often turning on a reversal. Chinese editions include Hebei Education (June 2002) and Guangxi Normal University Press (April 2024, trans. Zou Bo).</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 写作年代与中译；篇目为概述 ◐</span><span data-en>✓ writing span and Chinese editions; contents summarised ◐</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 自况：侏儒的立场</span><span data-en>Piece 1 · Self-portrait: the dwarf's position</span></h3>
+<div data-zh>以侏儒自比，确立一种低处的视角：不争高低，只负责看破。</div><div data-en>The dwarf establishes a low vantage: no contest of stature, only the work of seeing through.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>contents summary</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 箴语：人生与道德</span><span data-en>Piece 2 · Aphorisms: life and morals</span></h3>
+<div data-zh>大量短章处理道德、欲望、社交与自我欺骗，常以一句反转收尾。</div><div data-en>Many short pieces handle morals, desire, society and self-deception, often ending on a reversal.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>contents summary</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 艺术与政治</span><span data-en>Piece 3 · Art and politics</span></h3>
+<div data-zh>论艺术家的诚实、制度的虚伪与时代的荒诞，冷峭处最见芥川本色。</div><div data-en>On artistic honesty, institutional hypocrisy and the absurdity of the age: the coldest passages are the most Akutagawa.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>contents summary</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>没有连续结构，靠「段」的排列形成节奏：一段一个判断，判断之间互相拆台。读法上不必顺序，随手翻到哪段都能成立，但连读会发现一个逐渐冷下去的声音。</div><div data-en>There is no continuous structure; rhythm comes from the arrangement of fragments, one judgement per paragraph, each undermining the last. It need not be read in order, yet read through it reveals a voice growing colder.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《侏儒的话》 · 篇章链（数字为顺序）</span><span data-en>侏儒の言葉 · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">侏儒虽小，敢刺巨人之足。</div><div class="trs" data-zh>侏儒虽小，敢刺巨人之足。</div><div class="trs" data-en>Small as a dwarf, he dares to pierce the giant&#x27;s heel.</div><div class="src"><span data-both><span data-zh>自况概述（非逐字原文） · ◐ 译文随版本</span><span data-en>summary of the persona (not a verbatim line) · ◐ wording per edition</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>芥川晚年最锋利的文本，短句密度极高；与《妄想者手记》合读，可见一个作家的自剖与自嘲如何互为表里。
+
+箴语体难成系统，观点彼此拆台，也常被断章取义；网络流传的「芥川名言」多有误植。
+
+**合成 Synthesis：** 当「对读本」用：先读手记的长篇，再读侏儒的短句，最后回到小说，看格言如何变成叙事。</div><div data-en>Akutagawa&#x27;s sharpest late text, dense with short sentences; read with the Visionary notebook, it shows self-dissection and self-mockery as two sides of one writer.
+
+Aphorisms resist system, undercut one another, and are easily quoted out of context; many &#x27;Akutagawa quotations&#x27; online are misattributed.
+
+**Synthesis:** Use it as a companion: the long notebook first, then the short aphorisms, then back to the fiction to see the maxim turn into narrative.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>箴语体：一句成立，两句反转，不给论证留余地。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The aphorism: one sentence to stand, two to reverse, no room for argument.</p></div>
+<div class="card"><p data-zh>自嘲作为方法：先把自己放低，才有资格刻薄。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Self-mockery as method: lower yourself first, then you may be caustic.</p></div>
+<div class="card"><p data-zh>与小说互文：许多短章是小说主题的裸写。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Intertextual with the fiction: many fragments are the bare version of novel themes.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>侏儒</span><span data-en>the dwarf</span></div>
+<div class="orig">侏儒</div>
+<div class="mnote"><div data-zh>自况的人格：小，故自由。</div><div data-en>The persona: small, therefore free.</div></div>
+<div class="src"><span data-both><span data-zh>书名</span><span data-en>title</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>看破</span><span data-en>seeing through</span></div>
+<div class="orig">見抜く</div>
+<div class="mnote"><div data-zh>箴语的任务不是建设，而是揭穿。</div><div data-en>The aphorism&#x27;s task is not to build but to expose.</div></div>
+<div class="src"><span data-both><span data-zh>全书</span><span data-en>throughout</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>冷</span><span data-en>coldness</span></div>
+<div class="orig">冷</div>
+<div class="mnote"><div data-zh>晚年芥川的声音：越到后面越少温度。</div><div data-en>The late voice: less warmth as the book proceeds.</div></div>
+<div class="src"><span data-both><span data-zh>编次</span><span data-en>arrangement</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>《侏儒的话》没有连续结构，一段一个判断，判断之间互相拆台。芥川的自嘲不是谦辞，而是一种方法：先把话说得极漂亮，再亲手拆掉它的地基，让读者看见修辞底下的虚空。</div><div data-en>Tsukurou no kotoba has no continuous structure. Each paragraph is a judgement, and the judgements undercut one another. Akutagawa&#x27;s self-mockery is not modesty but method: say a thing beautifully, then remove its foundation so that the void under the rhetoric becomes visible.</div></div><div class="src"><span data-both><span data-zh>《侏儒的话》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>侏儒の言葉: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>随手翻开读十段，再回到《妄想者手记》读一篇长的，比较同一主题的两种写法。</div><div data-en>Open at random for ten fragments, then read one long piece in the Visionary volume, comparing two treatments of one theme.</div></div>
+<div class="card"><div data-zh>把涉及「艺术家的诚实」的段落集中抄出，看芥川如何用格言处理他小说里的核心焦虑。</div><div data-en>Collect the passages on artistic honesty to see how the aphorism handles the anxiety of the fiction.</div></div>
+<div class="card"><div data-zh>与《草枕》对读：漱石的非人情是冷的观照，芥川的冷是热的自嘲。</div><div data-en>Read with Kusamakura: Soseki&#x27;s coldness is contemplation, Akutagawa&#x27;s is self-mockery running hot.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《妄想者手记》</span><span data-en>A Fool&#x27;s Life / Visionary Notes</span></span></b></td><td><span data-both><span data-zh>芥川龙之介</span><span data-en>Akutagawa Ryunosuke</span></span></td><td>1927</td><td><span data-both><span data-zh>同源</span><span data-en>same root</span></span></td><td><div data-zh>手记体的长自剖与箴语的短自嘲同源。</div><div data-en>The long notebook confession and the short aphoristic mockery share a root.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《草枕》</span><span data-en>Kusamakura</span></span></b></td><td><span data-both><span data-zh>夏目漱石</span><span data-en>Natsume Soseki</span></span></td><td>1906</td><td><span data-both><span data-zh>师承</span><span data-en>lineage</span></span></td><td><div data-zh>芥川曾受漱石提携，冷峭处有师影。</div><div data-en>Soseki mentored Akutagawa; the coldness carries the master&#x27;s shadow.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>写作年代 1923—1927</span><span data-en>Written 1923-1927</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>维基百科 / 作品年表</span><span data-en>Wikipedia / chronology</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1927 年自杀，本书为遗作之一</span><span data-en>The author died in 1927; the book is among his posthumous works</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>河北教育出版社 2002 年 6 月中文版</span><span data-en>Hebei Education Press Chinese edition, June 2002</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目</span><span data-en>catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>广西师范大学出版社 2024 年 4 月邹波译本《侏儒的话：士说新语》</span><span data-en>Guangxi Normal UP, April 2024, trans. Zou Bo, Dwarf&#x27;s Words: New Tales of the Literati</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>出版社页面</span><span data-en>publisher page</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>旧稿系于 1923—1925，实际延续至 1927，已订正</span><span data-en>The old record said 1923-1925; the writing runs to 1927, corrected</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>回源核对</span><span data-en>source recheck</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>网络流传的芥川警句出处混杂，逐字引文待据原书录入，本页不作原文引用。</span><span data-en>Widely circulated Akutagawa aphorisms are inconsistently sourced; verbatim lines await the book, none quoted here.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>初版结集的书名、出版社与年份待核。</span><span data-en>The first collected edition&#x27;s title, publisher and year to verify.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

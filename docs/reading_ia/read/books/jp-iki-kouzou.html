@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《粹（いき）的结构》｜The Structure of Iki | 阅读与智识</title>
+<title>《粹（いき）的结构》｜「いき」の構造 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,215 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《粹（いき）的结构》</span><span data-en>The Structure of Iki · いきの構造</span></h1>
-  <div class="subtitle" data-both><span data-zh>九鬼周造 Kuki Shuzo · 1930 · 岩波 · 英译 Hiroshi Nara《The Structure of Detachment》(Univ. of Hawai'i Press, 2004)</span><span data-en>Kuki Shuzo · 1930 Iwanami · EN Hiroshi Nara, The Structure of Detachment (Univ. of Hawai'i Press, 2004)</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·原典 original</span><span data-en>original</span></span> <span class="chip"><span data-zh>潇洒节制</span><span data-en>jaunty restraint</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>《日本色气》母题所在：以西方哲学框架定义一个纯日本审美范畴的范式</span><span data-en>the mother-text of the Iki volume — defining a native category with a Western frame</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>近代日本美学论文里方法论最自觉的一部，九鬼以海德格尔式分析解剖江户的粹。</div><div data-en>The most methodologically self-conscious of modern Japanese aesthetic essays — Kuki dissects Edo's iki with a Heideggerian analysis.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>原刊于《思想》1930 年，后入岩波。九鬼把粹析为媚态、意地（不服输）、达观（諦め）诸契机的统一，是对一个只可意会的江户趣味的哲学立法。英译通道为 Nara 的《The Structure of Detachment》。</div><div data-en>First in the journal Shiso (1930), later Iwanami. Kuki parses iki as the unity of coquetry, defiance and resignation — a philosophical legislation of an untranslatable Edo taste. Its English channel is Nara's The Structure of Detachment.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://openlibrary.org/search?q=Structure+of+Detachment+Kuki+Nara" target="_blank" rel="noopener"><span data-zh>英译 · Open Library</span><span data-en>EN · Open Library search</span><span class="dom">openlibrary.org ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=九鬼周造 いき" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>粹＝媚态＋节制＋达观的三重契机。（论旨概述，非逐字原文）</div><div class="trs" data-en>Iki is the unity of coquetry, restraint and resignation. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>九鬼论旨 · ✓</span><span data-en>Kuki's thesis · ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>以西方哲学框架定义纯日本审美范畴</span><span data-en>defining a native category with a Western frame</span></li><li>· <span data-zh>粹是「只可意会」趣味的哲学立法</span><span data-en>a philosophy for an untranslatable taste</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>美学方法论的样本。合成：读英译 Nara 以见其哲学语境，再回日文原文校其概念层次。</div><div data-en>A specimen of aesthetic method. Synthesis: read Nara for the philosophical context, then the Japanese for its layers.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-shikike.html">《日本色气》</a></td><td><span data-zh>特辑母题</span><span data-en>the Special's source</span></td><td><div data-zh>色气册之源即此书</div><div data-en>the source of the Iki volume</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-onishi-trilogy.html">《幽玄·物哀·寂》</a></td><td><span data-zh>同侪方法</span><span data-en>peer method</span></td><td><div data-zh>同以西方方法解剖日本范畴</div><div data-en>a peer dissection by Western method</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>原刊 1930《思想》</span><span data-en>first published 1930 in Shiso</span></td><td><span data-zh>文献</span><span data-en>bibliography</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>英译 Nara, Univ. of Hawai'i Press, 2004</span><span data-en>EN by Nara, Univ. of Hawai'i Press, 2004</span></td><td><span data-zh>书目</span><span data-en>imprint</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>岩波文库版次年份待核</span><span data-en>the Iwanami Bunko edition year to verify</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《粹（いき）的结构》 · 「いき」の構造</span><span data-en>「いき」の構造</span></h1>
+  <div class="subtitle" data-both><span data-zh>九鬼周造 · 日本 · 岩波書店 · 1930 · 原刊《思想》 · 英译 Nara 2004</span><span data-en>Kuki Shūzō · Japan · Iwanami Shoten · 1930 · first in Shisō · EN trans. Nara 2004</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>美学论文 · 范畴分析</span><span data-en>aesthetic essay · category analysis</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>美学</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>conf ✓ 原刊 / 英译已核；日文版次 ◐</span><span data-en>conf ✓ first publication and English translation; Japanese printing ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 原刊 / 英译已核；日文版次 ◐ · 档案：jp-iki-kouzou（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ first publication and English translation; Japanese printing ◐ · record: jp-iki-kouzou. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与访谈 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, interviews now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>近代日本美学里方法论最自觉的一篇：九鬼用现象学的刀，解剖一个只可意会的江户词。</div><div data-en>The most methodologically self-conscious essay in modern Japanese aesthetics: Kuki dissects an untranslatable Edo word with a phenomenological scalpel.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://openlibrary.org/search?q=Structure+of+Detachment+Kuki+Nara" target="_blank" rel="noopener"><span data-zh>Open Library · 英译检索</span><span data-en>Open Library · EN search</span><span class="dom">openlibrary.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=九鬼周造 いきの構造" target="_blank" rel="noopener"><span data-zh>豆瓣 · 九鬼周造检索</span><span data-en>Douban · Kuki search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>九鬼周造（1888—1941）曾在欧洲随胡塞尔、海德格尔学习，《「いき」の構造》1930 年先刊于《思想》，同年由岩波书店出版。他把江户游里的「粹」规定为三个契机的统一：媚态（对异性的挑逗）、意気地（不服输的骨气）、諦め（看透之后的达观）。英译由 Hiroshi Nara 完成，题作 The Structure of Detachment（University of Hawai&#x27;i Press, 2004）。</div><div data-en>Kuki Shūzō (1888–1941) studied in Europe with Husserl and Heidegger. The Structure of Iki appeared in Shisō in 1930 and from Iwanami the same year. He defines Edo&#x27;s iki as the unity of three moments: coquetry, defiance and resignation. Hiroshi Nara&#x27;s English translation is The Structure of Detachment (University of Hawai&#x27;i Press, 2004).</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 原刊与英译</span><span data-en>✓ first publication and English translation</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>时段章节 · Periods &amp; chapters</span><span data-en>Periods &amp; chapters</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 序论：方法与立场</span><span data-en>Section 1 · Introduction: method and stance</span></h3>
+<div data-zh>先说明为何要用现象学处理一个日语词：概念分析必须从「本质」而非「经验」开始。</div><div data-en>Why treat a Japanese word phenomenologically: conceptual analysis must begin from essence, not experience.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 内包结构：三个契机</span><span data-en>Section 2 · Intension: the three moments</span></h3>
+<div data-zh>全书核心：媚态、意気地、諦め如何互相限制，合成「粹」的统一。</div><div data-en>The core: how coquetry, defiance and resignation limit one another to form the unity of iki.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 外延与背景</span><span data-en>Section 3 · Extension and background</span></h3>
+<div data-zh>从条纹和服、灰调、清瘦线条，到江户的社会结构与町人伦理。</div><div data-en>From striped kimono, greys and slender lines to Edo&#x27;s social structure and townsman ethics.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论述框架 · Analytical framework</span><span data-en>Analytical framework</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>结构极清楚：先立方法（本质直观），再析内包（三个契机），再推外延（自然、艺术、生活），最后放入民族与历史背景。九鬼的野心不是描述「粹」，而是证明一个民族的特殊趣味可以被普遍美学范畴严格把握。</div><div data-en>The structure is lucid: method (eidetic intuition), then intension (the three moments), then extension (nature, art, life), and finally national and historical background. Kuki&#x27;s ambition is not to describe iki but to prove that a nation&#x27;s particular taste can be strictly grasped by universal aesthetic categories.</div></div>
+<h2 class="part" data-both><span data-zh>时间线索引 · Chronological flow</span><span data-en>Chronological flow</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《粹（いき）的结构》 · 时段链（数字为顺序）</span><span data-en>「いき」の構造 · the chronological chain</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">粹＝媚态＋意気地＋諦めの統一。</div><div class="trs" data-zh>粹＝媚态＋意気地＋諦め的统一。</div><div class="trs" data-en>Iki is the unity of coquetry, defiance and resignation.</div><div class="src"><span data-both><span data-zh>九鬼论旨概述（非逐字原文） · ✓</span><span data-en>summary of Kuki&#x27;s thesis (not verbatim) · ✓</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>日本美学研究的奠基文本；英译书名 The Structure of Detachment 把「谛观」译为 detachment，反而让英语读者抓住了核心。
+
+把「粹」本质化的做法后来受到批评：一个带有强烈阶级与性别色彩的游里趣味，被写成超历史的审美范畴。
+
+**合成 Synthesis：** 先读结论再读分析：知道三个契机之后，回看九鬼如何一步步排除反例，才能学到他的方法而不只是术语。</div><div data-en>A founding text of Japanese aesthetics; the English title&#x27;s &#x27;detachment&#x27; actually helps readers grasp the core.
+
+Its essentialising has since been criticised: a pleasure-quarter taste saturated with class and gender is written as a transhistorical category.
+
+**Synthesis:** Read the conclusion first, then the analysis: knowing the three moments, watch him exclude counterexamples — that is how to learn the method, not just the terms.</div></div>
+<h2 class="part" data-both><span data-zh>史学方法 · Historiography</span><span data-en>Historiography</span></h2>
+<div class="card"><p data-zh>本质直观：从大量用例中剥离偶然属性，留下不可再分的结构。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Eidetic intuition: strip accidental properties from many examples to leave an irreducible structure.</p></div>
+<div class="card"><p data-zh>双重外延：自然美与艺术样式被当作范畴的「投影」，而非例证。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Double extension: natural beauty and art styles are treated as projections of the category, not illustrations.</p></div>
+<div class="card"><p data-zh>日语词的哲学化：把语气、姿态、服饰一并纳入概念分析。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Philosophising a Japanese word: tone, posture and dress all enter the concept.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>媚态</span><span data-en>coquetry</span></div>
+<div class="orig">媚態</div>
+<div class="mnote"><div data-zh>向异性发出的张力，是粹的动力因。</div><div data-en>Tension directed at the other sex — iki&#x27;s motive force.</div></div>
+<div class="src"><span data-both><span data-zh>内包结构章</span><span data-en>chapter on intension</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>意気地</span><span data-en>defiance</span></div>
+<div class="orig">意気地</div>
+<div class="mnote"><div data-zh>抵抗媚态滑向媚俗的骨气。</div><div data-en>The pride that keeps coquetry from kitsch.</div></div>
+<div class="src"><span data-both><span data-zh>内包结构章</span><span data-en>chapter on intension</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>諦め</span><span data-en>resignation</span></div>
+<div class="orig">諦め</div>
+<div class="mnote"><div data-zh>看透之后仍不放弃姿态，是粹的底色。</div><div data-en>Seeing through yet keeping the pose — iki&#x27;s ground tone.</div></div>
+<div class="src"><span data-both><span data-zh>内包结构章</span><span data-en>chapter on intension</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>九鬼先用「本质直观」立方法，再析「粹」的内包：媚态、意気地、諦め三者缺一不可；随后推及自然、艺术与生活，最后放入江户町人与民族文化背景。他要证明，一个只可意会的词也能被严格把握。</div><div data-en>Kuki first establishes his method of essential intuition, then analyses the content of iki: coquetry, pride and resignation, none dispensable. He extends the analysis to nature, art and life, and finally to Edo townsmen and national culture. His wager is that a word usually left to connoisseurs can be grasped rigorously.</div></div><div class="src"><span data-both><span data-zh>《粹（いき）的结构》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>「いき」の構造: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>把三个契机画成三角形，试着移动任意一角，看「粹」如何变成「野」或「冷」。</div><div data-en>Draw the three moments as a triangle; move any corner and see iki turn vulgar or cold.</div></div>
+<div class="card"><div data-zh>读英译的导论，看 Nara 如何处理「諦め」：detachment 是否比 resignation 更准？</div><div data-en>Read Nara&#x27;s introduction and ask whether &#x27;detachment&#x27; is more accurate than &#x27;resignation&#x27; for 諦め.</div></div>
+<div class="card"><div data-zh>用九鬼的方法分析一个当代现象（如「松弛感」），检验这套范畴分析的移植能力。</div><div data-en>Apply Kuki&#x27;s method to a contemporary phenomenon (say &#x27;effortless ease&#x27;) and test how portable the analysis is.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《日本色气》</span><span data-en>Japanese Iki</span></span></b></td><td><span data-both><span data-zh>九鬼周造 / 阿部次郎</span><span data-en>Kuki &amp; Abe</span></span></td><td>2019</td><td><span data-both><span data-zh>中译 · 合辑</span><span data-en>Chinese · omnibus</span></span></td><td><div data-zh>本篇的中译所在，与阿部贞操论同卷。</div><div data-en>Where the Chinese text lives, in one volume with Abe.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《幽玄·物哀·寂》</span><span data-en>Yūgen · Mono no Aware · Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2017</td><td><span data-both><span data-zh>同侪 · 方法</span><span data-en>peer · method</span></span></td><td><div data-zh>同以西方框架解剖日本范畴，可比较两人的取舍。</div><div data-en>Also dissects Japanese categories with a Western frame; compare their choices.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《菊与刀》</span><span data-en>The Chrysanthemum and the Sword</span></span></b></td><td><span data-both><span data-zh>鲁思·本尼迪克特</span><span data-en>Ruth Benedict</span></span></td><td>1946</td><td><span data-both><span data-zh>对照 · 外视</span><span data-en>contrast · outside view</span></span></td><td><div data-zh>九鬼从内部立法，本尼迪克特从外部定型。</div><div data-en>Kuki legislates from inside; Benedict types from outside.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>1930 年先刊《思想》，同年岩波书店出版</span><span data-en>First in Shisō 1930; Iwanami edition the same year</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>文献目录</span><span data-en>bibliography</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>英译 Hiroshi Nara, The Structure of Detachment, Univ. of Hawai&#x27;i Press, 2004</span><span data-en>EN trans. Hiroshi Nara, The Structure of Detachment, University of Hawai&#x27;i Press, 2004</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>出版社书目</span><span data-en>publisher catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1888—1941，曾从学于胡塞尔、海德格尔</span><span data-en>Author 1888–1941; studied with Husserl and Heidegger</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>岩波版的具体版次与页数（文库版 / 单行本）待核。</span><span data-en>Exact Iwanami printing and pagination (bunko vs hardcover) to verify.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>中译所据底本是否为岩波版，待核。</span><span data-en>Whether the Chinese translation follows the Iwanami text — to verify.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

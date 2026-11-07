@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《日本论》｜A Discussion of Japan | 阅读与智识</title>
+<title>《日本论》｜日本論 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,219 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《日本论》</span><span data-en>A Discussion of Japan · 日本论</span></h1>
-  <div class="subtitle" data-both><span data-zh>戴季陶 Dai Jitao · 1924 · 政论小册 · 近代中国人「知日—对日」思想的代表文本</span><span data-en>Dai Jitao · 1924 · a political tract · a key modern Chinese know/face-Japan text</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·论日本对手 rival</span><span data-en>rival Japan-ology</span></span> <span class="chip"><span data-zh>痛切策论</span><span data-en>pained policy-essay</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>以革命者的切身经验论日本的国体、武士道、宗教与对外性格；既是知日也是用日的策论</span><span data-en>arguing Japan's polity, bushido, religion and foreign character from a revolutionist's lived experience</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>《分身》自陈的直接前身之一。</div><div data-en>A direct predecessor Li names.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>戴季陶以在日本求学与革命的亲历，写日本国体的神权性、武士道伦理、宗教情感与对外性格。其文字既是「知日」也是「用日」——认识他者从来连着以他者为镜策对自己的行动。</div><div data-en>From his schooling and revolutionary experience in Japan, Dai treats the sacredness of the Japanese polity, bushido ethics, religious feeling and foreign character — a tract at once knowing and using Japan, since knowing the other is bound to acting on the self.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=日本论 戴季陶" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a><a href="https://openlibrary.org/search?q=Dai Jitao Japan" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>认识他者，从来连着认识（并使用）自身。（论旨概述，非逐字原文）</div><div class="trs" data-en>Knowing the other has always entangled knowing, and using, the self. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>策论论旨 · ✓</span><span data-en>the tract's thesis · ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>以国体·武士道·宗教论日本性格</span><span data-en>reading Japan's character via polity, bushido, religion</span></li><li>· <span data-zh>知日与用日一体</span><span data-en>knowing and using Japan are one</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>革命者的日本策论。合成：上承黄遵宪，下连《菊与刀》《分身》，成思想史轴一环。</div><div data-en>A revolutionist's policy essay on Japan. Synthesis: after Huang, before Benedict and Avatar, one link on the axis.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-nihonkoku-shi.html">《日本国志》</a></td><td><span data-zh>上游</span><span data-en>upstream</span></td><td><div data-zh>承黄遵宪知日之志</div><div data-en>carries Huang's intent</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-chrysanthemum-sword.html">《菊与刀》</a></td><td><span data-zh>同时代对手</span><span data-en>era rival</span></td><td><div data-zh>中／美两种知日的对照</div><div data-en>a China-US contrast of knowing Japan</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>1924 年成书</span><span data-en>written 1924</span></td><td><span data-zh>版本</span><span data-en>edition</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>后出单行本的版次待核</span><span data-en>later standalone editions to verify</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《日本论》 · 日本論</span><span data-en>日本論</span></h1>
+  <div class="subtitle" data-both><span data-zh>戴季陶 · 中国 · 上海民智书局 · 1928 初版 · 二十四篇 · 九州出版社 2005 再版</span><span data-en>Dai Jitao · China · Shanghai Minzhi Book Co. · 1928 first ed. · 24 essays · Jiuzhou Press 2005 reprint</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>政论 · 二十四篇 · 胡汉民序</span><span data-en>political essays · 24 pieces · preface by Hu Hanmin</span></span> <span class="chip"><span data-zh>kind·nonfiction</span><span data-en>nonfiction</span></span> <span class="chip"><span data-zh>思想史 · 政论</span><span data-en>intellectual history · political essay</span></span> <span class="chip"><span data-zh>conf ✓ 初版年 / 篇数 / 序作者 / 再版已核（旧稿「1924」已订正）</span><span data-en>conf ✓ first-edition year, essay count, preface, reprint verified (old &#x27;1924&#x27; corrected)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 初版年 / 篇数 / 序作者 / 再版已核（旧稿「1924」已订正） · 档案：jp-nihonron（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ first-edition year, essay count, preface, reprint verified (old &#x27;1924&#x27; corrected) · record: jp-nihonron. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>《分身》自陈的直接前身之一。它把「知日」从志书的记录推进为对日的判断：认识他者，从来连着如何使用这份认识。</div><div data-en>A predecessor Avatar names outright. It pushes knowing Japan from gazetteer record to judgement: knowing the other is always bound to how that knowledge is used.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://zh.wikipedia.org/zh-cn/%E6%97%A5%E6%9C%AC%E8%AB%96" target="_blank" rel="noopener"><span data-zh>维基百科 · 日本论</span><span data-en>Wikipedia · Nihonron</span><span class="dom">zh.wikipedia.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=日本论 戴季陶" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>戴季陶（1891—1949）早年留日，后任孙中山秘书，是国民党理论家。《日本论》1928 年由上海民智书局初版，胡汉民作序，收二十四篇短文，论皇权、国体、信仰、武士道、风俗与日本的对外性格。与黄遵宪的志书不同，它不作系统记录，而以论断带材料，是一本「对日」的书：写作动机里有革命政治的现实焦虑。</div><div data-en>Dai Jitao (1891-1949) studied in Japan and later served as Sun Yat-sen&#x27;s secretary, becoming a Kuomintang theorist. A Discussion of Japan appeared from Shanghai Minzhi in 1928 with a preface by Hu Hanmin: twenty-four short pieces on the throne, the polity, faith, bushido, manners and Japan&#x27;s outward character. Unlike Huang&#x27;s gazetteer it records nothing systematically; judgement carries the material. It is a book written facing Japan, with the practical anxiety of revolutionary politics behind it.</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 初版信息；论述归类为导读性概述 ◐</span><span data-en>✓ first edition; the thematic grouping is a reading summary ◐</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>时段章节 · Periods &amp; chapters</span><span data-en>Periods &amp; chapters</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 皇权与国体</span><span data-en>Section 1 · The throne and the polity</span></h3>
+<div data-zh>从神权性的皇权入手，指出日本国体的特殊结构，及其如何为近代国家提供合法性。</div><div data-en>Starting from the sacred throne, it identifies the peculiar structure of the Japanese polity and how it lent legitimacy to the modern state.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>summary of the essays</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 信仰与武士道</span><span data-en>Section 2 · Faith and bushido</span></h3>
+<div data-zh>论宗教情感与武士伦理如何合成一套可动员的精神装置；这一层与《武士道》互为参照。</div><div data-en>How religious feeling and warrior ethics fuse into a mobilisable spiritual apparatus; here it mirrors Bushido.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>summary of the essays</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 风俗与对外性格</span><span data-en>Section 3 · Manners and outward character</span></h3>
+<div data-zh>收在日本的对外行为方式上：知日的终点不是趣味，而是判断它下一步会怎样。</div><div data-en>It closes on Japan&#x27;s conduct abroad: knowing Japan ends not in curiosity but in judging what it will do next.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>篇目概述</span><span data-en>summary of the essays</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论述框架 · Analytical framework</span><span data-en>Analytical framework</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>二十四篇短论可以看作一台逐步逼近的装置：先论皇权与国体，说明日本政治的神圣外衣；再论信仰与武士道，说明伦理如何被组织成动员；最后论风俗与对外性格，落到行动。每篇都短，判断都硬。</div><div data-en>The twenty-four pieces form a closing-in device: the throne and polity first, showing the sacred dress of Japanese politics; faith and bushido next, showing how ethics is organised for mobilisation; manners and outward character last, arriving at action. Each piece is short, each judgement hard.</div></div>
+<h2 class="part" data-both><span data-zh>时间线索引 · Chronological flow</span><span data-en>Chronological flow</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《日本论》 · 时段链（数字为顺序）</span><span data-en>日本論 · the chronological chain</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">认识他者，从来连着如何使用这份认识。</div><div class="trs" data-zh>认识他者，从来连着如何使用这份认识。</div><div class="trs" data-en>Knowing the other is always bound to how that knowledge is used.</div><div class="src"><span data-both><span data-zh>全书主旨概述（非逐字原文） · ◐</span><span data-en>summary of the book&#x27;s argument (not a verbatim line) · ◐</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>民国日本论的代表作，二十四篇短论至今可读。它把国体、武士道、信仰与对外性格串成一套解释，比同时代游记更直接，也为后来的「国民性」讨论立了样本。
+
+政论先行的代价是材料服从判断；对皇权与「国民性」的处理带有强烈的时代政治投影，后世常被指为以论代史。
+
+**合成 Synthesis：** 与《日本国志》对读，一记录一判断；与《菊与刀》对读，一亲历一文献。三者并置，正好看出「知日」的三种姿势。</div><div data-en>The representative Republican-era discussion of Japan; its twenty-four pieces remain readable. It links polity, bushido, faith and outward character into one explanation, more direct than contemporary travel writing, and set a model for later national-character debate.
+
+Policy first, material second: the treatment of the throne and national character carries the political projections of its moment, and later readers have called it argument in place of history.
+
+**Synthesis:** Read with Huang for record against judgement; with Benedict for experience against documents. Set together, the three show three postures of knowing Japan.</div></div>
+<h2 class="part" data-both><span data-zh>史学方法 · Historiography</span><span data-en>Historiography</span></h2>
+<div class="card"><p data-zh>以论断带材料：先给判断，再举见闻，不作学院式铺陈。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Judgement carries the material: the verdict first, the observation after, with no academic scaffolding.</p></div>
+<div class="card"><p data-zh>政治家的文体：短句、断语、直接面向行动。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">A politician&#x27;s prose: short sentences, verdicts, addressed to action.</p></div>
+<div class="card"><p data-zh>与《日本国志》构成「志」与「论」的对照：一记录，一判断。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">It pairs with the gazetteer as record against judgement.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>神权国体</span><span data-en>the sacred polity</span></div>
+<div class="orig">国体</div>
+<div class="mnote"><div data-zh>戴季陶把皇权视为理解日本政治的第一把钥匙。</div><div data-en>Dai treats the throne as the first key to Japanese politics.</div></div>
+<div class="src"><span data-both><span data-zh>论皇权诸篇</span><span data-en>essays on the throne</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>知日即对日</span><span data-en>knowing as facing</span></div>
+<div class="orig">知日</div>
+<div class="mnote"><div data-zh>认识日本的目的，是判断与应对，而非鉴赏。</div><div data-en>The purpose of knowing Japan is judgement and response, not appreciation.</div></div>
+<div class="src"><span data-both><span data-zh>全书主旨</span><span data-en>the book&#x27;s argument</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>武士道</span><span data-en>bushido</span></div>
+<div class="orig">武士道</div>
+<div class="mnote"><div data-zh>作为伦理解释日本行动力的枢纽概念。</div><div data-en>The hinge concept for explaining Japan&#x27;s capacity for action.</div></div>
+<div class="src"><span data-both><span data-zh>论武士道诸篇</span><span data-en>essays on bushido</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>戴季陶用二十四篇短论逐步逼近日本：先拆皇权与国体的神圣外衣，再论信仰与武士道如何把伦理组织成动员，最后落到风俗与对外性格。认识他者，从来连着如何使用这份认识。</div><div data-en>Dai Jitao approaches Japan through twenty-four short essays. He first strips the sacred cover from the throne and the polity, then shows how faith and bushido organise ethics into mobilisation, and ends with custom and conduct abroad. To know the other is always tied to how that knowledge will be used.</div></div><div class="src"><span data-both><span data-zh>《日本论》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>日本論: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读论皇权与国体的几篇，再读论武士道的几篇，最后读论风俗与对外性格的几篇，看判断如何从结构推到行动。</div><div data-en>Read the throne and polity pieces, then bushido, then manners and outward character, to watch judgement move from structure to action.</div></div>
+<div class="card"><div data-zh>与《菊与刀》对读：一个中国政治家用亲历写，一个美国人类学家用文献写，方法不同，结论却常相邻。</div><div data-en>Read with Benedict: a Chinese politician writes from experience, an American anthropologist from documents; methods differ, conclusions often neighbour.</div></div>
+<div class="card"><div data-zh>留意书中对「国民性」的用法，它与后来《菊与刀》的「文化模式」是同一问题的两种问法。</div><div data-en>Note the use of national character: it and Benedict&#x27;s culture pattern are two ways of asking one question.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《日本国志》</span><span data-en>Records of Japan</span></span></b></td><td><span data-both><span data-zh>黄遵宪</span><span data-en>Huang Zunxian</span></span></td><td>1895</td><td><span data-both><span data-zh>上游</span><span data-en>upstream</span></span></td><td><div data-zh>承黄遵宪知日之志，由志书转为策论。</div><div data-en>It inherits Huang&#x27;s intent, turning gazetteer into policy.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《菊与刀》</span><span data-en>The Chrysanthemum and the Sword</span></span></b></td><td><span data-both><span data-zh>鲁思·本尼迪克特</span><span data-en>Ruth Benedict</span></span></td><td>1946</td><td><span data-both><span data-zh>同时代对手</span><span data-en>era rival</span></span></td><td><div data-zh>中、美两种知日方式的对照。</div><div data-en>A China-US contrast in knowing Japan.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《分身：新日本论》</span><span data-en>Avatar</span></span></b></td><td><span data-both><span data-zh>李永晶</span><span data-en>Li Yongjing</span></span></td><td>2020</td><td><span data-both><span data-zh>后学回响</span><span data-en>later echo</span></span></td><td><div data-zh>《分身》把戴季陶列为镜链上的关键节点。</div><div data-en>Avatar places Dai at a key node of the mirror-chain.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>1928 年上海民智书局初版</span><span data-en>First published 1928 by Shanghai Minzhi Book Co.</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>维基百科 / 中国社会科学院论文</span><span data-en>Wikipedia / CASS article</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>收二十四篇短文，胡汉民作序</span><span data-en>Twenty-four short essays, preface by Hu Hanmin</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目</span><span data-en>catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>九州出版社 2005 年再版</span><span data-en>Jiuzhou Press reprint, 2005</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>学界引用</span><span data-en>scholarly citation</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>旧稿系于 1924，实为 1928 初版；1924 或为写作之年，已订正</span><span data-en>The old record dated it 1924; the first edition is 1928. 1924 may be a writing date; corrected</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>回源核对</span><span data-en>source recheck</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>1924 年是否为动笔之年，待据戴季陶年谱或初版序跋复核。</span><span data-en>Whether 1924 was the year of writing awaits a chronology or the original preface.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>逐字引文待据初版或九州 2005 再版录入。</span><span data-en>Verbatim lines await the first edition or the 2005 reprint.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

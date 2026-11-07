@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《徒然草》｜Essays in Idleness | 阅读与智识</title>
+<title>《徒然草》｜徒然草 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,219 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《徒然草》</span><span data-en>Essays in Idleness · Tsurezuregusa · 徒然草</span></h1>
-  <div class="subtitle" data-both><span data-zh>兼好法师 Yoshida Koeno · 14 世纪（约 1330）· 中译：王以铸 译 · 商务印书馆 · 与《方丈记》并称随笔双璧</span><span data-en>Yoshida Kenko · 14th c. (c.1330) · Chinese trans. Wang Yizhu · Commercial Press · paired with Hojoki</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·古典 classic</span><span data-en>classic</span></span> <span class="chip"><span data-zh>闲观无常</span><span data-en>idling on impermanence</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>243 段随想，把无常、死、住处、审美写成闲淡而锋利的碎片，直下荷风·漱石·芥川的随笔血脉</span><span data-en>243 idling fragments on death and taste — the zuihitsu vein running into Kafu, Soseki and Akutagawa</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>日本随笔（zuihitsu）的源头之一，特辑文学手记的上溯母脉。</div><div data-en>A source of the Japanese zuihitsu; the upstream vein of the Special's notebooks.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>兼好以出家人的冷眼写无常：美之短促、死之无常、住处与交友之道。全篇 243 段，无体系而有节律，是「感物」传统的散文形态。商务印书馆 2022 王以铸译本保留 243 段体例；逐字译文随版本，本页以论旨概述。</div><div data-en>Kenko writes impermanence with a monk's cool eye: the brevity of beauty, death, dwelling and friendship. 243 systemless yet rhythmic fragments — the prose form of the pathos of things. The Commercial Press 2022 Wang Yizhu edition keeps the 243 sections; wording per edition, so the quote is a summary.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=徒然草 王以铸" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a><a href="https://openlibrary.org/search?q=Essays in Idleness Kenko" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>一切无常，随处皆可感发。（论旨概述，非逐字原文）</div><div class="trs" data-en>All is impermanent; everywhere the heart is moved. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>开卷论旨 · ◐ 译文随版本</span><span data-en>opening thesis · ◐ wording per edition</span></span></div></div><ul class="pts"><li>· <span data-zh>无常为美之短促立底</span><span data-en>impermanence grounds the brevity of beauty</span></li><li>· <span data-zh>随笔体：无体系而有节律</span><span data-en>the zuihitsu: systemless yet rhythmic</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>感物美学的散文原型。合成：下接《风姿花传》之幽玄、荷风漱石芥川之手记，成文学轴之源。</div><div data-en>The prose prototype of a poetics of feeling. Synthesis: down into Fushikaden's yugen and the modern notebooks as the axis's source.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-fushikaden.html">《风姿花传》</a></td><td><span data-zh>同时代美学</span><span data-en>near-era aesthetics</span></td><td><div data-zh>幽玄范畴的另一古典源头</div><div data-en>the other classic source of yugen</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-furoki.html">《异国放浪记》</a></td><td><span data-zh>血脉下游</span><span data-en>downstream vein</span></td><td><div data-zh>随笔血脉下至荷风</div><div data-en>the zuihitsu vein reaches Kafu</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>成书约 14 世纪上半叶</span><span data-en>composed in the first half of the 14th c.</span></td><td><span data-zh>作品年表</span><span data-en>chronology</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>商务印书馆 2022 王以铸译 · 243 段体例</span><span data-en>Commercial Press 2022, Wang Yizhu, 243 sections</span></td><td><span data-zh>书目核实</span><span data-en>imprint verified</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>逐字原文（日文假名遣）随版本异</span><span data-en>the verbatim kana spelling varies by edition</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《徒然草》 · 徒然草</span><span data-en>徒然草</span></h1>
+  <div class="subtitle" data-both><span data-zh>兼好法师 · 日本 · 商务印书馆 · 2022 · 王以铸译 · 243 段 · ¥45</span><span data-en>Yoshida Kenkō · Japan · Commercial Press · 2022 · trans. Wang Yizhu · 243 sections · ¥45</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>随笔 · 243 段</span><span data-en>zuihitsu · 243 sections</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>文学</span><span data-en>literature</span></span> <span class="chip"><span data-zh>conf ✓ 版本 / 译者 / 段数已核；成书年 ◐</span><span data-en>conf ✓ edition, translator, section count; composition date ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本 / 译者 / 段数已核；成书年 ◐ · 档案：jp-tsurezuregusa（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition, translator, section count; composition date ◐ · record: jp-tsurezuregusa. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography and secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>日本随笔（zuihitsu）的源头之一，也是特辑三本文学手记的上溯母脉：无体系、有节律，把无常写成日常的观察方法。</div><div data-en>One of the sources of Japanese zuihitsu and the upstream vein of the Special&#x27;s three notebooks: no system, but a rhythm that turns impermanence into a method of daily observation.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.cp.com.cn/book/422a9ded-0.html" target="_blank" rel="noopener"><span data-zh>商务印书馆 · 书目页</span><span data-en>Commercial Press · catalogue</span><span class="dom">www.cp.com.cn ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=徒然草 王以铸" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://openlibrary.org/search?q=Essays+in+Idleness+Kenko" target="_blank" rel="noopener"><span data-zh>Open Library · 英译检索</span><span data-en>Open Library · EN editions</span><span class="dom">openlibrary.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《徒然草》约成书于 14 世纪上半叶（通行说法约 1330 年前后），作者兼好法师（吉田兼好，1283?—1350?）是歌人、随笔家，曾仕于朝廷后出家。全书 243 段，长短不一：杂感、评论、小故事、人物轶事并存。它与此前的《枕草子》、同时代的《方丈记》并称日本三大随笔。中译由王以铸完成，商务印书馆 2022 年出版，保留 243 段体例。</div><div data-en>Essays in Idleness was composed in the first half of the fourteenth century (conventionally around 1330). Its author, Yoshida Kenkō (1283?–1350?), was a poet and essayist who served at court before taking vows. Its 243 sections vary in length — impressions, judgements, anecdotes, character sketches — and it stands with The Pillow Book and Hōjōki as one of Japan&#x27;s three great zuihitsu. Wang Yizhu&#x27;s Chinese version (Commercial Press, 2022) keeps the 243 sections.</div></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 成书年与生卒</span><span data-en>◐ composition and life dates</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 序段与无常</span><span data-en>Piece 1 · Preface and impermanence</span></h3>
+<div data-zh>开篇「つれづれなるままに」自述写作状态：无事可做，随手记下心中流过的琐事。无常由此不是教义，而是写作的起因。</div><div data-en>The opening declares the condition of writing: idle, jotting whatever passes through the mind. Impermanence is thus not doctrine but the cause of writing.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 处世与人物</span><span data-en>Piece 2 · Conduct and character</span></h3>
+<div data-zh>中段多写人：如何交友、如何说话、如何避免可笑。兼好的伦理不是戒律，而是「得体」——知道什么场合说什么话。</div><div data-en>The middle is full of people: how to make friends, how to speak, how to avoid absurdity. Kenkō&#x27;s ethics is not commandment but tact — knowing what to say where.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 艺文与自然</span><span data-en>Piece 3 · Arts and nature</span></h3>
+<div data-zh>末段转向和歌、音乐、花木与季节：美在将逝未逝之际最动人，这是「物哀」的散文版。</div><div data-en>The close turns to waka, music, plants and seasons: beauty moves most at the edge of vanishing — the prose version of aware.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>没有论证，也没有统一主题，靠「段」与「段」之间的呼吸形成整体。兼好的基本姿态是「看」：看人如何执着，看物如何衰败，看自己如何同样可笑。无常不是结论，而是他观察一切的起点。</div><div data-en>There is no argument and no single theme; the whole emerges from the breathing between sections. Kenkō&#x27;s stance is watching: how people cling, how things decay, how he is equally absurd. Impermanence is not a conclusion but the point from which he observes everything.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《徒然草》 · 篇章链（数字为顺序）</span><span data-en>徒然草 · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">つれづれなるままに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。</div><div class="trs" data-zh>百无聊赖之中，终日面对砚台，把心中流过的种种琐事随手写下来，竟也觉得莫名地心绪纷乱。</div><div class="trs" data-en>In sheer idleness, day after day at the inkstone, I set down whatever trifles drift through my mind — and find myself oddly unsettled.</div><div class="src"><span data-both><span data-zh>《徒然草》序段 · 公版原文 ✓（中译为大意）</span><span data-en>Tsurezuregusa, preface · public-domain original ✓ (Chinese is a paraphrase)</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>日本随笔的典范，也是理解「无常」最不教条的一本书；王以铸的译本以典雅白话保留文言语感，243 段体例完整。
+
+对现代读者，前一百段的人物轶事与官职典故门槛较高；且「无常」被流行文化简化为「丧」，与原书的冷静观察相去甚远。
+
+**合成 Synthesis：** 当作「方法书」读：学兼好如何看人、看物、看自己。它与《草枕》的「非人情」是同一种姿态的两种写法。</div><div data-en>The model of Japanese zuihitsu and the least doctrinal book about impermanence; Wang Yizhu&#x27;s elegant vernacular keeps the classical feel and the full 243 sections.
+
+For modern readers the early anecdotes and court titles are demanding, and popular culture flattens impermanence into gloom, far from the book&#x27;s cool observation.
+
+**Synthesis:** Read it as a method book: learn how Kenkō watches people, things and himself. It and Kusamakura&#x27;s &#x27;non-human feeling&#x27; are two versions of one stance.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>段与段的留白：不解释、不连接，让读者自己补上因果关系。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">White space between sections: no explanation, no connective, the reader supplies causation.</p></div>
+<div class="card"><p data-zh>以小事见大：一段写一个人怎么拿筷子，就能看出他的教养与命运。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">The great in the small: how a person holds chopsticks reveals upbringing and fate.</p></div>
+<div class="card"><p data-zh>冷静的幽默：兼好从不嘲讽，只是把人的可笑如实摆出来。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Cool humour: Kenkō never mocks, only sets human absurdity down as it is.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>无常</span><span data-en>impermanence</span></div>
+<div class="orig">無常</div>
+<div class="mnote"><div data-zh>不是悲观，而是观察的起点：一切都在变，故一切值得看。</div><div data-en>Not pessimism but the starting point of observation: all things change, so all things are worth watching.</div></div>
+<div class="src"><span data-both><span data-zh>全书</span><span data-en>the book</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>つれづれ</span><span data-en>idleness</span></div>
+<div class="orig">つれづれ</div>
+<div class="mnote"><div data-zh>无事可做的状态，反而是写作与观看的条件。</div><div data-en>Having nothing to do becomes the condition of writing and watching.</div></div>
+<div class="src"><span data-both><span data-zh>序段</span><span data-en>preface</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>得体</span><span data-en>tact</span></div>
+<div class="mnote"><div data-zh>兼好的伦理核心：知道场合与分寸。</div><div data-en>Kenkō&#x27;s ethical core: knowing occasion and measure.</div></div>
+<div class="src"><span data-both><span data-zh>处世诸段</span><span data-en>sections on conduct</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq">
+<div class="orig">つれづれなるままに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。<span class="lang">JA · Japanese</span></div>
+<div class="tr"><div data-zh>百无聊赖之中，终日面对砚台，把心中流过的种种琐事随手写下来，竟也觉得莫名地心绪纷乱。</div><div data-en>In sheer idleness, day after day at the inkstone, I set down whatever trifles drift through my mind — and find myself oddly unsettled.</div></div>
+<div class="note"><div data-zh>序段全文，公版；中译为大意，非王以铸译文。</div><div data-en>The full preface, public domain; the Chinese is a paraphrase, not Wang Yizhu&#x27;s text.</div></div>
+<div class="src">Tsurezuregusa, preface · public domain</div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>每天只读三段，读完写一句「这一段在看我什么」；243 段读完，等于做了一次自我观察。</div><div data-en>Read three sections a day and write one line on what each sees in you; after 243 you will have performed a self-observation.</div></div>
+<div class="card"><div data-zh>把讲「死」的段落与讲「花」的段落并置，看兼好如何用同一个语气谈两者。</div><div data-en>Set the sections on death beside those on flowers and see how Kenkō uses one tone for both.</div></div>
+<div class="card"><div data-zh>与《风姿花传》对读：一个讲艺人如何不朽，一个讲一切皆朽，同一时代的两副面孔。</div><div data-en>Read with Fūshikaden: one asks how an artist endures, one that all things pass — two faces of one era.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《风姿花传》</span><span data-en>Fūshikaden</span></span></b></td><td><span data-both><span data-zh>世阿弥</span><span data-en>Zeami</span></span></td><td>c.1400</td><td><span data-both><span data-zh>同时代 · 美学</span><span data-en>near era · aesthetics</span></span></td><td><div data-zh>无常与艺道，同一时代的两副面孔。</div><div data-en>Impermanence and craft — two faces of one era.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《永井荷风异国放浪记》</span><span data-en>Wandering Abroad</span></span></b></td><td><span data-both><span data-zh>永井荷风</span><span data-en>Nagai Kafū</span></span></td><td>2020</td><td><span data-both><span data-zh>下游 · 随笔血脉</span><span data-en>downstream · zuihitsu vein</span></span></td><td><div data-zh>随笔血脉下至荷风，仍以「看」为方法。</div><div data-en>The zuihitsu vein reaches Kafū, still watching.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《夏目漱石：浮世与病榻》</span><span data-en>The Floating World &amp; the Sickbed</span></span></b></td><td><span data-both><span data-zh>夏目漱石</span><span data-en>Natsume Sōseki</span></span></td><td>2020</td><td><span data-both><span data-zh>下游 · 断片</span><span data-en>downstream · fragment</span></span></td><td><div data-zh>漱石的短章是 20 世纪的徒然草。</div><div data-en>Sōseki&#x27;s sketches are the twentieth-century Tsurezuregusa.</div></td><td>丙</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>中译 2022，商务印书馆，王以铸译，207 页，¥45</span><span data-en>Chinese ed. 2022, Commercial Press, trans. Wang Yizhu, 207 pp, ¥45</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>馆藏书目</span><span data-en>catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>ISBN 978-7-100-21349-3；属汉译世界文学名著丛书</span><span data-en>ISBN 978-7-100-21349-3; in the Chinese Translations of World Literature series</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>馆藏书目</span><span data-en>catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>全书 243 段</span><span data-en>243 sections in all</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>商务印书馆书目页</span><span data-en>Commercial Press page</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>作者约 1283—1350，14 世纪上半叶成书</span><span data-en>Author c.1283–1350; composed in the first half of the fourteenth century</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>文学史资料</span><span data-en>literary-historical sources</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>成书确切年份（1330 前后）与作者生卒仍有异说。</span><span data-en>Exact composition year (c.1330) and the author&#x27;s dates remain disputed.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>王以铸译文是否全译 243 段，待对目录。</span><span data-en>Whether Wang&#x27;s version renders all 243 sections — check the TOC.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

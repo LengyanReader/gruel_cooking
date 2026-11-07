@@ -8,25 +8,43 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,222 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《武士道》</span><span data-en>Bushido: The Soul of Japan · 武士道（英文原版）</span></h1>
-  <div class="subtitle" data-both><span data-zh>新渡户稻造 Nitobe Inazo · 1900 · 纽约 Phillips · 公版（Project Gutenberg ebook 12096）</span><span data-en>Nitobe Inazo · 1900 · Phillips, New York · public domain (Gutenberg ebook 12096)</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文化自述 self-portrait</span><span data-en>self-portrait</span></span> <span class="chip"><span data-zh>凛然自辩</span><span data-en>austere apology</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>公版全文，逐字引文直接取自 Project Gutenberg 电子文本（版本经核实），出处可复核。</div><div data-en><b>Provenance.</b> Public-domain full text; the verbatim quote is taken directly from the Project Gutenberg e-text (edition verified), so it is re-checkable.</div></div>
-<div class="readban"><span data-zh>以道德谱系向西方解释日本：既是自述也是辩护，后世一切日本论的靶子之一</span><span data-en>Japan's morality explained to the West — portrait and apology, a standing target of later Japan-ologies</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>把封建伦理讲成可被世界理解的公民道德，公版可逐字引用。</div><div data-en>Renders feudal virtue as a civic ethics the world could grasp; public domain and quotable verbatim.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>新渡户以义、勇、仁、礼、信、忠、名誉诸德，把武士道写成一部「道德组织」的自辩；受西方读者欢迎，也招来把日本尚武精神本质化的批评，成为后世《菊与刀》一路论著的靶子。</div><div data-en>Nitobe sets out justice, courage, benevolence, courtesy, sincerity, loyalty and honour as a moral organisation of the soul — welcomed by Western readers, yet charged with essentialising Japanese militarism, and a target for later works from Benedict onward.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://www.gutenberg.org/ebooks/12096" target="_blank" rel="noopener"><span data-zh>公版全文 · Gutenberg ebook 12096</span><span data-en>Full text · Gutenberg ebook 12096</span><span class="dom">gutenberg.org ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=武士道 新渡户稻造" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="orig">Bushido, then, is the code of moral principles which the knights were required or instructed to observe.</div><div class="trs" data-zh>武士道，便是那些骑士被要求或被教导去遵守的道德准则。（逐字原文）</div><div class="trs" data-en>Bushido, then, is the code of moral principles which the knights were required or instructed to observe.</div><div class="src"><span data-both><span data-zh>第一章 What is Bushido · 公版全文 ✓</span><span data-en>Ch. I What is Bushido · public-domain text ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>武士道＝日本灵魂的道德组织</span><span data-en>bushido as the moral organisation of the soul</span></li><li>· <span data-zh>既是自述也是辩护：后世日本论的靶子</span><span data-en>portrait and apology, a target of later Japan-ologies</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>自我辩护式的文化定型。合成：与《菊与刀》（外视定型）、《杂种文化》（自省）三者并置，见「日本是什么」的三种答法。</div><div data-en>A self-apologising cultural typing. Synthesis: with Benedict (outside typing) and Kato (self-irony), three answers to what Japan is.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-book-of-tea.html">《茶之书》</a></td><td><span data-zh>同代自述</span><span data-en>same-era self-portrait</span></td><td><div data-zh>两部面向西方的自陈</div><div data-en>two self-portraits to the West</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-chrysanthemum-sword.html">《菊与刀》</a></td><td><span data-zh>对手·外视定型</span><span data-en>rival · outside typing</span></td><td><div data-zh>本尼迪克特的靶子之一</div><div data-en>one of Benedict's targets</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>初版 1900，纽约 Phillips</span><span data-en>first published 1900, Phillips New York</span></td><td><span data-zh>公版记录</span><span data-en>PD record</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>Gutenberg ebook #12096 收录全文</span><span data-en>Gutenberg ebook #12096 carries the full text</span></td><td><span data-zh>Gutenberg</span><span data-en>Gutenberg</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《武士道》 · Bushido: The Soul of Japan</span><span data-en>Bushido: The Soul of Japan</span></h1>
+  <div class="subtitle" data-both><span data-zh>新渡户稻造 · 日本 · 1900 初版（Philadelphia）· 1905 纽约 Putnam 版通行 · 公版 Gutenberg #12096</span><span data-en>Nitobe Inazō · Japan · first 1900 (Philadelphia) · 1905 Putnam, New York · public domain, Gutenberg #12096</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>英文自述 · 十七章</span><span data-en>self-portrait in English · seventeen chapters</span></span> <span class="chip"><span data-zh>kind·nonfiction</span><span data-en>nonfiction</span></span> <span class="chip"><span data-zh>伦理</span><span data-en>ethics</span></span> <span class="chip"><span data-zh>conf ✓ 初版年 / 公版全文已核；初版社 ◐</span><span data-en>conf ✓ first year and public-domain text; first publisher ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 初版年 / 公版全文已核；初版社 ◐ · 档案：jp-bushido（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ first year and public-domain text; first publisher ◐ · record: jp-bushido. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography and secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>把封建伦理讲成世界能懂的公民道德；它既是日本的自辩，也是后来《菊与刀》一路「日本论」的靶子。</div><div data-en>It renders feudal virtue as a civic ethics the world could grasp — at once Japan&#x27;s self-defence and the target of later Japan-ologies from Benedict onward.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.gutenberg.org/ebooks/12096" target="_blank" rel="noopener"><span data-zh>公版全文 · Gutenberg #12096</span><span data-en>Full text · Gutenberg #12096</span><span class="dom">www.gutenberg.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=武士道 新渡户稻造" target="_blank" rel="noopener"><span data-zh>豆瓣 · 中译检索</span><span data-en>Douban · Chinese editions</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>新渡户稻造（1862—1933）以英文写成此书，1900 年出版，1905 年由纽约 Putnam 推出修订版后在英语世界广泛流传。全书十七章，从「作为伦理体系的武士道」讲到义、勇、仁、礼、信、忠、名誉，再到切腹、刀、女性教育，最后问「武士道还活着吗」。它是在基督教西方面前为日本伦理辩护的著作，也因此把「武士道」本质化为一个统一体系。</div><div data-en>Nitobe Inazō (1862–1933) wrote in English; the book appeared in 1900 and, after a revised Putnam edition of 1905, circulated widely. Its seventeen chapters run from Bushido as an ethical system through rectitude, courage, benevolence, courtesy, veracity, loyalty and honour to seppuku, the sword and women&#x27;s education, closing with &#x27;Is Bushido still alive?&#x27;. Written to defend Japanese ethics before a Christian West, it also essentialised bushido into a single system.</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 初版年 / ◐ 初版社</span><span data-en>✓ first year / ◐ first publisher</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>时段章节 · Periods &amp; chapters</span><span data-en>Periods &amp; chapters</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 第一—三章 体系、源流、义</span><span data-en>Section 1 · I–III · System, sources, rectitude</span></h3>
+<div data-zh>先定义武士道为「武士须遵守的道德准则」，再追溯佛教、神道与儒家三源，最后立「义」为德目之首。</div><div data-en>Defines bushido as the code knights were required to observe, traces Buddhist, Shinto and Confucian sources, and sets rectitude first among virtues.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 第四—九章 勇、仁、礼、信、忠、名誉</span><span data-en>Section 2 · IV–IX · Courage, benevolence, courtesy, truth, loyalty, honour</span></h3>
+<div data-zh>德目逐一展开：勇须有「仁」来节制，礼是「对他人的体贴」，忠与名誉则构成社会纽带。</div><div data-en>The virtues unfold: courage must be tempered by benevolence, courtesy is consideration for others, loyalty and honour form the social bond.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 第十—十四章 教育、克己、切腹、刀、女性</span><span data-en>Section 3 · X–XIV · Training, self-control, seppuku, the sword, women</span></h3>
+<div data-zh>制度层面：武士如何被养成，切腹如何被赋予伦理意义，刀如何成为「武士之魂」，女性如何被教育。</div><div data-en>Institutions: how samurai were formed, how seppuku was given ethical meaning, how the sword became the samurai&#x27;s soul, how women were educated.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 节 · 第十五—十七章 影响、存续、未来</span><span data-en>Section 4 · XV–XVII · Influence, survival, future</span></h3>
+<div data-zh>末三章转向现代：武士道是否仍活在日本人的行为里？新渡户的回答是「活着的，但需要转化」。</div><div data-en>The last three turn modern: does bushido still live in Japanese conduct? Nitobe&#x27;s answer is yes, but it must be transformed.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论述框架 · Analytical framework</span><span data-en>Analytical framework</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>十七章像一部德目辞典，但有一条暗线：武士道不是成文法典，而是「活的伦理」——由武士阶层的习惯、荣誉感与教养沉淀而成。新渡户不断用欧洲的骑士、基督教与哲学作比，让西方读者在熟悉的坐标里接受日本。</div><div data-en>The seventeen chapters read like a dictionary of virtues, but a thread runs through: bushido is not a written code but a living ethic sedimented from samurai habit, honour and cultivation. Nitobe constantly compares with European chivalry, Christianity and philosophy so Western readers can receive Japan in familiar coordinates.</div></div>
+<h2 class="part" data-both><span data-zh>时间线索引 · Chronological flow</span><span data-en>Chronological flow</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《武士道》 · 时段链（数字为顺序）</span><span data-en>Bushido: The Soul of Japan · the chronological chain</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">Bushido, then, is the code of moral principles which the knights were required or instructed to observe.</div><div class="trs" data-zh>武士道，便是那些骑士被要求或被教导去遵守的道德准则。</div><div class="trs" data-en>Bushido, then, is the code of moral principles which the knights were required or instructed to observe.</div><div class="src"><span data-both><span data-zh>第一章 What is Bushido · 公版全文 ✓（Gutenberg #12096）</span><span data-en>Ch. I, What is Bushido · public-domain text ✓ (Gutenberg #12096)</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>英语世界理解日本伦理的入门书，也是「武士道」一词进入西方语言的主要通道；文笔典雅，引用欧洲经典自如。
+
+把武士道写成整齐的德目体系，掩盖了它历史上的暴力与阶级性；后来的民族主义也乐于引用此书，使它背上「军国主义辩护」的嫌疑。
+
+**合成 Synthesis：** 与《菊与刀》对读：新渡户从内部说「我们如此」，本尼迪克特从外部说「他们如此」。两本合读，才看得见「日本论」的两种视线。</div><div data-en>The English world&#x27;s primer on Japanese ethics and the main channel by which &#x27;bushido&#x27; entered Western languages; elegant, freely citing European classics.
+
+Writing bushido as a tidy system of virtues obscures its historical violence and class character; later nationalism gladly cited the book, saddling it with a suspicion of militarist apology.
+
+**Synthesis:** Read with Benedict: Nitobe says from inside &#x27;this is how we are&#x27;, Benedict from outside &#x27;this is how they are&#x27;. Together they show the two gazes of Japan-ology.</div></div>
+<h2 class="part" data-both><span data-zh>史学方法 · Historiography</span><span data-en>Historiography</span></h2>
+<div class="card"><p data-zh>比较论证：几乎每个德目都配一个欧洲对应物，降低西方读者的理解成本。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Comparative argument: nearly every virtue gets a European analogue, lowering the cost for Western readers.</p></div>
+<div class="card"><p data-zh>自辩的语气：不是中立描述，而是「请你们不要误解我们」的辩护。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">A defensive tone: not neutral description but a plea not to misread us.</p></div>
+<div class="card"><p data-zh>以人物轶事证德：用具体故事代替抽象定义。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Virtue proved by anecdote: concrete stories instead of abstract definitions.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>义</span><span data-en>rectitude</span></div>
+<div class="orig">義</div>
+<div class="mnote"><div data-zh>新渡户列为诸德之首：无义之勇只是蛮力。</div><div data-en>First of the virtues: courage without rectitude is mere force.</div></div>
+<div class="src"><span data-both><span data-zh>第三章</span><span data-en>ch. III</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>名誉</span><span data-en>honour</span></div>
+<div class="orig">名誉</div>
+<div class="mnote"><div data-zh>武士行为的最高裁判，也是切腹的逻辑起点。</div><div data-en>The highest court of samurai conduct and the logic behind seppuku.</div></div>
+<div class="src"><span data-both><span data-zh>第八、十二章</span><span data-en>chs. VIII, XII</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>活着的伦理</span><span data-en>a living ethic</span></div>
+<div class="mnote"><div data-zh>武士道不是法典，而是习惯与教养的沉淀。</div><div data-en>Bushido is not a code but sedimented habit and cultivation.</div></div>
+<div class="src"><span data-both><span data-zh>第一章</span><span data-en>ch. I</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq">
+<div class="orig">Bushido, then, is the code of moral principles which the knights were required or instructed to observe.<span class="lang">EN · english</span></div>
+<div class="tr"><div data-zh>武士道，便是那些骑士被要求或被教导去遵守的道德准则。</div><div data-en>Bushido, then, is the code of moral principles which the knights were required or instructed to observe.</div></div>
+<div class="note"><div data-zh>全书定义句：注意「required or instructed」——它既是强制也是教化。</div><div data-en>The defining sentence: note &#x27;required or instructed&#x27; — both compulsion and cultivation.</div></div>
+<div class="src">Bushido, ch. I · Gutenberg #12096</div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>读每一德目时问：这是历史事实，还是新渡户为了向西方解释而做的整理？</div><div data-en>Of each virtue ask: is this history, or Nitobe&#x27;s arrangement for Western explanation?</div></div>
+<div class="card"><div data-zh>把「切腹」一章与《菊与刀》的「耻感」章对读，看两种文化解释如何互相加固。</div><div data-en>Read the seppuku chapter against Benedict&#x27;s shame chapter and see how two cultural explanations reinforce each other.</div></div>
+<div class="card"><div data-zh>注意书中女性一章：它暴露了武士道伦理的性别结构，也是全书最容易被跳过的一章。</div><div data-en>Note the chapter on women: it exposes the gender structure of bushido and is the chapter most easily skipped.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《茶之书》</span><span data-en>The Book of Tea</span></span></b></td><td><span data-both><span data-zh>冈仓天心</span><span data-en>Okakura Kakuzō</span></span></td><td>1906</td><td><span data-both><span data-zh>同代 · 自述</span><span data-en>same era · self-portrait</span></span></td><td><div data-zh>两部面向西方的自陈，一德一美。</div><div data-en>Two self-portraits for the West, one of virtue, one of beauty.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《菊与刀》</span><span data-en>The Chrysanthemum and the Sword</span></span></b></td><td><span data-both><span data-zh>鲁思·本尼迪克特</span><span data-en>Ruth Benedict</span></span></td><td>1946</td><td><span data-both><span data-zh>对手 · 外视</span><span data-en>rival · outside view</span></span></td><td><div data-zh>本尼迪克特的靶子之一：内视自述 vs 外视定型。</div><div data-en>One of Benedict&#x27;s targets: inside portrait vs outside typing.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《日本论》</span><span data-en>A Discussion of Japan</span></span></b></td><td><span data-both><span data-zh>戴季陶</span><span data-en>Dai Jitao</span></span></td><td>1924</td><td><span data-both><span data-zh>同题 · 中国视角</span><span data-en>same theme · Chinese view</span></span></td><td><div data-zh>戴季陶也把武士道当作理解日本政治的钥匙。</div><div data-en>Dai also treats bushido as a key to Japanese politics.</div></td><td>甲</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>初版 1900 年；1905 年纽约 Putnam 修订版通行</span><span data-en>First edition 1900; the revised Putnam (New York) edition of 1905 circulated widely</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>公版书目</span><span data-en>public-domain bibliography</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>Project Gutenberg #12096 收全文，十七章</span><span data-en>Full text at Gutenberg #12096, seventeen chapters</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Gutenberg</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1862—1933</span><span data-en>Author 1862–1933</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>1900 年初版出版社（Leeds &amp; Biddle, Philadelphia）待核。</span><span data-en>The 1900 first publisher (Leeds &amp; Biddle, Philadelphia) to verify.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

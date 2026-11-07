@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《草枕》｜The Three-Cornered World | 阅读与智识</title>
+<title>《草枕》｜草枕 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,223 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《草枕》</span><span data-en>The Three-Cornered World (Kusamakura) · 草枕</span></h1>
-  <div class="subtitle" data-both><span data-zh>夏目漱石 Natsume Soseki · 1906 · 中译多种（高慧勤等）· 与特辑《浮世与病榻》同一作者的虚构面</span><span data-en>Natsume Soseki · 1906 · several Chinese eds. · the fiction-side of the same author as the Sickbed volume</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文豪侧翼 literary</span><span data-en>literary wing</span></span> <span class="chip"><span data-zh>超然非人情</span><span data-en>disinterested non-emotion</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>一位画家遁入山中温泉，把人世之情隔在窗外，只求审美地观照——漱石的非人情理想</span><span data-en>a painter retreats to a mountain spa and contemplates the world purely aesthetically — Soseki's ideal of non-human-emotion</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>《浮世与病榻》互为表里的虚构面：一个入世的病，一个出世的静。</div><div data-en>The fiction inverse of the Sickbed volume: engaged illness vs withdrawn stillness.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>开篇「智に働けば角が立つ」一句立起全书：非情（去人情）之美、俳谐之心，让叙述者以画意观看山中女子，不动情而观照。它是漱石「非人情」美学主张的小说化。</div><div data-en>Its famous opening sets the whole: beauty beyond emotion, a haiku-mind, letting the narrator view a mountain woman pictorially without passion. It novelises Soseki's creed of disinterestedness.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=草枕 漱石" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a><a href="https://openlibrary.org/search?q=Soseki Kusamakura" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>美在去人情：以诗人的眼、画家的光观照世界。（论旨概述，非逐字原文）</div><div class="trs" data-en>Beauty lies beyond emotion: to see the world with a poet's eyes, a painter's light. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>开篇论旨 · ◐ 译文随版本</span><span data-en>the opening · ◐ wording per edition</span></span></div></div><ul class="pts"><li>· <span data-zh>非人情＝审美地隔却世情</span><span data-en>disinterestedness: bracketing worldly feeling</span></li><li>· <span data-zh>以画意把人物化为风景</span><span data-en>turning persons into scenery by pictorial eye</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>近代日本文人美学的宣言式小说。合成：与《浮世与病榻》并读，见漱石之一体两面。</div><div data-en>A manifesto-novel of modern literati aesthetics. Synthesis: with the Sickbed volume as Soseki's two faces.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-usei.html">《浮世与病榻》</a></td><td><span data-zh>同作者表里</span><span data-en>same author · inverse</span></td><td><div data-zh>出世之静与入世之病互为表里</div><div data-en>withdrawn stillness vs engaged illness</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-furoki.html">《异国放浪记》</a></td><td><span data-zh>同反近代</span><span data-en>shared anti-modern</span></td><td><div data-zh>两种出世的审美姿态</div><div data-en>two poses of aesthetic withdrawal</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>1906 年发表</span><span data-en>published 1906</span></td><td><span data-zh>作品年表</span><span data-en>chronology</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>开篇名句逐字译文随译本而异</span><span data-en>the rendering of the famous opening varies by translation</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《草枕》 · 草枕</span><span data-en>草枕</span></h1>
+  <div class="subtitle" data-both><span data-zh>夏目漱石 · 日本 · 1906 初刊 · 中译多种（丰子恺、陈德文等）· 公版</span><span data-en>Natsume Soseki · Japan · first published 1906 · several Chinese translations (Feng Zikai, Chen Dewen) · public domain</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>中篇 · 「非人情」美学</span><span data-en>novella · the aesthetics of disinterestedness</span></span> <span class="chip"><span data-zh>kind·fiction</span><span data-en>fiction</span></span> <span class="chip"><span data-zh>文学 · 美学</span><span data-en>literature · aesthetics</span></span> <span class="chip"><span data-zh>conf ✓ 初刊年与公版地位已核；中译版本目待核 ◐</span><span data-en>conf ✓ year and public-domain status verified; Chinese imprints to check ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 初刊年与公版地位已核；中译版本目待核 ◐ · 档案：jp-kusamakura（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ year and public-domain status verified; Chinese imprints to check ◐ · record: jp-kusamakura. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>《浮世与病榻》互为表里的虚构面：一个入世的病，一个出世的静。漱石把「非人情」写成一次山中行走，而不是一篇论文。</div><div data-en>The fiction inverse of the Sickbed volume: engaged illness against withdrawn stillness. Soseki writes disinterestedness as a walk in the mountains, not a treatise.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.aozora.gr.jp/cards/000148/files/776_14938.html" target="_blank" rel="noopener"><span data-zh>青空文库 · 草枕（公版全文）</span><span data-en>Aozora Bunko · Kusamakura (public domain)</span><span class="dom">www.aozora.gr.jp ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=草枕 夏目漱石" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《草枕》1906 年发表，是漱石继《我是猫》《哥儿》之后的第三部中篇。叙述者是一位画家，为避开尘世而走入山中温泉，遇见当地女子那美。全书以画家的眼观看世界：不以人情介入，而以画意观照。开篇「智に働けば角が立つ」一段，是日本近代文学最著名的开头之一，也把全书的「非人情」主张一次说尽。</div><div data-en>Published in 1906, Kusamakura is Soseki&#x27;s third novella after I Am a Cat and Botchan. The narrator, a painter, withdraws to a mountain spa and meets a local woman, Nami. The whole book sees through a painter&#x27;s eye: not emotional involvement but pictorial contemplation. Its opening, &#x27;Work by intellect and you grow angular&#x27;, is one of the most famous in modern Japanese literature and states the creed of disinterestedness in a breath.</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 发表年与情节梗概；「非人情」释义为通行解读 ◐</span><span data-en>✓ year and plot outline; the gloss on disinterestedness is standard reading ◐</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>情节分幕 · Plot content</span><span data-en>Plot content</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 幕 · 入山</span><span data-en>Act 1 · Into the mountains</span></h3>
+<div data-zh>画家离城入山，开篇即立「非人情」之论：人世难居，故以诗画之眼观之。</div><div data-en>The painter leaves the city; the opening establishes disinterestedness: the world is hard to live in, so see it with a poet&#x27;s and painter&#x27;s eye.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>开篇</span><span data-en>opening</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 幕 · 温泉与那美</span><span data-en>Act 2 · The spa and Nami</span></h3>
+<div data-zh>山中温泉的人物次第出现，那美成为画家观照的中心。情感被刻意悬置，美却因此显出。</div><div data-en>Figures at the spa appear one by one, Nami at the centre of the painter&#x27;s gaze. Feeling is deliberately suspended, and beauty emerges thereby.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>情节梗概</span><span data-en>plot outline</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 幕 · 未完成的画</span><span data-en>Act 3 · The unfinished picture</span></h3>
+<div data-zh>结尾并未完成画作：观照本身即是目的，完成反而会破坏「非人情」的立场。</div><div data-en>The picture is never finished: contemplation is the end, and completion would break the stance of disinterestedness.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>结局解读</span><span data-en>reading of the ending</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>叙事结构 · Narrative structure</span><span data-en>Narrative structure</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>结构是「行走—观察—作画」：没有强情节，靠视角的移动推进。画家一路记下风景、人物与议论，议论与写景交替，最后以一幅未完成的画收束。它更像一部以小说形式写的诗论。</div><div data-en>The structure is walk, observe, paint: no strong plot, movement carried by shifts of viewpoint. The painter records scenery, people and reflection in alternation, closing on an unfinished picture. It reads as a poetics written in the form of fiction.</div></div>
+<h2 class="part" data-both><span data-zh>情节流程图 · Plot flow</span><span data-en>Plot flow</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《草枕》 · 事件链（数字为顺序）</span><span data-en>草枕 · the event chain (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。</div><div class="trs" data-zh>凭理智行事，处处碰壁；任情感驱遣，随波逐流；固执己见，则寸步难行。总之，人世间是住不惯的。（自译）</div><div class="trs" data-en>Act by intellect and you grow angular; drift with feeling and you are carried away; insist on your will and you are cramped. In any case, the human world is hard to live in. (our translation)</div><div class="src"><span data-both><span data-zh>『草枕』冒頭 · 公版全文 ✓</span><span data-en>Kusamakura, opening · public-domain text ✓</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>日本近代文学中最彻底的一次「非人情」实践；开篇一段被反复引用，成为漱石美学的入口，也让「以画意观世」成为此后日本美学的常用语。
+
+情节稀薄，议论过多，常被读作「以小说写诗论」；「非人情」的立场也被批评为对现实的逃避。
+
+**合成 Synthesis：** 与《浮世与病榻》对读，看出世与入世的两面；与《阴翳礼赞》对读，看两种反近代的审美姿态。</div><div data-en>The most thorough exercise in disinterestedness in modern Japanese literature; its opening is endlessly quoted, the gateway to Soseki&#x27;s aesthetics, and &#x27;seeing the world pictorially&#x27; became a staple phrase.
+
+Thin plot and abundant reflection make it a poetics in novel form; the stance of disinterestedness has also been criticised as flight from reality.
+
+**Synthesis:** Read with the Sickbed volume for withdrawal against engagement; with In Praise of Shadows for two anti-modern aesthetic poses.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>以画家的视觉组织叙述：色彩、光线、构图先于情节。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Narration organised by a painter&#x27;s vision: colour, light, composition before plot.</p></div>
+<div class="card"><p data-zh>议论与写景交替：一段景，一段思，互为注释。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Reflection alternates with landscape: a scene, a thought, each glossing the other.</p></div>
+<div class="card"><p data-zh>汉文调的文体：漱石以汉诗修养锻造日文句法。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">A Sino-Japanese prose: Soseki forges Japanese syntax with his training in Chinese poetry.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>非人情</span><span data-en>disinterestedness</span></div>
+<div class="orig">非人情</div>
+<div class="mnote"><div data-zh>不是无情，而是不让情感介入观照。</div><div data-en>Not heartlessness but keeping feeling out of contemplation.</div></div>
+<div class="src"><span data-both><span data-zh>开篇</span><span data-en>opening</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>画意</span><span data-en>the pictorial</span></div>
+<div class="orig">画</div>
+<div class="mnote"><div data-zh>世界先被看成一幅画，才被看成一段人生。</div><div data-en>The world is seen as a picture before it is seen as a life.</div></div>
+<div class="src"><span data-both><span data-zh>全书</span><span data-en>throughout</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>山路</span><span data-en>the mountain path</span></div>
+<div class="orig">山路</div>
+<div class="mnote"><div data-zh>行走是方法：换一个位置，才换一种看法。</div><div data-en>Walking is the method: change position to change vision.</div></div>
+<div class="src"><span data-both><span data-zh>开篇</span><span data-en>opening</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq">
+<div class="orig">智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。<span class="lang">JA · Japanese</span></div>
+<div class="tr"><div data-zh>凭理智行事，处处碰壁；任情感驱遣，随波逐流；固执己见，则寸步难行。总之，人世间是住不惯的。（自译）</div><div data-en>Act by intellect and you grow angular; drift with feeling and you are carried away; insist on your will and you are cramped. In any case, the human world is hard to live in. (our translation)</div></div>
+<div class="note"><div data-zh>全书开篇，也是「非人情」美学的入口：正因为人世难居，才需要诗与画的距离。</div><div data-en>The opening, and the gate to the aesthetics of disinterestedness: the world is hard to live in, hence the distance of poetry and painting.</div></div>
+<div class="src"><span data-both><span data-zh>『草枕』冒頭 · 公版</span><span data-en>Kusamakura, opening · public domain</span></span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读开篇与结尾，抓住「难居」与「未完成」两端，再读中间的山中人事。</div><div data-en>Read the opening and the ending for hardness and incompletion, then the mountain episodes between.</div></div>
+<div class="card"><div data-zh>与《浮世与病榻》对读：同一个作者，一边写病榻上的自省，一边写山中的忘我。</div><div data-en>Read with the Sickbed volume: the same author, one book of introspection on the sickbed, one of self-forgetfulness in the mountains.</div></div>
+<div class="card"><div data-zh>把书中的「画」全部标出，问：画家究竟画成了什么？</div><div data-en>Mark every mention of painting and ask what the painter actually completes.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《浮世与病榻》</span><span data-en>Soseki: The Floating World and the Sickbed</span></span></b></td><td><span data-both><span data-zh>夏目漱石</span><span data-en>Natsume Soseki</span></span></td><td>2020</td><td><span data-both><span data-zh>同作者表里</span><span data-en>same author, inverse</span></span></td><td><div data-zh>出世之静与入世之病互为表里。</div><div data-en>Withdrawn stillness against engaged illness.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《侏儒的话》</span><span data-en>Dwarf&#x27;s Words</span></span></b></td><td><span data-both><span data-zh>芥川龙之介</span><span data-en>Akutagawa Ryunosuke</span></span></td><td>1927</td><td><span data-both><span data-zh>后学回响</span><span data-en>successor echo</span></span></td><td><div data-zh>漱石的非人情，到芥川变成冷峭的箴语。</div><div data-en>Soseki&#x27;s disinterestedness turns into Akutagawa&#x27;s cold aphorism.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《阴翳礼赞》</span><span data-en>In Praise of Shadows</span></span></b></td><td><span data-both><span data-zh>谷崎润一郎</span><span data-en>Tanizaki Jun&#x27;ichiro</span></span></td><td>1933</td><td><span data-both><span data-zh>同族 · 审美</span><span data-en>kin · aesthetic</span></span></td><td><div data-zh>两种反近代的审美姿态：山中的距离与室内的幽暗。</div><div data-en>Two anti-modern poses: mountain distance and indoor gloom.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>1906 年发表</span><span data-en>Published 1906</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>作品年表</span><span data-en>chronology</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>漱石第三部中篇（继《我是猫》《哥儿》）</span><span data-en>Soseki&#x27;s third novella, after I Am a Cat and Botchan</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>作品年表</span><span data-en>chronology</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>开篇「智に働けば角が立つ」为公版原文</span><span data-en>The opening line is public-domain text</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>公版全文</span><span data-en>public-domain text</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>中译有丰子恺、陈德文等译本</span><span data-en>Chinese translations include Feng Zikai and Chen Dewen</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>译本调查</span><span data-en>translation survey</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>初刊杂志与具体月日待核（1906 年 9 月说待证）。</span><span data-en>First serialisation venue and exact date to verify (a September 1906 claim awaits proof).</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>中译各版的出版社、页数与 ISBN 待逐一核对。</span><span data-en>Publisher, pages and ISBN of each Chinese edition to check one by one.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

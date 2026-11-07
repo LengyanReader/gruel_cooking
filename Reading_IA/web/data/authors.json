@@ -2581,6 +2581,1759 @@
           "note": "Hitlers Deutschland BBC"
         }
       ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "中文",
+      "id": "li-yongjing",
+      "name_zh": "李永晶",
+      "name_en": "Li Yongjing",
+      "name_native": "李永晶",
+      "slug_display": "Li Yongjing",
+      "born": "20 世纪 70 年代 · 中国",
+      "domain_zh": "政治思想史 · 日本研究 · 东亚认识论",
+      "domain_en": "political thought · Japan studies · East Asian epistemology",
+      "one_liner_zh": "把「中国如何看日本」本身当作研究对象：日本是一面镜子，照出的常是中国自己的焦虑与欲望。",
+      "one_liner_en": "He studies how China looks at Japan: Japan is a mirror that mostly reflects China's own anxieties and desires.",
+      "school_zh": "中国新一代日本论 · 认识论转向",
+      "school_en": "the new Chinese Japan-ology · epistemological turn",
+      "timeline": [
+        {
+          "y": "1970s",
+          "event_zh": "生于中国；后赴日本留学，研究政治思想史。",
+          "event_en": "Born in China; later studied political thought in Japan.",
+          "conf": "◐"
+        },
+        {
+          "y": "2010s",
+          "event_zh": "任华东师范大学政治学系副教授，兼事日本研究与时评。",
+          "event_en": "Associate professor of political science at East China Normal University, writing on Japan.",
+          "conf": "✓"
+        },
+        {
+          "y": "2020-01",
+          "event_zh": "《分身：新日本论》由一頁folio / 北京联合出版，530 页。",
+          "event_en": "Avatar: A New Japan-ology published by Yīyè folio / Beijing United, 530 pp.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2020",
+          "title": "《分身：新日本论》",
+          "title_en": "Avatar: A New Japan-ology",
+          "note_zh": "本批核心：以「分身」重述近代中国的日本认识。",
+          "note_en": "The batch's hinge: modern China's knowledge of Japan retold as an avatar.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "日本研究与时评文章",
+          "title_en": "Essays on Japan",
+          "note_zh": "散见报刊与学术期刊，具体篇目待补。",
+          "note_en": "Scattered across journals and press; a bibliography is still to be built.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "李永晶的立场是认识论的：不急于回答「日本是什么」，而先问「我们为何这样问」。他把黄遵宪、戴季陶、本尼迪克特串成一条镜链，指出每一次知日都是一次自我定位；因此「新日本论」之新，在于把提问者放回问题之中。",
+      "stance_en": "Li's stance is epistemological: rather than answer what Japan is, he asks why we ask it that way. Huang, Dai and Benedict form a mirror-chain in which every knowing of Japan is a self-positioning; the newness of a new Japan-ology lies in putting the asker back inside the question.",
+      "why_now_zh": "在中日关系与民族情绪反复摆动的当下，他提供的是降温的读法：把对日本的判断转成对自己的检视。这与本批「甲 思想史」一线正好同频。",
+      "why_now_en": "At a moment when Sino-Japanese relations and national sentiment swing repeatedly, he offers a cooling reading: turn judgement of Japan into examination of the self, in tune with the batch's intellectual-history axis.",
+      "fact_ledger": [
+        {
+          "claim": "《分身：新日本论》2020-01，北京联合（一頁folio），530 页，ISBN 9787559637826",
+          "claim_en": "Avatar, 2020-01, Beijing United (Yīyè folio), 530 pp, ISBN 9787559637826",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "任华东师范大学政治学系副教授",
+          "claim_en": "Associate professor, Dept. of Political Science, ECNU",
+          "source": "作者简介",
+          "source_en": "author note",
+          "conf": "✓"
+        },
+        {
+          "claim": "旧稿「原 2018」无书目依据，已撤",
+          "claim_en": "The old 'original 2018' had no bibliographic basis and was withdrawn",
+          "source": "回源核对",
+          "source_en": "source recheck",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "yomota",
+      "name_zh": "四方田犬彦",
+      "name_en": "Yomota Inuhiko",
+      "name_native": "四方田犬彦",
+      "slug_display": "Yomota",
+      "born": "1953— · 东京",
+      "domain_zh": "比较文学 · 电影史 · 美学随笔",
+      "domain_en": "comparative literature · film history · aesthetic essays",
+      "one_liner_zh": "在废墟、壁画与旧照片里读「摩灭」：万物都在被时间擦去，美正发生在擦去的痕迹上。",
+      "one_liner_en": "He reads masshitsu in ruins, frescoes and old photographs: everything is being erased, and beauty happens in the trace of erasure.",
+      "school_zh": "跨文化批评 · 日本美学关键词",
+      "school_en": "cross-cultural criticism · keywords in Japanese aesthetics",
+      "timeline": [
+        {
+          "y": "1953",
+          "event_zh": "生于东京。",
+          "event_en": "Born in Tokyo.",
+          "conf": "✓"
+        },
+        {
+          "y": "1980s-",
+          "event_zh": "以电影研究与比较文学知名，长期任教于明治学院大学。",
+          "event_en": "Known for film studies and comparative literature; long-time professor at Meiji Gakuin University.",
+          "conf": "✓"
+        },
+        {
+          "y": "2003",
+          "event_zh": "《摩滅の賦》由筑摩书房出版，收十三篇。",
+          "event_en": "Masshitsu no Fu published by Chikuma Shobō, thirteen essays.",
+          "conf": "✓"
+        },
+        {
+          "y": "2020-01",
+          "event_zh": "中译《摩灭之赋》（蕾克译）由一頁folio / 北京联合出版。",
+          "event_en": "Chinese translation by Lei Ke from Yīyè folio / Beijing United.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2003",
+          "title": "《摩滅の賦》",
+          "title_en": "Masshitsu no Fu",
+          "note_zh": "本批底本：以「摩灭」重写消逝之美。",
+          "note_en": "The batch's source text: the beauty of erasure rewritten.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "电影史与比较文学著作",
+          "title_en": "Works on film and comparative literature",
+          "note_zh": "另有多种电影史论与随笔，书目待补。",
+          "note_en": "Further film histories and essays; bibliography to be completed.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "四方田不把「摩灭」当作怀旧，而当作一种观看方法：不修复、不保存，先承认消逝，再在消逝中辨认美。这使他的美学与谷崎的「阴翳」相邻，却更冷、更当代。",
+      "stance_en": "For Yomota, masshitsu is not nostalgia but a method of looking: do not restore or preserve, admit erasure first, then recognise beauty within it. His aesthetics neighbours Tanizaki's shadows but runs colder and more contemporary.",
+      "why_now_zh": "在一切都被要求「保存」「修复」「数字化」的时代，他提醒：有些美只在被擦去时才成立。这为本批的「消逝之美」提供了当代支点。",
+      "why_now_en": "In an age that demands preservation, restoration and digitisation, he reminds us that some beauty exists only in erasure, giving the batch's theme a contemporary pivot.",
+      "fact_ledger": [
+        {
+          "claim": "生于 1953 年，电影与比较文学学者",
+          "claim_en": "Born 1953; film and comparative-literature scholar",
+          "source": "中文维基百科",
+          "source_en": "Chinese Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "《摩滅の賦》筑摩書房 2003，十三篇",
+          "claim_en": "Masshitsu no Fu, Chikuma Shobō 2003, thirteen essays",
+          "source": "出版社书目",
+          "source_en": "publisher catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译 2020-01，蕾克译，ISBN 9787559637871",
+          "claim_en": "Chinese edition 2020-01, trans. Lei Ke, ISBN 9787559637871",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "onishi",
+      "name_zh": "大西克礼",
+      "name_en": "Onishi Yoshinori",
+      "name_native": "大西克礼",
+      "slug_display": "Onishi",
+      "born": "1888—1959 · 东京",
+      "domain_zh": "美学 · 日本审美范畴论",
+      "domain_en": "aesthetics · Japanese aesthetic categories",
+      "one_liner_zh": "用西方美学的解剖刀，把「幽玄」「物哀」「寂」切成可分析的范畴。",
+      "one_liner_en": "He uses the scalpel of Western aesthetics to dissect yūgen, mono no aware and sabi into analysable categories.",
+      "school_zh": "东京帝国大学美学 · 范畴研究",
+      "school_en": "Tokyo Imperial University aesthetics · category studies",
+      "timeline": [
+        {
+          "y": "1888",
+          "event_zh": "生于东京。",
+          "event_en": "Born in Tokyo.",
+          "conf": "✓"
+        },
+        {
+          "y": "1920s-",
+          "event_zh": "任东京帝国大学美学教授，专治日本审美范畴。",
+          "event_en": "Professor of aesthetics at Tokyo Imperial University, working on Japanese aesthetic categories.",
+          "conf": "✓"
+        },
+        {
+          "y": "1930s-40s",
+          "event_zh": "陆续刊行《幽玄とあはれ》《風雅論》《美意識の問題》。",
+          "event_en": "Published Yūgen and Aware, On Elegance, and The Problem of Aesthetic Consciousness.",
+          "conf": "◐"
+        },
+        {
+          "y": "2019-10",
+          "event_zh": "中译《日本侘寂》由一頁folio / 北京联合出版；三部曲另由上海译文刊行（王向远译，2017）。",
+          "event_en": "Japanese Wabi-Sabi in Chinese from Yīyè folio; the trilogy from Shanghai Translation (trans. Wang Yuanyuan, 2017).",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2019",
+          "title": "《日本侘寂》",
+          "title_en": "Japanese Wabi-Sabi",
+          "note_zh": "本批美学轴的范畴底座。",
+          "note_en": "The categorical base of the batch's aesthetic axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "2017",
+          "title": "《幽玄·物哀·寂》三部曲",
+          "title_en": "Yūgen, Mono no Aware, Sabi",
+          "note_zh": "上海译文，王向远译。",
+          "note_en": "Shanghai Translation, trans. Wang Yuanyuan.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "大西的方法是把审美感受转成概念结构：先追溯语词史，再分析其层次，最后给出定义。他拒绝把「侘寂」当作风格标签，坚持它是一个有内部构造的观照方式。",
+      "stance_en": "Onishi turns aesthetic feeling into conceptual structure: word history, then layers, then definition. He refuses wabi-sabi as a style label and insists it is a structured way of contemplating the world.",
+      "why_now_zh": "当「侘寂」在全球设计话语里被用成装饰风格时，大西的严格正好构成解毒剂：先弄清范畴，再谈趣味。",
+      "why_now_en": "As wabi-sabi becomes a decorative style in global design talk, Onishi's rigour is the antidote: fix the category before discussing taste.",
+      "fact_ledger": [
+        {
+          "claim": "1888—1959，东京帝国大学美学教授",
+          "claim_en": "1888-1959; professor of aesthetics at Tokyo Imperial University",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《日本侘寂》中译 2019-10，ISBN 9787559635180",
+          "claim_en": "Japanese Wabi-Sabi in Chinese, 2019-10, ISBN 9787559635180",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "三部曲中译 2017，上海译文，王向远译",
+          "claim_en": "Trilogy in Chinese, 2017, Shanghai Translation, trans. Wang Yuanyuan",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "旧稿罗马字作 Takehiro，实为 Yoshinori，已订正",
+          "claim_en": "The old record romanised him Takehiro; it is Yoshinori. Corrected",
+          "source": "回源核对",
+          "source_en": "source recheck",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "kuki",
+      "name_zh": "九鬼周造",
+      "name_en": "Kuki Shūzō",
+      "name_native": "九鬼周造",
+      "slug_display": "Kuki",
+      "born": "1888—1941 · 东京",
+      "domain_zh": "哲学 · 美学 · 江户趣味论",
+      "domain_en": "philosophy · aesthetics · Edo taste",
+      "one_liner_zh": "把「粹」拆成媚态、意气、谛观三个契机，用现象学给一种江户趣味下定义。",
+      "one_liner_en": "He splits iki into coquetry, spirit and resignation, defining an Edo taste phenomenologically.",
+      "school_zh": "京都学派 · 现象学美学",
+      "school_en": "Kyoto School · phenomenological aesthetics",
+      "timeline": [
+        {
+          "y": "1888",
+          "event_zh": "生于东京，父为明治官僚九鬼隆一。",
+          "event_en": "Born in Tokyo to the Meiji official Kuki Ryūichi.",
+          "conf": "✓"
+        },
+        {
+          "y": "1921-1928",
+          "event_zh": "留学欧洲，听海德格尔讲学，研究法国哲学。",
+          "event_en": "Studied in Europe, attended Heidegger's seminars, worked on French philosophy.",
+          "conf": "✓"
+        },
+        {
+          "y": "1930",
+          "event_zh": "《「いき」の構造》刊于《思想》，后由岩波书店出版。",
+          "event_en": "The Structure of Iki published in Shisō, later by Iwanami.",
+          "conf": "✓"
+        },
+        {
+          "y": "1941",
+          "event_zh": "病逝，年五十三。",
+          "event_en": "Died aged fifty-three.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1930",
+          "title": "《「いき」の構造》",
+          "title_en": "The Structure of Iki",
+          "note_zh": "本批《日本色气》所收。",
+          "note_en": "Included in the batch's Japanese Iki volume.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "《偶然性の問題》等",
+          "title_en": "The Problem of Contingency and others",
+          "note_zh": "形而上学与时间论著作，书目待补。",
+          "note_en": "Metaphysical and temporal works; bibliography to complete.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "九鬼要把「粹」从趣味提升为范畴：它由媚态（对异性的挑逗）、意气（不服输的骨气）、谛观（看破后的达观）三者合成，缺一不成。这是日本美学第一次被系统地「定义」。",
+      "stance_en": "Kuki raises iki from taste to category: coquetry toward the other, spirited defiance, and resigned lucidity, all three required. It is the first systematic definition of a Japanese aesthetic term.",
+      "why_now_zh": "当「日式审美」被简化成视觉元素时，九鬼提醒：真正的趣味有结构，也有伦理。",
+      "why_now_en": "When Japanese aesthetics is reduced to visual elements, Kuki reminds us that taste has structure and ethics.",
+      "fact_ledger": [
+        {
+          "claim": "1888—1941，京都帝国大学教授",
+          "claim_en": "1888-1941; professor at Kyoto Imperial University",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《「いき」の構造》原刊《思想》1930 年",
+          "claim_en": "The Structure of Iki first in Shisō, 1930",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "1921—1928 留学欧洲",
+          "claim_en": "Studied in Europe 1921-1928",
+          "source": "年谱",
+          "source_en": "chronology",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "abe",
+      "name_zh": "阿部次郎",
+      "name_en": "Abe Jirō",
+      "name_native": "阿部次郎",
+      "slug_display": "Abe",
+      "born": "1883—1959 · 山形",
+      "domain_zh": "伦理哲学 · 人格主义 · 评论",
+      "domain_en": "ethical philosophy · personalism · criticism",
+      "one_liner_zh": "以「人格主义」写日记、写评论，把贞操从道德戒律还原为一种生命形式。",
+      "one_liner_en": "A personalist diarist and critic, he reduces chastity from moral law to a form of life.",
+      "school_zh": "大正教养主义 · 人格主义",
+      "school_en": "Taishō cultivationism · personalism",
+      "timeline": [
+        {
+          "y": "1883",
+          "event_zh": "生于山形县。",
+          "event_en": "Born in Yamagata.",
+          "conf": "✓"
+        },
+        {
+          "y": "1914",
+          "event_zh": "《三太郎の日記》出版，成为大正青年的人格主义读本。",
+          "event_en": "The Diary of Santarō published, a personalist reader for Taishō youth.",
+          "conf": "✓"
+        },
+        {
+          "y": "1920s-",
+          "event_zh": "任东北帝国大学教授，兼事文艺评论。",
+          "event_en": "Professor at Tohoku Imperial University and literary critic.",
+          "conf": "✓"
+        },
+        {
+          "y": "1959",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1914",
+          "title": "《三太郎の日記》",
+          "title_en": "The Diary of Santarō",
+          "note_zh": "大正人格主义的代表作。",
+          "note_en": "The representative work of Taishō personalism.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "《贞操的理想——作为形式》",
+          "title_en": "The Ideal of Chastity, as Form",
+          "note_zh": "收入本批《日本色气》。",
+          "note_en": "Included in the batch's Japanese Iki volume.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "阿部把伦理问题美学化：贞操不是外在禁令，而是人能否把自己活成一件前后一贯的作品。这种「形式」的眼光，使他与九鬼的趣味论相邻。",
+      "stance_en": "Abe aestheticises ethics: chastity is not an external prohibition but whether one can live oneself as a coherent work. This formal eye places him beside Kuki's theory of taste.",
+      "why_now_zh": "在道德话语两极化的时候，他把贞操从规训转成自我塑造的问题，读来反而更接近当代伦理讨论。",
+      "why_now_en": "Amid polarised moral talk, he turns chastity from discipline into self-formation, which reads closer to contemporary ethics.",
+      "fact_ledger": [
+        {
+          "claim": "1883—1959，东北帝国大学教授",
+          "claim_en": "1883-1959; professor at Tohoku Imperial University",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《三太郎の日記》1914 年出版",
+          "claim_en": "The Diary of Santarō published 1914",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "《贞操的理想》收入《日本色气》中译",
+          "claim_en": "The Ideal of Chastity is included in the Chinese Japanese Iki volume",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "kafu",
+      "name_zh": "永井荷风",
+      "name_en": "Nagai Kafū",
+      "name_native": "永井荷風",
+      "slug_display": "Kafū",
+      "born": "1879—1959 · 东京",
+      "domain_zh": "小说 · 随笔 · 江户趣味",
+      "domain_en": "fiction · essays · Edo taste",
+      "one_liner_zh": "「最后的江户人」：向外流亡巴黎，向内凭吊东京，用一支反近代的笔写挽歌。",
+      "one_liner_en": "The last Edo man: exiled outward to Paris, mourning inward over Tokyo, writing elegies with an anti-modern pen.",
+      "school_zh": "唯美派 · 反近代",
+      "school_en": "aestheticism · anti-modernism",
+      "timeline": [
+        {
+          "y": "1879",
+          "event_zh": "生于东京，父为明治官僚、汉诗人。",
+          "event_en": "Born in Tokyo to a Meiji official and Chinese-style poet.",
+          "conf": "✓"
+        },
+        {
+          "y": "1903-1908",
+          "event_zh": "留学美国、法国，写《美国故事》《法国故事》。",
+          "event_en": "Studied in the US and France; wrote American and French stories.",
+          "conf": "✓"
+        },
+        {
+          "y": "1909",
+          "event_zh": "《隅田川》发表，转向江户趣味与下町风物。",
+          "event_en": "Sumidagawa published; the turn to Edo taste and low-town life.",
+          "conf": "✓"
+        },
+        {
+          "y": "1937",
+          "event_zh": "《濹東綺譚》发表，晚年风格的代表。",
+          "event_en": "Bokuto Kidan published, the representative late work.",
+          "conf": "✓"
+        },
+        {
+          "y": "1959",
+          "event_zh": "去世；《断肠亭日乘》留下数十年东京生活记录。",
+          "event_en": "Died; the Duanchang-ting diary left decades of Tokyo life on record.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1909",
+          "title": "《隅田川》",
+          "title_en": "Sumidagawa",
+          "note_zh": "下町转向的起点，勿与《濹东绮谭》相混。",
+          "note_en": "The start of the low-town turn; not to be confused with Bokuto Kidan.",
+          "conf": "✓"
+        },
+        {
+          "y": "1937",
+          "title": "《濹東綺譚》",
+          "title_en": "Bokuto Kidan",
+          "note_zh": "本批所收，谭晶华译。",
+          "note_en": "In this batch, trans. Tan Jinghua.",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "title": "《永井荷风异国放浪记》",
+          "title_en": "Wandering Abroad",
+          "note_zh": "本批另一种，收早年欧美游记。",
+          "note_en": "The batch's other Kafu volume, early European and American travel.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "荷风以「反近代」立身：拒绝明治的功利与规整，转向江户的趣味、游里的风俗与消逝的街景。他的挽歌不是怀旧消费，而是对现代化代价的持续记账。",
+      "stance_en": "Kafu stands as anti-modern: refusing Meiji utility and order for Edo taste, quarter customs and vanishing streets. His elegy is not nostalgic consumption but a running account of modernity's cost.",
+      "why_now_zh": "城市更新一次次抹去旧街区时，荷风的挽歌提供了另一种记录方式：不拯救，只保存。",
+      "why_now_en": "As urban renewal erases old quarters again and again, Kafu offers another way of recording: not rescue, but preservation.",
+      "fact_ledger": [
+        {
+          "claim": "1879—1959，东京",
+          "claim_en": "1879-1959, Tokyo",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "1903—1908 留学美国、法国",
+          "claim_en": "Studied in the US and France, 1903-1908",
+          "source": "年谱",
+          "source_en": "chronology",
+          "conf": "✓"
+        },
+        {
+          "claim": "《濹東綺譚》1937 年发表",
+          "claim_en": "Bokuto Kidan published 1937",
+          "source": "维基百科",
+          "source_en": "Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "旧稿将《濹东绮谭》误作 1909 年《墨东逸话》，已订正",
+          "claim_en": "The old record mistook it for a 1909 sketch; corrected",
+          "source": "回源核对",
+          "source_en": "source recheck",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "soseki",
+      "name_zh": "夏目漱石",
+      "name_en": "Natsume Sōseki",
+      "name_native": "夏目漱石",
+      "slug_display": "Sōseki",
+      "born": "1867—1916 · 东京",
+      "domain_zh": "小说 · 随笔 · 文明批评",
+      "domain_en": "fiction · essays · critique of civilisation",
+      "one_liner_zh": "把近代知识人的自我审视推到病榻上：浮世是向外的观察，病榻是向内的解剖。",
+      "one_liner_en": "He pushes the modern intellectual's self-examination to the sickbed: the floating world observed outward, the self dissected inward.",
+      "school_zh": "近代日本文学 · 反自然主义",
+      "school_en": "modern Japanese literature · anti-naturalism",
+      "timeline": [
+        {
+          "y": "1867",
+          "event_zh": "生于江户（东京）。",
+          "event_en": "Born in Edo (Tokyo).",
+          "conf": "✓"
+        },
+        {
+          "y": "1900-1902",
+          "event_zh": "留学伦敦，深受文明落差与孤独之苦。",
+          "event_en": "Studied in London, suffering the gap of civilisations and solitude.",
+          "conf": "✓"
+        },
+        {
+          "y": "1905",
+          "event_zh": "《我是猫》发表，一举成名。",
+          "event_en": "I Am a Cat made him famous.",
+          "conf": "✓"
+        },
+        {
+          "y": "1906",
+          "event_zh": "《草枕》发表，「非人情」美学成形。",
+          "event_en": "Kusamakura published; the aesthetics of disinterestedness takes shape.",
+          "conf": "✓"
+        },
+        {
+          "y": "1916",
+          "event_zh": "因胃溃疡去世，年四十九。",
+          "event_en": "Died of a stomach ulcer aged forty-nine.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1905",
+          "title": "《我是猫》",
+          "title_en": "I Am a Cat",
+          "note_zh": "成名作，讽刺文明开化。",
+          "note_en": "The breakthrough, satirising civilisation and enlightenment.",
+          "conf": "✓"
+        },
+        {
+          "y": "1906",
+          "title": "《草枕》",
+          "title_en": "Kusamakura",
+          "note_zh": "本批所收，「非人情」的小说化。",
+          "note_en": "In this batch: disinterestedness novelised.",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "title": "《浮世与病榻》",
+          "title_en": "The Floating World and the Sickbed",
+          "note_zh": "本批所收随笔选，含《永日小品》。",
+          "note_en": "The batch's essay selection, including Eiji Zuihitsu.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "漱石的立场是「非人情」：不以利害与情感介入世界，而以诗画之眼观照。但这并非逃避，他把最锋利的社会批评留在俏皮话里，把最深的自我解剖留在病榻上。",
+      "stance_en": "Soseki's stance is disinterestedness: not interest or sentiment but a poet's and painter's eye. It is no escape: his sharpest social criticism hides in wit, his deepest self-dissection on the sickbed.",
+      "why_now_zh": "当「内耗」成为日常词，漱石的病榻写作提供了一种更诚实的自我技术：把病写下来，而不是把病浪漫化。",
+      "why_now_en": "When burnout is everyday vocabulary, Soseki's sickbed writing offers an honester technology of the self: write the illness down rather than romanticise it.",
+      "fact_ledger": [
+        {
+          "claim": "1867—1916，留学伦敦 1900—1902",
+          "claim_en": "1867-1916; in London 1900-1902",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《草枕》1906 年发表",
+          "claim_en": "Kusamakura published 1906",
+          "source": "作品年表",
+          "source_en": "chronology",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译《浮世与病榻》2020-06，303 页，ISBN 9787559640918，收《永日小品》《往事漫忆》",
+          "claim_en": "Chinese Floating World and Sickbed, 2020-06, 303 pp, ISBN 9787559640918, includes Eiji Zuihitsu and Recollections",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "akutagawa",
+      "name_zh": "芥川龙之介",
+      "name_en": "Akutagawa Ryūnosuke",
+      "name_native": "芥川龍之介",
+      "slug_display": "Akutagawa",
+      "born": "1892—1927 · 东京",
+      "domain_zh": "短篇小说 · 箴语随笔",
+      "domain_en": "short fiction · aphorisms",
+      "one_liner_zh": "把理智与自嘲锻成警句，用「侏儒」的眼睛看穿巨人的破绽。",
+      "one_liner_en": "He forges intellect and self-mockery into maxims, seeing through giants with a dwarf's eyes.",
+      "school_zh": "新思潮派 · 大正文学",
+      "school_en": "Shinshichō school · Taishō literature",
+      "timeline": [
+        {
+          "y": "1892",
+          "event_zh": "生于东京，生母精神失常后由舅父芥川家抚养。",
+          "event_en": "Born in Tokyo; raised by his uncle's family after his mother's illness.",
+          "conf": "✓"
+        },
+        {
+          "y": "1915-1916",
+          "event_zh": "《罗生门》《鼻》发表，《鼻》获漱石赞赏。",
+          "event_en": "Rashōmon and The Nose published; Soseki praised The Nose.",
+          "conf": "✓"
+        },
+        {
+          "y": "1923-1927",
+          "event_zh": "《侏儒的话》陆续写成，晚年箴语结集。",
+          "event_en": "Dwarf's Words written across these years, his late aphorisms.",
+          "conf": "✓"
+        },
+        {
+          "y": "1927",
+          "event_zh": "7 月自杀，年三十五；1935 年芥川奖设立。",
+          "event_en": "Suicide in July aged thirty-five; the Akutagawa Prize founded in 1935.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1915",
+          "title": "《罗生门》",
+          "title_en": "Rashōmon",
+          "note_zh": "早期代表作。",
+          "note_en": "An early landmark.",
+          "conf": "✓"
+        },
+        {
+          "y": "1916",
+          "title": "《鼻》",
+          "title_en": "The Nose",
+          "note_zh": "获漱石激赏，确立文名。",
+          "note_en": "Praised by Soseki, establishing his name.",
+          "conf": "✓"
+        },
+        {
+          "y": "1923-1927",
+          "title": "《侏儒的话》",
+          "title_en": "Dwarf's Words",
+          "note_zh": "本批所收，箴语体。",
+          "note_en": "In this batch: the aphoristic mode.",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "title": "《妄想者手记》",
+          "title_en": "Visionary Notes",
+          "note_zh": "本批所收，与《侏儒的话》同源。",
+          "note_en": "In this batch, kin to Dwarf's Words.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "芥川的立场是「看破」：不信宏大叙事，也不信自己的真诚，于是把怀疑写成短句。他的冷是热的自嘲，越到晚年越少温度。",
+      "stance_en": "Akutagawa's stance is seeing-through: trusting neither grand narrative nor his own sincerity, he writes doubt as short sentences. His coldness is hot self-mockery, cooling toward the end.",
+      "why_now_zh": "在信息过载、警句泛滥的时代，读芥川能重新学会一件事：一句话可以锋利，但锋利不等于正确。",
+      "why_now_en": "In an age of overloaded information and proliferating maxims, Akutagawa reteaches one thing: a sentence can be sharp without being right.",
+      "fact_ledger": [
+        {
+          "claim": "1892—1927，东京",
+          "claim_en": "1892-1927, Tokyo",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《侏儒的话》写于 1923—1927",
+          "claim_en": "Dwarf's Words written 1923-1927",
+          "source": "维基百科",
+          "source_en": "Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译《妄想者手记》2020-06，290 页，ISBN 9787559640901",
+          "claim_en": "Chinese Visionary Notes, 2020-06, 290 pp, ISBN 9787559640901",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "okakura",
+      "name_zh": "冈仓天心",
+      "name_en": "Okakura Kakuzō",
+      "name_native": "岡倉天心",
+      "slug_display": "Okakura",
+      "born": "1863—1913 · 横滨",
+      "domain_zh": "美术史 · 美学 · 文化外宣",
+      "domain_en": "art history · aesthetics · cultural export",
+      "one_liner_zh": "用英文向西方解释「东方」：茶室是宇宙论，不完美是信仰。",
+      "one_liner_en": "He explained the East to the West in English: the tea-room as cosmology, imperfection as faith.",
+      "school_zh": "日本美术复兴 · 东方主义自述",
+      "school_en": "Japanese art revival · self-Orientalism",
+      "timeline": [
+        {
+          "y": "1863",
+          "event_zh": "生于横滨，早年习汉学与英语。",
+          "event_en": "Born in Yokohama; trained in Chinese learning and English.",
+          "conf": "✓"
+        },
+        {
+          "y": "1880s-",
+          "event_zh": "参与创立东京美术学校，后任校长。",
+          "event_en": "Helped found the Tokyo School of Fine Arts and became its head.",
+          "conf": "✓"
+        },
+        {
+          "y": "1904-",
+          "event_zh": "任波士顿美术馆东方部部长。",
+          "event_en": "Curator of Oriental art at the Museum of Fine Arts, Boston.",
+          "conf": "✓"
+        },
+        {
+          "y": "1906",
+          "event_zh": "《The Book of Tea》在纽约出版。",
+          "event_en": "The Book of Tea published in New York.",
+          "conf": "✓"
+        },
+        {
+          "y": "1913",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1903",
+          "title": "《The Ideals of the East》",
+          "title_en": "The Ideals of the East",
+          "note_zh": "以「亚洲一体」立论。",
+          "note_en": "Argues for Asia as one.",
+          "conf": "✓"
+        },
+        {
+          "y": "1906",
+          "title": "《茶之书》",
+          "title_en": "The Book of Tea",
+          "note_zh": "本批美学轴的自述原点。",
+          "note_en": "The batch's aesthetic self-statement.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "冈仓的立场是「以美争主体」：在军事与工业上无法与西方抗衡时，用美学与古典学养争一口气。代价是把东方写成一个整体，也把茶道去历史化。",
+      "stance_en": "Okakura's stance is subjecthood through beauty: unable to match the West militarily or industrially, he competes through aesthetics and classical learning. The cost is an East written as a whole and a de-historicised teaism.",
+      "why_now_zh": "文化出海成为关键词的今天，《茶之书》仍是最好的案例，也是最好的警告：说给外人听的自述，容易把自己说成风景。",
+      "why_now_en": "With cultural export a keyword today, The Book of Tea remains both the best case and the best warning: a self-account for outsiders easily turns the self into scenery.",
+      "fact_ledger": [
+        {
+          "claim": "1863—1913",
+          "claim_en": "1863-1913",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《The Book of Tea》1906 年纽约出版，七章",
+          "claim_en": "The Book of Tea, New York 1906, seven chapters",
+          "source": "公版书目",
+          "source_en": "public-domain catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "曾任波士顿美术馆东方部部长",
+          "claim_en": "Curator of Oriental art, Museum of Fine Arts, Boston",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "nitobe",
+      "name_zh": "新渡户稻造",
+      "name_en": "Nitobe Inazō",
+      "name_native": "新渡戸稲造",
+      "slug_display": "Nitobe",
+      "born": "1862—1933 · 盛冈",
+      "domain_zh": "伦理 · 教育 · 国际事务",
+      "domain_en": "ethics · education · international affairs",
+      "one_liner_zh": "用英文把武士道讲成一套「道德法则」，为日本在西方争取伦理地位。",
+      "one_liner_en": "He presented bushido in English as a moral code, claiming ethical standing for Japan in the West.",
+      "school_zh": "基督教人格主义 · 武士道论",
+      "school_en": "Christian personalism · bushido discourse",
+      "timeline": [
+        {
+          "y": "1862",
+          "event_zh": "生于盛冈藩士之家。",
+          "event_en": "Born into a Morioka samurai family.",
+          "conf": "✓"
+        },
+        {
+          "y": "1880s",
+          "event_zh": "留学美国、德国，研习农政与经济。",
+          "event_en": "Studied in the US and Germany, in agriculture and economics.",
+          "conf": "✓"
+        },
+        {
+          "y": "1900",
+          "event_zh": "《Bushido: The Soul of Japan》在费城出版。",
+          "event_en": "Bushido: The Soul of Japan published in Philadelphia.",
+          "conf": "✓"
+        },
+        {
+          "y": "1920s",
+          "event_zh": "任国际联盟副秘书长；后任东京女子大学首任校长。",
+          "event_en": "Under-Secretary-General of the League of Nations; first president of Tokyo Woman's Christian University.",
+          "conf": "✓"
+        },
+        {
+          "y": "1933",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1900",
+          "title": "《武士道》",
+          "title_en": "Bushido: The Soul of Japan",
+          "note_zh": "本批「甲」线的内视文本。",
+          "note_en": "The inside text of the batch's intellectual axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "农政与教育著作",
+          "title_en": "Works on agriculture and education",
+          "note_zh": "另有多种，书目待补。",
+          "note_en": "Further works; bibliography to complete.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "新渡户的立场是「翻译」：把武士的旧伦理译成西方能接受的「骑士道」，以证明日本有普遍的道德资格。这既是自我辩护，也是自我改写。",
+      "stance_en": "Nitobe's stance is translation: the old warrior ethic rendered as a Western-legible chivalry, proving Japan's universal moral standing. It is self-defence and self-rewriting at once.",
+      "why_now_zh": "与《菊与刀》对读，能看清「自述」与「他述」的差别：一个修补形象，一个建立模式。",
+      "why_now_en": "Read with Benedict to see self-portrait against other-portrait: one repairs an image, the other builds a pattern.",
+      "fact_ledger": [
+        {
+          "claim": "1862—1933，盛冈藩士出身",
+          "claim_en": "1862-1933, of Morioka samurai stock",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《Bushido》1900 年费城出版",
+          "claim_en": "Bushido published in Philadelphia, 1900",
+          "source": "公版书目",
+          "source_en": "public-domain catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "曾任国联副秘书长、东京女子大学首任校长",
+          "claim_en": "League of Nations Under-Secretary-General; first president of Tokyo Woman's Christian University",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "tanizaki",
+      "name_zh": "谷崎润一郎",
+      "name_en": "Tanizaki Jun'ichirō",
+      "name_native": "谷崎潤一郎",
+      "slug_display": "Tanizaki",
+      "born": "1886—1965 · 东京",
+      "domain_zh": "小说 · 美学随笔",
+      "domain_en": "fiction · aesthetic essays",
+      "one_liner_zh": "把阴影写成美学：美不在对象，而在对象所处的阴翳之中。",
+      "one_liner_en": "He writes shadow as aesthetics: beauty lies not in the object but in the gloom around it.",
+      "school_zh": "唯美派 · 恶魔主义",
+      "school_en": "aestheticism · diabolism",
+      "timeline": [
+        {
+          "y": "1886",
+          "event_zh": "生于东京，家道中落后靠写作自立。",
+          "event_en": "Born in Tokyo; turned to writing after the family's decline.",
+          "conf": "✓"
+        },
+        {
+          "y": "1910",
+          "event_zh": "《刺青》发表，确立唯美派地位。",
+          "event_en": "The Tattooer established him among the aesthetes.",
+          "conf": "✓"
+        },
+        {
+          "y": "1933-1934",
+          "event_zh": "《阴翳礼赞》连载，成为日本美学的经典文本。",
+          "event_en": "In Praise of Shadows serialised, becoming a classic of Japanese aesthetics.",
+          "conf": "✓"
+        },
+        {
+          "y": "1943-1948",
+          "event_zh": "《细雪》连载出版。",
+          "event_en": "The Makioka Sisters serialised and published.",
+          "conf": "✓"
+        },
+        {
+          "y": "1965",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1910",
+          "title": "《刺青》",
+          "title_en": "The Tattooer",
+          "note_zh": "早期唯美主义宣言。",
+          "note_en": "An early aestheticist manifesto.",
+          "conf": "✓"
+        },
+        {
+          "y": "1933",
+          "title": "《阴翳礼赞》",
+          "title_en": "In Praise of Shadows",
+          "note_zh": "本批美学轴的核心文本。",
+          "note_en": "The core text of the batch's aesthetic axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "1948",
+          "title": "《细雪》",
+          "title_en": "The Makioka Sisters",
+          "note_zh": "长篇代表作。",
+          "note_en": "His major novel.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "谷崎的立场是「反照明」：现代文明以亮度为标准，他偏要在幽暗里找美。这不是复古趣味，而是对感官经验的重新分配。",
+      "stance_en": "Tanizaki is anti-illumination: modern civilisation measures by brightness, so he seeks beauty in gloom. Not retro taste but a redistribution of sensory experience.",
+      "why_now_zh": "LED 与屏幕把一切照亮的时代，谷崎的阴翳论反而更像一种抵抗：允许东西看不清。",
+      "why_now_en": "In an age when LEDs and screens light everything, his praise of shadows reads as resistance: allow things to stay unclear.",
+      "fact_ledger": [
+        {
+          "claim": "1886—1965，东京",
+          "claim_en": "1886-1965, Tokyo",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《阴翳礼赞》1933—1934 年连载",
+          "claim_en": "In Praise of Shadows serialised 1933-1934",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "英译 Harper 1977 / Starr 2017",
+          "claim_en": "English translations Harper 1977 / Starr 2017",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "kenko",
+      "name_zh": "吉田兼好",
+      "name_en": "Yoshida Kenkō",
+      "name_native": "吉田兼好",
+      "slug_display": "Kenkō",
+      "born": "1283?—1350? · 京都",
+      "domain_zh": "随笔 · 和歌 · 隐逸思想",
+      "domain_en": "essays · waka · reclusion",
+      "one_liner_zh": "「徒然」即无事可做：把无常写成日常，把日常写成美。",
+      "one_liner_en": "Tsurezure means nothing to do: he writes impermanence as dailiness, and dailiness as beauty.",
+      "school_zh": "中世隐逸文学 · 三大随笔",
+      "school_en": "medieval recluse literature · three great essays",
+      "timeline": [
+        {
+          "y": "1283?",
+          "event_zh": "生于京都，卜部氏出身，后出家。",
+          "event_en": "Born in Kyoto, of the Urabe family; later took orders.",
+          "conf": "◐"
+        },
+        {
+          "y": "1330-1331",
+          "event_zh": "《徒然草》大致成书，共二百四十三段。",
+          "event_en": "Tsurezuregusa composed around these years, 243 sections.",
+          "conf": "✓"
+        },
+        {
+          "y": "1350?",
+          "event_zh": "去世，生卒年有异说。",
+          "event_en": "Died; dates are disputed.",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "1330",
+          "title": "《徒然草》",
+          "title_en": "Tsurezuregusa",
+          "note_zh": "本批「丙」线，与《枕草子》《方丈记》并称三大随笔。",
+          "note_en": "The batch's literary line; with the Pillow Book and Hōjōki, one of three great essays.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "和歌与歌论",
+          "title_en": "Waka and poetics",
+          "note_zh": "另有家集与歌论，书目待补。",
+          "note_en": "Further poetry collections; bibliography to complete.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "兼好的立场是「无常中的趣味」：既然一切都会散，便不必执着，也不妨此刻就欣赏。他的随笔没有体系，却有一个稳定的眼光：从细节看见时间。",
+      "stance_en": "Kenkō's stance is delight within impermanence: since all disperses, do not cling, and enjoy the moment. His essays have no system but one steady eye: seeing time in detail.",
+      "why_now_zh": "在效率话语之外，《徒然草》提供一种「无事」的合法性：闲坐、看月、听雨，本身即是生活。",
+      "why_now_en": "Beyond the language of efficiency, Tsurezuregusa legitimises having nothing to do: sitting, watching the moon, hearing rain, are life itself.",
+      "fact_ledger": [
+        {
+          "claim": "《徒然草》约 1330—1331 年成书，243 段",
+          "claim_en": "Tsurezuregusa composed c. 1330-1331, 243 sections",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译商务 2022，207 页，ISBN 9787100213493",
+          "claim_en": "Chinese edition, Commercial Press 2022, 207 pp, ISBN 9787100213493",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        },
+        {
+          "claim": "生卒年 1283?—1350? 有异说",
+          "claim_en": "Life dates 1283?-1350? are disputed",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "zeami",
+      "name_zh": "世阿弥",
+      "name_en": "Zeami Motokiyo",
+      "name_native": "世阿弥",
+      "slug_display": "Zeami",
+      "born": "1363?—1443? · 日本",
+      "domain_zh": "能乐 · 艺道论",
+      "domain_en": "nō · treatises on the art",
+      "one_liner_zh": "把「花」写成艺道的核心：秘すれば花，说破即谢。",
+      "one_liner_en": "He makes the flower the core of the art: hidden, it blooms; explained, it withers.",
+      "school_zh": "能乐 · 观世流",
+      "school_en": "nō · Kanze school",
+      "timeline": [
+        {
+          "y": "1363?",
+          "event_zh": "生于能乐世家，父为观阿弥。",
+          "event_en": "Born into a nō family; his father was Kan'ami.",
+          "conf": "◐"
+        },
+        {
+          "y": "1370s-",
+          "event_zh": "受足利义满庇护，观世流兴盛。",
+          "event_en": "Under Ashikaga Yoshimitsu's patronage the Kanze school flourished.",
+          "conf": "✓"
+        },
+        {
+          "y": "1400-1418",
+          "event_zh": "《风姿花传》等艺道论陆续写成。",
+          "event_en": "Fūshikaden and other treatises written across these years.",
+          "conf": "◐"
+        },
+        {
+          "y": "1430s",
+          "event_zh": "晚年被流放佐渡，后返京都。",
+          "event_en": "Exiled to Sado in old age, later returning to Kyoto.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1400-1418",
+          "title": "《风姿花传》",
+          "title_en": "Fūshikaden",
+          "note_zh": "本批所收，能艺论的起点。",
+          "note_en": "In this batch: the starting point of nō poetics.",
+          "conf": "◐"
+        },
+        {
+          "y": "—",
+          "title": "《花镜》《至花道》等",
+          "title_en": "Kakyō, Shikadō and others",
+          "note_zh": "后续艺道论，书目待补。",
+          "note_en": "Later treatises; bibliography to complete.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "世阿弥的立场是「秘」：真正的艺不是展示，而是保留；「花」不是技巧，而是观众心里一瞬间的新鲜。因此艺道论同时是一门关于距离与时间的学问。",
+      "stance_en": "Zeami's stance is secrecy: true art withholds rather than displays; the flower is not technique but a moment of freshness in the audience's mind. His poetics is therefore a study of distance and time.",
+      "why_now_zh": "当一切都被直播、拆解、教程化时，「秘すれば花」提醒：把方法全部说尽，艺术反而谢了。",
+      "why_now_en": "When everything is streamed, dissected and tutorialised, hidden-it-blooms reminds us that explaining the method exhausts the art.",
+      "fact_ledger": [
+        {
+          "claim": "生卒年 1363?—1443?，有异说",
+          "claim_en": "Life dates 1363?-1443? are disputed",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "◐"
+        },
+        {
+          "claim": "《风姿花传》成书于 1400—1418 年间",
+          "claim_en": "Fūshikaden written between 1400 and 1418",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "◐"
+        },
+        {
+          "claim": "「秘すれば花」通行归于世阿弥，确切出处待核",
+          "claim_en": "Hidden, it blooms is conventionally attributed to Zeami; exact locus to verify",
+          "source": "研究文献",
+          "source_en": "secondary literature",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "中文",
+      "id": "huang-zunxian",
+      "name_zh": "黄遵宪",
+      "name_en": "Huang Zunxian",
+      "name_native": "黄遵憲",
+      "slug_display": "Huang",
+      "born": "1848—1905 · 广东嘉应",
+      "domain_zh": "外交 · 诗文 · 日本研究",
+      "domain_en": "diplomacy · poetry · Japan studies",
+      "one_liner_zh": "以外交官与诗人的双眼睛，把日本第一次写成一部可查的国志。",
+      "one_liner_en": "With a diplomat's and a poet's double eye, he first wrote Japan into a consultable national record.",
+      "school_zh": "诗界革命 · 经世之学",
+      "school_en": "poetry revolution · statecraft",
+      "timeline": [
+        {
+          "y": "1848",
+          "event_zh": "生于广东嘉应州（今梅州）。",
+          "event_en": "Born in Jiaying, Guangdong (today's Meizhou).",
+          "conf": "✓"
+        },
+        {
+          "y": "1877",
+          "event_zh": "随首任驻日公使何如璋赴日，任参赞。",
+          "event_en": "Went to Japan as legation counsellor under the first minister He Ruzhang.",
+          "conf": "✓"
+        },
+        {
+          "y": "1882",
+          "event_zh": "调任驻美国旧金山总领事。",
+          "event_en": "Appointed consul-general in San Francisco.",
+          "conf": "✓"
+        },
+        {
+          "y": "1887",
+          "event_zh": "《日本国志》成书，四十卷。",
+          "event_en": "Records of Japan completed in forty juan.",
+          "conf": "✓"
+        },
+        {
+          "y": "1895",
+          "event_zh": "《日本国志》刊行；后参与戊戌变法，变法失败后免职归乡。",
+          "event_en": "Records of Japan printed; later joined the 1898 reform and was dismissed after its failure.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1879",
+          "title": "《日本杂事诗》",
+          "title_en": "Japan Miscellany in Verse",
+          "note_zh": "以诗记见闻，与《日本国志》互为表里。",
+          "note_en": "Impressions in verse, pairing with the gazetteer.",
+          "conf": "✓"
+        },
+        {
+          "y": "1895",
+          "title": "《日本国志》",
+          "title_en": "Records of Japan",
+          "note_zh": "本批「甲」线的起点。",
+          "note_en": "The starting point of the batch's intellectual axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "《人境庐诗草》",
+          "title_en": "Poems from the Human Realm Hut",
+          "note_zh": "诗集，含大量海外纪行。",
+          "note_en": "Poems, many from abroad.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "黄遵宪的立场是「经世」：写日本不是为了博物，而是为了变法。他以志书体例给中国一套可比较的制度镜像，又以诗保留见闻的温度。",
+      "stance_en": "Huang's stance is statecraft: Japan is written for reform, not curiosity. The gazetteer gives China a comparable institutional mirror; the poems keep the warmth of observation.",
+      "why_now_zh": "近代中国「知日」的原点，也是「如何向他者学习而不失去自己」这一问题的第一个中国样本。",
+      "why_now_en": "The origin of modern China's knowing of Japan, and the first Chinese sample of learning from the other without losing oneself.",
+      "fact_ledger": [
+        {
+          "claim": "1848—1905，广东嘉应人",
+          "claim_en": "1848-1905, of Jiaying, Guangdong",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "1877 年任驻日使馆参赞",
+          "claim_en": "Legation counsellor in Japan from 1877",
+          "source": "年谱",
+          "source_en": "chronology",
+          "conf": "✓"
+        },
+        {
+          "claim": "《日本国志》1887 成书、1895 初刊，四十卷",
+          "claim_en": "Records of Japan completed 1887, printed 1895, forty juan",
+          "source": "版本史",
+          "source_en": "publishing history",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "中文",
+      "id": "dai-jitao",
+      "name_zh": "戴季陶",
+      "name_en": "Dai Jitao",
+      "name_native": "戴季陶",
+      "slug_display": "Dai",
+      "born": "1891—1949 · 浙江吴兴",
+      "domain_zh": "政治思想 · 日本论 · 国民党理论",
+      "domain_en": "political thought · Japan · KMT theory",
+      "one_liner_zh": "以政治家之眼写日本：认识他者，从来连着如何使用这份认识。",
+      "one_liner_en": "He writes Japan with a politician's eye: knowing the other is always bound to how that knowledge is used.",
+      "school_zh": "国民党理论 · 日本论",
+      "school_en": "Kuomintang theory · Japan discourse",
+      "timeline": [
+        {
+          "y": "1891",
+          "event_zh": "生于四川广汉，祖籍浙江吴兴。",
+          "event_en": "Born in Guanghan, Sichuan; ancestral home in Wuxing, Zhejiang.",
+          "conf": "✓"
+        },
+        {
+          "y": "1905-",
+          "event_zh": "留日，后任孙中山秘书，参与革命宣传。",
+          "event_en": "Studied in Japan; later Sun Yat-sen's secretary and revolutionary publicist.",
+          "conf": "✓"
+        },
+        {
+          "y": "1928",
+          "event_zh": "《日本论》由上海民智书局初版，胡汉民作序。",
+          "event_en": "A Discussion of Japan published by Shanghai Minzhi with a preface by Hu Hanmin.",
+          "conf": "✓"
+        },
+        {
+          "y": "1928-1948",
+          "event_zh": "任考试院院长等职。",
+          "event_en": "Served as president of the Examination Yuan and in other posts.",
+          "conf": "✓"
+        },
+        {
+          "y": "1949",
+          "event_zh": "在广州去世。",
+          "event_en": "Died in Guangzhou.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1928",
+          "title": "《日本论》",
+          "title_en": "A Discussion of Japan",
+          "note_zh": "本批「甲」线的策论。",
+          "note_en": "The policy tract of the batch's intellectual axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "三民主义相关论著",
+          "title_en": "Writings on the Three Principles",
+          "note_zh": "另有多种政论，书目待补。",
+          "note_en": "Further political writings; bibliography to complete.",
+          "conf": "◐"
+        }
+      ],
+      "stance_zh": "戴季陶的立场是「知日以对日」：研究日本是为了判断它的下一步，而非欣赏它的美。因此《日本论》是策论，不是志书；判断先行，材料随后。",
+      "stance_en": "Dai's stance is knowing Japan in order to face it: study serves judgement of its next move, not appreciation of its beauty. A Discussion of Japan is policy, not gazetteer: judgement first, material after.",
+      "why_now_zh": "与黄遵宪、本尼迪克特并读，能看清中国「知日」传统的两种冲动：记录与判断，以及两者各自的盲点。",
+      "why_now_en": "Read with Huang and Benedict, it exposes two impulses in China's knowing of Japan, record and judgement, and the blind spot of each.",
+      "fact_ledger": [
+        {
+          "claim": "1891—1949",
+          "claim_en": "1891-1949",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《日本论》1928 年上海民智书局初版，二十四篇，胡汉民序",
+          "claim_en": "A Discussion of Japan, Shanghai Minzhi 1928, 24 essays, preface by Hu Hanmin",
+          "source": "维基百科",
+          "source_en": "Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "旧稿系于 1924，已订正为 1928 初版",
+          "claim_en": "The old 1924 dating corrected to the 1928 first edition",
+          "source": "回源核对",
+          "source_en": "source recheck",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "English",
+      "id": "benedict",
+      "name_zh": "鲁思·本尼迪克特",
+      "name_en": "Ruth Benedict",
+      "name_native": "Ruth Fulton Benedict",
+      "slug_display": "Benedict",
+      "born": "1887—1948 · 纽约",
+      "domain_zh": "文化人类学 · 文化与人格",
+      "domain_en": "cultural anthropology · culture and personality",
+      "one_liner_zh": "在未踏足的国度上建「文化模式」：把日本写成菊与刀的两极。",
+      "one_liner_en": "She built a culture pattern for a country she never visited: Japan as the two poles of chrysanthemum and sword.",
+      "school_zh": "哥伦比亚学派 · 文化与人格",
+      "school_en": "Columbia school · culture and personality",
+      "timeline": [
+        {
+          "y": "1887",
+          "event_zh": "生于纽约州。",
+          "event_en": "Born in New York State.",
+          "conf": "✓"
+        },
+        {
+          "y": "1923",
+          "event_zh": "在哥伦比亚大学获博士，师从博厄斯。",
+          "event_en": "PhD at Columbia under Franz Boas.",
+          "conf": "✓"
+        },
+        {
+          "y": "1934",
+          "event_zh": "《文化模式》出版，确立「文化模式」方法。",
+          "event_en": "Patterns of Culture published, establishing the method.",
+          "conf": "✓"
+        },
+        {
+          "y": "1944-1946",
+          "event_zh": "受战时机构委托研究日本，1946 年出版《菊与刀》。",
+          "event_en": "Commissioned to study Japan during the war; The Chrysanthemum and the Sword published 1946.",
+          "conf": "✓"
+        },
+        {
+          "y": "1948",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1934",
+          "title": "《文化模式》",
+          "title_en": "Patterns of Culture",
+          "note_zh": "方法论奠基之作。",
+          "note_en": "The methodological foundation.",
+          "conf": "✓"
+        },
+        {
+          "y": "1946",
+          "title": "《菊与刀》",
+          "title_en": "The Chrysanthemum and the Sword",
+          "note_zh": "本批「甲」线的外视文本。",
+          "note_en": "The outside text of the batch's intellectual axis.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "本尼迪克特的立场是「文化相对」：每种文化是一个整合的模式，不能用另一文化的标准评判。但战时写作使这套相对主义带有明确的应用目的，也带来简化。",
+      "stance_en": "Benedict's stance is cultural relativism: each culture is an integrated pattern, not to be judged by another's standards. Wartime writing gave that relativism an applied purpose, and brought simplification.",
+      "why_now_zh": "一切「国民性」讨论的源头文本。读它不是接受定型，而是学会辨认定型是如何被造出来的。",
+      "why_now_en": "The source text of every national-character discussion. Read it not to accept the typing but to learn how typing is manufactured.",
+      "fact_ledger": [
+        {
+          "claim": "1887—1948，哥伦比亚大学博士",
+          "claim_en": "1887-1948; PhD, Columbia University",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《菊与刀》1946 年 Houghton Mifflin 初版",
+          "claim_en": "The Chrysanthemum and the Sword, Houghton Mifflin 1946",
+          "source": "出版书目",
+          "source_en": "publisher record",
+          "conf": "✓"
+        },
+        {
+          "claim": "研究期间未访问日本",
+          "claim_en": "She never visited Japan during the research",
+          "source": "研究史",
+          "source_en": "history of the study",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "kato-shuichi",
+      "name_zh": "加藤周一",
+      "name_en": "Katō Shūichi",
+      "name_native": "加藤周一",
+      "slug_display": "Katō",
+      "born": "1919—2008 · 东京",
+      "domain_zh": "文化论 · 文学史 · 评论",
+      "domain_en": "cultural theory · literary history · criticism",
+      "one_liner_zh": "把日本文化定义为「杂种」：不纯粹的诚实，正是它的创造力。",
+      "one_liner_en": "He defines Japanese culture as hybrid: honest impurity is its creativity.",
+      "school_zh": "战后日本文化论 · 公共批评",
+      "school_en": "post-war cultural theory · public criticism",
+      "timeline": [
+        {
+          "y": "1919",
+          "event_zh": "生于东京。",
+          "event_en": "Born in Tokyo.",
+          "conf": "✓"
+        },
+        {
+          "y": "1943",
+          "event_zh": "东京帝国大学医学部毕业，后转向文学与评论。",
+          "event_en": "Graduated in medicine from Tokyo Imperial University; turned to literature and criticism.",
+          "conf": "✓"
+        },
+        {
+          "y": "1956",
+          "event_zh": "《雑種文化：日本的小希望》由讲谈社出版。",
+          "event_en": "Hybrid Culture: Japan's Small Hope published by Kodansha.",
+          "conf": "✓"
+        },
+        {
+          "y": "1975-1980",
+          "event_zh": "《日本文学史序説》出版。",
+          "event_en": "A History of Japanese Literature published.",
+          "conf": "✓"
+        },
+        {
+          "y": "2008",
+          "event_zh": "去世。",
+          "event_en": "Died.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1956",
+          "title": "《杂种文化》",
+          "title_en": "Hybrid Culture",
+          "note_zh": "本批「甲」线的自评文本。",
+          "note_en": "The self-assessment of the batch's intellectual axis.",
+          "conf": "✓"
+        },
+        {
+          "y": "1975-1980",
+          "title": "《日本文学史序説》",
+          "title_en": "A History of Japanese Literature",
+          "note_zh": "以「杂种」眼光重写文学史。",
+          "note_en": "Literary history through the hybrid lens.",
+          "conf": "✓"
+        },
+        {
+          "y": "1991",
+          "title": "《日本文化的杂种性》",
+          "title_en": "The Hybridity of Japanese Culture",
+          "note_zh": "中译，杨铁婴译，231 页。",
+          "note_en": "Chinese translation by Yang Tieying, 231 pp.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "加藤的立场是「诚实的混合」：拒绝纯粹传统的神话，也拒绝全盘西化的捷径，承认日本一直在交配中生成。因此他的文化论同时是近代批判。",
+      "stance_en": "Kato's stance is honest mixture: refuse the myth of pure tradition and the shortcut of wholesale westernisation, admit that Japan has always been generated by cross-breeding. His cultural theory is therefore a critique of modernity.",
+      "why_now_zh": "在身份政治与「纯粹性」话语回潮时，「杂种」提供另一种自信：不必纯净，也能创造。",
+      "why_now_en": "As identity politics and purity talk return, hybridity offers another confidence: creation without purity.",
+      "fact_ledger": [
+        {
+          "claim": "1919—2008，东京",
+          "claim_en": "1919-2008, Tokyo",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "《雑種文化》1956 年讲谈社出版",
+          "claim_en": "Hybrid Culture, Kodansha 1956",
+          "source": "出版书目",
+          "source_en": "publisher record",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译 1991-03 吉林人民，杨铁婴译，231 页",
+          "claim_en": "Chinese edition, Jilin People's Press, March 1991, trans. Yang Tieying, 231 pp",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
+    },
+    {
+      "circle": [],
+      "influences": [],
+      "awards": [],
+      "unverified": [],
+      "native_lang": "日本語",
+      "id": "kawabata",
+      "name_zh": "川端康成",
+      "name_en": "Kawabata Yasunari",
+      "name_native": "川端康成",
+      "slug_display": "Kawabata",
+      "born": "1899—1972 · 大阪",
+      "domain_zh": "小说 · 美学 · 讲演",
+      "domain_en": "fiction · aesthetics · lectures",
+      "one_liner_zh": "以「空无」收束日本美：温柔哀感在二十世纪的最后回响。",
+      "one_liner_en": "He closes Japanese beauty on emptiness: tender grief's last echo in the twentieth century.",
+      "school_zh": "新感觉派 · 日本美论",
+      "school_en": "Neo-Sensationalism · Japanese beauty discourse",
+      "timeline": [
+        {
+          "y": "1899",
+          "event_zh": "生于大阪，幼年丧亲。",
+          "event_en": "Born in Osaka; orphaned young.",
+          "conf": "✓"
+        },
+        {
+          "y": "1926",
+          "event_zh": "《伊豆的舞女》发表。",
+          "event_en": "The Izu Dancer published.",
+          "conf": "✓"
+        },
+        {
+          "y": "1935-1948",
+          "event_zh": "《雪国》陆续发表并成书。",
+          "event_en": "Snow Country serialised and published.",
+          "conf": "✓"
+        },
+        {
+          "y": "1968",
+          "event_zh": "获诺贝尔文学奖，12 月 12 日发表《美しい日本の私》。",
+          "event_en": "Nobel Prize in Literature; lecture Japan, the Beautiful and Myself on 12 December.",
+          "conf": "✓"
+        },
+        {
+          "y": "1972",
+          "event_zh": "自杀，年七十二。",
+          "event_en": "Suicide at seventy-two.",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1926",
+          "title": "《伊豆的舞女》",
+          "title_en": "The Izu Dancer",
+          "note_zh": "早期代表作。",
+          "note_en": "An early landmark.",
+          "conf": "✓"
+        },
+        {
+          "y": "1948",
+          "title": "《雪国》",
+          "title_en": "Snow Country",
+          "note_zh": "长篇代表作。",
+          "note_en": "His major novel.",
+          "conf": "✓"
+        },
+        {
+          "y": "1968",
+          "title": "《我在美丽的日本》",
+          "title_en": "Japan, the Beautiful and Myself",
+          "note_zh": "本批美学与文学两轴的共同终点。",
+          "note_en": "The shared terminus of the batch's aesthetic and literary axes.",
+          "conf": "✓"
+        }
+      ],
+      "stance_zh": "川端的立场是「以空无写美」：不分析美，只把物象并置，让无常自己显影。他的温柔不是软弱，而是一种对消逝的长期凝视。",
+      "stance_en": "Kawabata's stance is beauty through emptiness: no analysis, only objects placed side by side so impermanence develops itself. His tenderness is not softness but a long gaze at disappearance.",
+      "why_now_zh": "在一个要求表态的时代，川端提供另一种强度：不说服，只呈现。这也是本批两条轴线最终收在一起的地方。",
+      "why_now_en": "In an age that demands positions, Kawabata offers another intensity: not persuasion but presentation. Here the batch's two axes finally meet.",
+      "fact_ledger": [
+        {
+          "claim": "1899—1972，大阪",
+          "claim_en": "1899-1972, Osaka",
+          "source": "生平资料",
+          "source_en": "biographical sources",
+          "conf": "✓"
+        },
+        {
+          "claim": "1968 年获诺贝尔文学奖，12 月 12 日讲演",
+          "claim_en": "Nobel Prize 1968; lecture on 12 December",
+          "source": "nippon.com / 日文维基",
+          "source_en": "nippon.com / Japanese Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "讲演原题《美しい日本の私――その序説》",
+          "claim_en": "Lecture title Utsukushii Nihon no Watashi: sono josetsu",
+          "source": "讲演书目",
+          "source_en": "lecture bibliography",
+          "conf": "✓"
+        },
+        {
+          "claim": "中译《我在美丽的日本》2002 河北教育，叶渭渠译",
+          "claim_en": "Chinese Japan the Beautiful and Myself, Hebei Education 2002, trans. Ye Weiqu",
+          "source": "书目",
+          "source_en": "catalogue",
+          "conf": "✓"
+        }
+      ]
     }
   ]
 }

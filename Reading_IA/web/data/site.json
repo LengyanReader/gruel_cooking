@@ -13,6 +13,229 @@
   },
   "crops": [
     {
+      "id": "2026-japan-culture",
+      "page": "docs/reading_ia/read/japan-culture-books.html",
+      "dir_page": "japan-culture-books.html",
+      "glyph_zh": "读日本 · 回归东方 JAPAN CULTURE",
+      "glyph_en": "JAPAN CULTURE",
+      "date": "2026-11-07",
+      "title_zh": "读日本 · 回归东方 · 特辑二十四书",
+      "title_en": "Reading Japan, Returning to the East — the Set in twenty-four dossiers",
+      "subtitle_zh": "一套特辑八册为核，向源头原典、英译通道、文化自述、论日本对手与文豪侧翼展开的两圈阅读",
+      "subtitle_en": "An eight-volume special set at the core, opening outward into source originals, English channels, cultural self-accounts, Japan-ology rivals and literary-flank volumes",
+      "verdict_zh": "GAPS",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "中文特辑×8 · 日文原典/英译/对手×16 — 每书一页档案，均经 W2 定位版本",
+      "lang_line_en": "Chinese set ×8 · Japanese originals / English / rivals ×16 — a dossier per book, editions located (W2)",
+      "book_ids": [
+        "jp-fenshen",
+        "jp-masshitsu",
+        "jp-wabisabi",
+        "jp-shikike",
+        "jp-furoki",
+        "jp-usei",
+        "jp-mososhu",
+        "jp-iki-kouzou",
+        "jp-abe-teiso",
+        "jp-onishi-trilogy",
+        "jp-monoaware-en",
+        "jp-book-of-tea",
+        "jp-bushido",
+        "jp-inpraise-shadows",
+        "jp-tsurezuregusa",
+        "jp-fushikaden",
+        "jp-nihonkoku-shi",
+        "jp-nihonron",
+        "jp-chrysanthemum-sword",
+        "jp-zasshu-bunka",
+        "jp-kusamakura",
+        "jp-jujin",
+        "jp-bokuto",
+        "jp-utsukushii"
+      ],
+      "verdict_body_zh": "特辑八册与第二圈主干均已回源定位版本（✓/◐）。本轮回源订正四处书目错误：《日本论》初版为 1928 而非 1924；《濹东绮谭》为 1937 年小说而非 1909 年《墨东逸话》；川端讲演原题为《美しい日本の私》而非《美しい日本と私》；大西克礼、四方田犬彦的罗马字已改。公版文本（茶之书、武士道、徒然草、草枕，及川端引用的道元和歌）已逐字引文；仍在版权期的十九种以「论旨概述 · 非逐字原文」如实标注，标 ◐。",
+      "verdict_body_en": "The eight core volumes and Ring 2's spine are all edition-located (✓/◐). This pass corrected four bibliographic errors: Dai Jitao's first edition is 1928, not 1924; Bokuto Kidan is a 1937 novel, not a 1909 sketch; Kawabata's lecture is Utsukushii Nihon no Watashi, not Nihon to Watashi; and the romanisations of Onishi and Yomota are fixed. Public-domain texts (The Book of Tea, Bushido, Tsurezuregusa, Kusamakura, and the Dogen waka quoted by Kawabata) quote verbatim; the nineteen texts still in copyright carry a labelled paraphrase marked ◐.",
+      "verdict_gaps": [
+        {
+          "zh": "《日本色气》合辑实收篇目以版权页为准；阿部次郎确切篇名与初版年待核。",
+          "en": "The iki omnibus contents per colophon; Abe's exact title and first year pending."
+        },
+        {
+          "zh": "大西《物哀》仅得 Marra 2001 文集中的英译节选，未见单行英译；书目待续查。",
+          "en": "Onishi's Mono no Aware survives in English only as an excerpt in Marra 2001; no standalone translation found."
+        },
+        {
+          "zh": "《濹东绮谭》中译页数与印次待据原书补录；《侏儒的话》等仍在版权期的文本，逐字引文须先取得授权或核对原书。",
+          "en": "The Chinese page count and printing history of Bokuto Kidan await the book; verbatim lines for Dwarf's Words and other in-copyright texts require a licence or a checked copy."
+        },
+        {
+          "zh": "外围书目不抄豆瓣评分，只标存在性；特辑套装评分 8.2/8.9 两值以各册页为准。",
+          "en": "Peripheral titles carry existence marks, not Douban scores; the set's 8.2/8.9 split defers to each volume page."
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice",
+      "rings": [
+        {
+          "id": "ring1",
+          "label_zh": "第一圈 · 特辑本体（八册）",
+          "label_en": "Ring 1 · the Special (eight volumes)",
+          "note_zh": "北京联合「日本文化特辑（第一辑）」，以「日本美学关键词」丛书为骨：思想史（分身）—美学（摩灭／侘寂／色气／粹）—文学手记（荷风／漱石／芥川）。荷风《放浪记》分上下册，合为八。",
+          "note_en": "Beijing United's Japan Culture Special (Vol. 1), built on the Japanese Aesthetic Keywords series: thought-history (Avatar), aesthetics (masshitsu, wabi-sabi, iki), literary notebooks (Kafu, Soseki, Akutagawa). Kafu's Wandering Diary counts as two volumes, making eight.",
+          "book_ids": [
+            "jp-fenshen",
+            "jp-masshitsu",
+            "jp-wabisabi",
+            "jp-shikike",
+            "jp-furoki",
+            "jp-usei",
+            "jp-mososhu",
+            "jp-iki-kouzou"
+          ]
+        },
+        {
+          "id": "ring2",
+          "label_zh": "第二圈 · 源头与对手（十六册）",
+          "label_en": "Ring 2 · sources and rivals (sixteen volumes)",
+          "note_zh": "特辑只是这条长河的最近一段。往上游：每个美学关键词都有日文原典与英译通道；「日本是什么」由茶道、武士道、阴翳、徒然草、花传反复作答；「论日本」从黄遵宪、戴季陶到本尼迪克特、加藤周一，再到李永晶的《分身》。文豪侧翼回到荷风、漱石、芥川、川端的原文现场。",
+          "note_en": "The Special is only the nearest reach of one long river. Upstream, each aesthetic keyword has a Japanese original and an English channel; what Japan is gets answered again and again by tea, bushido, shadow, Essays in Idleness and the No treatise; Japan-ology runs Huang Zunxian, Dai Jitao, Benedict and Kato to Li Yongjing's Avatar. The literary wing returns to Kafu, Soseki, Akutagawa and Kawabata.",
+          "book_ids": [
+            "jp-abe-teiso",
+            "jp-onishi-trilogy",
+            "jp-monoaware-en",
+            "jp-book-of-tea",
+            "jp-bushido",
+            "jp-inpraise-shadows",
+            "jp-tsurezuregusa",
+            "jp-fushikaden",
+            "jp-nihonkoku-shi",
+            "jp-nihonron",
+            "jp-chrysanthemum-sword",
+            "jp-zasshu-bunka",
+            "jp-kusamakura",
+            "jp-jujin",
+            "jp-bokuto",
+            "jp-utsukushii"
+          ]
+        }
+      ],
+      "axes": [
+        {
+          "key": "甲",
+          "label_zh": "思想史 · 谁在论日本",
+          "label_en": "intellectual history · who discusses Japan",
+          "chain": [
+            "jp-nihonkoku-shi",
+            "jp-nihonron",
+            "jp-chrysanthemum-sword",
+            "jp-zasshu-bunka",
+            "jp-fenshen"
+          ],
+          "note_zh": "从志书（黄遵宪）到策论（戴季陶），再到外视定型（本尼迪克特）、日本自评（加藤周一），最后收于中国认识论的反省（李永晶）。",
+          "note_en": "From gazetteer (Huang) to policy tract (Dai), to outside typing (Benedict) and Japanese self-assessment (Kato), closing on a Chinese epistemological reflection (Li)."
+        },
+        {
+          "key": "乙",
+          "label_zh": "美学 · 范畴的谱系",
+          "label_en": "aesthetics · a genealogy of categories",
+          "chain": [
+            "jp-monoaware-en",
+            "jp-fushikaden",
+            "jp-iki-kouzou",
+            "jp-wabisabi",
+            "jp-inpraise-shadows",
+            "jp-masshitsu"
+          ],
+          "note_zh": "物哀（大西）→幽玄（世阿弥）→粹（九鬼）→侘寂（大西）→阴翳（谷崎）→摩灭（四方田）。六站各有一个可命名的范畴，也各有一位下定义的人。",
+          "note_en": "Aware (Onishi), yugen (Zeami), iki (Kuki), wabi-sabi (Onishi), shadow (Tanizaki), masshitsu (Yomota). Six stations, each with a nameable category and a definer."
+        },
+        {
+          "key": "丙",
+          "label_zh": "文学 · 从无常到空无",
+          "label_en": "literature · from impermanence to emptiness",
+          "chain": [
+            "jp-tsurezuregusa",
+            "jp-furoki",
+            "jp-usei",
+            "jp-mososhu",
+            "jp-utsukushii"
+          ],
+          "note_zh": "徒然草（中世）→荷风（江户挽歌）→漱石（非人情）→芥川（箴语）→川端（空无）。五站之间是六百年的语气变化，不是进步。",
+          "note_en": "Tsurezuregusa, Kafu, Soseki, Akutagawa, Kawabata: six centuries of changing voice, not of progress."
+        }
+      ],
+      "reading_order": [
+        {
+          "level_zh": "入门 · 先建立问题",
+          "level_en": "Entry · build the question",
+          "book_ids": [
+            "jp-fenshen",
+            "jp-wabisabi",
+            "jp-usei"
+          ],
+          "note_zh": "一本问「我们为何读日本」，一本给美学的概念底座，一本示范如何把日子写成文章。三本读完，全批的坐标就有了。",
+          "note_en": "One asks why we read Japan, one supplies the aesthetic base, one shows how to write a day into an essay. After three, the batch has coordinates."
+        },
+        {
+          "level_zh": "深入 · 进入范畴",
+          "level_en": "Deeper · enter the categories",
+          "book_ids": [
+            "jp-shikike",
+            "jp-masshitsu",
+            "jp-iki-kouzou",
+            "jp-inpraise-shadows"
+          ],
+          "note_zh": "粹、侘寂、阴翳、摩灭：四个范畴，四种看世界的方式。读时不要急着统合，先让它们互相冲突。",
+          "note_en": "Iki, wabi-sabi, shadow, masshitsu: four categories, four ways of seeing. Do not harmonise them too soon; let them conflict."
+        },
+        {
+          "level_zh": "贯通 · 两条长线",
+          "level_en": "Through · two long lines",
+          "book_ids": [
+            "jp-nihonkoku-shi",
+            "jp-nihonron",
+            "jp-chrysanthemum-sword",
+            "jp-zasshu-bunka",
+            "jp-furoki",
+            "jp-mososhu",
+            "jp-utsukushii"
+          ],
+          "note_zh": "先走「甲」线（黄→戴→菊→加藤），再走「丙」线（荷风→芥川→川端）。一条问日本是什么，一条问美如何消逝。",
+          "note_en": "Take the intellectual line first (Huang, Dai, Benedict, Kato), then the literary line (Kafu, Akutagawa, Kawabata). One asks what Japan is, the other how beauty passes."
+        }
+      ],
+      "pointers": [
+        {
+          "label_zh": "日语学习模块「日本语」",
+          "label_en": "the Japanese-language module",
+          "href": "../../language_stacking/learning/ja/",
+          "note_zh": "美学词的日语原文即其词根；先过五十音，再读原典。",
+          "note_en": "The aesthetic terms' Japanese roots live there; clear the kana first, then the originals."
+        },
+        {
+          "label_zh": "作者知识图谱",
+          "label_en": "the authors graph",
+          "href": "../authors/index.html",
+          "note_zh": "漱石、芥川、川端、谷崎、荷风五人的时代、师承与立场坐标。",
+          "note_en": "Era, lineage and stance for Soseki, Akutagawa, Kawabata, Tanizaki and Kafu."
+        },
+        {
+          "label_zh": "2026 秋分书单",
+          "label_en": "the 2026 Autumn crop",
+          "href": "2026-09-books.html",
+          "note_zh": "不同窗口，互不覆盖；其中一部日本书可与本批对读。",
+          "note_en": "A different window, neither overwriting the other; one Japanese title can be read alongside."
+        },
+        {
+          "label_zh": "企鹅欧洲史",
+          "label_en": "Penguin Europe",
+          "href": "penguin-europe-books.html",
+          "note_zh": "其「文明通论」写法，可与《菊与刀》《杂种文化》作内视／外视对照。",
+          "note_en": "Its civilisation-survey voice pairs with Benedict and Kato as an inside/outside contrast."
+        }
+      ]
+    },
+    {
       "id": "2026-writing-canon",
       "page": "docs/reading_ia/read/writing-canon-books.html",
       "dir_page": "writing-canon-books.html",

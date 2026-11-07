@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《永井荷风异国放浪记》｜Wandering Abroad | 阅读与智识</title>
+<title>《永井荷风异国放浪记》（上下）｜異国放浪記 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,210 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 特辑本体 · Ring 1</span><span data-en>JAPAN CULTURE — the Set · Ring 1</span></p>
-  <h1><span data-zh>《永井荷风异国放浪记》（上下）</span><span data-en>Wandering Abroad (2 vols.) · 放浪記</span></h1>
-  <div class="subtitle" data-both><span data-zh>[日] 永井荷风（Nagai Kafu）· 北京联合 · 上下两册 · 特辑版 2020 · 原作 1909-1910 · 文学轴</span><span data-en>Nagai Kafu · Beijing United · 2 vols. · 2020 · orig. 1909-1910 · the literary axis</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文学手记 notebook</span><span data-en>literary notebook</span></span> <span class="chip"><span data-zh>颓美漫游</span><span data-en>decadent wandering</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>以江户余韵与巴黎颓美，冷眼看明治开化的粗鄙；一个反近代的美学姿态</span><span data-en>Edo's residue and Parisian decadence used to cold-eye Meiji civilisation — an anti-modern pose</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑文学手记之开篇，川端所谓「最后的优雅文人」的自况之作。</div><div data-en>The opening of the set's literary notebooks — Kafu as Kawabata's last refined literatus.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>荷风留法与归国后的漫游手记。上、下两册以法式颓唐对观江户余韵，把明治开化的粗鄙看作文明的倒退；放浪不只是地理流亡，更是一种审美上的拒绝。</div><div data-en>Kafu's wanderings in France and after. The two volumes set Gallic decadence against Edo's lingering charm, reading Meiji vulgarity as regression; wandering is less exile than an aesthetic refusal.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=日本文化特辑" target="_blank" rel="noopener"><span data-zh>豆瓣 · 特辑套装检索</span><span data-en>Douban · the set</span><span class="dom">search.douban.com ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=永井荷风 放浪记" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>以颓废为方法，抵抗功利的近代。（论旨概述，非逐字原文）</div><div class="trs" data-en>Decadence as a method against a utilitarian modernity. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>全书主旨 · ✓</span><span data-en>book's argument · ✓</span></span></div></div><ul class="pts"><li>· <span data-zh>江户—巴黎双城，铺成审美流亡</span><span data-en>Edo-Paris as two cities of aesthetic exile</span></li><li>· <span data-zh>反近代：把开化看作粗鄙的别名</span><span data-en>anti-modern: civilisation as a byword for vulgarity</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>为特辑文学轴定调。合成：与《墨东逸话》相表里——向外流亡巴黎，向内凭吊江户。</div><div data-en>Sets the key of the literary axis. Synthesis: the inverse of Tales of the Sumida — one exile outward, one mourning inward.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-bokuto.html">《墨东逸话》</a></td><td><span data-zh>同作者江户面</span><span data-en>same author · Edo face</span></td><td><div data-zh>向外流亡与向内凭吊互为表里</div><div data-en>outward exile and inward mourning</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><a href="jp-utsukushii.html">《美丽的日本与我》</a></td><td><span data-zh>下游回响</span><span data-en>downstream echo</span></td><td><div data-zh>荷风的优雅余韵回响至川端</div><div data-en>Kafu's refinement echoes to Kawabata</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>原作连载约 1909-1910</span><span data-en>serialised around 1909-1910</span></td><td><span data-zh>作品年表</span><span data-en>chronology</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>特辑分上下册</span><span data-en>the Special prints it in two volumes</span></td><td><span data-zh>套装目录</span><span data-en>the set</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>中译本页目与所选章节待通读</span><span data-en>the Chinese selection to check against a full read</span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《永井荷风异国放浪记》（上下） · 異国放浪記</span><span data-en>異国放浪記</span></h1>
+  <div class="subtitle" data-both><span data-zh>永井荷风 · 日本 · 一頁folio · 北京联合 · 2020-06 · 上下两册 · 原作 1909-1910</span><span data-en>Nagai Kafū · Japan · Yīyè folio · Beijing United · 2020-06 · 2 vols · orig. 1909-1910</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>纪行随笔 · 上下册</span><span data-en>travel notebooks · two volumes</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>文学</span><span data-en>literature</span></span> <span class="chip"><span data-zh>conf ✓ 版本 / 译者已核；篇目 ◐</span><span data-en>conf ✓ edition and translator verified; contents ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本 / 译者已核；篇目 ◐ · 档案：jp-furoki（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition and translator verified; contents ◐ · record: jp-furoki. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目、书评与访谈 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography, reviews, interviews now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑文学手记的开篇。荷风把「放浪」写成一种审美拒绝：不是去看世界，而是拒绝留在被近代改造过的日本。</div><div data-en>The set&#x27;s literary notebooks open here. For Kafū wandering is an aesthetic refusal: not seeing the world but declining to stay in a Japan remade by modernity.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://book.douban.com/author/4552496/books" target="_blank" rel="noopener"><span data-zh>豆瓣 · 作者作品页</span><span data-en>Douban · author works</span><span class="dom">book.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://search.douban.com/book/subject_search?search_text=永井荷风 异国放浪记" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · search</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://www.jpfbj.cn/sys/?p=6949" target="_blank" rel="noopener"><span data-zh>日本国际交流基金 · 荷风讲座</span><span data-en>Japan Foundation · lecture on Kafū</span><span class="dom">www.jpfbj.cn ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>永井荷风（1879—1959）1903—1908 年游学美国、法国，归国后陆续发表纪行与随笔，1909—1910 年前后结集为《異国放浪記》一类文字。他以外来者的眼睛看西方，又以西方的颓废反观明治日本的功利与粗鄙；「放浪」因此是双向的：地理上离开日本，审美上离开近代。中译由陈德文等完成，2020 年 6 月出版，上下两册。</div><div data-en>Nagai Kafū (1879–1959) studied in the United States and France from 1903 to 1908; the travel writings gathered around 1909–10 as Ikoku Rōōki look at the West with a foreigner&#x27;s eyes and use Western decadence to measure Meiji Japan&#x27;s utilitarianism and vulgarity. Wandering is thus double: geographically away from Japan, aesthetically away from modernity. The Chinese, by Chen Dewen and others, appeared in two volumes in June 2020.</div></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 结集时间与篇目</span><span data-en>◐ gathering date and contents</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 上册 · 美利坚与法兰西</span><span data-en>Piece 1 · Vol. 1 · America and France</span></h3>
+<div data-zh>从横渡到巴黎：写异国的日常、女性的姿态、街市的声色。放浪的第一层是地理上的自由。</div><div data-en>From the crossing to Paris: foreign daily life, women&#x27;s bearing, the senses of the street. The first layer of wandering is geographical freedom.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 下册 · 归国与江户的余韵</span><span data-en>Piece 2 · Vol. 2 · Return and the Edo afterglow</span></h3>
+<div data-zh>回到日本后，笔锋转向下町、旧街与艺人：近代的东京越亮，荷风越要写它熄灯后的样子。</div><div data-en>After returning, the focus shifts to the low town, old streets and performers: the brighter modern Tokyo grows, the more Kafū writes its hours after lights-out.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>不是连续游记，而是一段段以城市、街巷、人物为单位的速写：巴黎的咖啡馆、纽约的码头、归国后的东京下町。荷风的句子慢，观察细，情绪压在景物之下；他很少直接批评近代，而是让「不好看」的东西自己显形。</div><div data-en>Not a continuous travelogue but sketches organised by city, street and person: Paris cafés, New York docks, Tokyo&#x27;s low town after return. Kafū&#x27;s sentences are slow and his observation fine, with feeling pressed beneath scenery; he rarely attacks modernity directly but lets the ugly show itself.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《永井荷风异国放浪记》（上下） · 篇章链（数字为顺序）</span><span data-en>異国放浪記 · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">以颓废为方法，抵抗功利的近代。</div><div class="trs" data-zh>以颓废为方法，抵抗功利的近代。</div><div class="trs" data-en>Decadence as a method against a utilitarian modernity.</div><div class="src"><span data-both><span data-zh>全书主旨概述（非逐字原文） · ✓</span><span data-en>summary of the book&#x27;s argument (not verbatim) · ✓</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>中文世界对荷风纪行文的第一次系统译介；陈德文的译笔保留了荷风句子的迟缓与暧昧，被读者称为「适合慢读的书」。
+
+也有读者嫌其「无事发生」：缺少事件与论证，若按小说期待去读会失望；此外上下两册的篇目分配未在书前说明。
+
+**合成 Synthesis：** 与《墨东逸话》对读：一本向外走，一本向内凭吊；两本合起来才是荷风的完整姿态——用「离开」保存一个已经不在的日本。</div><div data-en>The first systematic Chinese rendering of Kafū&#x27;s travel prose; Chen Dewen keeps the slowness and ambiguity of the sentences — readers call it a book for slow reading.
+
+Others find that nothing happens: no events, no argument, a disappointment if read as a novel; the division of pieces between the two volumes is also unexplained.
+
+**Synthesis:** Read with Tales of the Sumida East: one goes outward, one mourns inward; together they complete Kafū&#x27;s pose — preserving a vanished Japan by leaving it.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>以景写情：几乎不直说乡愁，而让码头、雨、煤气灯替他说。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Feeling through scenery: nostalgia is hardly named; docks, rain and gaslight say it.</p></div>
+<div class="card"><p data-zh>身体细节：衣角、手势、颈项，荷风的人物总从局部出现。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Bodily detail: hems, gestures, the nape — Kafū&#x27;s people always enter by a part.</p></div>
+<div class="card"><p data-zh>反近代的视线：不是复古口号，而是对「进步」之物的生理性不适。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">An anti-modern gaze: not a slogan of restoration but a physical discomfort with things called progress.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>放浪</span><span data-en>wandering</span></div>
+<div class="orig">放浪</div>
+<div class="mnote"><div data-zh>既是旅行，也是拒绝定居于近代。</div><div data-en>Both travel and a refusal to settle in modernity.</div></div>
+<div class="src"><span data-both><span data-zh>书名</span><span data-en>title</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>颓废</span><span data-en>decadence</span></div>
+<div class="orig">頽廃</div>
+<div class="mnote"><div data-zh>不是堕落，而是一种对抗功利的美学立场。</div><div data-en>Not dissipation but an aesthetic stance against utility.</div></div>
+<div class="src"><span data-both><span data-zh>全书</span><span data-en>the book</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>江户余韵</span><span data-en>the Edo afterglow</span></div>
+<div class="mnote"><div data-zh>归国后诸篇的核心意象：旧东京在电灯下退场。</div><div data-en>The key image of the return pieces: old Tokyo exiting under electric light.</div></div>
+<div class="src"><span data-both><span data-zh>下册</span><span data-en>vol. 2</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>荷风写巴黎、纽约与归国后的东京下町，却不写「见闻」，而写一个拒绝被近代改造的人如何在外邦与旧街之间安放自己。放浪不是远行，而是一种审美性的不合作：他赞美残存的旧物，正因新日本让他不适。</div><div data-en>Kafu writes Paris, New York and downtown Tokyo after his return, but not as travel notes. He writes how a man who refuses a modernised Japan settles himself between foreign cities and old streets. Wandering is not distance but aesthetic non-cooperation: he praises what survives because the new Japan discomforts him.</div></div><div class="src"><span data-both><span data-zh>《永井荷风异国放浪记》（上下）》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>異国放浪記: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>读上册时标出所有「气味」与「声音」的描写，读下册时标出所有「光」的描写——两套感官配置就是荷风的美学。</div><div data-en>In vol. 1 mark every smell and sound; in vol. 2 every description of light. The two sensory sets are Kafū&#x27;s aesthetics.</div></div>
+<div class="card"><div data-zh>把荷风的巴黎与谷崎的阴翳并置：一个在西方找颓废，一个在日本找幽暗，都是对「明亮近代」的抵抗。</div><div data-en>Set Kafū&#x27;s Paris beside Tanizaki&#x27;s shadows: one seeks decadence in the West, one gloom in Japan — both resist a bright modernity.</div></div>
+<div class="card"><div data-zh>读完查一下荷风 1910 年后的转向（《三田文学》与花柳小说），会明白「放浪」只是入口。</div><div data-en>Afterwards look up Kafū&#x27;s turn after 1910 (Mita Bungaku and the demimonde novels) to see that wandering is only the entrance.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《墨东逸话》</span><span data-en>Tales of the Sumida East</span></span></b></td><td><span data-both><span data-zh>永井荷风</span><span data-en>Nagai Kafū</span></span></td><td>1909</td><td><span data-both><span data-zh>同作者 · 表里</span><span data-en>same author · inverse</span></span></td><td><div data-zh>向外流亡与向内凭吊，是同一姿态的两面。</div><div data-en>Outward exile and inward mourning are two faces of one pose.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《美丽的日本与我》</span><span data-en>Japan, the Beautiful and I</span></span></b></td><td><span data-both><span data-zh>川端康成</span><span data-en>Kawabata Yasunari</span></span></td><td>1968</td><td><span data-both><span data-zh>下游 · 回响</span><span data-en>downstream · echo</span></span></td><td><div data-zh>荷风的优雅余韵在川端的演说里最后一次被命名。</div><div data-en>Kafū&#x27;s refinement is named one last time in Kawabata&#x27;s lecture.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《草枕》</span><span data-en>Kusamakura</span></span></b></td><td><span data-both><span data-zh>夏目漱石</span><span data-en>Natsume Sōseki</span></span></td><td>1906</td><td><span data-both><span data-zh>同代 · 反近代</span><span data-en>same era · anti-modern</span></span></td><td><div data-zh>两种出世的审美姿态：荷风的都市，漱石的山林。</div><div data-en>Two poses of aesthetic withdrawal: Kafū&#x27;s city, Sōseki&#x27;s mountains.</div></td><td>丙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>中译 2020-06，北京联合（一頁folio），陈德文等译，上下两册</span><span data-en>Chinese ed. 2020-06, Beijing United (Yīyè), trans. Chen Dewen et al., 2 vols</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>馆藏书目 / 豆瓣</span><span data-en>catalogue / Douban</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>下册 ISBN 978-7-5596-3979-0</span><span data-en>Vol. 2 ISBN 978-7-5596-3979-0</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>馆藏书目</span><span data-en>catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>原作文字约作于 1909—1910 年</span><span data-en>Original writings c. 1909–1910</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>作品年表</span><span data-en>chronology</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1879—1959，曾游学美国、法国</span><span data-en>Author 1879–1959; studied in the US and France</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>上下册各自的篇目与译者为「陈德文等」，具体分工待版权页。</span><span data-en>Per-volume contents and the exact division among translators (the credit reads &#x27;Chen Dewen et al.&#x27;) await the colophon.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>「异国放浪记」是否为原题直译，还是编者合辑名，待核。</span><span data-en>Whether the title is a direct translation or an editorial omnibus title — to verify.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

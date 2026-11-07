@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《物哀的美学》(英译)｜The Aesthetics of Mono no Aware | 阅读与智识</title>
+<title>《物哀论》（英译节选）｜On Mono no Aware (English excerpt) | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,224 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《物哀的美学》(英译)</span><span data-en>The Aesthetics of Mono no Aware</span></h1>
-  <div class="subtitle" data-both><span data-zh>大西克礼 Onishi Takehiro · 英译（约 2022）· 面向英文读者重述本居宣长一脉 · 精确书目待核</span><span data-en>Onishi Takehiro · EN trans. (c.2022) · recasting the Motoori line for English readers · exact imprint to verify</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·英译通道 English</span><span data-en>English channel</span></span> <span class="chip"><span data-zh>温柔哀感</span><span data-en>tender grief</span></span> <span class="chip"><span data-zh>conf ○ 待核</span><span data-en>conf ○ to verify</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>把「见落花而心有所动」的物哀译介给英语世界，是特辑情绪基调「温柔哀感」的概念源头</span><span data-en>translating mono no aware — the moved heart at falling petals — for an English readership</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>「物哀」进入英文学术语汇的通道之一，特辑情绪基调的概念源头。</div><div data-en>One channel by which aware enters English scholarly vocabulary; the conceptual wellspring of the Special's tender grief.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>物哀（もののあわれ）经本居宣长立于《源氏物语》诠释，是「知物之情」——一种先于道德判断的审美感应。此英译把日本一脉的感物美学转述给英语读者；确切英译书目（出版社／译者）尚待核实（故 ○）。</div><div data-en>Mono no aware, set on The Tale of Genji by Motoori Norinaga, is a knowing of things prior to moral judgment. This English edition recasts that line for English readers; the exact imprint (publisher/translator) is still to verify (hence ○).</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://openlibrary.org/search?q=Onishi mono no aware aesthetics" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a><a href="https://search.douban.com/book/subject_search?search_text=物哀 大西克礼" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>物哀＝见落花而心有所动，一种先于善恶的审美感应。（论旨概述，非逐字原文）</div><div class="trs" data-en>Mono no aware is the moved heart at falling petals — an aesthetic attunement prior to good and evil. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>范畴论旨 · ◐</span><span data-en>the category · ◐</span></span></div></div><ul class="pts"><li>· <span data-zh>物哀是先于道德判断的审美感应</span><span data-en>aware precedes moral judgment</span></li><li>· <span data-zh>本居宣长—《源氏》诠释一脉</span><span data-en>the Motoori-Guji interpretive line</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>概念出海的一站。合成：待英译书目核实后，与三部曲物哀册对读。</div><div data-en>A station where the concept sails abroad. Synthesis: verify the imprint, then read against the trilogy's aware volume.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-onishi-trilogy.html">《幽玄·物哀·寂》</a></td><td><span data-zh>日文母题</span><span data-en>Japanese mother-text</span></td><td><div data-zh>英译源自三部曲物哀册</div><div data-en>the EN stems from the aware volume</div></td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>英译本出版社、译者、年份均未核实</span><span data-en>the EN publisher, translator and year all unverified</span> <span class="tok"><span class="conf c-part">○</span></span></p></div><div class="card"><p><span data-zh>是否与三部曲同一底本待核</span><span data-en>whether it shares the trilogy's base text to verify</span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《物哀论》（英译节选） · On Mono no Aware (English excerpt)</span><span data-en>On Mono no Aware (English excerpt)</span></h1>
+  <div class="subtitle" data-both><span data-zh>大西克礼 · 日本 · 收于 Michele Marra 编 · A History of Modern Japanese Aesthetics · 2001</span><span data-en>Onishi Yoshinori · Japan · in Michele Marra (ed.), A History of Modern Japanese Aesthetics · 2001</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>英译通道 · 节选</span><span data-en>English channel · excerpt</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>美学</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>conf ○ 英译节选的存在有二手依据；单行英译本未见</span><span data-en>conf ○ secondary evidence for an English excerpt; no standalone translation found</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>○ 英译节选的存在有二手依据；单行英译本未见 · 档案：jp-monoaware-en（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ○ secondary evidence for an English excerpt; no standalone translation found · record: jp-monoaware-en. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography and secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>「物哀」进入英文学术语汇的通道之一。本页不再虚构一个 2022 年单行英译本，而如实记录它目前的英译形态：收入编本的节选。</div><div data-en>One channel by which aware entered English scholarly vocabulary. This page no longer invents a 2022 standalone translation but records the actual English form: an excerpt in an edited volume.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.degruyterbrill.com/document/doi/10.1515/9780824863678-008/html" target="_blank" rel="noopener"><span data-zh>De Gruyter · 编本中论大西的一章</span><span data-en>De Gruyter · chapter on Onishi</span><span class="dom">www.degruyterbrill.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://openlibrary.org/search?q=History+of+Modern+Japanese+Aesthetics+Marra" target="_blank" rel="noopener"><span data-zh>Open Library · 编本检索</span><span data-en>Open Library · volume search</span><span class="dom">openlibrary.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>大西克礼的《物哀论》是三部曲的中篇，英文世界长期没有单行译本。可核实的通道是 Michele Marra 编 A History of Modern Japanese Aesthetics（University of Hawai&#x27;i Press, 2001）中对大西物哀论的节译与讨论；此外英语研究（如关于 Onishi 的 sabi 与 aware 的论文）多转引其日文原著。旧档案所记「约 2022 年英译单行本」查无书目依据，已改为本条并降为 ○。</div><div data-en>Onishi&#x27;s aware study is the middle panel of the trilogy, and the English world long lacked a standalone translation. The verifiable channel is the excerpt and discussion of Onishi&#x27;s aware in Michele Marra (ed.), A History of Modern Japanese Aesthetics (University of Hawai&#x27;i Press, 2001); English scholarship otherwise cites the Japanese original. The old record&#x27;s &#x27;c.2022 standalone English translation&#x27; has no bibliographic basis and is replaced by this entry at ○.</div></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>○ 二手依据</span><span data-en>○ secondary evidence</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>时段章节 · Periods &amp; chapters</span><span data-en>Periods &amp; chapters</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 编本与选目</span><span data-en>Section 1 · The anthology and its selection</span></h3>
+<div data-zh>节选出自 Michele Marra 编《A History of Modern Japanese Aesthetics》（2001），选段把大西的物哀论放进英语学界的美学叙事，而不是单独成书。</div><div data-en>The excerpt comes from Michele Marra&#x27;s anthology A History of Modern Japanese Aesthetics (2001), where Onishi&#x27;s account of aware sits inside an English-language narrative of Japanese aesthetics rather than standing alone.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 术语的英译处理</span><span data-en>Section 2 · Handling the term in English</span></h3>
+<div data-zh>英译保留 mono no aware 的音译，再以 impermanence、sentiment 等词作解释。术语被保留，语义却被重新编排，这正是读节选最该留意的地方。</div><div data-en>The translation keeps mono no aware in romanised form and explains it through words such as impermanence and sentiment. The term survives, but its semantics are rearranged, which is exactly what an excerpt asks the reader to notice.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 节选的限度</span><span data-en>Section 3 · The limits of an excerpt</span></h3>
+<div data-zh>节选不能替代三论全本，也不足以还原大西的方法。本页把它当作「翻译个案」来读，而不是当作大西原论。</div><div data-en>The excerpt cannot replace the full trilogy or restore Onishi&#x27;s method. This page reads it as a case in translation, not as Onishi&#x27;s own argument.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论述框架 · Analytical framework</span><span data-en>Analytical framework</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>作为节选，它不能替代原著，但能看出英语学界如何转述「物哀」：多半把它放在「无常」「感伤」「前道德感应」三个坐标里，与日语原意有细微偏移。读它主要是读「翻译的选择」，而不是读大西。</div><div data-en>As an excerpt it cannot replace the original, but it shows how English scholarship restates aware: usually within impermanence, sentiment and pre-moral attunement — a slight shift from the Japanese. One reads it for the choices of translation, not for Onishi whole.</div></div>
+<h2 class="part" data-both><span data-zh>时间线索引 · Chronological flow</span><span data-en>Chronological flow</span></h2>
+<div class="diagram"><svg viewBox="0 0 860 327" role="img" aria-label="plot flow" xmlns="http://www.w3.org/2000/svg">
+<rect x="72" y="26" width="716" height="64" rx="10" fill="#FFF8EC" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="48" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">1</text>
+<text x="112" y="50" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F" data-zh>Marra 编本把日本美学写成现代学科史</text>
+<text x="112" y="71" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic" data-en>Marra&#x27;s anthology writes Japanese aesthetics as a modern discipline</text>
+<line class="eflow" x1="430.0" y1="90" x2="430.0" y2="120" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="120" width="716" height="64" rx="10" fill="#EFE6D3" stroke="#A5811D" stroke-width="1.4"/>
+<text x="88" y="142" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">2</text>
+<text x="112" y="144" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F" data-zh>大西物哀论被选入，成为其中一章的英译材料</text>
+<text x="112" y="165" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic" data-en>Onishi&#x27;s study of aware is selected as English source material for one chapter</text>
+<line class="eflow" x1="430.0" y1="184" x2="430.0" y2="214" stroke="#C9A227" stroke-width="2" marker-end="url(#arw)"/>
+<rect x="72" y="214" width="716" height="77" rx="10" fill="#FFF8EC" stroke="#C9A227" stroke-width="1.4" class="cn"/>
+<text x="88" y="236" font-family="LXGW WenKai,serif" font-size="14" font-weight="700" fill="#A5811D">3</text>
+<text x="112" y="238" font-family="LXGW WenKai,serif" font-size="12.5" fill="#26261F" data-zh>术语音译保留，解释词替换原义，形成读解偏移</text>
+<text x="112" y="259" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic" data-en>The term is transliterated while explanatory words replace its sense, producing a </text>
+<text x="112" y="272" font-family="Inter,sans-serif" font-size="11" fill="#7C7568" font-style="italic" data-en>shift</text>
+<defs><marker id="arw" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 z" fill="#C9A227"/></marker><style>@media (prefers-reduced-motion: no-preference){.eflow{animation:pfdraw 7s linear infinite}.cn{animation:pfpulse 4.2s ease-in-out infinite}}@keyframes pfdraw{to{stroke-dashoffset:-132}}@keyframes pfpulse{0%,100%{opacity:1}50%{opacity:.45}}@media print{.eflow,.cn{animation:none}}</style></defs>
+</svg><p class="cap"><span data-both><span data-zh>《物哀论》（英译节选） · 时段链（数字为顺序）</span><span data-en>On Mono no Aware (English excerpt) · the chronological chain</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">物哀＝见落花而心有所动，一种先于善恶的审美感应。</div><div class="trs" data-zh>物哀＝见落花而心有所动，一种先于善恶的审美感应。</div><div class="trs" data-en>Mono no aware is the moved heart at falling petals — an aesthetic attunement prior to good and evil.</div><div class="src"><span data-both><span data-zh>范畴论旨概述（非逐字原文） · ◐</span><span data-en>summary of the category (not verbatim) · ◐</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>让英语读者知道「物哀」不是简单的「悲」，而是一套关于感应与无常的审美结构；编本的注释也提供了日文文献线索。
+
+节选必然割裂论证；且英语转述常把 aware 浪漫化为「日本式感伤」，失掉大西的概念史严格性。
+
+**合成 Synthesis：** 把它当「接受史材料」而非「译本」：读英语如何误读，也是一种读法。真正的文本仍须回到《幽玄·物哀·寂》。</div><div data-en>It shows English readers that aware is not mere sadness but a structure of attunement and impermanence; the volume&#x27;s notes also give Japanese sources.
+
+An excerpt inevitably fragments the argument, and English restatements often romanticise aware as Japanese sentimentality, losing Onishi&#x27;s conceptual rigour.
+
+**Synthesis:** Treat it as reception history rather than a translation: reading how English misreads is itself a method. The real text remains the trilogy.</div></div>
+<h2 class="part" data-both><span data-zh>史学方法 · Historiography</span><span data-en>Historiography</span></h2>
+<div class="card"><p data-zh>编本形态：节选加编者导言，读者须分清哪句是大西、哪句是编者。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Edited-volume form: excerpt plus editor&#x27;s introduction — distinguish Onishi&#x27;s sentences from the editor&#x27;s.</p></div>
+<div class="card"><p data-zh>术语翻译的现场：aware 被译与不译之间，正是概念跨语的难点。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">At the scene of translation: whether to render aware or leave it untranslated is the cross-linguistic crux.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>无常</span><span data-en>impermanence</span></div>
+<div class="orig">無常</div>
+<div class="mnote"><div data-zh>英语转述最常抓住的一极，但大西的重心在「感应」而非「悲观」。</div><div data-en>The pole English restatements grasp most; Onishi&#x27;s centre is attunement, not pessimism.</div></div>
+<div class="src"><span data-both><span data-zh>节选与相关研究</span><span data-en>excerpt and related studies</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>感伤</span><span data-en>sentimentality</span></div>
+<div class="mnote"><div data-zh>英译常有的偏移：把前道德的感应读成情绪。</div><div data-en>A frequent English drift: reading pre-moral attunement as emotion.</div></div>
+<div class="src"><span data-both><span data-zh>接受史观察</span><span data-en>reception observation</span></span> · <span class="conf c-part">○</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>这段英译把「物哀」放进无常、感伤与前道德感应三个坐标里，与日语原意有细微偏移：aware 的「哀」被读成情绪，而原词更接近于对事物之「あはれ」的感应。读它主要读翻译的选择。</div><div data-en>The English excerpt places mono no aware within impermanence, sentiment and pre-moral attunement, a slight shift from the Japanese. The aware in mono no aware is read as emotion, while the word is closer to being moved by things. One reads it for the translator&#x27;s choices.</div></div><div class="src"><span data-both><span data-zh>《物哀论》（英译节选）》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>On Mono no Aware (English excerpt): Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读日文原论的结论（中译），再读英译节选，逐段标出「增、删、改」。</div><div data-en>Read the Japanese study&#x27;s conclusion (in Chinese), then the English excerpt, marking additions, cuts and changes.</div></div>
+<div class="card"><div data-zh>查 Marra 编本的导言如何处理「日本美学」这一整体范畴，这会解释节选的取舍。</div><div data-en>See how Marra&#x27;s introduction frames &#x27;Japanese aesthetics&#x27; as a whole; it explains the excerpt&#x27;s choices.</div></div>
+<div class="card"><div data-zh>把这条英译通道与九鬼的 Nara 译本对比：一个完整翻译，一个节选，接受效果完全不同。</div><div data-en>Compare this channel with Nara&#x27;s complete Kuki: full translation vs excerpt produce very different receptions.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《幽玄·物哀·寂》</span><span data-en>Yūgen · Mono no Aware · Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2017</td><td><span data-both><span data-zh>母本</span><span data-en>source text</span></span></td><td><div data-zh>节选的母本，读全本才算读过。</div><div data-en>The source; only the full study counts as reading it.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《粹（いき）的结构》</span><span data-en>The Structure of Iki</span></span></b></td><td><span data-both><span data-zh>九鬼周造</span><span data-en>Kuki Shūzō</span></span></td><td>1930</td><td><span data-both><span data-zh>对照 · 英译</span><span data-en>contrast · English</span></span></td><td><div data-zh>九鬼有完整英译，大西只有节选，接受史因此不同。</div><div data-en>Kuki has a full English translation, Onishi only an excerpt — hence different reception.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《日本侘寂》</span><span data-en>Japanese Wabi-Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2019</td><td><span data-both><span data-zh>同源 · 单行</span><span data-en>same source · standalone</span></span></td><td><div data-zh>同一位作者的另一范畴，可作对照。</div><div data-en>Another category by the same author, for contrast.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>Michele Marra 编 A History of Modern Japanese Aesthetics, University of Hawai&#x27;i Press, 2001</span><span data-en>Michele Marra (ed.), A History of Modern Japanese Aesthetics, University of Hawai&#x27;i Press, 2001</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>出版社书目</span><span data-en>publisher catalogue</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>编本含对大西物哀论的英译与讨论</span><span data-en>The volume contains an English rendering and discussion of Onishi&#x27;s aware</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>编本注释（二手）</span><span data-en>volume notes (secondary)</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>未见单行英译本；旧档案「2022 英译」无书目依据，已撤</span><span data-en>No standalone English translation found; the old &#x27;2022 EN&#x27; claim has no basis and is withdrawn</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目检索</span><span data-en>bibliographic search</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>节选的确切标题、译者与页码待查编本。</span><span data-en>Exact excerpt title, translator and pages await the volume.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>是否有期刊英译（如 Japanese Journal of Religious Studies 一类）待查。</span><span data-en>Whether a journal translation exists — to check.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

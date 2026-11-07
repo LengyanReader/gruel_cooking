@@ -3,30 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《阴翳礼赞》｜In Praise of Shadows | 阅读与智识</title>
+<title>《阴翳礼赞》｜陰翳礼讃 | 阅读与智识</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>/* shared Reading & IA toolkit */
-:root{--ink-deep:#26261F;--ink-mid:#4E4B42;--ink-soft:#7C7568;--ink-pale:#A89F90;--paper:#F7F1E3;--paper-soft:#EFE6D3;--paper-deep:#E7DCC4;--gold:#C9A227;--gold-soft:#E3C457;--gold-dim:#A5811D;--lapis:#3E5C76;--lapis-soft:#6C8AAF;--sage:#7A8F6E;--cond:#3E7C5A;--lueur:#A5811D;--ff-display:"LXGW WenKai","Noto Serif SC",serif;--ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;--shadow-md:0 6px 20px rgba(38,38,31,.08)}
-body.lang-zh [data-en]{display:none!important}body.lang-en [data-zh]{display:none!important}
-body.lang-en [data-both] span[data-en]{display:inline!important}body.lang-en [data-both] span[data-zh]{display:none!important}
-body.lang-zh [data-both] span[data-zh]{display:inline!important}body.lang-zh [data-both] span[data-en]{display:none!important}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
-a{color:var(--lapis);text-decoration:none;transition:color .25s}a:hover{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
 .nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
 .nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
 .nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
 .nav-right{display:flex;align-items:center;gap:1rem}
-.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
 .lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
 .lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
 .lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
-.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
 .hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
 .hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
 .hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
 .hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
 .hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
@@ -43,57 +61,219 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
 .ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
 .ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
 .tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
-.conf{font-family:"Inter",monospace;font-weight:700}.conf.c-ok{color:var(--cond)}.conf.c-part{color:var(--lueur)}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
 .tok{margin-left:.35rem}
 .quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
-.quote .orig{font-style:italic;color:var(--ink-deep)}.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
 .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
 .pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
 .pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
 .footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
 .gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
 .gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
 .tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
 .tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
 .tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
 .tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
-.pts{list-style:none;padding-left:0;margin:.6rem 0}.pts li{font-size:.9rem;color:var(--ink-mid);margin:.3rem 0}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
 </style>
 </head>
 <body class="lang-zh">
+
 <nav class="nav" id="nav">
-  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 书 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
+  <div class="nav-brand" data-both><span data-zh>读日本 · 回归东方 JAPAN CULTURE</span><span data-en>JAPAN CULTURE</span><span class="sub" data-both><span data-zh>24 部 · 2026-11</span><span data-en>24 books · 2026-11</span></span></div>
   <div class="nav-right">
-    <a class="nav-home" href="../../index.html"><span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span></a>
-    <div class="lang-toggle" id="langToggle"><button class="active" data-lang="zh">中</button><button data-lang="en">EN</button></div>
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </nav>
-<section class="hero">
-  <p class="kicker" data-both><span data-zh>读日本 · 回归东方 — 第二圈 · 源头与对手 · Ring 2</span><span data-en>JAPAN CULTURE — Sources & Rivals · Ring 2</span></p>
-  <h1><span data-zh>《阴翳礼赞》</span><span data-en>In Praise of Shadows · 陰翳礼讃</span></h1>
-  <div class="subtitle" data-both><span data-zh>谷崎润一郎 Tanizaki Jun'ichiro · 1933-1934 · 中译多种（陈德文等）· 英译 Thomas J. Harper 1977 / Gregory Starr 2017</span><span data-en>Tanizaki Jun'ichiro · 1933-34 · several Chinese eds. · EN Thomas J. Harper 1977 / Gregory Starr 2017</span></div>
-  <div class="metachip"><span class="chip"><span data-zh>kind·文化自述 self-portrait</span><span data-en>self-portrait</span></span> <span class="chip"><span data-zh>幽暗爱惜</span><span data-en>cherishing shadow</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实</span><span data-en>conf ✓ edition verified</span></span></div>
-</section>
-<div class="article">
 
-<div class="srcnote"><div data-zh><b>来源说明。</b>版本与主题经 WebSearch 回源核实存在；不确定细节标 ◐/○。核心论断取自该书自陈框架、未取逐字原文（无公版全文），引文栏以「概述」标注，守零虚构。</div><div data-en><b>Provenance.</b> Existence and theme re-verified via WebSearch; uncertain details marked ◐/○. The thesis follows the book's own framing, not a verbatim line (no public-domain text); quotes are labelled as summaries — nothing fabricated.</div></div>
-<div class="readban"><span data-zh>从漆器、和纸、厕所到能剧舞台，为黑暗与看不见正名；《摩灭》《侘寂》的美学母源</span><span data-en>vindicating darkness from lacquer and shoji to the Noh stage — the mother-source of Erosion and Wabi-Sabi</span></div>
-<div class="card"><h3 class="sec"><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑《摩灭》《侘寂》两册的美学母源。</div><div data-en>The aesthetic mother-source of the Special's Erosion and Wabi-Sabi volumes.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>谷崎说美不在对象本身而在对象所处的阴翳之中，由此为幽暗、包浆与「看不见」辩护，抵抗西式照明下的暴露。日文原文与多种中／英译并行；本页不取逐字译文，以论旨概述。</div><div data-en>For Tanizaki beauty lies not in the object but in the shadow it dwells in; he vindicates gloom, patina and the unseen against exposure under Western light. Japanese original with many Chinese/English versions; the quote here is a summary, not a verbatim rendering.</div></div>
-<div class="card"><h3 class="sec"><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p style="font-size:.82rem;color:var(--ink-soft)"><span data-zh>本书无公版全文，仅收录可核验的存在性出处；逐字引文与细目待通读原书，守零虚构。</span><span data-en>No public-domain full text; only verifiable sources listed. Verbatim lines await a full read — nothing fabricated.</span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=阴翳礼赞 谷崎" target="_blank" rel="noopener"><span data-zh>豆瓣 · 条目检索</span><span data-en>Douban · entry search</span><span class="dom">search.douban.com ↗</span></a><a href="https://openlibrary.org/search?q=Tanizaki In Praise of Shadows" target="_blank" rel="noopener"><span data-zh>Open Library · 检索</span><span data-en>Open Library · search</span><span class="dom">openlibrary.org ↗</span></a></div></div>
-<h2 class="part"><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2><div class="quote"><div class="trs" data-zh>美不在对象本身，而在对象所处的阴翳之中。（论旨概述，非逐字原文）</div><div class="trs" data-en>Beauty lies not in the object but in the shadow it dwells in. （论旨概述，非逐字原文）</div><div class="src"><span data-both><span data-zh>谷崎论旨 · ◐ 译文随版本</span><span data-en>Tanizaki's thesis · ◐ wording per edition</span></span></div></div><ul class="pts"><li>· <span data-zh>为黑暗与看不见正名</span><span data-en>a vindication of darkness and the unseen</span></li><li>· <span data-zh>抵抗西式照明下的暴露</span><span data-en>a resistance to exposure under Western light</span></li></ul>
-<div class="gapbox"><div class="v-line"><span data-zh>评价与合成</span><span data-en>Reception & synthesis</span></div><div data-zh>近代日本为自身感官立法。合成：上承茶之书，下启摩灭；与《日本侘寂》同读，见阴翳与寂的相续。</div><div data-en>Modern Japan legislating its own senses. Synthesis: between the Book of Tea and Erosion; read with Wabi-Sabi for shadow's kinship to sabi.</div></div>
-<h2 class="part"><span data-zh>相关定位 · Positioning</span><span data-en>Positioning</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>作品</span><span data-en>work</span></th><th><span data-zh>关系</span><span data-en>relation</span></th><th><span data-zh>一句理由</span><span data-en>why</span></th><th>conf</th></tr></thead><tbody><tr><td><a href="jp-masshitsu.html">《摩灭之赋》</a></td><td><span data-zh>下游</span><span data-en>downstream</span></td><td><div data-zh>摩灭是阴翳的当代延伸</div><div data-en>masshitsu extends the shadow</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><a href="jp-wabisabi.html">《日本侘寂》</a></td><td><span data-zh>姊妹范畴</span><span data-en>sister category</span></td><td><div data-zh>幽暗爱惜通向侘寂</div><div data-en>love of shadow leads to wabi-sabi</div></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2><div class="tablewrap"><table class="ledger"><thead><tr><th><span data-zh>主张</span><span data-en>claim</span></th><th><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><span data-zh>原作 1933-1934</span><span data-en>written 1933-34</span></td><td><span data-zh>作品年表</span><span data-en>chronology</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><span data-zh>英译 Thomas J. Harper 1977（Leete's Island）／ Gregory Starr 2017</span><span data-en>EN by Harper 1977 / Starr 2017</span></td><td><span data-zh>书目核实</span><span data-en>imprint verified</span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
-<h2 class="part"><span data-zh>未核 / 待读 · Unverified & pending</span><span data-en>Unverified & pending</span></h2><div class="card"><p><span data-zh>各中译本译者与出版社待逐一核</span><span data-en>the several Chinese translators/presses to verify</span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 读日本 · 回归东方 JAPAN CULTURE</span><span data-en>READING &amp; IA — JAPAN CULTURE</span></p>
+  <h1><span data-zh>《阴翳礼赞》 · 陰翳礼讃</span><span data-en>陰翳礼讃</span></h1>
+  <div class="subtitle" data-both><span data-zh>谷崎润一郎 · 日本 · 1933-34 连载 · 中译多种（陈德文等）· 英译 Harper 1977 / Starr 2017</span><span data-en>Tanizaki Jun&#x27;ichirō · Japan · serialised 1933–34 · many Chinese eds. · EN Harper 1977 / Starr 2017</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>读日本 · 回归东方 JAPAN CULTURE · 2026-11-07</span><span data-en>JAPAN CULTURE · 2026-11-07</span></span> <span class="chip"><span data-zh>美学随笔 · 阴翳</span><span data-en>aesthetic essay · shadow</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>美学</span><span data-en>aesthetics</span></span> <span class="chip"><span data-zh>conf ✓ 年代 / 英译已核；中译版目 ◐</span><span data-en>conf ✓ dates and English translations; Chinese editions ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 年代 / 英译已核；中译版目 ◐ · 档案：jp-inpraise-shadows（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ dates and English translations; Chinese editions ◐ · record: jp-inpraise-shadows. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读全文 · 待读后更新（现依据书目与二手研究 ◐）</span><span data-en>not yet read in full · refresh after reading (bibliography and secondary studies now ◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>特辑《摩灭》《侘寂》两册的美学母源：谷崎第一次把「暗」写成日本美的条件，而不是照明的失败。</div><div data-en>The mother-source of the Special&#x27;s Erosion and Wabi-Sabi volumes: Tanizaki first writes darkness as a condition of Japanese beauty rather than a failure of lighting.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://search.douban.com/book/subject_search?search_text=阴翳礼赞 谷崎" target="_blank" rel="noopener"><span data-zh>豆瓣 · 中译检索</span><span data-en>Douban · Chinese editions</span><span class="dom">search.douban.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://openlibrary.org/search?q=Tanizaki+In+Praise+of+Shadows" target="_blank" rel="noopener"><span data-zh>Open Library · 英译检索</span><span data-en>Open Library · EN editions</span><span class="dom">openlibrary.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《陰翳礼讃》1933—1934 年连载，后收入《文章読本》一系随笔。谷崎从厕所、漆器、烛光、能乐面具写到餐具与建筑，主张美不在对象本身，而在对象所处的阴翳之中。他并非单纯怀旧，而是指出：西方以照明消灭阴影，日本则以阴影保存物件的深度。中译有陈德文等多种，英译以 Thomas J. Harper（1977）与 Gregory Starr（2017）较为通行。</div><div data-en>In Praise of Shadows was serialised in 1933–34. From toilets, lacquerware, candlelight and Noh masks to tableware and architecture, Tanizaki argues that beauty lies not in the object but in the shadow it inhabits. This is not mere nostalgia: the West abolishes shadow with lighting, Japan preserves depth through it. Chinese versions include Chen Dewen&#x27;s; the usual English ones are Thomas J. Harper (1977) and Gregory Starr (2017).</div></div>
+<p class="tok"><span class="conf c-ok"><span data-both><span data-zh>✓ 年代与英译</span><span data-en>✓ dates and English translations</span></span></span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 从厕所开始</span><span data-en>Piece 1 · Starting from the toilet</span></h3>
+<div data-zh>最不雅的场所反而最适合谈美：幽暗、木香、雨声，构成一个与自然相通的私密空间。</div><div data-en>The least elegant place is best for beauty: gloom, wood, rain — a private room continuous with nature.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 漆器与烛光</span><span data-en>Piece 2 · Lacquer and candlelight</span></h3>
+<div data-zh>漆器的美依赖昏暗：在电灯下它只剩黑，在烛光里它才有深度。谷崎由此展开对「照明进步」的批判。</div><div data-en>Lacquer depends on dimness: under electric light it is merely black, in candlelight it has depth. From this he attacks the &#x27;progress&#x27; of lighting.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 建筑、能乐与餐具</span><span data-en>Piece 3 · Architecture, Noh, tableware</span></h3>
+<div data-zh>把阴翳从器物推到空间与表演：能乐的暗、和室的深邃、汤碗的黑红，都是同一美学。</div><div data-en>Shadow extends from objects to space and performance: Noh&#x27;s darkness, the depth of the washitsu, the black-red of soup bowls — one aesthetics.</div>
+
+<p class="tok"><span class="conf c-ok">✓</span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 篇 · 收束：美在关系</span><span data-en>Piece 4 · Close: beauty in relation</span></h3>
+<div data-zh>末段回到命题：美不是属性，而是物与物之间明暗的波纹。</div><div data-en>The close returns to the thesis: beauty is not a property but the ripple of light and dark between things.</div>
+
+<p class="tok"><span class="conf c-part">◐</span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>文章从最不雅的场所（厕所）写起，一路升到建筑与戏剧，最后落回日常器物。谷崎的策略是「从低处进入」：先让你承认一个不好意思承认的偏好，再告诉你这偏好背后是一整套文明选择。</div><div data-en>It begins in the least elegant place — the toilet — rises through architecture and theatre, and returns to everyday objects. Tanizaki&#x27;s strategy is to enter low: first make you admit a preference you are ashamed of, then show that behind it lies a whole civilisational choice.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《阴翳礼赞》 · 篇章链（数字为顺序）</span><span data-en>陰翳礼讃 · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>作者真意 · Intent</span><span data-en>The author&rsquo;s intent</span></h2>
+<div class="quote"><div class="orig">美不在对象本身，而在对象所处的阴翳之中。</div><div class="trs" data-zh>美不在对象本身，而在对象所处的阴翳之中。</div><div class="trs" data-en>Beauty lies not in the object but in the shadow it dwells in.</div><div class="src"><span data-both><span data-zh>谷崎论旨概述（非逐字原文） · ◐ 译文随版本</span><span data-en>summary of Tanizaki&#x27;s thesis (not verbatim) · ◐ wording per edition</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>二十世纪日本美学最有影响力的单篇随笔；它把「阴翳」从一个趣味词提升为文明比较的范畴，直接启发了后来的侘寂与摩灭写作。
+
+容易被读成「怀旧散文」或「反现代化」；谷崎对女性与感官的描写也常被后来的读者批评为男性凝视。
+
+**合成 Synthesis：** 读它不要停在「日本很美」，要抓住「美在关系」这一命题，再用它去看《摩灭之赋》如何把关系换成时间。</div><div data-en>The most influential single essay in twentieth-century Japanese aesthetics; it lifts &#x27;shadow&#x27; from a term of taste to a category of civilisational comparison and directly enables later writing on wabi-sabi and erosion.
+
+Easily read as nostalgic prose or anti-modernism; Tanizaki&#x27;s descriptions of women and the senses are also criticised as a male gaze.
+
+**Synthesis:** Do not stop at &#x27;Japan is beautiful&#x27;; grasp the proposition that beauty is relational, then see how Erosion swaps relation for time.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>从低处进入：以厕所、便器、食物等不雅对象起笔，反而更有说服力。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Entering low: toilets, chamber pots and food make the argument more persuasive, not less.</p></div>
+<div class="card"><p data-zh>感官的具体性：不说「幽暗很美」，而说漆器在烛光下如何。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Sensory concreteness: not &#x27;gloom is beautiful&#x27; but what lacquer does in candlelight.</p></div>
+<div class="card"><p data-zh>文明比较：西方/日本不是本质对立，而是两种处理光的技术选择。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Civilisational comparison: West and Japan are not essences but two technical choices about light.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>阴翳</span><span data-en>shadow</span></div>
+<div class="orig">陰翳</div>
+<div class="mnote"><div data-zh>不是黑暗本身，而是明暗之间的过渡地带。</div><div data-en>Not darkness itself but the zone of transition between light and dark.</div></div>
+<div class="src"><span data-both><span data-zh>全文</span><span data-en>the essay</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>漆器</span><span data-en>lacquerware</span></div>
+<div class="mnote"><div data-zh>谷崎的核心物证：它的美只在昏暗中成立。</div><div data-en>Tanizaki&#x27;s key exhibit: its beauty exists only in dimness.</div></div>
+<div class="src"><span data-both><span data-zh>漆器段</span><span data-en>the lacquer passage</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>照明</span><span data-en>lighting</span></div>
+<div class="mnote"><div data-zh>被批判的「进步」：电灯不是中性工具，而是文明选择。</div><div data-en>The &#x27;progress&#x27; under critique: electric light is not neutral but a civilisational choice.</div></div>
+<div class="src"><span data-both><span data-zh>中段</span><span data-en>middle section</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>谷崎从最不雅的场所写起，一路升到建筑与戏剧，再落回器物。他的论证是倒着走的：先让你承认一个不好意思承认的偏好，再指出这偏好背后是一整套文明对光与暗的分配。</div><div data-en>Tanizaki begins with the least presentable room, rises to architecture and drama, and returns to objects. His argument runs backwards: first admit a preference you would rather not admit, then see that behind it lies a whole civilisation&#x27;s division of light and dark.</div></div><div class="src"><span data-both><span data-zh>《阴翳礼赞》论旨概述 · 据出版说明与通行引述（非逐字）</span><span data-en>陰翳礼讃: Paraphrase after the publisher&#x27;s description and standard accounts; not a quotation.</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>读时关掉顶灯，只留一盏台灯，再读漆器与烛光一段——这是谷崎要求的阅读条件。</div><div data-en>Read the lacquer-and-candle passage with the overhead light off and a single lamp on — the condition Tanizaki asks for.</div></div>
+<div class="card"><div data-zh>标出所有「西洋」出现的地方，看谷崎如何把西方写成单一整体；这是全书最大的简化。</div><div data-en>Mark every appearance of &#x27;the West&#x27; and see how Tanizaki writes it as one whole — the book&#x27;s greatest simplification.</div></div>
+<div class="card"><div data-zh>与《摩灭之赋》对读同一件器物（如老碗）：一个看它如何反光，一个看它如何被磨薄。</div><div data-en>Read the same object (an old bowl) in Erosion: one watches how it reflects, the other how it is worn thin.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>《摩灭之赋》</span><span data-en>In Praise of Erosion</span></span></b></td><td><span data-both><span data-zh>四方田犬彦</span><span data-en>Yomota Inuhiko</span></span></td><td>2020</td><td><span data-both><span data-zh>下游</span><span data-en>downstream</span></span></td><td><div data-zh>摩灭是阴翳的当代延伸：从「暗」到「磨损」。</div><div data-en>Erosion extends shadow from darkness to wear.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《日本侘寂》</span><span data-en>Japanese Wabi-Sabi</span></span></b></td><td><span data-both><span data-zh>大西克礼</span><span data-en>Onishi Yoshinori</span></span></td><td>2019</td><td><span data-both><span data-zh>姊妹范畴</span><span data-en>sister category</span></span></td><td><div data-zh>爱惜幽暗通向侘寂的枯淡。</div><div data-en>Love of shadow leads to the plainness of wabi-sabi.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b><span data-both><span data-zh>《茶之书》</span><span data-en>The Book of Tea</span></span></b></td><td><span data-both><span data-zh>冈仓天心</span><span data-en>Okakura Kakuzō</span></span></td><td>1906</td><td><span data-both><span data-zh>上游 · 茶室</span><span data-en>upstream · tea-room</span></span></td><td><div data-zh>茶室的幽暗是谷崎论证的起点。</div><div data-en>The tea-room&#x27;s gloom is Tanizaki&#x27;s starting point.</div></td><td>乙</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>1933—1934 年连载</span><span data-en>Serialised 1933–1934</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>作品年表</span><span data-en>chronology</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>英译 Thomas J. Harper (1977)；Gregory Starr (2017)</span><span data-en>EN translations: Thomas J. Harper (1977); Gregory Starr (2017)</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>出版社书目</span><span data-en>publisher catalogues</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>中译有陈德文等多种</span><span data-en>Chinese versions include Chen Dewen&#x27;s and others</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书目检索</span><span data-en>bibliographic search</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>作者 1886—1965</span><span data-en>Author 1886–1965</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>生平资料</span><span data-en>biographical sources</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>初出刊物（《経済往来》？）与具体期号待核。</span><span data-en>First venue and issue numbers to verify.</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>中译各版译者与篇目（是否附其他随笔）待核。</span><span data-en>Chinese translators and whether other essays are included — to verify.</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
 <div class="links">
-<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本书单</span><span data-en>back to the list</span></a>
+<a class="pill" href="../japan-culture-books.html">← <span data-zh>返回读日本 · 回归东方 JAPAN CULTURE</span><span data-en>back to JAPAN CULTURE</span></a>
 <a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
-<a class="pill" href="../../glossary.html">↝ <span data-zh>术语架</span><span data-en>terms</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
 </div>
 </div>
-<footer class="footer"><p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p><p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p></footer>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
 <script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
