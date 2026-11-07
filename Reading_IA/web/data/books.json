@@ -7863,6 +7863,83 @@
             "url": "https://book.douban.com/subject/34897872/"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "李永晶真正想说的不是「日本是什么」，而是「近代中国为什么始终不能用自己的语言说自己」。日本在他笔下是一面借来的镜子：因为直接自述已经失效，只能通过描述一个最像自己、又最不像自己的邻人来完成自我定位。全书的落点因此不在日本史，而在中国的自我理解能力。\n\n再往下一层，他想终结一种摆荡。近代中国的日本论在「学它」与「防它」之间来回，两端都把日本当作工具。李永晶要把这种摆荡本身变成研究对象：一旦看清摆荡的机制，中国就有可能不再需要在两极之间选边。书末的「新世界主义」是这个愿望的规范表达——不是对日本的态度，而是对世界位置的态度。",
+        "claim_en": "Li Yongjing's real subject is not what Japan is but why modern China has been unable to speak of itself in its own terms. Japan serves as a borrowed mirror: direct self-description having failed, self-location proceeds by describing a neighbour that is at once most like and most unlike the self. The book therefore lands on China's capacity for self-understanding rather than on Japanese history.\n\nBeneath that lies a wish to end an oscillation. Chinese writing on Japan swings between learning from it and guarding against it, and both poles treat Japan as an instrument. Li turns the swing itself into the object of study: once its mechanism is visible, choosing a pole may cease to be necessary. The closing 'new cosmopolitanism' is the normative form of that wish, an attitude to the world rather than to Japan.",
+        "why_zh": "第一，材料的分布暴露了对象。全书倚重中文的日本论述——使日记载、政论、战后评论——而极少使用日文一手档案。如果研究对象真是日本，这个材料结构无法成立；如果研究对象是中国关于日本的想象，它就恰好合适。作者自述做的是「精神史」，但就证据结构而言更接近接受史。这个错位不是疏漏，而是意图的痕迹：他要的本来就是中国人的精神脉络。\n\n第二，章节的排法暴露了关切。七章不是编年，明治维新被放在最后。若以日本近代化为对象，起点应当在前；把起点当作终点来追问，说明他追的不是事件顺序，而是反复出现的自我定位方式。同样，战后没有单列一章，被分散进民主主义与宪法。分期不是他的问题，结构才是。\n\n第三，书名的承继暴露了文体。《新日本论》直接接戴季陶的《日本论》。戴书一九二八年由上海民智书局初版，胡汉民作序，收二十四篇短文，本质是政党要人对党务的训诫：分析日本是为了规训中国。李永晶续的是这个文体，不是日本学的学术题目。续一个文体，就是续它的问题意识。\n\n第四，结论的性质暴露了落点。「新世界主义」是规范主张，不是历史描述。一部以历史叙述为主的书，最后给出一个关于应当如何的主张，说明前面的叙述是为这个主张服务的。它想超越民族国家叙事，而全书的分析单位仍是民族国家——这个张力恰恰证明，作者真正焦虑的是中国在世界里的位置，不是日本在历史里的位置。\n\n第五，接受史反过来印证了意图。推荐语强调「审视中国的另一个自我」，读者记住的却是「日本」。一本书被误读的方式，往往正对着它最想纠正的东西：他想让读者从日本身上收回目光，读者却继续盯着日本。",
+        "why_en": "First, the distribution of sources betrays the object. The book leans on Chinese writing about Japan, mission accounts, tracts and post-war commentary, and rarely on Japanese primary archives. That structure cannot support a study of Japan; it fits a study of Chinese imagining of Japan exactly. Li calls it spiritual history, but the evidential shape is reception history. The mismatch is a trace of intent rather than an oversight.\n\nSecond, the ordering betrays the concern. The seven chapters are not chronological, and the Meiji Restoration comes last. A study of Japanese modernisation would begin there; placing the origin at the end shows that what is being traced is a recurring mode of self-location, not a sequence of events. The post-war period likewise has no chapter of its own and is distributed across democracy and the constitution. Periodisation is not the problem; structure is.\n\nThird, the title betrays the genre. A New Discussion of Japan succeeds Dai Jitao's Discussion of Japan, published in 1928 with a preface by Hu Hanmin, twenty-four short pieces of party admonition: analysing Japan in order to discipline China. Li continues that genre, not an academic problem in Japanese studies, and continuing a genre means continuing its question.\n\nFourth, the conclusion betrays the destination. The new cosmopolitanism is a normative claim, not a historical description. A historical narrative that ends in an ought has been serving that ought. It wants to move beyond the nation-state while its unit of analysis remains the nation-state, and that tension shows the anxiety is China's place in the world.\n\nFifth, reception confirms it. The blurb stresses examining China's other self; readers remember Japan. The way a book is misread often faces exactly what it wanted to correct.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "七章顺序为尊王攘夷、竞逐亚洲、超克西方、世界革命、民主主义、日本宪法、明治维新。起点置末，说明追的是定位方式而非事件顺序。",
+            "en": "The seven chapters run from sonno joi to the Meiji Restoration last. Putting the origin at the end shows the object is a mode of self-location, not a sequence.",
+            "source": "中译目录",
+            "source_en": "Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "全书材料以中文日本论述为主，日文一手档案罕见。材料结构支持「中国关于日本的想象」这一对象，不支持「日本本身」。",
+            "en": "Sources are overwhelmingly Chinese writing on Japan, with little Japanese archival material. The shape supports Chinese imagining as the object, not Japan itself.",
+            "source": "正文与征引结构",
+            "source_en": "text and citation structure",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "书名《新日本论》承戴季陶《日本论》；戴书 1928 年上海民智书局初版，胡汉民作序，二十四篇。续的是训诫文体。",
+            "en": "The title succeeds Dai Jitao's Discussion of Japan (Shanghai Minzhi, 1928, preface by Hu Hanmin, twenty-four pieces), a genre of admonition.",
+            "source": "两书书目；本批 jp-nihonron 档案",
+            "source_en": "both imprints; the jp-nihonron dossier",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "战后未单列一章，分散于民主主义与宪法两章。分期被弱化，结构被强化，说明关切在连续的自我定位而非断裂。",
+            "en": "The post-war era has no chapter and is split across democracy and the constitution, weakening periodisation in favour of structure.",
+            "source": "中译目录",
+            "source_en": "Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "书末提出「新世界主义」，属规范主张而非描述；与分析单位仍为民族国家形成张力，指向作者对世界位置的焦虑。",
+            "en": "The closing new cosmopolitanism is normative, and its tension with a nation-state unit of analysis points to anxiety about place in the world.",
+            "source": "正文结论部分",
+            "source_en": "concluding section",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "自述",
+            "kind_en": "self-statement",
+            "zh": "作者自述所做的是「精神史」。就证据结构看更接近接受史；自述与结构的差，本身是意图的线索。",
+            "en": "Li describes the work as spiritual history; the evidential shape is closer to reception history, and the gap is itself a clue.",
+            "source": "作者自述（转述）",
+            "source_en": "author's stated aim (as reported)",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "接受",
+            "kind_en": "reception",
+            "zh": "《新京报》推荐语作「审视中国的另一个自我」，读者接受却多聚焦日本。误读的方向正对着作者想纠正的方向。",
+            "en": "The Beijing News blurb reads 'examining China's other self', while readers focus on Japan; the misreading faces what the book wanted to correct.",
+            "source": "《新京报》2020 年书单与年度入围榜",
+            "source_en": "Beijing News 2020 lists",
+            "conf": "✓"
+          }
+        ],
+        "counter_zh": "最强的反读有三条。其一，取材偏中文可能只是条件所限：在中国写作、面向中国读者、以中文出版，日文档案的缺席未必反映对象的选择，只反映写作的位置。若如此，「精神史」就是诚实的自述，不是掩饰。\n\n其二，章节的非编年排列可能只是论文结集的自然结果。七章各自成文，先写哪一篇、后写哪一篇，未必有整体设计；把明治维新置末读成「以起点为终点」，可能是读者替作者补上的对称。\n\n其三，「新世界主义」也许只是尾章的例行升华。学术著作常在结尾给出一个规范展望，它未必承担全书的动机。用一个尾章反推整本书的意图，证据上是薄的。\n\n这三条都不能被现有材料排除。它们合起来构成一个更节制的读法：这是一部以中国材料写的日本论述史，作者关心自我理解，但没有证据表明他有一个贯穿全书的规范计划。",
+        "counter_en": "Three strong objections. The Chinese-heavy sourcing may simply reflect conditions: writing in China, for Chinese readers, in Chinese. The absence of Japanese archives would then record a position of writing, not a choice of object, and 'spiritual history' would be an honest description.\n\nThe non-chronological ordering may be an artefact of collected essays. Seven free-standing chapters need not embody a design, and reading the Restoration's final place as 'the origin as end' may supply a symmetry the author never intended.\n\nThe new cosmopolitanism may be a routine closing gesture. Academic books often end with a normative outlook that carries no motivating weight, and inferring a whole intention from a final chapter is evidentially thin.\n\nNone of these can be excluded on present material. Together they support a more restrained reading: a history of Chinese writing on Japan by an author concerned with self-understanding, without evidence of a normative plan governing the whole.",
+        "boundary_zh": "可以说的是：这部书的对象、材料与文体都指向中国的自我理解，而不是日本的社会史；这一点由目录、征引结构与书名承继三重支持，把握较高。不能说的是：作者有一个自觉的、贯穿七章的规范计划，或「新世界主义」是全书的动机。后者只有尾章一处证据，且与全书分析单位冲突，更像是愿望而非设计。\n\n还要划清一条界：推断作者意图与评价其成就无关。即使他只是写了一部中国日本论述史，这部书仍然成立；把意图读得比成就更大，反而是对书的抬举式误读。",
+        "boundary_en": "What can be said: object, sources and genre all point to Chinese self-understanding rather than Japanese social history, supported by the contents, the citation structure and the title's lineage. What cannot: that the author held a conscious normative plan across all seven chapters, or that the new cosmopolitanism motivates the whole. That rests on one closing passage and conflicts with the book's unit of analysis; it looks like a wish rather than a design.\n\nOne further line: inferring intent is separate from judging achievement. Even if this is only a history of Chinese writing on Japan, the book stands. Reading the intention as larger than the achievement would be a flattering misreading.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -8429,6 +8506,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "四方田犬彦真正想说的，是美不在物里，而在物被使用的历史里。一件东西之所以好看，不是因为它造得好，是因为有人在它身上留下了动作：摸、拜、搬、用。因此保存不是把物冻在完工的那一刻，而是承认它一直在被人碰。他要挪动的是审美的主体——从作者移到无名的使用者。\n\n再往下一层，这是一位电影与比较文学学者对「作品中心主义」的反抗。艺术史习惯把价值放在作品与作者那一侧；四方田把价值放在磨损那一侧，而磨损没有作者。佛像的脸被摸平，摸它的人一个也没有留下名字，可那张脸恰恰因为这些无名的人才好看。把美交给无名者，是这本书真正的姿态。",
+        "claim_en": "Yomota Inuhiko's real claim is that beauty lies not in the object but in the history of its use. A thing looks well not because it was well made but because people left actions on it: touching, praying, carrying, using. Preservation is therefore not freezing a thing at the moment of completion but acknowledging that it has been handled all along. What he moves is the subject of aesthetic value, from the maker to the anonymous user.\n\nBeneath that lies a comparatist and film scholar's revolt against the centrality of the work. Art history places value with the work and its author; Yomota places it with erosion, which has no author. A Buddha's face is rubbed flat by people who left no names, and it is precisely those nameless hands that make the face worth looking at. Handing beauty to the anonymous is the book's real gesture.",
+        "why_zh": "第一，选目的降格是论证，不是趣味。十三篇从玛利亚、佛陀、宾头卢一路走到牙齿、硬糖、臼与砥石。若他只想写废墟之美或宗教图像的沧桑，清单不会收一颗糖。糖在口中融化，是最短、最私人、最无纪念性的减损；把它放进同一份清单，等于宣布摩灭不挑对象。这份平等的清单本身就是论点：美不是某些作品的专利。\n\n第二，用字暴露了主体。汉语通行写「磨灭」，他偏用「摩灭」，取的是「摩」字里那只手。磨损可以是机械的、无人的；摩灭总有一双手在场。书里反复出现的那种黑亮，不是石头的颜色，是手掌年复一年擦出来的。形状被抹去的同时，人的动作被留下来。这一字之差，把主体从时间换成了人。\n\n第三，卷首的对照给出了来源。中译卷首提到中国的「手泽」与日本的「熟手」「习臭」，都说长年触摸把一处磨亮、体脂沁进去。手泽在汉语里本带哀悼，出自《礼记》，指亡亲留在书上的手汗。四方田把这个词带回物上，哀悼就变成了观看。他要的不是物的年代，是物上的人迹。\n\n第四，第二辑的转向扩大了战场。从无常引到托马森——赤濑川原平命名的超艺术：无用的台阶、封死的窗、够不着的门牌。摩灭是时间做减法，托马森是功能退出后留下的剩余物。把两者并置，说明他关心的不是「古老」，而是「谁在用、谁不再用」。减损于是从自然过程扩展到城市与制度。\n\n第五，文体的选择是自觉的。三部曲都以「赋」命名：摩灭、愚行、零落。赋是铺陈的文体，讲究排比与夸饰，专门把一件事说到极处。用增法的文体写减法的对象，是一种反讽，也是一种坚持：他要给减损足够的篇幅，让消失显得隆重。这个选择很难说是无意的。",
+        "why_en": "First, the downward slope of the contents is an argument. Thirteen pieces move from Mary, the Buddha and Pindola to teeth, a hard sweet, a mortar and a whetstone. A book about the pathos of ruins would not include a sweet. Dissolving in the mouth is the shortest, most private, least commemorative erosion there is; placing it on the same list declares that erosion does not select its objects. The equality of the list is the thesis: beauty is not the privilege of certain works.\n\nSecond, the choice of character betrays the subject. Where Chinese usually writes molie, mechanical wearing away, he writes masshitsu, whose first character contains a hand. Wear can be mechanical and unmanned; this word always has hands in it. The black shine recurring in the book is not the stone's colour but the polish of palms over years. As shape is erased, human action is left behind.\n\nThird, the opening comparison gives the source. The Chinese preface pairs shouze, the sweat a dead parent left on a book, with Japanese terms for the shine of long handling. Shouze originally carried mourning; returning it to objects turns mourning into looking. What he wants is not the age of a thing but the human trace on it.\n\nFourth, the second part widens the field. From impermanence he moves to Thomasson, Akasegawa Genpei's name for useless stairs, sealed windows and unreachable signs. Erosion subtracts through time; Thomasson is what remains when function withdraws. Pairing them shows the concern is not age but who uses and who has stopped using, extending loss from nature to the city and its institutions.\n\nFifth, the genre is deliberate. All three volumes are titled fu, the rhapsody, a form of amplification. Writing subtraction in an additive form is ironic and insistent at once: disappearance is to be given enough room to look ceremonious.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "十三篇选目自宗教图像降至牙齿、硬糖、臼与砥石。平等的清单宣告摩灭不挑对象，美非作品专利。",
+            "en": "The thirteen pieces descend from religious images to teeth, a sweet, a mortar and a whetstone; the equal list declares that erosion does not select.",
+            "source": "中译目录",
+            "source_en": "Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "书名用「摩」不用「磨」，取字中之手；正文反复写被手掌擦出的黑亮。主体由时间换为人。",
+            "en": "The title uses the character containing a hand; the text repeatedly describes shine produced by palms, shifting the subject from time to people.",
+            "source": "原书名《摩滅の賦》；中译用字说明",
+            "source_en": "original title; Chinese note on the character",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "卷首以中国「手泽」对日本「熟手」「习臭」。手泽本指亡亲手汗，带哀悼；移用于物，哀悼转为观看。",
+            "en": "The opening pairs Chinese shouze with Japanese terms for handled shine; a mourning term is moved onto objects, turning mourning into looking.",
+            "source": "中译卷首",
+            "source_en": "Chinese preface",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "全书分两辑：第一辑「消减之相」八篇处理物，第二辑「无常之观」四篇处理时间。由物及时，结构即论点。",
+            "en": "Two parts: eight pieces on things, four on time. The move from object to time is itself the argument.",
+            "source": "中译目录",
+            "source_en": "Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "第二辑由无常引到托马森（赤濑川原平命名的超艺术）。减损从自然过程扩展到城市与制度，关切在使用与停用。",
+            "en": "Part two moves from impermanence to Thomasson, extending loss from nature to the city and institutions, and shifting concern to use and disuse.",
+            "source": "中译目录该篇篇名",
+            "source_en": "the piece's title in the Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "2003《摩滅の賦》、2021《愚行の賦》、2025《零落の賦》，三书同以「赋」名。铺陈文体配减法对象，是持续的姿态。",
+            "en": "Three volumes titled fu (2003, 2021, 2025): an additive genre for subtractive objects, sustained as a stance.",
+            "source": "筑摩書房书目；朝日新闻书评",
+            "source_en": "Chikuma catalogue; Asahi review",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "作者为比较文学与电影学者，长期任教于明治学院大学。学科位置在作品与作者之外，支持其挪动审美主体的读法。",
+            "en": "A comparatist and film scholar long at Meiji Gakuin University; a disciplinary position outside the work-author pair supports the shift of subject.",
+            "source": "作者介绍（出版社与百科）",
+            "source_en": "publisher and reference profiles",
+            "conf": "◐"
+          }
+        ],
+        "counter_zh": "最强的反读是结集论。这十三篇本来是随笔，题材由足迹与约稿决定：去过柬埔寨，于是写废墟；在罗马看壁画，于是写剥落；吃到一颗糖，于是写糖。所谓「摩灭」，可能是事后追认的统一标题，而不是先行的方法。若如此，清单的平等只是随笔集的自然杂多，不是论证。\n\n第二条反读针对「反作品中心主义」。四方田是电影学者，谈磨损未必意味着反对作者论；他也可能只是喜欢旧东西。把一个趣味上升为立场，是评论者的抬举。\n\n第三条反读针对文体。「赋」在日语出版里常被借用作标题的雅称，未必承载汉语赋体的铺陈含义。用一个汉字反推作者的方法自觉，证据是薄的。\n\n这三条合起来给出一个更朴素的读法：这是一位会写文章的电影学者，把旅行与日常里注意到的减损现象结成一部随笔集，靠气质而非纲领统一。这个读法不排除书的洞见，只降低它的自觉程度。",
+        "counter_en": "The strongest alternative is the collected-essays reading. These were occasional pieces whose subjects follow travel and commissions: Cambodia yields ruins, Rome yields flaking frescoes, a sweet in the mouth yields a sweet. Masshitsu may be a unifying title applied after the fact rather than a method held in advance, and the equality of the list would then be the natural miscellany of the form.\n\nThe second objection concerns the revolt against the work. A film scholar writing about wear need not be opposing authorship; he may simply like old things. Lifting a taste into a position is the critic's flattery.\n\nThe third concerns genre. Fu is often borrowed in Japanese publishing as an elegant title word without the Chinese rhapsody's amplifying sense. Inferring methodological self-consciousness from one character is thin.\n\nTogether these support a plainer reading: a film scholar who writes well gathered noticed instances of loss into a volume unified by temperament rather than programme. This does not remove the book's insight; it lowers its degree of deliberateness.",
+        "boundary_zh": "可以说的是：文本反复把价值放在使用痕迹而非作品本身，选目、用字、两辑结构与托马森一篇共同支持这一读法；这是文本层面的事实，把握较高。\n\n不能说的是：作者自觉地在反对作品中心主义，或十三篇按一个先行方法写成。前者无自述，后者与随笔的生产方式相冲突。手泽与赋体的两条证据都依赖汉字联想，属于旁证，不能单独承重。\n\n还有一条界要划：把美交给无名使用者，是本节对文本功能的概括，不是作者的社会主张。书里并没有讨论保存的政治，长评已指出这一缺席；意图推断不能替作者补上他没有写的立场。",
+        "boundary_en": "What can be said: the text repeatedly locates value in traces of use rather than in the work, supported by the contents, the chosen character, the two-part structure and the Thomasson piece. That is a fact about the text.\n\nWhat cannot: that the author consciously opposed the centrality of the work, or wrote to a prior method. There is no self-statement for the first, and the second conflicts with how occasional essays are produced. The shouze and fu arguments rest on character association and cannot bear weight alone.\n\nOne further line: handing beauty to anonymous users summarises a function of the text, not a social programme. The book does not discuss the politics of preservation, a gap the essay above notes; inference must not supply a position the author did not write.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -9008,6 +9162,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "大西克礼真正想做的，是给日本美学建一张完整的范畴表：物哀、幽玄、寂，三格分别对应平安的文学、中世的能与近世的俳谐。《风雅论》只是这张表的第三格，不是一部独立的趣味论。他要的是体系，不是印象。\n\n而在「寂」这一格里，他真正想说的是：寂不是忧郁，是自由。流行的侘寂形象是枯、静、寡言；大西的六节却从忧郁一路走到幽默、游戏与闲寂。这个路线不是修辞的收束，而是论点的所在——寂是一种在约束里获得的余裕，能笑，能玩，能从规矩里退出来。若寂只是悲，它很快就会变成自我感动；幽默是它的防伪标记。",
+        "claim_en": "Onishi Yoshinori's real project is a complete table of Japanese aesthetic categories: mono no aware, yugen and sabi, corresponding to Heian literature, medieval no and early-modern haikai. Fugaron is the third cell of that table, not a free-standing essay on taste. He wants a system, not impressions.\n\nWithin the cell of sabi, his real claim is that sabi is not melancholy but freedom. The popular image is austere, quiet, taciturn; his six sections run from melancholy through humour and play to leisure. That route is not a rhetorical close but the thesis itself: sabi is an ease won inside constraint, able to laugh, to play, to step back from the rules. Were sabi merely sad it would collapse into self-regard; humour is its guarantee of authenticity.",
+        "why_zh": "第一，两本书的先后暴露了计划。一九三九年岩波先出《幽玄とあはれ》，一九四〇年才出《风雅论——「さび」の研究》，两书是姊妹篇。一个人先写幽玄与物哀，再写寂，很难说是三次独立的兴趣。三格并列，才看得出他要为日本文艺的整体经验建立一套可分析的语言。\n\n第二，六节的终点暴露了论点。第一节问侘与寂是否日本独有，第二节说侘是「优美之心」，第三节用虚实框架，第四节处理时间，第五节讲幽默，第六节收在闲寂、游戏与自由。若他只想描述枯淡，路线应当在第三或第四节结束。走到幽默与自由，说明前面的枯与静都是准备，余裕才是目的地。\n\n第三，方法暴露了野心。先清理语源与用例，再做契机的分析，最后用俳句验证——这是康德与新康德主义的程序：确立范畴，寻找经验对应物，说明普遍性。这套程序不是为鉴赏服务的，是为体系服务的。他自己也清楚其中的困难：若寂是日本独有的，它就不能是普遍范畴；反之亦然。全书在这两端往返，说明他要的正是那个普遍性。\n\n第四，俳论半部的做法暴露了标准。芭蕉与蕉门四家依次登场：去来的寂色、土芳的咏花咏雨、鬼贯的处处见诚、芜村的寂然伫立。他不是在鉴赏，是在找句法证据——一个范畴若真成立，应当能在破格、省略、季节错位里被指认出来。用可指认性作标准，这是体系的要求，不是趣味的要求。\n\n第五，中译的拆分发过来印证。繁体译本把三书合为一册，题作《日本美學：物哀、幽玄、侘寂》；简体本单出「侘寂」。同一批文本，两种装订，读者得到两种书。合订本让人看见表，单行本让人看见格。原书的结构本来支持前者。",
+        "why_en": "First, the sequence of two books betrays a plan. Iwanami issued Yugen and Aware in 1939 and Fugaron: A Study of Sabi in 1940 as its sister volume. Writing yugen and aware first and sabi second is hard to read as three separate interests; only the three cells together show an attempt to build an analysable language for the whole of Japanese literary experience.\n\nSecond, the endpoint of the six sections betrays the thesis. Section one asks whether wabi and sabi are uniquely Japanese; two calls wabi a heart of grace; three uses emptiness and substance; four treats time; five humour; six closes on leisure, play and freedom. A description of austerity could have ended at three or four. Going on to humour and freedom shows that the earlier dryness was preparation and ease the destination.\n\nThird, the method betrays the ambition. Clear etymology and usage, analyse into moments, test against haikai: this is the Kantian and neo-Kantian procedure of establishing a category, finding its empirical correlates and arguing universality. It serves a system rather than connoisseurship, and Onishi knows the built-in difficulty, shuttling between uniqueness and universality because universality is what he wants.\n\nFourth, the haikai half betrays the standard. Basho and four poets of his school appear in turn: Kiyorai's sabi colour, Joso on flowers and rain, Kikan on sincerity everywhere, Buson standing in stillness. He is not appreciating but seeking syntactic evidence, since a real category should be identifiable in ellipsis, broken form and seasonal displacement. Identifiability is a systemic requirement.\n\nFifth, the Chinese splitting confirms it in reverse. The traditional-Chinese volume binds all three as Japanese Aesthetics: Aware, Yugen, Wabi-Sabi; the simplified volume issues sabi alone. The same texts in two bindings give two books, and the original structure supports the former.",
+        "evidence": [
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "1939《幽玄とあはれ》在前，1940《风雅论》在后，岩波出版，两书为姊妹篇。先后与配对支持范畴表的读法。",
+            "en": "Yugen and Aware (1939) precedes Fugaron (1940), both Iwanami, as sister volumes; sequence and pairing support the table reading.",
+            "source": "岩波書店书目",
+            "source_en": "Iwanami catalogue",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "六节终点为幽默、游戏、闲寂与自由，而非枯淡。路线的终点即论点所在。",
+            "en": "The six sections end in humour, play, leisure and freedom rather than austerity; the endpoint carries the thesis.",
+            "source": "原书与中译章节结构",
+            "source_en": "original and Chinese section structure",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "第二节称侘为「优美之心」，把不足转化为优雅。此说与流行的粗陋印象相反，指向余裕而非匮乏。",
+            "en": "Section two calls wabi a heart of grace, converting lack into elegance, against the popular image of roughness.",
+            "source": "原书第二节",
+            "source_en": "section two",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "俳论半部以蕉门四家为句法证据：去来寂色、土芳咏花咏雨、鬼贯处处见诚、芜村寂然伫立。要求可指认性。",
+            "en": "The haikai half uses four poets as syntactic evidence, demanding that the category be identifiable in form.",
+            "source": "原书后半；中译目录",
+            "source_en": "second half; Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "第一节即问侘与寂是否日本独有，全书在独有与普遍之间往返。普遍性是问题，不是背景。",
+            "en": "Section one asks whether wabi and sabi are uniquely Japanese, and the book shuttles between uniqueness and universality throughout.",
+            "source": "原书第一节",
+            "source_en": "section one",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "繁体译本合三书为《日本美學：物哀、幽玄、侘寂》；简体本单出《日本侘寂》。合订本复原了范畴表。",
+            "en": "The traditional-Chinese edition binds all three; the simplified issues sabi alone. The omnibus restores the table.",
+            "source": "两版书目与封面",
+            "source_en": "both imprints and covers",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "研究",
+            "kind_en": "scholarship",
+            "zh": "Marinucci 2018 把寂的悖论结构与浪漫主义反讽并置；《国际美学词典》2019 称其仍是最全面的现代研究。体系性被后世确认。",
+            "en": "Marinucci (2018) reads sabi's paradox against Romantic irony; the International Lexicon of Aesthetics (2019) still calls it the most comprehensive modern study.",
+            "source": "Studi di Estetica 2018；Lexicon 2019",
+            "source_en": "Studi di Estetica 2018; Lexicon 2019",
+            "conf": "✓"
+          }
+        ],
+        "counter_zh": "最强的反读是惯例论。学院美学著作常以「自由」「游戏」收束，这是德国美学留下的文体习惯，从席勒的游戏冲动到康德的自由美，结尾谈自由几乎是格式。把格式读成论点，可能高估了大西的独创。若如此，六节的终点只是收束，真正的重心仍在第三、四节的虚实与时间。\n\n第二条反读针对范畴表。三书题材相邻，出版相连，未必等于一个先行计划。大西可能只是逐年推进，写到哪里算哪里；「表」是后人整理出来的秩序。要证明计划，需要自述或书信，目前没有。\n\n第三条反读针对幽默。书里把幽默列为寂的契机，行文却始终严肃，析理远多于会心。一个真正以幽默为鹄的的作者，或许会在文体上露出一点松弛。文体与论点的这一落差，至少说明幽默在他那里是分析对象，不是写作姿态。\n\n三条合起来给出更节制的读法：这是一部体系性的范畴研究，自由与幽默是其中两个契机，未必是全书的动机；范畴表是可信的结构描述，不必上升为作者的自觉纲领。",
+        "counter_en": "The strongest alternative is convention. Academic aesthetics often closes on freedom and play, a habit inherited from Schiller's play impulse and Kant's free beauty. Reading the format as the thesis may overstate Onishi's originality, and the real centre would remain sections three and four on emptiness and time.\n\nThe second objection concerns the table. Adjacent subjects and consecutive publication do not amount to a prior plan. He may have proceeded year by year, and the table may be an order supplied by later readers; proving a plan would need a self-statement or letters, which we lack.\n\nThe third concerns humour. It is listed as a moment of sabi, yet the prose stays serious, with far more analysis than gaiety. An author genuinely aiming at humour might loosen the style. The gap suggests humour is an object of analysis rather than a stance of writing.\n\nTogether these support a restrained reading: a systematic category study in which freedom and humour are two moments, not necessarily the motive; the table is a credible structural description without being a declared programme.",
+        "boundary_zh": "可以说的是：三书构成一个可辨认的范畴序列，六节的终点是自由与幽默，俳论半部以可指认性为标准。这三点由书目、章节结构与文本做法支持，把握较高。\n\n不能说的是：大西自觉地把三书写成一张表，或「自由」是他个人的精神诉求。前者缺自述，后者是把范畴读成心境，属于心理化。一九四〇年的时代语境可以解释这本书为什么被需要，不能解释作者心里想什么。\n\n还要分开两件事：原书的意图与中译的意图。简体本把「侘寂」合成一个生活方式标签，那是编者的意图，不是大西的。本节推断的对象始终是《风雅论》，不是封面上的《日本侘寂》。",
+        "boundary_en": "What can be said: the three books form a recognisable sequence of categories, the six sections end in freedom and humour, and the haikai half demands identifiability. Bibliography, structure and procedure support all three.\n\nWhat cannot: that Onishi consciously wrote a table, or that freedom was a personal spiritual demand. The first lacks a self-statement; the second psychologises a category. The context of 1940 can explain why the book was needed, not what its author felt.\n\nTwo intentions must be kept apart: the original's and the translation's. The simplified edition's lifestyle compound is the editor's intent, not Onishi's. The object of inference here is Fugaron, not the cover title.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -9620,6 +9851,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "这是合辑，两位作者要分开推断。\n\n九鬼一侧：他要替日本美意识取得与欧洲范畴平起平坐的资格。用最严格的现象学方法处理最不可译的江户行话，析出三个契机，再把结论归还给民族主体。方法上的普遍与结论上的特殊之间那道缝，正是他的用力处。\n\n阿部一侧：他要说的不是「江户很好色」，而是「一个在政治上没有资格的人群，在趣味上立了法」。色道是町人把欲望修养成制度的过程。作为大正教养主义的一路人，他真正关心的是修养的可能性：欲望可以被加工成道，人格因此可以被塑造。江户只是他找到的历史样本。",
+        "claim_en": "This is an omnibus, so the two authors need separate inferences.\n\nKuki wants analytic standing for Japanese aesthetic consciousness equal to European categories: the strictest phenomenological method applied to the least translatable Edo slang, three moments isolated, the conclusion returned to a national subject. The seam between universal method and particular conclusion is where his effort lies.\n\nAbe's claim is not that Edo was erotic but that a group without political standing legislated in taste. The erotic way is the process by which townsmen cultivated desire into an institution. As an heir of Taisho cultural idealism, his real concern is the possibility of cultivation: desire can be processed into a way, and personality thereby formed. Edo is the historical specimen he found.",
+        "why_zh": "先说九鬼。第一，序说拒绝经验归纳与语源考证，等于拒绝风俗研究的定位；他要的是本质。第二，结论收在「民族の背景」，形式分析本可提前结束，此节不删，说明它承担把结果归还给主体的功能。第三，一九三〇年的时间点落在国民美学生产的高峰，平卡斯一九九六年的研究把它放进这一潮流。第四，他一九二一至一九二八年在欧洲从学胡塞尔并与海德格尔往还，回国后偏偏选一个不可译的词——难译正是要证明的东西。\n\n再说阿部。第一，前编的起笔暴露主线：从「士农工商」的身份秩序与町人的胜利讲起，而不是从游里的风光讲起。主线是身份，不是情色。第二，两处「恶所」被写成可以花钱买到平等的地方——戏院与游里在秩序里被划为恶，却容纳了秩序不允许的东西。这是制度分析，不是风俗记。第三，他给藤本箕山与柳泽淇园大量篇幅：前者是游里的自我表述，后者是武士出身者的私记。两份材料都不是外部观察，而是当事人的自我理解。选这样的材料，说明他要问的是「他们如何把自己讲成一门道」。第四，日语维基百科把全书主线概括为「性欲生活之美化过程」。「美化」是修养词，不是揭露词；它指向加工与养成，不指向揭发与控诉。第五，他早年以《三太郎的日记》知名，属大正教养主义一路，讲人格与自我修养。带着这层背景读，「美化」二字的分量就清楚了。\n\n最后说合辑。两位作者都没有为这本书写作；把两篇合印、题作「色气」，是编者的意图，不是作者的。读者若要问「这本书想说什么」，答案有三层：九鬼的、阿部的、编者的。混在一起，三层都会失真。",
+        "why_en": "Kuki first. The introduction refuses empirical induction and etymology, hence the folklorist's position; he wants essence. The conclusion closes on national background although formal analysis could have ended earlier, so the section returns the result to a subject. The date, 1930, falls at the height of national-aesthetic production, and Pincus's 1996 study places it there. He was in Europe from 1921 to 1928 with Husserl and Heidegger and on returning chose an untranslatable word; the difficulty was the thing to prove.\n\nAbe next. Part one opens with the status order and the townsmen's victory, not with the scenery of the quarters: the thread is status, not eros. The two bad quarters are described as places where equality could be bought, spaces the order called bad that housed what the order forbade; this is institutional analysis. He gives much room to Fujimoto Kizan and Yanagisawa Kien, the first the quarters' own self-description, the second a samurai-born painter's private record. Neither is external observation; both are participants' self-understanding, which shows the question is how they talked themselves into a way. Japanese Wikipedia summarises the book as tracing the aestheticisation of erotic life, and aestheticisation is a word of cultivation, not exposure. Abe made his name with Santaro's Diary and belonged to Taisho cultural idealism, concerned with personality and self-cultivation; against that background the word carries weight.\n\nFinally the omnibus. Neither author wrote for this book. Printing the two together under a title about erotic charm is the editor's intent. Asking what this book wants to say has three answers, Kuki's, Abe's and the editor's, and collapsing them distorts all three.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "九鬼序说拒绝经验归纳与语源考证，结论收在「民族の背景」。方法普遍而结论特殊，缝隙即用力处。",
+            "en": "Kuki's introduction refuses induction and etymology; the conclusion closes on national background. Universal method, particular conclusion.",
+            "source": "九鬼本篇序说与结论",
+            "source_en": "Kuki's introduction and conclusion",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "九鬼篇先刊《思想》92、93 号（1930-01/02），同年岩波成书；时点落在国民美学潮流内。",
+            "en": "Kuki's essay ran in Shiso 92-93 (Jan-Feb 1930) and appeared from Iwanami that year, inside the national-aesthetic current.",
+            "source": "青空文庫卷首识语",
+            "source_en": "Aozora headnote",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "阿部前编自「士农工商」与町人的胜利起笔，经两处「恶所」进入游里。主线是身份秩序，不是情色风光。",
+            "en": "Abe's part one opens with the status order and the townsmen's victory before entering the quarters; the thread is status.",
+            "source": "中译前编章目",
+            "source_en": "Chinese contents of part one",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "阿部重用藤本箕山《色道大镜》与柳泽淇园《独寝》，皆为当事人自述而非外部观察。问的是自我理解。",
+            "en": "Abe relies on Fujimoto Kizan's mirror and Yanagisawa Kien's Hitorine, both participants' self-accounts rather than outside observation.",
+            "source": "中译前编章目",
+            "source_en": "Chinese contents of part one",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "研究",
+            "kind_en": "scholarship",
+            "zh": "日语维基概括阿部全书主线为「性欲生活之美化过程」，并称其为德川研究者必读书。「美化」属修养词汇。",
+            "en": "Japanese Wikipedia summarises Abe's thread as the aestheticisation of erotic life and calls the book required reading; the term belongs to cultivation.",
+            "source": "日语维基百科「阿部次郎」",
+            "source_en": "Japanese Wikipedia, Abe Jiro",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "阿部早年以《三太郎的日记》知名，属大正教养主义，讲人格与自我修养。此背景使「美化」读作修养而非揭露。",
+            "en": "Abe first became known for Santaro's Diary within Taisho cultural idealism, which makes aestheticisation read as cultivation.",
+            "source": "阿部次郎生平（通行记述）",
+            "source_en": "standard accounts of Abe's career",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "2012 吉林《日本意气》345 页附藤本箕山译文；2019 北京联合《日本色气》312 页删去。改题与删节属编者意图。",
+            "en": "The 2012 Jilin Iki (345 pp) included Fujimoto; the 2019 Beijing Iroke (312 pp) drops it. Retitling and cutting are editorial intent.",
+            "source": "两版书目与目录比对",
+            "source_en": "imprints and contents compared",
+            "conf": "◐"
+          }
+        ],
+        "counter_zh": "九鬼一侧最强的反读是技艺论：现象学家需要难例，いき 恰好够难，选它可能只为展示方法，与民族尊严无关；民族段落是当时论文的收束惯例。徐英瑾二〇一六年的语言游戏读法即取此路。\n\n阿部一侧最强的反读是史学论：他可能只是在做一部扎实的德川文艺社会史，「美化」是描述用语而非规范主张。把教养主义读进书里，有过度传记化的风险；一个学者早年的立场，不必然是他十年后著作的动机。此外，日语维基的概括属二手转述，用它承重本就有限。\n\n合辑一侧还有一条更硬的反读：所谓「编者意图」也可能只是市场行为，谈不上意图。改一个更好卖的书名、删一段更冷的原典，未必有可推断的想法，只有可观察的动作。把动作读成意图，是评论者的加戏。\n\n三条合起来给出更冷的读法：两篇各是一项专业工作，合印是一次出版操作；读者从中读出的对话，是读者的收获，不是任何一方的设计。",
+        "counter_en": "For Kuki the strongest alternative is craft: a phenomenologist needs a hard case and iki is hard, so the choice may demonstrate method rather than claim dignity, with the national passage a conventional close. Xu Yingjin's 2016 language-game reading takes this route.\n\nFor Abe it is scholarship: he may simply be writing solid social history, with aestheticisation a descriptive term rather than a normative claim. Reading cultural idealism into the book risks over-biographising, since an early position need not motivate a work a decade later; and the Wikipedia summary is second-hand and cannot bear much weight.\n\nFor the omnibus there is a harder objection: what is called editorial intent may be only market behaviour. A more saleable title and a dropped section are observable actions, not necessarily inferable thoughts.\n\nTogether these give a colder reading: two professional works and one publishing operation. The dialogue readers find is their gain, not anyone's design.",
+        "boundary_zh": "可以说的是：九鬼篇存在方法普遍而结论特殊的结构张力；阿部篇的主线是身份与制度而非情色，材料偏重当事人自述。这两点由文本与目录直接支持，把握较高。\n\n不能说的是：九鬼自觉参与国民美学生产，阿部自觉以江户为教养主义的样本，或编者有一个可陈述的配对理由。三者都缺自述；第三条尤其如此，中译本没有任何编者说明。\n\n最后一条界最重要：合辑没有单一作者意图。本节给出的是两个作者推断加一个出版操作描述，不是「这本书想说的一件事」。凡把三者合成一句话的读法，都应当被怀疑。",
+        "boundary_en": "What can be said: Kuki's text carries a structural tension between universal method and particular conclusion; Abe's thread is status and institution rather than eros, with sources weighted to participants' self-accounts. Both are directly supported by text and contents.\n\nWhat cannot: that Kuki knowingly joined national-aesthetic production, that Abe knowingly used Edo as a specimen of cultivation, or that the editor had a statable reason for the pairing. All three lack self-statements, and the Chinese edition carries no editorial note at all.\n\nThe last limit matters most: an omnibus has no single authorial intent. What is offered here is two inferences plus a description of a publishing operation, not one thing this book wants to say.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -10207,6 +10515,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "荷风真正想说的不是异国见闻，而是「我不属于这个正在进步的世界」。两本书是一份退场声明：他先用巴黎的旧美反驳纽约的新力，再用两者一起反驳明治日本的文明开化。美国册写「新」如何把人磨薄，法国册写贫穷如何被空气美化；两册的价值方向完全一致——反新、亲旧。\n\n更深一层，他要保住的是判断权。帝国上升期的日本要求国民用进步的语言说话：更快、更强、更文明。荷风拒绝这套词汇，改用色泽、气味、黄昏与雨巷。这不是逃避，而是另立尺度：当国家掌握了「什么算好」的定义权，他去国万里，是为了找一个还能用自己的眼睛判断的地方。找不到，就把旧东京当成那个地方。",
+        "claim_en": "Kafu's real statement is not foreign observation but 'I do not belong to this improving world'. The two books form a declaration of withdrawal: Parisian old beauty against New York's new force, and both against Meiji Japan's civilisation and enlightenment. The American volume records how newness wears people thin; the French records how poverty is beautified by the air. The direction of value is identical in both.\n\nBeneath that lies the right to judge. An ascending empire asked its citizens to speak the language of progress: faster, stronger, more civilised. Kafu refused that vocabulary for colour, smell, dusk and rainy lanes. This is not evasion but the setting up of another measure. When the state holds the definition of what counts as good, going ten thousand miles is a way to find a place where one's own eyes still judge; failing that, old Tokyo becomes the place.",
+        "why_zh": "第一，趣味先于经验。他一九〇三年赴美之前，读的是波德莱尔、魏尔伦一路；到了纽约，他拿欧洲的尺度量美国，觉得这里只有速度，没有韵味。一个装备已经定型的青年，去到世上最新的一座城市，记录下来的必然是不适。这不是偏见，而是方法：他不是去看美国，是去验证自己已有的趣味能不能在异国安放。\n\n第二，两册的取景一致到不像巧合。美国册不写工厂、不写议会、不写摩天楼的技术，只写人在街上如何站着、坐着、等船；法国册不写制度、不写政治，只写雾、旧书摊、咖啡馆的灯光与穷人脸上的光。凡是不能用「美」来处理的，他都绕开。两册隔着一年、隔着一个大洋，回避的东西却是同一类：制度、生产、进步。\n\n第三，禁令之后的路线证明这不是一时情绪。一九〇九年三月《法兰西物语》付印即遭禁，直到一九一五年才公开。此后他转向江户，写《隅田川》《墨东绮谭》，在旧东京的残影里安身。从巴黎的旧到东京的旧，方向没有变；变的只是地理。一个连贯的方向，很难用一时兴起解释。\n\n第四，《断肠亭日记》给出了长期证据。他从一九一七年记到去世，记天气、物价、花木、街上的艺人，也记空袭与占领。大事被压成一行，小事反而写得细。这个比例不是冷漠，是保存：当国家话语铺天盖地时，他只守住自己的感官。两本早期物语与这部日记之间，是同一种比例感。\n\n第五，回国后的位置说明他并未退出公共。由森鴎外、上田敏推荐任教庆应，一九一〇年创办《三田文学》，成为反自然主义的一支。他不是隐士，是在文学场里另立一派。反自然主义的要义正是拒绝把文学降为社会记录；这与他在美国拒绝写工厂，是同一个拒绝。",
+        "why_en": "First, taste precedes experience. Before leaving in 1903 he had read Baudelaire and Verlaine; in New York he measured the city on a European scale and found speed without savour. A young man whose equipment is already fixed, arriving in the newest of cities, will record discomfort. He went not to see America but to test whether his taste could be housed abroad.\n\nSecond, the framing of the two volumes agrees too closely for coincidence. The American book ignores factories, legislatures and the technology of skyscrapers, recording only how people stand, sit and wait for boats; the French ignores institutions and politics for fog, bookstalls, cafe light and the faces of the poor. Whatever cannot be handled as beauty is passed over. A year and an ocean apart, the two books avoid the same things: institution, production, progress.\n\nThird, the road after the ban shows this was not a mood. French Stories was suppressed at printing in March 1909 and circulated only in 1915. He then turned to Edo, to Sumida River and During the Rains, making a home in old Tokyo's remnants. From old Paris to old Tokyo the direction did not change, only the geography.\n\nFourth, the diary supplies long-term evidence. From 1917 until his death he recorded weather, prices, plants, street performers, air raids and occupation. Great events are compressed to a line; small things are written closely. That ratio is preservation: when national discourse fills the sky, he keeps his own senses.\n\nFifth, his position after returning shows he did not leave the public. Recommended by Ogai and Ueda Bin, he taught at Keio and founded Sanda Bungaku in 1910 as an anti-naturalist current. Anti-naturalism refuses to reduce literature to social record, the same refusal as declining to write about factories.",
+        "evidence": [
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "1903 赴美、1907 赴法、1908 回国；赴美前已浸淫法国世纪末文学。趣味定型在前，观察在后。",
+            "en": "America 1903, France 1907, return 1908; already steeped in French fin-de-siecle writing before departure. Taste fixed before observation.",
+            "source": "荷风年谱（通行记述）",
+            "source_en": "standard chronology",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《美利坚物语》23 篇写移民船、旅店、街道、唐人街、港口，不写工厂与议会。回避制度与生产，是取景的选择。",
+            "en": "The twenty-three American pieces cover ships, inns, streets, Chinatown and ports, not factories or legislatures; the avoidance is a framing choice.",
+            "source": "中译上册目录",
+            "source_en": "Chinese vol. 1 contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《法兰西物语》17 篇写拉丁区、外省、罗讷河、殖民港，篇名如《秋巷》《雾的夜》《面影》。取景与美国册同向。",
+            "en": "The seventeen French pieces take the Latin Quarter, provinces, the Rhone and colonial ports, with titles such as Autumn Lane and Night of Fog.",
+            "source": "中译下册目录",
+            "source_en": "Chinese vol. 2 contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "1909-03 付印即遭禁，1915 才公开；此后转向江户题材。禁令与转向之间是方向的延续，不是断裂。",
+            "en": "Suppressed at printing in March 1909, public in 1915; the turn to Edo follows. Continuity of direction, not rupture.",
+            "source": "博文馆版史；岩波文库解题",
+            "source_en": "Hakubunkan publication history; Iwanami note",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《断肠亭日记》自 1917 记至去世，大事压成一行，小事写细。与早期物语同一种比例感，是长期而非一时。",
+            "en": "The diary runs from 1917 to his death, compressing great events and expanding small ones; the same ratio as the early stories.",
+            "source": "日记通行介绍",
+            "source_en": "standard accounts of the diary",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "1910 创办《三田文学》，由森鴎外、上田敏推荐任教庆应，成为反自然主义一支。拒绝文学降为社会记录。",
+            "en": "Founded Sanda Bungaku in 1910 and taught at Keio on Ogai's and Ueda Bin's recommendation, an anti-naturalist current.",
+            "source": "荷风年谱与文学史记述",
+            "source_en": "chronology and literary histories",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "「异国放浪记」为中文合辑题名，非原书名。合读所见的一贯性，有一部分由编者制造，须与作者意图分开。",
+            "en": "The umbrella title is the Chinese editor's, not Kafu's; part of the coherence seen in reading them together is editorial.",
+            "source": "两书原书目与中译合辑书目",
+            "source_en": "original imprints and the Chinese set",
+            "conf": "✓"
+          }
+        ],
+        "counter_zh": "最强的反读是市场论。一九〇八年前后的日本出版界，异国见闻是有市场的题材；一个刚回国、需要文名的青年，写两本好卖的短章，是最合理的解释。反近代的连贯性可能是后来才被读出来的：先有作品，后有形象。\n\n第二条反读针对禁令。转向江户未必是立场的延续，也可能是审查与市场共同挤出的路径：写当代西方有风险，写旧东京安全且有读者。把被迫的路径读成自觉的选择，是回溯性的抬举。\n\n第三条反读针对日记。记天气物价花木，也可能只是日记这种文体的常态，不足以证明一种抵抗的姿态。用文体惯例承担动机，证据偏薄。\n\n第四条更直接：荷风出身官宦之家，有银行职经历，有回程船票。他的「不属于」是有退路的不属于。真正的退场需要代价，他没有付。若把这份舒适读成反抗，就把趣味误认成了立场。\n\n四条合起来给出更冷的读法：这是一位趣味早熟的青年写了两本成功的异国短章，遇禁之后转向安全题材，晚年形成风格；连贯性是真实的，但它是结果，不是计划。",
+        "counter_en": "The strongest alternative is the market. Around 1908 foreign observation sold well in Japan; a young man back home and needing a reputation writing two saleable volumes is the simplest explanation. The anti-modern coherence may have been read back after the works made the image.\n\nThe second objection concerns the ban. The turn to Edo may be a path squeezed out by censorship and the market rather than a continued position: writing the contemporary West was risky, old Tokyo safe and readable. Reading a forced path as a chosen one is retrospective flattery.\n\nThe third concerns the diary. Recording weather, prices and plants may be simply what diaries do, too thin to carry a stance of resistance.\n\nThe fourth is more direct. Kafu came from an official family, had bank employment and a return ticket. His not-belonging had an exit. Real withdrawal costs something, and he did not pay; reading comfort as resistance mistakes taste for position.\n\nTogether these give a colder reading: a precociously formed taste produced two successful volumes, a ban redirected it to safer material, and a style formed in old age. The coherence is real but is a result, not a plan.",
+        "boundary_zh": "可以说的是：两册的取景高度一致，回避制度与生产；禁令之后的题材转向延续了同一方向；反自然主义的文学位置与这一取向相合。三点由目录、版史与文学史支持，把握较高。\n\n不能说的是：荷风在赴美之前就有自觉的反近代纲领，或他的退场是一种付出代价的抵抗。前者无自述，后者与他的阶级位置矛盾。日记的比例感是旁证，不能单独承重。\n\n还有一条界：中文合辑把两书连成一条线，这条线有一部分是编者画的。本节推断的对象是一九〇八与一九〇九年的两本书，不是二〇二〇年的套装；「放浪」二字所暗示的一贯性，应当打折使用。",
+        "boundary_en": "What can be said: the two volumes frame their subjects almost identically, avoiding institution and production; the post-ban turn continues the direction; the anti-naturalist position fits. Contents, publication history and literary history support all three.\n\nWhat cannot: that Kafu held a conscious anti-modern programme before departure, or that his withdrawal was a resistance that cost him something. The first lacks a self-statement; the second conflicts with his class position. The diary's ratio is corroborative only.\n\nOne further line: the Chinese set draws part of the line between the books. The object of inference is the two books of 1908 and 1909, not the 2020 package, and the coherence suggested by the umbrella title should be discounted.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -10806,6 +11191,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "漱石真正想做的，是在职业写作的消耗里保住自己的感觉。小品不是长篇的边角料，是手感练习：写准一条蛇、一只柿子、一盆炭火，判断压到最低，让细节自己说话。一个靠长篇吃饭的人，需要一种不被产量拖垮的写作。\n\n晚期的《硝子戸の中》把这件事推到极限。身体缩小到一张床，世界的入口只剩声音与记忆；他于是要重新量一遍「我」：我不等于我的身体，也不等于我的记忆，我是那个还在看、还在听的东西。两书相隔六年，做的却是同一件事——在外部条件不断收窄时，守住一个还能判断的位置。",
+        "claim_en": "Soseki's real work is to keep his senses intact under the drain of professional authorship. The sketches are not leftovers from novels but exercises in touch: get a snake, a persimmon or a brazier exactly right, keep judgement low, let the detail speak. A man who lives by long novels needs a kind of writing that output cannot exhaust.\n\nInside My Glass Doors pushes this to the limit. The body contracts to a bed and the world enters only as sound and memory, so the 'I' must be measured again: I am not my body, nor my memory, but the thing still looking and listening. Six years apart, the two books do one job, holding a position from which judgement is still possible as external conditions narrow.",
+        "why_zh": "第一，编排暴露了身份。中译第一辑以《元旦》开篇、以《入社辞》收束：一头是节日的人情，一头是职业的声明。中间的蛇、柿子、火盆、下宿、猫的墓便有了位置——那是一个职业小说家在日常里练眼的记录。把职业声明放在卷末，等于给整辑小品盖了一个「这是工作的一部分」的戳。\n\n第二，方法有师承，说明是训练不是抒情。写生来自正冈子规一脉：先看准一个物件，再让记忆附上来。写猫的墓，他不写悲伤，写墓碑的大小、土的颜色、自己经过时的脚步。判断被压到最低，细节自己说话。这套做法有来源、有规矩，可以重复，也可以失败——凡是能失败的，就是训练。\n\n第三，一九一五年的双写暴露了实验意图。《硝子戸の中》一至二月在《朝日新闻》连载三十九回，六月起《道草》在同一份报上连载。同一批材料——养父母的纠葛、早年的寄养、婚姻的难处——一次写成随笔，一次写成小说。同一个人同一年用两种文体处理同一段过去，很难说是巧合；这更像有意的对照实验。\n\n第四，病的写法暴露了测量意图。他写呕、痛、不能翻身、听见护士的鞋声，不写隐喻。健康的人用年月日量时间，病人用一次呕吐、一次入睡、一次脚步声量；空间也从房间收到床、窗、门。他只记录尺度变化，不诉苦。记录尺度而不抒发感受，这是测量者的姿态。\n\n第五，演讲与随笔的分工反过来印证。一九一四年他在学习院讲《私の個人主義》，把立场说清楚：个人的自由以他人的自由为界。但随笔里几乎不出现这些词。立场留在演讲，感受留在小品——两种文字分工，说明他清楚随笔承担的不是论战，而是感觉的维持。",
+        "why_en": "First, the arrangement betrays the identity. Part I opens with New Year's Day and closes with the statement on joining the company: social obligation at one end, professional declaration at the other. Between them the snake, persimmons, brazier, lodging and cat's grave take their place as a professional novelist's record of training the eye. Ending with the declaration stamps the whole part as part of the job.\n\nSecond, the method has a lineage, which makes it training rather than lyric. Sketching comes from Masaoka Shiki: see the object accurately, then let memory attach. On the cat's grave he writes the size of the stone, the colour of the soil, his own footsteps passing. Judgement is kept low. A procedure with a source and rules, which can be repeated and can fail, is training.\n\nThird, the double writing of 1915 betrays experiment. Inside My Glass Doors ran in thirty-nine instalments in January and February; Grass on the Wayside began in the same paper in June. The same material, foster parents, early boarding, marital difficulty, is handled once as essay and once as fiction. One man, one year, two forms, one past: this looks like a deliberate comparison.\n\nFourth, the writing of illness betrays measurement. He records retching, pain, the inability to turn, a nurse's footsteps, without metaphor. The healthy measure time in years and months, the patient in a vomiting, a sleep, a footstep; space contracts from room to bed to window to door. Recording a change of scale without complaint is the posture of a measurer.\n\nFifth, the division between lecture and essay confirms it. In 1914 he told the Gakushuin audience in My Individualism that individual freedom is bounded by the freedom of others, yet those words barely appear in the essays. Positions stay in lectures, sensations in sketches; the division shows he knew the essays were not for argument but for keeping feeling alive.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "中译第一辑以《元旦》起、以《入社辞》止。节日人情与职业声明两端框住日常琐碎，编排即身份声明。",
+            "en": "Part I opens with New Year's Day and closes with the joining statement, framing daily fragments between social obligation and professional identity.",
+            "source": "中译第一辑目录",
+            "source_en": "Chinese Part I contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《猫之墓》写墓碑大小、土色与脚步，不写悲伤；判断压低，细节自陈。此为可重复、可失败的方法。",
+            "en": "The Cat's Grave records the stone's size, soil colour and footsteps rather than grief; a repeatable, fallible procedure.",
+            "source": "《永日小品》该篇",
+            "source_en": "the piece in Eijitsu Shohin",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "1909-01 起《朝日新闻》连载，1910-05 收入春阳堂《四篇》，与《梦十夜》《文鸟》同刊。短章被当作同一类手艺练习。",
+            "en": "Serialised in the Asahi from January 1909, collected in Shunyodo's Four Pieces (May 1910) with Ten Nights of Dreams and The Skylark.",
+            "source": "春阳堂《四篇》书目",
+            "source_en": "Shunyodo Four Pieces imprint",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "1915 年 1–2 月《硝子戸の中》连载 39 回，同年 6 月起《道草》连载。同批材料两种文体，构成对照。",
+            "en": "Inside My Glass Doors ran in 39 instalments in Jan-Feb 1915; Grass on the Wayside began that June. One material, two forms.",
+            "source": "朝日新闻连载记录；岩波书目",
+            "source_en": "Asahi serialisation records; Iwanami catalogue",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《病危》《生死》《病床上的天地》写呕、痛、不能翻身与护士鞋声，不用隐喻。记录尺度而非抒发感受。",
+            "en": "The illness pieces record retching, pain, immobility and a nurse's footsteps without metaphor: scale rather than sentiment.",
+            "source": "中译第二辑相关篇目",
+            "source_en": "the relevant pieces in Part II",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "自述",
+            "kind_en": "self-statement",
+            "zh": "1914 年学习院演讲《私の個人主義》主张个人自由以他人自由为界；此类词几乎不入随笔。立场与感受分工明确。",
+            "en": "The 1914 Gakushuin lecture My Individualism bounds freedom by others' freedom; such words barely enter the essays. A clear division of labour.",
+            "source": "演讲文本",
+            "source_en": "the lecture text",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "写生法承自正冈子规（1902 卒）。方法有师承，说明小品是训练而非余兴。",
+            "en": "Sketching descends from Masaoka Shiki (d. 1902); a lineage makes the sketches training rather than pastime.",
+            "source": "子规写生论与漱石记述",
+            "source_en": "Shiki's sketching theory and Soseki's accounts",
+            "conf": "◐"
+          }
+        ],
+        "counter_zh": "最强的反读是报刊论。这些短章是报纸连载的活儿：篇幅由版面定，题材由日常定，节奏由刊期定。把连载产物读成手感训练，可能倒因为果——不是他为了保住感觉而写小品，是报纸需要小品，他写了，顺手写得好。\n\n第二条反读针对一九一五年的双写。《道草》是长篇契约，《硝子戸の中》是随笔连载，两者并行可能只是排期结果。同一批材料出现在两处，也可能因为一个人此时能想起的就是这些；不必是有意的对照实验。\n\n第三条反读针对病的测量。病中写具体感觉，可能只是写作的自然结果：一个不能出门的人，可写的本来就只剩身体与声音。把处境读成方法，是把限制误认为选择。\n\n第四条针对「保手感」这个说法本身。它是功能主义解释：先假定作家需要维护某种能力，再去找证据。可是没有自述支持这个假定。漱石留下的演讲与书信里，并没有把小品定义为练习。\n\n四条合起来给出更朴素的读法：一位职业小说家在报纸上持续写短章，早期写物，晚年写病与记忆，写得好是因为他本来就好；连贯性来自人，不来自计划。",
+        "counter_en": "The strongest alternative is the newspaper. These are serial pieces whose length follows the page, subject follows daily life and rhythm follows the schedule. Reading them as exercises in touch may reverse cause and effect: the paper needed short pieces, he wrote them, and wrote them well because he was good.\n\nThe second objection concerns 1915. Grass on the Wayside was a novel commitment and Inside My Glass Doors an essay serial; running both may be scheduling. The same material appearing twice may simply be what a man could recall that year, not a designed comparison.\n\nThe third concerns illness. Writing concrete sensations may be the natural result of confinement: someone who cannot go out has only the body and sounds left to write. Reading a situation as a method mistakes a limit for a choice.\n\nThe fourth concerns the phrase itself. Keeping one's touch is a functionalist explanation that assumes a capacity needing maintenance and then finds evidence. No self-statement supports the assumption; the lectures and letters do not define the sketches as practice.\n\nTogether these give a plainer reading: a professional novelist wrote short pieces continuously, things early and illness and memory late, and wrote them well because he was good. The coherence comes from the man, not a plan.",
+        "boundary_zh": "可以说的是：两书在方法上连续——判断压低、细节自陈、尺度记录；一九一五年的双写与演讲随笔的分工，都由版本与文本直接支持。这一层把握较高。\n\n不能说的是：漱石自觉地把小品当作维持手感的训练，或晚期的自我测量是一项哲学计划。两者都缺自述。报刊节奏与病中处境提供了更节制的解释，且不能被现有材料排除。\n\n还有一条界必须划：漱石的「我」是写出来的。他会删改、合并、重排。本节推断的是这个被写出来的「我」的功能，不是床上那个人的心理。把两者混同，就把文学推断做成了传记断言。",
+        "boundary_en": "What can be said: the two books are continuous in method, with judgement lowered, details left to speak and scale recorded; the double writing of 1915 and the lecture-essay division are directly supported by imprints and texts.\n\nWhat cannot: that Soseki consciously treated the sketches as maintenance of touch, or that the late self-measurement was a philosophical plan. Both lack self-statements, and the newspaper rhythm and the situation of illness offer more restrained explanations that present material cannot exclude.\n\nOne line must be drawn: Soseki's 'I' is written. He cuts, merges and rearranges. The inference here concerns the function of that written 'I', not the psychology of the man in the bed; conflating them turns literary inference into biographical assertion.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -11404,6 +11866,83 @@
             "conf": "✓"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "芥川在这些文字里真正想做的，是把自己安置进一条谱系，并证明写作是一门可以练的手艺。写漱石、写森鴎外、写织匠龙村平藏，是给自己排师承；纪行练眼，杂记练判断。他要的不是「鬼才」的天赋神话，而是匠人的资格——凡把一件事做到极处的人，他都愿意看，也都愿意与之同列。\n\n更深一层，他要抵抗的是自己的传奇。三十五岁自杀、遗作满纸死亡意识，这个形象在他生前已经开始成形。这些纪行、怀人与杂记展示的是另一种自我：好奇、挑剔、谐谑、用功。可惜中文选本以「妄想者手记」为名，又把他推回那个传奇里去。",
+        "claim_en": "In these pieces Akutagawa is placing himself in a lineage and showing that writing is a trainable craft. Writing of Soseki, Ogai and the weaver Tatsumura Heizo arranges his masters; travel trains the eye, miscellany trains judgement. What he wants is not the myth of genius but the credentials of a craftsman: anyone who carries one thing to its limit is worth watching and worth standing beside.\n\nBeneath that lies resistance to his own legend. Suicide at thirty-five and posthumous pages saturated with death: the image was forming while he lived. These travel notes, portraits and miscellanies show another self, curious, fastidious, comic, industrious. The Chinese title, Notes of a Deluded Man, pushes him back into the legend.",
+        "why_zh": "第一，写师友的笔温暴露了目的。《漱石先生的故事》《漱石山房的冬天》《葬仪记》一篇比一篇冷，记的是脾气、习惯、病中的样子，也记自己作为晚辈的局促。悼亡不需要这么多局促；排谱系需要。他在告诉读者「我属于漱石这一条线」，同时用冷笔保住自己的位置：我是传人，不是门徒。\n\n第二，选材越出文学，暴露了标准。《龙村平藏氏的艺术》写一位织匠，写纹样、配色与手艺人的执拗，笔调近乎鉴赏。若他只关心文学，这篇不必写。把它放在写师友的几篇旁边，标准就清楚了：他敬的是「把一件事做到极处」，不限于哪一行。这是匠人的标准，不是文人的标准。\n\n第三，纪行的写法暴露了训练。《大川的水》《松江印象记》《枪岳纪行》不记行程，只记一地给身体的刺激：水声、雪光、山道的陡、旅馆的冷。这不是地方志，是感觉的校准。一个对不适特别敏感的人，走到哪里都先量一量自己的反应——量，就是练。\n\n第四，杂记的密度暴露了技术。《澄江堂杂记》从大正七年写到十三年，一条一条，短的只有几行，却要有转折、证据与收束。这种文体在日本随笔传统里其来有自，在汉语里对应笔记。笔记的要义是不成体系而有判断力，靠的是单条的密度。密度可以练，天赋不能练；他选了可练的那一样。\n\n第五，身后的神话反过来印证。一九三五年菊池寛设立芥川赏，同年设直木赏给大众文学；两个奖一分，芥川就成了纯文学的标尺，「新人」与「芥川」被绑在一起。这个形象是后人做的，与他生前这些用功的短章并不重合。书里那个挑剔、好奇、会写织匠的人，正是被这个形象遮住的部分。",
+        "why_en": "First, the temperature of the portraits betrays the purpose. The Soseki pieces grow colder one after another, recording temper, habits, illness and his own awkwardness as a junior. Mourning does not need so much awkwardness; arranging a lineage does. He tells readers he belongs to Soseki's line while keeping his own position with a cold brush: an heir, not a disciple.\n\nSecond, the range beyond literature betrays the standard. The piece on Tatsumura Heizo writes a weaver's patterns, colours and obstinacy in the tone of connoisseurship. A man concerned only with literature need not write it. Beside the portraits the standard is clear: reverence for carrying one thing to its limit, in any trade. That is a craftsman's standard.\n\nThird, the travel writing betrays training. The river, Matsue and Mount Yari pieces record no itinerary, only what a place does to the body: water sound, snow glare, steepness, the cold of an inn. This is calibration of sensation. A man sensitive to discomfort measures his own reaction wherever he goes, and measuring is practice.\n\nFourth, the density of the miscellanies betrays technique. Seido Hall Miscellanies ran from 1918 to 1924, item by item, some only a few lines, each needing a turn, evidence and a close. The form has a lineage in Japanese essays and an analogue in Chinese notebook writing, whose point is judgement without system, carried by the density of the single entry. Density can be practised; genius cannot.\n\nFifth, the posthumous myth confirms it in reverse. In 1935 Kikuchi Kan founded the Akutagawa Prize, with the Naoki Prize for popular fiction the same year; the split made Akutagawa the measure of pure literature and bound his name to newcomers. That image was made afterwards and does not match these industrious short pieces.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《漱石先生的故事》《漱石山房的冬天》《葬仪记》一篇比一篇冷，兼记自己的局促。冷笔与局促是排谱系的笔法。",
+            "en": "The three Soseki pieces grow colder and record his own awkwardness; the cold brush and the awkwardness are the technique of lineage.",
+            "source": "中译人物组篇目与正文",
+            "source_en": "Chinese contents and text of the portraits",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "《龙村平藏氏的艺术》写织匠的纹样、配色与执拗。选材越出文学，标准是「把一件事做到极处」。",
+            "en": "The Tatsumura Heizo piece writes a weaver's patterns and obstinacy; the standard is carrying one thing to its limit, in any trade.",
+            "source": "中译人物组该篇",
+            "source_en": "the piece in the Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "纪行九题不记行程，只记水声、雪光、山道之陡与旅馆之冷。取景是感觉校准，不是地理知识。",
+            "en": "The nine travel pieces record no itinerary, only water sound, snow glare, steepness and inn cold: calibration rather than geography.",
+            "source": "中译纪行组篇目",
+            "source_en": "Chinese travel-group contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "《澄江堂杂记》初出大正 7–13 年（1918–1924），一条一条写成。六年跨度支持「练」而非「一时兴到」。",
+            "en": "Seido Hall Miscellanies appeared 1918-1924, entry by entry; six years support practice rather than a passing mood.",
+            "source": "青空文庫初出信息",
+            "source_en": "Aozora first-publication data",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "全书 38 题分纪行、人物、杂记三组，无《侏儒的话》《某阿呆的一生》《齿轮》。晚期死亡意识文本缺席，见出另一自我。",
+            "en": "Thirty-eight pieces in three groups, without Dwarf's Words, The Life of a Fool or Cogwheels; the late death-saturated texts are absent.",
+            "source": "中译目录逐条核对",
+            "source_en": "item-by-item check of the Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "接受",
+            "kind_en": "reception",
+            "zh": "1935 年菊池寛设芥川赏，同年设直木赏；两奖之分把芥川固定为纯文学标尺。神话是身后造的。",
+            "en": "Kikuchi Kan founded the Akutagawa Prize in 1935, with the Naoki Prize the same year; the split fixed him as the measure of pure literature.",
+            "source": "芥川賞沿革",
+            "source_en": "history of the Akutagawa Prize",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "「妄想者手记」为中文编者题名，指向晚期；分组亦为编者所加。本书的一半「意图」属于编者，须与芥川分开。",
+            "en": "The Chinese title points late and the grouping is editorial; half the 'intent' of this volume belongs to the editor.",
+            "source": "中译版权页与目录",
+            "source_en": "Chinese colophon and contents",
+            "conf": "✓"
+          }
+        ],
+        "counter_zh": "最强的反读是应酬论。写森鴎外、写漱石、写葬仪，多半是约稿与义理：师长辈去世，门生故旧要写文章，这是文坛的义务，不是自我设计。把应酬读成排谱系，可能把礼节当成了策略。\n\n第二条反读针对织匠一篇。芥川对工艺有兴趣，也可能只是题材新鲜、约稿恰好如此。用一篇文章确立一个人的价值标准，样本太小。\n\n第三条反读最硬：这本书是选本。三十八题、三组、一个指向晚期的书名，都是编者的手。读者感到的「匠人自我形象」，很可能是选本制造的统一性；换一个人来选，多收《侏儒的话》、少收几篇纪行，形象就变了。选本从来不是中立的，它是一次解释。\n\n第四条针对「抵抗传奇」。说他在抵抗自己的传奇，需要证明他生前已感到那个传奇在成形。现有材料里没有这样的自述；这一条更像评论者的后见之明。\n\n四条合起来给出更冷的读法：这是一批因约稿、兴趣与专栏而写的短章，身后被神话，如今又被选本重新塑形；芥川本人的意图，可能比我们读出来的要小得多。",
+        "counter_en": "The strongest alternative is obligation. Writing on Ogai, Soseki and a funeral is largely commission and duty: when a senior dies, juniors write. Reading obligation as self-design mistakes etiquette for strategy.\n\nThe second objection concerns the weaver. Interest in craft may be a fresh subject or a convenient commission; one piece is too small a sample to establish a man's standard of value.\n\nThe third is hardest: this is a selection. Thirty-eight pieces, three groups and a late-pointing title are the editor's hand. The craftsman's self-image readers feel may be a unity manufactured by selection; another editor, adding Dwarf's Words and dropping travel, would produce another image. A selection is never neutral; it is an interpretation.\n\nThe fourth concerns resisting the legend. That requires evidence he felt the legend forming while alive, and no self-statement supplies it; this looks like the critic's hindsight.\n\nTogether these give a colder reading: short pieces written to commission, interest and column deadlines, mythologised after death and reshaped now by a selection. Akutagawa's own intent may be much smaller than what we read out.",
+        "boundary_zh": "可以说的是：这批文字在写法上呈现一致的训练特征——冷笔写人、校准写地、密度写判断；身后被固定为纯文学标尺，与这批文字的面貌不合。前者由文本支持，后者由奖项沿革支持，把握较高。\n\n不能说的是：芥川自觉地以这批文字排谱系、立匠人形象，或有意抵抗自己的传奇。三者都缺自述，且第三条与选本的性质冲突。\n\n最重要的一条界：本书是选本，「作者所欲言」在此有一半属于编者。本节推断的对象是这三十八篇文字里可辨认的写作姿态，不是《妄想者手记》这本书的编排意图；后者已在局限栏另作批评。两者不可混为一谈。",
+        "boundary_en": "What can be said: the pieces share marks of training, a cold brush for people, calibration for places, density for judgement; and the posthumous fixing as the measure of pure literature does not match them. Text supports the first, prize history the second.\n\nWhat cannot: that Akutagawa consciously used them to arrange a lineage, build a craftsman's image or resist his legend. All three lack self-statements, and the third conflicts with the nature of a selection.\n\nThe most important limit: this is a selection, and half of 'what the author meant' here belongs to the editor. The object of inference is the writing posture recognisable in these thirty-eight pieces, not the arrangement of the volume called Notes of a Deluded Man, which is criticised separately under limits.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {
@@ -11680,7 +12219,7 @@
       "why_zh": "近代日本美学里方法论最自觉的一篇：九鬼用现象学的刀，解剖一个只可意会的江户词。",
       "why_en": "The most methodologically self-conscious essay in modern Japanese aesthetics: Kuki dissects an untranslatable Edo word with a phenomenological scalpel.",
       "background": {
-        "zh": "九鬼周造（1888—1941）曾在欧洲随胡塞尔、海德格尔学习，《「いき」の構造》1930 年先刊于《思想》，同年由岩波书店出版。他把江户游里的「粹」规定为三个契机的统一：媚态（对异性的挑逗）、意気地（不服输的骨气）、諦め（看透之后的达观）。英译由 Hiroshi Nara 完成，题作 The Structure of Detachment（University of Hawai'i Press, 2004）。",
+        "zh": "九鬼周造（1888—1941）曾在欧洲随胡塞尔、海德格尔学习，《「いき」の構造》1930 年先刊于《思想》，同年由岩波书店出版。他把江户游里的「粹」规定为三个契机的统一：媚态（对异性的挑逗）、意気地（不服输的骨气）、諦め（看透之后的达观）。英译由 Hiroshi Nara 完成，题作《The Structure of Detachment》（University of Hawai'i Press, 2004）。",
         "en": "Kuki Shūzō (1888–1941) studied in Europe with Husserl and Heidegger. The Structure of Iki appeared in Shisō in 1930 and from Iwanami the same year. He defines Edo's iki as the unity of three moments: coquetry, defiance and resignation. Hiroshi Nara's English translation is The Structure of Detachment (University of Hawai'i Press, 2004).",
         "conf": "✓ 原刊与英译",
         "conf_en": "✓ first publication and English translation"
@@ -11901,6 +12440,83 @@
             "url": "https://www.jstage.jst.go.jp/article/jnpa/13/0/13_116/_article/-char/ja"
           }
         ]
+      },
+      "author_intent": {
+        "claim_zh": "九鬼真正想做的，是替日本美意识取得一张与欧洲范畴平起平坐的资格证。他选一个最难译的词，用欧洲最严格的方法处理它，然后宣布其中析出的结构具有普遍有效性。这是一次双向的声明：对欧洲说，我们的材料经得起你们的方法；对日本说，我们的趣味不是情调，是可以被分析的范畴。\n\n更深一层，他要保住的是尊严而不是内容。一九三〇年的日本正在急速西化，本土经验若不能被表述为普遍知识，就只能被降为民俗。九鬼把「いき」从街谈里取出来，放进本质直观的框架，正是要阻止这次降级。结论落在「民族の背景」，不是附会，而是这份资格证的落款。",
+        "claim_en": "Kuki's real aim was to secure for Japanese aesthetic consciousness a certificate of equality with European categories. He chose the least translatable word, handled it with the most rigorous European method, and declared the resulting structure universally valid. The statement runs both ways: to Europe, our material withstands your method; to Japan, our taste is not atmosphere but an analysable category.\n\nBeneath that lies dignity rather than content. In 1930 Japan was westernising fast, and local experience that could not be stated as universal knowledge would be demoted to folklore. Lifting iki out of street talk into eidetic intuition was a way to prevent that demotion. The closing section on national background is not an appendix but the signature on the certificate.",
+        "why_zh": "第一，方法与材料的配比本身就是论证。胡塞尔式的本质直观是当时欧洲最严格的方法之一，江户游里的行话是最地方性的材料。把两者接在一起，不是随机的搭配，而是一个证明结构：如果最地方的材料能产出最普遍的结构，那么地方性就不再是缺陷。九鬼在序说里明确拒绝经验归纳与语源考证，等于宣布他不接受「这只是风俗研究」的定位。\n\n第二，结论那一节不能删。若他只想做形式分析，「民族の背景」在逻辑上是多余的：三个契机已经析出，外延已经验证，论文可以在此结束。它没有被删，说明它承担着论文之外的功能——把分析结果归还给一个主体。这个主体不是意识，是日本民族。一篇以普遍性为方法的文章，最后把结论交给一个特殊主体，这个转折泄露了真正的动机。\n\n第三，时间点不是巧合。论文先刊《思想》第九十二、九十三号，一九三〇年一月与二月，同年岩波成书。莱斯利·平卡斯一九九六年的研究把它放回两次大战之间的「国民美学」潮流：那时日本学院正在生产可以对外表述的日本性。九鬼的书是这一潮流里最早也最精致的一件。文本里的民族框架由他自己写下，这是事实；他为何必须那样写，才是解释。\n\n第四，留学经历提供了动机的形状。一九二一至一九二八年他在欧洲，听胡塞尔的课，与海德格尔有往还。回国后第一批重要工作之一，是处理一个几乎不可译的日语词。这个选择本身有意味：他没有选一个已经有欧洲对应物的题目，偏偏选了那个只能在使用中成立的词。难译，正是要证明的东西。\n\n第五，译名史反过来印证。Hiroshi Nara 二〇〇四年的英译本题作《The Structure of Detachment》，用 detachment 对译いき，抓住谛观而丢失媚态；中文在「意气」与「粹」之间摇摆。半个多世纪过去，这个词仍然不能被安稳地翻译。九鬼当年选择它，等于选择了一道必须以方法而非词汇来通过的关口。",
+        "why_en": "First, the pairing of method and material is itself the argument. Husserlian eidetic intuition was among the most rigorous European methods; the slang of the Edo quarters was the most local of materials. Joining them is a proof structure: if the most local material yields the most universal structure, locality ceases to be a defect. By explicitly refusing empirical induction and etymology in the introduction, Kuki declines the position of a folklorist.\n\nSecond, the closing section cannot be deleted. A purely formal analysis could end once the three moments are isolated and the extension tested. That the section on national background survives shows it carries a function beyond the paper: returning the result to a subject, and that subject is not consciousness but the Japanese nation. A universal method handing its conclusion to a particular subject leaks the motive.\n\nThird, the date is not accidental. The essay ran in Shiso 92-93 in January and February 1930 and appeared from Iwanami that year. Leslie Pincus's 1996 study places it within the interwar current of national aesthetics, when Japanese scholarship was producing a Japan-statement for export. That the national frame is in Kuki's own sentences is a fact; why he had to write it that way is the interpretation.\n\nFourth, the years abroad give the motive its shape. From 1921 to 1928 he was in Europe, attending Husserl and in contact with Heidegger. One of his first major works on returning handles a nearly untranslatable Japanese word. He did not choose a topic with a ready European equivalent; the difficulty of translation was the thing to be proved.\n\nFifth, the history of translation confirms it. Nara's 2004 version, The Structure of Detachment, catches resignation and loses coquetry; Chinese wavers between yiqi and cui. Decades later the word still cannot be settled. Choosing it meant choosing a gate that could be passed only by method, not by vocabulary.",
+        "evidence": [
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "序说声明不从经验归纳、不从语源考证入手，而以本质直观处理。拒绝风俗研究的定位，是资格声明的第一步。",
+            "en": "The introduction refuses empirical induction and etymology in favour of eidetic intuition, declining the folklorist's position.",
+            "source": "本篇序说",
+            "source_en": "the essay's introduction",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "文本",
+            "kind_en": "text",
+            "zh": "结论收在「民族の背景」。形式分析本可在此前结束；此节不可删，说明它承担把结果归还给民族主体的功能。",
+            "en": "The conclusion closes on national background. Formal analysis could have ended earlier; the section returns the result to a national subject.",
+            "source": "本篇结论；中译目录",
+            "source_en": "conclusion; Chinese contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "先刊《思想》第 92、93 号（1930-01/02），同年岩波成书。时点落在国民美学生产的高峰期。",
+            "en": "First in Shiso 92-93 (Jan-Feb 1930), then Iwanami the same year, at the height of national-aesthetic production.",
+            "source": "青空文庫卷首识语；岩波书目",
+            "source_en": "Aozora headnote; Iwanami catalogue",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "生平",
+            "kind_en": "biography",
+            "zh": "1921–1928 留学欧洲，从学胡塞尔并与海德格尔往还；回国后处理一个不可译的日语词，选择本身即动机的形状。",
+            "en": "In Europe 1921-1928 with Husserl and Heidegger; on returning he takes up an untranslatable Japanese word, and the choice has the shape of a motive.",
+            "source": "作者年谱（通行记述）",
+            "source_en": "standard chronology",
+            "conf": "◐"
+          },
+          {
+            "kind_zh": "研究",
+            "kind_en": "scholarship",
+            "zh": "平卡斯 1996 年把本书置于两次大战之间的国民美学潮流，指出民族框架内在于文本。此为解释，非指控。",
+            "en": "Pincus (1996) situates the book in interwar national aesthetics and locates the national frame inside the text; interpretation, not accusation.",
+            "source": "Leslie Pincus, Authenticating Culture in Imperial Japan (1996)",
+            "source_en": "Pincus, Authenticating Culture in Imperial Japan (1996)",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "版本",
+            "kind_en": "edition",
+            "zh": "1979 年岩波文库本另收《风流に関する一考察》《情绪の系图》，可见这是一项为日本审美词汇建立分析语言的计划，不止一个词。",
+            "en": "The 1979 Iwanami paperback adds studies of furyu and a genealogy of emotions, showing a programme rather than a single word.",
+            "source": "岩波文庫本书目",
+            "source_en": "Iwanami bunko contents",
+            "conf": "✓"
+          },
+          {
+            "kind_zh": "接受",
+            "kind_en": "reception",
+            "zh": "Nara 2004 英译以 detachment 对译いき，中文在意气与粹之间摇摆；半世纪后仍不可稳译，印证选词即选关。",
+            "en": "Nara's 2004 detachment and the Chinese wavering show the word still resists translation, confirming that choosing it was choosing a gate.",
+            "source": "英译本书名；中译术语",
+            "source_en": "English title; Chinese renderings",
+            "conf": "✓"
+          }
+        ],
+        "counter_zh": "最强的反读是技艺论。现象学家需要一个足够难的例子来展示方法，いき 恰好够难：它没有欧洲对应物，语义随语境移动，又人人会用。选它可能只是因为它适合做本质直观的表演，与民族尊严无关。徐英瑾二〇一六年建议用维特根斯坦的语言游戏来读，正是把「粹」当作一种生活形式中的用法，而不是民族工程。\n\n第二条反读关于那一节结论。当时日本的哲学论文常在末尾加上文化或民族的展望，这是文体惯例。把惯例读成动机，等于把格式当成信念。九鬼也许只是照例收束。\n\n第三条反读针对留学叙事。在欧洲学过现象学的人很多，回国后做日本材料的人也很多；两件事相加并不自动产出「资格证明」的意图。把传记与文本并置就宣布动机，是发生学谬误的常见形式。\n\n这三条合起来给出一个更冷的读法：这是一篇技艺精湛的形式分析，民族段落是时代的修辞外壳，剥掉外壳，分析仍然成立。这个读法与本书的长评并不冲突——长评正是主张保留分析、拆掉本质。",
+        "counter_en": "The strongest alternative is a reading in terms of craft. A phenomenologist needs a hard case, and iki is hard: no European equivalent, meaning that shifts with context, yet everyone uses it. Choosing it may be a virtuoso demonstration rather than a claim of national dignity. Xu Yingjin's 2016 proposal to read it through Wittgenstein's language games treats iki as a use within a form of life, not a national project.\n\nThe second objection concerns the closing section. Philosophical essays in Japan at the time often ended with a cultural or national outlook; that is a convention. Reading a convention as a motive mistakes format for belief.\n\nThe third concerns the biographical story. Many studied phenomenology in Europe and many worked on Japanese material afterwards; adding the two does not yield an intention. Inferring motive from biography beside text is a familiar genetic fallacy.\n\nTogether these support a colder reading: a technically superb formal analysis whose national passages are the rhetorical shell of their period. Remove the shell and the analysis stands. This does not conflict with the essay above, which argues precisely for keeping the analysis and dismantling the essence.",
+        "boundary_zh": "可以说的是：文本内部存在一个从普遍方法到民族主体的转向，且这一转向由九鬼自己写下；方法的选择、结论的不可删、时点与文库本的姊妹篇，共同支持「这是一项为日本审美词汇争取分析资格的工程」。这一层把握较高。\n\n不能说的是：九鬼主观上以此为目标，或他自觉地参与了国民美学的生产。前者无自述可证，后者是平卡斯的解释框架，仍有争论。意图推断只能停在「文本要求这样读」，不能推进到「作者当时这样想」。\n\n另有一条方法上的界：本节用的是文本结构证据，不是心理证据。凡涉及「尊严」「焦虑」一类词，都是对文本功能的描述，不是对作者情绪的断言。",
+        "boundary_en": "What can be said: the text contains a turn from universal method to a national subject, written by Kuki himself; the choice of method, the undeletable conclusion, the date and the companion pieces in the paperback together support a programme to win analytic standing for Japanese aesthetic vocabulary.\n\nWhat cannot: that Kuki subjectively held this aim, or knowingly joined the production of national aesthetics. There is no self-statement for the first, and the second is Pincus's interpretive frame, still debated. Inference stops at 'the text requires this reading', not 'the author thought this at the time'.\n\nA methodological line: the evidence here is structural, not psychological. Words such as dignity or anxiety describe the function of the text, not the author's feelings.",
+        "conf": "◐",
+        "conf_en": "◐"
       }
     },
     {

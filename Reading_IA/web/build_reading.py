@@ -1080,6 +1080,67 @@ def _concept_table(concepts):
     return "".join(s)
 
 
+def _author_intent_block(ai):
+    ai = ai or {}
+    if not (ai.get("claim_zh") or ai.get("why_zh")):
+        return ""
+    s = ['<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span>'
+         '<span data-en>What the author meant to say</span></h2>',
+         '<div class="srcnote">' + zh_en(
+             "本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，"
+             "然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、"
+             "版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、"
+             "接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。",
+             "This section is an inference about intent, not a statement by the author. It offers a refutable claim, "
+             "then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, "
+             "and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, "
+             "framing, style), edition (title inheritance, selection, first publication and suppression), biography "
+             "(chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception "
+             "(blurbs, reviews, the direction of misreading) and scholarship (later academic placement). "
+             "Each item carries its own confidence mark; the inference itself is always marked ◐.") + '</div>']
+    s.append('<div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span>'
+             '<span data-en>The claim</span></h3>'
+             '<div data-zh style="line-height:1.9">%s</div>'
+             '<div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem">%s</div></div>'
+             % (_paras(ai.get("claim_zh", "")), _paras(ai.get("claim_en", ""))))
+    s.append('<div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span>'
+             '<span data-en>The grounds</span></h3>'
+             '<div data-zh style="line-height:1.9">%s</div>'
+             '<div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem">%s</div></div>'
+             % (_paras(ai.get("why_zh", "")), _paras(ai.get("why_en", ""))))
+    ev = ai.get("evidence") or []
+    if ev:
+        s.append('<div class="tablewrap"><table class="ledger"><thead><tr>'
+                 '<th data-both><span data-zh>类别</span><span data-en>kind</span></th>'
+                 '<th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th>'
+                 '<th data-both><span data-zh>出处</span><span data-en>source</span></th>'
+                 '<th data-both><span data-zh>把握</span><span data-en>conf</span></th>'
+                 '</tr></thead><tbody>')
+        for e in ev:
+            s.append('<tr><td>%s</td><td><div data-zh>%s</div><div data-en>%s</div></td>'
+                     '<td>%s</td><td class="conf">%s</td></tr>'
+                     % (pair(e.get("kind_zh", ""), e.get("kind_en"), "span"),
+                        esc(e.get("zh", "")), esc(e.get("en", "")),
+                        pair(e.get("source", ""), e.get("source_en"), "span"),
+                        pair(e.get("conf", ""), e.get("conf_en"), "span")))
+        s.append('</tbody></table></div>')
+    if ai.get("counter_zh") or ai.get("counter_en"):
+        s.append('<div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span>'
+                 '<span data-en>The strongest alternative</span></h3>'
+                 '<div data-zh style="line-height:1.9">%s</div>'
+                 '<div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem">%s</div></div>'
+                 % (_paras(ai.get("counter_zh", "")), _paras(ai.get("counter_en", ""))))
+    if ai.get("boundary_zh") or ai.get("boundary_en"):
+        s.append('<div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span>'
+                 '<span data-en>Limits of the inference</span></h3>'
+                 '<div data-zh style="line-height:1.9">%s</div>'
+                 '<div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem">%s</div>'
+                 '<div class="src" data-both><span data-zh>把握 %s</span><span data-en>confidence %s</span></div></div>'
+                 % (_paras(ai.get("boundary_zh", "")), _paras(ai.get("boundary_en", "")),
+                    esc(ai.get("conf", "◐")), esc(ai.get("conf_en", ai.get("conf", "◐")))))
+    return "".join(s)
+
+
 def _review_block(book):
     rv = book.get("review") or {}
     if not (rv.get("body_zh") or rv.get("abstract_en")):
@@ -1218,7 +1279,7 @@ def book_page(site, book, crop):
             s.append('<tr><td>' + esc(c["id"]) + '</td><td>' + zh_en(_nm, _nm_en, "span") + '</td><td>' + zh_en(_gr, _gr_en, "span") + '</td><td><div data-zh>' + esc(c["role_zh"]) + '</div><div data-en>' + esc(c["role_en"]) + '</div></td><td class="conf">' + pair(c["conf"], c.get("conf_en"), "span") + '</td></tr>')
         s.append('</tbody></table></div>')
     # intent / thesis
-    intent_label = ("核心论题 · Thesis" if is_thesis else "作者真意 · Intent", "Thesis" if is_thesis else "The author&rsquo;s intent")
+    intent_label = ("核心论题 · Thesis" if is_thesis else "原话与评价 · Quotation &amp; reception", "Thesis" if is_thesis else "Quotation &amp; reception")
     s.append(f'<h2 class="part" data-both><span data-zh>{intent_label[0]}</span><span data-en>{intent_label[1]}</span></h2>')
     if book["intent"].get("quotes"):
         for q in book["intent"].get("quotes"):
@@ -1229,6 +1290,10 @@ def book_page(site, book, crop):
             _src = '<div class="src"><span data-both><span data-zh>%s</span><span data-en>%s</span></span></div>' % (esc(q["source"]), esc(_src_en))
             s.append('<div class="quote"><div class="orig">%s</div>%s%s</div>' % (esc(q["orig"]), _trs, _src))
     s.append(blk("评价与合成 · Reception & synthesis", book["intent"]["reception_good_zh"] + "\n\n" + book["intent"]["reception_bad_zh"] + "\n\n**合成 Synthesis：** " + book["intent"]["syn_zh"], book["intent"]["reception_good_en"] + "\n\n" + book["intent"]["reception_bad_en"] + "\n\n**Synthesis:** " + book["intent"]["syn_en"], cls="gapbox"))
+    # authorial intent (inference + grounds + evidence + counter-reading + boundary)
+    _aib = _author_intent_block(book.get("author_intent"))
+    if _aib:
+        s.append(_aib)
     # concepts（关键概念表）
     if book.get("concepts"):
         s.append('<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>')
