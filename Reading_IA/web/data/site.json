@@ -53,20 +53,24 @@
         "jp-bokuto",
         "jp-utsukushii"
       ],
-      "verdict_body_zh": "特辑八册与第二圈主干均已回源定位版本（✓/◐）。本轮回源订正四处书目错误：《日本论》初版为 1928 而非 1924；《濹东绮谭》为 1937 年小说而非 1909 年《墨东逸话》；川端讲演原题为《美しい日本の私》而非《美しい日本と私》；大西克礼、四方田犬彦的罗马字已改。公版文本（茶之书、武士道、徒然草、草枕，及川端引用的道元和歌）已逐字引文；仍在版权期的十九种以「论旨概述 · 非逐字原文」如实标注，标 ◐。",
-      "verdict_body_en": "The eight core volumes and Ring 2's spine are all edition-located (✓/◐). This pass corrected four bibliographic errors: Dai Jitao's first edition is 1928, not 1924; Bokuto Kidan is a 1937 novel, not a 1909 sketch; Kawabata's lecture is Utsukushii Nihon no Watashi, not Nihon to Watashi; and the romanisations of Onishi and Yomota are fixed. Public-domain texts (The Book of Tea, Bushido, Tsurezuregusa, Kusamakura, and the Dogen waka quoted by Kawabata) quote verbatim; the nineteen texts still in copyright carry a labelled paraphrase marked ◐.",
+      "verdict_body_zh": "特辑八册与第二圈主干均已回源定位版本（✓/◐）。本轮又订正三处书目错误：《日本色气》所收阿部次郎篇为《德川时代的文艺与社会》（1931），不是《贞操的理想》；《妄想者手记》并未收入《侏儒的话》，封面副题与内容不符；《异国放浪记》是《美利坚物语》与《法兰西物语》的合辑题名，不是荷风原书名。八册的篇目已成表；仍存疑处逐条标 ◐/○。",
+      "verdict_body_en": "The eight core volumes and Ring 2's spine are all edition-located (✓/◐). This pass corrected three more bibliographic errors: the Abe Jiro text in Iki is Arts and Society of the Tokugawa Era (1931), not The Ideal of Chastity; the Akutagawa selection does not contain Dwarf's Words despite its subtitle; and Ikoku Roro-ki is an editorial title for American Stories plus French Stories, not an original Nagai title. Contents for all eight are now tabulated; open points are marked ◐/○.",
       "verdict_gaps": [
         {
-          "zh": "《日本色气》合辑实收篇目以版权页为准；阿部次郎确切篇名与初版年待核。",
-          "en": "The iki omnibus contents per colophon; Abe's exact title and first year pending."
+          "zh": "《日本色气》所收阿部篇已定为《德川时代的文艺与社会》（1931），后编篇目据中译目录列二题；日文原书后编未逐条核对。",
+          "en": "The Abe text in the iki omnibus is Arts and Society of the Tokugawa Era (1931); part two is listed from the Chinese contents as two items, and the Japanese original has not been checked item by item."
         },
         {
           "zh": "大西《物哀》仅得 Marra 2001 文集中的英译节选，未见单行英译；书目待续查。",
           "en": "Onishi's Mono no Aware survives in English only as an excerpt in Marra 2001; no standalone translation found."
         },
         {
-          "zh": "《濹东绮谭》中译页数与印次待据原书补录；《侏儒的话》等仍在版权期的文本，逐字引文须先取得授权或核对原书。",
-          "en": "The Chinese page count and printing history of Bokuto Kidan await the book; verbatim lines for Dwarf's Words and other in-copyright texts require a licence or a checked copy."
+          "zh": "《濹东绮谭》中译页数与印次待据原书补录；《侏儒的话》为另一文本，逐字引文须先取得授权或核对原书。",
+          "en": "Bokuto Kidan's Chinese page count awaits the book; Dwarf's Words is a separate text, and verbatim lines need a licence or a checked copy."
+        },
+        {
+          "zh": "《妄想者手记》的选目标准未说明；《异国放浪记》下册单册 ISBN 未独立显示。",
+          "en": "The Akutagawa selection's criteria are unstated; the Nagai vol. 2 ISBN is not shown independently."
         },
         {
           "zh": "外围书目不抄豆瓣评分，只标存在性；特辑套装评分 8.2/8.9 两值以各册页为准。",

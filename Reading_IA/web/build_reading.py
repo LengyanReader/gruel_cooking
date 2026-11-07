@@ -134,6 +134,10 @@ h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var
 .gapbox ul{list-style:none}
 .gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
 .gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+.tocw{margin:1rem 0 1.6rem}
+.tocgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}
+.tocgrid h4{font-family:var(--ff-display);font-size:.95rem;color:var(--ink-deep);margin:.2rem 0 .3rem;letter-spacing:.03em}
+.toclist{margin:.2rem 0 0 1.15rem;font-size:.84rem;line-height:1.75;color:var(--ink-soft)}
 /* Goodreads × Douban hybrid book card */
 .bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
 .bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
@@ -943,15 +947,23 @@ def motif_block(m):
 
 
 def _page_labels(kind):
-    """Section labels per book kind: history/nonfiction/scholarship read as
-    periods, essays as pieces, fiction as plot. Shared by book_page."""
-    if kind in ("history", "nonfiction", "scholarship"):
+    """Section labels per book kind: history/nonfiction read as periods,
+    scholarship as chapters of argument, essays as pieces, fiction as plot."""
+    if kind in ("history", "nonfiction"):
         return dict(
             acts=("时段章节 · Periods &amp; chapters", "Periods &amp; chapters"),
             act=("第 {n} 节 · {t}", "Section {n} · {t}"),
             narr=("论述框架 · Analytical framework", "Analytical framework"),
             flow=("时间线索引 · Chronological flow", "Chronological flow"),
             flow_cap=("{t} · 时段链（数字为顺序）", "{o} · the chronological chain"),
+            chars=("关键人物 · Key Figures", "Key Figures"))
+    if kind == "scholarship":
+        return dict(
+            acts=("章节结构 · Chapters &amp; sections", "Chapters &amp; sections"),
+            act=("第 {n} 节 · {t}", "Section {n} · {t}"),
+            narr=("论证结构 · Argument", "Argument"),
+            flow=("论证链 · Chain of argument", "Chain of argument"),
+            flow_cap=("{t} · 论证链（数字为顺序）", "{o} · the chain of argument (numbers = order)"),
             chars=("关键人物 · Key Figures", "Key Figures"))
     if kind == "essay":
         return dict(
@@ -970,6 +982,130 @@ def _page_labels(kind):
         chars=("人物关系图 · Characters", "Characters &amp; relations"))
 
 
+def _paras(text):
+    """Blank-line separated paragraphs -> <p>. Text is escaped; no markdown."""
+    out = []
+    for p in re.split(r"\n\s*\n", (text or "").replace("\r\n", "\n")):
+        p = p.strip()
+        if p:
+            out.append("<p>%s</p>" % esc(p))
+    return "".join(out)
+
+
+def _method_block(m):
+    m = m or {}
+    if not (m.get("zh") or m.get("en")):
+        return ""
+    return ('<h2 class="part" data-both><span data-zh>方法与材料 · Method &amp; sources</span><span data-en>Method &amp; sources</span></h2>'
+            '<div class="card gapbox" style="line-height:1.8"><div data-zh>%s</div>'
+            '<div data-en style="color:var(--ink-soft);font-size:.94rem">%s</div></div>'
+            % (_paras(m.get("zh", "")), _paras(m.get("en", ""))))
+
+
+_RCP_FIELDS = (("then", "当时的接受 · Contemporary reception", "Contemporary reception"),
+               ("later", "后世的再评价 · Later reassessment", "Later reassessment"),
+               ("influence", "影响 · Influence", "Influence"),
+               ("critique", "争议与反证 · Critique", "Critique"))
+
+
+def _reception_block(rc):
+    rc = rc or {}
+    strata = [(k, zh, en) for k, zh, en in _RCP_FIELDS if rc.get(k + "_zh") or rc.get(k + "_en")]
+    if not strata:
+        return ""
+    s = ['<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2>']
+    s.append('<div class="srcnote">' + zh_en(
+        "按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。",
+        "Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.") + '</div>')
+    for k, zh_label, en_label in strata:
+        s.append('<div class="card"><h3 class="sec" data-both><span data-zh>%s</span><span data-en>%s</span></h3>'
+                 '<div data-zh style="line-height:1.85;font-size:.96rem">%s</div>'
+                 '<div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem">%s</div></div>'
+                 % (zh_label, en_label, _paras(rc.get(k + "_zh", "")), _paras(rc.get(k + "_en", ""))))
+    srcs = rc.get("sources") or []
+    if srcs:
+        items = "".join('<li>%s</li>' % pair(x.get("zh", ""), x.get("en"), "span") for x in srcs)
+        s.append('<div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div>'
+                 '<div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div>'
+                 '<ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem">%s</ul></div>' % items)
+    return "".join(s)
+
+
+def _limits_block(lm):
+    lm = lm or {}
+    if not (lm.get("zh") or lm.get("en")):
+        return ""
+    out = ['<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2>',
+           '<div class="card gapbox" style="line-height:1.85"><div data-zh>%s</div>'
+           '<div data-en style="color:var(--ink-soft);font-size:.94rem">%s</div></div>'
+           % (_paras(lm.get("zh", "")), _paras(lm.get("en", "")))]
+    for u in lm.get("items") or []:
+        out.append('<div class="card"><p style="font-weight:600" data-both><span data-zh>%s</span><span data-en>%s</span></p>'
+                   '<div data-zh style="color:var(--ink-soft)">%s</div>'
+                   '<div data-en style="color:var(--ink-soft);font-size:.92rem">%s</div></div>'
+                   % (esc(u.get("title_zh", "")), esc(u.get("title_en", "")),
+                      esc(u.get("note_zh", "")), esc(u.get("note_en", ""))))
+    return "".join(out)
+
+
+def _toc_block(t):
+    if not (t or {}).get("groups"):
+        return ""
+    s = ['<div class="card tocw">']
+    if t.get("note_zh"):
+        s.append('<div class="srcnote" style="margin-top:0">%s</div>' % zh_en(t.get("note_zh", ""), t.get("note_en", ""), "span"))
+    s.append('<div class="tocgrid">')
+    for g in t["groups"]:
+        items = "".join("<li>%s</li>" % esc(x) for x in g.get("items", []))
+        s.append('<div><h4>%s</h4><ol class="toclist">%s</ol></div>' % (pair(g.get("title_zh", ""), g.get("title_en"), "span"), items))
+    s.append('</div></div>')
+    return "".join(s)
+
+
+def _concept_table(concepts):
+    s = ['<div class="tablewrap"><table class="ledger"><thead><tr>'
+         '<th data-both><span data-zh>术语</span><span data-en>term</span></th>'
+         '<th data-both><span data-zh>原语</span><span data-en>original</span></th>'
+         '<th data-both><span data-zh>释义</span><span data-en>gloss</span></th>'
+         '<th data-both><span data-zh>出处</span><span data-en>source</span></th>'
+         '<th class="conf">conf</th></tr></thead><tbody>']
+    for c in concepts:
+        s.append('<tr><td><b>%s</b></td><td>%s</td><td>%s</td><td style="font-size:.8rem;color:var(--ink-pale)">%s</td><td class="conf">%s</td></tr>' % (
+            pair(c["term"], c.get("term_en"), "span"),
+            esc(c.get("orig", "")),
+            zh_en(c["gloss_zh"], c.get("gloss_en", "")),
+            pair(c.get("source", ""), c.get("source_en"), "span"),
+            conf_token(c.get("conf", "◐"))))
+    s.append("</tbody></table></div>")
+    return "".join(s)
+
+
+def _review_block(book):
+    rv = book.get("review") or {}
+    if not (rv.get("body_zh") or rv.get("abstract_en")):
+        return ""
+    s = ['<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2>']
+    if rv.get("title_zh"):
+        s.append('<h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>%s</span><span data-en>%s</span></h3>'
+                 % (esc(rv["title_zh"]), esc(rv.get("title_en", rv["title_zh"]))))
+    if rv.get("standfirst_zh"):
+        s.append('<p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>%s</span><span data-en>%s</span></p>'
+                 % (esc(rv["standfirst_zh"]), esc(rv.get("standfirst_en", ""))))
+    if rv.get("body_zh"):
+        s.append('<div class="card gapbox review" style="line-height:1.95"><div data-zh>%s</div></div>' % _paras(rv["body_zh"]))
+    if rv.get("abstract_en"):
+        s.append('<div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3>'
+                 '<div style="line-height:1.8"><div data-en>%s</div>'
+                 '<div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div>'
+                 % _paras(rv["abstract_en"]))
+    if rv.get("sources"):
+        items = "".join('<li>%s</li>' % pair(x.get("zh", ""), x.get("en"), "span") for x in rv["sources"])
+        s.append('<div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div>'
+                 '<div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div>'
+                 '<ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem">%s</ul></div>' % items)
+    return "".join(s)
+
+
 def book_page(site, book, crop):
     title = f"{book['title_zh']}｜{book['title_orig']}"
     hero_sub = f"{book['author_zh']} · {book['country']} · {book['publines_zh']}"
@@ -986,7 +1122,9 @@ def book_page(site, book, crop):
     if book.get("domain"):
         _dom_en = book.get("domain_en") or ((_bilingual(book["domain"]) or [None, book["domain"]])[1])
         chips.insert(3, (book["domain"], _dom_en))
-    is_hist = book.get("kind", "") in ("history", "nonfiction", "scholarship")
+    _kind = book.get("kind", "")
+    is_hist = _kind in ("history", "nonfiction")
+    is_thesis = is_hist or _kind == "scholarship"
     LB = _page_labels(book.get("kind", ""))
     s = []
     # provenance
@@ -1021,6 +1159,9 @@ def book_page(site, book, crop):
     # plot acts / thematic periods
     acts_label = LB["acts"]
     s.append(f'<h2 class="part" data-both><span data-zh>{acts_label[0]}</span><span data-en>{acts_label[1]}</span></h2>')
+    _tb = _toc_block(book.get("toc"))
+    if _tb:
+        s.append(_tb)
     def render_brief(act):
         """Render a per-chapter lossless brief block if the act has one.
         Falls back to the older arg_zh/arg_en short form when no brief is present.
@@ -1056,6 +1197,9 @@ def book_page(site, book, crop):
     narr_label = LB["narr"]
     s.append(f'<h2 class="part" data-both><span data-zh>{narr_label[0]}</span><span data-en>{narr_label[1]}</span></h2>')
     s.append(blk("结构 · Structure", book["narrative"]["zh"], book["narrative"]["en"], cls="card"))
+    _mb = _method_block(book.get("method"))
+    if _mb:
+        s.append(_mb)
     # plot flow svg / chronological flow
     flow_label = LB["flow"]
     s.append(f'<h2 class="part" data-both><span data-zh>{flow_label[0]}</span><span data-en>{flow_label[1]}</span></h2>')
@@ -1074,7 +1218,7 @@ def book_page(site, book, crop):
             s.append('<tr><td>' + esc(c["id"]) + '</td><td>' + zh_en(_nm, _nm_en, "span") + '</td><td>' + zh_en(_gr, _gr_en, "span") + '</td><td><div data-zh>' + esc(c["role_zh"]) + '</div><div data-en>' + esc(c["role_en"]) + '</div></td><td class="conf">' + pair(c["conf"], c.get("conf_en"), "span") + '</td></tr>')
         s.append('</tbody></table></div>')
     # intent / thesis
-    intent_label = ("核心论题 · Thesis" if is_hist else "作者真意 · Intent", "Thesis" if is_hist else "The author&rsquo;s intent")
+    intent_label = ("核心论题 · Thesis" if is_thesis else "作者真意 · Intent", "Thesis" if is_thesis else "The author&rsquo;s intent")
     s.append(f'<h2 class="part" data-both><span data-zh>{intent_label[0]}</span><span data-en>{intent_label[1]}</span></h2>')
     if book["intent"].get("quotes"):
         for q in book["intent"].get("quotes"):
@@ -1085,6 +1229,21 @@ def book_page(site, book, crop):
             _src = '<div class="src"><span data-both><span data-zh>%s</span><span data-en>%s</span></span></div>' % (esc(q["source"]), esc(_src_en))
             s.append('<div class="quote"><div class="orig">%s</div>%s%s</div>' % (esc(q["orig"]), _trs, _src))
     s.append(blk("评价与合成 · Reception & synthesis", book["intent"]["reception_good_zh"] + "\n\n" + book["intent"]["reception_bad_zh"] + "\n\n**合成 Synthesis：** " + book["intent"]["syn_zh"], book["intent"]["reception_good_en"] + "\n\n" + book["intent"]["reception_bad_en"] + "\n\n**Synthesis:** " + book["intent"]["syn_en"], cls="gapbox"))
+    # concepts（关键概念表）
+    if book.get("concepts"):
+        s.append('<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>')
+        s.append('<div class="srcnote">' + zh_en(
+            "每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。",
+            "Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book's usage, not a dictionary definition.") + '</div>')
+        s.append(_concept_table(book["concepts"]))
+    # reception history（接受史）
+    _rb = _reception_block(book.get("reception"))
+    if _rb:
+        s.append(_rb)
+    # limits（局限与争议）
+    _lb = _limits_block(book.get("limits"))
+    if _lb:
+        s.append(_lb)
     # read-through notes (my own critical synthesis after reading through each book end-to-end)
     rt = book.get("read_through") or {}
     if rt.get("verdict_zh") or rt.get("observations"):
@@ -1110,7 +1269,12 @@ def book_page(site, book, crop):
                  f'<div data-en style="color:var(--ink-soft);font-size:.94rem">{esc(fa.get("en",""))}</div>'
                  '</div>')
     # craft / highlights
-    craft_label = ("史学方法 · Historiography", "Historiography") if is_hist else ("手法与亮点 · Craft", "Craft &amp; highlights")
+    if is_hist:
+        craft_label = ("史学方法 · Historiography", "Historiography")
+    elif _kind == "scholarship":
+        craft_label = ("学术方法 · Scholarship", "Scholarship")
+    else:
+        craft_label = ("手法与亮点 · Craft", "Craft &amp; highlights")
     s.append(f'<h2 class="part" data-both><span data-zh>{craft_label[0]}</span><span data-en>{craft_label[1]}</span></h2>')
     if book.get("craft"):
         for c in book["craft"]:
@@ -1119,18 +1283,22 @@ def book_page(site, book, crop):
         s.append(f'<div class="srcnote">{zh_en("待通读原书后补充。", "Craft notes come after the full read.")}</div>')
     # motifs（母题簇 / key themes）
     if book.get("motifs"):
-        motif_label = ("核心主题 · Themes", "Themes") if is_hist else ("母题簇 · Motifs", "Motif clusters")
+        motif_label = ("核心主题 · Themes", "Themes") if is_thesis else ("母题簇 · Motifs", "Motif clusters")
         s.append(f'<h2 class="part" data-both><span data-zh>{motif_label[0]}</span><span data-en>{motif_label[1]}</span></h2>')
         for m in book["motifs"]:
             s.append(motif_block(m))
     # excerpts
-    exc_label = ("原文摘录 · Passages from the book", "Passages from the book") if is_hist else ("语言与文化 · 原意摘录", "Language &amp; culture — excerpts")
+    exc_label = ("原文摘录 · Passages from the book", "Passages from the book") if is_thesis else ("语言与文化 · 原意摘录", "Language &amp; culture — excerpts")
     s.append(f'<h2 class="part" data-both><span data-zh>{exc_label[0]}</span><span data-en>{exc_label[1]}</span></h2>')
     if book.get("excerpts"):
         for e in book["excerpts"]:
             s.append(excerpt_block(e))
     else:
         s.append(f'<div class="srcnote">{zh_en("待读原书摘引。", "Excerpts pending the read.")}</div>')
+    # long-form critical essay（长评）
+    _rvb = _review_block(book)
+    if _rvb:
+        s.append(_rvb)
     # deep read
     s.append('<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>')
     for d in book.get("deep_read", []):
