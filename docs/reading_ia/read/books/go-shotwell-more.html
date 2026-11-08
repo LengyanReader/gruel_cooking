@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《围棋：不止是游戏》｜Go! More Than a Game | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>《围棋：不止是游戏》 · Go! More Than a Game</span><span data-en>Go! More Than a Game</span></h1>
+  <div class="subtitle" data-both><span data-zh>彼得·肖特韦尔 · 美国 · Tuttle Publishing · 2011-04-11 · 200 页 · ISBN 9781462900060（纸本 9780804834759）</span><span data-en>Peter Shotwell · the American · Tuttle Publishing · 2011-04-11 · 200 pp. · ISBN 9781462900060 (print 9780804834759)</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>围弈 · 观心与棋道 GO CULTURE · 2026-11-08</span><span data-en>GO CULTURE · WATCHING THE MIND · 2026-11-08</span></span> <span class="chip"><span data-zh>非虚构 · 围棋教学 · 历史与文化</span><span data-en>nonfiction · Go teaching · history &amp; culture</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>围棋教学 / 文化史</span><span data-en>Go teaching / cultural history</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实（Google Books：Tuttle, 2011-04-11, 200 pp., ISBN 9781462900060；2026-11-08）</span><span data-en>conf ✓ edition verified (Google Books: Tuttle, 2011-04-11, 200 pp., ISBN 9781462900060; 2026-11-08)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本核实（Google Books：Tuttle, 2011-04-11, 200 pp., ISBN 9781462900060；2026-11-08） · 档案：go-shotwell-more（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition verified (Google Books: Tuttle, 2011-04-11, 200 pp., ISBN 9781462900060; 2026-11-08) · record: go-shotwell-more. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅出版社简介（◐）</span><span data-en>not read · publisher description only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>英文入门书里最愿意把「围棋为什么不仅是游戏」讲清楚的一本：教学、早期围棋史、儒家论棋、AI 与组合博弈论都在一本书里。</div><div data-en>The English primer most willing to explain why Go is more than a game: teaching, early Go history, Confucian writing on Go, AI and combinatorial game theory in one volume.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://books.google.com/books/about/Go_More_Than_a_Game.html?id=qf_QAgAAQBAJ" target="_blank" rel="noopener"><span data-zh>Google Books 书目页</span><span data-en>Google Books record</span><span class="dom">books.google.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>Tuttle 2011 年版，200 页。出版社简介称作者据早期围棋史与儒家论棋的新材料作了全面修订，并加入电脑围棋、组合博弈论与国际职业棋坛的新进展。书中教学从 9×9 到 13×13 再到 19×19。
+
+出版社称 2011 版据早期围棋史与儒家论棋的新材料全面修订，并加入电脑围棋、组合博弈论与国际职业棋坛的新进展。</div><div data-en>Tuttle&#x27;s 2011 edition, 200 pp. The publisher says the author fully revised it with new material on early Go history and Confucian writers, adding computer Go, combinatorial game theory and the international professional scene. Teaching runs from 9×9 to 13×13 to 19×19.
+
+The publisher says the 2011 edition was fully revised with new material on early Go history and Confucian writing, adding computer Go, combinatorial game theory and the international professional scene.</div></div>
+<p class="tok"><span class="conf c-ok">✓</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>教学与文化交替：先用教学对局带读者从 9×9 走到 19×19，再插入围棋史、儒家论棋、电脑围棋与组合博弈论。它适合作为「入门 + 文化背景」的第一本英文书。</div><div data-en>Teaching alternates with culture: teaching games carry the reader from 9×9 to 19×19, with sections on Go history, Confucian writing, computer Go and combinatorial game theory. A good first English book for &#x27;primer plus background&#x27;.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《围棋：不止是游戏》 · 篇章链（数字为顺序）</span><span data-en>Go! More Than a Game · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>原话与评价 · Quotation &amp; reception</span><span data-en>Quotation &amp; reception</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>尚无独立书评证据；暂不作评价。
+
+未见系统批评；以下仅记可能的局限。
+
+**合成 Synthesis：** 待通读后再作合成判断。</div><div data-en>No independent review evidence yet; no verdict.
+
+No systematic critique found; only likely limits noted.
+
+**Synthesis:** Synthesis deferred until a full read.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>Shotwell 要证明：围棋入门书不必只教规则，也可以同时教「围棋为什么重要」；因此他把教学局（9×9→19×19）与围棋史、儒家论棋、电脑围棋、组合博弈论并置，让读者在学棋的同时建立文化背景。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Shotwell wants to show that a primer need not teach rules alone but can also teach why Go matters; he therefore juxtaposes teaching games (9x9 to 19x19) with Go history, Confucian writing, computer Go and combinatorial game theory, so the reader learns the game and its background together.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名「More Than a Game」就是论点；出版社说 2011 版据早期围棋史与儒家论棋的新材料全面修订，并加入电脑围棋与组合博弈论；书中教学从 9×9 到 19×19，说明他要把「学棋」与「理解围棋」放在同一条路径上。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title is the thesis; the publisher says the 2011 edition was revised with new material on early Go history and Confucian writing and adds computer Go and combinatorial game theory; the 9x9-to-19x19 teaching places learning and understanding on one path.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书名「Go! More Than a Game」即论点。</div><div data-en>The title states the thesis.</div></td><td>Google Books</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>出版</span><span data-en>publisher</span></span></td><td><div data-zh>2011 版据早期围棋史与儒家论棋新材料修订。</div><div data-en>The 2011 edition was revised with new material on early Go history and Confucian writing.</div></td><td><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>教学从 9×9 到 13×13 再到 19×19。</div><div data-en>Teaching runs 9x9 to 13x13 to 19x19.</div></td><td><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书中纳入电脑围棋与组合博弈论的新进展。</div><div data-en>It adds computer Go and combinatorial game theory.</div></td><td><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf">✓</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：所谓「不止是游戏」可能只是营销口号，书中文化材料仍是入门附录，不构成与教学并重的论证。若如此，它仍是一本入门书，只是多了背景章。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: &#x27;more than a game&#x27; may be marketing; the cultural material may remain a beginner&#x27;s appendix rather than a co-equal argument. On that reading it is still a primer with background chapters.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未读全文，无法判断文化章与教学章的实际比重；上述推断依据书名、出版社简介与结构，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text I cannot judge the actual balance of cultural and teaching chapters; the inference rests on title, description and structure, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>不止是游戏</span><span data-en>more than a game</span></span></b></td><td>more than a game</td><td><div data-zh>书名即论点：围棋的价值在竞技之外，还在历史、哲学与心智生活。</div><div data-en>The title is the thesis: Go&#x27;s value lies beyond competition, in history, philosophy and mental life.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>教学局</span><span data-en>teaching game</span></span></b></td><td></td><td><div data-zh>以 9×9、13×13 到 19×19 的教学对局，把规则与战略放进实战。</div><div data-en>Teaching games from 9x9 to 13x13 to 19x19 put rules and strategy into play.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>儒家论棋</span><span data-en>Confucian writing on Go</span></span></b></td><td>Confucians</td><td><div data-zh>2011 版据早期围棋史与儒家论棋的新材料修订，是本书的文化维度。</div><div data-en>The 2011 edition was revised with new material on early Go history and Confucian writing, the book&#x27;s cultural dimension.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>组合博弈论</span><span data-en>combinatorial game theory</span></span></b></td><td>combinatorial game theory</td><td><div data-zh>书中纳入电脑围棋与组合博弈论的新进展，显示其跨学科面向。</div><div data-en>The book adds computer Go and combinatorial game theory, showing its interdisciplinary side.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>Tuttle 2011 年版，200 页；2003 年有修订版。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Tuttle&#x27;s 2011 edition, 200 pp.; a revised edition appeared in 2003.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>作为英文入门书被广泛使用；其「教学 + 文化」结构在同类的入门书中较少见。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Widely used as an English primer; its teaching-plus-culture structure is relatively rare among primers.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>为「围棋为什么不仅是游戏」提供了一本可读的英文入口。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Provides a readable English entry to &#x27;why Go is more than a game&#x27;.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>版本（2003 修订/2011）需分清；文化章与教学章的比重可能不均衡。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Distinguish the 2003 revised and 2011 editions; the balance of cultural and teaching chapters may be uneven.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>Google Books《Go! More Than a Game》</span><span data-en>Google Books: Go! More Than a Game</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>版本混淆</span><span data-en>Edition confusion</span></p><div data-zh style="color:var(--ink-soft)">2003 修订版与 2011 Tuttle 版内容可能不同，需按所持版本读。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The 2003 revised and 2011 Tuttle editions may differ; read the one you hold.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>文化与教学的比重</span><span data-en>Culture vs teaching</span></p><div data-zh style="color:var(--ink-soft)">若文化章过重，入门读者可能被历史材料拖慢。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">If cultural chapters dominate, beginners may be slowed by history.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>入门深度</span><span data-en>Primer depth</span></p><div data-zh style="color:var(--ink-soft)">作为入门书，它不处理高级战略与全局判断。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">As a primer it does not treat advanced strategy or whole-board judgment.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>以教学局推进规则与战略，同时用文化章建立「为什么重要」。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Advances rules and strategy through teaching games while cultural chapters explain why Go matters.</p></div>
+<div class="card"><p data-zh>以「教学局 + 文化章」双线，兼顾入门与文化背景。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Runs two lines, teaching games and cultural chapters, covering entry and background.</p></div>
+<div class="card"><p data-zh>以「more than a game」为题眼，把文化论证前置到书名。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Puts the cultural argument in the title: more than a game.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>教学局</span><span data-en>teaching game</span></div>
+<div class="orig">teaching games</div>
+<div class="mnote"><div data-zh>教学从 9×9 到 19×19，是全书的主线。</div><div data-en>Teaching from 9x9 to 19x19 is the book&#x27;s spine.</div></div>
+<div class="src"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>文化背景</span><span data-en>cultural background</span></div>
+<div class="orig">history / Confucians</div>
+<div class="mnote"><div data-zh>文化章穿插围棋史与儒家论棋。</div><div data-en>Cultural chapters intersperse Go history and Confucian writing.</div></div>
+<div class="src"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>教学游戏从 9×9 到 13×13 再到 19×19；2011 版据早期围棋史与儒家论棋的新材料全面修订。</div><div data-en>Teaching games run 9x9 to 13x13 to 19x19; the 2011 edition was fully revised with new material on early history and Confucian writing.</div></div><div class="src"><span data-both><span data-zh>Google Books 简介</span><span data-en>Google Books description</span></span> · <span class="conf c-ok">✓</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>学棋与懂棋同路：读 Shotwell《Go! More Than a Game》</span><span data-en>Learning the game and understanding it</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>一本把教学局与围棋史、儒家论棋、电脑围棋并置的英文入门书。</span><span data-en>An English primer that sets teaching games beside Go history, Confucian writing and computer Go.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《Go! More Than a Game》的书名就是论点：围棋不止是游戏。Shotwell 的做法不是先讲文化再讲规则，而是把两者放在同一条路径上：教学局从 9×9 到 13×13 再到 19×19，文化章则穿插围棋史、儒家论棋、电脑围棋与组合博弈论。</p><p>这使它在英文入门书中比较特别：多数入门书只教规则，Shotwell 则要让读者在学棋的同时建立「围棋为什么重要」的背景。2011 版据早期围棋史与儒家论棋的新材料修订，说明这一文化维度不是装饰，而是持续更新的内容。</p><p>它的风险是比重：如果文化章过重，初学者可能被历史材料拖慢；如果过轻，「more than a game」就只是口号。读它时最好按所持版本（2003 修订或 2011）核对章节，并把「教学局」与「文化章」分开读：前者练手，后者建背景，两者不能互相替代。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>The title of Go! More Than a Game is the thesis: Go is more than a game. Shotwell does not postpone culture until after rules; he puts both on one path. Teaching games run from 9x9 to 13x13 to 19x19, while cultural chapters intersperse Go history, Confucian writing, computer Go and combinatorial game theory.</p><p>That makes it unusual among English primers: most teach rules only, while Shotwell wants the reader to build a background for why Go matters. The 2011 edition was revised with new material on early history and Confucian writing, showing the cultural dimension is updated rather than decorative.</p><p>The risk is balance: too much culture slows the beginner, too little makes &#x27;more than a game&#x27; a slogan. Check the edition you hold (2003 revised or 2011), and read teaching games and cultural chapters separately: one trains the hand, the other builds background; neither substitutes for the other.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>Google Books《Go! More Than a Game》</span><span data-en>Google Books: Go! More Than a Game</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>把「教学局」与「文化章」分开读：前者练手，后者建背景；不要用文化章代替棋力训练。</div><div data-en>Read teaching games and cultural chapters separately: one trains the hand, the other builds background; culture cannot substitute for practice.</div></div>
+<div class="card"><div data-zh>按所持版本核对章节：2003 修订版与 2011 Tuttle 版可能不同，先确认版本再引用。</div><div data-en>Check the edition you hold: the 2003 revised and 2011 Tuttle editions may differ; confirm before citing.</div></div>
+<div class="card"><div data-zh>按版本核对章节，区分 2003 修订与 2011 Tuttle。</div><div data-en>Check the edition you hold, distinguishing the 2003 revised and 2011 Tuttle versions.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>Go Basics</b></td><td>Peter Shotwell</td><td>—</td><td><span data-both><span data-zh>同作者 · 更基础</span><span data-en>same author · more basic</span></span></td><td><div data-zh>若只求规则与基础，先读 Go Basics</div><div data-en>for rules and basics only, start with Go Basics</div></td><td>technique</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The Book of Go</b></td><td>William S. Cobb</td><td>2000</td><td><span data-both><span data-zh>入门书对照</span><span data-en>primer contrast</span></span></td><td><div data-zh>Cobb 用「先吃子版」，Shotwell 用 9×9→19×19 的教学局</div><div data-en>Cobb starts with First-Capture Go; Shotwell with 9×9→19×19 teaching games</div></td><td>technique</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>The Go Companion</b></td><td>Fairbairn &amp; Hall</td><td>2009</td><td><span data-both><span data-zh>文化史对照</span><span data-en>cultural-history contrast</span></span></td><td><div data-zh>一本入门，一本历史随笔</div><div data-en>a primer vs a historical collection</div></td><td>history</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《Go! More Than a Game》由 Tuttle 于 2011-04-11 出版，200 页，ISBN 9781462900060</span><span data-en>Published by Tuttle on 2011-04-11, 200 pp., ISBN 9781462900060</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Google Books</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>书中教学从 9×9 到 13×13 再到 19×19</span><span data-en>Teaching progresses from 9×9 to 13×13 to 19×19</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>出版社简介</span><span data-en>publisher description</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>2003 年有 Revised Edition；2011 年 Tuttle 版 200 页</span><span data-en>A Revised Edition appeared in 2003; the Tuttle 2011 edition is 200 pp.</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 「Other editions」</span><span data-en>Google Books &#x27;Other editions&#x27;</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>纸本 ISBN 9780804834759</span><span data-en>Print ISBN 9780804834759</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Google Books 购买链接</span><span data-en>Google Books buy links</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>所持版本（2003 修订版或 2011 版）</span><span data-en>Which edition you hold (2003 revised or 2011)</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../go-culture-books.html">← <span data-zh>返回围弈 · 观心与棋道 GO CULTURE</span><span data-en>back to GO CULTURE · WATCHING THE MIND</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

@@ -116,6 +116,51 @@
       "why_zh": "范畴之学转为当代随笔：定义之后重新观看",
       "why_en": "category theory becomes contemporary essay: looking again after definition",
       "conf": "primary"
+    },
+    {
+      "from": "儒家 / 道家棋论",
+      "from_en": "Confucian / Daoist Go discourse",
+      "to": "he-yunbo",
+      "arrow": "⇐",
+      "why_zh": "立象比德 · 技进乎道",
+      "why_en": "imaging virtue · skill into the Way",
+      "conf": "✓"
+    },
+    {
+      "from": "佛教哲学",
+      "from_en": "Buddhist philosophy",
+      "to": "cobb",
+      "arrow": "⇐",
+      "why_zh": "以佛教观点读围棋",
+      "why_en": "reading Go through Buddhist views",
+      "conf": "◐"
+    },
+    {
+      "from": "中和 / 易经",
+      "from_en": "equilibrium / I Ching",
+      "to": "wu-qingyuan",
+      "arrow": "⇐",
+      "why_zh": "《中的精神》的自述来源",
+      "why_en": "the source of the memoir's vocabulary",
+      "conf": "◐"
+    },
+    {
+      "from": "中国棋论传统",
+      "from_en": "Chinese Go-theory tradition",
+      "to": "zhang-ni",
+      "arrow": "⇐",
+      "why_zh": "《棋经十三篇》立象比德",
+      "why_en": "the Thirteen Chapters' imaging of virtue",
+      "conf": "◐"
+    },
+    {
+      "from": "GoGoD / 棋谱数据库",
+      "from_en": "GoGoD / game-record database",
+      "to": "fairbairn-hall",
+      "arrow": "⇐",
+      "why_zh": "史料与棋谱基础",
+      "why_en": "the documentary and game-record base",
+      "conf": "✓"
     }
   ],
   "circle": [
@@ -239,6 +284,33 @@
       "why_zh": "定型与拆解：加藤以「杂种」回应文化模式",
       "why_en": "typing and dismantling: hybridity answers the culture pattern",
       "conf": "primary"
+    },
+    {
+      "from": "cobb",
+      "to": "fairbairn-hall",
+      "to_en": "John Fairbairn & T. Mark Hall",
+      "arrow": "◎",
+      "why_zh": "同在 Slate and Shell 出版圈",
+      "why_en": "shared Slate and Shell circle",
+      "conf": "✓"
+    },
+    {
+      "from": "he-yunbo",
+      "to": "wu-qingyuan",
+      "to_en": "Wu Qingyuan",
+      "arrow": "◎",
+      "why_zh": "引吴清源「和谐」说论棋道",
+      "why_en": "cites Wu's 'harmony' for the Way of Go",
+      "conf": "✓"
+    },
+    {
+      "from": "shotwell",
+      "to": "fairbairn-hall",
+      "to_en": "John Fairbairn & T. Mark Hall",
+      "arrow": "◎",
+      "why_zh": "同写围棋史与文化",
+      "why_en": "both write Go history and culture",
+      "conf": "◐"
     }
   ],
   "cowrites": [
@@ -259,6 +331,16 @@
       "why_zh": "两度合著",
       "why_en": "two co-writes",
       "conf": "verified"
+    },
+    {
+      "from": "fairbairn-hall",
+      "to": "T. Mark Hall",
+      "to_en": "T. Mark Hall",
+      "why_zh": "合著《The Go Companion》",
+      "why_en": "co-authored The Go Companion",
+      "book": "The Go Companion",
+      "book_en": "The Go Companion",
+      "conf": "✓"
     }
   ],
   "schools": [
@@ -429,6 +511,78 @@
       "why_zh": "以空无收束日本美",
       "why_en": "Japanese beauty closed on emptiness",
       "conf": "verified"
+    },
+    {
+      "author": "cobb",
+      "school_zh": "围棋哲学 · 佛教进路",
+      "school_en": "philosophy of Go · Buddhist approach",
+      "why_zh": "以佛教觉悟观重述围棋经验",
+      "why_en": "restates Go experience through Buddhist enlightenment",
+      "conf": "✓"
+    },
+    {
+      "author": "he-yunbo",
+      "school_zh": "围棋文化研究 · 思想史进路",
+      "school_en": "Go cultural studies · intellectual history",
+      "why_zh": "把围棋作为中国思想的标本",
+      "why_en": "treats Go as a specimen of Chinese thought",
+      "conf": "✓"
+    },
+    {
+      "author": "wu-qingyuan",
+      "school_zh": "中和 · 调和",
+      "school_en": "equilibrium · harmony",
+      "why_zh": "以「中」为阴阳平衡之点",
+      "why_en": "the middle as the yin-yang balance point",
+      "conf": "◐"
+    },
+    {
+      "author": "shotwell",
+      "school_zh": "跨文化围棋写作",
+      "school_en": "cross-cultural Go writing",
+      "why_zh": "教学、历史与文化合写",
+      "why_en": "teaching, history and culture in one",
+      "conf": "✓"
+    },
+    {
+      "author": "fairbairn-hall",
+      "school_zh": "围棋史与文献学",
+      "school_en": "Go history & documentary scholarship",
+      "why_zh": "棋谱数据库与历史考据",
+      "why_en": "game database and historical documentation",
+      "conf": "✓"
+    },
+    {
+      "author": "moskowitz",
+      "school_zh": "文化人类学 · 男性气质研究",
+      "school_en": "cultural anthropology · masculinity studies",
+      "why_zh": "民族志研究围棋的社会意义",
+      "why_en": "ethnography of Go's social meanings",
+      "conf": "◐"
+    },
+    {
+      "author": "zhang-ni",
+      "school_zh": "古典棋论 · 立象比德",
+      "school_en": "classical Go theory · imaging virtue",
+      "why_zh": "棋局法天、黑白法阴阳",
+      "why_en": "the board figures heaven; black/white figure yin-yang",
+      "conf": "◐"
+    },
+    {
+      "author": "liji-min",
+      "school_zh": "古典棋谱 · 文献汇编",
+      "school_en": "classical game records · compilation",
+      "why_zh": "以汇编保存前代棋论与棋局",
+      "why_en": "preserves earlier treatises and records by compilation",
+      "conf": "◐"
+    },
+    {
+      "author": "classical-anon",
+      "school_zh": "古典棋谱传统",
+      "school_en": "classical problem-collection tradition",
+      "why_zh": "以文本传统立节点，不臆断作者",
+      "why_en": "a textual-tradition node without guessing authorship",
+      "conf": "◐"
     }
   ]
 }

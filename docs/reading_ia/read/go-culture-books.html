@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>围棋 · 观心、棋道与思想传统 · 十五书｜Go — Watching the Mind, the Way of the Board, and the Thought Tradition (15 dossiers) | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>围棋 · 观心、棋道与思想传统 · 十五书</span><span data-en>Go — Watching the Mind, the Way of the Board, and the Thought Tradition (15 dossiers)</span></h1>
+  <div class="subtitle" data-both><span data-zh>四圈十五书：观心（Cobb）— 中国思想史（何云波）— 棋手自述与跨文化 — 原典（棋论与棋谱）；一本附录收拢其余提及文献。</span><span data-en>Four rings, fifteen dossiers: contemplation (Cobb) — Chinese intellectual history (He Yunbo) — the player&#x27;s account and cross-cultural studies — the classical sources. An appendix gathers the rest.</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>2026-11-08 · 围弈 · 观心与棋道 GO CULTURE</span><span data-en>2026-11-08 · GO CULTURE · WATCHING THE MIND</span></span> <span class="chip"><span data-zh>判定 GAPS</span><span data-en>GAPS</span></span> <span class="chip"><span data-zh>每书一页</span><span data-en>a page per book</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>本清单由 <code>web/data/books.json</code> 驱动（generator: build_reading.py）；每部均经 websearch/webfetch 定位实际版本（W2）。出版信息 <code>✓</code> 核实；情节细处标 <code>◐/○</code>。点击各书卡进入单书页码。</div><div data-en><b>Provenance.</b> This list is driven by <code>web/data/books.json</code> (generator: build_reading.py); each title located &amp; verified (W2). Pub facts <code>✓</code>; plot details <code>◐/○</code>. Click a card for the per-book page.</div></div>
+<div class="srcnote"><div data-zh><b>书封与照片。</b>书封图取自各出版社/书店公开页（<code>docs/reading_ia/art/covers/</code>，仅本地引用）；作者照片取自 Wikimedia Commons 等公开来源，版权归原作者，个人笔记内引用。</div><div data-en><b>Covers &amp; portraits.</b> Cover art referenced locally from publisher/bookseller pages (<code>art/covers/</code>); author photos from public sources (Wikimedia Commons etc.). All rights remain with their owners; cited here for a personal reading journal.</div></div>
+<h2 class="part" data-both><span data-zh>读法 · 圈层 · 三轴 · 一条路径</span><span data-en>How to read this crop</span></h2>
+<div class="srcnote"><div data-zh>读法图由 <code>web/data/site.json</code> 的 <code>rings / axes / reading_order / pointers</code> 生成；书名可点进单书档案。</div><div data-en>The map is generated from <code>rings / axes / reading_order / pointers</code> in <code>web/data/site.json</code>; every title opens its dossier.</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin:1rem 0">
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>第一圈 · 观心（Cobb 三书）</span><span data-en>Ring 1 · Watching the mind (three Cobb titles)</span></h3><div data-zh>从哲学随笔到佛教原理，再到入门教材：把「观心 Cobb」与「教学 Cobb」分开。</div><div data-en>From philosophical essays to Buddhist principles to the primer: separate the contemplative Cobb from the teacher.</div><ol style="list-style:none;margin:.8rem 0 0"><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">01</span><a href="books/go-cobb-reflections.html"><span data-zh>《围棋之思：空枰 1994–2004》</span><span data-en>Reflections on the Game of Go: The Empty Board 1994–2004</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 威廉·S·科布</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">02</span><a href="books/go-cobb-buddhist.html"><span data-zh>《佛教哲学与围棋》</span><span data-en>Buddhist Philosophy and the Game of Go</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 威廉·S·科布</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">03</span><a href="books/go-cobb-book-of-go.html"><span data-zh>《围棋之书》</span><span data-en>The Book of Go</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 威廉·S·科布</span></li></ol></div>
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>第二圈 · 中国思想史（何云波四书）</span><span data-en>Ring 2 · Chinese intellectual history (four He titles)</span></h3><div data-zh>思想史—棋论选—文化—文艺精神：先建框架，再回到文献。</div><div data-en>Intellectual history — selected treatises — culture — literary-artistic spirit: build the frame, then return to the documents.</div><ol style="list-style:none;margin:.8rem 0 0"><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">01</span><a href="books/go-he-thought.html"><span data-zh>《中国围棋思想史》</span><span data-en>中国围棋思想史</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">02</span><a href="books/go-he-qilun.html"><span data-zh>《中国历代围棋棋论选》</span><span data-en>中国历代围棋棋论选</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">03</span><a href="books/go-he-culture.html"><span data-zh>《围棋与中国文化》</span><span data-en>围棋与中国文化</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">04</span><a href="books/go-he-jing.html"><span data-zh>《弈境：围棋与中国文艺精神》</span><span data-en>弈境：围棋与中国文艺精神</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li></ol></div>
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>第三圈 · 棋手自述与跨文化</span><span data-en>Ring 3 · The player&#x27;s account &amp; cross-cultural studies</span></h3><div data-zh>吴清源的「中和」— Shotwell 的教学与文化 — Fairbairn/Hall 的历史 — Moskowitz 的人类学。</div><div data-en>Wu&#x27;s equilibrium — Shotwell&#x27;s teaching and culture — Fairbairn/Hall&#x27;s history — Moskowitz&#x27;s anthropology.</div><ol style="list-style:none;margin:.8rem 0 0"><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">01</span><a href="books/go-wu-zhong.html"><span data-zh>《中的精神》</span><span data-en>中的精神（吴清源自传）</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 吴清源</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">02</span><a href="books/go-shotwell-more.html"><span data-zh>《围棋：不止是游戏》</span><span data-en>Go! More Than a Game</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 彼得·肖特韦尔</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">03</span><a href="books/go-shotwell-basics.html"><span data-zh>《围棋基础》</span><span data-en>Go Basics: Concepts &amp; Strategies for New Players</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 彼得·肖特韦尔</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">04</span><a href="books/go-fairbairn-companion.html"><span data-zh>《围棋 companion：历史与文化中的围棋》</span><span data-en>The Go Companion: Go in History and Culture</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 约翰·费尔贝恩、T. 马克·霍尔</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">05</span><a href="books/go-moskowitz-nation.html"><span data-zh>《围棋国族：中国男性气质与围棋》</span><span data-en>Go Nation: Chinese Masculinities and the Game of Weiqi in China</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 马克·L·莫斯科维茨</span></li></ol></div>
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>第四圈 · 原典（棋论与棋谱）</span><span data-en>Ring 4 · The classical sources</span></h3><div data-zh>《棋经十三篇》—《忘忧清乐集》—《玄玄棋经》：从论到谱，再到死活题。</div><div data-en>Thirteen Chapters — Carefree Collection — Gateway: from theory to records to problems.</div><ol style="list-style:none;margin:.8rem 0 0"><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">01</span><a href="books/go-qijing-shisanpian.html"><span data-zh>《棋经十三篇》</span><span data-en>棋经十三篇</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 张拟（宋，传）</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">02</span><a href="books/go-wangyou-qingleji.html"><span data-zh>《忘忧清乐集》</span><span data-en>忘忧清乐集</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 李逸民（南宋，编）</span></li><li style="margin:.3rem 0;line-height:1.55"><span style="color:var(--ink-pale);font-size:.74rem;margin-right:.4em">03</span><a href="books/go-xuanxuan-qijing.html"><span data-zh>《玄玄棋经》</span><span data-en>玄玄棋经</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 佚名（传本）</span></li></ol></div>
+</div>
+<h3 class="sec" data-both><span data-zh>三条轴 · 三条谱系</span><span data-en>Three axes · three genealogies</span></h3>
+<div class="card"><h3 class="sec" data-both><span data-zh>甲 · 观心 · 从执著到放下</span><span data-en>contemplation · from attachment to release</span></h3><div data-zh>佛教觉悟（Cobb）与中和和谐（吴清源）是两条不同的「超越胜负」路径，不可混为一谈。</div><div data-en>Buddhist enlightenment (Cobb) and equilibrium-harmony (Wu) are two different routes beyond winning; do not conflate them.</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-top:.9rem"><a href="books/go-cobb-reflections.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《围棋之思：空枰 1994–2004》</b><b style="font-size:.84rem;font-weight:600" data-en>Reflections on the Game of Go: The Empty Board 1994–2004</b><span style="font-size:.72rem;color:var(--ink-pale)">威廉·S·科布 · 2005</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-cobb-buddhist.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《佛教哲学与围棋》</b><b style="font-size:.84rem;font-weight:600" data-en>Buddhist Philosophy and the Game of Go</b><span style="font-size:.72rem;color:var(--ink-pale)">威廉·S·科布 · 2021</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-wu-zhong.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《中的精神》</b><b style="font-size:.84rem;font-weight:600" data-en>中的精神（吴清源自传）</b><span style="font-size:.72rem;color:var(--ink-pale)">吴清源 · 2010</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>乙 · 中国思想 · 儒道与技进乎道</span><span data-en>Chinese thought · Confucian/Daoist and skill-into-Way</span></h3><div data-zh>从现代思想史回到古典棋论：看「立象比德」「技进乎道」如何在文本中成立。</div><div data-en>From modern intellectual history back to the classical treatise: see how imaging virtue and skill-into-Way actually work in the text.</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-top:.9rem"><a href="books/go-he-thought.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《中国围棋思想史》</b><b style="font-size:.84rem;font-weight:600" data-en>中国围棋思想史</b><span style="font-size:.72rem;color:var(--ink-pale)">何云波 · 2016</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-he-culture.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《围棋与中国文化》</b><b style="font-size:.84rem;font-weight:600" data-en>围棋与中国文化</b><span style="font-size:.72rem;color:var(--ink-pale)">何云波 · —（待核）</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-he-jing.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《弈境：围棋与中国文艺精神》</b><b style="font-size:.84rem;font-weight:600" data-en>弈境：围棋与中国文艺精神</b><span style="font-size:.72rem;color:var(--ink-pale)">何云波 · —（待核）</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-qijing-shisanpian.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《棋经十三篇》</b><b style="font-size:.84rem;font-weight:600" data-en>棋经十三篇</b><span style="font-size:.72rem;color:var(--ink-pale)">张拟（宋，传） · 宋</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>丙 · 原典与谱系 · 从棋论到死活</span><span data-en>sources &amp; genealogy · from theory to problems</span></h3><div data-zh>棋论、古谱、死活题三种文本形态；不要把题集读成人生寓言。</div><div data-en>Three textual forms — treatise, record, problem collection; do not read a problem collection as a life allegory.</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin-top:.9rem"><a href="books/go-qijing-shisanpian.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《棋经十三篇》</b><b style="font-size:.84rem;font-weight:600" data-en>棋经十三篇</b><span style="font-size:.72rem;color:var(--ink-pale)">张拟（宋，传） · 宋</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-wangyou-qingleji.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《忘忧清乐集》</b><b style="font-size:.84rem;font-weight:600" data-en>忘忧清乐集</b><span style="font-size:.72rem;color:var(--ink-pale)">李逸民（南宋，编） · 南宋 / 2017 整理本</span></a><span style="color:var(--gold-dim);font-weight:700">→</span><a href="books/go-xuanxuan-qijing.html" style="display:inline-flex;flex-direction:column;gap:.05rem;padding:.45rem .7rem;border:1px solid rgba(167,146,93,.4);border-radius:10px;background:rgba(255,255,255,.55);max-width:200px"><b style="font-size:.84rem;font-weight:600" data-zh>《玄玄棋经》</b><b style="font-size:.84rem;font-weight:600" data-en>玄玄棋经</b><span style="font-size:.72rem;color:var(--ink-pale)">佚名（传本） · 元明（待核）</span></a></div></div>
+<h3 class="sec" data-both><span data-zh>阅读路径 · 三步</span><span data-en>Reading order · three steps</span></h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0">
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>入门 · 三步</span><span data-en>Entry · three steps</span></h3><div data-zh>先规则，再问题意识，再古典语法。</div><div data-en>Rules first, then the question, then the classical grammar.</div><ol style="list-style:none;margin:.7rem 0 0"><li style="margin:.28rem 0"><a href="books/go-cobb-book-of-go.html"><span data-zh>《围棋之书》</span><span data-en>The Book of Go</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 威廉·S·科布</span></li><li style="margin:.28rem 0"><a href="books/go-shotwell-more.html"><span data-zh>《围棋：不止是游戏》</span><span data-en>Go! More Than a Game</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 彼得·肖特韦尔</span></li><li style="margin:.28rem 0"><a href="books/go-he-thought.html"><span data-zh>《中国围棋思想史》</span><span data-en>中国围棋思想史</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li></ol></div>
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>深入 · 三步</span><span data-en>Deepening · three steps</span></h3><div data-zh>观心、自述、原典各取一本。</div><div data-en>One from contemplation, one from the player&#x27;s account, one from the sources.</div><ol style="list-style:none;margin:.7rem 0 0"><li style="margin:.28rem 0"><a href="books/go-cobb-reflections.html"><span data-zh>《围棋之思：空枰 1994–2004》</span><span data-en>Reflections on the Game of Go: The Empty Board 1994–2004</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 威廉·S·科布</span></li><li style="margin:.28rem 0"><a href="books/go-wu-zhong.html"><span data-zh>《中的精神》</span><span data-en>中的精神（吴清源自传）</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 吴清源</span></li><li style="margin:.28rem 0"><a href="books/go-qijing-shisanpian.html"><span data-zh>《棋经十三篇》</span><span data-en>棋经十三篇</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 张拟（宋，传）</span></li></ol></div>
+<div class="card" style="margin:0"><h3 class="sec" data-both><span data-zh>贯通 · 三步</span><span data-en>Synthesis · three steps</span></h3><div data-zh>把美学、历史与社会科学的对照读进来。</div><div data-en>Bring in aesthetics, history and the social-science counterweight.</div><ol style="list-style:none;margin:.7rem 0 0"><li style="margin:.28rem 0"><a href="books/go-he-jing.html"><span data-zh>《弈境：围棋与中国文艺精神》</span><span data-en>弈境：围棋与中国文艺精神</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 何云波</span></li><li style="margin:.28rem 0"><a href="books/go-fairbairn-companion.html"><span data-zh>《围棋 companion：历史与文化中的围棋》</span><span data-en>The Go Companion: Go in History and Culture</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 约翰·费尔贝恩、T. 马克·霍尔</span></li><li style="margin:.28rem 0"><a href="books/go-moskowitz-nation.html"><span data-zh>《围棋国族：中国男性气质与围棋》</span><span data-en>Go Nation: Chinese Masculinities and the Game of Weiqi in China</span></a><span style="color:var(--ink-pale);font-size:.8rem"> · 马克·L·莫斯科维茨</span></li></ol></div>
+</div>
+<h3 class="sec" data-both><span data-zh>延伸 · 出口</span><span data-en>Pointers</span></h3>
+<div class="card"><ul style="list-style:none">
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://www.usgo.org/content.aspx?page_id=2507&amp;club_id=454497&amp;item_id=4960" style="font-weight:600"><span data-zh>美国围棋协会 · Cobb《空枰》专栏</span><span data-en>AGA · Cobb&#x27;s The Empty Board</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>专栏原文入口，#20 已核</span><span data-en>column archive; #20 verified</span></span></span></li>
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://senseis.xmp.net/?WilliamCobb" style="font-weight:600"><span data-zh>Sensei&#x27;s Library · Cobb 与书目</span><span data-en>Sensei&#x27;s Library · Cobb &amp; bibliography</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>作者与书目事实</span><span data-en>author and bibliography facts</span></span></span></li>
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://www.britgo.org/review/gocompanion" style="font-weight:600"><span data-zh>英国围棋协会 · 《The Go Companion》书评</span><span data-en>British Go Association · review</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>ISBN、页数与章节范围</span><span data-en>ISBN, pages and scope</span></span></span></li>
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://www.nopss.gov.cn/n1/2022/0223/c441751-32357815.html" style="font-weight:600"><span data-zh>《围棋与中国思想传统》全文</span><span data-en>&#x27;Go and the Chinese Thought Tradition&#x27; full text</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>何云波文；含儒道与和谐说</span><span data-en>He&#x27;s article; Confucian/Daoist and harmony</span></span></span></li>
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://weread.qq.com/web/bookDetail/f8432710811e5f92eg011835" style="font-weight:600"><span data-zh>微信读书 · 《围棋文献集成（8）》</span><span data-en>Weread · Go Literature Collection vol. 8</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>忘忧清乐集与所收棋论</span><span data-en>the Carefree Collection and its treatises</span></span></span></li>
+<li style="margin:.5rem 0;line-height:1.6"><a href="https://books.google.com/books/about/Go_More_Than_a_Game.html?id=qf_QAgAAQBAJ" style="font-weight:600"><span data-zh>Google Books · Go! More Than a Game</span><span data-en>Google Books · Go! More Than a Game</span></a> <span style="color:var(--ink-soft);font-size:.85rem">— <span data-both><span data-zh>Tuttle 2011 版书目</span><span data-en>Tuttle 2011 record</span></span></span></li>
+</ul></div>
+<h2 class="part" data-both><span data-zh>全书目 · 15 部</span><span data-en>All 15 dossiers</span></h2>
+<article class="bkcard">
+<a class="bkcover" href="books/go-cobb-reflections.html" aria-label="《围棋之思：空枰 1994–2004》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover Reflections on the Game of Go: The Empty Board 1994–2004"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>01</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Reflections</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">on the Game</text><text x="67.0" y="92.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">of Go: The</text><text x="67.0" y="112.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Empty Board…</text><line x1="24" y1="138.0" x2="106" y2="138.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="158.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Cobb</text><text x="67.0" y="174.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Slate and Shell · 2005</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>01 · 美国</span><span data-en>A · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-cobb-reflections.html"><span data-zh>《围棋之思：空枰 1994–2004》</span><span data-en>Reflections on the Game of Go: The Empty Board 1994–2004</span> <span class="orig" data-zh>Reflections on the Game of Go: The Empty Board 1994–2004</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#cobb" data-both><span data-zh>威廉·S·科布</span><span data-en>William S. Cobb</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· William S. Cobb</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Slate and Shell · 2005 · 116 页 · ISBN 9781932001242 · ISBN 9781932001242</span><span data-en>Slate and Shell · 2005 · 116 pp. · ISBN 9781932001242 · ISBN 9781932001242</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Slate and Shell</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 围棋哲学随笔 · 佛教与觉悟</span><span data-en>nonfiction · philosophical Go essays · Buddhism &amp; enlightenment</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>围棋哲学 / 佛教</span><span data-en>philosophy of Go / Buddhism</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>英语世界最贴近「围棋与观心」的文集：多数文章先在《空枰》专栏发表，主题集中在围棋如何与佛教的「觉悟」相联。</p><p data-en>The English collection closest to &#x27;Go and watching the mind&#x27;: most essays first appeared in The Empty Board column and centre on how Go relates to Buddhist enlightenment.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>多数文章探讨围棋与佛教觉悟观的关联</span><span data-en>Most essays explore Go&#x27;s relation to Buddhist views of enlightenment</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>围棋经验可以成为理解无常、执著与无我的入口</span><span data-en>Go experience can be an entry to impermanence, attachment and no-self</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>文集也处理足球、魔鬼等非佛教题目</span><span data-en>The collection also treats non-Buddhist topics such as football and demons</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-cobb-reflections.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://senseis.xmp.net/?ReflectionsOnTheGameOfGo" target="_blank" rel="noopener"><span data-zh>原文试读 · Sensei&#x27;s Library 书目页</span><span data-en>Original text · Sensei&#x27;s Library record</span></a>
+<a class="pill sm" href="books/go-cobb-reflections.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-cobb-buddhist.html" aria-label="《佛教哲学与围棋》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover Buddhist Philosophy and the Game of Go"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>02</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Buddhist</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Philosophy</text><text x="67.0" y="92.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">and the</text><text x="67.0" y="112.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Game of Go</text><line x1="24" y1="138.0" x2="106" y2="138.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="158.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Cobb</text><text x="67.0" y="174.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Independently publ · 2021</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>02 · 美国</span><span data-en>B · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-cobb-buddhist.html"><span data-zh>《佛教哲学与围棋》</span><span data-en>Buddhist Philosophy and the Game of Go</span> <span class="orig" data-zh>Buddhist Philosophy and the Game of Go</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#cobb" data-both><span data-zh>威廉·S·科布</span><span data-en>William S. Cobb</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· William S. Cobb</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Independently published · 2021-05-13 · 106 页 · ISBN 979-8503890051 · ISBN 979-8503890051</span><span data-en>Independently published · 2021-05-13 · 106 pp. · ISBN 979-8503890051 · ISBN 979-8503890051</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Independently published</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 佛教哲学 · 围棋</span><span data-en>nonfiction · Buddhist philosophy · Go</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>佛教哲学 / 围棋</span><span data-en>Buddhist philosophy / Go</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>Cobb 把「先讲佛教哲学基本原理，再逐一讨论其与围棋的联系」做成一本更直接的书；问题意识与《围棋之思》相接，但不能未核就称其为续集。</p><p data-en>Cobb&#x27;s more direct attempt: first set out basic Buddhist philosophy, then discuss its links to Go one by one. It continues the question of Reflections, but must not be called a sequel without verification.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>先介绍佛教哲学基本原理，再讨论其与围棋的联系</span><span data-en>Introduces basic Buddhist philosophy, then discusses its links to Go</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>以系列文章而非单一论证展开</span><span data-en>Develops through a series of essays rather than one argument</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-cobb-buddhist.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://www.amazon.co.jp/Buddhist-Philosophy-Game-William-Cobb/dp/B094T532XL" target="_blank" rel="noopener"><span data-zh>原文试读 · Amazon JP 图书页</span><span data-en>Original text · Amazon JP book page</span></a>
+<a class="pill sm" href="books/go-cobb-buddhist.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-cobb-book-of-go.html" aria-label="《围棋之书》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover The Book of Go"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>03</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">The Book of</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Go</text><line x1="24" y1="98.0" x2="106" y2="98.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="118.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Cobb</text><text x="67.0" y="134.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Sterling Publishin · 2000</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>03 · 美国</span><span data-en>C · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-cobb-book-of-go.html"><span data-zh>《围棋之书》</span><span data-en>The Book of Go</span> <span class="orig" data-zh>The Book of Go</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#cobb" data-both><span data-zh>威廉·S·科布</span><span data-en>William S. Cobb</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· William S. Cobb</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Sterling Publishing · 2000 · ISBN 9780806927299（ISBN-10 0-8069-2729-1） · ISBN 9780806927299</span><span data-en>Sterling Publishing · 2000 · ISBN 9780806927299 (ISBN-10 0-8069-2729-1) · ISBN 9780806927299</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Sterling Publishing</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 围棋入门教材</span><span data-en>nonfiction · Go primer</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>围棋入门</span><span data-en>Go primer</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>Cobb 的入门书：用「先吃子版」围棋把零基础读者带到完整围棋，再进入连接、死活、战略战术与练习题——它是理解 Cobb「技术教师」一面的必要对照。</p><p data-en>Cobb&#x27;s primer: starts with First-Capture Go and leads beginners into full Go, then connections, life and death, strategy, tactics and exercises — the necessary counterweight to his philosophical side.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>以「先吃子版」降低入门门槛，再过渡到完整围棋</span><span data-en>Uses First-Capture Go to lower the entry threshold, then moves to full Go</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>覆盖连接、死活、基本战略与战术</span><span data-en>Covers connections, life and death, basic strategy and tactics</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>附 9×9 与 13×13 棋具与练习题</span><span data-en>Includes 9×9 and 13×13 sets and study problems</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-cobb-book-of-go.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://archive.org/details/bookofgo0000cobb" target="_blank" rel="noopener"><span data-zh>原文试读 · Internet Archive 馆藏页</span><span data-en>Original text · Internet Archive record</span></a>
+<a class="pill sm" href="books/go-cobb-book-of-go.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-he-thought.html" aria-label="《中国围棋思想史》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 中国围棋思想史"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>04</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">中国围棋思想史</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">何云波</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">湖南人民出版社 · 2016</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>04 · 中国</span><span data-en>D · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-he-thought.html"><span data-zh>《中国围棋思想史》</span><span data-en>中国围棋思想史</span> <span class="orig" data-zh>中国围棋思想史</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#he-yunbo" data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· He Yunbo</span></div>
+
+<div class="bkmeta" data-both><span data-zh>湖南人民出版社 · 2016-09 · ISBN/页数待核 · ISBN —</span><span data-en>Hunan People&#x27;s Press · 2016-09 · ISBN/pages pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>湖南人民出版社</span><span data-en>Hunan People&#x27;s Press</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>学术 · 中国围棋思想史</span><span data-en>scholarship · Chinese intellectual history of Go</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>中国思想史 / 围棋</span><span data-en>Chinese intellectual history / Go</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>中文世界最系统的「围棋思想史」框架：把文化史、技术史与思想史放在一条线上，从先秦讲到现代；要谈「围棋与中国思想」，这是起点而非终点。</p><p data-en>The most systematic Chinese frame for a history of Go thought: cultural, technical and intellectual history on one line from pre-Qin to modernity — the starting point, not the终点, for &#x27;Go and Chinese thought&#x27;.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>从先秦到现代梳理围棋观念</span><span data-en>Traces ideas of Go from pre-Qin to modernity</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>把文化史、技术史与思想史结合</span><span data-en>Joins cultural, technical and intellectual history</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>以儒道与「技进乎道」「和谐」为几条主线</span><span data-en>Runs several lines: Confucian/Daoist frames, skill-into-Way, harmony</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-he-thought.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://weread.qq.com/web/bookDetail/bcb32200811e5f925g010851" target="_blank" rel="noopener"><span data-zh>原文试读 · 微信读书书目页</span><span data-en>Original text · Weread listing</span></a>
+<a class="pill sm" href="books/go-he-thought.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-he-qilun.html" aria-label="《中国历代围棋棋论选》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 中国历代围棋棋论选"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>05</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">中国历代围棋棋论选</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">何云波</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">—（待核） · —（待核）</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>05 · 中国</span><span data-en>E · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-he-qilun.html"><span data-zh>《中国历代围棋棋论选》</span><span data-en>中国历代围棋棋论选</span> <span class="orig" data-zh>中国历代围棋棋论选</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#he-yunbo" data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· He Yunbo</span></div>
+
+<div class="bkmeta" data-both><span data-zh>出版年 / 出版社 / ISBN 待核 · ISBN —</span><span data-en>year / publisher / ISBN pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>—（待核）</span><span data-en>— (pending)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>学术 · 历代棋论选编</span><span data-en>scholarship · anthology of historical Go treatises</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>古代棋论 / 文献选编</span><span data-en>classical Go treatises / anthology</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>从现代解释回到古人论述的桥梁：先看历代棋论原文，再判断现代「儒道释」框架是否贴切。</p><p data-en>The bridge from modern interpretation back to the ancients&#x27; own texts: read the treatises before judging whether modern Confucian/Daoist/Buddhist frames fit.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>选编历代围棋论说</span><span data-en>Selects historical Go discourse</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>为《中国围棋思想史》提供文献基础</span><span data-en>Provides the documentary base for the History</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-he-qilun.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://news.xtu.edu.cn/info/1042/22531.htm" target="_blank" rel="noopener"><span data-zh>原文试读 · 湘潭大学研究成果介绍</span><span data-en>Original text · Xiangtan University research note</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-he-culture.html" aria-label="《围棋与中国文化》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 围棋与中国文化"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>06</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">围棋与中国文化</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">何云波</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">—（待核） · —（待核）</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>06 · 中国</span><span data-en>F · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-he-culture.html"><span data-zh>《围棋与中国文化》</span><span data-en>围棋与中国文化</span> <span class="orig" data-zh>围棋与中国文化</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#he-yunbo" data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· He Yunbo</span></div>
+
+<div class="bkmeta" data-both><span data-zh>出版年 / 出版社 / ISBN 待核 · ISBN —</span><span data-en>year / publisher / ISBN pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>—（待核）</span><span data-en>— (pending)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>学术 · 围棋文化研究</span><span data-en>scholarship · Go cultural studies</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>围棋文化</span><span data-en>Go culture</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>若《思想史》偏观念，本书偏「文化」的整体面：制度、文人生活、艺术与传播。</p><p data-en>If the History leans to ideas, this book leans to culture at large: institutions, literati life, art and transmission.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>以文化史视角研究围棋</span><span data-en>Studies Go through cultural history</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>与思想史、文艺精神研究互补</span><span data-en>Complements the intellectual-history and literary-artistic studies</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-he-culture.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://news.xtu.edu.cn/info/1042/22531.htm" target="_blank" rel="noopener"><span data-zh>原文试读 · 湘潭大学研究成果介绍</span><span data-en>Original text · Xiangtan University research note</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-he-jing.html" aria-label="《弈境：围棋与中国文艺精神》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 弈境：围棋与中国文艺精神"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>07</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">弈境：围棋与中国文艺精神</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">何云波</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">—（待核） · —（待核）</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>07 · 中国</span><span data-en>G · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-he-jing.html"><span data-zh>《弈境：围棋与中国文艺精神》</span><span data-en>弈境：围棋与中国文艺精神</span> <span class="orig" data-zh>弈境：围棋与中国文艺精神</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#he-yunbo" data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· He Yunbo</span></div>
+
+<div class="bkmeta" data-both><span data-zh>出版年 / 出版社 / ISBN 待核 · ISBN —</span><span data-en>year / publisher / ISBN pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>—（待核）</span><span data-en>— (pending)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>学术 · 围棋与文艺精神</span><span data-en>scholarship · Go and the literary-artistic spirit</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>美学 / 文艺理论</span><span data-en>aesthetics / literary theory</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>直接处理「技—艺—道」：围棋如何从胜负之术进入文艺境界，而不只作人生比喻。</p><p data-en>Directly treats skill–art–Way: how Go moves from a technique of winning into an artistic realm, not merely a life metaphor.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>讨论围棋的「境」与「技进乎道」</span><span data-en>Discusses the &#x27;realm&#x27; of Go and &#x27;skill into the Way&#x27;</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>把围棋放入中国文艺精神谱系</span><span data-en>Places Go within the Chinese literary-artistic genealogy</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-he-jing.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://weread.qq.com/web/reader/a8b32680717260b3a8be681" target="_blank" rel="noopener"><span data-zh>原文试读 · 微信读书书目页</span><span data-en>Original text · Weread listing</span></a>
+<a class="pill sm" href="books/go-he-jing.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-wu-zhong.html" aria-label="《中的精神》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 中的精神（吴清源自传）"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>08</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">中的精神（吴清源自传）</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">吴清源</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">中信出版社 · 2010</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>08 · 中国</span><span data-en>H · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-wu-zhong.html"><span data-zh>《中的精神》</span><span data-en>中的精神（吴清源自传）</span> <span class="orig" data-zh>中的精神（吴清源自传）</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#wu-qingyuan" data-both><span data-zh>吴清源</span><span data-en>Wu Qingyuan (Go Seigen)</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Wu Qingyuan (Go Seigen)</span></div>
+
+<div class="bkmeta" data-both><span data-zh>中信出版社 · 2010 中文版（2001 日本连载，2003 中译）· ISBN 待核 · ISBN —</span><span data-en>CITIC Press · 2010 Chinese edition (serialised 2001; translated 2003) · ISBN pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>中信出版社</span><span data-en>CITIC Press</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 棋手自传 · 中和</span><span data-en>nonfiction · player&#x27;s memoir · equilibrium</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>自传 / 棋道</span><span data-en>memoir / the Way of Go</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>棋手本人的「棋道」自述：不是旁观者解释围棋，而是吴清源用「中和」「调和」说明自己如何在一局棋里寻找阴阳平衡的那一点。</p><p data-en>The player&#x27;s own account of the Way: not an outsider explaining Go, but Wu using 中和/调和 to say how he seeks the yin-yang balance point within a game.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>「中和」/「调和」是其围棋理想</span><span data-en>中和/调和 is his Go ideal</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>「中」是阴阳平衡的那一点</span><span data-en>The &#x27;middle&#x27; is the point where yin and yang balance</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>围棋不只是胜负，而是生存权与精神修养的象征</span><span data-en>Go figures survival and spiritual cultivation, not merely winning</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-wu-zhong.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://sports.sina.cn/others/qipai/2016-09-13/detail-ifxvukhx4849055.d.html" target="_blank" rel="noopener"><span data-zh>原文试读 · 《中的精神》第一章节选（新浪体育）</span><span data-en>Original text · Chapter-one excerpt (Sina Sports)</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-shotwell-more.html" aria-label="《围棋：不止是游戏》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover Go! More Than a Game"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>09</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Go! More</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Than a Game</text><line x1="24" y1="98.0" x2="106" y2="98.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="118.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Shotwell</text><text x="67.0" y="134.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Tuttle Publishing · 2011</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>09 · 美国</span><span data-en>I · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-shotwell-more.html"><span data-zh>《围棋：不止是游戏》</span><span data-en>Go! More Than a Game</span> <span class="orig" data-zh>Go! More Than a Game</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#shotwell" data-both><span data-zh>彼得·肖特韦尔</span><span data-en>Peter Shotwell</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Peter Shotwell</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Tuttle Publishing · 2011-04-11 · 200 页 · ISBN 9781462900060（纸本 9780804834759） · ISBN 9781462900060</span><span data-en>Tuttle Publishing · 2011-04-11 · 200 pp. · ISBN 9781462900060 (print 9780804834759) · ISBN 9781462900060</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Tuttle Publishing</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 围棋教学 · 历史与文化</span><span data-en>nonfiction · Go teaching · history &amp; culture</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>围棋教学 / 文化史</span><span data-en>Go teaching / cultural history</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>英文入门书里最愿意把「围棋为什么不仅是游戏」讲清楚的一本：教学、早期围棋史、儒家论棋、AI 与组合博弈论都在一本书里。</p><p data-en>The English primer most willing to explain why Go is more than a game: teaching, early Go history, Confucian writing on Go, AI and combinatorial game theory in one volume.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>教学从 9×9、13×13 到 19×19</span><span data-en>Teaching runs 9×9 → 13×13 → 19×19</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>包含早期围棋史与儒家论棋</span><span data-en>Includes early Go history and Confucian writing on Go</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>讨论电脑围棋与组合博弈论</span><span data-en>Discusses computer Go and combinatorial game theory</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-shotwell-more.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://books.google.com/books/about/Go_More_Than_a_Game.html?id=qf_QAgAAQBAJ" target="_blank" rel="noopener"><span data-zh>原文试读 · Google Books 书目页</span><span data-en>Original text · Google Books record</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-shotwell-basics.html" aria-label="《围棋基础》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover Go Basics: Concepts &amp; Strategies for New Players"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>10</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Go Basics:</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Concepts &amp;</text><text x="67.0" y="92.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Strategies</text><text x="67.0" y="112.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">for New…</text><line x1="24" y1="138.0" x2="106" y2="138.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="158.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Shotwell</text><text x="67.0" y="174.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Tuttle Publishing · 2005</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>10 · 美国</span><span data-en>J · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-shotwell-basics.html"><span data-zh>《围棋基础》</span><span data-en>Go Basics: Concepts &amp; Strategies for New Players</span> <span class="orig" data-zh>Go Basics: Concepts &amp; Strategies for New Players</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#shotwell" data-both><span data-zh>彼得·肖特韦尔</span><span data-en>Peter Shotwell</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Peter Shotwell</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Tuttle Publishing · 2005-11-15 · 160 页 · ISBN 9780804836883（0804836884） · ISBN 9780804836883</span><span data-en>Tuttle Publishing · 2005-11-15 · 160 pp. · ISBN 9780804836883 (0804836884) · ISBN 9780804836883</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Tuttle Publishing</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 新棋手基础教材</span><span data-en>nonfiction · primer for new players</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>围棋入门</span><span data-en>Go primer</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>若要的是「规则 + 基本概念 + 初学者策略」，这本比《Go! More Than a Game》更聚焦，文化史分量更轻。</p><p data-en>For rules, basic concepts and beginner strategy, this is more focused than Go! More Than a Game, with less cultural history.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>面向新棋手的基础概念与策略</span><span data-en>Basic concepts and strategy for new players</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>与《Go! More Than a Game》同作者</span><span data-en>Same author as Go! More Than a Game</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>600+ 图解</span><span data-en>600+ diagrams</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>从 9×9 入手</span><span data-en>starts from 9×9</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>解释受子制</span><span data-en>explains handicap</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>附 AGA CD-ROM</span><span data-en>AGA CD-ROM included</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-shotwell-basics.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://books.google.com/books/about/Go_Basics.html?id=8cxO8o2F2D8C" target="_blank" rel="noopener"><span data-zh>原文试读 · Google Books 书目线索</span><span data-en>Original text · Google Books lead</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-fairbairn-companion.html" aria-label="《围棋 companion：历史与文化中的围棋》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover The Go Companion: Go in History and Culture"><rect x="0" y="0" width="126" height="178" rx="5" fill="#1A3C5E"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>11</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">The Go</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Companion:</text><text x="67.0" y="92.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Go in</text><text x="67.0" y="112.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">History and…</text><line x1="24" y1="138.0" x2="106" y2="138.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="158.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Fairbairn</text><text x="67.0" y="174.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">Slate and Shell · 2009</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 英国</tspan><tspan data-en> · Britain</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>11 · 英国</span><span data-en>K · Britain</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-fairbairn-companion.html"><span data-zh>《围棋 companion：历史与文化中的围棋》</span><span data-en>The Go Companion: Go in History and Culture</span> <span class="orig" data-zh>The Go Companion: Go in History and Culture</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#fairbairn-hall" data-both><span data-zh>约翰·费尔贝恩、T. 马克·霍尔</span><span data-en>John Fairbairn &amp; T. Mark Hall</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· John Fairbairn &amp; T. Mark Hall</span></div>
+
+<div class="bkmeta" data-both><span data-zh>Slate and Shell · 2009 · 300 页 · ISBN 9781932001433（ISBN-10 1-932001-43-3） · ISBN 9781932001433</span><span data-en>Slate and Shell · 2009 · 300 pp. · ISBN 9781932001433 (ISBN-10 1-932001-43-3) · ISBN 9781932001433</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">Slate and Shell</span>
+<span class="tag" data-both><span data-zh>英国</span><span data-en>Britain</span></span>
+<span class="tag" data-both><span data-zh>非虚构 · 围棋历史与文化随笔</span><span data-en>nonfiction · essays on Go history &amp; culture</span></span>
+<span class="tag" data-both><span data-zh>kind · essay</span><span data-en>essay</span></span>
+<span class="tag"><span data-both><span data-zh>围棋史 / 文化</span><span data-en>Go history / culture</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>把「棋道」「棋品」「超越胜负」放回具体人物、战争与制度里：书评称它「围棋内容夹在可读文章之间」，适合作为历史与文化的对照。</p><p data-en>Puts &#x27;the Way&#x27;, &#x27;character&#x27; and &#x27;beyond winning&#x27; back into persons, war and institutions: the review calls it &#x27;Go bits between interesting things to read&#x27; — a good historical and cultural counterweight.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>以历史与文化为主，技术材料为辅</span><span data-en>History and culture first, technical material second</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>含战时日本围棋与原子弹对局的较长论述</span><span data-en>Includes a long piece on wartime Japan and the atom-bomb game</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>文章多来自 GoGoD 与各地棋书搜集</span><span data-en>Essays drawn from GoGoD and bookshop scouting</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-fairbairn-companion.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://www.britgo.org/review/gocompanion" target="_blank" rel="noopener"><span data-zh>原文试读 · 英国围棋协会书评</span><span data-en>Original text · British Go Association review</span></a>
+<a class="pill sm" href="books/go-fairbairn-companion.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-moskowitz-nation.html" aria-label="《围棋国族：中国男性气质与围棋》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover Go Nation: Chinese Masculinities and the Game of Weiqi in China"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>12</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Go Nation:</text><text x="67.0" y="72.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Chinese</text><text x="67.0" y="92.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">Masculinities</text><text x="67.0" y="112.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">and the…</text><line x1="24" y1="138.0" x2="106" y2="138.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="158.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">Moskowitz</text><text x="67.0" y="174.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">University of Cali · 2013</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">EN<tspan data-zh> · 美国</tspan><tspan data-en> · the American</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>12 · 美国</span><span data-en>L · the American</span></span><span class="tag cn">EN</span></div>
+<h3 class="bktitle"><a href="books/go-moskowitz-nation.html"><span data-zh>《围棋国族：中国男性气质与围棋》</span><span data-en>Go Nation: Chinese Masculinities and the Game of Weiqi in China</span> <span class="orig" data-zh>Go Nation: Chinese Masculinities and the Game of Weiqi in China</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#moskowitz" data-both><span data-zh>马克·L·莫斯科维茨</span><span data-en>Marc L. Moskowitz</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Marc L. Moskowitz</span></div>
+
+<div class="bkmeta" data-both><span data-zh>University of California Press · 2013 · ISBN/页数待核 · ISBN —</span><span data-en>University of California Press · 2013 · ISBN/pages pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069">University of California Press</span>
+<span class="tag" data-both><span data-zh>美国</span><span data-en>the American</span></span>
+<span class="tag" data-both><span data-zh>学术 · 围棋人类学 · 男性气质</span><span data-en>scholarship · anthropology of Go · masculinity</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>文化人类学 / 性别研究</span><span data-en>cultural anthropology / gender studies</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>为「棋道」提供社会科学对照：不教人借围棋观心，而是观察人们如何给围棋赋予道德、性别与民族意义。</p><p data-en>A social-science counterweight to &#x27;the Way&#x27;: it does not teach contemplation through Go but observes how people give Go moral, gendered and national meaning.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>围棋是人格、男性气质与民族认同被塑造的场域</span><span data-en>Go is a field where personhood, masculinity and national identity are shaped</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>研究「人们如何赋予围棋意义」，而非教授观心方法</span><span data-en>Studies how people give Go meaning rather than teaching contemplation</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-moskowitz-nation.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://academic.oup.com/california-scholarship-online/book/13895" target="_blank" rel="noopener"><span data-zh>原文试读 · Oxford Academic 图书介绍</span><span data-en>Original text · Oxford Academic record</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-qijing-shisanpian.html" aria-label="《棋经十三篇》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 棋经十三篇"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>13</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">棋经十三篇</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">张拟（传）</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">—（公版原典） · 宋</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>13 · 中国</span><span data-en>M · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-qijing-shisanpian.html"><span data-zh>《棋经十三篇》</span><span data-en>棋经十三篇</span> <span class="orig" data-zh>棋经十三篇</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#zhang-ni" data-both><span data-zh>张拟（宋，传）</span><span data-en>Zhang Ni (attrib., Song)</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Zhang Ni (attrib., Song)</span></div>
+
+<div class="bkmeta" data-both><span data-zh>宋代原典 · 现代整理本另计（《围棋文献集成》第八册收） · ISBN —</span><span data-en>Song original · modern editions separately (in Go Literature Collection vol. 8) · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>—（公版原典）</span><span data-en>— (public-domain classic)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>古典棋论 · 十三篇</span><span data-en>classical Go treatise · thirteen chapters</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>古典棋论</span><span data-en>classical Go theory</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>宋代以来最常被引用的围棋理论文本；要谈「立象比德」「技进乎道」，先回到这套把棋局与天地阴阳对齐的古典语法。</p><p data-en>The most cited Go theory text since the Song; to speak of &#x27;imaging virtue&#x27; or &#x27;skill into the Way&#x27;, return first to this classical grammar aligning the board with heaven, earth and yin-yang.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>棋局之数与天地阴阳相法</span><span data-en>The board&#x27;s number follows heaven, earth and yin-yang</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>论得算、权舆、合战、虚实、自知</span><span data-en>Treats calculation, opening, battle, emptiness/solidity, self-knowledge</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>把棋艺纳入宇宙论与伦理秩序</span><span data-en>Places the craft within cosmology and ethical order</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-qijing-shisanpian.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://cread.jd.com/read/startRead.action?bookId=30225174&amp;readType=1" target="_blank" rel="noopener"><span data-zh>原文试读 · 京东阅读页面</span><span data-en>Original text · JD Read page</span></a>
+<a class="pill sm" href="books/go-qijing-shisanpian.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-wangyou-qingleji.html" aria-label="《忘忧清乐集》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 忘忧清乐集"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>14</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">忘忧清乐集</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">李逸民（编）</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">浙江古籍出版社（整理本） · 南宋 / 2017 整理本</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>14 · 中国</span><span data-en>N · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-wangyou-qingleji.html"><span data-zh>《忘忧清乐集》</span><span data-en>忘忧清乐集</span> <span class="orig" data-zh>忘忧清乐集</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#liji-min" data-both><span data-zh>李逸民（南宋，编）</span><span data-en>Li Yimin (comp., Southern Song)</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Li Yimin (comp., Southern Song)</span></div>
+
+<div class="bkmeta" data-both><span data-zh>浙江古籍出版社 · 2017-10 整理本（《围棋文献集成》第八册）· ISBN 待核 · ISBN —</span><span data-en>Zhejiang Guji Press · 2017-10 modern edition (Go Literature Collection vol. 8) · ISBN pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>浙江古籍出版社（整理本）</span><span data-en>Zhejiang Guji Press (modern edition)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>古典 · 棋论与古谱汇编</span><span data-en>classical · treatises and ancient game records</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>古代棋谱 / 文献汇编</span><span data-en>ancient game records / compilation</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>现存最重要的早期围棋文献汇编之一：把棋论（《棋经十三篇》《棋诀》《论棋诀要杂说》）与古棋局放在一起，是「原典阅读」的入口。</p><p data-en>One of the most important early Go anthologies: it binds treatises (the Thirteen Chapters, the Qijue, the Lun Qijue Ya Zashuo) with ancient game records — an entry to reading the sources.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>收录《棋经十三篇》《棋诀》《论棋诀要杂说》等文字</span><span data-en>Includes the Thirteen Chapters, the Qijue and the Lun Qijue Ya Zashuo</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>收录孙策诏吕范等古棋局</span><span data-en>Includes ancient records such as the Sun Ce–Lü Fan game</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>书名取自宋徽宗「忘忧清乐在枰棋」</span><span data-en>Title from Huizong&#x27;s line on carefree joy at the board</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-wangyou-qingleji.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://weread.qq.com/web/bookDetail/f8432710811e5f92eg011835" target="_blank" rel="noopener"><span data-zh>原文试读 · 微信读书《围棋文献集成（8）》</span><span data-en>Original text · Weread vol. 8</span></a>
+</div>
+</div></article>
+<article class="bkcard">
+<a class="bkcover" href="books/go-xuanxuan-qijing.html" aria-label="《玄玄棋经》"><svg viewBox="0 0 126 178" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="cover 玄玄棋经"><rect x="0" y="0" width="126" height="178" rx="5" fill="#3E5C76"/><rect x="0" y="0" width="9" height="178" fill="#777069"/><rect x="17" y="10.0" width="96" height="158.0" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1"/><text x="110" y="30.0" text-anchor="end" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#E9D89B" data-zh>15</text><text x="67.0" y="52.0" text-anchor="middle" font-family="LXGW WenKai,serif" font-size="15.0" font-weight="700" fill="#F7F1E3">玄玄棋经</text><line x1="24" y1="78.0" x2="106" y2="78.0" stroke="rgba(233,216,155,.7)" stroke-width="1"/><text x="67.0" y="98.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="9.5" fill="#D9E1EA">佚名（传本）</text><text x="67.0" y="114.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.0" fill="rgba(217,225,234,.75)">—（传本） · 元明（待核）</text><text x="67.0" y="160.0" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" letter-spacing="1.5" fill="rgba(247,241,227,.6)">ZH<tspan data-zh> · 中国</tspan><tspan data-en> · China</tspan></text></svg></a>
+<div class="bkbody">
+<div class="bkhead"><span class="bknum" data-both><span data-zh>15 · 中国</span><span data-en>O · China</span></span><span class="tag cn">ZH</span></div>
+<h3 class="bktitle"><a href="books/go-xuanxuan-qijing.html"><span data-zh>《玄玄棋经》</span><span data-en>玄玄棋经</span> <span class="orig" data-zh>玄玄棋经</span></a></h3>
+<div class="bkauthor"><a href="../authors/index.html#classical-anon" data-both><span data-zh>佚名（传本）</span><span data-en>Anonymous (received text)</span></a> <span class="cnt" style="color:var(--ink-pale);font-size:.78rem">· Anonymous (received text)</span></div>
+
+<div class="bkmeta" data-both><span data-zh>传本 · 现代整理见《围棋文献集成》第十七册 · 编纂者/版本待核 · ISBN —</span><span data-en>received text · modern edition in Go Literature Collection vol. 17 · compiler/edition pending · ISBN —</span></div>
+<div class="bktags">
+<span class="tag pub" style="background:#777069"><span data-both><span data-zh>—（传本）</span><span data-en>— (received text)</span></span></span>
+<span class="tag" data-both><span data-zh>中国</span><span data-en>China</span></span>
+<span class="tag" data-both><span data-zh>古典 · 死活题集与棋论</span><span data-en>classical · life-and-death problems and theory</span></span>
+<span class="tag" data-both><span data-zh>kind · scholarship</span><span data-en>scholarship</span></span>
+<span class="tag"><span data-both><span data-zh>古代棋谱 / 死活题</span><span data-en>ancient game records / life-and-death problems</span></span></span>
+<span class="status unread" data-both><span data-zh>想读 / 未通读</span><span data-en>want to read / not finished</span></span>
+</div>
+<div class="bkwhy"><p data-zh>Fairbairn 称其为「史上最有影响力的围棋书」：它是中国古典死活题的集大成者，也是日本、朝鲜棋谱传统的共同上游。</p><p data-en>Fairbairn calls it &#x27;the most influential go book ever produced&#x27;: the great Chinese collection of classical life-and-death problems and a common upstream for Japanese and Korean traditions.</p></div>
+<ul style="list-style:none;display:flex;flex-wrap:wrap;gap:.35rem .9rem;margin-top:.35rem">
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>中国古典死活题的集大成之作</span><span data-en>The great Chinese collection of classical life-and-death problems</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>对日本、朝鲜围棋传统有深远影响</span><span data-en>Deep influence on Japanese and Korean Go traditions</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>题多具名，名称含典故与提示</span><span data-en>Problems are named, with allusions and hints</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>466 题 / 1,313 幅解法图</span><span data-en>466 problems / 1,313 solution diagrams</span></span></li>
+<li style="font-size:.78rem;color:var(--gold-dim)">· <span data-both><span data-zh>主题索引约 70 个</span><span data-en>about 70 themes indexed</span></span></li>
+</ul>
+<div class="bkact">
+<a class="pill sm" href="books/go-xuanxuan-qijing.html">☞ <span data-zh>进入单书页 · 完整档案</span><span data-en>open the full dossier</span></a>
+<a class="pill sm ext" href="https://www.amazon.sg/%E5%9B%B4%E6%A3%8B%E6%96%87%E7%8C%AE%E9%9B%86%E6%88%90-17%E7%8E%84%E7%8E%84%E6%A3%8B%E7%BB%8F%E7%9F%B3%E5%AE%A4%E7%A7%98%E4%BC%A0%E8%90%83%E5%A5%95%E6%90%9C%E7%8E%84-%E7%B2%BE-%E5%9B%B4%E6%A3%8B%E5%85%A8%E4%B9%A6-%E6%A3%8B%E6%96%87%E5%8C%96%E5%85%A8%E4%B9%A6/dp/7554013548" target="_blank" rel="noopener"><span data-zh>原文试读 · 《围棋文献集成》第十七册书目</span><span data-en>Original text · Go Literature Collection vol. 17 listing</span></a>
+<a class="pill sm" href="books/go-xuanxuan-qijing.html#textlinks"><span data-zh>全部原文链接 2 条 →</span><span data-en>all 2 source links →</span></a>
+</div>
+</div></article>
+<h2 class="part" data-both><span data-zh>出版社 × 书 · Publishers &amp; shelves</span><span data-en>Publishers &amp; shelves</span></h2>
+<div class="srcnote"><div data-zh><b>可视化说明。</b>每行一个出版社（色块=出版社色），块宽∝页数，块内为书名——出版方、篇幅与批次分布一图读完。</div><div data-en><b>How to read.</b> One row per publisher (color = press); block width ∝ page count; titles inside — press, length and batch at a glance.</div></div>
+<div class="pubviz"><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span>Slate and Shell</div><div class="bar"><div class="blk" style="background:#777069;width:277px" title="Reflections on the Game of Go: The Empty Board 1994–2004 · 116pp"><span>Reflections on t</span></div><div class="blk" style="background:#777069;width:480px" title="The Go Companion: Go in History and Culture · 300pp"><span>The Go Companion</span></div><span class="cnt">×2</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span>Independently published</div><div class="bar"><div class="blk" style="background:#777069;width:266px" title="Buddhist Philosophy and the Game of Go · 106pp"><span>Buddhist Philoso</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span>Sterling Publishing</div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="The Book of Go · 300pp"><span>The Book of Go</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>湖南人民出版社</span><span data-en>Hunan People&#x27;s Press</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="中国围棋思想史 · 300pp"><span>中国围棋思想史</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>—（待核）</span><span data-en>— (pending)</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="中国历代围棋棋论选 · 300pp"><span>中国历代围棋棋论选</span></div><div class="blk" style="background:#777069;width:480px" title="围棋与中国文化 · 300pp"><span>围棋与中国文化</span></div><div class="blk" style="background:#777069;width:480px" title="弈境：围棋与中国文艺精神 · 300pp"><span>弈境：围棋与中国文艺精神</span></div><span class="cnt">×3</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>中信出版社</span><span data-en>CITIC Press</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="中的精神（吴清源自传） · 300pp"><span>中的精神（吴清源自传）</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span>Tuttle Publishing</div><div class="bar"><div class="blk" style="background:#777069;width:370px" title="Go! More Than a Game · 200pp"><span>Go! More Than a </span></div><div class="blk" style="background:#777069;width:326px" title="Go Basics: Concepts &amp; Strategies for New Players · 160pp"><span>Go Basics: Conce</span></div><span class="cnt">×2</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span>University of California Press</div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="Go Nation: Chinese Masculinities and the Game of Weiqi in China · 300pp"><span>Go Nation: Chine</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>—（公版原典）</span><span data-en>— (public-domain classic)</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="棋经十三篇 · 300pp"><span>棋经十三篇</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>浙江古籍出版社（整理本）</span><span data-en>Zhejiang Guji Press (modern edition)</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="忘忧清乐集 · 300pp"><span>忘忧清乐集</span></div><span class="cnt">×1</span></div></div><div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><span data-both><span data-zh>—（传本）</span><span data-en>— (received text)</span></span></div><div class="bar"><div class="blk" style="background:#777069;width:480px" title="玄玄棋经 · 300pp"><span>玄玄棋经</span></div><span class="cnt">×1</span></div></div></div>
+<h2 class="part" data-both><span data-zh>作者 × 书 · Authors mapping</span><span data-en>Authors mapping</span></h2>
+<div class="pubviz">
+<div class="row"><div class="pname"><span class="dot" style="background:#3E5C76"></span><a href="../authors/index.html#cobb" data-both><span data-zh>威廉·S·科布</span><span data-en>William S. Cobb</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-cobb-reflections.html" style="font-size:.78rem">Reflections on the Game of Go: The Empty Board 1994–2004</a> <a href="books/go-cobb-buddhist.html" style="font-size:.78rem">Buddhist Philosophy and the Game of Go</a> <a href="books/go-cobb-book-of-go.html" style="font-size:.78rem">The Book of Go</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><a href="../authors/index.html#he-yunbo" data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-he-thought.html" style="font-size:.78rem">中国围棋思想史</a> <a href="books/go-he-qilun.html" style="font-size:.78rem">中国历代围棋棋论选</a> <a href="books/go-he-culture.html" style="font-size:.78rem">围棋与中国文化</a> <a href="books/go-he-jing.html" style="font-size:.78rem">弈境：围棋与中国文艺精神</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><a href="../authors/index.html#wu-qingyuan" data-both><span data-zh>吴清源</span><span data-en>Wu Qingyuan (Go Seigen)</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-wu-zhong.html" style="font-size:.78rem">中的精神（吴清源自传）</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#3E5C76"></span><a href="../authors/index.html#shotwell" data-both><span data-zh>彼得·肖特韦尔</span><span data-en>Peter Shotwell</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-shotwell-more.html" style="font-size:.78rem">Go! More Than a Game</a> <a href="books/go-shotwell-basics.html" style="font-size:.78rem">Go Basics: Concepts &amp; Strategies for New Players</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#1A3C5E"></span><a href="../authors/index.html#fairbairn-hall" data-both><span data-zh>约翰·费尔贝恩、T. 马克·霍尔</span><span data-en>John Fairbairn &amp; T. Mark Hall</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-fairbairn-companion.html" style="font-size:.78rem">The Go Companion: Go in History and Culture</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#3E5C76"></span><a href="../authors/index.html#moskowitz" data-both><span data-zh>马克·L·莫斯科维茨</span><span data-en>Marc L. Moskowitz</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-moskowitz-nation.html" style="font-size:.78rem">Go Nation: Chinese Masculinities and the Game of Weiqi in China</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><a href="../authors/index.html#zhang-ni" data-both><span data-zh>张拟（宋，传）</span><span data-en>Zhang Ni (attrib., Song)</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-qijing-shisanpian.html" style="font-size:.78rem">棋经十三篇</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><a href="../authors/index.html#liji-min" data-both><span data-zh>李逸民（南宋，编）</span><span data-en>Li Yimin (comp., Southern Song)</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-wangyou-qingleji.html" style="font-size:.78rem">忘忧清乐集</a></div></div>
+<div class="row"><div class="pname"><span class="dot" style="background:#777069"></span><a href="../authors/index.html#classical-anon" data-both><span data-zh>佚名（传本）</span><span data-en>Anonymous (received text)</span></a></div><div class="bar" style="gap:.9rem"><a href="books/go-xuanxuan-qijing.html" style="font-size:.78rem">玄玄棋经</a></div></div>
+</div>
+<h2 class="part" data-both><span data-zh>完备性核验 · Completeness review</span><span data-en>Completeness review</span></h2>
+<div class="gapbox"><div class="v-line"><span class="badge"><span data-both><span data-zh>判定 GAPS</span><span data-en>GAPS</span></span></span><span data-zh>核心书架十五部覆盖四圈：观心（Cobb 三书）、中国思想史（何云波四书）、棋手自述与跨文化（吴清源 / Shotwell / Fairbairn–Hall / Moskowitz）、原典（《棋经十三篇》/《忘忧清乐集》/《玄玄棋经》）。书目事实经出版社、馆藏或书评核对；未见全文的解读一律 ◐/○；原清单标为待核的篇名不升级。</span><span data-en>The fifteen dossiers cover four rings: contemplation (three Cobb titles), Chinese intellectual history (four He Yunbo titles), the player&#x27;s account and cross-cultural studies (Wu, Shotwell, Fairbairn–Hall, Moskowitz), and the classical sources (Thirteen Chapters, Carefree Collection, Gateway). Publication facts are checked against publishers, catalogues or reviews; unread interpretations stay ◐/○; titles marked unverified in the source list are not upgraded.</span></div><ul>
+<li data-zh>Cobb《佛教哲学与围棋》仅单一书目来源（2021），出版社 / ISBN / 与 2005 年文集的重合度待核。</li><li data-en>Cobb&#x27;s Buddhist Philosophy rests on a single 2021 listing; publisher, ISBN and overlap with the 2005 collection are pending.</li>
+<li data-zh>何云波四书的版次 / 年份 / ISBN 未逐一核实（书名与作者已由湘潭大学官网确认）。</li><li data-en>Editions, years and ISBNs of He Yunbo&#x27;s four books are not individually verified (titles and authorship are confirmed via Xiangtan University).</li>
+<li data-zh>《玄玄棋经》编纂者 / 版本待核；《棋经十三篇》十三篇全目与宋本原貌待核。</li><li data-en>The Gateway&#x27;s compiler and editions are pending; the full thirteen chapter-titles and the Song original of the Qijing are pending.</li>
+<li data-zh>Moskowitz《Go Nation》正文未读，ISBN / 页数待核（出版社页 403）。</li><li data-en>Moskowitz&#x27;s Go Nation is unread; ISBN/pages pending (publisher page 403).</li>
+<li data-zh>原清单中的「静坐 / 记录情绪 / 弃子观照 / 收盘观无常」是实践建议，不是上述作者的原文或成套行法，未写入正文。</li><li data-en>The source list&#x27;s &#x27;sitting / recording emotions / contemplating sacrifice / closing as impermanence&#x27; are practice suggestions, not the authors&#x27; verified teachings; they are kept out of the body text.</li>
+</ul></div>
+<h2 class="part" data-both><span data-zh>附录 · 其余提到的文献</span><span data-en>Appendix · other titles mentioned</span></h2>
+<div class="srcnote"><div data-zh>核心书架之外的其余文献按类归入此处；每条保留原清单的把握（✓/◐/○/◇），未核实者不升级。</div><div data-en>Titles beyond the core shelf are grouped here; each keeps its confidence mark (✓/◐/○/◇) and is never upgraded without evidence.</div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>Cobb 的其他文本 · 论文 / 专栏 / 小册子</span><span data-en>Other Cobb texts · papers, columns, pamphlets</span></h3>
+<div data-zh>以下多为小册子或专栏，未列入核心书架；篇名把握沿用原清单。</div><div data-en>Mostly pamphlets or columns, not on the core shelf; marks follow the source list.</div>
+<ul style="list-style:none;margin:.5rem 0">
+<li style="margin:.35rem 0;line-height:1.6"><b>The Game of Go: An Unexpected Path to Enlightenment</b> · The Eastern Buddhist, New Series 30:2 (1997), 199–213 — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>代表性论文；正式引用前宜核期刊原记录</span><span data-en>representative paper; check the journal record before citing</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>The Game of Go</b> · Tricycle, Spring 1999 — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>据作者页，改写自《The Eastern Buddhist》文章</span><span data-en>per the author page, adapted from the Eastern Buddhist article</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>The Empty Board（专栏）</span><span data-en>The Empty Board (column)</span></span></b> · American Go Journal / AGA — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>#20 已核（2024-03-29）；其余条目按站内档案</span><span data-en>#20 verified (2024-03-29); other items per the site archive</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>4-4 Point Joseki: A Brief Introduction</b> · William S. Cobb — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>技术小册子（约 44 页）</span><span data-en>technical pamphlet (~44 pp.)</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>Playing the Endgame: A Brief Introduction</b> · William S. Cobb — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>官子小册子</span><span data-en>endgame pamphlet</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>Go Problems for Kyu Level Players, vol. 1–6</b> · William S. Cobb — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>死活、全局、手筋等六册</span><span data-en>six volumes: life-and-death, whole-board, tesuji</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>Learning from the Masters, vol. 1–2</b> · William S. Cobb — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>书目已列；内容未核</span><span data-en>listed; contents unverified</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>Attachment and Detachment in Go</b> · <span data-both><span data-zh>篇名待核</span><span data-en>title pending</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅见早期表述，未见目录/原文</span><span data-en>early mention only; no contents/text</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b>Go as Meditation</b> · <span data-both><span data-zh>篇名待核</span><span data-en>title pending</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅见早期表述，未见目录/原文</span><span data-en>early mention only; no contents/text</span></span></span> <span class="conf c-part">○</span></li>
+</ul></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>何云波的其他文本 · 专著 / 文集 / 文章</span><span data-en>Other He Yunbo texts · books, collected works, articles</span></h3>
+<ul style="list-style:none;margin:.5rem 0">
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋与中国思想传统</span><span data-en>Go and the Chinese Thought Tradition</span></span></b> · <span data-both><span data-zh>《光明日报》国家社科基金专刊 · 2022-02-23</span><span data-en>Guangming Daily NSSF column · 2022-02-23</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>全文已核；核心书架以专著为主，此文作附录</span><span data-en>full text verified; kept in the appendix as a paper</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>中国围棋文化史</span><span data-en>A Cultural History of Chinese Go</span></span></b> · <span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>检索结果出现，目录/版本未核</span><span data-en>appears in search results; contents/edition unverified</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>中国围棋史</span><span data-en>A History of Chinese Go</span></span></b> · <span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>通识史，非思想史专著</span><span data-en>general history, not the intellectual history</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文化教程</span><span data-en>A Course in Go Culture</span></span></b> · <span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>教材；结构未核</span><span data-en>textbook; structure unverified</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>何云波围棋文集（四卷）</span><span data-en>He Yunbo Go Collected Works (4 vols.)</span></span></b> · <span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>竹林品弈 / 棋声流水 / 观棋者语 / 黑白有道；各卷目录未核</span><span data-en>four volumes; contents of each unverified</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>世界围棋通史</span><span data-en>A World History of Go</span></span></b> · <span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>湘潭大学页列为著作</span><span data-en>listed among his works by Xiangtan University</span></span></span> <span class="conf c-part">◐</span></li>
+</ul></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>Shotwell / Bozulich 与围棋文献集成其他册</span><span data-en>Shotwell / Bozulich and other Go Literature Collection volumes</span></h3>
+<ul style="list-style:none;margin:.5rem 0">
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>Winning Go: Successful Moves from the Opening to the Endgame</span><span data-en>Winning Go</span></span></b> · Richard Bozulich &amp; Peter Shotwell — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>合著技术书；对话未展开</span><span data-en>co-authored technical book; not discussed</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文献集成 第十二册 · 待月謻棋谱外八种</span><span data-en>Go Literature Collection vol. 12</span></span></b> · <span data-both><span data-zh>王国平 总主编</span><span data-en>Wang Guoping (gen. ed.)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅检索书目出现</span><span data-en>search listing only</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文献集成 第十三册 · 餐菊斋棋评 等</span><span data-en>Go Literature Collection vol. 13</span></span></b> · <span data-both><span data-zh>王国平 总主编</span><span data-en>Wang Guoping (gen. ed.)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>2017 浙江古籍，ISBN 9787554010990（馆藏提要）</span><span data-en>Zhejiang Guji 2017, ISBN 9787554010990 (catalogue note)</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文献集成 第十五册</span><span data-en>Go Literature Collection vol. 15</span></span></b> · <span data-both><span data-zh>王国平 总主编</span><span data-en>Wang Guoping (gen. ed.)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅馆藏检索条目</span><span data-en>catalogue entry only</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文献集成 第十七册 · 玄玄棋经 等</span><span data-en>Go Literature Collection vol. 17</span></span></b> · <span data-both><span data-zh>王国平 总主编</span><span data-en>Wang Guoping (gen. ed.)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>收《玄玄棋经》《石室秘传》《萃奕搜玄》</span><span data-en>contains the Gateway, Shishi Michuan and Cuiyi Souxuan</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋文献集成 第二十二册 · 秋仙汇选外十四种</span><span data-en>Go Literature Collection vol. 22</span></span></b> · <span data-both><span data-zh>王国平 总主编</span><span data-en>Wang Guoping (gen. ed.)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅检索书目出现</span><span data-en>search listing only</span></span></span> <span class="conf c-part">○</span></li>
+</ul></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>古代棋论 / 棋谱 · 单篇与其他题集</span><span data-en>Classical treatises &amp; problem collections · pieces and other collections</span></h3>
+<ul style="list-style:none;margin:.5rem 0">
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>棋诀</span><span data-en>Qijue</span></span></b> · <span data-both><span data-zh>刘仲甫</span><span data-en>Liu Zhongfu</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>见《围棋文献集成》第八册简介</span><span data-en>listed in vol. 8 blurb</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>论棋诀要杂说</span><span data-en>Lun Qijue Ya Zashuo</span></span></b> · <span data-both><span data-zh>张靖</span><span data-en>Zhang Jing</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>见《围棋文献集成》第八册简介</span><span data-en>listed in vol. 8 blurb</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>石室仙机 / 仙机武库</span><span data-en>Shishi Xianji / Xianji Wuku</span></span></b> · <span data-both><span data-zh>明 · 许榖编 / 陆玄宇原辑、过百龄修订</span><span data-en>Ming: Xu Gu (ed.) / Lu Xuanyu, rev. Guo Bailing</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>《围棋文献集成》第八册所收</span><span data-en>in vol. 8 of the Collection</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>棋经众妙</span><span data-en>Qijing Zhongmiao</span></span></b> · <span data-both><span data-zh>作者待核</span><span data-en>author pending</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>死活与战术材料</span><span data-en>life-and-death and tactics material</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋棋经众妙精选精解</span><span data-en>Selected Explanations of Qijing Zhongmiao</span></span></b> · <span data-both><span data-zh>作者/版本待核</span><span data-en>author/edition pending</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>页面称选 140 题、分五类；来自文档分享页，未核</span><span data-en>claims 140 problems in five classes; from a document-sharing page, unverified</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>玄玄棋经（现代整理）</span><span data-en>Gateway to All Marvels (modern ed.)</span></span></b> · <span data-both><span data-zh>见《围棋文献集成》第十七册</span><span data-en>see vol. 17</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>编纂者/版本待核</span><span data-en>compiler/edition pending</span></span></span> <span class="conf c-part">◐</span></li>
+</ul></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>未核论文 / 介绍文章 / 儒家原典</span><span data-en>Unverified papers, introductions, Confucian sources</span></h3>
+<ul style="list-style:none;margin:.5rem 0">
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>当 AlphaGo 遇见老子——从《棋经》的道家思想论当代人工智能的发展</span><span data-en>When AlphaGo Meets Laozi</span></span></b> · <span data-both><span data-zh>作者/刊物/年份待核</span><span data-en>author/venue/year pending</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>仅见 PDF；未读全文</span><span data-en>PDF only; unread</span></span></span> <span class="conf c-part">○</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>The Win or the Way: Finding Meaning in the Game of Go</span><span data-en>The Win or the Way</span></span></b> · American Go Association · 2019-08-25 — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>介绍 Cobb 及其围棋哲学的文章，非 Cobb 本人作品</span><span data-en>an article on Cobb, not a Cobb work</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>棋路书香：记忆中的 20 种棋书</span><span data-en>Twenty Go Books in Memory</span></span></b> · <span data-both><span data-zh>《围棋天地》2005-03-08 转载</span><span data-en>Weiqi Tiandi, reposted 2005-03-08</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>推荐与评论文章，非吴清源作品</span><span data-en>a recommendation piece, not by Wu</span></span></span> <span class="conf c-part">◐</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>论语·阳货</span><span data-en>Analects · Yang Huo</span></span></b> · <span data-both><span data-zh>孔子（记）</span><span data-en>Confucius (recorded)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>「不有博弈者乎，为之犹贤乎已」</span><span data-en>&#x27;Are there not games of go? To play them is better than nothing.&#x27;</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>孟子·告子上</span><span data-en>Mencius · Gaozi I</span></span></b> · <span data-both><span data-zh>孟子（记）</span><span data-en>Mencius (recorded)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>弈秋与专心致志</span><span data-en>Yi Qiu and focused attention</span></span></span> <span class="conf c-ok">✓</span></li>
+<li style="margin:.35rem 0;line-height:1.6"><b><span data-both><span data-zh>围棋：人生处世如棋道</span><span data-en>Go: Life and Conduct as the Way of the Board</span></span></b> · <span data-both><span data-zh>刘海军、傅璇琮（平台署名）</span><span data-en>Liu Haijun &amp; Fu Xuancong (per platform)</span></span> — <span style="color:var(--ink-soft);font-size:.88rem"><span data-both><span data-zh>2023-04-01 平台页；目录、责任关系与内容深度未核</span><span data-en>platform page dated 2023-04-01; contents, authorship and depth unverified</span></span></span> <span class="conf c-part">○</span></li>
+</ul></div>
+<div class="links">
+<a class="pill" href="index.html">☰ <span data-zh>全部书单 · 档案</span><span data-en>all lists · archive</span></a>
+<a class="pill" href="../moment/year-2026.html">↝ <span data-zh>读年度思潮：活着的此刻</span><span data-en>read the year</span></a>
+<a class="pill" href="../index.html">↝ <span data-zh>返回板块首页</span><span data-en>back to the domain</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

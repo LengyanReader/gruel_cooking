@@ -11,7 +11,7 @@
 ## Confirmed reading (requirement refinement R0–R5)
 
 - **Reading:** _(MVP · Elevated · Exploratory)_ — confirm with the human before executing.
-- **Constraint classification:** 
+- **Constraint classification:**
     - **Hard**: <HF> path, M0.4 Zero-fabrication, M0.1/M0.2 Truth/Traceability, M0.8 Human-gate.
     - **Soft**: Chinese language for task tracking, DH standards (TEI/CIDOC-CRM).
     - **Assumed (to confirm)**: Assistant has write access to .harness, User has Python environment for check.
@@ -36,3 +36,31 @@ horizon: long · verifiability: high · stakes: medium · grounding: deep · art
 3. 对 [manovich-lev.md](file:///c:/DA_Practice/cookbooks/gruel_cooking/reseArch_X/scholars/manovich-lev.md) 进行来源审计（Provenance Audit）（已完成：标记 2 处 ◇ 未溯源主张）。
 4. 补全 [dialogue_map.md](file:///c:/DA_Practice/cookbooks/gruel_cooking/reseArch_X/indexes/dialogue_map.md) 中的缺失指针（已完成：Manovich 行补 ✔）。
 5. 生成第一个 MVP 对话建议的验收标准（已完成：MVP-001 已存在且完整）。
+---
+
+## 2026-11-08 · Reading_IA 新书单 `2026-go-culture`（R5 已确认）
+
+**Goal:** 依据用户提供的「围棋文献对话清单」，制作一份新的阅读书单批次：**围棋 · 观心、棋道与思想传统**。
+
+**Confirmed reading (R4 → R5):** **Elevated**（用户已确认，四项皆取推荐）
+- crop id `2026-go-culture`，日期 `2026-11-08`；keel 仍为 `2026-12 冬至`（R2 一窗一书单）。
+- 双语 zh/en；沿用 Japan crop 的读法图（rings / axes / reading_order / pointers）+ 单书档案。
+- 范围：**核心书架 + 附录**（其余提及文献以带把握标注的附录呈现，不伪造深度）。
+- 考证：**核心书架**在线核对出版社/ISBN/年/版本；附录保留原清单的 ◐/○/◇。
+
+**Constraints:**
+- **Hard:** M0.4 零臆造；原清单的 ✓/◐/○/◇ 只降不升；书目事实以出版社/ISBN/馆藏为准 + asof；未见全文的解读一律 ◐/○；书单不入思潮之文（R1）；源→镜像同步（R4）；不新增 CI 红门；未获明确要求不 commit/publish。
+- **Soft:** 与现有 crop 同等深度；古代棋论与现代研究分层。
+- **Assumed:** 网络可达（核心书架核对）；单一 `author_slug` 必在 authors.json 注册（防 dangling edge）。
+
+**Definition of Done:**
+- [x] `site.json` 新增 crop（rings/axes/reading_order/pointers/verdict_gaps/appendix）。（2026-11-08：`2026-go-culture`，4 rings / 3 axes / 3-step path / 6 pointers / 5 gaps / appendix 5 组）
+- [x] 核心书架 14–18 部入 `books.json`，每部带 provenance + fact_ledger + unverified。（15 部）
+- [x] 关键作者入 `authors.json`，关系入 `relations.json`。（9 位作者；schools 9 / circle 3 / cowrites 1 / influences 5）
+- [x] `readings/lists/README.md` 登记新行；`build_reading.py --validate` 通过。（`books=57 authors=41 relations=ok site=ok crops=5`）
+- [x] 重建镜像后 `audit.py --graph` 无**新增** dangling；`--corpus` 无新增 incomplete。（graph 226 节点 / 153 边；仅旧有 4 dangling；corpus 仅旧有 jp-nihonkoku-shi）
+- [x] `git diff -- docs/reading_ia` 为生成结果（不要求提交）。（15 单书页 + 1 批页 + archive/authors 重建）
+- [x] 深度对齐其他 crop：15 部均补 TOC/概念/接受史/局限/作者意图/长评/母题/摘录（平均 10,442 字符，8,522–13,384；无缺块）。
+- [x] 跨 crop 复核并超越：概念/接受/局限/意图/长评 15/15（Japan 8/24）；related 3.6、craft 3.1、deep_read 3.0；6 部有实证 TOC 者补章节读法卡（28 acts）；crop 级 4 rings / 6 pointers / 5 appendix。平均 11,532 字符（8,726–15,822）。
+
+**First move:** 核对核心书架书目事实 → 写数据 → 重建 → 跑门禁。

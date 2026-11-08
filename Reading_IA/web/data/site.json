@@ -13,6 +13,567 @@
   },
   "crops": [
     {
+      "id": "2026-go-culture",
+      "page": "docs/reading_ia/read/go-culture-books.html",
+      "dir_page": "go-culture-books.html",
+      "glyph_zh": "围弈 · 观心与棋道 GO CULTURE",
+      "glyph_en": "GO CULTURE · WATCHING THE MIND",
+      "date": "2026-11-08",
+      "title_zh": "围棋 · 观心、棋道与思想传统 · 十五书",
+      "title_en": "Go — Watching the Mind, the Way of the Board, and the Thought Tradition (15 dossiers)",
+      "subtitle_zh": "四圈十五书：观心（Cobb）— 中国思想史（何云波）— 棋手自述与跨文化 — 原典（棋论与棋谱）；一本附录收拢其余提及文献。",
+      "subtitle_en": "Four rings, fifteen dossiers: contemplation (Cobb) — Chinese intellectual history (He Yunbo) — the player's account and cross-cultural studies — the classical sources. An appendix gathers the rest.",
+      "verdict_zh": "GAPS",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "英/中/文言 × 15 — 核心书架经出版社/馆藏/书评核对；未见全文者标 ◐/○",
+      "lang_line_en": "English / Chinese / Classical × 15 — core shelf checked against publishers, catalogues and reviews; unread items marked ◐/○",
+      "book_ids": [
+        "go-cobb-reflections",
+        "go-cobb-buddhist",
+        "go-cobb-book-of-go",
+        "go-he-thought",
+        "go-he-qilun",
+        "go-he-culture",
+        "go-he-jing",
+        "go-wu-zhong",
+        "go-shotwell-more",
+        "go-shotwell-basics",
+        "go-fairbairn-companion",
+        "go-moskowitz-nation",
+        "go-qijing-shisanpian",
+        "go-wangyou-qingleji",
+        "go-xuanxuan-qijing"
+      ],
+      "verdict_body_zh": "核心书架十五部覆盖四圈：观心（Cobb 三书）、中国思想史（何云波四书）、棋手自述与跨文化（吴清源 / Shotwell / Fairbairn–Hall / Moskowitz）、原典（《棋经十三篇》/《忘忧清乐集》/《玄玄棋经》）。书目事实经出版社、馆藏或书评核对；未见全文的解读一律 ◐/○；原清单标为待核的篇名不升级。",
+      "verdict_body_en": "The fifteen dossiers cover four rings: contemplation (three Cobb titles), Chinese intellectual history (four He Yunbo titles), the player's account and cross-cultural studies (Wu, Shotwell, Fairbairn–Hall, Moskowitz), and the classical sources (Thirteen Chapters, Carefree Collection, Gateway). Publication facts are checked against publishers, catalogues or reviews; unread interpretations stay ◐/○; titles marked unverified in the source list are not upgraded.",
+      "verdict_gaps": [
+        {
+          "zh": "Cobb《佛教哲学与围棋》仅单一书目来源（2021），出版社 / ISBN / 与 2005 年文集的重合度待核。",
+          "en": "Cobb's Buddhist Philosophy rests on a single 2021 listing; publisher, ISBN and overlap with the 2005 collection are pending."
+        },
+        {
+          "zh": "何云波四书的版次 / 年份 / ISBN 未逐一核实（书名与作者已由湘潭大学官网确认）。",
+          "en": "Editions, years and ISBNs of He Yunbo's four books are not individually verified (titles and authorship are confirmed via Xiangtan University)."
+        },
+        {
+          "zh": "《玄玄棋经》编纂者 / 版本待核；《棋经十三篇》十三篇全目与宋本原貌待核。",
+          "en": "The Gateway's compiler and editions are pending; the full thirteen chapter-titles and the Song original of the Qijing are pending."
+        },
+        {
+          "zh": "Moskowitz《Go Nation》正文未读，ISBN / 页数待核（出版社页 403）。",
+          "en": "Moskowitz's Go Nation is unread; ISBN/pages pending (publisher page 403)."
+        },
+        {
+          "zh": "原清单中的「静坐 / 记录情绪 / 弃子观照 / 收盘观无常」是实践建议，不是上述作者的原文或成套行法，未写入正文。",
+          "en": "The source list's 'sitting / recording emotions / contemplating sacrifice / closing as impermanence' are practice suggestions, not the authors' verified teachings; they are kept out of the body text."
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice",
+      "rings": [
+        {
+          "id": "ring1",
+          "label_zh": "第一圈 · 观心（Cobb 三书）",
+          "label_en": "Ring 1 · Watching the mind (three Cobb titles)",
+          "note_zh": "从哲学随笔到佛教原理，再到入门教材：把「观心 Cobb」与「教学 Cobb」分开。",
+          "note_en": "From philosophical essays to Buddhist principles to the primer: separate the contemplative Cobb from the teacher.",
+          "book_ids": [
+            "go-cobb-reflections",
+            "go-cobb-buddhist",
+            "go-cobb-book-of-go"
+          ]
+        },
+        {
+          "id": "ring2",
+          "label_zh": "第二圈 · 中国思想史（何云波四书）",
+          "label_en": "Ring 2 · Chinese intellectual history (four He titles)",
+          "note_zh": "思想史—棋论选—文化—文艺精神：先建框架，再回到文献。",
+          "note_en": "Intellectual history — selected treatises — culture — literary-artistic spirit: build the frame, then return to the documents.",
+          "book_ids": [
+            "go-he-thought",
+            "go-he-qilun",
+            "go-he-culture",
+            "go-he-jing"
+          ]
+        },
+        {
+          "id": "ring3",
+          "label_zh": "第三圈 · 棋手自述与跨文化",
+          "label_en": "Ring 3 · The player's account & cross-cultural studies",
+          "note_zh": "吴清源的「中和」— Shotwell 的教学与文化 — Fairbairn/Hall 的历史 — Moskowitz 的人类学。",
+          "note_en": "Wu's equilibrium — Shotwell's teaching and culture — Fairbairn/Hall's history — Moskowitz's anthropology.",
+          "book_ids": [
+            "go-wu-zhong",
+            "go-shotwell-more",
+            "go-shotwell-basics",
+            "go-fairbairn-companion",
+            "go-moskowitz-nation"
+          ]
+        },
+        {
+          "id": "ring4",
+          "label_zh": "第四圈 · 原典（棋论与棋谱）",
+          "label_en": "Ring 4 · The classical sources",
+          "note_zh": "《棋经十三篇》—《忘忧清乐集》—《玄玄棋经》：从论到谱，再到死活题。",
+          "note_en": "Thirteen Chapters — Carefree Collection — Gateway: from theory to records to problems.",
+          "book_ids": [
+            "go-qijing-shisanpian",
+            "go-wangyou-qingleji",
+            "go-xuanxuan-qijing"
+          ]
+        }
+      ],
+      "axes": [
+        {
+          "key": "甲",
+          "label_zh": "观心 · 从执著到放下",
+          "label_en": "contemplation · from attachment to release",
+          "chain": [
+            "go-cobb-reflections",
+            "go-cobb-buddhist",
+            "go-wu-zhong"
+          ],
+          "note_zh": "佛教觉悟（Cobb）与中和和谐（吴清源）是两条不同的「超越胜负」路径，不可混为一谈。",
+          "note_en": "Buddhist enlightenment (Cobb) and equilibrium-harmony (Wu) are two different routes beyond winning; do not conflate them."
+        },
+        {
+          "key": "乙",
+          "label_zh": "中国思想 · 儒道与技进乎道",
+          "label_en": "Chinese thought · Confucian/Daoist and skill-into-Way",
+          "chain": [
+            "go-he-thought",
+            "go-he-culture",
+            "go-he-jing",
+            "go-qijing-shisanpian"
+          ],
+          "note_zh": "从现代思想史回到古典棋论：看「立象比德」「技进乎道」如何在文本中成立。",
+          "note_en": "From modern intellectual history back to the classical treatise: see how imaging virtue and skill-into-Way actually work in the text."
+        },
+        {
+          "key": "丙",
+          "label_zh": "原典与谱系 · 从棋论到死活",
+          "label_en": "sources & genealogy · from theory to problems",
+          "chain": [
+            "go-qijing-shisanpian",
+            "go-wangyou-qingleji",
+            "go-xuanxuan-qijing"
+          ],
+          "note_zh": "棋论、古谱、死活题三种文本形态；不要把题集读成人生寓言。",
+          "note_en": "Three textual forms — treatise, record, problem collection; do not read a problem collection as a life allegory."
+        }
+      ],
+      "reading_order": [
+        {
+          "level_zh": "入门 · 三步",
+          "level_en": "Entry · three steps",
+          "note_zh": "先规则，再问题意识，再古典语法。",
+          "note_en": "Rules first, then the question, then the classical grammar.",
+          "book_ids": [
+            "go-cobb-book-of-go",
+            "go-shotwell-more",
+            "go-he-thought"
+          ]
+        },
+        {
+          "level_zh": "深入 · 三步",
+          "level_en": "Deepening · three steps",
+          "note_zh": "观心、自述、原典各取一本。",
+          "note_en": "One from contemplation, one from the player's account, one from the sources.",
+          "book_ids": [
+            "go-cobb-reflections",
+            "go-wu-zhong",
+            "go-qijing-shisanpian"
+          ]
+        },
+        {
+          "level_zh": "贯通 · 三步",
+          "level_en": "Synthesis · three steps",
+          "note_zh": "把美学、历史与社会科学的对照读进来。",
+          "note_en": "Bring in aesthetics, history and the social-science counterweight.",
+          "book_ids": [
+            "go-he-jing",
+            "go-fairbairn-companion",
+            "go-moskowitz-nation"
+          ]
+        }
+      ],
+      "pointers": [
+        {
+          "label_zh": "美国围棋协会 · Cobb《空枰》专栏",
+          "label_en": "AGA · Cobb's The Empty Board",
+          "href": "https://www.usgo.org/content.aspx?page_id=2507&club_id=454497&item_id=4960",
+          "note_zh": "专栏原文入口，#20 已核",
+          "note_en": "column archive; #20 verified"
+        },
+        {
+          "label_zh": "Sensei's Library · Cobb 与书目",
+          "label_en": "Sensei's Library · Cobb & bibliography",
+          "href": "https://senseis.xmp.net/?WilliamCobb",
+          "note_zh": "作者与书目事实",
+          "note_en": "author and bibliography facts"
+        },
+        {
+          "label_zh": "英国围棋协会 · 《The Go Companion》书评",
+          "label_en": "British Go Association · review",
+          "href": "https://www.britgo.org/review/gocompanion",
+          "note_zh": "ISBN、页数与章节范围",
+          "note_en": "ISBN, pages and scope"
+        },
+        {
+          "label_zh": "《围棋与中国思想传统》全文",
+          "label_en": "'Go and the Chinese Thought Tradition' full text",
+          "href": "https://www.nopss.gov.cn/n1/2022/0223/c441751-32357815.html",
+          "note_zh": "何云波文；含儒道与和谐说",
+          "note_en": "He's article; Confucian/Daoist and harmony"
+        },
+        {
+          "label_zh": "微信读书 · 《围棋文献集成（8）》",
+          "label_en": "Weread · Go Literature Collection vol. 8",
+          "href": "https://weread.qq.com/web/bookDetail/f8432710811e5f92eg011835",
+          "note_zh": "忘忧清乐集与所收棋论",
+          "note_en": "the Carefree Collection and its treatises"
+        },
+        {
+          "label_zh": "Google Books · Go! More Than a Game",
+          "label_en": "Google Books · Go! More Than a Game",
+          "href": "https://books.google.com/books/about/Go_More_Than_a_Game.html?id=qf_QAgAAQBAJ",
+          "note_zh": "Tuttle 2011 版书目",
+          "note_en": "Tuttle 2011 record"
+        }
+      ],
+      "appendix": [
+        {
+          "label_zh": "Cobb 的其他文本 · 论文 / 专栏 / 小册子",
+          "label_en": "Other Cobb texts · papers, columns, pamphlets",
+          "note_zh": "以下多为小册子或专栏，未列入核心书架；篇名把握沿用原清单。",
+          "note_en": "Mostly pamphlets or columns, not on the core shelf; marks follow the source list.",
+          "items": [
+            {
+              "title": "The Game of Go: An Unexpected Path to Enlightenment",
+              "title_en": "The Game of Go: An Unexpected Path to Enlightenment",
+              "author": "The Eastern Buddhist, New Series 30:2 (1997), 199–213",
+              "author_en": "The Eastern Buddhist, New Series 30:2 (1997), 199–213",
+              "note_zh": "代表性论文；正式引用前宜核期刊原记录",
+              "note_en": "representative paper; check the journal record before citing",
+              "conf": "◐"
+            },
+            {
+              "title": "The Game of Go",
+              "title_en": "The Game of Go",
+              "author": "Tricycle, Spring 1999",
+              "author_en": "Tricycle, Spring 1999",
+              "note_zh": "据作者页，改写自《The Eastern Buddhist》文章",
+              "note_en": "per the author page, adapted from the Eastern Buddhist article",
+              "conf": "✓"
+            },
+            {
+              "title": "The Empty Board（专栏）",
+              "title_en": "The Empty Board (column)",
+              "author": "American Go Journal / AGA",
+              "author_en": "American Go Journal / AGA",
+              "note_zh": "#20 已核（2024-03-29）；其余条目按站内档案",
+              "note_en": "#20 verified (2024-03-29); other items per the site archive",
+              "conf": "✓"
+            },
+            {
+              "title": "4-4 Point Joseki: A Brief Introduction",
+              "title_en": "4-4 Point Joseki: A Brief Introduction",
+              "author": "William S. Cobb",
+              "author_en": "William S. Cobb",
+              "note_zh": "技术小册子（约 44 页）",
+              "note_en": "technical pamphlet (~44 pp.)",
+              "conf": "✓"
+            },
+            {
+              "title": "Playing the Endgame: A Brief Introduction",
+              "title_en": "Playing the Endgame: A Brief Introduction",
+              "author": "William S. Cobb",
+              "author_en": "William S. Cobb",
+              "note_zh": "官子小册子",
+              "note_en": "endgame pamphlet",
+              "conf": "✓"
+            },
+            {
+              "title": "Go Problems for Kyu Level Players, vol. 1–6",
+              "title_en": "Go Problems for Kyu Level Players, vol. 1–6",
+              "author": "William S. Cobb",
+              "author_en": "William S. Cobb",
+              "note_zh": "死活、全局、手筋等六册",
+              "note_en": "six volumes: life-and-death, whole-board, tesuji",
+              "conf": "✓"
+            },
+            {
+              "title": "Learning from the Masters, vol. 1–2",
+              "title_en": "Learning from the Masters, vol. 1–2",
+              "author": "William S. Cobb",
+              "author_en": "William S. Cobb",
+              "note_zh": "书目已列；内容未核",
+              "note_en": "listed; contents unverified",
+              "conf": "◐"
+            },
+            {
+              "title": "Attachment and Detachment in Go",
+              "title_en": "Attachment and Detachment in Go",
+              "author": "篇名待核",
+              "author_en": "title pending",
+              "note_zh": "仅见早期表述，未见目录/原文",
+              "note_en": "early mention only; no contents/text",
+              "conf": "○"
+            },
+            {
+              "title": "Go as Meditation",
+              "title_en": "Go as Meditation",
+              "author": "篇名待核",
+              "author_en": "title pending",
+              "note_zh": "仅见早期表述，未见目录/原文",
+              "note_en": "early mention only; no contents/text",
+              "conf": "○"
+            }
+          ]
+        },
+        {
+          "label_zh": "何云波的其他文本 · 专著 / 文集 / 文章",
+          "label_en": "Other He Yunbo texts · books, collected works, articles",
+          "items": [
+            {
+              "title": "围棋与中国思想传统",
+              "title_en": "Go and the Chinese Thought Tradition",
+              "author": "《光明日报》国家社科基金专刊 · 2022-02-23",
+              "author_en": "Guangming Daily NSSF column · 2022-02-23",
+              "note_zh": "全文已核；核心书架以专著为主，此文作附录",
+              "note_en": "full text verified; kept in the appendix as a paper",
+              "conf": "✓"
+            },
+            {
+              "title": "中国围棋文化史",
+              "title_en": "A Cultural History of Chinese Go",
+              "author": "何云波",
+              "author_en": "He Yunbo",
+              "note_zh": "检索结果出现，目录/版本未核",
+              "note_en": "appears in search results; contents/edition unverified",
+              "conf": "◐"
+            },
+            {
+              "title": "中国围棋史",
+              "title_en": "A History of Chinese Go",
+              "author": "何云波",
+              "author_en": "He Yunbo",
+              "note_zh": "通识史，非思想史专著",
+              "note_en": "general history, not the intellectual history",
+              "conf": "◐"
+            },
+            {
+              "title": "围棋文化教程",
+              "title_en": "A Course in Go Culture",
+              "author": "何云波",
+              "author_en": "He Yunbo",
+              "note_zh": "教材；结构未核",
+              "note_en": "textbook; structure unverified",
+              "conf": "◐"
+            },
+            {
+              "title": "何云波围棋文集（四卷）",
+              "title_en": "He Yunbo Go Collected Works (4 vols.)",
+              "author": "何云波",
+              "author_en": "He Yunbo",
+              "note_zh": "竹林品弈 / 棋声流水 / 观棋者语 / 黑白有道；各卷目录未核",
+              "note_en": "four volumes; contents of each unverified",
+              "conf": "◐"
+            },
+            {
+              "title": "世界围棋通史",
+              "title_en": "A World History of Go",
+              "author": "何云波",
+              "author_en": "He Yunbo",
+              "note_zh": "湘潭大学页列为著作",
+              "note_en": "listed among his works by Xiangtan University",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "Shotwell / Bozulich 与围棋文献集成其他册",
+          "label_en": "Shotwell / Bozulich and other Go Literature Collection volumes",
+          "items": [
+            {
+              "title": "Winning Go: Successful Moves from the Opening to the Endgame",
+              "title_en": "Winning Go",
+              "author": "Richard Bozulich & Peter Shotwell",
+              "author_en": "Richard Bozulich & Peter Shotwell",
+              "note_zh": "合著技术书；对话未展开",
+              "note_en": "co-authored technical book; not discussed",
+              "conf": "◐"
+            },
+            {
+              "title": "围棋文献集成 第十二册 · 待月謻棋谱外八种",
+              "title_en": "Go Literature Collection vol. 12",
+              "author": "王国平 总主编",
+              "author_en": "Wang Guoping (gen. ed.)",
+              "note_zh": "仅检索书目出现",
+              "note_en": "search listing only",
+              "conf": "○"
+            },
+            {
+              "title": "围棋文献集成 第十三册 · 餐菊斋棋评 等",
+              "title_en": "Go Literature Collection vol. 13",
+              "author": "王国平 总主编",
+              "author_en": "Wang Guoping (gen. ed.)",
+              "note_zh": "2017 浙江古籍，ISBN 9787554010990（馆藏提要）",
+              "note_en": "Zhejiang Guji 2017, ISBN 9787554010990 (catalogue note)",
+              "conf": "◐"
+            },
+            {
+              "title": "围棋文献集成 第十五册",
+              "title_en": "Go Literature Collection vol. 15",
+              "author": "王国平 总主编",
+              "author_en": "Wang Guoping (gen. ed.)",
+              "note_zh": "仅馆藏检索条目",
+              "note_en": "catalogue entry only",
+              "conf": "○"
+            },
+            {
+              "title": "围棋文献集成 第十七册 · 玄玄棋经 等",
+              "title_en": "Go Literature Collection vol. 17",
+              "author": "王国平 总主编",
+              "author_en": "Wang Guoping (gen. ed.)",
+              "note_zh": "收《玄玄棋经》《石室秘传》《萃奕搜玄》",
+              "note_en": "contains the Gateway, Shishi Michuan and Cuiyi Souxuan",
+              "conf": "◐"
+            },
+            {
+              "title": "围棋文献集成 第二十二册 · 秋仙汇选外十四种",
+              "title_en": "Go Literature Collection vol. 22",
+              "author": "王国平 总主编",
+              "author_en": "Wang Guoping (gen. ed.)",
+              "note_zh": "仅检索书目出现",
+              "note_en": "search listing only",
+              "conf": "○"
+            }
+          ]
+        },
+        {
+          "label_zh": "古代棋论 / 棋谱 · 单篇与其他题集",
+          "label_en": "Classical treatises & problem collections · pieces and other collections",
+          "items": [
+            {
+              "title": "棋诀",
+              "title_en": "Qijue",
+              "author": "刘仲甫",
+              "author_en": "Liu Zhongfu",
+              "note_zh": "见《围棋文献集成》第八册简介",
+              "note_en": "listed in vol. 8 blurb",
+              "conf": "◐"
+            },
+            {
+              "title": "论棋诀要杂说",
+              "title_en": "Lun Qijue Ya Zashuo",
+              "author": "张靖",
+              "author_en": "Zhang Jing",
+              "note_zh": "见《围棋文献集成》第八册简介",
+              "note_en": "listed in vol. 8 blurb",
+              "conf": "◐"
+            },
+            {
+              "title": "石室仙机 / 仙机武库",
+              "title_en": "Shishi Xianji / Xianji Wuku",
+              "author": "明 · 许榖编 / 陆玄宇原辑、过百龄修订",
+              "author_en": "Ming: Xu Gu (ed.) / Lu Xuanyu, rev. Guo Bailing",
+              "note_zh": "《围棋文献集成》第八册所收",
+              "note_en": "in vol. 8 of the Collection",
+              "conf": "◐"
+            },
+            {
+              "title": "棋经众妙",
+              "title_en": "Qijing Zhongmiao",
+              "author": "作者待核",
+              "author_en": "author pending",
+              "note_zh": "死活与战术材料",
+              "note_en": "life-and-death and tactics material",
+              "conf": "○"
+            },
+            {
+              "title": "围棋棋经众妙精选精解",
+              "title_en": "Selected Explanations of Qijing Zhongmiao",
+              "author": "作者/版本待核",
+              "author_en": "author/edition pending",
+              "note_zh": "页面称选 140 题、分五类；来自文档分享页，未核",
+              "note_en": "claims 140 problems in five classes; from a document-sharing page, unverified",
+              "conf": "○"
+            },
+            {
+              "title": "玄玄棋经（现代整理）",
+              "title_en": "Gateway to All Marvels (modern ed.)",
+              "author": "见《围棋文献集成》第十七册",
+              "author_en": "see vol. 17",
+              "note_zh": "编纂者/版本待核",
+              "note_en": "compiler/edition pending",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "未核论文 / 介绍文章 / 儒家原典",
+          "label_en": "Unverified papers, introductions, Confucian sources",
+          "items": [
+            {
+              "title": "当 AlphaGo 遇见老子——从《棋经》的道家思想论当代人工智能的发展",
+              "title_en": "When AlphaGo Meets Laozi",
+              "author": "作者/刊物/年份待核",
+              "author_en": "author/venue/year pending",
+              "note_zh": "仅见 PDF；未读全文",
+              "note_en": "PDF only; unread",
+              "conf": "○"
+            },
+            {
+              "title": "The Win or the Way: Finding Meaning in the Game of Go",
+              "title_en": "The Win or the Way",
+              "author": "American Go Association · 2019-08-25",
+              "author_en": "American Go Association · 2019-08-25",
+              "note_zh": "介绍 Cobb 及其围棋哲学的文章，非 Cobb 本人作品",
+              "note_en": "an article on Cobb, not a Cobb work",
+              "conf": "◐"
+            },
+            {
+              "title": "棋路书香：记忆中的 20 种棋书",
+              "title_en": "Twenty Go Books in Memory",
+              "author": "《围棋天地》2005-03-08 转载",
+              "author_en": "Weiqi Tiandi, reposted 2005-03-08",
+              "note_zh": "推荐与评论文章，非吴清源作品",
+              "note_en": "a recommendation piece, not by Wu",
+              "conf": "◐"
+            },
+            {
+              "title": "论语·阳货",
+              "title_en": "Analects · Yang Huo",
+              "author": "孔子（记）",
+              "author_en": "Confucius (recorded)",
+              "note_zh": "「不有博弈者乎，为之犹贤乎已」",
+              "note_en": "'Are there not games of go? To play them is better than nothing.'",
+              "conf": "✓"
+            },
+            {
+              "title": "孟子·告子上",
+              "title_en": "Mencius · Gaozi I",
+              "author": "孟子（记）",
+              "author_en": "Mencius (recorded)",
+              "note_zh": "弈秋与专心致志",
+              "note_en": "Yi Qiu and focused attention",
+              "conf": "✓"
+            },
+            {
+              "title": "围棋：人生处世如棋道",
+              "title_en": "Go: Life and Conduct as the Way of the Board",
+              "author": "刘海军、傅璇琮（平台署名）",
+              "author_en": "Liu Haijun & Fu Xuancong (per platform)",
+              "note_zh": "2023-04-01 平台页；目录、责任关系与内容深度未核",
+              "note_en": "platform page dated 2023-04-01; contents, authorship and depth unverified",
+              "conf": "○"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-japan-culture",
       "page": "docs/reading_ia/read/japan-culture-books.html",
       "dir_page": "japan-culture-books.html",

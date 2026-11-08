@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《围棋 companion：历史与文化中的围棋》｜The Go Companion: Go in History and Culture | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>《围棋 companion：历史与文化中的围棋》 · The Go Companion: Go in History and Culture</span><span data-en>The Go Companion: Go in History and Culture</span></h1>
+  <div class="subtitle" data-both><span data-zh>约翰·费尔贝恩、T. 马克·霍尔 · 英国 · Slate and Shell · 2009 · 300 页 · ISBN 9781932001433（ISBN-10 1-932001-43-3）</span><span data-en>John Fairbairn &amp; T. Mark Hall · Britain · Slate and Shell · 2009 · 300 pp. · ISBN 9781932001433 (ISBN-10 1-932001-43-3)</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>围弈 · 观心与棋道 GO CULTURE · 2026-11-08</span><span data-en>GO CULTURE · WATCHING THE MIND · 2026-11-08</span></span> <span class="chip"><span data-zh>非虚构 · 围棋历史与文化随笔</span><span data-en>nonfiction · essays on Go history &amp; culture</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>围棋史 / 文化</span><span data-en>Go history / culture</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实（British Go Association, BGJ 148 Spring 2009 书评：ISBN 1-932001-43-3，300 页，Slate and Shell；2026-11-08）</span><span data-en>conf ✓ edition verified (British Go Association, BGJ 148 Spring 2009 review: ISBN 1-932001-43-3, 300 pp., Slate and Shell; 2026-11-08)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本核实（British Go Association, BGJ 148 Spring 2009 书评：ISBN 1-932001-43-3，300 页，Slate and Shell；2026-11-08） · 档案：go-fairbairn-companion（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition verified (British Go Association, BGJ 148 Spring 2009 review: ISBN 1-932001-43-3, 300 pp., Slate and Shell; 2026-11-08) · record: go-fairbairn-companion. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅书评（◐）</span><span data-en>not read · review only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>把「棋道」「棋品」「超越胜负」放回具体人物、战争与制度里：书评称它「围棋内容夹在可读文章之间」，适合作为历史与文化的对照。</div><div data-en>Puts &#x27;the Way&#x27;, &#x27;character&#x27; and &#x27;beyond winning&#x27; back into persons, war and institutions: the review calls it &#x27;Go bits between interesting things to read&#x27; — a good historical and cultural counterweight.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.britgo.org/review/gocompanion" target="_blank" rel="noopener"><span data-zh>英国围棋协会书评</span><span data-en>British Go Association review</span><span class="dom">www.britgo.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://senseis.xmp.net/?JohnFairbairn" target="_blank" rel="noopener"><span data-zh>Sensei&#x27;s Library · John Fairbairn</span><span data-en>Sensei&#x27;s Library · John Fairbairn</span><span class="dom">senseis.xmp.net ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>Fairbairn 与已故 T. Mark Hall 从 GoGoD 资料与各地棋书搜集文章，2009 年由 Slate and Shell 出版。BGJ 书评称全书 300 页，章节涉及开局、贴目、棋人、棋书、历史、现代围棋、业余与职业，并有关于战时日本围棋与原子弹对局的较长论述；另有两位客座作者。
+
+BGJ 书评列出的章节包括：开局、贴目、棋人、棋书、「sexy sekis」、历史、现代围棋、业余与职业；客座作者 Ivan Vigano 写日本盲人棋手，Pieter Mioch 写第 45 期十段与 2006 世界业余赛；并有一篇关于战时日本围棋与原子弹对局的较长论述。</div><div data-en>Fairbairn and the late T. Mark Hall assembled essays from GoGoD and Go bookshops; Slate and Shell published it in 2009. The BGJ review describes 300 pages on openings, komi, players, books, history, modern Go, amateur and professional play, with a long piece on wartime Japan and the atom-bomb game, plus two guest authors.
+
+The BGJ review lists sections on the opening, komi, players, books, &#x27;sexy sekis&#x27;, history, modern Go, amateur and professional Go; guest authors Ivan Vigano (blind players in Japan) and Pieter Mioch (45th Judan and the 2006 World Amateur); plus a long piece on wartime Japan and the atom-bomb game.</div></div>
+<p class="tok"><span class="conf c-ok">✓</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card tocw"><div class="srcnote" style="margin-top:0"><span data-both><span data-zh>章节范围依 BGA《BGJ 148》（2009 春）书评：开局、贴目、棋人、棋书、sexy sekis、历史、现代围棋、业余与职业；另有客座作者。</span><span data-en>Scope follows the BGA BGJ 148 (Spring 2009) review: opening, komi, players, books, sexy sekis, history, modern Go, amateur and professional; plus guest authors.</span></span></div><div class="tocgrid"><div><h4><span data-both><span data-zh>技术与开局</span><span data-en>Technique and opening</span></span></h4><ol class="toclist"><li>开局</li><li>贴目</li><li>sexy sekis</li></ol></div><div><h4><span data-both><span data-zh>人物与书籍</span><span data-en>Players and books</span></span></h4><ol class="toclist"><li>棋人</li><li>棋书</li></ol></div><div><h4><span data-both><span data-zh>历史与社会</span><span data-en>History and society</span></span></h4><ol class="toclist"><li>历史</li><li>现代围棋</li><li>业余与职业</li><li>战时日本与原子弹对局</li></ol></div><div><h4><span data-both><span data-zh>客座</span><span data-en>Guest pieces</span></span></h4><ol class="toclist"><li>Ivan Vigano：日本盲人棋手</li><li>Pieter Mioch：第45期十段、2006 世界业余赛</li></ol></div></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 技术与开局</span><span data-en>Piece 1 · Technique and opening</span></h3>
+<div data-zh>开局、贴目与「sexy sekis」：技术史也是文化史。</div><div data-en>Opening, komi and &#x27;sexy sekis&#x27;: technical history is also cultural history.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>技术议题如何进入文化史。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>技术议题如何进入文化史。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>开局 → 贴目 → sexy sekis。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>开局 → 贴目 → sexy sekis。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>开局；贴目；sexy sekis。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>开局；贴目；sexy sekis。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>BGA《BGJ 148》书评。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>BGA《BGJ 148》书评。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为人物与历史章提供技术背景。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>为人物与历史章提供技术背景。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>BGA《BGJ 148》书评。</span><span data-en>BGA《BGJ 148》书评。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 人物与书籍</span><span data-en>Piece 2 · Players and books</span></h3>
+<div data-zh>棋人与棋书：把「棋品」放回具体人物与阅读史。</div><div data-en>Players and books: character returned to concrete persons and reading history.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>棋品如何被人物与书籍承载。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>棋品如何被人物与书籍承载。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>棋人 → 棋书。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>棋人 → 棋书。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>棋人；棋书。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>棋人；棋书。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>BGA《BGJ 148》。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>BGA《BGJ 148》。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>从技术转向人物与文本。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>从技术转向人物与文本。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>BGA《BGJ 148》。</span><span data-en>BGA《BGJ 148》。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 历史与社会</span><span data-en>Piece 3 · History and society</span></h3>
+<div data-zh>历史、现代围棋、业余与职业，以及战时日本与原子弹对局。</div><div data-en>History, modern Go, amateur and professional, and wartime Japan with the atom-bomb game.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>围棋如何嵌入战争、制度与社会。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>围棋如何嵌入战争、制度与社会。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>历史 → 现代围棋 → 业余/职业 → 战时日本。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>历史 → 现代围棋 → 业余/职业 → 战时日本。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>历史；现代围棋；业余；职业；原子弹对局。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>历史；现代围棋；业余；职业；原子弹对局。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>BGA《BGJ 148》。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>BGA《BGJ 148》。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把人物与技术放进历史处境。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把人物与技术放进历史处境。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>BGA《BGJ 148》。</span><span data-en>BGA《BGJ 148》。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 篇 · 客座</span><span data-en>Piece 4 · Guest pieces</span></h3>
+<div data-zh>客座作者：Ivan Vigano 写日本盲人棋手，Pieter Mioch 写第45期十段与 2006 世界业余赛。</div><div data-en>Guest authors: Ivan Vigano on blind players in Japan; Pieter Mioch on the 45th Judan and the 2006 World Amateur.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>客座如何扩展历史与社会的视野。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>客座如何扩展历史与社会的视野。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从主笔到客座，扩大题材。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>从主笔到客座，扩大题材。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Ivan Vigano；Pieter Mioch。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Ivan Vigano；Pieter Mioch。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>BGA《BGJ 148》。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>BGA《BGJ 148》。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>以客座章收束「历史与文化」的多样性。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>以客座章收束「历史与文化」的多样性。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>BGA《BGJ 148》。</span><span data-en>BGA《BGJ 148》。</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>随笔集，非体系论著：文章长短不一，主题从开局、贴目到棋人、棋书、战时史与死活。读法上宜按主题选取，而非从头到尾。</div><div data-en>An essay collection, not a system: pieces range from openings and komi to players, books, wartime history and problems. Read by topic rather than straight through.</div></div>
+<h2 class="part" data-both><span data-zh>方法与材料 · Method &amp; sources</span><span data-en>Method &amp; sources</span></h2><div class="card gapbox" style="line-height:1.8"><div data-zh><p>随笔/史料汇编：以 GoGoD 棋谱库与各地棋书搜集为资料基础，长短文章并置；具体篇目出处待核。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Essay/documentary collection built from GoGoD and bookshop scouting, mixing long and short pieces; original venues of each piece pending.</p></div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《围棋 companion：历史与文化中的围棋》 · 篇章链（数字为顺序）</span><span data-en>The Go Companion: Go in History and Culture · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>原话与评价 · Quotation &amp; reception</span><span data-en>Quotation &amp; reception</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>尚无独立书评证据；暂不作评价。
+
+未见系统批评；以下仅记可能的局限。
+
+**合成 Synthesis：** 待通读后再作合成判断。</div><div data-en>No independent review evidence yet; no verdict.
+
+No systematic critique found; only likely limits noted.
+
+**Synthesis:** Synthesis deferred until a full read.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>Fairbairn 与 Hall 要把「棋道」「棋品」「超越胜负」放回具体人物、赛事与制度处境：围棋的价值不在格言，而在可核查的历史与文化。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Fairbairn and Hall want to put the Way, character and beyond-winning back into concrete persons, matches and institutions: Go&#x27;s value lies in checkable history and culture, not aphorism.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名「Go in History and Culture」直接标明方向；书评列出的章节从开局、贴目到棋人、棋书、战时日本与原子弹对局，都是历史与社会材料；Fairbairn 与 Hall 同时制作 GoGoD 棋谱库，说明其方法以史料与棋谱为基础。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title names history and culture; the review&#x27;s sections from opening and komi to players, books, wartime Japan and the atom-bomb game are historical and social material; Fairbairn and Hall also produce GoGoD, showing a method grounded in documents and records.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>版本</span><span data-en>edition</span></span></td><td><div data-zh>2009 Slate and Shell, 300 页, ISBN 1-932001-43-3。</div><div data-en>Slate and Shell 2009, 300 pp., ISBN 1-932001-43-3.</div></td><td>BGA BGJ 148</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书评列出开局、贴目、棋人、棋书、历史、现代围棋、业余与职业等章节。</div><div data-en>The review lists opening, komi, players, books, history, modern Go, amateur and professional.</div></td><td>BGA BGJ 148</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>有战时日本与原子弹对局的较长论述。</div><div data-en>A long piece on wartime Japan and the atom-bomb game.</div></td><td>BGA BGJ 148</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>生平</span><span data-en>biography</span></span></td><td><div data-zh>Fairbairn 为围棋史家/翻译者，与 Hall 共同制作 GoGoD。</div><div data-en>Fairbairn is a Go historian/translator who co-produces GoGoD with Hall.</div></td><td>Sensei&#x27;s · JohnFairbairn</td><td class="conf">✓</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：这是一本「围棋趣闻集」，历史与文化只是题材范围，未必有统一的方法论。若如此，不应把 GoGoD 的史料严谨性直接归给本书。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: this is a collection of Go curiosities; history and culture are thematic ranges rather than a unified method. On that reading, GoGoD&#x27;s documentary rigour should not be transferred wholesale to the book.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未读全文，且各篇出处未核，无法判断全书的方法一致性；上述推断依据书名、书评与作者资料，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text, and with original venues unverified, I cannot judge methodological consistency; the inference rests on title, review and author data, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>历史与文化中的围棋</span><span data-en>Go in history and culture</span></span></b></td><td>Go in History and Culture</td><td><div data-zh>书名即主张：围棋应放回历史与文化，而非只作技术手册。</div><div data-en>The title is the claim: Go belongs in history and culture, not only in a technical manual.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>BGA BGJ 148 书评</span><span data-en>BGA BGJ 148 review</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>贴目</span><span data-en>komi</span></span></b></td><td>komi</td><td><div data-zh>书评列有贴目一章，说明其技术史维度。</div><div data-en>The review lists a komi chapter, showing the technical-history dimension.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">BGA BGJ 148</td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>GoGoD</span><span data-en>Games of Go on Disk</span></span></b></td><td>GoGoD</td><td><div data-zh>Fairbairn 与 Hall 的棋谱数据库，是本书文章的重要资料基础。</div><div data-en>Fairbairn and Hall&#x27;s game database, a key source for the essays.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Sensei&#x27;s · JohnFairbairn</td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>原子弹对局</span><span data-en>the atom-bomb game</span></span></b></td><td>atom-bomb game</td><td><div data-zh>书评称有一篇关于战时日本围棋与原子弹对局的较长论述。</div><div data-en>The review notes a long piece on wartime Japan and the atom-bomb game.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">BGA BGJ 148</td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>2009 年由 Slate and Shell 出版，300 页，ISBN 1-932001-43-3；BGA《BGJ 148》有书评。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Published by Slate and Shell in 2009, 300 pp., ISBN 1-932001-43-3; reviewed in BGA&#x27;s BGJ 148.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>书评称其为「a pot pourri of articles on just about every aspect of go」，适合作为历史与文化的对照。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The review calls it &#x27;a pot pourri of articles on just about every aspect of go&#x27;, a good historical and cultural counterweight.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>与 GoGoD 一起，为英语世界的围棋史研究提供资料基础。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>With GoGoD, it supplies a documentary base for English-language Go history.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>随笔集非系统；篇目出处与完整目录待核。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>An essay collection, not a system; original venues and full contents pending.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>BGA《BGJ 148》（2009 春）书评</span><span data-en>BGA BGJ 148 (Spring 2009) review</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>随笔集的系统性</span><span data-en>Collection, not system</span></p><div data-zh style="color:var(--ink-soft)">长短文章并置，论证依赖多篇互补，而非一条主线。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Long and short pieces coexist; the case is cumulative, not a single line.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>篇目出处</span><span data-en>Original venues</span></p><div data-zh style="color:var(--ink-soft)">各篇原始出处与完整目录待核。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Original venues and full contents pending.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>历史选取</span><span data-en>Historical selection</span></p><div data-zh style="color:var(--ink-soft)">战时日本与原子弹对局等选题，可能偏重戏剧性事件。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Topics such as wartime Japan and the atom-bomb game may favour dramatic episodes.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>以长短文章并置的「拼贴」结构，让历史、人物与技术互相穿插。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Uses a collage of long and short pieces, interleaving history, persons and technique.</p></div>
+<div class="card"><p data-zh>以 GoGoD 棋谱库为资料基础，使随笔有史料支撑。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Grounds the essays in the GoGoD database.</p></div>
+<div class="card"><p data-zh>以 GoGoD 史料为底，随笔有可核查的历史支撑。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Grounds the essays in GoGoD documents, giving them checkable historical support.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>历史</span><span data-en>history</span></div>
+<div class="orig">history</div>
+<div class="mnote"><div data-zh>书评列出历史、现代围棋、战时日本等章节。</div><div data-en>The review lists history, modern Go and wartime Japan.</div></div>
+<div class="src">BGA BGJ 148 · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>棋品</span><span data-en>character</span></div>
+<div class="orig">character</div>
+<div class="mnote"><div data-zh>以棋人、赛事与制度处境呈现「棋品」，而非抽象格言。</div><div data-en>Presents character through players, matches and institutions rather than abstract aphorism.</div></div>
+<div class="src">BGA BGJ 148 · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>原子弹对局</span><span data-en>the atom-bomb game</span></div>
+<div class="orig">atom-bomb game</div>
+<div class="mnote"><div data-zh>战时日本与原子弹对局是书中最具历史重量的篇章之一。</div><div data-en>Wartime Japan and the atom-bomb game is one of the book&#x27;s heaviest historical pieces.</div></div>
+<div class="src">BGA BGJ 148 · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>「围棋内容夹在可读文章之间」——一种反技术手册的结构。</div><div data-en>&#x27;Go bits between interesting things to read&#x27; — the reverse of a technical manual.</div></div><div class="src"><span data-both><span data-zh>BGA《BGJ 148》（2009 春）书评</span><span data-en>BGA BGJ 148 (Spring 2009) review</span></span> · <span class="conf c-ok">✓</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>把棋道放回历史：读《The Go Companion》</span><span data-en>Putting the Way back into history</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>Fairbairn 与 Hall 的随笔集：从开局、贴目到棋人、棋书与战时日本，把围棋放回历史与文化。</span><span data-en>Fairbairn and Hall&#x27;s collection: from opening and komi to players, books and wartime Japan, putting Go back into history and culture.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《The Go Companion》的书名就是方向：Go in History and Culture。它不是 Cobb 式的哲学文集，也不是技术手册，而是一本把围棋放回历史与文化的随笔集。</p><p>BGA 书评列出的章节很说明问题：开局、贴目、棋人、棋书、sexy sekis、历史、现代围棋、业余与职业；还有客座作者写日本盲人棋手、第 45 期十段与 2006 世界业余赛；以及一篇关于战时日本与原子弹对局的较长论述。这些题目共同构成一个判断：围棋的价值不在格言，而在具体人物、赛事与制度处境。</p><p>它的风险是「随笔集」的松散：长短文章并置，论证依赖多篇互补，而非一条主线。读它时最好按主题选取，而不是从头到尾；并把「棋道」类格言放回具体历史处境检验。这正是它与 Cobb 的分工：Cobb 谈观心，Fairbairn/Hall 谈历史。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>The title of The Go Companion is the direction: Go in History and Culture. It is neither Cobb-style philosophy nor a technical manual, but a collection that returns Go to history and culture.</p><p>The BGA review&#x27;s sections are telling: opening, komi, players, books, sexy sekis, history, modern Go, amateur and professional; guest pieces on blind players in Japan, the 45th Judan and the 2006 World Amateur; and a long piece on wartime Japan and the atom-bomb game. Together they argue that Go&#x27;s value lies in concrete persons, matches and institutions, not aphorism.</p><p>Its risk is the looseness of a collection: long and short pieces coexist and the case is cumulative rather than a single line. Read by topic rather than straight through, and test &#x27;Way&#x27; aphorisms against concrete historical situations. This is its division of labour with Cobb: Cobb contemplates, Fairbairn and Hall historicise.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>BGA《BGJ 148》（2009 春）书评</span><span data-en>BGA BGJ 148 (Spring 2009) review</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读 BGJ 书评与目录，挑「战时日本」「棋人」两类各一篇；把「棋道」类格言放回人物处境检验。</div><div data-en>Start from the BGJ review and contents; pick one wartime-Japan and one players piece, and test &#x27;Way&#x27; aphorisms against concrete situations.</div></div>
+<div class="card"><div data-zh>与 Cobb《Reflections》对读：同由 Slate and Shell 出版，一为哲学，一为历史；比较两者对「超越胜负」的处理。</div><div data-en>Read against Cobb&#x27;s Reflections, also from Slate and Shell: one philosophy, one history; compare their treatment of &#x27;beyond winning&#x27;.</div></div>
+<div class="card"><div data-zh>按主题选取，不从头读到尾；把格言放回历史处境。</div><div data-en>Read by topic rather than straight through; test aphorisms in historical situations.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>Reflections on the Game of Go</b></td><td>William S. Cobb</td><td>2005</td><td><span data-both><span data-zh>同出版社 · 进路对照</span><span data-en>same press · contrast</span></span></td><td><div data-zh>同由 Slate and Shell 出版：一为哲学，一为历史</div><div data-en>both from Slate and Shell: one philosophy, one history</div></td><td>history</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>GoGoD (Games of Go on Disk)</b></td><td>Fairbairn &amp; Hall</td><td>—</td><td><span data-both><span data-zh>资料基础</span><span data-en>documentary base</span></span></td><td><div data-zh>本书文章的重要资料库</div><div data-en>the database behind many essays</div></td><td>history</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Go Nation</b></td><td>Marc L. Moskowitz</td><td>2013</td><td><span data-both><span data-zh>历史 vs 社科</span><span data-en>history vs social science</span></span></td><td><div data-zh>一为历史随笔，一为民族志</div><div data-en>historical essays vs ethnography</div></td><td>society</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>围棋与中国文化</span><span data-en>Go and Chinese Culture</span></span></b></td><td><span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span></td><td>—</td><td><span data-both><span data-zh>文化史对照</span><span data-en>cultural-history contrast</span></span></td><td><div data-zh>同处理围棋与文化，进路不同</div><div data-en>both treat Go and culture by different routes</div></td><td>sixiang</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《The Go Companion》作者为 Fairbairn 与 Hall，ISBN 1-932001-43-3，300 页，Slate and Shell</span><span data-en>The Go Companion is by Fairbairn and Hall, ISBN 1-932001-43-3, 300 pp., Slate and Shell</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>British Go Association BGJ 148 书评</span><span data-en>British Go Association BGJ 148 review</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>书评称章节涉及开局、贴目、棋人、棋书、历史、现代围棋、业余与职业</span><span data-en>The review lists sections on openings, komi, players, books, history, modern Go, amateur and professional Go</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>同上</span><span data-en>same review</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>书评列出客座作者 Ivan Vigano（日本盲人棋手）与 Pieter Mioch（第45期十段、2006 世界业余赛）</span><span data-en>The review lists guest authors Ivan Vigano and Pieter Mioch with those topics</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">BGA BGJ 148 (Spring 2009)</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>完整目录与各篇原始出处</span><span data-en>Full contents and original venues of each piece</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../go-culture-books.html">← <span data-zh>返回围弈 · 观心与棋道 GO CULTURE</span><span data-en>back to GO CULTURE · WATCHING THE MIND</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

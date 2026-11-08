@@ -1,22 +1,88 @@
+{"id": "author:abe", "type": "Author", "label": "Abe Jirō", "props": {"name_zh": "阿部次郎", "school_zh": "大正教养主义 · 人格主义", "domain_zh": "伦理哲学 · 人格主义 · 评论"}}
+{"id": "author:akutagawa", "type": "Author", "label": "Akutagawa Ryūnosuke", "props": {"name_zh": "芥川龙之介", "school_zh": "新思潮派 · 大正文学", "domain_zh": "短篇小说 · 箴语随笔"}}
+{"id": "author:benedict", "type": "Author", "label": "Ruth Benedict", "props": {"name_zh": "鲁思·本尼迪克特", "school_zh": "哥伦比亚学派 · 文化与人格", "domain_zh": "文化人类学 · 文化与人格"}}
 {"id": "author:blanning", "type": "Author", "label": "Tim Blanning", "props": {"name_zh": "蒂姆·布拉宁", "school_zh": "文化史 × 政治史 × 音乐与社会", "domain_zh": "近代早期欧洲 · 法国史 · 十八世纪文化史 · 音乐史"}}
+{"id": "author:classical-anon", "type": "Author", "label": "Anonymous (received text)", "props": {"name_zh": "佚名（传本）", "school_zh": "古典棋谱传统", "domain_zh": "古代棋谱 · 死活题集"}}
+{"id": "author:cobb", "type": "Author", "label": "William S. Cobb", "props": {"name_zh": "威廉·S·科布", "school_zh": "围棋哲学 · 佛教进路", "domain_zh": "围棋哲学 · 佛教与觉悟"}}
+{"id": "author:dai-jitao", "type": "Author", "label": "Dai Jitao", "props": {"name_zh": "戴季陶", "school_zh": "国民党理论 · 日本论", "domain_zh": "政治思想 · 日本论 · 国民党理论"}}
 {"id": "author:evans", "type": "Author", "label": "Evans", "props": {"name_zh": "埃文斯", "school_zh": "社会史 × 政治史 × 文化史综合", "domain_zh": "近代欧洲史 · 德国史 · 第三帝国 · 大屠杀史学"}}
+{"id": "author:fairbairn-hall", "type": "Author", "label": "John Fairbairn & T. Mark Hall", "props": {"name_zh": "约翰·费尔贝恩、T. 马克·霍尔", "school_zh": "围棋史与文献学", "domain_zh": "围棋史 · 棋谱数据库"}}
 {"id": "author:grafton", "type": "Author", "label": "Grafton", "props": {"name_zh": "格拉夫顿", "school_zh": "知识史 · 接受史 · 语文学", "domain_zh": "文艺复兴知识史 · 古典学接受史 · 语文学 · 学术方法论"}}
 {"id": "author:greengrass", "type": "Author", "label": "Greengrass", "props": {"name_zh": "格林格拉斯", "school_zh": "文化转移 × 政治-宗教交织", "domain_zh": "近代早期欧洲 · 宗教改革 · 文化转移"}}
+{"id": "author:he-yunbo", "type": "Author", "label": "He Yunbo", "props": {"name_zh": "何云波", "school_zh": "围棋文化研究 · 思想史进路", "domain_zh": "中国围棋思想史 · 文化研究"}}
+{"id": "author:huang-zunxian", "type": "Author", "label": "Huang Zunxian", "props": {"name_zh": "黄遵宪", "school_zh": "诗界革命 · 经世之学", "domain_zh": "外交 · 诗文 · 日本研究"}}
 {"id": "author:jordan", "type": "Author", "label": "Jordan", "props": {"name_zh": "乔丹", "school_zh": "政治史 × 制度史 × 经济社会史", "domain_zh": "中世纪法国 · 卡佩王朝 · 路易九世 · 1315 大饥荒"}}
+{"id": "author:kafu", "type": "Author", "label": "Nagai Kafū", "props": {"name_zh": "永井荷风", "school_zh": "唯美派 · 反近代", "domain_zh": "小说 · 随笔 · 江户趣味"}}
+{"id": "author:kato-shuichi", "type": "Author", "label": "Katō Shūichi", "props": {"name_zh": "加藤周一", "school_zh": "战后日本文化论 · 公共批评", "domain_zh": "文化论 · 文学史 · 评论"}}
+{"id": "author:kawabata", "type": "Author", "label": "Kawabata Yasunari", "props": {"name_zh": "川端康成", "school_zh": "新感觉派 · 日本美论", "domain_zh": "小说 · 美学 · 讲演"}}
+{"id": "author:kenko", "type": "Author", "label": "Yoshida Kenkō", "props": {"name_zh": "吉田兼好", "school_zh": "中世隐逸文学 · 三大随笔", "domain_zh": "随笔 · 和歌 · 隐逸思想"}}
 {"id": "author:kershaw", "type": "Author", "label": "Kershaw", "props": {"name_zh": "克肖", "school_zh": "结构主义功能论 × 通史综合", "domain_zh": "二十世纪欧洲史 · 希特勒与纳粹 · 战后欧洲 · 「结构性 vs 意图性」"}}
+{"id": "author:kuki", "type": "Author", "label": "Kuki Shūzō", "props": {"name_zh": "九鬼周造", "school_zh": "京都学派 · 现象学美学", "domain_zh": "哲学 · 美学 · 江户趣味论"}}
 {"id": "author:lemaitre", "type": "Author", "label": "Lemaitre", "props": {"name_zh": "勒梅特", "school_zh": "法国 polar → 社会史小说", "domain_zh": "法国 polar → 社会史小说 · Goncourt 2013"}}
+{"id": "author:li-yongjing", "type": "Author", "label": "Li Yongjing", "props": {"name_zh": "李永晶", "school_zh": "中国新一代日本论 · 认识论转向", "domain_zh": "政治思想史 · 日本研究 · 东亚认识论"}}
+{"id": "author:liji-min", "type": "Author", "label": "Li Yimin", "props": {"name_zh": "李逸民", "school_zh": "古典棋谱 · 文献汇编", "domain_zh": "古代棋谱编纂"}}
 {"id": "author:manda", "type": "Author", "label": "Manda", "props": {"name_zh": "萬田緑平", "school_zh": "日本在宅緩和ケア 生死观话语场", "domain_zh": "外科 → 在宅緩和ケア医 · 非虚构作者"}}
 {"id": "author:mandel", "type": "Author", "label": "Mandel", "props": {"name_zh": "曼德尔", "school_zh": "soft-apocalypse 跨界文学", "domain_zh": "当代小说 · speculative/literary crossover · 灾难—艺术母题"}}
+{"id": "author:moskowitz", "type": "Author", "label": "Marc L. Moskowitz", "props": {"name_zh": "马克·L·莫斯科维茨", "school_zh": "文化人类学 · 男性气质研究", "domain_zh": "围棋人类学 · 男性气质与民族认同"}}
+{"id": "author:nitobe", "type": "Author", "label": "Nitobe Inazō", "props": {"name_zh": "新渡户稻造", "school_zh": "基督教人格主义 · 武士道论", "domain_zh": "伦理 · 教育 · 国际事务"}}
+{"id": "author:okakura", "type": "Author", "label": "Okakura Kakuzō", "props": {"name_zh": "冈仓天心", "school_zh": "日本美术复兴 · 东方主义自述", "domain_zh": "美术史 · 美学 · 文化外宣"}}
+{"id": "author:onishi", "type": "Author", "label": "Onishi Yoshinori", "props": {"name_zh": "大西克礼", "school_zh": "东京帝国大学美学 · 范畴研究", "domain_zh": "美学 · 日本审美范畴论"}}
 {"id": "author:pelicot", "type": "Author", "label": "Pelicot", "props": {"name_zh": "佩利科", "school_zh": "#MeToo 档案 / 见证文学", "domain_zh": "幸存者 · 回忆录 · Mazan 案当事人"}}
 {"id": "author:perrignon", "type": "Author", "label": "Perrignon", "props": {"name_zh": "佩里尼翁", "school_zh": "法式传记/证言转写", "domain_zh": "传记/证言转写 · 法国文化电台节目"}}
 {"id": "author:price-thonemann", "type": "Author", "label": "Price & Thonemann", "props": {"name_zh": "普莱斯 & 托内曼", "school_zh": "记忆建构 × 帝国崇拜 × 物质文化", "domain_zh": "古希腊罗马史 · 帝国崇拜 · 记忆与文化史"}}
+{"id": "author:shotwell", "type": "Author", "label": "Peter Shotwell", "props": {"name_zh": "彼得·肖特韦尔", "school_zh": "跨文化围棋写作", "domain_zh": "围棋教学 · 历史与文化"}}
+{"id": "author:soseki", "type": "Author", "label": "Natsume Sōseki", "props": {"name_zh": "夏目漱石", "school_zh": "近代日本文学 · 反自然主义", "domain_zh": "小说 · 随笔 · 文明批评"}}
+{"id": "author:tanizaki", "type": "Author", "label": "Tanizaki Jun'ichirō", "props": {"name_zh": "谷崎润一郎", "school_zh": "唯美派 · 恶魔主义", "domain_zh": "小说 · 美学随笔"}}
 {"id": "author:vargas", "type": "Author", "label": "Vargas", "props": {"name_zh": "瓦尔加", "school_zh": "法式 néo-polar · 直觉派侦探文学", "domain_zh": "罪案小说 · 考古动物学"}}
 {"id": "author:wickham", "type": "Author", "label": "Wickham", "props": {"name_zh": "威克姆", "school_zh": "经济考古 × 制度史 × 大空间比较", "domain_zh": "中世纪早期 · 意大利中世纪史 · 地中海比较经济史"}}
+{"id": "author:wu-qingyuan", "type": "Author", "label": "Wu Qingyuan (Go Seigen)", "props": {"name_zh": "吴清源", "school_zh": "中和 · 调和", "domain_zh": "棋手自述 · 中和与调和"}}
+{"id": "author:yomota", "type": "Author", "label": "Yomota Inuhiko", "props": {"name_zh": "四方田犬彦", "school_zh": "跨文化批评 · 日本美学关键词", "domain_zh": "比较文学 · 电影史 · 美学随笔"}}
+{"id": "author:zeami", "type": "Author", "label": "Zeami Motokiyo", "props": {"name_zh": "世阿弥", "school_zh": "能乐 · 观世流", "domain_zh": "能乐 · 艺道论"}}
+{"id": "author:zhang-ni", "type": "Author", "label": "Zhang Ni", "props": {"name_zh": "张拟", "school_zh": "古典棋论 · 立象比德", "domain_zh": "古代棋论"}}
 {"id": "book:2026-lemaitre-belles-promesses", "type": "Book", "label": "《美丽的承诺》", "props": {"kind": "novel", "author": "Pierre Lemaitre", "year": "2026"}}
 {"id": "book:2026-manda-kanoke-made", "type": "Book", "label": "《走到棺材为止》", "props": {"kind": "essay", "author": "萬田緑平", "year": "2025"}}
 {"id": "book:2026-mandel-exit-party", "type": "Book", "label": "《逃离派对》", "props": {"kind": "novel", "author": "Emily St. John Mandel", "year": "2026"}}
 {"id": "book:2026-pelicot-joie-de-vivre", "type": "Book", "label": "《然后，活着的喜悦》", "props": {"kind": "memoir", "author": "Gisèle Pelicot & Judith Perrignon", "year": "2026"}}
 {"id": "book:2026-vargas-une-unique-lueur", "type": "Book", "label": "《一束独光》", "props": {"kind": "novel", "author": "Fred Vargas", "year": "2026"}}
+{"id": "book:go-cobb-book-of-go", "type": "Book", "label": "《围棋之书》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2000"}}
+{"id": "book:go-cobb-buddhist", "type": "Book", "label": "《佛教哲学与围棋》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2021"}}
+{"id": "book:go-cobb-reflections", "type": "Book", "label": "《围棋之思：空枰 1994–2004》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2005"}}
+{"id": "book:go-fairbairn-companion", "type": "Book", "label": "《围棋 companion：历史与文化中的围棋》", "props": {"kind": "essay", "author": "John Fairbairn & T. Mark Hall", "year": "2009"}}
+{"id": "book:go-he-culture", "type": "Book", "label": "《围棋与中国文化》", "props": {"kind": "scholarship", "author": "何云波", "year": "—（待核）"}}
+{"id": "book:go-he-jing", "type": "Book", "label": "《弈境：围棋与中国文艺精神》", "props": {"kind": "scholarship", "author": "何云波", "year": "—（待核）"}}
+{"id": "book:go-he-qilun", "type": "Book", "label": "《中国历代围棋棋论选》", "props": {"kind": "scholarship", "author": "何云波", "year": "—（待核）"}}
+{"id": "book:go-he-thought", "type": "Book", "label": "《中国围棋思想史》", "props": {"kind": "scholarship", "author": "何云波", "year": "2016"}}
+{"id": "book:go-moskowitz-nation", "type": "Book", "label": "《围棋国族：中国男性气质与围棋》", "props": {"kind": "scholarship", "author": "Marc L. Moskowitz", "year": "2013"}}
+{"id": "book:go-qijing-shisanpian", "type": "Book", "label": "《棋经十三篇》", "props": {"kind": "scholarship", "author": "张拟（传）", "year": "宋"}}
+{"id": "book:go-shotwell-basics", "type": "Book", "label": "《围棋基础》", "props": {"kind": "essay", "author": "Peter Shotwell", "year": "2005"}}
+{"id": "book:go-shotwell-more", "type": "Book", "label": "《围棋：不止是游戏》", "props": {"kind": "essay", "author": "Peter Shotwell", "year": "2011"}}
+{"id": "book:go-wangyou-qingleji", "type": "Book", "label": "《忘忧清乐集》", "props": {"kind": "scholarship", "author": "李逸民（编）", "year": "南宋 / 2017 整理本"}}
+{"id": "book:go-wu-zhong", "type": "Book", "label": "《中的精神》", "props": {"kind": "essay", "author": "吴清源", "year": "2010"}}
+{"id": "book:go-xuanxuan-qijing", "type": "Book", "label": "《玄玄棋经》", "props": {"kind": "scholarship", "author": "佚名（传本）", "year": "元明（待核）"}}
+{"id": "book:jp-abe-teiso", "type": "Book", "label": "《贞操的理想——作为形式》", "props": {"kind": "scholarship", "author": "Abe Jirō", "year": "2019"}}
+{"id": "book:jp-bokuto", "type": "Book", "label": "《濹东绮谭》", "props": {"kind": "fiction", "author": "Nagai Kafu", "year": "1937"}}
+{"id": "book:jp-book-of-tea", "type": "Book", "label": "《茶之书》", "props": {"kind": "essay", "author": "Okakura Kakuzō", "year": "1906"}}
+{"id": "book:jp-bushido", "type": "Book", "label": "《武士道》", "props": {"kind": "nonfiction", "author": "Nitobe Inazō", "year": "1900"}}
+{"id": "book:jp-chrysanthemum-sword", "type": "Book", "label": "《菊与刀》", "props": {"kind": "scholarship", "author": "Ruth Benedict", "year": "1946"}}
+{"id": "book:jp-fenshen", "type": "Book", "label": "《分身：新日本论》", "props": {"kind": "nonfiction", "author": "Li Yongjing", "year": "2020"}}
+{"id": "book:jp-furoki", "type": "Book", "label": "《永井荷风异国放浪记》（上下）", "props": {"kind": "essay", "author": "Nagai Kafū", "year": "2020"}}
+{"id": "book:jp-fushikaden", "type": "Book", "label": "《风姿花传》", "props": {"kind": "nonfiction", "author": "Zeami Motokiyo", "year": "1400"}}
+{"id": "book:jp-iki-kouzou", "type": "Book", "label": "《粹（いき）的结构》", "props": {"kind": "scholarship", "author": "Kuki Shūzō", "year": "1930"}}
+{"id": "book:jp-inpraise-shadows", "type": "Book", "label": "《阴翳礼赞》", "props": {"kind": "essay", "author": "Tanizaki Jun'ichirō", "year": "1933"}}
+{"id": "book:jp-jujin", "type": "Book", "label": "《侏儒的话》", "props": {"kind": "essay", "author": "Akutagawa Ryunosuke", "year": "1923-1927"}}
+{"id": "book:jp-kusamakura", "type": "Book", "label": "《草枕》", "props": {"kind": "fiction", "author": "Natsume Soseki", "year": "1906"}}
+{"id": "book:jp-masshitsu", "type": "Book", "label": "《摩灭之赋》", "props": {"kind": "essay", "author": "Yomota Inuhiko", "year": "2020"}}
+{"id": "book:jp-monoaware-en", "type": "Book", "label": "《物哀论》（英译节选）", "props": {"kind": "scholarship", "author": "Onishi Yoshinori", "year": "2001"}}
+{"id": "book:jp-mososhu", "type": "Book", "label": "《芥川龙之介：妄想者手记》", "props": {"kind": "essay", "author": "Akutagawa Ryūnosuke", "year": "2020"}}
+{"id": "book:jp-nihonkoku-shi", "type": "Book", "label": "《日本国志》", "props": {"kind": "history", "author": "Huang Zunxian", "year": "1887/1895"}}
+{"id": "book:jp-nihonron", "type": "Book", "label": "《日本论》", "props": {"kind": "nonfiction", "author": "Dai Jitao", "year": "1928"}}
+{"id": "book:jp-onishi-trilogy", "type": "Book", "label": "《幽玄·物哀·寂》三部曲", "props": {"kind": "scholarship", "author": "Onishi Yoshinori", "year": "2017"}}
+{"id": "book:jp-shikike", "type": "Book", "label": "《日本色气》", "props": {"kind": "scholarship", "author": "Kuki Shūzō & Abe Jirō", "year": "2019"}}
+{"id": "book:jp-tsurezuregusa", "type": "Book", "label": "《徒然草》", "props": {"kind": "essay", "author": "Yoshida Kenkō", "year": "2022"}}
+{"id": "book:jp-usei", "type": "Book", "label": "《夏目漱石：浮世与病榻》", "props": {"kind": "essay", "author": "Natsume Sōseki", "year": "2020"}}
+{"id": "book:jp-utsukushii", "type": "Book", "label": "《我在美丽的日本》", "props": {"kind": "essay", "author": "Kawabata Yasunari", "year": "1968"}}
+{"id": "book:jp-wabisabi", "type": "Book", "label": "《日本侘寂》", "props": {"kind": "scholarship", "author": "Onishi Yoshinori", "year": "2019"}}
+{"id": "book:jp-zasshu-bunka", "type": "Book", "label": "《杂种文化》", "props": {"kind": "nonfiction", "author": "Kato Shuichi", "year": "1956"}}
 {"id": "book:pe-volume1-birth-classical", "type": "Book", "label": "《古典欧洲的诞生：从特洛伊到奥古斯丁》", "props": {"kind": "history", "author": "Simon Price & Peter Thonemann", "year": "2010"}}
 {"id": "book:pe-volume2-inheritance-rome", "type": "Book", "label": "《罗马的遗产：黑暗时代 400–1000》", "props": {"kind": "history", "author": "Chris Wickham", "year": "2009"}}
 {"id": "book:pe-volume3-high-middle-ages", "type": "Book", "label": "《中世纪盛期的欧洲》", "props": {"kind": "history", "author": "William Chester Jordan", "year": "2001"}}
@@ -26,6 +92,10 @@
 {"id": "book:pe-volume7-pursuit-power", "type": "Book", "label": "《权力的追求：欧洲 1815–1914》", "props": {"kind": "history", "author": "Richard J. Evans", "year": "2016"}}
 {"id": "book:pe-volume8-hell-and-back", "type": "Book", "label": "《地狱归来：欧洲 1914–1949》", "props": {"kind": "history", "author": "Ian Kershaw", "year": "2015"}}
 {"id": "book:pe-volume9-global-age", "type": "Book", "label": "《全球时代：欧洲 1950–2017》", "props": {"kind": "history", "author": "Ian Kershaw", "year": "2019"}}
+{"id": "book:wcs-elements-of-style", "type": "Book", "label": "《风格的要素》", "props": {"kind": "nonfiction", "author": "William Strunk Jr. & E. B. White", "year": "1918/2011"}}
+{"id": "book:wcs-on-being-a-scientist", "type": "Book", "label": "《做一个科学家》", "props": {"kind": "nonfiction", "author": "National Academies (NAS / NAE / IOM)", "year": "2009"}}
+{"id": "book:wcs-sense-of-style", "type": "Book", "label": "《风格的感觉》", "props": {"kind": "nonfiction", "author": "Steven Pinker", "year": "2014"}}
+{"id": "book:wcs-they-say-i-say", "type": "Book", "label": "「他们说 / 我说」", "props": {"kind": "nonfiction", "author": "Gerald Graff & Cathy Birkenstein", "year": "2024"}}
 {"id": "char:2026-lemaitre-belles-promesses:L1", "type": "Character", "label": "Jean Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
 {"id": "char:2026-lemaitre-belles-promesses:L2", "type": "Character", "label": "François Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
 {"id": "char:2026-lemaitre-belles-promesses:L3", "type": "Character", "label": "Geneviève Pelletier", "props": {"group": "Pelletier 家族", "conf": "◐", "book": "2026-lemaitre-belles-promesses"}}
@@ -103,16 +173,41 @@
 {"id": "char:pe-volume9-global-age:k04", "type": "Character", "label": "Mikhail Gorbachev · 戈尔巴乔夫", "props": {"group": "苏联", "conf": "✓", "book": "pe-volume9-global-age"}}
 {"id": "char:pe-volume9-global-age:k05", "type": "Character", "label": "Helmut Kohl · 科尔", "props": {"group": "德国", "conf": "✓", "book": "pe-volume9-global-age"}}
 {"id": "char:pe-volume9-global-age:k06", "type": "Character", "label": "Angela Merkel · 默克尔", "props": {"group": "德国-欧盟", "conf": "✓", "book": "pe-volume9-global-age"}}
+{"id": "concept:aestheticism-anti-modernism", "type": "Concept", "label": "aestheticism · anti-modernism", "props": {"school_zh": "唯美派 · 反近代", "school_en": "aestheticism · anti-modernism"}}
+{"id": "concept:aestheticism-diabolism", "type": "Concept", "label": "aestheticism · diabolism", "props": {"school_zh": "唯美派 · 恶魔主义", "school_en": "aestheticism · diabolism"}}
+{"id": "concept:bushido-discourse-christian-personalism", "type": "Concept", "label": "bushido discourse · Christian personalism", "props": {"school_zh": "武士道论 · 基督教人格主义", "school_en": "bushido discourse · Christian personalism"}}
+{"id": "concept:classical-game-records-compilation", "type": "Concept", "label": "classical game records · compilation", "props": {"school_zh": "古典棋谱 · 文献汇编", "school_en": "classical game records · compilation"}}
+{"id": "concept:classical-go-theory-imaging-virtue", "type": "Concept", "label": "classical Go theory · imaging virtue", "props": {"school_zh": "古典棋论 · 立象比德", "school_en": "classical Go theory · imaging virtue"}}
+{"id": "concept:classical-problem-collection-tradition", "type": "Concept", "label": "classical problem-collection tradition", "props": {"school_zh": "古典棋谱传统", "school_en": "classical problem-collection tradition"}}
+{"id": "concept:columbia-school-culture-and-personality", "type": "Concept", "label": "Columbia school · culture and personality", "props": {"school_zh": "哥伦比亚学派 · 文化与人格", "school_en": "Columbia school · culture and personality"}}
+{"id": "concept:cross-cultural-go-writing", "type": "Concept", "label": "cross-cultural Go writing", "props": {"school_zh": "跨文化围棋写作", "school_en": "cross-cultural Go writing"}}
+{"id": "concept:cultural-anthropology-masculinity-studies", "type": "Concept", "label": "cultural anthropology · masculinity studies", "props": {"school_zh": "文化人类学 · 男性气质研究", "school_en": "cultural anthropology · masculinity studies"}}
+{"id": "concept:equilibrium-harmony", "type": "Concept", "label": "equilibrium · harmony", "props": {"school_zh": "中和 · 调和", "school_en": "equilibrium · harmony"}}
 {"id": "concept:french-neo-polar", "type": "Concept", "label": "French neo-polar", "props": {"school_zh": "法式 néo-polar 文学派（Adamsberg 脉）", "school_en": "French neo-polar"}}
+{"id": "concept:go-cultural-studies-intellectual-history", "type": "Concept", "label": "Go cultural studies · intellectual history", "props": {"school_zh": "围棋文化研究 · 思想史进路", "school_en": "Go cultural studies · intellectual history"}}
+{"id": "concept:go-history-documentary-scholarship", "type": "Concept", "label": "Go history & documentary scholarship", "props": {"school_zh": "围棋史与文献学", "school_en": "Go history & documentary scholarship"}}
 {"id": "concept:japan-home-palliative-discourse", "type": "Concept", "label": "Japan home-palliative discourse", "props": {"school_zh": "日本在宅緩和ケア 生死观话语场", "school_en": "Japan home-palliative discourse"}}
+{"id": "concept:japanese-art-revival-cultural-export", "type": "Concept", "label": "Japanese art revival · cultural export", "props": {"school_zh": "日本美术复兴 · 文化外宣", "school_en": "Japanese art revival · cultural export"}}
+{"id": "concept:kuomintang-theory-japan-discourse", "type": "Concept", "label": "Kuomintang theory · Japan discourse", "props": {"school_zh": "国民党理论 · 日本论", "school_en": "Kuomintang theory · Japan discourse"}}
+{"id": "concept:kyoto-school-phenomenological-aesthetics", "type": "Concept", "label": "Kyoto School · phenomenological aesthetics", "props": {"school_zh": "京都学派 · 现象学美学", "school_en": "Kyoto School · phenomenological aesthetics"}}
 {"id": "concept:literary-transcription", "type": "Concept", "label": "literary transcription", "props": {"school_zh": "法式传记/证言转写", "school_en": "literary transcription"}}
+{"id": "concept:medieval-recluse-literature-three-great-essays", "type": "Concept", "label": "medieval recluse literature · three great essays", "props": {"school_zh": "中世隐逸文学 · 三大随笔", "school_en": "medieval recluse literature · three great essays"}}
 {"id": "concept:metoo-archive-testimonial", "type": "Concept", "label": "#MeToo archive / testimonial", "props": {"school_zh": "#MeToo 档案 / 见证文学", "school_en": "#MeToo archive / testimonial"}}
+{"id": "concept:modern-japanese-literature-anti-naturalism", "type": "Concept", "label": "modern Japanese literature · anti-naturalism", "props": {"school_zh": "近代日本文学 · 反自然主义", "school_en": "modern Japanese literature · anti-naturalism"}}
+{"id": "concept:neo-sensationalism-japanese-beauty-discourse", "type": "Concept", "label": "Neo-Sensationalism · Japanese beauty discourse", "props": {"school_zh": "新感觉派 · 日本美论", "school_en": "Neo-Sensationalism · Japanese beauty discourse"}}
+{"id": "concept:no-kanze-school", "type": "Concept", "label": "no · Kanze school", "props": {"school_zh": "能乐 · 观世流", "school_en": "no · Kanze school"}}
+{"id": "concept:philosophy-of-go-buddhist-approach", "type": "Concept", "label": "philosophy of Go · Buddhist approach", "props": {"school_zh": "围棋哲学 · 佛教进路", "school_en": "philosophy of Go · Buddhist approach"}}
+{"id": "concept:poetry-revolution-statecraft", "type": "Concept", "label": "poetry revolution · statecraft", "props": {"school_zh": "诗界革命 · 经世之学", "school_en": "poetry revolution · statecraft"}}
 {"id": "concept:polar-to-social-history", "type": "Concept", "label": "polar to social history", "props": {"school_zh": "法国 polar 文学派 → 社会史小说", "school_en": "polar to social history"}}
+{"id": "concept:post-war-cultural-theory-public-criticism", "type": "Concept", "label": "post-war cultural theory · public criticism", "props": {"school_zh": "战后日本文化论 · 公共批评", "school_en": "post-war cultural theory · public criticism"}}
+{"id": "concept:shinshicho-school-taisho-literature", "type": "Concept", "label": "Shinshicho school · Taisho literature", "props": {"school_zh": "新思潮派 · 大正文学", "school_en": "Shinshicho school · Taisho literature"}}
 {"id": "concept:soft-apocalypse-crossover", "type": "Concept", "label": "soft-apocalypse crossover", "props": {"school_zh": "soft-apocalypse 跨界文学", "school_en": "soft-apocalypse crossover"}}
+{"id": "concept:tokyo-imperial-aesthetics-category-studies", "type": "Concept", "label": "Tokyo Imperial aesthetics · category studies", "props": {"school_zh": "东京帝大美学 · 范畴研究", "school_en": "Tokyo Imperial aesthetics · category studies"}}
 {"id": "person:albert-dupontel", "type": "Person", "label": "Albert Dupontel", "props": {"raw": "Albert Dupontel（导演）"}}
 {"id": "person:balzac-zola", "type": "Person", "label": "Balzac / Zola", "props": {"raw": "Balzac / Zola"}}
 {"id": "person:caroline-darian", "type": "Person", "label": "Caroline Darian", "props": {"raw": "Caroline Darian（女儿/作家）"}}
 {"id": "person:georges-simenon", "type": "Person", "label": "Georges Simenon", "props": {"raw": "Georges Simenon"}}
+{"id": "person:gogod-棋谱数据库", "type": "Person", "label": "GoGoD / 棋谱数据库", "props": {"raw": "GoGoD / 棋谱数据库"}}
 {"id": "person:jo-vargas", "type": "Person", "label": "Jo Vargas", "props": {"raw": "Jo Vargas（孪生姐）"}}
 {"id": "person:manon-garcia", "type": "Person", "label": "Manon Garcia", "props": {"raw": "Manon Garcia（哲学家）"}}
 {"id": "person:marceline-loridan-ivens", "type": "Person", "label": "Marceline Loridan-Ivens", "props": {"raw": "Marceline Loridan-Ivens"}}
@@ -121,6 +216,11 @@
 {"id": "person:primo-levi-见证文学", "type": "Person", "label": "Primo Levi / 见证文学", "props": {"raw": "Primo Levi / 见证文学"}}
 {"id": "person:siân-reynolds", "type": "Person", "label": "Siân Reynolds", "props": {"raw": "Siân Reynolds（英译者）"}}
 {"id": "person:stéphane-audoin-rouzeau", "type": "Person", "label": "Stéphane Audoin-Rouzeau", "props": {"raw": "Stéphane Audoin-Rouzeau（兄）"}}
+{"id": "person:t-mark-hall", "type": "Person", "label": "T. Mark Hall", "props": {"raw": "T. Mark Hall"}}
+{"id": "person:中和-易经", "type": "Person", "label": "中和 / 易经", "props": {"raw": "中和 / 易经"}}
+{"id": "person:中国棋论传统", "type": "Person", "label": "中国棋论传统", "props": {"raw": "中国棋论传统"}}
+{"id": "person:佛教哲学", "type": "Person", "label": "佛教哲学", "props": {"raw": "佛教哲学"}}
+{"id": "person:儒家-道家棋论", "type": "Person", "label": "儒家 / 道家棋论", "props": {"raw": "儒家 / 道家棋论"}}
 {"id": "person:東畑開人", "type": "Person", "label": "東畑開人", "props": {"raw": "東畑開人（临床心理師）"}}
 {"id": "person:柏木哲夫-日本ホスピス緩和ケア", "type": "Person", "label": "柏木哲夫 / 日本ホスピス緩和ケア", "props": {"raw": "柏木哲夫 / 日本ホスピス緩和ケア"}}
 {"id": "person:青栁幸利", "type": "Person", "label": "青栁幸利", "props": {"raw": "青栁幸利（中之条研究）"}}

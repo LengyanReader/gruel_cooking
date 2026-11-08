@@ -4334,6 +4334,725 @@
           "conf": "✓"
         }
       ]
+    },
+    {
+      "id": "cobb",
+      "name_zh": "威廉·S·科布",
+      "name_en": "William S. Cobb",
+      "name_native": "William S. Cobb",
+      "name_native_en": "William S. Cobb",
+      "slug_display": "William S. Cobb",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "围棋哲学 · 佛教与觉悟",
+      "domain_en": "philosophy of Go · Buddhism & enlightenment",
+      "one_liner_zh": "威廉与玛丽学院荣退哲学教授、日本棋院国际围棋讲师、《空枰》专栏作者、Slate and Shell 主编——英语世界最持续地把围棋与佛教哲学放在一起思考的人。",
+      "one_liner_en": "Emeritus professor of philosophy (William & Mary), Nihon Kiin international Go instructor, author of The Empty Board column, editor-in-chief of Slate and Shell — the most sustained English attempt to think Go with Buddhist philosophy.",
+      "school_zh": "围棋哲学 · 佛教进路",
+      "school_en": "philosophy of Go · Buddhist approach",
+      "circle": [
+        {
+          "who": "John Fairbairn / T. Mark Hall",
+          "who_en": "John Fairbairn / T. Mark Hall",
+          "edge": "◎",
+          "why_zh": "同在 Slate and Shell 出版圈",
+          "why_en": "shared Slate and Shell circle",
+          "conf": "✓"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "—",
+          "event_zh": "威廉与玛丽学院哲学教授，后荣退",
+          "event_en": "Professor of philosophy, College of William & Mary (later emeritus)",
+          "conf": "✓"
+        },
+        {
+          "y": "1994–2004",
+          "event_zh": "《空枰》（The Empty Board）专栏，刊于《美国围棋杂志》",
+          "event_en": "The Empty Board column in the American Go Journal",
+          "conf": "✓"
+        },
+        {
+          "y": "2005",
+          "event_zh": "《围棋之思：空枰 1994–2004》由 Slate and Shell 出版",
+          "event_en": "Reflections on the Game of Go published by Slate and Shell",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2000",
+          "title": "The Book of Go",
+          "title_en": "The Book of Go",
+          "note_zh": "入门教材（Sterling）",
+          "note_en": "beginners' primer (Sterling)",
+          "conf": "✓"
+        },
+        {
+          "y": "2005",
+          "title": "Reflections on the Game of Go",
+          "title_en": "Reflections on the Game of Go",
+          "note_zh": "哲学随笔集（Slate and Shell）",
+          "note_en": "philosophical essays (Slate and Shell)",
+          "conf": "✓"
+        },
+        {
+          "y": "2021",
+          "title": "Buddhist Philosophy and the Game of Go",
+          "title_en": "Buddhist Philosophy and the Game of Go",
+          "note_zh": "佛教哲学与围棋；出版信息待核",
+          "note_en": "Buddhist philosophy & Go; publication data pending",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "把围棋当作可以通向佛教「觉悟」理解的一种实践，而不是单纯竞技；哲学教授的训练让他在概念上较真，围棋讲师的身份让他的例子落在棋上。",
+      "stance_en": "Treats Go as a practice through which Buddhist views of enlightenment can be understood, not mere competition; a philosopher's rigour with a Go instructor's concrete examples.",
+      "why_now_zh": "若目标是「以围棋观心」，Cobb 是英语世界最直接的入口；但他的佛教论述需要与他的技术教材分开读。",
+      "why_now_en": "For 'watching the mind through Go', Cobb is the most direct English entry — but his Buddhist essays must be read apart from his technical primers.",
+      "fact_ledger": [
+        {
+          "claim": "Cobb 为威廉与玛丽学院荣退哲学教授、日本棋院国际围棋讲师、Slate and Shell 主编",
+          "claim_en": "Cobb is professor emeritus of philosophy at William & Mary, a Nihon Kiin international Go instructor, and editor-in-chief of Slate and Shell",
+          "source": "Sensei's Library · WilliamCobb（2023-09-14）",
+          "source_en": "Sensei's Library · WilliamCobb (2023-09-14)",
+          "conf": "✓"
+        },
+        {
+          "claim": "《空枰》专栏刊于《美国围棋杂志》与《美国围棋电子杂志》",
+          "claim_en": "The Empty Board ran in the American Go Journal and the American Go E-Journal",
+          "source": "Sensei's Library · WilliamCobb",
+          "source_en": "Sensei's Library · WilliamCobb",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "《佛教哲学与围棋》的出版社、ISBN 与是否与前书重合",
+          "item_en": "Publisher/ISBN of Buddhist Philosophy and its overlap with Reflections",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "he-yunbo",
+      "name_zh": "何云波",
+      "name_en": "He Yunbo",
+      "name_native": "何云波",
+      "name_native_en": "何云波",
+      "slug_display": "He Yunbo",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "中文",
+      "domain_zh": "中国围棋思想史 · 文化研究",
+      "domain_en": "Chinese intellectual history of Go · cultural studies",
+      "one_liner_zh": "湘潭大学文学与新闻学院教授、湘潭大学围棋文化研究中心负责人；国家社科基金项目「中国围棋思想史」负责人，中文世界最系统的围棋思想史作者。",
+      "one_liner_en": "Professor at Xiangtan University, head of its Go Culture Research Centre, principal investigator of the national project 'A History of Chinese Go Thought' — the most systematic Chinese-language historian of Go thought.",
+      "school_zh": "围棋文化研究 · 思想史进路",
+      "school_en": "Go cultural studies · intellectual-history approach",
+      "circle": [
+        {
+          "who": "吴清源",
+          "who_en": "Wu Qingyuan",
+          "edge": "◎",
+          "why_zh": "引吴清源「和谐」说以论棋道",
+          "why_en": "cites Wu's 'harmony' to frame the Way of Go",
+          "conf": "✓"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "2022-02-23",
+          "event_zh": "《围棋与中国思想传统》刊于《光明日报》国家社科基金专刊",
+          "event_en": "'Go and the Chinese Thought Tradition' in Guangming Daily's NSSF column",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "event_zh": "任湘潭大学围棋文化研究中心负责人",
+          "event_en": "Head of the Xiangtan University Go Culture Research Centre",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "—",
+          "title": "中国围棋思想史",
+          "title_en": "A History of Chinese Go Thought",
+          "note_zh": "国家社科基金成果",
+          "note_en": "NSSF project output",
+          "conf": "◐"
+        },
+        {
+          "y": "—",
+          "title": "中国历代围棋棋论选",
+          "title_en": "Selected Go Treatises of Successive Dynasties",
+          "note_zh": "历代棋论选编",
+          "note_en": "anthology of historical treatises",
+          "conf": "◐"
+        },
+        {
+          "y": "—",
+          "title": "围棋与中国文化",
+          "title_en": "Go and Chinese Culture",
+          "note_zh": "综合文化研究",
+          "note_en": "cultural synthesis",
+          "conf": "◐"
+        },
+        {
+          "y": "—",
+          "title": "弈境：围棋与中国文艺精神",
+          "title_en": "The Realm of Play: Go and the Chinese Literary-Artistic Spirit",
+          "note_zh": "技、艺、道",
+          "note_en": "skill, art, Way",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "围棋是中国思想与文化的一个「标本」与「象征」：儒家给它价值尺度，道家给它生命与境界，最终收于「和谐」；「技进乎道」不是比喻，而是需要具体棋论支撑的命题。",
+      "stance_en": "Go is a specimen and symbol of Chinese thought: Confucianism supplies its value measure, Daoism its life and realm, and both converge on harmony; 'skill advancing into the Way' is a thesis to be grounded in actual treatises, not a metaphor.",
+      "why_now_zh": "要建立「围棋与中国思想」的整体框架，何云波是中文世界绕不开的起点；但他多部书的版次仍需逐一核对。",
+      "why_now_en": "To build an overall frame for 'Go and Chinese thought', He is the unavoidable Chinese starting point — though the editions of his books still need item-by-item checking.",
+      "fact_ledger": [
+        {
+          "claim": "何云波为湘潭大学文学与新闻学院教授、围棋文化研究中心负责人",
+          "claim_en": "He Yunbo is a professor at Xiangtan University and heads its Go Culture Research Centre",
+          "source": "湘潭大学新闻网（2022-02-24）",
+          "source_en": "Xiangtan University news (2022-02-24)",
+          "conf": "✓"
+        },
+        {
+          "claim": "《围棋与中国思想传统》为 2022-02-23《光明日报》国家社科基金专刊文章",
+          "claim_en": "'Go and the Chinese Thought Tradition' appeared in Guangming Daily's NSSF column on 2022-02-23",
+          "source": "全国哲学社会科学工作办公室转载页",
+          "source_en": "NOPSS reprint page",
+          "conf": "✓"
+        },
+        {
+          "claim": "已出版《中国围棋思想史》《中国历代围棋棋论选》《围棋与中国文化》《弈境》《世界围棋通史》《何云波围棋文集》",
+          "claim_en": "Published works include the History, the Selected Treatises, Go and Chinese Culture, The Realm of Play, a World History of Go, and the He Yunbo Go Collected Works",
+          "source": "湘潭大学新闻网",
+          "source_en": "Xiangtan University news",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "各书的出版年、出版社与 ISBN 未逐一核对",
+          "item_en": "Years, publishers and ISBNs of the books not checked individually",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "wu-qingyuan",
+      "name_zh": "吴清源",
+      "name_en": "Wu Qingyuan (Go Seigen)",
+      "name_native": "吴清源 / 呉清源",
+      "name_native_en": "吴清源 / 呉清源",
+      "slug_display": "Wu Qingyuan (Go Seigen)",
+      "born": "1914–2014",
+      "born_en": "1914–2014",
+      "native_lang": "中文 / 日文",
+      "domain_zh": "棋手自述 · 中和与调和",
+      "domain_en": "player's self-account · 中和 (equilibrium) and harmony",
+      "one_liner_zh": "二十世纪围棋巨匠；以「中和」「调和」表述棋道，把「中」解为阴阳平衡的那一点，并以《中的精神》自述其一生与信仰。",
+      "one_liner_en": "A twentieth-century Go master who framed the Way of Go as 中和/调和 — the point where yin and yang balance — and gave his life and faith in The Spirit of the Middle.",
+      "school_zh": "中和 · 调和",
+      "school_en": "equilibrium · harmony",
+      "circle": [
+        {
+          "who": "何云波",
+          "who_en": "He Yunbo",
+          "edge": "◎",
+          "why_zh": "何云波以「和谐」说引其棋道",
+          "why_en": "He cites Wu's 'harmony' in framing the Way",
+          "conf": "✓"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "1914",
+          "event_zh": "出生",
+          "event_en": "born",
+          "conf": "✓"
+        },
+        {
+          "y": "1928-10",
+          "event_zh": "赴日，年十四",
+          "event_en": "arrived in Japan aged fourteen",
+          "conf": "✓"
+        },
+        {
+          "y": "2001",
+          "event_zh": "自传在日本报纸连载",
+          "event_en": "memoir serialised in a Japanese newspaper",
+          "conf": "✓"
+        },
+        {
+          "y": "2014",
+          "event_zh": "去世",
+          "event_en": "died",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2010",
+          "title": "中的精神（吴清源自传）",
+          "title_en": "The Spirit of the Middle (memoir)",
+          "note_zh": "中信出版社中文版；2001 连载、2003 初译",
+          "note_en": "CITIC Chinese edition; serialised 2001, first translated 2003",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "黑布局 / 白布局",
+          "title_en": "Black Fuseki / White Fuseki",
+          "note_zh": "仅见回忆文字提及，版本待核",
+          "note_en": "mentioned in a reminiscence only; edition unverified",
+          "conf": "○"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "「与其说围棋是竞争和胜负，不如说围棋是和谐」；「中」是阴阳平衡的那一点，正着即中和各子作用之点。围棋于他不只是胜负，而是生存权与精神修养的象征。",
+      "stance_en": "'Go is not so much competition and victory as harmony'; the 'middle' is the point where yin and yang balance, and the right move harmonises the stones' roles. Go is a figure of survival and spiritual cultivation, not merely winning.",
+      "why_now_zh": "棋手本人的形上语汇，比任何二手哲学解释都更贴近「棋道」的原生经验；但「中和」不能被直接等同于儒释道任一体系。",
+      "why_now_en": "The player's own metaphysical vocabulary is closer to the lived experience of the Way than any second-hand philosophy — yet 'equilibrium' must not be equated outright with any one of Confucianism, Daoism or Buddhism.",
+      "fact_ledger": [
+        {
+          "claim": "自传 2001 年在日本报纸连载、2003 年译成中文、2010 年由中信出版社出版",
+          "claim_en": "The memoir was serialised in Japan in 2001, translated into Chinese in 2003, and published by CITIC in 2010",
+          "source": "新浪体育《中的精神》节选（2016-09-13）",
+          "source_en": "Sina Sports excerpt (2016-09-13)",
+          "conf": "✓"
+        },
+        {
+          "claim": "吴清源 1914 年生、2014 年卒、1928 年赴日",
+          "claim_en": "Wu was born in 1914, died in 2014, and arrived in Japan in 1928",
+          "source": "Sensei's Library · JohnFairbairn（2026-10-01 版）",
+          "source_en": "Sensei's Library · JohnFairbairn (2026-10-01)",
+          "conf": "✓"
+        },
+        {
+          "claim": "「与其说围棋是竞争和胜负，不如说围棋是和谐」为吴清源语",
+          "claim_en": "The line on harmony over competition is attributed to Wu",
+          "source": "何云波《围棋与中国思想传统》转引",
+          "source_en": "quoted in He Yunbo's Guangming Daily article",
+          "conf": "◐"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "《中的精神》ISBN、页数与所据版本",
+          "item_en": "ISBN, page count and edition of the memoir",
+          "conf": "◐"
+        },
+        {
+          "item": "《黑布局》《白布局》的责任者与版本",
+          "item_en": "authorship and editions of Black/White Fuseki",
+          "conf": "○"
+        }
+      ]
+    },
+    {
+      "id": "shotwell",
+      "name_zh": "彼得·肖特韦尔",
+      "name_en": "Peter Shotwell",
+      "name_native": "Peter Shotwell",
+      "name_native_en": "Peter Shotwell",
+      "slug_display": "Peter Shotwell",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "围棋教学 · 历史与文化",
+      "domain_en": "Go teaching · history & culture",
+      "one_liner_zh": "《Go! More Than a Game》与《Go Basics》作者，把入门教学、围棋史与儒道文化讨论放在同一本书里。",
+      "one_liner_en": "Author of Go! More Than a Game and Go Basics, joining beginner teaching, Go history and Confucian/Daoist culture in one book.",
+      "school_zh": "跨文化围棋写作",
+      "school_en": "cross-cultural Go writing",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2003",
+          "event_zh": "《Go! More Than a Game》修订版",
+          "event_en": "revised edition of Go! More Than a Game",
+          "conf": "✓"
+        },
+        {
+          "y": "2011",
+          "event_zh": "Tuttle 版（200 页）",
+          "event_en": "Tuttle edition (200 pp.)",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2011",
+          "title": "Go! More Than a Game",
+          "title_en": "Go! More Than a Game",
+          "note_zh": "教学 × 历史 × 文化（Tuttle）",
+          "note_en": "teaching × history × culture (Tuttle)",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "Go Basics",
+          "title_en": "Go Basics",
+          "note_zh": "新棋手基础教材；版次待核",
+          "note_en": "beginners' primer; edition pending",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "围棋「不止是游戏」：规则可以几分钟学会，但其历史、哲学与人的心智生活才是他真正要写的。",
+      "stance_en": "Go is 'more than a game': the rules take minutes, but its history, philosophy and mental life are what he writes about.",
+      "why_now_zh": "想把「围棋为什么不仅是游戏」讲清楚，Shotwell 是英文入门书里最愿意给历史与文化篇幅的一位。",
+      "why_now_en": "For 'why Go is more than a game', Shotwell gives more room to history and culture than most English primers.",
+      "fact_ledger": [
+        {
+          "claim": "《Go! More Than a Game》由 Tuttle 于 2011-04-11 出版，200 页，ISBN 9781462900060",
+          "claim_en": "Go! More Than a Game was published by Tuttle on 2011-04-11, 200 pp., ISBN 9781462900060",
+          "source": "Google Books 书目页",
+          "source_en": "Google Books record",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "《Go Basics》的出版年、出版社与 ISBN",
+          "item_en": "Year, publisher and ISBN of Go Basics",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "fairbairn-hall",
+      "name_zh": "约翰·费尔贝恩、T. 马克·霍尔",
+      "name_en": "John Fairbairn & T. Mark Hall",
+      "name_native": "John Fairbairn & T. Mark Hall",
+      "name_native_en": "John Fairbairn & T. Mark Hall",
+      "slug_display": "John Fairbairn & T. Mark Hall",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "围棋史 · 棋谱数据库",
+      "domain_en": "Go history · game-record database",
+      "one_liner_zh": "英国围棋翻译者与史家；与已故 T. Mark Hall 共同制作 GoGoD（Games of Go on Disk）棋谱库，合著《The Go Companion》。",
+      "one_liner_en": "English Go translator and historian; co-producer with the late T. Mark Hall of the GoGoD database and co-author of The Go Companion.",
+      "school_zh": "围棋史与文献学",
+      "school_en": "Go history & documentary scholarship",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1965",
+          "event_zh": "开始下围棋",
+          "event_en": "began playing Go",
+          "conf": "✓"
+        },
+        {
+          "y": "2009",
+          "event_zh": "《The Go Companion》出版",
+          "event_en": "The Go Companion published",
+          "conf": "✓"
+        },
+        {
+          "y": "2025",
+          "event_zh": "GoGoD 棋谱库逾 130,000 局",
+          "event_en": "GoGoD passes 130,000 games",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "2009",
+          "title": "The Go Companion: Go in History and Culture",
+          "title_en": "The Go Companion: Go in History and Culture",
+          "note_zh": "历史与文化随笔集",
+          "note_en": "essays on history and culture",
+          "conf": "✓"
+        },
+        {
+          "y": "—",
+          "title": "GoGoD (Games of Go on Disk)",
+          "title_en": "GoGoD (Games of Go on Disk)",
+          "note_zh": "棋谱数据库，非书籍",
+          "note_en": "game-record database, not a book",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "把「棋道」「棋品」「超越胜负」放回具体人物、赛事与制度处境中；史料与棋谱优先于感想。",
+      "stance_en": "Puts 'the Way', 'character' and 'beyond winning' back into concrete persons, matches and institutions; documents and game records before sentiment.",
+      "why_now_zh": "当围棋论述容易飘向格言时，Fairbairn/Hall 提供的是可核查的历史与谱系。",
+      "why_now_en": "When Go writing drifts into aphorism, Fairbairn/Hall supply checkable history and genealogy.",
+      "fact_ledger": [
+        {
+          "claim": "Fairbairn 为英国围棋翻译者/史家，与已故 T. Mark Hall 共同制作 GoGoD",
+          "claim_en": "Fairbairn is an English Go translator/historian who co-produced GoGoD with the late T. Mark Hall",
+          "source": "Sensei's Library · JohnFairbairn",
+          "source_en": "Sensei's Library · JohnFairbairn",
+          "conf": "✓"
+        },
+        {
+          "claim": "《The Go Companion》ISBN 1-932001-43-3，300 页，Slate and Shell",
+          "claim_en": "The Go Companion: ISBN 1-932001-43-3, 300 pp., Slate and Shell",
+          "source": "British Go Association, BGJ 148 (Spring 2009) review",
+          "source_en": "British Go Association, BGJ 148 (Spring 2009) review",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "T. Mark Hall 的生卒与具体分工",
+          "item_en": "T. Mark Hall's dates and exact division of labour",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "moskowitz",
+      "name_zh": "马克·L·莫斯科维茨",
+      "name_en": "Marc L. Moskowitz",
+      "name_native": "Marc L. Moskowitz",
+      "name_native_en": "Marc L. Moskowitz",
+      "slug_display": "Marc L. Moskowitz",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "围棋人类学 · 男性气质与民族认同",
+      "domain_en": "anthropology of Go · masculinity & national identity",
+      "one_liner_zh": "人类学家；《Go Nation》以民族志研究中国围棋与男性气质、儒家形象、阶层与民族认同的关系。",
+      "one_liner_en": "An anthropologist whose Go Nation studies Chinese weiqi through masculinity, Confucian imagery, class and national identity.",
+      "school_zh": "文化人类学 · 男性气质研究",
+      "school_en": "cultural anthropology · masculinity studies",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2013",
+          "event_zh": "《Go Nation》由加州大学出版社出版",
+          "event_en": "Go Nation published by University of California Press",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "2013",
+          "title": "Go Nation",
+          "title_en": "Go Nation",
+          "note_zh": "中国围棋的民族志",
+          "note_en": "ethnography of Chinese weiqi",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "不教人「借围棋观心」，而是观察人们如何给围棋赋予道德与文化意义——围棋是社会身份与民族想象的场域。",
+      "stance_en": "Does not teach 'watching the mind through Go' but observes how people give Go moral and cultural meaning — Go as a field of social identity and national imagination.",
+      "why_now_zh": "为「棋道」提供社会科学的对照：那些被哲学化的说法，在具体人群里如何被使用。",
+      "why_now_en": "Supplies a social-science counterweight: how philosophised claims are actually used by concrete groups.",
+      "fact_ledger": [
+        {
+          "claim": "《Go Nation》2013 年由 University of California Press 出版",
+          "claim_en": "Go Nation was published by University of California Press in 2013",
+          "source": "Oxford Academic / California Scholarship Online 书目条",
+          "source_en": "Oxford Academic / California Scholarship Online record",
+          "conf": "◐"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "ISBN、页数与正文（出版社页 403，未读）",
+          "item_en": "ISBN, pages and body text (publisher page 403; unread)",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "zhang-ni",
+      "name_zh": "张拟",
+      "name_en": "Zhang Ni",
+      "name_native": "张拟（宋）",
+      "name_native_en": "张拟（宋）",
+      "slug_display": "Zhang Ni",
+      "born": "—（宋代）",
+      "born_en": "—（宋代）",
+      "native_lang": "文言",
+      "domain_zh": "古代棋论",
+      "domain_en": "classical Go treatise",
+      "one_liner_zh": "《棋经十三篇》的通行归属作者；该书是宋代以来最常被引用的围棋理论文本。",
+      "one_liner_en": "The conventional attribution for The Go Classic in Thirteen Chapters, the most cited Go theory text since the Song.",
+      "school_zh": "古典棋论 · 立象比德",
+      "school_en": "classical Go theory · imaging virtue",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "宋",
+          "event_zh": "《棋经十三篇》成书/归属",
+          "event_en": "The Go Classic in Thirteen Chapters attributed",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "宋",
+          "title": "棋经十三篇",
+          "title_en": "The Go Classic in Thirteen Chapters",
+          "note_zh": "十三篇棋论",
+          "note_en": "a treatise in thirteen chapters",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "以「立象比德」论棋：棋局法天、黑白法阴阳，把技艺纳入宇宙论与伦理秩序。",
+      "stance_en": "Argues by 'imaging virtue': the board figures heaven, black and white figure yin and yang, and the craft is placed within cosmology and ethical order.",
+      "why_now_zh": "要谈「技进乎道」，先回到这套把棋局与天地阴阳对齐的古典语法。",
+      "why_now_en": "To speak of 'skill advancing into the Way', return first to this classical grammar aligning the board with heaven, earth and yin-yang.",
+      "fact_ledger": [
+        {
+          "claim": "《棋经十三篇》收入《围棋文献集成》第八册",
+          "claim_en": "The Go Classic in Thirteen Chapters is included in volume 8 of the Go Literature Collection",
+          "source": "微信读书《围棋文献集成（8）》简介",
+          "source_en": "Weread blurb for Go Literature Collection vol. 8",
+          "conf": "◐"
+        },
+        {
+          "claim": "何云波文引《棋经十三篇》「夫万物之数，从一而起……白黑相半，以法阴阳」",
+          "claim_en": "He Yunbo's article quotes the opening on number, the board's 361 points and black/white following yin-yang",
+          "source": "《光明日报》2022-02-23",
+          "source_en": "Guangming Daily, 2022-02-23",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "张拟生平、十三篇全目与宋本原貌",
+          "item_en": "Zhang Ni's life, the full chapter list, and the Song original",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "liji-min",
+      "name_zh": "李逸民",
+      "name_en": "Li Yimin",
+      "name_native": "李逸民（南宋）",
+      "name_native_en": "李逸民（南宋）",
+      "slug_display": "Li Yimin",
+      "born": "—（南宋）",
+      "born_en": "—（南宋）",
+      "native_lang": "文言",
+      "domain_zh": "古代棋谱编纂",
+      "domain_en": "classical game-record compilation",
+      "one_liner_zh": "南宋翰林院棋待诏，编《忘忧清乐集》——现存最重要的早期围棋文献汇编之一。",
+      "one_liner_en": "A Southern Song imperial Go attendant who compiled The Carefree & Innocent Pastime Collection, one of the most important early Go anthologies.",
+      "school_zh": "古典棋谱 · 文献汇编",
+      "school_en": "classical game records · compilation",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "南宋",
+          "event_zh": "编《忘忧清乐集》",
+          "event_en": "compiled The Carefree & Innocent Pastime Collection",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "南宋",
+          "title": "忘忧清乐集",
+          "title_en": "The Carefree & Innocent Pastime Collection",
+          "note_zh": "棋论与古谱汇编",
+          "note_en": "treatises and ancient game records",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "以汇编保存前代棋论与棋局；书名取自宋徽宗「忘忧清乐在枰棋」，把围棋安放在「忘忧」的审美与生活世界里。",
+      "stance_en": "Preserves earlier treatises and game records by compilation; the title, from Emperor Huizong's line on 'carefree joy at the board', places Go within a world of carefree aesthetic life.",
+      "why_now_zh": "现代哲学论述之前，先看宋人如何把棋论、棋谱与「忘忧」编在一起。",
+      "why_now_en": "Before modern philosophy, see how Song compilers bound treatises, records and 'carefree joy' into one volume.",
+      "fact_ledger": [
+        {
+          "claim": "《忘忧清乐集》由南宋翰林院棋待诏李逸民编著，书名取自宋徽宗「忘忧清乐在枰棋」",
+          "claim_en": "The Collection was compiled by the Southern Song imperial Go attendant Li Yimin; its title comes from Huizong's line on carefree joy at the board",
+          "source": "微信读书《围棋文献集成（8）》简介",
+          "source_en": "Weread blurb for Go Literature Collection vol. 8",
+          "conf": "◐"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "李逸民生平与宋本原貌",
+          "item_en": "Li Yimin's life and the Song original",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "classical-anon",
+      "name_zh": "佚名（传本）",
+      "name_en": "Anonymous (received text)",
+      "name_native": "佚名 / 传本",
+      "name_native_en": "佚名 / 传本",
+      "slug_display": "Anonymous (received text)",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "文言",
+      "domain_zh": "古代棋谱 · 死活题集",
+      "domain_en": "classical problem collections",
+      "one_liner_zh": "《玄玄棋经》等传本的编纂者不详；以「文本传统」而非个人作者立节点，避免把未核实的归属写成事实。",
+      "one_liner_en": "Compiler(s) of The Gateway to All Marvels and similar received texts are unknown; this node stands for the textual tradition rather than an unverified person.",
+      "school_zh": "古典棋谱传统",
+      "school_en": "classical problem-collection tradition",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "元明",
+          "event_zh": "《玄玄棋经》传本流行",
+          "event_en": "The Gateway to All Marvels circulated in Yuan-Ming received editions",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "元明",
+          "title": "玄玄棋经",
+          "title_en": "The Gateway to All Marvels",
+          "note_zh": "传世死活题集；编纂者待核",
+          "note_en": "received problem collection; compiler pending",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "先把「书」与「作者」分开：在编纂者未核实前，宁可立一个诚实的「佚名/传本」节点。",
+      "stance_en": "Separate the book from the author: until the compiler is verified, keep an honest 'anonymous/received' node.",
+      "why_now_zh": "古籍研究的第一课是不要为了「按作者排列」而贸然归属。",
+      "why_now_en": "The first lesson of classical bibliography: do not assign authorship merely to sort by author.",
+      "fact_ledger": [
+        {
+          "claim": "Fairbairn 称《玄玄棋经》为「the most influential go book ever produced」",
+          "claim_en": "Fairbairn calls The Gateway to All Marvels 'the most influential go book ever produced'",
+          "source": "Sensei's Library · JohnFairbairn",
+          "source_en": "Sensei's Library · JohnFairbairn",
+          "conf": "◐"
+        },
+        {
+          "claim": "《围棋文献集成》第十七册收《玄玄棋经》《石室秘传》《萃奕搜玄》",
+          "claim_en": "Volume 17 of the Go Literature Collection contains the Gateway, Shishi Michuan and Cuiyi Souxuan",
+          "source": "Amazon SG 书目页",
+          "source_en": "Amazon SG bibliographic page",
+          "conf": "◐"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "《玄玄棋经》编纂者、版本与篇章结构",
+          "item_en": "Compiler, edition and structure of the Gateway",
+          "conf": "◐"
+        }
+      ]
     }
   ]
 }

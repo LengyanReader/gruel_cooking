@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《棋经十三篇》｜棋经十三篇 | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>《棋经十三篇》 · 棋经十三篇</span><span data-en>棋经十三篇</span></h1>
+  <div class="subtitle" data-both><span data-zh>张拟（宋，传） · 中国 · 宋代原典 · 现代整理本另计（《围棋文献集成》第八册收）</span><span data-en>Zhang Ni (attrib., Song) · China · Song original · modern editions separately (in Go Literature Collection vol. 8)</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>围弈 · 观心与棋道 GO CULTURE · 2026-11-08</span><span data-en>GO CULTURE · WATCHING THE MIND · 2026-11-08</span></span> <span class="chip"><span data-zh>古典棋论 · 十三篇</span><span data-en>classical Go treatise · thirteen chapters</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>古典棋论</span><span data-en>classical Go theory</span></span> <span class="chip"><span data-zh>conf ◐ 作者/时代为通行归属；未见宋刊原椠，据《围棋文献集成》第八册简介与何云波文引文（2026-11-08）</span><span data-en>conf ◐ conventional attribution; no Song imprint seen; based on vol. 8 blurb and He Yunbo&#x27;s quotation (2026-11-08)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>◐ 作者/时代为通行归属；未见宋刊原椠，据《围棋文献集成》第八册简介与何云波文引文（2026-11-08） · 档案：go-qijing-shisanpian（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ◐ conventional attribution; no Song imprint seen; based on vol. 8 blurb and He Yunbo&#x27;s quotation (2026-11-08) · record: go-qijing-shisanpian. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅引文与篇目线索（◐）</span><span data-en>not read · quotations and chapter leads only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>宋代以来最常被引用的围棋理论文本；要谈「立象比德」「技进乎道」，先回到这套把棋局与天地阴阳对齐的古典语法。</div><div data-en>The most cited Go theory text since the Song; to speak of &#x27;imaging virtue&#x27; or &#x27;skill into the Way&#x27;, return first to this classical grammar aligning the board with heaven, earth and yin-yang.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://cread.jd.com/read/startRead.action?bookId=30225174&amp;readType=1" target="_blank" rel="noopener"><span data-zh>京东阅读页面</span><span data-en>JD Read page</span><span class="dom">cread.jd.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://weread.qq.com/web/bookDetail/f8432710811e5f92eg011835" target="_blank" rel="noopener"><span data-zh>微信读书《围棋文献集成（8）》</span><span data-en>Weread vol. 8</span><span class="dom">weread.qq.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>通行归属为宋代张拟，全文十三篇。已知篇目包括棋局、得算、权舆、合战、虚实、自知等（据对话清单；全目待核）。《围棋文献集成》第八册收录其文字；何云波文引其开篇「夫万物之数，从一而起……白黑相半，以法阴阳」。</div><div data-en>Conventionally attributed to Zhang Ni of the Song, in thirteen chapters. Known chapter names include board, calculation, opening, battle, emptiness-and-solidity and self-knowledge (per the source list; full list pending). Volume 8 of the Go Literature Collection includes the text; He Yunbo quotes its opening on number, the 361 points and black/white following yin-yang.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card tocw"><div class="srcnote" style="margin-top:0"><span data-both><span data-zh>已知篇目据对话清单（棋局、得算、权舆、合战、虚实、自知）；十三篇全目与宋本原貌待核。</span><span data-en>Known chapter names follow the source list (board, calculation, opening, battle, emptiness/solidity, self-knowledge); the full thirteen and the Song original are pending.</span></span></div><div class="tocgrid"><div><h4><span data-both><span data-zh>已知篇目（部分）</span><span data-en>Known chapters (partial)</span></span></h4><ol class="toclist"><li>棋局</li><li>得算</li><li>权舆</li><li>合战</li><li>虚实</li><li>自知</li></ol></div><div><h4><span data-both><span data-zh>待核</span><span data-en>Pending</span></span></h4><ol class="toclist"><li>其余篇目待核</li><li>宋本原貌待核</li></ol></div></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 棋局</span><span data-en>Section 1 · The board</span></h3>
+<div data-zh>以棋局之数法天地阴阳，是「立象比德」的起点。</div><div data-en>The board&#x27;s number figures heaven/earth and yin-yang, the start of imaging virtue.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>棋局如何接宇宙论。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>棋局如何接宇宙论。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从「万物之数，从一而起」到「白黑相半，以法阴阳」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>从「万物之数，从一而起」到「白黑相半，以法阴阳」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>棋局；数；阴阳。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>棋局；数；阴阳。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>何云波文引《棋经十三篇》。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>何云波文引《棋经十三篇》。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为后五篇提供象数基础。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>为后五篇提供象数基础。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>何云波文引《棋经十三篇》。</span><span data-en>何云波文引《棋经十三篇》。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 得算</span><span data-en>Section 2 · Calculation</span></h3>
+<div data-zh>以算筹喻棋算：计算在棋中的位置。</div><div data-en>Calculation in Go, figured through counting rods.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>计算如何被理解。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>计算如何被理解。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>由「棋局」进入「得算」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>由「棋局」进入「得算」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>得算；算。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>得算；算。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>对话清单篇目。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>对话清单篇目。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>从象数转入技术判断。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>从象数转入技术判断。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目。</span><span data-en>对话清单篇目。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 权舆</span><span data-en>Section 3 · Opening</span></h3>
+<div data-zh>开局之义：与「合战」「虚实」构成从开局到战斗的链条。</div><div data-en>The opening, linked to battle and emptiness/solidity in a chain.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>开局在整盘中的位置。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>开局在整盘中的位置。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>由「得算」进入「权舆」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>由「得算」进入「权舆」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>权舆；开局。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>权舆；开局。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>对话清单篇目。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>对话清单篇目。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把计算落到开局选择。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把计算落到开局选择。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目。</span><span data-en>对话清单篇目。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 节 · 合战</span><span data-en>Section 4 · Battle</span></h3>
+<div data-zh>战斗的判断：与「虚实」相接。</div><div data-en>Judgment in battle, linked to emptiness/solidity.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>战斗如何判断。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>战斗如何判断。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>由「权舆」进入「合战」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>由「权舆」进入「合战」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>合战；战。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>合战；战。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>对话清单篇目。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>对话清单篇目。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>从开局进入中盘战斗。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>从开局进入中盘战斗。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目。</span><span data-en>对话清单篇目。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 5 节 · 虚实</span><span data-en>Section 5 · Emptiness and solidity</span></h3>
+<div data-zh>虚实判断：战术与全局的核心。</div><div data-en>Judging empty and solid points, central to tactics and the whole board.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>虚实如何判断。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>虚实如何判断。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>由「合战」进入「虚实」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>由「合战」进入「虚实」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>虚实。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>虚实。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>对话清单篇目。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>对话清单篇目。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把战斗判断提升为全局判断。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把战斗判断提升为全局判断。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目。</span><span data-en>对话清单篇目。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 6 节 · 自知</span><span data-en>Section 6 · Self-knowledge</span></h3>
+<div data-zh>以「自知」收束：棋艺与自我认识相连。</div><div data-en>Closes on self-knowledge, linking Go to self-understanding.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>棋艺如何回到自我认识。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>棋艺如何回到自我认识。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>由「虚实」收于「自知」。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>由「虚实」收于「自知」。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>自知。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>自知。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>对话清单篇目。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>对话清单篇目。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把技术链收束为伦理/自我认识。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把技术链收束为伦理/自我认识。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目。</span><span data-en>对话清单篇目。</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>十三篇短论，从棋局象数、得算、权舆、合战，到虚实、自知，构成一套「从宇宙论到实战判断」的论说。它不是棋谱，也不是佛教修行书。</div><div data-en>Thirteen short chapters move from the board&#x27;s cosmology and calculation to opening, battle, emptiness/solidity and self-knowledge — a discourse from cosmology to practical judgment. It is neither a game-record collection nor a Buddhist manual.</div></div>
+<h2 class="part" data-both><span data-zh>方法与材料 · Method &amp; sources</span><span data-en>Method &amp; sources</span></h2><div class="card gapbox" style="line-height:1.8"><div data-zh><p>古典棋论：十三篇短论，从棋局象数到实战判断；全目与宋本原貌待核。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Classical treatise: thirteen short chapters from board cosmology to practical judgment; full chapter list and Song original pending.</p></div></div>
+<h2 class="part" data-both><span data-zh>论证链 · Chain of argument</span><span data-en>Chain of argument</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《棋经十三篇》 · 论证链（数字为顺序）</span><span data-en>棋经十三篇 · the chain of argument (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="quote"><div class="orig">夫万物之数，从一而起。局之路，三百六十有一。一者，生数之主，据其极而运四方也。……白黑相半，以法阴阳。</div><div class="trs" data-zh>—</div><div class="trs" data-en>All things begin from one; the board has 361 points; the one is the master of number, moving the four directions from its pole… black and white are half and half, following yin and yang.</div><div class="src"><span data-both><span data-zh>何云波《围棋与中国思想传统》引《棋经十三篇》</span><span data-en>quoted in He Yunbo&#x27;s article</span></span></div></div>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>尚无独立书评证据；暂不作评价。
+
+未见系统批评；以下仅记可能的局限。
+
+**合成 Synthesis：** 待通读后再作合成判断。</div><div data-en>No independent review evidence yet; no verdict.
+
+No systematic critique found; only likely limits noted.
+
+**Synthesis:** Synthesis deferred until a full read.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>《棋经十三篇》的意图不是写一本佛教修行书，而是把围棋放进宇宙论与伦理秩序：以棋局之数法天地阴阳，以「得算」「权舆」「合战」「虚实」「自知」构成从象数到实战、再到自我认识的论说链。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The Thirteen Chapters does not aim at a Buddhist manual; it places Go within cosmology and ethical order: the board&#x27;s number figures heaven/earth and yin-yang, and calculation, opening, battle, emptiness/solidity and self-knowledge form a chain from number to practice to self-knowledge.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>开篇「夫万物之数，从一而起……白黑相半，以法阴阳」把棋局直接接到宇宙论；篇目从「棋局」到「得算」「权舆」「合战」「虚实」，是技术性的论说链；末以「自知」收束，说明作者关心的不只是胜负，而是棋手对自己的认识。三处结构共同指向「立象比德」而非「佛教修行」。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The opening ties the board to cosmology through number and yin-yang; the chapters run from board to calculation, opening, battle and emptiness/solidity as a technical chain; the close on self-knowledge shows concern beyond winning. The structure points to imaging virtue, not Buddhist practice.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>开篇以「万物之数，从一而起」「白黑相半，以法阴阳」立论。</div><div data-en>The opening argues from number and yin-yang.</div></td><td><span data-both><span data-zh>何云波文引</span><span data-en>quoted in He&#x27;s article</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>已知篇目含棋局、得算、权舆、合战、虚实、自知。</div><div data-en>Known chapters include board, calculation, opening, battle, emptiness/solidity and self-knowledge.</div></td><td><span data-both><span data-zh>对话清单</span><span data-en>source list</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>版本</span><span data-en>edition</span></span></td><td><div data-zh>收入《围棋文献集成》第八册。</div><div data-en>Included in Go Literature Collection vol. 8.</div></td><td><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>接受</span><span data-en>reception</span></span></td><td><div data-zh>Fairbairn 的 Gateway to All Marvels 亦收其文。</div><div data-en>Fairbairn&#x27;s Gateway also includes it.</div></td><td>Sensei&#x27;s · JohnFairbairn</td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：它也可以被读成一部「棋艺教科书」，宇宙论只是开篇的修辞；「自知」只是棋德，而非哲学。若如此，不应把它过度哲学化。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: it can be read as a Go manual whose cosmology is opening rhetoric, and self-knowledge as conduct rather than philosophy. On that reading it should not be over-philosophised.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未见宋本、十三篇全目未核，无法判断各篇的论说比例；上述推断依据开篇引文、已知篇目与收录情况，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the Song original or the full chapter list I cannot judge the balance of the chapters; the inference rests on the opening quotation, known chapter names and inclusion, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>棋局</span><span data-en>the board</span></span></b></td><td>棋局</td><td><div data-zh>以棋局之数法天地阴阳，是「立象比德」的起点。</div><div data-en>The board&#x27;s number figures heaven/earth and yin-yang, the starting point of imaging virtue.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>何云波文引《棋经十三篇》</span><span data-en>He&#x27;s article quoting the text</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>得算</span><span data-en>calculation</span></span></b></td><td>得算</td><td><div data-zh>以算筹喻棋算，强调计算在棋中的位置。</div><div data-en>Calculation in Go, figured through counting rods.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目</span><span data-en>source-list chapter names</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>权舆</span><span data-en>opening / beginning</span></span></b></td><td>权舆</td><td><div data-zh>开局之义；与「合战」「虚实」构成从开局到战斗的链条。</div><div data-en>The opening, linked to battle and emptiness/solidity in a chain.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目</span><span data-en>source-list chapter names</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>虚实</span><span data-en>emptiness and solidity</span></span></b></td><td>虚实</td><td><div data-zh>棋局中的虚实判断，是战术与全局的核心。</div><div data-en>Judging empty and solid points, central to tactics and the whole board.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目</span><span data-en>source-list chapter names</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>自知</span><span data-en>self-knowledge</span></span></b></td><td>自知</td><td><div data-zh>把棋艺与自我认识相连，是全书最具伦理意味的一篇。</div><div data-en>Links Go to self-knowledge, the most ethical chapter.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>对话清单篇目</span><span data-en>source-list chapter names</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>宋代以来最常被引用的围棋理论文本；《围棋文献集成》第八册收录。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The most cited Go theory text since the Song; included in Go Literature Collection vol. 8.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>Fairbairn 的 Gateway to All Marvels 亦收其文，说明其跨语言影响。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Fairbairn&#x27;s Gateway to All Marvels also includes it, showing cross-language influence.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>「立象比德」「技进乎道」等论述的古典源头之一。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>One classical source for imaging virtue and skill-into-Way.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>作者归属、十三篇全目与宋本原貌未核；不宜把现代解释当作原文。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Attribution, full chapter list and Song original unverified; do not treat modern interpretation as the text.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>《围棋文献集成》第八册简介</span><span data-en>Go Literature Collection vol. 8 blurb</span></span></li><li><span data-both><span data-zh>何云波《围棋与中国思想传统》（光明日报 2022-02-23）</span><span data-en>He Yunbo, Guangming Daily, 2022-02-23</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>作者与版本</span><span data-en>Author and edition</span></p><div data-zh style="color:var(--ink-soft)">张拟归属为通行说法，宋本原貌未见。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The Zhang Ni attribution is conventional; no Song original seen.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>十三篇全目</span><span data-en>Full chapter list</span></p><div data-zh style="color:var(--ink-soft)">仅知部分篇目，不能据此重建全书结构。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Only some chapters are known; the full structure cannot be reconstructed.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>现代解释的污染</span><span data-en>Modern interpretation</span></p><div data-zh style="color:var(--ink-soft)">「立象比德」「技进乎道」是现代概括，需回到原文检验。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Imaging virtue and skill-into-Way are modern summaries; return to the text.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>以「棋局—得算—权舆—合战—虚实—自知」构成从象数到判断、再到自我认识的论说链。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Builds a chain from board to calculation, opening, battle, emptiness/solidity and self-knowledge.</p></div>
+<div class="card"><p data-zh>以「象数—技术—自知」的链条组织十三篇。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Organises the thirteen chapters as number–technique–self-knowledge.</p></div>
+<div class="card"><p data-zh>以开篇的宇宙论与末篇的「自知」形成首尾呼应。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Frames the opening cosmology and closing self-knowledge as a pair.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>立象比德</span><span data-en>imaging virtue</span></div>
+<div class="orig">立象比德</div>
+<div class="mnote"><div data-zh>开篇以棋局之数法天地阴阳，是「立象比德」的古典语法。</div><div data-en>The opening makes the board figure heaven/earth and yin-yang, the classical grammar of imaging virtue.</div></div>
+<div class="src"><span data-both><span data-zh>何云波文引</span><span data-en>quoted in He&#x27;s article</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>阴阳</span><span data-en>yin-yang</span></div>
+<div class="orig">白黑相半，以法阴阳</div>
+<div class="mnote"><div data-zh>以黑白各半法阴阳，是棋局宇宙论的核心句。</div><div data-en>Black and white as half and half figure yin-yang, the core cosmological line.</div></div>
+<div class="src"><span data-both><span data-zh>何云波文引</span><span data-en>quoted in He&#x27;s article</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>自知</span><span data-en>self-knowledge</span></div>
+<div class="orig">自知</div>
+<div class="mnote"><div data-zh>以「自知」收束，把棋艺与自我认识相连。</div><div data-en>Closes on self-knowledge, linking Go to self-understanding.</div></div>
+<div class="src"><span data-both><span data-zh>对话清单篇目</span><span data-en>source-list chapter names</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq">
+<div class="orig">夫万物之数，从一而起。局之路，三百六十有一。一者，生数之主，据其极而运四方也。……白黑相半，以法阴阳。</div>
+<div class="tr"><div data-zh>万物之数从「一」开始；棋盘三百六十一路；黑白各半，用来效法阴阳。</div><div data-en>All things begin from one; the board has 361 points; black and white are half and half, following yin and yang.</div></div>
+<div class="src"><span data-both><span data-zh>何云波《围棋与中国思想传统》引《棋经十三篇》（光明日报 2022-02-23）</span><span data-en>quoted in He Yunbo, Guangming Daily, 2022-02-23</span></span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>从象数到自知：《棋经十三篇》的论说链</span><span data-en>From number to self-knowledge</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>宋代以来最常被引用的围棋理论文本：它把棋局接到宇宙论，又以「自知」收束。</span><span data-en>The most cited Go theory text since the Song: it ties the board to cosmology and closes on self-knowledge.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《棋经十三篇》常被当作「围棋哲学」来引，但它首先是一部棋论。它的论说链很清楚：开篇以「万物之数，从一而起」「白黑相半，以法阴阳」把棋局接到宇宙论；随后以「得算」「权舆」「合战」「虚实」展开技术判断；末以「自知」收束，把棋艺与自我认识相连。</p><p>这条链条说明，它的意图不是「佛教修行」，而是「立象比德」：让棋局成为天地阴阳与伦理秩序的图像，同时不放弃技术性。它的风险也在这里：现代读者容易只引开篇的宇宙论，而忽略后面的技术篇目，把一个棋论读成哲学寓言。</p><p>由于十三篇全目与宋本原貌未核，本文只能判断其论说方向。最稳妥的读法是：先读开篇与「自知」，再读「得算」「权舆」「合战」「虚实」，看「象数」如何落地为「判断」。如果落地失败，它就只是宇宙论修辞；如果成功，它才是「技进乎道」的古典原型。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>The Thirteen Chapters is often quoted as Go philosophy, but it is first a Go treatise. Its chain is clear: the opening ties the board to cosmology through number and yin-yang; calculation, opening, battle and emptiness/solidity develop technical judgment; self-knowledge closes by linking Go to self-understanding.</p><p>That chain shows its intent is not Buddhist practice but imaging virtue: the board becomes an image of cosmic and ethical order without abandoning technique. The risk is the reverse: modern readers quote the cosmology and ignore the technical chapters, turning a treatise into allegory.</p><p>With the full chapter list and Song original unverified, this essay can judge only the direction. The safest reading is to take the opening and self-knowledge first, then calculation, opening, battle and emptiness/solidity, and see whether number actually lands in judgment. If it does not, the cosmology is rhetoric; if it does, this is the classical prototype of skill-into-Way.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>《围棋文献集成》第八册简介</span><span data-en>Go Literature Collection vol. 8 blurb</span></span></li><li><span data-both><span data-zh>何云波《围棋与中国思想传统》（光明日报 2022-02-23）</span><span data-en>He Yunbo, Guangming Daily, 2022-02-23</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先只读开篇与「自知」两篇，标出「数」「阴阳」「道」的用法；再把它们与「得算」「虚实」等技术篇对照。</div><div data-en>Read only the opening and self-knowledge first, mark how number, yin-yang and the Way are used, then compare with calculation and emptiness/solidity.</div></div>
+<div class="card"><div data-zh>与何云波的现代解释逐句对照：哪些是原文，哪些是后设概括？不要把「立象比德」当成原文里的词。</div><div data-en>Compare line by line with He&#x27;s modern interpretation: what is primary text and what is later summary? Do not treat imaging virtue as a phrase in the original.</div></div>
+<div class="card"><div data-zh>先读开篇与「自知」，再读「得算」「虚实」等技术篇。</div><div data-en>Read the opening and self-knowledge first, then calculation and emptiness/solidity.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>忘忧清乐集</span><span data-en>The Carefree &amp; Innocent Pastime Collection</span></span></b></td><td><span data-both><span data-zh>李逸民（编）</span><span data-en>Li Yimin (comp.)</span></span></td><td>南宋</td><td><span data-both><span data-zh>同册收录</span><span data-en>same volume</span></span></td><td><div data-zh>同见于《围棋文献集成》第八册</div><div data-en>both in vol. 8 of the Collection</div></td><td>classical</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>玄玄棋经</span><span data-en>The Gateway to All Marvels</span></span></b></td><td><span data-both><span data-zh>佚名（传）</span><span data-en>Anonymous (received)</span></span></td><td>元明</td><td><span data-both><span data-zh>原典传统 · 下游</span><span data-en>classical tradition · downstream</span></span></td><td><div data-zh>棋论与死活题的另一支</div><div data-en>another branch: theory and problems</div></td><td>classical</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>中国历代围棋棋论选</span><span data-en>Selected Go Treatises</span></span></b></td><td><span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span></td><td>—</td><td><span data-both><span data-zh>现代选本 · 下游</span><span data-en>modern anthology · downstream</span></span></td><td><div data-zh>现代选本收录并解释此篇</div><div data-en>the modern anthology includes and interprets it</div></td><td>sixiang</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《棋经十三篇》收入《围棋文献集成》第八册</span><span data-en>Included in Go Literature Collection vol. 8</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>何云波文引其开篇语</span><span data-en>He Yunbo quotes its opening</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>《光明日报》2022-02-23</span><span data-en>Guangming Daily, 2022-02-23</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>《棋经十三篇》为十三篇短论（书名所示）</span><span data-en>The work is a treatise in thirteen chapters (per its title)</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>书名；对话清单</span><span data-en>title; source list</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>《围棋文献集成》第八册简介列其为所收棋论</span><span data-en>Vol. 8&#x27;s blurb lists it among the included treatises</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>十三篇全目、张拟生平与宋本原貌</span><span data-en>Full chapter list, Zhang Ni&#x27;s life, Song original</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>「严华审定」等版本细节</span><span data-en>Edition details such as the &#x27;Yan Hua&#x27; recension</span></span> <span class="tok"><span class="conf c-part">○</span></span></p></div>
+<div class="links">
+<a class="pill" href="../go-culture-books.html">← <span data-zh>返回围弈 · 观心与棋道 GO CULTURE</span><span data-en>back to GO CULTURE · WATCHING THE MIND</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

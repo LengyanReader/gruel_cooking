@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《忘忧清乐集》｜忘忧清乐集 | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>《忘忧清乐集》 · 忘忧清乐集</span><span data-en>忘忧清乐集</span></h1>
+  <div class="subtitle" data-both><span data-zh>李逸民（南宋，编） · 中国 · 浙江古籍出版社 · 2017-10 整理本（《围棋文献集成》第八册）· ISBN 待核</span><span data-en>Li Yimin (comp., Southern Song) · China · Zhejiang Guji Press · 2017-10 modern edition (Go Literature Collection vol. 8) · ISBN pending</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>围弈 · 观心与棋道 GO CULTURE · 2026-11-08</span><span data-en>GO CULTURE · WATCHING THE MIND · 2026-11-08</span></span> <span class="chip"><span data-zh>古典 · 棋论与古谱汇编</span><span data-en>classical · treatises and ancient game records</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>古代棋谱 / 文献汇编</span><span data-en>ancient game records / compilation</span></span> <span class="chip"><span data-zh>conf ◐ 编者李逸民、书名由来、2017-10 整理本经微信读书页核实；宋本原貌与 ISBN 待核（2026-11-08）</span><span data-en>conf ◐ compiler Li Yimin, title origin and 2017-10 modern edition verified via Weread; Song original and ISBN pending (2026-11-08)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>◐ 编者李逸民、书名由来、2017-10 整理本经微信读书页核实；宋本原貌与 ISBN 待核（2026-11-08） · 档案：go-wangyou-qingleji（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ◐ compiler Li Yimin, title origin and 2017-10 modern edition verified via Weread; Song original and ISBN pending (2026-11-08) · record: go-wangyou-qingleji. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅简介与目录线索（◐）</span><span data-en>not read · blurb and contents leads only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>现存最重要的早期围棋文献汇编之一：把棋论（《棋经十三篇》《棋诀》《论棋诀要杂说》）与古棋局放在一起，是「原典阅读」的入口。</div><div data-en>One of the most important early Go anthologies: it binds treatises (the Thirteen Chapters, the Qijue, the Lun Qijue Ya Zashuo) with ancient game records — an entry to reading the sources.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://weread.qq.com/web/bookDetail/f8432710811e5f92eg011835" target="_blank" rel="noopener"><span data-zh>微信读书《围棋文献集成（8）》</span><span data-en>Weread vol. 8</span><span class="dom">weread.qq.com ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>南宋翰林院棋待诏李逸民编，书名取自宋徽宗「忘忧清乐在枰棋」。2017 年浙江古籍出版社《围棋文献集成》第八册收入《忘忧清乐集》《石室仙机》《仙机武库》三种；简介称其收张拟《棋经十三篇》、刘仲甫《棋诀》、张靖《论棋诀要杂说》及诸多棋局、变式，包括「孙策诏吕范弈棋局面」等古局。</div><div data-en>Compiled by the Southern Song imperial Go attendant Li Yimin; the title comes from Emperor Huizong&#x27;s line on carefree joy at the board. Zhejiang Guji&#x27;s 2017 volume 8 of the Go Literature Collection includes the Collection, Shishi Xianji and Xianji Wuku; the blurb lists the Thirteen Chapters, Liu Zhongfu&#x27;s Qijue, Zhang Jing&#x27;s Lun Qijue Ya Zashuo, and many game records and variations, including the Sun Ce–Lü Fan board.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card tocw"><div class="srcnote" style="margin-top:0"><span data-both><span data-zh>《围棋文献集成》第八册收三种；《忘忧清乐集》内含《棋经十三篇》《棋诀》《论棋诀要杂说》与古棋局。</span><span data-en>Go Literature Collection vol. 8 contains three works; the Carefree Collection includes the Thirteen Chapters, the Qijue, the Lun Qijue Ya Zashuo and ancient game records.</span></span></div><div class="tocgrid"><div><h4><span data-both><span data-zh>忘忧清乐集</span><span data-en>Carefree &amp; Innocent Pastime Collection</span></span></h4><ol class="toclist"><li>棋经十三篇（张拟）</li><li>棋诀（刘仲甫）</li><li>论棋诀要杂说（张靖）</li><li>古棋局：孙策诏吕范弈棋局面</li><li>古棋局：晋武帝诏王武子弈棋局</li><li>古棋局：明皇诏郑观音弈棋局图</li></ol></div><div><h4><span data-both><span data-zh>石室仙机</span><span data-en>Shishi Xianji</span></span></h4><ol class="toclist"><li>明·许榖编</li><li>全局谱 / 受子谱</li><li>开局 / 死活局势</li></ol></div><div><h4><span data-both><span data-zh>仙机武库</span><span data-en>Xianji Wuku</span></span></h4><ol class="toclist"><li>明·陆玄宇原辑，过百龄修订</li><li>金 / 石 / 丝 / 竹 / 匏 / 土 / 革 / 木 八集</li></ol></div></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 忘忧清乐集</span><span data-en>Section 1 · Carefree & Innocent Pastime Collection</span></h3>
+<div data-zh>以棋论与古谱并置：棋经十三篇、棋诀、论棋诀要杂说与孙策等古局。</div><div data-en>Juxtaposes treatises and ancient records: the Thirteen Chapters, Qijue, Lun and the Sun Ce and other games.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>棋论与古谱如何并置。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>棋论与古谱如何并置。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>先棋论，后古棋局。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>先棋论，后古棋局。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>棋经十三篇；棋诀；论棋诀要杂说；孙策诏吕范局。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>棋经十三篇；棋诀；论棋诀要杂说；孙策诏吕范局。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>微信读书《围棋文献集成（8）》简介。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>微信读书《围棋文献集成（8）》简介。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为后两种明代棋谱提供「论 + 谱」范式。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>为后两种明代棋谱提供「论 + 谱」范式。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书《围棋文献集成（8）》简介。</span><span data-en>微信读书《围棋文献集成（8）》简介。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 石室仙机</span><span data-en>Section 2 · Shishi Xianji</span></h3>
+<div data-zh>明·许榖编：全局谱、受子谱、开局与死活局势。</div><div data-en>Edited by Xu Gu (Ming): full-game records, handicap games, openings and life-and-death positions.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>明代综合性棋谱的体例。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>明代综合性棋谱的体例。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从全局谱到受子谱，再到开局与死活。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>从全局谱到受子谱，再到开局与死活。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>石室仙机；许榖。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>石室仙机；许榖。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>微信读书简介。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>微信读书简介。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把「论」转为「谱」的实践。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把「论」转为「谱」的实践。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介。</span><span data-en>微信读书简介。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 仙机武库</span><span data-en>Section 3 · Xianji Wuku</span></h3>
+<div data-zh>明·陆玄宇原辑、过百龄修订：金石丝竹匏土革木八集。</div><div data-en>Lu Xuanyu&#x27;s original compilation revised by Guo Bailing: eight sections (metal, stone, silk, bamboo, gourd, clay, leather, wood).</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>以八集分类的明代棋谱。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>以八集分类的明代棋谱。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从原辑到过百龄修订，再到八集分类。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>从原辑到过百龄修订，再到八集分类。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>仙机武库；陆玄宇；过百龄；八集。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>仙机武库；陆玄宇；过百龄；八集。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>微信读书简介。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>微信读书简介。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>完成「论—谱—分类」的汇编结构。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>完成「论—谱—分类」的汇编结构。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介。</span><span data-en>微信读书简介。</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>汇编体：先列棋论文字，再列全局谱、受子谱、开局与死活局势。它既是理论读本，也是古谱资料库；读时要把「论」与「谱」分开。</div><div data-en>A compilation: treatises first, then full-game records, handicap games, openings and life-and-death positions. It is both a theory reader and an archive of old records; separate the discourse from the records.</div></div>
+<h2 class="part" data-both><span data-zh>方法与材料 · Method &amp; sources</span><span data-en>Method &amp; sources</span></h2><div class="card gapbox" style="line-height:1.8"><div data-zh><p>汇编体：先棋论、后棋谱；现代整理本另收《石室仙机》《仙机武库》。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Compilation: treatises first, records second; the modern edition adds Shishi Xianji and Xianji Wuku.</p></div></div>
+<h2 class="part" data-both><span data-zh>论证链 · Chain of argument</span><span data-en>Chain of argument</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《忘忧清乐集》 · 论证链（数字为顺序）</span><span data-en>忘忧清乐集 · the chain of argument (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>尚无独立书评证据；暂不作评价。
+
+未见系统批评；以下仅记可能的局限。
+
+**合成 Synthesis：** 待通读后再作合成判断。</div><div data-en>No independent review evidence yet; no verdict.
+
+No systematic critique found; only likely limits noted.
+
+**Synthesis:** Synthesis deferred until a full read.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>李逸民编《忘忧清乐集》，要做的不是「立一家之言」，而是「存一代之文」：把棋论与古谱汇编成一部可传承的围棋经典，并以宋徽宗「忘忧清乐在枰棋」的句子，把围棋安放在审美与生活世界。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Li Yimin&#x27;s aim is not a personal doctrine but preservation: to compile treatises and ancient records into a transmitted Go classic, and through Huizong&#x27;s line to place Go in a world of aesthetic life.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名取自宋徽宗句，说明编者关心的是「忘忧」的生活情调，而非宗教修行；所收《棋经十三篇》《棋诀》《论棋诀要杂说》与孙策、晋武帝、明皇等古局，构成「论 + 谱」的双重证据；李逸民的「翰林院棋待诏」身份，说明这是宫廷制度内的文献整理，而非私人哲学写作。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title from Huizong shows concern with carefree life rather than religious practice; the Thirteen Chapters, Qijue and Lun together with ancient records form a double evidence of treatise and record; Li&#x27;s office as imperial Go attendant places the work within court documentation, not private philosophy.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书名取自宋徽宗「忘忧清乐在枰棋」。</div><div data-en>Title from Huizong&#x27;s line on carefree joy at the board.</div></td><td><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>收《棋经十三篇》《棋诀》《论棋诀要杂说》与古棋局。</div><div data-en>Includes the Thirteen Chapters, Qijue, Lun and ancient records.</div></td><td><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>生平</span><span data-en>biography</span></span></td><td><div data-zh>李逸民为南宋翰林院棋待诏。</div><div data-en>Li Yimin was a Southern Song imperial Go attendant.</div></td><td><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>版本</span><span data-en>edition</span></span></td><td><div data-zh>2017 年浙江古籍出版社《围棋文献集成》第八册收入。</div><div data-en>Included in Zhejiang Guji&#x27;s 2017 vol. 8.</div></td><td><span data-both><span data-zh>微信读书版权页</span><span data-en>Weread copyright page</span></span></td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：书名与选目也可能只是沿袭前代类书体例，「忘忧」是现成典故，不必过度解释为编者的生活哲学；汇编的意图可能只是保存与教学。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: the title and selection may simply follow earlier encyclopaedic conventions; &#x27;carefree joy&#x27; is a ready-made allusion, not the compiler&#x27;s philosophy; the aim may be preservation and teaching only.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未见宋本、编者生平与完整选目未核，无法判断汇编的取舍标准；上述推断依据书名、内容与官职，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the Song original, biography or full selection I cannot judge the selection criteria; the inference rests on title, contents and office, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>忘忧</span><span data-en>carefree joy</span></span></b></td><td>忘忧清乐在枰棋</td><td><div data-zh>书名取自宋徽宗句，把围棋安放在「忘忧」的审美与生活世界，而非修行体系。</div><div data-en>The title comes from Huizong&#x27;s line, placing Go in a world of carefree aesthetic life rather than a system of practice.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书《围棋文献集成（8）》简介</span><span data-en>Weread blurb for vol. 8</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>棋待诏</span><span data-en>imperial Go attendant</span></span></b></td><td>翰林院棋待诏</td><td><div data-zh>李逸民的官职，说明围棋在宋代宫廷制度中的位置。</div><div data-en>Li Yimin&#x27;s office, showing Go&#x27;s place in the Song court.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>古谱</span><span data-en>ancient game records</span></span></b></td><td>古棋局</td><td><div data-zh>所收孙策、晋武帝、明皇等棋局，是古谱传承的核心证据。</div><div data-en>Records such as Sun Ce, Emperor Wu of Jin and Emperor Ming are the core evidence of ancient transmission.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>汇编</span><span data-en>compilation</span></span></b></td><td>汇编</td><td><div data-zh>以汇编方式保存前代棋论与棋局，是本书的文体。</div><div data-en>Preserves earlier treatises and records by compilation; that is its genre.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>南宋李逸民编；2017 年浙江古籍出版社《围棋文献集成》第八册收入，含《石室仙机》《仙机武库》。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Compiled by Li Yimin in the Southern Song; Zhejiang Guji&#x27;s 2017 vol. 8 includes it with Shishi Xianji and Xianji Wuku.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>Fairbairn 的 Gateway to All Marvels 以《忘忧清乐集》与《玄玄棋经》为最早两部死活题集，说明其地位延续至今。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Fairbairn&#x27;s Gateway treats the Carefree Collection and the Gateway as the two earliest problem collections, showing its continuing status.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>为《棋经十三篇》《棋诀》等棋论提供早期汇编载体，也是古谱研究的重要资料。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Provides an early compilation vehicle for the Thirteen Chapters and the Qijue, and a key source for ancient records.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>宋本原貌、完整选目与李逸民生平待核；现代整理本的注释体例未核。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The Song original, full selection and Li&#x27;s biography are pending; the modern edition&#x27;s annotation is unverified.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>微信读书《围棋文献集成（8）》简介与版权页</span><span data-en>Weread vol. 8 blurb and copyright page</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>宋本原貌</span><span data-en>Song original</span></p><div data-zh style="color:var(--ink-soft)">未见宋本，现代整理本与原本的距离未测。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">No Song original seen; the distance between modern edition and original is unmeasured.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>编者与选目</span><span data-en>Compiler and selection</span></p><div data-zh style="color:var(--ink-soft)">李逸民归属与完整选目未逐一核对。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Li Yimin&#x27;s attribution and the full selection are not checked item by item.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>汇编的边界</span><span data-en>Limits of compilation</span></p><div data-zh style="color:var(--ink-soft)">汇编保存材料，但不提供统一论证；不宜当作「思想史」专著。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">A compilation preserves material without a unified argument; not a work of intellectual history.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>以「论 + 谱」并置的汇编体，保存棋论与古局双重材料。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Compiles discourse and records together, preserving both kinds of material.</p></div>
+<div class="card"><p data-zh>以「论 + 谱」并置的汇编体保存双重材料。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Compiles discourse and records together, preserving both.</p></div>
+<div class="card"><p data-zh>以书名典故「忘忧清乐」为汇编定调。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Tunes the compilation through the title&#x27;s allusion to carefree joy.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>忘忧</span><span data-en>carefree joy</span></div>
+<div class="orig">忘忧清乐在枰棋</div>
+<div class="mnote"><div data-zh>书名取自宋徽宗句，为全书定调。</div><div data-en>The title from Huizong sets the tone.</div></div>
+<div class="src"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>古谱</span><span data-en>ancient records</span></div>
+<div class="orig">古棋局</div>
+<div class="mnote"><div data-zh>孙策、晋武帝、明皇等棋局是古谱传承的核心证据。</div><div data-en>Records of Sun Ce, Jin Emperor Wu and Ming Emperor are core evidence of transmission.</div></div>
+<div class="src"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span> · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>宋徽宗：「忘忧清乐在枰棋。」</div><div data-en>Emperor Huizong: &#x27;Carefree joy lies in the game at the board.&#x27;</div></div><div class="src"><span data-both><span data-zh>微信读书《围棋文献集成（8）》简介</span><span data-en>Weread vol. 8 blurb</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>存一代之文：读《忘忧清乐集》</span><span data-en>Preserving the texts of an age</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>南宋棋待诏的汇编：它把棋论与古谱放在一起，以「忘忧清乐」为围棋定调。</span><span data-en>A Southern Song imperial attendant&#x27;s compilation: treatises and ancient records together, tuning Go to &#x27;carefree joy&#x27;.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《忘忧清乐集》是南宋翰林院棋待诏李逸民编的围棋文献汇编。它的书名取自宋徽宗「忘忧清乐在枰棋」，这个选择很关键：编者把围棋放在「忘忧」的审美与生活世界，而不是宗教修行体系里。</p><p>它的内容也支持这一点：《棋经十三篇》《棋诀》《论棋诀要杂说》是棋论，孙策、晋武帝、明皇等古棋局是棋谱，两者合在一起，构成「论 + 谱」的双重证据。这不是一部「思想史」专著，而是一部可传承的经典汇编。</p><p>它的价值在保存，风险也在保存：汇编不提供统一论证，读者若只读现代解释，容易把「立象比德」当成原书宗旨，而忽略它首先是棋论与棋谱的集合。读它时最好先看目录，分清「论」与「谱」，再判断哪些是原文、哪些是后人的解释。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>The Carefree &amp; Innocent Pastime Collection was compiled by Li Yimin, a Southern Song imperial Go attendant. Its title, from Huizong&#x27;s line on carefree joy at the board, is decisive: the compiler places Go in a world of aesthetic life, not a system of religious practice.</p><p>The contents support this. The Thirteen Chapters, the Qijue and the Lun Qijue Ya Zashuo are treatises; the Sun Ce, Jin Emperor Wu and Ming Emperor records are game records; together they form a double evidence of discourse and record. This is not a work of intellectual history but a transmitted classic.</p><p>Its value is preservation, and so is its risk: a compilation offers no unified argument, and a reader who relies on modern interpretation may mistake imaging virtue for the book&#x27;s purpose while ignoring that it is first a collection of treatises and records. Begin with the contents, separate discourse from record, and then decide what is primary text and what is later interpretation.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>微信读书《围棋文献集成（8）》简介与版权页</span><span data-en>Weread vol. 8 blurb and copyright page</span></span></li><li>Sensei&#x27;s Library · JohnFairbairn</li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先看目录，分清「论」（棋经、棋诀）与「谱」（古棋局），再读；不要用现代「道」的解释代替原文。</div><div data-en>Read the contents first, separating treatises from records; do not replace the texts with a modern discourse of the Way.</div></div>
+<div class="card"><div data-zh>挑一局古谱（如孙策诏吕范局）与《棋经十三篇》开篇对读：一个给「象」，一个给「谱」，看它们如何互相支撑。</div><div data-en>Pair one ancient record (e.g., Sun Ce–Lü Fan) with the opening of the Thirteen Chapters: one gives the image, the other the record; see how they support each other.</div></div>
+<div class="card"><div data-zh>先分「论」与「谱」，再读；不要用现代「道」代替原文。</div><div data-en>Separate discourse from records before reading; do not replace the text with a modern discourse of the Way.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b><span data-both><span data-zh>棋经十三篇</span><span data-en>The Go Classic in Thirteen Chapters</span></span></b></td><td><span data-both><span data-zh>张拟（传）</span><span data-en>Zhang Ni (attrib.)</span></span></td><td>宋</td><td><span data-both><span data-zh>同册收录 · 棋论</span><span data-en>same volume · treatise</span></span></td><td><div data-zh>本书所收最重要棋论</div><div data-en>the most important treatise in the volume</div></td><td>classical</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>玄玄棋经</span><span data-en>The Gateway to All Marvels</span></span></b></td><td><span data-both><span data-zh>佚名（传）</span><span data-en>Anonymous (received)</span></span></td><td>元明</td><td><span data-both><span data-zh>原典传统 · 死活题</span><span data-en>classical tradition · problems</span></span></td><td><div data-zh>从棋论延伸到死活题集</div><div data-en>from treatises to problem collections</div></td><td>classical</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>中国历代围棋棋论选</span><span data-en>Selected Go Treatises</span></span></b></td><td><span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span></td><td>—</td><td><span data-both><span data-zh>现代选本 · 下游</span><span data-en>modern anthology · downstream</span></span></td><td><div data-zh>现代选本收录其中棋论</div><div data-en>the modern anthology includes its treatises</div></td><td>sixiang</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b><span data-both><span data-zh>中国围棋思想史</span><span data-en>A History of Chinese Go Thought</span></span></b></td><td><span data-both><span data-zh>何云波</span><span data-en>He Yunbo</span></span></td><td>2016</td><td><span data-both><span data-zh>现代研究 · 下游</span><span data-en>modern study · downstream</span></span></td><td><div data-zh>思想史以这些文本为材料</div><div data-en>the History uses these texts as material</div></td><td>sixiang</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《忘忧清乐集》由南宋翰林院棋待诏李逸民编著</span><span data-en>Compiled by the Southern Song imperial Go attendant Li Yimin</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>2017-10 浙江古籍出版社《围棋文献集成》第八册收《忘忧清乐集》《石室仙机》《仙机武库》</span><span data-en>Zhejiang Guji&#x27;s 2017-10 vol. 8 contains the Collection, Shishi Xianji and Xianji Wuku</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书版权信息</span><span data-en>Weread copyright info</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>所收文字包括张拟《棋经十三篇》、刘仲甫《棋诀》、张靖《论棋诀要杂说》</span><span data-en>Includes Zhang Ni&#x27;s Thirteen Chapters, Liu Zhongfu&#x27;s Qijue and Zhang Jing&#x27;s treatise</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>微信读书简介</span><span data-en>Weread blurb</span></span></td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>宋本原貌、ISBN、页数与完整选目</span><span data-en>Song original, ISBN, pages and full selection</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../go-culture-books.html">← <span data-zh>返回围弈 · 观心与棋道 GO CULTURE</span><span data-en>back to GO CULTURE · WATCHING THE MIND</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

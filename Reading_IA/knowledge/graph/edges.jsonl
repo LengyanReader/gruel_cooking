@@ -4,6 +4,45 @@
 {"from": "book:2026-mandel-exit-party", "to": "author:mandel", "type": "authored_by", "props": {"book": "2026-mandel-exit-party"}}
 {"from": "book:2026-pelicot-joie-de-vivre", "to": "author:pelicot", "type": "authored_by", "props": {"book": "2026-pelicot-joie-de-vivre"}}
 {"from": "book:2026-vargas-une-unique-lueur", "to": "author:vargas", "type": "authored_by", "props": {"book": "2026-vargas-une-unique-lueur"}}
+{"from": "book:go-cobb-book-of-go", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-book-of-go"}}
+{"from": "book:go-cobb-buddhist", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-buddhist"}}
+{"from": "book:go-cobb-reflections", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-reflections"}}
+{"from": "book:go-fairbairn-companion", "to": "author:fairbairn-hall", "type": "authored_by", "props": {"book": "go-fairbairn-companion"}}
+{"from": "book:go-he-culture", "to": "author:he-yunbo", "type": "authored_by", "props": {"book": "go-he-culture"}}
+{"from": "book:go-he-jing", "to": "author:he-yunbo", "type": "authored_by", "props": {"book": "go-he-jing"}}
+{"from": "book:go-he-qilun", "to": "author:he-yunbo", "type": "authored_by", "props": {"book": "go-he-qilun"}}
+{"from": "book:go-he-thought", "to": "author:he-yunbo", "type": "authored_by", "props": {"book": "go-he-thought"}}
+{"from": "book:go-moskowitz-nation", "to": "author:moskowitz", "type": "authored_by", "props": {"book": "go-moskowitz-nation"}}
+{"from": "book:go-qijing-shisanpian", "to": "author:zhang-ni", "type": "authored_by", "props": {"book": "go-qijing-shisanpian"}}
+{"from": "book:go-shotwell-basics", "to": "author:shotwell", "type": "authored_by", "props": {"book": "go-shotwell-basics"}}
+{"from": "book:go-shotwell-more", "to": "author:shotwell", "type": "authored_by", "props": {"book": "go-shotwell-more"}}
+{"from": "book:go-wangyou-qingleji", "to": "author:liji-min", "type": "authored_by", "props": {"book": "go-wangyou-qingleji"}}
+{"from": "book:go-wu-zhong", "to": "author:wu-qingyuan", "type": "authored_by", "props": {"book": "go-wu-zhong"}}
+{"from": "book:go-xuanxuan-qijing", "to": "author:classical-anon", "type": "authored_by", "props": {"book": "go-xuanxuan-qijing"}}
+{"from": "book:jp-abe-teiso", "to": "author:abe", "type": "authored_by", "props": {"book": "jp-abe-teiso"}}
+{"from": "book:jp-bokuto", "to": "author:kafu", "type": "authored_by", "props": {"book": "jp-bokuto"}}
+{"from": "book:jp-book-of-tea", "to": "author:okakura", "type": "authored_by", "props": {"book": "jp-book-of-tea"}}
+{"from": "book:jp-bushido", "to": "author:nitobe", "type": "authored_by", "props": {"book": "jp-bushido"}}
+{"from": "book:jp-chrysanthemum-sword", "to": "author:benedict", "type": "authored_by", "props": {"book": "jp-chrysanthemum-sword"}}
+{"from": "book:jp-fenshen", "to": "author:li-yongjing", "type": "authored_by", "props": {"book": "jp-fenshen"}}
+{"from": "book:jp-furoki", "to": "author:kafu", "type": "authored_by", "props": {"book": "jp-furoki"}}
+{"from": "book:jp-fushikaden", "to": "author:zeami", "type": "authored_by", "props": {"book": "jp-fushikaden"}}
+{"from": "book:jp-iki-kouzou", "to": "author:kuki", "type": "authored_by", "props": {"book": "jp-iki-kouzou"}}
+{"from": "book:jp-inpraise-shadows", "to": "author:tanizaki", "type": "authored_by", "props": {"book": "jp-inpraise-shadows"}}
+{"from": "book:jp-jujin", "to": "author:akutagawa", "type": "authored_by", "props": {"book": "jp-jujin"}}
+{"from": "book:jp-kusamakura", "to": "author:soseki", "type": "authored_by", "props": {"book": "jp-kusamakura"}}
+{"from": "book:jp-masshitsu", "to": "author:yomota", "type": "authored_by", "props": {"book": "jp-masshitsu"}}
+{"from": "book:jp-monoaware-en", "to": "author:onishi", "type": "authored_by", "props": {"book": "jp-monoaware-en"}}
+{"from": "book:jp-mososhu", "to": "author:akutagawa", "type": "authored_by", "props": {"book": "jp-mososhu"}}
+{"from": "book:jp-nihonkoku-shi", "to": "author:huang-zunxian", "type": "authored_by", "props": {"book": "jp-nihonkoku-shi"}}
+{"from": "book:jp-nihonron", "to": "author:dai-jitao", "type": "authored_by", "props": {"book": "jp-nihonron"}}
+{"from": "book:jp-onishi-trilogy", "to": "author:onishi", "type": "authored_by", "props": {"book": "jp-onishi-trilogy"}}
+{"from": "book:jp-shikike", "to": "author:kuki", "type": "authored_by", "props": {"book": "jp-shikike"}}
+{"from": "book:jp-tsurezuregusa", "to": "author:kenko", "type": "authored_by", "props": {"book": "jp-tsurezuregusa"}}
+{"from": "book:jp-usei", "to": "author:soseki", "type": "authored_by", "props": {"book": "jp-usei"}}
+{"from": "book:jp-utsukushii", "to": "author:kawabata", "type": "authored_by", "props": {"book": "jp-utsukushii"}}
+{"from": "book:jp-wabisabi", "to": "author:onishi", "type": "authored_by", "props": {"book": "jp-wabisabi"}}
+{"from": "book:jp-zasshu-bunka", "to": "author:kato-shuichi", "type": "authored_by", "props": {"book": "jp-zasshu-bunka"}}
 {"from": "book:pe-volume1-birth-classical", "to": "author:price-thonemann", "type": "authored_by", "props": {"book": "pe-volume1-birth-classical"}}
 {"from": "book:pe-volume2-inheritance-rome", "to": "author:wickham", "type": "authored_by", "props": {"book": "pe-volume2-inheritance-rome"}}
 {"from": "book:pe-volume3-high-middle-ages", "to": "author:jordan", "type": "authored_by", "props": {"book": "pe-volume3-high-middle-ages"}}
@@ -13,33 +52,56 @@
 {"from": "book:pe-volume7-pursuit-power", "to": "author:evans", "type": "authored_by", "props": {"book": "pe-volume7-pursuit-power"}}
 {"from": "book:pe-volume8-hell-and-back", "to": "author:kershaw", "type": "authored_by", "props": {"book": "pe-volume8-hell-and-back"}}
 {"from": "book:pe-volume9-global-age", "to": "author:kershaw", "type": "authored_by", "props": {"book": "pe-volume9-global-age"}}
+{"from": "book:wcs-elements-of-style", "to": "author:strunk-white", "type": "authored_by", "props": {"book": "wcs-elements-of-style"}}
+{"from": "book:wcs-on-being-a-scientist", "to": "author:national-academies", "type": "authored_by", "props": {"book": "wcs-on-being-a-scientist"}}
+{"from": "book:wcs-sense-of-style", "to": "author:steven-pinker", "type": "authored_by", "props": {"book": "wcs-sense-of-style"}}
+{"from": "book:wcs-they-say-i-say", "to": "author:graff-birkenstein", "type": "authored_by", "props": {"book": "wcs-they-say-i-say"}}
 {"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P2", "type": "bond", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "婚姻→施害十年"}}
 {"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V2", "type": "colleague", "props": {"book": "2026-vargas-une-unique-lueur", "note": "搭档探案"}}
 {"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V3", "type": "colleague", "props": {"book": "2026-vargas-une-unique-lueur", "note": "同组探员"}}
 {"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L6", "type": "contrast", "props": {"book": "2026-lemaitre-belles-promesses", "note": "英雄vs退伍兵对照"}}
+{"from": "author:fairbairn-hall", "to": "person:t-mark-hall", "type": "cowrite", "props": {"conf": "✓", "book": "The Go Companion", "year": null}}
 {"from": "author:pelicot", "to": "author:perrignon", "type": "cowrite", "props": {"conf": "verified", "book": "《Et la joie de vivre》", "year": "2026-02-17"}}
 {"from": "author:perrignon", "to": "person:marceline-loridan-ivens", "type": "cowrite", "props": {"conf": "verified", "book": "《Et tu n'es pas revenu》《L'Amour d'après》", "year": "2015/2018"}}
 {"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P5", "type": "cowrite", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "合著"}}
 {"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J2", "type": "dialogue", "props": {"book": "2026-manda-kanoke-made", "note": "对谈·步行是活着"}}
 {"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J3", "type": "evidence", "props": {"book": "2026-manda-kanoke-made", "note": "实证坐标"}}
 {"from": "char:2026-mandel-exit-party:C2", "to": "char:2026-mandel-exit-party:C6", "type": "friend", "props": {"book": "2026-mandel-exit-party", "note": "挚友"}}
+{"from": "author:benedict", "to": "author:kato-shuichi", "type": "in_circle", "props": {"conf": "primary", "why_zh": "定型与拆解：加藤以「杂种」回应文化模式", "why_en": "typing and dismantling: hybridity answers the culture pattern"}}
+{"from": "author:cobb", "to": "author:fairbairn-hall", "type": "in_circle", "props": {"conf": "✓", "why_zh": "同在 Slate and Shell 出版圈", "why_en": "shared Slate and Shell circle"}}
+{"from": "author:he-yunbo", "to": "author:wu-qingyuan", "type": "in_circle", "props": {"conf": "✓", "why_zh": "引吴清源「和谐」说论棋道", "why_en": "cites Wu's 'harmony' for the Way of Go"}}
+{"from": "author:kuki", "to": "author:abe", "type": "in_circle", "props": {"conf": "verified", "why_zh": "同卷合刊（《日本色气》收两家之文）", "why_en": "bound in one volume, Japanese Iki"}}
 {"from": "author:lemaitre", "to": "person:albert-dupontel", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Au revoir là-haut》电影改编，César 共获", "why_en": "film adaptation; shared César"}}
 {"from": "author:manda", "to": "person:東畑開人", "type": "in_circle", "props": {"conf": "verified", "why_zh": "2026-02-11 对谈「步行是活着」", "why_en": "2026-02-11 dialogue"}}
 {"from": "author:manda", "to": "person:青栁幸利", "type": "in_circle", "props": {"conf": "verified", "why_zh": "8000 步/日实证线", "why_en": "8,000-steps/day evidence line"}}
 {"from": "author:mandel", "to": "person:patrick-somerville", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Station Eleven》HBO 改编 → Exit Party 回响", "why_en": "Station Eleven HBO → the Exit Party echo"}}
+{"from": "author:okakura", "to": "author:nitobe", "type": "in_circle", "props": {"conf": "verified", "why_zh": "同代对西方自述：一讲美，一讲德", "why_en": "contemporary self-accounts to the West: beauty and virtue"}}
 {"from": "author:pelicot", "to": "author:perrignon", "type": "in_circle", "props": {"conf": "verified", "why_zh": "回忆录合著（证言转写）", "why_en": "memoir co-write"}}
 {"from": "author:pelicot", "to": "person:caroline-darian", "type": "in_circle", "props": {"conf": "verified", "why_zh": "「M'endors pas」化学顺从运动；母女对表", "why_en": "the M'endors pas campaign"}}
 {"from": "author:pelicot", "to": "person:manon-garcia", "type": "in_circle", "props": {"conf": "verified", "why_zh": "《Living With Men》分析 Mazan 审判", "why_en": "Living With Men on the trial"}}
+{"from": "author:shotwell", "to": "author:fairbairn-hall", "type": "in_circle", "props": {"conf": "◐", "why_zh": "同写围棋史与文化", "why_en": "both write Go history and culture"}}
+{"from": "author:soseki", "to": "author:kafu", "type": "in_circle", "props": {"conf": "primary", "why_zh": "同代反近代：一以病榻自剖，一以江户凭吊", "why_en": "contemporary anti-moderns: sickbed and Edo elegy"}}
 {"from": "author:vargas", "to": "person:jo-vargas", "type": "in_circle", "props": {"conf": "verified", "why_zh": "笔名来源；画名借自《赤足天使》", "why_en": "pen-name source; painter"}}
 {"from": "author:vargas", "to": "person:siân-reynolds", "type": "in_circle", "props": {"conf": "verified", "why_zh": "长期译者，Dagger 随译共认", "why_en": "long-time translator"}}
 {"from": "author:vargas", "to": "person:stéphane-audoin-rouzeau", "type": "in_circle", "props": {"conf": "verified", "why_zh": "Three Evangelists 史家角色原型", "why_en": "historian character source"}}
+{"from": "author:dai-jitao", "to": "author:li-yongjing", "type": "influence", "props": {"conf": "verified", "why_zh": "《分身》自陈的直接前身之一", "why_en": "a predecessor Avatar names outright"}}
+{"from": "author:huang-zunxian", "to": "author:dai-jitao", "type": "influence", "props": {"conf": "verified", "why_zh": "从志书到策论：知日传统由记录转为判断", "why_en": "from gazetteer to policy: record turns to judgement"}}
+{"from": "author:kuki", "to": "author:onishi", "type": "influence", "props": {"conf": "primary", "why_zh": "「粹」的范畴化先例，大西续以「幽玄·物哀·寂」", "why_en": "iki categorised first; Onishi continues with yugen, aware, sabi"}}
 {"from": "author:lemaitre", "to": "author:vargas", "type": "influence", "props": {"conf": "strong", "why_zh": "2013 共获 CWA International Dagger；同被 Stephen King 表彰", "why_en": "shared 2013 Dagger; both praised by King"}}
+{"from": "author:onishi", "to": "author:yomota", "type": "influence", "props": {"conf": "primary", "why_zh": "范畴之学转为当代随笔：定义之后重新观看", "why_en": "category theory becomes contemporary essay: looking again after definition"}}
+{"from": "author:soseki", "to": "author:akutagawa", "type": "influence", "props": {"conf": "verified", "why_zh": "漱石激赏《鼻》，提携芥川；冷峭的箴语里有师影", "why_en": "Soseki praised The Nose and mentored Akutagawa"}}
+{"from": "author:tanizaki", "to": "author:yomota", "type": "influence", "props": {"conf": "primary", "why_zh": "阴翳之美下启「摩灭」：从光的消逝到物的消逝", "why_en": "shadow leads to masshitsu: from fading light to fading matter"}}
 {"from": "author:vargas", "to": "author:lemaitre", "type": "influence", "props": {"conf": "strong", "why_zh": "同代法国罪案双峰；书风构成法式 noir 两端（直觉美学 vs 道德写实）", "why_en": "peers; the two poles of French crime"}}
 {"from": "author:vargas", "to": "author:mandel", "type": "influence", "props": {"conf": "medium", "why_zh": "皆用「一件艺术图像作谜面发动机」（美学化为装置）", "why_en": "both drive plot from a single work of art"}}
 {"from": "person:balzac-zola", "to": "author:lemaitre", "type": "influence", "props": {"conf": "medium", "why_zh": "社会史四部曲承自十九世纪家族-产业史诗法", "why_en": "9th-style family-industry epic"}}
 {"from": "person:georges-simenon", "to": "author:vargas", "type": "influence", "props": {"conf": "medium", "why_zh": "心理侦探传统 + 罪案读成社会病理", "why_en": "psychological detective line"}}
+{"from": "person:gogod-棋谱数据库", "to": "author:fairbairn-hall", "type": "influence", "props": {"conf": "✓", "why_zh": "史料与棋谱基础", "why_en": "the documentary and game-record base"}}
 {"from": "person:metoo", "to": "author:pelicot", "type": "influence", "props": {"conf": "verified", "why_zh": "Mazan 公开庭审 → 回忆录：运动的三级火箭", "why_en": "public trial → memoir: the movement's third stage"}}
 {"from": "person:primo-levi-见证文学", "to": "author:perrignon", "type": "influence", "props": {"conf": "medium", "why_zh": "口述史 × 文学转写（Loridan-Ivens 线）", "why_en": "oral history × transcription"}}
+{"from": "person:中和-易经", "to": "author:wu-qingyuan", "type": "influence", "props": {"conf": "◐", "why_zh": "《中的精神》的自述来源", "why_en": "the source of the memoir's vocabulary"}}
+{"from": "person:中国棋论传统", "to": "author:zhang-ni", "type": "influence", "props": {"conf": "◐", "why_zh": "《棋经十三篇》立象比德", "why_en": "the Thirteen Chapters' imaging of virtue"}}
+{"from": "person:佛教哲学", "to": "author:cobb", "type": "influence", "props": {"conf": "◐", "why_zh": "以佛教观点读围棋", "why_en": "reading Go through Buddhist views"}}
+{"from": "person:儒家-道家棋论", "to": "author:he-yunbo", "type": "influence", "props": {"conf": "✓", "why_zh": "立象比德 · 技进乎道", "why_en": "imaging virtue · skill into the Way"}}
 {"from": "person:柏木哲夫-日本ホスピス緩和ケア", "to": "author:manda", "type": "influence", "props": {"conf": "medium", "why_zh": "「善终」谱系 → 在宅路线分岔", "why_en": "good-death lineage → home branch"}}
 {"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L2", "type": "kin", "props": {"book": "2026-lemaitre-belles-promesses", "note": "兄弟·猜疑"}}
 {"from": "char:2026-mandel-exit-party:C3", "to": "char:2026-mandel-exit-party:C17", "type": "kin", "props": {"book": "2026-mandel-exit-party", "note": "叔父·画作作者"}}
@@ -58,10 +120,34 @@
 {"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P4", "type": "parent", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "母子"}}
 {"from": "char:2026-mandel-exit-party:C14", "to": "char:2026-mandel-exit-party:C1", "type": "romance", "props": {"book": "2026-mandel-exit-party", "note": "情人"}}
 {"from": "char:2026-vargas-une-unique-lueur:V1", "to": "char:2026-vargas-une-unique-lueur:V4", "type": "romance", "props": {"book": "2026-vargas-une-unique-lueur", "note": "分合伴侣"}}
+{"from": "author:akutagawa", "to": "concept:shinshicho-school-taisho-literature", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:benedict", "to": "concept:columbia-school-culture-and-personality", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:classical-anon", "to": "concept:classical-problem-collection-tradition", "type": "school_of", "props": {"conf": "◐"}}
+{"from": "author:cobb", "to": "concept:philosophy-of-go-buddhist-approach", "type": "school_of", "props": {"conf": "✓"}}
+{"from": "author:dai-jitao", "to": "concept:kuomintang-theory-japan-discourse", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:fairbairn-hall", "to": "concept:go-history-documentary-scholarship", "type": "school_of", "props": {"conf": "✓"}}
+{"from": "author:he-yunbo", "to": "concept:go-cultural-studies-intellectual-history", "type": "school_of", "props": {"conf": "✓"}}
+{"from": "author:huang-zunxian", "to": "concept:poetry-revolution-statecraft", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:kafu", "to": "concept:aestheticism-anti-modernism", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:kato-shuichi", "to": "concept:post-war-cultural-theory-public-criticism", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:kawabata", "to": "concept:neo-sensationalism-japanese-beauty-discourse", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:kenko", "to": "concept:medieval-recluse-literature-three-great-essays", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:kuki", "to": "concept:kyoto-school-phenomenological-aesthetics", "type": "school_of", "props": {"conf": "verified"}}
 {"from": "author:lemaitre", "to": "concept:polar-to-social-history", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:liji-min", "to": "concept:classical-game-records-compilation", "type": "school_of", "props": {"conf": "◐"}}
 {"from": "author:manda", "to": "concept:japan-home-palliative-discourse", "type": "school_of", "props": {"conf": "medium"}}
 {"from": "author:mandel", "to": "concept:soft-apocalypse-crossover", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:moskowitz", "to": "concept:cultural-anthropology-masculinity-studies", "type": "school_of", "props": {"conf": "◐"}}
+{"from": "author:nitobe", "to": "concept:bushido-discourse-christian-personalism", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:okakura", "to": "concept:japanese-art-revival-cultural-export", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:onishi", "to": "concept:tokyo-imperial-aesthetics-category-studies", "type": "school_of", "props": {"conf": "verified"}}
 {"from": "author:pelicot", "to": "concept:metoo-archive-testimonial", "type": "school_of", "props": {"conf": "verified"}}
 {"from": "author:perrignon", "to": "concept:literary-transcription", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:shotwell", "to": "concept:cross-cultural-go-writing", "type": "school_of", "props": {"conf": "✓"}}
+{"from": "author:soseki", "to": "concept:modern-japanese-literature-anti-naturalism", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:tanizaki", "to": "concept:aestheticism-diabolism", "type": "school_of", "props": {"conf": "verified"}}
 {"from": "author:vargas", "to": "concept:french-neo-polar", "type": "school_of", "props": {"conf": "strong"}}
+{"from": "author:wu-qingyuan", "to": "concept:equilibrium-harmony", "type": "school_of", "props": {"conf": "◐"}}
+{"from": "author:zeami", "to": "concept:no-kanze-school", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:zhang-ni", "to": "concept:classical-go-theory-imaging-virtue", "type": "school_of", "props": {"conf": "◐"}}
 {"from": "char:2026-lemaitre-belles-promesses:L1", "to": "char:2026-lemaitre-belles-promesses:L5", "type": "witness", "props": {"book": "2026-lemaitre-belles-promesses", "note": "约瑟夫旁观英雄"}}

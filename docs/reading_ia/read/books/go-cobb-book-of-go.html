@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《围棋之书》｜The Book of Go | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>围弈 · 观心与棋道 GO CULTURE</span><span data-en>GO CULTURE · WATCHING THE MIND</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 围弈 · 观心与棋道 GO CULTURE</span><span data-en>READING &amp; IA — GO CULTURE · WATCHING THE MIND</span></p>
+  <h1><span data-zh>《围棋之书》 · The Book of Go</span><span data-en>The Book of Go</span></h1>
+  <div class="subtitle" data-both><span data-zh>威廉·S·科布 · 美国 · Sterling Publishing · 2000 · ISBN 9780806927299（ISBN-10 0-8069-2729-1）</span><span data-en>William S. Cobb · the American · Sterling Publishing · 2000 · ISBN 9780806927299 (ISBN-10 0-8069-2729-1)</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>围弈 · 观心与棋道 GO CULTURE · 2026-11-08</span><span data-en>GO CULTURE · WATCHING THE MIND · 2026-11-08</span></span> <span class="chip"><span data-zh>非虚构 · 围棋入门教材</span><span data-en>nonfiction · Go primer</span></span> <span class="chip"><span data-zh>kind·essay</span><span data-en>essay</span></span> <span class="chip"><span data-zh>围棋入门</span><span data-en>Go primer</span></span> <span class="chip"><span data-zh>conf ✓ 版本核实（Sensei&#x27;s Library：Sterling, 2000, ISBN 0-8069-2729-1）；出版年与部分零售页 2002 有出入，已记 ◐</span><span data-en>conf ✓ edition verified (Sensei&#x27;s Library: Sterling, 2000, ISBN 0-8069-2729-1); year differs from some 2002 retail listings and is marked ◐</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本核实（Sensei&#x27;s Library：Sterling, 2000, ISBN 0-8069-2729-1）；出版年与部分零售页 2002 有出入，已记 ◐ · 档案：go-cobb-book-of-go（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition verified (Sensei&#x27;s Library: Sterling, 2000, ISBN 0-8069-2729-1); year differs from some 2002 retail listings and is marked ◐ · record: go-cobb-book-of-go. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 目录与书目已核（◐）</span><span data-en>not read · contents &amp; bibliography verified (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>Cobb 的入门书：用「先吃子版」围棋把零基础读者带到完整围棋，再进入连接、死活、战略战术与练习题——它是理解 Cobb「技术教师」一面的必要对照。</div><div data-en>Cobb&#x27;s primer: starts with First-Capture Go and leads beginners into full Go, then connections, life and death, strategy, tactics and exercises — the necessary counterweight to his philosophical side.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://archive.org/details/bookofgo0000cobb" target="_blank" rel="noopener"><span data-zh>Internet Archive 馆藏页</span><span data-en>Internet Archive record</span><span class="dom">archive.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a><a href="https://senseis.xmp.net/?TheBookOfGo" target="_blank" rel="noopener"><span data-zh>Sensei&#x27;s Library 书目页</span><span data-en>Sensei&#x27;s Library record</span><span class="dom">senseis.xmp.net ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>Cobb 在学校与大学教过大量初学者，并在日本棋院接受过八周教学训练；本书据此设计，从「先吃子版」自然过渡到正式围棋。书附 9×9 与 13×13 棋盘及塑料棋子。目录自 Introduction 至 Study Problems，共 12 章加练习与索引。</div><div data-en>Cobb taught hundreds of beginners in schools and colleges and trained in Tokyo for eight weeks with the Nihon Kiin; the book grows from First-Capture Go into regular Go. It includes 9×9 and 13×13 sets with plastic stones. Its 12 chapters run from Introduction to Go and the Internet, plus Study Problems and an index.</div></div>
+<p class="tok"><span class="conf c-ok">✓</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>篇章结构 · Pieces &amp; sections</span><span data-en>Pieces &amp; sections</span></h2>
+<div class="card tocw"><div class="srcnote" style="margin-top:0"><span data-both><span data-zh>章目依 Sensei&#x27;s Library 所录目录：12 章加练习与索引。</span><span data-en>Contents follow the Sensei&#x27;s Library record: 12 chapters plus study problems and an index.</span></span></div><div class="tocgrid"><div><h4><span data-both><span data-zh>教学起步</span><span data-en>Starting to teach</span></span></h4><ol class="toclist"><li>Introduction</li><li>First-Capture Go</li><li>Playing Regular Go</li></ol></div><div><h4><span data-both><span data-zh>基本技术</span><span data-en>Basic technique</span></span></h4><ol class="toclist"><li>Capturing</li><li>Connections</li><li>Eyes and Life</li></ol></div><div><h4><span data-both><span data-zh>战略与战术</span><span data-en>Strategy and tactics</span></span></h4><ol class="toclist"><li>Basic Strategy</li><li>Basic Tactics</li><li>Handicap Go</li><li>Close Games</li></ol></div><div><h4><span data-both><span data-zh>收束</span><span data-en>Closing</span></span></h4><ol class="toclist"><li>Go Proverbs</li><li>Go and the Internet</li><li>Study Problems</li><li>Index</li></ol></div></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 篇 · 教学起步</span><span data-en>Piece 1 · Starting to teach</span></h3>
+<div data-zh>从 Introduction 到 First-Capture Go 再到 Playing Regular Go：先把规则复杂度降下来。</div><div data-en>From Introduction to First-Capture Go to Playing Regular Go: lower rule complexity first.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>用「先吃子版」降低入门门槛。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>用「先吃子版」降低入门门槛。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>Introduction → First-Capture Go → Playing Regular Go。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>Introduction → First-Capture Go → Playing Regular Go。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Introduction；First-Capture Go；Regular Go。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Introduction；First-Capture Go；Regular Go。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>Sensei&#x27;s Library 目录。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Sensei&#x27;s Library 目录。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为后续技术章建立可下棋的起点。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>为后续技术章建立可下棋的起点。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录。</span><span data-en>Sensei&#x27;s Library 目录。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 篇 · 基本技术</span><span data-en>Piece 2 · Basic technique</span></h3>
+<div data-zh>Capturing、Connections、Eyes and Life：吃子、连接、眼与活三组基本技术。</div><div data-en>Capturing, Connections, Eyes and Life: three basic techniques.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>吃子、连接、死活。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>吃子、连接、死活。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>Capturing → Connections → Eyes and Life。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>Capturing → Connections → Eyes and Life。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Capturing；Connections；Eyes and Life。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Capturing；Connections；Eyes and Life。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>Sensei&#x27;s Library 目录。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Sensei&#x27;s Library 目录。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把「先吃子」过渡到完整围棋的技术基础。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把「先吃子」过渡到完整围棋的技术基础。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录。</span><span data-en>Sensei&#x27;s Library 目录。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 篇 · 战略与战术</span><span data-en>Piece 3 · Strategy and tactics</span></h3>
+<div data-zh>Basic Strategy、Basic Tactics、Handicap Go、Close Games：从战略到受子与收官。</div><div data-en>Basic Strategy, Basic Tactics, Handicap Go, Close Games: from strategy to handicap and close games.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>战略、战术、受子与收官。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>战略、战术、受子与收官。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>Basic Strategy → Basic Tactics → Handicap Go → Close Games。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>Basic Strategy → Basic Tactics → Handicap Go → Close Games。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Strategy；Tactics；Handicap；Close Games。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Strategy；Tactics；Handicap；Close Games。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>Sensei&#x27;s Library 目录。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Sensei&#x27;s Library 目录。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把技术放进整盘与强弱关系。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>把技术放进整盘与强弱关系。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录。</span><span data-en>Sensei&#x27;s Library 目录。</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 篇 · 收束</span><span data-en>Piece 4 · Closing</span></h3>
+<div data-zh>Go Proverbs、Go and the Internet、Study Problems、Index：以谚语与练习收束。</div><div data-en>Go Proverbs, Go and the Internet, Study Problems, Index: closes with proverbs and drills.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>以谚语与练习把技术提升为可记忆原则。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>以谚语与练习把技术提升为可记忆原则。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>Proverbs → Internet → Study Problems → Index。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>Proverbs → Internet → Study Problems → Index。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Go Proverbs；Internet；Study Problems。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Go Proverbs；Internet；Study Problems。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>Sensei&#x27;s Library 目录。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Sensei&#x27;s Library 目录。</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>收束全书，回到可练习的层面。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>收束全书，回到可练习的层面。</span></p></div>
+<p class="tok"><span class="conf c-part">◐</span></p>
+<p class="tok"><span class="conf c-part">src</span> <span style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录。</span><span data-en>Sensei&#x27;s Library 目录。</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>篇章脉络 · The shape of the sequence</span><span data-en>The shape of the sequence</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>教学递进式：先降低规则复杂度（只吃子），再逐步引入连接、死活、战略与战术；每章以「概念 + 示例」推进，末附练习。它不讨论佛教，也不假装是哲学书。</div><div data-en>A graded teaching sequence: reduce the rules first (capture-only), then add connections, life and death, strategy and tactics; each chapter proceeds by concept plus example, with exercises at the end. It does not discuss Buddhism and does not pretend to be philosophy.</div></div>
+<h2 class="part" data-both><span data-zh>篇章链 · Sequence of pieces</span><span data-en>Sequence of pieces</span></h2>
+<div class="diagram"><p class="cap"><span data-both><span data-zh>《围棋之书》 · 篇章链（数字为顺序）</span><span data-en>The Book of Go · the sequence of pieces (numbers = order)</span></span></p></div>
+<h2 class="part" data-both><span data-zh>原话与评价 · Quotation &amp; reception</span><span data-en>Quotation &amp; reception</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>尚无独立书评证据；暂不作评价。
+
+未见系统批评；以下仅记可能的局限。
+
+**合成 Synthesis：** 待通读后再作合成判断。</div><div data-en>No independent review evidence yet; no verdict.
+
+No systematic critique found; only likely limits noted.
+
+**Synthesis:** Synthesis deferred until a full read.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>Cobb 要证明：初学者的真正瓶颈是「规则复杂度」，不是「计算」；因此他把围棋拆成「先吃子版」再到完整围棋的阶梯，让入门者在几十分钟内就能下第一盘。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Cobb wants to show that the beginner&#x27;s real bottleneck is rule complexity, not calculation; he therefore builds a ladder from First-Capture Go to full Go so a newcomer can play a first game within minutes.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>目录以「First-Capture Go」为第二章，而不是直接讲完整规则；随后才进入「Playing Regular Go」「Capturing」「Connections」「Eyes and Life」；书附 9×9 与 13×13 棋具，说明教学设计指向「立刻能下」而不是「先学完再下」。Cobb 在学校与大学教过大量初学者，这一设计有教学经验基础。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The contents put First-Capture Go in chapter two instead of starting with full rules, then move to regular Go, capturing, connections and life; the included 9x9 and 13x13 sets point to &#x27;play at once&#x27; rather than &#x27;learn everything first&#x27;. Cobb taught many beginners in schools and colleges, grounding the design in teaching experience.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>第二章为 First-Capture Go，完整规则后置。</div><div data-en>Chapter two is First-Capture Go; full rules come later.</div></td><td><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>版本</span><span data-en>edition</span></span></td><td><div data-zh>书附 9×9 与 13×13 棋盘与塑料棋子。</div><div data-en>Includes 9x9 and 13x13 sets with plastic stones.</div></td><td>Sensei&#x27;s</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>生平</span><span data-en>biography</span></span></td><td><div data-zh>Cobb 在学校与大学教过大量初学者，并在日本棋院受训。</div><div data-en>Cobb taught many beginners in schools and colleges and trained with the Nihon Kiin.</div></td><td>Sensei&#x27;s Library</td><td class="conf">✓</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>目录以「棋谚」「练习」收束，强调可记忆、可练习。</div><div data-en>The contents close with proverbs and study problems, stressing memory and practice.</div></td><td><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf">✓</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：先吃子版只是为了降低教学焦虑，并不构成「规则复杂度是瓶颈」的理论；完整围棋仍需要大量计算训练。若如此，本书是教学技巧，而非教学理论。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: First-Capture Go merely lowers teaching anxiety and does not establish that rule complexity is the bottleneck; full Go still needs calculation. On that reading this is teaching technique, not teaching theory.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未读全文，无法判断先吃子版到完整围棋的过渡是否平滑；上述推断依据目录、器材与作者教学经历，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text I cannot judge whether the transition from First-Capture to full Go is smooth; the inference rests on contents, equipment and teaching biography, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>先吃子版围棋</span><span data-en>First-Capture Go</span></span></b></td><td>First-Capture Go</td><td><div data-zh>Cobb 的入门设计：先只教「吃子」，把规则复杂度降到最低，再过渡到完整围棋。</div><div data-en>Cobb&#x27;s beginner design: teach capture only first, lowering rule complexity before full Go.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录</span><span data-en>Sensei&#x27;s Library contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>连接</span><span data-en>connections</span></span></b></td><td>connections</td><td><div data-zh>棋子之间的连接与切断，是「Playing Regular Go」之后的第一组基本技术。</div><div data-en>Connecting and cutting stones, the first basic technique after regular Go.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>眼与活</span><span data-en>eyes and life</span></span></b></td><td>eyes and life</td><td><div data-zh>死活的基本单位：眼、假眼、活棋与死棋。</div><div data-en>The basics of life and death: eyes, false eyes, living and dead groups.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>受子</span><span data-en>handicap</span></span></b></td><td>handicap</td><td><div data-zh>以受子平衡强弱，使初学者与高手仍可对局。</div><div data-en>Handicap balances strength so beginners can play stronger opponents.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr><tr><td><b><span data-both><span data-zh>棋谚</span><span data-en>Go proverbs</span></span></b></td><td>proverbs</td><td><div data-zh>以谚语收束全书，把具体着法提升为可记忆的原则。</div><div data-en>The book closes with proverbs, turning specific moves into memorable principles.</div></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>Sterling Publishing 2000 年出版；部分零售页作 2002，存在版本/年份出入。Internet Archive 有馆藏记录。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Sterling Publishing, 2000; some retail pages say 2002, a year/edition discrepancy. Internet Archive holds a copy.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>作为 Cobb 的入门教材被引用；与其哲学随笔形成「教学 Cobb / 观心 Cobb」的对照。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Cited as Cobb&#x27;s primer; it forms the &#x27;teaching Cobb / contemplative Cobb&#x27; contrast with his essays.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>其「先吃子版」教学法在英语围棋入门书中较为独特。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Its First-Capture Go method is relatively distinctive among English Go primers.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>年份出入需核；作为教材，其教学假设（规则复杂度是初学者的瓶颈）可被检验。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The year discrepancy needs checking; as a primer, its teaching hypothesis (rule complexity is the beginner&#x27;s bottleneck) is testable.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li>Sensei&#x27;s Library · TheBookOfGo</li><li><span data-both><span data-zh>Internet Archive 馆藏页</span><span data-en>Internet Archive record</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>年份出入</span><span data-en>Year discrepancy</span></p><div data-zh style="color:var(--ink-soft)">Sensei&#x27;s 作 2000，部分零售页作 2002；需以版权页定夺。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Sensei&#x27;s says 2000, some retail pages 2002; the copyright page should decide.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>教学假设</span><span data-en>Teaching hypothesis</span></p><div data-zh style="color:var(--ink-soft)">先吃子版假设初学者的瓶颈是规则复杂度，而非计算；这一假设可争议。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">First-Capture Go assumes rule complexity, not calculation, is the bottleneck; that is contestable.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>技术深度</span><span data-en>Technical depth</span></p><div data-zh style="color:var(--ink-soft)">作为入门书，它不处理高级战略与全局判断。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">As a primer it does not treat advanced strategy or whole-board judgment.</div></div>
+<h2 class="part" data-both><span data-zh>手法与亮点 · Craft</span><span data-en>Craft &amp; highlights</span></h2>
+<div class="card"><p data-zh>用「先吃子版」降低规则复杂度，再过渡到完整围棋。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Uses First-Capture Go to lower rule complexity before full Go.</p></div>
+<div class="card"><p data-zh>附 9×9 与 13×13 棋具，教学与器材一体。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Includes 9x9 and 13x13 sets, binding teaching to equipment.</p></div>
+<div class="card"><p data-zh>以棋谚与练习收束，强调可记忆、可练习。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Closes with proverbs and problems, stressing memory and practice.</p></div>
+<h2 class="part" data-both><span data-zh>母题簇 · Motifs</span><span data-en>Motif clusters</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>先吃子</span><span data-en>capture first</span></div>
+<div class="orig">First-Capture Go</div>
+<div class="mnote"><div data-zh>第二章即「先吃子版」，是全书教学法的标志。</div><div data-en>Chapter two is First-Capture Go, the book&#x27;s pedagogical signature.</div></div>
+<div class="src"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>棋谚</span><span data-en>proverbs</span></div>
+<div class="orig">proverbs</div>
+<div class="mnote"><div data-zh>以棋谚收束，把具体着法提升为可记忆原则。</div><div data-en>Closes with proverbs, turning moves into memorable principles.</div></div>
+<div class="src"><span data-both><span data-zh>Sensei&#x27;s 目录</span><span data-en>Sensei&#x27;s contents</span></span> · <span class="conf c-ok">✓</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>语言与文化 · 原意摘录</span><span data-en>Language &amp; culture — excerpts</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>全书从「先吃子版」进入，再依次讲连接、眼与活、基本战略、基本战术、受子、棋谚与练习。</div><div data-en>The book moves from First-Capture Go through connections, eyes and life, basic strategy, tactics, handicap, proverbs and problems.</div></div><div class="src"><span data-both><span data-zh>Sensei&#x27;s Library 目录</span><span data-en>Sensei&#x27;s Library contents</span></span> · <span class="conf c-ok">✓</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>先学会吃子：Cobb 的入门教学法</span><span data-en>Learn to capture first</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>Cobb 的入门书把「规则复杂度」当作初学者的真正瓶颈，因此先教「先吃子版」，再过渡到完整围棋。</span><span data-en>Cobb&#x27;s primer treats rule complexity as the beginner&#x27;s real bottleneck, teaching First-Capture Go before full Go.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《The Book of Go》是 Cobb 的入门教材，也是理解他「技术教师」一面的关键。它的设计很激进：第二章不是完整规则，而是「先吃子版围棋」——先只教吃子，把规则复杂度降到最低，再在后续章节引入连接、眼与活、战略、战术与受子。</p><p>这套设计的假设是：初学者的瓶颈不是计算，而是规则太多。书附 9×9 与 13×13 棋具，目录以棋谚与练习收束，说明它追求的是「立刻能下、可记忆、可练习」。Cobb 在学校与大学教过大量初学者，这一设计有教学经验基础。</p><p>它的局限也在这里：作为入门书，它不处理高级战略与全局判断；而「规则复杂度是瓶颈」本身是一个可争议的教学假设。读它时不妨把它当一次教学实验：先吃子版是否真的让初学者更快进入完整围棋？如果是，它的价值就超出「又一本入门书」。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>The Book of Go is Cobb&#x27;s primer and the key to his &#x27;teacher&#x27; side. Its design is radical: chapter two is not the full rules but First-Capture Go, which teaches capture only and lowers rule complexity, before later chapters introduce connections, eyes and life, strategy, tactics and handicap.</p><p>The assumption is that the beginner&#x27;s bottleneck is not calculation but too many rules. The included 9x9 and 13x13 sets and the closing chapters on proverbs and problems show a pedagogy of &#x27;play at once, remember, practise&#x27;. Cobb taught many beginners in schools and colleges, so the design has an experiential basis.</p><p>Its limit is the same: as a primer it does not treat advanced strategy or whole-board judgment, and &#x27;rule complexity is the bottleneck&#x27; is itself contestable. Read it as a teaching experiment: does First-Capture Go really move beginners faster into full Go? If so, its value exceeds that of another primer.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li>Sensei&#x27;s Library · TheBookOfGo</li><li><span data-both><span data-zh>Internet Archive 馆藏页</span><span data-en>Internet Archive record</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>把目录当作「教学假设」读：Cobb 认为初学者的难点在规则复杂度，而非计算；读完再判断这一假设是否成立。</div><div data-en>Read the contents as a teaching hypothesis: Cobb assumes rule complexity, not calculation, is the bottleneck; test it after reading.</div></div>
+<div class="card"><div data-zh>与《Go Basics》对读：Shotwell 用 9×9 教学局，Cobb 用先吃子版；比较两种入门路径。</div><div data-en>Read against Go Basics: Shotwell uses 9x9 teaching games, Cobb First-Capture Go; compare the two entry paths.</div></div>
+<div class="card"><div data-zh>把「先吃子版」与完整规则对照，判断教学阶梯是否必要。</div><div data-en>Compare First-Capture Go with full rules and judge whether the ladder is necessary.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>Reflections on the Game of Go</b></td><td>William S. Cobb</td><td>2005</td><td><span data-both><span data-zh>同作者 · 技术面</span><span data-en>same author · technical side</span></span></td><td><div data-zh>先读入门书，再看哲学随笔，能分辨「教学 Cobb」与「观心 Cobb」</div><div data-en>read the primer before the essays to separate the teacher from the contemplative</div></td><td>technique</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Go Basics</b></td><td>Peter Shotwell</td><td>2005</td><td><span data-both><span data-zh>入门书对照</span><span data-en>primer contrast</span></span></td><td><div data-zh>Cobb 用「先吃子版」，Shotwell 用 9×9 教学局</div><div data-en>Cobb uses First-Capture Go, Shotwell 9×9 teaching games</div></td><td>technique</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><b>Go! More Than a Game</b></td><td>Peter Shotwell</td><td>2011</td><td><span data-both><span data-zh>入门书对照 · 文化面</span><span data-en>primer contrast · culture</span></span></td><td><div data-zh>Cobb 的入门更纯，Shotwell 加文化史</div><div data-en>Cobb&#x27;s primer is purer; Shotwell adds cultural history</div></td><td>technique</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《The Book of Go》由 Sterling Publishing 于 2000 年出版，ISBN 0-8069-2729-1</span><span data-en>The Book of Go was published by Sterling in 2000, ISBN 0-8069-2729-1</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Sensei&#x27;s Library</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>目录含 First-Capture Go、连接、死活、基本战略、基本战术、围棋谚语等 12 章</span><span data-en>The 12 chapters include First-Capture Go, connections, life and death, basic strategy, basic tactics and Go proverbs</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录</span><span data-en>Sensei&#x27;s Library contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>Internet Archive 有《The Book of Go》馆藏记录（bookofgo0000cobb）</span><span data-en>Internet Archive holds a copy (bookofgo0000cobb)</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Internet Archive</td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+<tr><td><span data-both><span data-zh>目录含 12 章、练习与索引</span><span data-en>Contents include 12 chapters, study problems and an index</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Sensei&#x27;s Library 目录</span><span data-en>Sensei&#x27;s Library contents</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>出版年 2000 与部分零售页 2002 的差异</span><span data-en>The 2000 vs 2002 discrepancy across listings</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>页数与印次</span><span data-en>Page count and printing</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../go-culture-books.html">← <span data-zh>返回围弈 · 观心与棋道 GO CULTURE</span><span data-en>back to GO CULTURE · WATCHING THE MIND</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

@@ -1419,7 +1419,8 @@ def crop_reading_map(crop, books):
         return f'<span style="color:var(--ink-pale);font-size:.8rem"> · {esc(b["author_zh"])}</span>'
 
     s = []
-    s.append('<h2 class="part" data-both><span data-zh>读法 · 两圈三轴一条路径</span><span data-en>How to read this crop</span></h2>')
+    _map_head_zh = "读法 · 两圈三轴一条路径" if len(rings) <= 2 else "读法 · 圈层 · 三轴 · 一条路径"
+    s.append('<h2 class="part" data-both><span data-zh>%s</span><span data-en>How to read this crop</span></h2>' % _map_head_zh)
     s.append(srcnote(
         '读法图由 <code>web/data/site.json</code> 的 <code>rings / axes / reading_order / pointers</code> 生成；书名可点进单书档案。',
         'The map is generated from <code>rings / axes / reading_order / pointers</code> in <code>web/data/site.json</code>; every title opens its dossier.'))
@@ -1485,6 +1486,35 @@ def crop_reading_map(crop, books):
                      f'<span data-zh>{esc(p["label_zh"])}</span><span data-en>{esc(p["label_en"])}</span></a> '
                      '<span style="color:var(--ink-soft);font-size:.85rem">— '
                      + zh_en(p.get("note_zh", ""), p.get("note_en", ""), "span") + '</span></li>')
+        s.append('</ul></div>')
+    return "\n".join(s)
+
+
+def crop_appendix(crop):
+    """Optional provenance-marked appendix for titles beyond the core shelf.
+    Each group: label_zh/label_en, note_zh/note_en, items[{title,author,note,conf}]."""
+    groups = crop.get("appendix") or []
+    if not groups:
+        return ""
+    s = ['<h2 class="part" data-both><span data-zh>附录 · 其余提到的文献</span><span data-en>Appendix · other titles mentioned</span></h2>']
+    s.append(srcnote(
+        "核心书架之外的其余文献按类归入此处；每条保留原清单的把握（✓/◐/○/◇），未核实者不升级。",
+        "Titles beyond the core shelf are grouped here; each keeps its confidence mark (✓/◐/○/◇) and is never upgraded without evidence."))
+    for g in groups:
+        s.append('<div class="card"><h3 class="sec" data-both><span data-zh>%s</span><span data-en>%s</span></h3>'
+                 % (esc(g.get("label_zh", "")), esc(g.get("label_en", ""))))
+        if g.get("note_zh") or g.get("note_en"):
+            s.append(zh_en(g.get("note_zh", ""), g.get("note_en", "")))
+        s.append('<ul style="list-style:none;margin:.5rem 0">')
+        for it in g.get("items", []):
+            line = '<b>' + pair(it.get("title", ""), it.get("title_en"), "span") + '</b>'
+            if it.get("author"):
+                line += ' · ' + pair(it["author"], it.get("author_en"), "span")
+            if it.get("note_zh") or it.get("note_en"):
+                line += ' — <span style="color:var(--ink-soft);font-size:.88rem">' + zh_en(
+                    it.get("note_zh", ""), it.get("note_en", ""), "span") + '</span>'
+            line += ' ' + conf_token(it.get("conf", "○"), it.get("conf_en"))
+            s.append('<li style="margin:.35rem 0;line-height:1.6">' + line + '</li>')
         s.append('</ul></div>')
     return "\n".join(s)
 
@@ -1583,6 +1613,9 @@ def crop_page(site, crop, books):
     for g in crop["verdict_gaps"]:
         s.append(f'<li data-zh>{esc(g["zh"])}</li><li data-en>{esc(g["en"])}</li>')
     s.append('</ul></div>')
+    _apx = crop_appendix(crop)
+    if _apx:
+        s.append(_apx)
     s.append('<div class="links">')
     s.append('<a class="pill" href="index.html">☰ <span data-zh>全部书单 · 档案</span><span data-en>all lists · archive</span></a>')
     s.append('<a class="pill" href="../moment/year-2026.html">↝ <span data-zh>读年度思潮：活着的此刻</span><span data-en>read the year</span></a>')
