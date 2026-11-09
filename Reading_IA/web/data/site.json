@@ -13,6 +13,468 @@
   },
   "crops": [
     {
+      "id": "2026-games-play-culture",
+      "page": "docs/reading_ia/read/games-play-culture-books.html",
+      "dir_page": "games-play-culture-books.html",
+      "glyph_zh": "游戏 · 技艺 · 文化系统 PLAY & CULTURE",
+      "glyph_en": "GAMES, PLAY & CULTURAL SYSTEMS",
+      "date": "2026-11-10",
+      "title_zh": "游戏、技艺与文化系统 · 四家二十书",
+      "title_en": "Games, Play, and Cultural Systems — four scholars, 20 dossiers",
+      "subtitle_zh": "Moretti 的尺度、Rusch 的意义、Parasecoli 的身份、Gobet 的专长：四条路径，一个关于「玩」的问题。",
+      "subtitle_en": "Moretti's scale, Rusch's meaning, Parasecoli's identity, Gobet's expertise: four routes into one question about play.",
+      "verdict_zh": "GAPS",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "英/意/瑞/丹 × 20 — 核心书目经出版社/作者页/馆藏核对；未见全文者标 ◐/○",
+      "lang_line_en": "English / Italian / Swedish / Danish × 20 — core facts checked against publishers, author pages and catalogues; unread items marked ◐/○",
+      "book_ids": [
+        "moretti-graphs-maps-trees",
+        "moretti-distant-reading",
+        "moretti-bourgeois",
+        "moretti-atlas",
+        "jockers-macroanalysis",
+        "underwood-distant-horizons",
+        "rusch-making-deep-games",
+        "salen-zimmerman-rules-of-play",
+        "bogost-persuasive-games",
+        "juul-half-real",
+        "parasecoli-gastronativism",
+        "parasecoli-global-brooklyn",
+        "parasecoli-pierogi-problem",
+        "parasecoli-knowing-where",
+        "mintz-sweetness-power",
+        "appadurai-modernity-large",
+        "gobet-perception-memory",
+        "gobet-moves-in-mind",
+        "gobet-psychology-of-chess",
+        "degroot-thought-choice"
+      ],
+      "verdict_body_zh": "四圈二十书：尺度（Moretti 四书 + Jockers/Underwood）、意义（Rusch + Salen & Zimmerman/Bogost/Juul）、身份（Parasecoli 四书 + Mintz/Appadurai）、专长（Gobet 三书 + de Groot）。核心书目事实经出版社/作者页核对；未见全文者一律 ◐/○；相邻作品是语境，不是核心。",
+      "verdict_body_en": "Four rings, twenty dossiers: scale (four Moretti titles plus Jockers/Underwood), meaning (Rusch plus Salen & Zimmerman/Bogost/Juul), identity (four Parasecoli titles plus Mintz/Appadurai), expertise (three Gobet titles plus de Groot). Core facts checked against publishers and author pages; unread items marked ◐/○; adjacent works are context, not core.",
+      "verdict_gaps": [
+        {
+          "zh": "Rusch《Making Deep Games》的 ISBN/页数/目录待核。",
+          "en": "ISBN/pages/contents of Rusch's Making Deep Games pending."
+        },
+        {
+          "zh": "Jockers、Underwood、Mintz、Appadurai、de Groot 的 ISBN/页数与部分版次待核。",
+          "en": "ISBN/pages and some editions for Jockers, Underwood, Mintz, Appadurai and de Groot pending."
+        },
+        {
+          "zh": "Parasecoli《The Pierogi Problem》的 ISBN/页数待核。",
+          "en": "ISBN/pages of Parasecoli's The Pierogi Problem pending."
+        },
+        {
+          "zh": "多数书未通读；20 部均已补概念/接受/局限/意图/长评，但仍未逐页通读。",
+          "en": "Most books are unread; all 20 dossiers now carry concepts, reception, limits, author-intent and a critical essay, but none has been read page by page."
+        },
+        {
+          "zh": "相邻作品（Jockers/Underwood/Salen & Zimmerman/Bogost/Juul/Mintz/Appadurai/de Groot）用于语境，不替代四家核心。",
+          "en": "Adjacent works are context and do not replace the four core scholars."
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice",
+      "rings": [
+        {
+          "id": "ring1",
+          "label_zh": "第一圈 · 尺度（Moretti 四书 + 两本方法书）",
+          "label_en": "Ring 1 · Scale (four Moretti titles + two method books)",
+          "note_zh": "从图/地图/树到「远读」，再到 Jockers 的宏观分析与 Underwood 的尺度反省。",
+          "note_en": "From graphs/maps/trees to distant reading, then Jockers's macroanalysis and Underwood's reflection on scale.",
+          "book_ids": [
+            "moretti-graphs-maps-trees",
+            "moretti-distant-reading",
+            "moretti-bourgeois",
+            "moretti-atlas",
+            "jockers-macroanalysis",
+            "underwood-distant-horizons"
+          ]
+        },
+        {
+          "id": "ring2",
+          "label_zh": "第二圈 · 意义（Rusch + 游戏设计三书）",
+          "label_en": "Ring 2 · Meaning (Rusch + three design books)",
+          "note_zh": "从「深度游戏」到规则—玩耍—文化、程序修辞与半真实。",
+          "note_en": "From deep games to rules–play–culture, procedural rhetoric and half-reality.",
+          "book_ids": [
+            "rusch-making-deep-games",
+            "salen-zimmerman-rules-of-play",
+            "bogost-persuasive-games",
+            "juul-half-real"
+          ]
+        },
+        {
+          "id": "ring3",
+          "label_zh": "第三圈 · 身份（Parasecoli 四书 + 两本理论）",
+          "label_en": "Ring 3 · Identity (four Parasecoli titles + two theory books)",
+          "note_zh": "从美食民族主义到全球布鲁克林、饺子问题与标签政治；Mintz/Appadurai 提供历史与理论纵深。",
+          "note_en": "From gastronativism to Global Brooklyn, the pierogi problem and label politics; Mintz/Appadurai supply history and theory.",
+          "book_ids": [
+            "parasecoli-gastronativism",
+            "parasecoli-global-brooklyn",
+            "parasecoli-pierogi-problem",
+            "parasecoli-knowing-where",
+            "mintz-sweetness-power",
+            "appadurai-modernity-large"
+          ]
+        },
+        {
+          "id": "ring4",
+          "label_zh": "第四圈 · 专长（Gobet 三书 + de Groot）",
+          "label_en": "Ring 4 · Expertise (three Gobet titles + de Groot)",
+          "note_zh": "从知觉/记忆到棋盘游戏心理学、普及版与经典出声思维研究。",
+          "note_en": "From perception/memory to board-game psychology, the popular version and the classic think-aloud study.",
+          "book_ids": [
+            "gobet-perception-memory",
+            "gobet-moves-in-mind",
+            "gobet-psychology-of-chess",
+            "degroot-thought-choice"
+          ]
+        }
+      ],
+      "axes": [
+        {
+          "key": "甲",
+          "label_zh": "尺度 · 从细读到远读",
+          "label_en": "scale · from close to distant reading",
+          "chain": [
+            "moretti-graphs-maps-trees",
+            "moretti-distant-reading",
+            "jockers-macroanalysis",
+            "underwood-distant-horizons"
+          ],
+          "note_zh": "一条从「模型」到「纲领」再到「操作/反省」的方法链。",
+          "note_en": "A method chain from models to programme to operationalisation/reflection."
+        },
+        {
+          "key": "乙",
+          "label_zh": "意义 · 游戏如何说",
+          "label_en": "meaning · how games mean",
+          "chain": [
+            "rusch-making-deep-games",
+            "salen-zimmerman-rules-of-play",
+            "bogost-persuasive-games",
+            "juul-half-real"
+          ],
+          "note_zh": "从「有意义的设计」到「规则如何论证」再到「半真实」。",
+          "note_en": "From design-for-meaning to how rules argue to half-reality."
+        },
+        {
+          "key": "丙",
+          "label_zh": "身份 · 食物如何划分归属",
+          "label_en": "identity · how food draws belonging",
+          "chain": [
+            "parasecoli-gastronativism",
+            "parasecoli-global-brooklyn",
+            "parasecoli-pierogi-problem",
+            "mintz-sweetness-power",
+            "appadurai-modernity-large"
+          ],
+          "note_zh": "从当代民族主义到城市审美、单一国家案例，再到历史与理论纵深。",
+          "note_en": "From contemporary nationalism to urban aesthetics, a single-nation case, and historical/theoretical depth."
+        },
+        {
+          "key": "丁",
+          "label_zh": "专长 · 专家如何看",
+          "label_en": "expertise · how experts see",
+          "chain": [
+            "gobet-psychology-of-chess",
+            "gobet-moves-in-mind",
+            "gobet-perception-memory",
+            "degroot-thought-choice"
+          ],
+          "note_zh": "从普及导论回到学术比较，再到经典出声思维研究。",
+          "note_en": "From the popular introduction back to academic comparison and the classic think-aloud study."
+        }
+      ],
+      "reading_order": [
+        {
+          "level_zh": "入门 · 三步",
+          "level_en": "Entry · three steps",
+          "note_zh": "先各取一本可读的导论。",
+          "note_en": "One readable introduction from each cluster.",
+          "book_ids": [
+            "moretti-distant-reading",
+            "rusch-making-deep-games",
+            "parasecoli-gastronativism",
+            "gobet-psychology-of-chess"
+          ]
+        },
+        {
+          "level_zh": "深入 · 三步",
+          "level_en": "Deepening · three steps",
+          "note_zh": "进入方法与设计语法。",
+          "note_en": "Into method and design grammar.",
+          "book_ids": [
+            "moretti-graphs-maps-trees",
+            "salen-zimmerman-rules-of-play",
+            "parasecoli-global-brooklyn",
+            "gobet-moves-in-mind"
+          ]
+        },
+        {
+          "level_zh": "贯通 · 三步",
+          "level_en": "Synthesis · three steps",
+          "note_zh": "把尺度、意义、身份、专长放在一起看。",
+          "note_en": "Read scale, meaning, identity and expertise together.",
+          "book_ids": [
+            "jockers-macroanalysis",
+            "bogost-persuasive-games",
+            "mintz-sweetness-power",
+            "appadurai-modernity-large"
+          ]
+        }
+      ],
+      "pointers": [
+        {
+          "label_zh": "Stanford · Franco Moretti",
+          "label_en": "Stanford · Franco Moretti",
+          "href": "https://english.stanford.edu/people/franco-moretti",
+          "note_zh": "作者页与书目",
+          "note_en": "author page and bibliography"
+        },
+        {
+          "label_zh": "Uppsala · Doris Rusch-Hellström",
+          "label_en": "Uppsala · Doris Rusch-Hellström",
+          "href": "https://www.uu.se/en/contact-and-organisation/staff?query=N19-274",
+          "note_zh": "作者页与著作",
+          "note_en": "author page and works"
+        },
+        {
+          "label_zh": "Fabio Parasecoli",
+          "label_en": "Fabio Parasecoli",
+          "href": "https://fabioparasecoli.com/books/",
+          "note_zh": "著作总表",
+          "note_en": "full book list"
+        },
+        {
+          "label_zh": "Chess Programming · Fernand Gobet",
+          "label_en": "Chess Programming · Fernand Gobet",
+          "href": "https://chessprogramming.org/Fernand_Gobet",
+          "note_zh": "著作与 CHREST",
+          "note_en": "works and CHREST"
+        },
+        {
+          "label_zh": "Stanford Literary Lab",
+          "label_en": "Stanford Literary Lab",
+          "href": "https://litlab.stanford.edu/",
+          "note_zh": "远读 Pamphlets",
+          "note_en": "distant-reading pamphlets"
+        },
+        {
+          "label_zh": "Routledge · The Psychology of Chess",
+          "label_en": "Routledge · The Psychology of Chess",
+          "href": "https://www.routledge.com/The-Psychology-of-Chess/Gobet/p/book/9781138216655",
+          "note_zh": "目录与版本",
+          "note_en": "contents and edition"
+        }
+      ],
+      "appendix": [
+        {
+          "label_zh": "Moretti 的其他著作",
+          "label_en": "Other Moretti books",
+          "items": [
+            {
+              "title": "The Way of the World",
+              "title_en": "The Way of the World",
+              "author": "Franco Moretti",
+              "author_en": "Franco Moretti",
+              "note_zh": "成长小说与欧洲文化（1987）",
+              "note_en": "Bildungsroman and European culture (1987)",
+              "conf": "✓"
+            },
+            {
+              "title": "Modern Epic",
+              "title_en": "Modern Epic",
+              "author": "Franco Moretti",
+              "author_en": "Franco Moretti",
+              "note_zh": "从歌德到加西亚·马尔克斯的世界体系（1996）",
+              "note_en": "world-system from Goethe to García Márquez (1996)",
+              "conf": "✓"
+            },
+            {
+              "title": "The Novel（主编）",
+              "title_en": "The Novel (ed.)",
+              "author": "Franco Moretti (ed.)",
+              "author_en": "Franco Moretti (ed.)",
+              "note_zh": "两卷本小说史（Princeton 2006）",
+              "note_en": "two-volume history of the novel (Princeton 2006)",
+              "conf": "✓"
+            },
+            {
+              "title": "Far Country",
+              "title_en": "Far Country",
+              "author": "Franco Moretti",
+              "author_en": "Franco Moretti",
+              "note_zh": "美国文化场景（2019）",
+              "note_en": "scenes from American culture (2019)",
+              "conf": "✓"
+            },
+            {
+              "title": "Falso movimento",
+              "title_en": "Falso movimento",
+              "author": "Franco Moretti",
+              "author_en": "Franco Moretti",
+              "note_zh": "量化转向的自省（2022，意大利文）",
+              "note_en": "self-critique of the quantitative turn (2022, Italian)",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "Rusch 的文章与章节",
+          "label_en": "Rusch articles & chapters",
+          "items": [
+            {
+              "title": "Existential Transformational Game Design",
+              "title_en": "Existential Transformational Game Design",
+              "author": "Rusch & Phelps, Frontiers in Psychology 2020",
+              "author_en": "Rusch & Phelps, Frontiers in Psychology 2020",
+              "note_zh": "「心理魔法」与象征性 enactment",
+              "note_en": "'psychomagic' and symbolic enactment",
+              "conf": "✓"
+            },
+            {
+              "title": "The Game of Academia",
+              "title_en": "The Game of Academia",
+              "author": "Doris C. Rusch, 2024",
+              "author_en": "Doris C. Rusch, 2024",
+              "note_zh": "角色扮演与跨学科协作",
+              "note_en": "role-play and interdisciplinary collaboration",
+              "conf": "✓"
+            },
+            {
+              "title": "Digital Games and Mental Health",
+              "title_en": "Digital Games and Mental Health",
+              "author": "Kowert, Ferguson, Fletcher & Rusch, 2021",
+              "author_en": "Kowert, Ferguson, Fletcher & Rusch, 2021",
+              "note_zh": "Frontiers in Psychology 编者按",
+              "note_en": "Frontiers in Psychology editorial",
+              "conf": "✓"
+            }
+          ]
+        },
+        {
+          "label_zh": "Parasecoli 的其他著作",
+          "label_en": "Other Parasecoli books",
+          "items": [
+            {
+              "title": "Food",
+              "title_en": "Food",
+              "author": "Fabio Parasecoli",
+              "author_en": "Fabio Parasecoli",
+              "note_zh": "MIT Press Essential Knowledge（2019）",
+              "note_en": "MIT Press Essential Knowledge (2019)",
+              "conf": "✓"
+            },
+            {
+              "title": "Feasting Our Eyes",
+              "title_en": "Feasting Our Eyes",
+              "author": "Lindenfeld & Parasecoli",
+              "author_en": "Lindenfeld & Parasecoli",
+              "note_zh": "美国食物电影与身份（2016）",
+              "note_en": "food films and US identity (2016)",
+              "conf": "✓"
+            },
+            {
+              "title": "Al Dente",
+              "title_en": "Al Dente",
+              "author": "Fabio Parasecoli",
+              "author_en": "Fabio Parasecoli",
+              "note_zh": "意大利食物史（2014）",
+              "note_en": "a history of food in Italy (2014)",
+              "conf": "✓"
+            },
+            {
+              "title": "Bite Me",
+              "title_en": "Bite Me",
+              "author": "Fabio Parasecoli",
+              "author_en": "Fabio Parasecoli",
+              "note_zh": "流行文化中的食物（2008）",
+              "note_en": "food in popular culture (2008)",
+              "conf": "✓"
+            },
+            {
+              "title": "A Cultural History of Food（总主编）",
+              "title_en": "A Cultural History of Food (gen. ed.)",
+              "author": "Parasecoli & Scholliers (eds.)",
+              "author_en": "Parasecoli & Scholliers (eds.)",
+              "note_zh": "六卷本（Bloomsbury 2012）",
+              "note_en": "six volumes (Bloomsbury 2012)",
+              "conf": "✓"
+            }
+          ]
+        },
+        {
+          "label_zh": "Gobet 的其他著作与论文",
+          "label_en": "Other Gobet books & papers",
+          "items": [
+            {
+              "title": "Foundations of Cognitive Psychology",
+              "title_en": "Foundations of Cognitive Psychology",
+              "author": "Gobet, Chassy & Bilalić",
+              "author_en": "Gobet, Chassy & Bilalić",
+              "note_zh": "McGraw Hill（2011）",
+              "note_en": "McGraw Hill (2011)",
+              "conf": "✓"
+            },
+            {
+              "title": "CHREST / CHUMP",
+              "title_en": "CHREST / CHUMP",
+              "author": "Gobet / Gobet & Jansen",
+              "author_en": "Gobet / Gobet & Jansen",
+              "note_zh": "组块层级与棋类程序",
+              "note_en": "chunk hierarchies and a chess program",
+              "conf": "✓"
+            },
+            {
+              "title": "Templates in Chess Memory",
+              "title_en": "Templates in Chess Memory",
+              "author": "Gobet & Simon, Cognitive Psychology 1996",
+              "author_en": "Gobet & Simon, Cognitive Psychology 1996",
+              "note_zh": "多棋盘记忆的模板机制",
+              "note_en": "templates for recalling several boards",
+              "conf": "✓"
+            }
+          ]
+        },
+        {
+          "label_zh": "相邻经典与论文",
+          "label_en": "Adjacent classics & papers",
+          "items": [
+            {
+              "title": "Chase & Simon, 'Perception in chess' (1973)",
+              "title_en": "Chase & Simon, 'Perception in chess' (1973)",
+              "author": "William G. Chase & Herbert A. Simon",
+              "author_en": "William G. Chase & Herbert A. Simon",
+              "note_zh": "组块理论的奠基论文",
+              "note_en": "founding paper of chunking theory",
+              "conf": "✓"
+            },
+            {
+              "title": "Ericsson, Krampe & Tesch-Römer (1993)",
+              "title_en": "Ericsson, Krampe & Tesch-Römer (1993)",
+              "author": "K. Anders Ericsson et al.",
+              "author_en": "K. Anders Ericsson et al.",
+              "note_zh": "刻意练习论文",
+              "note_en": "deliberate practice paper",
+              "conf": "✓"
+            },
+            {
+              "title": "Huizinga, Homo Ludens (1938)",
+              "title_en": "Homo Ludens",
+              "author": "Johan Huizinga",
+              "author_en": "Johan Huizinga",
+              "note_zh": "游戏作为文化起源的经典",
+              "note_en": "classic on play as origin of culture",
+              "conf": "◐"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-go-culture",
       "page": "docs/reading_ia/read/go-culture-books.html",
       "dir_page": "go-culture-books.html",

@@ -5053,6 +5053,1055 @@
           "conf": "◐"
         }
       ]
+    },
+    {
+      "id": "moretti",
+      "name_zh": "弗朗科·莫雷蒂",
+      "name_en": "Franco Moretti",
+      "name_native": "Franco Moretti",
+      "name_native_en": "Franco Moretti",
+      "slug_display": "Franco Moretti",
+      "born": "1950",
+      "born_en": "1950",
+      "native_lang": "意大利语 / 英语",
+      "domain_zh": "文学史 · 远读 · 数字人文",
+      "domain_en": "literary history · distant reading · digital humanities",
+      "one_liner_zh": "意大利文学史家与理论家，斯坦福文学实验室创始人之一，「远读」概念的提出者；用图、地图、树与统计把文学史变成可比较的整体。",
+      "one_liner_en": "Italian literary historian, co-founder of the Stanford Literary Lab, and originator of 'distant reading'; turns literary history into comparable wholes through graphs, maps, trees and statistics.",
+      "school_zh": "远读 · 世界体系 · 文学演化",
+      "school_en": "distant reading · world-systems · literary evolution",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2000",
+          "event_zh": "斯坦福大学，创办小说研究中心",
+          "event_en": "Stanford; founds the Center for the Study of the Novel",
+          "conf": "✓"
+        },
+        {
+          "y": "2010",
+          "event_zh": "与 Matthew Jockers 创办斯坦福文学实验室",
+          "event_en": "Founds the Stanford Literary Lab with Matthew Jockers",
+          "conf": "✓"
+        },
+        {
+          "y": "2013",
+          "event_zh": "《Distant Reading》获美国书评人协会奖",
+          "event_en": "Distant Reading wins the NBCC criticism award",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2005",
+          "title": "Graphs, Maps, Trees",
+          "title_en": "Graphs, Maps, Trees",
+          "note_zh": "文学史的抽象模型",
+          "note_en": "abstract models for literary history",
+          "conf": "✓"
+        },
+        {
+          "y": "2013",
+          "title": "Distant Reading",
+          "title_en": "Distant Reading",
+          "note_zh": "远读文集",
+          "note_en": "essays on distant reading",
+          "conf": "✓"
+        },
+        {
+          "y": "2013",
+          "title": "The Bourgeois",
+          "title_en": "The Bourgeois",
+          "note_zh": "资产阶级三部曲收官",
+          "note_en": "closes the bourgeois trilogy",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "反对只对单文本做主观细读；主张「退后一步」，用可计量的形式看文类的兴衰、地理分布与演化。",
+      "stance_en": "Opposes subjective close reading of single texts; steps back to measure genre rise and fall, geography and evolution through countable forms.",
+      "why_now_zh": "当「读不过来」成为常态，Moretti 提供了把文学史变成可比较整体的方法入口。",
+      "why_now_en": "When no one can read everything, Moretti offers the entry to literary history as comparable wholes.",
+      "fact_ledger": [
+        {
+          "claim": "Moretti 1950 年生于意大利 Sondrio；1972 年罗马大学现代文学毕业",
+          "claim_en": "Born 1950 in Sondrio; graduated in modern literatures, Rome, 1972",
+          "source": "Wikipedia",
+          "source_en": "Wikipedia",
+          "conf": "✓"
+        },
+        {
+          "claim": "2000 年创办斯坦福小说研究中心；2010 年与 Jockers 创办文学实验室",
+          "claim_en": "Founded the Stanford Center for the Study of the Novel in 2000 and the Literary Lab with Jockers in 2010",
+          "source": "Wikipedia / Stanford",
+          "source_en": "Wikipedia / Stanford",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "个人生平细节与 2017 年争议的完整语境",
+          "item_en": "biographical details and the full context of the 2017 allegations",
+          "conf": "○"
+        }
+      ]
+    },
+    {
+      "id": "rusch",
+      "name_zh": "多丽丝·鲁施-赫尔斯特伦",
+      "name_en": "Doris Rusch-Hellström",
+      "name_native": "Doris C. Rusch",
+      "name_native_en": "Doris C. Rusch",
+      "slug_display": "Doris Rusch-Hellström",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "英语 / 瑞典语",
+      "domain_zh": "游戏设计 · 存在主义 · 意义设计",
+      "domain_en": "game design · existentialism · design for meaning",
+      "one_liner_zh": "乌普萨拉大学游戏设计教授、游戏设计师；《Making Deep Games》把「意义、仪式、神话与存在经验」带入游戏设计。",
+      "one_liner_en": "Professor of game design at Uppsala and a practising designer; Making Deep Games brings meaning, ritual, myth and existential experience into design.",
+      "school_zh": "深度游戏 · 存在主义设计",
+      "school_en": "deep games · existential design",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2017",
+          "event_zh": "《Making Deep Games》出版",
+          "event_en": "Making Deep Games published",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "event_zh": "与 Phelps 发表「存在主义转化式游戏设计」",
+          "event_en": "Publishes existential-transformational game design with Phelps",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2017",
+          "title": "Making Deep Games",
+          "title_en": "Making Deep Games",
+          "note_zh": "有意义的游戏设计",
+          "note_en": "designing games with meaning and purpose",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "title": "Existential Transformational Game Design",
+          "title_en": "Existential Transformational Game Design",
+          "note_zh": "Frontiers in Psychology",
+          "note_en": "Frontiers in Psychology",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "游戏不只是机制与奖励；它可以处理悲伤、成瘾、孤独与死亡，让玩家在「象征性 enactment」中练习活着。",
+      "stance_en": "Games are not only mechanics and rewards; they can address grief, addiction, loneliness and death, letting players rehearse living through symbolic enactment.",
+      "why_now_zh": "当游戏研究多谈机制与产业，Rusch 把「意义」重新放回设计中心。",
+      "why_now_en": "When game studies mostly talks mechanics and industry, Rusch returns meaning to the centre of design.",
+      "fact_ledger": [
+        {
+          "claim": "Rusch 为乌普萨拉大学游戏设计教授，著有 Making Deep Games (2017)",
+          "claim_en": "Rusch is Professor of Game Design at Uppsala and author of Making Deep Games (2017)",
+          "source": "Uppsala staff page",
+          "source_en": "Uppsala staff page",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "Making Deep Games 的 ISBN、页数与版次",
+          "item_en": "ISBN, pages and edition of Making Deep Games",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "parasecoli",
+      "name_zh": "法比奥·帕拉塞科利",
+      "name_en": "Fabio Parasecoli",
+      "name_native": "Fabio Parasecoli",
+      "name_native_en": "Fabio Parasecoli",
+      "slug_display": "Fabio Parasecoli",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "意大利语 / 英语",
+      "domain_zh": "食物研究 · 文化政治 · 食物设计",
+      "domain_en": "food studies · cultural politics · food design",
+      "one_liner_zh": "纽约大学食物研究教授；从「美食民族主义」到「全球布鲁克林」，研究食物如何被用来划分「谁属于这里」。",
+      "one_liner_en": "Professor of Food Studies at NYU; from gastronativism to Global Brooklyn, he studies how food is used to decide who belongs.",
+      "school_zh": "食物研究 · 文化政治",
+      "school_en": "food studies · cultural politics",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2022",
+          "event_zh": "《Gastronativism》出版",
+          "event_en": "Gastronativism published",
+          "conf": "✓"
+        },
+        {
+          "y": "2025",
+          "event_zh": "《The Pierogi Problem》出版",
+          "event_en": "The Pierogi Problem published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2022",
+          "title": "Gastronativism",
+          "title_en": "Gastronativism",
+          "note_zh": "食物、身份、政治",
+          "note_en": "food, identity, politics",
+          "conf": "✓"
+        },
+        {
+          "y": "2021",
+          "title": "Global Brooklyn",
+          "title_en": "Global Brooklyn",
+          "note_zh": "与 Halawa 合著",
+          "note_en": "with Halawa",
+          "conf": "✓"
+        },
+        {
+          "y": "2025",
+          "title": "The Pierogi Problem",
+          "title_en": "The Pierogi Problem",
+          "note_zh": "与 Bachórz、Halawa 合著",
+          "note_en": "with Bachórz and Halawa",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "食物不是「文化」的装饰，而是划分归属、动员政治、制造阶层的核心装置。",
+      "stance_en": "Food is not decoration on culture but a core device for drawing belonging, mobilising politics and producing class.",
+      "why_now_zh": "当「本土/外来」成为全球政治语言，Parasecoli 给出了一套可操作的「美食民族主义」分析。",
+      "why_now_en": "When 'native/foreign' becomes global political language, Parasecoli supplies an operational analysis of gastronativism.",
+      "fact_ledger": [
+        {
+          "claim": "Parasecoli 为 NYU 食物研究教授；Gastronativism 由 Columbia UP 2022 出版",
+          "claim_en": "Parasecoli is Professor of Food Studies at NYU; Gastronativism was published by Columbia UP in 2022",
+          "source": "fabioparasecoli.com / Columbia UP",
+          "source_en": "fabioparasecoli.com / Columbia UP",
+          "conf": "✓"
+        },
+        {
+          "claim": "The Pierogi Problem 由 University of California Press 2025 出版",
+          "claim_en": "The Pierogi Problem was published by University of California Press in 2025",
+          "source": "fabioparasecoli.com",
+          "source_en": "fabioparasecoli.com",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "The Pierogi Problem 的 ISBN 与页数",
+          "item_en": "ISBN and pages of The Pierogi Problem",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "gobet",
+      "name_zh": "费尔南·戈贝",
+      "name_en": "Fernand Gobet",
+      "name_native": "Fernand Gobet",
+      "name_native_en": "Fernand Gobet",
+      "slug_display": "Fernand Gobet",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "法语 / 英语",
+      "domain_zh": "棋类专长 · 认知心理学 · CHREST",
+      "domain_en": "chess expertise · cognitive psychology · CHREST",
+      "one_liner_zh": "瑞士心理学家、国际象棋国际大师、利物浦大学心理科学教授；用「组块」与 CHREST 解释专家如何看棋盘。",
+      "one_liner_en": "Swiss psychologist, chess International Master and Professor at Liverpool; explains how experts see the board through chunks and CHREST.",
+      "school_zh": "组块理论 · 专家认知",
+      "school_en": "chunking · expert cognition",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1992",
+          "event_zh": "弗里堡大学心理学博士（《棋手的记忆》）",
+          "event_en": "PhD in psychology, Fribourg (chess memory)",
+          "conf": "✓"
+        },
+        {
+          "y": "1996",
+          "event_zh": "与 de Groot 合著《Perception and Memory in Chess》",
+          "event_en": "Perception and Memory in Chess with de Groot",
+          "conf": "✓"
+        },
+        {
+          "y": "2018",
+          "event_zh": "《The Psychology of Chess》出版",
+          "event_en": "The Psychology of Chess published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1996",
+          "title": "Perception and Memory in Chess",
+          "title_en": "Perception and Memory in Chess",
+          "note_zh": "与 de Groot 合著",
+          "note_en": "with de Groot",
+          "conf": "✓"
+        },
+        {
+          "y": "2004",
+          "title": "Moves in Mind",
+          "title_en": "Moves in Mind",
+          "note_zh": "棋盘游戏心理学",
+          "note_en": "psychology of board games",
+          "conf": "✓"
+        },
+        {
+          "y": "2018",
+          "title": "The Psychology of Chess",
+          "title_en": "The Psychology of Chess",
+          "note_zh": "Routledge, 140 页",
+          "note_en": "Routledge, 140 pp.",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "专家不是「想得更多」，而是「看得不同」：组块与模板让高手在有限时间里识别模式、缩小搜索。",
+      "stance_en": "Experts do not think more but see differently: chunks and templates let masters recognise patterns and narrow search under time pressure.",
+      "why_now_zh": "当 AI 重新定义「专长」，Gobet 的组块研究提供了人机比较的认知基线。",
+      "why_now_en": "When AI redefines expertise, Gobet's chunking research supplies the cognitive baseline for human–machine comparison.",
+      "fact_ledger": [
+        {
+          "claim": "Gobet 为利物浦大学心理科学教授、国际象棋国际大师；1992 年获弗里堡大学心理学博士",
+          "claim_en": "Gobet is Professor at Liverpool, a chess IM, PhD Fribourg 1992",
+          "source": "chessprogramming.org / Liverpool",
+          "source_en": "chessprogramming.org / Liverpool",
+          "conf": "✓"
+        },
+        {
+          "claim": "The Psychology of Chess 由 Routledge 2019 出版，140 页，ISBN 9781138216655",
+          "claim_en": "The Psychology of Chess: Routledge 2019, 140 pp., ISBN 9781138216655",
+          "source": "Routledge",
+          "source_en": "Routledge",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "Perception and Memory in Chess 与 Moves in Mind 的当前印次",
+          "item_en": "current printings of Perception and Memory and Moves in Mind",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "jockers",
+      "name_zh": "马修·乔克斯",
+      "name_en": "Matthew L. Jockers",
+      "name_native": "Matthew L. Jockers",
+      "name_native_en": "Matthew L. Jockers",
+      "slug_display": "Matthew L. Jockers",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "英语",
+      "domain_zh": "数字文学史 · 宏观分析",
+      "domain_en": "digital literary history · macroanalysis",
+      "one_liner_zh": "与 Moretti 共创斯坦福文学实验室；《Macroanalysis》把「宏观分析」写成数字文学史的方法宣言。",
+      "one_liner_en": "Co-founded the Stanford Literary Lab with Moretti; Macroanalysis is a manifesto for digital literary history.",
+      "school_zh": "宏观分析 · 数字文学史",
+      "school_en": "macroanalysis · digital literary history",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2010",
+          "event_zh": "与 Moretti 创办文学实验室",
+          "event_en": "Co-founds the Literary Lab",
+          "conf": "✓"
+        },
+        {
+          "y": "2013",
+          "event_zh": "《Macroanalysis》出版",
+          "event_en": "Macroanalysis published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2013",
+          "title": "Macroanalysis",
+          "title_en": "Macroanalysis",
+          "note_zh": "数字方法与文学史",
+          "note_en": "digital methods and literary history",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "文学史应在「百万书」的尺度上做，而不是只读经典。",
+      "stance_en": "Literary history should be done at the scale of millions of books, not only the canon.",
+      "why_now_zh": "Moretti 的「远读」需要一套可操作的方法，Jockers 提供了其中一本。",
+      "why_now_en": "Moretti's distant reading needs operational methods; Jockers supplies one.",
+      "fact_ledger": [
+        {
+          "claim": "Jockers 与 Moretti 于 2010 年共同创办斯坦福文学实验室",
+          "claim_en": "Jockers co-founded the Stanford Literary Lab with Moretti in 2010",
+          "source": "Wikipedia",
+          "source_en": "Wikipedia",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "Macroanalysis 的 ISBN 与页数",
+          "item_en": "ISBN and pages of Macroanalysis",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "underwood",
+      "name_zh": "泰德·安德伍德",
+      "name_en": "Ted Underwood",
+      "name_native": "Ted Underwood",
+      "name_native_en": "Ted Underwood",
+      "slug_display": "Ted Underwood",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "英语",
+      "domain_zh": "远读 · 文学史 · 机器学习",
+      "domain_en": "distant reading · literary history · machine learning",
+      "one_liner_zh": "伊利诺伊大学文学教授，把机器学习与文学史结合；《Distant Horizons》讨论「尺度」如何改变文学史的问题。",
+      "one_liner_en": "Illinois literary scholar combining machine learning and literary history; Distant Horizons asks how scale changes the questions of literary history.",
+      "school_zh": "远读 · 计算批评",
+      "school_en": "distant reading · computational criticism",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2019",
+          "event_zh": "《Distant Horizons》出版",
+          "event_en": "Distant Horizons published",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "2019",
+          "title": "Distant Horizons",
+          "title_en": "Distant Horizons",
+          "note_zh": "文学量的时代",
+          "note_en": "the era of literary quantity",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "远读不是「不读」，而是换一种问题：尺度改变我们能看到什么。",
+      "stance_en": "Distant reading is not not-reading but a change of question: scale changes what can be seen.",
+      "why_now_zh": "为 Moretti 的纲领提供更晚近、更方法论的反省。",
+      "why_now_en": "Supplies a later, more methodological reflection on Moretti's programme.",
+      "fact_ledger": [
+        {
+          "claim": "Underwood 为伊利诺伊大学文学教授，著有 Distant Horizons (2019)",
+          "claim_en": "Underwood is a professor at Illinois and author of Distant Horizons (2019)",
+          "source": "Wikipedia / JHUP",
+          "source_en": "Wikipedia / JHUP",
+          "conf": "◐"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "Distant Horizons 的 ISBN 与页数",
+          "item_en": "ISBN and pages of Distant Horizons",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "salen-zimmerman",
+      "name_zh": "凯蒂·萨伦、埃里克·齐默曼",
+      "name_en": "Katie Salen & Eric Zimmerman",
+      "name_native": "Katie Salen & Eric Zimmerman",
+      "name_native_en": "Katie Salen & Eric Zimmerman",
+      "slug_display": "Katie Salen & Eric Zimmerman",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "英语",
+      "domain_zh": "游戏设计 · 游戏研究",
+      "domain_en": "game design · game studies",
+      "one_liner_zh": "《Rules of Play》的作者，把「规则、玩耍、文化」写成游戏设计的三大轴。",
+      "one_liner_en": "Authors of Rules of Play, which lays out rules, play and culture as the three axes of game design.",
+      "school_zh": "游戏设计基础",
+      "school_en": "foundations of game design",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2003",
+          "event_zh": "《Rules of Play》出版",
+          "event_en": "Rules of Play published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2003",
+          "title": "Rules of Play",
+          "title_en": "Rules of Play",
+          "note_zh": "游戏设计基础",
+          "note_en": "game design fundamentals",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "游戏是「规则系统 + 玩耍经验 + 文化语境」的三层结构。",
+      "stance_en": "Games are a three-layer structure of rules, play experience and cultural context.",
+      "why_now_zh": "为 Rusch 的「深度游戏」提供设计学的公共语法。",
+      "why_now_en": "Supplies the shared design grammar for Rusch's deep games.",
+      "fact_ledger": [
+        {
+          "claim": "《Rules of Play》由 MIT Press 2003 出版",
+          "claim_en": "Rules of Play was published by MIT Press in 2003",
+          "source": "MIT Press",
+          "source_en": "MIT Press",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "ISBN 与页数",
+          "item_en": "ISBN and pages",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "bogost",
+      "name_zh": "伊恩·博戈斯特",
+      "name_en": "Ian Bogost",
+      "name_native": "Ian Bogost",
+      "name_native_en": "Ian Bogost",
+      "slug_display": "Ian Bogost",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "英语",
+      "domain_zh": "游戏研究 · 说服性游戏",
+      "domain_en": "game studies · persuasive games",
+      "one_liner_zh": "游戏研究者与设计师；《Persuasive Games》提出「程序修辞」：游戏的规则本身在说服。",
+      "one_liner_en": "Game scholar and designer; Persuasive Games proposes 'procedural rhetoric': a game's rules themselves persuade.",
+      "school_zh": "程序修辞 · 对象导向",
+      "school_en": "procedural rhetoric · object-oriented",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2007",
+          "event_zh": "《Persuasive Games》出版",
+          "event_en": "Persuasive Games published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2007",
+          "title": "Persuasive Games",
+          "title_en": "Persuasive Games",
+          "note_zh": "电子游戏的表现力",
+          "note_en": "the expressive power of videogames",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "游戏的说服力不在文字，而在规则与流程；「程序修辞」是它的分析单位。",
+      "stance_en": "A game persuades through rules and processes, not words; procedural rhetoric is the unit of analysis.",
+      "why_now_zh": "把 Rusch 的「意义」从主题推进到「规则如何论证」。",
+      "why_now_en": "Moves Rusch's 'meaning' from theme to how rules argue.",
+      "fact_ledger": [
+        {
+          "claim": "《Persuasive Games》由 MIT Press 2007 出版",
+          "claim_en": "Persuasive Games was published by MIT Press in 2007",
+          "source": "MIT Press",
+          "source_en": "MIT Press",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "ISBN 与页数",
+          "item_en": "ISBN and pages",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "juul",
+      "name_zh": "杰斯珀·尤尔",
+      "name_en": "Jesper Juul",
+      "name_native": "Jesper Juul",
+      "name_native_en": "Jesper Juul",
+      "slug_display": "Jesper Juul",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "丹麦语 / 英语",
+      "domain_zh": "游戏研究 · 半真实",
+      "domain_en": "game studies · half-real",
+      "one_liner_zh": "丹麦游戏研究者；《Half-Real》提出电子游戏是「真实规则」与「虚构世界」的叠合。",
+      "one_liner_en": "Danish game scholar; Half-Real argues that videogames overlay real rules and fictional worlds.",
+      "school_zh": "半真实 · 游戏本体论",
+      "school_en": "half-real · game ontology",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2005",
+          "event_zh": "《Half-Real》出版",
+          "event_en": "Half-Real published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2005",
+          "title": "Half-Real",
+          "title_en": "Half-Real",
+          "note_zh": "真实规则与虚构世界",
+          "note_en": "rules and fictional worlds",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "玩家同时在「真实规则」与「虚构世界」两层行动；游戏的意义正在这两层之间。",
+      "stance_en": "Players act in real rules and fictional worlds at once; meaning lives between the two.",
+      "why_now_zh": "为「深度游戏」提供本体论底座：意义不是外加，而是规则/虚构的叠合。",
+      "why_now_en": "Gives deep games an ontological base: meaning is not added but layered in rules/fiction.",
+      "fact_ledger": [
+        {
+          "claim": "《Half-Real》由 MIT Press 2005 出版",
+          "claim_en": "Half-Real was published by MIT Press in 2005",
+          "source": "MIT Press",
+          "source_en": "MIT Press",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "ISBN 与页数",
+          "item_en": "ISBN and pages",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "mintz",
+      "name_zh": "西德尼·明茨",
+      "name_en": "Sidney W. Mintz",
+      "name_native": "Sidney W. Mintz",
+      "name_native_en": "Sidney W. Mintz",
+      "slug_display": "Sidney W. Mintz",
+      "born": "1922–2015",
+      "born_en": "1922–2015",
+      "native_lang": "英语",
+      "domain_zh": "食物人类学 · 糖史",
+      "domain_en": "food anthropology · history of sugar",
+      "one_liner_zh": "人类学家；《Sweetness and Power》把糖从奢侈品变成工人阶级日常的过程写成资本主义的世界史。",
+      "one_liner_en": "Anthropologist; Sweetness and Power writes the making of sugar into a world history of capitalism and class.",
+      "school_zh": "政治经济学 · 食物人类学",
+      "school_en": "political economy · food anthropology",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1985",
+          "event_zh": "《Sweetness and Power》出版",
+          "event_en": "Sweetness and Power published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1985",
+          "title": "Sweetness and Power",
+          "title_en": "Sweetness and Power",
+          "note_zh": "糖在近代史上的地位",
+          "note_en": "sugar in modern history",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "食物消费不是口味问题，而是殖民、劳动与阶级关系的沉淀。",
+      "stance_en": "Food consumption is not taste but the sediment of colonial, labour and class relations.",
+      "why_now_zh": "为 Parasecoli 的「食物政治」提供历史纵深。",
+      "why_now_en": "Gives Parasecoli's food politics historical depth.",
+      "fact_ledger": [
+        {
+          "claim": "《Sweetness and Power》1985 年由 Viking 出版",
+          "claim_en": "Sweetness and Power was published by Viking in 1985",
+          "source": "Penguin / Viking",
+          "source_en": "Penguin / Viking",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "具体印次与 ISBN",
+          "item_en": "printing and ISBN",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "appadurai",
+      "name_zh": "阿尔君·阿帕杜莱",
+      "name_en": "Arjun Appadurai",
+      "name_native": "Arjun Appadurai",
+      "name_native_en": "Arjun Appadurai",
+      "slug_display": "Arjun Appadurai",
+      "born": "1949",
+      "born_en": "1949",
+      "native_lang": "英语",
+      "domain_zh": "全球化 · 文化人类学",
+      "domain_en": "globalization · cultural anthropology",
+      "one_liner_zh": "人类学家；《Modernity at Large》用「全球文化流动」解释地方如何在全球中生产差异。",
+      "one_liner_en": "Anthropologist; Modernity at Large explains how the local produces difference within global flows.",
+      "school_zh": "全球文化流动 · 现代性",
+      "school_en": "global cultural flows · modernity",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1996",
+          "event_zh": "《Modernity at Large》出版",
+          "event_en": "Modernity at Large published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1996",
+          "title": "Modernity at Large",
+          "title_en": "Modernity at Large",
+          "note_zh": "全球化时代的文化诸维度",
+          "note_en": "cultural dimensions of globalization",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "全球化不是同质化，而是「流动」中不断生产地方差异。",
+      "stance_en": "Globalization is not homogenisation but the production of local difference through flows.",
+      "why_now_zh": "为 Parasecoli 的「全球布鲁克林」提供文化流动的理论语言。",
+      "why_now_en": "Supplies the theoretical language of flows for Parasecoli's Global Brooklyn.",
+      "fact_ledger": [
+        {
+          "claim": "《Modernity at Large》1996 年由 University of Minnesota Press 出版",
+          "claim_en": "Modernity at Large was published by University of Minnesota Press in 1996",
+          "source": "University of Minnesota Press",
+          "source_en": "University of Minnesota Press",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "ISBN 与页数",
+          "item_en": "ISBN and pages",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "de-groot",
+      "name_zh": "阿德里安·德·格鲁特",
+      "name_en": "Adriaan de Groot",
+      "name_native": "Adriaan D. de Groot",
+      "name_native_en": "Adriaan D. de Groot",
+      "slug_display": "Adriaan de Groot",
+      "born": "1914–2006",
+      "born_en": "1914–2006",
+      "native_lang": "荷兰语 / 英语",
+      "domain_zh": "棋类心理学 · 思维",
+      "domain_en": "chess psychology · thought",
+      "one_liner_zh": "荷兰心理学家与棋手；《Thought and Choice in Chess》用出声思维研究棋手如何选择着法。",
+      "one_liner_en": "Dutch psychologist and chess player; Thought and Choice in Chess uses think-aloud protocols to study move choice.",
+      "school_zh": "棋类心理学 · 专家直觉",
+      "school_en": "chess psychology · expert intuition",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1946",
+          "event_zh": "《Het denken van den schaker》出版",
+          "event_en": "Thought and Choice in Chess first published",
+          "conf": "✓"
+        },
+        {
+          "y": "1965",
+          "event_zh": "英译本出版",
+          "event_en": "English edition",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1965",
+          "title": "Thought and Choice in Chess",
+          "title_en": "Thought and Choice in Chess",
+          "note_zh": "棋手思维的经典研究",
+          "note_en": "classic study of chess thinking",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "高手的优势在「一眼看出」而非「想得更多」；这是组块理论的先声。",
+      "stance_en": "Masters excel at seeing at a glance, not thinking more; a precursor of chunking theory.",
+      "why_now_zh": "为 Gobet 的组块研究提供经典源头。",
+      "why_now_en": "Provides the classic source for Gobet's chunking research.",
+      "fact_ledger": [
+        {
+          "claim": "de Groot 1946 年出版荷兰文原书，1965 年英译",
+          "claim_en": "de Groot published the Dutch original in 1946 and the English edition in 1965",
+          "source": "chessprogramming.org",
+          "source_en": "chessprogramming.org",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "英译本 ISBN 与版次",
+          "item_en": "ISBN and edition of the English translation",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "strunk-white",
+      "name_zh": "威廉·斯特伦克、E. B. 怀特",
+      "name_en": "William Strunk Jr. & E. B. White",
+      "name_native": "William Strunk Jr. & E. B. White",
+      "name_native_en": "William Strunk Jr. & E. B. White",
+      "slug_display": "William Strunk Jr. & E. B. White",
+      "born": "1869–1946 / 1899–1985",
+      "born_en": "1869–1946 / 1899–1985",
+      "native_lang": "English",
+      "domain_zh": "英语写作 · 风格指南",
+      "domain_en": "English writing · style guide",
+      "one_liner_zh": "《风格的要素》的作者：把清晰、简洁与惯用法写成可执行的规则。",
+      "one_liner_en": "Authors of The Elements of Style: clarity, concision and usage turned into workable rules.",
+      "school_zh": "写作正典 · 风格指南",
+      "school_en": "writing canon · style guide",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1918",
+          "event_zh": "Strunk 自印《The Elements of Style》",
+          "event_en": "Strunk privately prints The Elements of Style",
+          "conf": "✓"
+        },
+        {
+          "y": "1959",
+          "event_zh": "White 修订出版",
+          "event_en": "White revises and publishes it",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "1959",
+          "title": "The Elements of Style",
+          "title_en": "The Elements of Style",
+          "note_zh": "写作正典",
+          "note_en": "the writing canon",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "清晰来自删减与惯用法，而非装饰。",
+      "stance_en": "Clarity comes from subtraction and usage, not ornament.",
+      "why_now_zh": "一切写作正典的起点。",
+      "why_now_en": "The starting point of the writing canon.",
+      "fact_ledger": [
+        {
+          "claim": "《The Elements of Style》1918 年由 Strunk 自印，1959 年由 White 修订",
+          "claim_en": "The Elements of Style was privately printed in 1918 and revised by White in 1959",
+          "source": "Standard bibliographic record",
+          "source_en": "Standard bibliographic record",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "所持版次与 ISBN",
+          "item_en": "edition and ISBN",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "steven-pinker",
+      "name_zh": "史蒂芬·平克",
+      "name_en": "Steven Pinker",
+      "name_native": "Steven Pinker",
+      "name_native_en": "Steven Pinker",
+      "slug_display": "Steven Pinker",
+      "born": "1954",
+      "born_en": "1954",
+      "native_lang": "English",
+      "domain_zh": "认知科学 · 写作",
+      "domain_en": "cognitive science · writing",
+      "one_liner_zh": "认知科学家，《风格的感觉》用心理学解释好文风如何「看见」读者。",
+      "one_liner_en": "Cognitive scientist; The Sense of Style explains good prose through how it sees the reader.",
+      "school_zh": "认知写作 · 风格科学",
+      "school_en": "cognitive writing · science of style",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2014",
+          "event_zh": "《The Sense of Style》出版",
+          "event_en": "The Sense of Style published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2014",
+          "title": "The Sense of Style",
+          "title_en": "The Sense of Style",
+          "note_zh": "认知写作指南",
+          "note_en": "a cognitive guide to writing",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "好文风不是遵守规则，而是让读者看见你看见的东西。",
+      "stance_en": "Good style is not rule-following but making the reader see what you see.",
+      "why_now_zh": "把写作从规则提升到认知模型。",
+      "why_now_en": "Moves writing from rules to a cognitive model.",
+      "fact_ledger": [
+        {
+          "claim": "《The Sense of Style》2014 年出版；Pinker 为认知科学家",
+          "claim_en": "The Sense of Style was published in 2014; Pinker is a cognitive scientist",
+          "source": "Standard bibliographic record",
+          "source_en": "Standard bibliographic record",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "出版社、ISBN 与页数",
+          "item_en": "publisher, ISBN and pages",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "graff-birkenstein",
+      "name_zh": "杰拉尔德·格拉夫、凯茜·伯肯斯坦",
+      "name_en": "Gerald Graff & Cathy Birkenstein",
+      "name_native": "Gerald Graff & Cathy Birkenstein",
+      "name_native_en": "Gerald Graff & Cathy Birkenstein",
+      "slug_display": "Gerald Graff & Cathy Birkenstein",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "学术写作 · 对话模型",
+      "domain_en": "academic writing · conversation model",
+      "one_liner_zh": "《他们说 / 我说》的作者：把学术写作定义为进入一场已有的对话。",
+      "one_liner_en": "Authors of They Say / I Say: academic writing as entering an existing conversation.",
+      "school_zh": "学术写作 · 对话模型",
+      "school_en": "academic writing · conversation model",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "2006",
+          "event_zh": "《They Say / I Say》出版",
+          "event_en": "They Say / I Say published",
+          "conf": "✓"
+        }
+      ],
+      "works": [
+        {
+          "y": "2006",
+          "title": "They Say / I Say",
+          "title_en": "They Say / I Say",
+          "note_zh": "学术写作模板",
+          "note_en": "academic writing templates",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "先复述他人的话，再说自己的话；写作是对话，不是独白。",
+      "stance_en": "Restate others first, then speak; writing is conversation, not monologue.",
+      "why_now_zh": "学术写作的「对话」语法。",
+      "why_now_en": "The conversational grammar of academic writing.",
+      "fact_ledger": [
+        {
+          "claim": "《They Say / I Say》2006 年出版；作者为 Graff 与 Birkenstein",
+          "claim_en": "They Say / I Say was published in 2006 by Graff and Birkenstein",
+          "source": "Standard bibliographic record",
+          "source_en": "Standard bibliographic record",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "版次与 ISBN",
+          "item_en": "edition and ISBN",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "national-academies",
+      "name_zh": "美国国家科学院、工程院、医学院",
+      "name_en": "National Academies (NAS / NAE / IOM)",
+      "name_native": "National Academy of Sciences, National Academy of Engineering, Institute of Medicine",
+      "name_native_en": "National Academy of Sciences, National Academy of Engineering, Institute of Medicine",
+      "slug_display": "National Academies (NAS / NAE / IOM)",
+      "born": "—",
+      "born_en": "—",
+      "native_lang": "English",
+      "domain_zh": "科研伦理 · 科学写作",
+      "domain_en": "research ethics · scientific writing",
+      "one_liner_zh": "《做一个科学家》的机构作者：把科研诚信写成可操作的规范。",
+      "one_liner_en": "Institutional author of On Being a Scientist: research integrity as workable norms.",
+      "school_zh": "科研伦理 · 责任",
+      "school_en": "research ethics · responsibility",
+      "circle": [],
+      "timeline": [
+        {
+          "y": "1989",
+          "event_zh": "《On Being a Scientist》首版",
+          "event_en": "On Being a Scientist first published",
+          "conf": "✓"
+        },
+        {
+          "y": "2009",
+          "event_zh": "第三版",
+          "event_en": "third edition",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "2009",
+          "title": "On Being a Scientist",
+          "title_en": "On Being a Scientist",
+          "note_zh": "科研诚信指南",
+          "note_en": "a guide to responsible conduct",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "科学是共同体实践，诚信是方法的一部分。",
+      "stance_en": "Science is a communal practice; integrity is part of method.",
+      "why_now_zh": "写作正典中的伦理维度。",
+      "why_now_en": "The ethical dimension of the writing canon.",
+      "fact_ledger": [
+        {
+          "claim": "《On Being a Scientist》由美国国家科学院等机构出版",
+          "claim_en": "On Being a Scientist is published by the US National Academies",
+          "source": "Standard bibliographic record",
+          "source_en": "Standard bibliographic record",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "所持版次与 ISBN",
+          "item_en": "edition and ISBN",
+          "conf": "◐"
+        }
+      ]
     }
   ]
 }

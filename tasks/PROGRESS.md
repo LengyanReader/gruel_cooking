@@ -14,6 +14,8 @@
 
 | 2026-11-08-3 | 跨 crop 深度对齐复核 | 审读全部 5 批：Go 在 concepts/reception/limits/author_intent/review 为 15/15（Japan 8/24，其余 0）；toc 6/15（40%，Japan 33%）；related 3.6（Japan 3.0）、craft 3.1（Japan 3.0）、deep_read 3.0（Japan 3.1）；crop 级 4 rings / 6 pointers / 5 appendix（Japan 2/4/0）。本轮补 6 部有实证 TOC 的章节读法卡（思想史 6、弈境 5、Book of Go 4、棋经 6、忘忧 3、Go Companion 4）＋ related/craft/deep-read/ledger。仍落后：plot_acts 6/15（仅 TOC 可核者）、fact_ledger 3.4（Japan 5.2）、verbatim quotes 0.3（Japan 1.1）——均因未通读，拒绝填充。 | 9 部无 TOC 者不造章节卡；quotes/ledger 保持可核范围 | 下轮：按用户反馈；按需 commit |
 
+| 2026-11-10-1 | 新书单 `2026-games-play-culture`（游戏、技艺与文化系统） | 四家二十书：尺度（Moretti 四书 + Jockers/Underwood）、意义（Rusch + Salen & Zimmerman/Bogost/Juul）、身份（Parasecoli 四书 + Mintz/Appadurai）、专长（Gobet 三书 + de Groot）。12 作者、4 rings / 4 axes / 3-step path / 6 pointers / 5 gaps / 5 appendix。核心书目经 Stanford / Uppsala / Parasecoli 站 / chessprogramming / Routledge / Wikipedia 核对。20/20 全部补齐 concept / reception / limits / author-intent / review，并补 motifs / excerpts / ledger。重建：77 书 / 53 作者 / 6 批；`--validate` OK；graph 276 节点 / 195 边，无新增 dangling；corpus 无新增。 | 8 部相邻作品未加深；部分 ISBN/页数待核；多数未通读 | 下轮：按需加深 8 部相邻；补旧有红门；按需 commit |
+
 > Handoff sources（2026-11-08-1）：Sensei's Library（WilliamCobb / ReflectionsOnTheGameOfGo / TheBookOfGo / JohnFairbairn）· British Go Association（BGJ 148 review）· Google Books（Go! More Than a Game）· 湘潭大学新闻网（何云波）· 全国哲学社会科学工作办公室（《围棋与中国思想传统》全文）· 微信读书（《围棋文献集成（8）》）· 新浪体育（《中的精神》第一章节选）＋ harness-factory M0/M3/M4（经 capability-router）。
 
 > Handoff sources（2026-11-03-1）：本仓档案（math_clarification/essays 三 checks、reseArch_X/scholars 14 档、opportunities 档案）＋ harness-factory M0/M3/M4（`core/01-meta-principles.md`、`core/04-verification-and-gates.md`、`core/05-provenance-and-integrity.md`，经 `reference/capability-router.md` 路由）。

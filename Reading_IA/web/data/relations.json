@@ -161,6 +161,42 @@
       "why_zh": "史料与棋谱基础",
       "why_en": "the documentary and game-record base",
       "conf": "✓"
+    },
+    {
+      "from": "世界体系 / 达尔文演化",
+      "from_en": "world-systems / Darwinian evolution",
+      "to": "moretti",
+      "arrow": "⇐",
+      "why_zh": "把文学放进世界体系与演化",
+      "why_en": "places literature in world-system and evolution",
+      "conf": "✓"
+    },
+    {
+      "from": "存在主义 / 仪式 / 神话",
+      "from_en": "existentialism / ritual / myth",
+      "to": "rusch",
+      "arrow": "⇐",
+      "why_zh": "把意义设计写成存在经验",
+      "why_en": "designs meaning as existential experience",
+      "conf": "◐"
+    },
+    {
+      "from": "食物研究 / 全球化理论",
+      "from_en": "food studies / globalization theory",
+      "to": "parasecoli",
+      "arrow": "⇐",
+      "why_zh": "食物作为归属与政治",
+      "why_en": "food as belonging and politics",
+      "conf": "✓"
+    },
+    {
+      "from": "de Groot / Herbert Simon",
+      "from_en": "de Groot / Herbert Simon",
+      "to": "gobet",
+      "arrow": "⇐",
+      "why_zh": "组块与专家认知",
+      "why_en": "chunks and expert cognition",
+      "conf": "✓"
     }
   ],
   "circle": [
@@ -311,6 +347,42 @@
       "why_zh": "同写围棋史与文化",
       "why_en": "both write Go history and culture",
       "conf": "◐"
+    },
+    {
+      "from": "moretti",
+      "to": "jockers",
+      "to_en": "Matthew L. Jockers",
+      "arrow": "◎",
+      "why_zh": "共创斯坦福文学实验室",
+      "why_en": "co-founded the Stanford Literary Lab",
+      "conf": "✓"
+    },
+    {
+      "from": "rusch",
+      "to": "salen-zimmerman",
+      "to_en": "Katie Salen & Eric Zimmerman",
+      "arrow": "◎",
+      "why_zh": "游戏设计的公共语法",
+      "why_en": "shared design grammar",
+      "conf": "◐"
+    },
+    {
+      "from": "parasecoli",
+      "to": "appadurai",
+      "to_en": "Arjun Appadurai",
+      "arrow": "◎",
+      "why_zh": "全球文化流动与食物",
+      "why_en": "global flows and food",
+      "conf": "◐"
+    },
+    {
+      "from": "gobet",
+      "to": "de-groot",
+      "to_en": "Adriaan de Groot",
+      "arrow": "◎",
+      "why_zh": "棋类心理学的跨代对话",
+      "why_en": "cross-generational chess psychology",
+      "conf": "✓"
     }
   ],
   "cowrites": [
@@ -340,6 +412,26 @@
       "why_en": "co-authored The Go Companion",
       "book": "The Go Companion",
       "book_en": "The Go Companion",
+      "conf": "✓"
+    },
+    {
+      "from": "parasecoli",
+      "to": "Mateusz Halawa",
+      "to_en": "Mateusz Halawa",
+      "why_zh": "合著 Global Brooklyn / The Pierogi Problem",
+      "why_en": "co-authored Global Brooklyn and The Pierogi Problem",
+      "book": "Global Brooklyn",
+      "book_en": "Global Brooklyn",
+      "conf": "✓"
+    },
+    {
+      "from": "gobet",
+      "to": "Adriaan de Groot",
+      "to_en": "Adriaan de Groot",
+      "why_zh": "合著 Perception and Memory in Chess",
+      "why_en": "co-authored Perception and Memory in Chess",
+      "book": "Perception and Memory in Chess",
+      "book_en": "Perception and Memory in Chess",
       "conf": "✓"
     }
   ],
@@ -583,6 +675,134 @@
       "why_zh": "以文本传统立节点，不臆断作者",
       "why_en": "a textual-tradition node without guessing authorship",
       "conf": "◐"
+    },
+    {
+      "author": "moretti",
+      "school_zh": "远读 · 世界体系 · 文学演化",
+      "school_en": "distant reading · world-systems · literary evolution",
+      "why_zh": "以尺度与模型重写文学史",
+      "why_en": "rewrites literary history through scale and models",
+      "conf": "✓"
+    },
+    {
+      "author": "rusch",
+      "school_zh": "深度游戏 · 存在主义设计",
+      "school_en": "deep games · existential design",
+      "why_zh": "把意义与存在经验带入游戏设计",
+      "why_en": "brings meaning and existential experience into design",
+      "conf": "✓"
+    },
+    {
+      "author": "parasecoli",
+      "school_zh": "食物研究 · 文化政治",
+      "school_en": "food studies · cultural politics",
+      "why_zh": "以食物划分归属与政治",
+      "why_en": "uses food to draw belonging and politics",
+      "conf": "✓"
+    },
+    {
+      "author": "gobet",
+      "school_zh": "组块理论 · 专家认知",
+      "school_en": "chunking · expert cognition",
+      "why_zh": "以组块解释棋类专长",
+      "why_en": "explains chess expertise through chunks",
+      "conf": "✓"
+    },
+    {
+      "author": "jockers",
+      "school_zh": "宏观分析 · 数字文学史",
+      "school_en": "macroanalysis · digital literary history",
+      "why_zh": "把远读操作化",
+      "why_en": "operationalises distant reading",
+      "conf": "✓"
+    },
+    {
+      "author": "underwood",
+      "school_zh": "远读 · 计算批评",
+      "school_en": "distant reading · computational criticism",
+      "why_zh": "反省尺度与证据",
+      "why_en": "reflects on scale and evidence",
+      "conf": "◐"
+    },
+    {
+      "author": "salen-zimmerman",
+      "school_zh": "游戏设计基础",
+      "school_en": "foundations of game design",
+      "why_zh": "规则—玩耍—文化三层",
+      "why_en": "rules–play–culture",
+      "conf": "✓"
+    },
+    {
+      "author": "bogost",
+      "school_zh": "程序修辞 · 对象导向",
+      "school_en": "procedural rhetoric · object-oriented",
+      "why_zh": "规则如何论证",
+      "why_en": "how rules argue",
+      "conf": "✓"
+    },
+    {
+      "author": "juul",
+      "school_zh": "半真实 · 游戏本体论",
+      "school_en": "half-real · game ontology",
+      "why_zh": "真实规则与虚构世界",
+      "why_en": "real rules and fictional worlds",
+      "conf": "✓"
+    },
+    {
+      "author": "mintz",
+      "school_zh": "政治经济学 · 食物人类学",
+      "school_en": "political economy · food anthropology",
+      "why_zh": "糖的阶级与殖民史",
+      "why_en": "class and colonial history of sugar",
+      "conf": "✓"
+    },
+    {
+      "author": "appadurai",
+      "school_zh": "全球文化流动 · 现代性",
+      "school_en": "global cultural flows · modernity",
+      "why_zh": "五种景观与地方差异",
+      "why_en": "five scapes and local difference",
+      "conf": "✓"
+    },
+    {
+      "author": "de-groot",
+      "school_zh": "棋类心理学 · 专家直觉",
+      "school_en": "chess psychology · expert intuition",
+      "why_zh": "出声思维与一眼识别",
+      "why_en": "think-aloud and seeing at a glance",
+      "conf": "✓"
+    },
+    {
+      "author": "strunk-white",
+      "school_zh": "写作正典 · 风格指南",
+      "school_en": "writing canon · style guide",
+      "why_zh": "清晰、简洁与惯用法",
+      "why_en": "clarity, concision, usage",
+      "conf": "✓"
+    },
+    {
+      "author": "steven-pinker",
+      "school_zh": "认知写作 · 风格科学",
+      "school_en": "cognitive writing · science of style",
+      "why_zh": "以认知模型解释好文风",
+      "why_en": "explains style through cognition",
+      "conf": "✓"
+    },
+    {
+      "author": "graff-birkenstein",
+      "school_zh": "学术写作 · 对话模型",
+      "school_en": "academic writing · conversation model",
+      "why_zh": "写作是进入对话",
+      "why_en": "writing as entering a conversation",
+      "conf": "✓"
+    },
+    {
+      "author": "national-academies",
+      "school_zh": "科研伦理 · 责任",
+      "school_en": "research ethics · responsibility",
+      "why_zh": "诚信是方法的一部分",
+      "why_en": "integrity is part of method",
+      "conf": "✓"
     }
   ]
 }
