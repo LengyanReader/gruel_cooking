@@ -5,7 +5,7 @@ name: Gunnar Liestøl
 tier: 卓越开明
 affiliation: 奥斯陆大学 · 媒体与传播系（Department of Media & Communication）· 教授  # ✔ Google Scholar tEYb3AcAAAAJ「Professor, Dept. of Media & Communication, University of Oslo」+ ub.uio.no C2HO 活动页, 2026-11-04
 field: 增强现实（AR）× 文化遗产传播 × 定位/在场叙事（locative media）× 数字人文与媒介设计
-homepage: https://www.mediakom.uio.no（系页个人条目直补 ◇）
+homepage: https://www.hf.uio.no/imk/personer/vit/gunnarl  # ✔ 实测 200（2026-11-05 链接审计）；原 mediakom.uio.no 为旧系站, 已失联 000 → 改 IMK 系个人页
 qid:
 current_work:
   - **C2HO（Creative Computing Hub Oslo）「AR Reconstruction of Cultural Heritage」活动主讲（2024-09-13）**——以媒体设计、AR 与动作捕捉做文化遗产传播（✔ ub.uio.no C2HO 事件页 2024-09-13, 2026-11-04）

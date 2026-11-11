@@ -5,7 +5,7 @@ name: Jane Winters
 tier: 卓越开明
 affiliation: School of Advanced Study, University of London · Professor of Digital Humanities  # ✔ sas.ac.uk/people/professor-jane-winters, 2026-11-03【先验纠错：不在 Brunel，本档据官方页订正】
 field: 数字历史 × 存档网（archived web）× 数字文化遗产可持续性
-homepage: https://www.sas.ac.uk/people/professor-jane-winters   # 个人站 digitalhistorian.org
+homepage: https://digitalhistorian.org  # ✔ 个人站实测 200（2026-11-05 链接审计）；SAS 校页 sas.ac.uk 对机器人 403 反爬（浏览器可开, 非死链）, 故主页改个人站
 qid:                 # 诚实留空
 current_work:
   - 新书 forthcoming《**Exploring Digital Cultural Heritage: Access, Use, Value and Sustainability**》（University of London Press, 2026 年列）（✔ uolpress.co.uk, 2026-11-03）

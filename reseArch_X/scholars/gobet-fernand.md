@@ -5,7 +5,7 @@ name: Fernand Gobet
 tier: 卓越开明
 affiliation: London School of Economics · Professorial Research Fellow（前利物浦大学心理科学教授）· 国际象棋大师（International Master）  # ✔ 亚美尼亚棋院 2025-26 讲座介绍「LSE Professorial Research Fellow」+ chessprogramming 条目（瑞士人/IM/利物浦教授）+ Routledge 访谈, 2026-11-04（LSE 官方页直补 ◇）
 field: 认知心理学 × 专业本领的计算建模（chunking/template/CHASE）× 国际象棋认知科学
-homepage: https://chessprogramming.org/Fernand_Gobet（条目页；LSE 官方 profile 直补 ◇）
+homepage: https://www.chessprogramming.org/Fernand_Gobet  # ✔ 实测 200（2026-11-05 链接审计, 原行中文括注粘连 URL 已修）；LSE 官方 profile 直补 ◇
 qid:
 current_work:
   - **「Chess, Cognition and Learning」系列讲座现行在巡**（「Professor Fernand Gobet on Chess, Cognition and Learning」，亚美尼亚国际象棋学院等场次释出）——把棋认知研究持续导向教育与学习（✔ Facebook/Armenian Chess Academy 讲座条目, 2026-11-04）

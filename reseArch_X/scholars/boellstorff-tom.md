@@ -5,7 +5,7 @@ name: Tom Boellstorff
 tier: 卓越开明
 affiliation: UC Irvine · 人类学教授 · RAI「Anthropology of Play and Games」研讨系列讲员（2026-03 场次）  # ✔ therai.org.uk 系列页（2026-03-24 场次列名）+ UC Irvine 人类学系口径, 2026-11-04（系内现职页直补 ◇）
 field: 人类学 × 虚拟世界民族志（《Coming of Age in Second Life》）× 玩与游戏的人类学
-homepage: https://www.anthropology.uci.edu/（系页个人条目直补 ◇）
+homepage: https://www.anthropology.uci.edu/  # ✔ 系官网实测 200（2026-11-05 链接审计）；个人条目路径随学期变动, 以系内检索直达（◇）
 qid:
 current_work:
   - **RAI「Anthropology of Play and Games」研讨系列现行**（Hazel Andrews/Liverpool John Moores、Kellynn Wee/UCL 与皇家人类学研究所组织；2025-11-12 场次已开、2026-03-24 场次其列名主讲）——「游戏人类学」正在被建制化为常设论坛（✔ therai.org.uk 系列页 + RAI Facebook 活动帖, 2026-11-04）

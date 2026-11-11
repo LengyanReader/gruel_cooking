@@ -5,7 +5,7 @@ name: Camilla Brattland
 tier: 卓越开明
 affiliation: UiT The Arctic University of Norway · The University Museum of Norway（Tromsø）· Sámi 文化研究  # ✔ en.uit.no/ansatte/camilla.brattland（页面署 Professor）+ SAMFORSK 团队页；注意 ResearchGate 仍标 Associate professor——职级口径 ◇, 2026-11-04
 field: 萨米原住民遗产与博物馆学 × 原住民知识与土地治理 × 北极人文（Arctic Humanities）
-homepage: https://en.uit.no/ansatte/camilla.brattland
+homepage: https://en.uit.no/ansatte/camilla.brattland  # ✔ 实测 200（2026-11-11 复测恢复；2026-11-05 曾时段性 500 而暂改 Google Scholar，该域在本网 000 不可达，故恢复官方页）
 qid:
 current_work:
   - **SAMFORSK（Research on Sámi Research and on Representation of Sámi Cultural Heritage）团队核心成员**——新编文集《Memory Institutions…》出版（对萨米遗产的**研究本身**再研究）（✔ uit.no/research/samforsk + Centre for Arctic Humanities 新闻页, 2026-11-04）

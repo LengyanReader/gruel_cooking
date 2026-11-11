@@ -5,7 +5,7 @@ name: Wendy Hui Kyong Chun
 affiliation: Simon Fraser University (SFU) Canada 150 Chair；Digital Democracies Institute (DDI) 主任  # ✔ 2026-10-29
 tier: 卓越开明
 field: 数字媒体 / 算法批判 / 网络人文
-homepage: https://www.sfu.ca/communication/team/faculty/wendy-chun.html
+homepage: https://www.sfu.ca/communication/people/faculty/wendy-chun.html  # ✔ 实测 200（2026-11-05 链接审计, 原 team/ 路径 404 已修）
 ethos: "反对算法的「同质性」隔离逻辑；主张通过「修复性」媒介实践打破预测模型的闭环（✔ Discriminating Data, 2021; CDH Lecture, 2026）"
 vision: "揭示「次真实」(Hypo-real) 模型背后的贫乏；利用模型裁切后的现实缝隙，重新夺回对行星未来的想象力与行动力（✔ CDH Annual Lecture, 2026）"
 theory_practice: 

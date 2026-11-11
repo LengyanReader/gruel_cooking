@@ -3,9 +3,9 @@
 ```yaml
 name: Richard J. T. Klein
 tier: 卓越开明
-affiliation: 斯德哥尔摩环境研究所（SEI）· 高级研究员 · 国际气候风险与适应研究团队负责人（现以独立气候适应政策身份活动）  # ✔ sei.org 新闻页 2023-10-04「SEI Senior Research Fellow, Leader of SEI's international climate risk and adaptation research team」+ climatestrategies.org + LinkedIn「independent climate adaptation policy」, 2026-11-04（团队现职/独立身份过渡细目 ◇）
+affiliation: 独立气候适应政策专家（RICKLE · research and policy advice）；Adaptation Without Borders 支持专家；**前**斯德哥尔摩环境研究所（SEI）高级研究员 · 国际气候风险与适应研究团队负责人；IPCC 六份报告主笔/主协调撰稿人  # ✔ 检索实核（SEI person 页已 404=已离任）+ climatestrategies.org + LinkedIn, 2026-11-05（RICKLE 无独立官网 ◇）
 field: 气候适应科学与政策 × 以模拟/严肃游戏做政策沟通 × IPCC 评估 × 适应主流化
-homepage: https://www.sei.org/people/richard-klein（个人页直补 ◇）
+homepage: https://orcid.org/0000-0002-9458-0944  # ✔ ORCID 公开记录（机构列「RICKLE | research and policy advice」，与 affiliation 一致；2026-11-11 实核）；AWB 官网 adaptationwithoutborders.org 对无头抓取 403（浏览器可开 ◐），故主页取 ORCID
 qid:
 current_work:
   - **COP28 前对 Climate Home 公开发声**（2023-10-04）——「无可否认，我们必须现在就行动」；SEI 气候风险与适应团队负责人身份在列（✔ sei.org 新闻页 2023-10-04, 2026-11-04）

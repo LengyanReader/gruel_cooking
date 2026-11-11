@@ -572,7 +572,10 @@ function renderDossier(){
       : ((st.mark||'') + (st.asof?' '+st.asof:'')));
   const marks = [...(s.axes||[]).map(k=>axisLabel(k)), s.mode||'', ...stamps].filter(Boolean)
       .map(x=>`<span class="mark-tag">${esc(x)}</span>`).join('');
-  const home = s.homepage ? `<a class="homepage" href="${esc(s.homepage)}" target="_blank" rel="noopener">${isE?'homepage ↗':'主页 ↗'}</a>` : '';
+  const homeUrl = (typeof s.homepage === 'string' && /^https?:\/\//i.test(s.homepage.trim())) ? s.homepage.trim() : '';
+  const home = homeUrl
+      ? `<a class="homepage" href="${esc(homeUrl)}" target="_blank" rel="noopener">${isE?'homepage ↗':'主页 ↗'}</a>`
+      : (s.homepage ? `<span class="homepage" title="${esc(s.homepage)}">${isE?'no stable homepage ◇':'暂无稳定主页 ◇'}</span>` : '');
   const virt = [[s.v_insight,isE?'insight':'悟性'],[s.v_character,isE?'character':'人格'],
       [s.v_temperament,isE?'temperament':'性格'],[s.v_compassion,isE?'compassion':'慈悲']].filter(([v])=>v);
   const virtHtml = (virt.length||s.v_overall)

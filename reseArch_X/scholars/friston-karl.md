@@ -5,7 +5,7 @@ name: Karl J. Friston
 tier: 卓越开明
 affiliation: University College London · Queen Square Institute of Neurology（Wellcome Trust 首席研究员；Scientific Director, FIL）  # ✔ profiles.ucl.ac.uk/2747-karl-friston + fil.ion.ucl.ac.uk/~karl/, 2026-11-04
 field: 自由能原理（FEP）/ 主动推理 × 神经成像 × 理论神经科学与 AI
-homepage: https://fil.ion.ucl.ac.uk/~karl/
+homepage: https://profiles.ucl.ac.uk/2747-karl-friston  # UCL profiles 官方页（2026-11-05 审计：旧 fil.ion.ucl.ac.uk/~karl/ 已失效 000 → 替换；UCL profiles 有浏览器门禁, 对爬虫返回「Browser Not Supported」, 真浏览器可开 ◐）
 qid:                 # 诚实留空
 current_work:
   - 自由能原理/主动推理的持续形式化与扩展；《**Active Inference: The Free Energy Principle in Mind, Brain, and Behavior**》（Parr, Pezzulo & Friston, MIT Press）**open access** 全书免费（✔ direct.mit.edu/books/oa-monograph/5299, 2026-11-04）
