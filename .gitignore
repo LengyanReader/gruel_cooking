@@ -42,3 +42,7 @@ docs/culture_review/_*
 
 # 一次性渲染核验截图（fig/页面 PNG 自检产物，源文件均可再生）
 *_check.png
+
+# 探针/审计的一次性工作目录（跨 session 共用的抓取产物与临时脚本；可复跑的工具在
+# scripts/scratch/reseArch_X/，临时产物不入库）
+/.arts/

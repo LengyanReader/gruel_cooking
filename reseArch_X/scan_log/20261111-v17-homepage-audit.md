@@ -57,7 +57,8 @@
 
 ## 七、方法学备注
 
-- **全量复扫**（58 条 homepage 逐条 GET，2026-11-11）：54 条 200；1 条 403 反爬（`cbdb.hsites.harvard.edu`，浏览器可开）；4 条本网 000——`digitalhistorian.org`（本日早前实测 200，复测抖动）、`rubenlaukkonen.com`、`stefangossling.de`、`terrytao.wordpress.com`。四条均非本轮改动项，未据此改档，留待下轮复测。
+- **全量复扫**（58 条 homepage 逐条 GET，2026-11-11）：首轮 54 条 200；1 条 403 反爬（`cbdb.hsites.harvard.edu`，浏览器可开）；4 条本网 000。第二轮间隔 2 秒复扫时 `rubenlaukkonen.com` 与 `terrytao.wordpress.com` 恢复 200，Davidson 新落的校方页反在批量请求后掉成 000、单测两次均 200 —— **批量 000 是本机限流，不是死链**。稳定未达者：`stefangossling.de`、`digitalhistorian.org`（后者本日早前实测 200，判为站点侧间歇）。四条均非本轮改动项，未据此改档。
+- 复跑入口：`python scripts/scratch/reseArch_X/audit_homepages.py --probe`（含「URL 后紧粘括注」的退出码检查）。
 
 - 环境限制：`websearch` 402、DuckDuckGo HTML 返回空、Bing 结果被区域噪声污染（返回淘宝/百科无关条目），故本轮**未用搜索引擎**，全部走机构站内检索 / sitemap / 名录 / ORCID 公共 API 直证。
 - 渲染侧同步：`template.html` 的 homepage 守卫（仅 `^https?://` 出 `<a>`）使「无个人主页 ◇」与机构页说明不再生成坏链，悬停可见原文。
