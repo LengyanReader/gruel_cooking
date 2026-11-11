@@ -8,6 +8,7 @@
 {"id": "author:cobb", "type": "Author", "label": "William S. Cobb", "props": {"name_zh": "威廉·S·科布", "school_zh": "围棋哲学 · 佛教进路", "domain_zh": "围棋哲学 · 佛教与觉悟"}}
 {"id": "author:dai-jitao", "type": "Author", "label": "Dai Jitao", "props": {"name_zh": "戴季陶", "school_zh": "国民党理论 · 日本论", "domain_zh": "政治思想 · 日本论 · 国民党理论"}}
 {"id": "author:de-groot", "type": "Author", "label": "Adriaan de Groot", "props": {"name_zh": "阿德里安·德·格鲁特", "school_zh": "棋类心理学 · 专家直觉", "domain_zh": "棋类心理学 · 思维"}}
+{"id": "author:escobar", "type": "Author", "label": "Arturo Escobar", "props": {"name_zh": "阿图罗·埃斯科瓦尔", "school_zh": "后发展 · 多元宇宙政治", "domain_zh": "后发展 · 政治本体论 · 设计人类学"}}
 {"id": "author:evans", "type": "Author", "label": "Evans", "props": {"name_zh": "埃文斯", "school_zh": "社会史 × 政治史 × 文化史综合", "domain_zh": "近代欧洲史 · 德国史 · 第三帝国 · 大屠杀史学"}}
 {"id": "author:fairbairn-hall", "type": "Author", "label": "John Fairbairn & T. Mark Hall", "props": {"name_zh": "约翰·费尔贝恩、T. 马克·霍尔", "school_zh": "围棋史与文献学", "domain_zh": "围棋史 · 棋谱数据库"}}
 {"id": "author:gobet", "type": "Author", "label": "Fernand Gobet", "props": {"name_zh": "费尔南·戈贝", "school_zh": "组块理论 · 专家认知", "domain_zh": "棋类专长 · 认知心理学 · CHREST"}}
@@ -48,6 +49,7 @@
 {"id": "author:steven-pinker", "type": "Author", "label": "Steven Pinker", "props": {"name_zh": "史蒂芬·平克", "school_zh": "认知写作 · 风格科学", "domain_zh": "认知科学 · 写作"}}
 {"id": "author:strunk-white", "type": "Author", "label": "William Strunk Jr. & E. B. White", "props": {"name_zh": "威廉·斯特伦克、E. B. 怀特", "school_zh": "写作正典 · 风格指南", "domain_zh": "英语写作 · 风格指南"}}
 {"id": "author:tanizaki", "type": "Author", "label": "Tanizaki Jun'ichirō", "props": {"name_zh": "谷崎润一郎", "school_zh": "唯美派 · 恶魔主义", "domain_zh": "小说 · 美学随笔"}}
+{"id": "author:tsing", "type": "Author", "label": "Anna Lowenhaupt Tsing", "props": {"name_zh": "安娜·青", "school_zh": "多物种民族志 · 摩擦理论", "domain_zh": "多物种民族志 · 人类世 · 全球连接"}}
 {"id": "author:underwood", "type": "Author", "label": "Ted Underwood", "props": {"name_zh": "泰德·安德伍德", "school_zh": "远读 · 计算批评", "domain_zh": "远读 · 文学史 · 机器学习"}}
 {"id": "author:vargas", "type": "Author", "label": "Vargas", "props": {"name_zh": "瓦尔加", "school_zh": "法式 néo-polar · 直觉派侦探文学", "domain_zh": "罪案小说 · 考古动物学"}}
 {"id": "author:wickham", "type": "Author", "label": "Wickham", "props": {"name_zh": "威克姆", "school_zh": "经济考古 × 制度史 × 大空间比较", "domain_zh": "中世纪早期 · 意大利中世纪史 · 地中海比较经济史"}}
@@ -63,6 +65,14 @@
 {"id": "book:appadurai-modernity-large", "type": "Book", "label": "《大现代性：全球化时代的文化诸维度》", "props": {"kind": "scholarship", "author": "Arjun Appadurai", "year": "1996"}}
 {"id": "book:bogost-persuasive-games", "type": "Book", "label": "《说服性游戏：电子游戏的表现力》", "props": {"kind": "scholarship", "author": "Ian Bogost", "year": "2007"}}
 {"id": "book:degroot-thought-choice", "type": "Book", "label": "《国际象棋中的思维与选择》", "props": {"kind": "scholarship", "author": "Adriaan de Groot", "year": "1965"}}
+{"id": "book:escobar-autonomia-diseno", "type": "Book", "label": "《自主与设计：公共性的实现》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2020"}}
+{"id": "book:escobar-designs-pluriverse", "type": "Book", "label": "《多元宇宙的设计：根本相互依存、自主与世界生成》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2018"}}
+{"id": "book:escobar-encountering-development", "type": "Book", "label": "《遭遇发展：第三世界的建构与解构》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "1995"}}
+{"id": "book:escobar-minga", "type": "Book", "label": "《为后发展的一场明加：地方、环境与社会运动》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2021"}}
+{"id": "book:escobar-pluriversal-politics", "type": "Book", "label": "《多元宇宙政治：真实与可能》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2020"}}
+{"id": "book:escobar-relationality", "type": "Book", "label": "《关联性：超越人类的生命涌现政治》", "props": {"kind": "scholarship", "author": "Arturo Escobar, Michal Osterweil & Kriti Sharma", "year": "2022"}}
+{"id": "book:escobar-sentipensar", "type": "Book", "label": "《与大地共感思：关于发展、领地与差异的新读法》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2016"}}
+{"id": "book:escobar-territories-difference", "type": "Book", "label": "《差异的领地：地方、运动、生活、网络》", "props": {"kind": "scholarship", "author": "Arturo Escobar", "year": "2008"}}
 {"id": "book:go-cobb-book-of-go", "type": "Book", "label": "《围棋之书》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2000"}}
 {"id": "book:go-cobb-buddhist", "type": "Book", "label": "《佛教哲学与围棋》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2021"}}
 {"id": "book:go-cobb-reflections", "type": "Book", "label": "《围棋之思：空枰 1994–2004》", "props": {"kind": "essay", "author": "William S. Cobb", "year": "2005"}}
@@ -127,6 +137,13 @@
 {"id": "book:pe-volume9-global-age", "type": "Book", "label": "《全球时代：欧洲 1950–2017》", "props": {"kind": "history", "author": "Ian Kershaw", "year": "2019"}}
 {"id": "book:rusch-making-deep-games", "type": "Book", "label": "《制作深度游戏：有意义的游戏设计》", "props": {"kind": "scholarship", "author": "Doris C. Rusch", "year": "2017"}}
 {"id": "book:salen-zimmerman-rules-of-play", "type": "Book", "label": "《游戏规则：游戏设计基础》", "props": {"kind": "scholarship", "author": "Katie Salen & Eric Zimmerman", "year": "2003"}}
+{"id": "book:tsing-arts-living", "type": "Book", "label": "《在受损星球上生活的艺术：人类世的幽灵与怪物》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing, Nils Bubandt, Elaine Gan & Heather Anne Swanson (eds.)", "year": "2016"}}
+{"id": "book:tsing-diamond-queen", "type": "Book", "label": "《钻石女王的领地：偏远之地的边缘性》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing", "year": "1993"}}
+{"id": "book:tsing-feral-atlas", "type": "Book", "label": "《野性图谱：超越人类的人类世》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing, Jennifer Deger, Alder Keleman Saxena & Feifei Zhou (eds.)", "year": "2022"}}
+{"id": "book:tsing-field-guide", "type": "Book", "label": "《斑驳人类世野外指南：新自然》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing, Jennifer Deger, Alder Keleman Saxena & Feifei Zhou", "year": "2024"}}
+{"id": "book:tsing-friction", "type": "Book", "label": "《摩擦：全球连接的人类学志》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing", "year": "2004"}}
+{"id": "book:tsing-mushroom", "type": "Book", "label": "《世界末日的菌菇：资本主义废墟上的生命可能性》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing", "year": "2015"}}
+{"id": "book:tsing-unruly-edges", "type": "Book", "label": "《不羁的边缘：菌菇作为伴生物种》", "props": {"kind": "scholarship", "author": "Anna Lowenhaupt Tsing", "year": "2012"}}
 {"id": "book:underwood-distant-horizons", "type": "Book", "label": "《远方的地平线：文学量的时代》", "props": {"kind": "scholarship", "author": "Ted Underwood", "year": "2019"}}
 {"id": "book:wcs-elements-of-style", "type": "Book", "label": "《风格的要素》", "props": {"kind": "nonfiction", "author": "William Strunk Jr. & E. B. White", "year": "1918/2011"}}
 {"id": "book:wcs-on-being-a-scientist", "type": "Book", "label": "《做一个科学家》", "props": {"kind": "nonfiction", "author": "National Academies (NAS / NAE / IOM)", "year": "2009"}}
@@ -242,12 +259,14 @@
 {"id": "concept:medieval-recluse-literature-three-great-essays", "type": "Concept", "label": "medieval recluse literature · three great essays", "props": {"school_zh": "中世隐逸文学 · 三大随笔", "school_en": "medieval recluse literature · three great essays"}}
 {"id": "concept:metoo-archive-testimonial", "type": "Concept", "label": "#MeToo archive / testimonial", "props": {"school_zh": "#MeToo 档案 / 见证文学", "school_en": "#MeToo archive / testimonial"}}
 {"id": "concept:modern-japanese-literature-anti-naturalism", "type": "Concept", "label": "modern Japanese literature · anti-naturalism", "props": {"school_zh": "近代日本文学 · 反自然主义", "school_en": "modern Japanese literature · anti-naturalism"}}
+{"id": "concept:multispecies-ethnography-friction-theory", "type": "Concept", "label": "multispecies ethnography · friction theory", "props": {"school_zh": "多物种民族志 · 摩擦理论", "school_en": "multispecies ethnography · friction theory"}}
 {"id": "concept:neo-sensationalism-japanese-beauty-discourse", "type": "Concept", "label": "Neo-Sensationalism · Japanese beauty discourse", "props": {"school_zh": "新感觉派 · 日本美论", "school_en": "Neo-Sensationalism · Japanese beauty discourse"}}
 {"id": "concept:no-kanze-school", "type": "Concept", "label": "no · Kanze school", "props": {"school_zh": "能乐 · 观世流", "school_en": "no · Kanze school"}}
 {"id": "concept:philosophy-of-go-buddhist-approach", "type": "Concept", "label": "philosophy of Go · Buddhist approach", "props": {"school_zh": "围棋哲学 · 佛教进路", "school_en": "philosophy of Go · Buddhist approach"}}
 {"id": "concept:poetry-revolution-statecraft", "type": "Concept", "label": "poetry revolution · statecraft", "props": {"school_zh": "诗界革命 · 经世之学", "school_en": "poetry revolution · statecraft"}}
 {"id": "concept:polar-to-social-history", "type": "Concept", "label": "polar to social history", "props": {"school_zh": "法国 polar 文学派 → 社会史小说", "school_en": "polar to social history"}}
 {"id": "concept:political-economy-food-anthropology", "type": "Concept", "label": "political economy · food anthropology", "props": {"school_zh": "政治经济学 · 食物人类学", "school_en": "political economy · food anthropology"}}
+{"id": "concept:post-development-pluriversal-politics", "type": "Concept", "label": "post-development · pluriversal politics", "props": {"school_zh": "后发展 · 多元宇宙政治", "school_en": "post-development · pluriversal politics"}}
 {"id": "concept:post-war-cultural-theory-public-criticism", "type": "Concept", "label": "post-war cultural theory · public criticism", "props": {"school_zh": "战后日本文化论 · 公共批评", "school_en": "post-war cultural theory · public criticism"}}
 {"id": "concept:procedural-rhetoric-object-oriented", "type": "Concept", "label": "procedural rhetoric · object-oriented", "props": {"school_zh": "程序修辞 · 对象导向", "school_en": "procedural rhetoric · object-oriented"}}
 {"id": "concept:research-ethics-responsibility", "type": "Concept", "label": "research ethics · responsibility", "props": {"school_zh": "科研伦理 · 责任", "school_en": "research ethics · responsibility"}}
@@ -262,11 +281,13 @@
 {"id": "person:de-groot-herbert-simon", "type": "Person", "label": "de Groot / Herbert Simon", "props": {"raw": "de Groot / Herbert Simon"}}
 {"id": "person:georges-simenon", "type": "Person", "label": "Georges Simenon", "props": {"raw": "Georges Simenon"}}
 {"id": "person:gogod-棋谱数据库", "type": "Person", "label": "GoGoD / 棋谱数据库", "props": {"raw": "GoGoD / 棋谱数据库"}}
+{"id": "person:haraway-多物种研究-女性主义-sts", "type": "Person", "label": "Haraway / 多物种研究 / 女性主义 STS", "props": {"raw": "Haraway / 多物种研究 / 女性主义 STS"}}
 {"id": "person:jo-vargas", "type": "Person", "label": "Jo Vargas", "props": {"raw": "Jo Vargas（孪生姐）"}}
 {"id": "person:manon-garcia", "type": "Person", "label": "Manon Garcia", "props": {"raw": "Manon Garcia（哲学家）"}}
 {"id": "person:marceline-loridan-ivens", "type": "Person", "label": "Marceline Loridan-Ivens", "props": {"raw": "Marceline Loridan-Ivens"}}
 {"id": "person:mateusz-halawa", "type": "Person", "label": "Mateusz Halawa", "props": {"raw": "Mateusz Halawa"}}
 {"id": "person:metoo", "type": "Person", "label": "#MeToo", "props": {"raw": "#MeToo（2017）"}}
+{"id": "person:nils-bubandt-elaine-gan-heather-anne-swanson", "type": "Person", "label": "Nils Bubandt, Elaine Gan & Heather Anne Swanson", "props": {"raw": "Nils Bubandt, Elaine Gan & Heather Anne Swanson"}}
 {"id": "person:patrick-somerville", "type": "Person", "label": "Patrick Somerville", "props": {"raw": "Patrick Somerville（剧集主创）"}}
 {"id": "person:primo-levi-见证文学", "type": "Person", "label": "Primo Levi / 见证文学", "props": {"raw": "Primo Levi / 见证文学"}}
 {"id": "person:siân-reynolds", "type": "Person", "label": "Siân Reynolds", "props": {"raw": "Siân Reynolds（英译者）"}}
@@ -277,6 +298,7 @@
 {"id": "person:中国棋论传统", "type": "Person", "label": "中国棋论传统", "props": {"raw": "中国棋论传统"}}
 {"id": "person:佛教哲学", "type": "Person", "label": "佛教哲学", "props": {"raw": "佛教哲学"}}
 {"id": "person:儒家-道家棋论", "type": "Person", "label": "儒家 / 道家棋论", "props": {"raw": "儒家 / 道家棋论"}}
+{"id": "person:后发展-拉美去殖民-政治本体论", "type": "Person", "label": "后发展 / 拉美去殖民 / 政治本体论", "props": {"raw": "后发展 / 拉美去殖民 / 政治本体论"}}
 {"id": "person:存在主义-仪式-神话", "type": "Person", "label": "存在主义 / 仪式 / 神话", "props": {"raw": "存在主义 / 仪式 / 神话"}}
 {"id": "person:東畑開人", "type": "Person", "label": "東畑開人", "props": {"raw": "東畑開人（临床心理師）"}}
 {"id": "person:柏木哲夫-日本ホスピス緩和ケア", "type": "Person", "label": "柏木哲夫 / 日本ホスピス緩和ケア", "props": {"raw": "柏木哲夫 / 日本ホスピス緩和ケア"}}

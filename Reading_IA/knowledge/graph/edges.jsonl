@@ -7,6 +7,14 @@
 {"from": "book:appadurai-modernity-large", "to": "author:appadurai", "type": "authored_by", "props": {"book": "appadurai-modernity-large"}}
 {"from": "book:bogost-persuasive-games", "to": "author:bogost", "type": "authored_by", "props": {"book": "bogost-persuasive-games"}}
 {"from": "book:degroot-thought-choice", "to": "author:de-groot", "type": "authored_by", "props": {"book": "degroot-thought-choice"}}
+{"from": "book:escobar-autonomia-diseno", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-autonomia-diseno"}}
+{"from": "book:escobar-designs-pluriverse", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-designs-pluriverse"}}
+{"from": "book:escobar-encountering-development", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-encountering-development"}}
+{"from": "book:escobar-minga", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-minga"}}
+{"from": "book:escobar-pluriversal-politics", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-pluriversal-politics"}}
+{"from": "book:escobar-relationality", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-relationality"}}
+{"from": "book:escobar-sentipensar", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-sentipensar"}}
+{"from": "book:escobar-territories-difference", "to": "author:escobar", "type": "authored_by", "props": {"book": "escobar-territories-difference"}}
 {"from": "book:go-cobb-book-of-go", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-book-of-go"}}
 {"from": "book:go-cobb-buddhist", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-buddhist"}}
 {"from": "book:go-cobb-reflections", "to": "author:cobb", "type": "authored_by", "props": {"book": "go-cobb-reflections"}}
@@ -71,6 +79,13 @@
 {"from": "book:pe-volume9-global-age", "to": "author:kershaw", "type": "authored_by", "props": {"book": "pe-volume9-global-age"}}
 {"from": "book:rusch-making-deep-games", "to": "author:rusch", "type": "authored_by", "props": {"book": "rusch-making-deep-games"}}
 {"from": "book:salen-zimmerman-rules-of-play", "to": "author:salen-zimmerman", "type": "authored_by", "props": {"book": "salen-zimmerman-rules-of-play"}}
+{"from": "book:tsing-arts-living", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-arts-living"}}
+{"from": "book:tsing-diamond-queen", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-diamond-queen"}}
+{"from": "book:tsing-feral-atlas", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-feral-atlas"}}
+{"from": "book:tsing-field-guide", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-field-guide"}}
+{"from": "book:tsing-friction", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-friction"}}
+{"from": "book:tsing-mushroom", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-mushroom"}}
+{"from": "book:tsing-unruly-edges", "to": "author:tsing", "type": "authored_by", "props": {"book": "tsing-unruly-edges"}}
 {"from": "book:underwood-distant-horizons", "to": "author:underwood", "type": "authored_by", "props": {"book": "underwood-distant-horizons"}}
 {"from": "book:wcs-elements-of-style", "to": "author:strunk-white", "type": "authored_by", "props": {"book": "wcs-elements-of-style"}}
 {"from": "book:wcs-on-being-a-scientist", "to": "author:national-academies", "type": "authored_by", "props": {"book": "wcs-on-being-a-scientist"}}
@@ -85,6 +100,7 @@
 {"from": "author:parasecoli", "to": "person:mateusz-halawa", "type": "cowrite", "props": {"conf": "✓", "book": "Global Brooklyn", "year": null}}
 {"from": "author:pelicot", "to": "author:perrignon", "type": "cowrite", "props": {"conf": "verified", "book": "《Et la joie de vivre》", "year": "2026-02-17"}}
 {"from": "author:perrignon", "to": "person:marceline-loridan-ivens", "type": "cowrite", "props": {"conf": "verified", "book": "《Et tu n'es pas revenu》《L'Amour d'après》", "year": "2015/2018"}}
+{"from": "author:tsing", "to": "person:nils-bubandt-elaine-gan-heather-anne-swanson", "type": "cowrite", "props": {"conf": "✓", "book": "Arts of Living on a Damaged Planet", "year": null}}
 {"from": "char:2026-pelicot-joie-de-vivre:P1", "to": "char:2026-pelicot-joie-de-vivre:P5", "type": "cowrite", "props": {"book": "2026-pelicot-joie-de-vivre", "note": "合著"}}
 {"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J2", "type": "dialogue", "props": {"book": "2026-manda-kanoke-made", "note": "对谈·步行是活着"}}
 {"from": "char:2026-manda-kanoke-made:J1", "to": "char:2026-manda-kanoke-made:J3", "type": "evidence", "props": {"book": "2026-manda-kanoke-made", "note": "实证坐标"}}
@@ -107,6 +123,7 @@
 {"from": "author:rusch", "to": "author:salen-zimmerman", "type": "in_circle", "props": {"conf": "◐", "why_zh": "游戏设计的公共语法", "why_en": "shared design grammar"}}
 {"from": "author:shotwell", "to": "author:fairbairn-hall", "type": "in_circle", "props": {"conf": "◐", "why_zh": "同写围棋史与文化", "why_en": "both write Go history and culture"}}
 {"from": "author:soseki", "to": "author:kafu", "type": "in_circle", "props": {"conf": "primary", "why_zh": "同代反近代：一以病榻自剖，一以江户凭吊", "why_en": "contemporary anti-moderns: sickbed and Edo elegy"}}
+{"from": "author:tsing", "to": "author:escobar", "type": "in_circle", "props": {"conf": "◐", "why_zh": "同处人类世/多元宇宙对话", "why_en": "shared Anthropocene/pluriverse conversation"}}
 {"from": "author:vargas", "to": "person:jo-vargas", "type": "in_circle", "props": {"conf": "verified", "why_zh": "笔名来源；画名借自《赤足天使》", "why_en": "pen-name source; painter"}}
 {"from": "author:vargas", "to": "person:siân-reynolds", "type": "in_circle", "props": {"conf": "verified", "why_zh": "长期译者，Dagger 随译共认", "why_en": "long-time translator"}}
 {"from": "author:vargas", "to": "person:stéphane-audoin-rouzeau", "type": "in_circle", "props": {"conf": "verified", "why_zh": "Three Evangelists 史家角色原型", "why_en": "historian character source"}}
@@ -123,6 +140,7 @@
 {"from": "person:de-groot-herbert-simon", "to": "author:gobet", "type": "influence", "props": {"conf": "✓", "why_zh": "组块与专家认知", "why_en": "chunks and expert cognition"}}
 {"from": "person:georges-simenon", "to": "author:vargas", "type": "influence", "props": {"conf": "medium", "why_zh": "心理侦探传统 + 罪案读成社会病理", "why_en": "psychological detective line"}}
 {"from": "person:gogod-棋谱数据库", "to": "author:fairbairn-hall", "type": "influence", "props": {"conf": "✓", "why_zh": "史料与棋谱基础", "why_en": "the documentary and game-record base"}}
+{"from": "person:haraway-多物种研究-女性主义-sts", "to": "author:tsing", "type": "influence", "props": {"conf": "◐", "why_zh": "伴生物种与多物种民族志", "why_en": "companion species and multispecies ethnography"}}
 {"from": "person:metoo", "to": "author:pelicot", "type": "influence", "props": {"conf": "verified", "why_zh": "Mazan 公开庭审 → 回忆录：运动的三级火箭", "why_en": "public trial → memoir: the movement's third stage"}}
 {"from": "person:primo-levi-见证文学", "to": "author:perrignon", "type": "influence", "props": {"conf": "medium", "why_zh": "口述史 × 文学转写（Loridan-Ivens 线）", "why_en": "oral history × transcription"}}
 {"from": "person:世界体系-达尔文演化", "to": "author:moretti", "type": "influence", "props": {"conf": "✓", "why_zh": "把文学放进世界体系与演化", "why_en": "places literature in world-system and evolution"}}
@@ -130,6 +148,7 @@
 {"from": "person:中国棋论传统", "to": "author:zhang-ni", "type": "influence", "props": {"conf": "◐", "why_zh": "《棋经十三篇》立象比德", "why_en": "the Thirteen Chapters' imaging of virtue"}}
 {"from": "person:佛教哲学", "to": "author:cobb", "type": "influence", "props": {"conf": "◐", "why_zh": "以佛教观点读围棋", "why_en": "reading Go through Buddhist views"}}
 {"from": "person:儒家-道家棋论", "to": "author:he-yunbo", "type": "influence", "props": {"conf": "✓", "why_zh": "立象比德 · 技进乎道", "why_en": "imaging virtue · skill into the Way"}}
+{"from": "person:后发展-拉美去殖民-政治本体论", "to": "author:escobar", "type": "influence", "props": {"conf": "◐", "why_zh": "发展批判与多元宇宙", "why_en": "critique of development and the pluriverse"}}
 {"from": "person:存在主义-仪式-神话", "to": "author:rusch", "type": "influence", "props": {"conf": "◐", "why_zh": "把意义设计写成存在经验", "why_en": "designs meaning as existential experience"}}
 {"from": "person:柏木哲夫-日本ホスピス緩和ケア", "to": "author:manda", "type": "influence", "props": {"conf": "medium", "why_zh": "「善终」谱系 → 在宅路线分岔", "why_en": "good-death lineage → home branch"}}
 {"from": "person:食物研究-全球化理论", "to": "author:parasecoli", "type": "influence", "props": {"conf": "✓", "why_zh": "食物作为归属与政治", "why_en": "food as belonging and politics"}}
@@ -158,6 +177,7 @@
 {"from": "author:cobb", "to": "concept:philosophy-of-go-buddhist-approach", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:dai-jitao", "to": "concept:kuomintang-theory-japan-discourse", "type": "school_of", "props": {"conf": "verified"}}
 {"from": "author:de-groot", "to": "concept:chess-psychology-expert-intuition", "type": "school_of", "props": {"conf": "✓"}}
+{"from": "author:escobar", "to": "concept:post-development-pluriversal-politics", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:fairbairn-hall", "to": "concept:go-history-documentary-scholarship", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:gobet", "to": "concept:chunking-expert-cognition", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:graff-birkenstein", "to": "concept:academic-writing-conversation-model", "type": "school_of", "props": {"conf": "✓"}}
@@ -191,6 +211,7 @@
 {"from": "author:steven-pinker", "to": "concept:cognitive-writing-science-of-style", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:strunk-white", "to": "concept:writing-canon-style-guide", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:tanizaki", "to": "concept:aestheticism-diabolism", "type": "school_of", "props": {"conf": "verified"}}
+{"from": "author:tsing", "to": "concept:multispecies-ethnography-friction-theory", "type": "school_of", "props": {"conf": "✓"}}
 {"from": "author:underwood", "to": "concept:distant-reading-computational-criticism", "type": "school_of", "props": {"conf": "◐"}}
 {"from": "author:vargas", "to": "concept:french-neo-polar", "type": "school_of", "props": {"conf": "strong"}}
 {"from": "author:wu-qingyuan", "to": "concept:equilibrium-harmony", "type": "school_of", "props": {"conf": "◐"}}

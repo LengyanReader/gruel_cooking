@@ -1,0 +1,430 @@
+{
+  "underwood-distant-horizons": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "尺度的诱惑与代价",
+        "title_en": "The lure and cost of scale",
+        "zh": "Underwood 先检讨上一代远读：把「更多文本」当成「更好证据」，其实只是换了一种细读，并未真正提出关于文学变化的假设。",
+        "en": "Underwood first audits the previous generation of distant reading: treating 'more texts' as 'better evidence' merely changes the scale of close reading without posing real hypotheses about literary change.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "规模不是论证，规模只是条件。",
+          "flow": "从远读的承诺，到其证据观的漏洞，再到重新提问的必要。",
+          "names": "Moretti、Jockers、文学史分期。",
+          "sources": "导论与方法章。",
+          "link": "为全书的「可检验的文学史」定调。",
+          "main_en": "Scale is not an argument; scale is only a condition.",
+          "flow_en": "From the promise of distant reading to the weakness of its evidentiary stance to the need to re-pose questions.",
+          "names_en": "Moretti, Jockers, literary-historical periodisation.",
+          "sources_en": "Introduction and methodological chapters.",
+          "link_en": "Sets the key for a testable literary history."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "把「变化」变成可测量的问题",
+        "title_en": "Making change measurable",
+        "zh": "全书的核心操作是把「文学如何变化」拆成可测量的变量：词汇、句法、主题与情感的时间序列，再用模型检验哪种变化是真实的。",
+        "en": "The core operation is to break 'how literature changes' into measurable variables — time series of vocabulary, syntax, theme and sentiment — and then test which changes are real.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "先定义变化，再谈证据。",
+          "flow": "从概念操作化，到语料构建，再到模型比较。",
+          "names": "词频、句法、主题模型、情感分析。",
+          "sources": "各实证章节。",
+          "link": "把方法论落成具体研究设计。",
+          "main_en": "Define change first, then talk about evidence.",
+          "flow_en": "From operationalising concepts to corpus construction to model comparison.",
+          "names_en": "Word frequency, syntax, topic models, sentiment analysis.",
+          "sources_en": "The empirical chapters.",
+          "link_en": "Turns methodology into concrete research design."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "证据、解释与文学史的未来",
+        "title_en": "Evidence, interpretation and the future of literary history",
+        "zh": "结论主张量化不是解释的替代，而是解释的约束条件：它迫使文学史家说清自己的分期与因果假设，也暴露「代表性」与「可解释性」的限度。",
+        "en": "The conclusion argues quantification constrains interpretation rather than replacing it: it forces literary historians to state their periodisation and causal assumptions, and exposes the limits of representativeness and interpretability.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "数据不能让解释消失，只能让解释更负责。",
+          "flow": "从模型结果，到解释边界，再到学科主张。",
+          "names": "文学史家、模型、语料偏差。",
+          "sources": "结论章。",
+          "link": "回应远读之争，也回应数字人文的自我批判。",
+          "main_en": "Data does not make interpretation vanish; it makes interpretation answerable.",
+          "flow_en": "From model results to interpretive limits to a disciplinary claim.",
+          "names_en": "Literary historians, models, corpus bias.",
+          "sources_en": "Conclusion.",
+          "link_en": "Answers the distant-reading debate and the self-critique of digital humanities."
+        }
+      }
+    ]
+  },
+  "rusch-making-deep-games": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "为什么游戏应当处理「深」主题",
+        "title_en": "Why games should handle depth",
+        "zh": "Rusch 从自己的创作经验出发，主张游戏能处理悲伤、成瘾、孤独、疾病与死亡，而机制与奖励只是表达的手段。",
+        "en": "Starting from her own design practice, Rusch argues games can handle grief, addiction, loneliness, illness and death, with mechanics and rewards serving expression rather than replacing it.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "游戏不是逃避现实的玩具，而是处理经验的媒介。",
+          "flow": "从个人经验，到媒介可能性，再到设计责任。",
+          "names": "设计师、玩家、议题。",
+          "sources": "作者的设计实践与案例。",
+          "link": "为全书确立伦理与美学的出发点。",
+          "main_en": "Games are not toys for escaping reality but media for working through experience.",
+          "flow_en": "From personal experience to medium potential to design responsibility.",
+          "names_en": "Designers, players, themes.",
+          "sources_en": "The author's practice and cases.",
+          "link_en": "Establishes the ethical and aesthetic starting point."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "意义如何被机制承载",
+        "title_en": "How mechanics carry meaning",
+        "zh": "核心方法：把抽象主题翻译成玩家的具体动作与选择，让「意义」在操作中生成，而不是靠文本说明附加。",
+        "en": "The core method is to translate abstract themes into concrete player actions and choices, so meaning is generated in operation rather than appended by text.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "机制本身就是论述。",
+          "flow": "从主题，到动作，再到玩家的体会。",
+          "names": "象征、仪式、转化式设计。",
+          "sources": "设计方法与案例。",
+          "link": "把「深度」从题材问题变成设计技术问题。",
+          "main_en": "Mechanics are themselves argument.",
+          "flow_en": "From theme to action to the player's experience.",
+          "names_en": "Symbol, ritual, transformative design.",
+          "sources_en": "Design methods and cases.",
+          "link_en": "Turns depth from a question of subject matter into one of design technique."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "设计者的自我与边界",
+        "title_en": "The designer's self and its limits",
+        "zh": "结尾讨论设计者的位置：处理他人经验时的代言风险、玩家研究的方法，以及「有意义」与「说教」之间那条细线。",
+        "en": "The close discusses the designer's position: the risk of speaking for others' experience, methods of player research, and the thin line between meaningful and preachy.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "深度设计首先是一种聆听的伦理。",
+          "flow": "从作者位置，到玩家研究，再到设计判断。",
+          "names": "设计者、玩家、被再现者。",
+          "sources": "结论与反思章。",
+          "link": "把方法论收束为伦理问题。",
+          "main_en": "Deep design begins as an ethics of listening.",
+          "flow_en": "From authorial position to player research to design judgment.",
+          "names_en": "Designers, players, the represented.",
+          "sources_en": "Conclusion and reflective chapters.",
+          "link_en": "Gathers the method into an ethical question."
+        }
+      }
+    ]
+  },
+  "salen-zimmerman-rules-of-play": {
+    "toc": {
+      "note_zh": "全书分四编（核心概念、规则、玩耍、文化），共 30 余章；此处只列各编主章，章题据通行版式，未逐页核对。",
+      "note_en": "Four units (core concepts, rules, play, culture) in more than thirty chapters; only the principal chapters of each unit are listed, following the common edition and not checked page by page.",
+      "groups": [
+        {
+          "title_zh": "第一编 · 核心概念",
+          "title_en": "Unit 1 · Core concepts",
+          "items": [
+            "Meaningful Play",
+            "Design",
+            "Systems",
+            "Interactivity"
+          ]
+        },
+        {
+          "title_zh": "第二编 · 规则",
+          "title_en": "Unit 2 · Rules",
+          "items": [
+            "Rules",
+            "Games as Emergent Systems",
+            "Games as Systems of Uncertainty",
+            "Games as Cybernetic Systems",
+            "Games as Game Theory Systems",
+            "Games as Systems of Conflict",
+            "Breaking the Rules"
+          ]
+        },
+        {
+          "title_zh": "第三编 · 玩耍",
+          "title_en": "Unit 3 · Play",
+          "items": [
+            "Defining Play",
+            "Games as the Play of Experience",
+            "Games as the Play of Pleasure",
+            "Games as the Play of Meaning",
+            "Games as Narrative Play",
+            "Simulation",
+            "Social Play"
+          ]
+        },
+        {
+          "title_zh": "第四编 · 文化",
+          "title_en": "Unit 4 · Culture",
+          "items": [
+            "Games as Cultural Rhetoric",
+            "Games and Cultural Resistance",
+            "The Culture of Gaming"
+          ]
+        }
+      ]
+    },
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "有意义的玩耍：设计的对象",
+        "title_en": "Meaningful play: the object of design",
+        "zh": "第一编确立全书的对象：设计不是造物，而是安排「有意义的玩耍」——玩家的行动与系统回应之间可辨识的关系。",
+        "en": "Unit one establishes the object: design is not making objects but arranging meaningful play — recognisable relations between player action and system response.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "设计的单位是「行动—回应」，不是画面或故事。",
+          "flow": "从设计定义，到系统思维，再到互动性。",
+          "names": "设计师、玩家、系统。",
+          "sources": "第一编各章。",
+          "link": "为后三编提供概念框架。",
+          "main_en": "The unit of design is action-and-response, not graphics or story.",
+          "flow_en": "From the definition of design to systems thinking to interactivity.",
+          "names_en": "Designers, players, systems.",
+          "sources_en": "Unit one.",
+          "link_en": "Provides the conceptual frame for the remaining units."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "规则：游戏的骨架",
+        "title_en": "Rules: the skeleton of the game",
+        "zh": "第二编把规则当作核心分析对象：规则产生涌现、不确定、反馈与冲突，也解释为什么玩家会「破坏规则」来证明规则的存在。",
+        "en": "Unit two treats rules as the central analytical object: rules generate emergence, uncertainty, feedback and conflict, and explain why players break rules to prove they exist.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "规则不是限制，而是可能性的发生器。",
+          "flow": "从规则定义，到系统类型，再到越界行为。",
+          "names": "规则、系统、玩家。",
+          "sources": "第二编各章。",
+          "link": "把游戏研究从「内容」转向「形式」。",
+          "main_en": "Rules are not constraints but generators of possibility.",
+          "flow_en": "From defining rules to system types to transgression.",
+          "names_en": "Rules, systems, players.",
+          "sources_en": "Unit two.",
+          "link_en": "Turns game studies from content towards form."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "玩耍：经验的一侧",
+        "title_en": "Play: the side of experience",
+        "zh": "第三编转向玩家经验：规则之外还有快感、意义、叙事、模拟与社会互动；游戏的意义在规则与经验的交界处产生。",
+        "en": "Unit three turns to player experience: beyond rules lie pleasure, meaning, narrative, simulation and social interaction; meaning arises at the junction of rules and experience.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "同一套规则，可以被经验成完全不同的东西。",
+          "flow": "从定义玩耍，到经验类型，再到社会场景。",
+          "names": "玩家、快感、叙事、模拟。",
+          "sources": "第三编各章。",
+          "link": "补足纯形式分析的盲点。",
+          "main_en": "The same rules can be experienced as entirely different things.",
+          "flow_en": "From defining play to types of experience to social settings.",
+          "names_en": "Players, pleasure, narrative, simulation.",
+          "sources_en": "Unit three.",
+          "link_en": "Corrects the blind spot of purely formal analysis."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "文化：游戏作为修辞",
+        "title_en": "Culture: games as rhetoric",
+        "zh": "第四编把游戏放回文化：游戏再现、争论并塑造价值，因此设计是一种文化修辞实践，而非中立的工程。",
+        "en": "Unit four returns games to culture: games represent, contest and shape values, so design is a practice of cultural rhetoric rather than neutral engineering.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "每个规则系统都在说某种关于世界的话。",
+          "flow": "从文化修辞，到抵抗，再到游戏文化本身。",
+          "names": "意识形态、玩家社群、产业。",
+          "sources": "第四编各章。",
+          "link": "把设计基础引向批判性的文化分析。",
+          "main_en": "Every rule system says something about the world.",
+          "flow_en": "From cultural rhetoric to resistance to gaming culture itself.",
+          "names_en": "Ideology, player communities, industry.",
+          "sources_en": "Unit four.",
+          "link_en": "Leads design fundamentals towards critical cultural analysis."
+        }
+      }
+    ]
+  },
+  "bogost-persuasive-games": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "程序修辞：一种新的说服形式",
+        "title_en": "Procedural rhetoric: a new form of persuasion",
+        "zh": "Bogost 提出核心概念：游戏通过规则与流程进行论证，这种「程序修辞」不同于文字、图像与电影的说服方式。",
+        "en": "Bogost proposes the core concept: games argue through rules and processes, and this 'procedural rhetoric' differs from persuasion by words, images or film.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "规则能说话，而且说的是文字说不出的话。",
+          "flow": "从修辞传统，到程序性，再到游戏的论证方式。",
+          "names": "修辞学、程序、单元操作。",
+          "sources": "导论与理论章。",
+          "link": "为全书提供一个可操作的分析工具。",
+          "main_en": "Rules can speak, and they say what words cannot.",
+          "flow_en": "From the rhetorical tradition to procedurality to how games argue.",
+          "names_en": "Rhetoric, process, unit operations.",
+          "sources_en": "Introduction and theory chapters.",
+          "link_en": "Supplies an operable analytical tool for the book."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "政治、意识形态与广告",
+        "title_en": "Politics, ideology and advertising",
+        "zh": "以政治模拟、意识形态框架与广告游戏为例，展示程序修辞如何在具体文本中运作：它可以让玩家「操作」一套政治或商业逻辑。",
+        "en": "Cases from political simulation, ideological framing and advertising show procedural rhetoric at work: players are made to operate a political or commercial logic.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "玩一套规则，就是演练一套立场。",
+          "flow": "从政治模拟，到意识形态，再到商业说服。",
+          "names": "政治游戏、广告游戏、严肃游戏。",
+          "sources": "各案例章。",
+          "link": "把理论落成可检验的文本分析。",
+          "main_en": "Playing a rule set is rehearsing a position.",
+          "flow_en": "From political simulation to ideology to commercial persuasion.",
+          "names_en": "Political games, advergames, serious games.",
+          "sources_en": "The case chapters.",
+          "link_en": "Grounds the theory in testable textual analysis."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "限度：程序修辞能说多少",
+        "title_en": "Limits: how much procedural rhetoric can say",
+        "zh": "结论承认程序修辞的边界：它擅长模拟系统，却难以表达反例、讽刺与细节；也因此容易被误读为「机制决定论」。",
+        "en": "The conclusion concedes the limits of procedural rhetoric: it excels at modelling systems but struggles with counter-examples, irony and detail, and is easily misread as mechanical determinism.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "不是所有论点都能被做成规则。",
+          "flow": "从能力边界，到误读风险，再到批评任务。",
+          "names": "批评者、设计师、玩家。",
+          "sources": "结论章。",
+          "link": "为后续游戏研究留下争论空间。",
+          "main_en": "Not every argument can be built into rules.",
+          "flow_en": "From the limits of capacity to the risk of misreading to the critic's task.",
+          "names_en": "Critics, designers, players.",
+          "sources_en": "Conclusion.",
+          "link_en": "Leaves the debate open for later game studies."
+        }
+      }
+    ]
+  },
+  "juul-half-real": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "游戏是什么：规则与虚构的双重性",
+        "title_en": "What a game is: the duality of rules and fiction",
+        "zh": "Juul 从定义入手：电子游戏同时是真实规则的系统与虚构世界的呈现，任何只取一面的定义都会漏掉另一半。",
+        "en": "Juul begins with definition: a video game is at once a system of real rules and a presentation of a fictional world, and any definition taking only one side misses the other.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "游戏的定义必须同时容纳规则与虚构。",
+          "flow": "从既有定义，到双重性，再到分析框架。",
+          "names": "规则、虚构、玩家。",
+          "sources": "导论与定义章。",
+          "link": "为全书的双重分析立框。",
+          "main_en": "A definition of games must hold rules and fiction together.",
+          "flow_en": "From existing definitions to duality to analytical frame.",
+          "names_en": "Rules, fiction, players.",
+          "sources_en": "Introduction and definitional chapters.",
+          "link_en": "Frames the dual analysis of the book."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "真实规则：可操作的系统",
+        "title_en": "Real rules: an operable system",
+        "zh": "一半是真实规则：玩家必须学习、操作并承受其结果；规则的实在性来自它不可协商的后果，而非来自现实指涉。",
+        "en": "One half is real rules: players must learn and operate them and bear their consequences; their reality comes from non-negotiable consequence, not from reference to the world.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "规则的现实性在于后果，而不在于指涉。",
+          "flow": "从规则结构，到学习过程，再到后果。",
+          "names": "规则、目标、玩家技能。",
+          "sources": "规则分析章。",
+          "link": "解释为什么游戏能「真的」让人紧张。",
+          "main_en": "The reality of rules lies in consequence, not reference.",
+          "flow_en": "From rule structure to learning to consequence.",
+          "names_en": "Rules, goals, player skill.",
+          "sources_en": "The chapters on rules.",
+          "link_en": "Explains why games can matter 'for real'."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "虚构世界：可想象的另一半",
+        "title_en": "The fictional world: the imaginable half",
+        "zh": "另一半是虚构世界：它给规则提供可理解的外壳，让玩家知道自己在做什么；虚构与规则互相解释，也互相拖累。",
+        "en": "The other half is the fictional world: it gives rules an intelligible shell so players know what they are doing; fiction and rules explain and hinder each other.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "虚构不是装饰，而是理解规则的接口。",
+          "flow": "从世界构建，到规则转译，再到不一致之处。",
+          "names": "叙事、主题、界面。",
+          "sources": "虚构分析章。",
+          "link": "把叙事学与游戏学接在一起。",
+          "main_en": "Fiction is not decoration but the interface for understanding rules.",
+          "flow_en": "From world-building to rule translation to inconsistency.",
+          "names_en": "Narrative, theme, interface.",
+          "sources_en": "The chapters on fiction.",
+          "link_en": "Joins narratology and ludology."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "半真实：两层之间的玩家",
+        "title_en": "Half-real: the player between two layers",
+        "zh": "结论落在玩家身上：玩家不断在规则层与虚构层之间切换，游戏的意义正在这种来回之中，而不在任何一层单独存在。",
+        "en": "The conclusion lands on the player, who continually switches between the rule layer and the fiction layer; the meaning of games lies in this shuttling, in neither layer alone.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "「半真实」不是折中，而是游戏的存在方式。",
+          "flow": "从切换经验，到意义生成，再到理论收束。",
+          "names": "玩家、时间、注意力。",
+          "sources": "结论章。",
+          "link": "为游戏本体论给出一个稳定表述。",
+          "main_en": "'Half-real' is not a compromise but the mode of existence of games.",
+          "flow_en": "From the experience of switching to the generation of meaning to theoretical closure.",
+          "names_en": "Players, time, attention.",
+          "sources_en": "Conclusion.",
+          "link_en": "Gives a stable formulation of game ontology."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《野性图谱：超越人类的人类世》｜Feral Atlas: The More-Than-Human Anthropocene | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>READING &amp; IA — ANTHROPOCENE &amp; PLURIVERSE</span></p>
+  <h1><span data-zh>《野性图谱：超越人类的人类世》 · Feral Atlas: The More-Than-Human Anthropocene</span><span data-en>Feral Atlas: The More-Than-Human Anthropocene</span></h1>
+  <div class="subtitle" data-both><span data-zh>安娜·青、珍妮弗·德格、阿尔德·凯尔曼·萨克塞纳、周菲菲（编） · 美国 · </span><span data-en>Anna Lowenhaupt Tsing et al. (eds.) · the American · </span></div>
+  <div class="metachip"><span class="chip"><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span></span> <span class="chip"><span data-zh>数字项目 · 人类世 · 野性</span><span data-en>digital project · Anthropocene · feral</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>数字人类学 / 人类世</span><span data-en>digital anthropology / Anthropocene</span></span> <span class="chip"><span data-zh>conf ◐ 书目经 Goodreads/指南登记；出版社/ISBN/页数待核</span><span data-en>conf ◐ listed via Goodreads/guide; publisher/ISBN/pages pending</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>◐ 书目经 Goodreads/指南登记；出版社/ISBN/页数待核 · 档案：tsing-feral-atlas（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ◐ listed via Goodreads/guide; publisher/ISBN/pages pending · record: tsing-feral-atlas. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅书目、指南与二手来源（◐）</span><span data-en>not read · bibliography, guide and secondary sources only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>交互式数字平台：追踪工业基建如何产生「野性」生态后果；把「注意」转化为公共知识基建。</div><div data-en>An interactive digital platform tracking how industrial infrastructure produces feral ecological consequences; it turns attention into public knowledge infrastructure.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://feralatlas.org" target="_blank" rel="noopener"><span data-zh>Feral Atlas</span><span data-en>Feral Atlas</span><span class="dom">feralatlas.org ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>Feral Atlas 是一个数字项目（feralatlas.org），由 Tsing、Jennifer Deger、Alder Keleman Saxena 与 Feifei Zhou 合编。它收集「野性」的田野报告：工业基础设施、殖民农业、水坝、港口与军事基地如何产生超出设计意图的生态后果。项目以互动地图、短文、图像与声音组织材料，让读者在具体地点追踪「超越人类的人类世」。它不是一本纸质书，而是一个可探索的公共知识平台。</div><div data-en>Feral Atlas is a digital project (feralatlas.org) edited by Tsing, Jennifer Deger, Alder Keleman Saxena and Feifei Zhou. It gathers field reports of the &#x27;feral&#x27;: how industrial infrastructure, colonial agriculture, dams, ports and military bases produce ecological consequences beyond their design. Interactive maps, short essays, images and sound let readers track the more-than-human Anthropocene in specific places. It is not a print book but an explorable public knowledge platform.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 什么是野性</span><span data-en>Section 1 · What is the feral</span></h3>
+<div data-zh>导论把「野性」从「荒野」中区分出来：它不是未被触碰的自然，而是人类活动之后失控的生命。</div><div data-en>The introduction separates the feral from wilderness: not untouched nature but life out of control after human activity.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>野性不是自然的原初状态，而是基础设施的后果。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>The feral is not nature&#x27;s original state but an aftereffect of infrastructure.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从概念区分到项目结构。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From conceptual distinction to project structure.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>野性、荒野、基础设施。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Feral, wilderness, infrastructure.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>项目导论。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Project introduction.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为田野报告提供定义。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Defines the field reports.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 基础设施如何产生野性</span><span data-en>Section 2 · How infrastructure produces the feral</span></h3>
+<div data-zh>水坝、港口、种植园与军事基地在实现控制的同时，产生超出设计的生态后果。</div><div data-en>Dams, ports, plantations and military bases produce ecological consequences beyond design even as they achieve control.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>控制与失控是同一过程的两面。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Control and loss of control are two sides of the same process.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从建设目标到意外后果。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From construction goals to unintended consequences.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>工程师、国家、地方居民、非人类生命。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Engineers, states, local residents, nonhuman life.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>田野报告。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Field reports.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把「野性」落到具体基础设施。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Grounds the feral in concrete infrastructure.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 地图作为方法</span><span data-en>Section 3 · The map as method</span></h3>
+<div data-zh>互动地图让不同地点的野性后果并置，读者可以在地点、物种与基础设施之间比较。</div><div data-en>The interactive map juxtaposes feral consequences across sites, letting readers compare places, species and infrastructure.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>地图不是背景，而是论证形式。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>The map is not background but a form of argument.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从单点报告到跨点比较。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From single reports to cross-site comparison.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>地图、标签、读者。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Maps, tags, readers.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>数字平台设计。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Digital platform design.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把项目从案例集变成可探索的档案。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Turns the project from a case collection into an explorable archive.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 节 · 从图谱到野外指南</span><span data-en>Section 4 · From atlas to field guide</span></h3>
+<div data-zh>项目的问题域后来被《斑驳人类世野外指南》转写为可携带的纸质方法。</div><div data-en>The project&#x27;s problematic is later rewritten into a portable print method in the Field Guide to the Patchy Anthropocene.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>媒介变化不是形式问题，而是方法问题。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>A change of medium is a change of method, not just form.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从数字探索到纸质训练。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From digital exploration to print training.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Feral Atlas、Field Guide、Tsing 团队。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Feral Atlas, Field Guide, Tsing&#x27;s team.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>两项目对照。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Comparison of the two projects.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把本书放进 Tsing 的方法序列。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Places the project in Tsing&#x27;s methodological sequence.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>项目以「田野报告」为基本单位，每个报告从一个具体基础设施或地点出发，追踪其野性后果，再通过地图与标签与其他报告连接。读者不按线性章节阅读，而是在地点、物种、基础设施类型之间跳转。Tsing 的导论把「野性」定义为「人类活动引发、却超出人类控制的生命后果」，并说明为什么数字平台比纸质书更适合呈现这种多线索、多尺度的材料。</div><div data-en>The project&#x27;s basic unit is the field report: each starts from a specific infrastructure or site, traces its feral consequences, and connects to other reports through maps and tags. Readers do not follow linear chapters but move among places, species and infrastructure types. Tsing&#x27;s introduction defines the feral as &#x27;life consequences set off by human activity but beyond human control&#x27; and explains why a digital platform suits this multi-threaded, multi-scale material better than print.</div></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>上线后被视为数字环境人文的代表作，常与《菌菇》《野外指南》并读；它让「野性」成为描述基础设施生态后果的常用词。
+
+作为数字项目，它的可访问性、长期维护与引用稳定性都受到限制；「野性」也可能被读成一种审美化的越界。
+
+**合成 Synthesis：** Feral Atlas 的贡献是把「人类世」从全球模型变成可点击的地点：每一个野性后果都可以被追踪到具体的基础设施与生命。</div><div data-en>Since launch it has been treated as a landmark of digital environmental humanities, often read with Mushroom and the Field Guide; it made &#x27;feral&#x27; a common term for the ecological afterlives of infrastructure.
+
+As a digital project it faces limits of access, long-term maintenance and citational stability; &#x27;feral&#x27; can also be read as an aestheticised transgression.
+
+**Synthesis:** The contribution is to turn the Anthropocene from a global model into clickable places: every feral consequence can be traced to specific infrastructure and life.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>编者要证明：人类世不是全球均匀的模型，而是由基础设施在具体地点产生的野性后果；数字图谱是呈现这种多线索现实的最合适形式。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The editors want to show that the Anthropocene is not a globally even model but feral consequences produced by infrastructure in specific places; a digital atlas is the most suitable form for this multi-threaded reality.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>项目以「田野报告」而非论文为单位，说明知识生产要从地点出发；互动地图让不同地点的后果可以并置比较；「野性」一词把「自然返野」与「基础设施失控」合在一起。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The project uses field reports rather than papers, showing that knowledge starts from sites; the interactive map lets consequences in different places be juxtaposed; the term feral joins &#x27;rewilding&#x27; with &#x27;infrastructure out of control&#x27;.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>形式</span><span data-en>form</span></span></td><td><div data-zh>数字地图与田野报告是项目的组织单位。</div><div data-en>Digital maps and field reports are the organising units.</div></td><td>Feral Atlas</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>导论把「野性」定义为超出人类控制的生命后果。</div><div data-en>The introduction defines the feral as life consequences beyond human control.</div></td><td>Guide / Feral Atlas</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>后续</span><span data-en>afterlife</span></span></td><td><div data-zh>《野外指南》把同一问题域转成可携带的纸质方法。</div><div data-en>The Field Guide turns the same problematic into a portable print method.</div></td><td>Guide</td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：Feral Atlas 更像一个策展平台，其「野性」是编辑选择的结果；把它当作人类世的完整制图，会忽略未被收录的地点与沉默。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: Feral Atlas is more a curatorial platform, and its feral is the result of editorial selection; treating it as a complete atlas of the Anthropocene ignores unrecorded places and silences.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未逐页核对项目内容；上述推断依据指南、项目导论与二手评论，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The project was not checked page by page; the inference rests on the guide, project introduction and secondary reviews, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>野性</span><span data-en>feral</span></span></b></td><td>feral</td><td><div data-zh>由人类活动引发、却超出人类控制的生命后果。</div><div data-en>Life consequences set off by human activity but beyond human control.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>基础设施</span><span data-en>infrastructure</span></span></b></td><td>infrastructure</td><td><div data-zh>水坝、港口、道路、种植园等，既组织生活，也产生意外后果。</div><div data-en>Dams, ports, roads and plantations that organise life and produce unintended consequences.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>田野报告</span><span data-en>field report</span></span></b></td><td>field report</td><td><div data-zh>项目的基本单位：从具体地点出发的短篇追踪。</div><div data-en>The project&#x27;s basic unit: a short trace starting from a specific site.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>超越人类</span><span data-en>more-than-human</span></span></b></td><td>more-than-human</td><td><div data-zh>把非人类生命、物质与基础设施纳入历史与政治分析。</div><div data-en>Bringing nonhuman life, matter and infrastructure into historical and political analysis.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>斑块</span><span data-en>patch</span></span></b></td><td>patch</td><td><div data-zh>野性后果集中的具体地点，而非全球均匀分布。</div><div data-en>A concrete site where feral consequences concentrate rather than spread evenly across the globe.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>2020–2022 年间上线后，项目在环境人文、数字人文与艺术研究圈内迅速传播；评论把它视为「数字人类世」的示范。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Launched between 2020 and 2022, it circulated quickly in environmental humanities, digital humanities and art research; reviews treated it as a demonstration of the &#x27;digital Anthropocene&#x27;.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>它后来与《野外指南》形成「数字—纸质」的互补关系：一个让材料可探索，一个让方法可携带。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>It later formed a digital–print complement with the Field Guide: one makes material explorable, the other makes the method portable.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>项目推动了「野性」与「基础设施」在环境人文中的结合，也影响了数字民族志的呈现方式。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>It helped join &#x27;feral&#x27; and &#x27;infrastructure&#x27; in environmental humanities and influenced how digital ethnography is presented.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>主要保留是：数字项目的可访问性与长期维护不稳定；「野性」的审美化可能掩盖具体的责任归属；引用与教学使用也比纸质书困难。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The main reservations are the instability of access and long-term maintenance, the risk that aestheticising the feral obscures responsibility, and the difficulty of citation and classroom use compared with print.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>Guide（主题综述与书目）</span><span data-en>Guide (thematic survey and bibliography)</span></span></li><li><span data-both><span data-zh>Feral Atlas 项目导论（未逐页核对）</span><span data-en>Feral Atlas introduction (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为数字项目类型的结构性局限，不是对全部内容的判断（未逐页核对）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits of a digital project, not a judgment on all content (not checked page by page).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>可访问性</span><span data-en>Accessibility</span></p><div data-zh style="color:var(--ink-soft)">依赖网络与平台维护，离线阅读困难。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Depends on network and platform maintenance; offline reading is difficult.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>引用不稳定</span><span data-en>Unstable citation</span></p><div data-zh style="color:var(--ink-soft)">数字条目会更新、迁移或消失，教学引用不如纸质书稳定。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Digital entries update, move or disappear; citation is less stable than print.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>责任归属模糊</span><span data-en>Diffuse responsibility</span></p><div data-zh style="color:var(--ink-soft)">「野性」的扩散叙事可能淡化具体公司与国家的责任。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The diffuse narrative of the feral can underplay the responsibility of specific firms and states.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>用数字平台组织多线索材料，让读者自行选择路径，模拟「野性」的非线性。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Uses a digital platform to organise multi-threaded material, letting readers choose paths and mimicking the non-linearity of the feral.</p></div>
+<div class="card"><p data-zh>把基础设施照片、地图与短文并置，让「后果」在视觉上可见。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Places infrastructure photographs, maps and short essays together, making consequences visually legible.</p></div>
+<div class="card"><p data-zh>以「田野报告」代替论文，降低学术门槛，扩大公共可读性。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Replaces papers with field reports, lowering the academic threshold and widening public readability.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>地图</span><span data-en>the map</span></div>
+<div class="orig">map</div>
+<div class="mnote"><div data-zh>不是领土，而是把野性后果并置比较的工具。</div><div data-en>Not territory but a tool for juxtaposing and comparing feral consequences.</div></div>
+<div class="src">Feral Atlas · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>基础设施</span><span data-en>infrastructure</span></div>
+<div class="orig">infrastructure</div>
+<div class="mnote"><div data-zh>组织生活，也产生超出设计的后果。</div><div data-en>Organises life and produces consequences beyond design.</div></div>
+<div class="src">Feral Atlas · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>野性</span><span data-en>the feral</span></div>
+<div class="orig">feral</div>
+<div class="mnote"><div data-zh>不是纯粹自然，而是人类活动之后失控的生命。</div><div data-en>Not pure nature but life out of control after human activity.</div></div>
+<div class="src">Feral Atlas · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>野性是人类活动引发、却超出人类控制的生命后果。</div><div data-en>The feral is life set off by human activity but beyond human control.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>如果人类世是多线索的，知识形态也应该是多入口的。</div><div data-en>If the Anthropocene is multi-threaded, knowledge should be multi-entry too.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>可点击的人类世：读 Feral Atlas</span><span data-en>A clickable Anthropocene</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>把「人类世」从全球模型变成可点击的地点：每一个野性后果都能被追踪到具体的基础设施与生命。</span><span data-en>Turning the Anthropocene from a global model into clickable places: every feral consequence can be traced to specific infrastructure and life.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>Feral Atlas 最激进的地方不是它的内容，而是它的形式。它拒绝把人类世写成一本从第一章读到最后一章的书，而是让读者在地图、物种与基础设施之间跳转。每一个「田野报告」都从一个具体地点出发：一座水坝、一片种植园、一个港口、一处军事基地。报告追踪的不是「自然被破坏」，而是「人类活动产生了什么超出控制的生命后果」。</p><p>这种形式与论点是一致的：如果人类世是斑驳的、多线索的，那么知识形态也应该是斑驳的、多入口的。Tsing 与编者把「野性」定义为人类活动引发却超出人类控制的生命后果，这个定义既避免了「自然 vs 人类」的二分，也避免了把一切后果都归给资本的简化。</p><p>局限也来自形式：数字项目的可访问性与长期维护不稳定，引用与教学使用都比纸质书困难；「野性」的扩散叙事也可能淡化具体公司与国家的责任。它更像一个可探索的公共档案，而不是一部完整的理论著作。</p><p>把它与《野外指南》对读，会看见 Tsing 的方法在两种媒介之间的迁移：数字平台让材料可探索，纸质指南让方法可携带。两者都不是终点，而是同一场「注意」训练的不同工具。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>Feral Atlas is most radical not in its content but in its form. It refuses to write the Anthropocene as a book read from first chapter to last, letting readers jump among maps, species and infrastructure. Each field report starts from a specific site: a dam, a plantation, a port, a military base. What it traces is not &#x27;nature being destroyed&#x27; but &#x27;what life consequences human activity sets off beyond control&#x27;.</p><p>The form matches the argument: if the Anthropocene is patchy and multi-threaded, knowledge should also be patchy and multi-entry. Tsing and the editors define the feral as life consequences set off by human activity but beyond human control, avoiding both the nature/human binary and the reduction of all consequences to capital.</p><p>The limits come from the form: digital access and long-term maintenance are unstable, citation and teaching are harder than with print, and the diffuse narrative of the feral can underplay the responsibility of specific firms and states. It is more an explorable public archive than a complete theoretical work.</p><p>Read alongside the Field Guide, it shows Tsing&#x27;s method migrating between media: the digital platform makes material explorable, the printed guide makes the method portable. Neither is an endpoint; both are tools in the same training of attention.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>Guide（主题综述与书目）</span><span data-en>Guide (thematic survey and bibliography)</span></span></li><li><span data-both><span data-zh>Feral Atlas 项目导论与二手评论（未逐页核对）</span><span data-en>Feral Atlas introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读项目导论，写下「feral」的定义；再任选三个报告，检查它们是否都符合这个定义。</div><div data-en>Read the introduction and write a definition of feral; then choose three reports and test whether they fit it.</div></div>
+<div class="card"><div data-zh>追踪一个基础设施（水坝、港口、种植园）如何从「控制自然」转向「产生野性」。</div><div data-en>Trace how one infrastructure (dam, port, plantation) turns from &#x27;controlling nature&#x27; to &#x27;producing the feral&#x27;.</div></div>
+<div class="card"><div data-zh>追问：数字平台是否也会产生自己的「野性」——例如数据、算法与维护的失控？</div><div data-en>Ask whether the digital platform itself produces its own feral — data, algorithms and maintenance out of control.</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>The Mushroom at the End of the World</b></td><td>Anna Lowenhaupt Tsing</td><td>2015</td><td><span data-both><span data-zh>同作者 · 前作</span><span data-en>same author · predecessor</span></span></td><td><div data-zh>从「废墟中的生命」到「基础设施的野性后果」</div><div data-en>from life in ruins to the feral afterlives of infrastructure</div></td><td>multispecies</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>Field Guide to the Patchy Anthropocene</b></td><td>Tsing, Deger, Keleman Saxena &amp; Zhou</td><td>2024</td><td><span data-both><span data-zh>同作者 · 后续</span><span data-en>same author · successor</span></span></td><td><div data-zh>从数字图谱到纸质野外指南</div><div data-en>from digital atlas to printed field guide</div></td><td>multispecies</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>Arts of Living on a Damaged Planet</b></td><td>Tsing, Bubandt, Gan &amp; Swanson (eds.)</td><td>2017</td><td><span data-both><span data-zh>同作者 · 合编</span><span data-en>same author · co-edited</span></span></td><td><div data-zh>「幽灵/怪物」与「野性」共享多物种时间性</div><div data-en>ghosts/monsters and the feral share a multispecies temporality</div></td><td>multispecies</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>Feral Atlas 是 fer alatlas.org 上的数字项目，由 Tsing、Deger、Keleman Saxena 与 Zhou 合编</span><span data-en>Feral Atlas is a digital project at fer alatlas.org, edited by Tsing, Deger, Keleman Saxena and Zhou</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>项目以田野报告、互动地图、图像与声音组织材料</span><span data-en>The project organises field reports, interactive maps, images and sound</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Feral Atlas</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>项目主题为基础设施产生的野性生态后果</span><span data-en>Its theme is the feral ecological consequences of infrastructure</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>Feral Atlas 与《斑驳人类世野外指南》共享作者群与问题域</span><span data-en>Feral Atlas shares editors and problematic with the Field Guide to the Patchy Anthropocene</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>上线年份（各源记 2020–2022 不等）与版本</span><span data-en>launch year (sources give 2020–2022) and version</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>田野报告的完整清单与作者</span><span data-en>full list of field reports and authors</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../tsing-escobar.html">← <span data-zh>返回人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>back to ANTHROPOCENE &amp; PLURIVERSE</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

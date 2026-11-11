@@ -1055,8 +1055,14 @@ def _toc_block(t):
     if t.get("note_zh"):
         s.append('<div class="srcnote" style="margin-top:0">%s</div>' % zh_en(t.get("note_zh", ""), t.get("note_en", ""), "span"))
     s.append('<div class="tocgrid">')
+
+    def _item(x):
+        if isinstance(x, dict):
+            return pair(x.get("zh", ""), x.get("en"), "span")
+        return esc(x)
+
     for g in t["groups"]:
-        items = "".join("<li>%s</li>" % esc(x) for x in g.get("items", []))
+        items = "".join("<li>%s</li>" % _item(x) for x in g.get("items", []))
         s.append('<div><h4>%s</h4><ol class="toclist">%s</ol></div>' % (pair(g.get("title_zh", ""), g.get("title_en"), "span"), items))
     s.append('</div></div>')
     return "".join(s)
@@ -1262,9 +1268,10 @@ def book_page(site, book, crop):
     if _mb:
         s.append(_mb)
     # plot flow svg / chronological flow
-    flow_label = LB["flow"]
-    s.append(f'<h2 class="part" data-both><span data-zh>{flow_label[0]}</span><span data-en>{flow_label[1]}</span></h2>')
-    s.append('<div class="diagram">' + svg_plot_flow(book.get("plot_flow", [])) + '<p class="cap">' + zh_en(LB["flow_cap"][0].format(t=book["title_zh"]), LB["flow_cap"][1].format(o=book["title_orig"]), "span") + '</p></div>')
+    if book.get("plot_flow"):
+        flow_label = LB["flow"]
+        s.append(f'<h2 class="part" data-both><span data-zh>{flow_label[0]}</span><span data-en>{flow_label[1]}</span></h2>')
+        s.append('<div class="diagram">' + svg_plot_flow(book.get("plot_flow", [])) + '<p class="cap">' + zh_en(LB["flow_cap"][0].format(t=book["title_zh"]), LB["flow_cap"][1].format(o=book["title_orig"]), "span") + '</p></div>')
     # characters + charedge svg / key figures
     if book.get("characters"):
         chars_label = LB["chars"]

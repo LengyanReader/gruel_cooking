@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《关联性：超越人类的生命涌现政治》｜Relationality: An Emergent Politics of Life Beyond the Human | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>READING &amp; IA — ANTHROPOCENE &amp; PLURIVERSE</span></p>
+  <h1><span data-zh>《关联性：超越人类的生命涌现政治》 · Relationality: An Emergent Politics of Life Beyond the Human</span><span data-en>Relationality: An Emergent Politics of Life Beyond the Human</span></h1>
+  <div class="subtitle" data-both><span data-zh>阿图罗·埃斯科瓦尔、米哈尔·奥斯特韦尔、克里蒂·夏尔马 · 哥伦比亚 / 美国 · Bloomsbury Academic · 2022 · 合著 Osterweil &amp; Sharma · ISBN/页数待核</span><span data-en>Arturo Escobar, Michal Osterweil &amp; Kriti Sharma · Colombia / the American · Bloomsbury Academic · 2022 · with Osterweil &amp; Sharma · ISBN/pages pending</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span></span> <span class="chip"><span data-zh>学术 · 合著 · 关系本体论</span><span data-en>scholarship · co-authored · relational ontology</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>政治本体论 / 超越人类</span><span data-en>political ontology / beyond-human</span></span> <span class="chip"><span data-zh>conf ◐ 出版社、年份与合著者经指南/Goodreads 登记；ISBN、页数与具体印次待核</span><span data-en>conf ◐ publisher, year and co-authors via guide/Goodreads; ISBN, pages and printing pending</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>◐ 出版社、年份与合著者经指南/Goodreads 登记；ISBN、页数与具体印次待核 · 档案：escobar-relationality（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ◐ publisher, year and co-authors via guide/Goodreads; ISBN, pages and printing pending · record: escobar-relationality. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅书目、指南与二手来源（◐）</span><span data-en>not read · bibliography, guide and secondary sources only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>Escobar 与 Osterweil、Sharma 合著的「关系本体论」纲领：存在不是孤立的实体，而是关系的事件；政治因此是维护与切断关系的问题。</div><div data-en>Escobar&#x27;s co-authored programme in relational ontology with Osterweil and Sharma: being is not isolated substance but an event of relation; politics therefore becomes a question of sustaining and severing relations.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.goodreads.com/book/show/60142366-relationality" target="_blank" rel="noopener"><span data-zh>Goodreads 书目</span><span data-en>Goodreads record</span><span class="dom">www.goodreads.com ↗</span><span class="rtag" style="color:#A5811D"><span data-both><span data-zh>读者平台 · Reader community</span><span data-en>Reader community</span></span> · ◐</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《关联性》由 Escobar、Michal Osterweil 与 Kriti Sharma 合著，2022 年由 Bloomsbury 出版。三人分别来自人类学/后发展、社会运动理论与科学哲学，全书试图把「关系性」从一个哲学立场变成一种政治纲领：如果一切存在都是关系性的，那么政治就不只是分配资源，而是维护、切断与重组关系。书的结构围绕几个问题展开：关系本体论的谱系、超越人类的关系、涌现政治（emergent politics）、以及关系性如何指导实践。</div><div data-en>Relationality is co-authored by Escobar, Michal Osterweil and Kriti Sharma and published by Bloomsbury in 2022. The three come from anthropology/post-development, social movement theory and philosophy of science, and the book turns relationality from a philosophical position into a political programme: if all being is relational, politics is not only distributing resources but sustaining, severing and recomposing relations. Chapters circle several questions: the genealogy of relational ontologies, relations beyond the human, emergent politics, and how relationality guides practice.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 关系本体论的谱系</span><span data-en>Section 1 · The genealogy of relational ontology</span></h3>
+<div data-zh>梳理过程哲学、本体论人类学、女性主义科学与原住民宇宙论中的关系思想。</div><div data-en>Traces relational thought in process philosophy, ontological anthropology, feminist science studies and indigenous cosmologies.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>关系性不是新发明，而是多条思想传统的交汇。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Relationality is not new but a crossing of several traditions.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从哲学传统，到人类学，再到原住民思想。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From philosophy to anthropology to indigenous thought.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>Whitehead、Viveiros de Castro、Haraway。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Whitehead, Viveiros de Castro, Haraway.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>理论谱系章。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Genealogical chapters.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为后续政治主张提供思想基础。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Provides the intellectual ground for the political claims.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 超越人类的关系</span><span data-en>Section 2 · Relations beyond the human</span></h3>
+<div data-zh>关系性必须包括非人类生命、物质与地球过程，否则仍是人类中心主义。</div><div data-en>Relationality must include nonhuman life, matter and earth processes, or it remains anthropocentric.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>没有非人类的关系性，只是扩大版的人类中心主义。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Relationality without the nonhuman is anthropocentrism writ large.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从物种，到物质，再到地球过程。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From species to matter to earth processes.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>多物种、微生物、气候。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Multispecies, microbes, climate.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>环境人文与多物种研究。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Environmental humanities and multispecies studies.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把关系性接入生态政治。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Connects relationality to ecological politics.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 涌现政治</span><span data-en>Section 3 · Emergent politics</span></h3>
+<div data-zh>政治行动在关系与实践中生成，而非由预先形成的主体决定；这要求重新定义自由与共同体。</div><div data-en>Political action emerges in relation and practice rather than being decided by pre-formed subjects, requiring a redefinition of freedom and community.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>自由不是摆脱关系，而是在关系中获得自决。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Freedom is not escape from relation but self-determination within it.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从主体批判，到关系政治，再到实践判准。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From critique of the subject to relational politics to practical criteria.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>运动、共同体、研究者。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Movements, communities, researchers.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>案例与理论章。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Case and theory chapters.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把本体论转成政治纲领。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Turns ontology into a political programme.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>全书以理论章与案例章交替推进。理论部分梳理关系本体论的不同来源：过程哲学、本体论人类学、女性主义科学研究与原住民宇宙论；案例部分讨论气候行动、食物主权、社区经济与多物种实践。结论提出「涌现政治」：不是先有主体再有关系，而是关系先于主体，政治因此是关系的事件。</div><div data-en>Theoretical and case chapters alternate. Theory traces the sources of relational ontology: process philosophy, ontological anthropology, feminist science studies and indigenous cosmologies; cases discuss climate action, food sovereignty, community economies and multispecies practice. The conclusion proposes &#x27;emergent politics&#x27;: subjects do not precede relations; relations precede subjects, so politics is an event of relation.</div></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>出版后进入关系社会学、环境人文与后发展讨论；它被视为 Escobar 从「多元宇宙」走向「关系本体论」的总结性文本。
+
+作为合著，三人的声音不完全统一；「关系性」被批评为过于宽泛，几乎可以解释一切，因而难以证伪。
+
+**合成 Synthesis：** 本书的贡献是把「关系」从描述词变成政治判准：一个实践是否解放，取决于它维护了哪些关系、切断了哪些关系。</div><div data-en>It entered relational sociology, environmental humanities and post-development debate and is read as Escobar&#x27;s summing-up move from the pluriverse to relational ontology.
+
+As a co-authored work the three voices do not fully harmonise, and relationality is criticised as so broad that it can explain anything and is hard to falsify.
+
+**Synthesis:** The contribution is to turn relation from a descriptor into a political criterion: whether a practice is emancipatory depends on which relations it sustains and which it severs.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>三位作者要证明：存在是关系性的，因此政治不是主体之间的资源分配，而是关系的维护、切断与重组；这一本体论转向要求重新定义自由、自主与共同体。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The authors want to show that being is relational, so politics is not resource distribution among subjects but the sustaining, severing and recomposing of relations; this ontological turn requires redefining freedom, autonomy and community.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名以「关联性」为标题，副标题则给出政治任务，说明本体论与政治是一体两面；三人合著意味着关系性本身要在跨学科关系中实践；书中案例覆盖气候、食物与多物种，说明关系性不是抽象哲学。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title names relationality and the subtitle names the political task, making ontology and politics two sides of one thing; co-authorship practises relationality across disciplines; cases from climate, food and multispecies life show relationality is not abstract philosophy.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书名与副标题把本体论与政治绑定。</div><div data-en>The title and subtitle bind ontology to politics.</div></td><td>Book title</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>形式</span><span data-en>form</span></span></td><td><div data-zh>三人合著本身是关系性的实践。</div><div data-en>Co-authorship is itself a relational practice.</div></td><td>Guide</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>案例</span><span data-en>case</span></span></td><td><div data-zh>气候、食物主权与多物种案例把理论落到实践。</div><div data-en>Climate, food sovereignty and multispecies cases ground the theory in practice.</div></td><td>Secondary summaries</td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：本书是一次跨学科的综合尝试，但「关系性」的宽泛使其难以区分解放性与压迫性的关系；把它当作政治纲领，会高估其操作性。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: it is an interdisciplinary synthesis whose broad relationality struggles to distinguish emancipatory from oppressive relations; treating it as a political programme overestimates its operability.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>关系性</span><span data-en>relationality</span></span></b></td><td>relacionalidad</td><td><div data-zh>存在不是孤立的实体，而是在关系中被构成的事件。</div><div data-en>Being is not isolated substance but an event constituted in relation.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>涌现政治</span><span data-en>emergent politics</span></span></b></td><td>política emergente</td><td><div data-zh>政治不是先有主体再行动，而是在关系与实践中生成行动。</div><div data-en>Politics does not start from pre-formed subjects but generates action in relation and practice.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>超越人类</span><span data-en>beyond the human</span></span></b></td><td>más allá de lo humano</td><td><div data-zh>把非人类生命、物质与地球过程纳入关系与政治的思考。</div><div data-en>Bringing nonhuman life, matter and earth processes into thinking about relation and politics.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>共同体</span><span data-en>community</span></span></b></td><td>comunidad</td><td><div data-zh>在关系中被不断重做的共同生活，而非既定的成员集合。</div><div data-en>Shared life continually remade in relation, not a fixed set of members.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>共生</span><span data-en>sympoiesis</span></span></b></td><td>sympoiesis</td><td><div data-zh>借自 Haraway：一起生成，而非自我生成。</div><div data-en>From Haraway: making-with rather than self-making.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>2022 年出版后进入关系社会学、环境人文与后发展课程；评论肯定它把本体论讨论推向政治判准。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Published in 2022, it entered relational sociology, environmental humanities and post-development courses; reviews praised its move from ontology to political criteria.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>后世把它与 Haraway、Barad、Ingold 的关系本体论并读，视为 Escobar 思想的总结性文本。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Later work reads it with the relational ontologies of Haraway, Barad and Ingold as a summing-up of Escobar&#x27;s thought.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>它让「关系性」从哲学概念变成分析工具，影响了关于照护、共同体经济与多物种政治的讨论。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>It turned relationality from a philosophical concept into an analytical tool, shaping discussion of care, community economies and multispecies politics.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>主要保留是：合著声音不统一；「关系性」过于宽泛，难以证伪；对关系中的权力与暴力分析仍偏弱。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The main reservations are the uneven co-authored voice, the breadth of relationality that makes it hard to falsify, and still-weak analysis of power and violence within relations.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>Guide（书目与主题综述）</span><span data-en>Guide (bibliography and thematic survey)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>合著声音不统一</span><span data-en>Uneven co-authorship</span></p><div data-zh style="color:var(--ink-soft)">三位作者的学科语气与关注点不完全协调。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The three authors&#x27; disciplinary registers and concerns do not fully harmonise.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>概念过宽</span><span data-en>Concept too broad</span></p><div data-zh style="color:var(--ink-soft)">「关系性」几乎可以解释一切，降低了可证伪性。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Relationality can explain almost anything, weakening falsifiability.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>权力分析偏弱</span><span data-en>Thin analysis of power</span></p><div data-zh style="color:var(--ink-soft)">关系中的支配与暴力着墨较少。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Domination and violence within relations receive less attention.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>三人合著，让不同学科的声音在同一论证中互相校正。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Co-authorship lets voices from different disciplines correct one another within one argument.</p></div>
+<div class="card"><p data-zh>以「关系」为动词而非名词，把抽象本体论转成可讨论的政治判准。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Treats relation as a verb rather than a noun, turning abstract ontology into a discussable political criterion.</p></div>
+<div class="card"><p data-zh>理论与案例交替，避免本体论讨论脱离实践。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Alternates theory and cases so ontological discussion does not drift from practice.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>关系</span><span data-en>relation</span></div>
+<div class="orig">relación</div>
+<div class="mnote"><div data-zh>不是实体之间的连线，而是实体得以存在的方式。</div><div data-en>Not a line between entities but the way entities come to be.</div></div>
+<div class="src">Relationality · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>共生</span><span data-en>sympoiesis</span></div>
+<div class="orig">sympoiesis</div>
+<div class="mnote"><div data-zh>一起生成，而非自我生成。</div><div data-en>Making-with rather than self-making.</div></div>
+<div class="src">Relationality · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>涌现</span><span data-en>emergence</span></div>
+<div class="orig">emergencia</div>
+<div class="mnote"><div data-zh>政治行动在关系中出现，而非由主体预先决定。</div><div data-en>Political action appears in relation rather than being pre-decided by subjects.</div></div>
+<div class="src">Relationality · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>存在不是孤立的实体，而是关系的事件；关系先于主体。</div><div data-en>Being is not isolated substance but an event of relation; relations precede subjects.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>政治不是主体之间的资源分配，而是关系的维护、切断与重组。</div><div data-en>Politics is not resource distribution among subjects but the sustaining, severing and recomposing of relations.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>关系先于主体：读《关联性》</span><span data-en>Relations before subjects</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>如果存在是关系性的，那么政治就不是分配资源，而是维护、切断与重组关系。</span><span data-en>If being is relational, politics is not distributing resources but sustaining, severing and recomposing relations.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《关联性》是 Escobar 与 Osterweil、Sharma 的合著，也是他思想的一次收束：从《遭遇发展》的话语批判，到《差异的领地》的领地政治，再到《多元宇宙的设计》的本体论设计，最后落到「关系」这个最基础的概念。</p><p>书的核心命题是：存在不是孤立的实体，而是关系的事件。这个命题听起来像哲学，却有直接的政治后果。如果主体不是先于关系而存在，那么政治就不能从「谁的利益」开始，而要从「哪些关系被维护、哪些被切断」开始。自由因此不是摆脱关系，而是在关系中获得自决；共同体不是成员的集合，而是在关系中被不断重做的共同生活。</p><p>这本书的优点是跨学科：三位作者分别带来人类学、社会运动理论与科学哲学的视角，案例覆盖气候、食物与多物种。缺点也来自这里：三人的声音不完全统一，「关系性」宽泛到几乎可以解释一切，因而难以证伪；对关系中的支配与暴力，分析仍显不足。</p><p>读它最好的方式，是把它当作一组问题而不是一套答案：你正在维护哪些关系？切断了哪些？这些关系的重组，让谁更有能力生活，又让谁更难？</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>Relationality is Escobar&#x27;s co-authored book with Osterweil and Sharma and a gathering of his thought: from the discourse critique of Encountering Development, through the territorial politics of Territories of Difference and the ontological design of Designs for the Pluriverse, to the most basic concept of all, relation.</p><p>The core proposition is that being is not isolated substance but an event of relation. It sounds philosophical but has direct political consequences. If subjects do not precede relations, politics cannot start from &#x27;whose interests&#x27; but from &#x27;which relations are sustained and which severed&#x27;. Freedom is therefore not escape from relation but self-determination within it; community is not a set of members but shared life continually remade in relation.</p><p>The strength is interdisciplinarity: three authors bring anthropology, social movement theory and philosophy of science, with cases from climate, food and multispecies life. The weakness comes from the same place: the voices do not fully harmonise, relationality is broad enough to explain almost anything and is hard to falsify, and the analysis of domination and violence within relations remains thin.</p><p>The best way to read it is as a set of questions rather than answers: which relations are you sustaining, which severing, and who becomes more able to live — or less — as they are recomposed?</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>Guide（书目与主题综述）</span><span data-en>Guide (bibliography and thematic survey)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读导论，写下「关系先于主体」对你意味着什么；再读案例章，检查案例是否真的支持这个命题。</div><div data-en>Read the introduction and write what &#x27;relations precede subjects&#x27; means to you; then test the case chapters against the proposition.</div></div>
+<div class="card"><div data-zh>比较三位作者的处理方式：谁更偏哲学，谁更偏运动，谁更偏科学？这种分工是否造成论证断裂？</div><div data-en>Compare the three authors&#x27; approaches: who is more philosophical, more movement-oriented, more scientific? Does the division fracture the argument?</div></div>
+<div class="card"><div data-zh>追问：如果一切都在关系中，政治责任如何归属？「切断关系」是否也需要判准？</div><div data-en>Ask: if everything is relational, how is political responsibility assigned? Does severing relations also need criteria?</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>Pluriversal Politics</b></td><td>Arturo Escobar</td><td>2020</td><td><span data-both><span data-zh>同作者 · 前作</span><span data-en>same author · predecessor</span></span></td><td><div data-zh>从「真实/可能」走向「关系本体论」</div><div data-en>from real/possible to relational ontology</div></td><td>relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The Mushroom at the End of the World</b></td><td>Anna Lowenhaupt Tsing</td><td>2015</td><td><span data-both><span data-zh>对读 · 多物种关系</span><span data-en>compare · multispecies relation</span></span></td><td><div data-zh>Tsing 的多物种协作是关系本体论的民族志实践</div><div data-en>Tsing&#x27;s multispecies collaboration is relational ontology in ethnographic practice</div></td><td>relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>Staying with the Trouble</b></td><td>Donna Haraway</td><td>2016</td><td><span data-both><span data-zh>理论对话</span><span data-en>theoretical interlocutor</span></span></td><td><div data-zh>「共生」与「关系性」共享同一问题域</div><div data-en>sympoiesis and relationality share a problematic</div></td><td>relationality</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《Relationality: An Emergent Politics of Life Beyond the Human》2022 年由 Bloomsbury Academic 出版</span><span data-en>Relationality: An Emergent Politics of Life Beyond the Human was published by Bloomsbury Academic in 2022</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Goodreads</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书由 Arturo Escobar、Michal Osterweil 与 Kriti Sharma 合著</span><span data-en>The book is co-authored by Arturo Escobar, Michal Osterweil and Kriti Sharma</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Goodreads</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书围绕「超越人类的关系」与「涌现政治」展开</span><span data-en>The book is organised around more-than-human relation and emergent politics</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Book subtitle; guide</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书有法语版《Éloge de la relationnalité》（2022）</span><span data-en>A French edition, Éloge de la relationnalité, appeared in 2022</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Goodreads</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>ISBN、页数与具体印次</span><span data-en>ISBN, page count and printing</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>各章作者分工与章节标题（未逐页核对）</span><span data-en>division of authorship and chapter titles (not checked page by page)</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../tsing-escobar.html">← <span data-zh>返回人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>back to ANTHROPOCENE &amp; PLURIVERSE</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

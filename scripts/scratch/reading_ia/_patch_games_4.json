@@ -1,0 +1,390 @@
+{
+  "appadurai-modernity-large": {
+    "toc": {
+      "note_zh": "全书由七章与一则后记组成，章题据通行版式；页码与具体小节未逐页核对。",
+      "note_en": "Seven chapters and a postscript, chapter titles following the common edition; page numbers and subsections not checked page by page.",
+      "groups": [
+        {
+          "title_zh": "全球流动",
+          "title_en": "Global flows",
+          "items": [
+            "Disjuncture and Difference in the Global Cultural Economy",
+            "Global Ethnoscapes: Notes and Queries for a Transnational Anthropology"
+          ]
+        },
+        {
+          "title_zh": "一与多",
+          "title_en": "The one and the many",
+          "items": [
+            "Consumption, Duration, and History",
+            "Playing with Modernity: The Decolonization of Indian Cricket"
+          ]
+        },
+        {
+          "title_zh": "想象与地方",
+          "title_en": "Imagination and locality",
+          "items": [
+            "Number in the Colonial Imagination",
+            "Life after Primordialism",
+            "The Production of Locality"
+          ]
+        }
+      ]
+    },
+    "excerpts": [
+      {
+        "paraphrase": "景观命题（非逐字原文）",
+        "trans_zh": "全球文化流动由五个维度构成：族群景观、媒体景观、技术景观、金融景观与意识形态景观；它们彼此断裂，因此全球化不是同质化。",
+        "trans_en": "Global cultural flow has five dimensions — ethnoscapes, mediascapes, technoscapes, financescapes and ideoscapes — which are disjunctive, so globalisation is not homogenisation.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "地方性命题（非逐字原文）",
+        "trans_zh": "地方性不是自然给定的背景，而是在邻里、仪式与日常实践中被不断生产出来的。",
+        "trans_en": "Locality is not a naturally given backdrop but is continually produced in neighbourhood, ritual and everyday practice.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "想象命题（非逐字原文）",
+        "trans_zh": "电子媒体让「想象」成为日常社会实践：人们借远方的图像来设计自己的生活，移民与民族主义都由此获得素材。",
+        "trans_en": "Electronic media make imagination an everyday social practice: people design their lives with images from elsewhere, and both migration and nationalism draw on them.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "断裂与差异：五种景观",
+        "title_en": "Disjuncture and difference: five scapes",
+        "zh": "Appadurai 提出五种「景观」（族群、媒体、技术、金融、意识形态），它们的流动速度与方向彼此不同，因此全球化产生的是差异而非同质。",
+        "en": "Appadurai proposes five scapes — ethnic, media, techno, finance, ideo — whose flows move at different speeds and directions, so globalisation produces difference rather than sameness.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "全球化是一组错位的流动，而不是一套统一的输出。",
+          "flow": "从五个维度，到错位关系，再到文化后果。",
+          "names": "移民、媒体、资本、国家意识形态。",
+          "sources": "导论与第一章。",
+          "link": "为全书提供分析词汇。",
+          "main_en": "Globalisation is a set of disjunctive flows, not one uniform export.",
+          "flow_en": "From the five dimensions to their disjunction to cultural consequence.",
+          "names_en": "Migrants, media, capital, state ideology.",
+          "sources_en": "Introduction and chapter one.",
+          "link_en": "Supplies the book's analytical vocabulary."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "消费、时间与历史",
+        "title_en": "Consumption, time and history",
+        "zh": "第二组章讨论消费如何重排时间感：广告、商品与媒体让不同历史节奏并置，消费成为参与现代性的方式。",
+        "en": "The second group asks how consumption rearranges the sense of time: advertising, commodities and media juxtapose different historical rhythms, and consumption becomes a way of participating in modernity.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "买东西也是一种历史实践。",
+          "flow": "从商品，到时间感，再到历史叙事。",
+          "names": "消费者、广告、国家。",
+          "sources": "消费与媒体章节。",
+          "link": "把经济实践接到文化时间。",
+          "main_en": "Shopping is also a historical practice.",
+          "flow_en": "From commodities to the sense of time to historical narrative.",
+          "names_en": "Consumers, advertising, the state.",
+          "sources_en": "Chapters on consumption and media.",
+          "link_en": "Connects economic practice to cultural time."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "板球、数字与原始主义",
+        "title_en": "Cricket, numbers and primordialism",
+        "zh": "中段以印度板球、殖民时期的数字治理与「原始主义之后」为例，展示地方如何挪用全球形式，把它们变成民族与社群政治的场域。",
+        "en": "Middle chapters use Indian cricket, colonial number governance and 'life after primordialism' to show how localities appropriate global forms and turn them into sites of national and communal politics.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "全球形式一旦落地，就被改写成地方政治。",
+          "flow": "从殖民引入，到民族化，再到社群冲突。",
+          "names": "板球、殖民统计、社群政党。",
+          "sources": "印度个案。",
+          "link": "用具体案例检验景观理论。",
+          "main_en": "Once global forms land, they are rewritten as local politics.",
+          "flow_en": "From colonial introduction to nationalisation to communal conflict.",
+          "names_en": "Cricket, colonial statistics, communal parties.",
+          "sources_en": "Indian cases.",
+          "link_en": "Tests scape theory on concrete cases."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "地方性的生产",
+        "title_en": "The production of locality",
+        "zh": "结论提出「地方性的生产」：地方不是全球的对立面，而是需要持续被做出来的成就；邻里的仪式与日常实践就是这种生产。",
+        "en": "The conclusion proposes 'the production of locality': locality is not the opposite of the global but an achievement that must be continually made, in neighbourhood ritual and everyday practice.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "地方性是一种需要维护的成就。",
+          "flow": "从仪式，到邻里，再到全球压力下的脆弱性。",
+          "names": "邻里、仪式、民族国家。",
+          "sources": "结论章。",
+          "link": "把全书收束为一种地方性理论。",
+          "main_en": "Locality is an achievement requiring maintenance.",
+          "flow_en": "From ritual to neighbourhood to vulnerability under global pressure.",
+          "names_en": "Neighbourhoods, ritual, nation-states.",
+          "sources_en": "Conclusion.",
+          "link_en": "Gathers the book into a theory of locality."
+        }
+      }
+    ]
+  },
+  "gobet-perception-memory": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "de Groot 的问题与 Gobet 的接手",
+        "title_en": "de Groot's question, Gobet's continuation",
+        "zh": "全书以跨代对话展开：de Groot 在 1940 年代问「棋手在看什么」，Gobet 用实验与模型重新回答，并把「知觉」而非「搜索」放在专长的中心。",
+        "en": "The book unfolds as a transgenerational dialogue: de Groot asked in the 1940s what players look at, and Gobet answers again with experiments and models, placing perception rather than search at the centre of expertise.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "专长不是想得更多，而是看得不同。",
+          "flow": "从经典问题，到实验方法，再到理论重述。",
+          "names": "de Groot、Gobet、棋手。",
+          "sources": "历史回顾与实验章。",
+          "link": "为后续的组块与模板理论奠基。",
+          "main_en": "Expertise is not thinking more but seeing differently.",
+          "flow_en": "From the classic question to experimental method to theoretical restatement.",
+          "names_en": "De Groot, Gobet, players.",
+          "sources_en": "Historical review and experiments.",
+          "link_en": "Grounds the later chunking and template theory."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "知觉：职业眼光",
+        "title_en": "Perception: the professional eye",
+        "zh": "核心证据：专家在极短时间内就能把握局面要点，眼动与回忆实验显示他们看到的不是棋子，而是有意义的棋型。",
+        "en": "The core evidence: experts grasp the essentials of a position in a fraction of a second, and eye-movement and recall experiments show they see meaningful patterns rather than pieces.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "「一眼看出」是可以被实验测量的。",
+          "flow": "从短暂呈现，到回忆成绩，再到眼动轨迹。",
+          "names": "专家、新手、棋盘。",
+          "sources": "知觉实验。",
+          "link": "把直觉从神秘变成机制。",
+          "main_en": "'Seeing at a glance' can be measured experimentally.",
+          "flow_en": "From brief presentation to recall scores to eye movements.",
+          "names_en": "Experts, novices, boards.",
+          "sources_en": "Perception experiments.",
+          "link_en": "Turns intuition from mystery into mechanism."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "记忆：组块与模板",
+        "title_en": "Memory: chunks and templates",
+        "zh": "理论部分：专家的记忆以「组块」为单位，并在长期训练中形成更大的「模板」，这解释了为何专家记忆真实棋局远胜随机棋局。",
+        "en": "The theory: expert memory works in chunks and, through long training, in larger templates, which explains why experts recall real positions far better than random ones.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "记忆的单位是意义，而不是元素。",
+          "flow": "从组块，到模板，再到专家优势的边界。",
+          "names": "组块、模板、长期记忆。",
+          "sources": "认知模型章。",
+          "link": "把知觉与记忆统一为一个架构。",
+          "main_en": "The unit of memory is meaning, not elements.",
+          "flow_en": "From chunks to templates to the limits of expert advantage.",
+          "names_en": "Chunks, templates, long-term memory.",
+          "sources_en": "Chapters on cognitive models.",
+          "link_en": "Unifies perception and memory in one architecture."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "启发法与其限度",
+        "title_en": "Heuristics and their limits",
+        "zh": "结论承认：知觉优势只在熟悉的局面中有效，随机局面会抹平专家与新手差距；这也为后来的「模板」修正与技能迁移研究留下入口。",
+        "en": "The conclusion concedes that perceptual advantage works only in familiar positions and vanishes in random ones, opening the way for later template revisions and transfer research.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "专长有边界，边界本身就是证据。",
+          "flow": "从随机局面，到理论修正，再到迁移问题。",
+          "names": "专家、新手、实验设计。",
+          "sources": "结论与后续研究。",
+          "link": "把本书接到 2000 年代后的专长研究。",
+          "main_en": "Expertise has boundaries, and the boundaries are themselves evidence.",
+          "flow_en": "From random positions to theoretical revision to the problem of transfer.",
+          "names_en": "Experts, novices, experimental design.",
+          "sources_en": "Conclusion and later research.",
+          "link_en": "Connects the book to expertise research after 2000."
+        }
+      }
+    ]
+  },
+  "gobet-moves-in-mind": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "为什么不能只看国际象棋",
+        "title_en": "Why chess is not enough",
+        "zh": "Gobet 等主张：国际象棋只是棋盘游戏的一种，若不比较围棋、将棋、西洋跳棋，就无法判断哪些认知机制是普适的。",
+        "en": "Gobet and colleagues argue chess is only one board game; without comparing go, shogi and draughts, we cannot tell which cognitive mechanisms are general.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "单一游戏的研究，无法区分「棋类」与「国际象棋」。",
+          "flow": "从国际象棋中心，到跨游戏比较，再到机制检验。",
+          "names": "国际象棋、围棋、将棋、跳棋。",
+          "sources": "导论与比较章。",
+          "link": "确立全书的比较方法。",
+          "main_en": "A single game cannot separate 'board games' from 'chess'.",
+          "flow_en": "From chess-centrism to cross-game comparison to testing mechanisms.",
+          "names_en": "Chess, go, shogi, draughts.",
+          "sources_en": "Introduction and comparative chapters.",
+          "link_en": "Establishes the comparative method."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "专长：共享与差异",
+        "title_en": "Expertise: shared and different",
+        "zh": "比较显示：组块与模板机制在多种棋类中都成立，但游戏规则（如将棋的持驹）会改变记忆与搜索的具体形态。",
+        "en": "Comparison shows chunking and templates hold across games, but rules — such as shogi's drops — change the specific shape of memory and search.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "普遍机制在具体规则下长出不同形态。",
+          "flow": "从组块，到规则差异，再到行为后果。",
+          "names": "将棋持驹、围棋布局、跳棋残局。",
+          "sources": "实验与规则分析。",
+          "link": "把认知普遍性与文化特殊性接合。",
+          "main_en": "Universal mechanisms take different shapes under specific rules.",
+          "flow_en": "From chunking to rule differences to behavioural consequences.",
+          "names_en": "Shogi drops, go openings, draughts endgames.",
+          "sources_en": "Experiments and rule analysis.",
+          "link_en": "Joins cognitive universals to cultural specificity."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "学习、迁移与文化",
+        "title_en": "Learning, transfer and culture",
+        "zh": "后段讨论训练如何塑造专长、技能能否迁移，以及棋类在不同文化中的位置：棋不只是认知任务，也是制度与教养的载体。",
+        "en": "Later chapters discuss how training shapes expertise, whether skill transfers, and the place of board games in different cultures: games are institutions and forms of upbringing, not only cognitive tasks.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "棋艺是练出来的，也是被文化安排的。",
+          "flow": "从训练，到迁移，再到文化制度。",
+          "names": "教练、棋院、国家传统。",
+          "sources": "训练研究与跨文化材料。",
+          "link": "把认知科学接回社会语境。",
+          "main_en": "Skill is trained, and it is also arranged by culture.",
+          "flow_en": "From training to transfer to cultural institutions.",
+          "names_en": "Coaches, academies, national traditions.",
+          "sources_en": "Training research and cross-cultural material.",
+          "link_en": "Reconnects cognitive science to social context."
+        }
+      }
+    ]
+  },
+  "degroot-thought-choice": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "问题与方法：出声思维",
+        "title_en": "Question and method: thinking aloud",
+        "zh": "de Groot 把棋手请进实验室，让他们边想边说；他要研究的不是棋艺，而是「选择」这一思维过程本身。",
+        "en": "De Groot brought players into the laboratory to think aloud; what he studied was not chess skill but the thought process of choice itself.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "要研究思维，就要让它说出来。",
+          "flow": "从问题设定，到方法设计，再到记录分析。",
+          "names": "棋手、实验者、录音记录。",
+          "sources": "方法与导论章。",
+          "link": "开创了专家研究的口述方法。",
+          "main_en": "To study thinking, make it speak.",
+          "flow_en": "From framing the question to designing the method to analysing protocols.",
+          "names_en": "Players, experimenters, transcripts.",
+          "sources_en": "Method and introduction.",
+          "link_en": "Founds the verbal-report method in expertise research."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "发现：高手不穷举",
+        "title_en": "Finding: masters do not enumerate",
+        "zh": "最重要的发现：高手并不计算更多着法，而是在最初几秒就识别出少数「好着法」，随后才做验证；新手则平均分配注意力。",
+        "en": "The key finding: masters do not calculate more moves but recognise a few good ones in the first seconds and then verify; novices distribute attention evenly.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "选择的第一步是识别，不是计算。",
+          "flow": "从第一印象，到候选着法，再到验证。",
+          "names": "大师、专家、新手。",
+          "sources": "实验记录。",
+          "link": "为后来的知觉专长理论提供原始证据。",
+          "main_en": "The first step of choice is recognition, not calculation.",
+          "flow_en": "From first impression to candidate moves to verification.",
+          "names_en": "Grandmasters, experts, novices.",
+          "sources_en": "Experimental protocols.",
+          "link_en": "Supplies the original evidence for later perceptual expertise theory."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "理论化：知觉、启发法与阶段",
+        "title_en": "Theorising: perception, heuristics and phases",
+        "zh": "de Groot 提出阶段模型：定向、探索、调查、验证；并以「启发法」解释专家如何在信息不足时仍能快速判断。",
+        "en": "De Groot proposes a phase model — orientation, exploration, investigation, verification — and uses heuristics to explain how experts judge quickly on incomplete information.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "决策是有阶段的，而非一次性计算。",
+          "flow": "从阶段划分，到启发法，再到理论边界。",
+          "names": "定向、探索、调查、验证。",
+          "sources": "理论章。",
+          "link": "把实验发现转成可检验的模型。",
+          "main_en": "Decision has phases rather than being one act of calculation.",
+          "flow_en": "From phases to heuristics to theoretical limits.",
+          "names_en": "Orientation, exploration, investigation, verification.",
+          "sources_en": "Theoretical chapters.",
+          "link_en": "Turns findings into a testable model."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "遗产：从棋桌到认知科学",
+        "title_en": "Legacy: from the chessboard to cognitive science",
+        "zh": "结论把棋类定位为「思维的自然实验室」：它可控制、可测量、可重复，因此成为二十世纪认知科学的原型任务。",
+        "en": "The conclusion positions chess as a natural laboratory of thought: controllable, measurable and repeatable, it became a prototype task for twentieth-century cognitive science.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "棋不是隐喻，而是实验装置。",
+          "flow": "从棋局，到实验范式，再到学科影响。",
+          "names": "认知科学、人工智能、心理学。",
+          "sources": "结论章。",
+          "link": "解释本书为何被反复引用。",
+          "main_en": "Chess is not a metaphor but an experimental apparatus.",
+          "flow_en": "From positions to experimental paradigm to disciplinary influence.",
+          "names_en": "Cognitive science, AI, psychology.",
+          "sources_en": "Conclusion.",
+          "link_en": "Explains why the book is so often cited."
+        }
+      }
+    ]
+  }
+}

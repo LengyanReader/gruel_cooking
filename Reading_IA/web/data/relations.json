@@ -197,6 +197,24 @@
       "why_zh": "组块与专家认知",
       "why_en": "chunks and expert cognition",
       "conf": "✓"
+    },
+    {
+      "from": "Haraway / 多物种研究 / 女性主义 STS",
+      "from_en": "Haraway / multispecies studies / feminist STS",
+      "to": "tsing",
+      "arrow": "⇐",
+      "why_zh": "伴生物种与多物种民族志",
+      "why_en": "companion species and multispecies ethnography",
+      "conf": "◐"
+    },
+    {
+      "from": "后发展 / 拉美去殖民 / 政治本体论",
+      "from_en": "post-development / Latin American decolonial / political ontology",
+      "to": "escobar",
+      "arrow": "⇐",
+      "why_zh": "发展批判与多元宇宙",
+      "why_en": "critique of development and the pluriverse",
+      "conf": "◐"
     }
   ],
   "circle": [
@@ -383,6 +401,15 @@
       "why_zh": "棋类心理学的跨代对话",
       "why_en": "cross-generational chess psychology",
       "conf": "✓"
+    },
+    {
+      "from": "tsing",
+      "to": "escobar",
+      "to_en": "Arturo Escobar",
+      "arrow": "◎",
+      "why_zh": "同处人类世/多元宇宙对话",
+      "why_en": "shared Anthropocene/pluriverse conversation",
+      "conf": "◐"
     }
   ],
   "cowrites": [
@@ -432,6 +459,16 @@
       "why_en": "co-authored Perception and Memory in Chess",
       "book": "Perception and Memory in Chess",
       "book_en": "Perception and Memory in Chess",
+      "conf": "✓"
+    },
+    {
+      "from": "tsing",
+      "to": "Nils Bubandt, Elaine Gan & Heather Anne Swanson",
+      "to_en": "Nils Bubandt, Elaine Gan & Heather Anne Swanson",
+      "why_zh": "合编 Arts of Living",
+      "why_en": "co-edited Arts of Living",
+      "book": "Arts of Living on a Damaged Planet",
+      "book_en": "Arts of Living on a Damaged Planet",
       "conf": "✓"
     }
   ],
@@ -802,6 +839,22 @@
       "school_en": "research ethics · responsibility",
       "why_zh": "诚信是方法的一部分",
       "why_en": "integrity is part of method",
+      "conf": "✓"
+    },
+    {
+      "author": "tsing",
+      "school_zh": "多物种民族志 · 摩擦理论",
+      "school_en": "multispecies ethnography · friction theory",
+      "why_zh": "以摩擦、多物种与斑驳重写全球连接",
+      "why_en": "rewrites global connection through friction, multispecies and patchiness",
+      "conf": "✓"
+    },
+    {
+      "author": "escobar",
+      "school_zh": "后发展 · 多元宇宙政治",
+      "school_en": "post-development · pluriversal politics",
+      "why_zh": "把发展写成话语、把设计写成世界生成",
+      "why_en": "development as discourse, design as world-making",
       "conf": "✓"
     }
   ]

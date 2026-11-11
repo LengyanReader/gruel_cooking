@@ -1,0 +1,358 @@
+{
+  "moretti-graphs-maps-trees": {
+    "toc": {
+      "note_zh": "全书由三篇长论组成（图表、地图、树），章题据通行版式；具体小节未逐页核对。",
+      "note_en": "Three long essays (graphs, maps, trees); titles follow the common edition, subsections not checked page by page.",
+      "groups": [
+        {
+          "title_zh": "图表",
+          "title_en": "Graphs",
+          "items": ["图表：文学史的量表"]
+        },
+        {
+          "title_zh": "地图",
+          "title_en": "Maps",
+          "items": ["地图：空间中的文学"]
+        },
+        {
+          "title_zh": "树",
+          "title_en": "Trees",
+          "items": ["树：形式的演化"]
+        }
+      ]
+    },
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "图表：把文学史变成可数的对象",
+        "title_en": "Graphs: making literary history countable",
+        "zh": "Moretti 用出版年、文类与国别的计数曲线，展示文学生产的宏观节律；单个文本退到背景，取而代之的是文类的生灭。",
+        "en": "Moretti plots publication years, genres and national literatures as curves, showing the macro-rhythm of production; individual texts recede and genres rise and fall instead.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "不读文本也能看见文学史的形状，只要把文本变成数据。",
+          "flow": "从计数方法，到文类曲线，再到解释的边界。",
+          "names": "出版年、文类、国别文学。",
+          "sources": "书目数据库与文学史统计。",
+          "link": "为后两篇（地图、树）提供量化的基调。",
+          "main_en": "The shape of literary history is visible without reading texts, if texts become data.",
+          "flow_en": "From counting to genre curves to the limits of explanation.",
+          "names_en": "Publication years, genres, national literatures.",
+          "sources_en": "Bibliographic databases and literary-historical statistics.",
+          "link_en": "Sets the quantitative key for maps and trees."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "地图：把小说放回空间",
+        "title_en": "Maps: putting the novel back into space",
+        "zh": "把小说的地点标在地图上，可以看出文类与地理的相互塑造：首都、边境、殖民地与乡村各有其叙事功能。",
+        "en": "Plotting novelistic locations on maps reveals how genre and geography shape each other: capital, border, colony and countryside each carry narrative functions.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "空间不是背景，而是形式的构成要素。",
+          "flow": "从地点标注，到空间模式，再到文类差异。",
+          "names": "巴黎、伦敦、边境、殖民地。",
+          "sources": "小说地图书目。",
+          "link": "把量化的抽象拉回地理的具体。",
+          "main_en": "Space is not background but a constituent of form.",
+          "flow_en": "From plotting locations to spatial patterns to genre difference.",
+          "names_en": "Paris, London, borders, colonies.",
+          "sources_en": "Bibliographies of novelistic geography.",
+          "link_en": "Pulls quantitative abstraction back to geographical concreteness."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "树：形式的演化",
+        "title_en": "Trees: the evolution of form",
+        "zh": "用树状图表示文类与形式的分叉，把达尔文式的演化隐喻引入文学史：形式有谱系，也有灭绝。",
+        "en": "Tree diagrams represent the branching of genres and forms, importing an evolutionary metaphor into literary history: forms have lineages and extinctions.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "形式像物种一样分化、竞争与消失。",
+          "flow": "从形式特征，到分叉图，再到演化解释。",
+          "names": "文类、形式特征、分支。",
+          "sources": "形式分析与文学史。",
+          "link": "把三篇统一为一种「宏观形式学」。",
+          "main_en": "Forms branch, compete and vanish like species.",
+          "flow_en": "From formal features to branching diagrams to evolutionary explanation.",
+          "names_en": "Genres, formal features, branches.",
+          "sources_en": "Formal analysis and literary history.",
+          "link_en": "Unifies the three essays as a macro-formalism."
+        }
+      }
+    ]
+  },
+  "moretti-distant-reading": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "远读：把「不读」变成方法",
+        "title_en": "Distant reading: making 'not reading' a method",
+        "zh": "Moretti 主张文学史不必从细读出发：通过文类、市场与地理的宏观数据，可以看见单篇文本看不见的模式。",
+        "en": "Moretti argues literary history need not start from close reading: macro-data on genre, market and geography reveal patterns invisible in single texts.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "距离是认识的条件，而不是理解的障碍。",
+          "flow": "从细读的局限，到宏观方法，再到解释的尺度。",
+          "names": "文类、市场、出版数据。",
+          "sources": "文集各篇。",
+          "link": "为全书确立方法论姿态。",
+          "main_en": "Distance is a condition of knowledge, not an obstacle to understanding.",
+          "flow_en": "From the limits of close reading to macro-methods to scales of explanation.",
+          "names_en": "Genres, markets, publication data.",
+          "sources_en": "The collected essays.",
+          "link_en": "Establishes the book's methodological stance."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "世界文学作为一个体系",
+        "title_en": "World literature as a system",
+        "zh": "把世界文学理解为不平等交换的体系：中心提供形式，边缘提供材料与市场，创新往往发生在半边缘。",
+        "en": "World literature is read as a system of unequal exchange: centres supply forms, peripheries supply material and markets, and innovation often emerges in the semi-periphery.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "文学的世界性来自不平等，而非普世价值。",
+          "flow": "从中心/边缘，到形式流动，再到半边缘的创新。",
+          "names": "歌德、卡萨诺瓦、世界文学市场。",
+          "sources": "世界文学理论与书目数据。",
+          "link": "把远读从方法提升为全球文学史模型。",
+          "main_en": "Literary worldliness comes from inequality, not universal value.",
+          "flow_en": "From centre/periphery to the flow of forms to semi-peripheral innovation.",
+          "names_en": "Goethe, Casanova, the world-literary market.",
+          "sources_en": "World-literature theory and bibliographic data.",
+          "link_en": "Raises distant reading from method to a model of global literary history."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "形式的实验",
+        "title_en": "Experiments in form",
+        "zh": "以具体实验收尾：文类演化、叙事句法、标题与篇幅的统计，展示远读能提出什么样的问题。",
+        "en": "Concrete experiments close the book: genre evolution, narrative syntax, statistics of titles and length show what kinds of questions distant reading can pose.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "远读的价值不在结论，而在它能提出新问题。",
+          "flow": "从假设，到数据，再到解释的限度。",
+          "names": "文类、句法、标题、篇幅。",
+          "sources": "各篇实验。",
+          "link": "把方法论落成可检验的案例。",
+          "main_en": "The value of distant reading lies in new questions, not conclusions.",
+          "flow_en": "From hypothesis to data to the limits of explanation.",
+          "names_en": "Genre, syntax, titles, length.",
+          "sources_en": "The individual experiments.",
+          "link_en": "Grounds the method in testable cases."
+        }
+      }
+    ]
+  },
+  "moretti-bourgeois": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "形容词：布尔乔亚的自我描述",
+        "title_en": "Adjectives: the bourgeoisie describes itself",
+        "zh": "Moretti 从 19 世纪小说中反复出现的形容词入手，追踪「严肃」「舒适」「有用」等词如何构成布尔乔亚的自我形象。",
+        "en": "Starting from adjectives recurring in nineteenth-century fiction, Moretti traces how words like serious, comfortable and useful compose the bourgeois self-image.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "阶级不是先存在再被描述，而是在词汇中被做成。",
+          "flow": "从词频，到语义场，再到阶级形象。",
+          "names": "布尔乔亚、小说家、形容词。",
+          "sources": "19 世纪小说语料。",
+          "link": "为后两章的形式分析提供语言证据。",
+          "main_en": "A class is not described after it exists; it is made in vocabulary.",
+          "flow_en": "From word frequency to semantic fields to class image.",
+          "names_en": "Bourgeoisie, novelists, adjectives.",
+          "sources_en": "Nineteenth-century fiction.",
+          "link_en": "Supplies linguistic evidence for the formal analyses that follow."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "散文：布尔乔亚的文体",
+        "title_en": "Prose: the bourgeois style",
+        "zh": "布尔乔亚的文体不是华丽的，而是清晰、功能性的散文；这种「平淡」本身就是一种意识形态。",
+        "en": "The bourgeois style is not ornate but clear, functional prose; its very plainness is an ideology.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "透明性是一种修辞，而不是修辞的缺席。",
+          "flow": "从文体特征，到叙事功能，再到意识形态。",
+          "names": "叙述者、散文、现实主义。",
+          "sources": "小说文本细读与文体统计。",
+          "link": "把语言分析与阶级分析接合。",
+          "main_en": "Transparency is a rhetoric, not the absence of rhetoric.",
+          "flow_en": "From stylistic features to narrative function to ideology.",
+          "names_en": "Narrator, prose, realism.",
+          "sources_en": "Close reading and stylistic statistics.",
+          "link_en": "Joins linguistic and class analysis."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "胜利与失败：一个阶级的文学命运",
+        "title_en": "Victory and defeat: the literary fate of a class",
+        "zh": "布尔乔亚在小说中既有胜利时刻，也逐渐失去叙事中心；Moretti 把这一曲线读成阶级的历史命运。",
+        "en": "The bourgeoisie has its victories in fiction and then loses narrative centrality; Moretti reads this curve as the historical fate of a class.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "文学形式的兴衰，是阶级命运的仪表盘。",
+          "flow": "从叙事中心，到形式衰退，再到历史解释。",
+          "names": "布尔乔亚、小说形式、19 世纪。",
+          "sources": "全书论证。",
+          "link": "把微观词汇分析与宏观历史叙事合并。",
+          "main_en": "The rise and fall of literary form is a dashboard of class fate.",
+          "flow_en": "From narrative centrality to formal decline to historical explanation.",
+          "names_en": "Bourgeoisie, novel form, the nineteenth century.",
+          "sources_en": "The book's overall argument.",
+          "link_en": "Merges micro-vocabulary analysis with macro-historical narrative."
+        }
+      }
+    ]
+  },
+  "moretti-atlas": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "空间与小说",
+        "title_en": "Space and the novel",
+        "zh": "把 19 世纪欧洲小说的故事地点标在地图上，可以看到文类与国土、边境、殖民地的关系。",
+        "en": "Mapping where nineteenth-century European novels take place reveals relations between genre and nation, border and colony.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "小说的地理不是随机的，而是被文类与国家结构塑造的。",
+          "flow": "从地图标注，到空间模式，再到文类解释。",
+          "names": "巴尔扎克、狄更斯、司汤达。",
+          "sources": "小说地图书目。",
+          "link": "为文类的地理分析奠定基础。",
+          "main_en": "Novelistic geography is not random but shaped by genre and state structure.",
+          "flow_en": "From mapping to spatial pattern to generic explanation.",
+          "names_en": "Balzac, Dickens, Stendhal.",
+          "sources_en": "Bibliographies of novelistic geography.",
+          "link_en": "Grounds the geographical analysis of genre."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "地图上的文类",
+        "title_en": "Genre on the map",
+        "zh": "不同文类占据不同空间：成长小说走向首都，冒险小说走向边境与殖民地，乡土小说退回乡村。",
+        "en": "Genres occupy different spaces: the Bildungsroman moves to the capital, adventure fiction to border and colony, regional fiction back to the countryside.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "文类是有地理的：形式选择也是空间选择。",
+          "flow": "从文类分布，到空间功能，再到形式差异。",
+          "names": "成长小说、冒险小说、乡土小说。",
+          "sources": "地图与文本对照。",
+          "link": "把「文类」从时间概念改为空间概念。",
+          "main_en": "Genres have geographies: formal choice is also spatial choice.",
+          "flow_en": "From generic distribution to spatial function to formal difference.",
+          "names_en": "Bildungsroman, adventure fiction, regional fiction.",
+          "sources_en": "Maps read against texts.",
+          "link_en": "Turns genre from a temporal into a spatial concept."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "地理作为形式",
+        "title_en": "Geography as form",
+        "zh": "结论主张地图不是辅助材料，而是文学分析的形式工具：它让「在哪里发生」成为可解释的问题。",
+        "en": "The conclusion argues maps are not ancillary but formal instruments of analysis: they make 'where it happens' an explicable question.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "空间分析补充而非取代文本分析。",
+          "flow": "从案例，到方法，再到文学史主张。",
+          "names": "地图、文类、欧洲。",
+          "sources": "全书总结。",
+          "link": "为《图表、地图、树》的地图篇铺路。",
+          "main_en": "Spatial analysis supplements rather than replaces textual analysis.",
+          "flow_en": "From cases to method to a claim about literary history.",
+          "names_en": "Maps, genres, Europe.",
+          "sources_en": "Overall argument.",
+          "link_en": "Prepares the maps essay in Graphs, Maps, Trees."
+        }
+      }
+    ]
+  },
+  "jockers-macroanalysis": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "从细读到宏观",
+        "title_en": "From close to macro",
+        "zh": "Jockers 主张把数千部小说当作一个语料库来分析：词频、句法与主题的模式，只有在规模上才可见。",
+        "en": "Jockers treats thousands of novels as one corpus: patterns of word frequency, syntax and theme become visible only at scale.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "规模本身是一种解释工具。",
+          "flow": "从细读传统，到语料库构建，再到模式识别。",
+          "names": "19 世纪小说、语料库、统计方法。",
+          "sources": "数字人文方法与小说语料。",
+          "link": "为后续的文类与影响分析奠基。",
+          "main_en": "Scale is itself an instrument of explanation.",
+          "flow_en": "From the close-reading tradition to corpus building to pattern recognition.",
+          "names_en": "Nineteenth-century novels, corpora, statistics.",
+          "sources_en": "Digital-humanities methods and novel corpora.",
+          "link_en": "Grounds the later analyses of genre and influence."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "文类与风格的量化",
+        "title_en": "Quantifying genre and style",
+        "zh": "通过词频与风格距离，Jockers 展示文类不是评论家的分类，而是可以在文本中测量出的差异。",
+        "en": "Through word frequencies and stylistic distance, Jockers shows genre is not only a critic's category but a difference measurable in texts.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "文类有可测量的语言指纹。",
+          "flow": "从特征词，到风格距离，再到文类聚类。",
+          "names": "文类、作者、风格特征。",
+          "sources": "统计模型与语料库。",
+          "link": "把文类研究从解释转成检验。",
+          "main_en": "Genres have measurable linguistic fingerprints.",
+          "flow_en": "From feature words to stylistic distance to genre clustering.",
+          "names_en": "Genres, authors, stylistic features.",
+          "sources_en": "Statistical models and corpora.",
+          "link_en": "Turns genre study from interpretation into testing."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "文学影响的网络",
+        "title_en": "Networks of literary influence",
+        "zh": "以文本相似度构建影响网络，Jockers 让「谁影响了谁」从印象判断变成可检验的关系结构。",
+        "en": "Building influence networks from textual similarity, Jockers turns 'who influenced whom' from impression into a testable relational structure.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "影响不是灵感，而是可追踪的文本关系。",
+          "flow": "从相似度，到网络，再到文学史叙事。",
+          "names": "作者、文本、网络节点。",
+          "sources": "网络分析与语料库。",
+          "link": "把宏观分析推到文学史的核心问题。",
+          "main_en": "Influence is not inspiration but a traceable textual relation.",
+          "flow_en": "From similarity to network to literary-historical narrative.",
+          "names_en": "Authors, texts, network nodes.",
+          "sources_en": "Network analysis and corpora.",
+          "link_en": "Pushes macroanalysis to the core question of literary history."
+        }
+      }
+    ]
+  }
+}

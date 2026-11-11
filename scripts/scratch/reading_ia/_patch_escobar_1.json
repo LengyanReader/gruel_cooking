@@ -1,0 +1,967 @@
+{
+  "escobar-encountering-development": {
+    "title_zh": "《遭遇发展：第三世界的建构与解构》",
+    "title_orig": "Encountering Development: The Making and Unmaking of the Third World",
+    "year": "1995",
+    "publisher": "Princeton University Press",
+    "publisher_en": "Princeton University Press",
+    "publines_zh": "Princeton University Press · 1995（另有 2012 年新版附新序）· ISBN/页数待核",
+    "publines_en": "Princeton University Press · 1995 (2012 reissue with a new preface) · ISBN/pages pending",
+    "meta_zh": "学术 · 发展批判 · 后发展",
+    "meta_en": "scholarship · development critique · post-development",
+    "baseline_conf": "◐ 出版社与年份经指南/Goodreads 登记（指南记 1994，版权页通常作 1995）；ISBN、页数、版次待核",
+    "baseline_conf_en": "◐ publisher and year via guide/Goodreads (guide gives 1994, title page usually 1995); ISBN, pages and printing pending",
+    "why_zh": "后发展的奠基之作：发展不是中性援助，而是一套把「第三世界」发明为干预对象的话语装置——贫困、饥饿、农民都在这套装置里被重新命名。",
+    "why_en": "The founding text of post-development: development is not neutral aid but a discursive apparatus that invented the 'Third World' as an object of intervention — poverty, hunger and the peasant were all renamed inside it.",
+    "background": {
+      "zh": "《遭遇发展》写于 1980 年代末至 1990 年代初，Escobar 从哥伦比亚的农业与农村发展项目出发，转而在华盛顿、罗马与波哥大的档案里追踪「发展」的诞生。他的核心材料不是田野访谈，而是发展机构的报告、计划书、人口与营养数据、以及「绿色革命」的技术推广文本。书名里的「遭遇」有两层：第三世界「遭遇」发展机器，研究者也「遭遇」自己所属的话语。Escobar 借福柯的话语分析与萨义德的东方主义批判，把 1949 年杜鲁门就职演说中的「第四点计划」当作发展时代的起点：从那以后，世界被重新划分为「发达」与「欠发达」。",
+      "en": "Encountering Development was written in the late 1980s and early 1990s. Escobar starts from agricultural and rural development projects in Colombia and moves into the archives of Washington, Rome and Bogotá to trace the birth of 'development'. His core materials are not interviews but agency reports, project documents, population and nutrition data, and the technical literature of the Green Revolution. 'Encountering' works in two directions: the Third World encounters the development machine, and the researcher encounters the discourse he belongs to. Drawing on Foucault's discourse analysis and Said's critique of Orientalism, Escobar takes the 'Point Four' programme in Truman's 1949 inaugural address as the opening of the development era: from then on the world was redivided into developed and underdeveloped.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts of post-development",
+      "sources_en": "Guide; book description; standard accounts of post-development"
+    },
+    "narrative": {
+      "zh": "全书六章加结论，可分成三个动作。第一，追溯「发展」的话语装置：贫困如何被问题化，经济增长如何成为普遍尺度，饥饿如何被转译成粮食与技术问题。第二，展示这套装置如何在具体制度中运作：计划、贷款、专家、统计表格，把地方生活切成可计算的项目。第三，转向「后发展」：不是提出另一种发展方案，而是从地方运动、农民知识与混合文化中寻找「另一些世界」的线索。结论不提供蓝图，只提出一个问题：如果发展是一种被发明的话语，那么把它拆开之后，还剩下什么可以生长的东西？",
+      "en": "Six chapters and a conclusion form three movements. First, the discursive apparatus of development is traced: how poverty was problematised, how economic growth became a universal measure, how hunger was translated into a problem of food and technology. Second, the apparatus is shown at work in institutions: plans, loans, experts and statistical tables cut local life into calculable projects. Third, the book turns to post-development: not another development model but clues to 'other worlds' in local movements, peasant knowledge and hybrid cultures. The conclusion offers no blueprint, only a question: if development is an invented discourse, what remains that can grow once it is taken apart?",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后成为后发展研究、批判发展研究与拉丁美洲研究的标准参照；「发展话语」「第三世界的发明」进入大量教材，也常与 Ferguson、Crush、Rist 的发展批判并读。",
+      "reception_good_en": "It became a standard reference in post-development, critical development studies and Latin American studies; development discourse and the invention of the Third World entered many textbooks and are read alongside Ferguson, Crush and Rist.",
+      "reception_bad_zh": "最主要的批评是「只拆不建」：话语分析精细，但对替代方案着墨不多，也低估了发展项目在健康、识字与基础设施上的实际效果；另有批评指出，把发展整体化为铁板一块的话语，会抹去其内部差异。",
+      "reception_bad_en": "The main criticism is that it dismantles without building: the discourse analysis is fine-grained but alternatives are thin, and the real gains of development projects in health, literacy and infrastructure are underplayed. Others argue that treating development as a single coherent discourse erases its internal differences.",
+      "syn_zh": "本书的贡献不是否定一切改善生活的努力，而是把「发展」从自然事实还原为历史发明：一旦看见它是被做出来的，就可以问它由谁做、为谁做、还能不能做得不一样。",
+      "syn_en": "The contribution is not to deny every effort to improve life but to restore development from natural fact to historical invention: once it is seen as made, one can ask by whom, for whom, and whether it could be made otherwise.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "发展不是中性技术援助，而是一套生产「欠发达」主体的话语装置",
+      "「第三世界」是二战后发展话语的发明物，而非给定地理实体",
+      "贫困、饥饿与农民在发展规划中被转译为可计算、可干预的对象",
+      "后发展不是另一种发展方案，而是从地方实践中开启另一些世界",
+      "发展话语的拆解必须同时是研究者自身位置的拆解"
+    ],
+    "claims_list_en": [
+      "Development is not neutral technical aid but a discursive apparatus that produces 'underdeveloped' subjects",
+      "The 'Third World' is an invention of post-war development discourse, not a given geographical entity",
+      "Poverty, hunger and the peasant are translated into calculable, intervenable objects in development planning",
+      "Post-development is not another development model but the opening of other worlds from local practice",
+      "Dismantling development discourse must also dismantle the researcher's own position"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Encountering Development》由 Princeton University Press 出版，版权页通常作 1995 年（指南记 1994）",
+        "claim_en": "Encountering Development was published by Princeton University Press, usually dated 1995 on the title page (guide gives 1994)",
+        "source": "Guide / Goodreads / standard citation",
+        "source_en": "Guide / Goodreads / standard citation",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书把杜鲁门 1949 年就职演说中的「第四点计划」作为发展时代的起点",
+        "claim_en": "The book takes the Point Four programme in Truman's 1949 inaugural address as the opening of the development era",
+        "source": "Book description / secondary summaries",
+        "source_en": "Book description / secondary summaries",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书以福柯式话语分析与萨义德的东方主义批判为方法资源",
+        "claim_en": "The book draws methodologically on Foucauldian discourse analysis and Said's critique of Orientalism",
+        "source": "Secondary summaries",
+        "source_en": "Secondary summaries",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书被视为后发展（post-development）研究的奠基文本之一",
+        "claim_en": "The book is treated as one of the founding texts of post-development",
+        "source": "Guide / reception",
+        "source_en": "Guide / reception",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次（1995 初版 / 2012 新版）",
+        "item_en": "ISBN, page count and printing (1995 original / 2012 reissue)",
+        "conf": "◐"
+      },
+      {
+        "item": "各章标题与分章结构（据通行版式重构，未逐页核对）",
+        "item_en": "chapter titles and structure (reconstructed from the common edition, not checked page by page)",
+        "conf": "◐"
+      },
+      {
+        "item": "书中具体统计表、报告名称与引用页码",
+        "item_en": "specific tables, report titles and page references",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "从「拆解发展话语」转向「从领地实践中建构替代」",
+        "note_en": "from dismantling development discourse to building alternatives from territorial practice",
+        "conf": "◐"
+      },
+      {
+        "title": "Friction",
+        "title_en": "Friction",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2004",
+        "relation": "对读 · 摩擦",
+        "relation_en": "compare · friction",
+        "axis": "friction",
+        "pos": "",
+        "note_zh": "Escobar 拆宏观话语装置，Tsing 看它在森林里如何被摩擦与转译",
+        "note_en": "Escobar dismantles the macro discursive apparatus; Tsing watches it being rubbed and translated in the forest",
+        "conf": "◐"
+      },
+      {
+        "title": "The Anti-Politics Machine",
+        "title_en": "The Anti-Politics Machine",
+        "author": "James Ferguson",
+        "author_en": "James Ferguson",
+        "year": "1990",
+        "relation": "同域 · 发展批判",
+        "relation_en": "same field · development critique",
+        "axis": "development",
+        "pos": "",
+        "note_zh": "以莱索托为例展示发展项目如何「去政治化」贫困",
+        "note_en": "uses Lesotho to show how development projects depoliticise poverty",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "以档案与报告为主要材料，而不是田野访谈：论证的力量来自「发展如何书写自己」的文本证据。",
+        "en": "Uses archives and reports rather than interviews: the argument draws its force from the textual evidence of how development writes itself."
+      },
+      {
+        "zh": "把「贫困」「饥饿」「农民」当作词与范畴来处理，追踪它们在不同机构文本中如何被重新定义。",
+        "en": "Treats poverty, hunger and the peasant as words and categories, tracing how they are redefined across institutional texts."
+      },
+      {
+        "zh": "结论从批判转向「另一些世界」，但拒绝给出方案，保持问题开放。",
+        "en": "The conclusion turns from critique to 'other worlds' while refusing a blueprint, keeping the question open."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论，把「发展话语」的定义抄下来，再逐章检查：每一章用的是哪一种材料（报告、数据、政策文件），它们各自能证明什么、不能证明什么。",
+        "en": "Read the introduction and copy out the definition of development discourse; then check chapter by chapter which material is used (reports, data, policy documents) and what each can and cannot prove."
+      },
+      {
+        "zh": "把「贫困的问题化」一章与「饥饿」一章对读：两者都把生活转译成可计算对象，但转译的技术不同——哪一种更容易被反证？",
+        "en": "Read the chapter on problematising poverty against the chapter on hunger: both translate life into calculable objects, but with different techniques — which is easier to refute?"
+      },
+      {
+        "zh": "追问：如果发展话语真的如此封闭，本书自己为何能写出？作者的位置是否也被同一套话语塑造？",
+        "en": "Ask: if development discourse is really so closed, how could this book be written? Is the author's own position shaped by the same discourse?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "发展话语",
+        "term_en": "development discourse",
+        "orig": "development discourse",
+        "gloss_zh": "把世界划分为发达与欠发达，并据此组织知识、制度与干预规则的话语装置。",
+        "gloss_en": "A discursive apparatus that divides the world into developed and underdeveloped and organises knowledge, institutions and rules of intervention accordingly.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "term": "第三世界的发明",
+        "term_en": "invention of the Third World",
+        "orig": "the making of the Third World",
+        "gloss_zh": "「第三世界」不是先存在再被描述，而是在发展话语与冷战秩序中被生产出来的对象。",
+        "gloss_en": "The Third World does not exist first and get described; it is produced as an object within development discourse and Cold War order.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "term": "贫困的问题化",
+        "term_en": "problematisation of poverty",
+        "orig": "problematization of poverty",
+        "gloss_zh": "把贫困从一种关系状态转译为可用收入线、增长率与项目来处理的技術问题。",
+        "gloss_en": "Translating poverty from a relational condition into a technical problem manageable through income lines, growth rates and projects.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "term": "权力/知识",
+        "term_en": "power/knowledge",
+        "orig": "power/knowledge",
+        "gloss_zh": "借自福柯：知识的生产与权力的运作不可分，专家报告本身就是治理工具。",
+        "gloss_en": "From Foucault: knowledge production and the exercise of power are inseparable; the expert report is itself an instrument of governance.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "term": "后发展",
+        "term_en": "post-development",
+        "orig": "post-development",
+        "gloss_zh": "不是「另一种发展」，而是拒绝发展主义框架、从地方实践与混合文化中寻找另一些世界。",
+        "gloss_en": "Not 'another development' but a refusal of the developmentalist frame, seeking other worlds in local practice and hybrid cultures.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "term": "混合文化",
+        "term_en": "hybrid cultures",
+        "orig": "hybrid cultures",
+        "gloss_zh": "地方生活在与全球力量接触中形成的混合形态，是后发展想象的现实基础。",
+        "gloss_en": "Mixed formations produced as local life meets global forces; the real ground of post-development imagination.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "1995 年出版后迅速进入发展研究、人类学与文化研究课程；评论普遍承认它把「发展」重新问题化的功劳，也担心它把发展整体化。",
+      "then_en": "Published in 1995, it quickly entered development studies, anthropology and cultural studies; reviews acknowledged its success in re-problematising development while worrying that it totalised it.",
+      "later_zh": "后世把它与 Ferguson、Crush、Rist、Sachs 的发展批判并置，视为后发展研究的奠基文本；2010 年代又被「去殖民」「本体论政治」等讨论重新征用。",
+      "later_en": "Later work places it with Ferguson, Crush, Rist and Sachs as a founding text of post-development; in the 2010s it was reappropriated by decolonial and ontological-politics debates.",
+      "influence_zh": "「发展话语」成为批判发展研究的通用词；本书也塑造了后来的「另一些世界」「多元宇宙」问题意识。",
+      "influence_en": "Development discourse became a common term in critical development studies, and the book shaped the later problematic of 'other worlds' and the pluriverse.",
+      "critique_zh": "主要保留是：替代方案薄弱；对发展项目的实际收益估计不足；把发展写成铁板一块，可能抹去其内部的政治分歧；此外，话语分析难以解释为何某些发展项目确实改变了寿命与识字率。",
+      "critique_en": "The main reservations are that alternatives remain thin, the real gains of development projects are underestimated, and treating development as a single block may erase its internal political divisions. Discourse analysis also struggles to explain why some projects did change life expectancy and literacy.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述，访问 2026-11-09）",
+          "en": "Guide (bibliography and thematic survey, accessed 2026-11-09)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "替代方案薄弱",
+          "title_en": "Thin alternatives",
+          "note_zh": "拆解细致，但「后发展」更多是姿态与线索，缺少可操作的制度设计。",
+          "note_en": "The dismantling is detailed, but post-development remains a stance and a set of clues rather than institutional design."
+        },
+        {
+          "title_zh": "发展被整体化",
+          "title_en": "Development totalised",
+          "note_zh": "把跨越半个世纪、多个机构的实践写成一套连贯话语，可能抹去内部分歧。",
+          "note_en": "Writing half a century and many agencies as one coherent discourse may erase internal disagreement."
+        },
+        {
+          "title_zh": "实际收益被低估",
+          "title_en": "Real gains underplayed",
+          "note_zh": "对公共卫生、识字与基础设施的改善着墨较少。",
+          "note_en": "Improvements in public health, literacy and infrastructure receive little attention."
+        },
+        {
+          "title_zh": "话语分析的边界",
+          "title_en": "Limits of discourse analysis",
+          "note_zh": "文本分析难以解释物质条件与项目效果的差异。",
+          "note_en": "Textual analysis struggles to explain differences in material conditions and project outcomes."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：发展不是被发现的中性过程，而是二战后被发明的话语装置；它生产了「第三世界」这个可干预的对象，因此真正的替代不是「更好的发展」，而是对这套装置的拆解与另一些世界的开启。",
+      "claim_en": "Escobar wants to show that development is not a neutral process discovered but a discursive apparatus invented after 1945; it produced the 'Third World' as an intervenable object, so the real alternative is not 'better development' but the dismantling of that apparatus and the opening of other worlds.",
+      "why_zh": "书名用「遭遇」而非「批判」，把研究者也放进被检视的关系里；全书以杜鲁门「第四点计划」开篇，锁定话语的起点；结论不写方案而写「另一些世界」，说明作者要改变的是问题框架，而非政策清单。",
+      "why_en": "The title uses 'encountering' rather than 'critique', placing the researcher inside the relation being examined; the book opens with Truman's Point Four to fix the discourse's starting point; the conclusion offers 'other worlds' rather than a policy list, showing that the target is the frame of the question, not a programme.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "以「遭遇」命名，把批判对象与批判者放在同一关系里。",
+          "en": "The title 'encountering' places the object and the critic in one relation.",
+          "source": "Book title / introduction",
+          "source_en": "Book title / introduction",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "材料",
+          "kind_en": "material",
+          "zh": "以机构报告与政策文本为主，说明对象是话语而非项目效果。",
+          "en": "Agency reports and policy texts dominate, showing the object is discourse rather than project outcomes.",
+          "source": "Secondary summaries",
+          "source_en": "Secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "接受",
+          "kind_en": "reception",
+          "zh": "本书被读作后发展奠基文本，说明其目标被理解为框架转换。",
+          "en": "It is read as a founding post-development text, showing its aim was understood as a change of frame.",
+          "source": "Guide / reception",
+          "source_en": "Guide / reception",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书是一次成功的「话语批判」，但它把发展写得过于统一，也未能说明替代性实践如何规模化；把它当作完整的政治方案，会高估其建设性。",
+      "counter_en": "Alternative reading: it is a successful discourse critique, but it writes development as too unified and does not show how alternative practices scale; treating it as a complete political programme overestimates its constructive side.",
+      "boundary_zh": "未通读，无法判断各章论证与材料细节；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters or the details of its materials; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "把「发展」放回历史：读《遭遇发展》",
+      "title_en": "Putting development back in history",
+      "standfirst_zh": "发展不是援助的技术问题，而是把「第三世界」发明为干预对象的话语装置。",
+      "standfirst_en": "Development is not a technical question of aid but a discursive apparatus that invented the Third World as an object of intervention.",
+      "body_zh": "《遭遇发展》最容易被误读成一本「反对援助」的书。它其实更精确：Escobar 要问的不是「发展有没有用」，而是「发展」这个词如何在一九四五年之后获得如此大的权力，以至于所有社会都被迫用它来讲述自己。杜鲁门的「第四点计划」是一个象征性的起点：从那一刻起，世界被分成「发达」与「欠发达」，而后者需要前者提供技术、资本与专家。\n\n这本书的方法值得注意：它几乎不写田野访谈，而是读报告、计划书、统计表与政策文本。Escobar 要展示的不是「发展项目失败了」，而是「发展如何书写自己」——贫困如何被转译成收入线，饥饿如何被转译成粮食产量，农民如何被转译成需要改造的对象。当这些转译完成时，干预就已经在语法上被允许了。\n\n它的局限也在这里：拆解很细，建设很薄。读者合上书会知道「发展」是被发明的，却不太知道「另一些世界」具体长什么样。后来的《差异的领地》与《多元宇宙的设计》正是在补这一块。\n\n读这本书，最好的姿势是把它当作一次「语法课」：学会在看任何发展项目时问——它把谁的生活转译成了什么？谁有权力做这个转译？转译过程中，什么被保留了，什么被删掉了？", 
+      "abstract_en": "Encountering Development is easily misread as a book against aid. It is more precise: Escobar asks not whether development works but how the word acquired such power after 1945 that every society was forced to narrate itself through it. Truman's Point Four is a symbolic starting point: from then on the world was split into developed and underdeveloped, the latter needing technology, capital and experts from the former.\n\nThe method matters: there are almost no interviews, only reports, project documents, statistical tables and policy texts. Escobar shows not that development projects failed but how development writes itself — how poverty is translated into an income line, hunger into grain output, the peasant into an object to be remade. Once those translations are made, intervention is already permitted at the level of grammar.\n\nIts limit lies there too: the dismantling is fine, the building is thin. Readers close the book knowing development was invented but not what 'other worlds' look like. Territories of Difference and Designs for the Pluriverse later fill that gap.\n\nThe best posture for reading it is as a grammar lesson: learn to ask of any development project — whose life has been translated into what, who has the power to make that translation, and what is kept or deleted in the process?",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论、结论与二手评论（未逐页核对）",
+          "en": "The book's introduction, conclusion and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "第四点计划",
+        "name_en": "Point Four",
+        "orig": "Point Four",
+        "evid_zh": "发展时代的象征性起点：技术援助成为全球秩序的语言。",
+        "evid_en": "The symbolic opening of the development era: technical assistance becomes the language of global order.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "表格与报告",
+        "name_en": "tables and reports",
+        "orig": "tables and reports",
+        "evid_zh": "话语的物质载体：生活被切成可计算的行与列。",
+        "evid_en": "The material carriers of discourse: life cut into calculable rows and columns.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "农民",
+        "name_en": "the peasant",
+        "orig": "the peasant",
+        "evid_zh": "被发展话语反复命名的对象，也是后发展重新寻找行动者的地方。",
+        "evid_en": "The figure repeatedly named by development discourse, and where post-development looks again for actors.",
+        "source": "Encountering Development",
+        "source_en": "Encountering Development",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "发展话语命题（非逐字原文）",
+        "trans_zh": "发展不是被发现的中性过程，而是二战后被发明的话语装置，它生产了「第三世界」这个可干预的对象。",
+        "trans_en": "Development is not a neutral process discovered but a discursive apparatus invented after 1945 that produced the Third World as an intervenable object.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "后发展命题（非逐字原文）",
+        "trans_zh": "真正的替代不是「更好的发展」，而是拆解这套装置，并从地方实践中开启另一些世界。",
+        "trans_en": "The real alternative is not 'better development' but dismantling the apparatus and opening other worlds from local practice.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "toc": {
+      "note_zh": "章目据通行版式重构（Princeton 平装本），章题未逐页核对，仅作阅读路线。",
+      "note_en": "Contents reconstructed from the common Princeton paperback edition; chapter titles are not checked page by page and serve only as a reading route.",
+      "groups": [
+        {
+          "title_zh": "导论",
+          "title_en": "Introduction",
+          "items": ["导论：发展与现代性的人类学"]
+        },
+        {
+          "title_zh": "话语的建构",
+          "title_en": "Making the discourse",
+          "items": [
+            "贫困的问题化：三个世界与发展故事",
+            "经济学与发展的空间：增长与资本的故事",
+            "权力的散布：粮食与饥饿的故事"
+          ]
+        },
+        {
+          "title_zh": "解构与替代",
+          "title_en": "Unmaking and alternatives",
+          "items": [
+            "第三世界的建构与解构",
+            "结论：想象一个后发展时代"
+          ]
+        }
+      ]
+    },
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "发展如何被发明",
+        "title_en": "How development was invented",
+        "zh": "从杜鲁门「第四点计划」入手，展示「发达/欠发达」的划分如何在一九四五年后成为全球秩序的基本语法。",
+        "en": "Starting from Truman's Point Four, the book shows how the developed/underdeveloped split became the basic grammar of global order after 1945.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "发展不是自然进程，而是被话语制造出来的时间差。",
+          "flow": "从政治演说，到国际机构，再到各国发展规划。",
+          "names": "杜鲁门、联合国、世界银行、国家计划部门。",
+          "sources": "政策文本与机构报告。",
+          "link": "为后续的贫困与饥饿分析设定框架。",
+          "main_en": "Development is not a natural process but a temporal gap manufactured by discourse.",
+          "flow_en": "From political speech to international agencies to national plans.",
+          "names_en": "Truman, the UN, the World Bank, planning ministries.",
+          "sources_en": "Policy texts and agency reports.",
+          "link_en": "Sets the frame for the analyses of poverty and hunger."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "生活如何被转译成项目",
+        "title_en": "How life is translated into projects",
+        "zh": "贫困、饥饿与农民被转译为收入线、产量指标与可改造的对象；报告、表格与专家成为治理的媒介。",
+        "en": "Poverty, hunger and the peasant are translated into income lines, output targets and objects to be remade; reports, tables and experts become the media of governance.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "转译本身就是权力：它决定了什么可见、什么可干预。",
+          "flow": "从问题化，到量化，再到项目化。",
+          "names": "专家、统计员、规划者、农民。",
+          "sources": "发展机构文本与绿色革命文献。",
+          "link": "把宏观话语落到具体的书写技术。",
+          "main_en": "Translation is itself power: it decides what is visible and intervenable.",
+          "flow_en": "From problematisation to quantification to projectisation.",
+          "names_en": "Experts, statisticians, planners, peasants.",
+          "sources_en": "Development agency texts and Green Revolution literature.",
+          "link_en": "Grounds macro discourse in concrete writing practices."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "拆开之后：后发展的可能",
+        "title_en": "After dismantling: the possibility of post-development",
+        "zh": "结论转向地方运动、农民知识与混合文化，提出「另一些世界」的问题，但拒绝给出新的发展方案。",
+        "en": "The conclusion turns to local movements, peasant knowledge and hybrid cultures, posing the question of 'other worlds' while refusing a new development model.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "替代不是一个更好的模型，而是让被压抑的实践获得可见性。",
+          "flow": "从批判总结，到地方实践，再到开放的问题。",
+          "names": "地方运动、农民、混合文化。",
+          "sources": "拉丁美洲案例与理论资源。",
+          "link": "为《差异的领地》的领地政治铺路。",
+          "main_en": "An alternative is not a better model but making suppressed practices visible.",
+          "flow_en": "From critical summary to local practice to an open question.",
+          "names_en": "Local movements, peasants, hybrid cultures.",
+          "sources_en": "Latin American cases and theoretical sources.",
+          "link_en": "Prepares the territorial politics of Territories of Difference."
+        }
+      }
+    ]
+  },
+  "escobar-territories-difference": {
+    "title_zh": "《差异的领地：地方、运动、生活、网络》",
+    "title_orig": "Territories of Difference: Place, Movements, Life, Redes",
+    "year": "2008",
+    "publisher": "Duke University Press",
+    "publisher_en": "Duke University Press",
+    "publines_zh": "Duke University Press · 2008 · ISBN/页数待核",
+    "publines_en": "Duke University Press · 2008 · ISBN/pages pending",
+    "meta_zh": "学术 · 政治生态 · 领地",
+    "meta_en": "scholarship · political ecology · territory",
+    "baseline_conf": "◐ 出版社与年份经指南/Goodreads 登记；ISBN、页数与具体印次待核",
+    "baseline_conf_en": "◐ publisher and year via guide/Goodreads; ISBN, pages and printing pending",
+    "why_zh": "从「批判发展」走向「建构替代」：哥伦比亚太平洋沿岸黑人社区如何把森林、河流与红树林写成自己的「领地」，并在全球资本与武装冲突之间维持生命世界。",
+    "why_en": "The move from critiquing development to building alternatives: how Afro-Colombian communities on the Pacific coast wrote forest, river and mangrove into their own 'territory' and sustained a lifeworld between global capital and armed conflict.",
+    "background": {
+      "zh": "本书基于 Escobar 在哥伦比亚太平洋沿岸地区多年的合作研究，对象是非洲裔社区（尤其 proceso de comunidades negras 运动）与他们的领地组织。这一地区在 1990 年代获得集体土地权（Ley 70），同时被卷入生物多样性热、棕榈油种植、伐木、矿业与准军事暴力。Escobar 与地方组织、NGO 与研究者合作，追踪「领地」如何从一个法律范畴变成一种生命世界的政治：河流不是资源，而是道路与亲属关系；森林不是碳汇，而是历史与知识的载体。书名四个词——地方、运动、生活、网络——就是全书的结构。",
+      "en": "The book grows out of years of collaborative research on Colombia's Pacific coast with Afro-Colombian communities, especially the proceso de comunidades negras movement and its territorial organisations. In the 1990s the region won collective land rights (Ley 70) while being pulled into biodiversity booms, oil-palm plantations, logging, mining and paramilitary violence. Working with local organisations, NGOs and researchers, Escobar traces how 'territory' turns from a legal category into a politics of lifeworld: the river is not a resource but a road and a kinship relation; the forest is not a carbon sink but a carrier of history and knowledge. The four words of the subtitle — place, movements, life, redes — are the book's structure.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts",
+      "sources_en": "Guide; book description; standard accounts"
+    },
+    "narrative": {
+      "zh": "全书分四部分，层层放大：先写「地方」——太平洋沿岸的地理、河流与村落如何构成一个关系性的生活空间；再写「资本」——生物多样性、棕榈油、林业与「发展」如何把地方重新编码为资源；第三部分写「生活」——社区如何用领地、食物、仪式与教育维持生命世界；最后写「网络」——地方组织如何与跨国倡议、学术网络与全球环境治理连接。全书不是线性叙事，而是四个尺度的叠合，每一部分都回指其他部分。",
+      "en": "Four parts scale outward: place — how the geography, rivers and villages of the Pacific coast form a relational living space; capital — how biodiversity, oil palm, forestry and 'development' recode place as resource; life — how communities sustain a lifeworld through territory, food, ritual and education; and redes — how local organisations connect to transnational advocacy, scholarly networks and global environmental governance. It is not a linear narrative but four scales superimposed, each pointing back to the others.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后成为政治生态学、领地研究与拉丁美洲研究的核心文本；「领地作为生命世界」「redes」被广泛引用，也常与 Porto-Gonçalves、Haesbaert 的领地理论并读。",
+      "reception_good_en": "It became a core text in political ecology, territory studies and Latin American studies; territory as lifeworld and redes are widely cited and read with Porto-Gonçalves and Haesbaert on territory.",
+      "reception_bad_zh": "批评集中在两点：一是与社区组织的合作关系可能影响批判距离；二是「领地」概念在跨区域使用时容易被理想化，掩盖社区内部的分歧与性别不平等。",
+      "reception_bad_en": "Criticism centres on two points: collaborative relations with community organisations may affect critical distance, and the concept of territory can be idealised when used across regions, obscuring internal divisions and gender inequality.",
+      "syn_zh": "本书的关键贡献是把「替代」从抽象主张变成可追踪的实践：领地不是被保护的资源，而是被集体生产与维护的生命世界。",
+      "syn_en": "The key contribution is to turn 'alternatives' from an abstract claim into a traceable practice: territory is not a resource to be protected but a lifeworld collectively produced and maintained.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "领地不是资源，而是被集体生产与维护的生命世界",
+      "发展资本通过生物多样性、棕榈油与林业把地方重新编码为资源",
+      "黑人社区运动把法律范畴转化为政治与文化实践",
+      "地方网络（redes）连接跨国倡议，但不失其地方性",
+      "替代性政治必须在具体地方、具体历史中被建构"
+    ],
+    "claims_list_en": [
+      "Territory is not a resource but a lifeworld collectively produced and maintained",
+      "Development capital recodes place as resource through biodiversity, oil palm and forestry",
+      "The black communities' movement turns a legal category into political and cultural practice",
+      "Local networks (redes) connect to transnational advocacy without losing their locality",
+      "Alternative politics must be built in concrete places and concrete histories"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Territories of Difference》2008 年由 Duke University Press 出版",
+        "claim_en": "Territories of Difference was published by Duke University Press in 2008",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "研究对象为哥伦比亚太平洋沿岸的非洲裔社区及其领地运动",
+        "claim_en": "The object is Afro-Colombian communities on Colombia's Pacific coast and their territorial movement",
+        "source": "Guide; book description",
+        "source_en": "Guide; book description",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书围绕 place、movements、life、redes 四个概念组织",
+        "claim_en": "The book is organised around place, movements, life and redes",
+        "source": "Guide; book description",
+        "source_en": "Guide; book description",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书是 Escobar 从发展批判转向领地/多元宇宙政治的关键过渡",
+        "claim_en": "The book is Escobar's key transition from development critique to territorial and pluriversal politics",
+        "source": "Guide; reception",
+        "source_en": "Guide; reception",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次",
+        "item_en": "ISBN, page count and printing",
+        "conf": "◐"
+      },
+      {
+        "item": "四部分各章标题（未逐页核对）",
+        "item_en": "chapter titles of the four parts (not checked page by page)",
+        "conf": "◐"
+      },
+      {
+        "item": "Ley 70 等法律条文的具体条款与年份细节",
+        "item_en": "specific clauses and dates of Ley 70 and related law",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Encountering Development",
+        "title_en": "Encountering Development",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "1995",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "development",
+        "pos": "",
+        "note_zh": "从拆解发展话语，到从领地实践中建构替代",
+        "note_en": "from dismantling development discourse to building alternatives from territorial practice",
+        "conf": "◐"
+      },
+      {
+        "title": "Designs for the Pluriverse",
+        "title_en": "Designs for the Pluriverse",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2018",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "把领地实践提升为「为多元宇宙而设计」",
+        "note_en": "lifts territorial practice into 'design for the pluriverse'",
+        "conf": "◐"
+      },
+      {
+        "title": "In the Realm of the Diamond Queen",
+        "title_en": "In the Realm of the Diamond Queen",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "1993",
+        "relation": "对读 · 边缘",
+        "relation_en": "compare · margins",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "Tsing 的「边缘」与 Escobar 的「领地」：两种从国家外部思考的方式",
+        "note_en": "Tsing's margin and Escobar's territory: two ways of thinking from outside the state",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "以四个概念（place/movements/life/redes）分部，让理论结构与地方经验互相检验。",
+        "en": "Divides the book by four concepts (place, movements, life, redes), letting theoretical structure and local experience test each other."
+      },
+      {
+        "zh": "把河流、红树林、食谱与口述史当作分析材料，而不只是背景描写。",
+        "en": "Treats rivers, mangroves, recipes and oral history as analytical material, not mere background."
+      },
+      {
+        "zh": "以合作研究的方式写作，明确标注与社区组织、NGO 的关系，让知识生产的位置可见。",
+        "en": "Writes as collaborative research, marking relations with community organisations and NGOs so the position of knowledge production stays visible."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论，弄清四个关键词各自的尺度；再读任一部分，检查它是否真的改变了你对另一个尺度的理解。",
+        "en": "Read the introduction and clarify the scale of each keyword; then read one part and check whether it genuinely changes your understanding of another scale."
+      },
+      {
+        "zh": "把「资本」部分与「生活」部分对读：同一片红树林在两者中分别是什么？",
+        "en": "Read the capital part against the life part: what is the same mangrove in each?"
+      },
+      {
+        "zh": "追问：本书的「领地」是否把社区写得太和谐？性别、代际与阶级差异在哪里出现？",
+        "en": "Ask whether the book writes the community as too harmonious. Where do gender, generation and class differences appear?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "领地",
+        "term_en": "territory",
+        "orig": "territorio",
+        "gloss_zh": "不是被占有的土地，而是被集体生活、命名与维护的生命世界。",
+        "gloss_en": "Not land that is owned but a lifeworld collectively lived, named and maintained.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "term": "生命世界",
+        "term_en": "lifeworld",
+        "orig": "mundo de la vida",
+        "gloss_zh": "由河流、森林、食物、仪式与亲属关系共同构成的生活整体。",
+        "gloss_en": "A whole of life composed of rivers, forests, food, ritual and kinship.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "term": "网络",
+        "term_en": "redes",
+        "orig": "redes",
+        "gloss_zh": "地方组织与跨国倡议、学术与运动之间的连接形式，既开放又扎根。",
+        "gloss_en": "Forms of connection between local organisations and transnational advocacy, scholarship and movements: open yet rooted.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "term": "地方",
+        "term_en": "place",
+        "orig": "lugar",
+        "gloss_zh": "不是全球的对立面，而是全球力量被具体化、被感受、被回应的场所。",
+        "gloss_en": "Not the opposite of the global but where global forces are concretised, felt and answered.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "term": "政治生态",
+        "term_en": "political ecology",
+        "orig": "ecología política",
+        "gloss_zh": "把生态问题放回权力、资本与知识关系中分析。",
+        "gloss_en": "Analysing ecological questions within relations of power, capital and knowledge.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "term": "差异",
+        "term_en": "difference",
+        "orig": "diferencia",
+        "gloss_zh": "不是多样性的装饰，而是不同世界在同一空间中的共存与冲突。",
+        "gloss_en": "Not decorative diversity but the coexistence and conflict of different worlds in one space.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2008 年出版后进入政治生态学、拉丁美洲研究与领地研究课程；评论肯定它把「地方」从怀旧概念变成政治分析单位。",
+      "then_en": "Published in 2008, it entered political ecology, Latin American studies and territory studies; reviews praised its conversion of 'place' from nostalgia into a unit of political analysis.",
+      "later_zh": "后世把它视为 Escobar 从「后发展」走向「多元宇宙」的枢纽；redes 与领地概念被用于分析全球南方的资源冲突。",
+      "later_en": "Later work treats it as the hinge between post-development and the pluriverse; redes and territory travel into analyses of resource conflict across the global South.",
+      "influence_zh": "本书让「领地」成为全球南方环境政治的核心词，也影响了「生命世界」在人类学与地理学中的使用。",
+      "influence_en": "It made territory central to environmental politics in the global South and shaped the use of lifeworld in anthropology and geography.",
+      "critique_zh": "主要保留是：合作研究的立场可能削弱批判距离；「领地」的和谐叙事可能掩盖社区内部的性别与阶级差异；四个尺度的整合有时显得并置而非贯通。",
+      "critique_en": "The main reservations are that collaborative stance may weaken critical distance, the harmonious narrative of territory may obscure gender and class differences within communities, and the four scales sometimes sit side by side rather than integrate.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "批判距离",
+          "title_en": "Critical distance",
+          "note_zh": "与社区组织的合作关系使本书更偏向内部视角。",
+          "note_en": "Collaboration with community organisations tilts the book toward an internal perspective."
+        },
+        {
+          "title_zh": "内部差异被淡化",
+          "title_en": "Internal difference underplayed",
+          "note_zh": "性别、代际与阶级冲突在「领地」叙事中着墨较少。",
+          "note_en": "Gender, generational and class conflict receive less attention in the territory narrative."
+        },
+        {
+          "title_zh": "四尺度并置",
+          "title_en": "Four scales juxtaposed",
+          "note_zh": "place/movements/life/redes 的整合有时更像并列而非贯通。",
+          "note_en": "The integration of place, movements, life and redes sometimes reads as juxtaposition rather than articulation."
+        },
+        {
+          "title_zh": "外推风险",
+          "title_en": "Risk of generalisation",
+          "note_zh": "哥伦比亚太平洋沿岸的经验不能直接套用到其他领地冲突。",
+          "note_en": "The Pacific coast case cannot be applied directly to other territorial conflicts."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：替代性政治不是理论构想，而是在具体领地中被集体生产的生命世界；因此研究者应追踪地方运动如何把法律、生态与历史转译成「另一个世界」的实践。",
+      "claim_en": "Escobar wants to show that alternative politics is not a theoretical construct but a lifeworld collectively produced in concrete territories; research should therefore trace how local movements translate law, ecology and history into the practice of 'another world'.",
+      "why_zh": "书名把「差异」放在「领地」之后，说明差异不是抽象多元，而是有地点的共存；四个关键词分别对应空间、政治、生活与连接，构成一个完整的分析装置；本书明确接续《遭遇发展》的「另一些世界」问题。",
+      "why_en": "The title puts difference after territory, making difference a located coexistence rather than abstract plurality; the four keywords cover space, politics, life and connection as a complete analytical device; the book explicitly continues the 'other worlds' question of Encountering Development.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与结构把「差异」锚定在具体领地。",
+          "en": "The title and structure anchor difference in concrete territory.",
+          "source": "Book description",
+          "source_en": "Book description",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "方法",
+          "kind_en": "method",
+          "zh": "以合作研究与地方组织为对象，说明知识生产本身是替代政治的一部分。",
+          "en": "Collaborative research with local organisations shows that knowledge production is part of alternative politics.",
+          "source": "Secondary summaries",
+          "source_en": "Secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "《多元宇宙的设计》把本书的领地实践提升为普遍的设计问题。",
+          "en": "Designs for the Pluriverse lifts the territorial practice here into a general problem of design.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书是一部立场鲜明的合作民族志，其「领地」概念带有规范性承诺；把它当作中立的社会科学分析，会低估其政治投入。",
+      "counter_en": "Alternative reading: it is a committed collaborative ethnography whose concept of territory carries normative commitments; treating it as neutral social science underplays its political investment.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "领地作为生命世界：读《差异的领地》",
+      "title_en": "Territory as lifeworld",
+      "standfirst_zh": "替代不是抽象主张，而是被集体生产与维护的生命世界——河流是道路，森林是历史。",
+      "standfirst_en": "Alternatives are not abstract claims but lifeworlds collectively produced and maintained — the river is a road, the forest is history.",
+      "body_zh": "《差异的领地》是《遭遇发展》之后必须读的一本书，因为它回答了前者留下的问题：拆掉发展话语之后，还剩什么？Escobar 的答案是「领地」——但不是土地所有权意义上的领地，而是哥伦比亚太平洋沿岸黑人社区用河流、森林、食物、仪式与亲属关系共同维护的生命世界。\n\n这本书的结构值得学习：place、movements、life、redes 四个词既是章节，也是四个尺度。地方不是全球的对立面，而是全球力量被具体感受的地方；运动不是抽象政治，而是把法律范畴转成文化实践的过程；生活不是背景，而是政治的内容；网络不是逃离地方，而是让地方连接到跨国倡议的方式。\n\n它的力量来自合作研究的深度：Escobar 不假装站在外部观察，而是明确自己与社区组织、NGO 的关系。这种立场也让批评成为可能——读者可以问，当研究者与运动站在一起时，他还能看见社区内部的性别与阶级分歧吗？\n\n这本书最适合与 Tsing 的《钻石女王的领地》对读：一个从国家边缘的黑人社区出发，一个从印尼的梅拉瑙人出发；两人都在问，被国家视为「偏远」的地方，如何可能是世界生成的现场。", 
+      "abstract_en": "Territories of Difference is the necessary sequel to Encountering Development because it answers the question the earlier book left open: what remains after development discourse is dismantled? Escobar's answer is territory — not land ownership but a lifeworld maintained by Afro-Colombian communities on the Pacific coast through rivers, forests, food, ritual and kinship.\n\nThe structure is worth learning from: place, movements, life and redes are both chapters and scales. Place is not the opposite of the global but where global forces are concretely felt; movements are not abstract politics but the conversion of legal categories into cultural practice; life is not background but the content of politics; networks are not escape from place but the way place connects to transnational advocacy.\n\nIts force comes from the depth of collaboration: Escobar does not pretend to observe from outside but marks his relations with community organisations and NGOs. That stance also enables criticism — one can ask whether a researcher standing with a movement can still see its internal gender and class divisions.\n\nThe book is best read against Tsing's In the Realm of the Diamond Queen: one starts from an Afro-Colombian community at the state's edge, the other from the Meratus in Indonesia; both ask how a place the state treats as remote can be a site where worlds are made.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "河流",
+        "name_en": "the river",
+        "orig": "río",
+        "evid_zh": "既是交通与生计，也是亲属关系与记忆的载体。",
+        "evid_en": "At once transport and livelihood, kinship and memory.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "红树林",
+        "name_en": "mangrove",
+        "orig": "manglar",
+        "evid_zh": "在资本眼中是资源，在社区眼中是生命的边界与守护者。",
+        "evid_en": "A resource in capital's eyes, a boundary and guardian of life in the community's.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "食谱",
+        "name_en": "recipes",
+        "orig": "recetas",
+        "evid_zh": "食物实践是领地知识的口传档案。",
+        "evid_en": "Food practice is an oral archive of territorial knowledge.",
+        "source": "Territories of Difference",
+        "source_en": "Territories of Difference",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "领地命题（非逐字原文）",
+        "trans_zh": "领地不是被占有的土地，而是被集体生活、命名与维护的生命世界。",
+        "trans_en": "Territory is not land that is owned but a lifeworld collectively lived, named and maintained.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "网络命题（非逐字原文）",
+        "trans_zh": "地方网络既开放又扎根：它连接跨国倡议，却不因此离开地方。",
+        "trans_en": "Local networks are open and rooted at once: they connect to transnational advocacy without leaving the local.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "地方：河流构成的生活空间",
+        "title_en": "Place: a living space made of rivers",
+        "zh": "太平洋沿岸的地理与村落不是背景，而是关系性的生活空间；河流同时是道路、食物来源与亲属记忆。",
+        "en": "The geography and villages of the Pacific coast are not background but a relational living space; the river is at once road, food source and kinship memory.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "地方是被关系构成的，而不是被坐标定位的。",
+          "flow": "从地理描述，到生计实践，再到亲属与记忆。",
+          "names": "村落、河流、红树林、家庭。",
+          "sources": "民族志与口述史。",
+          "link": "为资本部分的冲突提供生活基础。",
+          "main_en": "Place is constituted by relations, not located by coordinates.",
+          "flow_en": "From geography to livelihood to kinship and memory.",
+          "names_en": "Villages, rivers, mangroves, households.",
+          "sources_en": "Ethnography and oral history.",
+          "link_en": "Provides the lived ground for the conflicts in the capital part."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "资本：把地方重新编码为资源",
+        "title_en": "Capital: recoding place as resource",
+        "zh": "生物多样性热、棕榈油、林业与矿业把森林与河流重新编码为可开发资源，地方知识被降格为「传统」。",
+        "en": "Biodiversity booms, oil palm, forestry and mining recode forest and river as exploitable resources, demoting local knowledge to 'tradition'.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "资源化是一种编码行为，它决定了谁的知识算知识。",
+          "flow": "从全球市场，到国家政策，再到地方冲突。",
+          "names": "棕榈油公司、国家机构、NGO、社区。",
+          "sources": "政治生态学与政策分析。",
+          "link": "解释为什么领地成为争夺对象。",
+          "main_en": "Resource-making is an act of coding that decides whose knowledge counts.",
+          "flow_en": "From global markets to state policy to local conflict.",
+          "names_en": "Oil-palm firms, state agencies, NGOs, communities.",
+          "sources_en": "Political ecology and policy analysis.",
+          "link_en": "Explains why territory becomes the object of struggle."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "生活：领地如何被日常维护",
+        "title_en": "Life: how territory is maintained daily",
+        "zh": "食物、仪式、教育与合作劳动把领地维持为一个生命世界；政治不只是对抗，也是日常再生产。",
+        "en": "Food, ritual, education and cooperative labour sustain territory as a lifeworld; politics is not only resistance but everyday reproduction.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "生命世界的维持本身就是政治实践。",
+          "flow": "从生产，到仪式，再到教育。",
+          "names": "妇女组织、教师、社区议会。",
+          "sources": "民族志章节。",
+          "link": "把「替代」落到可观察的日常。",
+          "main_en": "Sustaining a lifeworld is itself political practice.",
+          "flow_en": "From production to ritual to education.",
+          "names_en": "Women's organisations, teachers, community councils.",
+          "sources_en": "Ethnographic chapters.",
+          "link_en": "Grounds 'alternatives' in observable everyday life."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "网络：从地方到跨国",
+        "title_en": "Redes: from local to transnational",
+        "zh": "地方组织通过 red 与跨国倡议、学术网络、环境治理连接，既获得支持，也面临被代言的风险。",
+        "en": "Local organisations connect through redes to transnational advocacy, scholarly networks and environmental governance, gaining support while risking being spoken for.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "连接是必要的，但连接也会改写地方的声音。",
+          "flow": "从地方组织，到跨国倡议，再到全球治理。",
+          "names": "社区议会、NGO、跨国倡议网络。",
+          "sources": "组织网络分析。",
+          "link": "把本书接入全球化研究。",
+          "main_en": "Connection is necessary, but it also rewrites local voices.",
+          "flow_en": "From local organisations to transnational advocacy to global governance.",
+          "names_en": "Community councils, NGOs, transnational advocacy networks.",
+          "sources_en": "Analysis of organisational networks.",
+          "link_en": "Connects the book to globalisation studies."
+        }
+      }
+    ]
+  }
+}

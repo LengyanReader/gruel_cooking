@@ -13,6 +13,475 @@
   },
   "crops": [
     {
+      "id": "2026-tsing-escobar",
+      "page": "docs/reading_ia/read/tsing-escobar.html",
+      "dir_page": "tsing-escobar.html",
+      "glyph_zh": "人类世 · 多元宇宙 ANTHROPOCENE & PLURIVERSE",
+      "glyph_en": "ANTHROPOCENE & PLURIVERSE",
+      "date": "2026-11-10",
+      "title_zh": "Tsing × Escobar · 边缘、摩擦与多元宇宙 · 十五书",
+      "title_en": "Tsing × Escobar — Margins, Friction, and the Pluriverse (15 dossiers)",
+      "subtitle_zh": "Tsing 的多物种民族志 × Escobar 的后发展与设计；两作者十五书，七个共享主题。",
+      "subtitle_en": "Tsing's multispecies ethnography × Escobar's post-development and design; two authors, fifteen dossiers, seven shared themes.",
+      "verdict_zh": "GAPS",
+      "verdict_en": "GAPS",
+      "lang_line_zh": "英/西/法/葡 × 15 — 核心书目经 Goodreads 作者页、指南与出版社页/书评核对；未见全文者标 ◐/○",
+      "lang_line_en": "English / Spanish / French / Portuguese × 15 — core facts checked against Goodreads author pages, the guide, and publisher pages/reviews; unread items marked ◐/○",
+      "book_ids": [
+        "tsing-diamond-queen",
+        "tsing-friction",
+        "tsing-unruly-edges",
+        "tsing-mushroom",
+        "tsing-arts-living",
+        "tsing-feral-atlas",
+        "tsing-field-guide",
+        "escobar-encountering-development",
+        "escobar-territories-difference",
+        "escobar-sentipensar",
+        "escobar-designs-pluriverse",
+        "escobar-pluriversal-politics",
+        "escobar-autonomia-diseno",
+        "escobar-minga",
+        "escobar-relationality"
+      ],
+      "verdict_body_zh": "两作者十五书：Tsing 的边缘/摩擦/多物种/人类世，Escobar 的发展批判/领地/多元宇宙/关联性。七组共享主题（发展批判、多元宇宙、关联性、领地、社会运动/自主设计、翻译、方法论）作为读轴；书目事实已部分回出版社页与书评核对（页数 8 部、ISBN 5 部）；未见全文者一律 ◐/○。",
+      "verdict_body_en": "Fifteen dossiers: Tsing's margin/friction/multispecies/Anthropocene and Escobar's development critique/territory/pluriverse/relationality. Seven shared themes (development critique, pluriverse, relationality, territory, movements/autonomous design, translation, method) serve as axes; bibliographic facts are now partly checked against publisher pages and reviews (pages for 8 titles, ISBNs for 5); unread items marked ◐/○.",
+      "verdict_gaps": [
+        {
+          "zh": "多数书未通读；解读限于书目、指南与二手来源。",
+          "en": "Most books are unread; interpretation rests on bibliography, guide and secondary sources."
+        },
+        {
+          "zh": "书目事实部分核实：15 部中页数 8 部（4 部经出版社产品页、3 部据书评、1 部为期刊文章）、ISBN 5 部；Princeton 五部、西语原版与数字项目因产品页 403 或未见权威页，仍留 —。",
+          "en": "Bibliographic facts partly verified: pages for 8 of 15 titles (4 from publisher pages, 3 from reviews, 1 journal article) and ISBNs for 5; the five Princeton titles, the Spanish-language editions and the digital project remain — because product pages return 403 or no authoritative page was found."
+        },
+        {
+          "zh": "《Arts of Living on a Damaged Planet》出版社页记 2017-05-30（部分文献作 2016）；本档两说并存，未强行统一。",
+          "en": "The publisher page dates Arts of Living on a Damaged Planet to 2017-05-30 (some sources say 2016); both are recorded rather than forced into one."
+        },
+        {
+          "zh": "Feral Atlas 是数字项目，不是纸质书；阅读依赖网络。",
+          "en": "Feral Atlas is a digital project, not a print book; reading depends on the network."
+        },
+        {
+          "zh": "Escobar 的 58 条 Goodreads 条目经去重/筛选为 ~15 核心作；筛选标准见指南。",
+          "en": "Escobar's 58 Goodreads entries were deduplicated/curated to ~15 core works; criteria in the guide."
+        },
+        {
+          "zh": "Goodreads 评分与评价数随时间变动，只作参考。",
+          "en": "Goodreads ratings and counts change over time; reference only."
+        }
+      ],
+      "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",
+      "keel_en": "next crop 2026-12 winter solstice",
+      "rings": [
+        {
+          "id": "ring1",
+          "label_zh": "第一圈 · Tsing 的边缘与摩擦",
+          "label_en": "Ring 1 · Tsing's margins and friction",
+          "note_zh": "从《钻石女王的领地》到《摩擦》再到《不羁的边缘》。",
+          "note_en": "From Diamond Queen to Friction to Unruly Edges.",
+          "book_ids": [
+            "tsing-diamond-queen",
+            "tsing-friction",
+            "tsing-unruly-edges"
+          ]
+        },
+        {
+          "id": "ring2",
+          "label_zh": "第二圈 · Tsing 的多物种与人类世",
+          "label_en": "Ring 2 · Tsing's multispecies and Anthropocene",
+          "note_zh": "从《菌菇》到《Arts of Living》、Feral Atlas 与《野外指南》。",
+          "note_en": "From Mushroom to Arts of Living, Feral Atlas and Field Guide.",
+          "book_ids": [
+            "tsing-mushroom",
+            "tsing-arts-living",
+            "tsing-feral-atlas",
+            "tsing-field-guide"
+          ]
+        },
+        {
+          "id": "ring3",
+          "label_zh": "第三圈 · Escobar 的发展批判与领地",
+          "label_en": "Ring 3 · Escobar's development critique and territory",
+          "note_zh": "从《遭遇发展》到《差异的领地》与《Sentipensar》。",
+          "note_en": "From Encountering Development to Territories of Difference and Sentipensar.",
+          "book_ids": [
+            "escobar-encountering-development",
+            "escobar-territories-difference",
+            "escobar-sentipensar"
+          ]
+        },
+        {
+          "id": "ring4",
+          "label_zh": "第四圈 · Escobar 的多元宇宙与设计",
+          "label_en": "Ring 4 · Escobar's pluriverse and design",
+          "note_zh": "从《多元宇宙的设计》到《Pluriversal Politics》《Autonomía》《Minga》与《Relationality》。",
+          "note_en": "From Designs for the Pluriverse to Pluriversal Politics, Autonomía, Minga and Relationality.",
+          "book_ids": [
+            "escobar-designs-pluriverse",
+            "escobar-pluriversal-politics",
+            "escobar-autonomia-diseno",
+            "escobar-minga",
+            "escobar-relationality"
+          ]
+        }
+      ],
+      "axes": [
+        {
+          "key": "甲",
+          "label_zh": "发展 / 现代性批判",
+          "label_en": "development / modernity critique",
+          "chain": [
+            "escobar-encountering-development",
+            "tsing-friction"
+          ],
+          "note_zh": "Escobar 从宏观话语批判，Tsing 从微观摩擦现场；共同指向「发展不是单一轨道」。",
+          "note_en": "Escobar from macro discourse, Tsing from micro friction; together, development is not a single track."
+        },
+        {
+          "key": "乙",
+          "label_zh": "多物种 / 人类世",
+          "label_en": "multispecies / Anthropocene",
+          "chain": [
+            "tsing-unruly-edges",
+            "tsing-mushroom",
+            "tsing-arts-living",
+            "tsing-feral-atlas",
+            "tsing-field-guide"
+          ],
+          "note_zh": "从菌菇到受损星球，再到斑驳注意；一条「多物种—人类世」的方法链。",
+          "note_en": "From mushrooms to damaged planet to patchy noticing; a multispecies–Anthropocene method chain."
+        },
+        {
+          "key": "丙",
+          "label_zh": "领地 / 多元宇宙",
+          "label_en": "territory / pluriverse",
+          "chain": [
+            "escobar-territories-difference",
+            "escobar-designs-pluriverse",
+            "escobar-pluriversal-politics",
+            "escobar-autonomia-diseno",
+            "escobar-minga"
+          ],
+          "note_zh": "从黑人社区领地到设计即世界生成，再到自主与明加。",
+          "note_en": "From black-community territory to design as world-making, then autonomy and minga."
+        },
+        {
+          "key": "丁",
+          "label_zh": "关联性 / 翻译",
+          "label_en": "relationality / translation",
+          "chain": [
+            "escobar-sentipensar",
+            "escobar-relationality",
+            "tsing-friction"
+          ],
+          "note_zh": "Escobar 的 sentipensar/relationality 与 Tsing 的摩擦/转译；概念跨语言旅行。",
+          "note_en": "Escobar's sentipensar/relationality and Tsing's friction/translation; concepts travel across languages."
+        }
+      ],
+      "reading_order": [
+        {
+          "level_zh": "入门 · 三步",
+          "level_en": "Entry · three steps",
+          "note_zh": "先读三本可读的入口。",
+          "note_en": "Three readable entries.",
+          "book_ids": [
+            "escobar-encountering-development",
+            "tsing-friction",
+            "tsing-mushroom"
+          ]
+        },
+        {
+          "level_zh": "深入 · 三步",
+          "level_en": "Deepening · three steps",
+          "note_zh": "进入设计与领地。",
+          "note_en": "Into design and territory.",
+          "book_ids": [
+            "escobar-designs-pluriverse",
+            "escobar-territories-difference",
+            "tsing-arts-living"
+          ]
+        },
+        {
+          "level_zh": "贯通 · 三步",
+          "level_en": "Synthesis · three steps",
+          "note_zh": "把关联性、斑驳与野性放在一起。",
+          "note_en": "Read relationality, patchiness and feral together.",
+          "book_ids": [
+            "escobar-relationality",
+            "tsing-field-guide",
+            "tsing-feral-atlas"
+          ]
+        }
+      ],
+      "pointers": [
+        {
+          "label_zh": "Goodreads · Anna Tsing",
+          "label_en": "Goodreads · Anna Tsing",
+          "href": "https://www.goodreads.com/author/show/119987.Anna_Lowenhaupt_Tsing",
+          "note_zh": "24 部作品",
+          "note_en": "24 works"
+        },
+        {
+          "label_zh": "Goodreads · Arturo Escobar",
+          "label_en": "Goodreads · Arturo Escobar",
+          "href": "https://www.goodreads.com/author/show/136535.Arturo_Escobar",
+          "note_zh": "58 条 → ~15 核心",
+          "note_en": "58 entries → ~15 core"
+        },
+        {
+          "label_zh": "Feral Atlas",
+          "label_en": "Feral Atlas",
+          "href": "https://feralatlas.org",
+          "note_zh": "数字野性图谱",
+          "note_en": "digital feral atlas"
+        },
+        {
+          "label_zh": "Matsutake Worlds",
+          "label_en": "Matsutake Worlds",
+          "href": "https://matsutakeworlds.org",
+          "note_zh": "松茸研究网络",
+          "note_en": "matsutake research network"
+        },
+        {
+          "label_zh": "Pluriverse Dictionary",
+          "label_en": "Pluriverse Dictionary",
+          "href": "https://pluriverse.network",
+          "note_zh": "多元宇宙词条",
+          "note_en": "pluriverse entries"
+        },
+        {
+          "label_zh": "Aral Sea Project",
+          "label_en": "Aral Sea Project",
+          "href": "https://aralsea.ucsc.edu",
+          "note_zh": "Tsing 早期数字实验",
+          "note_en": "Tsing's early digital experiment"
+        }
+      ],
+      "appendix": [
+        {
+          "label_zh": "Tsing 的其他著作与编辑项目",
+          "label_en": "Other Tsing books & edited projects",
+          "items": [
+            {
+              "title": "Nature in the Global South",
+              "title_en": "Nature in the Global South",
+              "author": "Greenough & Tsing (eds.)",
+              "author_en": "Greenough & Tsing (eds.)",
+              "note_zh": "2003，环境项目与全球南方",
+              "note_en": "2003, environment and the global South",
+              "conf": "◐"
+            },
+            {
+              "title": "Communities and Conservation",
+              "title_en": "Communities and Conservation",
+              "author": "Brosius, Tsing & Zerner (eds.)",
+              "author_en": "Brosius, Tsing & Zerner (eds.)",
+              "note_zh": "2005，社区保护话语批判",
+              "note_en": "2005, critique of community conservation",
+              "conf": "◐"
+            },
+            {
+              "title": "Words in Motion",
+              "title_en": "Words in Motion",
+              "author": "Gluck & Tsing (eds.)",
+              "author_en": "Gluck & Tsing (eds.)",
+              "note_zh": "2009，全球词典与概念旅行",
+              "note_en": "2009, global lexicon and concept travel",
+              "conf": "◐"
+            },
+            {
+              "title": "A Bestiary of the Anthropocene",
+              "title_en": "A Bestiary of the Anthropocene",
+              "author": "Nova et al. (Tsing contrib.)",
+              "author_en": "Nova et al. (Tsing contrib.)",
+              "note_zh": "2021，混合标本图录",
+              "note_en": "2021, hybrid specimen atlas",
+              "conf": "◐"
+            },
+            {
+              "title": "Proliférations",
+              "title_en": "Proliférations",
+              "author": "Tsing (Stengers preface)",
+              "author_en": "Tsing (Stengers preface)",
+              "note_zh": "2022，法语版",
+              "note_en": "2022, French edition",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "Escobar 的其他著作与译本",
+          "label_en": "Other Escobar books & translations",
+          "items": [
+            {
+              "title": "The Making of Social Movements in Latin America",
+              "title_en": "The Making of Social Movements in Latin America",
+              "author": "Escobar & Alvarez (eds.)",
+              "author_en": "Escobar & Alvarez (eds.)",
+              "note_zh": "1992，身份/策略/民主",
+              "note_en": "1992, identity/strategy/democracy",
+              "conf": "◐"
+            },
+            {
+              "title": "World Anthropologies",
+              "title_en": "World Anthropologies",
+              "author": "Ribeiro & Escobar (eds.)",
+              "author_en": "Ribeiro & Escobar (eds.)",
+              "note_zh": "2006，去殖民人类学",
+              "note_en": "2006, decolonial anthropology",
+              "conf": "◐"
+            },
+            {
+              "title": "La Invención del Desarrollo",
+              "title_en": "La Invención del Desarrollo",
+              "author": "Escobar",
+              "author_en": "Escobar",
+              "note_zh": "2014，西语深化版",
+              "note_en": "2014, expanded Spanish edition",
+              "conf": "◐"
+            },
+            {
+              "title": "Una minga para el postdesarrollo",
+              "title_en": "Una minga para el postdesarrollo",
+              "author": "Escobar",
+              "author_en": "Escobar",
+              "note_zh": "2021，明加与后发展",
+              "note_en": "2021, minga and post-development",
+              "conf": "◐"
+            },
+            {
+              "title": "Autonomía y diseño",
+              "title_en": "Autonomía y diseño",
+              "author": "Escobar",
+              "author_en": "Escobar",
+              "note_zh": "2020，自主与设计",
+              "note_en": "2020, autonomy and design",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "关键二手文献",
+          "label_en": "Key secondary literature",
+          "items": [
+            {
+              "title": "Blaser, Ontological Conflicts (2013)",
+              "title_en": "Blaser, Ontological Conflicts (2013)",
+              "author": "Mario Blaser",
+              "author_en": "Mario Blaser",
+              "note_zh": "本体论政治奠基文",
+              "note_en": "foundational text in political ontology",
+              "conf": "◐"
+            },
+            {
+              "title": "de la Cadena, Earth Beings (2015)",
+              "title_en": "Earth Beings",
+              "author": "Marisol de la Cadena",
+              "author_en": "Marisol de la Cadena",
+              "note_zh": "安第斯世界的实践生态",
+              "note_en": "ecologies of practice in the Andes",
+              "conf": "◐"
+            },
+            {
+              "title": "Kirksey & Helmreich, Multispecies Ethnography (2010)",
+              "title_en": "Multispecies Ethnography (2010)",
+              "author": "Kirksey & Helmreich",
+              "author_en": "Kirksey & Helmreich",
+              "note_zh": "多物种民族志宣言",
+              "note_en": "multispecies ethnography manifesto",
+              "conf": "◐"
+            },
+            {
+              "title": "Haraway, Staying with the Trouble (2016)",
+              "title_en": "Staying with the Trouble",
+              "author": "Donna Haraway",
+              "author_en": "Donna Haraway",
+              "note_zh": "两作者共同对话伙伴",
+              "note_en": "shared interlocutor",
+              "conf": "◐"
+            },
+            {
+              "title": "Pluriverse: A Post-Development Dictionary (2019)",
+              "title_en": "Pluriverse: A Post-Development Dictionary",
+              "author": "Kothari, Salleh, Escobar et al.",
+              "author_en": "Kothari, Salleh, Escobar et al.",
+              "note_zh": "多元宇宙核心词条",
+              "note_en": "core pluriverse entries",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "数字项目",
+          "label_en": "Digital projects",
+          "items": [
+            {
+              "title": "Feral Atlas",
+              "title_en": "Feral Atlas",
+              "author": "Tsing et al.",
+              "author_en": "Tsing et al.",
+              "note_zh": "https://feralatlas.org",
+              "note_en": "https://feralatlas.org",
+              "conf": "✓"
+            },
+            {
+              "title": "Aral Sea Project",
+              "title_en": "Aral Sea Project",
+              "author": "Tsing (early)",
+              "author_en": "Tsing (early)",
+              "note_zh": "https://aralsea.ucsc.edu",
+              "note_en": "https://aralsea.ucsc.edu",
+              "conf": "◐"
+            },
+            {
+              "title": "Matsutake Worlds Research Group",
+              "title_en": "Matsutake Worlds Research Group",
+              "author": "Tsing et al.",
+              "author_en": "Tsing et al.",
+              "note_zh": "https://matsutakeworlds.org",
+              "note_en": "https://matsutakeworlds.org",
+              "conf": "◐"
+            }
+          ]
+        },
+        {
+          "label_zh": "译本与语言版本",
+          "label_en": "Translations & language editions",
+          "items": [
+            {
+              "title": "Viver nas Ruínas (PT)",
+              "title_en": "Viver nas Ruínas",
+              "author": "Tsing",
+              "author_en": "Tsing",
+              "note_zh": "2019，葡语版",
+              "note_en": "2019, Portuguese",
+              "conf": "◐"
+            },
+            {
+              "title": "Proliférations (FR)",
+              "title_en": "Proliférations",
+              "author": "Tsing",
+              "author_en": "Tsing",
+              "note_zh": "2022，法语版",
+              "note_en": "2022, French",
+              "conf": "◐"
+            },
+            {
+              "title": "Notre nouvelle nature (FR)",
+              "title_en": "Notre nouvelle nature",
+              "author": "Tsing et al.",
+              "author_en": "Tsing et al.",
+              "note_zh": "2024，法语版",
+              "note_en": "2024, French",
+              "conf": "◐"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-games-play-culture",
       "page": "docs/reading_ia/read/games-play-culture-books.html",
       "dir_page": "games-play-culture-books.html",
@@ -25,8 +494,8 @@
       "subtitle_en": "Moretti's scale, Rusch's meaning, Parasecoli's identity, Gobet's expertise: four routes into one question about play.",
       "verdict_zh": "GAPS",
       "verdict_en": "GAPS",
-      "lang_line_zh": "英/意/瑞/丹 × 20 — 核心书目经出版社/作者页/馆藏核对；未见全文者标 ◐/○",
-      "lang_line_en": "English / Italian / Swedish / Danish × 20 — core facts checked against publishers, author pages and catalogues; unread items marked ◐/○",
+      "lang_line_zh": "英/意/瑞/丹 × 20 — 书目事实部分经出版社产品页与书评核对；未见全文者标 ◐/○",
+      "lang_line_en": "English / Italian / Swedish / Danish × 20 — bibliographic facts partly checked against publisher pages and review citations; unread items marked ◐/○",
       "book_ids": [
         "moretti-graphs-maps-trees",
         "moretti-distant-reading",
@@ -49,28 +518,28 @@
         "gobet-psychology-of-chess",
         "degroot-thought-choice"
       ],
-      "verdict_body_zh": "四圈二十书：尺度（Moretti 四书 + Jockers/Underwood）、意义（Rusch + Salen & Zimmerman/Bogost/Juul）、身份（Parasecoli 四书 + Mintz/Appadurai）、专长（Gobet 三书 + de Groot）。核心书目事实经出版社/作者页核对；未见全文者一律 ◐/○；相邻作品是语境，不是核心。",
-      "verdict_body_en": "Four rings, twenty dossiers: scale (four Moretti titles plus Jockers/Underwood), meaning (Rusch plus Salen & Zimmerman/Bogost/Juul), identity (four Parasecoli titles plus Mintz/Appadurai), expertise (three Gobet titles plus de Groot). Core facts checked against publishers and author pages; unread items marked ◐/○; adjacent works are context, not core.",
+      "verdict_body_zh": "四圈二十书：尺度（Moretti 四书 + Jockers/Underwood）、意义（Rusch + Salen & Zimmerman/Bogost/Juul）、身份（Parasecoli 四书 + Mintz/Appadurai）、专长（Gobet 三书 + de Groot）。书目事实已部分回出版社页与书评核对（页数 12 部、ISBN 19 部）；未见全文者一律 ◐/○；相邻作品是语境，不是核心。",
+      "verdict_body_en": "Four rings, twenty dossiers: scale (four Moretti titles plus Jockers/Underwood), meaning (Rusch plus Salen & Zimmerman/Bogost/Juul), identity (four Parasecoli titles plus Mintz/Appadurai), expertise (three Gobet titles plus de Groot). Bibliographic facts are now partly checked against publisher pages and reviews (pages for 12 titles, ISBNs for 19); unread items marked ◐/○; adjacent works are context, not core.",
       "verdict_gaps": [
         {
-          "zh": "Rusch《Making Deep Games》的 ISBN/页数/目录待核。",
-          "en": "ISBN/pages/contents of Rusch's Making Deep Games pending."
+          "zh": "页数 12/20 已补：6 部经出版社产品页（Parasecoli 两书、Rusch、Appadurai、Gobet 两书），6 部据书评标示（Salen & Zimmerman 688、Juul 255、Mintz 274、Moretti 三书 119/244/203）；ISBN 19/20，仅 Mintz 缺。",
+          "en": "Pages supplied for 12 of 20: six from publisher pages (two Parasecoli titles, Rusch, Appadurai, two Gobet titles) and six from review citations (Salen & Zimmerman 688, Juul 255, Mintz 274, three Moretti titles at 119/244/203); ISBNs 19 of 20, only Mintz missing."
         },
         {
-          "zh": "Jockers、Underwood、Mintz、Appadurai、de Groot 的 ISBN/页数与部分版次待核。",
-          "en": "ISBN/pages and some editions for Jockers, Underwood, Mintz, Appadurai and de Groot pending."
+          "zh": "目录只对 6 部给出（Moretti 两书、Salen & Zimmerman、Mintz、Appadurai、Gobet 普及版），且注明「未逐页核对」；其余 14 部未列目录。",
+          "en": "Contents are given for only six titles (two Moretti books, Salen & Zimmerman, Mintz, Appadurai, the Gobet primer), each flagged 'not checked page by page'; the other fourteen have no table of contents."
         },
         {
-          "zh": "Parasecoli《The Pierogi Problem》的 ISBN/页数待核。",
-          "en": "ISBN/pages of Parasecoli's The Pierogi Problem pending."
+          "zh": "20/20 均已补「章节读法卡」（plot_acts），但多为论旨重构（标 ◐），不是逐章摘要。",
+          "en": "All twenty dossiers now carry chapter-level reading cards (plot_acts), but most are reconstructed arguments marked ◐ rather than chapter-by-chapter summaries."
         },
         {
-          "zh": "多数书未通读；20 部均已补概念/接受/局限/意图/长评，但仍未逐页通读。",
-          "en": "Most books are unread; all 20 dossiers now carry concepts, reception, limits, author-intent and a critical essay, but none has been read page by page."
+          "zh": "本轮网络部分恢复：Duke、Columbia、Minnesota、UC Press、T&F 产品页可取；Princeton、MIT、Bloomsbury、Penguin 与 Verso 产品页仍 403/429，相关书目事实未能核实。",
+          "en": "The network partly recovered this round: Duke, Columbia, Minnesota, UC Press and T&F product pages were reachable; Princeton, MIT, Bloomsbury, Penguin and Verso product pages still return 403/429, so those facts remain unchecked."
         },
         {
-          "zh": "相邻作品（Jockers/Underwood/Salen & Zimmerman/Bogost/Juul/Mintz/Appadurai/de Groot）用于语境，不替代四家核心。",
-          "en": "Adjacent works are context and do not replace the four core scholars."
+          "zh": "多数书未通读；相邻作品（Jockers/Underwood/Salen & Zimmerman/Bogost/Juul/Mintz/Appadurai/de Groot）用于语境，不替代四家核心。",
+          "en": "Most books are unread; adjacent works (Jockers, Underwood, Salen & Zimmerman, Bogost, Juul, Mintz, Appadurai, de Groot) supply context and do not replace the four core scholars."
         }
       ],
       "keel_zh": "下个窗口 2026-12 冬至 · Winter solstice",

@@ -1,0 +1,918 @@
+{
+  "escobar-sentipensar": {
+    "title_zh": "《与大地共感思：关于发展、领地与差异的新读法》",
+    "title_orig": "Sentipensar con la tierra: nuevas lecturas sobre desarrollo, territorio y diferencia",
+    "year": "2014",
+    "publisher": "Ediciones UNAULA (Medellín)",
+    "publisher_en": "Ediciones UNAULA (Medellín)",
+    "publines_zh": "Ediciones UNAULA · 2014（指南记 2016）· ISBN/页数待核",
+    "publines_en": "Ediciones UNAULA · 2014 (guide gives 2016) · ISBN/pages pending",
+    "meta_zh": "学术 · 西语文集 · 认识论",
+    "meta_en": "scholarship · Spanish-language essays · epistemology",
+    "baseline_conf": "◐ 出版社与年份经指南/Goodreads 登记（指南作 2016）；ISBN、页数与具体印次待核",
+    "baseline_conf_en": "◐ publisher and year via guide/Goodreads (guide gives 2016); ISBN, pages and printing pending",
+    "why_zh": "「共感思」是 Escobar 全部工作的认识论枢纽：思考不是头脑的独白，而是身体、土地与共同体一起做出来的。",
+    "why_en": "'Sentipensar' is the epistemological hinge of Escobar's whole project: thinking is not a monologue of the head but something done by body, land and community together.",
+    "background": {
+      "zh": "《与大地共感思》是一部西班牙语文集，汇集 Escobar 在 2000 年代至 2010 年代初关于发展、领地与差异的文章与讲演。书名取自哥伦比亚加勒比沿岸的民间说法 sentipensar——「用心思考」或「用身体感受着思考」，Escobar 从奥兰多·法尔斯·博尔达（Orlando Fals Borda）那里接过这个词，把它变成一种方法论：研究者不能只做旁观的分析者，必须让自己的身体与情感进入与土地、社区的关系。全书讨论四个问题：发展的替代、领地的政治、差异的本体论、以及「认识论南方」的可能。",
+      "en": "Sentipensar con la tierra is a Spanish-language collection of essays and talks from the 2000s and early 2010s on development, territory and difference. The title takes a popular expression from Colombia's Caribbean coast — sentipensar, to think with the heart or to feel-think — which Escobar receives via Orlando Fals Borda and turns into a method: the researcher cannot remain a detached analyst but must let body and affect enter into relation with land and community. The book addresses four questions: alternatives to development, the politics of territory, the ontology of difference, and the possibility of an 'epistemology of the South'.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts of sentipensar",
+      "sources_en": "Guide; book description; standard accounts of sentipensar"
+    },
+    "narrative": {
+      "zh": "文集不是线性专著，而是围绕四个关键词反复推进的短章：先批评「发展」的单一尺度，再讨论领地如何成为生命世界的政治，然后把「差异」从文化概念提升为本体论问题，最后提出「共感思」作为一种认识论姿态。篇章之间有重复，也有修订，读者可以把它当作 Escobar 思想的「工作台」——许多后来在《多元宇宙的设计》中成形的概念，在这里还带着草稿的痕迹。",
+      "en": "The collection is not a linear monograph but short chapters circling four keywords: a critique of development's single scale, territory as the politics of a lifeworld, difference raised from culture to ontology, and sentipensar as an epistemological stance. There is repetition and revision across chapters; readers can use it as Escobar's workbench, where many concepts later formalised in Designs for the Pluriverse still carry the marks of draft.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "在西语学界与拉丁美洲研究圈内影响很大，「共感思」成为去殖民方法论的常用词；它也让英语读者看到 Escobar 思想更口语、更介入的一面。",
+      "reception_good_en": "It has had wide influence in Spanish-language scholarship and Latin American studies; sentipensar became a common term in decolonial methodology, and the book shows English readers a more spoken, more engaged Escobar.",
+      "reception_bad_zh": "作为文集，结构松散、篇章重复；「共感思」的诗性定义也常被批评为难以操作，容易变成姿态而非方法。",
+      "reception_bad_en": "As a collection it is loosely structured and repetitive, and the poetic definition of sentipensar is often criticised as hard to operationalise, risking stance over method.",
+      "syn_zh": "本书的价值不在体系，而在姿态：它提醒研究者，关于土地与差异的知识不能只从外部描述，必须在关系中被共同生产。",
+      "syn_en": "Its value lies not in system but in stance: it reminds researchers that knowledge about land and difference cannot be described only from outside but must be co-produced in relation.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "思考与感受不可分，认识是身体与土地共同参与的过程",
+      "发展必须被地方性的「另一些世界」取代，而非改良",
+      "领地是生命世界的政治，不只是土地权属",
+      "差异是本体论的，不同世界在同一空间中并存",
+      "「认识论南方」要求重写谁有资格生产知识"
+    ],
+    "claims_list_en": [
+      "Thinking and feeling are inseparable; knowing involves body and land",
+      "Development must be replaced by local 'other worlds', not reformed",
+      "Territory is the politics of a lifeworld, not only land tenure",
+      "Difference is ontological: different worlds coexist in one space",
+      "An 'epistemology of the South' requires rewriting who may produce knowledge"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Sentipensar con la tierra》由 Ediciones UNAULA（麦德林）出版，通常记 2014 年（指南作 2016）",
+        "claim_en": "Sentipensar con la tierra was published by Ediciones UNAULA (Medellín), usually dated 2014 (guide gives 2016)",
+        "source": "Guide / Goodreads / standard citation",
+        "source_en": "Guide / Goodreads / standard citation",
+        "conf": "◐"
+      },
+      {
+        "claim": "「sentipensar」一词经 Orlando Fals Borda 进入 Escobar 的方法论",
+        "claim_en": "The term sentipensar reaches Escobar's methodology via Orlando Fals Borda",
+        "source": "Guide; secondary literature",
+        "source_en": "Guide; secondary literature",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书为西班牙语文集，主题涵盖发展、领地与差异",
+        "claim_en": "The book is a Spanish-language collection on development, territory and difference",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书与《差异的领地》《多元宇宙的设计》共享问题域，是二者之间的过渡",
+        "claim_en": "It shares the problematic of Territories of Difference and Designs for the Pluriverse and bridges them",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数、版次与出版年（2014/2016）",
+        "item_en": "ISBN, pages, printing and year (2014/2016)",
+        "conf": "◐"
+      },
+      {
+        "item": "各篇原始发表出处与年份",
+        "item_en": "original venues and years of the individual chapters",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "领地实践的民族志基础",
+        "note_en": "the ethnographic ground of territorial practice",
+        "conf": "◐"
+      },
+      {
+        "title": "Designs for the Pluriverse",
+        "title_en": "Designs for the Pluriverse",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2018",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "把「共感思」的姿态发展成设计理论",
+        "note_en": "develops the stance of sentipensar into a theory of design",
+        "conf": "◐"
+      },
+      {
+        "title": "Pedagogy of the Oppressed",
+        "title_en": "Pedagogy of the Oppressed",
+        "author": "Paulo Freire",
+        "author_en": "Paulo Freire",
+        "year": "1968",
+        "relation": "思想资源",
+        "relation_en": "intellectual source",
+        "axis": "epistemology",
+        "pos": "",
+        "note_zh": "「认识论南方」与参与式知识生产的先声",
+        "note_en": "a precursor of the epistemology of the South and participatory knowledge production",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "以讲演与短章保持口语性，让概念在重复中被磨亮，而不是被体系固定。",
+        "en": "Keeps the orality of talks and short chapters, letting concepts be polished by repetition rather than fixed into a system."
+      },
+      {
+        "zh": "把民间说法（sentipensar）提升为理论词，让地方语言承担分析功能。",
+        "en": "Raises a popular expression (sentipensar) into a theoretical term, letting local language do analytical work."
+      },
+      {
+        "zh": "在同一本文集内并置学术论文与介入性写作，模糊研究者与运动参与者的边界。",
+        "en": "Juxtaposes academic papers and engaged writing, blurring the boundary between researcher and movement participant."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先找「sentipensar」在书中被定义的段落，比较几次定义之间的差异：它是认识论、伦理，还是政治？",
+        "en": "Find where sentipensar is defined and compare the definitions: is it epistemology, ethics or politics?"
+      },
+      {
+        "zh": "把「领地」章与《差异的领地》对读：同一概念在文集里更抽象还是更具体？",
+        "en": "Read the territory chapter against Territories of Difference: is the concept more abstract or more concrete here?"
+      },
+      {
+        "zh": "追问：如果知识必须在关系中被共同生产，那么本书自己的作者署名是否也需要被重新理解？",
+        "en": "Ask: if knowledge must be co-produced in relation, does the book's own authorship need to be re-read?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "共感思",
+        "term_en": "sentipensar",
+        "orig": "sentipensar",
+        "gloss_zh": "用心思考、以身体感受着思考：认识是情感、身体与土地共同参与的过程。",
+        "gloss_en": "To think with the heart, to feel-think: knowing as a process in which affect, body and land participate.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "term": "认识论南方",
+        "term_en": "epistemology of the South",
+        "orig": "epistemologías del Sur",
+        "gloss_zh": "从被殖民、被边缘化的经验出发重写知识生产的资格与形式。",
+        "gloss_en": "Rewriting the credentials and forms of knowledge production from colonised and marginalised experience.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "term": "领地",
+        "term_en": "territory",
+        "orig": "territorio",
+        "gloss_zh": "被集体生活与维护的生命世界，而非单纯的土地权属。",
+        "gloss_en": "A lifeworld collectively lived and maintained, not merely land tenure.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "term": "差异的本体论",
+        "term_en": "ontological difference",
+        "orig": "diferencia ontológica",
+        "gloss_zh": "不同世界不是同一世界的不同看法，而是并存的多重实在。",
+        "gloss_en": "Different worlds are not views of one world but multiple coexisting realities.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "term": "另一些世界",
+        "term_en": "other worlds",
+        "orig": "otros mundos",
+        "gloss_zh": "已经在地方实践中存在的替代，而非未来蓝图。",
+        "gloss_en": "Alternatives already existing in local practice, not future blueprints.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2010 年代中期在西语学界流传，随后随「去殖民转向」进入英语世界的课程与读本。",
+      "then_en": "It circulated in Spanish-language scholarship in the mid-2010s and entered English-language courses and readers with the decolonial turn.",
+      "later_zh": "后世把它视为 Escobar 从领地民族志走向「多元宇宙」理论的过渡文本，「共感思」也成为方法论文献中的高频词。",
+      "later_en": "Later work treats it as the bridge from Escobar's territorial ethnography to pluriversal theory, and sentipensar became a frequent term in methodological writing.",
+      "influence_zh": "它推动了「知识生产的位置性」在拉丁美洲研究中的讨论，也影响了参与式行动研究的方法反思。",
+      "influence_en": "It advanced discussion of the situatedness of knowledge production in Latin American studies and shaped methodological reflection on participatory action research.",
+      "critique_zh": "主要保留是：文集结构松散、重复较多；「共感思」的定义诗意而难以操作；对具体制度与政策的分析较少。",
+      "critique_en": "The main reservations are the loose, repetitive structure, the poetic and hard-to-operationalise definition of sentipensar, and the limited analysis of concrete institutions and policy.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为文集类型的结构性局限，不是对全书的判断（未通读）。",
+      "en": "Structural limits of an essay collection, not a judgment on the whole book (unread).",
+      "items": [
+        {
+          "title_zh": "结构松散",
+          "title_en": "Loose structure",
+          "note_zh": "篇章原为不同场合写作，重复与跳跃较多。",
+          "note_en": "Chapters were written for different occasions, with repetition and jumps."
+        },
+        {
+          "title_zh": "概念难以操作",
+          "title_en": "Hard to operationalise",
+          "note_zh": "「共感思」的诗性定义缺少可检验的方法步骤。",
+          "note_en": "The poetic definition of sentipensar lacks testable methodological steps."
+        },
+        {
+          "title_zh": "制度分析薄弱",
+          "title_en": "Thin institutional analysis",
+          "note_zh": "对政策、法律与国家机构的讨论较少。",
+          "note_en": "Policy, law and state institutions receive little discussion."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：关于发展、领地与差异的知识不能只从外部描述，必须在身体、情感与土地的关系中被共同生产；「共感思」因此不是修辞，而是认识论立场。",
+      "claim_en": "Escobar wants to show that knowledge about development, territory and difference cannot be described only from outside but must be co-produced in the relation of body, affect and land; sentipensar is therefore an epistemological stance, not rhetoric.",
+      "why_zh": "书名用民间说法而非学术术语，说明作者要改变的是知识的语气与位置；文集反复回到「领地」与「差异」，说明这两个词是「共感思」的对象；它明确承接 Fals Borda 的参与式研究传统。",
+      "why_en": "The title uses a popular expression rather than an academic term, showing that what changes is the tone and position of knowledge; the collection keeps returning to territory and difference as the objects of sentipensar; it explicitly continues Fals Borda's tradition of participatory research.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名把民间说法放在学术标题位置。",
+          "en": "The title places a popular expression where an academic term would go.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "谱系",
+          "kind_en": "genealogy",
+          "zh": "经 Fals Borda 承接参与式行动研究传统。",
+          "en": "It inherits participatory action research through Fals Borda.",
+          "source": "Secondary literature",
+          "source_en": "Secondary literature",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "《多元宇宙的设计》把这一姿态发展成设计理论。",
+          "en": "Designs for the Pluriverse develops the stance into a theory of design.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书更像一部思想随笔集，其价值在于姿态与词汇，而非论证；把它当作完整的方法论著作，会高估其系统性。",
+      "counter_en": "Alternative reading: it is closer to a collection of intellectual essays whose value lies in stance and vocabulary rather than argument; treating it as a complete methodology overestimates its system.",
+      "boundary_zh": "未通读，无法判断各篇论证；上述推断依据书目、指南与二手讨论，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary discussion, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "用心思考土地：读《与大地共感思》",
+      "title_en": "Thinking the land with the heart",
+      "standfirst_zh": "「共感思」不是诗意的装饰，而是 Escobar 全部工作的认识论枢纽。",
+      "standfirst_en": "Sentipensar is not poetic decoration but the epistemological hinge of Escobar's whole project.",
+      "body_zh": "如果要找一本能解释 Escobar 为什么这样写作的书，《与大地共感思》比《遭遇发展》更合适。它不是一部体系之作，而是一部工作台之书：讲演、短文、序言与回应被放在一起，反复打磨几个词——发展、领地、差异、共感思。\n\n「共感思」（sentipensar）是全书的核心。这个词来自哥伦比亚加勒比沿岸的民间说法，意思是「用心思考」或「带着感受去思考」。Escobar 经 Fals Borda 接过它，用它反对两种知识姿态：一种是抽离的、只做描述的社会科学；另一种是只讲立场的、拒绝分析的宣言。他要的是一种既不放弃分析、也不假装中立的写法。\n\n这本书的力量在于姿态，局限也在于姿态。文集的结构松散，篇章之间重复不少；「共感思」的定义诗意而难以操作，读者很难从中学到一套可复制的步骤。它更像一次邀请：请你在读土地、读领地、读差异时，把自己的身体与情感也算进知识里。\n\n把它当作《多元宇宙的设计》的前传读，会看见许多后来被系统化的概念还带着草稿的痕迹。这种草稿感不是缺点，而是它最诚实的地方。", 
+      "abstract_en": "If you want a book that explains why Escobar writes the way he does, Sentipensar con la tierra is a better guide than Encountering Development. It is not a systematic work but a workbench book: talks, short essays, prefaces and responses gathered to polish a few words — development, territory, difference, sentipensar.\n\nSentipensar is the core. The term comes from Colombia's Caribbean coast and means to think with the heart, or to think while feeling. Escobar receives it through Fals Borda and uses it against two postures: detached social science that only describes, and manifesto-style writing that refuses analysis. What he wants is a writing that neither abandons analysis nor pretends to neutrality.\n\nThe book's strength is its stance, and so is its limit. The collection is loosely structured and repetitive; the definition of sentipensar is poetic and hard to operationalise, and readers will not extract a replicable procedure. It is closer to an invitation: when reading land, territory and difference, count your body and affect as part of the knowledge.\n\nRead as a prequel to Designs for the Pluriverse, it shows many later systematised concepts still carrying draft marks. That draft quality is not a defect but the most honest thing about it.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "大地",
+        "name_en": "the land",
+        "orig": "la tierra",
+        "evid_zh": "不是资源，而是思考的参与者与知识的共同作者。",
+        "evid_en": "Not a resource but a participant in thought and a co-author of knowledge.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "心",
+        "name_en": "the heart",
+        "orig": "el corazón",
+        "evid_zh": "情感不是干扰，而是认识的器官。",
+        "evid_en": "Affect is not interference but an organ of knowing.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "行走",
+        "name_en": "walking",
+        "orig": "caminar",
+        "evid_zh": "知识在行走与同行中产生，而非在书桌上。",
+        "evid_en": "Knowledge arises in walking and walking-with, not at a desk.",
+        "source": "Sentipensar con la tierra",
+        "source_en": "Sentipensar con la tierra",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "共感思命题（非逐字原文）",
+        "trans_zh": "思考不是头脑的独白，而是身体、情感与土地共同参与的过程。",
+        "trans_en": "Thinking is not a monologue of the head but a process in which body, affect and land participate.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "知识位置命题（非逐字原文）",
+        "trans_zh": "关于土地与差异的知识不能只从外部描述，必须在关系中被共同生产。",
+        "trans_en": "Knowledge about land and difference cannot be described only from outside; it must be co-produced in relation.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "发展之外",
+        "title_en": "Beyond development",
+        "zh": "批评发展的单一尺度，提出「另一些世界」已经在地方实践中存在。",
+        "en": "Critiques development's single scale and argues that 'other worlds' already exist in local practice.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "替代不是未来方案，而是当下被压抑的实践。",
+          "flow": "从发展批判，到地方案例，再到替代想象。",
+          "names": "社区、运动、发展机构。",
+          "sources": "讲演与短文。",
+          "link": "为领地与差异的讨论设定前提。",
+          "main_en": "Alternatives are not future plans but suppressed practices of the present.",
+          "flow_en": "From development critique to local cases to alternative imaginaries.",
+          "names_en": "Communities, movements, development agencies.",
+          "sources_en": "Talks and short essays.",
+          "link_en": "Sets the premise for territory and difference."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "领地作为生命世界",
+        "title_en": "Territory as lifeworld",
+        "zh": "领地不是土地权属，而是被集体生活与维护的关系整体，是替代政治的具体场所。",
+        "en": "Territory is not land tenure but a whole of relations collectively lived and maintained, the concrete site of alternative politics.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "政治的单位不是个体或国家，而是生命世界。",
+          "flow": "从土地权，到生活实践，再到政治主体。",
+          "names": "社区、领地组织、NGO。",
+          "sources": "哥伦比亚案例。",
+          "link": "把「另一些世界」落到地理。",
+          "main_en": "The unit of politics is neither the individual nor the state but the lifeworld.",
+          "flow_en": "From land rights to lived practice to political subject.",
+          "names_en": "Communities, territorial organisations, NGOs.",
+          "sources_en": "Colombian cases.",
+          "link_en": "Grounds 'other worlds' geographically."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "差异的本体论",
+        "title_en": "The ontology of difference",
+        "zh": "不同世界不是同一世界的不同看法，而是并存的实在；这要求一种新的政治想象。",
+        "en": "Different worlds are not views of one world but coexisting realities, which demands a new political imagination.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "多元不是文化装饰，而是本体论事实。",
+          "flow": "从文化差异，到本体论差异，再到政治后果。",
+          "names": "社会运动、学者、政策制定者。",
+          "sources": "理论章与案例。",
+          "link": "通向《多元宇宙的设计》。",
+          "main_en": "Plurality is not cultural decoration but an ontological fact.",
+          "flow_en": "From cultural to ontological difference to political consequence.",
+          "names_en": "Social movements, scholars, policymakers.",
+          "sources_en": "Theoretical chapters and cases.",
+          "link_en": "Leads to Designs for the Pluriverse."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "共感思作为方法",
+        "title_en": "Sentipensar as method",
+        "zh": "结论把「共感思」提为认识论姿态：研究者必须让自己的身体与情感进入与土地的关系。",
+        "en": "The conclusion raises sentipensar to an epistemological stance: researchers must let body and affect enter into relation with land.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "方法不是程序，而是研究者与世界的关系。",
+          "flow": "从认识论批评，到研究实践，再到写作姿态。",
+          "names": "研究者、社区、土地。",
+          "sources": "方法论章。",
+          "link": "为全书提供统摄性的姿态。",
+          "main_en": "Method is not procedure but the researcher's relation to the world.",
+          "flow_en": "From epistemological critique to research practice to writing stance.",
+          "names_en": "Researchers, communities, land.",
+          "sources_en": "Methodological chapters.",
+          "link_en": "Provides the book's unifying stance."
+        }
+      }
+    ]
+  },
+  "escobar-designs-pluriverse": {
+    "title_zh": "《多元宇宙的设计：根本相互依存、自主与世界生成》",
+    "title_orig": "Designs for the Pluriverse: Radical Interdependence, Autonomy, and the Making of Worlds",
+    "year": "2018",
+    "publisher": "Duke University Press",
+    "publisher_en": "Duke University Press",
+    "publines_zh": "Duke University Press · 2018 · ISBN/页数待核",
+    "publines_en": "Duke University Press · 2018 · ISBN/pages pending",
+    "meta_zh": "学术 · 设计理论 · 政治本体论",
+    "meta_en": "scholarship · design theory · political ontology",
+    "baseline_conf": "◐ 出版社与年份经指南/Goodreads 登记；ISBN、页数与具体印次待核",
+    "baseline_conf_en": "◐ publisher and year via guide/Goodreads; ISBN, pages and printing pending",
+    "why_zh": "Escobar 的代表作：设计不是造物，而是造世界；如果世界是多元的，设计就必须从「为一个世界做方案」转向「为多个世界的共存做条件」。",
+    "why_en": "Escobar's major work: design is not making objects but making worlds; if worlds are plural, design must shift from 'solving for one world' to 'making conditions for the coexistence of many'.",
+    "background": {
+      "zh": "《多元宇宙的设计》写于 Escobar 在哥伦比亚、北卡罗来纳与欧洲多所院校任教与合作的时期，是他在设计研究、人类学与政治本体论之间的综合之作。他关心的不是产品设计，而是「设计」作为一种本体论实践：现代性把世界设计成单一版本（发展、增长、技术），并以此抹平其他世界的存在。Escobar 因此提出「为多元宇宙而设计」：不是为所有人设计同一个未来，而是为不同世界的共存设计条件。书的对话对象包括设计研究（Papanek、Manzini、Fry）、本体论人类学（Viveiros de Castro、Descola）与自主政治（Castoriadis、自治主义）。",
+      "en": "Designs for the Pluriverse was written while Escobar taught and collaborated in Colombia, North Carolina and Europe, and it synthesises design studies, anthropology and political ontology. Its concern is not product design but design as an ontological practice: modernity designed a single version of the world — development, growth, technology — and flattened other worlds in the process. Escobar therefore proposes 'design for the pluriverse': not one future designed for everyone but the design of conditions for different worlds to coexist. Its interlocutors include design studies (Papanek, Manzini, Fry), ontological anthropology (Viveiros de Castro, Descola) and the politics of autonomy (Castoriadis, autonomism).",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts",
+      "sources_en": "Guide; book description; standard accounts"
+    },
+    "narrative": {
+      "zh": "全书分三部分：先诊断——现代性如何通过设计把世界单一化，设计与发展如何共谋；再理论——引入政治本体论、关系性与「多元宇宙」，说明世界是如何被做出来的；最后实践——从拉丁美洲的领地运动、社区设计与自主实践中提炼「为多元宇宙而设计」的原则。Escobar 不提供工具箱，而是提供一组姿态与判准：设计应服务于自主、公共性与生命的维持，而不是抽象的效率。",
+      "en": "Three parts: diagnosis — how modernity singularised the world through design and how design colluded with development; theory — political ontology, relationality and the pluriverse, explaining how worlds are made; practice — principles of 'design for the pluriverse' distilled from Latin American territorial movements, community design and autonomous practice. Escobar offers no toolbox but a set of stances and criteria: design should serve autonomy, the communal and the maintenance of life rather than abstract efficiency.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "2018 年出版后成为设计研究、人类学与后发展研究的交叉核心文本；「为多元宇宙而设计」被设计学院、社会创新与去殖民设计广泛采用。",
+      "reception_good_en": "Published in 2018, it became a crossroads text for design studies, anthropology and post-development; 'design for the pluriverse' was widely taken up in design schools, social innovation and decolonial design.",
+      "reception_bad_zh": "批评主要有三：一，设计被赋予了过重的本体论使命，具体项目难以承载；二，「多元宇宙」有时被用成口号，缺少对权力冲突的分析；三，对专业设计实践的操作指导偏少。",
+      "reception_bad_en": "Three criticisms recur: design is given an ontological burden that concrete projects can hardly carry; the pluriverse sometimes functions as a slogan without analysis of power conflict; and operational guidance for professional practice is thin.",
+      "syn_zh": "本书的贡献是把设计从「解决问题」提升为「决定哪些世界可以存在」的问题，同时要求设计者放弃单一现代性的普遍主义。",
+      "syn_en": "The contribution is to raise design from problem-solving to the question of which worlds may exist, while asking designers to give up the universalism of a single modernity.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "设计不是造物，而是造世界：它决定哪些存在方式被允许",
+      "现代性通过设计把多元世界单一化",
+      "多元宇宙不是文化相对主义，而是政治本体论",
+      "为多元宇宙而设计意味着为自主与公共性设计",
+      "设计必须从「为谁设计」转向「与谁共同设计」"
+    ],
+    "claims_list_en": [
+      "Design is not object-making but world-making: it decides which ways of being are permitted",
+      "Modernity singularised plural worlds through design",
+      "The pluriverse is not cultural relativism but political ontology",
+      "Designing for the pluriverse means designing for autonomy and the communal",
+      "Design must shift from 'designing for whom' to 'designing with whom'"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Designs for the Pluriverse》2018 年由 Duke University Press 出版",
+        "claim_en": "Designs for the Pluriverse was published by Duke University Press in 2018",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书围绕「根本相互依存」「自主」「世界生成」三个关键词展开",
+        "claim_en": "The book is organised around radical interdependence, autonomy and world-making",
+        "source": "Book subtitle; guide",
+        "source_en": "Book subtitle; guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书把设计研究与政治本体论、后发展理论结合",
+        "claim_en": "The book joins design studies with political ontology and post-development theory",
+        "source": "Guide; book description",
+        "source_en": "Guide; book description",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书与《自主与设计》（Autonomía y diseño）共享问题域，后者为西语展开版",
+        "claim_en": "It shares its problematic with Autonomía y diseño, the Spanish-language elaboration",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次",
+        "item_en": "ISBN, page count and printing",
+        "conf": "◐"
+      },
+      {
+        "item": "三部分各章标题（未逐页核对）",
+        "item_en": "chapter titles of the three parts (not checked page by page)",
+        "conf": "◐"
+      },
+      {
+        "item": "书中具体设计案例的完整清单",
+        "item_en": "full list of design cases discussed",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Autonomía y diseño",
+        "title_en": "Autonomía y diseño",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2016",
+        "relation": "同作者 · 西语版",
+        "relation_en": "same author · Spanish elaboration",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "同一问题域的西语展开，更贴近拉丁美洲实践",
+        "note_en": "the Spanish elaboration of the same problematic, closer to Latin American practice",
+        "conf": "◐"
+      },
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "领地实践是本书设计理论的民族志基础",
+        "note_en": "territorial practice is the ethnographic ground of the design theory here",
+        "conf": "◐"
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "对读 · 世界生成",
+        "relation_en": "compare · world-making",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "Tsing 的「多物种世界生成」与 Escobar 的「为多元宇宙设计」互补",
+        "note_en": "Tsing's multispecies world-making complements Escobar's design for the pluriverse",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "把设计史、本体论人类学与拉美社会运动放在同一论证里，形成跨学科的综合。",
+        "en": "Puts design history, ontological anthropology and Latin American social movements into one argument, producing an interdisciplinary synthesis."
+      },
+      {
+        "zh": "用「世界生成」替代「文化」，让设计问题获得本体论重量。",
+        "en": "Replaces 'culture' with 'world-making', giving design an ontological weight."
+      },
+      {
+        "zh": "以原则与判准而非工具箱收尾，保持理论的开放性。",
+        "en": "Ends with principles and criteria rather than a toolbox, keeping the theory open."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论，写下一句「设计即造世界」的判准；读完后再问：这个判准能否区分好的设计与坏的设计？",
+        "en": "Read the introduction and write one criterion for 'design as world-making'; afterwards ask whether it can distinguish good from bad design."
+      },
+      {
+        "zh": "把「诊断」部分与「实践」部分对读：同一个设计案例，在两部分中分别被如何评价？",
+        "en": "Read the diagnosis against the practice part: how is the same design case evaluated in each?"
+      },
+      {
+        "zh": "追问：如果每个世界都应被允许存在，那么伤害他人的世界呢？「多元宇宙」如何处理不可通约的冲突？",
+        "en": "Ask: if every world should be allowed to exist, what about worlds that harm others? How does the pluriverse handle incommensurable conflict?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "多元宇宙",
+        "term_en": "pluriverse",
+        "orig": "pluriverso",
+        "gloss_zh": "多个世界并存的本体论主张，而非同一世界的多元文化版本。",
+        "gloss_en": "The ontological claim that many worlds coexist, not multicultural versions of one world.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "term": "设计即世界生成",
+        "term_en": "design as world-making",
+        "orig": "diseño como creación de mundo",
+        "gloss_zh": "设计不只是造物，而是决定哪些存在方式得以维持。",
+        "gloss_en": "Design is not only making objects but deciding which ways of being are sustained.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "term": "根本相互依存",
+        "term_en": "radical interdependence",
+        "orig": "interdependencia radical",
+        "gloss_zh": "一切存在都依赖他者，自主不是孤立而是关系中的自决。",
+        "gloss_en": "All being depends on others; autonomy is not isolation but self-determination within relation.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "term": "自主",
+        "term_en": "autonomy",
+        "orig": "autonomía",
+        "gloss_zh": "共同体自我规定生活条件的能力，而非个体的自由选择。",
+        "gloss_en": "A community's capacity to define the conditions of its own life, not individual free choice.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "term": "本体论政治",
+        "term_en": "ontological politics",
+        "orig": "política ontológica",
+        "gloss_zh": "争夺「什么算作真实」的政治，而非仅争夺资源分配。",
+        "gloss_en": "Politics over what counts as real, not only over the distribution of resources.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "term": "公共性",
+        "term_en": "the communal",
+        "orig": "lo comunal",
+        "gloss_zh": "以共同生活为基础的组织原则，区别于国家与市场的二元。",
+        "gloss_en": "An organising principle grounded in shared life, distinct from the state/market binary.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2018 年出版后迅速进入设计学院与人类学系课程；评论视其为「去殖民设计」与「本体论设计」的奠基文本。",
+      "then_en": "Published in 2018, it quickly entered design schools and anthropology departments; reviews treated it as a founding text of decolonial and ontological design.",
+      "later_zh": "后世把它与 Fry 的《Design as Politics》、Willis 的《Design Philosophy》、以及「设计人类学」并读；「为多元宇宙而设计」成为社会创新与可持续设计的口号。",
+      "later_en": "Later work reads it with Fry's Design as Politics, Willis's design philosophy and design anthropology; 'design for the pluriverse' became a slogan in social innovation and sustainable design.",
+      "influence_zh": "本书让设计研究正式接入后发展与本体论政治，也让「自主」成为设计伦理的核心词。",
+      "influence_en": "It connected design studies to post-development and ontological politics and made autonomy a core term in design ethics.",
+      "critique_zh": "主要保留是：本体论使命过重，具体项目难以承载；「多元宇宙」有时沦为口号；对专业设计的操作指导不足；对权力冲突与不可通约性的处理仍偏乐观。",
+      "critique_en": "The main reservations are the heavy ontological burden on concrete projects, the slogan-like use of the pluriverse, thin operational guidance for professional design, and an optimistic handling of power conflict and incommensurability.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "本体论负担过重",
+          "title_en": "Ontological overload",
+          "note_zh": "把「造世界」交给设计，具体项目难以承担这一使命。",
+          "note_en": "Assigning world-making to design asks more than concrete projects can carry."
+        },
+        {
+          "title_zh": "口号化风险",
+          "title_en": "Slogan risk",
+          "note_zh": "「多元宇宙」被广泛引用，但常缺少具体分析。",
+          "note_en": "The pluriverse is widely cited but often without concrete analysis."
+        },
+        {
+          "title_zh": "操作指导不足",
+          "title_en": "Thin operational guidance",
+          "note_zh": "对专业设计流程、评估与冲突处理着墨较少。",
+          "note_en": "Professional process, evaluation and conflict handling receive limited attention."
+        },
+        {
+          "title_zh": "冲突处理偏乐观",
+          "title_en": "Optimistic about conflict",
+          "note_zh": "对不可通约的世界之间如何共存，论证仍不充分。",
+          "note_en": "How incommensurable worlds coexist remains under-argued."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：设计不是中立的技术活动，而是决定哪些世界可以存在的本体论实践；因此设计必须从服务单一现代性，转向为多个世界的共存与自主设计条件。",
+      "claim_en": "Escobar wants to show that design is not a neutral technical activity but an ontological practice deciding which worlds may exist; design must therefore turn from serving a single modernity to designing conditions for the coexistence and autonomy of many worlds.",
+      "why_zh": "书名把「设计」放在「多元宇宙」之前，说明设计是入口而非对象；副标题三个词（相互依存、自主、世界生成）构成判准；全书从诊断到理论再到实践，说明作者要改变的是设计的目的论，而非技法。",
+      "why_en": "The title puts design before the pluriverse, making design the entry point rather than the object; the subtitle's three terms (interdependence, autonomy, world-making) form the criteria; the movement from diagnosis to theory to practice shows that what changes is design's teleology, not its techniques.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与副标题把设计、自主与世界生成绑定。",
+          "en": "The title and subtitle bind design, autonomy and world-making together.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "理论",
+          "kind_en": "theory",
+          "zh": "引入政治本体论，把设计问题提升为「什么算真实」。",
+          "en": "Political ontology raises design to the question of what counts as real.",
+          "source": "Book description; secondary summaries",
+          "source_en": "Book description; secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "本书被设计学院广泛采用，说明其目标被理解为范式转换。",
+          "en": "Its wide uptake in design schools shows the aim was understood as a paradigm shift.",
+          "source": "Guide / reception",
+          "source_en": "Guide / reception",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书是一套有力的设计伦理与本体论纲领，但其「多元宇宙」缺少对不可通约冲突的处理；把它当作可操作的设计方法，会高估其工程性。",
+      "counter_en": "Alternative reading: it is a powerful design ethics and ontological programme, but its pluriverse lacks a treatment of incommensurable conflict; treating it as an operational design method overestimates its engineering.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "设计作为造世界：读《多元宇宙的设计》",
+      "title_en": "Design as world-making",
+      "standfirst_zh": "如果世界是多元的，设计就不能只为一种未来做方案，而要为多个世界的共存做条件。",
+      "standfirst_en": "If worlds are plural, design cannot plan for one future; it must make conditions for many worlds to coexist.",
+      "body_zh": "《多元宇宙的设计》是 Escobar 最难被归类的书：它既不是设计手册，也不是人类学专著，而是一次把设计研究、政治本体论与后发展理论缝合起来的尝试。它的核心命题很简单：设计不是造物，而是造世界。每一次设计都在决定哪些生活方式被允许、哪些被边缘化、哪些根本不被看见。\n\n这个命题的批判面指向现代性：发展、增长、技术效率，都是被设计出来的单一世界版本。Escobar 把这种单一化称为「一元宇宙」（universe）对「多元宇宙」（pluriverse）的压制。他的替代不是「更好的设计」，而是「为多元宇宙而设计」——为不同世界的共存设计条件，为共同体自我规定生活条件的能力（自主）设计支持。\n\n这本书的力量在于视野，局限也在于视野。当设计被赋予「造世界」的使命时，具体的设计项目很难承载这样的重量；「多元宇宙」也容易被用成口号，而回避一个尖锐的问题：如果某个世界以伤害他人为基础，它还应被允许存在吗？Escobar 对这一点的回答并不充分。\n\n尽管如此，这本书仍然是设计研究过去十年最重要的理论干预之一。它让设计者无法再假装自己只是解决问题的人。读它最好的方式，是把它当作一面镜子：你做的每一个设计决定，正在让哪些世界变得可能，又让哪些世界变得不可能？", 
+      "abstract_en": "Designs for the Pluriverse is Escobar's hardest book to classify: neither a design manual nor an anthropology monograph, but an attempt to suture design studies, political ontology and post-development. Its core proposition is simple: design is not object-making but world-making. Every design decision decides which ways of life are permitted, which are marginalised, which are not seen at all.\n\nThe critical edge points at modernity: development, growth and technical efficiency are designed versions of a single world. Escobar calls this the suppression of the pluriverse by the universe. His alternative is not 'better design' but 'design for the pluriverse' — designing conditions for worlds to coexist and for communities to define the conditions of their own life (autonomy).\n\nThe strength is the vision, and so is the limit. When design is given the mission of world-making, concrete projects can hardly carry the weight; the pluriverse can also become a slogan that avoids a sharp question: if a world is founded on harming others, should it be allowed to exist? Escobar's answer is not fully developed.\n\nStill, it is one of the most important theoretical interventions in design studies of the past decade. It makes it impossible for designers to pretend they only solve problems. The best way to read it is as a mirror: which worlds does each of your design decisions make possible, and which does it make impossible?",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "世界",
+        "name_en": "world",
+        "orig": "mundo",
+        "evid_zh": "不是背景，而是被设计、被维护、被争夺的存在整体。",
+        "evid_en": "Not background but a whole of being designed, maintained and contested.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "过渡",
+        "name_en": "transition",
+        "orig": "transición",
+        "evid_zh": "从单一现代性走向多元共存的过渡，而非一次革命。",
+        "evid_en": "A transition from singular modernity to plural coexistence rather than a revolution.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "共同体",
+        "name_en": "community",
+        "orig": "comunidad",
+        "evid_zh": "自主与公共性的承担者，而非设计的受众。",
+        "evid_en": "The bearer of autonomy and the communal, not the audience of design.",
+        "source": "Designs for the Pluriverse",
+        "source_en": "Designs for the Pluriverse",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "设计即造世界（非逐字原文）",
+        "trans_zh": "设计不是造物，而是造世界：它决定哪些存在方式被允许。",
+        "trans_en": "Design is not object-making but world-making: it decides which ways of being are permitted.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "多元宇宙命题（非逐字原文）",
+        "trans_zh": "多元宇宙不是同一世界的多元文化版本，而是多个世界的并存。",
+        "trans_en": "The pluriverse is not multicultural versions of one world but the coexistence of many worlds.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "诊断：设计如何单一化世界",
+        "title_en": "Diagnosis: how design singularised the world",
+        "zh": "现代性通过设计与发展，把多元世界压缩成单一版本；效率与增长成为唯一尺度。",
+        "en": "Modernity compressed plural worlds into a single version through design and development; efficiency and growth became the only measure.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "单一化不是自然趋同，而是被设计出来的。",
+          "flow": "从设计史，到发展项目，再到技术转移。",
+          "names": "现代主义设计师、发展机构、技术专家。",
+          "sources": "设计史与发展研究。",
+          "link": "为政治本体论的引入提供批判对象。",
+          "main_en": "Singularisation is not natural convergence but designed.",
+          "flow_en": "From design history to development projects to technology transfer.",
+          "names_en": "Modernist designers, development agencies, technical experts.",
+          "sources_en": "Design history and development studies.",
+          "link_en": "Sets the critical target for political ontology."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "理论：世界是如何被做出来的",
+        "title_en": "Theory: how worlds are made",
+        "zh": "借政治本体论与关系性，说明世界不是给定的，而是在实践、叙事与物质关系中生成的。",
+        "en": "Drawing on political ontology and relationality, the book shows that worlds are not given but emerge in practice, narrative and material relation.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "本体论不是哲学专利，而是政治争夺的场所。",
+          "flow": "从关系性，到多元宇宙，再到本体论政治。",
+          "names": "Viveiros de Castro、Descola、Castoriadis。",
+          "sources": "本体论人类学与自主理论。",
+          "link": "为「为多元宇宙而设计」提供理论支点。",
+          "main_en": "Ontology is not a philosophical specialty but a site of political struggle.",
+          "flow_en": "From relationality to the pluriverse to ontological politics.",
+          "names_en": "Viveiros de Castro, Descola, Castoriadis.",
+          "sources_en": "Ontological anthropology and theories of autonomy.",
+          "link_en": "Provides the theoretical fulcrum for design for the pluriverse."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "实践：为自主与公共性而设计",
+        "title_en": "Practice: designing for autonomy and the communal",
+        "zh": "从拉丁美洲的领地运动与社区设计中提炼原则：设计应支持共同体自我规定生活条件的能力。",
+        "en": "Principles are drawn from Latin American territorial movements and community design: design should support a community's capacity to define its own conditions of life.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "设计的成功标准是自主的增强，而非方案的优雅。",
+          "flow": "从案例，到原则，再到判准。",
+          "names": "社区组织、设计师、地方政府。",
+          "sources": "拉丁美洲案例。",
+          "link": "把理论转成可讨论的实践取向。",
+          "main_en": "Design succeeds when autonomy grows, not when the solution is elegant.",
+          "flow_en": "From cases to principles to criteria.",
+          "names_en": "Community organisations, designers, local government.",
+          "sources_en": "Latin American cases.",
+          "link_en": "Turns theory into a discussable practical orientation."
+        }
+      }
+    ]
+  }
+}

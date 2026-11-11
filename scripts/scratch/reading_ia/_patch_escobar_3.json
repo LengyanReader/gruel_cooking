@@ -1,0 +1,876 @@
+{
+  "escobar-pluriversal-politics": {
+    "title_zh": "《多元宇宙政治：真实与可能》",
+    "title_orig": "Pluriversal Politics: The Real and the Possible",
+    "year": "2020",
+    "publisher": "Duke University Press",
+    "publisher_en": "Duke University Press",
+    "publines_zh": "Duke University Press · 2020 · 英译文集 · ISBN/页数/译者待核",
+    "publines_en": "Duke University Press · 2020 · essays in English translation · ISBN/pages/translator pending",
+    "meta_zh": "学术 · 政治哲学 · 文集",
+    "meta_en": "scholarship · political philosophy · essays",
+    "baseline_conf": "◐ 出版社与年份经指南/Goodreads 登记；ISBN、页数、译者与原篇出处待核",
+    "baseline_conf_en": "◐ publisher and year via guide/Goodreads; ISBN, pages, translator and original venues pending",
+    "why_zh": "「真实」是被政治地做出来的：如果现实本身可以被重新设计，那么「另一种可能是可能的」就不是口号，而是一项本体论主张。",
+    "why_en": "'The real' is politically made: if reality itself can be redesigned, then 'another possible is possible' is not a slogan but an ontological claim.",
+    "background": {
+      "zh": "《多元宇宙政治》是 Escobar 的英译文集，汇集他在《多元宇宙的设计》之后关于「真实与可能」的文章与讲演。书名针对的是政治想象力的贫乏：当代政治总是说「现实一点」，而 Escobar 要问，谁定义了现实？他借用政治本体论与「认识论南方」的资源，主张「真实」（lo real）从来不是给定的，而是在权力关系中被做出来的；因此改变世界不只是改变分配，而是改变什么算作真实。书中讨论的案例包括拉丁美洲的领地运动、过渡实践（transiciones）、以及「另一种可能是可能的」这一口号的政治含义。",
+      "en": "Pluriversal Politics is a collection of Escobar's essays and talks in English translation, following Designs for the Pluriverse and centring on the real and the possible. The title targets the poverty of political imagination: contemporary politics keeps saying 'be realistic', and Escobar asks who defines the real. Drawing on political ontology and the epistemology of the South, he argues that the real (lo real) is never given but made within relations of power; changing the world is therefore not only redistributing but changing what counts as real. Cases include Latin American territorial movements, transition practices and the politics of the slogan 'another possible is possible'.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts",
+      "sources_en": "Guide; book description; standard accounts"
+    },
+    "narrative": {
+      "zh": "文集以短章推进，反复在三个词之间移动：真实（lo real）、可能（lo posible）、多元宇宙（pluriverso）。第一部分诊断「现实主义」如何成为一种去政治化的技术；第二部分展示「过渡」如何在地方实践中被想象与试验；第三部分回到本体论，主张「可能」不是未来的选项，而是当下被压抑的实在。篇章之间有重叠，但整体构成一个从批判到实践的弧线。",
+      "en": "Short chapters move repeatedly among three words: the real, the possible and the pluriverse. A first movement diagnoses how 'realism' becomes a depoliticising technique; a second shows how transitions are imagined and tested in local practice; a third returns to ontology, arguing that the possible is not a future option but a presently suppressed reality. Chapters overlap, but together they form an arc from critique to practice.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后成为「多元宇宙」讨论的常用入口，因篇幅短、命题清晰，常被用于课程与运动读本；它也让 Escobar 的政治哲学面向更明确。",
+      "reception_good_en": "It became a common entry point to pluriverse debates: short, clearly argued, and often used in courses and movement readers; it also makes Escobar's political philosophy more explicit.",
+      "reception_bad_zh": "作为文集，重复较多，理论的系统性不如《多元宇宙的设计》；「另一种可能是可能的」也被批评为循环论证——可能之所以可能，正因为被定义为可能。",
+      "reception_bad_en": "As a collection it is repetitive and less systematic than Designs for the Pluriverse; 'another possible is possible' has been criticised as circular — the possible is possible because it is defined as such.",
+      "syn_zh": "本书的价值在于把「现实感」本身问题化：当有人说「这不现实」时，他其实在保护一个特定的世界。",
+      "syn_en": "Its value is to problematise the sense of reality itself: when someone says 'that's not realistic', they are in fact protecting a particular world.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "「真实」不是给定的，而是在权力关系中被做出来的",
+      "「现实一点」常是一种去政治化的技术",
+      "过渡不是从 A 到 B 的线性过程，而是多重世界的试验",
+      "「另一种可能是可能的」是本体论主张，而非乐观口号",
+      "政治的任务是扩大可存在的世界，而非在既定现实中分配"
+    ],
+    "claims_list_en": [
+      "The real is not given but made within relations of power",
+      "'Be realistic' is often a depoliticising technique",
+      "Transition is not a linear passage from A to B but experimentation among multiple worlds",
+      "'Another possible is possible' is an ontological claim, not optimistic rhetoric",
+      "Politics should expand the worlds that can exist rather than distribute within a given reality"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Pluriversal Politics: The Real and the Possible》2020 年由 Duke University Press 出版",
+        "claim_en": "Pluriversal Politics: The Real and the Possible was published by Duke University Press in 2020",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书为英译文集，原篇多为西班牙语写作",
+        "claim_en": "The book is a collection in English translation, with originals mostly in Spanish",
+        "source": "Guide; secondary summaries",
+        "source_en": "Guide; secondary summaries",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书围绕「真实」（lo real）与「可能」（lo posible）的对置展开",
+        "claim_en": "The book is organised around the opposition of the real (lo real) and the possible (lo posible)",
+        "source": "Book description",
+        "source_en": "Book description",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书承接《多元宇宙的设计》的政治本体论框架",
+        "claim_en": "It continues the political-ontology frame of Designs for the Pluriverse",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与译者",
+        "item_en": "ISBN, page count and translator",
+        "conf": "◐"
+      },
+      {
+        "item": "各篇原始出处、发表年份与西语标题",
+        "item_en": "original venues, years and Spanish titles of the chapters",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Designs for the Pluriverse",
+        "title_en": "Designs for the Pluriverse",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2018",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "设计理论的政治哲学展开",
+        "note_en": "the political-philosophical elaboration of the design theory",
+        "conf": "◐"
+      },
+      {
+        "title": "Relationality",
+        "title_en": "Relationality",
+        "author": "Escobar, Osterweil & Sharma",
+        "author_en": "Escobar, Osterweil & Sharma",
+        "year": "2022",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "relationality",
+        "pos": "",
+        "note_zh": "从「可能」走向「关联性」的本体论",
+        "note_en": "from the possible to an ontology of relationality",
+        "conf": "◐"
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "对读 · 可能性的现场",
+        "relation_en": "compare · sites of possibility",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "Tsing 在废墟中寻找生命可能，Escobar 在政治中寻找世界可能",
+        "note_en": "Tsing seeks possibilities of life in ruins; Escobar seeks possibilities of worlds in politics",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "以短章与讲演保持论辩性，让「现实一点」这类日常说法成为分析对象。",
+        "en": "Keeps the polemical register of short essays and talks, making everyday phrases like 'be realistic' objects of analysis."
+      },
+      {
+        "zh": "把本体论术语（真实、可能）与运动口号并置，让哲学与政治互相翻译。",
+        "en": "Juxtaposes ontological terms (the real, the possible) with movement slogans, translating philosophy and politics into each other."
+      },
+      {
+        "zh": "以「过渡」而不是「革命」作为时间框架，强调渐进的、多点的实践。",
+        "en": "Uses transition rather than revolution as the temporal frame, stressing gradual, multi-site practice."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先找书中对「现实主义」的批评段落，再问：你自己在哪些场合说过「这不现实」？那句话在保护什么？",
+        "en": "Find the critique of 'realism', then ask where you have said 'that's not realistic' — what was that sentence protecting?"
+      },
+      {
+        "zh": "把「过渡」章与《多元宇宙的设计》的实践部分对读：两者对「改变如何发生」的设想是否一致？",
+        "en": "Read the transition chapters against the practice part of Designs for the Pluriverse: do they agree on how change happens?"
+      },
+      {
+        "zh": "追问：「另一种可能是可能的」是否只是同义反复？它需要什么经验证据才能成立？",
+        "en": "Ask whether 'another possible is possible' is tautological, and what evidence would make it stand."
+      }
+    ],
+    "concepts": [
+      {
+        "term": "真实",
+        "term_en": "the real",
+        "orig": "lo real",
+        "gloss_zh": "不是给定的事实总体，而是在权力关系中被做出来的实在。",
+        "gloss_en": "Not the given totality of facts but a reality made within relations of power.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "term": "可能",
+        "term_en": "the possible",
+        "orig": "lo posible",
+        "gloss_zh": "不是未来的选项，而是当下被压抑、却已在实践中存在的实在。",
+        "gloss_en": "Not a future option but a reality suppressed in the present yet already existing in practice.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "term": "现实主义",
+        "term_en": "realism",
+        "orig": "realismo",
+        "gloss_zh": "一种去政治化的技术：以「现实」为名缩小可想象的政治空间。",
+        "gloss_en": "A depoliticising technique that narrows the imaginable political space in the name of reality.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "term": "过渡",
+        "term_en": "transition",
+        "orig": "transición",
+        "gloss_zh": "多重世界之间的试验性移动，而非从旧制度到新制度的线性过渡。",
+        "gloss_en": "Experimental movement among multiple worlds rather than a linear passage from one regime to another.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "term": "多元宇宙政治",
+        "term_en": "pluriversal politics",
+        "orig": "política pluriversal",
+        "gloss_zh": "以多个世界的共存为目标的政治，而非在单一世界中分配资源。",
+        "gloss_en": "Politics aimed at the coexistence of many worlds rather than distributing resources within one.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2020 年出版后进入课程与运动读本；评论肯定它把本体论问题转成可讨论的政治语言。",
+      "then_en": "Published in 2020, it entered courses and movement readers; reviews praised its translation of ontological questions into discussable political language.",
+      "later_zh": "后世把它与「去增长」「过渡运动」「去殖民政治」并读，视为多元宇宙话语的政治入口。",
+      "later_en": "Later work reads it with degrowth, transition movements and decolonial politics as the political entry to pluriversal discourse.",
+      "influence_zh": "它让「另一种可能是可能的」成为全球南北方运动共用的口号，也让「现实主义批判」进入政治理论讨论。",
+      "influence_en": "It made 'another possible is possible' a shared slogan across movements North and South and brought the critique of realism into political theory.",
+      "critique_zh": "主要保留是：文集重复、系统性强于前作不足；「可能」的论述有循环之嫌；对制度权力与暴力冲突的分析仍偏弱。",
+      "critique_en": "The main reservations are repetition, less system than the previous book, a possibly circular account of the possible, and still-weak analysis of institutional power and violent conflict.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为文集类型的结构性局限，不是对全书的判断（未通读）。",
+      "en": "Structural limits of an essay collection, not a judgment on the whole book (unread).",
+      "items": [
+        {
+          "title_zh": "重复与松散",
+          "title_en": "Repetition and looseness",
+          "note_zh": "各篇原为不同场合写作，论点反复出现。",
+          "note_en": "Chapters were written for different occasions and repeat the same arguments."
+        },
+        {
+          "title_zh": "循环论证之嫌",
+          "title_en": "Near-tautology",
+          "note_zh": "「可能之所以可能」需要独立证据，否则只是定义。",
+          "note_en": "Why the possible is possible needs independent evidence, or it is merely a definition."
+        },
+        {
+          "title_zh": "制度分析薄弱",
+          "title_en": "Thin institutional analysis",
+          "note_zh": "对国家、法律与暴力的处理较少。",
+          "note_en": "The state, law and violence receive limited treatment."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：「真实」是被权力做出来的，因此政治的想象力不应被「现实一点」所限制；「多元宇宙政治」的任务是扩大可存在的世界，而不是在既定现实中重新分配。",
+      "claim_en": "Escobar wants to show that the real is made by power, so political imagination should not be limited by 'be realistic'; the task of pluriversal politics is to expand the worlds that can exist, not to redistribute within a given reality.",
+      "why_zh": "书名把「政治」放在「多元宇宙」之后，说明政治是落实多元宇宙的场域；全书反复处理「真实/可能」这对词，说明作者要动摇的是现实感本身；以「过渡」而非「革命」为框架，说明其政治是渐进而非决裂的。",
+      "why_en": "The title places politics after the pluriverse, making politics the field where plurality is realised; the book keeps working the pair real/possible, showing that what is shaken is the sense of reality itself; the frame of transition rather than revolution shows a gradual rather than ruptural politics.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与核心词把「真实」问题化。",
+          "en": "The title and keywords problematise the real.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "案例",
+          "kind_en": "case",
+          "zh": "以拉丁美洲领地运动与过渡实践为例。",
+          "en": "Latin American territorial movements and transition practices supply the cases.",
+          "source": "Guide; secondary summaries",
+          "source_en": "Guide; secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "「另一种可能是可能的」成为跨运动口号，说明命题被实践征用。",
+          "en": "'Another possible is possible' became a cross-movement slogan, showing the thesis was taken up in practice.",
+          "source": "Guide / reception",
+          "source_en": "Guide / reception",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书是一部政治宣言式的文集，其力量在于语气与口号，而非论证；把它当作政治本体论的完整陈述，会高估其理论密度。",
+      "counter_en": "Alternative reading: it is a manifesto-like collection whose force lies in tone and slogan rather than argument; treating it as a complete statement of political ontology overestimates its theoretical density.",
+      "boundary_zh": "未通读，无法判断各篇论证；上述推断依据书目、指南与二手讨论，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary discussion, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "谁定义了现实：读《多元宇宙政治》",
+      "title_en": "Who defines the real",
+      "standfirst_zh": "「现实一点」往往不是忠告，而是保护一个特定世界的政治技术。",
+      "standfirst_en": "'Be realistic' is often not advice but a political technique for protecting a particular world.",
+      "body_zh": "《多元宇宙政治》篇幅不大，但论点锋利：当代政治最有效的手段，不是禁止你想什么，而是告诉你「这不现实」。一旦「现实」被设定，讨论的范围就被悄悄缩小了。Escobar 要问的正是：谁有权力定义现实？这个定义服务于谁？\n\n他的回答借自政治本体论：真实不是给定的，而是在实践、制度与叙事中被做出来的。因此政治的争夺不只是资源分配，而是「什么算作真实」的争夺。当拉丁美洲的领地运动说「另一个世界是可能的」，他们不是在许愿，而是在陈述一个已经部分存在的实在。\n\n这本书的优点是清楚、可引用、适合带入讨论；缺点是重复，且「另一种可能是可能的」这句口号有循环论证之嫌——如果可能之所以可能，只是因为它被定义为可能，那么这个命题就无法被反驳，也就难以指导实践。\n\n读它最好的方式，是把它当作一个提问工具：下次有人说「这不现实」时，先别争辩可行性，先问——你说的现实，是谁做的？", 
+      "abstract_en": "Pluriversal Politics is short but sharp: the most effective move in contemporary politics is not to forbid what you think but to tell you that it is 'not realistic'. Once the real is set, the range of discussion quietly shrinks. Escobar asks: who has the power to define the real, and whom does that definition serve?\n\nHis answer comes from political ontology: the real is not given but made in practice, institutions and narrative. Political struggle is therefore not only about distributing resources but about what counts as real. When Latin American territorial movements say 'another world is possible', they are not wishing; they are stating a reality that already partly exists.\n\nThe book's virtue is clarity and quotability; its weakness is repetition, and the slogan risks circularity — if the possible is possible only because it is defined as such, the claim cannot be refuted and can hardly guide practice.\n\nThe best way to use it is as a question-tool: next time someone says 'that's not realistic', do not argue feasibility first. Ask instead — whose reality is that, and who made it?",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "现实",
+        "name_en": "the real",
+        "orig": "lo real",
+        "evid_zh": "被反复援引的权威，也是被争夺的场所。",
+        "evid_en": "An authority repeatedly invoked and a site repeatedly contested.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "过渡",
+        "name_en": "transition",
+        "orig": "transición",
+        "evid_zh": "不是一次决裂，而是多点、渐进的试验。",
+        "evid_en": "Not a single rupture but multi-site, gradual experimentation.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "口号",
+        "name_en": "the slogan",
+        "orig": "consigna",
+        "evid_zh": "「另一种可能是可能的」既是政治口号，也是本体论命题。",
+        "evid_en": "'Another possible is possible' is both political slogan and ontological proposition.",
+        "source": "Pluriversal Politics",
+        "source_en": "Pluriversal Politics",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "现实命题（非逐字原文）",
+        "trans_zh": "「真实」不是给定的，而是在权力关系中被做出来的；改变世界也是改变什么算作真实。",
+        "trans_en": "The real is not given but made within relations of power; changing the world is also changing what counts as real.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "可能命题（非逐字原文）",
+        "trans_zh": "「另一种可能是可能的」不是乐观口号，而是说：另一个世界已经部分存在于当下。",
+        "trans_en": "'Another possible is possible' is not optimism but the claim that another world already partly exists in the present.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "现实主义作为去政治化",
+        "title_en": "Realism as depoliticisation",
+        "zh": "诊断「现实一点」如何成为一种缩小政治想象的技术，并追问谁有权力定义现实。",
+        "en": "Diagnoses how 'be realistic' shrinks political imagination and asks who has the power to define the real.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "定义现实就是划定政治的可能范围。",
+          "flow": "从日常说法，到制度话语，再到政治后果。",
+          "names": "政策制定者、媒体、运动。",
+          "sources": "短章与讲演。",
+          "link": "为「可能」的讨论清出空间。",
+          "main_en": "Defining the real is drawing the boundary of the politically possible.",
+          "flow_en": "From everyday phrase to institutional discourse to political consequence.",
+          "names_en": "Policymakers, media, movements.",
+          "sources_en": "Short essays and talks.",
+          "link_en": "Clears space for the discussion of the possible."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "过渡：多重世界的试验",
+        "title_en": "Transition: experimentation among worlds",
+        "zh": "从拉丁美洲的领地与过渡实践中，展示「另一个世界」如何被逐步试验，而非一次性建立。",
+        "en": "Latin American territorial and transition practices show how another world is tested step by step rather than founded at once.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "改变是渐进的、多点的，而非单点的决裂。",
+          "flow": "从地方实践，到区域网络，再到全球话语。",
+          "names": "社区、运动、NGO。",
+          "sources": "案例章。",
+          "link": "把本体论主张落到实践。",
+          "main_en": "Change is gradual and multi-site rather than a single rupture.",
+          "flow_en": "From local practice to regional networks to global discourse.",
+          "names_en": "Communities, movements, NGOs.",
+          "sources_en": "Case chapters.",
+          "link_en": "Grounds the ontological claim in practice."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "多元宇宙政治",
+        "title_en": "Pluriversal politics",
+        "zh": "结论把「可能」提升为政治任务：扩大可存在的世界，而非在既定现实中分配资源。",
+        "en": "The conclusion raises the possible into a political task: expand the worlds that can exist rather than distribute resources within a given reality.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "政治的成功标准是世界的增多，而非效率的提高。",
+          "flow": "从案例总结，到本体论主张，再到政治纲领。",
+          "names": "运动、共同体、研究者。",
+          "sources": "全书总结。",
+          "link": "与《多元宇宙的设计》形成理论与实践的双联。",
+          "main_en": "Politics succeeds when worlds multiply, not when efficiency rises.",
+          "flow_en": "From case summary to ontological claim to political programme.",
+          "names_en": "Movements, communities, researchers.",
+          "sources_en": "Overall argument.",
+          "link_en": "Pairs with Designs for the Pluriverse as theory and practice."
+        }
+      }
+    ]
+  },
+  "escobar-autonomia-diseno": {
+    "title_zh": "《自主与设计：公共性的实现》",
+    "title_orig": "Autonomía y diseño: La realización de lo comunal",
+    "year": "2016",
+    "publisher": "Universidad del Cauca (Popayán)",
+    "publisher_en": "Universidad del Cauca (Popayán)",
+    "publines_zh": "Universidad del Cauca · 2016（指南记 2020）· 西语 · ISBN/页数待核",
+    "publines_en": "Universidad del Cauca · 2016 (guide gives 2020) · Spanish · ISBN/pages pending",
+    "meta_zh": "学术 · 西语专著 · 自主设计",
+    "meta_en": "scholarship · Spanish monograph · autonomous design",
+    "baseline_conf": "◐ 出版社与年份经指南/通行引用（指南作 2020，另有法语版 2023）；ISBN、页数与印次待核",
+    "baseline_conf_en": "◐ publisher and year via guide/common citation (guide gives 2020; French edition 2023); ISBN, pages and printing pending",
+    "why_zh": "《多元宇宙的设计》的西语姊妹作：设计不是为共同体做方案，而是共同体自我规定生活条件的实践——「公共性」（lo comunal）才是设计的目的。",
+    "why_en": "The Spanish sibling of Designs for the Pluriverse: design is not making plans for a community but the practice by which a community defines the conditions of its own life — the communal (lo comunal) is design's purpose.",
+    "background": {
+      "zh": "本书是 Escobar 在哥伦比亚考卡大学（Universidad del Cauca）长期合作的成果，以西班牙语写作，面向拉丁美洲的读者与运动。它与《多元宇宙的设计》共享问题域，但重心不同：英文版更重设计理论与本体论，西语版更重「公共性」（lo comunal）与地方实践。Escobar 从考卡地区的原住民与农民组织、社区广播、自治教育与生态过渡项目中提炼「自主设计」：设计不是专家带给共同体的方案，而是共同体维持与扩展共同生活的技艺。",
+      "en": "The book results from Escobar's long collaboration with the Universidad del Cauca in Colombia, written in Spanish for Latin American readers and movements. It shares its problematic with Designs for the Pluriverse but shifts the weight: the English book stresses design theory and ontology, the Spanish one stresses the communal (lo comunal) and local practice. From indigenous and peasant organisations, community radio, autonomous education and ecological transition projects in Cauca, Escobar draws out 'autonomous design': design is not a plan experts bring to a community but the craft by which a community sustains and extends shared life.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts",
+      "sources_en": "Guide; book description; standard accounts"
+    },
+    "narrative": {
+      "zh": "全书从「设计危机」写起：现代设计服务于市场与国家，无法回应生命与领地的危机。随后转向「自主」：不是个体的自由选择，而是共同体自我规定生活条件的能力。最后落到「公共性」：设计应生产共同生活的条件，而非私人的解决方案。篇章之间穿插考卡地区的案例与对拉美思想（Fals Borda、Dussel、自治传统）的引用。",
+      "en": "It opens with a crisis of design: modern design serves market and state and cannot answer the crisis of life and territory. It then turns to autonomy — not individual choice but a community's capacity to define the conditions of its own life — and finally to the communal: design should produce the conditions of shared life rather than private solutions. Cases from Cauca and references to Latin American thought (Fals Borda, Dussel, autonomist traditions) run through the chapters.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "在西语学界与拉丁美洲设计圈内影响很大，被视为「自主设计」的宣言；它也让「公共性」成为设计讨论的核心词之一。",
+      "reception_good_en": "It has had wide influence in Spanish-language scholarship and Latin American design circles as a manifesto of autonomous design, and made the communal a core term in design debate.",
+      "reception_bad_zh": "批评指出：与英文版重复较多；「自主」概念带有浪漫化风险，可能低估共同体内部的权力差异；对具体设计流程着墨少。",
+      "reception_bad_en": "Critics note substantial overlap with the English book, a risk of romanticising autonomy that may underplay internal power differences, and limited attention to concrete design process.",
+      "syn_zh": "本书的贡献是把设计的目的从「解决问题」改为「实现公共性」：好的设计让共同体更有能力决定自己的生活。",
+      "syn_en": "The contribution is to change design's purpose from problem-solving to realising the communal: good design increases a community's capacity to decide its own life.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "现代设计服务于市场与国家，无法回应生命与领地的危机",
+      "自主不是个体自由，而是共同体自我规定生活条件的能力",
+      "设计应生产共同生活的条件，而非私人的解决方案",
+      "公共性（lo comunal）是设计的目的与判准",
+      "自主设计必须从地方实践与运动中学习，而非从理论推导"
+    ],
+    "claims_list_en": [
+      "Modern design serves market and state and cannot answer the crisis of life and territory",
+      "Autonomy is not individual freedom but a community's capacity to define its own conditions of life",
+      "Design should produce the conditions of shared life, not private solutions",
+      "The communal (lo comunal) is design's purpose and criterion",
+      "Autonomous design must learn from local practice and movements, not deduce from theory"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Autonomía y diseño: La realización de lo comunal》为西班牙语专著，通常记 2016 年（指南作 2020）",
+        "claim_en": "Autonomía y diseño: La realización de lo comunal is a Spanish-language monograph usually dated 2016 (guide gives 2020)",
+        "source": "Guide / common citation",
+        "source_en": "Guide / common citation",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书与考卡大学（Universidad del Cauca）的合作有关",
+        "claim_en": "The book is connected to collaboration with the Universidad del Cauca",
+        "source": "Guide; secondary literature",
+        "source_en": "Guide; secondary literature",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书与《Designs for the Pluriverse》共享问题域，为西语展开版",
+        "claim_en": "It shares the problematic of Designs for the Pluriverse as a Spanish elaboration",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书有法语版《Autonomie et design》（2023）",
+        "claim_en": "A French edition, Autonomie et design, appeared in 2023",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数、版次与出版年（2016/2020）",
+        "item_en": "ISBN, pages, printing and year (2016/2020)",
+        "conf": "◐"
+      },
+      {
+        "item": "各章标题与案例清单（未逐页核对）",
+        "item_en": "chapter titles and list of cases (not checked page by page)",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Designs for the Pluriverse",
+        "title_en": "Designs for the Pluriverse",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2018",
+        "relation": "同作者 · 英文姊妹作",
+        "relation_en": "same author · English sibling",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "同一问题域的英文理论版",
+        "note_en": "the English theoretical version of the same problematic",
+        "conf": "◐"
+      },
+      {
+        "title": "Una minga para el postdesarrollo",
+        "title_en": "Una minga para el postdesarrollo",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2010",
+        "relation": "同作者 · 实践脉络",
+        "relation_en": "same author · practical context",
+        "axis": "development",
+        "pos": "",
+        "note_zh": "明加（集体劳动）作为后发展的实践形式",
+        "note_en": "the minga (collective labour) as a practical form of post-development",
+        "conf": "◐"
+      },
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "领地作为生命世界，是自主设计的前提",
+        "note_en": "territory as lifeworld is the premise of autonomous design",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "用西语写作，直接面向拉丁美洲读者与运动，语气比英文版更介入。",
+        "en": "Written in Spanish and addressed directly to Latin American readers and movements, with a more engaged tone than the English book."
+      },
+      {
+        "zh": "以「公共性」为核心词，把设计从专业问题转成共同体问题。",
+        "en": "Makes the communal the central term, turning design from a professional issue into a community issue."
+      },
+      {
+        "zh": "以考卡地区的案例贯穿理论，让抽象概念始终有地方。",
+        "en": "Carries theory through cases from Cauca so that abstract concepts stay located."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读对「设计危机」的诊断，再读「自主」章：两者之间的因果链是否成立？",
+        "en": "Read the diagnosis of the design crisis, then the chapter on autonomy: does the causal chain hold?"
+      },
+      {
+        "zh": "把「公共性」与英文版的「多元宇宙」对读：两个核心词各自解决了什么问题？",
+        "en": "Read the communal against the pluriverse in the English book: what problem does each solve?"
+      },
+      {
+        "zh": "追问：共同体如何防止「自主」变成少数人对多数人的支配？书中是否处理了内部权力？",
+        "en": "Ask how a community prevents autonomy from becoming rule of the few over the many. Does the book address internal power?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "自主设计",
+        "term_en": "autonomous design",
+        "orig": "diseño autónomo",
+        "gloss_zh": "由共同体自我规定目标与形式的设计实践，而非专家带入的方案。",
+        "gloss_en": "Design practice in which a community defines its own goals and forms, rather than a plan brought by experts.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "term": "公共性",
+        "term_en": "the communal",
+        "orig": "lo comunal",
+        "gloss_zh": "以共同生活为基础的组织原则，是设计的目的与判准。",
+        "gloss_en": "An organising principle grounded in shared life; design's purpose and criterion.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "term": "自主",
+        "term_en": "autonomy",
+        "orig": "autonomía",
+        "gloss_zh": "共同体自我规定生活条件的能力，而非个体的自由选择。",
+        "gloss_en": "A community's capacity to define the conditions of its own life, not individual free choice.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "term": "设计危机",
+        "term_en": "crisis of design",
+        "orig": "crisis del diseño",
+        "gloss_zh": "现代设计服务于市场与国家，无法回应生命与领地的危机。",
+        "gloss_en": "Modern design serves market and state and cannot answer the crisis of life and territory.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "term": "过渡",
+        "term_en": "transition",
+        "orig": "transición",
+        "gloss_zh": "从 Extractivismo 与开发主义走向自主公共性的多点实践。",
+        "gloss_en": "Multi-site practice moving from extractivism and developmentalism toward autonomous communality.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2016 年前后在拉丁美洲流传，随后进入西语设计课程与社会运动读本；法语版 2023 年扩大了欧洲读者群。",
+      "then_en": "It circulated in Latin America from around 2016, entering Spanish-language design courses and movement readers; a French edition in 2023 widened its European readership.",
+      "later_zh": "后世把它与《多元宇宙的设计》当作姊妹文本并读：一本讲理论，一本讲公共性。",
+      "later_en": "Later work reads it with Designs for the Pluriverse as a sibling pair: one on theory, one on the communal.",
+      "influence_zh": "它让「自主设计」成为拉美设计运动的关键词，也影响了社区媒体、自治教育与生态过渡的实践讨论。",
+      "influence_en": "It made autonomous design a keyword in Latin American design movements and shaped discussion of community media, autonomous education and ecological transition.",
+      "critique_zh": "主要保留是：与英文版重复；「自主」与「公共性」带有规范性理想化，可能低估共同体内部的性别、阶级与代际权力。",
+      "critique_en": "The main reservations are overlap with the English book and the normative idealisation of autonomy and the communal, which may underplay gender, class and generational power inside communities.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手讨论（未逐页核对）",
+          "en": "The book's introduction and secondary discussion (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "与英文版重复",
+          "title_en": "Overlap with the English book",
+          "note_zh": "核心论证与《多元宇宙的设计》高度重合。",
+          "note_en": "The core argument overlaps heavily with Designs for the Pluriverse."
+        },
+        {
+          "title_zh": "共同体的理想化",
+          "title_en": "Idealised community",
+          "note_zh": "内部权力差异（性别、阶级、代际）着墨较少。",
+          "note_en": "Internal power differences (gender, class, generation) receive little attention."
+        },
+        {
+          "title_zh": "流程指导不足",
+          "title_en": "Thin process guidance",
+          "note_zh": "对具体设计流程与评估方法讨论有限。",
+          "note_en": "Concrete design process and evaluation are discussed only briefly."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：设计的目的不是解决问题，而是实现公共性；只有当共同体能够自我规定生活条件时，设计才真正服务于生命。",
+      "claim_en": "Escobar wants to show that design's purpose is not problem-solving but realising the communal; only when a community can define its own conditions of life does design truly serve life.",
+      "why_zh": "书名把「自主」放在「设计」之前，说明自主是前提而非结果；副标题「公共性的实现」给出目的；以西语写作并扎根考卡案例，说明本书要面向的是运动而非学院。",
+      "why_en": "The title puts autonomy before design, making autonomy the premise rather than the outcome; the subtitle names the communal as the goal; writing in Spanish from Cauca cases shows the book addresses movements rather than the academy.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与副标题把自主、设计、公共性连成一条链。",
+          "en": "The title and subtitle chain autonomy, design and the communal together.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "案例",
+          "kind_en": "case",
+          "zh": "考卡地区的组织与过渡实践是论证基础。",
+          "en": "Organisations and transition practices in Cauca ground the argument.",
+          "source": "Guide; secondary summaries",
+          "source_en": "Guide; secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "接受",
+          "kind_en": "reception",
+          "zh": "本书被拉美设计圈读作「自主设计」宣言。",
+          "en": "Latin American design circles read it as a manifesto of autonomous design.",
+          "source": "Guide / reception",
+          "source_en": "Guide / reception",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书更像《多元宇宙的设计》的西语普及版与实践注脚；把它当作独立的理论著作，会高估其原创性。",
+      "counter_en": "Alternative reading: it is closer to a Spanish-language popularisation and practical footnote to Designs for the Pluriverse; treating it as an independent theoretical work overestimates its originality.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手讨论，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary discussion, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "设计为了什么：读《自主与设计》",
+      "title_en": "What design is for",
+      "standfirst_zh": "设计的目的不是解决问题，而是让共同体更有能力决定自己的生活。",
+      "standfirst_en": "Design's purpose is not solving problems but increasing a community's capacity to decide its own life.",
+      "body_zh": "《自主与设计》常被当作《多元宇宙的设计》的西语版来读，但它其实有一个不同的重心：英文版问「世界如何被设计」，西语版问「设计为了什么」。Escobar 的答案是「公共性」（lo comunal）——设计的目的不是交付方案，而是让共同体更有能力维持与扩展共同生活。\n\n这本书的语气比英文版更介入。它从考卡地区的组织、社区广播、自治教育与生态过渡写起，把「自主」从哲学概念拉回具体的日常：谁决定种什么、谁说话、孩子学什么、河流如何被守护。这些决定看起来琐碎，却是「自我规定生活条件」的实际内容。\n\n局限也很明显：它与英文版重复较多；「自主」与「公共性」带有理想化色彩，可能低估共同体内部的性别、阶级与代际权力。一个共同体说「我们自主」时，往往也是某些人替另一些人说的。\n\n读这本书，最好把它当作一个判准而不是一套方法：下次做设计时问——这个方案是让共同体更有能力决定自己的生活，还是让他们更依赖外部的专家与资金？", 
+      "abstract_en": "Autonomía y diseño is often read as the Spanish version of Designs for the Pluriverse, but its centre of gravity differs: the English book asks how worlds are designed, the Spanish one asks what design is for. Escobar's answer is the communal (lo comunal) — design's purpose is not to deliver solutions but to increase a community's capacity to sustain and extend shared life.\n\nThe tone is more engaged than the English book. It starts from organisations, community radio, autonomous education and ecological transition in Cauca, pulling autonomy from philosophy back into daily decisions: who decides what to plant, who speaks, what children learn, how the river is guarded. These look small but they are the actual content of self-determination.\n\nThe limits are clear: substantial overlap with the English book, and an idealised autonomy and communality that may underplay gender, class and generational power inside communities. When a community says 'we are autonomous', some people are often speaking for others.\n\nThe best use of the book is as a criterion rather than a method: next time you design, ask whether the proposal increases the community's capacity to decide its own life, or its dependence on outside experts and funding.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手讨论（未逐页核对）",
+          "en": "The book's introduction and secondary discussion (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "共同体",
+        "name_en": "community",
+        "orig": "comunidad",
+        "evid_zh": "设计的主体，而非受众。",
+        "evid_en": "The subject of design, not its audience.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "集会",
+        "name_en": "assembly",
+        "orig": "asamblea",
+        "evid_zh": "决定共同生活条件的场所。",
+        "evid_en": "The place where the conditions of shared life are decided.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "土地",
+        "name_en": "land",
+        "orig": "tierra",
+        "evid_zh": "自主的物质基础，也是设计的第一对象。",
+        "evid_en": "The material ground of autonomy and design's first object.",
+        "source": "Autonomía y diseño",
+        "source_en": "Autonomía y diseño",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "自主设计命题（非逐字原文）",
+        "trans_zh": "设计不是专家带给共同体的方案，而是共同体自我规定生活条件的实践。",
+        "trans_en": "Design is not a plan experts bring to a community but the practice by which a community defines the conditions of its own life.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "公共性命题（非逐字原文）",
+        "trans_zh": "设计的目的不是解决问题，而是实现共同生活的条件。",
+        "trans_en": "Design's purpose is not problem-solving but realising the conditions of shared life.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "设计的危机",
+        "title_en": "The crisis of design",
+        "zh": "现代设计服务于市场与国家，无法回应生命与领地的危机；专业化的设计反而加深了依赖。",
+        "en": "Modern design serves market and state and cannot answer the crisis of life and territory; professionalised design deepens dependence.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "设计的问题不是不够专业，而是目的错了。",
+          "flow": "从设计史，到发展项目，再到生态危机。",
+          "names": "设计师、国家、市场。",
+          "sources": "设计史与拉美案例。",
+          "link": "为「自主」的提出设定问题。",
+          "main_en": "Design's problem is not a lack of professionalism but a wrong purpose.",
+          "flow_en": "From design history to development projects to ecological crisis.",
+          "names_en": "Designers, state, market.",
+          "sources_en": "Design history and Latin American cases.",
+          "link_en": "Sets the problem for autonomy."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "自主：共同体自我规定",
+        "title_en": "Autonomy: a community defines itself",
+        "zh": "自主不是个体自由，而是共同体决定种什么、学什么、如何守护河流的能力。",
+        "en": "Autonomy is not individual freedom but a community's capacity to decide what to plant, what to learn and how to guard the river.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "自主是日常决定的总和，而非抽象权利。",
+          "flow": "从生产，到教育，再到生态。",
+          "names": "农民组织、教师、社区议会。",
+          "sources": "考卡案例。",
+          "link": "把「自主」从哲学拉回日常。",
+          "main_en": "Autonomy is the sum of daily decisions, not an abstract right.",
+          "flow_en": "From production to education to ecology.",
+          "names_en": "Peasant organisations, teachers, community councils.",
+          "sources_en": "Cauca cases.",
+          "link_en": "Pulls autonomy from philosophy into daily life."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "公共性的实现",
+        "title_en": "Realising the communal",
+        "zh": "设计的目的应是生产共同生活的条件；判准不是方案是否优雅，而是共同体是否更有能力。",
+        "en": "Design should produce the conditions of shared life; the criterion is not elegance but whether the community's capacity grows.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "好的设计让共同体更不依赖外部。",
+          "flow": "从案例，到判准，再到实践取向。",
+          "names": "共同体、设计师、NGO。",
+          "sources": "全书总结。",
+          "link": "与《多元宇宙的设计》的理论框架对接。",
+          "main_en": "Good design makes a community less dependent on the outside.",
+          "flow_en": "From cases to criteria to practical orientation.",
+          "names_en": "Communities, designers, NGOs.",
+          "sources_en": "Overall argument.",
+          "link_en": "Connects to the theoretical frame of Designs for the Pluriverse."
+        }
+      }
+    ]
+  }
+}

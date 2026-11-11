@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《差异的领地：地方、运动、生活、网络》｜Territories of Difference: Place, Movements, Life, Redes | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>READING &amp; IA — ANTHROPOCENE &amp; PLURIVERSE</span></p>
+  <h1><span data-zh>《差异的领地：地方、运动、生活、网络》 · Territories of Difference: Place, Movements, Life, Redes</span><span data-en>Territories of Difference: Place, Movements, Life, Redes</span></h1>
+  <div class="subtitle" data-both><span data-zh>阿图罗·埃斯科瓦尔 · 哥伦比亚 / 美国 · Duke University Press · 2008-11 · 平装 ISBN 9780822343271 · 456 页 · DOI 10.1215/9780822389439</span><span data-en>Arturo Escobar · Colombia / the American · Duke University Press · 2008-11 · paper ISBN 9780822343271 · 456 pp · DOI 10.1215/9780822389439</span></div>
+  <div class="metachip"><span class="chip"><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span></span> <span class="chip"><span data-zh>学术 · 政治生态 · 领地</span><span data-en>scholarship · political ecology · territory</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>政治生态学 / 拉美研究</span><span data-en>political ecology / Latin American studies</span></span> <span class="chip"><span data-zh>conf ✓ 版本、ISBN 与页数核实（Duke UP 产品页，2026-11-11）</span><span data-en>conf ✓ edition, ISBN and pages verified (Duke UP product page, 2026-11-11)</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>✓ 版本、ISBN 与页数核实（Duke UP 产品页，2026-11-11） · 档案：escobar-territories-difference（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ✓ edition, ISBN and pages verified (Duke UP product page, 2026-11-11) · record: escobar-territories-difference. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅书目、指南与二手来源（◐）</span><span data-en>not read · bibliography, guide and secondary sources only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>从「批判发展」走向「建构替代」：哥伦比亚太平洋沿岸黑人社区如何把森林、河流与红树林写成自己的「领地」，并在全球资本与武装冲突之间维持生命世界。</div><div data-en>The move from critiquing development to building alternatives: how Afro-Colombian communities on the Pacific coast wrote forest, river and mangrove into their own &#x27;territory&#x27; and sustained a lifeworld between global capital and armed conflict.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.dukeupress.edu/territories-of-difference" target="_blank" rel="noopener"><span data-zh>Duke UP 书目</span><span data-en>Duke UP record</span><span class="dom">www.dukeupress.edu ↗</span><span class="rtag" style="color:#6C8AAF"><span data-both><span data-zh>其他 · Other</span><span data-en>Other</span></span> · ○</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>本书基于 Escobar 在哥伦比亚太平洋沿岸地区多年的合作研究，对象是非洲裔社区（尤其 proceso de comunidades negras 运动）与他们的领地组织。这一地区在 1990 年代获得集体土地权（Ley 70），同时被卷入生物多样性热、棕榈油种植、伐木、矿业与准军事暴力。Escobar 与地方组织、NGO 与研究者合作，追踪「领地」如何从一个法律范畴变成一种生命世界的政治：河流不是资源，而是道路与亲属关系；森林不是碳汇，而是历史与知识的载体。书名四个词——地方、运动、生活、网络——就是全书的结构。</div><div data-en>The book grows out of years of collaborative research on Colombia&#x27;s Pacific coast with Afro-Colombian communities, especially the proceso de comunidades negras movement and its territorial organisations. In the 1990s the region won collective land rights (Ley 70) while being pulled into biodiversity booms, oil-palm plantations, logging, mining and paramilitary violence. Working with local organisations, NGOs and researchers, Escobar traces how &#x27;territory&#x27; turns from a legal category into a politics of lifeworld: the river is not a resource but a road and a kinship relation; the forest is not a carbon sink but a carrier of history and knowledge. The four words of the subtitle — place, movements, life, redes — are the book&#x27;s structure.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 地方：河流构成的生活空间</span><span data-en>Section 1 · Place: a living space made of rivers</span></h3>
+<div data-zh>太平洋沿岸的地理与村落不是背景，而是关系性的生活空间；河流同时是道路、食物来源与亲属记忆。</div><div data-en>The geography and villages of the Pacific coast are not background but a relational living space; the river is at once road, food source and kinship memory.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>地方是被关系构成的，而不是被坐标定位的。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Place is constituted by relations, not located by coordinates.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从地理描述，到生计实践，再到亲属与记忆。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From geography to livelihood to kinship and memory.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>村落、河流、红树林、家庭。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Villages, rivers, mangroves, households.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>民族志与口述史。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Ethnography and oral history.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为资本部分的冲突提供生活基础。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Provides the lived ground for the conflicts in the capital part.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 资本：把地方重新编码为资源</span><span data-en>Section 2 · Capital: recoding place as resource</span></h3>
+<div data-zh>生物多样性热、棕榈油、林业与矿业把森林与河流重新编码为可开发资源，地方知识被降格为「传统」。</div><div data-en>Biodiversity booms, oil palm, forestry and mining recode forest and river as exploitable resources, demoting local knowledge to &#x27;tradition&#x27;.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>资源化是一种编码行为，它决定了谁的知识算知识。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Resource-making is an act of coding that decides whose knowledge counts.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从全球市场，到国家政策，再到地方冲突。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From global markets to state policy to local conflict.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>棕榈油公司、国家机构、NGO、社区。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Oil-palm firms, state agencies, NGOs, communities.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>政治生态学与政策分析。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Political ecology and policy analysis.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>解释为什么领地成为争夺对象。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Explains why territory becomes the object of struggle.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 生活：领地如何被日常维护</span><span data-en>Section 3 · Life: how territory is maintained daily</span></h3>
+<div data-zh>食物、仪式、教育与合作劳动把领地维持为一个生命世界；政治不只是对抗，也是日常再生产。</div><div data-en>Food, ritual, education and cooperative labour sustain territory as a lifeworld; politics is not only resistance but everyday reproduction.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>生命世界的维持本身就是政治实践。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Sustaining a lifeworld is itself political practice.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从生产，到仪式，再到教育。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From production to ritual to education.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>妇女组织、教师、社区议会。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Women&#x27;s organisations, teachers, community councils.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>民族志章节。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Ethnographic chapters.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把「替代」落到可观察的日常。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Grounds &#x27;alternatives&#x27; in observable everyday life.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 4 节 · 网络：从地方到跨国</span><span data-en>Section 4 · Redes: from local to transnational</span></h3>
+<div data-zh>地方组织通过 red 与跨国倡议、学术网络、环境治理连接，既获得支持，也面临被代言的风险。</div><div data-en>Local organisations connect through redes to transnational advocacy, scholarly networks and environmental governance, gaining support while risking being spoken for.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>连接是必要的，但连接也会改写地方的声音。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Connection is necessary, but it also rewrites local voices.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从地方组织，到跨国倡议，再到全球治理。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From local organisations to transnational advocacy to global governance.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>社区议会、NGO、跨国倡议网络。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Community councils, NGOs, transnational advocacy networks.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>组织网络分析。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Analysis of organisational networks.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把本书接入全球化研究。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Connects the book to globalisation studies.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>全书分四部分，层层放大：先写「地方」——太平洋沿岸的地理、河流与村落如何构成一个关系性的生活空间；再写「资本」——生物多样性、棕榈油、林业与「发展」如何把地方重新编码为资源；第三部分写「生活」——社区如何用领地、食物、仪式与教育维持生命世界；最后写「网络」——地方组织如何与跨国倡议、学术网络与全球环境治理连接。全书不是线性叙事，而是四个尺度的叠合，每一部分都回指其他部分。</div><div data-en>Four parts scale outward: place — how the geography, rivers and villages of the Pacific coast form a relational living space; capital — how biodiversity, oil palm, forestry and &#x27;development&#x27; recode place as resource; life — how communities sustain a lifeworld through territory, food, ritual and education; and redes — how local organisations connect to transnational advocacy, scholarly networks and global environmental governance. It is not a linear narrative but four scales superimposed, each pointing back to the others.</div></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>出版后成为政治生态学、领地研究与拉丁美洲研究的核心文本；「领地作为生命世界」「redes」被广泛引用，也常与 Porto-Gonçalves、Haesbaert 的领地理论并读。
+
+批评集中在两点：一是与社区组织的合作关系可能影响批判距离；二是「领地」概念在跨区域使用时容易被理想化，掩盖社区内部的分歧与性别不平等。
+
+**合成 Synthesis：** 本书的关键贡献是把「替代」从抽象主张变成可追踪的实践：领地不是被保护的资源，而是被集体生产与维护的生命世界。</div><div data-en>It became a core text in political ecology, territory studies and Latin American studies; territory as lifeworld and redes are widely cited and read with Porto-Gonçalves and Haesbaert on territory.
+
+Criticism centres on two points: collaborative relations with community organisations may affect critical distance, and the concept of territory can be idealised when used across regions, obscuring internal divisions and gender inequality.
+
+**Synthesis:** The key contribution is to turn &#x27;alternatives&#x27; from an abstract claim into a traceable practice: territory is not a resource to be protected but a lifeworld collectively produced and maintained.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>Escobar 要证明：替代性政治不是理论构想，而是在具体领地中被集体生产的生命世界；因此研究者应追踪地方运动如何把法律、生态与历史转译成「另一个世界」的实践。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Escobar wants to show that alternative politics is not a theoretical construct but a lifeworld collectively produced in concrete territories; research should therefore trace how local movements translate law, ecology and history into the practice of &#x27;another world&#x27;.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名把「差异」放在「领地」之后，说明差异不是抽象多元，而是有地点的共存；四个关键词分别对应空间、政治、生活与连接，构成一个完整的分析装置；本书明确接续《遭遇发展》的「另一些世界」问题。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title puts difference after territory, making difference a located coexistence rather than abstract plurality; the four keywords cover space, politics, life and connection as a complete analytical device; the book explicitly continues the &#x27;other worlds&#x27; question of Encountering Development.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书名与结构把「差异」锚定在具体领地。</div><div data-en>The title and structure anchor difference in concrete territory.</div></td><td>Book description</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>方法</span><span data-en>method</span></span></td><td><div data-zh>以合作研究与地方组织为对象，说明知识生产本身是替代政治的一部分。</div><div data-en>Collaborative research with local organisations shows that knowledge production is part of alternative politics.</div></td><td>Secondary summaries</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>后续</span><span data-en>afterlife</span></span></td><td><div data-zh>《多元宇宙的设计》把本书的领地实践提升为普遍的设计问题。</div><div data-en>Designs for the Pluriverse lifts the territorial practice here into a general problem of design.</div></td><td>Guide</td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：本书是一部立场鲜明的合作民族志，其「领地」概念带有规范性承诺；把它当作中立的社会科学分析，会低估其政治投入。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: it is a committed collaborative ethnography whose concept of territory carries normative commitments; treating it as neutral social science underplays its political investment.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>领地</span><span data-en>territory</span></span></b></td><td>territorio</td><td><div data-zh>不是被占有的土地，而是被集体生活、命名与维护的生命世界。</div><div data-en>Not land that is owned but a lifeworld collectively lived, named and maintained.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>生命世界</span><span data-en>lifeworld</span></span></b></td><td>mundo de la vida</td><td><div data-zh>由河流、森林、食物、仪式与亲属关系共同构成的生活整体。</div><div data-en>A whole of life composed of rivers, forests, food, ritual and kinship.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>网络</span><span data-en>redes</span></span></b></td><td>redes</td><td><div data-zh>地方组织与跨国倡议、学术与运动之间的连接形式，既开放又扎根。</div><div data-en>Forms of connection between local organisations and transnational advocacy, scholarship and movements: open yet rooted.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>地方</span><span data-en>place</span></span></b></td><td>lugar</td><td><div data-zh>不是全球的对立面，而是全球力量被具体化、被感受、被回应的场所。</div><div data-en>Not the opposite of the global but where global forces are concretised, felt and answered.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>政治生态</span><span data-en>political ecology</span></span></b></td><td>ecología política</td><td><div data-zh>把生态问题放回权力、资本与知识关系中分析。</div><div data-en>Analysing ecological questions within relations of power, capital and knowledge.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>差异</span><span data-en>difference</span></span></b></td><td>diferencia</td><td><div data-zh>不是多样性的装饰，而是不同世界在同一空间中的共存与冲突。</div><div data-en>Not decorative diversity but the coexistence and conflict of different worlds in one space.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Territories of Difference</td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>2008 年出版后进入政治生态学、拉丁美洲研究与领地研究课程；评论肯定它把「地方」从怀旧概念变成政治分析单位。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Published in 2008, it entered political ecology, Latin American studies and territory studies; reviews praised its conversion of &#x27;place&#x27; from nostalgia into a unit of political analysis.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>后世把它视为 Escobar 从「后发展」走向「多元宇宙」的枢纽；redes 与领地概念被用于分析全球南方的资源冲突。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Later work treats it as the hinge between post-development and the pluriverse; redes and territory travel into analyses of resource conflict across the global South.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>本书让「领地」成为全球南方环境政治的核心词，也影响了「生命世界」在人类学与地理学中的使用。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>It made territory central to environmental politics in the global South and shaped the use of lifeworld in anthropology and geography.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>主要保留是：合作研究的立场可能削弱批判距离；「领地」的和谐叙事可能掩盖社区内部的性别与阶级差异；四个尺度的整合有时显得并置而非贯通。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The main reservations are that collaborative stance may weaken critical distance, the harmonious narrative of territory may obscure gender and class differences within communities, and the four scales sometimes sit side by side rather than integrate.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>Guide（书目与主题综述）</span><span data-en>Guide (bibliography and thematic survey)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>批判距离</span><span data-en>Critical distance</span></p><div data-zh style="color:var(--ink-soft)">与社区组织的合作关系使本书更偏向内部视角。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Collaboration with community organisations tilts the book toward an internal perspective.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>内部差异被淡化</span><span data-en>Internal difference underplayed</span></p><div data-zh style="color:var(--ink-soft)">性别、代际与阶级冲突在「领地」叙事中着墨较少。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Gender, generational and class conflict receive less attention in the territory narrative.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>四尺度并置</span><span data-en>Four scales juxtaposed</span></p><div data-zh style="color:var(--ink-soft)">place/movements/life/redes 的整合有时更像并列而非贯通。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The integration of place, movements, life and redes sometimes reads as juxtaposition rather than articulation.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>外推风险</span><span data-en>Risk of generalisation</span></p><div data-zh style="color:var(--ink-soft)">哥伦比亚太平洋沿岸的经验不能直接套用到其他领地冲突。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The Pacific coast case cannot be applied directly to other territorial conflicts.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>以四个概念（place/movements/life/redes）分部，让理论结构与地方经验互相检验。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Divides the book by four concepts (place, movements, life, redes), letting theoretical structure and local experience test each other.</p></div>
+<div class="card"><p data-zh>把河流、红树林、食谱与口述史当作分析材料，而不只是背景描写。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Treats rivers, mangroves, recipes and oral history as analytical material, not mere background.</p></div>
+<div class="card"><p data-zh>以合作研究的方式写作，明确标注与社区组织、NGO 的关系，让知识生产的位置可见。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Writes as collaborative research, marking relations with community organisations and NGOs so the position of knowledge production stays visible.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>河流</span><span data-en>the river</span></div>
+<div class="orig">río</div>
+<div class="mnote"><div data-zh>既是交通与生计，也是亲属关系与记忆的载体。</div><div data-en>At once transport and livelihood, kinship and memory.</div></div>
+<div class="src">Territories of Difference · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>红树林</span><span data-en>mangrove</span></div>
+<div class="orig">manglar</div>
+<div class="mnote"><div data-zh>在资本眼中是资源，在社区眼中是生命的边界与守护者。</div><div data-en>A resource in capital&#x27;s eyes, a boundary and guardian of life in the community&#x27;s.</div></div>
+<div class="src">Territories of Difference · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>食谱</span><span data-en>recipes</span></div>
+<div class="orig">recetas</div>
+<div class="mnote"><div data-zh>食物实践是领地知识的口传档案。</div><div data-en>Food practice is an oral archive of territorial knowledge.</div></div>
+<div class="src">Territories of Difference · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>领地不是被占有的土地，而是被集体生活、命名与维护的生命世界。</div><div data-en>Territory is not land that is owned but a lifeworld collectively lived, named and maintained.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>地方网络既开放又扎根：它连接跨国倡议，却不因此离开地方。</div><div data-en>Local networks are open and rooted at once: they connect to transnational advocacy without leaving the local.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>领地作为生命世界：读《差异的领地》</span><span data-en>Territory as lifeworld</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>替代不是抽象主张，而是被集体生产与维护的生命世界——河流是道路，森林是历史。</span><span data-en>Alternatives are not abstract claims but lifeworlds collectively produced and maintained — the river is a road, the forest is history.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《差异的领地》是《遭遇发展》之后必须读的一本书，因为它回答了前者留下的问题：拆掉发展话语之后，还剩什么？Escobar 的答案是「领地」——但不是土地所有权意义上的领地，而是哥伦比亚太平洋沿岸黑人社区用河流、森林、食物、仪式与亲属关系共同维护的生命世界。</p><p>这本书的结构值得学习：place、movements、life、redes 四个词既是章节，也是四个尺度。地方不是全球的对立面，而是全球力量被具体感受的地方；运动不是抽象政治，而是把法律范畴转成文化实践的过程；生活不是背景，而是政治的内容；网络不是逃离地方，而是让地方连接到跨国倡议的方式。</p><p>它的力量来自合作研究的深度：Escobar 不假装站在外部观察，而是明确自己与社区组织、NGO 的关系。这种立场也让批评成为可能——读者可以问，当研究者与运动站在一起时，他还能看见社区内部的性别与阶级分歧吗？</p><p>这本书最适合与 Tsing 的《钻石女王的领地》对读：一个从国家边缘的黑人社区出发，一个从印尼的梅拉瑙人出发；两人都在问，被国家视为「偏远」的地方，如何可能是世界生成的现场。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>Territories of Difference is the necessary sequel to Encountering Development because it answers the question the earlier book left open: what remains after development discourse is dismantled? Escobar&#x27;s answer is territory — not land ownership but a lifeworld maintained by Afro-Colombian communities on the Pacific coast through rivers, forests, food, ritual and kinship.</p><p>The structure is worth learning from: place, movements, life and redes are both chapters and scales. Place is not the opposite of the global but where global forces are concretely felt; movements are not abstract politics but the conversion of legal categories into cultural practice; life is not background but the content of politics; networks are not escape from place but the way place connects to transnational advocacy.</p><p>Its force comes from the depth of collaboration: Escobar does not pretend to observe from outside but marks his relations with community organisations and NGOs. That stance also enables criticism — one can ask whether a researcher standing with a movement can still see its internal gender and class divisions.</p><p>The book is best read against Tsing&#x27;s In the Realm of the Diamond Queen: one starts from an Afro-Colombian community at the state&#x27;s edge, the other from the Meratus in Indonesia; both ask how a place the state treats as remote can be a site where worlds are made.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>Guide（书目与主题综述）</span><span data-en>Guide (bibliography and thematic survey)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读导论，弄清四个关键词各自的尺度；再读任一部分，检查它是否真的改变了你对另一个尺度的理解。</div><div data-en>Read the introduction and clarify the scale of each keyword; then read one part and check whether it genuinely changes your understanding of another scale.</div></div>
+<div class="card"><div data-zh>把「资本」部分与「生活」部分对读：同一片红树林在两者中分别是什么？</div><div data-en>Read the capital part against the life part: what is the same mangrove in each?</div></div>
+<div class="card"><div data-zh>追问：本书的「领地」是否把社区写得太和谐？性别、代际与阶级差异在哪里出现？</div><div data-en>Ask whether the book writes the community as too harmonious. Where do gender, generation and class differences appear?</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>Encountering Development</b></td><td>Arturo Escobar</td><td>1995</td><td><span data-both><span data-zh>同作者 · 前作</span><span data-en>same author · predecessor</span></span></td><td><div data-zh>从拆解发展话语，到从领地实践中建构替代</div><div data-en>from dismantling development discourse to building alternatives from territorial practice</div></td><td>development</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>Designs for the Pluriverse</b></td><td>Arturo Escobar</td><td>2018</td><td><span data-both><span data-zh>同作者 · 后续</span><span data-en>same author · successor</span></span></td><td><div data-zh>把领地实践提升为「为多元宇宙而设计」</div><div data-en>lifts territorial practice into &#x27;design for the pluriverse&#x27;</div></td><td>pluriverse</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>In the Realm of the Diamond Queen</b></td><td>Anna Lowenhaupt Tsing</td><td>1993</td><td><span data-both><span data-zh>对读 · 边缘</span><span data-en>compare · margins</span></span></td><td><div data-zh>Tsing 的「边缘」与 Escobar 的「领地」：两种从国家外部思考的方式</div><div data-en>Tsing&#x27;s margin and Escobar&#x27;s territory: two ways of thinking from outside the state</div></td><td>territory</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《Territories of Difference》2008 年由 Duke University Press 出版</span><span data-en>Territories of Difference was published by Duke University Press in 2008</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Goodreads</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>研究对象为哥伦比亚太平洋沿岸的非洲裔社区及其领地运动</span><span data-en>The object is Afro-Colombian communities on Colombia&#x27;s Pacific coast and their territorial movement</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide; book description</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书围绕 place、movements、life、redes 四个概念组织</span><span data-en>The book is organised around place, movements, life and redes</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide; book description</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书是 Escobar 从发展批判转向领地/多元宇宙政治的关键过渡</span><span data-en>The book is Escobar&#x27;s key transition from development critique to territorial and pluriversal politics</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide; reception</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>《Territories of Difference》2008 年 11 月由 Duke University Press 出版，平装 456 页，属 “New Ecologies for the Twenty-First Century” 丛书</span><span data-en>Territories of Difference was published by Duke University Press in November 2008, 456 pp., in the series “New Ecologies for the Twenty-First Century”</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)"><span data-both><span data-zh>Duke UP 产品页 https://dukeupress.edu/territories-of-difference</span><span data-en>Duke UP product page https://dukeupress.edu/territories-of-difference</span></span></td><td class="conf"><span class="conf c-ok">✓</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>四部分各章标题（未逐页核对）</span><span data-en>chapter titles of the four parts (not checked page by page)</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>Ley 70 等法律条文的具体条款与年份细节</span><span data-en>specific clauses and dates of Ley 70 and related law</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../tsing-escobar.html">← <span data-zh>返回人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>back to ANTHROPOCENE &amp; PLURIVERSE</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

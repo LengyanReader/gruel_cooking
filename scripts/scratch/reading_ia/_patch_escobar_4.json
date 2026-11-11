@@ -1,0 +1,897 @@
+{
+  "escobar-minga": {
+    "title_zh": "《为后发展的一场明加：地方、环境与社会运动》",
+    "title_orig": "Una minga para el postdesarrollo: lugar, medio ambiente y movimientos sociales en las transformaciones globales",
+    "year": "2010",
+    "publisher": "Ediciones Desde Abajo (Bogotá)",
+    "publisher_en": "Ediciones Desde Abajo (Bogotá)",
+    "publines_zh": "Ediciones Desde Abajo（波哥大）· 2010 初版；指南另记 2021 年版 · ISBN/页数待核",
+    "publines_en": "Ediciones Desde Abajo (Bogotá) · 2010 first edition; guide lists a 2021 edition · ISBN/pages pending",
+    "meta_zh": "学术 · 西语文集 · 社会运动",
+    "meta_en": "scholarship · Spanish-language essays · social movements",
+    "baseline_conf": "◐ 出版社与初版年经通行引用（指南记 2021 年版）；ISBN、页数与版次待核",
+    "baseline_conf_en": "◐ publisher and first edition via common citation (guide lists a 2021 edition); ISBN, pages and printing pending",
+    "why_zh": "「明加」（minga）是安第斯与亚马逊地区的集体劳动：不是为工资而做，而是为共同生活而做。Escobar 把它当作后发展的实践原型——替代不是想出来的，是一起做出来的。",
+    "why_en": "The minga is collective labour in the Andes and Amazon: work not for a wage but for shared life. Escobar treats it as the practical prototype of post-development — alternatives are not thought up but made together.",
+    "background": {
+      "zh": "书名来自安第斯与哥伦比亚亚马逊地区的「明加」：一种召唤性的集体劳动，社区为修路、清渠、建房或应对灾害而共同出力，通常伴随食物、音乐与互惠义务。Escobar 用它命名一种后发展的实践逻辑：改变不是等待政策，而是通过集体劳动把另一种生活做出来。本书汇集他关于地方、环境与社会运动的文章，讨论拉丁美洲运动如何在采掘主义、全球化与国家暴力之间维持领地与替代实践。",
+      "en": "The title comes from the minga of the Andes and the Colombian Amazon: a summoning form of collective labour in which a community works together on a road, a canal, a house or a disaster, usually with food, music and reciprocal obligation. Escobar uses it to name a post-development logic of practice: change is not waiting for policy but making another life through collective labour. The book gathers his essays on place, environment and social movements, asking how Latin American movements sustain territory and alternatives amid extractivism, globalisation and state violence.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts of the minga",
+      "sources_en": "Guide; book description; standard accounts of the minga"
+    },
+    "narrative": {
+      "zh": "全书以文章与讲演组成，围绕三个词推进：地方（lugar）——全球力量被具体化的场所；环境（medio ambiente）——不是外部自然，而是领地与生命的政治；社会运动——不是利益团体，而是世界生成的集体行动者。最后落到「明加」：一种把劳动、互惠与共同体再生产的实践形式。篇章之间有重复，但「明加」作为组织意象贯穿全书。",
+      "en": "The book is made of essays and talks circling three words: place — where global forces are concretised; environment — not external nature but the politics of territory and life; and social movements — not interest groups but collective actors in world-making. It ends with the minga: a practical form that reproduces labour, reciprocity and community. Chapters repeat, but the minga works as an organising image throughout.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "在西语学界与运动圈内流传，「明加」成为后发展实践的常用比喻；本书也常与《差异的领地》《自主与设计》并读，作为「实践三部曲」的一环。",
+      "reception_good_en": "It circulated in Spanish-language scholarship and movement circles, and the minga became a common figure for post-development practice; the book is often read with Territories of Difference and Autonomía y diseño as a practical trilogy.",
+      "reception_bad_zh": "作为文集，理论密度不均；「明加」的浪漫化风险也被指出——集体劳动同样可能伴随强制、性别分工与排斥。",
+      "reception_bad_en": "As a collection its theoretical density varies, and the risk of romanticising the minga has been noted: collective labour can also involve coercion, gendered division of work and exclusion.",
+      "syn_zh": "本书的价值在于把「替代」从概念变成动词：不是「另一个世界是可能的」，而是「我们今天一起做另一个世界」。",
+      "syn_en": "Its value is to turn 'alternative' from a concept into a verb: not 'another world is possible' but 'we make another world together today'.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "明加是后发展的实践原型：替代通过集体劳动被做出来",
+      "地方是全球力量被具体化的场所，而非全球的对立面",
+      "环境政治是领地与生命的政治，不只是自然保护",
+      "社会运动是世界生成的集体行动者，而非利益团体",
+      "后发展必须从地方实践与互惠关系中生长，而非从理论推导"
+    ],
+    "claims_list_en": [
+      "The minga is the practical prototype of post-development: alternatives are made through collective labour",
+      "Place is where global forces are concretised, not the opposite of the global",
+      "Environmental politics is the politics of territory and life, not only nature protection",
+      "Social movements are collective actors in world-making, not interest groups",
+      "Post-development must grow from local practice and reciprocity, not from theory"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Una minga para el postdesarrollo》由 Ediciones Desde Abajo（波哥大）出版，初版通常记 2010 年（指南另记 2021 年版）",
+        "claim_en": "Una minga para el postdesarrollo was published by Ediciones Desde Abajo (Bogotá), usually dated 2010 (the guide lists a 2021 edition)",
+        "source": "Common citation / guide",
+        "source_en": "Common citation / guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "「minga」指安第斯与亚马逊地区的召唤性集体劳动",
+        "claim_en": "Minga refers to summoning collective labour in the Andes and Amazon",
+        "source": "Guide; standard accounts",
+        "source_en": "Guide; standard accounts",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书主题为地方、环境与社会运动在全球化中的转型",
+        "claim_en": "The book concerns place, environment and social movements in global transformation",
+        "source": "Book subtitle",
+        "source_en": "Book subtitle",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书与《差异的领地》《自主与设计》共享问题域",
+        "claim_en": "It shares the problematic of Territories of Difference and Autonomía y diseño",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数、版次与出版年（2010/2021）",
+        "item_en": "ISBN, pages, printing and year (2010/2021)",
+        "conf": "◐"
+      },
+      {
+        "item": "各篇原始出处与发表年份",
+        "item_en": "original venues and years of the chapters",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "领地作为生命世界，是明加的对象",
+        "note_en": "territory as lifeworld is what the minga works on",
+        "conf": "◐"
+      },
+      {
+        "title": "Autonomía y diseño",
+        "title_en": "Autonomía y diseño",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2016",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "pluriverse",
+        "pos": "",
+        "note_zh": "把明加的实践提升为自主设计",
+        "note_en": "lifts minga practice into autonomous design",
+        "conf": "◐"
+      },
+      {
+        "title": "Friction",
+        "title_en": "Friction",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2004",
+        "relation": "对读 · 协作",
+        "relation_en": "compare · collaboration",
+        "axis": "friction",
+        "pos": "",
+        "note_zh": "Tsing 的「协作生存」与 Escobar 的「明加」：两种集体劳动的人类学",
+        "note_en": "Tsing's collaborative survival and Escobar's minga: two anthropologies of collective labour",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "用一个地方性实践（明加）作为全书组织意象，让理论有动作。",
+        "en": "Uses one local practice (the minga) as the organising image, giving the theory a verb."
+      },
+      {
+        "zh": "以文章与讲演保持介入性，直接面向运动读者。",
+        "en": "Keeps the engaged register of essays and talks, addressing movement readers directly."
+      },
+      {
+        "zh": "把环境、地方与社会运动三个词编织在一起，拒绝把生态与社会分开。",
+        "en": "Weaves environment, place and social movements together, refusing to separate ecology from society."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先弄清「minga」在安第斯与亚马逊语境中的具体含义，再读 Escobar 如何把它扩展为后发展概念。",
+        "en": "First establish what minga means in Andean and Amazonian contexts, then see how Escobar extends it into a post-development concept."
+      },
+      {
+        "zh": "把「地方」章与《差异的领地》对读：同一概念在两本书中的用法是否一致？",
+        "en": "Read the place chapter against Territories of Difference: is the concept used consistently?"
+      },
+      {
+        "zh": "追问：明加是否总是自愿的？集体劳动中的性别分工与排斥如何处理？",
+        "en": "Ask whether the minga is always voluntary, and how gendered division of labour and exclusion are handled."
+      }
+    ],
+    "concepts": [
+      {
+        "term": "明加",
+        "term_en": "minga",
+        "orig": "minga",
+        "gloss_zh": "安第斯与亚马逊地区的召唤性集体劳动，以互惠与共同生活为目的。",
+        "gloss_en": "Summoning collective labour in the Andes and Amazon, aimed at reciprocity and shared life.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "term": "地方",
+        "term_en": "place",
+        "orig": "lugar",
+        "gloss_zh": "全球力量被具体化、被感受、被回应的场所。",
+        "gloss_en": "Where global forces are concretised, felt and answered.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "term": "环境政治",
+        "term_en": "environmental politics",
+        "orig": "política ambiental",
+        "gloss_zh": "领地与生命的政治，而非仅自然保护或资源管理。",
+        "gloss_en": "The politics of territory and life, not merely nature protection or resource management.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "term": "社会运动",
+        "term_en": "social movements",
+        "orig": "movimientos sociales",
+        "gloss_zh": "世界生成的集体行动者，而非仅表达利益的团体。",
+        "gloss_en": "Collective actors in world-making, not merely groups expressing interests.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "term": "后发展",
+        "term_en": "post-development",
+        "orig": "postdesarrollo",
+        "gloss_zh": "通过地方实践与集体劳动实现的替代，而非另一种发展模型。",
+        "gloss_en": "An alternative realised through local practice and collective labour, not another development model.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2010 年前后在拉丁美洲流传，随后进入社会运动与生态政治的讨论；2021 年新版的流通扩大了读者群。",
+      "then_en": "It circulated in Latin America from around 2010 and entered debates on social movements and environmental politics; a 2021 edition widened its readership.",
+      "later_zh": "后世把它当作 Escobar 的「实践文本」，与《差异的领地》《自主与设计》构成从领地到劳动再到设计的序列。",
+      "later_en": "Later work treats it as Escobar's practical text, forming a sequence with Territories of Difference and Autonomía y diseño from territory to labour to design.",
+      "influence_zh": "「明加」成为后发展实践中常用的比喻，也影响了关于集体劳动、互惠经济与生态过渡的讨论。",
+      "influence_en": "The minga became a common figure in post-development practice and shaped discussion of collective labour, reciprocity economies and ecological transition.",
+      "critique_zh": "主要保留是：文集的理论密度不均；「明加」有浪漫化风险，可能掩盖集体劳动中的强制与不平等；对城市与无地者的适用性也有限。",
+      "critique_en": "The main reservations are uneven theoretical density, the risk of romanticising the minga and obscuring coercion and inequality within collective labour, and limited applicability to urban and landless settings.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为文集类型的结构性局限，不是对全书的判断（未通读）。",
+      "en": "Structural limits of an essay collection, not a judgment on the whole book (unread).",
+      "items": [
+        {
+          "title_zh": "理论密度不均",
+          "title_en": "Uneven density",
+          "note_zh": "各篇写作场合不同，抽象程度差异较大。",
+          "note_en": "Chapters come from different occasions and vary widely in abstraction."
+        },
+        {
+          "title_zh": "明加的浪漫化",
+          "title_en": "Romanticising the minga",
+          "note_zh": "集体劳动中的强制、性别分工与排斥着墨较少。",
+          "note_en": "Coercion, gendered division of labour and exclusion within collective labour receive little attention."
+        },
+        {
+          "title_zh": "适用范围有限",
+          "title_en": "Limited applicability",
+          "note_zh": "以农村与领地社区为中心，对城市与无地者的适用性不足。",
+          "note_en": "Centred on rural and territorial communities, with limited applicability to urban and landless settings."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Escobar 要证明：后发展不是一套理论主张，而是一种集体劳动的实践；「明加」展示了替代如何被一起做出来，而非被设计或等待。",
+      "claim_en": "Escobar wants to show that post-development is not a set of theoretical claims but a practice of collective labour; the minga shows how alternatives are made together rather than designed or awaited.",
+      "why_zh": "书名用「一场明加」而非「一份宣言」，说明替代是动作而非文本；副标题把地方、环境与社会运动并列，说明三者是同一实践的不同面向；全书以西语写作并面向运动读者，说明其目标是实践而非学院。",
+      "why_en": "The title says 'a minga' rather than 'a manifesto', making the alternative a deed rather than a text; the subtitle places place, environment and social movements side by side as facets of one practice; writing in Spanish for movement readers shows the aim is practice, not the academy.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名以集体劳动命名后发展。",
+          "en": "The title names post-development through collective labour.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "案例",
+          "kind_en": "case",
+          "zh": "拉丁美洲的领地与环境运动是主要材料。",
+          "en": "Latin American territorial and environmental movements supply the material.",
+          "source": "Guide; secondary summaries",
+          "source_en": "Guide; secondary summaries",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "《自主与设计》把明加的实践提升为设计原则。",
+          "en": "Autonomía y diseño lifts minga practice into design principles.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书更像一部运动取向的文集，其力量在于意象与号召，而非论证；把它当作后发展的完整理论，会高估其系统性。",
+      "counter_en": "Alternative reading: it is a movement-oriented collection whose force lies in image and call rather than argument; treating it as a complete theory of post-development overestimates its system.",
+      "boundary_zh": "未通读，无法判断各篇论证；上述推断依据书目、指南与二手讨论，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary discussion, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "一起做另一个世界：读《为后发展的一场明加》",
+      "title_en": "Making another world together",
+      "standfirst_zh": "替代不是想出来的，是一起做出来的——「明加」就是后发展的动词形式。",
+      "standfirst_en": "Alternatives are not thought up but made together — the minga is post-development in verb form.",
+      "body_zh": "「明加」是一个很难翻译的词。它既是劳动，也是召唤；既是义务，也是节日。在安第斯与亚马逊地区，社区为修一条路、清一条渠、盖一栋房子而共同出力，食物与音乐随之而来，互惠关系也在此被重新确认。Escobar 用这个词命名后发展，是有意的：他要说的不是「另一个世界是可能的」，而是「我们今天一起做另一个世界」。\n\n这本书因此更像一本实践者的书，而不是理论家的书。它谈地方、环境与社会运动，但重点始终在「怎么做」：如何在没有国家支持的情况下维持领地，如何在全球资本与暴力之间保持共同生活，如何把生态问题理解为生命政治而非自然保护。\n\n局限也在这里：明加并不总是自愿的，集体劳动同样可能伴随强制、性别分工与排斥；本书对这些内部张力着墨不多。它更适合被当作一种召唤，而不是一份完整的分析。\n\n读它最好的方式，是把它与《差异的领地》《自主与设计》连起来读：一本讲领地是什么，一本讲替代怎么做，一本讲设计为了谁。三本合起来，才是 Escobar 的实践三部曲。", 
+      "abstract_en": "Minga is a hard word to translate. It is labour and summons, obligation and festival. In the Andes and the Amazon, a community works together on a road, a canal or a house; food and music follow, and relations of reciprocity are confirmed. Escobar names post-development with this word deliberately: what he wants to say is not 'another world is possible' but 'we make another world together today'.\n\nThe book is therefore a practitioner's book more than a theorist's. It discusses place, environment and social movements, but the focus stays on how: how to sustain territory without state support, how to keep shared life going between global capital and violence, how to understand ecological questions as biopolitics rather than nature protection.\n\nThe limit lies there too: the minga is not always voluntary, and collective labour can involve coercion, gendered division of work and exclusion. The book says little about these internal tensions. It is better used as a summons than as a complete analysis.\n\nThe best way to read it is with Territories of Difference and Autonomía y diseño: one on what territory is, one on how alternatives are made, one on whom design serves. Together they form Escobar's practical trilogy.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书选篇与二手讨论（未逐篇核对）",
+          "en": "Selected chapters and secondary discussion (not checked chapter by chapter)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "劳动",
+        "name_en": "labour",
+        "orig": "trabajo",
+        "evid_zh": "不是工资劳动，而是共同生活的再生产。",
+        "evid_en": "Not wage labour but the reproduction of shared life.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "召唤",
+        "name_en": "the summons",
+        "orig": "convocatoria",
+        "evid_zh": "明加始于一声召唤，政治始于把人们叫到一起。",
+        "evid_en": "The minga begins with a call; politics begins with bringing people together.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "互惠",
+        "name_en": "reciprocity",
+        "orig": "reciprocidad",
+        "evid_zh": "劳动之后的食物与分享，是共同体的再确认。",
+        "evid_en": "Food and sharing after work reconfirm the community.",
+        "source": "Una minga para el postdesarrollo",
+        "source_en": "Una minga para el postdesarrollo",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "明加命题（非逐字原文）",
+        "trans_zh": "后发展不是一套理论主张，而是一种集体劳动的实践：替代是被一起做出来的。",
+        "trans_en": "Post-development is not a set of theoretical claims but a practice of collective labour: alternatives are made together.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "地方命题（非逐字原文）",
+        "trans_zh": "地方不是全球的对立面，而是全球力量被具体化、被感受、被回应的场所。",
+        "trans_en": "Place is not the opposite of the global but where global forces are concretised, felt and answered.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "地方：全球力量的具体化",
+        "title_en": "Place: global forces concretised",
+        "zh": "地方不是全球的对立面，而是采掘主义、全球化与国家暴力被具体感受与回应的场所。",
+        "en": "Place is not the opposite of the global but where extractivism, globalisation and state violence are concretely felt and answered.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "要理解全球，必须从它落地的地方开始。",
+          "flow": "从全球力量，到地方冲突，再到地方回应。",
+          "names": "社区、公司、国家。",
+          "sources": "拉丁美洲案例。",
+          "link": "为环境与社会运动的讨论设定场所。",
+          "main_en": "To understand the global, start where it lands.",
+          "flow_en": "From global forces to local conflict to local response.",
+          "names_en": "Communities, firms, state.",
+          "sources_en": "Latin American cases.",
+          "link_en": "Sets the site for environment and movements."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "环境：领地与生命的政治",
+        "title_en": "Environment: the politics of territory and life",
+        "zh": "环境问题不是自然保护，而是领地、生命与知识之间的冲突。",
+        "en": "Environmental questions are not nature protection but conflicts among territory, life and knowledge.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "生态冲突的实质是本体论冲突。",
+          "flow": "从资源项目，到领地防卫，再到知识冲突。",
+          "names": "社区、环保 NGO、企业。",
+          "sources": "政治生态学。",
+          "link": "把环境与社会运动连成一体。",
+          "main_en": "The substance of ecological conflict is ontological conflict.",
+          "flow_en": "From resource projects to territorial defence to knowledge conflict.",
+          "names_en": "Communities, environmental NGOs, corporations.",
+          "sources_en": "Political ecology.",
+          "link_en": "Joins environment and social movements."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "运动：世界生成的集体行动",
+        "title_en": "Movements: collective action in world-making",
+        "zh": "社会运动不是利益团体，而是通过集体劳动生产另一种生活的行动者。",
+        "en": "Social movements are not interest groups but actors producing another life through collective labour.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "运动的政治性在于创造，而不只在于抗议。",
+          "flow": "从抗议，到建设，再到制度化。",
+          "names": "农民组织、原住民运动、社区议会。",
+          "sources": "运动研究。",
+          "link": "为「明加」的提出提供主体。",
+          "main_en": "The politics of movements lies in creation, not only protest.",
+          "flow_en": "From protest to construction to institutionalisation.",
+          "names_en": "Peasant organisations, indigenous movements, community councils.",
+          "sources_en": "Movement studies.",
+          "link_en": "Provides the subject for the minga."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "明加：后发展的动词",
+        "title_en": "Minga: post-development as a verb",
+        "zh": "结论把「明加」提为后发展的实践原型：替代通过集体劳动、互惠与共同生活被一起做出来。",
+        "en": "The conclusion raises the minga into the practical prototype of post-development: alternatives are made together through collective labour, reciprocity and shared life.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "替代不是一个模型，而是一种一起劳动的形式。",
+          "flow": "从案例，到实践逻辑，再到政治主张。",
+          "names": "共同体、运动、研究者。",
+          "sources": "全书总结。",
+          "link": "通向《自主与设计》的设计原则。",
+          "main_en": "An alternative is not a model but a form of working together.",
+          "flow_en": "From cases to practical logic to political claim.",
+          "names_en": "Communities, movements, researchers.",
+          "sources_en": "Overall argument.",
+          "link_en": "Leads to the design principles of Autonomía y diseño."
+        }
+      }
+    ]
+  },
+  "escobar-relationality": {
+    "title_zh": "《关联性：超越人类的生命涌现政治》",
+    "title_orig": "Relationality: An Emergent Politics of Life Beyond the Human",
+    "year": "2022",
+    "publisher": "Bloomsbury Academic",
+    "publisher_en": "Bloomsbury Academic",
+    "publines_zh": "Bloomsbury Academic · 2022 · 合著 Osterweil & Sharma · ISBN/页数待核",
+    "publines_en": "Bloomsbury Academic · 2022 · with Osterweil & Sharma · ISBN/pages pending",
+    "meta_zh": "学术 · 合著 · 关系本体论",
+    "meta_en": "scholarship · co-authored · relational ontology",
+    "baseline_conf": "◐ 出版社、年份与合著者经指南/Goodreads 登记；ISBN、页数与具体印次待核",
+    "baseline_conf_en": "◐ publisher, year and co-authors via guide/Goodreads; ISBN, pages and printing pending",
+    "why_zh": "Escobar 与 Osterweil、Sharma 合著的「关系本体论」纲领：存在不是孤立的实体，而是关系的事件；政治因此是维护与切断关系的问题。",
+    "why_en": "Escobar's co-authored programme in relational ontology with Osterweil and Sharma: being is not isolated substance but an event of relation; politics therefore becomes a question of sustaining and severing relations.",
+    "background": {
+      "zh": "《关联性》由 Escobar、Michal Osterweil 与 Kriti Sharma 合著，2022 年由 Bloomsbury 出版。三人分别来自人类学/后发展、社会运动理论与科学哲学，全书试图把「关系性」从一个哲学立场变成一种政治纲领：如果一切存在都是关系性的，那么政治就不只是分配资源，而是维护、切断与重组关系。书的结构围绕几个问题展开：关系本体论的谱系、超越人类的关系、涌现政治（emergent politics）、以及关系性如何指导实践。",
+      "en": "Relationality is co-authored by Escobar, Michal Osterweil and Kriti Sharma and published by Bloomsbury in 2022. The three come from anthropology/post-development, social movement theory and philosophy of science, and the book turns relationality from a philosophical position into a political programme: if all being is relational, politics is not only distributing resources but sustaining, severing and recomposing relations. Chapters circle several questions: the genealogy of relational ontologies, relations beyond the human, emergent politics, and how relationality guides practice.",
+      "conf": "◐",
+      "sources": "Guide; book description; standard accounts",
+      "sources_en": "Guide; book description; standard accounts"
+    },
+    "narrative": {
+      "zh": "全书以理论章与案例章交替推进。理论部分梳理关系本体论的不同来源：过程哲学、本体论人类学、女性主义科学研究与原住民宇宙论；案例部分讨论气候行动、食物主权、社区经济与多物种实践。结论提出「涌现政治」：不是先有主体再有关系，而是关系先于主体，政治因此是关系的事件。",
+      "en": "Theoretical and case chapters alternate. Theory traces the sources of relational ontology: process philosophy, ontological anthropology, feminist science studies and indigenous cosmologies; cases discuss climate action, food sovereignty, community economies and multispecies practice. The conclusion proposes 'emergent politics': subjects do not precede relations; relations precede subjects, so politics is an event of relation.",
+      "conf": "◐",
+      "sources": "Guide; secondary summaries",
+      "sources_en": "Guide; secondary summaries"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后进入关系社会学、环境人文与后发展讨论；它被视为 Escobar 从「多元宇宙」走向「关系本体论」的总结性文本。",
+      "reception_good_en": "It entered relational sociology, environmental humanities and post-development debate and is read as Escobar's summing-up move from the pluriverse to relational ontology.",
+      "reception_bad_zh": "作为合著，三人的声音不完全统一；「关系性」被批评为过于宽泛，几乎可以解释一切，因而难以证伪。",
+      "reception_bad_en": "As a co-authored work the three voices do not fully harmonise, and relationality is criticised as so broad that it can explain anything and is hard to falsify.",
+      "syn_zh": "本书的贡献是把「关系」从描述词变成政治判准：一个实践是否解放，取决于它维护了哪些关系、切断了哪些关系。",
+      "syn_en": "The contribution is to turn relation from a descriptor into a political criterion: whether a practice is emancipatory depends on which relations it sustains and which it severs.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "存在不是孤立的实体，而是关系的事件",
+      "关系先于主体，政治是关系的维护、切断与重组",
+      "关系性必须包括超越人类的存在",
+      "涌现政治不是先有主体再行动，而是在关系中生成行动",
+      "关系本体论要求重新定义自由、自主与共同体"
+    ],
+    "claims_list_en": [
+      "Being is not isolated substance but an event of relation",
+      "Relations precede subjects; politics is the sustaining, severing and recomposing of relations",
+      "Relationality must include more-than-human being",
+      "Emergent politics does not start from subjects who then act but from action generated in relation",
+      "Relational ontology requires redefining freedom, autonomy and community"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Relationality: An Emergent Politics of Life Beyond the Human》2022 年由 Bloomsbury Academic 出版",
+        "claim_en": "Relationality: An Emergent Politics of Life Beyond the Human was published by Bloomsbury Academic in 2022",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书由 Arturo Escobar、Michal Osterweil 与 Kriti Sharma 合著",
+        "claim_en": "The book is co-authored by Arturo Escobar, Michal Osterweil and Kriti Sharma",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书围绕「超越人类的关系」与「涌现政治」展开",
+        "claim_en": "The book is organised around more-than-human relation and emergent politics",
+        "source": "Book subtitle; guide",
+        "source_en": "Book subtitle; guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书有法语版《Éloge de la relationnalité》（2022）",
+        "claim_en": "A French edition, Éloge de la relationnalité, appeared in 2022",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次",
+        "item_en": "ISBN, page count and printing",
+        "conf": "◐"
+      },
+      {
+        "item": "各章作者分工与章节标题（未逐页核对）",
+        "item_en": "division of authorship and chapter titles (not checked page by page)",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Pluriversal Politics",
+        "title_en": "Pluriversal Politics",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2020",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "relationality",
+        "pos": "",
+        "note_zh": "从「真实/可能」走向「关系本体论」",
+        "note_en": "from real/possible to relational ontology",
+        "conf": "◐"
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "对读 · 多物种关系",
+        "relation_en": "compare · multispecies relation",
+        "axis": "relationality",
+        "pos": "",
+        "note_zh": "Tsing 的多物种协作是关系本体论的民族志实践",
+        "note_en": "Tsing's multispecies collaboration is relational ontology in ethnographic practice",
+        "conf": "◐"
+      },
+      {
+        "title": "Staying with the Trouble",
+        "title_en": "Staying with the Trouble",
+        "author": "Donna Haraway",
+        "author_en": "Donna Haraway",
+        "year": "2016",
+        "relation": "理论对话",
+        "relation_en": "theoretical interlocutor",
+        "axis": "relationality",
+        "pos": "",
+        "note_zh": "「共生」与「关系性」共享同一问题域",
+        "note_en": "sympoiesis and relationality share a problematic",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "三人合著，让不同学科的声音在同一论证中互相校正。",
+        "en": "Co-authorship lets voices from different disciplines correct one another within one argument."
+      },
+      {
+        "zh": "以「关系」为动词而非名词，把抽象本体论转成可讨论的政治判准。",
+        "en": "Treats relation as a verb rather than a noun, turning abstract ontology into a discussable political criterion."
+      },
+      {
+        "zh": "理论与案例交替，避免本体论讨论脱离实践。",
+        "en": "Alternates theory and cases so ontological discussion does not drift from practice."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论，写下「关系先于主体」对你意味着什么；再读案例章，检查案例是否真的支持这个命题。",
+        "en": "Read the introduction and write what 'relations precede subjects' means to you; then test the case chapters against the proposition."
+      },
+      {
+        "zh": "比较三位作者的处理方式：谁更偏哲学，谁更偏运动，谁更偏科学？这种分工是否造成论证断裂？",
+        "en": "Compare the three authors' approaches: who is more philosophical, more movement-oriented, more scientific? Does the division fracture the argument?"
+      },
+      {
+        "zh": "追问：如果一切都在关系中，政治责任如何归属？「切断关系」是否也需要判准？",
+        "en": "Ask: if everything is relational, how is political responsibility assigned? Does severing relations also need criteria?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "关系性",
+        "term_en": "relationality",
+        "orig": "relacionalidad",
+        "gloss_zh": "存在不是孤立的实体，而是在关系中被构成的事件。",
+        "gloss_en": "Being is not isolated substance but an event constituted in relation.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "term": "涌现政治",
+        "term_en": "emergent politics",
+        "orig": "política emergente",
+        "gloss_zh": "政治不是先有主体再行动，而是在关系与实践中生成行动。",
+        "gloss_en": "Politics does not start from pre-formed subjects but generates action in relation and practice.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "term": "超越人类",
+        "term_en": "beyond the human",
+        "orig": "más allá de lo humano",
+        "gloss_zh": "把非人类生命、物质与地球过程纳入关系与政治的思考。",
+        "gloss_en": "Bringing nonhuman life, matter and earth processes into thinking about relation and politics.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "term": "共同体",
+        "term_en": "community",
+        "orig": "comunidad",
+        "gloss_zh": "在关系中被不断重做的共同生活，而非既定的成员集合。",
+        "gloss_en": "Shared life continually remade in relation, not a fixed set of members.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "term": "共生",
+        "term_en": "sympoiesis",
+        "orig": "sympoiesis",
+        "gloss_zh": "借自 Haraway：一起生成，而非自我生成。",
+        "gloss_en": "From Haraway: making-with rather than self-making.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2022 年出版后进入关系社会学、环境人文与后发展课程；评论肯定它把本体论讨论推向政治判准。",
+      "then_en": "Published in 2022, it entered relational sociology, environmental humanities and post-development courses; reviews praised its move from ontology to political criteria.",
+      "later_zh": "后世把它与 Haraway、Barad、Ingold 的关系本体论并读，视为 Escobar 思想的总结性文本。",
+      "later_en": "Later work reads it with the relational ontologies of Haraway, Barad and Ingold as a summing-up of Escobar's thought.",
+      "influence_zh": "它让「关系性」从哲学概念变成分析工具，影响了关于照护、共同体经济与多物种政治的讨论。",
+      "influence_en": "It turned relationality from a philosophical concept into an analytical tool, shaping discussion of care, community economies and multispecies politics.",
+      "critique_zh": "主要保留是：合著声音不统一；「关系性」过于宽泛，难以证伪；对关系中的权力与暴力分析仍偏弱。",
+      "critique_en": "The main reservations are the uneven co-authored voice, the breadth of relationality that makes it hard to falsify, and still-weak analysis of power and violence within relations.",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "合著声音不统一",
+          "title_en": "Uneven co-authorship",
+          "note_zh": "三位作者的学科语气与关注点不完全协调。",
+          "note_en": "The three authors' disciplinary registers and concerns do not fully harmonise."
+        },
+        {
+          "title_zh": "概念过宽",
+          "title_en": "Concept too broad",
+          "note_zh": "「关系性」几乎可以解释一切，降低了可证伪性。",
+          "note_en": "Relationality can explain almost anything, weakening falsifiability."
+        },
+        {
+          "title_zh": "权力分析偏弱",
+          "title_en": "Thin analysis of power",
+          "note_zh": "关系中的支配与暴力着墨较少。",
+          "note_en": "Domination and violence within relations receive less attention."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "三位作者要证明：存在是关系性的，因此政治不是主体之间的资源分配，而是关系的维护、切断与重组；这一本体论转向要求重新定义自由、自主与共同体。",
+      "claim_en": "The authors want to show that being is relational, so politics is not resource distribution among subjects but the sustaining, severing and recomposing of relations; this ontological turn requires redefining freedom, autonomy and community.",
+      "why_zh": "书名以「关联性」为标题，副标题则给出政治任务，说明本体论与政治是一体两面；三人合著意味着关系性本身要在跨学科关系中实践；书中案例覆盖气候、食物与多物种，说明关系性不是抽象哲学。",
+      "why_en": "The title names relationality and the subtitle names the political task, making ontology and politics two sides of one thing; co-authorship practises relationality across disciplines; cases from climate, food and multispecies life show relationality is not abstract philosophy.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与副标题把本体论与政治绑定。",
+          "en": "The title and subtitle bind ontology to politics.",
+          "source": "Book title",
+          "source_en": "Book title",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "形式",
+          "kind_en": "form",
+          "zh": "三人合著本身是关系性的实践。",
+          "en": "Co-authorship is itself a relational practice.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "案例",
+          "kind_en": "case",
+          "zh": "气候、食物主权与多物种案例把理论落到实践。",
+          "en": "Climate, food sovereignty and multispecies cases ground the theory in practice.",
+          "source": "Secondary summaries",
+          "source_en": "Secondary summaries",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书是一次跨学科的综合尝试，但「关系性」的宽泛使其难以区分解放性与压迫性的关系；把它当作政治纲领，会高估其操作性。",
+      "counter_en": "Alternative reading: it is an interdisciplinary synthesis whose broad relationality struggles to distinguish emancipatory from oppressive relations; treating it as a political programme overestimates its operability.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "关系先于主体：读《关联性》",
+      "title_en": "Relations before subjects",
+      "standfirst_zh": "如果存在是关系性的，那么政治就不是分配资源，而是维护、切断与重组关系。",
+      "standfirst_en": "If being is relational, politics is not distributing resources but sustaining, severing and recomposing relations.",
+      "body_zh": "《关联性》是 Escobar 与 Osterweil、Sharma 的合著，也是他思想的一次收束：从《遭遇发展》的话语批判，到《差异的领地》的领地政治，再到《多元宇宙的设计》的本体论设计，最后落到「关系」这个最基础的概念。\n\n书的核心命题是：存在不是孤立的实体，而是关系的事件。这个命题听起来像哲学，却有直接的政治后果。如果主体不是先于关系而存在，那么政治就不能从「谁的利益」开始，而要从「哪些关系被维护、哪些被切断」开始。自由因此不是摆脱关系，而是在关系中获得自决；共同体不是成员的集合，而是在关系中被不断重做的共同生活。\n\n这本书的优点是跨学科：三位作者分别带来人类学、社会运动理论与科学哲学的视角，案例覆盖气候、食物与多物种。缺点也来自这里：三人的声音不完全统一，「关系性」宽泛到几乎可以解释一切，因而难以证伪；对关系中的支配与暴力，分析仍显不足。\n\n读它最好的方式，是把它当作一组问题而不是一套答案：你正在维护哪些关系？切断了哪些？这些关系的重组，让谁更有能力生活，又让谁更难？", 
+      "abstract_en": "Relationality is Escobar's co-authored book with Osterweil and Sharma and a gathering of his thought: from the discourse critique of Encountering Development, through the territorial politics of Territories of Difference and the ontological design of Designs for the Pluriverse, to the most basic concept of all, relation.\n\nThe core proposition is that being is not isolated substance but an event of relation. It sounds philosophical but has direct political consequences. If subjects do not precede relations, politics cannot start from 'whose interests' but from 'which relations are sustained and which severed'. Freedom is therefore not escape from relation but self-determination within it; community is not a set of members but shared life continually remade in relation.\n\nThe strength is interdisciplinarity: three authors bring anthropology, social movement theory and philosophy of science, with cases from climate, food and multispecies life. The weakness comes from the same place: the voices do not fully harmonise, relationality is broad enough to explain almost anything and is hard to falsify, and the analysis of domination and violence within relations remains thin.\n\nThe best way to read it is as a set of questions rather than answers: which relations are you sustaining, which severing, and who becomes more able to live — or less — as they are recomposed?",
+      "sources": [
+        {
+          "zh": "Guide（书目与主题综述）",
+          "en": "Guide (bibliography and thematic survey)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "关系",
+        "name_en": "relation",
+        "orig": "relación",
+        "evid_zh": "不是实体之间的连线，而是实体得以存在的方式。",
+        "evid_en": "Not a line between entities but the way entities come to be.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "共生",
+        "name_en": "sympoiesis",
+        "orig": "sympoiesis",
+        "evid_zh": "一起生成，而非自我生成。",
+        "evid_en": "Making-with rather than self-making.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "涌现",
+        "name_en": "emergence",
+        "orig": "emergencia",
+        "evid_zh": "政治行动在关系中出现，而非由主体预先决定。",
+        "evid_en": "Political action appears in relation rather than being pre-decided by subjects.",
+        "source": "Relationality",
+        "source_en": "Relationality",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "关系命题（非逐字原文）",
+        "trans_zh": "存在不是孤立的实体，而是关系的事件；关系先于主体。",
+        "trans_en": "Being is not isolated substance but an event of relation; relations precede subjects.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "政治命题（非逐字原文）",
+        "trans_zh": "政治不是主体之间的资源分配，而是关系的维护、切断与重组。",
+        "trans_en": "Politics is not resource distribution among subjects but the sustaining, severing and recomposing of relations.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "关系本体论的谱系",
+        "title_en": "The genealogy of relational ontology",
+        "zh": "梳理过程哲学、本体论人类学、女性主义科学与原住民宇宙论中的关系思想。",
+        "en": "Traces relational thought in process philosophy, ontological anthropology, feminist science studies and indigenous cosmologies.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "关系性不是新发明，而是多条思想传统的交汇。",
+          "flow": "从哲学传统，到人类学，再到原住民思想。",
+          "names": "Whitehead、Viveiros de Castro、Haraway。",
+          "sources": "理论谱系章。",
+          "link": "为后续政治主张提供思想基础。",
+          "main_en": "Relationality is not new but a crossing of several traditions.",
+          "flow_en": "From philosophy to anthropology to indigenous thought.",
+          "names_en": "Whitehead, Viveiros de Castro, Haraway.",
+          "sources_en": "Genealogical chapters.",
+          "link_en": "Provides the intellectual ground for the political claims."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "超越人类的关系",
+        "title_en": "Relations beyond the human",
+        "zh": "关系性必须包括非人类生命、物质与地球过程，否则仍是人类中心主义。",
+        "en": "Relationality must include nonhuman life, matter and earth processes, or it remains anthropocentric.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "没有非人类的关系性，只是扩大版的人类中心主义。",
+          "flow": "从物种，到物质，再到地球过程。",
+          "names": "多物种、微生物、气候。",
+          "sources": "环境人文与多物种研究。",
+          "link": "把关系性接入生态政治。",
+          "main_en": "Relationality without the nonhuman is anthropocentrism writ large.",
+          "flow_en": "From species to matter to earth processes.",
+          "names_en": "Multispecies, microbes, climate.",
+          "sources_en": "Environmental humanities and multispecies studies.",
+          "link_en": "Connects relationality to ecological politics."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "涌现政治",
+        "title_en": "Emergent politics",
+        "zh": "政治行动在关系与实践中生成，而非由预先形成的主体决定；这要求重新定义自由与共同体。",
+        "en": "Political action emerges in relation and practice rather than being decided by pre-formed subjects, requiring a redefinition of freedom and community.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "自由不是摆脱关系，而是在关系中获得自决。",
+          "flow": "从主体批判，到关系政治，再到实践判准。",
+          "names": "运动、共同体、研究者。",
+          "sources": "案例与理论章。",
+          "link": "把本体论转成政治纲领。",
+          "main_en": "Freedom is not escape from relation but self-determination within it.",
+          "flow_en": "From critique of the subject to relational politics to practical criteria.",
+          "names_en": "Movements, communities, researchers.",
+          "sources_en": "Case and theory chapters.",
+          "link_en": "Turns ontology into a political programme."
+        }
+      }
+    ]
+  }
+}

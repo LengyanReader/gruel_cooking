@@ -1,0 +1,1307 @@
+{
+  "tsing-diamond-queen": {
+    "background": {
+      "zh": "《钻石女王的领地》改写自 Tsing 在印尼南加里曼丹的博士田野。1970—80 年代，梅拉瑙人（Meratus）生活在国家林业、伊斯兰化、伐木业与新秩序开发的交叠处；Tsing 追踪他们如何在被国家视为「偏远」的地方继续组织婚姻、迁徙、狩猎与仪式。书名取自当地关于「钻石女王」的传说：一位从远方来的女王留下秩序又离开，留下的是需要不断重述的关系。Tsing 由此提出：边缘不是中心的对立面，而是国家、资本与地方生活相互制作的接触带。",
+      "en": "In the Realm of the Diamond Queen grew out of Tsing's doctoral fieldwork in South Kalimantan, Indonesia. Through the 1970s and 1980s the Meratus lived where state forestry, Islamisation, logging and New Order development overlapped; Tsing follows how they kept organising marriage, mobility, hunting and ritual in a place the state treated as remote. The title comes from a local legend of a queen who arrives from elsewhere, leaves an order behind, and departs — leaving relations that must be retold. Marginality, Tsing argues, is not the opposite of the centre but a contact zone where state, capital and local life make one another.",
+      "conf": "◐",
+      "sources": "Guide; book description",
+      "sources_en": "Guide; book description"
+    },
+    "narrative": {
+      "zh": "全书以民族志章节而非编年展开：先写国家如何用地图、身份证与林业法规把梅拉瑙人简化为「游耕者/原始人」，再写梅拉瑙人如何用迁徙、亲属关系与仪式把这些范畴拆开；性别与萨满实践是两条副线，显示边缘秩序并不只是「抵抗国家」，也在内部生产权威与差异。结论把「边缘」重新定义为一种关系位置，而非地理剩余。",
+      "en": "The book unfolds through ethnographic chapters rather than chronology: first how maps, identity cards and forestry law simplify the Meratus into 'shifting cultivators' or 'primitives', then how mobility, kinship and ritual prise those categories apart. Gender and shamanic practice run as subplots, showing that marginal order is not only resistance to the state but also an internal production of authority and difference. The conclusion redefines marginality as a relational position, not a geographical leftover.",
+      "conf": "◐",
+      "sources": "Guide; review synthesis",
+      "sources_en": "Guide; review synthesis"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后成为东南亚研究与人类学「边缘性」讨论的常用参照；「out-of-the-way place」一语被广泛借用来描述国家触角之外的场所。",
+      "reception_good_en": "It became a common reference in Southeast Asian studies and anthropological debates on marginality; the phrase 'out-of-the-way place' was widely borrowed for sites beyond the state's reach.",
+      "reception_bad_zh": "早期评论也指出：民族志细节丰富，但理论框架尚未像《摩擦》那样系统化；「边缘」有时被读成抵抗的浪漫场所。",
+      "reception_bad_en": "Early reviews also noted that the ethnography is rich but the theoretical frame is not yet as systematic as in Friction; the margin can be read as a romantic site of resistance.",
+      "syn_zh": "把本书读成「边缘作为方法」的起点，而不是「摩擦」的完成版：它提供了后来所有概念的田野感性，但还没有把全球连接本身当作对象。",
+      "syn_en": "Read it as the starting point of 'marginality as method', not as the finished version of Friction: it supplies the field sensibility for all the later concepts but does not yet make global connection itself the object.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "边缘不是缺席，而是国家、资本与地方生活相互制作的接触带",
+      "国家简化会把复杂地方压成可治理的图式",
+      "迁徙、亲属与仪式是边缘维持自主性的实践",
+      "性别秩序与萨满实践参与边缘权威的生产"
+    ],
+    "claims_list_en": [
+      "Marginality is not absence but a contact zone where state, capital and local life make one another",
+      "State simplification compresses complex places into governable schemas",
+      "Mobility, kinship and ritual sustain autonomy at the margin",
+      "Gender order and shamanic practice participate in producing marginal authority"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《In the Realm of the Diamond Queen》1993 年由 Princeton University Press 出版",
+        "claim_en": "In the Realm of the Diamond Queen was published by Princeton University Press in 1993",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书改写自作者在印尼南加里曼丹的博士田野，以梅拉瑙人为核心",
+        "claim_en": "The book is reworked from doctoral fieldwork in South Kalimantan, centred on the Meratus",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "书名借当地「钻石女王」传说组织全书问题",
+        "claim_en": "The title borrows the local Diamond Queen legend to frame the book",
+        "source": "Guide / book description",
+        "source_en": "Guide / book description",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书是 Tsing 从边缘性研究走向《摩擦》的过渡作品",
+        "claim_en": "The book is Tsing's transition from marginality studies toward Friction",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次",
+        "item_en": "ISBN, page count and printing",
+        "conf": "◐"
+      },
+      {
+        "item": "各章标题与分卷结构（未逐页核对）",
+        "item_en": "chapter titles and part structure (not checked page by page)",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "Friction",
+        "title_en": "Friction",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2004",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "friction",
+        "pos": "",
+        "note_zh": "把「边缘」升级为「全球连接」的摩擦现场",
+        "note_en": "upgrades the margin into a friction site of global connection",
+        "conf": "◐"
+      },
+      {
+        "title": "Territories of Difference",
+        "title_en": "Territories of Difference",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "2008",
+        "relation": "对读 · 领地",
+        "relation_en": "compare · territory",
+        "axis": "territory",
+        "pos": "",
+        "note_zh": "Tsing 的「边缘」与 Escobar 的「领地」：一个从国家边缘，一个从黑人社区的生命世界",
+        "note_en": "Tsing's margin and Escobar's territory: one from the state's edge, one from an Afro-Colombian lifeworld",
+        "conf": "◐"
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "同作者 · 多物种转向",
+        "relation_en": "same author · multispecies turn",
+        "axis": "multispecies",
+        "pos": "",
+        "note_zh": "从「边缘的人」转向「边缘的物种」",
+        "note_en": "from marginal people to marginal species",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "用传说与民族志并置：钻石女王的故事不是装饰，而是全书关于「外来秩序如何被重述」的隐喻。",
+        "en": "Legend and ethnography are set side by side: the Diamond Queen is not decoration but a metaphor for how an external order is retold."
+      },
+      {
+        "zh": "把国家文件、地图与田野对话放在同一章，让「简化」与「拆解」互相显影。",
+        "en": "State documents, maps and field dialogue share a chapter, letting simplification and its undoing expose each other."
+      },
+      {
+        "zh": "拒绝把边缘写成纯粹的受害者：迁徙与仪式既是适应，也是生产差异的技术。",
+        "en": "Refuses to write the margin as pure victim: mobility and ritual are both adaptation and techniques for producing difference."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论与结论，标出「marginality」「out-of-the-way place」「state simplification」三词首次出现的位置，再回看它们在各章如何被具体化。",
+        "en": "Read the introduction and conclusion first, marking where marginality, out-of-the-way place and state simplification first appear, then see how the chapters concretise them."
+      },
+      {
+        "zh": "把写国家林业与身份证的段落，与写迁徙、亲属的段落对读：哪些是国家看到的，哪些是国家看不见的？",
+        "en": "Read the passages on forestry and identity cards against those on mobility and kinship: what does the state see, and what can it not see?"
+      },
+      {
+        "zh": "追问：本书的「边缘」是否仍以一个中心为参照？如果边缘自己就是中心，论证会怎样改变？",
+        "en": "Ask whether the book's margin still depends on a centre. If the margin were itself a centre, how would the argument change?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "边缘性",
+        "term_en": "marginality",
+        "orig": "marginality",
+        "gloss_zh": "不是缺席或剩余，而是一种被国家、资本与地方实践共同制作的关系位置。",
+        "gloss_en": "Not absence or leftover but a relational position co-produced by state, capital and local practice.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "term": "偏远之地",
+        "term_en": "out-of-the-way place",
+        "orig": "out-of-the-way place",
+        "gloss_zh": "被国家与市场视为边角、却因此保留另类秩序可能性的地方。",
+        "gloss_en": "A place treated as a corner by state and market, and therefore able to keep alternative orders alive.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "term": "国家简化",
+        "term_en": "state simplification",
+        "orig": "state simplification",
+        "gloss_zh": "国家用地图、分类与法规把复杂地方压成可治理的图式。",
+        "gloss_en": "The state compresses complex places into governable schemas through maps, categories and law.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "term": "接触带",
+        "term_en": "contact zone",
+        "orig": "contact zone",
+        "gloss_zh": "不同权力与生活形式相遇、冲突并相互改写的界面。",
+        "gloss_en": "An interface where different powers and life forms meet, clash and rewrite one another.",
+        "source": "Diamond Queen (interpretive gloss)",
+        "source_en": "Diamond Queen (interpretive gloss)",
+        "conf": "◐"
+      },
+      {
+        "term": "性别秩序",
+        "term_en": "gender order",
+        "orig": "gender order",
+        "gloss_zh": "性别关系与婚姻规则参与边缘社会的权威分配与差异生产。",
+        "gloss_en": "Gender relations and marriage rules participate in allocating authority and producing difference at the margin.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "term": "地方知识",
+        "term_en": "local knowledge",
+        "orig": "local knowledge",
+        "gloss_zh": "从具体迁徙、耕作与仪式中长出的知识，不能被国家分类穷尽。",
+        "gloss_en": "Knowledge grown from concrete mobility, cultivation and ritual that state classification cannot exhaust.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "1993 年由 Princeton University Press 出版，随后进入东南亚研究与人类学课程。评论普遍肯定其民族志密度与对「边缘」概念的重写，也注意到它仍是一部区域民族志。",
+      "then_en": "Published by Princeton University Press in 1993, it entered Southeast Asian studies and anthropology syllabi. Reviews generally praised its ethnographic density and its rewriting of marginality, while noting that it remained a regional ethnography.",
+      "later_zh": "后世把它视为 Tsing 全部工作的起点：从「边缘」到「摩擦」，再到「多物种」，问题一直是「不同世界如何在不平等权力中相互接触」。",
+      "later_en": "Later scholarship treats it as the origin of all Tsing's work: from margin to friction to multispecies, the question remains how different worlds meet under unequal power.",
+      "influence_zh": "「out-of-the-way place」成为讨论国家边缘、基础设施与地方生活的常用词；本书也常与斯科特的国家简化论、Escobar 的领地政治并读。",
+      "influence_en": "'Out-of-the-way place' became a common term for state margins, infrastructure and local life; the book is often read alongside Scott on state simplification and Escobar on territory.",
+      "critique_zh": "最主要的保留是：本书仍以「边缘—中心」为隐含框架，且对跨国资本与全球连接的处理要到《摩擦》才充分展开；若把它当作完整的全球化理论，会高估其范围。",
+      "critique_en": "The main reservation is that the book still implies a margin–centre frame, and its treatment of transnational capital and global connection only becomes full in Friction; reading it as a complete theory of globalisation overestimates its scope.",
+      "sources": [
+        {
+          "zh": "Guide（Goodreads 书目与主题综述，访问 2026-11-09）",
+          "en": "Guide (Goodreads bibliography and thematic survey, accessed 2026-11-09)"
+        },
+        {
+          "zh": "本书导论与结论（据指南与二手综述，未逐页核对）",
+          "en": "The book's introduction and conclusion (via guide and secondary summary, not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "单一区域民族志",
+          "title_en": "Single regional ethnography",
+          "note_zh": "以梅拉瑙人与南加里曼丹为中心，不能直接外推到其他边缘。",
+          "note_en": "Centred on the Meratus and South Kalimantan; not directly generalisable to other margins."
+        },
+        {
+          "title_zh": "全球连接尚未成为对象",
+          "title_en": "Global connection not yet the object",
+          "note_zh": "跨国资本、NGO 与全球话语要到《摩擦》才被系统处理。",
+          "note_en": "Transnational capital, NGOs and global discourse are only systematically treated in Friction."
+        },
+        {
+          "title_zh": "抵抗的浪漫化风险",
+          "title_en": "Risk of romanticising resistance",
+          "note_zh": "把边缘写成「另类世界」时，容易淡化内部的权力不平等。",
+          "note_en": "Writing the margin as an alternative world can underplay internal inequality."
+        },
+        {
+          "title_zh": "理论野心有限",
+          "title_en": "Limited theoretical ambition",
+          "note_zh": "本书更像民族志问题意识的奠基，而非完成的理论体系。",
+          "note_en": "The book founds a problem rather than completing a theoretical system."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Tsing 要证明：边缘不是现代化的剩余，而是另一种世界生成的现场；国家简化、性别秩序与地方仪式都在此被重新谈判。",
+      "claim_en": "Tsing wants to show that the margin is not a leftover of modernity but another site of world-making; state simplification, gender order and local ritual are renegotiated there.",
+      "why_zh": "书名把「钻石女王」的传说与「偏远之地」并置；民族志以梅拉瑙田野为核心；后续《摩擦》继续追问「边缘如何连接全球」。这三条线索共同说明：本书的目标不是记录一个封闭的地方，而是把「边缘」建立为一个分析位置。",
+      "why_en": "The title pairs the Diamond Queen legend with an out-of-the-way place; the ethnography centres on Meratus fieldwork; Friction goes on to ask how margins connect globally. Together these show that the aim is not to record a closed place but to establish marginality as an analytical position.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与导论把「边缘」置于中心，而非作为背景。",
+          "en": "The title and introduction place marginality at the centre rather than in the background.",
+          "source": "Guide / book description",
+          "source_en": "Guide / book description",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "《摩擦》继续处理「边缘如何被全球连接穿透」。",
+          "en": "Friction continues to ask how margins are penetrated by global connection.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "接受",
+          "kind_en": "reception",
+          "zh": "本书被当作边缘性研究的参照，而非单纯的区域志。",
+          "en": "It is cited as a reference in marginality studies, not merely as a regional monograph.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书仍是一部关于印尼梅拉瑙人的区域民族志，其「边缘」概念依赖于国家中心的存在；把它读成普遍化的「边缘理论」会高估其抽象程度。",
+      "counter_en": "Alternative reading: it remains a regional ethnography of the Meratus, and its notion of marginality depends on a state centre; reading it as a general theory of marginality overestimates its abstraction.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "边缘作为方法：读《钻石女王的领地》",
+      "title_en": "Marginality as method",
+      "standfirst_zh": "Tsing 的起点：边缘不是缺席，而是另一种世界生成的现场。",
+      "standfirst_en": "Tsing's starting point: marginality is not absence but another site of world-making.",
+      "body_zh": "《钻石女王的领地》常被当作 Tsing 的「早期作品」读过，但它的野心并不小：它要把「边缘」从一个地理形容词改造成一个分析位置。梅拉瑙人生活在国家林业、伊斯兰化与伐木业的交叠处，Tsing 关心的不是他们「缺少」什么，而是他们如何用迁徙、亲属与仪式，把国家强加的范畴重新拆开。\n\n这本书最有力的地方，是让「国家简化」与「地方重述」在同一页上发生。地图、身份证与林业法规把复杂的地方压成可治理的图式；而梅拉瑙人的迁徙与仪式，又不断把这些图式拖回具体的关系。边缘因此不是中心的失败复制，而是中心必须不断处理的外部。\n\n它的局限也同样明显：本书仍以「边缘—中心」为隐含框架，跨国资本与全球 NGO 要到《摩擦》才成为正面对象。若把本书当作完整的全球化理论，会高估它的范围；但若把它当作「边缘作为方法」的起点，它几乎提供了后来所有问题的种子。\n\n读这本书，最好的方式不是寻找「Tsing 后来讲了什么」，而是看她如何把一个看似边缘的田野，写成理解国家、资本与生活形式之间关系的入口。边缘不是世界的剩余；边缘是世界被制作出来的地方之一。",
+      "abstract_en": "In the Realm of the Diamond Queen is often read as Tsing's early work, but its ambition is larger: it turns marginality from a geographical adjective into an analytical position. The Meratus live where state forestry, Islamisation and logging overlap; Tsing asks not what they lack but how mobility, kinship and ritual prise open the categories the state imposes.\n\nThe book's strength is to make state simplification and local retelling happen on the same page. Maps, identity cards and forestry law compress a complex place into governable schemas; Meratus mobility and ritual keep dragging those schemas back into concrete relations. The margin is therefore not a failed copy of the centre but an outside the centre must keep processing.\n\nIts limit is equally clear: the book still implies a margin–centre frame, and transnational capital and global NGOs only become explicit objects in Friction. Read as a complete theory of globalisation, it overreaches; read as the starting point of marginality as method, it seeds almost every later question.\n\nThe best way to read it is not to look for what Tsing will say later but to watch how she turns an apparently marginal field into an entry point for understanding state, capital and forms of life. The margin is not the world's leftover; it is one of the places where the world is made.",
+      "sources": [
+        {
+          "zh": "Guide（主题综述与书目）",
+          "en": "Guide (thematic survey and bibliography)"
+        },
+        {
+          "zh": "本书导论、结论与二手评论（未逐页核对）",
+          "en": "The book's introduction, conclusion and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "钻石女王",
+        "name_en": "the Diamond Queen",
+        "orig": "Diamond Queen",
+        "evid_zh": "外来女王留下秩序又离开，地方必须不断重述她的关系。",
+        "evid_en": "An outsider queen leaves an order and departs; the place must keep retelling her relations.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "迁徙",
+        "name_en": "mobility",
+        "orig": "mobility",
+        "evid_zh": "迁徙不是逃避国家，而是维持地方秩序的技术。",
+        "evid_en": "Mobility is not flight from the state but a technique for sustaining local order.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "地图与身份证",
+        "name_en": "maps and identity cards",
+        "orig": "state documents",
+        "evid_zh": "国家简化的物质载体，也是地方重述的起点。",
+        "evid_en": "Material carriers of state simplification and starting points for local retelling.",
+        "source": "Diamond Queen",
+        "source_en": "Diamond Queen",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "边缘命题（非逐字原文）",
+        "trans_zh": "边缘不是中心的缺席，而是国家、资本与地方生活相互制作的接触带。",
+        "trans_en": "Marginality is not the absence of the centre but a contact zone where state, capital and local life make one another.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "国家简化（非逐字原文）",
+        "trans_zh": "国家用地图与分类把复杂地方压成可治理的图式，而地方用迁徙与仪式把这些图式重新拆开。",
+        "trans_en": "The state compresses complex places into governable schemas through maps and categories; local mobility and ritual prise them open again.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "国家如何看见边缘",
+        "title_en": "How the state sees the margin",
+        "zh": "从地图、身份证、林业法规与新秩序开发入手，展示国家如何把梅拉瑙人简化为可治理的范畴。",
+        "en": "Maps, identity cards, forestry law and New Order development show how the state simplifies the Meratus into governable categories.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "国家简化不是描述，而是生产：它制造了「边缘」这个可治理的对象。",
+          "flow": "从行政分类到林业规划，再到地方对分类的日常应对。",
+          "names": "梅拉瑙人、国家林业部门、新秩序开发。",
+          "sources": "南加里曼丹田野与档案。",
+          "link": "为后文的地方重述提供对立面。",
+          "main_en": "State simplification is productive: it creates the margin as a governable object.",
+          "flow_en": "From administrative categories to forestry planning to everyday responses.",
+          "names_en": "Meratus, state forestry, New Order development.",
+          "sources_en": "South Kalimantan fieldwork and archives.",
+          "link_en": "Sets up the local retelling that follows."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "地方如何重述边缘",
+        "title_en": "How the margin retells itself",
+        "zh": "迁徙、亲属、婚姻与仪式把国家范畴拖回具体关系；边缘秩序在内部生产权威与差异。",
+        "en": "Mobility, kinship, marriage and ritual drag state categories back into concrete relations; marginal order produces authority and difference internally.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "边缘不是被动承受分类，而是用生活实践重写分类。",
+          "flow": "从迁徙路线到婚姻联盟，再到仪式中的权威展演。",
+          "names": "亲属群体、萨满、婚姻联盟。",
+          "sources": "民族志章节。",
+          "link": "把「边缘」从地理概念变成关系概念。",
+          "main_en": "The margin does not merely receive categories; it rewrites them through practice.",
+          "flow_en": "From routes to marriage alliances to ritual authority.",
+          "names_en": "Kin groups, shamans, marriage alliances.",
+          "sources_en": "Ethnographic chapters.",
+          "link_en": "Turns marginality from geography into relation."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "把边缘写成方法",
+        "title_en": "Making marginality a method",
+        "zh": "结论把「边缘」提升为分析位置：理解国家与资本，必须从它们无法完全消化的地方开始。",
+        "en": "The conclusion elevates marginality into an analytical position: to understand state and capital one must start where they cannot fully digest.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "边缘是理解中心的入口，而不是中心的补充。",
+          "flow": "从民族志总结转向方法论主张。",
+          "names": "边缘性、国家简化、地方知识。",
+          "sources": "全书论证。",
+          "link": "为《摩擦》的全球连接问题埋下伏笔。",
+          "main_en": "The margin is an entry to the centre, not its supplement.",
+          "flow_en": "From ethnographic summary to methodological claim.",
+          "names_en": "Marginality, state simplification, local knowledge.",
+          "sources_en": "The book's overall argument.",
+          "link_en": "Prepares Friction's question of global connection."
+        }
+      }
+    ]
+  },
+  "tsing-friction": {
+    "background": {
+      "zh": "《摩擦》基于 Tsing 在印尼加里曼丹与雅加达的田野，追踪三组「普世声张」——热带雨林保护、矿业开发与原住民权利——如何在同一片森林里相遇。她跟随自然保护协会（The Nature Conservancy）的项目、伐木工人、流动的梅拉瑙与马来社区，观察全球连接如何被具体的人、文件、资金与误解拼接起来。核心论点是：全球化不是平滑的流动，而是充满阻力的「摩擦」；正是摩擦让普遍性获得地方形态，也让地方生活被卷入更大的权力网络。",
+      "en": "Friction draws on fieldwork in Kalimantan and Jakarta to follow three universal claims — rainforest conservation, mining development and indigenous rights — as they meet in the same forest. Tsing tracks a Nature Conservancy project, loggers, mobile Meratus and Malay communities, and asks how global connection is assembled from people, documents, money and misunderstanding. The thesis is that globalisation is not smooth flow but friction; friction is what gives universals local form and pulls local life into wider power networks.",
+      "conf": "◐",
+      "sources": "Guide; book description",
+      "sources_en": "Guide; book description"
+    },
+    "narrative": {
+      "zh": "全书分三部分：先写「繁荣」——森林如何被不同力量视为资源、保护区或家园；再写「知识」——地图、分类与 NGO 文件如何把地方转译成可治理的对象；最后写「自由」——流离、迁徙与「不服从」如何在全球连接的缝隙中发生。案例彼此不完全连贯，Tsing 有意保留民族志的碎片性，让「摩擦」作为方法而非结论出现。",
+      "en": "The book has three parts: prosperity — how the forest is seen as resource, reserve or home; knowledge — how maps, categories and NGO documents translate place into governable objects; and freedom — how displacement, mobility and refusal happen in the seams of global connection. The cases do not fully cohere, and Tsing deliberately keeps the ethnography fragmentary so that friction appears as method rather than conclusion.",
+      "conf": "◐",
+      "sources": "Guide; review synthesis",
+      "sources_en": "Guide; review synthesis"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "出版后成为全球化人类学的核心文本；「摩擦」被广泛用于描述全球与地方之间既冲突又生成的接触。",
+      "reception_good_en": "It became a core text in the anthropology of globalisation; 'friction' is widely used for contact that is both conflictual and generative.",
+      "reception_bad_zh": "评论也指出：案例的碎片性让论证不易收束；「摩擦」有时被用得过于宽泛，几乎等于「一切接触」。",
+      "reception_bad_en": "Reviews also noted that the fragmentary cases make the argument hard to close, and that 'friction' can be used so broadly as to mean almost any contact.",
+      "syn_zh": "本书的贡献不是给出全球化的总理论，而是提供一个可追踪的中层概念：看普遍性如何在具体接触点被翻译、扭曲与重新发明。",
+      "syn_en": "The contribution is not a general theory of globalisation but a trackable middle-range concept: watch how universals are translated, twisted and reinvented at concrete points of contact.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "全球化不是平滑流动，而是摩擦性的接触",
+      "普世声张必须经过地方转译才能生效",
+      "NGO、资本与地方生活在同一现场相互制作",
+      "摩擦既产生合作，也产生新的不平等"
+    ],
+    "claims_list_en": [
+      "Globalisation is friction-laden contact, not smooth flow",
+      "Universal claims only take effect through local translation",
+      "NGOs, capital and local life co-produce one another in the same site",
+      "Friction generates both collaboration and new inequality"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Friction: An Ethnography of Global Connection》2004/2005 年由 Princeton University Press 出版",
+        "claim_en": "Friction: An Ethnography of Global Connection was published by Princeton University Press in 2004/2005",
+        "source": "Guide / Goodreads",
+        "source_en": "Guide / Goodreads",
+        "conf": "◐"
+      },
+      {
+        "claim": "田野覆盖印尼加里曼丹与雅加达，涉及雨林保护、矿业与原住民权利",
+        "claim_en": "Fieldwork covers Kalimantan and Jakarta, involving rainforest conservation, mining and indigenous rights",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "本书把「摩擦」确立为全球化研究的中层概念",
+        "claim_en": "The book establishes friction as a middle-range concept for globalisation studies",
+        "source": "Guide / reception",
+        "source_en": "Guide / reception",
+        "conf": "◐"
+      },
+      {
+        "claim": "Tsing 后来在《菌菇》中把「摩擦」扩展为多物种的协作生存问题",
+        "claim_en": "Tsing later extends friction into the problem of multispecies collaborative survival in Mushroom",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "ISBN、页数与具体印次",
+        "item_en": "ISBN, page count and printing",
+        "conf": "◐"
+      },
+      {
+        "item": "三部分各章标题（未逐页核对）",
+        "item_en": "chapter titles of the three parts (not checked page by page)",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "In the Realm of the Diamond Queen",
+        "title_en": "In the Realm of the Diamond Queen",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "1993",
+        "relation": "同作者 · 前作",
+        "relation_en": "same author · predecessor",
+        "axis": "friction",
+        "pos": "",
+        "note_zh": "从「边缘」到「全球连接」：把地方问题升级为跨国问题",
+        "note_en": "from margin to global connection: scaling a local question into a transnational one",
+        "conf": "◐"
+      },
+      {
+        "title": "Encountering Development",
+        "title_en": "Encountering Development",
+        "author": "Arturo Escobar",
+        "author_en": "Arturo Escobar",
+        "year": "1995",
+        "relation": "对读 · 发展批判",
+        "relation_en": "compare · development critique",
+        "axis": "development",
+        "pos": "",
+        "note_zh": "Escobar 批判发展话语的宏观装置，Tsing 展示它在森林里如何被摩擦",
+        "note_en": "Escobar critiques the macro apparatus of development discourse; Tsing shows it being rubbed in the forest",
+        "conf": "◐"
+      },
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "同作者 · 后续",
+        "relation_en": "same author · successor",
+        "axis": "multispecies",
+        "pos": "",
+        "note_zh": "从「全球连接」转向「废墟中的多物种协作」",
+        "note_en": "from global connection to multispecies collaboration in ruins",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "用多地点、多行动者的拼贴代替单线叙事，让「摩擦」在结构层面被感受到。",
+        "en": "Uses a collage of sites and actors instead of a single line, letting friction be felt at the level of structure."
+      },
+      {
+        "zh": "把 NGO 文件、地图与田野对话并置，展示「普遍性」如何被具体媒介承载。",
+        "en": "Places NGO documents, maps and field dialogue side by side to show how universals are carried by concrete media."
+      },
+      {
+        "zh": "拒绝把任何一方写成纯粹反派：保护者、伐木者与地方居民都在摩擦中改变。",
+        "en": "Refuses to make any side a pure villain: conservationists, loggers and locals all change through friction."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先读导论，写下你对「friction」的一句话定义；读完三部分后再回来修改，看看概念是否变宽或变窄。",
+        "en": "Read the introduction and write a one-sentence definition of friction; revise it after the three parts and see whether the concept widened or narrowed."
+      },
+      {
+        "zh": "选一个案例（保护项目、矿业或原住民权利），列出「全球」与「地方」各自携带的三种媒介：文件、资金、人员。",
+        "en": "Choose one case (conservation, mining or indigenous rights) and list three media carried by 'global' and 'local' respectively: documents, money, people."
+      },
+      {
+        "zh": "追问：摩擦是否总是生成性的？在哪些情况下，摩擦只是消耗与压迫？",
+        "en": "Ask whether friction is always generative. When is it merely depletion and oppression?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "摩擦",
+        "term_en": "friction",
+        "orig": "friction",
+        "gloss_zh": "全球连接在具体接触点产生的阻力、翻译与生成性张力。",
+        "gloss_en": "The resistance, translation and generative tension produced when global connection meets concrete sites.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "term": "普世声张",
+        "term_en": "universal claims",
+        "orig": "universal claims",
+        "gloss_zh": "以「全人类」「自然」「权利」之名提出的主张，必须经地方转译才能落地。",
+        "gloss_en": "Claims made in the name of humanity, nature or rights that must be locally translated to take effect.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "term": "笨拙的投入",
+        "term_en": "awkward engagement",
+        "orig": "awkward engagement",
+        "gloss_zh": "不同行动者在不对等、不顺畅、不完整的接触中仍然相互卷入。",
+        "gloss_en": "Unequal, uneven and incomplete contact in which actors nonetheless become involved with one another.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "term": "摩擦带",
+        "term_en": "zones of friction",
+        "orig": "zones of friction",
+        "gloss_zh": "全球项目与地方生活相遇的具体空间，如森林、矿区、会议室。",
+        "gloss_en": "Concrete spaces where global projects meet local life: forests, mines, meeting rooms.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "term": "转译",
+        "term_en": "translation",
+        "orig": "translation",
+        "gloss_zh": "把普遍主张改写成地方可理解、可执行的形式；转译从不忠实。",
+        "gloss_en": "Rewriting a universal claim into a locally intelligible and executable form; translation is never faithful.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "term": "全球连接",
+        "term_en": "global connection",
+        "orig": "global connection",
+        "gloss_zh": "不是既成的网络，而是被不断拼接、维持与争夺的关系。",
+        "gloss_en": "Not a ready-made network but relations continually assembled, maintained and contested.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2000 年代中期出版后迅速进入全球化人类学课程；评论把它视为「全球民族志」的方法示范，而不仅是一部印尼研究。",
+      "then_en": "Published in the mid-2000s, it quickly entered courses on the anthropology of globalisation; reviews treated it as a methodological demonstration of 'global ethnography', not only an Indonesian study.",
+      "later_zh": "「摩擦」后来成为跨学科高频词，被用于媒体研究、基础设施研究与环境人文；Tsing 自己则在《菌菇》中把摩擦转向多物种协作。",
+      "later_en": "Friction later became a cross-disciplinary term in media studies, infrastructure studies and environmental humanities; Tsing herself turned it toward multispecies collaboration in Mushroom.",
+      "influence_zh": "本书让「全球连接」从抽象结构变成可追踪的接触点，影响了后续关于 NGO、保护、供应链与基础设施的研究。",
+      "influence_en": "The book turned global connection from abstract structure into trackable points of contact, shaping later work on NGOs, conservation, supply chains and infrastructure.",
+      "critique_zh": "主要保留是：案例碎片化使「摩擦」难以被证伪；概念的外延过宽，可能把一切接触都称为摩擦。此外，本书对资本结构的处理仍偏民族志，而非政治经济学。",
+      "critique_en": "The main reservation is that the fragmentary cases make friction hard to falsify; the concept is broad enough to call almost any contact friction. The treatment of capital also remains ethnographic rather than political-economic.",
+      "sources": [
+        {
+          "zh": "Guide（主题综述与书目）",
+          "en": "Guide (thematic survey and bibliography)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为结构层面的可能局限，不是对全文的判断（未通读）。",
+      "en": "Structural limits only, not a judgment on the full text (unread).",
+      "items": [
+        {
+          "title_zh": "案例碎片化",
+          "title_en": "Fragmentary cases",
+          "note_zh": "多地点拼贴让论证不易收束，读者需要自己搭建线索。",
+          "note_en": "The multi-site collage makes the argument hard to close; readers must build the thread themselves."
+        },
+        {
+          "title_zh": "概念外延过宽",
+          "title_en": "Concept too broad",
+          "note_zh": "「摩擦」几乎可以指任何接触，降低了可证伪性。",
+          "note_en": "Friction can mean almost any contact, weakening falsifiability."
+        },
+        {
+          "title_zh": "政治经济学不足",
+          "title_en": "Thin political economy",
+          "note_zh": "对资本积累的整体结构着墨少于对接触现场的民族志。",
+          "note_en": "The overall structure of capital accumulation gets less attention than the ethnographic site."
+        },
+        {
+          "title_zh": "印尼之外的外推",
+          "title_en": "Generalising beyond Indonesia",
+          "note_zh": "案例扎根于印尼，跨区域使用「摩擦」时需要重新校准。",
+          "note_en": "The cases are rooted in Indonesia; using friction elsewhere requires recalibration."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Tsing 要证明：全球化不是普遍性从中心流向边缘，而是普遍性在边缘被摩擦、翻译与重新发明；全球连接因此是一个未完成的关系工程。",
+      "claim_en": "Tsing wants to show that globalisation is not universals flowing from centre to margin but universals being rubbed, translated and reinvented at the margin; global connection is therefore an unfinished relational project.",
+      "why_zh": "书名把「摩擦」放在「全球连接」之前，等于把阻力而非流动当作解释原则；三部分分别处理繁荣、知识与自由，覆盖全球项目落地时最常被调动的三种资源；案例选择 NGO、矿业与原住民权利，是因为它们都以「普遍」之名行动。",
+      "why_en": "The title puts friction before global connection, making resistance rather than flow the explanatory principle; the three parts handle prosperity, knowledge and freedom, the resources most often mobilised when global projects land; the cases — NGO, mining, indigenous rights — all act in the name of universals.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "书名与导论把「摩擦」定义为生成性接触，而非障碍。",
+          "en": "The title and introduction define friction as generative contact, not obstacle.",
+          "source": "Guide / book description",
+          "source_en": "Guide / book description",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "案例",
+          "kind_en": "case",
+          "zh": "保护、矿业与原住民权利三组普世声张在同一森林相遇。",
+          "en": "Conservation, mining and indigenous rights meet in the same forest.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "接受",
+          "kind_en": "reception",
+          "zh": "「摩擦」被跨学科采用，说明它击中了全球研究的一个空缺。",
+          "en": "The cross-disciplinary uptake of friction shows it addressed a gap in global studies.",
+          "source": "Guide / reception",
+          "source_en": "Guide / reception",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：本书仍是一部印尼民族志，「摩擦」的地方性很强；把它当作全球化的普遍理论，会忽略其案例与概念的边界。",
+      "counter_en": "Alternative reading: it remains an Indonesian ethnography, and friction is strongly local; treating it as a general theory of globalisation ignores the boundaries of its cases and concept.",
+      "boundary_zh": "未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。",
+      "boundary_en": "Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "摩擦作为方法：读《摩擦》",
+      "title_en": "Friction as method",
+      "standfirst_zh": "全球化不是流动，而是普遍性在具体接触点被摩擦、翻译与重新发明。",
+      "standfirst_en": "Globalisation is not flow but universals being rubbed, translated and reinvented at concrete points of contact.",
+      "body_zh": "《摩擦》最容易被误读成一本「反全球化」的书。它其实更冷静：Tsing 不否认全球连接的存在，她只是拒绝把它写成平滑的流动。热带雨林保护、矿业开发与原住民权利，三组都以「全人类」或「自然」之名说话；当它们进入加里曼丹的森林，就必须经过文件、会议、翻译与误解。摩擦不是连接的失败，而是连接得以发生的方式。\n\n这本书的方法也值得注意：Tsing 不从一个理论体系出发，而是从多个接触点出发，让概念在案例之间慢慢显形。读者会觉得结构松散，但这种松散是有意的——它模拟了全球连接本身的不完整。\n\n局限同样明显：当「摩擦」可以指任何接触时，它就不再能区分不同性质的冲突；本书对资本积累的整体结构也着墨不多。它更适合被当作一个中层方法，而不是全球化的总理论。\n\n读《摩擦》最好的收获，或许是学会在看全球项目时问：它在这里被翻译成了什么？谁在翻译？翻译过程中失去了什么？这些问题比「全球化是好是坏」更有用。",
+      "abstract_en": "Friction is easily misread as an anti-globalisation book. It is cooler than that: Tsing does not deny global connection; she refuses to write it as smooth flow. Rainforest conservation, mining and indigenous rights all speak in the name of humanity or nature; when they enter a Kalimantan forest they must pass through documents, meetings, translation and misunderstanding. Friction is not the failure of connection but the way connection happens.\n\nThe method matters too: Tsing does not start from a theoretical system but from multiple points of contact, letting concepts emerge slowly across cases. The structure feels loose, but the looseness is deliberate — it mimics the incompleteness of global connection itself.\n\nThe limits are equally clear: when friction can mean any contact, it can no longer distinguish kinds of conflict; the book also says little about the overall structure of capital accumulation. It is better used as a middle-range method than as a general theory of globalisation.\n\nThe best takeaway may be a habit of asking, whenever a global project lands: what has it been translated into here, who is translating, and what is lost in translation? These questions are more useful than whether globalisation is good or bad.",
+      "sources": [
+        {
+          "zh": "Guide（主题综述与书目）",
+          "en": "Guide (thematic survey and bibliography)"
+        },
+        {
+          "zh": "本书导论与二手评论（未逐页核对）",
+          "en": "The book's introduction and secondary reviews (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "森林",
+        "name_en": "the forest",
+        "orig": "forest",
+        "evid_zh": "同一片森林同时是资源、保护区、家园与全球象征。",
+        "evid_en": "The same forest is resource, reserve, home and global icon at once.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "文件",
+        "name_en": "documents",
+        "orig": "documents",
+        "evid_zh": "地图、报告与合同是普世声张落地的最小单位。",
+        "evid_en": "Maps, reports and contracts are the smallest units through which universals land.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "会议",
+        "name_en": "the meeting",
+        "orig": "meeting",
+        "evid_zh": "不同行动者在同一张桌子上笨拙地相互卷入。",
+        "evid_en": "Actors become awkwardly involved with one another at the same table.",
+        "source": "Friction",
+        "source_en": "Friction",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "摩擦命题（非逐字原文）",
+        "trans_zh": "全球化不是普遍性从中心流向边缘，而是普遍性在边缘被摩擦、翻译与重新发明。",
+        "trans_en": "Globalisation is not universals flowing from centre to margin but universals being rubbed, translated and reinvented at the margin.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "笨拙的投入（非逐字原文）",
+        "trans_zh": "不同行动者在不对等、不顺畅的接触中仍然相互卷入，这就是全球连接的现场。",
+        "trans_en": "Unequal, uneven contact in which actors nonetheless become involved with one another — that is the site of global connection.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "繁荣：森林作为资源、保护区与家园",
+        "title_en": "Prosperity: forest as resource, reserve and home",
+        "zh": "不同力量把同一片森林当作开发资源、保护对象或生活家园，繁荣的定义因此成为争夺对象。",
+        "en": "Different forces treat the same forest as development resource, conservation object or lived home; the definition of prosperity becomes contested.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "繁荣不是给定的，而是被不同普世声张争夺的。",
+          "flow": "从伐木与矿业，到保护项目，再到地方生计。",
+          "names": "伐木公司、矿业、自然保护协会、地方社区。",
+          "sources": "加里曼丹田野。",
+          "link": "为「知识」部分提供物质利益背景。",
+          "main_en": "Prosperity is not given but contested by competing universal claims.",
+          "flow_en": "From logging and mining to conservation to local livelihoods.",
+          "names_en": "Logging companies, mining, The Nature Conservancy, local communities.",
+          "sources_en": "Kalimantan fieldwork.",
+          "link_en": "Provides the material stakes for the knowledge section."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "知识：把地方转译成可治理的对象",
+        "title_en": "Knowledge: translating place into governable objects",
+        "zh": "地图、分类、报告与会议把森林与居民变成可计算、可管理、可资助的对象。",
+        "en": "Maps, categories, reports and meetings turn forest and residents into calculable, manageable and fundable objects.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "知识生产是全球连接的基础设施。",
+          "flow": "从地图与分类，到 NGO 文件与专家会议。",
+          "names": "NGO 专家、政府机构、地方翻译者。",
+          "sources": "文件与会议民族志。",
+          "link": "解释为什么「摩擦」总发生在知识界面。",
+          "main_en": "Knowledge production is the infrastructure of global connection.",
+          "flow_en": "From maps and categories to NGO documents and expert meetings.",
+          "names_en": "NGO experts, state agencies, local translators.",
+          "sources_en": "Ethnography of documents and meetings.",
+          "link_en": "Explains why friction concentrates at knowledge interfaces."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "自由：在缝隙中迁徙与不服从",
+        "title_en": "Freedom: mobility and refusal in the seams",
+        "zh": "流离、迁徙与「不服从」不是全球连接的反面，而是它在地方产生的缝隙。",
+        "en": "Displacement, mobility and refusal are not the opposite of global connection but the seams it produces locally.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "自由是在不平等连接中争取到的有限空间。",
+          "flow": "从流离失所，到迁徙策略，再到日常不服从。",
+          "names": "流动的梅拉瑙与马来社区、伐木工人。",
+          "sources": "民族志章节。",
+          "link": "把「摩擦」从结构分析推向生活政治。",
+          "main_en": "Freedom is a limited space won within unequal connection.",
+          "flow_en": "From displacement to mobility strategies to everyday refusal.",
+          "names_en": "Mobile Meratus and Malay communities, loggers.",
+          "sources_en": "Ethnographic chapters.",
+          "link_en": "Moves friction from structural analysis to the politics of life."
+        }
+      }
+    ]
+  },
+  "tsing-unruly-edges": {
+    "publisher": "Environmental Humanities（期刊）",
+    "publisher_en": "Environmental Humanities (journal)",
+    "pubdate": "2012",
+    "pubdate_en": "2012",
+    "pages": "141–154",
+    "isbn": "—（期刊论文，无 ISBN）",
+    "publines_zh": "Environmental Humanities · vol. 1 (2012) · pp. 141–154",
+    "publines_en": "Environmental Humanities · vol. 1 (2012) · pp. 141–154",
+    "meta_zh": "期刊论文 · 多物种 · 伴生物种",
+    "meta_en": "journal article · multispecies · companion species",
+    "baseline_conf": "◐ 期刊与卷期据指南/通行引用；页码与 DOI 待核",
+    "baseline_conf_en": "◐ journal and volume via guide/common citation; pages and DOI pending",
+    "why_zh": "《菌菇》的方法前奏：把「边缘」从地理概念变成物种相遇的界面，提出菌菇作为「伴生物种」的思考方式。",
+    "why_en": "A methodological prelude to Mushroom: it turns the edge from a geographical concept into an interface of species encounter and proposes mushrooms as companion species.",
+    "background": {
+      "zh": "这是 Tsing 在《世界末日的菌菇》之前发表的一篇关键论文，刊于《Environmental Humanities》创刊号（2012）。它把「伴生物种」（companion species，借自 Haraway）用于菌菇：菌菇既不是被驯化的作物，也不是纯粹野生的自然，而是在人类扰动过的边缘地带生长的「不羁」生命。Tsing 用松茸、香菇与真菌的案例，提出多物种研究不应从「物种」开始，而应从「相遇」开始。",
+      "en": "This is a key essay published before The Mushroom at the End of the World, in the first volume of Environmental Humanities (2012). It applies 'companion species' (borrowed from Haraway) to fungi: mushrooms are neither domesticated crops nor pure wild nature but 'unruly' life growing on edges disturbed by humans. Through matsutake, shiitake and fungal cases, Tsing argues that multispecies research should start not from species but from encounters.",
+      "conf": "◐",
+      "sources": "Guide; journal citation",
+      "sources_en": "Guide; journal citation"
+    },
+    "narrative": {
+      "zh": "文章以短论形式推进：先质疑「自然/文化」与「野生/驯化」的二分，再以菌菇的生命史说明「不羁的边缘」如何被人类活动制造，最后把「伴生物种」提升为一种方法论——研究共同生成，而不是研究孤立的物。",
+      "en": "The essay proceeds as a short argument: it first questions the nature/culture and wild/domesticated binaries, then uses fungal life histories to show how unruly edges are produced by human activity, and finally elevates companion species into a method — study co-becoming rather than isolated objects.",
+      "conf": "◐",
+      "sources": "Guide; article abstract",
+      "sources_en": "Guide; article abstract"
+    },
+    "intent": {
+      "quotes": [],
+      "reception_good_zh": "这篇论文后来被视为 Tsing 多物种转向的方法宣言，常与 Haraway 的「伴生物种」和《菌菇》一起引用。",
+      "reception_good_en": "The essay is now treated as a methodological manifesto for Tsing's multispecies turn and is often cited with Haraway's companion species and Mushroom.",
+      "reception_bad_zh": "作为短篇，它无法展开完整的田野论证；「不羁」也容易被读成一种浪漫化的野生性。",
+      "reception_bad_en": "As a short essay it cannot develop a full field argument, and 'unruly' can be read as a romanticised wildness.",
+      "syn_zh": "它的价值在于提出问题而非给出答案：如果物种总是在相遇中生成，那么「自然」与「文化」的分类本身就值得重写。",
+      "syn_en": "Its value is to pose a question rather than answer it: if species always emerge in encounters, the nature/culture distinction itself must be rewritten.",
+      "conf": "◐"
+    },
+    "claims_list": [
+      "菌菇不是纯野生或纯驯化，而是人类扰动边缘的伴生物种",
+      "多物种研究应从相遇开始，而非从物种分类开始",
+      "「不羁的边缘」是人类活动与真菌生命共同制造的",
+      "自然/文化的二分遮蔽了共同生成的过程"
+    ],
+    "claims_list_en": [
+      "Mushrooms are neither pure wild nor pure domesticated but companion species on human-disturbed edges",
+      "Multispecies research should start from encounters, not species classification",
+      "Unruly edges are co-produced by human activity and fungal life",
+      "The nature/culture binary obscures co-becoming"
+    ],
+    "fact_ledger": [
+      {
+        "claim": "《Unruly Edges: Mushrooms as Companion Species》刊于 Environmental Humanities 第 1 卷（2012）",
+        "claim_en": "Unruly Edges: Mushrooms as Companion Species appeared in Environmental Humanities vol. 1 (2012)",
+        "source": "Guide / journal citation",
+        "source_en": "Guide / journal citation",
+        "conf": "◐"
+      },
+      {
+        "claim": "文章将「伴生物种」概念用于菌菇，连接 Haraway 的多物种理论",
+        "claim_en": "The essay applies companion species to fungi, linking to Haraway's multispecies theory",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      },
+      {
+        "claim": "文章是《世界末日的菌菇》（2015）的方法前奏",
+        "claim_en": "The essay is a methodological prelude to The Mushroom at the End of the World (2015)",
+        "source": "Guide",
+        "source_en": "Guide",
+        "conf": "◐"
+      }
+    ],
+    "unverified": [
+      {
+        "item": "精确页码、DOI 与期刊卷期",
+        "item_en": "exact pages, DOI and volume",
+        "conf": "◐"
+      },
+      {
+        "item": "文中具体案例的完整清单",
+        "item_en": "full list of cases discussed",
+        "conf": "◐"
+      }
+    ],
+    "related": [
+      {
+        "title": "The Mushroom at the End of the World",
+        "title_en": "The Mushroom at the End of the World",
+        "author": "Anna Lowenhaupt Tsing",
+        "author_en": "Anna Lowenhaupt Tsing",
+        "year": "2015",
+        "relation": "同作者 · 展开",
+        "relation_en": "same author · expansion",
+        "axis": "multispecies",
+        "pos": "",
+        "note_zh": "把论文的「伴生物种」扩展为松茸供应链的民族志",
+        "note_en": "expands the essay's companion species into an ethnography of the matsutake supply chain",
+        "conf": "◐"
+      },
+      {
+        "title": "Staying with the Trouble",
+        "title_en": "Staying with the Trouble",
+        "author": "Donna Haraway",
+        "author_en": "Donna Haraway",
+        "year": "2016",
+        "relation": "理论对话",
+        "relation_en": "theoretical interlocutor",
+        "axis": "multispecies",
+        "pos": "",
+        "note_zh": "「伴生物种」与「留守麻烦」的共同语境",
+        "note_en": "shared context for companion species and staying with the trouble",
+        "conf": "◐"
+      },
+      {
+        "title": "Arts of Living on a Damaged Planet",
+        "title_en": "Arts of Living on a Damaged Planet",
+        "author": "Tsing, Bubandt, Gan & Swanson (eds.)",
+        "author_en": "Tsing, Bubandt, Gan & Swanson (eds.)",
+        "year": "2017",
+        "relation": "同作者 · 合编",
+        "relation_en": "same author · co-edited",
+        "axis": "multispecies",
+        "pos": "",
+        "note_zh": "从单篇论文到多物种文集",
+        "note_en": "from a single essay to a multispecies collection",
+        "conf": "◐"
+      }
+    ],
+    "craft": [
+      {
+        "zh": "用短篇论文的形式保留概念的开放性，不急于建立体系。",
+        "en": "Uses the short essay to keep the concept open rather than system-building."
+      },
+      {
+        "zh": "把「边缘」写成动词：不是地点，而是持续发生的相遇过程。",
+        "en": "Writes the edge as a verb: not a place but an ongoing process of encounter."
+      },
+      {
+        "zh": "以菌菇的生命史抵抗「野生/驯化」的二分。",
+        "en": "Uses fungal life histories against the wild/domesticated binary."
+      }
+    ],
+    "deep_read": [
+      {
+        "zh": "先找出文中对「自然/文化」二分的批评段落，再看菌菇案例如何替代这对概念。",
+        "en": "Find the passages criticising the nature/culture binary, then see how the fungal cases replace that pair."
+      },
+      {
+        "zh": "把「伴生物种」与 Haraway 的原义对照：Tsing 增加了什么、削弱了什么？",
+        "en": "Compare companion species with Haraway's original: what does Tsing add or weaken?"
+      },
+      {
+        "zh": "追问：如果菌菇是「不羁」的，那么「驯化」在什么意义上仍然成立？",
+        "en": "Ask: if mushrooms are unruly, in what sense does domestication still hold?"
+      }
+    ],
+    "concepts": [
+      {
+        "term": "伴生物种",
+        "term_en": "companion species",
+        "orig": "companion species",
+        "gloss_zh": "不同物种在共同生活中相互塑造，而非各自独立演化。",
+        "gloss_en": "Species shape one another in shared life rather than evolving independently.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "term": "不羁的边缘",
+        "term_en": "unruly edges",
+        "orig": "unruly edges",
+        "gloss_zh": "人类扰动与真菌生长交叠、无法被完全管理的边缘地带。",
+        "gloss_en": "Edges where human disturbance and fungal growth overlap beyond full management.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "term": "多物种",
+        "term_en": "multispecies",
+        "orig": "multispecies",
+        "gloss_zh": "把人类与非人类生命放在同一个关系场中研究。",
+        "gloss_en": "Studying humans and nonhuman life within one relational field.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "term": "驯化",
+        "term_en": "domestication",
+        "orig": "domestication",
+        "gloss_zh": "被本书相对化的概念：驯化不是单向控制，而是相互适应的过程。",
+        "gloss_en": "A concept the essay relativises: domestication is not one-way control but mutual adjustment.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "term": "相遇",
+        "term_en": "encounter",
+        "orig": "encounter",
+        "gloss_zh": "物种研究的最小单位：不是物，而是物与物的接触。",
+        "gloss_en": "The smallest unit of multispecies study: not the object but contact between objects.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      }
+    ],
+    "reception": {
+      "then_zh": "2012 年刊出后，先在环境人文与多物种研究圈内被引用，随后随着《菌菇》的流行成为 Tsing 方法转向的常用参照。",
+      "then_en": "After 2012 it circulated first in environmental humanities and multispecies studies, then became a common reference for Tsing's methodological turn as Mushroom became widely read.",
+      "later_zh": "后世把它与 Haraway 的「伴生物种」、Kirksey & Helmreich 的「多物种民族志」并置，视为 2010 年代多物种转向的关键文本之一。",
+      "later_en": "Later work places it alongside Haraway's companion species and Kirksey & Helmreich's multispecies ethnography as a key text of the 2010s multispecies turn.",
+      "influence_zh": "它让「边缘」从地理/政治概念扩展为生态概念，为《菌菇》的「废墟边缘」与《野外指南》的「斑块」提供了概念雏形。",
+      "influence_en": "It expands the edge from a geographical/political concept into an ecological one, prefiguring Mushroom's ruined edges and the Field Guide's patches.",
+      "critique_zh": "作为短篇，它缺乏完整的田野证据；「不羁」的修辞也可能把真菌浪漫化为抵抗人类控制的英雄。",
+      "critique_en": "As a short essay it lacks full field evidence, and the rhetoric of unruliness can romanticise fungi as heroes resisting human control.",
+      "sources": [
+        {
+          "zh": "Guide（主题综述与书目）",
+          "en": "Guide (thematic survey and bibliography)"
+        },
+        {
+          "zh": "Environmental Humanities 论文（据指南与通行引用，未逐页核对）",
+          "en": "Environmental Humanities essay (via guide and common citation, not checked page by page)"
+        }
+      ]
+    },
+    "limits": {
+      "zh": "以下为文本类型的结构性局限，不是对全文的判断（未逐页核对）。",
+      "en": "Structural limits of the genre, not a judgment on the full text (not checked page by page).",
+      "items": [
+        {
+          "title_zh": "短篇容量",
+          "title_en": "Short-form limits",
+          "note_zh": "无法展开完整的田野论证与反例。",
+          "note_en": "Cannot develop full field evidence or counter-cases."
+        },
+        {
+          "title_zh": "案例集中于菌菇",
+          "title_en": "Fungal focus",
+          "note_zh": "从菌菇推到所有多物种关系，需要额外论证。",
+          "note_en": "Extending from fungi to all multispecies relations needs further argument."
+        },
+        {
+          "title_zh": "「不羁」的浪漫化",
+          "title_en": "Romanticising the unruly",
+          "note_zh": "把不受控写成生命力，可能淡化生态破坏与权力不平等。",
+          "note_en": "Writing the uncontrolled as vitality can underplay ecological damage and inequality."
+        }
+      ]
+    },
+    "author_intent": {
+      "claim_zh": "Tsing 要证明：菌菇不是自然/文化二分的对象，而是人类与真菌在边缘共同生成的「伴生物种」；因此多物种研究的起点应是相遇，而非分类。",
+      "claim_en": "Tsing wants to show that mushrooms are not objects of a nature/culture divide but companion species co-produced by humans and fungi at edges; multispecies research should therefore start from encounters, not classification.",
+      "why_zh": "标题把「不羁」与「边缘」并置，直接挑战「野生/驯化」的边界；文章选择菌菇，是因为它们既在森林中「野生」，又在人类扰动过的土地上生长；「伴生物种」借自 Haraway，但 Tsing 更强调边缘的生态物质性。",
+      "why_en": "The title pairs unruliness with edges, directly challenging the wild/domesticated boundary; fungi are chosen because they are both wild in forests and grow on human-disturbed land; companion species comes from Haraway, but Tsing stresses the ecological materiality of edges.",
+      "evidence": [
+        {
+          "kind_zh": "文本",
+          "kind_en": "text",
+          "zh": "标题与摘要把「不羁」放在「边缘」，而非「自然」。",
+          "en": "The title and abstract place unruliness at the edge, not in nature.",
+          "source": "Guide / article abstract",
+          "source_en": "Guide / article abstract",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "理论",
+          "kind_en": "theory",
+          "zh": "借用 Haraway 的「伴生物种」，但转向真菌的生态物质性。",
+          "en": "Borrows Haraway's companion species but turns toward fungal ecological materiality.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        },
+        {
+          "kind_zh": "后续",
+          "kind_en": "afterlife",
+          "zh": "《菌菇》把论文的命题展开为供应链民族志。",
+          "en": "Mushroom expands the essay's thesis into a supply-chain ethnography.",
+          "source": "Guide",
+          "source_en": "Guide",
+          "conf": "◐"
+        }
+      ],
+      "counter_zh": "另一种读法：这篇论文更像一次概念提案，而非经验研究；把它当作多物种研究的完整纲领，会高估其证据基础。",
+      "counter_en": "Alternative reading: the essay is a conceptual proposal rather than an empirical study; treating it as a complete multispecies programme overestimates its evidential base.",
+      "boundary_zh": "未逐页核对原文；上述推断依据指南、摘要与通行引用，推断本身标 ◐。",
+      "boundary_en": "The text was not checked page by page; the inference rests on the guide, abstract and common citation, and is marked ◐.",
+      "conf": "◐",
+      "conf_en": "◐"
+    },
+    "review": {
+      "title_zh": "在边缘与菌丝之间：读《不羁的边缘》",
+      "title_en": "Between edges and mycelium",
+      "standfirst_zh": "一篇短论文，提前写下了《菌菇》的方法：从相遇开始，而不是从物种开始。",
+      "standfirst_en": "A short essay that anticipates Mushroom's method: start from encounters, not species.",
+      "body_zh": "《不羁的边缘》不是一本完整的书，而是一篇方法宣言。它的核心动作很小，却很重要：把菌菇从「野生/驯化」的分类里拿出来，放回人类扰动过的边缘。菌菇既不在纯粹的自然里，也不在完全的掌控中；它们在两者之间生长，并把两者都改写。\n\nTsing 借用 Haraway 的「伴生物种」，但她更关心生态物质性：菌丝如何穿过土壤、树木与人的活动，如何在被砍伐、被耕种、被遗弃的地方继续生长。她由此提出，多物种研究不应从「物种」这个单位开始，而应从「相遇」这个关系开始。\n\n这篇论文的力量在于它的开放性；局限也来自同一处。它没有完整的田野证据，也没有处理「不羁」被浪漫化的风险。它更像一个问题的提出，而不是一个结论的证明。\n\n把它当作《菌菇》的前奏来读，会看见 Tsing 后来所有关键词的雏形：边缘、相遇、共同生成、废墟中的生命。它短，但它打开了一整条路。",
+      "abstract_en": "Unruly Edges is not a complete book but a methodological manifesto. Its central move is small but important: it takes mushrooms out of the wild/domesticated classification and returns them to edges disturbed by humans. Mushrooms are neither in pure nature nor under full control; they grow between the two and rewrite both.\n\nTsing borrows Haraway's companion species but cares more about ecological materiality: how mycelium passes through soil, trees and human activity, and keeps growing in logged, cultivated and abandoned places. She argues that multispecies research should start not from the unit 'species' but from the relation 'encounter'.\n\nThe essay's strength is its openness; its limit comes from the same place. It has no full field evidence and does not address the risk of romanticising the unruly. It is closer to posing a question than proving a conclusion.\n\nRead as a prelude to Mushroom, it shows the germ of all Tsing's later keywords: edges, encounters, co-becoming, life in ruins. It is short, but it opens a whole road.",
+      "sources": [
+        {
+          "zh": "Guide（主题综述与书目）",
+          "en": "Guide (thematic survey and bibliography)"
+        },
+        {
+          "zh": "Environmental Humanities 论文摘要与通行引用（未逐页核对）",
+          "en": "Environmental Humanities abstract and common citation (not checked page by page)"
+        }
+      ]
+    },
+    "motifs": [
+      {
+        "name_zh": "菌丝",
+        "name_en": "mycelium",
+        "orig": "mycelium",
+        "evid_zh": "看不见的网络把土壤、树木与人的活动连在一起。",
+        "evid_en": "An invisible network linking soil, trees and human activity.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "边缘",
+        "name_en": "the edge",
+        "orig": "edge",
+        "evid_zh": "不是界线，而是持续发生的相遇地带。",
+        "evid_en": "Not a boundary but a zone of ongoing encounter.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      },
+      {
+        "name_zh": "不羁",
+        "name_en": "unruly",
+        "orig": "unruly",
+        "evid_zh": "拒绝被完全管理，但也不是纯粹的自由。",
+        "evid_en": "Refusing full management without being pure freedom.",
+        "source": "Unruly Edges",
+        "source_en": "Unruly Edges",
+        "conf": "◐"
+      }
+    ],
+    "excerpts": [
+      {
+        "paraphrase": "伴生物种命题（非逐字原文）",
+        "trans_zh": "菌菇不是自然或文化的对象，而是人类与真菌在边缘共同生成的伴生物种。",
+        "trans_en": "Mushrooms are not objects of nature or culture but companion species co-produced by humans and fungi at edges.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      },
+      {
+        "paraphrase": "方法论命题（非逐字原文）",
+        "trans_zh": "多物种研究应从相遇开始，而不是从物种分类开始。",
+        "trans_en": "Multispecies research should start from encounters, not from species classification.",
+        "source": "Guide（综述）",
+        "source_en": "Guide (summary)",
+        "conf": "◐"
+      }
+    ],
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "拆开自然/文化",
+        "title_en": "Unpacking nature/culture",
+        "zh": "文章先质疑「野生/驯化」「自然/文化」的二分，指出它们遮蔽了人类与非人类的共同生成。",
+        "en": "The essay first questions the wild/domesticated and nature/culture binaries, arguing that they obscure human–nonhuman co-becoming.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "二分不是描述世界，而是管理世界的方式。",
+          "flow": "从概念批评到菌菇案例的引入。",
+          "names": "自然、文化、驯化、野生。",
+          "sources": "环境人文与多物种理论。",
+          "link": "为「伴生物种」清理概念空间。",
+          "main_en": "The binary describes a way of managing the world, not the world itself.",
+          "flow_en": "From conceptual critique to the fungal case.",
+          "names_en": "Nature, culture, domestication, wildness.",
+          "sources_en": "Environmental humanities and multispecies theory.",
+          "link_en": "Clears conceptual space for companion species."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "菌菇的生命史",
+        "title_en": "Fungal life histories",
+        "zh": "以松茸、香菇与真菌为例，说明菌菇如何在被人类扰动过的边缘生长，并反过来改变人的生计。",
+        "en": "Matsutake, shiitake and other fungi show how mushrooms grow on human-disturbed edges and in turn reshape human livelihoods.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "菌菇是边缘的居民，也是边缘的制造者。",
+          "flow": "从森林生态到采集与栽培实践。",
+          "names": "松茸、香菇、菌丝、采集者。",
+          "sources": "真菌生态学与民族志例证。",
+          "link": "把概念落到具体的生命过程。",
+          "main_en": "Mushrooms are residents and makers of edges.",
+          "flow_en": "From forest ecology to gathering and cultivation.",
+          "names_en": "Matsutake, shiitake, mycelium, gatherers.",
+          "sources_en": "Fungal ecology and ethnographic examples.",
+          "link_en": "Grounds the concept in concrete life processes."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "把伴生物种变成方法",
+        "title_en": "Companion species as method",
+        "zh": "结论把「伴生物种」提升为研究纲领：追踪共同生成，而不是给孤立的对象分类。",
+        "en": "The conclusion elevates companion species into a research programme: trace co-becoming rather than classify isolated objects.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "方法不是描述物种，而是描述物种之间的生成关系。",
+          "flow": "从案例总结转向方法论主张。",
+          "names": "伴生物种、多物种、相遇。",
+          "sources": "全文论证。",
+          "link": "直接通向《菌菇》的供应链民族志。",
+          "main_en": "Method describes the generative relations between species, not species themselves.",
+          "flow_en": "From case summary to methodological claim.",
+          "names_en": "Companion species, multispecies, encounter.",
+          "sources_en": "The essay's overall argument.",
+          "link_en": "Leads directly to Mushroom's supply-chain ethnography."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《摩擦：全球连接的人类学志》｜Friction: An Ethnography of Global Connection | 阅读与智识</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* shared Reading & IA toolkit */
+:root {
+  --ink-deep:#26261F; --ink-mid:#4E4B42; --ink-soft:#7C7568; --ink-pale:#A89F90;
+  --paper:#F7F1E3; --paper-soft:#EFE6D3; --paper-deep:#E7DCC4;
+  --gold:#C9A227; --gold-soft:#E3C457; --gold-dim:#A5811D;
+  --lapis:#3E5C76; --lapis-soft:#6C8AAF; --sage:#7A8F6E;
+  --cond:#3E7C5A; --lueur:#A5811D;
+  --ff-display:"LXGW WenKai","Noto Serif SC",serif;
+  --ff-body:"Inter","LXGW WenKai","Noto Sans SC",sans-serif;
+  --shadow-md:0 6px 20px rgba(38,38,31,.08);
+}
+body.lang-zh [data-en]{display:none!important}
+body.lang-en [data-zh]{display:none!important}
+body.lang-en [data-both] span[data-en]{display:inline!important}
+body.lang-en [data-both] span[data-zh]{display:none!important}
+body.lang-zh [data-both] span[data-zh]{display:inline!important}
+body.lang-zh [data-both] span[data-en]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);color:var(--ink-deep);background:var(--paper);line-height:1.85;overflow-x:hidden}
+a{color:var(--lapis);text-decoration:none;transition:color .25s}
+a:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(247,241,227,.85);backdrop-filter:blur(20px) saturate(1.3);-webkit-backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(167,146,93,.25)}
+.nav.scrolled{background:rgba(247,241,227,.97);box-shadow:0 2px 16px rgba(38,38,31,.07)}
+.nav-brand{font-family:var(--ff-display);font-weight:700;font-size:1.15rem;color:var(--ink-deep);letter-spacing:.05em}
+.nav-brand .sub{font-size:.66em;color:var(--ink-pale);margin-left:.55em;font-weight:400;letter-spacing:.12em}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-home{color:var(--ink-soft);font-size:.8rem;font-weight:500;border:1px solid rgba(167,146,93,.4);border-radius:18px;padding:4px 13px}
+.nav-home:hover{color:var(--gold);border-color:var(--gold)}
+.lang-toggle{display:flex;border-radius:20px;overflow:hidden;border:1px solid rgba(167,146,93,.45);font-size:.8rem;font-weight:500;cursor:pointer;background:var(--paper-soft)}
+.lang-toggle button{border:none;padding:5px 14px;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;font-weight:500;transition:all .25s;color:var(--ink-soft);background:transparent}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#fff}
+.hero{position:relative;padding:7.5rem 2rem 3.4rem;text-align:center;color:#F3EDE0;
+  background:radial-gradient(700px 360px at 20% 10%,rgba(201,162,39,.14),transparent 60%),
+    linear-gradient(170deg,#20253A 0%,#2A3350 28%,#3E5C76 52%,#8C8A6C 76%,#C9B98F 90%,var(--paper) 100%)}
+.hero .kicker{font-size:.85rem;letter-spacing:.3em;color:var(--gold-soft);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:var(--ff-display);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;color:#F7F1E3;letter-spacing:.06em;line-height:1.3;margin-bottom:.4rem}
+.hero h1 .zh{font-size:.85em;display:block;margin-bottom:.3rem;color:#E9E2CE}
+.hero .subtitle{font-family:var(--ff-display);font-size:clamp(.95rem,2vw,1.2rem);color:#D9E1EA;font-weight:300;letter-spacing:.12em}
+.hero .metachip{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1.2rem}
+.hero .metachip .chip{font-size:.74rem;letter-spacing:.08em;color:#D9E1EA;border:1px solid rgba(217,225,234,.35);border-radius:20px;padding:4px 12px;background:rgba(30,34,48,.25)}
+.article{max-width:960px;margin:0 auto;padding:3rem 2rem 3.4rem}
+h2.part{font-family:var(--ff-display);font-size:clamp(1.5rem,3.2vw,2rem);font-weight:700;color:var(--ink-deep);letter-spacing:.04em;margin:3.4rem 0 .3rem;text-align:center}
+h2.part::after{content:"";display:block;width:54px;height:2px;margin:.8rem auto 1.2rem;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:1px}
+h3.sec{font-family:var(--ff-display);font-size:1.18rem;font-weight:700;color:var(--lapis);margin:2.2rem 0 .6rem;letter-spacing:.03em}
+.srcnote{font-size:.84rem;color:var(--ink-soft);background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:12px;padding:.9rem 1.1rem;margin:1rem 0 1.8rem}
+.srcnote code{font-family:"Inter",monospace;font-size:.78rem;color:var(--gold-dim)}
+.readban{font-size:.84rem;color:#5A5E33;background:#ECEFD8;border:1px solid rgba(167,146,93,.35);border-left:4px solid var(--gold);border-radius:10px;padding:.7rem 1rem;margin:.6rem 0 1.4rem}
+.card{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1.3rem 1.5rem;margin:1.1rem 0;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.85}
+.ledger{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:14px;overflow:hidden}
+.ledger th,.ledger td{padding:.6rem .85rem;text-align:left;border-bottom:1px solid rgba(167,146,93,.22);vertical-align:top}
+.ledger th{font-family:var(--ff-display);font-size:.8rem;font-weight:700;color:var(--gold-dim);background:var(--paper-deep);letter-spacing:.04em}
+.ledger tr:last-child td{border-bottom:none}
+.ledger td.conf{font-size:.78rem;white-space:nowrap}
+.tablewrap{overflow-x:auto;margin:1rem 0 1.8rem;border-radius:14px}
+.conf{font-family:"Inter",monospace;font-weight:700}
+.conf.c-ok{color:var(--cond)} .conf.c-part{color:var(--lueur)}
+.tok{margin-left:.35rem}
+.quote{border-left:3px solid var(--gold-soft);background:var(--paper-soft);border-radius:0 10px 10px 0;padding:.7rem 1rem;margin:.7rem 0}
+.quote .orig{font-style:italic;color:var(--ink-deep)}
+.quote .trs{color:var(--ink-soft);font-size:.9rem;margin-top:.2rem}
+.quote .src{color:var(--ink-pale);font-size:.76rem;margin-top:.25rem}
+.exq{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-left:3px solid var(--lapis);border-radius:0 12px 12px 0;padding:.8rem 1.05rem;margin:.8rem 0}
+.exq .orig{font-style:italic;color:var(--ink-deep);font-size:1.02rem;line-height:1.6}
+.exq .lang{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;color:var(--ink-pale);border:1px solid rgba(167,146,93,.4);border-radius:8px;padding:.05rem .5rem;margin-left:.45rem;vertical-align:.18rem}
+.exq .tr{color:var(--ink-soft);font-size:.9rem;margin-top:.3rem;line-height:1.55}
+.exq .tr [data-en]{font-style:italic}
+.exq .note{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin-top:.45rem;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .note::before{content:"✎ ";color:var(--lapis)}
+.exq .src{color:var(--ink-pale);font-size:.76rem;margin-top:.3rem}
+.exq .mname{font-weight:700;letter-spacing:.02em;color:var(--ink-deep);margin-bottom:.35rem}
+.exq .mname [data-en]{font-weight:400;color:var(--ink-soft);font-style:italic}
+.exq .mnote{background:var(--paper-deep);border-radius:8px;padding:.5rem .7rem;margin:.4rem 0;font-size:.88rem;color:var(--ink-deep);line-height:1.6}
+.exq .mnote [data-en]{font-style:italic;color:var(--ink-soft)}
+.diagram{background:var(--paper-soft);border:1px solid rgba(167,146,93,.3);border-radius:16px;padding:1rem;margin:1.2rem 0;overflow-x:auto}
+.diagram svg{display:block;margin:0 auto;max-width:100%;height:auto}
+.diagram .cap{font-size:.8rem;color:var(--ink-pale);text-align:center;margin-top:.5rem;letter-spacing:.06em}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:2.2rem 0 1rem}
+.pill{display:inline-block;font-size:.85rem;font-weight:500;color:var(--ink-soft);border:1px solid rgba(167,146,93,.45);border-radius:22px;padding:7px 18px;background:var(--paper-soft);transition:all .25s}
+.pill:hover{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+.footer{text-align:center;padding:2.6rem 2rem 2.2rem;color:var(--ink-pale);font-size:.875rem;border-top:1px solid rgba(167,146,93,.3);background:var(--paper)}
+.gapbox{background:var(--paper-deep);border:1px solid rgba(167,146,93,.35);border-radius:16px;padding:1.4rem 1.6rem;margin:1.4rem 0}
+.gapbox .v-line{font-family:var(--ff-display);font-size:1.12rem;font-weight:700;color:var(--ink-deep);margin-bottom:.5rem}
+.gapbox .v-line .badge{display:inline-block;font-family:var(--ff-body);font-size:.74rem;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#fff;border-radius:20px;padding:3px 12px;margin-right:.6rem;vertical-align:2px}
+.gapbox ul{list-style:none}
+.gapbox ul li{position:relative;padding-left:1.25rem;margin-bottom:.5rem;font-size:.93rem;color:var(--ink-mid)}
+.gapbox ul li::before{content:"";position:absolute;left:0;top:.62rem;width:7px;height:7px;border-radius:50%;background:var(--lapis)}
+/* Goodreads × Douban hybrid book card */
+.bkcard{display:grid;grid-template-columns:126px 1fr;gap:1.15rem;background:linear-gradient(180deg,#FBF6EA,#F2EAD8);border:1px solid rgba(167,146,93,.35);border-radius:14px;padding:1.15rem 1.25rem;margin:1.3rem 0;box-shadow:0 4px 18px rgba(38,38,31,.08);position:relative;overflow:hidden}
+.bkcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-dim),var(--gold-soft));opacity:.9}
+.bkcover{width:126px;align-self:start;filter:drop-shadow(0 6px 14px rgba(38,38,31,.25))}
+.bkcover svg,.bkcover img{display:block;width:100%;height:auto;border-radius:6px}
+.bkcover img{object-fit:cover}
+.bkhead{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.bknum{font-family:var(--ff-display);font-size:.76rem;color:var(--gold-dim);letter-spacing:.14em}
+.bktitle{font-family:var(--ff-display);font-size:1.28rem;font-weight:700;color:var(--ink-deep);line-height:1.35;margin:.1rem 0 .05rem}
+.bktitle a{color:inherit}.bktitle a:hover{color:var(--gold)}
+.bktitle .orig{color:var(--lapis);font-weight:400;font-size:.9em}
+.bkauthor{font-size:.86rem;color:var(--ink-mid)}
+.bkauthor a{color:var(--lapis)}
+.aface{width:44px;height:44px;min-width:44px;border-radius:50%;object-fit:cover;border:2px solid rgba(201,162,39,.5);box-shadow:0 3px 9px rgba(38,38,31,.18)}
+.aface.sm{width:30px;height:30px;min-width:30px;border-width:1.5px;box-shadow:none;vertical-align:middle;margin-right:.3rem}
+.anode{display:flex;gap:.85rem;align-items:center}
+.bkrate{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.4rem 0 .05rem}
+.bkrate .score{font-family:var(--ff-display);font-weight:700;font-size:1.2rem;color:#C77E1F}
+.bkrate .cnt{font-size:.74rem;color:var(--ink-pale)}
+.bkrate .cnt .n{color:var(--ink-soft);font-weight:600}
+.bkmeta{font-size:.79rem;color:var(--ink-soft);margin-top:.15rem}
+.bktags{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0 .1rem}
+.tag{font-size:.7rem;border:1px solid rgba(167,146,93,.5);border-radius:10px;padding:1px 9px;color:var(--gold-dim);background:rgba(255,255,255,.55);letter-spacing:.03em}
+.tag.pub{color:#fff;border-color:transparent;font-weight:600}
+.tag.cn{font-weight:700;color:#fff;border-color:transparent}
+.status{font-size:.7rem;font-weight:700;border-radius:9px;padding:2px 9px;letter-spacing:.05em}
+.status.reading{background:#E4EFDD;color:#2F6B4A;border:1px solid #A9C6A0}
+.status.unread{background:#F6EDE4;color:#96674A;border:1px solid #DCC3AC}
+.status.half{background:#E7EDF5;color:#3E5C76;border:1px solid #A9BCD0}
+.bkwhy{font-size:.9rem;color:var(--ink-soft);font-style:italic;margin:.4rem 0 .1rem}
+.bkact{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-top:.55rem}
+.pill.sm{font-size:.77rem;padding:4px 14px}
+.pill.ext::after{content:" ↗";font-size:.72em;opacity:.75}
+.pill.on{color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-color:var(--gold)}
+/* glossary & methods chips */
+.modechip{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;border-radius:20px;padding:2px 11px;color:#fff;background:#3E5C76;margin-right:.35rem}
+.modechip.tradition{background:#8C4A77}
+.modechip.archetype{background:#C9880F}
+.modechip.practice{background:#7A8F6E}
+.domchip{display:inline-block;font-size:.68rem;font-weight:500;letter-spacing:.05em;border-radius:20px;padding:2px 11px;color:#7C7568;border:1px solid rgba(167,146,93,.45);margin-right:.35rem}
+.ref{display:inline-block;font-size:.72rem;font-weight:600;color:var(--gold-dim);background:var(--paper);border:1px dashed rgba(167,146,93,.5);border-radius:7px;padding:0 7px;margin:.1rem .2rem;vertical-align:1px}
+.term-line{margin:.3rem 0;font-size:.9rem}
+.term-line b{font-family:var(--ff-display);color:var(--ink-deep);font-weight:700}
+.method-num{font-family:var(--ff-display);font-weight:700;color:#fff;background:linear-gradient(135deg,var(--gold),var(--gold-dim));border-radius:50%;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;margin-right:.5rem;vertical-align:2px}
+.tl-list{display:flex;flex-direction:column;gap:.45rem;margin:.7rem 0 1.4rem}
+.tl-list a{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;font-size:.86rem;background:var(--paper-soft);border:1px solid rgba(167,146,93,.35);border-radius:11px;padding:.55rem .9rem;color:var(--lapis)}
+.tl-list a:hover{border-color:var(--gold);color:var(--gold);background:#FFF8EC}
+.tl-list a .dom{font-size:.72rem;color:var(--ink-pale);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44%}
+.pubviz{display:grid;gap:.55rem;margin:.8rem 0 1.6rem}
+.pubviz .row{display:grid;grid-template-columns:150px 1fr;gap:.7rem;align-items:center;font-size:.83rem}
+.pubviz .pname{display:flex;align-items:center;gap:.5rem;font-weight:600;color:var(--ink-deep);justify-content:flex-end;text-align:right}
+.pubviz .dot{width:11px;height:11px;border-radius:3px;flex:none;box-shadow:0 1px 3px rgba(38,38,31,.25)}
+.pubviz .bar{display:flex;gap:.5rem;align-items:center;min-height:24px}
+.pubviz .blk{height:22px;border-radius:5px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12);position:relative;min-width:34px}
+.pubviz .blk span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.64rem;color:#fff;font-weight:700;text-shadow:0 1px 2px rgba(0,0,0,.4);white-space:nowrap;padding:0 4px;overflow:hidden}
+.pubviz .cnt{font-size:.75rem;color:var(--ink-pale)}
+@media (max-width:768px){.bkcard{grid-template-columns:92px 1fr;padding:.9rem;gap:.8rem}.bkcover{width:92px}.pubviz .row{grid-template-columns:110px 1fr}}
+@media (max-width:768px){.nav{padding:.6rem 1rem}.hero{padding:6rem 1rem 2.6rem}.article{padding:2.4rem 1.1rem 3rem}}
+</style>
+</head>
+<body class="lang-zh">
+
+<nav class="nav" id="nav">
+  <div class="nav-brand" data-both><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE</span><span class="sub" data-both><span data-zh>15 部 · 2026-11</span><span data-en>15 books · 2026-11</span></span></div>
+  <div class="nav-right">
+    <a class="nav-home" href="../../../index.html">
+      <span data-zh>← 阅读与智识 首页</span><span data-en>← Reading &amp; IA</span>
+    </a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="zh">中</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="kicker" data-both><span data-zh>READING &amp; IA — 人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>READING &amp; IA — ANTHROPOCENE &amp; PLURIVERSE</span></p>
+  <h1><span data-zh>《摩擦：全球连接的人类学志》 · Friction: An Ethnography of Global Connection</span><span data-en>Friction: An Ethnography of Global Connection</span></h1>
+  <div class="subtitle" data-both><span data-zh>安娜·青 · 美国 · </span><span data-en>Anna Lowenhaupt Tsing · the American · </span></div>
+  <div class="metachip"><span class="chip"><span data-zh>人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span><span data-en>ANTHROPOCENE &amp; PLURIVERSE · 2026-11-10</span></span> <span class="chip"><span data-zh>学术 · 全球连接 · 摩擦</span><span data-en>scholarship · global connection · friction</span></span> <span class="chip"><span data-zh>kind·scholarship</span><span data-en>scholarship</span></span> <span class="chip"><span data-zh>人类学 / 全球化</span><span data-en>anthropology / globalization</span></span> <span class="chip"><span data-zh>conf ◐ 书目经 Goodreads/指南登记；出版社/ISBN/页数待核</span><span data-en>conf ◐ listed via Goodreads/guide; publisher/ISBN/pages pending</span></span></div>
+</section>
+
+<div class="article">
+<div class="srcnote"><div data-zh><b>来源说明。</b>◐ 书目经 Goodreads/指南登记；出版社/ISBN/页数待核 · 档案：tsing-friction（Books）核心数据经四级核实，情节细处标 ◐/○。</div><div data-en><b>Provenance.</b> ◐ listed via Goodreads/guide; publisher/ISBN/pages pending · record: tsing-friction. Publication facts verified; plot details marked ◐/○.</div></div>
+<div class="readban" data-both><span data-zh>未通读 · 仅书目、指南与二手来源（◐）</span><span data-en>not read · bibliography, guide and secondary sources only (◐)</span></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>为何此刻</span><span data-en>Why now</span></h3><div data-zh>Tsing 的方法论集大成作：全球连接不是润滑的流动，而是摩擦的产物；普世声张在本地遭遇时产生生成性张力。</div><div data-en>Tsing&#x27;s methodological summa: global connection is not smooth flow but the product of friction; universal claims generate tension when they meet the local.</div></div>
+<div class="card" id="textlinks"><h3 class="sec" data-both><span data-zh>原文获取 · Accessing the original</span><span data-en>Accessing the original</span></h3><p class="tl-note"><span data-both><span data-zh>本页仅收录官方预览 / 授权试读与图书馆记录等可核验出处，不提供未经授权的全文镜像。全文以正式出版与馆藏借阅为准。</span><span data-en>This page links only verifiable sources — official previews, licensed samples, and library/OverDrive records. No unlicensed full-text mirrors. The complete original is obtained via the published edition or library loan.</span></span></p><div class="tl-list"><a href="https://www.goodreads.com/book/show/112859.Friction" target="_blank" rel="noopener"><span data-zh>Goodreads 书目</span><span data-en>Goodreads record</span><span class="dom">www.goodreads.com ↗</span><span class="rtag" style="color:#A5811D"><span data-both><span data-zh>读者平台 · Reader community</span><span data-en>Reader community</span></span> · ◐</span></a></div></div>
+<div class="card"><h3 class="sec" data-both><span data-zh>背景</span><span data-en>Background</span></h3><div data-zh>《摩擦》基于 Tsing 在印尼加里曼丹与雅加达的田野，追踪三组「普世声张」——热带雨林保护、矿业开发与原住民权利——如何在同一片森林里相遇。她跟随自然保护协会（The Nature Conservancy）的项目、伐木工人、流动的梅拉瑙与马来社区，观察全球连接如何被具体的人、文件、资金与误解拼接起来。核心论点是：全球化不是平滑的流动，而是充满阻力的「摩擦」；正是摩擦让普遍性获得地方形态，也让地方生活被卷入更大的权力网络。</div><div data-en>Friction draws on fieldwork in Kalimantan and Jakarta to follow three universal claims — rainforest conservation, mining development and indigenous rights — as they meet in the same forest. Tsing tracks a Nature Conservancy project, loggers, mobile Meratus and Malay communities, and asks how global connection is assembled from people, documents, money and misunderstanding. The thesis is that globalisation is not smooth flow but friction; friction is what gives universals local form and pulls local life into wider power networks.</div></div>
+<p class="tok"><span class="conf c-part">◐</span> <span class="hidden"></span></p>
+<h2 class="part" data-both><span data-zh>章节结构 · Chapters &amp; sections</span><span data-en>Chapters &amp; sections</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 1 节 · 繁荣：森林作为资源、保护区与家园</span><span data-en>Section 1 · Prosperity: forest as resource, reserve and home</span></h3>
+<div data-zh>不同力量把同一片森林当作开发资源、保护对象或生活家园，繁荣的定义因此成为争夺对象。</div><div data-en>Different forces treat the same forest as development resource, conservation object or lived home; the definition of prosperity becomes contested.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>繁荣不是给定的，而是被不同普世声张争夺的。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Prosperity is not given but contested by competing universal claims.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从伐木与矿业，到保护项目，再到地方生计。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From logging and mining to conservation to local livelihoods.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>伐木公司、矿业、自然保护协会、地方社区。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Logging companies, mining, The Nature Conservancy, local communities.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>加里曼丹田野。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Kalimantan fieldwork.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>为「知识」部分提供物质利益背景。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Provides the material stakes for the knowledge section.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 2 节 · 知识：把地方转译成可治理的对象</span><span data-en>Section 2 · Knowledge: translating place into governable objects</span></h3>
+<div data-zh>地图、分类、报告与会议把森林与居民变成可计算、可管理、可资助的对象。</div><div data-en>Maps, categories, reports and meetings turn forest and residents into calculable, manageable and fundable objects.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>知识生产是全球连接的基础设施。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Knowledge production is the infrastructure of global connection.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从地图与分类，到 NGO 文件与专家会议。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From maps and categories to NGO documents and expert meetings.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>NGO 专家、政府机构、地方翻译者。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>NGO experts, state agencies, local translators.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>文件与会议民族志。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Ethnography of documents and meetings.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>解释为什么「摩擦」总发生在知识界面。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Explains why friction concentrates at knowledge interfaces.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<div class="card"><h3 class="sec" data-both><span data-zh>第 3 节 · 自由：在缝隙中迁徙与不服从</span><span data-en>Section 3 · Freedom: mobility and refusal in the seams</span></h3>
+<div data-zh>流离、迁徙与「不服从」不是全球连接的反面，而是它在地方产生的缝隙。</div><div data-en>Displacement, mobility and refusal are not the opposite of global connection but the seams it produces locally.</div>
+<div class="briefbox" style="margin-top:.8em;padding:.7em .9em;border-left:3px solid var(--accent);background:rgba(200,120,50,.05);border-radius:0 6px 6px 0;line-height:1.65"><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章旨 · Chapter argument：</strong>自由是在不平等连接中争取到的有限空间。</span><span data-en style="color:var(--ink-soft)"><strong>Argument: </strong>Freedom is a limited space won within unequal connection.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">论证展开 · Argument development：</strong>从流离失所，到迁徙策略，再到日常不服从。</span><span data-en style="color:var(--ink-soft)"><strong>Development: </strong>From displacement to mobility strategies to everyday refusal.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">关键人物 · 事件 · 年代 · 地名：</strong>流动的梅拉瑙与马来社区、伐木工人。</span><span data-en style="color:var(--ink-soft)"><strong>Key figures · events · dates · places: </strong>Mobile Meratus and Malay communities, loggers.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">材料与方法 · Evidence base：</strong>民族志章节。</span><span data-en style="color:var(--ink-soft)"><strong>Evidence: </strong>Ethnographic chapters.</span></p><p style="margin:.35em 0"><span data-zh style="color:var(--ink)"><strong style="color:var(--accent)">章际关系 · Relation to neighbouring chapters：</strong>把「摩擦」从结构分析推向生活政治。</span><span data-en style="color:var(--ink-soft)"><strong>Chapter link: </strong>Moves friction from structural analysis to the politics of life.</span></p></div>
+<p class="tok"><span class="conf c-part"><span data-both><span data-zh>◐ 论旨重构</span><span data-en>◐ reconstructed argument</span></span></span></p>
+</div>
+<h2 class="part" data-both><span data-zh>论证结构 · Argument</span><span data-en>Argument</span></h2>
+<div class="card"><h3 class="sec" data-both><span data-zh>结构</span><span data-en>Structure</span></h3><div data-zh>全书分三部分：先写「繁荣」——森林如何被不同力量视为资源、保护区或家园；再写「知识」——地图、分类与 NGO 文件如何把地方转译成可治理的对象；最后写「自由」——流离、迁徙与「不服从」如何在全球连接的缝隙中发生。案例彼此不完全连贯，Tsing 有意保留民族志的碎片性，让「摩擦」作为方法而非结论出现。</div><div data-en>The book has three parts: prosperity — how the forest is seen as resource, reserve or home; knowledge — how maps, categories and NGO documents translate place into governable objects; and freedom — how displacement, mobility and refusal happen in the seams of global connection. The cases do not fully cohere, and Tsing deliberately keeps the ethnography fragmentary so that friction appears as method rather than conclusion.</div></div>
+<h2 class="part" data-both><span data-zh>核心论题 · Thesis</span><span data-en>Thesis</span></h2>
+<div class="gapbox"><h3 class="sec" data-both><span data-zh>评价与合成</span><span data-en>Reception &amp; synthesis</span></h3><div data-zh>出版后成为全球化人类学的核心文本；「摩擦」被广泛用于描述全球与地方之间既冲突又生成的接触。
+
+评论也指出：案例的碎片性让论证不易收束；「摩擦」有时被用得过于宽泛，几乎等于「一切接触」。
+
+**合成 Synthesis：** 本书的贡献不是给出全球化的总理论，而是提供一个可追踪的中层概念：看普遍性如何在具体接触点被翻译、扭曲与重新发明。</div><div data-en>It became a core text in the anthropology of globalisation; &#x27;friction&#x27; is widely used for contact that is both conflictual and generative.
+
+Reviews also noted that the fragmentary cases make the argument hard to close, and that &#x27;friction&#x27; can be used so broadly as to mean almost any contact.
+
+**Synthesis:** The contribution is not a general theory of globalisation but a trackable middle-range concept: watch how universals are translated, twisted and reinvented at concrete points of contact.</div></div>
+<h2 class="part" data-both><span data-zh>作者所欲言 · What the author meant to say</span><span data-en>What the author meant to say</span></h2><div class="srcnote"><div data-zh>本节是意图推断，不是作者自述。做法：先给一个可被反驳的推断，再逐条说明理由，每条理由配可核查的证据指针，然后给出最强的另一种读法，最后划出推断的边界。证据分六类：文本（篇目、章序、取景、文体）、版本（书名承继、编选、初刊与禁毁）、生平（时间线、师承、位置）、自述（序跋、演讲、访谈）、接受（推荐语、书评、误读的方向）、研究（后世学术的定位）。每条各标把握；推断本身一律标 ◐。</div><div data-en>This section is an inference about intent, not a statement by the author. It offers a refutable claim, then the reasons for it, each with a checkable evidence pointer, then the strongest alternative reading, and finally the limits of the inference. Evidence falls into six kinds: text (contents, chapter order, framing, style), edition (title inheritance, selection, first publication and suppression), biography (chronology, teachers, position), self-statement (prefaces, lectures, interviews), reception (blurbs, reviews, the direction of misreading) and scholarship (later academic placement). Each item carries its own confidence mark; the inference itself is always marked ◐.</div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断 · The claim</span><span data-en>The claim</span></h3><div data-zh style="line-height:1.9"><p>Tsing 要证明：全球化不是普遍性从中心流向边缘，而是普遍性在边缘被摩擦、翻译与重新发明；全球连接因此是一个未完成的关系工程。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Tsing wants to show that globalisation is not universals flowing from centre to margin but universals being rubbed, translated and reinvented at the margin; global connection is therefore an unfinished relational project.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>为什么这样读 · The grounds</span><span data-en>The grounds</span></h3><div data-zh style="line-height:1.9"><p>书名把「摩擦」放在「全球连接」之前，等于把阻力而非流动当作解释原则；三部分分别处理繁荣、知识与自由，覆盖全球项目落地时最常被调动的三种资源；案例选择 NGO、矿业与原住民权利，是因为它们都以「普遍」之名行动。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>The title puts friction before global connection, making resistance rather than flow the explanatory principle; the three parts handle prosperity, knowledge and freedom, the resources most often mobilised when global projects land; the cases — NGO, mining, indigenous rights — all act in the name of universals.</p></div></div><div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>类别</span><span data-en>kind</span></th><th data-both><span data-zh>证据与它证明什么</span><span data-en>evidence and what it shows</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody><tr><td><span data-both><span data-zh>文本</span><span data-en>text</span></span></td><td><div data-zh>书名与导论把「摩擦」定义为生成性接触，而非障碍。</div><div data-en>The title and introduction define friction as generative contact, not obstacle.</div></td><td>Guide / book description</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>案例</span><span data-en>case</span></span></td><td><div data-zh>保护、矿业与原住民权利三组普世声张在同一森林相遇。</div><div data-en>Conservation, mining and indigenous rights meet in the same forest.</div></td><td>Guide</td><td class="conf">◐</td></tr><tr><td><span data-both><span data-zh>接受</span><span data-en>reception</span></span></td><td><div data-zh>「摩擦」被跨学科采用，说明它击中了全球研究的一个空缺。</div><div data-en>The cross-disciplinary uptake of friction shows it addressed a gap in global studies.</div></td><td>Guide / reception</td><td class="conf">◐</td></tr></tbody></table></div><div class="card"><h3 class="sec" data-both><span data-zh>反读 · The strongest alternative</span><span data-en>The strongest alternative</span></h3><div data-zh style="line-height:1.9"><p>另一种读法：本书仍是一部印尼民族志，「摩擦」的地方性很强；把它当作全球化的普遍理论，会忽略其案例与概念的边界。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Alternative reading: it remains an Indonesian ethnography, and friction is strongly local; treating it as a general theory of globalisation ignores the boundaries of its cases and concept.</p></div></div><div class="card gapbox"><h3 class="sec" data-both><span data-zh>推断的边界 · Limits of the inference</span><span data-en>Limits of the inference</span></h3><div data-zh style="line-height:1.9"><p>未通读，无法判断各章论证；上述推断依据书目、指南与二手综述，推断本身标 ◐。</p></div><div data-en style="line-height:1.8;color:var(--ink-soft);font-size:.94rem"><p>Without the full text I cannot judge the chapters; the inference rests on bibliography, guide and secondary summary, and is marked ◐.</p></div><div class="src" data-both><span data-zh>把握 ◐</span><span data-en>confidence ◐</span></div></div>
+<h2 class="part" data-both><span data-zh>关键概念 · Key concepts</span><span data-en>Key concepts</span></h2>
+<div class="srcnote"><div data-zh>每条给原语、释义与在书中的出处；释义为本书语境下的用法，不是通用辞典义。</div><div data-en>Each entry gives the original term, a gloss, and where the book uses it. The gloss is the book&#x27;s usage, not a dictionary definition.</div></div>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>术语</span><span data-en>term</span></th><th data-both><span data-zh>原语</span><span data-en>original</span></th><th data-both><span data-zh>释义</span><span data-en>gloss</span></th><th data-both><span data-zh>出处</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody><tr><td><b><span data-both><span data-zh>摩擦</span><span data-en>friction</span></span></b></td><td>friction</td><td><div data-zh>全球连接在具体接触点产生的阻力、翻译与生成性张力。</div><div data-en>The resistance, translation and generative tension produced when global connection meets concrete sites.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>普世声张</span><span data-en>universal claims</span></span></b></td><td>universal claims</td><td><div data-zh>以「全人类」「自然」「权利」之名提出的主张，必须经地方转译才能落地。</div><div data-en>Claims made in the name of humanity, nature or rights that must be locally translated to take effect.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>笨拙的投入</span><span data-en>awkward engagement</span></span></b></td><td>awkward engagement</td><td><div data-zh>不同行动者在不对等、不顺畅、不完整的接触中仍然相互卷入。</div><div data-en>Unequal, uneven and incomplete contact in which actors nonetheless become involved with one another.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>摩擦带</span><span data-en>zones of friction</span></span></b></td><td>zones of friction</td><td><div data-zh>全球项目与地方生活相遇的具体空间，如森林、矿区、会议室。</div><div data-en>Concrete spaces where global projects meet local life: forests, mines, meeting rooms.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>转译</span><span data-en>translation</span></span></b></td><td>translation</td><td><div data-zh>把普遍主张改写成地方可理解、可执行的形式；转译从不忠实。</div><div data-en>Rewriting a universal claim into a locally intelligible and executable form; translation is never faithful.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr><tr><td><b><span data-both><span data-zh>全球连接</span><span data-en>global connection</span></span></b></td><td>global connection</td><td><div data-zh>不是既成的网络，而是被不断拼接、维持与争夺的关系。</div><div data-en>Not a ready-made network but relations continually assembled, maintained and contested.</div></td><td style="font-size:.8rem;color:var(--ink-pale)">Friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr></tbody></table></div>
+<h2 class="part" data-both><span data-zh>接受史 · Reception history</span><span data-en>Reception history</span></h2><div class="srcnote"><div data-zh>按四层记录可核查的接受证据：当时评价、后世再评价、实际影响、争议反证。每条附出处与年份；未见确证者标 ○。</div><div data-en>Four strata of checkable reception evidence: contemporary reviews, later reassessment, actual influence, counter-argument. Each item carries a venue and year; ○ marks what could not be confirmed.</div></div><div class="card"><h3 class="sec" data-both><span data-zh>当时的接受 · Contemporary reception</span><span data-en>Contemporary reception</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>2000 年代中期出版后迅速进入全球化人类学课程；评论把它视为「全球民族志」的方法示范，而不仅是一部印尼研究。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Published in the mid-2000s, it quickly entered courses on the anthropology of globalisation; reviews treated it as a methodological demonstration of &#x27;global ethnography&#x27;, not only an Indonesian study.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>后世的再评价 · Later reassessment</span><span data-en>Later reassessment</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>「摩擦」后来成为跨学科高频词，被用于媒体研究、基础设施研究与环境人文；Tsing 自己则在《菌菇》中把摩擦转向多物种协作。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>Friction later became a cross-disciplinary term in media studies, infrastructure studies and environmental humanities; Tsing herself turned it toward multispecies collaboration in Mushroom.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>影响 · Influence</span><span data-en>Influence</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>本书让「全球连接」从抽象结构变成可追踪的接触点，影响了后续关于 NGO、保护、供应链与基础设施的研究。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The book turned global connection from abstract structure into trackable points of contact, shaping later work on NGOs, conservation, supply chains and infrastructure.</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>争议与反证 · Critique</span><span data-en>Critique</span></h3><div data-zh style="line-height:1.85;font-size:.96rem"><p>主要保留是：案例碎片化使「摩擦」难以被证伪；概念的外延过宽，可能把一切接触都称为摩擦。此外，本书对资本结构的处理仍偏民族志，而非政治经济学。</p></div><div data-en style="line-height:1.75;color:var(--ink-soft);font-size:.93rem"><p>The main reservation is that the fragmentary cases make friction hard to falsify; the concept is broad enough to call almost any contact friction. The treatment of capital also remains ethnographic rather than political-economic.</p></div></div><div class="srcnote"><div data-zh><b>接受史依据。</b>以下为可核查的评论、书评与研究文献。</div><div data-en><b>Reception sources.</b> Checkable reviews and scholarship below.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.8rem"><li><span data-both><span data-zh>Guide（主题综述与书目）</span><span data-en>Guide (thematic survey and bibliography)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>局限与争议 · Limits &amp; disputes</span><span data-en>Limits &amp; disputes</span></h2><div class="card gapbox" style="line-height:1.85"><div data-zh><p>以下为结构层面的可能局限，不是对全文的判断（未通读）。</p></div><div data-en style="color:var(--ink-soft);font-size:.94rem"><p>Structural limits only, not a judgment on the full text (unread).</p></div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>案例碎片化</span><span data-en>Fragmentary cases</span></p><div data-zh style="color:var(--ink-soft)">多地点拼贴让论证不易收束，读者需要自己搭建线索。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The multi-site collage makes the argument hard to close; readers must build the thread themselves.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>概念外延过宽</span><span data-en>Concept too broad</span></p><div data-zh style="color:var(--ink-soft)">「摩擦」几乎可以指任何接触，降低了可证伪性。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">Friction can mean almost any contact, weakening falsifiability.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>政治经济学不足</span><span data-en>Thin political economy</span></p><div data-zh style="color:var(--ink-soft)">对资本积累的整体结构着墨少于对接触现场的民族志。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The overall structure of capital accumulation gets less attention than the ethnographic site.</div></div><div class="card"><p style="font-weight:600" data-both><span data-zh>印尼之外的外推</span><span data-en>Generalising beyond Indonesia</span></p><div data-zh style="color:var(--ink-soft)">案例扎根于印尼，跨区域使用「摩擦」时需要重新校准。</div><div data-en style="color:var(--ink-soft);font-size:.92rem">The cases are rooted in Indonesia; using friction elsewhere requires recalibration.</div></div>
+<h2 class="part" data-both><span data-zh>学术方法 · Scholarship</span><span data-en>Scholarship</span></h2>
+<div class="card"><p data-zh>用多地点、多行动者的拼贴代替单线叙事，让「摩擦」在结构层面被感受到。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Uses a collage of sites and actors instead of a single line, letting friction be felt at the level of structure.</p></div>
+<div class="card"><p data-zh>把 NGO 文件、地图与田野对话并置，展示「普遍性」如何被具体媒介承载。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Places NGO documents, maps and field dialogue side by side to show how universals are carried by concrete media.</p></div>
+<div class="card"><p data-zh>拒绝把任何一方写成纯粹反派：保护者、伐木者与地方居民都在摩擦中改变。</p><p data-en style="color:var(--ink-soft);font-size:.9rem">Refuses to make any side a pure villain: conservationists, loggers and locals all change through friction.</p></div>
+<h2 class="part" data-both><span data-zh>核心主题 · Themes</span><span data-en>Themes</span></h2>
+<div class="exq">
+<div class="mname"><span data-zh>森林</span><span data-en>the forest</span></div>
+<div class="orig">forest</div>
+<div class="mnote"><div data-zh>同一片森林同时是资源、保护区、家园与全球象征。</div><div data-en>The same forest is resource, reserve, home and global icon at once.</div></div>
+<div class="src">Friction · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>文件</span><span data-en>documents</span></div>
+<div class="orig">documents</div>
+<div class="mnote"><div data-zh>地图、报告与合同是普世声张落地的最小单位。</div><div data-en>Maps, reports and contracts are the smallest units through which universals land.</div></div>
+<div class="src">Friction · <span class="conf c-part">◐</span></div>
+</div>
+<div class="exq">
+<div class="mname"><span data-zh>会议</span><span data-en>the meeting</span></div>
+<div class="orig">meeting</div>
+<div class="mnote"><div data-zh>不同行动者在同一张桌子上笨拙地相互卷入。</div><div data-en>Actors become awkwardly involved with one another at the same table.</div></div>
+<div class="src">Friction · <span class="conf c-part">◐</span></div>
+</div>
+<h2 class="part" data-both><span data-zh>原文摘录 · Passages from the book</span><span data-en>Passages from the book</span></h2>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>全球化不是普遍性从中心流向边缘，而是普遍性在边缘被摩擦、翻译与重新发明。</div><div data-en>Globalisation is not universals flowing from centre to margin but universals being rubbed, translated and reinvented at the margin.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<div class="exq"><div class="mname"><span data-zh>论旨概述 · 非逐字原文</span><span data-en>Paraphrase &middot; not a verbatim quotation</span></div><div class="mnote"><div data-zh>不同行动者在不对等、不顺畅的接触中仍然相互卷入，这就是全球连接的现场。</div><div data-en>Unequal, uneven contact in which actors nonetheless become involved with one another — that is the site of global connection.</div></div><div class="src"><span data-both><span data-zh>Guide（综述）</span><span data-en>Guide (summary)</span></span> · <span class="conf c-part">◐</span></div></div>
+<h2 class="part" data-both><span data-zh>长评 · Critical essay</span><span data-en>Critical essay</span></h2><h3 class="sec" style="text-align:center;margin-top:.4rem" data-both><span data-zh>摩擦作为方法：读《摩擦》</span><span data-en>Friction as method</span></h3><p style="text-align:center;color:var(--ink-soft);font-size:.95rem;line-height:1.7;margin:0 auto 1.2rem;max-width:78ch" data-both><span data-zh>全球化不是流动，而是普遍性在具体接触点被摩擦、翻译与重新发明。</span><span data-en>Globalisation is not flow but universals being rubbed, translated and reinvented at concrete points of contact.</span></p><div class="card gapbox review" style="line-height:1.95"><div data-zh><p>《摩擦》最容易被误读成一本「反全球化」的书。它其实更冷静：Tsing 不否认全球连接的存在，她只是拒绝把它写成平滑的流动。热带雨林保护、矿业开发与原住民权利，三组都以「全人类」或「自然」之名说话；当它们进入加里曼丹的森林，就必须经过文件、会议、翻译与误解。摩擦不是连接的失败，而是连接得以发生的方式。</p><p>这本书的方法也值得注意：Tsing 不从一个理论体系出发，而是从多个接触点出发，让概念在案例之间慢慢显形。读者会觉得结构松散，但这种松散是有意的——它模拟了全球连接本身的不完整。</p><p>局限同样明显：当「摩擦」可以指任何接触时，它就不再能区分不同性质的冲突；本书对资本积累的整体结构也着墨不多。它更适合被当作一个中层方法，而不是全球化的总理论。</p><p>读《摩擦》最好的收获，或许是学会在看全球项目时问：它在这里被翻译成了什么？谁在翻译？翻译过程中失去了什么？这些问题比「全球化是好是坏」更有用。</p></div></div><div class="card"><h3 class="sec" data-both><span data-zh>英文摘要 · Abstract</span><span data-en>Abstract</span></h3><div style="line-height:1.8"><div data-en><p>Friction is easily misread as an anti-globalisation book. It is cooler than that: Tsing does not deny global connection; she refuses to write it as smooth flow. Rainforest conservation, mining and indigenous rights all speak in the name of humanity or nature; when they enter a Kalimantan forest they must pass through documents, meetings, translation and misunderstanding. Friction is not the failure of connection but the way connection happens.</p><p>The method matters too: Tsing does not start from a theoretical system but from multiple points of contact, letting concepts emerge slowly across cases. The structure feels loose, but the looseness is deliberate — it mimics the incompleteness of global connection itself.</p><p>The limits are equally clear: when friction can mean any contact, it can no longer distinguish kinds of conflict; the book also says little about the overall structure of capital accumulation. It is better used as a middle-range method than as a general theory of globalisation.</p><p>The best takeaway may be a habit of asking, whenever a global project lands: what has it been translated into here, who is translating, and what is lost in translation? These questions are more useful than whether globalisation is good or bad.</p></div><div data-zh style="font-size:.85rem;color:var(--ink-pale)">英文侧为独立 critical abstract，不逐句对译；判断与反方论证与中文正文一致。</div></div></div><div class="srcnote"><div data-zh><b>长评依据。</b>以下为可核查的评论文献与版本页；未逐条引用的内部材料以 ◐ 标于正文。</div><div data-en><b>Review sources.</b> Checkable reviews and edition pages below; internal material not quoted is marked ◐ in the text.</div><ul style="margin:.5rem 0 0 1.1rem;font-size:.82rem"><li><span data-both><span data-zh>Guide（主题综述与书目）</span><span data-en>Guide (thematic survey and bibliography)</span></span></li><li><span data-both><span data-zh>本书导论与二手评论（未逐页核对）</span><span data-en>The book&#x27;s introduction and secondary reviews (not checked page by page)</span></span></li></ul></div>
+<h2 class="part" data-both><span data-zh>精读建议 · Deep reading</span><span data-en>Deep reading</span></h2>
+<div class="card"><div data-zh>先读导论，写下你对「friction」的一句话定义；读完三部分后再回来修改，看看概念是否变宽或变窄。</div><div data-en>Read the introduction and write a one-sentence definition of friction; revise it after the three parts and see whether the concept widened or narrowed.</div></div>
+<div class="card"><div data-zh>选一个案例（保护项目、矿业或原住民权利），列出「全球」与「地方」各自携带的三种媒介：文件、资金、人员。</div><div data-en>Choose one case (conservation, mining or indigenous rights) and list three media carried by &#x27;global&#x27; and &#x27;local&#x27; respectively: documents, money, people.</div></div>
+<div class="card"><div data-zh>追问：摩擦是否总是生成性的？在哪些情况下，摩擦只是消耗与压迫？</div><div data-en>Ask whether friction is always generative. When is it merely depletion and oppression?</div></div>
+<h2 class="part" data-both><span data-zh>相关定位 · Positioning</span><span data-en>Related works &amp; positioning</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>作品</span><span data-en>work</span></th><th data-both><span data-zh>作者</span><span data-en>author</span></th><th data-both><span data-zh>年</span><span data-en>year</span></th><th data-both><span data-zh>关系</span><span data-en>relation</span></th><th data-both><span data-zh>一句理由</span><span data-en>why</span></th><th data-both><span data-zh>轴</span><span data-en>axis</span></th><th data-both><span data-zh>把握</span><span data-en>conf</span></th></tr></thead><tbody>
+<tr><td><b>In the Realm of the Diamond Queen</b></td><td>Anna Lowenhaupt Tsing</td><td>1993</td><td><span data-both><span data-zh>同作者 · 前作</span><span data-en>same author · predecessor</span></span></td><td><div data-zh>从「边缘」到「全球连接」：把地方问题升级为跨国问题</div><div data-en>from margin to global connection: scaling a local question into a transnational one</div></td><td>friction</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>Encountering Development</b></td><td>Arturo Escobar</td><td>1995</td><td><span data-both><span data-zh>对读 · 发展批判</span><span data-en>compare · development critique</span></span></td><td><div data-zh>Escobar 批判发展话语的宏观装置，Tsing 展示它在森林里如何被摩擦</div><div data-en>Escobar critiques the macro apparatus of development discourse; Tsing shows it being rubbed in the forest</div></td><td>development</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><b>The Mushroom at the End of the World</b></td><td>Anna Lowenhaupt Tsing</td><td>2015</td><td><span data-both><span data-zh>同作者 · 后续</span><span data-en>same author · successor</span></span></td><td><div data-zh>从「全球连接」转向「废墟中的多物种协作」</div><div data-en>from global connection to multispecies collaboration in ruins</div></td><td>multispecies</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>核对账本 · Fact ledger</span><span data-en>Fact ledger</span></h2>
+<div class="tablewrap"><table class="ledger"><thead><tr><th data-both><span data-zh>主张</span><span data-en>claim</span></th><th data-both><span data-zh>来源</span><span data-en>source</span></th><th class="conf">conf</th></tr></thead><tbody>
+<tr><td><span data-both><span data-zh>《Friction: An Ethnography of Global Connection》2004/2005 年由 Princeton University Press 出版</span><span data-en>Friction: An Ethnography of Global Connection was published by Princeton University Press in 2004/2005</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / Goodreads</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>田野覆盖印尼加里曼丹与雅加达，涉及雨林保护、矿业与原住民权利</span><span data-en>Fieldwork covers Kalimantan and Jakarta, involving rainforest conservation, mining and indigenous rights</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>本书把「摩擦」确立为全球化研究的中层概念</span><span data-en>The book establishes friction as a middle-range concept for globalisation studies</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide / reception</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+<tr><td><span data-both><span data-zh>Tsing 后来在《菌菇》中把「摩擦」扩展为多物种的协作生存问题</span><span data-en>Tsing later extends friction into the problem of multispecies collaborative survival in Mushroom</span></span></td><td style="font-size:.8rem;color:var(--ink-pale)">Guide</td><td class="conf"><span class="conf c-part">◐</span></td></tr>
+</tbody></table></div>
+<h2 class="part" data-both><span data-zh>未核 / 未知 · Unverified</span><span data-en>Unverified / unknown</span></h2>
+<div class="card"><p><span data-both><span data-zh>ISBN、页数与具体印次</span><span data-en>ISBN, page count and printing</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="card"><p><span data-both><span data-zh>三部分各章标题（未逐页核对）</span><span data-en>chapter titles of the three parts (not checked page by page)</span></span> <span class="tok"><span class="conf c-part">◐</span></span></p></div>
+<div class="links">
+<a class="pill" href="../tsing-escobar.html">← <span data-zh>返回人类世 · 多元宇宙 ANTHROPOCENE &amp; PLURIVERSE</span><span data-en>back to ANTHROPOCENE &amp; PLURIVERSE</span></a>
+<a class="pill" href="../index.html">☰ <span data-zh>书单档案</span><span data-en>the archive</span></a>
+<a class="pill" href="../../authors/index.html">↝ <span data-zh>作者知识图谱</span><span data-en>the authors graph</span></a>
+</div>
+</div>
+
+<footer class="footer">
+  <p data-zh>一书一卡，一人一卡；读完每一本，至少落下一个延伸线索 · 阅读与智识</p>
+  <p data-en>One card per book, one per author; every finished book drops a lead · Reading &amp; IA</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const toggle=document.getElementById('langToggle');
+const buttons=toggle.querySelectorAll('button');
+function setLang(lang){document.body.className='lang-'+lang;buttons.forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('zhzz-reading-lang',lang);document.documentElement.lang=(lang==='zh')?'zh':'en';}
+const saved=localStorage.getItem('zhzz-reading-lang');
+if(saved)setLang(saved);
+buttons.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+</script>
+</body>
+</html>

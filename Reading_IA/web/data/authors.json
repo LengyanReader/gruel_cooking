@@ -6102,6 +6102,341 @@
           "conf": "◐"
         }
       ]
+    },
+    {
+      "id": "tsing",
+      "name_zh": "安娜·青",
+      "name_en": "Anna Lowenhaupt Tsing",
+      "name_native": "Anna Lowenhaupt Tsing",
+      "name_native_en": "Anna Lowenhaupt Tsing",
+      "slug_display": "Anna Lowenhaupt Tsing",
+      "born": "1952",
+      "born_en": "1952",
+      "native_lang": "English",
+      "domain_zh": "多物种民族志 · 人类世 · 全球连接",
+      "domain_en": "multispecies ethnography · Anthropocene · global connection",
+      "one_liner_zh": "美国人类学家，以《摩擦》《世界末日的菌菇》《野性图谱》把「全球连接」写成摩擦、把「人类世」写成斑驳的多物种现场。",
+      "one_liner_en": "American anthropologist whose Friction, The Mushroom at the End of the World and Feral Atlas turn global connection into friction and the Anthropocene into patchy multispecies sites.",
+      "school_zh": "多物种民族志 · 摩擦理论",
+      "school_en": "multispecies ethnography · friction theory",
+      "circle": [
+        {
+          "who": "Donna Haraway",
+          "edge": "⇌",
+          "why_zh": "同代对谈：多物种、共生（sympoiesis）与「与麻烦共处」的共同问题域",
+          "why_en": "peer interlocutor on multispecies life, sympoiesis and staying with the trouble",
+          "conf": "✓"
+        },
+        {
+          "who": "Nils Bubandt / Elaine Gan / Heather Swanson",
+          "edge": "✎",
+          "why_zh": "Feral Atlas 合编者；「斑驳人类世」的共同作者",
+          "why_en": "co-editors of Feral Atlas and co-authors of the patchy Anthropocene work",
+          "conf": "✓"
+        },
+        {
+          "who": "Matsutake Worlds Research Group",
+          "edge": "✎",
+          "why_zh": "松茸研究协作组：多人多地的民族志协作",
+          "why_en": "the matsutake research collective; multi-sited collaborative ethnography",
+          "conf": "✓"
+        },
+        {
+          "who": "Shiho Satsuka / Michael Hathaway",
+          "edge": "✎",
+          "why_zh": "松茸追踪的合作研究者",
+          "why_en": "collaborators in tracing matsutake worlds",
+          "conf": "◐"
+        },
+        {
+          "who": "UC Santa Cruz · 人类学系",
+          "edge": "◎",
+          "why_zh": "长期任教所在，多物种与人类世研究的据点",
+          "why_en": "long-term institutional home for multispecies and Anthropocene work",
+          "conf": "✓"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "1993",
+          "event_zh": "《钻石女王的领地》出版",
+          "event_en": "In the Realm of the Diamond Queen",
+          "conf": "✓"
+        },
+        {
+          "y": "2004",
+          "event_zh": "《摩擦》出版",
+          "event_en": "Friction published",
+          "conf": "✓"
+        },
+        {
+          "y": "2015",
+          "event_zh": "《世界末日的菌菇》出版",
+          "event_en": "The Mushroom at the End of the World",
+          "conf": "✓"
+        },
+        {
+          "y": "2022",
+          "event_zh": "Feral Atlas 上线",
+          "event_en": "Feral Atlas launched",
+          "conf": "✓"
+        },
+        {
+          "y": "2019",
+          "event_zh": "与 Escobar 同被列为「后发展/多物种」一代的核心引用",
+          "event_en": "read alongside Escobar as core references for post-development and multispecies work",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "2004",
+          "title": "Friction",
+          "title_en": "Friction",
+          "note_zh": "全球连接的人类学",
+          "note_en": "ethnography of global connection",
+          "conf": "✓"
+        },
+        {
+          "y": "2015",
+          "title": "The Mushroom at the End of the World",
+          "title_en": "The Mushroom at the End of the World",
+          "note_zh": "松茸多物种民族志",
+          "note_en": "matsutake multispecies ethnography",
+          "conf": "✓"
+        },
+        {
+          "y": "2024",
+          "title": "Field Guide to the Patchy Anthropocene",
+          "title_en": "Field Guide to the Patchy Anthropocene",
+          "note_zh": "斑驳人类世",
+          "note_en": "patchy Anthropocene",
+          "conf": "✓"
+        },
+        {
+          "y": "1993",
+          "title": "In the Realm of the Diamond Queen",
+          "title_en": "In the Realm of the Diamond Queen",
+          "note_zh": "边陲、性别与国家的人类学",
+          "note_en": "marginality, gender and the state",
+          "conf": "✓"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "全球连接不是润滑的流动，而是摩擦的产物；人类世不是整体，而是斑驳的多物种拼贴。",
+      "stance_en": "Global connection is not smooth flow but friction; the Anthropocene is not a whole but a patchy multispecies collage.",
+      "why_now_zh": "在「人类世」被大写的时代，Tsing 坚持从具体斑块与多物种协作出发。",
+      "why_now_en": "When the Anthropocene is written in capitals, Tsing insists on concrete patches and multispecies collaboration.",
+      "fact_ledger": [
+        {
+          "claim": "Tsing 为 UC Santa Cruz 人类学教授，著有 Friction (2004)、Mushroom (2015)",
+          "claim_en": "Tsing is a professor at UC Santa Cruz; author of Friction (2004) and Mushroom (2015)",
+          "source": "Goodreads / guide",
+          "source_en": "Goodreads / guide",
+          "conf": "✓"
+        },
+        {
+          "claim": "Feral Atlas 为 2022 年上线的数字项目（feralatlas.org）",
+          "claim_en": "Feral Atlas is a 2022 digital project (feralatlas.org)",
+          "source": "Guide / Feral Atlas",
+          "source_en": "Guide / Feral Atlas",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "出生年与部分出版社/ISBN",
+          "item_en": "birth year and some publishers/ISBNs",
+          "conf": "◐"
+        },
+        {
+          "item": "《In the Realm of the Diamond Queen》出版社与页数、以及 Feral Atlas 的确切上线年份（2020/2022 两说）",
+          "item_en": "publisher and pages of In the Realm of the Diamond Queen, and the exact launch year of Feral Atlas (2020 and 2022 both cited)",
+          "conf": "◐"
+        }
+      ]
+    },
+    {
+      "id": "escobar",
+      "name_zh": "阿图罗·埃斯科瓦尔",
+      "name_en": "Arturo Escobar",
+      "name_native": "Arturo Escobar",
+      "name_native_en": "Arturo Escobar",
+      "slug_display": "Arturo Escobar",
+      "born": "1952",
+      "born_en": "1952",
+      "native_lang": "English",
+      "domain_zh": "后发展 · 政治本体论 · 设计人类学",
+      "domain_en": "post-development · political ontology · design anthropology",
+      "one_liner_zh": "哥伦比亚裔美国人类学家，以《遭遇发展》《多元宇宙的设计》把「发展」写成话语装置、把「设计」写成世界生成。",
+      "one_liner_en": "Colombian-American anthropologist whose Encountering Development and Designs for the Pluriverse treat development as discourse and design as world-making.",
+      "school_zh": "后发展 · 多元宇宙政治",
+      "school_en": "post-development · pluriversal politics",
+      "circle": [
+        {
+          "who": "Michal Osterweil / Kriti Sharma",
+          "edge": "✎",
+          "why_zh": "《Relationality》(2022) 合著者：社会运动理论与科学哲学",
+          "why_en": "co-authors of Relationality (2022): social movement theory and philosophy of science",
+          "conf": "◐"
+        },
+        {
+          "who": "Marisol de la Cadena",
+          "edge": "⇌",
+          "why_zh": "同代对谈：政治本体论与「大地存在」",
+          "why_en": "peer interlocutor on political ontology and earth beings",
+          "conf": "✓"
+        },
+        {
+          "who": "Ashish Kothari / Alberto Acosta / Gustavo Esteva",
+          "edge": "⇌",
+          "why_zh": "多元宇宙与后发展运动中的同行：Buen Vivir、生态斯瓦拉吉",
+          "why_en": "allies in pluriverse and post-development movements: Buen Vivir, ecological swaraj",
+          "conf": "◐"
+        },
+        {
+          "who": "Grupo de Estudios Culturales · Universidad del Valle（Cali）",
+          "edge": "◎",
+          "why_zh": "早期学术据点：发展话语与哥伦比亚太平洋研究",
+          "why_en": "early institutional base for development-discourse and Colombian Pacific research",
+          "conf": "◐"
+        },
+        {
+          "who": "UNC Chapel Hill · 人类学系",
+          "edge": "◎",
+          "why_zh": "长期任教所在（荣退）",
+          "why_en": "long-term home department (now emeritus)",
+          "conf": "✓"
+        }
+      ],
+      "timeline": [
+        {
+          "y": "1995",
+          "event_zh": "《遭遇发展》出版",
+          "event_en": "Encountering Development",
+          "conf": "◐"
+        },
+        {
+          "y": "2008",
+          "event_zh": "《差异的领地》出版",
+          "event_en": "Territories of Difference",
+          "conf": "✓"
+        },
+        {
+          "y": "2010",
+          "event_zh": "《为后发展的一场明加》出版",
+          "event_en": "Una minga para el postdesarrollo",
+          "conf": "◐"
+        },
+        {
+          "y": "2016",
+          "event_zh": "《自主与设计》出版",
+          "event_en": "Autonomía y diseño",
+          "conf": "◐"
+        },
+        {
+          "y": "2018",
+          "event_zh": "《多元宇宙的设计》出版",
+          "event_en": "Designs for the Pluriverse",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "event_zh": "《多元宇宙政治》出版",
+          "event_en": "Pluriversal Politics",
+          "conf": "◐"
+        },
+        {
+          "y": "2022",
+          "event_zh": "《关联性》合著出版",
+          "event_en": "Relationality (with Osterweil & Sharma)",
+          "conf": "◐"
+        }
+      ],
+      "works": [
+        {
+          "y": "1995",
+          "title": "Encountering Development",
+          "title_en": "Encountering Development",
+          "note_zh": "发展话语批判",
+          "note_en": "critique of development discourse",
+          "conf": "◐"
+        },
+        {
+          "y": "2008",
+          "title": "Territories of Difference",
+          "title_en": "Territories of Difference",
+          "note_zh": "哥伦比亚太平洋黑人社区",
+          "note_en": "Colombian Pacific black communities",
+          "conf": "✓"
+        },
+        {
+          "y": "2010",
+          "title": "Una minga para el postdesarrollo",
+          "title_en": "Una minga para el postdesarrollo",
+          "note_zh": "明加：后发展的实践原型",
+          "note_en": "明加：后发展的实践原型",
+          "conf": "◐"
+        },
+        {
+          "y": "2016",
+          "title": "Autonomía y diseño",
+          "title_en": "Autonomía y diseño",
+          "note_zh": "自主与设计：从设计人类学到自治",
+          "note_en": "自主与设计：从设计人类学到自治",
+          "conf": "◐"
+        },
+        {
+          "y": "2018",
+          "title": "Designs for the Pluriverse",
+          "title_en": "Designs for the Pluriverse",
+          "note_zh": "设计即世界生成",
+          "note_en": "design as world-making",
+          "conf": "✓"
+        },
+        {
+          "y": "2020",
+          "title": "Pluriversal Politics",
+          "title_en": "Pluriversal Politics",
+          "note_zh": "真实/可能：多元宇宙的政治",
+          "note_en": "真实/可能：多元宇宙的政治",
+          "conf": "◐"
+        },
+        {
+          "y": "2022",
+          "title": "Relationality",
+          "title_en": "Relationality",
+          "note_zh": "关系本体论（合著）",
+          "note_en": "关系本体论（合著）",
+          "conf": "◐"
+        }
+      ],
+      "awards": [],
+      "stance_zh": "发展不是中性援助，而是话语权力；世界不止一个，设计可以参与生成多元宇宙。",
+      "stance_en": "Development is not neutral aid but discursive power; there is more than one world, and design can participate in making pluriverses.",
+      "why_now_zh": "当「另一种可能」成为全球口号，Escobar 给出后发展与多元宇宙的政治本体论。",
+      "why_now_en": "When 'another possible' becomes a global slogan, Escobar supplies the political ontology of post-development and the pluriverse.",
+      "fact_ledger": [
+        {
+          "claim": "Escobar 为 UNC Chapel Hill 人类学教授（荣退），著有 Encountering Development、Designs for the Pluriverse",
+          "claim_en": "Escobar is emeritus professor at UNC Chapel Hill; author of Encountering Development and Designs for the Pluriverse",
+          "source": "Goodreads / guide",
+          "source_en": "Goodreads / guide",
+          "conf": "✓"
+        }
+      ],
+      "unverified": [
+        {
+          "item": "出生年与部分出版社/ISBN",
+          "item_en": "birth year and some publishers/ISBNs",
+          "conf": "◐"
+        },
+        {
+          "item": "《明加》《自主与设计》《多元宇宙政治》《关联性》的出版社、ISBN、页数与版次（本轮未能联网复核）",
+          "item_en": "publishers, ISBNs, pages and printings of Una minga, Autonomía y diseño, Pluriversal Politics and Relationality (not re-checked online this round)",
+          "conf": "◐"
+        }
+      ]
     }
   ]
 }

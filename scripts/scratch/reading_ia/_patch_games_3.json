@@ -1,0 +1,441 @@
+{
+  "parasecoli-gastronativism": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "定义：食物如何划分归属",
+        "title_en": "Definition: how food draws belonging",
+        "zh": "Parasecoli 先给出定义：美食民族主义是把食物当作「谁属于这里」的判准，它既可是防卫性的，也可是攻击性的。",
+        "en": "Parasecoli begins with a definition: gastronativism makes food the criterion of who belongs, and it can be defensive or aggressive.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "食物不只是象征，而是 membership 的行政技术。",
+          "flow": "从日常饮食，到归属判断，再到政治动员。",
+          "names": "国民、移民、外来食物。",
+          "sources": "导论与定义章。",
+          "link": "为后续案例提供分析尺规。",
+          "main_en": "Food is not only symbol but an administrative technique of membership.",
+          "flow_en": "From everyday eating to judgments of belonging to political mobilisation.",
+          "names_en": "Citizens, migrants, foreign foods.",
+          "sources_en": "Introduction and definitional chapters.",
+          "link_en": "Supplies the gauge for the cases that follow."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "光谱：从抵抗到排外",
+        "title_en": "A spectrum: from resistance to exclusion",
+        "zh": "核心论证是一个光谱：同一套「我们的食物」话语，既可以抵抗跨国资本与文化同质化，也可以转化为对外来者的排斥。",
+        "en": "The core argument is a spectrum: the same discourse of 'our food' can resist corporate capital and homogenisation, or turn into exclusion of outsiders.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "同一句话，可以是盾，也可以是刀。",
+          "flow": "从保护传统，到划界，再到排斥。",
+          "names": "慢食运动、本土主义者、移民社群。",
+          "sources": "比较案例章。",
+          "link": "避免把食物运动一律浪漫化。",
+          "main_en": "The same sentence can be a shield or a knife.",
+          "flow_en": "From protecting tradition to drawing boundaries to exclusion.",
+          "names_en": "Slow Food, nativists, migrant communities.",
+          "sources_en": "Comparative case chapters.",
+          "link_en": "Prevents romanticising food movements wholesale."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "全球现象，而非穷国特产",
+        "title_en": "A global phenomenon, not a poor-country speciality",
+        "zh": "Parasecoli 强调美食民族主义不是「落后地区」的症候：从欧洲的产地保护到北美的精酿与本土运动，它同样发生在富国与精英层。",
+        "en": "Parasecoli stresses that gastronativism is not a symptom of 'backward regions': from European origin protection to North American craft and localist movements, it occurs in rich countries and among elites too.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "排外不只属于底层焦虑，也属于品味政治。",
+          "flow": "从欧洲，到北美，再到全球南方。",
+          "names": "地理标志、精酿、农夫市集。",
+          "sources": "跨区域案例。",
+          "link": "把概念从「民粹」扩展为「治理术」。",
+          "main_en": "Exclusion belongs not only to working-class anxiety but to taste politics.",
+          "flow_en": "From Europe to North America to the global South.",
+          "names_en": "Geographical indications, craft beer, farmers' markets.",
+          "sources_en": "Cross-regional cases.",
+          "link_en": "Widens the concept from populism to governmentality."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "限度：概念能否承重",
+        "title_en": "Limits: can the concept bear the weight",
+        "zh": "结论讨论概念的边界：当一切食物政治都被称作「美食民族主义」，它是否还区分得开保护、排斥与单纯的乡愁？",
+        "en": "The conclusion asks about the concept's boundary: if all food politics is called gastronativism, can it still distinguish protection, exclusion and plain nostalgia?",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "一个太好用的概念，往往失去分辨力。",
+          "flow": "从类型学，到滑移风险，再到分析建议。",
+          "names": "研究者、运动、消费者。",
+          "sources": "结论章。",
+          "link": "把定义工作收回自身。",
+          "main_en": "A concept that is too usable tends to lose discrimination.",
+          "flow_en": "From typology to the risk of slippage to analytical advice.",
+          "names_en": "Researchers, movements, consumers.",
+          "sources_en": "Conclusion.",
+          "link_en": "Turns the definitional work back on itself."
+        }
+      }
+    ]
+  },
+  "parasecoli-global-brooklyn": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "什么是「全球布鲁克林」",
+        "title_en": "What 'Global Brooklyn' is",
+        "zh": "开篇命名一种跨国审美：裸露砖墙、爱迪生灯泡、粗木长桌、单一产地咖啡——它看起来极本地，其实是一套全球流通的设计语法。",
+        "en": "The opening names a transnational aesthetic: exposed brick, Edison bulbs, rough wooden tables, single-origin coffee — it looks hyper-local but is a globally circulating design grammar.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "地方感是可以被设计、被复制的。",
+          "flow": "从视觉符号，到空间语法，再到全球流通。",
+          "names": "咖啡馆、餐厅、设计师。",
+          "sources": "编者导论与城市案例。",
+          "link": "为全书提供可辨识的对象。",
+          "main_en": "A sense of place can be designed and reproduced.",
+          "flow_en": "From visual signs to spatial grammar to global circulation.",
+          "names_en": "Cafés, restaurants, designers.",
+          "sources_en": "Editors' introduction and city cases.",
+          "link_en": "Gives the book a recognisable object."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "城市作为节点",
+        "title_en": "Cities as nodes",
+        "zh": "各城市章展示同一套语法如何被本地化：在布鲁克林、伦敦、东京、圣保罗，同样的材料被用来讲述不同的地方故事。",
+        "en": "City chapters show the same grammar localised: in Brooklyn, London, Tokyo and São Paulo the same materials tell different local stories.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "全球化不是复制，而是同一语法的不同方言。",
+          "flow": "从全球语法，到城市变体，再到地方叙事。",
+          "names": "布鲁克林、伦敦、东京、圣保罗。",
+          "sources": "各城市田野章节。",
+          "link": "把抽象体制落成可比较的田野。",
+          "main_en": "Globalisation is not copying but dialects of one grammar.",
+          "flow_en": "From global grammar to urban variants to local narrative.",
+          "names_en": "Brooklyn, London, Tokyo, São Paulo.",
+          "sources_en": "The city fieldwork chapters.",
+          "link_en": "Grounds the abstract regime in comparable fieldwork."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "谁被邀请，谁被排除",
+        "title_en": "Who is invited, who is excluded",
+        "zh": "全书的政治锋芒在此：这套审美伴随租金上涨、街区绅士化与人口置换，「地方感」的生产同时是驱逐的生产。",
+        "en": "Here lies the book's political edge: the aesthetic arrives with rising rents, gentrification and displacement, so producing a sense of place is also producing eviction.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "审美中立的背后是地产逻辑。",
+          "flow": "从风格，到租金，再到人口置换。",
+          "names": "店主、房东、原住民街区。",
+          "sources": "城市案例与批判章。",
+          "link": "把食物研究接回城市政治经济学。",
+          "main_en": "Behind the neutral aesthetic lies real-estate logic.",
+          "flow_en": "From style to rent to displacement.",
+          "names_en": "Shopkeepers, landlords, longstanding neighbourhoods.",
+          "sources_en": "City cases and critical chapters.",
+          "link_en": "Reconnects food studies to urban political economy."
+        }
+      }
+    ]
+  },
+  "parasecoli-pierogi-problem": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "饺子问题",
+        "title_en": "The pierogi problem",
+        "zh": "书名的问题很具体：一道家常饺子，如何同时成为民族象征、手工遗产与全球市场上的商品？",
+        "en": "The title's question is concrete: how does a homely dumpling become at once national symbol, craft heritage and commodity on a global market?",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "一道菜可以同时是三种东西。",
+          "flow": "从家常，到象征，再到商品。",
+          "names": "家庭、餐馆、出口市场。",
+          "sources": "导论与案例。",
+          "link": "设定全书的分析对象。",
+          "main_en": "One dish can be three things at once.",
+          "flow_en": "From home cooking to symbol to commodity.",
+          "names_en": "Households, restaurants, export markets.",
+          "sources_en": "Introduction and cases.",
+          "link_en": "Sets the object of analysis."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "后社会主义的味觉重组",
+        "title_en": "Post-socialist reorganisation of taste",
+        "zh": "1989 年后的消费转型重塑了波兰食物：国有食品工业解体，私营餐馆、进口食材与「回归传统」同时出现。",
+        "en": "Post-1989 consumer transformation reshaped Polish food: the state food industry dissolved, and private restaurants, imported ingredients and a 'return to tradition' appeared together.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "「传统」常常是在断裂之后被发明的。",
+          "flow": "从计划经济，到市场转型，再到传统复兴。",
+          "names": "国营工厂、新中产、餐饮创业者。",
+          "sources": "历史与访谈材料。",
+          "link": "解释为何「本地」在此刻变得可售。",
+          "main_en": "'Tradition' is often invented after a rupture.",
+          "flow_en": "From planned economy to market transition to revival of tradition.",
+          "names_en": "State factories, new middle class, restaurant entrepreneurs.",
+          "sources_en": "Historical and interview material.",
+          "link_en": "Explains why 'the local' became sellable at that moment."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "世界主义胃口与本土主义修辞",
+        "title_en": "Cosmopolitan appetite and nativist rhetoric",
+        "zh": "结论指出二者并不互斥：同一批消费者既享受全球美食，也要求「真正的波兰味道」；世界主义可以是一种更精致的本土主义。",
+        "en": "The conclusion argues the two are not mutually exclusive: the same consumers enjoy global food and demand 'authentic Polish taste'; cosmopolitanism can be a more refined nativism.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "开放的口味与封闭的身份可以共存。",
+          "flow": "从消费实践，到身份叙事，再到政治含义。",
+          "names": "城市中产、美食媒体、民族话语。",
+          "sources": "结论与访谈。",
+          "link": "回应《美食民族主义》的光谱论。",
+          "main_en": "Open taste and closed identity can coexist.",
+          "flow_en": "From consumption to identity narrative to political meaning.",
+          "names_en": "Urban middle class, food media, national discourse.",
+          "sources_en": "Conclusion and interviews.",
+          "link_en": "Answers the spectrum argument of Gastronativism."
+        }
+      }
+    ]
+  },
+  "parasecoli-knowing-where": {
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "标签之前：传统如何成为资源",
+        "title_en": "Before the label: how tradition becomes a resource",
+        "zh": "先讲制度史：欧盟的原产地命名（PDO/PGI）如何把「地方传统」转成可保护、可交易的知识产权对象。",
+        "en": "The institutional history first: how EU designations (PDO/PGI) turned 'local tradition' into a protectable, tradeable object of intellectual property.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "要让传统受保护，先要把它写成文件。",
+          "flow": "从地方实践，到法规文本，再到市场准入。",
+          "names": "欧盟、产区协会、生产者。",
+          "sources": "制度史与法规材料。",
+          "link": "为比较案例设定制度基线。",
+          "main_en": "To protect tradition, first write it into a document.",
+          "flow_en": "From local practice to legal text to market access.",
+          "names_en": "EU, producer consortia, producers.",
+          "sources_en": "Institutional history and legal material.",
+          "link_en": "Sets the institutional baseline for comparison."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "比较：欧洲之外的原产地政治",
+        "title_en": "Comparison: origin politics beyond Europe",
+        "zh": "把视野移到哥斯达黎加、泰国、印度等地：当「风土」被引入没有相应法律传统的国家，它同时带来赋权与新的不平等。",
+        "en": "The view shifts to Costa Rica, Thailand and India: when terroir is imported into countries without that legal tradition, it brings empowerment and new inequality at once.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "同一工具，在不同制度里长出不同结果。",
+          "flow": "从欧洲模型，到南方国家的挪用，再到本地后果。",
+          "names": "小农、合作社、跨国买家。",
+          "sources": "多国田野。",
+          "link": "把欧洲中心的概念相对化。",
+          "main_en": "The same tool grows different outcomes in different institutions.",
+          "flow_en": "From the European model to Southern appropriation to local consequences.",
+          "names_en": "Smallholders, cooperatives, transnational buyers.",
+          "sources_en": "Multi-sited fieldwork.",
+          "link_en": "Relativises a Eurocentric concept."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "双刃：保护与排除",
+        "title_en": "Double edge: protection and exclusion",
+        "zh": "结论主张标签是双刃：它能保住价格与知识，也能把不合规的小生产者、移民与传统变体排除在「正宗」之外。",
+        "en": "The conclusion argues labels cut both ways: they defend prices and knowledge, and exclude non-compliant smallholders, migrants and variant traditions from 'authenticity'.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "正宗的每一次定义，都是一次排除。",
+          "flow": "从保护效果，到排除机制，再到政策建议。",
+          "names": "认证机构、小农、消费者。",
+          "sources": "结论章。",
+          "link": "把食物研究接到知识产权与发展研究。",
+          "main_en": "Every definition of authenticity is also an exclusion.",
+          "flow_en": "From protective effects to exclusionary mechanisms to policy suggestions.",
+          "names_en": "Certifiers, smallholders, consumers.",
+          "sources_en": "Conclusion.",
+          "link_en": "Connects food studies to intellectual property and development."
+        }
+      }
+    ]
+  },
+  "mintz-sweetness-power": {
+    "toc": {
+      "note_zh": "全书五章，章题据通行版式（Penguin / Vintage）；具体页码未逐页核对。",
+      "note_en": "Five chapters following the common edition (Penguin / Vintage); page numbers not checked page by page.",
+      "groups": [
+        {
+          "title_zh": "第一章",
+          "title_en": "Chapter one",
+          "items": [
+            "Food, Sociality, and Sugar"
+          ]
+        },
+        {
+          "title_zh": "第二章",
+          "title_en": "Chapter two",
+          "items": [
+            "Production"
+          ]
+        },
+        {
+          "title_zh": "第三章",
+          "title_en": "Chapter three",
+          "items": [
+            "Consumption"
+          ]
+        },
+        {
+          "title_zh": "第四章",
+          "title_en": "Chapter four",
+          "items": [
+            "Power"
+          ]
+        },
+        {
+          "title_zh": "第五章",
+          "title_en": "Chapter five",
+          "items": [
+            "Eating and Being"
+          ]
+        }
+      ]
+    },
+    "plot_acts": [
+      {
+        "n": 1,
+        "title_zh": "食物、社会性与糖",
+        "title_en": "Food, sociality and sugar",
+        "zh": "Mintz 从「吃什么」与「和谁吃」的关系入手，指出食物从来不是营养问题，而是社会关系的标记与再生产。",
+        "en": "Mintz starts from the relation between what we eat and whom we eat with, arguing food is never a matter of nutrition alone but a marker and reproduction of social relations.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "饮食是社会结构的语法。",
+          "flow": "从共食，到等级，再到意义。",
+          "names": "家庭、阶级、仪式。",
+          "sources": "人类学饮食研究。",
+          "link": "为糖的个案提供理论入口。",
+          "main_en": "Eating is the grammar of social structure.",
+          "flow_en": "From commensality to hierarchy to meaning.",
+          "names_en": "Households, classes, rituals.",
+          "sources_en": "Anthropological food studies.",
+          "link_en": "Provides the theoretical entry to the sugar case."
+        }
+      },
+      {
+        "n": 2,
+        "title_zh": "生产：种植园、奴隶制与资本",
+        "title_en": "Production: plantation, slavery and capital",
+        "zh": "糖的生产是近代世界体系的缩影：加勒比种植园、非洲奴隶贸易、英国资本与海军保护共同构成一条跨国生产链。",
+        "en": "Sugar production condenses the modern world-system: Caribbean plantations, the African slave trade, British capital and naval protection form one transnational chain.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "甜的代价是奴役与殖民。",
+          "flow": "从种植园，到贸易路线，再到帝国财政。",
+          "names": "巴巴多斯、牙买加、利物浦商人。",
+          "sources": "殖民档案与经济史。",
+          "link": "把消费史锚定在生产史。",
+          "main_en": "The price of sweetness was slavery and colonisation.",
+          "flow_en": "From plantation to trade route to imperial finance.",
+          "names_en": "Barbados, Jamaica, Liverpool merchants.",
+          "sources_en": "Colonial archives and economic history.",
+          "link_en": "Anchors consumption history in production history."
+        }
+      },
+      {
+        "n": 3,
+        "title_zh": "消费：从奢侈品到工人日常",
+        "title_en": "Consumption: from luxury to working-class staple",
+        "zh": "核心转折：糖在两百多年间从贵族药品与装饰变成工人茶里的热量来源，这一变化由价格、税收、广告与工厂作息共同推动。",
+        "en": "The central turn: over two centuries sugar moved from aristocratic medicine and ornament to the calorie source in the worker's tea, driven by price, tax, advertising and factory time.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "口味是被价格与作息训练出来的。",
+          "flow": "从稀缺，到降价，再到日常化。",
+          "names": "工人家庭、糖商、广告。",
+          "sources": "消费数据与家政手册。",
+          "link": "解释「甜」如何成为阶级经验。",
+          "main_en": "Taste is trained by price and by the working day.",
+          "flow_en": "From scarcity to falling price to everyday use.",
+          "names_en": "Working-class households, sugar merchants, advertising.",
+          "sources_en": "Consumption data and household manuals.",
+          "link_en": "Explains how sweetness became class experience."
+        }
+      },
+      {
+        "n": 4,
+        "title_zh": "权力：谁定义「需要」",
+        "title_en": "Power: who defines need",
+        "zh": "Mintz 追问：为什么工人接受了这种高热量、低营养的饮食？答案在权力——不是强迫，而是让某种饮食成为「正常」的能力。",
+        "en": "Mintz asks why workers accepted this high-calorie, low-nutrition diet; the answer is power — not coercion but the capacity to make a diet seem normal.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "最有效的支配，是让人以为自己在选择。",
+          "flow": "从供给，到习惯，再到正当性。",
+          "names": "国家、资本、消费者。",
+          "sources": "政治经济学分析。",
+          "link": "把消费史提升为权力分析。",
+          "main_en": "The most effective domination makes people believe they are choosing.",
+          "flow_en": "From supply to habit to legitimacy.",
+          "names_en": "State, capital, consumers.",
+          "sources_en": "Political-economic analysis.",
+          "link_en": "Raises consumption history into an analysis of power."
+        }
+      },
+      {
+        "n": 5,
+        "title_zh": "吃与存在：糖的当代遗产",
+        "title_en": "Eating and being: sugar's present legacy",
+        "zh": "结尾把历史拉回当下：糖的日常化留下的是饮食结构、健康不平等与全球糖业的政治，它们至今仍在塑造「吃什么」。",
+        "en": "The close returns history to the present: the normalisation of sugar left behind dietary structure, health inequality and the politics of the global sugar industry, still shaping what we eat.",
+        "conf": "◐ 论旨重构",
+        "conf_en": "◐ reconstructed argument",
+        "brief": {
+          "main": "历史没有结束，它变成了我们的口味。",
+          "flow": "从历史，到当代饮食，再到健康政治。",
+          "names": "消费者、食品工业、公共卫生。",
+          "sources": "结论章。",
+          "link": "把个案扩展为现代性的诊断。",
+          "main_en": "History did not end; it became our taste.",
+          "flow_en": "From history to contemporary diet to health politics.",
+          "names_en": "Consumers, food industry, public health.",
+          "sources_en": "Conclusion.",
+          "link_en": "Widens the case into a diagnosis of modernity."
+        }
+      }
+    ]
+  }
+}
