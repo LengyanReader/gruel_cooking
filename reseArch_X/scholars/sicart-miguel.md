@@ -5,7 +5,7 @@ name: Miguel Sicart
 tier: 卓越开明
 affiliation: IT University of Copenhagen · Professor of Digital Play · Center for Digital Play 主任  # ✔ SAGE 2026 论文作者署衔 + itu.dk 教授侧写 2023, 2026-11-04
 field: 游戏伦理 × 玩法哲学（play as praxis）× 数字玩的价值观设计
-homepage: https://en.itu.dk/en/Miguel-Sicart（个人页直补 ◇）
+homepage: https://www.miguelsicart.net  # ✔ 个人站实测 200（2026-11-11，正文自述 ITU Copenhagen 副教授、Center for Computer Games Research 主任）；ITU 站内 path（en.itu.dk/en/Miguel-Sicart）000 不可达，pure.itu.dk 301，故取个人站
 qid:
 current_work:
   - **「The Failure of Play」（SAGE 游戏研究刊 OnlineFirst, 2026）**——自述为「对玩沦为商品的檄文——愤怒而乐观」；在游戏化/算法语境下正面诊断「玩的失败」（✔ journals.sagepub.com/doi/10.1177/20563051261433506 + 作者 Bluesky/LinkedIn 自述, 2026-11-04；刊名全称待直补 ◇）

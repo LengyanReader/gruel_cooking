@@ -5,7 +5,7 @@ name: Sarah Oberbichler
 tier: 有潜力      # 2026-01 新设讲席，正在把 AI×历史 的议程立起来——早期即最好接话的窗口
 affiliation: University of Luxembourg · C²DH（Luxembourg Centre for Contemporary and Digital History）Assistant Professor in Artificial Intelligence  # ✔ 2026-01 上任，uni.lu/C²DH, 2026-10-29
 field: AI × 数字历史 / 文化遗产 × 机器学习
-homepage: (uni.lu/c2dh-en)
+homepage: https://orcid.org/0000-0002-1031-2759  # ✔ ORCID 公开记录（任职列 Luxembourg Centre for Contemporary and Digital History · Assistant Professor in AI and Data Mining in Digital History, 2026–，与 affiliation 一致；2026-11-11 实测 200）；uni.lu 与 c2dh.uni.lu 对无头抓取统一 202 空体/不可达（控制测试：虚构路径同样 202），故不落个人页直链
 qid:                 # 诚实留空
 current_work:
   - C²DH「Artificial intelligence」研究主题线的核心成员（✔ uni.lu/c2dh-en/articles-topic/artificial-intelligence）

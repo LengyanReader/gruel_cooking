@@ -5,7 +5,7 @@ name: Geoffrey West
 tier: 卓越开明
 affiliation: Santa Fe Institute · Shannon Distinguished Professor（前所长 2005–2009）· 理论物理学家（原 Los Alamos）  # ✔ santafe.edu 新闻页 + csh.ac.at 讲员页一致, 2026-11-04
 field: 复杂系统 × 生命与城市的普适标度律（scaling laws）× 增长/退化/寿命的定量理论
-homepage: https://www.santafe.edu/about/people/profile/geoffrey-west（个人页待直补 ◇）
+homepage: https://www.santafe.edu/about/people/profile/geoffrey-west  # ✔ SFI 个人页实测 200（2026-11-11，标题即「Geoffrey West | Santa Fe Institute」）
 qid:
 current_work:
   - **2026-10-08 播客长谈（WTF for Cities ep.470i）：urban scaling laws × population degrowth × the future of cities**——把「退化（degrowth）」接进城市标度的现行叙述（✔ wtf4cities.com 条目 2026-10-08, 2026-11-04）

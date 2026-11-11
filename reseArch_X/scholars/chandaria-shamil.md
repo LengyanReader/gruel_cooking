@@ -5,7 +5,7 @@ name: Shamil Chandaria
 tier: 有潜力      # 无传统教职线（多机构跨聘+行业顾问），但正处其理论成名窗口
 affiliation: Oxford / Cambridge / Imperial College London 多机构关联（确切聘书逐条待核 ◇）；Google DeepMind 顾问  # ✔ 检索快照（PubMed 著录其为 Oxford University, UK）, 2026-11-04
 field: 意识哲学 × 主动推理 × 冥想科学 × AI
-homepage: (个人站/YouTube「Rewiring Your Reality」——直链待补 ◇)
+homepage: https://orcid.org/0009-0004-9946-4901  # ✔ ORCID 公开记录（任职列 University of Oxford · Senior research fellow；2026-11-11 实测 200，ORCID 检索此姓名唯一记录）；个人站「Rewiring Your Reality」直链未取到（◇）
 qid:                 # 诚实留空
 current_work:
   - 「**A beautiful loop: An active inference theory of consciousness**」（与 Laukkonen, *NBR* 2025，被引 109+）——主动推理意识论，覆盖冥想、迷幻与最小现象体验（✔ PubMed 40750007, 2026-11-04）

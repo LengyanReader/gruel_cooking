@@ -5,7 +5,7 @@ name: Arturo Escobar
 tier: 卓越开明
 affiliation: University of North Carolina at Chapel Hill · 人类学（长聘；具体当期状态待核 ◇）  # ✔ 2026-10-29 代表作/影响
 field: 后发展/去殖民 × 可持续 × 设计人类学 × 多世界(pluriverse)
-homepage: (UNC)
+homepage: https://anthropology.unc.edu/people/arturo-escobar/  # ✔ UNC 人类学系个人页实测 200（2026-11-11，正文含其研究简介）；无个人官网（arturoescobar.net 在本网 000 不可达 ◇）
 qid:                 # 诚实留空
 current_work:
   - 《**Designs for the Pluriverse: Radical Interdependence, Autonomy, and the Making of Worlds**》(Duke UP 2018/2020, 被引~7281)——把「设计」重导向自主性、草根民主与生态完整（✔ degruyter/jstor/projects.au.dk, 2026-10-29）

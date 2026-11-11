@@ -5,7 +5,7 @@ name: Kalevi Kull
 tier: 卓越开明
 affiliation: University of Tartu · Institute of Philosophy and Semiotics（教授）  # ✔ researchgate/ut.academia/scholar 多源一致, 2026-11-04
 field: 生物符号学（biosemiotics）× 理论生物学 × 生命哲学史 × 符号过程的一般理论
-homepage: https://scholar.google.com/citations?user=fnAqqM4AAAAJ（学术页；个人站待补 ◇）
+homepage: 无个人主页 ◇  # 2026-11-11 实证：UT 总站与哲学与符号学研究所（flfi.ut.ee）人名录均无其个人页（站内检索为 JS 渲染、无服务端结果可取证），ORCID 检索 0 条，Google Scholar 页在本网 000 不可达；不落未核实链接
 qid:
 current_work:
   - **Tartu 符号学派 biosemiotics 线 2025 仍在聚落现场**（2025-08-25 学派聚会官方帖在列）——Uexküll 与 Lotman 两脉的接绪人（✔ facebook.com/Tartusemiotics 2025-08-25, 2026-11-04）

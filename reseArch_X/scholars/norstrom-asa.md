@@ -5,7 +5,7 @@ name: Åsa V. Norström
 tier: 卓越开明
 affiliation: Stockholm Resilience Centre (SRC)  # ✔ 2026-10-28
 field: 可持续科学 / 超学科知识共产
-homepage: (stockholmresilience.org people)
+homepage: 无个人主页 ◇  # 2026-11-11 实证：SRC 站内检索仅见 Albert Norström（/meet-our-team/staff/2009-09-28-norstrom.html），无 Åsa 条目；站点 sitemap 无 norstr；ORCID 检索（Åsa/Asa 两写）0 条。机构归属见 affiliation，不落未核实链接
 qid:            # 诚实留空（前批无匹配 en-wiki 实体，不臆造）
 current_work:
   - SRC 超学科知识共产原则的持续应用与更新；《Principles for knowledge co-production in sustainability research》(Nature Sustainability 2020, 被引~2197)为其纲领锚点  # ✔ 2026-10-28

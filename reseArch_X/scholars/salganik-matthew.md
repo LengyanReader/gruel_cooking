@@ -5,7 +5,7 @@ name: Matthew J. Salganik
 tier: 卓越开明
 affiliation: Princeton University · Sociology（原 Microsoft Research 背景）  # ✔ 2026-10-28
 field: 计算社会科学 / 数字迹数据
-homepage: bitbybitbook.com
+homepage: http://bitbybitbook.com/  # ✔ 其《Bit by Bit》书站实测 200（2026-11-11，含 About the Author）；Princeton 社会系个人页与 www.princeton.edu/~msalganik 对抓取 403（浏览器可开 ◐）；ORCID 0000-0001-8968-1356 无任职无作品，均未采
 qid: Q56273186
 current_work:
   - 《Bit by Bit: Social Research in the Digital Age》开放评审版持续更新；sicss.io 方法课件公开复用  # ✔ 2026-10-28

@@ -5,7 +5,7 @@ name: Franco Moretti
 tier: 卓越开明
 affiliation: Stanford University · Department of Comparative Literature / English  # ✔ 2026-10-28
 field: 数字人文 / 世界文学 / 远读
-homepage: (Stanford English dept)
+homepage: https://english.stanford.edu/people/franco-moretti  # ✔ Stanford 英文系个人页实测 200（2026-11-11，页面标题含其名）；dlcl.stanford.edu 旧路径 404
 qid: Q971600
 current_work:
   - Stanford Literary Lab pamphlet 系列持续开放（free/open access）  # ✔ 2026-10-28

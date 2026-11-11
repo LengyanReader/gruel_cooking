@@ -5,7 +5,7 @@ name: Anna Lowenhaupt Tsing
 tier: 卓越开明
 affiliation: University of California, Santa Cruz · 人类学（"Arts of Living on a Damaged Planet" / "End of the World" 研究群）  # ✔ 2026-10-29
 field: 多物种民族志 / 人类世 / 艺术×科学 / 资本主义废墟中的生命
-homepage: (UCSC)
+homepage: https://campusdirectory.ucsc.edu/cd_detail?uid=atsing  # ✔ UCSC 校方名录条目实测 200（2026-11-11）；系页 faculty/index.php?uid=atsing 为全系名册，其条目另列项目站「Matsutake Worlds」（独立域名未取到 ◇），故取校方条目
 qid:                 # 诚实留空
 current_work:
   - 《**The Mushroom at the End of the World: On the Possibility of Life in Capitalist Ruins**》(2015, 累积被引~6886/研究项 49)——松茸跨芬兰/日本/俄勒冈的「扰动世界」方法（✔ researchgate / uchicago journals, 2026-10-29）

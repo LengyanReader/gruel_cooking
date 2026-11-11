@@ -5,7 +5,7 @@ name: Richard J. (Richie) Davidson
 tier: 卓越开明
 affiliation: University of Wisconsin–Madison · Psychiatry；Center for Healthy Minds 创办/主任  # ✔ 2026-10-28
 field: 思辨科学 / 冥想神经科学 / 幸福的可训练性
-homepage: centerhealthyminds.org
+homepage: https://psych.wisc.edu/staff/davidson-richard/  # ✔ UW–Madison 心理系个人页实测 200（2026-11-11）；Center for Healthy Minds 的 leadership 旧路径已 404，故取校方页
 qid: Q2149302
 current_work:
   - Center for Healthy Minds 长期冥想-情绪可塑性实证（lifelong 训练 × 神经影像范式 ongoing）  # ✔ 2026-10-28

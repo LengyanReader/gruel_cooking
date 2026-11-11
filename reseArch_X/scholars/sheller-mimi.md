@@ -5,7 +5,7 @@ name: Mimi Sheller
 tier: 卓越开明
 affiliation: Worcester Polytechnic Institute · The Global School 院长；New Mobilities Research and Policy Center 创始主任  # ✔ 2026-10-28
 field: mobilities / 流动正义 / 旅游 × 可持续 × AI
-homepage: (WPI Global School / Global Lab podcast)
+homepage: https://www.wpi.edu/people/faculty/msheller  # ✔ WPI 校方教职员页实测 200（2026-11-11，含其 The Global School 职务）
 qid: Q6862191
 current_work:
   - 「**Mobility Data Justice**」(Mobilities 19(1):151-169, 2024, 与 Frauke Behrendt 合著, 被引 ~85)——把 mobility justice 与 data justice 合成框架，正对 AI 时代移动数据（✔ research.tue.nl / scholar.google, 2026-10-29）

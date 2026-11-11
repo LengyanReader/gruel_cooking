@@ -5,7 +5,7 @@ name: Frauke Behrendt
 tier: 有潜力      # 早期-中期职业，正开出一个新框架，比宗师更好接话
 affiliation: Eindhoven University of Technology (TU/e) · 交通/城市与出行规划（研究页载于 research.tue.nl）  # ✔ 2026-10-29，具体院系待落页 ◇
 field: 流动 × 数据正义 × 可持续交通 × AI
-homepage: (research.tue.nl / scholar.google hqYeaCIAAAAJ)
+homepage: https://www.tue.nl/en/research/researchers/frauke-behrendt  # ✔ TU/e 官方研究者页实测 200（2026-11-11）；research.tue.nl 旧路径与 Google Scholar 在本网均 000 不可达，故取校方页
 qid:                 # 诚实留空（无匹配 en-wiki 实体，不臆造）
 current_work:
   - 「**Mobility Data Justice**」(Mobilities 2024, 与 M. Sheller 合著, 被引 ~85)—— mobility justice × data justice 的合成框架（✔ research.tue.nl / ideas.repec.org, 2026-10-29）

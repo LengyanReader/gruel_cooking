@@ -5,7 +5,7 @@ name: Jessica Fanzo
 tier: 卓越开明
 affiliation: Johns Hopkins University · SAIS · James Anderson Professor of Food Policy & Climate（SAIS Europe, Bologna）；Columbia Climate School Food for Humanity Initiative Director Emeritus；美国国家医学院 NAS 成员；Cornell Atkinson 可持续中心关联  # ✔ atkinson.cornell.edu + food.climate.columbia.edu + nasonline.org, 2026-11-04
 field: 食物系统 × 气候 × 健康 × 食物政策
-homepage: (JHU SAIS 页——直链待补 ◇)
+homepage: https://orcid.org/0000-0002-6760-1359  # ✔ ORCID 公开记录（任职列 Johns Hopkins University SAIS Europe · The James Anderson Professor of Food Policy and Climate, 2026–；2026-11-11 实测 200）；SAIS 与 JHU Hub 个人页对抓取 403（浏览器可开 ◐），故取 ORCID
 qid:                 # 诚实留空
 current_work:
   - 「食物政策 × 气候」讲席（2023 起，JHU SAIS Europe）——农业-环境/气候-健康三联的耦合研究（✔ atkinson.cornell.edu, 2026-11-04）
