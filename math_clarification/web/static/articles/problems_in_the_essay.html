@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文中的数学问题：一页看懂</title>
+<meta name="description" content="The problems in the essay: a one-page field guide">
+<style>
+:root {
+  --cream: #FFFBF5;
+  --cream-deep: #F7EFE2;
+  --paper: #FFFDF9;
+  --gold: #F5C97E;
+  --gold-soft: #FBE9C8;
+  --amber: #E8A855;
+  --amber-deep: #C9852F;
+  --ink: #332C23;
+  --ink-soft: #6B5F4F;
+  --ink-faint: #9A8D7A;
+  --sky-deep: #407CB0;
+  --line: #EBDCC4;
+  --line-soft: #F3E9D8;
+  --measure: 42rem;
+  --sans: "Inter", "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Georgia, "LXGW WenKai",
+           "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", "SimSun", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--bh, 0px) + 84px); }
+body {
+  margin: 0;
+  padding-top: var(--bh, 0px);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.85;
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: radial-gradient(rgba(232, 168, 85, 0.055) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- bilingual text pairs ----------
+   Dual mode shows both halves; lang-en and lang-zh each keep their own.
+   `revert` restores the element's default display, so a pair can sit inside
+   a span or a <p> without either one changing the surrounding layout. */
+.p-zh, .p-en { display: revert; }
+body.lang-en .p-zh { display: none !important; }
+body.lang-zh .p-en { display: none !important; }
+
+/* ---------- draft notice (pinned, floating) ---------- */
+#draft {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 70;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 9px 52px 9px 20px;
+  font-family: var(--sans); font-size: .78rem; line-height: 1.5;
+  color: #6B4A12; text-align: center;
+  background: repeating-linear-gradient(135deg, #FBE9C8, #FBE9C8 12px, #F8E0B8 12px, #F8E0B8 24px);
+  border-bottom: 1px solid var(--amber);
+  box-shadow: 0 2px 10px rgba(58, 50, 40, .07);
+}
+#draft .flag {
+  flex: none; font-size: .62rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: #fff; background: var(--amber-deep);
+  border-radius: 4px; padding: 2px 7px;
+}
+#draft .msg { min-width: 0; }
+#draft .msg em { font-style: normal; font-weight: 600; }
+#draft .dismiss {
+  position: absolute; top: 50%; right: 10px; transform: translateY(-50%);
+  width: 26px; height: 26px; padding: 0; cursor: pointer;
+  font: inherit; font-size: 1.05rem; line-height: 1;
+  color: var(--amber-deep); background: rgba(255, 255, 255, .6);
+  border: 1px solid var(--amber); border-radius: 50%;
+}
+#draft .dismiss:hover { background: #fff; color: #8A4B12; }
+#draft[hidden] { display: none; }
+
+/* ---------- reading progress ---------- */
+#progress {
+  position: fixed; top: var(--bh, 0px); left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--amber), var(--gold));
+  z-index: 60; transition: width .1s linear;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 18px;
+  padding: 12px 26px;
+  background: rgba(255, 251, 245, 0.93);
+  backdrop-filter: blur(9px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .brand { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.topbar .brand a { color: var(--ink); font-weight: 600; font-size: .95rem;
+                   text-decoration: none; font-family: var(--sans); }
+.topbar .brand .zh { font-size: .74rem; color: var(--ink-faint); letter-spacing: .04em; }
+.topbar .spacer { flex: 1; }
+.topbar .langset { display: flex; gap: 6px; font-family: var(--sans); }
+.langset { display: flex; gap: 6px; font-family: var(--sans); }
+.langset button {
+  font: inherit; font-size: .82rem; cursor: pointer; line-height: 1.4;
+  padding: 5px 13px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--cream); color: var(--ink-soft);
+  transition: all .16s ease;
+}
+.langset button:hover { border-color: var(--amber); color: var(--ink); }
+.langset button[aria-pressed="true"] {
+  background: var(--amber); border-color: var(--amber); color: #fff; font-weight: 600;
+}
+
+/* ---------- share ---------- */
+.share { display: flex; align-items: center; gap: 6px; font-family: var(--sans); }
+.share button {
+  font: inherit; font-size: .78rem; line-height: 1.4; cursor: pointer;
+  padding: 5px 11px; border-radius: 999px; text-decoration: none;
+  border: 1px solid var(--line); background: var(--cream); color: var(--ink-soft);
+  transition: all .16s ease; white-space: nowrap;
+}
+.share button:hover { border-color: var(--amber); color: var(--ink); background: var(--cream-deep); }
+.share button.done { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+/* ---------- signature ---------- */
+.byline, .colophon {
+  font-family: var(--sans); font-size: .74rem; color: var(--ink-faint);
+}
+.byline { margin-top: 14px; letter-spacing: .02em; }
+.byline b { font-weight: 600; color: var(--ink-soft); }
+.byline a, .colophon a { color: var(--sky-deep); text-decoration: none; }
+.byline a:hover, .colophon a:hover { text-decoration: underline; }
+/* publication / update dateline, declared as metadata in the source preamble */
+.dateline { margin-top: 10px; font-family: var(--sans); font-size: .74rem; color: var(--ink-faint); letter-spacing: .02em; }
+.dateline b { font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.dateline .sep { margin: 0 10px; color: var(--line); }
+.colophon {
+  margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line-soft);
+  display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: space-between;
+}
+
+/* ---------- shell ---------- */
+.shell { display: grid; grid-template-columns: 262px minmax(0, 1fr); gap: 0; align-items: start; }
+.toc {
+  position: sticky; top: calc(var(--bh, 0px) + 62px); align-self: start;
+  max-height: calc(100vh - var(--bh, 0px) - 62px); overflow-y: auto;
+  padding: 30px 20px 60px 26px; border-right: 1px solid var(--line-soft);
+}
+.toc h2 {
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: var(--ink-faint); margin: 0 0 14px;
+}
+.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: c; }
+.toc li { counter-increment: c; margin: 0 0 2px; }
+.toc a {
+  display: block; padding: 5px 10px; border-radius: 7px;
+  font-family: var(--sans); font-size: .855rem; line-height: 1.45;
+  color: var(--ink-soft); text-decoration: none;
+  border-left: 2px solid transparent; transition: all .16s ease;
+}
+.toc a:hover { background: var(--cream-deep); color: var(--ink); }
+.toc a.active {
+  background: var(--gold-soft); color: var(--amber-deep);
+  border-left-color: var(--amber); font-weight: 600;
+}
+.toc .lv { font-size: .95em; opacity: .55; margin-right: .4em; }
+
+main { padding: 40px 56px 140px; min-width: 0; }
+.doc { max-width: var(--measure); margin: 0 auto; }
+
+/* ---------- title block ---------- */
+.titleblock { border-bottom: 1px solid var(--line); padding-bottom: 26px; margin-bottom: 12px; }
+.kicker {
+          font-family: var(--sans); font-size: .72rem; font-weight: 600;
+          letter-spacing: .18em; text-transform: uppercase; color: var(--amber-deep);
+          margin: 0 0 14px;
+        }
+        .kicker { margin: 0 0 14px; }
+
+.titleblock h1 {
+  font-family: var(--sans); font-weight: 700; color: var(--ink);
+  font-size: clamp(1.65rem, 3.4vw, 2.35rem); line-height: 1.32; margin: 0 0 10px;
+  letter-spacing: -.005em;
+}
+.titleblock h1 .t-zh, .titleblock h1 .t-en { display: block; }
+/* In dual mode the English title rides under the Chinese one; the lang-en and
+   lang-zh modes each promote their own half to full heading size. */
+.titleblock h1 .t-en {
+  margin-top: .32em; font-size: .54em; font-weight: 500;
+  color: var(--ink-soft); line-height: 1.44; letter-spacing: 0;
+}
+body.lang-en .titleblock h1 .t-zh { display: none; }
+body.lang-en .titleblock h1 .t-en {
+  margin-top: 0; font-size: 1em; font-weight: 700;
+  color: var(--ink); line-height: 1.32; letter-spacing: -.005em;
+}
+body.lang-zh .titleblock h1 .t-en { display: none; }
+.titleblock .sub {
+  font-family: var(--sans); font-size: 1.02rem; color: var(--ink-soft);
+  line-height: 1.6; margin: 0;
+}
+.titleblock .note {
+          font-family: var(--sans); font-size: .78rem; line-height: 1.65;
+          color: var(--ink-faint); margin: 16px 0 0; padding: 10px 14px;
+          background: var(--cream-deep); border-left: 3px solid var(--line);
+          border-radius: 0 8px 8px 0;
+        }
+        .titleblock .note .n-en { display: block; }
+        .titleblock .note .n-en + .n-zh, .titleblock .note .n-zh + .n-en { margin-top: 8px; }
+        body.lang-en .titleblock .note .n-zh,
+        body.lang-zh .titleblock .note .n-en { display: none; }
+
+
+/* ---------- units (one per source block) ---------- */
+.unit { padding: 34px 0 10px; border-top: 1px solid var(--line-soft); }
+.unit:first-of-type { border-top: none; }
+.unit.is-src .lang-body ol { columns: 2; column-gap: 34px; font-size: .84rem; line-height: 1.62; }
+.unit.is-src .lang-body li { break-inside: avoid; margin-bottom: 9px; }
+
+.lang-block { position: relative; margin: 0 0 26px; }
+.lang-chip {
+  display: inline-block; font-family: var(--sans); font-size: .64rem; font-weight: 700;
+  letter-spacing: .14em; color: var(--ink-faint);
+  border: 1px solid var(--line); border-radius: 4px;
+  padding: 1px 7px; margin-bottom: 12px; background: var(--paper);
+}
+.lang-zh { border-left: 3px solid var(--gold); padding-left: 20px; }
+
+/* ---------- heading hierarchy ----------
+   Chapters (h2) sit flush against the measure with a rule above; numbered
+   sub-sections (h3/h4) step in by one level each, and their body copy follows
+   them in, so the outline is readable at a glance. */
+.lang-body .sub { margin: 0; }
+.lang-body h2 {
+  font-family: var(--sans); font-weight: 650; font-size: 1.32rem; line-height: 1.4;
+  color: var(--ink); letter-spacing: -.003em;
+  margin: 38px 0 8px; padding-top: 24px; border-top: 1px solid var(--line);
+}
+.lang-body .sub.d0 > h2:first-child,
+.lang-body > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.lang-body h3 {
+  font-family: var(--sans); font-weight: 600; font-size: 1.06rem; line-height: 1.5;
+  color: var(--amber-deep); margin: 28px 0 9px;
+  padding-left: .8rem; border-left: 2px solid var(--gold);
+}
+.lang-body h4 {
+  font-family: var(--sans); font-weight: 600; font-size: .97rem; color: var(--ink-soft);
+  margin: 22px 0 7px; padding-left: .7rem; border-left: 2px solid var(--line);
+}
+.lang-body .sub.d1 { margin-left: 1.5rem; }
+.lang-body .sub.d2 { margin-left: 1.5rem; }
+.lang-body .sub.d2 > h4 { border-left-color: var(--line); }
+.lang-body .sub > :first-child { margin-top: 0; }
+.lang-body p { margin: 0 0 17px; }
+.lang-zh .lang-body p { text-align: justify; text-justify: inter-ideograph; letter-spacing: .01em; }
+.lang-body ul, .lang-body ol { margin: 0 0 18px; padding-left: 1.35em; }
+.lang-body li { margin-bottom: 7px; }
+.lang-body li > ul, .lang-body li > ol { margin-top: 7px; }
+.lang-body strong { font-weight: 650; color: #241E17; }
+.lang-body em { font-style: italic; }
+.lang-body a { color: var(--sky-deep); text-underline-offset: 2px; }
+.lang-body hr { border: 0; border-top: 1px solid var(--line); margin: 26px 0; }
+.lang-body blockquote {
+  margin: 0 0 18px; padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--line); color: var(--ink-soft); font-style: italic;
+}
+.lang-body code {
+  font-family: "Cascadia Mono", Consolas, monospace; font-size: .88em;
+  background: var(--cream-deep); padding: 1px 5px; border-radius: 4px;
+}
+.lang-body pre {
+  background: var(--cream-deep); border: 1px solid var(--line);
+  padding: 14px 16px; border-radius: 10px; overflow-x: auto; line-height: 1.55;
+}
+.lang-body pre code { background: none; padding: 0; }
+.lang-body table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 0 0 18px; }
+.lang-body th, .lang-body td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
+.lang-body th { background: var(--cream-deep); font-family: var(--sans); font-weight: 600; }
+
+/* ---------- language modes ---------- */
+body.lang-en .lang-zh { display: none; }
+body.lang-zh .lang-en { display: none; }
+body.lang-en .lang-chip, body.lang-zh .lang-chip { display: none; }
+body.lang-zh .lang-body, body.lang-en .lang-body { text-align: left; }
+body.lang-en .lang-block { border-left: none; padding-left: 0; }
+
+/* ---------- index page ---------- */
+.idx { max-width: 780px; margin: 0 auto; padding: 64px 26px 120px; }
+.idx h1 { font-family: var(--sans); font-size: 2rem; margin: 0 0 6px; }
+.idx .lede { color: var(--ink-soft); font-size: 1.02rem; margin: 0 0 34px; font-family: var(--sans); }
+.idx article {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 14px; padding: 24px 26px; margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(58, 50, 40, .05);
+}
+.idx article h2 { font-family: var(--sans); font-size: 1.15rem; margin: 0 0 8px; line-height: 1.45; }
+.idx article h2 a { color: var(--ink); text-decoration: none; }
+.idx article h2 a:hover { color: var(--amber-deep); }
+.idx article p { margin: 0 0 12px; font-size: .95rem; color: var(--ink-soft); }
+.idx .meta { font-family: var(--sans); font-size: .78rem; color: var(--ink-faint); }
+.idx .open {
+  display: inline-block; font-family: var(--sans); font-size: .8rem; font-weight: 600;
+  color: #fff; background: var(--amber); text-decoration: none;
+  padding: 6px 16px; border-radius: 999px;
+}
+.idx .open:hover { background: var(--amber-deep); color: #fff; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1000px) {
+  .shell { grid-template-columns: 1fr; }
+  .toc {
+    position: static; max-height: none; border-right: none;
+    border-bottom: 1px solid var(--line-soft); padding: 20px 26px;
+  }
+  .toc ol { columns: 2; column-gap: 18px; }
+  main { padding: 26px 26px 100px; }
+  .unit.is-src .lang-body ol { columns: 1; }
+}
+@media (max-width: 620px) {
+        body { font-size: 16.5px; }
+        .toc ol { columns: 1; }
+        .lang-zh { padding-left: 14px; }
+        .topbar { flex-wrap: wrap; gap: 10px 14px; padding: 10px 18px; }
+        #draft { font-size: .72rem; padding: 7px 40px 7px 14px; }
+      }
+
+      /* ---------- print ---------- */
+      @media print {
+        body { background: #fff; font-size: 11.5pt; line-height: 1.6; padding-top: 0; }
+        #draft, #progress, .topbar, .toc, .lang-chip, .langset, .share { display: none !important; }
+        .shell { display: block; }
+        main { padding: 0; }
+        .doc { max-width: none; }
+        body.lang-en .lang-zh, body.lang-zh .lang-en { display: none; }
+        .lang-block { break-inside: avoid; }
+        .unit { border-top: 1px solid #ddd; }
+        .colophon { border-top: 1px solid #ccc; }
+      }
+      </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body class="lang-dual" data-title-zh="文中的数学问题：一页看懂" data-title-en="The problems in the essay: a one-page field guide">
+<div id="draft" role="note">
+  <span class="flag"><span class="p-zh">草稿</span><span class="p-en">Draft</span></span>
+  <span class="msg">
+    <span class="p-zh"><em>本文仅为草稿，仅供参考</em>，恳请各位读者多多指正、批评指教；文中观点与疏漏之处，欢迎来信讨论。</span>
+    <span class="p-en"><em>This is a working draft, for reference only.</em> Comments and corrections are warmly welcome — please get in touch.</span>
+  </span>
+  <button type="button" class="dismiss" aria-label="关闭声明 / Dismiss notice">&times;</button>
+</div>
+<div id="progress"></div>
+
+<div class="topbar">
+  <div class="brand">
+    <a href="index.html">Math Clarification</a>
+    <span class="zh"><span class="p-zh">数学释疑 · 文章</span><span class="p-en">Math Clarification · Essays</span></span>
+  </div>
+  <div class="spacer"></div>
+  <div class="share">
+    <button type="button" data-share="copy" data-done-zh="已复制" data-done-en="Copied"><span class="p-zh">复制链接</span><span class="p-en">Copy link</span></button>
+  </div>
+  <div class="langset" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" data-lang="zh" aria-pressed="false">中</button>
+    <button type="button" data-lang="dual" aria-pressed="true">双语</button>
+  </div>
+</div>
+
+<div class="shell">
+  <nav class="toc">
+    <h2><span class="p-zh">目录</span><span class="p-en">Contents</span></h2>
+    <ol><li><a href="#u0"><span class="lv">L1</span><span class="p-zh">A 组 · 事件的主角</span><span class="p-en">Group A · The actors</span></a></li></ol>
+  </nav>
+  <main>
+    <div class="doc">
+      <div class="titleblock">
+        <p class="kicker"><span class="p-zh">综述 · Review</span><span class="p-en">Review · Survey</span></p>
+        <h1><span class="t-zh">文中的数学问题：一页看懂</span><span class="t-en">The problems in the essay: a one-page field guide</span></h1>
+        <p class="note"><p class="note"><span class="n-zh">姊妹页（companion page）：为长稿《各归各位：证明的归机器，理解的归人》（proofs_no_longer_scarce.md）中出现的全部数学问题做一页普通读者友好的导览。每题五栏：一句话 / 前提·背景 / 问的是什么 / 为什么重要 / 现状。AI 起草、未经作者逐条复核（harness §I.6）；「现状」栏事实均核于 2026-11-22，方括号编号指向该长稿文末来源表（[1]–[128]），标注「详见」处链接 math_clarification 内既有条目（§II.9 单一来源：概念正文不在本页重复）。双语逐段并列，英文侧与中文侧内容与精神对应。</span></p></p>
+        
+        <p class="byline">南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></p>
+      </div>
+      <section class="unit" id="u0">
+<div class="lang-block lang-en"><span class="lang-chip">EN</span><div class="lang-body"><section class="sub d0"><h2>Group A · The actors</h2>
+</section>
+<section class="sub d1"><h3>A1 · Navier–Stokes existence and smoothness</h3>
+<ul>
+<li><strong>In one line</strong>: do the equations of fluid flow always behave, or can they blow up?</li>
+<li><strong>Background</strong>: Claude-Louis Navier (1822) and George Stokes (1845) wrote down the equations governing viscous fluids — the water in a pipe, the air over a wing. Whether every smooth flow described by them stays smooth forever, or develops a singularity (infinite velocity) in finite time, has been open for over a century and carries one of the seven Clay Millennium Prizes (2000).</li>
+<li><strong>What is asked</strong>: in three dimensions, do solutions exist for all time and remain smooth — or can they develop singularities?</li>
+<li><strong>Why it matters</strong>: it is the essay's central case (§1.7, §2.2) — a September 2026 announcement compressed a technical truth, a commercial race, an authorship dispute and a priority quarrel into one week [1,5,6].</li>
+<li><strong>Status (22 Nov 2026)</strong>: the Clay page still labels the problem Active [4]. OpenAI's 8 September claim — a machine blow-up proof for statements "C/D" of Clay's formulation, Lean-checked but with a forcing term [1] — was found by a Cambridge team not to match its own natural-language text [118]; the method did not obviously extend to the unforced case [5]. On 20 November, unforced blow-up proofs for 3D Euler (Alpöge, Buckmaster, Coiculescu) and 3D Navier–Stokes (Alpöge, Buckmaster) were announced, with Lean formalizations in public repositories [120,121]. No prize has been claimed.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A2 · The Erdős unit distance conjecture (1946)</h3>
+<ul>
+<li><strong>In one line</strong>: among n points in the plane, how many pairs can be exactly distance 1 apart?</li>
+<li><strong>Background</strong>: Paul Erdős asked in 1946; his grid construction gives about n^(1+c/log log n) unit distances, and he conjectured that is essentially the whole truth: u(n) ≤ n^(1+o(1)).</li>
+<li><strong>What is asked</strong>: is the maximum number of unit distances among n plane points sub-polynomially more than n?</li>
+<li><strong>Why it matters</strong>: in May 2026 it became the first core-field conjecture disproved by an AI system — the essay's "act three" (§1.5) and its sharpest case of machine-proposed, human-digested mathematics [19,20].</li>
+<li><strong>Status (22 Nov 2026)</strong>: disproved. Alon, Bloom, Gowers and others published a human-verified digest of the OpenAI-generated counterexample (u(n) ≥ n^(1+ε) infinitely often); Sawin made the exponent explicit at n^1.014; the classical upper bound O(n^(4/3)) is untouched [19,20]. Full entry: <a href="../famous_problems/erdos_unit_distance.md">Erdős Unit Distance</a>.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A3 · Fermat's Last Theorem — and its formalization</h3>
+<ul>
+<li><strong>In one line</strong>: x^n + y^n = z^n has no positive integer solutions for n ≥ 3 — and in 2026 a machine wrote out the entire proof in a language a computer can check.</li>
+<li><strong>Background</strong>: conjectured by Fermat around 1637 in a margin too narrow for his proof; proved by Andrew Wiles (with Richard Taylor) in 1994–95 after 358 years. Full entry: <a href="../fermat_last_theorem.md">Fermat's Last Theorem</a>.</li>
+<li><strong>What is asked</strong> (2026 version): can Wiles's proof be re-derived from Lean's three standard axioms alone, with no human trust anywhere in the chain?</li>
+<li><strong>Why it matters</strong>: the essay's §1.8 uses it as the extreme specimen of the verification bottleneck — an artifact no human can read end-to-end [25,26].</li>
+<li><strong>Status (22 Nov 2026)</strong>: Anthropic announced (4 September) a complete Lean formalization: about 13 million lines, roughly 29,500 intermediate lemmas, eleven days of largely autonomous work, checked by the Lean kernel and confirmed to match Mathlib's statement of the theorem; Kevin Buzzard reviewed it and called it an extraordinary autoformalization achievement that adds nothing mathematically new [25,26].</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A4 · The Riemann Hypothesis</h3>
+<ul>
+<li><strong>In one line</strong>: do all the "interesting" zeros of the zeta function sit on one straight line?</li>
+<li><strong>Background</strong>: Bernhard Riemann (1859) noticed that the error term in the prime-counting theorem is governed by the zeros of his zeta function; he conjectured they all lie on the line Re(s) = 1/2. It is the most famous open problem in mathematics and one of the seven Millennium Prizes.</li>
+<li><strong>What is asked</strong>: do all nontrivial zeros of ζ(s) have real part exactly 1/2?</li>
+<li><strong>Why it matters</strong>: the essay's §6.4 uses "will AI prove the Riemann hypothesis" as the question to look past; November 2026 answered a version of it in an unexpected way [93,120,122].</li>
+<li><strong>Status (22 Nov 2026)</strong>: a proof was announced on 20 November by Levent Alpöge, produced with an internal AI model (press names Claude; Tao's wording says "an internal AI model" — both recorded [120,123]); it exists as a ~17-million-line Lean artifact, and on 21 November the Lean community certified by four stated criteria that "both the statement and the proof of the Riemann Hypothesis are correct" [122]. Earlier in the window, a "quasi-RH" result (zeros off the line confined to 1/8 &lt; Re(s) &lt; 7/8) from the October release was digested and largely confirmed by human analysts within two weeks [115]. The Association for Human Mathematics objected that no human can responsibly claim to understand such a document [124]. Machine-verified; community-certified; human understanding in progress.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A5 · The Unique Games Conjecture (2002)</h3>
+<ul>
+<li><strong>In one line</strong>: is a certain "guess the labels" problem nearly as hard to approximately solve as it is to solve exactly?</li>
+<li><strong>Background</strong>: posed by Subhash Khot in 2002. If true, it implies that many approximation problems (Max Cut among them) are provably hard to approximate — it has become the hinge of theoretical computer science's hardness program.</li>
+<li><strong>What is asked</strong>: for constraint systems with a small fraction of violations allowed, is finding a labeling satisfying most constraints computationally intractable?</li>
+<li><strong>Why it matters</strong>: the 6 October release claimed a proof of it among its 372 families — the most consequential single claim in the batch (§xi of the postscript) [93].</li>
+<li><strong>Status (22 Nov 2026)</strong>: released claim, not an accepted theorem. Dana Moshkovitz has spent weeks on the proof with Khot, Håstad and Minzer (and the GPT-6 Astra model), confronting what she calls a totally alien new error-correcting code; the effort was presented at the Simons Institute; no full verification has been declared [119].</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A6 · The Jacobian conjecture (1939)</h3>
+<ul>
+<li><strong>In one line</strong>: if a polynomial map has a constant nonzero Jacobian, must it have a polynomial inverse?</li>
+<li><strong>Background</strong>: asked by Ott-Heinrich Keller in 1939; trivially true in one dimension, open in two for nearly a century, with false "proofs" accumulating on both sides.</li>
+<li><strong>What is asked</strong>: for which dimensions n does a polynomial map C^n → C^n with constant nonzero Jacobian determinant necessarily admit a polynomial inverse?</li>
+<li><strong>Why it matters</strong>: the essay's §2.1 lists its July 2026 counterexample as one of the machine-proof dramas preceding the Fields medalists' letter [1,19,30].</li>
+<li><strong>Status (22 Nov 2026)</strong>: false for n ≥ 3. Levent Alpöge announced a three-variable counterexample on 19 July 2026, found with the help of an AI model; Tao wrote a public digestion of it the next day [106]; Gao generalized counterexamples to every dimension greater than two, with all identities verified in exact rational arithmetic [107]; Buzzard's group saw the counterexample Lean-checked within days of its announcement [108]. n = 2 remains open.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A7 · Positive sectional curvature on all smooth 7-spheres</h3>
+<ul>
+<li><strong>In one line</strong>: can every exotic seven-dimensional sphere be given a geometry where all directions curve positively?</li>
+<li><strong>Background</strong>: in 1956 John Milnor discovered the 7-sphere carries 28 distinct smooth structures — same topology, different differentiable calculus. Whether every one admits a Riemannian metric of strictly positive sectional curvature (all two-dimensional slices bend the same way, like a sphere and unlike a saddle) was a long-standing test case for how topology constrains geometry.</li>
+<li><strong>What is asked</strong>: construct, for each of the 28 oriented diffeomorphism classes of smooth homotopy 7-spheres, a metric of strictly positive sectional curvature.</li>
+<li><strong>Why it matters</strong>: the essay's postscript (§iv) records it as a boundary case — inside the essay's period, with its AI acknowledgment surfacing late [82,83].</li>
+<li><strong>Status (22 Nov 2026)</strong>: claimed in a preprint (24 September) by Yang-Hui He, Ziran Liu and Shing-Tung Yau, gluing two positively curved 7-disks with matching boundary metrics; the paper acknowledges suggestions from GPT and Claude [82,83]. Follow-up work extends the technique; no community verdict either way.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A8 · Matrix multiplication, 4×4 complex: 49 to 48</h3>
+<ul>
+<li><strong>In one line</strong>: how many scalar multiplications are needed to multiply two 4×4 complex matrices?</li>
+<li><strong>Background</strong>: Volker Strassen's 1969 algorithm did it in 49 multiplications, beating the textbook 64 and founding algebraic complexity theory; his record stood for 56 years.</li>
+<li><strong>What is asked</strong>: find the smallest known number of scalar multiplications for the 4×4 complex case — each reduction compounds across every larger matrix product.</li>
+<li><strong>Why it matters</strong>: the essay's §1.4 uses AlphaEvolve's 48 as the emblem of results at the compute-verify end, where no expert judgment is needed [16].</li>
+<li><strong>Status (22 Nov 2026)</strong>: 48, found by DeepMind's AlphaEvolve (May 2025), still the record; a follow-up line re-derives it with rational coefficients only. Note the fine print: 48 is the best known algorithm (an upper bound), not a proven minimum for the tensor rank.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A9 · The kissing number in eleven dimensions</h3>
+<ul>
+<li><strong>In one line</strong>: how many unit spheres can touch a central unit sphere at once, in 11-dimensional space?</li>
+<li><strong>Background</strong>: the "kissing number" is ancient in 3 dimensions (13, famously argued by Newton and Gregory); exact values are known only in dimensions 1, 2, 3, 4, 8 and 24.</li>
+<li><strong>What is asked</strong>: determine the maximum number of non-overlapping unit spheres touching a central one in R^11.</li>
+<li><strong>Why it matters</strong>: the essay's §1.4 pairs it with matrix multiplication as a mechanically checkable record [16].</li>
+<li><strong>Status (22 Nov 2026)</strong>: lower bound 593 (AlphaEvolve, May 2025, replacing 592), upper bound 868; exact value unknown. A later paper claims 604; it is not yet reflected in standard references and is unverified for this page's purposes [16].</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A10 · Nine-loop hexagon amplitudes (and a single-minus aside)</h3>
+<ul>
+<li><strong>In one line</strong>: compute a fearsomely complex scattering amplitude in the toy model of quantum field theory — nine quantum loops deep.</li>
+<li><strong>Background</strong>: planar N=4 super Yang–Mills is the "hydrogen atom" of modern field theory; its six-particle "hexagon" amplitudes at loop order L grow astronomically complex. The previous record, eight loops, was set by Lance Dixon and Andy Liu in 2023, by the "bootstrap" method — imposing consistency conditions until the answer is forced.</li>
+<li><strong>What is asked</strong>: compute the nine-loop hexagon amplitude (and in the aside, decide whether a certain one-minus gluon tree amplitude is nonzero at all).</li>
+<li><strong>Why it matters</strong>: the essay's §1.7 reads the two 2026 physics cases as live specimens of machine-executed-recipe versus machine-proposed-conjecture [23,24].</li>
+<li><strong>Status (22 Nov 2026)</strong>: Anthropic announced (25 September) Claude computing the nine-loop amplitude, validated independently by Dixon over roughly two weeks; a CAS team led by Song He obtained most of the result concurrently, using GPT-6 for part of the constraints [24]. In the aside, a 2026 preprint reports the single-minus gluon tree amplitude formula first conjectured by GPT-5.2 Pro and then proved by an OpenAI internal model [23].</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A11 · First Proof: ten research-level questions</h3>
+<ul>
+<li><strong>In one line</strong>: can a machine solve problems its own examiners care about?</li>
+<li><strong>Background</strong>: a 2026 challenge organized by eleven research mathematicians, posing ten questions that arose in their own research — deliberately not contest problems, not benchmarks written to be solved.</li>
+<li><strong>What is asked</strong>: how many of the ten can machine-generated answers settle — and who can tell?</li>
+<li><strong>Why it matters</strong>: the essay's §1.6 and §6.4 use it as the cleanest statement of the verification bottleneck: the reported difficulty was in evaluation, not generation [22].</li>
+<li><strong>Status (22 Nov 2026)</strong>: the generation half stands; the evaluation half remains unfinished public business, and the organizers concede no protocol yet exists for measuring autonomous problem-posing [22].</li>
+</ul>
+</section>
+<section class="sub d0"><h2>Group B · The background</h2>
+</section>
+<section class="sub d1"><h3>B1 · Gödel's incompleteness theorems (1931)</h3>
+<ul>
+<li><strong>In one line</strong>: any consistent system rich enough for arithmetic contains true statements it cannot prove — and cannot certify its own consistency.</li>
+<li><strong>Background</strong>: Kurt Gödel, reacting to Hilbert's program of securing all of mathematics on formal foundations.</li>
+<li><strong>What is asked</strong> (answered): are there mechanical limits to formal proof? Yes — the essay leans on this twice (§3.3 against "mathematics as ultimate ground", §5.4 on Penrose's contested use of it) [42,43,44].</li>
+<li><strong>Status</strong>: settled mathematics; the philosophical arguments built on it remain contested.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B2 · The halting problem (1936)</h3>
+<ul>
+<li><strong>In one line</strong>: no algorithm can decide, for every program and input, whether the program eventually stops.</li>
+<li><strong>Background</strong>: Alan Turing, in the paper that defined computation itself.</li>
+<li><strong>What is asked</strong> (answered): is there a universal mechanical decision procedure for this well-defined question? No [48].</li>
+<li><strong>Why it matters</strong>: with Gödel, it closes the "formalization can exhaust mathematics" hope — the essay's §3.5 and §5.4 [48].</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B3 · The continuum hypothesis</h3>
+<ul>
+<li><strong>In one line</strong>: is there a size of infinity strictly between the integers' and the continuum's?</li>
+<li><strong>Background</strong>: Georg Cantor, 1878. Gödel (1940) showed it cannot be disproved from the standard axioms; Paul Cohen (1963) showed it cannot be proved from them either — it is independent.</li>
+<li><strong>Why it matters</strong>: the essay's §3.3 uses Cohen's result to show even the most foundational branch has axiomatic choices not uniquely forced [45].</li>
+<li><strong>Status</strong>: settled as independence; which axiom to adopt remains a live stance, not a fact.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B4 · Russell's paradox (1901)</h3>
+<ul>
+<li><strong>In one line</strong>: the set of all sets that do not contain themselves — contains itself or not?</li>
+<li><strong>Background</strong>: Bertrand Russell's letter to Gottlob Frege, puncturing naive set theory at its foundation.</li>
+<li><strong>Why it matters</strong>: the essay's §3.1 uses it to mark logicism's failure — the lesson being that logic is mathematics' grammar, not its ground [36].</li>
+<li><strong>Status</strong>: resolved by type theory and axiomatic set theory; the lesson is now a fixture of foundations.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B5 · The Kepler conjecture</h3>
+<ul>
+<li><strong>In one line</strong>: the grocer's stacking of cannonballs is the densest way to pack equal spheres.</li>
+<li><strong>Background</strong>: Johannes Kepler, 1611. Thomas Hales announced a proof in 1998; referees "99% certain" but not certain; a machine-checked formal proof (Flyspeck) was completed in 2014 and published 2017.</li>
+<li><strong>Why it matters</strong>: the essay's §5.3 cites the years of verification labor as the price tag for professional verification — labor still among the discipline's worst paid [66].</li>
+<li><strong>Status</strong>: proved, machine-checked; historically the first major theorem certified this way.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B6 · The Robbins problem</h3>
+<ul>
+<li><strong>In one line</strong>: do three simple equations about a boolean operation capture all of boolean algebra?</li>
+<li><strong>Background</strong>: Herbert Robbins posed it in 1933; it resisted hand proof for over sixty years until William McCune's automated theorem prover EQP settled it in 1996.</li>
+<li><strong>Why it matters</strong>: the essay's §5.3 cites it in the lineage of machines absorbing the checking and the executing, humans moving on [65].</li>
+<li><strong>Status</strong>: proved by machine — the precedent the AI-mathematics wave extends one layer up.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B7 · Bounded gaps between primes (and Chen's theorem)</h3>
+<ul>
+<li><strong>In one line</strong>: how small a gap between consecutive primes occurs infinitely often?</li>
+<li><strong>Background</strong>: Yitang Zhang (2014) proved some gap below 70 million occurs infinitely often — the first finite bound — launching the Polymath8 project (246) and James Maynard's independent breakthrough. Chen Jingrun (1973) had proved every large even number is a prime plus a product of at most two primes ("1+2").</li>
+<li><strong>Why it matters</strong>: the essay's §4.2 and §6.2 cite the lineage as additive combinatorics alive and well — and as an example of a stock of questions curated across generations [57,58,72].</li>
+<li><strong>Status (22 Nov 2026)</strong>: the record unconditional bound is now 240 (Stadlmann, August 2026) [129]. The twin-prime conjecture (gap 2) remains open. Related entry: <a href="../famous_problems/goldbach_and_twin_primes.md">Goldbach &amp; twin primes</a>.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B8 · The Weil conjectures</h3>
+<ul>
+<li><strong>In one line</strong>: count solutions of polynomial equations over finite fields, and find deep topology hiding in the arithmetic.</li>
+<li><strong>Background</strong>: André Weil, 1949, conjectured a zeta function for varieties over finite fields with the flavour of the Riemann hypothesis; Pierre Deligne proved the last and hardest part in 1974.</li>
+<li><strong>Why it matters</strong>: the essay's §4.2 cites Deligne's proof as the landmark of arithmetic geometry, the territory around the Langlands program [56].</li>
+<li><strong>Status</strong>: proved (Deligne 1974); its descendants — including the geometric Langlands program — remain among the deepest active territories in mathematics.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B9 · Pi, Liu Hui and Zu Chongzhi</h3>
+<ul>
+<li><strong>In one line</strong>: how precisely can the circle's ratio be computed — and by which method?</li>
+<li><strong>Background</strong>: Liu Hui (263 AD) computed π by inscribed polygons with a cut-and-augment algorithm; Zu Chongzhi (5th century) gave 355/113, correct to six decimals — a result Europe reached only after another millennium.</li>
+<li><strong>Why it matters</strong>: the essay's §5.5 cites the Chinese tradition as an algorithmic, constructive path to the same truths — different in what counts as a solution, not in what is true [50,69].</li>
+<li><strong>Status</strong>: settled numerically to trillions of digits; historiographically the essay's point stands: content may be necessary, form never was.</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B10 · The Kerala school's infinite series</h3>
+<ul>
+<li><strong>In one line</strong>: power series for sine, cosine and π — laid down in India centuries before Newton and Leibniz.</li>
+<li><strong>Background</strong>: Madhava of Sangamagrama and successors (14th–16th centuries) derived series expansions equivalent to those later named for European mathematicians, without building the systematic calculus framework.</li>
+<li><strong>Why it matters</strong>: the essay's §5.5 cites Kerala as evidence that the same mathematics can grow in more than one institutional shape [50,70].</li>
+<li><strong>Status</strong>: historically established; the essay uses it against the "modern Western mathematics = mathematics as such" equation.</li>
+</ul></section></div></div>
+<div class="lang-block lang-zh"><span class="lang-chip">中</span><div class="lang-body"><section class="sub d0"><h2>A 组 · 事件的主角</h2>
+</section>
+<section class="sub d1"><h3>A1 · 纳维–斯托克斯：存在性与光滑性</h3>
+<ul>
+<li><strong>一句话</strong>：描述流体运动的方程，是否永远规规矩矩——还是会在有限时间内「爆炸」？</li>
+<li><strong>前提·背景</strong>：纳维（1822）与斯托克斯（1845）写下黏性流体的运动方程——水管里的水、机翼上的空气都由它描述。方程的光滑解是否永远光滑，还是会在有限时间内产生奇点（速度无穷大），悬置超过一个世纪，是七个千禧年大奖难题之一（2000）。</li>
+<li><strong>问的是什么</strong>：三维情形，解是否对所有时间都存在且保持光滑——还是会产生奇点？</li>
+<li><strong>为什么重要</strong>：它是全文的中心案件（§1.7、§2.2）——2026 年 9 月的一纸宣布，把一个技术真相、一场商业竞争、一次署名纠纷、一桩优先权公案压缩进了同一周 [1,5,6]。</li>
+<li><strong>现状（2026-11-22）</strong>：克雷官网仍标 Active [4]。OpenAI 9 月 8 日的主张——就克雷表述的 C/D 陈述给出机器 blow-up 证明，经 Lean 核验但带一个外力项 [1]——被剑桥团队发现与其自然语言文本对不上 [118]；该方法未见推广到无外力情形 [5]。11 月 20 日，无外力三维 Euler（Alpöge、Buckmaster、Coiculescu）与无外力三维 Navier–Stokes（Alpöge、Buckmaster）的 blow-up 证明宣布，Lean 形式化存于公开仓库 [120,121]。奖金至今无人申领。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A2 · Erdős 单位距离猜想（1946）</h3>
+<ul>
+<li><strong>一句话</strong>：平面上的 n 个点，最多能有多少对恰好相距 1？</li>
+<li><strong>前提·背景</strong>：Erdős 1946 年提出；他的网格构造给出约 n^(1+c/log log n) 对，并猜想这已是全部真相：u(n) ≤ n^(1+o(1))。</li>
+<li><strong>问的是什么</strong>：n 个平面点之间的单位距离对数，是否只比 n 多出亚多项式的一点点？</li>
+<li><strong>为什么重要</strong>：2026 年 5 月，它成为第一个被 AI 系统证伪的核心领域猜想——全文 §1.5 的「第三幕」，也是机器提出、人类消化这一模式最锋利的样本 [19,20]。</li>
+<li><strong>现状（2026-11-22）</strong>：已证伪。Alon、Bloom、Gowers 等九人发表了 OpenAI 生成反例的人类核验版（u(n) ≥ n^(1+ε) 无穷多次成立）；萨温把指数显式化到 n^1.014；经典上界 O(n^(4/3)) 纹丝未动 [19,20]。完整条目详见 <a href="../famous_problems/erdos_unit_distance.md">Erdős 单位距离</a>。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A3 · 费马大定理——与它的形式化</h3>
+<ul>
+<li><strong>一句话</strong>：x^n + y^n = z^n 在 n ≥ 3 时没有正整数解——2026 年，机器把整个证明写成了计算机能逐行检查的语言。</li>
+<li><strong>前提·背景</strong>：费马约 1637 年在页边留下因「太窄写不下」而失传的证明；358 年后由怀尔斯（与泰勒）于 1994–95 年证明。完整条目详见 <a href="../famous_problems/fermat_last_theorem.md">费马大定理</a>。</li>
+<li><strong>问的是什么</strong>（2026 年版本）：能否只从 Lean 的三条标准公理出发重新推出怀尔斯的证明——链条中不剩任何一处需要人的信任？</li>
+<li><strong>为什么重要</strong>：全文 §1.8 以它作为核验瓶颈的极端标本——一份没有任何人能通读的制品 [25,26]。</li>
+<li><strong>现状（2026-11-22）</strong>：Anthropic 9 月 4 日宣布完整 Lean 形式化：约 1300 万行、约 29500 个中间定理、近自主工作十一天，经 Lean 内核核验、并确认与 Mathlib 的陈述一致；巴扎德审阅后称之为非凡的自动形式化成就，但数学上不增添任何新知识 [25,26]。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A4 · 黎曼假设</h3>
+<ul>
+<li><strong>一句话</strong>：zeta 函数所有「有意思」的零点，是否都落在一条直线上？</li>
+<li><strong>前提·背景</strong>：黎曼（1859）发现素数计数定理的误差由其 zeta 函数的零点支配，猜想这些零点全部位于实部 1/2 的直线上。它是数学最著名的未解问题，千禧年难题之一。</li>
+<li><strong>问的是什么</strong>：ζ(s) 的所有非平凡零点，实部是否恰为 1/2？</li>
+<li><strong>为什么重要</strong>：§6.4 曾以「AI 会不会证明黎曼猜想」作为该被绕开的问法；2026 年 11 月，这个问题以一种谁也没料到的方式被回答了一版 [93,120,122]。</li>
+<li><strong>现状（2026-11-22）</strong>：11 月 20 日，Alpöge 宣布黎曼假设的证明，出自一个内部 AI 模型（媒体点名 Claude；Tao 原文说「一个内部 AI 模型」——两说照录 [120,123]）；证明以约 1700 万行的 Lean 制品存在，11 月 21 日 Lean 社区按四项明示判据认证「黎曼假设的陈述与证明均属正确」[122]。更早，10 月发布中的「quasi-RH」结果（临界线外的零点必落在 1/8 &lt; Re(s) &lt; 7/8 竖条内）在两周内被人类分析学家消化并大体确认 [115]。人类数学协会则反对：无人能有理由声称理解这样一份文件 [124]。机器已核验；共同体已认证；人类理解进行中。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A5 · 唯一游戏猜想（2002）</h3>
+<ul>
+<li><strong>一句话</strong>：某个「猜标签」问题，近似求解是否几乎和精确求解一样难？</li>
+<li><strong>前提·背景</strong>：Khot 2002 年提出。若为真，则一大批近似问题（Max Cut 等）可证难以近似——它已成为理论计算机科学困难性纲领的枢纽。</li>
+<li><strong>问的是什么</strong>：允许少量违反的约束系统里，找到满足大多数约束的标签，是否计算上不可行？</li>
+<li><strong>为什么重要</strong>：10 月 6 日发布宣称其 372 个家族中包含 UGC 的证明——整批发布中分量最重的一条主张（后记 §xi）[93]。</li>
+<li><strong>现状（2026-11-22）</strong>：已发布的主张，未被接受的定理。Moshkovitz 已在这份证明上花数周，与 Khot、Håstad、Minzer 协作并借助 GPT-6 Astra，面对一个她称为「全然陌生的全新纠错码」；相关努力已在 Simons Institute 报告；完整核验尚未宣布 [119]。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A6 · 雅可比猜想（1939）</h3>
+<ul>
+<li><strong>一句话</strong>：多项式映射若雅可比行列式恒为非零常数，它是否必有多项式逆映射？</li>
+<li><strong>前提·背景</strong>：Keller 1939 年提出；一维平凡成立，二维悬置近百年，双方「证明」的沉船残骸堆积如山。</li>
+<li><strong>问的是什么</strong>：对哪些维数 n，雅可比行列式恒为非零常数的多项式映射 C^n → C^n 必有多项式逆？</li>
+<li><strong>为什么重要</strong>：§2.1 把它 2026 年 7 月的反例列为菲尔兹奖得主联名信之前机器证明大戏的一幕 [1,19,30]。</li>
+<li><strong>现状（2026-11-22）</strong>：n ≥ 3 为假。Alpöge 2026 年 7 月 19 日宣布三维反例（AI 模型助力找到）；Tao 次日发布公开的「消化」[106]；Gao 推广到一切大于二的维数，所有恒等式经精确有理数算术验证 [107]；巴扎德的团队在宣布数日内即看到反例被 Lean 机检 [108]。n = 2 仍未解。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A7 · 全部光滑七维球面上的正截面曲率</h3>
+<ul>
+<li><strong>一句话</strong>：每一种「怪异」的七维球面，能否都被赋予一个处处正弯曲的几何？</li>
+<li><strong>前提·背景</strong>：1956 年米尔诺发现七维球面携带 28 种不同的光滑结构——拓扑相同，微积分法则不同。每一种是否都容许严格正截面曲率的黎曼度量（所有二维截面都同向弯曲，像球面而不像马鞍），是拓扑如何约束几何的长久试金石。</li>
+<li><strong>问的是什么</strong>：为光滑同伦七维球面的全部 28 个定向微分同胚类，各构造一个严格正截面曲率的度量。</li>
+<li><strong>为什么重要</strong>：后记 §iv 把它记作边界案例——论文落在正文时段之内，致谢细节落在时段之外 [82,83]。</li>
+<li><strong>现状（2026-11-22）</strong>：何杨辉、刘子然与丘成桐 9 月 24 日在预印本中宣称已构造（以边界度量相容的两个正曲率七维圆盘粘合）；论文致谢 GPT 与 Claude 提出的建议 [82,83]。后续工作正在延伸该技术；共同体尚无裁定。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A8 · 四阶复矩阵乘法：49 到 48</h3>
+<ul>
+<li><strong>一句话</strong>：乘两个 4×4 复矩阵，最少需要几次标量乘法？</li>
+<li><strong>前提·背景</strong>：斯特拉森 1969 年的算法用 49 次，击败教科书的 64 次，开创了代数复杂度理论；这个纪录保持了五十六年。</li>
+<li><strong>问的是什么</strong>：找到 4×4 复矩阵情形已知最少的标量乘法次数——每一次缩减都会在更大的矩阵乘积上复利放大。</li>
+<li><strong>为什么重要</strong>：§1.4 以 AlphaEvolve 的 48 作为「计算-核验」一端成果的标志——那里不需要任何专家判断 [16]。</li>
+<li><strong>现状（2026-11-22）</strong>：48（DeepMind AlphaEvolve，2025 年 5 月）仍为纪录；后续工作把它以纯有理数系数重新导出。小字须读：48 是已知最好算法（上界），不是已证的最小张量秩。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A9 · 十一维的接吻数</h3>
+<ul>
+<li><strong>一句话</strong>：在十一维空间里，多少个单位球可以同时贴住中央那个单位球？</li>
+<li><strong>前提·背景</strong>：「接吻数」在三维古已有之（牛顿与格雷戈里争论的 13）；精确值仅在一、二、三、四、八、二十四维已知。</li>
+<li><strong>问的是什么</strong>：确定 R^11 中互不重叠的单位球同时贴住中央单位球的最大个数。</li>
+<li><strong>为什么重要</strong>：§1.4 把它与矩阵乘法并举，作为可机械核验的纪录 [16]。</li>
+<li><strong>现状（2026-11-22）</strong>：下界 593（AlphaEvolve，2025 年 5 月，自 592 提升），上界 868；精确值未知。后有论文主张 604；标准参考尚未采信，本页亦按未核验处理 [16]。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A10 · 九圈六边形振幅（附一个「单负」旁注）</h3>
+<ul>
+<li><strong>一句话</strong>：在量子场论的「玩具模型」里，算出一个深达九个量子圈的、复杂得可怕的散射振幅。</li>
+<li><strong>前提·背景</strong>：平面 N=4 超杨–米尔斯理论是现代场论的「氢原子」；其六粒子「六边形」振幅随圈数 L 天文级增长。原纪录为 2023 年 Dixon 与刘洋的八圈，用的是「自举」法——不断施加一致性条件，直到答案被逼出来。</li>
+<li><strong>问的是什么</strong>：算出九圈六边形振幅（旁注：判定某个单负胶子树级振幅是否非零）。</li>
+<li><strong>为什么重要</strong>：§1.7 把 2026 年理论物理的两案读作「机器执行配方」与「机器提出猜想」的现场标本 [23,24]。</li>
+<li><strong>现状（2026-11-22）</strong>：Anthropic 9 月 25 日宣布 Claude 算出九圈振幅，Dixon 花约两周独立核验；何颂领衔的中科院团队同期得到大部分结果，部分约束用了 GPT-6 [24]。旁注中，一篇 2026 年预印本报告单负胶子树级振幅公式先由 GPT-5.2 Pro 猜想、再由 OpenAI 内部模型证明 [23]。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>A11 · First Proof：十道研究级问题</h3>
+<ul>
+<li><strong>一句话</strong>：机器能否解出它的考官们自己真心关心的问题？</li>
+<li><strong>前提·背景</strong>：2026 年由十一位研究数学家组织的挑战，十道题全部取自出题人自己的研究——刻意不是竞赛题，不是为「可解」而设计的基准题。</li>
+<li><strong>问的是什么</strong>：十题之中，机器生成的解答能确立几道——以及谁能判定？</li>
+<li><strong>为什么重要</strong>：§1.6 与 §6.4 以它作为核验瓶颈最干净的表达：报告的困难在评估，不在生成 [22]。</li>
+<li><strong>现状（2026-11-22）</strong>：生成的一半已经成立；评估的一半仍是未了的公案，组织者自己承认，测度「自主提出问题」的实验方法尚不存在 [22]。</li>
+</ul>
+</section>
+<section class="sub d0"><h2>B 组 · 论证的背景板</h2>
+</section>
+<section class="sub d1"><h3>B1 · 哥德尔不完备定理（1931）</h3>
+<ul>
+<li><strong>一句话</strong>：任何足够丰富、一致的形式系统，必有它自己证不出的真命题——而且它无法在内部证明自己的一致性。</li>
+<li><strong>前提·背景</strong>：哥德尔，针对希尔伯特「把全部数学安放在形式地基上」的纲领。</li>
+<li><strong>问的是什么</strong>（已有答案）：形式证明有没有机械边界？有——全文两处倚重它（§3.3 反对「数学是终极根据」，§5.4 论彭罗斯对它的争议性援引）[42,43,44]。</li>
+<li><strong>现状</strong>：已成定论的数学；建立在它之上的哲学论证仍在争论。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B2 · 停机问题（1936）</h3>
+<ul>
+<li><strong>一句话</strong>：没有任何算法能对每个程序与输入判定它是否终将停机。</li>
+<li><strong>前提·背景</strong>：图灵，在那篇定义了「计算」本身的论文里。</li>
+<li><strong>问的是什么</strong>（已有答案）：对这道界定明确的问题，存在普适的机械判定程序吗？不存在 [48]。</li>
+<li><strong>为什么重要</strong>：与哥德尔一道，合上了「形式化能够穷尽数学」的希望——§3.5 与 §5.4 [48]。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B3 · 连续统假设</h3>
+<ul>
+<li><strong>一句话</strong>：整数与连续统之间，还有没有别的大小？</li>
+<li><strong>前提·背景</strong>：康托尔，1878。哥德尔（1940）证明它不能从标准公理否证；科恩（1963）证明它也不能由此证出——它是独立的。</li>
+<li><strong>为什么重要</strong>：§3.3 以科恩的结果说明：连最基础的分支，其公理选择也不是唯一被迫的 [45]。</li>
+<li><strong>现状</strong>：「独立」已成定论；采纳哪套公理是立场，不是事实。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B4 · 罗素悖论（1901）</h3>
+<ul>
+<li><strong>一句话</strong>：「所有不包含自身的集合组成的集合」——它包含自己吗？</li>
+<li><strong>前提·背景</strong>：罗素致弗雷格的信，在朴素集合论的地基上凿出一个洞。</li>
+<li><strong>为什么重要</strong>：§3.1 以它标记逻辑主义的失败——教训是逻辑是数学的语法，不是数学的地基 [36]。</li>
+<li><strong>现状</strong>：由类型论与公理化集合论解决；教训已成为基础理论的常识。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B5 · 开普勒猜想</h3>
+<ul>
+<li><strong>一句话</strong>：杂货店堆橙子的方式，就是等球堆得最密的方式。</li>
+<li><strong>前提·背景</strong>：开普勒，1611。黑尔斯 1998 年宣布证明；审稿人「99% 确信」但不敢断言；机器核验的形式证明（Flyspeck）2014 年完成、2017 年发表。</li>
+<li><strong>为什么重要</strong>：§5.3 以多年的核验劳动为「核验应当付酬」的价码——这类劳动至今是学科里报酬最低的一档 [66]。</li>
+<li><strong>现状</strong>：已证明、已机器核验；历史上第一个以此方式认证的重大定理。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B6 · 罗宾斯问题</h3>
+<ul>
+<li><strong>一句话</strong>：三条关于一个布尔运算的简单等式，能否穷尽全部布尔代数？</li>
+<li><strong>前提·背景</strong>：罗宾斯 1933 年提出；人手六十余年攻而不克，1996 年被麦库恩的自动定理证明器 EQP 解决。</li>
+<li><strong>为什么重要</strong>：§5.3 把它列在「机器接手检查与执行、人相应转移阵地」的谱系里 [65]。</li>
+<li><strong>现状</strong>：已被机器证明——AI 数学浪潮正是把这个先例又推高一层。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B7 · 素数有界间隙（与陈景润定理）</h3>
+<ul>
+<li><strong>一句话</strong>：相邻素数的间隙，最小能多小——而且无穷多次出现？</li>
+<li><strong>前提·背景</strong>：张益唐（2014）证明存在某个小于七千万的间隙无穷多次出现——第一个有限界——引出 Polymath8 项目（246）与梅纳德独立的突破。陈景润（1973）证明每个大偶数都是素数加至多两个素数之积（「1+2」）。</li>
+<li><strong>为什么重要</strong>：§4.2 与 §6.2 以这一谱系说明加法组合学的活力——以及世代筛选的问题存量如何供给研究 [57,58,72]。</li>
+<li><strong>现状（2026-11-22）</strong>：无条件纪录现为 240（Stadlmann，2026 年 8 月）[129]。孪生素数猜想（间隙 2）仍未解。相关条目详见 <a href="../famous_problems/goldbach_and_twin_primes.md">哥德巴赫与孪生素数</a>。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B8 · 韦尔猜想</h3>
+<ul>
+<li><strong>一句话</strong>：数有限域上多项式方程的解，并在算术深处找到拓扑。</li>
+<li><strong>前提·背景</strong>：韦尔 1949 年猜想有限域上代数簇的 zeta 函数具有黎曼假设的风味；德利涅 1974 年证明最后也最难的部分。</li>
+<li><strong>为什么重要</strong>：§4.2 以德利涅的证明作为算术几何的里程碑——朗兰兹纲领周边那片疆域的界碑 [56]。</li>
+<li><strong>现状</strong>：已证明（1974）；其后裔（几何朗兰兹等）仍是数学最深处的活疆域。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B9 · 圆周率：刘徽与祖冲之</h3>
+<ul>
+<li><strong>一句话</strong>：圆的比率能算到多精——以及用什么方法算？</li>
+<li><strong>前提·背景</strong>：刘徽（公元 263 年）以割补术用内接多边形逼近；祖冲之（五世纪）给出密率 355/113，精确到小数六位——欧洲得到同精度结果要再等一千年。</li>
+<li><strong>为什么重要</strong>：§5.5 以中国传统为「算法性、构造性路径」的证据——差别在什么使一份解答算数，不在什么为真 [50,69]。</li>
+<li><strong>现状</strong>：数值上已算至万亿位；史学上本页的论点依旧成立：内容或许必然，形式从来不是。</li>
+</ul>
+</section>
+<section class="sub d1"><h3>B10 · 喀拉拉学派的无穷级数</h3>
+<ul>
+<li><strong>一句话</strong>：正弦、余弦与 π 的幂级数——在牛顿与莱布尼茨之前的几个世纪，已在印度写成。</li>
+<li><strong>前提·背景</strong>：桑伽马格拉的马达瓦及其后继者（十四至十六世纪）得到与后来欧洲同名结果等价的级数展开，但没有发展出系统化的微积分框架。</li>
+<li><strong>为什么重要</strong>：§5.5 以喀拉拉为证据：同一种数学可以在不止一种建制形态下生长 [50,70]。</li>
+<li><strong>现状</strong>：史学上已成定论；文章用它对抗「现代西方数学＝数学本身」的等式。</li>
+</ul>
+<!-- 新来源备注：本页 [129] 为长稿来源表之外新增（Stadlmann, Bounded gaps between primes, arXiv:2608.31126, 2026, https://arxiv.org/abs/2608.31126, accessed 22 November 2026, 一手（预印本））；其余方括号编号一律指向 proofs_no_longer_scarce.md 文末来源表。 --></section></div></div>
+</section>
+      <p class="colophon">
+        <span>南予 <b>nanyu</b> &middot; <a href="mailto:nanyudong@gmail.com">nanyudong@gmail.com</a></span>
+        <span><span class="p-zh">本文为草稿，仅供参考，欢迎批评指正</span><span class="p-en">A working draft, for reference only — corrections welcome</span></span>
+      </p>
+    </div>
+  </main>
+</div>
+
+<script>
+(function () {
+  var body = document.body;
+  // Scope the language choice per page: reading one essay in EN must not force
+  // another essay to open in EN. Each document remembers its own selection, and a
+  // page never chosen defaults to bilingual. An explicit ?lang= link still wins.
+  var KEY = 'zh-article-lang:' + location.pathname;
+  var DRAFT_KEY = 'zh-draft-dismissed';
+
+  /* ---------- draft notice: measure, pin, remember dismissal ---------- */
+  var draft = document.getElementById('draft');
+  function syncBanner() {
+    var h = (draft && !draft.hidden) ? draft.offsetHeight : 0;
+    document.documentElement.style.setProperty('--bh', h + 'px');
+  }
+  if (draft) {
+    try {
+      if (localStorage.getItem(DRAFT_KEY) === '1') { draft.hidden = true; }
+    } catch (e) { /* file:// may block */ }
+    var dismiss = draft.querySelector('.dismiss');
+    if (dismiss) {
+      dismiss.addEventListener('click', function () {
+        draft.hidden = true;
+        try { localStorage.setItem(DRAFT_KEY, '1'); } catch (e) { /* ignore */ }
+        syncBanner();
+      });
+    }
+    syncBanner();
+    window.addEventListener('resize', syncBanner);
+  }
+
+  /* ---------- share: copy the page link ---------- */
+  var here = location.href;
+  Array.prototype.forEach.call(document.querySelectorAll('.share [data-share]'), function (el) {
+    if (el.getAttribute('data-share') === 'copy') {
+      // Keep the bilingual markup intact: swapping textContent would delete the
+      // .p-zh/.p-en spans and freeze the button in one language after one click.
+      var rest = el.innerHTML;
+      el.addEventListener('click', function () {
+        function ok() {
+          el.innerHTML = '<span class="p-zh">' + (el.getAttribute('data-done-zh') || '已复制')
+            + '</span><span class="p-en">' + (el.getAttribute('data-done-en') || 'Copied')
+            + '</span>';
+          el.classList.add('done');
+          setTimeout(function () {
+            el.innerHTML = rest;
+            el.classList.remove('done');
+          }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(here).then(ok, fallback);
+        } else { fallback(); }
+        function fallback() {
+          // file:// and older browsers block the async clipboard API
+          var ta = document.createElement('textarea');
+          ta.value = here;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); ok(); } catch (e) { /* give up */ }
+          body.removeChild(ta);
+        }
+      });
+    }
+  });
+
+  /* ---------- language ---------- */
+  function setLang(mode) {
+    body.classList.remove('lang-en', 'lang-zh', 'lang-dual');
+    body.classList.add('lang-' + mode);
+    Array.prototype.forEach.call(document.querySelectorAll('.langset button'), function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === mode));
+    });
+    var tz = body.getAttribute('data-title-zh');
+    var te = body.getAttribute('data-title-en');
+    if (tz && te) {
+      document.title = mode === 'en' ? te : (mode === 'zh' ? tz : tz + ' / ' + te);
+    }
+    try { localStorage.setItem(KEY, mode); } catch (e) { /* file:// may block */ }
+    if (history.replaceState) {
+      history.replaceState(null, '', '?lang=' + mode);
+    }
+    spy();
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.langset button'), function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.lang); });
+  });
+
+  var initial = 'dual';
+  try {
+    var saved = localStorage.getItem(KEY);
+    if (saved) { initial = saved; }
+  } catch (e) { /* ignore */ }
+  var q = (location.search.match(/lang=(en|zh|dual)/) || [])[1];
+  if (q) { initial = q; }
+  setLang(initial);
+
+  // reading progress
+  var bar = document.getElementById('progress');
+  function progress() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', progress, { passive: true });
+  progress();
+
+  // scroll spy
+  var links = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.toc a'), function (a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+  var units = Array.prototype.slice.call(document.querySelectorAll('.unit'));
+  var current = null;
+  function spy() {
+    var y = window.scrollY + 140, found = null;
+    for (var i = 0; i < units.length; i++) {
+      if (units[i].offsetTop <= y) { found = units[i].id; } else { break; }
+    }
+    if (found === current) { return; }
+    current = found;
+    Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+    if (found && links[found]) { links[found].classList.add('active'); }
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+})();
+// KaTeX auto-render: entries are math-heavy ($...$, $$...$$); the FastAPI viewer
+// loads the same CDN pair (see templates/base.html). Deferred scripts above, so
+// renderMathInElement exists by DOMContentLoaded.
+window.addEventListener('DOMContentLoaded', function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '\[', right: '\]', display: true },
+        { left: '\(', right: '\)', display: false },
+        { left: '$', right: '$', display: false }
+      ],
+      throwOnError: false
+    });
+  }
+});
+</script>
+</body>
+</html>
