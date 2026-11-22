@@ -11,6 +11,9 @@ current_work:
   - NWO **Vici** 150 万欧元项目「**Technodiversity: A New Lens on AI**」（2026-02-26 公布）——把技术多样性做成 AI 哲学纲领（✔ erasmusmagazine.nl, 2026-11-03）
   - 《**Kant Machine**》（Bloomsbury Academic, 2026-02-27 出版）（✔ digitalmilieu.net news log, 2026-11-03）
   - 近著四部：Machine and Sovereignty (U Minnesota Press 2024)；Post-Europe (Sequence/Urbanomic 2024)；主编 Cybernetics for the 21st Century Vol.1 (Hanart 2024)；Jenseits von West und Ost (Matthes & Seitz 2025)（✔ digitalmilieu.net, 2026-11-03；Art and Cosmotechnics 系 2021 旧作）
+circle:
+  - 师承 Bernard Stiegler（1952–2020）——Goldsmiths 博士论文在其指导下完成；Hui 自述「Stiegler 是我的老师，也是挚友，2008 年结识后密切合作至今（他生前）」；2021 年主讲 Bernard Stiegler 纪念演讲（✔ 检索实核 eur.nl/digitalmilieu.net/访谈引文, 2026-11-22）
+  - 谱系位：法国技术哲学（Simondon–Heidegger–Stiegler 线）与东亚技术论述之间的直系承灯者——本仓「技术多样性」对话的师门背景（学界共识层，已标注）
 trends_analysis: 由本档已溯源条目可见——2024–2026 连续四部著作/主编卷落地后，2026 年转入双线：以 Vici 项目把「技术多样性」立成 AI 哲学的建制化研究纲领，以 Kant Machine 进入「AI 时代的哲学史重写」；动向是从跨文明立论期进入 field-building 期（✔ 2026-11-03，沿本档 current_work）
 why_open: 公开研究网络（Research Network for Philosophy and Technology, 2014 起）与多场公开 symposia（Cybernetics for the 21st Century I/II 等）；个人站全程公开 news/events log（✔ digitalmilieu.net, 2026-11-03）
 what_real: 「宇宙论的技术」（cosmotechnics）——技术从来内嵌于各文明的宇宙观；AI 时代需要**技术多样性**而非单一「全球技术」（✔ 其自铸术语，见上著列；转述为其一贯论纲）

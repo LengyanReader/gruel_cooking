@@ -29,7 +29,7 @@
 
 | id | 项 | 涉及 | 状态 | 优先级 |
 |---|---|---|---|---|
-| M-1 | 26 位学者近 5 年指导谱系/毕业生去向（v2、v3 两轮均「空手而归」，下轮专做） | `reseArch_X/scholars/*.md` 字段 `risk`/`entry` | 待办 | 高 |
+| M-1 | 26 位学者近 5 年指导谱系/毕业生去向（v2、v3 两轮均「空手而归」，下轮专做） | `reseArch_X/scholars/*.md` 字段 `risk`/`entry` | **部分开工（2026-11-22）**：schema 新增 `mentees` 字段；friston-karl（弟子 Thomas Parr ✔ + AII 教材社群 ✔）、hui-yuk（师承 Stiegler ✔，Goldsmiths 博士导师 + 2021 纪念演讲）已入档；新增弟子档 parr-thomas.md。余 58 位待做 | 高 |
 
 ## 四、趋势/动向回源（trends_analysis 补强）
 

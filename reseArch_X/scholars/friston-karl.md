@@ -12,6 +12,9 @@ current_work:
   - FEP→AI 的交叉扩散：2025-11 综述「From Neuroscience to Artificial Intelligence: Karl Friston's FEP and the Rise of Active Inference」梳理其 AI 应用线（✔ 检索快照, 2026-11-04）
   - **Active Inference Institute**——围绕其框架的开放研习社群，常规 session 与工作组持续运转（2026 年报告关注 FEP 在精神病学/疼痛/神经学的实证验证缺口）（✔ activeinference.institute, 2026-11-04）
 trends_analysis: 由本档已溯源条目可见——FEP 已越过神经科学边界：open-access 专著定型（2022）→ 2025-2026 的 AI 应用综述潮 → 开放社群（Active Inference Institute）自行生长；动向是理论进入「公共品化 + 跨域扩散」期，本人则持续做形式化推进（✔ 2026-11-04，沿本档 current_work）
+mentees:
+  - Thomas Parr——博士生→博士后→《Active Inference》教科书共同执笔人（MIT Press 2022，与 Pezzulo 合著），现 UCL Queen Square 理论神经科学家（✔ 见 parr-thomas.md，2026-11-22）
+  - Active Inference Institute 的 Textbook Group：以本书为教材的逐章共读社群（2022 年起九期）——「弟子」在学派成熟期常以社群而非学位形式出现（✔ AII 口径，2026-11-04）
 why_open: MIT Press 专著 open access；FIL/SPM 软件传统开源；其框架的最大研习社群（AII）是第三方自组织而非其私产——开放是被社群验证的行为常态（✔）
 what_real: 生命即抵抗耗散——**自由能原理**：自组织系统以最小化预测误差/自由能维系自身；知觉、行动与学习是同一个最小化的三面（✔ 转述 FEP 纲领，见 open-access 专著）
 mode: 受教

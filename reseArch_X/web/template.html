@@ -603,6 +603,7 @@ function renderDossier(){
           : (trends.length ? blk(isE?'trends':'动向','TRENDS',li(trends)) : '')}
       ${blk(isE?'key works':'代表作','KEY WORKS', li(s.key_works))}
       ${blk(isE?'repo anchors':'本仓接口','REPO ANCHORS', li(s.repo_anchors))}
+      ${blk(isE?'mentees · disciples':'弟子 · 门生谱系','MENTEES', li(s.mentees))}
       ${blk(isE?'open-mind evidence':'开明可证由','OPEN-MIND EVIDENCE', s.why_open?`<p>${esc(md(s.why_open))}</p>`:'')}
       ${blk(isE?'real problem':'真问题','REAL PROBLEM', s.what_real?`<p>${esc(md(s.what_real))}</p>`:'')}
       ${s.why_now ? blk(isE?'why now':'时代抓手','WHY NOW',`<p>${esc(md(s.why_now))}</p>`) : ''}

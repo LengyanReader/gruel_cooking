@@ -304,6 +304,7 @@ SCHOLAR_AXES = {
     "kringelbach-morten": ["cultiv", "goodlife"],
     "friston-karl":       ["cultiv", "ai_ds", "ai_hum"],
     "chandaria-shamil":   ["cultiv", "goodlife", "ai_hum"],
+    "parr-thomas":        ["cultiv", "ai_ds"],
     "fanzo-jessica":      ["food", "sus"],
     "patel-raj":          ["food", "sus"],
     "buzzard-kevin":      ["ai_ds"],
