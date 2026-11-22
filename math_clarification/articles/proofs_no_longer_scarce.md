@@ -2,7 +2,7 @@
 
 <!-- 长稿正式条目（论说体，house style 论点→论据→论证→反诘→来源）。AI 起草、未经作者逐条复核（harness §I.6）。双语逐段并列；英文侧与中文侧在内容与精神上对应，而非逐句对译（作者决定 2026-09-26）。来源标注四级（harness R-B）：一手 / 权威版本 / 学界共识·解读 / 存疑；【已审计】出自 essays/submission/citation_audit.md 语料，【待审】为待人工核验。L0 块为导读与目录（按受众层级裁剪：level=L0 只见导读）。 -->
 <!-- en: Long-form entry (essayistic; house style claim → evidence → argument → counter-question → sources). AI-drafted and not yet verified item by item by the author (harness §I.6). The two languages run paragraph by paragraph in parallel: the English and the Chinese correspond in content and in spirit rather than word for word (author's decision, 2026-09-26). Sources are graded on four levels (harness R-B): primary / authoritative edition / scholarly consensus or interpretation / doubtful; [audited] marks material drawn from essays/submission/citation_audit.md, [pending] marks what still needs manual verification. The L0 block is the foreword and contents, cropped by audience level (level=L0 shows the foreword only). -->
-<!-- 发表 2026-09-26 19:38 · 更新 2026-09-27 10:58 · 后记一期 2026-10-09 · 后记二期（事件续编+待审项处置+双重审计后的论证修订）2026-11-22 -->
+<!-- 发表 2026-09-26 19:38 · 更新 2026-09-27 10:58 · 后记一期 2026-10-09 · 后记二期+论证修订+全套结构重写（R1–R6：主题前移/每章一景/桥接/理解正面说明/钢人段/三本账与章程）2026-11-22 -->
 
 <!-- L0 -->
 
@@ -42,15 +42,17 @@ This essay was written to slow a news cycle down. Between 2024 and 2026 the repo
   - 5.3 How the division of labor should evolve
   - 5.4 Rationality, formalization, computability, quantifiability, and logic
   - 5.5 Is Western mathematics the whole of mathematics
+  - 5.6 What understanding is: a positive account
 - **6 · What counts as originative**: a checkable three-condition definition that makes originativity a relation between a question and a literature; why originative work is scarce and where its supply comes from; the multiple identities of Descartes, Newton, Leibniz, Gauss, and their like; and a more productive way of asking the question about AI.
   - 6.1 Defining the term
   - 6.2 Scarcity and supply
   - 6.3 The multiple identities of the originators
   - 6.4 A more productive way of asking
-- **7 · Summary and a view from above**: the threads gathered; Whitehead's process philosophy and Friston's free-energy principle as two nameable resources for a structure in which parts and whole constitute each other; and the warning that the concrete stakes of the moment are not dissolved by the wide view.
-  - 7.1 Gathering the threads
+- **7 · Summary and a view from above**: the threads gathered into three ledgers (truth, credit, meaning); Whitehead's process philosophy and Friston's free-energy principle as two nameable resources for the structure the ledgers share; a charter for the new division, collected from the essay's own record; and the warning that the concrete stakes of the moment are not dissolved by the wide view.
+  - 7.1 Gathering the threads: three ledgers
   - 7.2 Process, prediction, and mutual constitution
-  - 7.3 Concrete stakes are not dissolved by the wide view
+  - 7.3 A charter for the new division
+  - 7.4 Concrete stakes are not dissolved by the wide view
 - **Postscript · 27 September – 22 November 2026**: an independent section appended directly after the sources, recording the events that followed the last update in two installments — the September guidelines and the release-day statement of the advisory group, arXiv's new submission cap, a seven-sphere construction and its late-surfacing acknowledgment, the October release of a mathematics repository, the withdrawal of three of its manuscripts, and the debates over the manner of the release (first installment); then, through late November: a quasi-Riemann paper digested by human experts within two weeks, two further interventions by the advisory group, two additions to the repository including a claimed disproof of the exponential time hypothesis, the verification effort on the released Unique Games proof, new communal infrastructure (MathHelm, a German Mathematical Society position paper), machine-checked unforced blow-up proofs for the Euler and Navier–Stokes equations, and the announcement, and Lean-community certification, of a claimed proof of the Riemann Hypothesis (second installment). Where the postscript differs from the chapters, the difference is stated in the postscript rather than by altering the chapters.
 
 The sources are numbered by first appearance at the end of the article, each carrying its reliability tier (primary / authoritative / scholarly consensus or interpretation / doubtful) and its audit status; entries marked [pending] await human verification. Sources [98] onward were added in the 22 November revision — the ones closing the chapters' pending items first, then the second installment's — ordered by first appearance among the new citations; the original numbering [1]–[97] is unchanged.
@@ -91,15 +93,17 @@ The sources are numbered by first appearance at the end of the article, each car
   - 5.3 分工应如何演化
   - 5.4 理性、形式化、可计算、可量化与逻辑
   - 5.5 西方数学是数学的全部吗
+  - 5.6 理解是什么：一个正面说明
 - **6 · 什么是「开创性」**：可核查的三条件定义，使开创性成为问题与文献之间的关系而非心智的属性；开创性工作为何稀缺、存量从何补给；以笛卡尔、牛顿、莱布尼茨、高斯为代表的开创者的多重身份；以及关于 AI 的一个更有生产力的问法。
   - 6.1 界定「开创性」
   - 6.2 开创性工作的稀缺与供给
   - 6.3 开创者的多重身份
   - 6.4 换一个更有生产力的问法
-- **7 · 总结与统观**：收束全篇；怀特海过程哲学与弗里斯顿自由能原理为「整体与部分互相成就」的结构提供两个名字说得出口的思想资源；并提醒：此刻的具体利害不因整体视野而消解。
-  - 7.1 收束
+- **7 · 总结与统观**：收束为三本账（真理、信用、意义）；怀特海过程哲学与弗里斯顿自由能原理为账目所共享的结构提供两个名字说得出口的思想资源；一份从本文自己的记录收拢的「各归各位」章程；并提醒：此刻的具体利害不因整体视野而消解。
+  - 7.1 收束：三本账
   - 7.2 统观：过程、预测与互相成就
-  - 7.3 具体利害不因整体视野而消解
+  - 7.3 各归各位的章程
+  - 7.4 具体利害不因整体视野而消解
 - **后记 · 2026年9月27日至11月22日**：作为独立部分直接接续文末来源之后，分两期记录上次更新之后的事态——第一期：AGMAI 的九月指南与发布当日声明、arXiv 的新投稿限额、一篇七维球面构造及其迟到致谢、十月数学仓库的发布、其中三篇手稿的撤回，以及围绕发布方式的争论；第二期（至 11 月下旬）：quasi-RH 论文两周内被人类专家消化、AGMAI 的两次新介入、仓库新增两篇（其一宣称否证指数时间假设）、已发布唯一游戏猜想证明的核验进行时、新的共同体基础设施（MathHelm、德国数学会立场文件）、无外力 Euler 与 Navier–Stokes 奇点证明的机器核验，以及一则黎曼假设证明的宣布与其 Lean 社区认证。凡与正文有出入处，皆在后记中说明，而不改动正文。
 
 文末各条来源按首次出现编号，每条标注来源层级（一手 / 权威版本 / 学界共识·解读 / 存疑）与审计状态；标注【待审】者待人工核验。[98] 起为 2026 年 11 月 22 日修订新增的来源——先列闭合正文待审项者，再列后记第二期者——按新增引用首次出现排序；原编号 [1]–[97] 保持不变。
@@ -114,7 +118,7 @@ The sources are numbered by first appearance at the end of the article, each car
 
 On 8 September 2026, OpenAI announced that an internal, unreleased model had solved the existence and smoothness problem for the Navier-Stokes equations, one of the seven Millennium Prize problems, open for nearly a century [1]. Three days later the Clay Mathematics Institute chose a telling word in reply: the problem was "apparently" settled, its evaluation procedure remained in force, and its website still labelled the problem "unsolved" [2,3,4]. Ten days further on, Scientific American asked whether OpenAI had solved the wrong problem [5]. In the same week a mathematician at New York University publicly accused the company of trying to exclude from the authorship his collaborator, who works at a competing firm [6]. A technical truth, a commercial race, an authorship dispute, and a priority quarrel echoing Newton against Leibniz were compressed into a single September.
 
-The compression is the rhythm of the past two years. Silver in 2024, gold in 2025, a Millennium problem in 2026: the machine's report card changes every year, and each announcement stirs astonishment or alarm, while the disputes around it seldom touch whether the calculation was right. This essay wants to slow those news-cycle reflexes down and put the real questions on the table one at a time. There are seven of them. How much of each "breakthrough" deserves belief? Where do the voices raised in the mathematical community stand, and why? What is mathematics itself, and where does it sit in human knowledge? Who is the mathematician, and what are mathematicians busy with? In formalizable settings, is the machine really inferior to the human? Does the word "originative" describe something only mathematicians can have? And what, seen in the large, is actually happening to us?
+The compression is the rhythm of the past two years. Silver in 2024, gold in 2025, a Millennium problem in 2026: the machine's report card changes every year, and each announcement stirs astonishment or alarm. Beneath the noise, this essay argues, a division of labor has been quietly taking shape, and its principle sits in the title: the proofs go to the machine, the understanding stays with us. The events of 2026 gave that principle a new edge: by late November, verification had begun to arrive faster than understanding — artifacts checked, certified and recompiled while nobody yet grasps them. Whether that inversion is a triumph, a warning, or simply the next stage of a very old accommodation is not a slogan to chant but a claim to test. So the essay tests it, one question at a time; there are seven. How much of each "breakthrough" deserves belief? Where do the voices raised in the mathematical community stand, and why? What is mathematics itself, and where does it sit in human knowledge? Who is the mathematician, and what are mathematicians busy with? In formalizable settings, is the machine really inferior to the human? Does the word "originative" describe something only mathematicians can have? And what, seen in the large, is actually happening to us?
 
 The essay attempts a systematic cleaning in that order, under a single rule: every claim follows its evidence, every piece of evidence carries a stated reliability, and every conclusion says under what conditions it would fail.
 
@@ -124,7 +128,7 @@ The essay attempts a systematic cleaning in that order, under a single rule: eve
 
 2026 年 9 月 8 日，OpenAI 宣布其内部一个未公开的模型解决了纳维-斯托克斯方程的存在性与光滑性问题，这是七个千禧年大奖难题之一，悬置近一个世纪 [1]。三天后，克雷数学研究所用了一个耐人寻味的词来回应：「似乎」已经解决，并强调评审程序照旧，官网上这道题仍标着「未解决」[2,3,4]。又过十天，《科学美国人》刊出质问：OpenAI 会不会解错了一道题 [5]？同一周里，一位纽约大学的数学家公开指控，对方曾试图把他在竞争对手公司任职的合作者从署名中剔除 [6]。一个技术真相、一场商业竞争、一次署名纠纷、一桩与牛顿和莱布尼茨之争遥相呼应的优先权公案，在同一个九月里被压缩到了一起。
 
-这种压缩正是过去两年的节奏。2024 年银牌、2025 年金牌、2026 年千禧年难题，机器的成绩单一年一换；每一次宣布都激起一阵惊叹与警惕，而围绕每一张成绩单的争论，却几乎从不在「算得对不对」上。本文想做的，正是把这些新闻式的惊叹与警惕放慢下来，把争论背后的真问题一件一件摆到桌面上。这些真问题一共有七个：这些「突破」各自有几分可信？数学界里响起的各种声音，各自站在哪里、为什么？数学本身究竟是什么，它在人类知识里处在什么位置？数学家是怎样一种人，他们在忙什么？在可以形式化的场景里，机器真的不如人吗？所谓「开创性」，究竟是不是只有数学家才能拥有的东西？以及，把这一切放回一张更大的图景里看，我们到底在经历什么？
+这种压缩正是过去两年的节奏。2024 年银牌、2025 年金牌、2026 年千禧年难题，机器的成绩单一年一换；每一次宣布都激起一阵惊叹与警惕。而在喧嚣之下，本文想要论证：一种分工正在悄然成形，它的原则就写在题目里——证明归机器，理解归人。2026 年的事件把这个原则磨出了新的锋刃：到十一月下旬，核验已经跑到了理解前面——制品被检验、被认证、被复编译，而尚未有人真正读懂它们。这场倒置是胜利、是警讯，还是一次古老协作的下一个阶段，不是用来喊的口号，而是有待检验的主张。所以本文把它拆成七问，逐一检验：这些「突破」各自有几分可信？数学界里响起的各种声音，各自站在哪里、为什么？数学本身究竟是什么，它在人类知识里处在什么位置？数学家是怎样一种人，他们在忙什么？在可以形式化的场景里，机器真的不如人吗？所谓「开创性」，究竟是不是只有数学家才能拥有的东西？以及，把这一切放回一张更大的图景里看，我们到底在经历什么？
 
 本文尝试按这个顺序做一次系统的清理。清理的原则只有一条：每一个论断都跟着证据走，每一处证据都标明它的可靠程度，而每一个结论，都一并说明它会在什么条件下失效。
 
@@ -135,6 +139,8 @@ The essay attempts a systematic cleaning in that order, under a single rule: eve
 <!-- en -->
 
 ## 1 · Events and credibility: a case-by-case audit
+
+*A scene to begin with.* July 2024: a machine solves four of six International Mathematical Olympiad problems, including the hardest of the year, and the account is peer-reviewed and checked in Lean [9,10]. The fine print sits in the same disclosure: the problems had been translated into formal language by human mathematicians, and some searches ran for up to three days — while the human contestants sat a four-and-a-half-hour contest [10]. The score is real; the conditions are different. Every case in this chapter turns on exactly that gap. The method is to audit it case by case: five dimensions, three certification settings, and an explicit verdict at the end of each event.
 
 ### 1.1 A workable framework
 
@@ -147,6 +153,8 @@ Industry itself has begun to separate the autonomy of a result from its weight. 
 <!-- zh -->
 
 ## 1 · 事件与信度：一次逐案审计
+
+*以一个场景开场。*2024 年 7 月：一台机器解出国际数学奥林匹克六题中的四题，包括当年最难的一题，记录经同行评议并以 Lean 检查 [9,10]。细则写在同一份披露里：题目由人类数学家译入形式语言，部分搜索最长跑了三天——而人类考生坐进的是一场四个半小时的竞赛 [10]。分数是真的，条件不一样。本章的每一案都卡在这道缝隙上；方法是逐案审计：五个维度、三种核验情形，每案末尾一条显式判级。
 
 ### 1.1 一套可操作的评估框架
 
@@ -256,6 +264,8 @@ First Proof 挑战给出十道研究层次的问题，都取自十一位发起�
 
 ## 2 · The voices, and whose crisis it is
 
+*A scene to begin with.* In the last week of August 2026, a mathematician at New York University was forced into hurried publication between two competing corporations; by his account, when he objected to his collaborator's exclusion from the authorship, the response hinted at his career; by the laboratory's account, nothing of the kind happened [6]. The rival claims need not be adjudicated here — his situation is itself the datum. A way of doing mathematics paced by seminars and sabbaticals had run into a way paced by product launches, and the collision had a human being inside it. The voices gathered in this chapter are read across four registers — argument, evidence, logic, and the position and motive behind them — because what each speaker can see depends on where they stand in that collision.
+
 ### 2.1 The spectrum of voices
 
 The public record of 2024 to 2026 can be sorted into six voices, and each should be read across four registers at once: argument, evidence, logic, and the position and motive behind it. The first two decide whether the claim is right; the latter two decide how its weight should be measured.
@@ -287,6 +297,8 @@ The honest summary is therefore: not a crisis of mathematics as a body of truth,
 <!-- zh -->
 
 ## 2 · 众声喧哗与危机诊断
+
+*以一个场景开场。*2026 年 8 月的最后一周，一位纽约大学的数学家被裹挟进两家巨头企业夹缝中的仓促发表；据他的说法，当他抗议合作者被排除在署名之外时，得到的回应近似于对其职业前途的暗示；实验室方面则否认有此事 [6]。各执一词且不必在此裁决——他的处境本身就是数据。一种以研讨班与学术假期为节奏的数学，撞上了一种以产品发布为节奏的数学，而碰撞的内部站着一个人。本章的声音各按论证、论据、逻辑，以及立场与动机四个层面拆读——因为每个人能看见什么，取决于他站在这场碰撞的哪个位置。
 
 ### 2.1 众声的谱系
 
@@ -324,6 +336,8 @@ The honest summary is therefore: not a crisis of mathematics as a body of truth,
 
 ## 3 · What mathematics is
 
+*A scene to begin with.* In 1963, Paul Cohen closed — by closing it as unanswerable — a question Georg Cantor had left open for eighty-five years: is there a size of infinity strictly between the integers' and the continuum's? Cohen proved that the standard axioms decide neither way [45]. The answer to "what is mathematics" is already inside that episode: a discipline whose hardest questions can be answered by showing that its own ground is a choice. This chapter asks what mathematics is, because every position in the AI debate borrows its intuition from an answer to it.
+
 Before asking whether AI can do mathematics, it is worth asking what mathematics is, because the answer supplies the intuition behind every position in the debate.
 
 ### 3.1 Its place in the system of knowledge
@@ -336,7 +350,7 @@ Mathematics and the empirical sciences: Wigner marvelled at the "unreasonable ef
 
 Mathematics and natural language, the relation easiest to overlook: mathematical concepts borrow bodily metaphors wholesale, "greater than", "contains", "approaches", all spatial words, and the embodied-cognition tradition of Lakoff and Nunez takes such projection as constitutive rather than incidental [38]. de Bruijn proved the same point from the other end with AUTOMATH: a large part of mathematical writing can be rearranged into a grammar a machine can parse, but the rearrangement preserves the logical form while discarding nearly everything else — what the notation suggests, which equivalent statement was treated as natural, why a hypothesis was unnecessary [39]. A formal text is a partial representation, and the part it omits is the part readers use to judge whether a problem has been posed well. 
 
-The three relations together yield a picture: mathematics neither rules over logic, science, and language nor bows beneath them; it sits at their junction, shaped by all three and constraining all three in return.
+The three relations together yield a picture: mathematics neither rules over logic, science, and language nor bows beneath them; it sits at their junction, shaped by all three and constraining all three in return. For the AI debate the consequence is immediate: whatever a machine can be tested on will be one face at a time, and each face hides a different share of the answer.
 
 ### 3.2 Seven ontological positions
 
@@ -350,11 +364,11 @@ One extreme view promotes mathematics to the position of ultimate ground, what p
 
 But mathematics contains the heaviest internal warning against being treated as a self-certifying ground, and it is a technical result rather than a philosophical one. Gödel's incompleteness theorems show that any consistent formal system rich enough to express elementary arithmetic contains true statements it can neither prove nor disprove, and that such a system cannot establish its own consistency; doing so requires a stronger metasystem, whose consistency in turn requires a still stronger one, in an open-ended ascent [42]; Lucas and Penrose built famous arguments on these theorems [43,44]. Cohen then proved the continuum hypothesis independent of the Zermelo-Fraenkel axioms, showing that even the most foundational-looking branch has axiomatic choices that are not uniquely forced [45]. 
 
-If mathematics cannot supply itself with a closed, self-completing foundation, then "mathematics is the first cause", read as a claim about a self-certifying ground, holds only in a localized sense, relative to some particular formal system, and cannot be promoted to a cosmological assertion. A defender of the mathematical-universe hypothesis may reply that existence needs no internal consistency proof; the reply is fair, and it shifts rather than removes the burden — what incompleteness and Cohen's independence together rule out is not a mathematical ground as such, but one that certifies itself and compels its own axioms. Mathematics resembles less a tower standing on a foundation that needs no foundation than a relational network without a single origin, in which every node is defined and warranted by other nodes, a figure to which the final chapter returns.
+If mathematics cannot supply itself with a closed, self-completing foundation, then "mathematics is the first cause", read as a claim about a self-certifying ground, holds only in a localized sense, relative to some particular formal system, and cannot be promoted to a cosmological assertion. A defender of the mathematical-universe hypothesis may reply that existence needs no internal consistency proof; the reply is fair, and it shifts rather than removes the burden — what incompleteness and Cohen's independence together rule out is not a mathematical ground as such, but one that certifies itself and compels its own axioms. Mathematics resembles less a tower standing on a foundation that needs no foundation than a relational network without a single origin, in which every node is defined and warranted by other nodes, a figure to which the final chapter returns. This is also why the AI question cannot be settled by a scoreboard: scores certify derivations; they say nothing about what kind of ground the derivations stand on.
 
 ### 3.4 The four forces that shape mathematics
 
-If mathematics is not self-grounding, what shapes it? Four forces at least. Logic, though Gödel showed deduction cannot exhaust mathematical truth. The applicability to physical reality, Wigner's effectiveness again [37]. Human cognition and bodily experience, which is why we speak of abstract relations in spatial vocabulary. And historical and cultural contingency, the most underestimated: Newton and Leibniz invented calculus independently, which suggests that certain structures emerge almost inevitably once external conditions are ready, yet the notation that surfaced carries the marks of its time and person; Leibniz's symbols survive, Newton's "fluxions" were abandoned by history [46,47]. Later generations kept only Leibniz's notation; the same calculus wore two faces, and one of them became "natural". The content of mathematics may carry necessity; its form was never uniquely destined.
+If mathematics is not self-grounding, what shapes it? Four forces at least. Logic, though Gödel showed deduction cannot exhaust mathematical truth. The applicability to physical reality, Wigner's effectiveness again [37]. Human cognition and bodily experience, which is why we speak of abstract relations in spatial vocabulary. And historical and cultural contingency, the most underestimated: Newton and Leibniz invented calculus independently, which suggests that certain structures emerge almost inevitably once external conditions are ready, yet the notation that surfaced carries the marks of its time and person; Leibniz's symbols survive, Newton's "fluxions" were abandoned by history [46,47]. Later generations kept only Leibniz's notation; the same calculus wore two faces, and one of them became "natural". The content of mathematics may carry necessity; its form was never uniquely destined. For the AI debate: machines inherit a mathematics that arrived in one of several possible notations — what they formalize is already a historical choice, and "faithful to the mathematics itself" is never a clean notion.
 
 ### 3.5 The limits of mathematics
 
@@ -372,6 +386,8 @@ The conclusion common to these routes is that posing a good problem or a good th
 
 ## 3 · 数学是什么
 
+*以一个场景开场。*1963 年，保罗·科恩把一个康托尔悬置了八十五年的问题「解决」成了不可解决：整数与连续统之间是否存在另一个无穷的大小？科恩证明，标准公理对它既不能证明、也不能否证 [45]。「数学是什么」的答案已经藏在这桩公案里：一门其最难的问题可以由「自身的地基是一种选择」来回答的学科。本章追问数学是什么，因为 AI 之争里的每一种立场，都在向某个关于数学的答案借直觉。
+
 在讨论「AI 能不能做数学」之前，更该先追问一个经常被绕过去的问题：我们所说的「数学」，到底是什么。这个问题不是书斋里的空转，因为它直接决定「AI 与数学」之争里每个立场的直觉来源。
 
 ### 3.1 数学在知识体系中的位置
@@ -384,7 +400,7 @@ The conclusion common to these routes is that posing a good problem or a good th
 
 数学与自然语言。这是最容易被忽略的一层。数学概念大量借用空间与身体的隐喻：「大于」「包含」「靠近」，这些词都源自方位经验；莱考夫与努涅斯一派主张，数学概念根植于人类身体与感知运动经验中的隐喻投射 [38]。de Bruijn 的 AUTOMATH 计划从另一端证明了同一件事：数学书写中相当大的一部分可以重新安排为机器能解析的文法，但这种重新安排保留了论证的逻辑形式，舍弃了几乎所有其余内容，记号里隐含的意图、被认定为自然的表述、某个假设为何不必写出 [39]。形式文本只是数学文本的部分表征，而它略去的那部分，正是读者用来判断问题提得是否妥当的部分。
 
-这三层关系合起来给出一幅图景：数学既不凌驾于逻辑、科学与语言之上，也不屈居于它们之下；它处在三者的交汇处，由三者共同塑形，又反过来约束三者。
+这三层关系合起来给出一幅图景：数学既不凌驾于逻辑、科学与语言之上，也不屈居于它们之下；它处在三者的交汇处，由三者共同塑形，又反过来约束三者。对 AI 之争而言，后果是直接的：机器能被检验的，永远只是数学的一面，而每一面都各自藏着答案的一部分。
 
 ### 3.2 七种本体论立场
 
@@ -398,11 +414,11 @@ The conclusion common to these routes is that posing a good problem or a good th
 
 但数学内部正藏着一个对「把数学当作自证性根据」最沉重的内部警示，而且它来自数学自身最严格的技术性成果。哥德尔不完备定理表明：任何一个足够丰富、能表达基本算术的一致形式系统，必然存在在该系统内既不能证明、也不能证伪的真命题；更进一步，这样的系统甚至无法在内部证明自身的一致性，要证明它一致，必须诉诸更强的元系统，而那个元系统的一致性又需要更强的系统来担保，如此层层外推，没有尽头 [42]；卢卡斯与彭罗斯对哥德尔的著名援引另见 [43,44]。科恩其后证明连续统假设独立于策梅洛-弗兰克尔集合论公理系统，进一步说明即便集合论这样看似最基础的数学分支，其公理本身也存在并非唯一必然的选择空间 [45]。
 
-把这个技术性事实推而广之：如果数学连给自己一个自洽、封闭、自我完成的基础都做不到，那么「数学是万物的终极根据」，只要读作关于自证性根据的主张，就只在非常在地化的、相对于某个具体形式系统的意义上成立，而不能推广为终极的宇宙论断言。数学宇宙假说的辩护者可以答辩：存在并不需要内部的一致性证明；这一答辩是公道的，它只是挪动了举证责任而未取消之——不完备性与科恩的独立性合在一起所排除的，不是一个数学根据本身，而是一个能自我担保、且公理唯一被迫的数学根据。数学更像一张没有单一起点、每个节点都依赖其他节点才能被定义和证成的关系网络，而不是一座建立在无需地基的地基之上的高塔。这个意象，留到第七章再做全面展开。
+把这个技术性事实推而广之：如果数学连给自己一个自洽、封闭、自我完成的基础都做不到，那么「数学是万物的终极根据」，只要读作关于自证性根据的主张，就只在非常在地化的、相对于某个具体形式系统的意义上成立，而不能推广为终极的宇宙论断言。数学宇宙假说的辩护者可以答辩：存在并不需要内部的一致性证明；这一答辩是公道的，它只是挪动了举证责任而未取消之——不完备性与科恩的独立性合在一起所排除的，不是一个数学根据本身，而是一个能自我担保、且公理唯一被迫的数学根据。数学更像一张没有单一起点、每个节点都依赖其他节点才能被定义和证成的关系网络，而不是一座建立在无需地基的地基之上的高塔。这个意象，留到第七章再做全面展开。这也是为什么 AI 之问无法用一张记分牌了结：分数担保的只是推导，而推导站在什么地基上，记分牌无话可说。
 
 ### 3.4 塑造数学的四种力量
 
-如果数学不是自我担保的终极根据，那么是什么在为它划定边界、塑造它的走向？至少有四种力量在共同起作用。逻辑当然是其中之一，但哥德尔已经说明逻辑推演无法穷尽数学真理的全部。物理实在的可应用性是第二种强大的塑造力，维格纳的「不合理有效性」就是它的见证 [37]。人类认知与身体经验是第三种，我们借用空间词汇谈论抽象关系，绝非偶然。历史与文化偶然性是第四种，也最常被低估：牛顿与莱布尼茨各自独立发明微积分，说明某些结构一旦外部条件具备，就会以近乎必然的方式浮现；但它浮现出来的记号系统、表述方式、侧重点带着鲜明的时代与个人烙印，莱布尼茨的记号沿用至今，牛顿的「流数」说法早被历史淘汰 [46,47]。后世只保留莱布尼茨的微积分符号，牛顿的记号几乎无人认得；同一个微积分，两副面孔，其中一副流传成了「自然」的样子。数学的内容或许有其必然性，但数学的形式从来不是唯一注定的。
+如果数学不是自我担保的终极根据，那么是什么在为它划定边界、塑造它的走向？至少有四种力量在共同起作用。逻辑当然是其中之一，但哥德尔已经说明逻辑推演无法穷尽数学真理的全部。物理实在的可应用性是第二种强大的塑造力，维格纳的「不合理有效性」就是它的见证 [37]。人类认知与身体经验是第三种，我们借用空间词汇谈论抽象关系，绝非偶然。历史与文化偶然性是第四种，也最常被低估：牛顿与莱布尼茨各自独立发明微积分，说明某些结构一旦外部条件具备，就会以近乎必然的方式浮现；但它浮现出来的记号系统、表述方式、侧重点带着鲜明的时代与个人烙印，莱布尼茨的记号沿用至今，牛顿的「流数」说法早被历史淘汰 [46,47]。后世只保留莱布尼茨的微积分符号，牛顿的记号几乎无人认得；同一个微积分，两副面孔，其中一副流传成了「自然」的样子。数学的内容或许有其必然性，但数学的形式从来不是唯一注定的。对 AI 之争而言：机器继承的数学，本就带着某一套偶然胜出的记号——它们形式化的对象已是一次历史选择，「忠实于数学本身」从来不是一个干净的概念。
 
 ### 3.5 数学的边界
 
@@ -424,11 +440,13 @@ The conclusion common to these routes is that posing a good problem or a good th
 
 ## 4 · Who the mathematician is
 
+*A scene to begin with.* The most famous "pure" mathematician in history never held a chair of mathematics: Gauss was appointed professor of astronomy and director of the Göttingen observatory — he computed the orbit of Ceres, took part in land surveys, studied geomagnetism with Weber [74]. The myth of the mathematician — solitary, abstract, apart — has never described the profession well, and this chapter takes the myth apart, because the debate about machines and mathematics is conducted largely in its shadow.
+
 ### 4.1 Birds, frogs, and other roles
 
 The mathematician is not one kind of person, and the debate regularly forgets this. Dyson's famous image divides mathematicians into birds, who survey wide territory from above in search of unifying pictures, and frogs, who dig into the mud of a specific problem [53]. A second axis separates the competition solver, who cracks hard problems inside an existing framework; the paradigm builder in Grothendieck's manner, who erects a new conceptual language in which previously unrelated problems suddenly make sense together; the synthesizer, who unifies scattered results; and the expositor, who transmits hard mathematics to the next generation. Gowers's distinction between theory-building and problem-solving is the canonical statement of the same observation inside the discipline [54]. 
 
-The profession is also stratified institutionally: a small apex of figures with enormous standing, a large middle of teaching researchers, and a substantial population of mathematically trained people in industry, finance, cryptography, and machine learning. The stratification is not a reproach; it is a reminder that "the mathematician" of this debate has never been a homogeneous person.
+The profession is also stratified institutionally: a small apex of figures with enormous standing, a large middle of teaching researchers, and a substantial population of mathematically trained people in industry, finance, cryptography, and machine learning. The stratification is not a reproach; it is a reminder that "the mathematician" of this debate has never been a homogeneous person. For the AI debate: "can machines replace mathematicians" first has to say which ones — the frog's mud, the bird's horizon, the expositor's classroom are different territories, and the machine's gains are not spread evenly across them.
 
 ### 4.2 What contemporary mathematicians do
 
@@ -448,11 +466,13 @@ The empirical record supplies the underside of the myth: a meta-analysis of 177 
 
 ## 4 · 数学家是何种人
 
+*以一个场景开场。*史上最著名的「纯粹」数学家从未拥有过数学教席：高斯的任命是天文学教授兼哥廷根天文台台长——他算过谷神星轨道、参加过大地测量、与韦伯合作研究过地磁 [74]。「数学家」的迷思——孤独、抽象、遗世独立——从来没有很好地描述过这个职业；本章拆解它，因为关于机器与数学的争论，大半正是在这道阴影里进行的。
+
 ### 4.1 鸟、蛙与其他角色
 
 数学家不是一种人，而这场争论经常忘记这一点。物理学家戴森有一个广为流传的比喻：数学家可以分为「鸟」与「蛙」，鸟从高处俯瞰辽阔疆域，寻找连接不同领域的统一图景；蛙深入具体问题的泥土，在细节中掘进 [53]。这个比喻之外还可以从另一个维度区分：有的数学家擅长在已有框架内解决高难度具体问题，即竞赛型、问题求解型；有的擅长搭建全新概念框架，让一大批此前互不相干的问题突然可以在同一种语言下被重新理解，即格罗滕迪克式的范式建构型；有的擅长把分散结果整合成连贯体系，即综合型；有的致力于把艰深的数学清晰传授给下一代，即阐释型、教育型。高尔斯关于理论建构与问题解决两种文化的著名区分，是这一观察在数学内部的正式说法 [54]。
 
-在建制层面，数学家群体同样高度分层：少数处于金字塔尖、享有极高声望的领军人物；大量在高校和研究机构从事教学与研究的普通学者；还有相当一部分在工业界从事应用性工作的数学训练者，金融、密码学、机器学习里都有他们。这个分层本身并不丢人，它只是提醒我们，本章与第六章要讨论的「数学家」从来不是一个同质的人群。
+在建制层面，数学家群体同样高度分层：少数处于金字塔尖、享有极高声望的领军人物；大量在高校和研究机构从事教学与研究的普通学者；还有相当一部分在工业界从事应用性工作的数学训练者，金融、密码学、机器学习里都有他们。这个分层本身并不丢人，它只是提醒我们，本章与第六章要讨论的「数学家」从来不是一个同质的人群。对 AI 之争而言：「机器能否取代数学家」必须先回答「取代哪一种」——蛙的泥、鸟的天际线、阐释者的课堂是不同的疆域，机器的斩获在其中分布得并不均匀。
 
 ### 4.2 当代数学家在做什么
 
@@ -476,6 +496,8 @@ The empirical record supplies the underside of the myth: a meta-analysis of 177 
 
 ## 5 · Formalization, computation, and division: is AI really inferior to mathematicians
 
+*A scene to begin with.* For roughly two weeks in September 2026, Lance Dixon sat with a nine-loop scattering amplitude produced by a machine and rebuilt it by hand along a different route — the form factor — until he was satisfied the answer was right [24]. Nobody asked him to; the machine had already announced the result. That fortnight is the division of labor in miniature, and this chapter tries to give it a vocabulary and a set of rules.
+
 ### 5.1 Three layers of mathematical activity
 
 "Does AI fall short of mathematicians?" is unanswerable until "doing mathematics" is decomposed. Three layers at least. Mechanical computation, numerical work and symbolic simplification, were conceded to machines long ago with calculators and computer algebra. Proof search inside a given formal system, the search for a path through a large but bounded space toward a stated goal, is a structured search problem, exactly the terrain on which reinforcement learning and large compute are strongest, and the recent progress of systems like AlphaProof sits largely here [9]. And a third layer: the posing of problems themselves, judging what is worth asking, which direction has promise, what structure a conjecture hides. That layer depends on aesthetic intuition, historical context and cross-domain association, and no clean objective function yet exists to reward it.
@@ -486,7 +508,9 @@ The industry's own data appear to echo the layering: in Aletheia's two-axis sche
 
 So, on the sharp question: in rationally analyzable, formalizable settings, is AI really inferior to mathematicians at proposing, thinking about and solving mathematical problems? In all honesty, the evidence so far supports no categorical verdict in either direction. On the proof-search layer, the speed of progress from 2024 to 2026 has surprised even senior mathematicians who thought such things a decade away: gold-standard Olympiad performance and some research-level results arrived within a remarkably short window [9,11,19,22]. On the other side, nearly every result acknowledged as significant, from the unit-distance disproof to the Navier-Stokes breakthrough, became a mathematical achievement only through deep human involvement in checking, digesting, and contextualizing it [1,19]. A proof becomes knowledge only when a community capable of digesting, simplifying, and verifying it takes it in; until then it is a correct symbol sequence and nothing more.
 
-The more precise statement is therefore: in the relatively narrow but increasingly central subdomain of clearly specified goals with mechanically checkable correctness, AI already executes at a level comparable to the best humans and often faster; in the wider layer of deciding what is worth doing and what counts as important, for which no agreed metric yet exists, human experts still play an irreplaceable role. Whether that role is temporarily or in principle irreplaceable, nobody can say with confidence, and every categorical claim, "AI will never truly create" or "human mathematicians will soon be obsolete", runs beyond the evidence. The answer satisfies neither side: the partisans of "AI has won" find it too cautious and the partisans of "machines never understand" find it too generous; it is precisely this honesty, leaving both uncomfortable, that is its only virtue.
+The strongest case for the other side deserves stating in its own voice before any verdict. It runs: every wall announced in this record has been passed within months. "The machine can do contest problems" was a wall until 2024; "it can pass the formal layer of research mathematics" until 2026; "it can produce results the community digests" fell with the quasi-RH paper, read and largely confirmed by human analysts in two weeks [115]; "it can produce results nobody can check" fell, in one sense, with a seventeen-million-line Lean artifact certified by its own community [122]. Systems now solve the formalizable end of the distribution at a pace no human roster can match, and every limitation conceded along the way — low-hanging fruit, a forced term, an unverifiable proof — has described the current systems, not the method. On this reading, the honest answer is not symmetrical agnosticism but a moving frontier whose direction is not in doubt.
+
+The more precise statement is therefore: in the relatively narrow but increasingly central subdomain of clearly specified goals with mechanically checkable correctness, AI already executes at a level comparable to the best humans and often faster; in the wider layer of deciding what is worth doing and what counts as important, for which no agreed metric yet exists, human experts still play an irreplaceable role. Whether that role is temporarily or in principle irreplaceable, nobody can say with confidence, and every categorical claim, "AI will never truly create" or "human mathematicians will soon be obsolete", runs beyond the evidence. The answer satisfies neither side: the partisans of "AI has won" find it too cautious and the partisans of "machines never understand" find it too generous; it is precisely this honesty, leaving both uncomfortable, that is its only virtue. And the steelman just given keeps it honest in one more way: its weakest joint is the extrapolation — every wall passed so far has been a wall on the compute-verify side of the three layers of §5.1, and the pattern of this record is not that limits fall in general, but that the frontier travels along one layer while the third — posing, valuing, understanding — stays pinned. That pinning is itself a prediction, falsifiable in exactly the way §1.9's clause is.
 
 ### 5.3 How the division of labor should evolve
 
@@ -514,6 +538,8 @@ A computational procedure presented without axioms is not thereby an invalid pro
 
 ## 5 · 形式化、可计算性与分工：AI 真的不如数学家吗
 
+*以一个场景开场。*2026 年 9 月的约两周里，迪克森守着一份机器算出的九圈散射振幅，沿另一条路径——形状因子——徒手重建它，直到确信答案无误 [24]。没有人要求他这样做；机器早已公布了结果。这两周是分工的缩影，本章要为这个缩影给出词汇与规则。
+
 ### 5.1 数学活动的三个层级
 
 要回答「AI 是否不如数学家」，首先必须承认「做数学」不是一件单一的活动，至少可以拆成三个层级：机械计算，即数值运算、符号化简，这一层早在计算器与计算机代数系统时代就被机器全面超越；在给定形式系统内搜索证明，即已知目标命题、在庞大但边界清晰的证明空间中寻找路径，这是结构化搜索问题，恰是强化学习与大规模算力最擅长的领域，AlphaProof 等系统近两年的进展主要在这一层 [9]；提出问题本身，即判断什么问题值得问、这个方向是否有前途、这个猜想背后可能隐藏怎样的结构，这一层高度依赖审美直觉、历史语境感与跨领域联想，目前没有清晰的目标函数可以做强化学习的奖励信号。
@@ -524,7 +550,9 @@ A computational procedure presented without axioms is not thereby an invalid pro
 
 那么回到那个尖锐的问题：在可以被理性分析、形式化处理的场景下，AI 提出、思考、解决数学问题的能力，难道真的不如数学家吗？平心而论，截至目前，证据不支持任何方向的斩钉截铁答案。一方面，在第二层上，AI 在 2024 至 2026 年间展现的进步速度已经让许多此前认为「至少还要十年」的资深数学家感到意外：竞赛数学金牌水准、部分研究级问题的自主解决，都发生在极短的时间窗口内 [9,11,19,22]。另一方面，举凡真正被承认为「重大」的成果，从单位距离猜想的证伪到纳维-斯托克斯的突破，都是在人类专家的深度参与、审核、语境化解读之下才最终成型的，离开这层人类参与，这些结果甚至无法被恰当地「理解」为一项数学成就 [1,19]。一个证明只有被一个能够消化、简化、核验它的人类共同体所吸纳，才真正转化为知识，而不只是一段冰冷的、正确的符号序列。
 
-所以更诚实的回答或许是：在「给定清晰目标、可机械核验正确性」这个相对狭窄却越来越关键的子领域里，AI 已经具备了与顶尖人类相当甚至更快的执行力；但在「决定什么值得做、什么才算真正重要」这个更宽泛、目前仍缺乏明确评价标准的层面上，人类专家依然扮演着不可替代的角色。而这个角色究竟是「暂时不可替代」还是「原则上不可替代」，目前没有人能给出有充分把握的答案；任何斩钉截铁的断言，无论「AI 永远无法真正创造」还是「人类数学家很快就会过时」，都超出了现有证据所能支撑的范围。这个回答注定让两边都不满意：主张「AI 已经赢了」的人嫌它保守，主张「机器永远不懂数学」的人嫌它暧昧；而这份让两边都不舒服的诚实，正是它目前唯一能声称的美德。
+对面的最强论证，理应在裁决之前以它自己的声音被陈述一遍。它的大意是：这份记录里被宣布的每一堵墙，都在数月之内被跨过。「机器能做竞赛题」是墙，直到 2024 年；「机器能过研究数学的形式层」是墙，直到 2026 年；「机器能产出共同体能消化的结果」倒了，倒在一篇两周内被人类分析学家读毕并大体确认的 quasi-RH 论文上 [115]；「机器能产出无人能核验的结果」在某种意义上也倒了，倒在那份由其共同体认证的一千七百万行 Lean 制品上 [122]。如今机器以任何人类名册都无法匹敌的速度解出分布上可形式化的一端，而一路上承认的每一条限制——低垂的果实、外力项、无法核验的证明——描述的都是当前的系统，而非这套方法。照这种读法，诚实的答案不是对称的不可知论，而是一条方向并不存疑的移动前沿。
+
+所以更诚实的回答或许是：在「给定清晰目标、可机械核验正确性」这个相对狭窄却越来越关键的子领域里，AI 已经具备了与顶尖人类相当甚至更快的执行力；但在「决定什么值得做、什么才算真正重要」这个更宽泛、目前仍缺乏明确评价标准的层面上，人类专家依然扮演着不可替代的角色。而这个角色究竟是「暂时不可替代」还是「原则上不可替代」，目前没有人能给出有充分把握的答案；任何斩钉截铁的断言，无论「AI 永远无法真正创造」还是「人类数学家很快就会过时」，都超出了现有证据所能支撑的范围。这个回答注定让两边都不满意：主张「AI 已经赢了」的人嫌它保守，主张「机器永远不懂数学」的人嫌它暧昧；而这份让两边都不舒服的诚实，正是它目前唯一能声称的美德。上一段的钢人论证还从另一个方向保住了这份诚实：它最弱的关节在外推——迄今被跨过的每一堵墙，都在 §5.1 三层中「计算-核验」那一侧；这份记录的格局不是「界限在普遍崩塌」，而是前沿沿着一层旅行，而第三层——提出、权衡、理解——仍被钉在原地。这个「钉住」本身就是一个预言，其可证伪方式与 §1.9 的条款一模一样。
 
 ### 5.3 分工应如何演化
 
@@ -548,6 +576,10 @@ A computational procedure presented without axioms is not thereby an invalid pro
 
 一个没有公理支撑的计算程序，并不因此就是无效的证明；它是对「什么使一份解答算数」的另一种回答。承认这一点，并不是要否定现代数学范式的强大威力，它确实展现出了空前的统一性与严谨性；而是要提醒：把现代数学等同于数学的全部，本身是把一种历史性、地方性的建构误认成了普遍必然。更有意味的是，二十世纪出现了机械化的几何定理证明（吴文俊方法），它与中国传统数学的算法脉络遥相呼应 [71]。一条被主流叙事边缘化的传统，在机器证明时代反而重新证明了自己的当代性。这个细节为第七章的整体视野埋下了一条引线。
 
+### 5.6 理解是什么：一个正面说明
+
+标题的后半句——理解的归人——至此一直被当作敬语使用。它需要内容。四项能力，每一项都能在本文自己的记录里找到样本，合成了数学中「理解一个结果」的含义。可复推：不止于核验证明，而是能够重建它——拉德齐维乌凭半页纸重构 quasi-RH 的论证，就是这个意义上的理解 [115]。可连接：知道一个结果与什么相连——迪克森沿形状因子这条不同的路径核验九圈振幅，因为能从两个方向抵达的结果是被把握的，不是被记住的 [24]。可传授：能够把它教出去——第二章的培养体系之忧与 MathHelm 的立会前提都住在这里 [125]。以及知其所用：知道结果为了什么——正是 §1.7 置于中心的问题，被检验的那条陈述是否就是所问的问题。在这四项能力上，「理解归人」是一个事实主张而非一种感伤：机器目前持有的是每一项的核验端——内核不复推，只核验；比较器连接的是陈述而非意义；MathHelm 的存在本身证明传授没有机器替身；而知其所用，恰是一切基准都无法编码的东西。照本文其余主张的先例，这里也须写明限度：四项没有一项是机器原则上不可能的——柯尔莫哥洛夫与图灵各自把一个前形式的模糊概念炼成了精确学科（§5.4）[48,68]。这个主张说的是这些能力如今住在哪里、把它们搬走要付出什么；算账是建制的事，最后一章就转向它们。
+
 <!-- L1-end -->
 
 <!-- L1 -->
@@ -555,6 +587,8 @@ A computational procedure presented without axioms is not thereby an invalid pro
 <!-- en -->
 
 ## 6 · What counts as originative
+
+*A scene to begin with.* In 1616, a young Frenchman took his degree at Poitiers — in law. He held no mathematics degree, never a university post, and his mathematics came largely from letters to a schoolteacher [73]. The name on analytic geometry is René Descartes. This chapter asks what "originative" can mean such that a lawyer-philosopher and a machine can be measured by the same ruler.
 
 ### 6.1 Defining the term
 
@@ -581,6 +615,8 @@ It also carries an observation about the present: the AI results judged most imp
 <!-- zh -->
 
 ## 6 · 什么是「开创性」
+
+*以一个场景开场。*1616 年，一个法国青年在普瓦捷取得学位——法学学位。他没有数学学位，从未拥有大学教职，他的数学功夫主要来自与一位教师的通信 [73]。解析几何刻上的名字，是这个叫笛卡尔的人。本章要问：「开创性」究竟应当怎样界定，才能让一位律师-哲学家与一台机器，被同一把尺子度量。
 
 ### 6.1 界定「开创性」
 
@@ -612,9 +648,9 @@ It also carries an observation about the present: the AI results judged most imp
 
 ## 7 · Summary and a view from above
 
-### 7.1 Gathering the threads
+### 7.1 Gathering the threads: three ledgers
 
-Gathered together, the six chapters describe a single woven figure. In the Navier-Stokes episode a technical truth, a commercial race, an authorship dispute and a priority quarrel were compressed into the same September week [1,6]. Asked whether mathematics is the ultimate ground of everything, the discipline's own strictest theorems answered, almost against intuition, that it cannot supply itself with a closed foundation, and that every truth is warranted by something outside the system. Unwrapped from its packaging of genius, the mathematician turns out, at the moments of genuine origin, to be a person carrying several identities at once. And the question of whether AI falls short of mathematicians cannot be answered apart from the older questions of what mathematics is, where creativity comes from and who assigns meaning.
+Gathered together, the chapters settle into three ledgers, and the essay's title is the arithmetic that balances them. The ledger of truth: derivations can now be produced at a scale no human roster can read, and they fail the way the audit said they would — a sign error caught by revision notices, a formalization that certified a statement nobody intended [87,118] — while the public battles stayed about framing, attribution, and admissibility, exactly the ground chapters 1 and 2 mapped. The ledger of credit: authorship, priority, and the right to announce were built around a human rhythm, and the September compressions strained them visibly; the institutions built in response — an advisory group, a disclosure code, an intake cap, a forum for reading what no one is obliged to read [80,81,116,125] — are the credit ledger being rebalanced in public. The ledger of meaning: what mathematics is for, and who grows by doing it — the layer chapter 2 called deepest, which no benchmark encodes and no kernel checks, and to which §5.6's four capacities (re-derivation, connection, transmission, purpose) begin to give content. The title reads the three ledgers at once: proofs to the machine — on the truth ledger, where machines now execute and, increasingly, verify; understanding to us — on the meaning ledger, where the four capacities still live; and the credit ledger is where the two meet, the only place where "each to its place" becomes an arrangement rather than a slogan. What remains is to name the structure the three ledgers share — and to write down, plainly, the arrangement they imply.
 
 ### 7.2 Process, prediction, and mutual constitution
 
@@ -622,9 +658,13 @@ The threads point to one structure: Be it mathematics itself, the identity of th
 
 Two nameable intellectual resources describe this figure without dissolving into vague sentiment — and the paragraphs that follow borrow them as interpretive frames, not conclusions: if process philosophy or predictive processing turned out to be poor guides to mathematical practice, the chapters' findings would not move with them. Whitehead's process philosophy holds that reality is process rather than substance, that each entity becomes itself through its relations to everything in its environment, and that each moment of actual existence prehends and integrates the whole past world [77] (prehension is Whitehead's term for the way an actual entity takes up, in its own way, everything that precedes it). The active inference framework and free-energy principle of Friston propose that every activity of a cognitive system, from perception to action, is a continuous generative prediction of the world with the minimization of prediction error [78] — a framework whose empirical standing in neuroscience is itself contested, which is one reason it is borrowed here as a frame rather than cited as a finding. What is called understanding, on this account, is not a static mirror of external facts but the process of a system generating and revising its own model of the world; the boundary between model and world is under permanent renegotiation. The two resources, eight decades and two disciplines apart, point at the same structure: the whole is given before the parts, the parts gain identity inside the whole's relations, and the whole is continually reconstituted by the relations among the parts. Leibniz's monads gave the structure a poetic version three centuries ago: the monads have no windows, yet each mirrors the same universe [79].
 
-Placed over the present debate, this structure dissolves the either-or of crisis versus breakthrough. A proof becomes knowledge because a community able to understand it digests, questions, and teaches it; a mathematical tradition becomes visible in its particularity and its limits through comparison with other traditions; an "AI victory", inspected closely, is always carried by a multitude of earlier human works, by the reviewing eyes of human experts, even by earlier competition and cooperation among humans. Crisis and breakthrough are not two external, mutually exclusive entities but two sides of one unfolding web momentarily lit up: the same structure that carries the machine's advance also carries the institution's instability, which is why both are visible at once. The Fields medalists' letter in fact touches this structure at its close: whether AI strengthens or damages mathematics "will largely be determined by the decisions of the humans who control this new technology" [30]. Even the sharpest critics, that is, do not hand the outcome to the technology; they hand it back to people.
+Placed over the present debate, this structure dissolves the either-or of crisis versus breakthrough. A proof becomes knowledge because a community able to understand it digests, questions, and teaches it; a mathematical tradition becomes visible in its particularity and its limits through comparison with other traditions; an "AI victory", in every case inspected in this essay, is carried by a multitude of earlier human works, by the reviewing eyes of human experts, even by earlier competition and cooperation among humans. Crisis and breakthrough are not two external, mutually exclusive entities but two sides of one unfolding web momentarily lit up: the same structure that carries the machine's advance also carries the institution's instability, which is why both are visible at once. The Fields medalists' letter in fact touches this structure at its close: whether AI strengthens or damages mathematics "will largely be determined by the decisions of the humans who control this new technology" [30]. Even the sharpest critics, that is, do not hand the outcome to the technology; they hand it back to people.
 
-### 7.3 Concrete stakes are not dissolved by the wide view
+### 7.3 A charter for the new division
+
+The wide view earns its keep only if it can be written down as an arrangement. Collected from this essay's own record, the arrangement reads like a charter — each clause already practiced somewhere, none yet universal. For laboratories: disclose symmetrically, failures included [13,14]; name the model, the prompts, the cost, and the count of failed attempts, as the September guidelines require [80]; deposit results in a scholarly repository with recorded revisions [80,86]; fund the human understanding that follows, organically and community-led [80]; release through standard publication or an out-of-laboratory repository under independent oversight, never through pre-designated mathematicians [116]; and do not hold completed results hostage to formalization pipelines while announcing their existence [117]. For the community: designate certifiers before announcements, by independent bodies [12,116]; treat "checked" and "understood" as two statuses, never one [115,122]; keep a place — a MathHelm, a referee report, a seminar — where reading what no one is obliged to read is honored as labor [125,66]; and keep the intake of the record sustainable, as arXiv's cap conceded must be done [81]. For the readers of this essay: the charter's clauses are falsifiable — each names the practice whose recurrence would refute it, and the postscript is where the refutations will land first. This is what "each to its place" means on the ground: not a boundary to defend, but a set of practices whose absence, not whose idea, would be the crisis.
+
+### 7.4 Concrete stakes are not dissolved by the wide view
 
 One caution must be added immediately, against misusing this whole view: none of it makes the participants in the authorship dispute a jot less wronged [6], nor dissolves the anxiety of a doctoral student about a career. The concrete interests of the moment remain real and remain to be honoured, and the wide view must not be allowed to dissolve them. Its use lies elsewhere, in a steadier posture: no need to declare the dusk of a discipline because a machine computes faster, and no need to declare the dawn of an era because a score is impressive. 
 
@@ -634,9 +674,9 @@ Whether "crisis" or "breakthrough", what is happening is a node of this mutually
 
 ## 7 · 总结与统观
 
-### 7.1 收束
+### 7.1 收束：三本账
 
-把前六章收束在一起，会看到一张相互缠绕的图景。纳维-斯托克斯事件里，一个技术真相、一场商业竞争、一次署名纠纷、一桩优先权公案，几乎被压缩进了同一个九月的星期 [1,6]。数学被追问是不是万物的终极根据，答案却在数学内部最严格的定理那里得到一种近乎反直觉的回应：它连给自己一个自足封闭的地基都做不到，任何一条真理都要靠系统之外的东西来担保。数学家的形象被「聪明」「天才」层层包裹，而拆开层层包裹之后，那些真正被公认开创了新局面的人物，几乎无一不是同时背负好几重身份、数学家只是其中之一的人。至于「AI 是否不如数学家」这个看似该有斩钉截铁答案的问题，越往深处追问，越发现它无法脱离「数学究竟是什么」「创造性从何而来」「意义由谁赋予」这些更古老的追问而被单独回答。
+把各章收束在一起，账目落成三本，而本文的题目正是使三本账平衡的那笔算术。真理之账：推导如今以任何人类名册都无法通读的规模被生产出来，并且以审计预言的方式失效——一处符号错误被修订通告抓住，一份形式化担保了一条无人想要的陈述 [87,118]——而公开的争夺战始终停留在框架、归属与可入性，恰是第一、二章测绘过的地带。信用之账：署名、优先权与宣布之权围绕人类的节奏建成，九月的几次压缩让它们力不从心；作为回应而建的那些建制——一个顾问组、一部披露指南、一道入口限额、一个专议「无人有义务读的论文」的论坛 [80,81,116,125]——正是信用之账在众目睽睽之下重新平衡的过程。意义之账：数学为了什么、谁在其中成长——第二章称之为最深的那一层，任何基准都不编码、任何内核都不检验；§5.6 的四项能力（可复推、可连接、可传授、知其所用）开始给它内容。题目同时读出三本账：证明归机器——真理之账上，机器如今执行、且日益核验；理解归人——意义之账上，四项能力仍然住在这里；而信用之账是两者相遇的地方，「各归各位」只有在这里才从口号变成安排。剩下的，是给三本账所共有的结构一个名字——并把它们所蕴含的安排，朴质地写下来。
 
 ### 7.2 统观：过程、预测与互相成就
 
@@ -644,9 +684,13 @@ Whether "crisis" or "breakthrough", what is happening is a node of this mutually
 
 要精确地描述这种图景而不落入模糊的感叹，可以借助两个现成的、名字说得出口的思想资源——下文把它们借作解释框架，而非结论：若过程哲学或预测加工被证明不是数学实践的好向导，前文各章的发现并不随之动摇。其一是怀特海的过程哲学：他主张实在是过程而非实体，任何存在物都因它与环境中其他存在物的关系而成为它自身，每一刻的实际存在都以自己的方式摄入并整合了整个过去的世界 [77]。其二是认知科学中的主动推理与自由能原理：弗里斯顿提出，认知系统的一切活动，从知觉到行动，都在持续地对世界做生成式的预测并最小化预测误差 [78]——该框架在神经科学中的经验地位本身尚有争议，这正是本文只把它借作框架、不引作发现的理由之一。所谓「理解」，在这种框架下不是对外部事实的静态镜像，而是系统持续生成并修正它自己的世界模型的过程；模型与世界的边界，因此永远处在再协商之中。这两套思想相隔八十余年、分属哲学与神经科学，却指向同一个结构：整体先于部分而被给定，部分在整体的关系中才获得身份，而整体又由部分之间的关系持续地再构成。莱布尼茨的单子论早在三百年前就为这种结构给过一个诗意的版本：单子没有窗户，却各自映照着同一个宇宙 [79]。
 
-把这个结构放回我们的主题，会看到一场关于「危机还是突破」的争论如何失去它的非此即彼性。一个证明因为被一整个能理解它的共同体消化、质疑、传授，才真正成为知识；一种数学传统因为与其他传统的比照，才显出自己的特殊性与局限；一次「AI 的胜利」，细看之下也总是由无数人类的既有工作、人类专家的审核之眼、甚至人类之间此前的竞争与合作共同托举而成。危机与突破从来不是彼此外在、非此即彼的两个实体，而是同一张不断展开的关系之网上暂时被照亮的两个侧面：正因为同一个结构既托举了机器的进展，也托举了建制的失稳，人们才同时看到了两样东西。二十五位菲尔兹奖得主的那封信，末尾其实已经触到了这个结构：AI 最终是增益还是损害数学，「将在很大程度上取决于掌控这项技术的人类的决定」[30]。换言之，连最激烈的批评者也不把结局交给技术本身，而是交还给人。
+把这个结构放回我们的主题，会看到一场关于「危机还是突破」的争论如何失去它的非此即彼性。一个证明因为被一整个能理解它的共同体消化、质疑、传授，才真正成为知识；一种数学传统因为与其他传统的比照，才显出自己的特殊性与局限；一次「AI 的胜利」，在本文检视过的每一案里，都由无数人类的既有工作、人类专家的审核之眼、甚至人类之间此前的竞争与合作共同托举而成。危机与突破从来不是彼此外在、非此即彼的两个实体，而是同一张不断展开的关系之网上暂时被照亮的两个侧面：正因为同一个结构既托举了机器的进展，也托举了建制的失稳，人们才同时看到了两样东西。二十五位菲尔兹奖得主的那封信，末尾其实已经触到了这个结构：AI 最终是增益还是损害数学，「将在很大程度上取决于掌控这项技术的人类的决定」[30]。换言之，连最激烈的批评者也不把结局交给技术本身，而是交还给人。
 
-### 7.3 具体利害不因整体视野而消解
+### 7.3 各归各位的章程
+
+整体视野要挣得自己的位置，须能被写成一份安排。从本文自己的记录里收拢，这份安排读起来像一部章程——每一条都已在某处被实践，没有一条已经普及。对实验室：对称披露，包括失败 [13,14]；按九月指南的要求，写明模型、提示词、成本与失败尝试的次数 [80]；把成果存入学问性仓库并记录修订 [80,86]；为随之而来的人类理解出资，且让这种跟进自发生长、由共同体主导 [80]；经标准学术发表或独立监督的实验室外仓库发布，绝不经预先指定的数学家 [116]；不把已完成的结果扣在形式化管线里而只宣布其存在 [117]。对共同体：在宣布之前由独立方指定认证者 [12,116]；把「已核验」与「已被理解」当作两种状态，绝不当成一种 [115,122]；保留一个地方——一个 MathHelm、一份审稿报告、一场研讨班——让「读那些无人有义务读的东西」被当作劳动来敬重 [125,66]；并让记录的入口保持可持续，如 arXiv 的限额所承认的那样 [81]。对本文的读者：章程的每一条都可证伪——每条都点名了那种「若反复出现即推翻它」的实践，而后记正是反驳最先落地的地方。这就是「各归各位」在地面的含义：不是一条要防守的边界，而是一组实践——它们的缺席，而非它们的观念，才会构成危机。
+
+### 7.4 具体利害不因整体视野而消解
 
 必须立刻补上一句，以防这种整体性的视野被误用：承认这种彼此成就、没有哪一方能单独宣称全部功劳或全部危机的处境，并不会让署名纠纷中的当事人少受一分委屈 [6]，也不会让某位数学博士生对自己职业前景的忧虑因此消散。那些具体的、此时此地的利害依然真实，依然应当被认真对待，不该被这样一种整体视野轻轻消解掉。整体视野的用处不在这里；它的用处在于提供一种更从容的姿态：不必因为机器算得比自己快就仓皇宣告一个学科的黄昏，也不必因为一次漂亮的分数就急着宣告一个时代的黎明。
 
