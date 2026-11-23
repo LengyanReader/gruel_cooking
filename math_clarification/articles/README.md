@@ -5,7 +5,7 @@
 ## 文章索引
 
 - [各归各位：证明的归机器，理解的归人 / Everything in its place: proofs for the machine, understanding for us](proofs_no_longer_scarce.md) *(长稿：七章全景 + L0 导读与目录压缩版；约 1.9 万汉字，双语逐段并列；后记分两期，二期记至 2026-11-22，并闭合正文待审项)*
-- [文中的数学问题：一页看懂 / The problems in the essay: a one-page field guide](problems_in_the_essay.md) *(姊妹页 v2：21 个数学问题 × 八栏卡——一句话/譬喻/问的是什么/前提背景/先修概念/逻辑与语言/为何重要/现状截至 2026-11-22；页首「读卡之前：四个门槛」共享导读承载语言学与逻辑学维度；A 组主角 11 题 + B 组背景 10 题；普通读者向；与 famous_problems 既有条目互链而不重复)*
+- [文中的数学问题：一页看懂 / The problems in the essay: a one-page field guide](problems_in_the_essay.md) *(姊妹页 v3：21 个数学问题 × 八栏卡——一句话/譬喻/问的是什么/前提背景/先修概念/逻辑与语言/为何重要/现状截至 2026-11-22；页首「读卡之前：四个门槛」共享导读承载语言学与逻辑学维度；每卡末附一幅内嵌 SVG 几何示意（纯图形、图注承载文字，明标示意而非证明、不按比例），双语各一份；A 组主角 11 题 + B 组背景 10 题；普通读者向；与 famous_problems 既有条目互链而不重复)*
 - [数学真理不由共识决定 / Mathematical truth is not a matter of consensus](ai_and_math.md) *(压缩版双语综述：前言 + 十节，三问为纲；其投稿包（提要、闸门、重建脚本）在 [`../essays/submission/`](../essays/submission/))*
 
 ## 写作规范

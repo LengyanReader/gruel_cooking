@@ -64,3 +64,34 @@ horizon: long · verifiability: high · stakes: medium · grounding: deep · art
 - [x] 跨 crop 复核并超越：概念/接受/局限/意图/长评 15/15（Japan 8/24）；related 3.6、craft 3.1、deep_read 3.0；6 部有实证 TOC 者补章节读法卡（28 acts）；crop 级 4 rings / 6 pointers / 5 appendix。平均 11,532 字符（8,726–15,822）。
 
 **First move:** 核对核心书架书目事实 → 写数据 → 重建 → 跑门禁。
+
+---
+
+## 2026-11-22 · math_clarification 长稿编辑修订（R5 已确认）
+
+**Goal:** 对《各归各位：证明的归机器，理解的归人》（`math_clarification/articles/proofs_no_longer_scarce.md`）做一轮发展性编辑 + 文字编辑 + 事实核查，并为核心数学问题建立两级澄清页。
+
+**Confirmed reading (R4 → R5):** **Elevated**（用户已确认，四项皆取推荐/自选）
+- **T1 论证与表述审校**：逐章压最强反驳，出「缺口清单 + 修订」。
+- **T2 后记补录**：**联网检索** 2026-10-10 至 2026-11-22 的遗漏事件，逐条回源核实后按四级信度入账；检不到即如实空缺，不补（M0.1/M0.2）。再加时间线梳理。
+- **T3 换题**：出多风格候选（中英对照）供用户挑选，不擅自定题。
+- **T4 数学澄清两级页**：①审校扩写既有 `articles/problems_in_the_essay.md`（导览页）；②为核心问题按本册九段体例建正式「澄清条目」，互链不重复。
+  - *2026-11-23 追加（用户要求）：* ①的导览页每卡配一幅内嵌 SVG 示意图（v3，21 图 × 双语），图形只承载结构、图注标「示意/不按比例/非证明」；②未动。
+- **T5 去 AI 腔**：语言 + 适度结构（拆长句、削排比与套话、加过渡），论证内容与章节结构不动；**中英两侧同步**（`cross-language`：意群对应，非逐句）。
+
+**Constraints:**
+- **Hard:** M0.4 零臆造；M0.1/M0.2 事件逐条回源 + 访问日期，无源标 `unverified`；双语意群对应；普通读者看得懂（T4 底线）；不可逆动作（commit/publish）须用户明确同意。
+- **Soft:** 小清新/有趣题目；既有论说体例与来源四级标注延续；「去 AI 腔」不放松论证严谨。
+- **Assumed（已转为问题并获答）:** 事件来源=联网检索；T4 形态=两级；改写力度=语言+适度结构。
+
+**Definition of Done:**
+- [ ] T1 缺口清单（逐条：位置/问题/建议改法/严重度）产出并落实修订。
+- [ ] T2 检索记录（query/命中/URL+访问日期）留痕；新增事件逐条带信度判级与「与正文出入」说明；后记时间线梳理。
+- [ ] T3 标题候选（≥6，含中英对照与风格说明）交用户选定后落地。
+- [ ] T4 导览页审校扩写 + ≥N 个正式澄清条目建成并互链（N 待定，建议 6–8 题）；普通读者验收线通过。
+- [ ] T5 改写样例（文风对照）交用户验收后全稿铺开；双语同步无遗漏。
+- [ ] `harness check --dir .` 通过；`web/build_static.py` 重建后站点无红。
+
+**First move:** 出 T3 标题候选 + 启动 T2 联网检索（并行）；随后通读正文做 T1。
+
+**Capabilities fired:** `ambition-elevation`（requirement-refinement.md）、`baseline-discipline`+`verification-gate`（core/01、core/04）、`argument-reconstruction`（review/basic-disciplines-schools-2026-10.md）、`traceable-sources`（core/05）、`expression-design`（review/expression-design-2026-10.md）、`prose-polish`（review/language-polish-2026-10.md）、`cross-language`（reference/cross-language.md）。

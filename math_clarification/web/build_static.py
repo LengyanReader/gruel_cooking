@@ -336,6 +336,22 @@ body.lang-zh .titleblock h1 .t-en { display: none; }
 .lang-body th, .lang-body td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; }
 .lang-body th { background: var(--cream-deep); font-family: var(--sans); font-weight: 600; }
 
+/* ---------- figures ----------
+   Inline SVG schematics. The drawing is geometry only; the caption carries the
+   words, so the same SVG can sit in both language columns. */
+.fig {
+  margin: 20px 0 10px; padding: 14px 16px 10px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.fig svg { display: block; width: 100%; height: auto; }
+.fig figcaption {
+  font-family: var(--sans); font-size: .78rem; line-height: 1.65;
+  color: var(--ink-soft); margin-top: 10px; padding-top: 8px;
+  border-top: 1px dashed var(--line);
+}
+.fig figcaption b { color: var(--amber-deep); font-weight: 600; }
+
 /* ---------- language modes ---------- */
 body.lang-en .lang-zh { display: none; }
 body.lang-zh .lang-en { display: none; }

@@ -1,6 +1,8 @@
 # 文中的数学问题：一页看懂 / The problems in the essay: a one-page field guide
 
-<!-- 姊妹页（companion page v2）：为长稿《各归各位：证明的归机器，理解的归人》（proofs_no_longer_scarce.md）中出现的全部数学问题做普通读者友好的深度导览。每卡八栏：一句话 / 譬喻 / 问的是什么 / 前提·背景 / 先修概念 / 逻辑与语言 / 为什么重要 / 现状。页首设「读卡之前：四个门槛」共享导读（词表、量词与渐近记号、逻辑门槛、譬喻的边界），承接语言学与逻辑学维度；各卡只写该题特需的部分，不重复。AI 起草、未经作者逐条复核（harness §I.6）；「现状」栏事实核于 2026-11-22（A1 依 T2 检索记录的已核实更正），方括号编号指向长稿文末来源表 [1]–[128]；标注「详见」处链接 math_clarification 既有条目（§II.9 单一来源）。双语逐段并列，英文侧与中文侧内容与精神对应。 -->
+<!-- 姊妹页（companion page v3）：为长稿《各归各位：证明的归机器，理解的归人》（proofs_no_longer_scarce.md）中出现的全部数学问题做普通读者友好的深度导览。每卡八栏：一句话 / 譬喻 / 问的是什么 / 前提·背景 / 先修概念 / 逻辑与语言 / 为什么重要 / 现状。页首设「读卡之前：四个门槛」共享导读（词表、量词与渐近记号、逻辑门槛、譬喻的边界），承接语言学与逻辑学维度；各卡只写该题特需的部分，不重复。AI 起草、未经作者逐条复核（harness §I.6）；「现状」栏事实核于 2026-11-22（A1 依 T2 检索记录的已核实更正），方括号编号指向长稿文末来源表 [1]–[128]；标注「详见」处链接 math_clarification 既有条目（§II.9 单一来源）。双语逐段并列，英文侧与中文侧内容与精神对应。v3 每卡末增一幅几何示意 SVG（纯图形、无自然语言文字，图注承载文字；双语各一份）；图不是证明，图注标明其边界与不按比例之处。 -->
+
+<!-- L0 -->
 
 <!-- en -->
 
@@ -9,6 +11,8 @@
 The essay this page accompanies tells a story about machines, proofs, and the people who check them — and the story walks through a crowd of specific mathematical problems: a Millennium Prize equation, an eighty-year-old combinatorial conjecture, a geometry question about seven-dimensional spheres, a counting problem about kisses in eleven dimensions. Most news coverage assumes you already know what these problems are. This page assumes you do not.
 
 Each problem below gets eight fields: **in one line** (compressed), **analogy** (an everyday picture — with its boundary stated, because a compass is not a map), **what is asked**, **background** (who, when, out of what), **prerequisites** (the machinery the statement needs — what the zeta function *is*, what "smoothness" means), **logic and language** (the quantifier structure or logical form that makes the statement say what it says), **why it matters**, and **status** (as of 22 November 2026, with the essay's source numbers). Group A collects the problems that act in the essay's events; Group B collects those cited as background and evidence. Where the cookbook has a full entry, this page links rather than duplicates.
+
+Every card closes with a schematic figure. The drawings carry geometry only — the shape of the question, never a proof and never a scale drawing; the caption says what the figure shows and where it stops. A diagram is a second compass, not a second map.
 
 ## Before the cards: four thresholds
 
@@ -27,6 +31,8 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 本页所配套的那篇长文，讲的是机器、证明与核验者之间的故事——而故事里走过一群具体的数学问题：一道千禧年大奖难题、一个悬置八十年的组合猜想、一个关于七维球面的几何问题、一个数十一维空间里「接吻」的计数问题。绝大多数报道默认你早已知道这些问题是什么；本页默认你并不知道。
 
 下面每个问题给八栏：**一句话**（压缩）、**譬喻**（日常画面——并写明边界，因为指南针不是地图）、**问的是什么**、**前提·背景**（谁、何时、出于什么）、**先修概念**（该题陈述所需的机器——zeta 函数到底是什么、「光滑」是什么意思）、**逻辑与语言**（使命题成为该命题的量词结构与逻辑形式）、**为什么重要**、**现状**（截至 2026 年 11 月 22 日，方括号为长文来源编号）。A 组收录文中事件里的「主角」问题；B 组收录论证援引的「背景板」问题。凡本册已有完整条目者，本页只链接、不重复。
+
+每张卡末尾附一幅示意图。图只用几何承载问题的结构——是问题的形状，不是证明，也不按比例；图注写明它显示什么、在哪里停住。图是第二枚指南针，不是第二张地图。
 
 ## 读卡之前：四个门槛
 
@@ -55,6 +61,33 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: the essay's central case (§1.7, §2.2) — September 2026 compressed a technical truth, a commercial race, an authorship dispute and a priority quarrel into one week [1,5,6].
 - **Status (22 Nov 2026)**: the Clay page still labels the problem Active [4]. OpenAI's 8 September claim — a machine blow-up proof for statements "C/D", Lean-checked but with a forcing term [1] — was found by a Cambridge team not to match its own natural-language text [118]; the method did not obviously extend to the unforced case [5]. On 20 November, Alpöge and Buckmaster announced an *unforced* Navier–Stokes blow-up proof with a Lean formalization (~600,000 lines, public) — though the repository states the formalization contains no data and the interval-arithmetic *certificate* is not yet released [120,121]. A Lean artifact for a *forced* Euler blow-up (credited to Claude under Alpöge's guidance, Anthropic) is public; an *unforced* Euler proof attributed to three authors could not be verified against primary sources and is treated as unverified here. No prize has been claimed.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Smooth flow for all time, versus a finite-time blow-up">
+<title>Smooth flow for all time, versus a finite-time blow-up</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="20" y="40" width="190" height="120" rx="6" fill="#FFFDF9" stroke="#EBDCC4"/>
+<line x1="40" y1="62" x2="178" y2="62" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,62 178,58 178,66" fill="#407CB0"/>
+<line x1="40" y1="86" x2="178" y2="86" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,86 178,82 178,90" fill="#407CB0"/>
+<line x1="40" y1="110" x2="178" y2="110" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,110 178,106 178,114" fill="#407CB0"/>
+<line x1="40" y1="134" x2="178" y2="134" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,134 178,130 178,138" fill="#407CB0"/>
+<text x="115" y="182" text-anchor="middle" font-size="13" fill="#6B5F4F">∀ t</text>
+<line x1="300" y1="160" x2="492" y2="160" stroke="#6B5F4F"/>
+<line x1="300" y1="160" x2="300" y2="40" stroke="#6B5F4F"/>
+<line x1="470" y1="160" x2="470" y2="48" stroke="#A4553F" stroke-dasharray="4 4"/>
+<path d="M300 152 C 360 148, 430 120, 466 58" fill="none" stroke="#C9852F" stroke-width="2.2"/>
+<text x="470" y="40" text-anchor="middle" font-size="14" fill="#A4553F">∞</text>
+<text x="476" y="176" text-anchor="middle" font-size="12" fill="#A4553F">T*</text>
+<text x="290" y="50" text-anchor="end" font-size="12" fill="#6B5F4F">‖u(t)‖</text>
+<text x="496" y="164" text-anchor="end" font-size="12" fill="#6B5F4F">t</text>
+</g>
+</svg>
+<figcaption><b>Fig. A1</b> · Schematic: smooth flow (left) and a finite-time blow-up (right). The curve shows shape only, not scale.</figcaption>
+</figure>
+
 ### A2 · The Erdős unit distance conjecture (1946)
 
 - **In one line**: among n points in the plane, how many pairs can be exactly distance 1 apart?
@@ -65,6 +98,64 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: the conjecture is a *for-all* statement (for every n, the count stays near n); the disproof is *existential* — one family of configurations, working for infinitely many n, with a fixed ε > 0. One family kills the whole conjecture.
 - **Why it matters**: in May 2026 it became the first core-field conjecture disproved by an AI system — §1.5's "act three" [19,20].
 - **Status (22 Nov 2026)**: disproved. Alon, Bloom, Gowers and others published a human-verified digest of the OpenAI-generated counterexample (u(n) ≥ n^(1+ε) infinitely often); Sawin made the exponent explicit at n^1.014; the classical upper bound O(n^(4/3)) is untouched [19,20]. Full entry: [Erdős Unit Distance](../famous_problems/erdos_unit_distance.md).
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A five by five grid of unit distances, and growth shapes n, n^1.014, n^4/3">
+<title>A five by five grid of unit distances, and growth shapes n, n^1.014, n^4/3</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="40" y1="50" x2="40" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="50" x2="160" y2="50" stroke="#EBDCC4"/>
+<line x1="70" y1="50" x2="70" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="80" x2="160" y2="80" stroke="#EBDCC4"/>
+<line x1="100" y1="50" x2="100" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="110" x2="160" y2="110" stroke="#EBDCC4"/>
+<line x1="130" y1="50" x2="130" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="140" x2="160" y2="140" stroke="#EBDCC4"/>
+<line x1="160" y1="50" x2="160" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="170" x2="160" y2="170" stroke="#EBDCC4"/>
+<circle cx="40" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="170" r="2.6" fill="#332C23"/>
+<text x="100" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">n = 25 → 40</text>
+<line x1="262" y1="170" x2="502" y2="170" stroke="#6B5F4F"/>
+<line x1="262" y1="170" x2="262" y2="35" stroke="#6B5F4F"/>
+<path d="M272 152 C 340 122, 430 82, 496 42" fill="none" stroke="#407CB0" stroke-dasharray="5 4"/>
+<path d="M272 154 C 350 132, 440 96, 496 62" fill="none" stroke="#E8A855" stroke-width="2.2"/>
+<path d="M272 156 C 350 140, 440 112, 496 80" fill="none" stroke="#6B5F4F" stroke-dasharray="2 4"/>
+<line x1="278" y1="40" x2="298" y2="40" stroke="#407CB0" stroke-dasharray="5 4"/>
+<text x="304" y="44" text-anchor="start" font-size="10" fill="#407CB0">n^4/3</text>
+<line x1="278" y1="58" x2="298" y2="58" stroke="#E8A855" stroke-width="2.2"/>
+<text x="304" y="62" text-anchor="start" font-size="10" fill="#C9852F">n^1.014</text>
+<line x1="278" y1="76" x2="298" y2="76" stroke="#6B5F4F" stroke-dasharray="2 4"/>
+<text x="304" y="80" text-anchor="start" font-size="10" fill="#6B5F4F">n</text>
+<text x="502" y="164" text-anchor="end" font-size="12" fill="#6B5F4F">n</text>
+<text x="258" y="44" text-anchor="end" font-size="12" fill="#6B5F4F">u(n)</text>
+</g>
+</svg>
+<figcaption><b>Fig. A2</b> · Schematic: a 5×5 grid (n = 25, 40 unit pairs) and the three growth shapes — n, n^1.014, n^4/3.</figcaption>
+</figure>
 
 ### A3 · Fermat's Last Theorem — and its formalization
 
@@ -77,6 +168,26 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §1.8 uses it as the extreme specimen of the verification bottleneck — an artifact no human can read end-to-end [25,26].
 - **Status (22 Nov 2026)**: Anthropic announced (4 September) a complete Lean formalization: about 13 million lines, roughly 29,500 intermediate lemmas, eleven days of largely autonomous work, kernel-checked and confirmed to match Mathlib's statement; Buzzard reviewed it and called it an extraordinary autoformalization achievement that adds nothing mathematically new [25,26].
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Squares 3-4-5 add up; cubes 3 and 4 do not add up to a cube">
+<title>Squares 3-4-5 add up; cubes 3 and 4 do not add up to a cube</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="26" y="80" width="48" height="48" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="50.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">3²</text>
+<rect x="94" y="64" width="64" height="64" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="126.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">4²</text>
+<rect x="186" y="48" width="80" height="80" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="226.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">5²</text>
+<text x="82" y="96" text-anchor="middle" font-size="16" fill="#6B5F4F">+</text>
+<text x="172" y="96" text-anchor="middle" font-size="16" fill="#6B5F4F">=</text>
+<text x="300" y="86" text-anchor="start" font-size="12" fill="#332C23">3³ + 4³ = 91</text>
+<text x="300" y="116" text-anchor="start" font-size="12" fill="#332C23">5³ = 125</text>
+<text x="300" y="152" text-anchor="start" font-size="14" fill="#A4553F">91 ≠ 125</text>
+</g>
+</svg>
+<figcaption><b>Fig. A3</b> · Schematic: squares add up (3² + 4² = 5²); cubes do not (3³ + 4³ = 91 ≠ 125).</figcaption>
+</figure>
+
 ### A4 · The Riemann Hypothesis
 
 - **In one line**: do all the "interesting" zeros of the zeta function sit on one straight line?
@@ -87,6 +198,38 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: the hypothesis is a for-all statement over infinitely many zeros; a single zero off the line refutes it. "Quasi-RH" is not a weakened RH in the logical sense — it is a *different, weaker confinement*, proved for all zeros at once.
 - **Why it matters**: §6.4 used "will AI prove the Riemann hypothesis" as the question to look past; November 2026 answered a version of it in an unexpected way [93,120,122].
 - **Status (22 Nov 2026)**: a proof was announced on 20 November by Levent Alpöge, produced with an internal AI model (press names Claude; Tao's wording says "an internal AI model" — both recorded [120,123]); it exists as a ~17-million-line Lean artifact, and on 21 November the Lean community certified by four stated criteria that "both the statement and the proof of the Riemann Hypothesis are correct" [122]. Earlier in the window, the quasi-RH result from the October release was digested and largely confirmed by human analysts within two weeks [115]. The Association for Human Mathematics objected that no human can responsibly claim to understand such a document [124]. Machine-verified; community-certified; human understanding in progress.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Critical strip, critical line at real part one half, quasi-Riemann band">
+<title>Critical strip, critical line at real part one half, quasi-Riemann band</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="250" y="30" width="55" height="148" fill="#F7EFE2"/>
+<rect x="256.9" y="30" width="41.2" height="148" fill="#FBE9C8"/>
+<line x1="20" y1="110" x2="500" y2="110" stroke="#6B5F4F"/>
+<line x1="250" y1="190" x2="250" y2="22" stroke="#6B5F4F"/>
+<line x1="277.5" y1="190" x2="277.5" y2="22" stroke="#C9852F" stroke-width="2" stroke-dasharray="6 3"/>
+<circle cx="277.5" cy="76.1" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="59.6" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="50.0" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="143.9" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="160.4" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="170.0" r="3.2" fill="#A4553F"/>
+<circle cx="140" cy="110" r="3.2" fill="#6B5F4F"/>
+<circle cx="30" cy="110" r="3.2" fill="#6B5F4F"/>
+<text x="283.5" y="20" text-anchor="start" font-size="12" fill="#C9852F">Re = 1/2</text>
+<text x="256.875" y="194" text-anchor="middle" font-size="10" fill="#9A8D7A">1/8</text>
+<text x="298.125" y="194" text-anchor="middle" font-size="10" fill="#9A8D7A">7/8</text>
+<text x="140" y="126" text-anchor="middle" font-size="10" fill="#6B5F4F">−2</text>
+<text x="30" y="126" text-anchor="middle" font-size="10" fill="#6B5F4F">−4</text>
+<text x="309" y="126" text-anchor="start" font-size="10" fill="#6B5F4F">1</text>
+<text x="246" y="126" text-anchor="end" font-size="10" fill="#6B5F4F">0</text>
+<text x="287.5" y="80.088" text-anchor="start" font-size="10" fill="#A4553F">14.13i</text>
+<text x="500" y="126" text-anchor="end" font-size="12" fill="#9A8D7A">Re(s)</text>
+<text x="244" y="34" text-anchor="end" font-size="12" fill="#9A8D7A">Im(s)</text>
+</g>
+</svg>
+<figcaption><b>Fig. A4</b> · Schematic: the critical strip 0 < Re < 1, the line Re = 1/2 with its first zeros, the trivial zeros at −2 and −4, and the quasi-RH band 1/8–7/8.</figcaption>
+</figure>
 
 ### A5 · The Unique Games Conjecture (2002)
 
@@ -99,6 +242,35 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: the 6 October release claimed a proof of it among its 372 families — the most consequential single claim in the batch (§xi of the postscript) [93].
 - **Status (22 Nov 2026)**: released claim, not an accepted theorem. Dana Moshkovitz has spent weeks on the proof with Khot, Håstad and Minzer (and the GPT-6 Astra model), confronting what she calls a totally alien new error-correcting code; the effort was presented at the Simons Institute; no full verification has been declared [119].
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="An odd cycle that cannot be two-coloured, and the no-discount axis">
+<title>An odd cycle that cannot be two-coloured, and the no-discount axis</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="120.0" y1="45.0" x2="172.3" y2="83.0" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="172.3" y1="83.0" x2="152.3" y2="144.5" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="152.3" y1="144.5" x2="87.7" y2="144.5" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="87.7" y1="144.5" x2="67.7" y2="83.0" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="67.7" y1="83.0" x2="120.0" y2="45.0" stroke="#A4553F" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="120.0" cy="45.0" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<circle cx="172.3" cy="83.0" r="7" fill="#407CB0" stroke="#FFFDF9"/>
+<circle cx="152.3" cy="144.5" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<circle cx="87.7" cy="144.5" r="7" fill="#407CB0" stroke="#FFFDF9"/>
+<circle cx="67.7" cy="83.0" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<text x="120" y="188" text-anchor="middle" font-size="12" fill="#6B5F4F">C₅</text>
+<line x1="250" y1="130" x2="500" y2="130" stroke="#6B5F4F"/>
+<line x1="480" y1="120" x2="480" y2="140" stroke="#6B5F4F"/>
+<line x1="440" y1="120" x2="440" y2="140" stroke="#A4553F"/>
+<text x="480" y="156" text-anchor="middle" font-size="10" fill="#6B5F4F">1</text>
+<text x="440" y="156" text-anchor="middle" font-size="10" fill="#A4553F">1−ε</text>
+<line x1="440" y1="96" x2="480" y2="96" stroke="#A4553F" stroke-dasharray="3 3"/>
+<text x="460" y="88" text-anchor="middle" font-size="14" fill="#A4553F">≈</text>
+<text x="250" y="146" text-anchor="start" font-size="10" fill="#6B5F4F">0</text>
+<text x="375" y="60" text-anchor="start" font-size="12" fill="#332C23" font-weight="600">UGC</text>
+</g>
+</svg>
+<figcaption><b>Fig. A5</b> · Schematic: an odd cycle cannot be two-coloured — one constraint must break; the axis shows the conjecture's 'no discount' claim.</figcaption>
+</figure>
+
 ### A6 · The Jacobian conjecture (1939)
 
 - **In one line**: if a polynomial map has a constant nonzero Jacobian, must it have a polynomial inverse?
@@ -109,6 +281,40 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: local-versus-global is the hinge — "invertible at every point" (analytic fact) is weaker than "has a polynomial inverse" (global algebraic fact); the conjecture asks whether the first forces the second, and the counterexamples show it does not, dimension by dimension.
 - **Why it matters**: §2.1 lists its July 2026 counterexample among the machine-proof dramas preceding the Fields medalists' letter [1,19,30].
 - **Status (22 Nov 2026)**: false for n ≥ 3. Levent Alpöge announced a three-variable counterexample on 19 July 2026, found with the help of an AI model; Tao wrote a public digestion the next day [106]; Gao generalized to every dimension greater than two, with all identities verified in exact rational arithmetic [107]; Buzzard's group saw the counterexample Lean-checked within days [108]. n = 2 remains open.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A shear with constant Jacobian, and a tangle with no polynomial inverse">
+<title>A shear with constant Jacobian, and a tangle with no polynomial inverse</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="40" y="60" width="120" height="120" fill="#FFFDF9" stroke="#9A8D7A"/>
+<line x1="40" y1="60" x2="40" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="60" x2="160" y2="60" stroke="#EBDCC4"/>
+<line x1="70" y1="60" x2="70" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="90" x2="160" y2="90" stroke="#EBDCC4"/>
+<line x1="100" y1="60" x2="100" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="120" x2="160" y2="120" stroke="#EBDCC4"/>
+<line x1="130" y1="60" x2="130" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="150" x2="160" y2="150" stroke="#EBDCC4"/>
+<line x1="160" y1="60" x2="160" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="180" x2="160" y2="180" stroke="#EBDCC4"/>
+<line x1="220" y1="90.0" x2="220" y2="210.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="250" y1="79.5" x2="250" y2="199.5" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="280" y1="69.0" x2="280" y2="189.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="310" y1="58.5" x2="310" y2="178.5" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="340" y1="48.0" x2="340" y2="168.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="90" x2="340" y2="48.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="120" x2="340" y2="78.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="150" x2="340" y2="108.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="180" x2="340" y2="138.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="210" x2="340" y2="168.0" stroke="#C9852F" stroke-width="1.4"/>
+<text x="110" y="196" text-anchor="middle" font-size="12" fill="#332C23">det J = 1</text>
+<text x="340" y="196" text-anchor="middle" font-size="12" fill="#332C23">n ≥ 3</text>
+<path d="M330 70 C 390 30, 470 90, 410 130 C 360 165, 300 110, 350 80" fill="none" stroke="#407CB0" stroke-width="2"/>
+<path d="M350 80 C 400 60, 440 120, 390 140" fill="none" stroke="#A4553F" stroke-width="2"/>
+</g>
+</svg>
+<figcaption><b>Fig. A6</b> · Schematic: a shear with constant Jacobian (equal cell areas) and a tangle that no polynomial untangles.</figcaption>
+</figure>
 
 ### A7 · Positive sectional curvature on all smooth 7-spheres
 
@@ -121,6 +327,60 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: the essay's postscript §iv records it as a boundary case — with its AI acknowledgment visible from version one [82,83].
 - **Status (22 Nov 2026)**: claimed in a preprint (24 September) by Yang-Hui He, Ziran Liu and Shing-Tung Yau, gluing two positively curved 7-disks with matching boundary metrics; the paper's acknowledgment thanks ChatGPT and Claude (present in v1) [82,83]. Follow-up work extends the technique; no community verdict either way.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Two positively curved discs glued along the boundary, and twenty-eight smooth structures">
+<title>Two positively curved discs glued along the boundary, and twenty-eight smooth structures</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<path d="M70 110 A 60 60 0 0 1 190 110" fill="none" stroke="#C9852F" stroke-width="2"/>
+<path d="M70 110 A 60 60 0 0 0 190 110" fill="none" stroke="#407CB0" stroke-width="2"/>
+<line x1="70" y1="110" x2="190" y2="110" stroke="#A4553F" stroke-dasharray="4 4"/>
+<line x1="95" y1="78" x2="95" y2="59" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="95,57 92,65 98,65" fill="#C9852F"/>
+<line x1="130" y1="66" x2="130" y2="46" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="130,44 127,52 133,52" fill="#C9852F"/>
+<line x1="165" y1="78" x2="165" y2="59" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="165,57 162,65 168,65" fill="#C9852F"/>
+<line x1="95" y1="142" x2="95" y2="161" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="95,163 92,155 98,155" fill="#407CB0"/>
+<line x1="130" y1="154" x2="130" y2="174" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="130,176 127,168 133,168" fill="#407CB0"/>
+<line x1="165" y1="142" x2="165" y2="161" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="165,163 162,155 168,155" fill="#407CB0"/>
+<text x="130" y="100" text-anchor="middle" font-size="11" fill="#332C23">D⁷ ∪ D⁷</text>
+<circle cx="320" cy="66" r="5" fill="#E8A855"/>
+<circle cx="320" cy="92" r="5" fill="#407CB0"/>
+<circle cx="320" cy="118" r="5" fill="#E8A855"/>
+<circle cx="320" cy="144" r="5" fill="#407CB0"/>
+<circle cx="346" cy="66" r="5" fill="#407CB0"/>
+<circle cx="346" cy="92" r="5" fill="#E8A855"/>
+<circle cx="346" cy="118" r="5" fill="#407CB0"/>
+<circle cx="346" cy="144" r="5" fill="#E8A855"/>
+<circle cx="372" cy="66" r="5" fill="#E8A855"/>
+<circle cx="372" cy="92" r="5" fill="#407CB0"/>
+<circle cx="372" cy="118" r="5" fill="#E8A855"/>
+<circle cx="372" cy="144" r="5" fill="#407CB0"/>
+<circle cx="398" cy="66" r="5" fill="#407CB0"/>
+<circle cx="398" cy="92" r="5" fill="#E8A855"/>
+<circle cx="398" cy="118" r="5" fill="#407CB0"/>
+<circle cx="398" cy="144" r="5" fill="#E8A855"/>
+<circle cx="424" cy="66" r="5" fill="#E8A855"/>
+<circle cx="424" cy="92" r="5" fill="#407CB0"/>
+<circle cx="424" cy="118" r="5" fill="#E8A855"/>
+<circle cx="424" cy="144" r="5" fill="#407CB0"/>
+<circle cx="450" cy="66" r="5" fill="#407CB0"/>
+<circle cx="450" cy="92" r="5" fill="#E8A855"/>
+<circle cx="450" cy="118" r="5" fill="#407CB0"/>
+<circle cx="450" cy="144" r="5" fill="#E8A855"/>
+<circle cx="476" cy="66" r="5" fill="#E8A855"/>
+<circle cx="476" cy="92" r="5" fill="#407CB0"/>
+<circle cx="476" cy="118" r="5" fill="#E8A855"/>
+<circle cx="476" cy="144" r="5" fill="#407CB0"/>
+<text x="398" y="186" text-anchor="middle" font-size="12" fill="#6B5F4F">28</text>
+</g>
+</svg>
+<figcaption><b>Fig. A7</b> · Schematic: two positively curved discs glued along a matching boundary; the 28 smooth structures of the 7-sphere.</figcaption>
+</figure>
+
 ### A8 · Matrix multiplication, 4×4 complex: 49 to 48
 
 - **In one line**: how many scalar multiplications are needed to multiply two 4×4 complex matrices?
@@ -131,6 +391,75 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: an upper bound is witnessed by an algorithm (build it); a matching lower bound would require excluding all better ones — the record 48 is the best *known* algorithm, not a proven minimum. The logical asymmetry of threshold 3, in the wild.
 - **Why it matters**: §1.4 uses it as the emblem of results at the compute-verify end [16].
 - **Status (22 Nov 2026)**: 48 (DeepMind's AlphaEvolve, May 2025) still the record; a follow-up re-derives it with rational coefficients only.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Three four by four grids, and bars for 64, 49, 48 scalar multiplications">
+<title>Three four by four grids, and bars for 64, 49, 48 scalar multiplications</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="30" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="54" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">A</text>
+<rect x="120" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="144" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">B</text>
+<rect x="215" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="239" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">C</text>
+<text x="108" y="100" text-anchor="middle" font-size="16" fill="#6B5F4F">×</text>
+<text x="200" y="100" text-anchor="middle" font-size="16" fill="#6B5F4F">=</text>
+<rect x="300" y="70" width="166" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="474.4" y="84" text-anchor="start" font-size="12" fill="#332C23">64</text>
+<rect x="300" y="110" width="127" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="435.4" y="124" text-anchor="start" font-size="12" fill="#332C23">49</text>
+<rect x="300" y="150" width="124" height="18" rx="4" fill="#C9852F" opacity=".85"/>
+<text x="432.8" y="164" text-anchor="start" font-size="12" fill="#332C23">48</text>
+<text x="300" y="190" text-anchor="start" font-size="10" fill="#9A8D7A">n×n, n = 4</text>
+</g>
+</svg>
+<figcaption><b>Fig. A8</b> · Schematic: multiplying two 4×4 matrices, and the record count 64 → 49 → 48.</figcaption>
+</figure>
 
 ### A9 · The kissing number in eleven dimensions
 
@@ -143,6 +472,39 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §1.4 pairs it with matrix multiplication as a mechanically checkable record [16].
 - **Status (22 Nov 2026)**: 593–868; exact value unknown. A later paper claims 604; not yet reflected in standard references, unverified for this page [16].
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Six unit circles around a central one, and known kissing numbers by dimension">
+<title>Six unit circles around a central one, and known kissing numbers by dimension</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="120" cy="100" r="28" fill="#F7EFE2" stroke="#C9852F" stroke-width="2"/>
+<circle cx="176.0" cy="100.0" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="148.0" cy="148.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="92.0" cy="148.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="64.0" cy="100.0" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="92.0" cy="51.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="148.0" cy="51.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<text x="120" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">d = 2</text>
+<rect x="412" y="52" width="44" height="58" rx="6" fill="#FBE9C8" stroke="#C9852F" stroke-dasharray="4 3"/>
+<text x="235" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">1</text>
+<text x="235" y="96" text-anchor="middle" font-size="10" fill="#332C23">2</text>
+<text x="272" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">2</text>
+<text x="272" y="96" text-anchor="middle" font-size="10" fill="#332C23">6</text>
+<text x="309" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">3</text>
+<text x="309" y="96" text-anchor="middle" font-size="10" fill="#332C23">12</text>
+<text x="346" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">4</text>
+<text x="346" y="96" text-anchor="middle" font-size="10" fill="#332C23">24</text>
+<text x="390" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">8</text>
+<text x="390" y="96" text-anchor="middle" font-size="10" fill="#332C23">240</text>
+<text x="434" y="70" text-anchor="middle" font-size="10" fill="#A4553F">11</text>
+<text x="434" y="96" text-anchor="middle" font-size="9" fill="#A4553F">593–868</text>
+<text x="478" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">24</text>
+<text x="478" y="96" text-anchor="middle" font-size="10" fill="#332C23">196560</text>
+<text x="200" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">d</text>
+</g>
+</svg>
+<figcaption><b>Fig. A9</b> · Schematic: six unit circles around a central one (2-D), and the known kissing numbers — dimension 11 is still a bracket.</figcaption>
+</figure>
+
 ### A10 · Nine-loop hexagon amplitudes (and a single-minus aside)
 
 - **In one line**: compute a fearsomely complex scattering amplitude in the toy model of quantum field theory — nine quantum loops deep.
@@ -153,6 +515,36 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: the aside's statement — "these amplitudes are nonzero" — is an existence claim witnessed by an explicit formula; the 2026 preprint reports the formula first conjectured by GPT-5.2 Pro, then proved by an OpenAI internal model [23].
 - **Why it matters**: §1.7 reads the two 2026 physics cases as live specimens of machine-executed-recipe versus machine-proposed-conjecture [23,24].
 - **Status (22 Nov 2026)**: Anthropic announced (25 September) Claude computing the nine-loop amplitude, validated independently by Dixon over roughly two weeks; a CAS team led by Song He obtained most of the result concurrently, using GPT-6 for part of the constraints [24].
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A hexagon amplitude with nine loops, and the eight to nine loop record">
+<title>A hexagon amplitude with nine loops, and the eight to nine loop record</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<polygon points="185.0,100.0 157.5,147.6 102.5,147.6 75.0,100.0 102.5,52.4 157.5,52.4" fill="none" stroke="#C9852F" stroke-width="2"/>
+<line x1="185.0" y1="100.0" x2="211.0" y2="100.0" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="157.5" y1="147.6" x2="170.5" y2="170.1" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="102.5" y1="147.6" x2="89.5" y2="170.1" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="75.0" y1="100.0" x2="49.0" y2="100.0" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="102.5" y1="52.4" x2="89.5" y2="29.9" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="157.5" y1="52.4" x2="170.5" y2="29.9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="105" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="105" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="105" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<text x="130" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">L = 9</text>
+<rect x="300" y="76" width="144" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="300" y="70" text-anchor="start" font-size="11" fill="#332C23">8 · 2023</text>
+<rect x="300" y="122" width="162" height="18" rx="4" fill="#C9852F" opacity=".85"/>
+<text x="300" y="116" text-anchor="start" font-size="11" fill="#332C23">9 · 2026</text>
+</g>
+</svg>
+<figcaption><b>Fig. A10</b> · Schematic: a hexagon amplitude with nine loops, and the 8 → 9 loop record.</figcaption>
+</figure>
 
 ### A11 · First Proof: ten research-level questions
 
@@ -165,6 +557,45 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §1.6 and §6.4 use it as the cleanest statement of the verification bottleneck [22].
 - **Status (22 Nov 2026)**: the generation half stands; the evaluation half remains unfinished public business, and the organizers concede no protocol yet exists for measuring autonomous problem-posing [22].
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Ten research questions, a machine answer, and an open evaluation gate">
+<title>Ten research questions, a machine answer, and an open evaluation gate</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="24" y="44" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="59" text-anchor="middle" font-size="10" fill="#6B5F4F">1</text>
+<rect x="82" y="44" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="59" text-anchor="middle" font-size="10" fill="#6B5F4F">6</text>
+<rect x="24" y="72" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="87" text-anchor="middle" font-size="10" fill="#6B5F4F">2</text>
+<rect x="82" y="72" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="87" text-anchor="middle" font-size="10" fill="#6B5F4F">7</text>
+<rect x="24" y="100" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="115" text-anchor="middle" font-size="10" fill="#6B5F4F">3</text>
+<rect x="82" y="100" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="115" text-anchor="middle" font-size="10" fill="#6B5F4F">8</text>
+<rect x="24" y="128" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="143" text-anchor="middle" font-size="10" fill="#6B5F4F">4</text>
+<rect x="82" y="128" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="143" text-anchor="middle" font-size="10" fill="#6B5F4F">9</text>
+<rect x="24" y="156" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="171" text-anchor="middle" font-size="10" fill="#6B5F4F">5</text>
+<rect x="82" y="156" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="171" text-anchor="middle" font-size="10" fill="#6B5F4F">10</text>
+<text x="76" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">10</text>
+<line x1="146" y1="100" x2="182" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="190,100 180,96 180,104" fill="#6B5F4F"/>
+<rect x="196" y="70" width="86" height="60" rx="8" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="239" y="105" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">AI</text>
+<line x1="288" y1="100" x2="322" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="330,100 320,96 320,104" fill="#6B5F4F"/>
+<rect x="336" y="66" width="120" height="68" rx="8" fill="#FBE9C8" stroke="#A4553F" stroke-dasharray="5 4"/>
+<text x="396" y="106" text-anchor="middle" font-size="22" fill="#A4553F">?</text>
+<text x="396" y="84" text-anchor="middle" font-size="10" fill="#A4553F">0 / 10</text>
+</g>
+</svg>
+<figcaption><b>Fig. A11</b> · Schematic: ten questions, a machine answer, and the missing evaluation protocol.</figcaption>
+</figure>
+
 ## Group B · The background
 
 ### B1 · Gödel's incompleteness theorems (1931)
@@ -176,6 +607,29 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: the proof encodes a self-referential sentence — "this statement is not provable here" — inside arithmetic; the linguistic machinery (Gödel numbering) is what lets a rulebook talk about itself.
 - **Status**: settled mathematics; the philosophical arguments built on it remain contested.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A formal system containing a true statement it cannot prove">
+<title>A formal system containing a true statement it cannot prove</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="24" y="40" width="220" height="120" rx="10" fill="#FFFDF9" stroke="#6B5F4F" stroke-width="1.6"/>
+<text x="40" y="62" text-anchor="start" font-size="12" fill="#332C23" font-weight="600">S</text>
+<line x1="46" y1="82" x2="150" y2="82" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="98" x2="150" y2="98" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="114" x2="150" y2="114" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="130" x2="150" y2="130" stroke="#EBDCC4" stroke-width="2"/>
+<rect x="160" y="86" width="56" height="34" rx="6" fill="#FBE9C8" stroke="#C9852F"/>
+<text x="188" y="108" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">G</text>
+<path d="M216 96 C 250 70, 250 128, 216 110" fill="none" stroke="#A4553F" stroke-dasharray="4 3"/>
+<line x1="244" y1="100" x2="300" y2="100" stroke="#A4553F" stroke-dasharray="4 3"/>
+<polygon points="308,100 298,96 298,104" fill="#A4553F"/>
+<text x="318" y="96" text-anchor="start" font-size="12" fill="#A4553F">S ⊬ G</text>
+<text x="318" y="124" text-anchor="start" font-size="12" fill="#A4553F">S ⊬ Con(S)</text>
+<text x="318" y="152" text-anchor="start" font-size="11" fill="#6B5F4F">G ⊨ ⊤</text>
+</g>
+</svg>
+<figcaption><b>Fig. B1</b> · Schematic: inside the system S there is a true sentence G it cannot prove, and it cannot prove its own consistency.</figcaption>
+</figure>
+
 ### B2 · The halting problem (1936)
 
 - **In one line**: no algorithm can decide, for every program and input, whether the program eventually stops.
@@ -184,6 +638,28 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: the proof is diagonal — one constructed counterexample against a universal claim; the same for-all/existential shape as threshold 3.
 - **Why it matters**: with Gödel, it closes the "formalization can exhaust mathematics" hope — §3.5 and §5.4 [48].
 - **Status**: settled; the boundary between decidable and undecidable remains an active map.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A halting decider fed its own description, and the contradiction">
+<title>A halting decider fed its own description, and the contradiction</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="70" y="66" width="96" height="68" rx="10" fill="#FFFDF9" stroke="#6B5F4F" stroke-width="1.6"/>
+<text x="118" y="106" text-anchor="middle" font-size="20" fill="#332C23" font-weight="600">H</text>
+<line x1="24" y1="100" x2="62" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="70,100 60,96 60,104" fill="#6B5F4F"/>
+<text x="44" y="90" text-anchor="middle" font-size="11" fill="#6B5F4F">⟨H,H⟩</text>
+<line x1="166" y1="88" x2="216" y2="72" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="224,70 213,68 216,76" fill="#6B5F4F"/>
+<text x="236" y="70" text-anchor="start" font-size="16" fill="#6B5F4F">↓</text>
+<line x1="166" y1="112" x2="216" y2="128" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="224,130 213,132 216,124" fill="#6B5F4F"/>
+<text x="236" y="136" text-anchor="start" font-size="16" fill="#6B5F4F">∞</text>
+<path d="M270 140 C 320 190, 20 190, 44 118" fill="none" stroke="#A4553F" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="160" y="186" text-anchor="middle" font-size="18" fill="#A4553F">⊥</text>
+</g>
+</svg>
+<figcaption><b>Fig. B2</b> · Schematic: the halting decider fed its own description — either output contradicts the other.</figcaption>
+</figure>
 
 ### B3 · The continuum hypothesis
 
@@ -194,6 +670,30 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §3.3 uses it to show even the most foundational branch has axiomatic choices not uniquely forced.
 - **Status**: settled as independence; adopting CH is a stance, not a fact.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A gap between aleph-null and the continuum, and two consistent models">
+<title>A gap between aleph-null and the continuum, and two consistent models</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="110" y1="176" x2="110" y2="36" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="168" x2="128" y2="168" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="48" x2="128" y2="48" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="108" x2="128" y2="108" stroke="#A4553F" stroke-dasharray="4 4"/>
+<text x="84" y="172" text-anchor="end" font-size="12" fill="#332C23">ℵ₀</text>
+<text x="84" y="52" text-anchor="end" font-size="12" fill="#332C23">2^ℵ₀</text>
+<text x="84" y="112" text-anchor="end" font-size="16" fill="#A4553F">?</text>
+<text x="110" y="30" text-anchor="middle" font-size="12" fill="#A4553F">CH</text>
+<rect x="240" y="62" width="96" height="54" rx="8" fill="#FFFDF9" stroke="#6B5F4F"/>
+<text x="288" y="86" text-anchor="middle" font-size="12" fill="#332C23">CH</text>
+<text x="288" y="106" text-anchor="middle" font-size="12" fill="#6B5F4F">✓</text>
+<rect x="356" y="62" width="96" height="54" rx="8" fill="#FFFDF9" stroke="#6B5F4F"/>
+<text x="404" y="86" text-anchor="middle" font-size="12" fill="#332C23">¬CH</text>
+<text x="404" y="106" text-anchor="middle" font-size="12" fill="#6B5F4F">✓</text>
+<text x="346" y="146" text-anchor="middle" font-size="11" fill="#9A8D7A">ZFC</text>
+</g>
+</svg>
+<figcaption><b>Fig. B3</b> · Schematic: the gap between ℵ₀ and 2^ℵ₀; both CH and ¬CH are consistent with the axioms.</figcaption>
+</figure>
+
 ### B4 · Russell's paradox (1901)
 
 - **In one line**: the set of all sets that do not contain themselves — contains itself or not?
@@ -202,6 +702,23 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: a self-reference defect in a definition — the linguistic side of threshold 2: a grammatical sentence can be semantically bankrupt.
 - **Why it matters**: §3.1 uses it to mark logicism's failure — logic is mathematics' grammar, not its ground [36].
 - **Status**: resolved; the lesson is a fixture of foundations.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="The set of all sets that do not contain themselves, and its contradiction">
+<title>The set of all sets that do not contain themselves, and its contradiction</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="120" cy="100" r="50" fill="#F7EFE2" stroke="#C9852F" stroke-width="1.8"/>
+<text x="120" y="106" text-anchor="middle" font-size="18" fill="#332C23" font-weight="600">R</text>
+<path d="M148 66 C 190 40, 210 96, 160 110" fill="none" stroke="#A4553F" stroke-width="1.6"/>
+<polygon points="154,108 166,108 160,118" fill="#A4553F"/>
+<text x="196" y="60" text-anchor="middle" font-size="12" fill="#A4553F">R ∈ R ?</text>
+<text x="262" y="78" text-anchor="start" font-size="12" fill="#332C23">R ∈ R ⇒ R ∉ R</text>
+<text x="262" y="104" text-anchor="start" font-size="12" fill="#332C23">R ∉ R ⇒ R ∈ R</text>
+<text x="262" y="140" text-anchor="start" font-size="20" fill="#A4553F">⊥</text>
+</g>
+</svg>
+<figcaption><b>Fig. B4</b> · Schematic: the set of all sets that do not contain themselves — either answer breaks the definition.</figcaption>
+</figure>
 
 ### B5 · The Kepler conjecture
 
@@ -212,6 +729,31 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §5.3 cites the verification labor as the price tag for professional verification — labor still among the discipline's worst paid [66].
 - **Status**: proved, machine-checked; historically the first major theorem certified this way.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Hexagonal close packing cross-section and the proof timeline">
+<title>Hexagonal close packing cross-section and the proof timeline</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="130" cy="100" r="26" fill="#F7EFE2" stroke="#C9852F" stroke-width="1.8"/>
+<circle cx="182.0" cy="100.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="156.0" cy="145.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="104.0" cy="145.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="78.0" cy="100.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="104.0" cy="55.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="156.0" cy="55.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<polygon points="156,115 130,130 104,115 104,85 130,70 156,85" fill="none" stroke="#A4553F" stroke-dasharray="4 3"/>
+<text x="130" y="190" text-anchor="middle" font-size="12" fill="#332C23">π / (3√2) ≈ 0.7405</text>
+<line x1="270" y1="100" x2="500" y2="100" stroke="#EBDCC4"/>
+<circle cx="300" cy="100" r="4" fill="#C9852F"/>
+<text x="300" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">1611</text>
+<circle cx="380" cy="100" r="4" fill="#C9852F"/>
+<text x="380" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">1998</text>
+<circle cx="460" cy="100" r="4" fill="#C9852F"/>
+<text x="460" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">2014</text>
+</g>
+</svg>
+<figcaption><b>Fig. B5</b> · Schematic: the hexagonal cross-section of the densest packing, density π/(3√2) ≈ 0.7405, and the proof timeline.</figcaption>
+</figure>
+
 ### B6 · The Robbins problem
 
 - **In one line**: do three simple equations about a boolean operation capture all of boolean algebra?
@@ -220,6 +762,26 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: an equivalence claim — "these axioms define exactly boolean algebra" — requires two proofs: everything boolean follows from the three, and the three hold in boolean algebra.
 - **Why it matters**: §5.3 cites it in the lineage of machines absorbing the checking and the executing, humans moving on.
 - **Status**: proved by machine — the precedent the AI-mathematics wave extends one layer up.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Three axiom poles holding up the dome of Boolean algebra">
+<title>Three axiom poles holding up the dome of Boolean algebra</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<path d="M70 92 Q 160 34 250 92" fill="none" stroke="#C9852F" stroke-width="2"/>
+<line x1="100" y1="150" x2="100" y2="76" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="100" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A1</text>
+<line x1="160" y1="150" x2="160" y2="63" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="160" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A2</text>
+<line x1="220" y1="150" x2="220" y2="76" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="220" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A3</text>
+<text x="160" y="58" text-anchor="middle" font-size="12" fill="#332C23">B</text>
+<text x="40" y="168" text-anchor="start" font-size="10" fill="#9A8D7A">1933</text>
+<text x="280" y="168" text-anchor="start" font-size="10" fill="#9A8D7A">1996</text>
+<line x1="24" y1="150" x2="300" y2="150" stroke="#EBDCC4"/>
+</g>
+</svg>
+<figcaption><b>Fig. B6</b> · Schematic: three axiom poles holding up the dome of Boolean algebra.</figcaption>
+</figure>
 
 ### B7 · Bounded gaps between primes (and Chen's theorem)
 
@@ -230,6 +792,43 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §4.2 and §6.2 cite the lineage as sieve methods and additive combinatorics alive [57,58,72]. Related entry: [Goldbach & twin primes](../famous_problems/goldbach_and_twin_primes.md).
 - **Status (22 Nov 2026)**: record 240 (Stadlmann); twin primes open.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Primes on a line, a twin gap of two, and a bounded gap of 240">
+<title>Primes on a line, a twin gap of two, and a bounded gap of 240</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="20" y1="110" x2="500" y2="110" stroke="#6B5F4F"/>
+<line x1="30" y1="104" x2="30" y2="116" stroke="#6B5F4F"/>
+<text x="30" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">2</text>
+<line x1="75" y1="104" x2="75" y2="116" stroke="#6B5F4F"/>
+<text x="75" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">3</text>
+<line x1="120" y1="104" x2="120" y2="116" stroke="#6B5F4F"/>
+<text x="120" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">5</text>
+<line x1="165" y1="104" x2="165" y2="116" stroke="#6B5F4F"/>
+<text x="165" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">7</text>
+<line x1="210" y1="104" x2="210" y2="116" stroke="#6B5F4F"/>
+<text x="210" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">11</text>
+<line x1="255" y1="104" x2="255" y2="116" stroke="#6B5F4F"/>
+<text x="255" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">13</text>
+<line x1="300" y1="104" x2="300" y2="116" stroke="#6B5F4F"/>
+<text x="300" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">17</text>
+<line x1="345" y1="104" x2="345" y2="116" stroke="#6B5F4F"/>
+<text x="345" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">19</text>
+<line x1="390" y1="104" x2="390" y2="116" stroke="#6B5F4F"/>
+<text x="390" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">23</text>
+<line x1="435" y1="104" x2="435" y2="116" stroke="#6B5F4F"/>
+<text x="435" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">29</text>
+<line x1="480" y1="104" x2="480" y2="116" stroke="#6B5F4F"/>
+<text x="480" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">31</text>
+<path d="M210 96 L210 88 L255 88 L255 96" fill="none" stroke="#A4553F"/>
+<text x="232" y="80" text-anchor="middle" font-size="10" fill="#A4553F">2</text>
+<path d="M300 62 L300 52 L480 52 L480 62" fill="none" stroke="#C9852F" stroke-dasharray="4 3"/>
+<text x="390" y="44" text-anchor="middle" font-size="12" fill="#C9852F">≤ 240</text>
+<text x="390" y="176" text-anchor="middle" font-size="14" fill="#9A8D7A">∞</text>
+</g>
+</svg>
+<figcaption><b>Fig. B7</b> · Schematic: primes on a line; a twin gap of 2 and the bounded gap of 240, which occurs infinitely often.</figcaption>
+</figure>
+
 ### B8 · The Weil conjectures
 
 - **In one line**: count solutions of polynomial equations over finite fields, and find deep topology hiding in the arithmetic.
@@ -239,6 +838,49 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Why it matters**: §4.2 cites Deligne's proof as the landmark of arithmetic geometry, the territory around the Langlands program.
 - **Status**: proved; its descendants (geometric Langlands) remain among the deepest active territories.
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Point counts over finite fields and a torus with its Betti numbers">
+<title>Point counts over finite fields and a torus with its Betti numbers</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="40" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="86" r="5" fill="#C9852F"/>
+<circle cx="118" cy="86" r="5" fill="#C9852F"/>
+<circle cx="66" cy="138" r="5" fill="#C9852F"/>
+<circle cx="144" cy="164" r="5" fill="#C9852F"/>
+<text x="90" y="196" text-anchor="middle" font-size="12" fill="#332C23">N₁ N₂ …</text>
+<ellipse cx="360" cy="104" rx="86" ry="46" fill="none" stroke="#407CB0" stroke-width="2"/>
+<ellipse cx="360" cy="104" rx="30" ry="14" fill="none" stroke="#407CB0" stroke-width="2"/>
+<text x="360" y="176" text-anchor="middle" font-size="11" fill="#332C23">b: 1 · 2 · 1</text>
+<text x="360" y="40" text-anchor="middle" font-size="12" fill="#C9852F">Z(V, t)</text>
+</g>
+</svg>
+<figcaption><b>Fig. B8</b> · Schematic: point counts over finite fields feeding a zeta function; the shape's holes (Betti numbers) govern the rhythm.</figcaption>
+</figure>
+
 ### B9 · Pi, Liu Hui and Zu Chongzhi
 
 - **In one line**: how precisely can the circle's ratio be computed — and by which method?
@@ -246,6 +888,22 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **What is asked** (answered): π is irrational and transcendental; the historiographical question — which traditions, which methods — is the essay's [50,69].
 - **Why it matters**: §5.5 cites the Chinese tradition as an algorithmic, constructive path — different in what warrants a solution, not in what is true.
 - **Status**: computed to trillions of digits; the essay's historiographical point stands.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Inscribed and circumscribed hexagons closing on the circle">
+<title>Inscribed and circumscribed hexagons closing on the circle</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="140" cy="100" r="60" fill="none" stroke="#6B5F4F" stroke-width="2"/>
+<polygon points="200.0,100.0 170.0,152.0 110.0,152.0 80.0,100.0 110.0,48.0 170.0,48.0" fill="none" stroke="#407CB0" stroke-dasharray="5 4"/>
+<polygon points="200.0,134.6 140.0,169.3 80.0,134.6 80.0,65.4 140.0,30.7 200.0,65.4" fill="none" stroke="#C9852F" stroke-dasharray="2 4"/>
+<text x="140" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">n = 6</text>
+<text x="280" y="74" text-anchor="start" font-size="11" fill="#332C23">3.14159265…</text>
+<text x="280" y="100" text-anchor="start" font-size="11" fill="#C9852F">355/113</text>
+<text x="280" y="126" text-anchor="start" font-size="11" fill="#6B5F4F">= 3.14159292…</text>
+</g>
+</svg>
+<figcaption><b>Fig. B9</b> · Schematic: inscribed and circumscribed hexagons closing on the circle; 355/113 as the classical bound.</figcaption>
+</figure>
 
 ### B10 · The Kerala school's infinite series
 
@@ -255,6 +913,24 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **Logic and language**: an infinite series is a claim with a limit in it — "the partial sums approach…"; the linguistic care (approach to what, at what speed) is exactly the grammar threshold 2 teaches.
 - **Why it matters**: §5.5 cites Kerala as evidence that the same mathematics can grow in more than one institutional shape.
 - **Status**: historically established.
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Sine and its successive partial sums from the power series">
+<title>Sine and its successive partial sums from the power series</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="40" y1="110" x2="480" y2="110" stroke="#EBDCC4"/>
+<line x1="260" y1="40" x2="260" y2="180" stroke="#EBDCC4"/>
+<polyline points="60.0,267.1 66.7,261.8 73.3,256.6 80.0,251.4 86.7,246.1 93.3,240.9 100.0,235.7 106.7,230.4 113.3,225.2 120.0,220.0 126.7,214.7 133.3,209.5 140.0,204.2 146.7,199.0 153.3,193.8 160.0,188.5 166.7,183.3 173.3,178.1 180.0,172.8 186.7,167.6 193.3,162.4 200.0,157.1 206.7,151.9 213.3,146.7 220.0,141.4 226.7,136.2 233.3,130.9 240.0,125.7 246.7,120.5 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.5 280.0,94.3 286.7,89.1 293.3,83.8 300.0,78.6 306.7,73.3 313.3,68.1 320.0,62.9 326.7,57.6 333.3,52.4 340.0,47.2 346.7,41.9 353.3,36.7 360.0,31.5 366.7,26.2 373.3,21.0 380.0,15.8 386.7,10.5 393.3,5.3 400.0,0.0 406.7,-5.2 413.3,-10.4 420.0,-15.7 426.7,-20.9 433.3,-26.1 440.0,-31.4 446.7,-36.6 453.3,-41.8 460.0,-47.1" fill="none" stroke="#6B5F4F" stroke-width="1.2" stroke-dasharray="2 5"/>
+<polyline points="60.0,8.7 66.7,28.4 73.3,46.5 80.0,63.0 86.7,77.9 93.3,91.4 100.0,103.4 106.7,114.0 113.3,123.3 120.0,131.3 126.7,138.2 133.3,143.8 140.0,148.4 146.7,152.0 153.3,154.6 160.0,156.2 166.7,157.0 173.3,157.0 180.0,156.3 186.7,154.9 193.3,152.8 200.0,150.1 206.7,147.0 213.3,143.4 220.0,139.3 226.7,135.0 233.3,130.3 240.0,125.4 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.6 286.7,89.7 293.3,85.0 300.0,80.7 306.7,76.6 313.3,73.0 320.0,69.9 326.7,67.2 333.3,65.1 340.0,63.7 346.7,63.0 353.3,63.0 360.0,63.8 366.7,65.4 373.3,68.0 380.0,71.6 386.7,76.2 393.3,81.8 400.0,88.7 406.7,96.7 413.3,106.0 420.0,116.6 426.7,128.6 433.3,142.1 440.0,157.0 446.7,173.5 453.3,191.6 460.0,211.3" fill="none" stroke="#407CB0" stroke-width="1.6" stroke-dasharray="5 4"/>
+<polyline points="60.0,136.2 66.7,136.1 73.3,136.8 80.0,138.3 86.7,140.3 93.3,142.6 100.0,145.2 106.7,147.8 113.3,150.3 120.0,152.8 126.7,155.0 133.3,156.8 140.0,158.4 146.7,159.4 153.3,160.1 160.0,160.2 166.7,159.9 173.3,159.0 180.0,157.6 186.7,155.7 193.3,153.3 200.0,150.5 206.7,147.2 213.3,143.5 220.0,139.4 226.7,135.0 233.3,130.3 240.0,125.5 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.5 286.7,89.7 293.3,85.0 300.0,80.6 306.7,76.5 313.3,72.8 320.0,69.5 326.7,66.7 333.3,64.3 340.0,62.4 346.7,61.0 353.3,60.1 360.0,59.8 366.7,59.9 373.3,60.6 380.0,61.6 386.7,63.2 393.3,65.0 400.0,67.2 406.7,69.7 413.3,72.2 420.0,74.8 426.7,77.4 433.3,79.7 440.0,81.7 446.7,83.2 453.3,83.9 460.0,83.8" fill="none" stroke="#C9852F" stroke-width="1.6" stroke-dasharray="8 3 2 3"/>
+<polyline points="60.0,110.0 66.7,115.2 73.3,120.4 80.0,125.5 86.7,130.3 93.3,135.0 100.0,139.4 106.7,143.5 113.3,147.2 120.0,150.5 126.7,153.3 133.3,155.7 140.0,157.6 146.7,158.9 153.3,159.7 160.0,160.0 166.7,159.7 173.3,158.9 180.0,157.6 186.7,155.7 193.3,153.3 200.0,150.5 206.7,147.2 213.3,143.5 220.0,139.4 226.7,135.0 233.3,130.3 240.0,125.5 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.5 286.7,89.7 293.3,85.0 300.0,80.6 306.7,76.5 313.3,72.8 320.0,69.5 326.7,66.7 333.3,64.3 340.0,62.4 346.7,61.1 353.3,60.3 360.0,60.0 366.7,60.3 373.3,61.1 380.0,62.4 386.7,64.3 393.3,66.7 400.0,69.5 406.7,72.8 413.3,76.5 420.0,80.6 426.7,85.0 433.3,89.7 440.0,94.5 446.7,99.6 453.3,104.8 460.0,110.0" fill="none" stroke="#332C23" stroke-width="2"/>
+<text x="140" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">−π</text>
+<text x="380" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">π</text>
+<text x="470" y="32" text-anchor="end" font-size="10" fill="#C9852F">x − x³/3! + x⁵/5! …</text>
+</g>
+</svg>
+<figcaption><b>Fig. B10</b> · Schematic: sin x and its successive partial sums — each added term hugs the curve closer.</figcaption>
+</figure>
 
 <!-- zh -->
 
@@ -271,6 +947,33 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：全文的中心案件（§1.7、§2.2）——2026 年 9 月的一纸宣布，把技术真相、商业竞争、署名纠纷、优先权公案压缩进同一周 [1,5,6]。
 - **现状（2026-11-22）**：克雷官网仍标 Active [4]。OpenAI 9 月 8 日的主张——就克雷表述的 C/D 陈述给出机器 blow-up 证明，经 Lean 核验但带外力项 [1]——被剑桥团队发现与其自然语言文本对不上 [118]；该方法未见推广到无外力情形 [5]。11 月 20 日，Alpöge–Buckmaster 宣布**无外力** NS blow-up 证明，Lean 形式化约 60 万行、已公开——但仓库自述形式化不含数据、区间算术**证书尚未放出** [120,121]。另有一份**带光滑外力**的 Euler blow-up Lean 制品公开（署名 Anthropic，Claude 在 Alpöge 指导下写出）；所谓三人合著的「无外力 Euler」未获一手来源，此处按未核实处理。奖金至今无人申领。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Smooth flow for all time, versus a finite-time blow-up">
+<title>Smooth flow for all time, versus a finite-time blow-up</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="20" y="40" width="190" height="120" rx="6" fill="#FFFDF9" stroke="#EBDCC4"/>
+<line x1="40" y1="62" x2="178" y2="62" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,62 178,58 178,66" fill="#407CB0"/>
+<line x1="40" y1="86" x2="178" y2="86" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,86 178,82 178,90" fill="#407CB0"/>
+<line x1="40" y1="110" x2="178" y2="110" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,110 178,106 178,114" fill="#407CB0"/>
+<line x1="40" y1="134" x2="178" y2="134" stroke="#407CB0" stroke-width="1.5"/>
+<polygon points="188,134 178,130 178,138" fill="#407CB0"/>
+<text x="115" y="182" text-anchor="middle" font-size="13" fill="#6B5F4F">∀ t</text>
+<line x1="300" y1="160" x2="492" y2="160" stroke="#6B5F4F"/>
+<line x1="300" y1="160" x2="300" y2="40" stroke="#6B5F4F"/>
+<line x1="470" y1="160" x2="470" y2="48" stroke="#A4553F" stroke-dasharray="4 4"/>
+<path d="M300 152 C 360 148, 430 120, 466 58" fill="none" stroke="#C9852F" stroke-width="2.2"/>
+<text x="470" y="40" text-anchor="middle" font-size="14" fill="#A4553F">∞</text>
+<text x="476" y="176" text-anchor="middle" font-size="12" fill="#A4553F">T*</text>
+<text x="290" y="50" text-anchor="end" font-size="12" fill="#6B5F4F">‖u(t)‖</text>
+<text x="496" y="164" text-anchor="end" font-size="12" fill="#6B5F4F">t</text>
+</g>
+</svg>
+<figcaption><b>图 A1</b> · 示意：光滑流（左）与有限时间爆破（右）。曲线只示形状，不按比例。</figcaption>
+</figure>
+
 ### A2 · Erdős 单位距离猜想（1946）
 
 - **一句话**：平面上的 n 个点，最多能有多少对恰好相距 1？
@@ -281,6 +984,64 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：猜想是**全称**命题（对每个 n 都压在 n 附近）；否证是**存在性**的——一族反例，在无穷多个 n 上成立，带一个固定的 ε > 0。一族反例，杀掉整条猜想。
 - **为什么重要**：2026 年 5 月，它成为第一个被 AI 系统证伪的核心领域猜想——§1.5 的「第三幕」[19,20]。
 - **现状（2026-11-22）**：已证伪。Alon、Bloom、Gowers 等九人发表了 OpenAI 生成反例的人类核验版（u(n) ≥ n^(1+ε) 无穷多次成立）；萨温把指数显式化到 n^1.014；经典上界 O(n^(4/3)) 纹丝未动 [19,20]。完整条目详见 [Erdős 单位距离](../famous_problems/erdos_unit_distance.md)。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A five by five grid of unit distances, and growth shapes n, n^1.014, n^4/3">
+<title>A five by five grid of unit distances, and growth shapes n, n^1.014, n^4/3</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="40" y1="50" x2="40" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="50" x2="160" y2="50" stroke="#EBDCC4"/>
+<line x1="70" y1="50" x2="70" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="80" x2="160" y2="80" stroke="#EBDCC4"/>
+<line x1="100" y1="50" x2="100" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="110" x2="160" y2="110" stroke="#EBDCC4"/>
+<line x1="130" y1="50" x2="130" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="140" x2="160" y2="140" stroke="#EBDCC4"/>
+<line x1="160" y1="50" x2="160" y2="170" stroke="#EBDCC4"/>
+<line x1="40" y1="170" x2="160" y2="170" stroke="#EBDCC4"/>
+<circle cx="40" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="40" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="70" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="100" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="130" cy="170" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="50" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="80" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="110" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="140" r="2.6" fill="#332C23"/>
+<circle cx="160" cy="170" r="2.6" fill="#332C23"/>
+<text x="100" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">n = 25 → 40</text>
+<line x1="262" y1="170" x2="502" y2="170" stroke="#6B5F4F"/>
+<line x1="262" y1="170" x2="262" y2="35" stroke="#6B5F4F"/>
+<path d="M272 152 C 340 122, 430 82, 496 42" fill="none" stroke="#407CB0" stroke-dasharray="5 4"/>
+<path d="M272 154 C 350 132, 440 96, 496 62" fill="none" stroke="#E8A855" stroke-width="2.2"/>
+<path d="M272 156 C 350 140, 440 112, 496 80" fill="none" stroke="#6B5F4F" stroke-dasharray="2 4"/>
+<line x1="278" y1="40" x2="298" y2="40" stroke="#407CB0" stroke-dasharray="5 4"/>
+<text x="304" y="44" text-anchor="start" font-size="10" fill="#407CB0">n^4/3</text>
+<line x1="278" y1="58" x2="298" y2="58" stroke="#E8A855" stroke-width="2.2"/>
+<text x="304" y="62" text-anchor="start" font-size="10" fill="#C9852F">n^1.014</text>
+<line x1="278" y1="76" x2="298" y2="76" stroke="#6B5F4F" stroke-dasharray="2 4"/>
+<text x="304" y="80" text-anchor="start" font-size="10" fill="#6B5F4F">n</text>
+<text x="502" y="164" text-anchor="end" font-size="12" fill="#6B5F4F">n</text>
+<text x="258" y="44" text-anchor="end" font-size="12" fill="#6B5F4F">u(n)</text>
+</g>
+</svg>
+<figcaption><b>图 A2</b> · 示意：5×5 网格（n = 25，40 对单位距离）与三种增长形状——n、n^1.014、n^4/3。</figcaption>
+</figure>
 
 ### A3 · 费马大定理——与它的形式化
 
@@ -293,6 +1054,26 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§1.8 以它作为核验瓶颈的极端标本——一份没有任何人能通读的制品 [25,26]。
 - **现状（2026-11-22）**：Anthropic 9 月 4 日宣布完整 Lean 形式化：约 1300 万行、约 29500 个中间定理、近自主工作十一天，经内核核验并确认与 Mathlib 的陈述一致；巴扎德审阅后称之为非凡的自动形式化成就，但数学上不增添任何新知识 [25,26]。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Squares 3-4-5 add up; cubes 3 and 4 do not add up to a cube">
+<title>Squares 3-4-5 add up; cubes 3 and 4 do not add up to a cube</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="26" y="80" width="48" height="48" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="50.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">3²</text>
+<rect x="94" y="64" width="64" height="64" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="126.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">4²</text>
+<rect x="186" y="48" width="80" height="80" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="226.0" y="144" text-anchor="middle" font-size="12" fill="#6B5F4F">5²</text>
+<text x="82" y="96" text-anchor="middle" font-size="16" fill="#6B5F4F">+</text>
+<text x="172" y="96" text-anchor="middle" font-size="16" fill="#6B5F4F">=</text>
+<text x="300" y="86" text-anchor="start" font-size="12" fill="#332C23">3³ + 4³ = 91</text>
+<text x="300" y="116" text-anchor="start" font-size="12" fill="#332C23">5³ = 125</text>
+<text x="300" y="152" text-anchor="start" font-size="14" fill="#A4553F">91 ≠ 125</text>
+</g>
+</svg>
+<figcaption><b>图 A3</b> · 示意：平方能拼（3² + 4² = 5²）；立方不能（3³ + 4³ = 91 ≠ 125）。</figcaption>
+</figure>
+
 ### A4 · 黎曼假设
 
 - **一句话**：zeta 函数所有「有意思」的零点，是否都落在一条直线上？
@@ -303,6 +1084,38 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：假设是对无穷多个零点的全称命题；线外一个零点即否证之。「quasi-RH」在逻辑上不是「弱化的 RH」——它是一条**不同且更弱的围栏**，且对全体零点一次证明。
 - **为什么重要**：§6.4 曾以「AI 会不会证明黎曼猜想」作为该被绕开的问法；2026 年 11 月，这个问题以一种谁也没料到的方式被回答了一版 [93,120,122]。
 - **现状（2026-11-22）**：11 月 20 日，Alpöge 宣布黎曼假设的证明，出自一个内部 AI 模型（媒体点名 Claude；Tao 原文说「一个内部 AI 模型」——两说照录 [120,123]）；证明以约 1700 万行的 Lean 制品存在，11 月 21 日 Lean 社区按四项明示判据认证「黎曼假设的陈述与证明均属正确」[122]。更早，10 月发布中的 quasi-RH 结果在两周内被人类分析学家消化并大体确认 [115]。人类数学协会则反对：无人能有理由声称理解这样一份文件 [124]。机器已核验；共同体已认证；人类理解进行中。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Critical strip, critical line at real part one half, quasi-Riemann band">
+<title>Critical strip, critical line at real part one half, quasi-Riemann band</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="250" y="30" width="55" height="148" fill="#F7EFE2"/>
+<rect x="256.9" y="30" width="41.2" height="148" fill="#FBE9C8"/>
+<line x1="20" y1="110" x2="500" y2="110" stroke="#6B5F4F"/>
+<line x1="250" y1="190" x2="250" y2="22" stroke="#6B5F4F"/>
+<line x1="277.5" y1="190" x2="277.5" y2="22" stroke="#C9852F" stroke-width="2" stroke-dasharray="6 3"/>
+<circle cx="277.5" cy="76.1" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="59.6" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="50.0" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="143.9" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="160.4" r="3.2" fill="#A4553F"/>
+<circle cx="277.5" cy="170.0" r="3.2" fill="#A4553F"/>
+<circle cx="140" cy="110" r="3.2" fill="#6B5F4F"/>
+<circle cx="30" cy="110" r="3.2" fill="#6B5F4F"/>
+<text x="283.5" y="20" text-anchor="start" font-size="12" fill="#C9852F">Re = 1/2</text>
+<text x="256.875" y="194" text-anchor="middle" font-size="10" fill="#9A8D7A">1/8</text>
+<text x="298.125" y="194" text-anchor="middle" font-size="10" fill="#9A8D7A">7/8</text>
+<text x="140" y="126" text-anchor="middle" font-size="10" fill="#6B5F4F">−2</text>
+<text x="30" y="126" text-anchor="middle" font-size="10" fill="#6B5F4F">−4</text>
+<text x="309" y="126" text-anchor="start" font-size="10" fill="#6B5F4F">1</text>
+<text x="246" y="126" text-anchor="end" font-size="10" fill="#6B5F4F">0</text>
+<text x="287.5" y="80.088" text-anchor="start" font-size="10" fill="#A4553F">14.13i</text>
+<text x="500" y="126" text-anchor="end" font-size="12" fill="#9A8D7A">Re(s)</text>
+<text x="244" y="34" text-anchor="end" font-size="12" fill="#9A8D7A">Im(s)</text>
+</g>
+</svg>
+<figcaption><b>图 A4</b> · 示意：临界带 0 < Re < 1、Re = 1/2 上的最初几个零点、−2 与 −4 处的平凡零点，以及 quasi-RH 的 1/8–7/8 竖条。</figcaption>
+</figure>
 
 ### A5 · 唯一游戏猜想（2002）
 
@@ -315,6 +1128,35 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：10 月 6 日发布宣称其 372 个家族中包含 UGC 的证明——整批发布中分量最重的一条主张（后记 §xi）[93]。
 - **现状（2026-11-22）**：已发布的主张，未被接受的定理。Moshkovitz 已在这份证明上花数周，与 Khot、Håstad、Minzer 协作并借助 GPT-6 Astra，面对一个她称为「全然陌生的全新纠错码」；相关努力已在 Simons Institute 报告；完整核验尚未宣布 [119]。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="An odd cycle that cannot be two-coloured, and the no-discount axis">
+<title>An odd cycle that cannot be two-coloured, and the no-discount axis</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="120.0" y1="45.0" x2="172.3" y2="83.0" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="172.3" y1="83.0" x2="152.3" y2="144.5" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="152.3" y1="144.5" x2="87.7" y2="144.5" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="87.7" y1="144.5" x2="67.7" y2="83.0" stroke="#EBDCC4" stroke-width="1.4"/>
+<line x1="67.7" y1="83.0" x2="120.0" y2="45.0" stroke="#A4553F" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="120.0" cy="45.0" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<circle cx="172.3" cy="83.0" r="7" fill="#407CB0" stroke="#FFFDF9"/>
+<circle cx="152.3" cy="144.5" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<circle cx="87.7" cy="144.5" r="7" fill="#407CB0" stroke="#FFFDF9"/>
+<circle cx="67.7" cy="83.0" r="7" fill="#E8A855" stroke="#FFFDF9"/>
+<text x="120" y="188" text-anchor="middle" font-size="12" fill="#6B5F4F">C₅</text>
+<line x1="250" y1="130" x2="500" y2="130" stroke="#6B5F4F"/>
+<line x1="480" y1="120" x2="480" y2="140" stroke="#6B5F4F"/>
+<line x1="440" y1="120" x2="440" y2="140" stroke="#A4553F"/>
+<text x="480" y="156" text-anchor="middle" font-size="10" fill="#6B5F4F">1</text>
+<text x="440" y="156" text-anchor="middle" font-size="10" fill="#A4553F">1−ε</text>
+<line x1="440" y1="96" x2="480" y2="96" stroke="#A4553F" stroke-dasharray="3 3"/>
+<text x="460" y="88" text-anchor="middle" font-size="14" fill="#A4553F">≈</text>
+<text x="250" y="146" text-anchor="start" font-size="10" fill="#6B5F4F">0</text>
+<text x="375" y="60" text-anchor="start" font-size="12" fill="#332C23" font-weight="600">UGC</text>
+</g>
+</svg>
+<figcaption><b>图 A5</b> · 示意：奇圈无法二染色——必有一条约束被违反；右轴示猜想的「无折扣」主张。</figcaption>
+</figure>
+
 ### A6 · 雅可比猜想（1939）
 
 - **一句话**：多项式映射若雅可比行列式恒为非零常数，它是否必有多项式逆映射？
@@ -325,6 +1167,40 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：局部对全局是铰链——「每一点都可逆」（分析事实）弱于「有多项式逆」（全局代数事实）；猜想问前者是否强制后者，反例逐维给出「不强制」。
 - **为什么重要**：§2.1 把它 2026 年 7 月的反例列为菲尔兹奖得主联名信之前机器证明大戏的一幕 [1,19,30]。
 - **现状（2026-11-22）**：n ≥ 3 为假。Alpöge 2026 年 7 月 19 日宣布三维反例（AI 模型助力找到）；Tao 次日发布公开的「消化」[106]；Gao 推广到一切大于二的维数，所有恒等式经精确有理数算术验证 [107]；巴扎德的团队在宣布数日内即看到反例被 Lean 机检 [108]。n = 2 仍未解。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A shear with constant Jacobian, and a tangle with no polynomial inverse">
+<title>A shear with constant Jacobian, and a tangle with no polynomial inverse</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="40" y="60" width="120" height="120" fill="#FFFDF9" stroke="#9A8D7A"/>
+<line x1="40" y1="60" x2="40" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="60" x2="160" y2="60" stroke="#EBDCC4"/>
+<line x1="70" y1="60" x2="70" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="90" x2="160" y2="90" stroke="#EBDCC4"/>
+<line x1="100" y1="60" x2="100" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="120" x2="160" y2="120" stroke="#EBDCC4"/>
+<line x1="130" y1="60" x2="130" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="150" x2="160" y2="150" stroke="#EBDCC4"/>
+<line x1="160" y1="60" x2="160" y2="180" stroke="#EBDCC4"/>
+<line x1="40" y1="180" x2="160" y2="180" stroke="#EBDCC4"/>
+<line x1="220" y1="90.0" x2="220" y2="210.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="250" y1="79.5" x2="250" y2="199.5" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="280" y1="69.0" x2="280" y2="189.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="310" y1="58.5" x2="310" y2="178.5" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="340" y1="48.0" x2="340" y2="168.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="90" x2="340" y2="48.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="120" x2="340" y2="78.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="150" x2="340" y2="108.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="180" x2="340" y2="138.0" stroke="#C9852F" stroke-width="1.4"/>
+<line x1="220" y1="210" x2="340" y2="168.0" stroke="#C9852F" stroke-width="1.4"/>
+<text x="110" y="196" text-anchor="middle" font-size="12" fill="#332C23">det J = 1</text>
+<text x="340" y="196" text-anchor="middle" font-size="12" fill="#332C23">n ≥ 3</text>
+<path d="M330 70 C 390 30, 470 90, 410 130 C 360 165, 300 110, 350 80" fill="none" stroke="#407CB0" stroke-width="2"/>
+<path d="M350 80 C 400 60, 440 120, 390 140" fill="none" stroke="#A4553F" stroke-width="2"/>
+</g>
+</svg>
+<figcaption><b>图 A6</b> · 示意：雅可比恒定的剪切（每格面积不变），以及没有多项式能解开的缠绕。</figcaption>
+</figure>
 
 ### A7 · 全部光滑七维球面上的正截面曲率
 
@@ -337,6 +1213,60 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：后记 §iv 把它记作边界案例——AI 致谢自 v1 起就在 [82,83]。
 - **现状（2026-11-22）**：何杨辉、刘子然与丘成桐 9 月 24 日在预印本中宣称已构造（以边界度量相容的两个正曲率七维圆盘粘合）；论文致谢 ChatGPT 与 Claude（v1 即有）[82,83]。后续工作正在延伸该技术；共同体尚无裁定。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Two positively curved discs glued along the boundary, and twenty-eight smooth structures">
+<title>Two positively curved discs glued along the boundary, and twenty-eight smooth structures</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<path d="M70 110 A 60 60 0 0 1 190 110" fill="none" stroke="#C9852F" stroke-width="2"/>
+<path d="M70 110 A 60 60 0 0 0 190 110" fill="none" stroke="#407CB0" stroke-width="2"/>
+<line x1="70" y1="110" x2="190" y2="110" stroke="#A4553F" stroke-dasharray="4 4"/>
+<line x1="95" y1="78" x2="95" y2="59" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="95,57 92,65 98,65" fill="#C9852F"/>
+<line x1="130" y1="66" x2="130" y2="46" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="130,44 127,52 133,52" fill="#C9852F"/>
+<line x1="165" y1="78" x2="165" y2="59" stroke="#C9852F" stroke-width="1.3"/>
+<polygon points="165,57 162,65 168,65" fill="#C9852F"/>
+<line x1="95" y1="142" x2="95" y2="161" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="95,163 92,155 98,155" fill="#407CB0"/>
+<line x1="130" y1="154" x2="130" y2="174" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="130,176 127,168 133,168" fill="#407CB0"/>
+<line x1="165" y1="142" x2="165" y2="161" stroke="#407CB0" stroke-width="1.3"/>
+<polygon points="165,163 162,155 168,155" fill="#407CB0"/>
+<text x="130" y="100" text-anchor="middle" font-size="11" fill="#332C23">D⁷ ∪ D⁷</text>
+<circle cx="320" cy="66" r="5" fill="#E8A855"/>
+<circle cx="320" cy="92" r="5" fill="#407CB0"/>
+<circle cx="320" cy="118" r="5" fill="#E8A855"/>
+<circle cx="320" cy="144" r="5" fill="#407CB0"/>
+<circle cx="346" cy="66" r="5" fill="#407CB0"/>
+<circle cx="346" cy="92" r="5" fill="#E8A855"/>
+<circle cx="346" cy="118" r="5" fill="#407CB0"/>
+<circle cx="346" cy="144" r="5" fill="#E8A855"/>
+<circle cx="372" cy="66" r="5" fill="#E8A855"/>
+<circle cx="372" cy="92" r="5" fill="#407CB0"/>
+<circle cx="372" cy="118" r="5" fill="#E8A855"/>
+<circle cx="372" cy="144" r="5" fill="#407CB0"/>
+<circle cx="398" cy="66" r="5" fill="#407CB0"/>
+<circle cx="398" cy="92" r="5" fill="#E8A855"/>
+<circle cx="398" cy="118" r="5" fill="#407CB0"/>
+<circle cx="398" cy="144" r="5" fill="#E8A855"/>
+<circle cx="424" cy="66" r="5" fill="#E8A855"/>
+<circle cx="424" cy="92" r="5" fill="#407CB0"/>
+<circle cx="424" cy="118" r="5" fill="#E8A855"/>
+<circle cx="424" cy="144" r="5" fill="#407CB0"/>
+<circle cx="450" cy="66" r="5" fill="#407CB0"/>
+<circle cx="450" cy="92" r="5" fill="#E8A855"/>
+<circle cx="450" cy="118" r="5" fill="#407CB0"/>
+<circle cx="450" cy="144" r="5" fill="#E8A855"/>
+<circle cx="476" cy="66" r="5" fill="#E8A855"/>
+<circle cx="476" cy="92" r="5" fill="#407CB0"/>
+<circle cx="476" cy="118" r="5" fill="#E8A855"/>
+<circle cx="476" cy="144" r="5" fill="#407CB0"/>
+<text x="398" y="186" text-anchor="middle" font-size="12" fill="#6B5F4F">28</text>
+</g>
+</svg>
+<figcaption><b>图 A7</b> · 示意：两个正曲率圆盘沿相容边界粘合；七维球面的 28 种光滑结构。</figcaption>
+</figure>
+
 ### A8 · 四阶复矩阵乘法：49 到 48
 
 - **一句话**：乘两个 4×4 复矩阵，最少需要几次标量乘法？
@@ -347,6 +1277,75 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：上界由算法见证（造出来即可）；配套的下界要求排除一切更好的可能——纪录 48 是已知最好的**算法**，不是已证的最小值。门槛三的逻辑不对称，野生标本。
 - **为什么重要**：§1.4 以 AlphaEvolve 的 48 作为「计算-核验」一端成果的标志 [16]。
 - **现状（2026-11-22）**：48（DeepMind AlphaEvolve，2025 年 5 月）仍为纪录；后续工作把它以纯有理数系数重新导出。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Three four by four grids, and bars for 64, 49, 48 scalar multiplications">
+<title>Three four by four grids, and bars for 64, 49, 48 scalar multiplications</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="30" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="30" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="42" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="54" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="66" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="54" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">A</text>
+<rect x="120" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="120" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="132" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="144" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="156" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="144" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">B</text>
+<rect x="215" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="215" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="227" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="239" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="70" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="82" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="94" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<rect x="251" y="106" width="12" height="12" fill="#F7EFE2" stroke="#EBDCC4"/>
+<text x="239" y="60" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">C</text>
+<text x="108" y="100" text-anchor="middle" font-size="16" fill="#6B5F4F">×</text>
+<text x="200" y="100" text-anchor="middle" font-size="16" fill="#6B5F4F">=</text>
+<rect x="300" y="70" width="166" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="474.4" y="84" text-anchor="start" font-size="12" fill="#332C23">64</text>
+<rect x="300" y="110" width="127" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="435.4" y="124" text-anchor="start" font-size="12" fill="#332C23">49</text>
+<rect x="300" y="150" width="124" height="18" rx="4" fill="#C9852F" opacity=".85"/>
+<text x="432.8" y="164" text-anchor="start" font-size="12" fill="#332C23">48</text>
+<text x="300" y="190" text-anchor="start" font-size="10" fill="#9A8D7A">n×n, n = 4</text>
+</g>
+</svg>
+<figcaption><b>图 A8</b> · 示意：两个 4×4 矩阵相乘，以及 64 → 49 → 48 的纪录。</figcaption>
+</figure>
 
 ### A9 · 十一维的接吻数
 
@@ -359,6 +1358,39 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§1.4 把它与矩阵乘法并举，作为可机械核验的纪录 [16]。
 - **现状（2026-11-22）**：593–868；精确值未知。后有论文主张 604；标准参考尚未采信，本页亦按未核验处理 [16]。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Six unit circles around a central one, and known kissing numbers by dimension">
+<title>Six unit circles around a central one, and known kissing numbers by dimension</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="120" cy="100" r="28" fill="#F7EFE2" stroke="#C9852F" stroke-width="2"/>
+<circle cx="176.0" cy="100.0" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="148.0" cy="148.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="92.0" cy="148.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="64.0" cy="100.0" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="92.0" cy="51.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="148.0" cy="51.5" r="28" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.6"/>
+<text x="120" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">d = 2</text>
+<rect x="412" y="52" width="44" height="58" rx="6" fill="#FBE9C8" stroke="#C9852F" stroke-dasharray="4 3"/>
+<text x="235" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">1</text>
+<text x="235" y="96" text-anchor="middle" font-size="10" fill="#332C23">2</text>
+<text x="272" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">2</text>
+<text x="272" y="96" text-anchor="middle" font-size="10" fill="#332C23">6</text>
+<text x="309" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">3</text>
+<text x="309" y="96" text-anchor="middle" font-size="10" fill="#332C23">12</text>
+<text x="346" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">4</text>
+<text x="346" y="96" text-anchor="middle" font-size="10" fill="#332C23">24</text>
+<text x="390" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">8</text>
+<text x="390" y="96" text-anchor="middle" font-size="10" fill="#332C23">240</text>
+<text x="434" y="70" text-anchor="middle" font-size="10" fill="#A4553F">11</text>
+<text x="434" y="96" text-anchor="middle" font-size="9" fill="#A4553F">593–868</text>
+<text x="478" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">24</text>
+<text x="478" y="96" text-anchor="middle" font-size="10" fill="#332C23">196560</text>
+<text x="200" y="70" text-anchor="middle" font-size="10" fill="#9A8D7A">d</text>
+</g>
+</svg>
+<figcaption><b>图 A9</b> · 示意：二维中六个单位圆贴住中央圆；各维已知接吻数——十一维仍是一个区间。</figcaption>
+</figure>
+
 ### A10 · 九圈六边形振幅（附一个「单负」旁注）
 
 - **一句话**：在量子场论的「玩具模型」里，算出一个深达九个量子圈的、复杂得可怕的散射振幅。
@@ -369,6 +1401,36 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：旁注的陈述——「这些振幅非零」——是由显式公式见证的**存在性**主张；2026 年预印本报告该公式先由 GPT-5.2 Pro 猜想、再由 OpenAI 内部模型证明 [23]。
 - **为什么重要**：§1.7 把 2026 年理论物理的两案读作「机器执行配方」与「机器提出猜想」的现场标本 [23,24]。
 - **现状（2026-11-22）**：Anthropic 9 月 25 日宣布 Claude 算出九圈振幅，Dixon 花约两周独立核验；何颂领衔的中科院团队同期得到大部分结果，部分约束用了 GPT-6 [24]。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A hexagon amplitude with nine loops, and the eight to nine loop record">
+<title>A hexagon amplitude with nine loops, and the eight to nine loop record</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<polygon points="185.0,100.0 157.5,147.6 102.5,147.6 75.0,100.0 102.5,52.4 157.5,52.4" fill="none" stroke="#C9852F" stroke-width="2"/>
+<line x1="185.0" y1="100.0" x2="211.0" y2="100.0" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="157.5" y1="147.6" x2="170.5" y2="170.1" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="102.5" y1="147.6" x2="89.5" y2="170.1" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="75.0" y1="100.0" x2="49.0" y2="100.0" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="102.5" y1="52.4" x2="89.5" y2="29.9" stroke="#407CB0" stroke-width="1.6"/>
+<line x1="157.5" y1="52.4" x2="170.5" y2="29.9" stroke="#407CB0" stroke-width="1.6"/>
+<circle cx="105" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="105" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="105" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="130" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="80" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="100" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<circle cx="155" cy="120" r="7" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.3"/>
+<text x="130" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">L = 9</text>
+<rect x="300" y="76" width="144" height="18" rx="4" fill="#E8A855" opacity=".85"/>
+<text x="300" y="70" text-anchor="start" font-size="11" fill="#332C23">8 · 2023</text>
+<rect x="300" y="122" width="162" height="18" rx="4" fill="#C9852F" opacity=".85"/>
+<text x="300" y="116" text-anchor="start" font-size="11" fill="#332C23">9 · 2026</text>
+</g>
+</svg>
+<figcaption><b>图 A10</b> · 示意：带九个圈的六边形振幅，以及 8 → 9 圈的纪录。</figcaption>
+</figure>
 
 ### A11 · First Proof：十道研究级问题
 
@@ -381,6 +1443,45 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§1.6 与 §6.4 以它作为核验瓶颈最干净的表达 [22]。
 - **现状（2026-11-22）**：生成的一半已经成立；评估的一半仍是未了的公案，组织者自己承认，测度「自主提出问题」的实验方法尚不存在 [22]。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Ten research questions, a machine answer, and an open evaluation gate">
+<title>Ten research questions, a machine answer, and an open evaluation gate</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="24" y="44" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="59" text-anchor="middle" font-size="10" fill="#6B5F4F">1</text>
+<rect x="82" y="44" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="59" text-anchor="middle" font-size="10" fill="#6B5F4F">6</text>
+<rect x="24" y="72" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="87" text-anchor="middle" font-size="10" fill="#6B5F4F">2</text>
+<rect x="82" y="72" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="87" text-anchor="middle" font-size="10" fill="#6B5F4F">7</text>
+<rect x="24" y="100" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="115" text-anchor="middle" font-size="10" fill="#6B5F4F">3</text>
+<rect x="82" y="100" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="115" text-anchor="middle" font-size="10" fill="#6B5F4F">8</text>
+<rect x="24" y="128" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="143" text-anchor="middle" font-size="10" fill="#6B5F4F">4</text>
+<rect x="82" y="128" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="143" text-anchor="middle" font-size="10" fill="#6B5F4F">9</text>
+<rect x="24" y="156" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="49" y="171" text-anchor="middle" font-size="10" fill="#6B5F4F">5</text>
+<rect x="82" y="156" width="50" height="22" rx="5" fill="#FFFDF9" stroke="#EBDCC4"/>
+<text x="107" y="171" text-anchor="middle" font-size="10" fill="#6B5F4F">10</text>
+<text x="76" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">10</text>
+<line x1="146" y1="100" x2="182" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="190,100 180,96 180,104" fill="#6B5F4F"/>
+<rect x="196" y="70" width="86" height="60" rx="8" fill="#F7EFE2" stroke="#C9852F"/>
+<text x="239" y="105" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">AI</text>
+<line x1="288" y1="100" x2="322" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="330,100 320,96 320,104" fill="#6B5F4F"/>
+<rect x="336" y="66" width="120" height="68" rx="8" fill="#FBE9C8" stroke="#A4553F" stroke-dasharray="5 4"/>
+<text x="396" y="106" text-anchor="middle" font-size="22" fill="#A4553F">?</text>
+<text x="396" y="84" text-anchor="middle" font-size="10" fill="#A4553F">0 / 10</text>
+</g>
+</svg>
+<figcaption><b>图 A11</b> · 示意：十道题、机器作答，以及缺失的评估协议。</figcaption>
+</figure>
+
 ## B 组 · 论证的背景板
 
 ### B1 · 哥德尔不完备定理（1931）
@@ -392,6 +1493,29 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：证明把一句自指的话——「本语句在此不可证」——编码进算术；**哥德尔编号**这套语言学机器，正是让规则手册能谈论自己的办法。
 - **现状**：已成定论的数学；建立在它之上的哲学论证仍在争论。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A formal system containing a true statement it cannot prove">
+<title>A formal system containing a true statement it cannot prove</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="24" y="40" width="220" height="120" rx="10" fill="#FFFDF9" stroke="#6B5F4F" stroke-width="1.6"/>
+<text x="40" y="62" text-anchor="start" font-size="12" fill="#332C23" font-weight="600">S</text>
+<line x1="46" y1="82" x2="150" y2="82" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="98" x2="150" y2="98" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="114" x2="150" y2="114" stroke="#EBDCC4" stroke-width="2"/>
+<line x1="46" y1="130" x2="150" y2="130" stroke="#EBDCC4" stroke-width="2"/>
+<rect x="160" y="86" width="56" height="34" rx="6" fill="#FBE9C8" stroke="#C9852F"/>
+<text x="188" y="108" text-anchor="middle" font-size="12" fill="#332C23" font-weight="600">G</text>
+<path d="M216 96 C 250 70, 250 128, 216 110" fill="none" stroke="#A4553F" stroke-dasharray="4 3"/>
+<line x1="244" y1="100" x2="300" y2="100" stroke="#A4553F" stroke-dasharray="4 3"/>
+<polygon points="308,100 298,96 298,104" fill="#A4553F"/>
+<text x="318" y="96" text-anchor="start" font-size="12" fill="#A4553F">S ⊬ G</text>
+<text x="318" y="124" text-anchor="start" font-size="12" fill="#A4553F">S ⊬ Con(S)</text>
+<text x="318" y="152" text-anchor="start" font-size="11" fill="#6B5F4F">G ⊨ ⊤</text>
+</g>
+</svg>
+<figcaption><b>图 B1</b> · 示意：系统 S 内部有一句它证不出的真语句 G，它也证不出自身的一致性。</figcaption>
+</figure>
+
 ### B2 · 停机问题（1936）
 
 - **一句话**：没有任何算法能对每个程序与输入判定它是否终将停机。
@@ -400,6 +1524,28 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：证明是**对角线**式的——针对全称主张构造一个反例；与门槛三的全称/存在形态同款。
 - **为什么重要**：与哥德尔一道，合上「形式化能够穷尽数学」的希望——§3.5 与 §5.4 [48]。
 - **现状**：已定论；可判定与不可判定的边界仍是一张活地图。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A halting decider fed its own description, and the contradiction">
+<title>A halting decider fed its own description, and the contradiction</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<rect x="70" y="66" width="96" height="68" rx="10" fill="#FFFDF9" stroke="#6B5F4F" stroke-width="1.6"/>
+<text x="118" y="106" text-anchor="middle" font-size="20" fill="#332C23" font-weight="600">H</text>
+<line x1="24" y1="100" x2="62" y2="100" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="70,100 60,96 60,104" fill="#6B5F4F"/>
+<text x="44" y="90" text-anchor="middle" font-size="11" fill="#6B5F4F">⟨H,H⟩</text>
+<line x1="166" y1="88" x2="216" y2="72" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="224,70 213,68 216,76" fill="#6B5F4F"/>
+<text x="236" y="70" text-anchor="start" font-size="16" fill="#6B5F4F">↓</text>
+<line x1="166" y1="112" x2="216" y2="128" stroke="#6B5F4F" stroke-width="1.6"/>
+<polygon points="224,130 213,132 216,124" fill="#6B5F4F"/>
+<text x="236" y="136" text-anchor="start" font-size="16" fill="#6B5F4F">∞</text>
+<path d="M270 140 C 320 190, 20 190, 44 118" fill="none" stroke="#A4553F" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="160" y="186" text-anchor="middle" font-size="18" fill="#A4553F">⊥</text>
+</g>
+</svg>
+<figcaption><b>图 B2</b> · 示意：停机判定器被喂进自己的描述——两种输出互相矛盾。</figcaption>
+</figure>
 
 ### B3 · 连续统假设
 
@@ -410,6 +1556,30 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§3.3 以科恩的结果说明：连最基础的分支，其公理选择也不是唯一被迫的。
 - **现状**：「独立」已成定论；采纳 CH 是立场，不是事实。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A gap between aleph-null and the continuum, and two consistent models">
+<title>A gap between aleph-null and the continuum, and two consistent models</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="110" y1="176" x2="110" y2="36" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="168" x2="128" y2="168" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="48" x2="128" y2="48" stroke="#6B5F4F" stroke-width="1.6"/>
+<line x1="92" y1="108" x2="128" y2="108" stroke="#A4553F" stroke-dasharray="4 4"/>
+<text x="84" y="172" text-anchor="end" font-size="12" fill="#332C23">ℵ₀</text>
+<text x="84" y="52" text-anchor="end" font-size="12" fill="#332C23">2^ℵ₀</text>
+<text x="84" y="112" text-anchor="end" font-size="16" fill="#A4553F">?</text>
+<text x="110" y="30" text-anchor="middle" font-size="12" fill="#A4553F">CH</text>
+<rect x="240" y="62" width="96" height="54" rx="8" fill="#FFFDF9" stroke="#6B5F4F"/>
+<text x="288" y="86" text-anchor="middle" font-size="12" fill="#332C23">CH</text>
+<text x="288" y="106" text-anchor="middle" font-size="12" fill="#6B5F4F">✓</text>
+<rect x="356" y="62" width="96" height="54" rx="8" fill="#FFFDF9" stroke="#6B5F4F"/>
+<text x="404" y="86" text-anchor="middle" font-size="12" fill="#332C23">¬CH</text>
+<text x="404" y="106" text-anchor="middle" font-size="12" fill="#6B5F4F">✓</text>
+<text x="346" y="146" text-anchor="middle" font-size="11" fill="#9A8D7A">ZFC</text>
+</g>
+</svg>
+<figcaption><b>图 B3</b> · 示意：ℵ₀ 与 2^ℵ₀ 之间的空档；CH 与 ¬CH 都与公理相容。</figcaption>
+</figure>
+
 ### B4 · 罗素悖论（1901）
 
 - **一句话**：「所有不包含自身的集合组成的集合」——它包含自己吗？
@@ -418,6 +1588,23 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：定义里的**自指**缺陷——门槛二的语言学面：一句合语法的句子可能在语义上破产。
 - **为什么重要**：§3.1 以它标记逻辑主义的失败——逻辑是数学的语法，不是数学的地基 [36]。
 - **现状**：已解决；教训已成为基础理论的常识。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="The set of all sets that do not contain themselves, and its contradiction">
+<title>The set of all sets that do not contain themselves, and its contradiction</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="120" cy="100" r="50" fill="#F7EFE2" stroke="#C9852F" stroke-width="1.8"/>
+<text x="120" y="106" text-anchor="middle" font-size="18" fill="#332C23" font-weight="600">R</text>
+<path d="M148 66 C 190 40, 210 96, 160 110" fill="none" stroke="#A4553F" stroke-width="1.6"/>
+<polygon points="154,108 166,108 160,118" fill="#A4553F"/>
+<text x="196" y="60" text-anchor="middle" font-size="12" fill="#A4553F">R ∈ R ?</text>
+<text x="262" y="78" text-anchor="start" font-size="12" fill="#332C23">R ∈ R ⇒ R ∉ R</text>
+<text x="262" y="104" text-anchor="start" font-size="12" fill="#332C23">R ∉ R ⇒ R ∈ R</text>
+<text x="262" y="140" text-anchor="start" font-size="20" fill="#A4553F">⊥</text>
+</g>
+</svg>
+<figcaption><b>图 B4</b> · 示意：所有不含自身的集合之集——任一答案都破坏定义。</figcaption>
+</figure>
 
 ### B5 · 开普勒猜想
 
@@ -428,6 +1615,31 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§5.3 以多年的核验劳动为「核验应当付酬」的价码——这类劳动至今是学科里报酬最低的一档 [66]。
 - **现状**：已证明、已机器核验；历史上第一个以此方式认证的重大定理。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Hexagonal close packing cross-section and the proof timeline">
+<title>Hexagonal close packing cross-section and the proof timeline</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="130" cy="100" r="26" fill="#F7EFE2" stroke="#C9852F" stroke-width="1.8"/>
+<circle cx="182.0" cy="100.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="156.0" cy="145.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="104.0" cy="145.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="78.0" cy="100.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="104.0" cy="55.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<circle cx="156.0" cy="55.0" r="26" fill="#FFFDF9" stroke="#407CB0" stroke-width="1.4"/>
+<polygon points="156,115 130,130 104,115 104,85 130,70 156,85" fill="none" stroke="#A4553F" stroke-dasharray="4 3"/>
+<text x="130" y="190" text-anchor="middle" font-size="12" fill="#332C23">π / (3√2) ≈ 0.7405</text>
+<line x1="270" y1="100" x2="500" y2="100" stroke="#EBDCC4"/>
+<circle cx="300" cy="100" r="4" fill="#C9852F"/>
+<text x="300" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">1611</text>
+<circle cx="380" cy="100" r="4" fill="#C9852F"/>
+<text x="380" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">1998</text>
+<circle cx="460" cy="100" r="4" fill="#C9852F"/>
+<text x="460" y="124" text-anchor="middle" font-size="10" fill="#6B5F4F">2014</text>
+</g>
+</svg>
+<figcaption><b>图 B5</b> · 示意：最密堆积的六边形截面，密度 π/(3√2) ≈ 0.7405；右侧为证明时间线。</figcaption>
+</figure>
+
 ### B6 · 罗宾斯问题
 
 - **一句话**：三条关于一个布尔运算的简单等式，能否穷尽全部布尔代数？
@@ -436,6 +1648,26 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：一条**等价**主张——「这三条公理恰好定义布尔代数」——需要两个方向的证明：布尔代数的一切可由三条推出，且三条在布尔代数中成立。
 - **为什么重要**：§5.3 把它列在「机器接手检查与执行、人相应转移阵地」的谱系里。
 - **现状**：已被机器证明——AI 数学浪潮正是把这个先例又推高一层。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Three axiom poles holding up the dome of Boolean algebra">
+<title>Three axiom poles holding up the dome of Boolean algebra</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<path d="M70 92 Q 160 34 250 92" fill="none" stroke="#C9852F" stroke-width="2"/>
+<line x1="100" y1="150" x2="100" y2="76" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="100" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A1</text>
+<line x1="160" y1="150" x2="160" y2="63" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="160" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A2</text>
+<line x1="220" y1="150" x2="220" y2="76" stroke="#6B5F4F" stroke-width="2.4"/>
+<text x="220" y="168" text-anchor="middle" font-size="10" fill="#6B5F4F">A3</text>
+<text x="160" y="58" text-anchor="middle" font-size="12" fill="#332C23">B</text>
+<text x="40" y="168" text-anchor="start" font-size="10" fill="#9A8D7A">1933</text>
+<text x="280" y="168" text-anchor="start" font-size="10" fill="#9A8D7A">1996</text>
+<line x1="24" y1="150" x2="300" y2="150" stroke="#EBDCC4"/>
+</g>
+</svg>
+<figcaption><b>图 B6</b> · 示意：三根公理柱撑起布尔代数的穹顶。</figcaption>
+</figure>
 
 ### B7 · 素数有界间隙（与陈景润定理）
 
@@ -446,6 +1678,43 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§4.2 与 §6.2 以这一谱系说明筛法与加法组合学的活力 [57,58,72]。相关条目详见 [哥德巴赫与孪生素数](../famous_problems/goldbach_and_twin_primes.md)。
 - **现状（2026-11-22）**：纪录 240（Stadlmann）；孪生素数仍未解。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Primes on a line, a twin gap of two, and a bounded gap of 240">
+<title>Primes on a line, a twin gap of two, and a bounded gap of 240</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="20" y1="110" x2="500" y2="110" stroke="#6B5F4F"/>
+<line x1="30" y1="104" x2="30" y2="116" stroke="#6B5F4F"/>
+<text x="30" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">2</text>
+<line x1="75" y1="104" x2="75" y2="116" stroke="#6B5F4F"/>
+<text x="75" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">3</text>
+<line x1="120" y1="104" x2="120" y2="116" stroke="#6B5F4F"/>
+<text x="120" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">5</text>
+<line x1="165" y1="104" x2="165" y2="116" stroke="#6B5F4F"/>
+<text x="165" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">7</text>
+<line x1="210" y1="104" x2="210" y2="116" stroke="#6B5F4F"/>
+<text x="210" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">11</text>
+<line x1="255" y1="104" x2="255" y2="116" stroke="#6B5F4F"/>
+<text x="255" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">13</text>
+<line x1="300" y1="104" x2="300" y2="116" stroke="#6B5F4F"/>
+<text x="300" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">17</text>
+<line x1="345" y1="104" x2="345" y2="116" stroke="#6B5F4F"/>
+<text x="345" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">19</text>
+<line x1="390" y1="104" x2="390" y2="116" stroke="#6B5F4F"/>
+<text x="390" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">23</text>
+<line x1="435" y1="104" x2="435" y2="116" stroke="#6B5F4F"/>
+<text x="435" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">29</text>
+<line x1="480" y1="104" x2="480" y2="116" stroke="#6B5F4F"/>
+<text x="480" y="136" text-anchor="middle" font-size="10" fill="#6B5F4F">31</text>
+<path d="M210 96 L210 88 L255 88 L255 96" fill="none" stroke="#A4553F"/>
+<text x="232" y="80" text-anchor="middle" font-size="10" fill="#A4553F">2</text>
+<path d="M300 62 L300 52 L480 52 L480 62" fill="none" stroke="#C9852F" stroke-dasharray="4 3"/>
+<text x="390" y="44" text-anchor="middle" font-size="12" fill="#C9852F">≤ 240</text>
+<text x="390" y="176" text-anchor="middle" font-size="14" fill="#9A8D7A">∞</text>
+</g>
+</svg>
+<figcaption><b>图 B7</b> · 示意：素数排成一线；孪生间隙 2 与有界间隙 240（后者无穷多次出现）。</figcaption>
+</figure>
+
 ### B8 · 韦尔猜想
 
 - **一句话**：数有限域上多项式方程的解，并在算术深处找到拓扑。
@@ -455,6 +1724,49 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **为什么重要**：§4.2 以德利涅的证明作为算术几何的里程碑——朗兰兹纲领周边那片疆域的界碑。
 - **现状**：已证明；其后裔（几何朗兰兹）仍是数学最深处的活疆域。
 
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Point counts over finite fields and a torus with its Betti numbers">
+<title>Point counts over finite fields and a torus with its Betti numbers</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="40" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="40" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="92" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="118" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="60" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="86" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="112" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="138" r="3" fill="#EBDCC4"/>
+<circle cx="144" cy="164" r="3" fill="#EBDCC4"/>
+<circle cx="66" cy="86" r="5" fill="#C9852F"/>
+<circle cx="118" cy="86" r="5" fill="#C9852F"/>
+<circle cx="66" cy="138" r="5" fill="#C9852F"/>
+<circle cx="144" cy="164" r="5" fill="#C9852F"/>
+<text x="90" y="196" text-anchor="middle" font-size="12" fill="#332C23">N₁ N₂ …</text>
+<ellipse cx="360" cy="104" rx="86" ry="46" fill="none" stroke="#407CB0" stroke-width="2"/>
+<ellipse cx="360" cy="104" rx="30" ry="14" fill="none" stroke="#407CB0" stroke-width="2"/>
+<text x="360" y="176" text-anchor="middle" font-size="11" fill="#332C23">b: 1 · 2 · 1</text>
+<text x="360" y="40" text-anchor="middle" font-size="12" fill="#C9852F">Z(V, t)</text>
+</g>
+</svg>
+<figcaption><b>图 B8</b> · 示意：有限域上的点计数汇入 zeta 函数；形状的孔（贝蒂数）支配节律。</figcaption>
+</figure>
+
 ### B9 · 圆周率：刘徽与祖冲之
 
 - **一句话**：圆的比率能算到多精——以及用什么方法算？
@@ -462,6 +1774,22 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **问的是什么**（已有答案）：π 是无理数也是超越数；史学之问——哪些传统、哪些方法——才是本文的 [50,69]。
 - **为什么重要**：§5.5 以中国传统为「算法性、构造性路径」的证据——差别在什么使一份解答算数，不在什么为真。
 - **现状**：数值上已算至万亿位；文章的史学论点依旧成立。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Inscribed and circumscribed hexagons closing on the circle">
+<title>Inscribed and circumscribed hexagons closing on the circle</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<circle cx="140" cy="100" r="60" fill="none" stroke="#6B5F4F" stroke-width="2"/>
+<polygon points="200.0,100.0 170.0,152.0 110.0,152.0 80.0,100.0 110.0,48.0 170.0,48.0" fill="none" stroke="#407CB0" stroke-dasharray="5 4"/>
+<polygon points="200.0,134.6 140.0,169.3 80.0,134.6 80.0,65.4 140.0,30.7 200.0,65.4" fill="none" stroke="#C9852F" stroke-dasharray="2 4"/>
+<text x="140" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">n = 6</text>
+<text x="280" y="74" text-anchor="start" font-size="11" fill="#332C23">3.14159265…</text>
+<text x="280" y="100" text-anchor="start" font-size="11" fill="#C9852F">355/113</text>
+<text x="280" y="126" text-anchor="start" font-size="11" fill="#6B5F4F">= 3.14159292…</text>
+</g>
+</svg>
+<figcaption><b>图 B9</b> · 示意：内接与外切六边形向圆合拢；355/113 为经典界。</figcaption>
+</figure>
 
 ### B10 · 喀拉拉学派的无穷级数
 
@@ -471,6 +1799,24 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 - **逻辑与语言**：无穷级数是带极限的主张——「部分和逼近……」；逼近什么、以多快的速度——这正是门槛二所教的那种语法细心。
 - **为什么重要**：§5.5 以喀拉拉为证据：同一种数学可以在不止一种建制形态下生长。
 - **现状**：史学上已成定论。
+
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="Sine and its successive partial sums from the power series">
+<title>Sine and its successive partial sums from the power series</title>
+<g font-family="Inter, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="12" fill="#6B5F4F">
+<line x1="40" y1="110" x2="480" y2="110" stroke="#EBDCC4"/>
+<line x1="260" y1="40" x2="260" y2="180" stroke="#EBDCC4"/>
+<polyline points="60.0,267.1 66.7,261.8 73.3,256.6 80.0,251.4 86.7,246.1 93.3,240.9 100.0,235.7 106.7,230.4 113.3,225.2 120.0,220.0 126.7,214.7 133.3,209.5 140.0,204.2 146.7,199.0 153.3,193.8 160.0,188.5 166.7,183.3 173.3,178.1 180.0,172.8 186.7,167.6 193.3,162.4 200.0,157.1 206.7,151.9 213.3,146.7 220.0,141.4 226.7,136.2 233.3,130.9 240.0,125.7 246.7,120.5 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.5 280.0,94.3 286.7,89.1 293.3,83.8 300.0,78.6 306.7,73.3 313.3,68.1 320.0,62.9 326.7,57.6 333.3,52.4 340.0,47.2 346.7,41.9 353.3,36.7 360.0,31.5 366.7,26.2 373.3,21.0 380.0,15.8 386.7,10.5 393.3,5.3 400.0,0.0 406.7,-5.2 413.3,-10.4 420.0,-15.7 426.7,-20.9 433.3,-26.1 440.0,-31.4 446.7,-36.6 453.3,-41.8 460.0,-47.1" fill="none" stroke="#6B5F4F" stroke-width="1.2" stroke-dasharray="2 5"/>
+<polyline points="60.0,8.7 66.7,28.4 73.3,46.5 80.0,63.0 86.7,77.9 93.3,91.4 100.0,103.4 106.7,114.0 113.3,123.3 120.0,131.3 126.7,138.2 133.3,143.8 140.0,148.4 146.7,152.0 153.3,154.6 160.0,156.2 166.7,157.0 173.3,157.0 180.0,156.3 186.7,154.9 193.3,152.8 200.0,150.1 206.7,147.0 213.3,143.4 220.0,139.3 226.7,135.0 233.3,130.3 240.0,125.4 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.6 286.7,89.7 293.3,85.0 300.0,80.7 306.7,76.6 313.3,73.0 320.0,69.9 326.7,67.2 333.3,65.1 340.0,63.7 346.7,63.0 353.3,63.0 360.0,63.8 366.7,65.4 373.3,68.0 380.0,71.6 386.7,76.2 393.3,81.8 400.0,88.7 406.7,96.7 413.3,106.0 420.0,116.6 426.7,128.6 433.3,142.1 440.0,157.0 446.7,173.5 453.3,191.6 460.0,211.3" fill="none" stroke="#407CB0" stroke-width="1.6" stroke-dasharray="5 4"/>
+<polyline points="60.0,136.2 66.7,136.1 73.3,136.8 80.0,138.3 86.7,140.3 93.3,142.6 100.0,145.2 106.7,147.8 113.3,150.3 120.0,152.8 126.7,155.0 133.3,156.8 140.0,158.4 146.7,159.4 153.3,160.1 160.0,160.2 166.7,159.9 173.3,159.0 180.0,157.6 186.7,155.7 193.3,153.3 200.0,150.5 206.7,147.2 213.3,143.5 220.0,139.4 226.7,135.0 233.3,130.3 240.0,125.5 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.5 286.7,89.7 293.3,85.0 300.0,80.6 306.7,76.5 313.3,72.8 320.0,69.5 326.7,66.7 333.3,64.3 340.0,62.4 346.7,61.0 353.3,60.1 360.0,59.8 366.7,59.9 373.3,60.6 380.0,61.6 386.7,63.2 393.3,65.0 400.0,67.2 406.7,69.7 413.3,72.2 420.0,74.8 426.7,77.4 433.3,79.7 440.0,81.7 446.7,83.2 453.3,83.9 460.0,83.8" fill="none" stroke="#C9852F" stroke-width="1.6" stroke-dasharray="8 3 2 3"/>
+<polyline points="60.0,110.0 66.7,115.2 73.3,120.4 80.0,125.5 86.7,130.3 93.3,135.0 100.0,139.4 106.7,143.5 113.3,147.2 120.0,150.5 126.7,153.3 133.3,155.7 140.0,157.6 146.7,158.9 153.3,159.7 160.0,160.0 166.7,159.7 173.3,158.9 180.0,157.6 186.7,155.7 193.3,153.3 200.0,150.5 206.7,147.2 213.3,143.5 220.0,139.4 226.7,135.0 233.3,130.3 240.0,125.5 246.7,120.4 253.3,115.2 260.0,110.0 266.7,104.8 273.3,99.6 280.0,94.5 286.7,89.7 293.3,85.0 300.0,80.6 306.7,76.5 313.3,72.8 320.0,69.5 326.7,66.7 333.3,64.3 340.0,62.4 346.7,61.1 353.3,60.3 360.0,60.0 366.7,60.3 373.3,61.1 380.0,62.4 386.7,64.3 393.3,66.7 400.0,69.5 406.7,72.8 413.3,76.5 420.0,80.6 426.7,85.0 433.3,89.7 440.0,94.5 446.7,99.6 453.3,104.8 460.0,110.0" fill="none" stroke="#332C23" stroke-width="2"/>
+<text x="140" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">−π</text>
+<text x="380" y="190" text-anchor="middle" font-size="12" fill="#6B5F4F">π</text>
+<text x="470" y="32" text-anchor="end" font-size="10" fill="#C9852F">x − x³/3! + x⁵/5! …</text>
+</g>
+</svg>
+<figcaption><b>图 B10</b> · 示意：sin x 与其逐次部分和——每添一项，就更贴曲线一点。</figcaption>
+</figure>
 
 <!-- L1-end -->
 
