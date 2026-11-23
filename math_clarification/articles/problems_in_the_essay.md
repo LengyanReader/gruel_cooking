@@ -224,7 +224,7 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 ### B7 · Bounded gaps between primes (and Chen's theorem)
 
 - **In one line**: how small a gap between consecutive primes occurs infinitely often?
-- **Analogy**: primes as buses that stop at unpredictable times. Zhang proved (2014): there is *some* finite interval — his was 70 million — inside which two buses stop together, infinitely often. The Polymath project and Maynard shrank the interval to 246; by August 2026 it stands at 240 [129]. The twin-prime conjecture is the same claim with interval 2 — still open. Chen's theorem (1973) is a neighboring triumph: every large even number is a prime plus a product of at most two primes ("1+2"). *Boundary*: "infinitely often" is about the whole infinite line, not any stretch you can walk.
+- **Analogy**: primes as buses that stop at unpredictable times. Zhang proved (2014): there is *some* finite interval — his was 70 million — inside which two buses stop together, infinitely often. The Polymath project and Maynard shrank the interval to 246; by August 2026 it stands at 240 (Stadlmann, arXiv:2608.31126). The twin-prime conjecture is the same claim with interval 2 — still open. Chen's theorem (1973) is a neighboring triumph: every large even number is a prime plus a product of at most two primes ("1+2"). *Boundary*: "infinitely often" is about the whole infinite line, not any stretch you can walk.
 - **What is asked**: the smallest H₁ such that infinitely many prime pairs differ by at most H₁.
 - **Prerequisites**: "infinitely often" is the quantifier shape — not "there are many", but "no matter how far out you go, they keep happening".
 - **Why it matters**: §4.2 and §6.2 cite the lineage as sieve methods and additive combinatorics alive [57,58,72]. Related entry: [Goldbach & twin primes](../famous_problems/goldbach_and_twin_primes.md).
@@ -440,7 +440,7 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 ### B7 · 素数有界间隙（与陈景润定理）
 
 - **一句话**：相邻素数的间隙，最小能多小——而且无穷多次出现？
-- **譬喻**：素数像到站时刻不定的公交车。张益唐证明（2014）：存在某个有限区间——他的是七千万——其中两班车几乎同时进站，且这样的事**无穷多次**发生。Polymath 项目与梅纳德把区间缩到 246；截至 2026 年 8 月，纪录是 240 [129]。孪生素数猜想是把区间换成 2 的同一主张——仍未解。陈景润定理（1973）是相邻的丰碑：每个大偶数都是一个素数加至多两个素数之积（「1+2」）。**边界**：「无穷多次」说的是整条无穷直线，不是你走得到的任何一段。
+- **譬喻**：素数像到站时刻不定的公交车。张益唐证明（2014）：存在某个有限区间——他的是七千万——其中两班车几乎同时进站，且这样的事**无穷多次**发生。Polymath 项目与梅纳德把区间缩到 246；截至 2026 年 8 月，纪录是 240（Stadlmann, arXiv:2608.31126）。孪生素数猜想是把区间换成 2 的同一主张——仍未解。陈景润定理（1973）是相邻的丰碑：每个大偶数都是一个素数加至多两个素数之积（「1+2」）。**边界**：「无穷多次」说的是整条无穷直线，不是你走得到的任何一段。
 - **问的是什么**：最小的 H₁，使无穷多对素数的差不超过 H₁。
 - **先修概念**：「无穷多次」的量词形状——不是「有很多」，而是「无论走到多远，它们还在发生」。
 - **为什么重要**：§4.2 与 §6.2 以这一谱系说明筛法与加法组合学的活力 [57,58,72]。相关条目详见 [哥德巴赫与孪生素数](../famous_problems/goldbach_and_twin_primes.md)。
@@ -474,4 +474,4 @@ Each problem below gets eight fields: **in one line** (compressed), **analogy** 
 
 <!-- L1-end -->
 
-<!-- 新来源备注：本页 [129] 为长稿来源表之外新增（Stadlmann, Bounded gaps between primes, arXiv:2608.31126, 2026, https://arxiv.org/abs/2608.31126, accessed 22 November 2026, 一手（预印本））；其余方括号编号一律指向 proofs_no_longer_scarce.md 文末来源表。A1 现状栏依另一会话 T2 检索记录的已核实事实更正（带外力 Euler 制品、NS 证书未公开、无外力 Euler 归属未核实）；A7 依「致谢 v1 即有」校准。 -->
+<!-- 新来源备注：B7 的 Stadlmann 引用以行内署名给出（长稿来源表之外，不占编号）；其余方括号编号一律指向 proofs_no_longer_scarce.md 文末来源表。A1 现状栏曾依另一会话 T2 检索记录更正；2026-11-23 无外力 Euler 归属经一手核实落定（长稿新增 [130]），本页与长稿一致。 -->
